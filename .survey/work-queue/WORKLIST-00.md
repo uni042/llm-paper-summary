@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-10T01:23:11+00:00`
+Generated: `2026-11-10T01:57:02+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -547,7 +547,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 464 | 1 | 4 | 5 | arXiv:2410.12187 | DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs | 2024-10-16 | arXiv.org | 1 | 5 | 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2410.12187) |
 | 465 | 101 | 4 | 5 | DOI:10.56553/popets-2026-0008 | SPRINT: Scalable Secure & Differentially Private Inference for Transformers | 2026-01-01 | Proceedings on Privacy Enhancing Technologies | 1 | 5 | 99-other-inference-systems | [source](https://doi.org/10.56553/popets-2026-0008) |
 | 466 | 2 | 4 | 5 | SemanticScholar:43d7e36606bd78191484c2a84980c7e20b8243ca | Distributional Quantization of Large Language Models |  |  | 2 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://www.semanticscholar.org/paper/43d7e36606bd78191484c2a84980c7e20b8243ca) |
-| 467 | 106 | 4 | 5 | arXiv:2607.22629 | Masked Self-Distillation: Internalizing the Chain-of-Thought in Language Models | 2026-06-18 |  | 6 | 5 |  | [source](https://arxiv.org/abs/2607.22629) |
+| 467 | 105 | 4 | 5 | arXiv:2607.22629 | Masked Self-Distillation: Internalizing the Chain-of-Thought in Language Models | 2026-06-18 |  | 5 | 5 |  | [source](https://arxiv.org/abs/2607.22629) |
 | 468 | 10 | 4 | 5 | arXiv:2610.33039 | Nemotron 3.5 Bolt 74B-A9B 24GB: A Hybrid Vision-Language Model for Local AI | 2026-10-15 |  | 0 | 5 | inference-systems, speculative-decoding, 投機的復号 / LLMサービング・ベンチマーク | [source](https://arxiv.org/abs/2610.33039) |
 | 469 | 104 | 4 | 5 | arXiv:2601.21238 | PTQ4ARVG: Post-Training Quantization for AutoRegressive Visual Generation Models | 2026-01-29 | arXiv.org | 4 | 5 |  | [source](https://arxiv.org/abs/2601.21238) |
 | 470 | 101 | 4 | 5 | arXiv:2606.16429 | Taylor-Calibrate: Principled Initialization for Hybrid Linear Attention Distillation | 2026-06-15 | arXiv.org | 1 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2606.16429) |
