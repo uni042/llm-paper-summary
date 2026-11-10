@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261111-0030-scheduled-chat-30/r01",
+  "reference_main_sha": "e5c147979a4edf2a30889c308fa116846ab82258",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02543",
+      "identity_tokens": [
+        "arXiv:2611.02543",
+        "DOI:10.48550/arXiv.2611.02543"
+      ],
+      "title": "When Cache Pressure Becomes a Trap: Metastability in Agent Serving",
+      "reason": "一次要旨は、エージェント型LLMサービングのPD分離環境で短時間の到着急増がprefix再利用を破壊し、負荷が元に戻っても性能低下が持続するメタ安定状態を分析する。遅延したセッションの長期化→集約コンテキスト増大→キャッシュミス・再計算増大という人口・キャッシュの正帰還を流体モデルで説明し、Basinがセッション優先度固定、ピークコンテキストの予約、遊休decodeメモリ利用、需要制限で回復を図る。一次要旨にはSGLangで急増後のgoodput約88%低下、H200の1P3Dで既存方式に対し最大3.59倍のgoodputが記載されており、LLM推論サービングのKVキャッシュ容量制御と入場制御に直接関係するためaccept。本文・図表は未確認であり数値の独立検証はResearch段階で行う。",
+      "source_url": "https://arxiv.org/abs/2611.02543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-11T00:34:04+09:00",
+      "last_checked_at": "2026-11-11T00:34:04+09:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md"
+      ],
+      "worklist_rank": 14,
+      "origin": "discovery_worklist"
+    }
+  ]
+}
