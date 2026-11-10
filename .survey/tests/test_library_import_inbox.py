@@ -436,13 +436,13 @@ source: https://arxiv.org/abs/2609.12345
             # An import receipt alone must not hide an outstanding repair.
             self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
             paper.write_text(
-                "---\\ncanonical_id: arXiv:2209.01188\\n---\\n# Published\\n",
+                "---\ncanonical_id: arXiv:2209.01188\n---\n# Published\n",
                 encoding="utf-8",
             )
             self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 0)
             # A paper with the wrong identity is not completion evidence.
             paper.write_text(
-                "---\\ncanonical_id: arXiv:2209.01189\\n---\\n# Other\\n",
+                "---\ncanonical_id: arXiv:2209.01189\n---\n# Other\n",
                 encoding="utf-8",
             )
             self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
