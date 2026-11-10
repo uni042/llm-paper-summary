@@ -1,39 +1,99 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.findings-emnlp.716"
-title: "Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models"
+canonical_id: DOI:10.18653/v1/2025.findings-emnlp.716
+title: 'Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models'
 authors:
-  - Yunhai Hu
-  - Zining Liu
-  - Zhenyuan Dong
-  - Tianfan Peng
-  - Bradley McDanel
-  - Sai Qian Zhang
-published: "2025-11"
-publication: "Findings of EMNLP 2025, pp. 13289–13304"
+- Yunhai Hu
+- Zining Liu
+- Zhenyuan Dong
+- Tianfan Peng
+- Bradley McDanel
+- Sai Qian Zhang
+published: 2025-11
+publication: Findings of EMNLP 2025, pp. 13289–13304
 publication_type: survey
-publication_status: "査読済み国際会議論文（Findings of EMNLP 2025）"
-summary: "自己回帰生成の逐次依存を、草案生成と検証・反復修正に分ける生成・修正枠組みを体系化したサーベイ。独立・従属草案、検索・n-gram、線形・木検証、Jacobi型反復を比較し、同期・非同期・CPU/GPU異種実装を整理する。付録では単一A100の11方式比較と5種類のVLM比較を行い、受理長と実測速度、タスクごとの例外を示す。"
-list_summary: "投機的復号と反復修正を草案生成・検証の二軸で分類し、A100上の既存方式比較とVLM比較から受理長・速度・実装費用の違いを示すサーベイ。"
-source: "https://aclanthology.org/2025.findings-emnlp.716.pdf"
+publication_status: 査読済み国際会議論文（Findings of EMNLP 2025）
+summary: 自己回帰生成の逐次依存を、草案生成と検証・反復修正に分ける生成・修正枠組みを体系化したサーベイ。独立・従属草案、検索・n-gram、線形・木検証、Jacobi型反復を比較し、同期・非同期・CPU/GPU異種実装を整理する。付録では単一A100の11方式比較と5種類のVLM比較を行い、受理長と実測速度、タスクごとの例外を示す。
+list_summary: 投機的復号と反復修正を草案生成・検証の二軸で分類し、A100上の既存方式比較とVLM比較から受理長・速度・実装費用の違いを示すサーベイ。
+source: https://aclanthology.org/2025.findings-emnlp.716.pdf
 sources:
-  - "https://aclanthology.org/2025.findings-emnlp.716.pdf"
-  - "https://aclanthology.org/2025.findings-emnlp.716/"
-implementation: "新規の推論エンジンではなく既存方式の体系化。付録A1は公開実装による単一A100 80GB、バッチ1、貪欲復号での11方式比較。付録A2はLLaVA-v1.6-Vicuna、Pixtral、SmolVLM、Gemma3の5種類のVLMを複数ベンチマークで比較する。"
+- https://aclanthology.org/2025.findings-emnlp.716.pdf
+- https://aclanthology.org/2025.findings-emnlp.716/
+implementation: 新規の推論エンジンではなく既存方式の体系化。付録A1は公開実装による単一A100 80GB、バッチ1、貪欲復号での11方式比較。付録A2はLLaVA-v1.6-Vicuna、Pixtral、SmolVLM、Gemma3の5種類のVLMを複数ベンチマークで比較する。
 code: null
-last_checked: "2026-10-29"
-worker_id: "scheduled-chat-00"
-scheduled_slot: "00"
-worker_run_key: "20261029-0400-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-29T04:12:25+09:00"
-reference_main_sha: "aa3395932a44e680ed6aaea1482e5fe48d6cbcbd"
-under16kb_reaudit_target_path: "papers/inference/99-other-inference-systems/2025-d5b03c1b33e0-mitigating-sequential-dependencies-a-survey-of-algorithms-and-systems-fo.md"
-under16kb_reaudit_source_git_blob_sha: "198bd6ef3ca10375adda1b4f26ec1ecb796611b0"
-under16kb_reaudit_version: "2026-10-07-v1"
+last_checked: '2026-10-29'
+worker_id: scheduled-chat-00
+scheduled_slot: '00'
+worker_run_key: 20261029-0400-scheduled-chat-00/r01
+worker_completed_at: '2026-10-29T04:12:25+09:00'
+reference_main_sha: aa3395932a44e680ed6aaea1482e5fe48d6cbcbd
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2025-d5b03c1b33e0-mitigating-sequential-dependencies-a-survey-of-algorithms-and-systems-fo.md
+under16kb_reaudit_source_git_blob_sha: 198bd6ef3ca10375adda1b4f26ec1ecb796611b0
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2410.07073
+  arxiv_id: '2410.07073'
+- canonical_id: arXiv:2505.19201
+- canonical_id: arXiv:2305.09781
+- canonical_id: arXiv:2402.11809
+- canonical_id: arXiv:2408.11049
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2404.11912
+- canonical_id: arXiv:2406.02532
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2402.14160
+- canonical_id: arXiv:2503.01840
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2402.13720
+- canonical_id: arXiv:2404.08698
+- canonical_id: arXiv:2501.19309
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2307.05908
+- canonical_id: arXiv:2410.01028
+- canonical_id: arXiv:2410.17375
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2310.08461
+- canonical_id: arXiv:2403.09919
+- canonical_id: arXiv:2410.06916
+- canonical_id: arXiv:2407.12021
+- canonical_id: arXiv:2412.18934
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2405.19715
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2410.11305
+- canonical_id: arXiv:2410.11744
+- canonical_id: arXiv:2402.11131
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2410.05589
+- canonical_id: arXiv:2402.12374
+- canonical_id: arXiv:2406.17276
+- canonical_id: arXiv:2408.15766
+- canonical_id: arXiv:2310.12072
+- canonical_id: arXiv:2404.19737
+- canonical_id: arXiv:2411.00841
+- canonical_id: arXiv:2406.11016
+- canonical_id: arXiv:2308.04623
+- canonical_id: arXiv:2402.05109
+- canonical_id: arXiv:2404.08856
+- canonical_id: arXiv:2409.00142
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2312.11462
+- canonical_id: arXiv:2310.15141
+- canonical_id: arXiv:2404.15778
+- canonical_id: arXiv:2403.10444
+- canonical_id: arXiv:2302.07863
+- canonical_id: arXiv:2311.08252
+- canonical_id: arXiv:2403.00835
+- canonical_id: arXiv:2310.07177
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # 生成・修正型復号の体系：逐次依存を減らすアルゴリズムと実装

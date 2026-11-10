@@ -1,44 +1,54 @@
 ---
-canonical_id: "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625"
-title: "Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA"
+canonical_id: SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625
+title: 'Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA'
 authors:
-  - "Chi Tsai"
-  - "Jay Martin"
-published: "2024-03"
-publication: "Stanford CS224N Winter 2024 Custom Final Project"
-publication_type: "student_project_report"
-publication_status: "public_report; 査読会議論文ではない"
-summary: "事前学習済みT5の中間層を96個の専門家へ分割し、入力ごとに20個を選ぶ疎な推論と、常時活性の低ランク補正枝による精度回復を組み合わせる。RTX 3090の相対推論時間はT5-3Bで元モデルの71.1%、T5-baseで101.4%、T5-smallで135.1%。品質評価はT5-baseのSST-2、MNLI、RACEに限定され、3Bで品質が維持された証拠はない。"
-list_summary: "既存T5の中間層を96専門家に分割して20個を選択し、常時活性の低ランク枝で分類精度を補正。大規模モデルでは速いが小型モデルでは遅くなる。"
-source: "https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/ChiYoTsaiJayMartin.pdf"
+- Chi Tsai
+- Jay Martin
+published: 2024-03
+publication: Stanford CS224N Winter 2024 Custom Final Project
+publication_type: student_project_report
+publication_status: public_report; 査読会議論文ではない
+summary: 事前学習済みT5の中間層を96個の専門家へ分割し、入力ごとに20個を選ぶ疎な推論と、常時活性の低ランク補正枝による精度回復を組み合わせる。RTX 3090の相対推論時間はT5-3Bで元モデルの71.1%、T5-baseで101.4%、T5-smallで135.1%。品質評価はT5-baseのSST-2、MNLI、RACEに限定され、3Bで品質が維持された証拠はない。
+list_summary: 既存T5の中間層を96専門家に分割して20個を選択し、常時活性の低ランク枝で分類精度を補正。大規模モデルでは速いが小型モデルでは遅くなる。
+source: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/ChiYoTsaiJayMartin.pdf
 sources:
-  - "https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/ChiYoTsaiJayMartin.pdf"
-  - "https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/index.html"
-implementation: "事前学習済みT5のFFNを制約付きk-meansで96専門家へ分割し、二層ルータで20専門家を選択。常時活性の低ランク枝を追加してSST-2、MNLI、RACEで学習。RTX 3090上でCUDA同期を含むモデル呼出し時間を測定。"
-code: "https://github.com/chiyotsai/MoEfication-with-LoRA"
-last_checked: "2026-10-29"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
-worker_run_key: "20261029-0145-scheduled-chat-45/r01"
-worker_completed_at: "2026-10-29T01:48:00+09:00"
-reference_main_sha: "e90eda8482787e105a02de6924aa517d4acbecd6"
-under16kb_reaudit_target_path: "papers/inference/99-other-inference-systems/2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md"
-under16kb_reaudit_source_git_blob_sha: "eae5ab8edc2b054250bd53f331d8eed40c467776"
-under16kb_reaudit_source_sha256: "0a8047b6963172cb37681546049f32e68e4d2681b4c7c3a94707f9aa474123ed"
-under16kb_reaudit_version: "2026-10-07-v1"
+- https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/final-projects/ChiYoTsaiJayMartin.pdf
+- https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/index.html
+implementation: 事前学習済みT5のFFNを制約付きk-meansで96専門家へ分割し、二層ルータで20専門家を選択。常時活性の低ランク枝を追加してSST-2、MNLI、RACEで学習。RTX 3090上でCUDA同期を含むモデル呼出し時間を測定。
+code: https://github.com/chiyotsai/MoEfication-with-LoRA
+last_checked: '2026-10-29'
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
+worker_run_key: 20261029-0145-scheduled-chat-45/r01
+worker_completed_at: '2026-10-29T01:48:00+09:00'
+reference_main_sha: e90eda8482787e105a02de6924aa517d4acbecd6
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md
+under16kb_reaudit_source_git_blob_sha: eae5ab8edc2b054250bd53f331d8eed40c467776
+under16kb_reaudit_source_sha256: 0a8047b6963172cb37681546049f32e68e4d2681b4c7c3a94707f9aa474123ed
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-last_audited: "2026-10-29"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: '2026-10-29'
 audit_version: 1
-under16kb_reaudit_checked_at: "2026-10-29T01:48:00+09:00"
+under16kb_reaudit_checked_at: '2026-10-29T01:48:00+09:00'
 references:
-  - canonical_id: "arXiv:2106.09685"
-    arxiv_id: "2106.09685"
-  - canonical_id: "arXiv:2103.13262"
-    arxiv_id: "2103.13262"
-references_checked_at: "2026-10-29"
-references_source: "Stanford CS224N公式学生プロジェクトPDFの参考文献に記載されたLoRAとFastMoEを照合。"
+- canonical_id: arXiv:2301.01821
+  arxiv_id: '2301.01821'
+- canonical_id: arXiv:2203.14680
+- canonical_id: arXiv:1905.09418
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:1701.06538
+- canonical_id: arXiv:2110.01786
+- canonical_id: arXiv:2112.06905
+- canonical_id: arXiv:2004.12993
+- canonical_id: arXiv:2202.09368
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2009.14794
+- canonical_id: arXiv:2001.04451
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Outrageously Fast LLMs：既存T5の専門家化と低ランク補正の規模依存性

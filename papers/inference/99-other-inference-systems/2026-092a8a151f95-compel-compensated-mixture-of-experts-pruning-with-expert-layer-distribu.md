@@ -1,41 +1,62 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.findings-acl.1521"
-doi: "10.18653/v1/2026.findings-acl.1521"
-title: "COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution"
+canonical_id: DOI:10.18653/v1/2026.findings-acl.1521
+doi: 10.18653/v1/2026.findings-acl.1521
+title: 'COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution'
 authors:
-  - "Seohee Yoon"
-  - "Yong Suk Choi"
-published: "2026-07-02"
-publication: "Findings of ACL 2026, pp. 30408–30423"
-publication_type: "conference-paper"
-publication_status: "ACL Anthology公式PDF全文確認"
-summary: "COMPELは、MoEの層別冗長性を無視する均一なexpert剪定に対し、各expertのFisher情報と各層の活性外れ値分布をKL最小化で学習し、重要度の積に基づきexpertを剪定した後、残存expertへFisher重み付き補償を加える方式。Qwen1.5-MoE-A2.7Bでは25%剪定時の8タスク平均68.34%（無剪定68.37%）、50%剪定時64.53%。Qwenでスループット45.21→69.42 tok/s、ピークGPUメモリ9.48→7.78GBを報告するが、WikiText2のPPLは7.06→7.94/8.03へ悪化する。"
-list_summary: "MoEのexpert感度と層ごとの活性外れ値を統合して剪定率を変え、Fisher重み付き補償で精度低下を抑える。Qwenで25%剪定時の平均精度をほぼ維持。"
-source: "https://aclanthology.org/2026.findings-acl.1521.pdf"
+- Seohee Yoon
+- Yong Suk Choi
+published: '2026-07-02'
+publication: Findings of ACL 2026, pp. 30408–30423
+publication_type: conference-paper
+publication_status: ACL Anthology公式PDF全文確認
+summary: COMPELは、MoEの層別冗長性を無視する均一なexpert剪定に対し、各expertのFisher情報と各層の活性外れ値分布をKL最小化で学習し、重要度の積に基づきexpertを剪定した後、残存expertへFisher重み付き補償を加える方式。Qwen1.5-MoE-A2.7Bでは25%剪定時の8タスク平均68.34%（無剪定68.37%）、50%剪定時64.53%。Qwenでスループット45.21→69.42 tok/s、ピークGPUメモリ9.48→7.78GBを報告するが、WikiText2のPPLは7.06→7.94/8.03へ悪化する。
+list_summary: MoEのexpert感度と層ごとの活性外れ値を統合して剪定率を変え、Fisher重み付き補償で精度低下を抑える。Qwenで25%剪定時の平均精度をほぼ維持。
+source: https://aclanthology.org/2026.findings-acl.1521.pdf
 sources:
-  - "https://aclanthology.org/2026.findings-acl.1521.pdf"
-  - "https://aclanthology.org/2026.findings-acl.1521/"
-implementation: "校正データC4の128系列×1024トークンを用いてFisher感度・層別外れ値比を計算。αとβをAdamで3 epoch最適化し、全体の剪定予算に応じてexpertを除去。残存expertにγ=0.1のFisher重み付き補償を適用。"
-code: "https://github.com/seohee0925/COMPEL"
-last_checked: "2026-10-28"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
-worker_run_key: "20261028-2045-scheduled-chat-45/r01"
-worker_completed_at: 2026-10-28T20:53:11+09:00
+- https://aclanthology.org/2026.findings-acl.1521.pdf
+- https://aclanthology.org/2026.findings-acl.1521/
+implementation: 校正データC4の128系列×1024トークンを用いてFisher感度・層別外れ値比を計算。αとβをAdamで3 epoch最適化し、全体の剪定予算に応じてexpertを除去。残存expertにγ=0.1のFisher重み付き補償を適用。
+code: https://github.com/seohee0925/COMPEL
+last_checked: '2026-10-28'
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
+worker_run_key: 20261028-2045-scheduled-chat-45/r01
+worker_completed_at: 2026-10-28 20:53:11+09:00
 reference_main_sha: 6e04d3219e2426832b4f59f36e103e38afce4085
 repair_origin_library_file_id: libfile_fd118b98232081918cfef36d6e4c6613
-repair_reason: "authorsメタデータの文字列を公式著者2名の配列へ修正し、一次論文と数値を再照合"
+repair_reason: authorsメタデータの文字列を公式著者2名の配列へ修正し、一次論文と数値を再照合
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 references:
-  - canonical_id: "arXiv:2509.16105"
-    title: "DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning"
-  - canonical_id: "arXiv:2401.04088"
-    title: "Mixtral of Experts"
-references_checked_at: "2026-10-28"
-references_source: "ACL Anthology PDF §2 References"
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2407.00945
+- canonical_id: arXiv:2402.14800
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:2410.12013
+- canonical_id: arXiv:2308.15030
+- canonical_id: arXiv:2509.16105
+- canonical_id: arXiv:2006.16668
+- canonical_id: arXiv:2404.05089
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:2310.06694
+- canonical_id: arXiv:1701.06538
+- canonical_id: arXiv:2412.14219
+- canonical_id: arXiv:2403.03853
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2401.15024
+- canonical_id: arXiv:2409.06211
+- canonical_id: arXiv:2509.22299
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2402.16363
+- canonical_id: arXiv:2505.03531
+- canonical_id: arXiv:2512.18425
+- canonical_id: arXiv:2409.02060
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
 last_audited: null
 audit_version: 0
+references_total: 1
 ---
 
 # COMPEL：MoEの層別重要度とFisher補償によるエキスパート剪定

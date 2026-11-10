@@ -1,35 +1,58 @@
 ---
-canonical_id: "DOI:10.1609/aaai.v39i22.34567"
-title: "Multi-Branch Self-Drafting for LLM Inference Acceleration"
-summary: "Self-Draftは、外部ドラフトモデルや追加学習を使わず、同じLLMの推論パスへランダム初期化した複数の分岐を加え、分岐から作る文脈依存n-gram候補と一般コーパス候補をキャッシュして並列検証する投機的復号方式。分岐間を遮断する注意マスク、分岐更新、LRU文脈キャッシュを統合し、A100 40GB・batch 1でLlama/CodeLlama 7B/13Bを評価した。原著Table 2では自己回帰比1.45〜2.54倍のトークンスループット、2.00〜3.22 token/forwardを報告するが、コード生成以外の利得は小さく、分岐長・本数を増やし過ぎると検証費用で低下する。"
-list_summary: "単一LLMの複数の分岐から文脈依存ドラフトを作り、一般コーパスとLRUキャッシュの候補を同時検証する学習不要のSelf-Draft。A100・batch 1で自己回帰比1.45〜2.54倍の復号スループットを報告。"
+canonical_id: DOI:10.1609/aaai.v39i22.34567
+title: Multi-Branch Self-Drafting for LLM Inference Acceleration
+summary: Self-Draftは、外部ドラフトモデルや追加学習を使わず、同じLLMの推論パスへランダム初期化した複数の分岐を加え、分岐から作る文脈依存n-gram候補と一般コーパス候補をキャッシュして並列検証する投機的復号方式。分岐間を遮断する注意マスク、分岐更新、LRU文脈キャッシュを統合し、A100 40GB・batch 1でLlama/CodeLlama 7B/13Bを評価した。原著Table 2では自己回帰比1.45〜2.54倍のトークンスループット、2.00〜3.22 token/forwardを報告するが、コード生成以外の利得は小さく、分岐長・本数を増やし過ぎると検証費用で低下する。
+list_summary: 単一LLMの複数の分岐から文脈依存ドラフトを作り、一般コーパスとLRUキャッシュの候補を同時検証する学習不要のSelf-Draft。A100・batch 1で自己回帰比1.45〜2.54倍の復号スループットを報告。
 authors:
-  - Zipeng Gao
-  - Qingrong Xia
-  - Tong Xu
-  - Xinyu Duan
-  - Zhi Zheng
-  - Zhefeng Wang
-  - Enhong Chen
-published: "2025-04-11"
-publication: "Proceedings of the AAAI Conference on Artificial Intelligence 39(22), 23942–23950 (AAAI 2025)"
-publication_type: "conference"
-publication_status: "published, peer-reviewed conference proceedings"
-source: "https://ojs.aaai.org/index.php/AAAI/article/download/34567/36722"
+- Zipeng Gao
+- Qingrong Xia
+- Tong Xu
+- Xinyu Duan
+- Zhi Zheng
+- Zhefeng Wang
+- Enhong Chen
+published: '2025-04-11'
+publication: Proceedings of the AAAI Conference on Artificial Intelligence 39(22), 23942–23950 (AAAI 2025)
+publication_type: conference
+publication_status: published, peer-reviewed conference proceedings
+source: https://ojs.aaai.org/index.php/AAAI/article/download/34567/36722
 sources:
-  - "https://ojs.aaai.org/index.php/AAAI/article/download/34567/36722"
-  - "https://ojs.aaai.org/index.php/AAAI/article/view/34567"
-implementation: "原著のSelf-DraftをNVIDIA A100 40GB、FP16、batch size 1で評価。Llama 7B/13B、CodeLlama 7B/13Bを対象とし、原著PDFの冒頭に著者の公式コード公開先を明記。"
-code: "https://github.com/ZipECHO/Self-Draft"
-last_checked: "2026-10-26"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-26T11:56:00+09:00"
-worker_run_key: "20261026-1156-scheduled-chat-00/r01"
-reference_main_sha: "00a6f0a2bbc5402d0292142f1c6f664c72cc5906"
+- https://ojs.aaai.org/index.php/AAAI/article/download/34567/36722
+- https://ojs.aaai.org/index.php/AAAI/article/view/34567
+implementation: 原著のSelf-DraftをNVIDIA A100 40GB、FP16、batch size 1で評価。Llama 7B/13B、CodeLlama 7B/13Bを対象とし、原著PDFの冒頭に著者の公式コード公開先を明記。
+code: https://github.com/ZipECHO/Self-Draft
+last_checked: '2026-10-26'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-26T11:56:00+09:00'
+worker_run_key: 20261026-1156-scheduled-chat-00/r01
+reference_main_sha: 00a6f0a2bbc5402d0292142f1c6f664c72cc5906
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2108.07732
+  arxiv_id: '2108.07732'
+- canonical_id: arXiv:2312.12728
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2309.08168
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2402.02057
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: DOI:10.18653/v1/d19-1633
+- canonical_id: arXiv:1904.09324
+- canonical_id: arXiv:2305.11627
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2402.16363
+- canonical_id: arXiv:1910.04732
+- canonical_id: arXiv:2311.08252
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Self-Draft：単一LLMの分岐を使った学習不要の投機的復号

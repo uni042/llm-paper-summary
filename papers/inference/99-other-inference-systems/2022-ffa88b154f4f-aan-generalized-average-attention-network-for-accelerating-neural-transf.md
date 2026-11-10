@@ -1,39 +1,47 @@
 ---
-canonical_id: "DOI:10.1613/jair.1.13896"
-doi: "10.1613/jair.1.13896"
-title: "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer"
-summary: "自己回帰Transformerデコーダの全履歴へのsoftmax注意を、位置・内容に応じた正のスコアの累積加重平均とゲートへ置換するAAN+。推論時は一定個数の再帰状態だけで更新し、WMT14 En-DeでBLEU 27.59に対してNer 27.56、復号1.30倍を達成。要約ではROUGE-L低下もある。"
-list_summary: "AAN+はデコーダ自己注意を累積加重平均とゲートへ置き換え、再帰状態を一定数に抑えて逐次復号をO(1)依存にする。翻訳で約1.3倍高速化する一方、長文要約では品質が低下する。"
+canonical_id: DOI:10.1613/jair.1.13896
+doi: 10.1613/jair.1.13896
+title: 'AAN+: Generalized Average Attention Network for Accelerating Neural Transformer'
+summary: 自己回帰Transformerデコーダの全履歴へのsoftmax注意を、位置・内容に応じた正のスコアの累積加重平均とゲートへ置換するAAN+。推論時は一定個数の再帰状態だけで更新し、WMT14 En-DeでBLEU 27.59に対してNer 27.56、復号1.30倍を達成。要約ではROUGE-L低下もある。
+list_summary: AAN+はデコーダ自己注意を累積加重平均とゲートへ置き換え、再帰状態を一定数に抑えて逐次復号をO(1)依存にする。翻訳で約1.3倍高速化する一方、長文要約では品質が低下する。
 authors:
-  - Biao Zhang
-  - Deyi Xiong
-  - Yubin Ge
-  - Junfeng Yao
-  - Hao Yue
-  - Jinsong Su
-published: "2022-11-06"
-publication: "Journal of Artificial Intelligence Research 75, 677-708 (2022)"
-publication_type: "peer-reviewed journal article"
-publication_status: "published"
-source: "https://www.jair.org/index.php/jair/article/view/13896"
+- Biao Zhang
+- Deyi Xiong
+- Yubin Ge
+- Junfeng Yao
+- Hao Yue
+- Jinsong Su
+published: '2022-11-06'
+publication: Journal of Artificial Intelligence Research 75, 677-708 (2022)
+publication_type: peer-reviewed journal article
+publication_status: published
+source: https://www.jair.org/index.php/jair/article/view/13896
 sources:
-  - "https://www.jair.org/index.php/jair/article/download/13896/26859/32362"
-  - "https://www.jair.org/index.php/jair/article/view/13896"
-  - "https://doi.org/10.1613/jair.1.13896"
-implementation: "TensorFlowベースの研究実装。マスク行列による並列累積和と推論時の動的計画更新を使用。著者はMarian等での採用に言及するが、本稿の検証時点でAAN+専用の公式リポジトリURLは確認できない。"
+- https://www.jair.org/index.php/jair/article/download/13896/26859/32362
+- https://www.jair.org/index.php/jair/article/view/13896
+- https://doi.org/10.1613/jair.1.13896
+implementation: TensorFlowベースの研究実装。マスク行列による並列累積和と推論時の動的計画更新を使用。著者はMarian等での採用に言及するが、本稿の検証時点でAAN+専用の公式リポジトリURLは確認できない。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T00:59:00+09:00"
-worker_run_key: "20261030-0056-scheduled-chat-00/r01"
-reference_main_sha: "7d4cb306e202d477ba1dbc9117dcf82edd4c61e6"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T00:59:00+09:00'
+worker_run_key: 20261030-0056-scheduled-chat-00/r01
+reference_main_sha: 7d4cb306e202d477ba1dbc9117dcf82edd4c61e6
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_repair: true
-returned_research_reason: "前回見出し修復稿が再差し戻しされ手法説明量601文字と判定されたため、JAIR一次論文の式(4)～(17)、Table 1、Figure 6に基づき学習・生成経路、状態更新、交差注意の境界を補強"
-returned_research_blocked_source_git_blob_sha: "69ae3150baf93e79887bc156eb8e77db13644d36"
+returned_research_reason: 前回見出し修復稿が再差し戻しされ手法説明量601文字と判定されたため、JAIR一次論文の式(4)～(17)、Table 1、Figure 6に基づき学習・生成経路、状態更新、交差注意の境界を補強
+returned_research_blocked_source_git_blob_sha: 69ae3150baf93e79887bc156eb8e77db13644d36
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:1905.09418
+- canonical_id: arXiv:2105.04371
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2009.14794
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # AAN+：累積加重平均を使う定数状態デコーダ注意と、その速度・品質の交換条件

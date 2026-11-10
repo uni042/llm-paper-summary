@@ -1,44 +1,437 @@
 ---
-canonical_id: "DOI:10.1145/3706418"
-doi: "10.1145/3706418"
-title: "Resource-efficient Algorithms and Systems of Foundation Models: A Survey"
+canonical_id: DOI:10.1145/3706418
+doi: 10.1145/3706418
+title: 'Resource-efficient Algorithms and Systems of Foundation Models: A Survey'
 authors:
-  - "Mengwei Xu"
-  - "Dongqi Cai"
-  - "Wangsong Yin"
-  - "Shangguang Wang"
-  - "Xin Jin"
-  - "Xuanzhe Liu"
-published: "2025-01-09"
-publication: "ACM Computing Surveys 57(5), Article 110, 39 pages"
-publication_type: "peer-reviewed journal survey"
-publication_status: "published"
-source: "https://www.caidongqi.com/pdf/CSUR25-llm-survey.pdf"
+- Mengwei Xu
+- Dongqi Cai
+- Wangsong Yin
+- Shangguang Wang
+- Xin Jin
+- Xuanzhe Liu
+published: '2025-01-09'
+publication: ACM Computing Surveys 57(5), Article 110, 39 pages
+publication_type: peer-reviewed journal survey
+publication_status: published
+source: https://www.caidongqi.com/pdf/CSUR25-llm-survey.pdf
 sources:
-  - "https://www.caidongqi.com/pdf/CSUR25-llm-survey.pdf"
-  - "https://doi.org/10.1145/3706418"
-implementation: "独立した新規推論システムではなく、2024年頃までの基盤モデルの構造・圧縮・学習・クラウド/エッジ推論のアルゴリズムと実装を比較分類したサーベイ。表3に当時の推論基盤を整理するが、本論文自体の実装はない。"
+- https://www.caidongqi.com/pdf/CSUR25-llm-survey.pdf
+- https://doi.org/10.1145/3706418
+implementation: 独立した新規推論システムではなく、2024年頃までの基盤モデルの構造・圧縮・学習・クラウド/エッジ推論のアルゴリズムと実装を比較分類したサーベイ。表3に当時の推論基盤を整理するが、本論文自体の実装はない。
 code: null
-last_checked: "2026-10-25"
-worker_completed_at: "2026-10-25T21:30:00+09:00"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261025-2130-scheduled-chat-30/r01"
-reference_main_sha: "4c59610190aa807694851df13fbca80e49813f19"
+last_checked: '2026-10-25'
+worker_completed_at: '2026-10-25T21:30:00+09:00'
+worker_id: scheduled-chat-30
+worker_run_key: 20261025-2130-scheduled-chat-30/r01
+reference_main_sha: 4c59610190aa807694851df13fbca80e49813f19
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_repair: true
-returned_research_source_path: ".survey/import-inbox/blocked/research/retry-research-ef1d16605523--0-libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--start-snapshot-20261024.md"
-summary: "2025年のACM Computing Surveys掲載サーベイ。基盤モデルの計算・メモリ費用を構造、アルゴリズム、システムの3層に分け、注意近似・MoE・早期終了、量子化/枝刈り、KVキャッシュ、クラウドのprefill/decode分離、エッジのCPU/GPUオフロードまでを統一的に整理する。独自ベンチマークではなく各引用研究の異なる条件の数値を紹介しており、例えばH2Oの最大1.9倍の遅延改善と29倍のスループットは同一条件の一括測定値として解釈できない。2024年までの研究を中心とするため、2026年の実装選定には後続研究と現行コードの再確認が必要。"
-list_summary: "基盤モデルの効率化を構造・圧縮アルゴリズム・クラウド/エッジシステムに分解し、KV・MoE・量子化・推論スケジューリングを横断整理した39ページの査読サーベイ。"
+returned_research_source_path: .survey/import-inbox/blocked/research/retry-research-ef1d16605523--0-libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--start-snapshot-20261024.md
+summary: 2025年のACM Computing Surveys掲載サーベイ。基盤モデルの計算・メモリ費用を構造、アルゴリズム、システムの3層に分け、注意近似・MoE・早期終了、量子化/枝刈り、KVキャッシュ、クラウドのprefill/decode分離、エッジのCPU/GPUオフロードまでを統一的に整理する。独自ベンチマークではなく各引用研究の異なる条件の数値を紹介しており、例えばH2Oの最大1.9倍の遅延改善と29倍のスループットは同一条件の一括測定値として解釈できない。2024年までの研究を中心とするため、2026年の実装選定には後続研究と現行コードの再確認が必要。
+list_summary: 基盤モデルの効率化を構造・圧縮アルゴリズム・クラウド/エッジシステムに分解し、KV・MoE・量子化・推論スケジューリングを横断整理した39ページの査読サーベイ。
 references:
-  - canonical_id: "arXiv:2307.02628"
-  - canonical_id: "arXiv:2305.14314"
-  - canonical_id: "arXiv:2307.08691"
-  - canonical_id: "arXiv:2312.00752"
-references_checked_at: "2026-10-25"
-references_source: "published-primary-PDF-reference-list"
+- canonical_id: arXiv:2401.08671
+- canonical_id: arXiv:2306.13649
+  arxiv_id: '2306.13649'
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2312.11514
+  arxiv_id: '2312.11514'
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2305.15805
+  arxiv_id: '2305.15805'
+- canonical_id: arXiv:2310.05424
+  arxiv_id: '2310.05424'
+- canonical_id: arXiv:2012.15701
+  arxiv_id: '2012.15701'
+- canonical_id: arXiv:2106.15183
+  arxiv_id: '2106.15183'
+- canonical_id: arXiv:2308.14711
+  arxiv_id: '2308.14711'
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2304.11062
+  arxiv_id: '2304.11062'
+- canonical_id: arXiv:2205.14756
+  arxiv_id: '2205.14756'
+- canonical_id: arXiv:2305.17530
+  arxiv_id: '2305.17530'
+- canonical_id: DOI:10.1145/3706418
+- canonical_id: arXiv:2306.07967
+  arxiv_id: '2306.07967'
+- canonical_id: arXiv:2307.13304
+  arxiv_id: '2307.13304'
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2103.14899
+  arxiv_id: '2103.14899'
+- canonical_id: arXiv:2310.18167
+  arxiv_id: '2310.18167'
+- canonical_id: arXiv:2111.00160
+  arxiv_id: '2111.00160'
+- canonical_id: arXiv:2309.12307
+  arxiv_id: '2309.12307'
+- canonical_id: arXiv:2110.07814
+  arxiv_id: '2110.07814'
+- canonical_id: arXiv:2305.14788
+  arxiv_id: '2305.14788'
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2212.14052
+  arxiv_id: '2212.14052'
+- canonical_id: arXiv:2311.03748
+  arxiv_id: '2311.03748'
+- canonical_id: arXiv:2307.02628
+  arxiv_id: '2307.02628'
+- canonical_id: arXiv:2208.07339
+  arxiv_id: '2208.07339'
+- canonical_id: arXiv:2305.14314
+  arxiv_id: '2305.14314'
+- canonical_id: arXiv:2306.03078
+  arxiv_id: '2306.03078'
+- canonical_id: arXiv:2307.02486
+  arxiv_id: '2307.02486'
+- canonical_id: arXiv:2312.00678
+  arxiv_id: '2312.00678'
+- canonical_id: arXiv:2301.00234
+  arxiv_id: '2301.00234'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:2112.06905
+- canonical_id: arXiv:2309.17425
+  arxiv_id: '2309.17425'
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:2103.14636
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2301.12726
+  arxiv_id: '2301.12726'
+- canonical_id: arXiv:2304.14108
+  arxiv_id: '2304.14108'
+- canonical_id: arXiv:2307.06945
+  arxiv_id: '2307.06945'
+- canonical_id: arXiv:2001.08950
+  arxiv_id: '2001.08950'
+- canonical_id: arXiv:2312.00752
+  arxiv_id: '2312.00752'
+- canonical_id: arXiv:2111.00396
+  arxiv_id: '2111.00396'
+- canonical_id: arXiv:2306.08543
+  arxiv_id: '2306.08543'
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1145/3579371.3589038
+- canonical_id: arXiv:2310.10700
+  arxiv_id: '2310.10700'
+- canonical_id: arXiv:2002.10941
+  arxiv_id: '2002.10941'
+- canonical_id: arXiv:1510.00149
+  arxiv_id: '1510.00149'
+- canonical_id: arXiv:1506.02626
+  arxiv_id: '1506.02626'
+- canonical_id: arXiv:2402.12354
+  arxiv_id: '2402.12354'
+- canonical_id: arXiv:2311.01906
+  arxiv_id: '2311.01906'
+- canonical_id: arXiv:2310.03270
+  arxiv_id: '2310.03270'
+- canonical_id: arXiv:2310.07702
+  arxiv_id: '2310.07702'
+- canonical_id: arXiv:2212.10071
+  arxiv_id: '2212.10071'
+- canonical_id: arXiv:2311.01282
+  arxiv_id: '2311.01282'
+- canonical_id: arXiv:2305.02301
+  arxiv_id: '2305.02301'
+- canonical_id: arXiv:2305.11234
+  arxiv_id: '2305.11234'
+- canonical_id: arXiv:2104.02112
+  arxiv_id: '2104.02112'
+- canonical_id: arXiv:2207.05557
+  arxiv_id: '2207.05557'
+- canonical_id: arXiv:2312.08901
+  arxiv_id: '2312.08901'
+- canonical_id: arXiv:2212.10670
+  arxiv_id: '2212.10670'
+- canonical_id: arXiv:2102.08124
+  arxiv_id: '2102.08124'
+- canonical_id: arXiv:2206.03382
+- canonical_id: arXiv:2310.05736
+  arxiv_id: '2310.05736'
+- canonical_id: arXiv:2311.11514
+  arxiv_id: '2311.11514'
+- canonical_id: arXiv:2310.01655
+  arxiv_id: '2310.01655'
+- canonical_id: arXiv:2001.08361
+  arxiv_id: '2001.08361'
+- canonical_id: arXiv:2309.14021
+  arxiv_id: '2309.14021'
+- canonical_id: arXiv:2010.07003
+  arxiv_id: '2010.07003'
+- canonical_id: arXiv:2305.14152
+  arxiv_id: '2305.14152'
+- canonical_id: arXiv:2306.07629
+  arxiv_id: '2306.07629'
+- canonical_id: arXiv:2302.14017
+  arxiv_id: '2302.14017'
+- canonical_id: arXiv:2304.02643
+  arxiv_id: '2304.02643'
+- canonical_id: arXiv:2212.05055
+  arxiv_id: '2212.05055'
+- canonical_id: arXiv:2308.15030
+  arxiv_id: '2308.15030'
+- canonical_id: arXiv:2112.13890
+  arxiv_id: '2112.13890'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2109.04838
+  arxiv_id: '2109.04838'
+- canonical_id: arXiv:2306.02272
+  arxiv_id: '2306.02272'
+- canonical_id: arXiv:2306.00317
+  arxiv_id: '2306.00317'
+- canonical_id: arXiv:2104.08691
+  arxiv_id: '2104.08691'
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2309.10020
+  arxiv_id: '2309.10020'
+- canonical_id: arXiv:2203.14509
+  arxiv_id: '2203.14509'
+- canonical_id: arXiv:2203.07814
+- canonical_id: arXiv:2209.15200
+  arxiv_id: '2209.15200'
+- canonical_id: arXiv:2306.00980
+  arxiv_id: '2306.00980'
+- canonical_id: arXiv:2401.05459
+  arxiv_id: '2401.05459'
+- canonical_id: arXiv:2310.08659
+  arxiv_id: '2310.08659'
+- canonical_id: arXiv:2306.11222
+  arxiv_id: '2306.11222'
+- canonical_id: arXiv:2206.01191
+  arxiv_id: '2206.01191'
+- canonical_id: arXiv:2305.16742
+  arxiv_id: '2305.16742'
+- canonical_id: arXiv:2306.00477
+  arxiv_id: '2306.00477'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: arXiv:2309.04965
+  arxiv_id: '2309.04965'
+- canonical_id: arXiv:2310.08041
+  arxiv_id: '2310.08041'
+- canonical_id: arXiv:2202.09778
+  arxiv_id: '2202.09778'
+- canonical_id: arXiv:2302.02210
+  arxiv_id: '2302.02210'
+- canonical_id: arXiv:2402.09353
+  arxiv_id: '2402.09353'
+- canonical_id: arXiv:2305.07027
+  arxiv_id: '2305.07027'
+- canonical_id: DOI:10.1007/s11432-021-3528-7
+  doi: 10.1007/s11432-021-3528-7
+- canonical_id: arXiv:2305.17118
+  arxiv_id: '2305.17118'
+- canonical_id: arXiv:2305.17888
+  arxiv_id: '2305.17888'
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2409.15790
+  arxiv_id: '2409.15790'
+- canonical_id: arXiv:2305.11627
+  arxiv_id: '2305.11627'
+- canonical_id: arXiv:2209.10655
+  arxiv_id: '2209.10655'
+- canonical_id: arXiv:2110.02178
+  arxiv_id: '2110.02178'
+- canonical_id: arXiv:2404.02948
+  arxiv_id: '2404.02948'
+- canonical_id: arXiv:2111.15668
+  arxiv_id: '2111.15668'
+- canonical_id: arXiv:2312.15234
+  arxiv_id: '2312.15234'
+- canonical_id: arXiv:2305.09781
+  arxiv_id: '2305.09781'
+- canonical_id: arXiv:2311.15566
+  arxiv_id: '2311.15566'
+- canonical_id: arXiv:2110.15943
+  arxiv_id: '2110.15943'
+- canonical_id: arXiv:2305.16300
+  arxiv_id: '2305.16300'
+- canonical_id: arXiv:2305.16820
+  arxiv_id: '2305.16820'
+- canonical_id: arXiv:2104.04473
+- canonical_id: arXiv:2211.09761
+  arxiv_id: '2211.09761'
+- canonical_id: arXiv:2304.03946
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2303.06349
+  arxiv_id: '2303.06349'
+- canonical_id: arXiv:2205.03436
+  arxiv_id: '2205.03436'
+- canonical_id: arXiv:2111.11124
+  arxiv_id: '2111.11124'
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: arXiv:2212.09748
+  arxiv_id: '2212.09748'
+- canonical_id: arXiv:2305.13048
+  arxiv_id: '2305.13048'
+- canonical_id: arXiv:2401.04081
+  arxiv_id: '2401.04081'
+- canonical_id: arXiv:2302.10866
+  arxiv_id: '2302.10866'
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2310.02409
+  arxiv_id: '2310.02409'
+- canonical_id: arXiv:1910.02054
+- canonical_id: arXiv:2106.02034
+  arxiv_id: '2106.02034'
+- canonical_id: arXiv:2101.06840
+- canonical_id: arXiv:2310.11028
+  arxiv_id: '2310.11028'
+- canonical_id: arXiv:2302.03773
+  arxiv_id: '2302.03773'
+- canonical_id: arXiv:2311.03285
+  arxiv_id: '2311.03285'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2301.13741
+  arxiv_id: '2301.13741'
+- canonical_id: arXiv:2010.02502
+  arxiv_id: '2010.02502'
+- canonical_id: arXiv:2312.12456
+  arxiv_id: '2312.12456'
+- canonical_id: arXiv:2306.11695
+  arxiv_id: '2306.11695'
+- canonical_id: arXiv:2307.08621
+  arxiv_id: '2307.08621'
+- canonical_id: arXiv:2310.15141
+  openreview_id: d0mGsaheuT
+- canonical_id: arXiv:2011.14203
+  arxiv_id: '2011.14203'
+- canonical_id: arXiv:2203.10705
+  arxiv_id: '2203.10705'
+- canonical_id: arXiv:2308.02019
+  arxiv_id: '2308.02019'
+- canonical_id: arXiv:2109.06952
+  arxiv_id: '2109.06952'
+- canonical_id: arXiv:2012.12877
+  arxiv_id: '2012.12877'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2310.19975
+  arxiv_id: '2310.19975'
+- canonical_id: arXiv:2306.04050
+  arxiv_id: '2306.04050'
+- canonical_id: arXiv:2303.14189
+  arxiv_id: '2303.14189'
+- canonical_id: arXiv:2311.17049
+  arxiv_id: '2311.17049'
+- canonical_id: arXiv:2305.16701
+  arxiv_id: '2305.16701'
+- canonical_id: arXiv:2312.03863
+  arxiv_id: '2312.03863'
+- canonical_id: arXiv:2310.11453
+  arxiv_id: '2310.11453'
+- canonical_id: arXiv:2012.09852
+  doi: 10.1109/hpca51647.2021.00018
+- canonical_id: arXiv:2006.04768
+  arxiv_id: '2006.04768'
+- canonical_id: arXiv:2312.04793
+  arxiv_id: '2312.04793'
+- canonical_id: arXiv:2304.03284
+  arxiv_id: '2304.03284'
+- canonical_id: arXiv:2210.17451
+  arxiv_id: '2210.17451'
+- canonical_id: DOI:10.1145/3600006.3613145
+- canonical_id: arXiv:2304.09145
+  arxiv_id: '2304.09145'
+- canonical_id: arXiv:2308.15272
+  arxiv_id: '2308.15272'
+- canonical_id: arXiv:2210.03162
+  arxiv_id: '2210.03162'
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: arXiv:2310.06694
+  arxiv_id: '2310.06694'
+- canonical_id: arXiv:2201.00520
+  arxiv_id: '2201.00520'
+- canonical_id: arXiv:2211.10438
+  arxiv_id: '2211.10438'
+- canonical_id: arXiv:2309.17453
+  arxiv_id: '2309.17453'
+- canonical_id: arXiv:2004.12993
+  arxiv_id: '2004.12993'
+- canonical_id: arXiv:2309.04255
+  arxiv_id: '2309.04255'
+- canonical_id: arXiv:2407.05858
+  arxiv_id: '2407.05858'
+- canonical_id: arXiv:2307.00526
+  arxiv_id: '2307.00526'
+- canonical_id: arXiv:2401.08092
+  arxiv_id: '2401.08092'
+- canonical_id: arXiv:2309.14717
+  arxiv_id: '2309.14717'
+- canonical_id: DOI:10.1007/s11432-024-4227-2
+  doi: 10.1007/s11432-024-4227-2
+- canonical_id: arXiv:2311.10986
+  arxiv_id: '2311.10986'
+- canonical_id: arXiv:2304.13712
+  arxiv_id: '2304.13712'
+- canonical_id: arXiv:2309.15275
+  arxiv_id: '2309.15275'
+- canonical_id: arXiv:2310.16836
+  arxiv_id: '2310.16836'
+- canonical_id: arXiv:2206.01861
+- canonical_id: DOI:10.18653/v1/2021.naacl-main.463
+  arxiv_id: '2105.11618'
+- canonical_id: arXiv:2308.14352
+  arxiv_id: '2308.14352'
+- canonical_id: arXiv:2411.05046
+  arxiv_id: '2411.05046'
+- canonical_id: arXiv:2112.07658
+  arxiv_id: '2112.07658'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1145/3636534
+  doi: 10.1145/3636534
+- canonical_id: arXiv:2304.01089
+  arxiv_id: '2304.01089'
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2111.09881
+  arxiv_id: '2111.09881'
+- canonical_id: arXiv:2401.03868
+  arxiv_id: '2401.03868'
+- canonical_id: arXiv:2105.14103
+  arxiv_id: '2105.14103'
+- canonical_id: arXiv:2210.03052
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2305.18403
+  arxiv_id: '2305.18403'
+- canonical_id: arXiv:2110.01786
+- canonical_id: arXiv:2306.14048
+  arxiv_id: '2306.14048'
+- canonical_id: arXiv:2204.04362
+  arxiv_id: '2204.04362'
+- canonical_id: arXiv:2304.11277
+  arxiv_id: '2304.11277'
+- canonical_id: arXiv:2310.19102
+  arxiv_id: '2310.19102'
+- canonical_id: arXiv:2311.16567
+  arxiv_id: '2311.16567'
+- canonical_id: arXiv:2312.07104
+  arxiv_id: '2312.07104'
+- canonical_id: arXiv:2006.04152
+- canonical_id: arXiv:2308.07633
+  arxiv_id: '2308.07633'
+- canonical_id: arXiv:2309.02411
+  arxiv_id: '2309.02411'
+- canonical_id: arXiv:2001.04451
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
 last_audited: null
 audit_version: 0
+references_total: 318
 ---
 
 # Resource-efficient Algorithms and Systems of Foundation Models — 基盤モデル効率化の階層横断サーベイ
