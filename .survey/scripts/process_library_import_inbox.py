@@ -657,6 +657,7 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
     results_root = repo_root / RESULT_RESEARCH
     latest: dict[str, tuple[tuple[str, str], dict[str, Any], Path]] = {}
     return_counts: dict[str, int] = {}
+    imported_receipts: dict[str, list[dict[str, Any]]] = {}
 
     if results_root.is_dir():
         for result_path in sorted(results_root.glob("*.json")):
@@ -674,6 +675,8 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
                 continue
             if status == "blocked_quality":
                 return_counts[canonical_id] = return_counts.get(canonical_id, 0) + 1
+            elif status == "imported":
+                imported_receipts.setdefault(canonical_id.casefold(), []).append(result)
             processed_at = str(result.get("processed_at") or "")
             order_key = (processed_at, result_path.name)
             previous = latest.get(canonical_id)
@@ -685,6 +688,26 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
         if result.get("status") != "blocked_quality":
             continue
         if _proven_existing_duplicate(repo_root, canonical_id, list(result.get("failures") or [])):
+            continue
+        # An older successful import can still win over a later failed duplicate
+        # submission. Require BOTH an imported receipt and the same canonical
+        # paper still present on main; identity alone or a stale receipt is unsafe.
+        already_imported = False
+        for accepted in imported_receipts.get(canonical_id.casefold(), []):
+            raw_path = str(accepted.get("paper_path") or "").strip()
+            if not raw_path.startswith(("papers/inference/", "papers/training/", "papers/survey/")):
+                continue
+            published = (repo_root / raw_path).resolve()
+            if not published.is_relative_to(repo_root.resolve()) or not published.is_file():
+                continue
+            try:
+                published_id = str(parse_frontmatter(published.read_text(encoding="utf-8")).get("canonical_id") or "").strip()
+            except (OSError, UnicodeError, ValueError):
+                continue
+            if published_id.casefold() == canonical_id.casefold():
+                already_imported = True
+                break
+        if already_imported:
             continue
         blocked_path = str(result.get("blocked_path") or "").strip() or None
         title = None
@@ -725,7 +748,7 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
         "priority": "before normal Research/Discovery work",
         "assignment": "sha256(canonical_id)[0] mod 3",
         "workers": list(REPAIR_WORKERS),
-        "completion": "removed after a later imported/already_represented receipt for the same canonical_id",
+        "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id",
     }
     queue_path = repo_root / RETURNED_RESEARCH_QUEUE
     if queue_path.is_file():
