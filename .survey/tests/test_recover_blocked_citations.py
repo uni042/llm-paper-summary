@@ -187,6 +187,70 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
             pdf.assert_called_once_with(primary_url)
             self.assertEqual(meta["references_total"], 34)
 
+    def test_arxiv_html_bibliography_precedes_source_archive_fallback(self) -> None:
+        from tempfile import TemporaryDirectory
+
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            paper = root / "papers/inference/example/paper.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text("placeholder", encoding="utf-8")
+            meta = {
+                "canonical_id": "arXiv:2503.02495",
+                "arxiv_id": "2503.02495",
+                "source": "https://arxiv.org/html/2503.02495",
+            }
+            with (
+                patch.object(recovery, "load_records", return_value=[]),
+                patch.object(recovery, "alias_index", return_value={}),
+                patch.object(recovery, "paper_paths", return_value=[paper]),
+                patch.object(recovery, "front", return_value=(meta, "")),
+                patch.object(recovery, "primary_pdf_urls", return_value=[]),
+                patch.object(recovery, "arxiv_html_references", return_value=(
+                    [{"text": "Example reference", "hrefs": []}],
+                    "arxiv-html-reference-section",
+                )) as html,
+                patch.object(recovery, "source_archive_references") as compiled,
+                patch.object(recovery, "arxiv_bibtex_entries") as bibtex,
+                patch.object(recovery, "coverage_report", return_value={"summary": {"incomplete": 0}}),
+            ):
+                result = recovery.backfill(root, limit=1, apply=False)
+            self.assertEqual(result["completed"], 1)
+            html.assert_called_once_with("2503.02495")
+            compiled.assert_not_called()
+            bibtex.assert_not_called()
+            self.assertEqual(meta["references_total"], 1)
+            self.assertEqual(meta["references_source"], "arxiv-html-reference-section")
+
+    def test_arxiv_compiled_bibliography_is_used_when_html_unavailable(self) -> None:
+        from tempfile import TemporaryDirectory
+
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            paper = root / "papers/inference/example/paper.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text("placeholder", encoding="utf-8")
+            meta = {"canonical_id": "arXiv:2506.05387"}
+            with (
+                patch.object(recovery, "load_records", return_value=[]),
+                patch.object(recovery, "alias_index", return_value={}),
+                patch.object(recovery, "paper_paths", return_value=[paper]),
+                patch.object(recovery, "front", return_value=(meta, "")),
+                patch.object(recovery, "primary_pdf_urls", return_value=[]),
+                patch.object(recovery, "arxiv_html_references", side_effect=ValueError("HTML unavailable")),
+                patch.object(recovery, "source_archive_references", return_value=(
+                    [{"text": "Source bbl item", "hrefs": []}],
+                    "arxiv-source-reference-section",
+                )) as compiled,
+                patch.object(recovery, "arxiv_bibtex_entries") as bibtex,
+                patch.object(recovery, "coverage_report", return_value={"summary": {"incomplete": 0}}),
+            ):
+                result = recovery.backfill(root, limit=1, apply=False)
+            self.assertEqual(result["completed"], 1)
+            compiled.assert_called_once_with("2506.05387")
+            bibtex.assert_not_called()
+            self.assertEqual(meta["references_source"], "arxiv-source-reference-section")
+
     def test_bibtex_blocks_keep_complete_entries(self) -> None:
         text = """
 @article{first,
