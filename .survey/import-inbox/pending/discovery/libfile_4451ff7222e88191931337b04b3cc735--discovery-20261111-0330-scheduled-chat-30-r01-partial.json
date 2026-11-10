@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261111-0330-scheduled-chat-30/r01",
+  "reference_main_sha": "fb9d78caf29753fd8c1334d08ac415cc6926c0e7",
+  "candidate_inventory": 571,
+  "record_count": 2,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.15075",
+      "identity_tokens": [
+        "arXiv:2502.15075",
+        "DOI:10.48550/arXiv.2502.15075",
+        "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a"
+      ],
+      "title": "Quantize What Counts: More for Keys, Less for Values",
+      "reason": "worklist rank 15の旧題名「Bit Allocation Insights Informed by Spectral Gaps in Keys and Values」に対応するarXiv改題版。著者らはキー射影と値射影のスペクトル・Frobeniusノルムの差を理論化し、同じKVキャッシュ予算でキー側の量子化精度を優先する配分を提案。一次要旨v3はキー4bit・値2bitが均一4bit構成と比べ最大98.3%の精度を保持しつつメモリ削減すると報告。KV量子化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2502.15075",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 15,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T03:34:55+09:00",
+      "last_checked_at": "2026-11-11T03:34:55+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03351",
+      "identity_tokens": [
+        "arXiv:2508.03351",
+        "DOI:10.48550/arXiv.2508.03351"
+      ],
+      "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+      "reason": "VLMの視覚トークン冗長性とモダリティ差を考慮する量子化校正法。損失摂動と出力勾配からトークン重要度を算出し、層ごとの再構成目的へ導入する。一次要旨v3では推論時追加演算を伴わず、INT2g128条件でMME-RealWorld精度16.45%改善を報告。VLMの低bit推論効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 19,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T03:34:55+09:00",
+      "last_checked_at": "2026-11-11T03:34:55+09:00"
+    }
+  ]
+}
