@@ -30,6 +30,7 @@ from typing import Any
 from urllib.parse import quote, urlsplit
 
 from backfill_citations import (
+    arxiv_html_references,
     entries_to_references,
     fetch_bytes,
     load_state,
@@ -317,9 +318,20 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
             except Exception as exc:
                 errors.append(f"{source_url}: {type(exc).__name__}: {exc}")
 
-        # A withdrawn arXiv record may return 404 for HTML/PDF while retaining an
-        # official source archive for an explicit version. BibTeX remains the
-        # paper's own bibliography and is acceptable as the primary source.
+        # Official arXiv HTML has direct bibliography entries even when a
+        # PDF's text layer is broken or the source tarball has no .bib file.
+        # Preserve this primary evidence before falling back to source BibTeX.
+        if not success and aid:
+            try:
+                entries, source_label = arxiv_html_references(aid)
+                references = entries_to_references(entries, aliases, title_targets)
+                total = len(entries)
+                source_url = f"https://arxiv.org/html/{aid}"
+                success = True
+            except Exception as exc:
+                errors.append(f"arXiv HTML references: {type(exc).__name__}: {exc}")
+
+        # Withdrawn arXiv versions may still retain a formal .bib source file.
         if not success and aid:
             try:
                 entries, source_url = arxiv_bibtex_entries(aid)
