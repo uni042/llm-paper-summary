@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "source_url": "https://arxiv.org/abs/2608.28044",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "IEEE International Symposium on Workload Characterization",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31× at context-512 to 1.17× at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+      "identifiers": [
+        "SemanticScholar:aaf46dc87740c49088dedc2036ecaa4814de3791"
+      ],
+      "semantic_scholar_id": "aaf46dc87740c49088dedc2036ecaa4814de3791",
+      "canonical_id": "arXiv:2608.28044",
+      "arxiv_id": "2608.28044",
+      "doi": "10.1109/IISWC71020.2026.00027",
+      "authors": [
+        "Prabhu Vellaisamy",
+        "Vanessa Lam",
+        "Shawn Blanton",
+        "J. Shen"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NVIDIA H100/H200上のdense/MoEモデルを対象にprefill固定費とdecode限界費用を分解してrequest全体とtoken単位のエネルギーを測定。H200上のLlama-3.2-1B、batch16、context4Kでは出力10から512tokenへの増加でtoken energyが7.46から0.72 J/tokenへ減る一方、総エネルギーは1.19から5.93 kJへ増える。GPU推論servingのエネルギー評価とスケジューリングに直接関係。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8dd4d6127542",
+    "round": "libimp-8dd4d6127542ac68-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8dd4d6127542ac68-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8dd4d6127542ac68-pre01.json",
+    "receipt": "sha256:6e02fb82310305640e142eed02bea837ffe46a94aaefa9510c8fa4fde04cc3d8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8dd4d6127542",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
