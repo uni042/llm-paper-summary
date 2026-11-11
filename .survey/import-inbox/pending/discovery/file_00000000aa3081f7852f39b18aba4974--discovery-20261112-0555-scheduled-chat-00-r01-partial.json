@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-0555-scheduled-chat-00/r01",
+  "reference_main_sha": "0700c11fa6842be5fb05ebff41001212a3a70035",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18701",
+      "identity_tokens": ["arxiv:2410.18701"],
+      "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
+      "reason": "LLMの動的re-batchingで新規queryのベクトル形状とattention maskを整合させ、prefill済みKVを実行中batchへ挿入してidle computationを抑制する。一次arXiv要旨ではOrca比でquery処理最大1.75倍を報告。LLM serving schedulingの直接的研究でありaccept。",
+      "source_url": "https://arxiv.org/abs/2410.18701",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T05:55:11+09:00",
+      "last_checked_at": "2026-11-12T05:55:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 84
+    }
+  ]
+}
