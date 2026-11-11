@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Characterizing Cloud-Native LLM Inference at Bytedance and Exposing Optimization Challenges and Opportunities for Future AI Accelerators",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408526",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As a major provider of LLM inference services, ByteDance has continuously explored diverse accelerator options to meet the rapidly growing inference demands of various heterogeneous LLM scenarios with higher cost-effectiveness, thereby enabling LLMs to serve more people worldwide. However, during this process, we have found that the complexity and opacity of cloud scenarios and corresponding cloud accelerators make it difficult for academia and many innovative chip startups to fully understand the real demands and challenges of these scenarios, which in turn severely restricts innovation and application potential in this field. To bridge this gap, we first present and analyze the data and characteristics of the ByteDance Doubao LLM app across multiple dimensions, helping the community understand real-world cloud scenarios, and detail the challenges and opportunities we have identified. Second, we propose and plan to open-source our multi-level evaluation framework, XPU-Perf, which includes benchmarks spanning instructions, operators, and models. This framework improves interpretability and trustworthiness, and helps promising new accelerator architectures gain wider adoption and development. Finally, we present comparative results of four typical accelerators, summarize their shortcomings and challenges, conduct in-depth analysis, and highlight numerous architectural and scheduling innovation opportunities we have observed.",
+      "identifiers": [
+        "SemanticScholar:78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e"
+      ],
+      "semantic_scholar_id": "78e7e76af18c2b4ffdb1b0dece52e1defbc2cd5e",
+      "doi": "10.1109/HPCA68181.2026.11408526",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408526",
+      "authors": [
+        "Jing-Wei Cai",
+        "De-Hao Kong",
+        "Han-Tao Huang",
+        "Zi-Shang Jiang",
+        "Zi-Xuan Ma",
+        "Qing-Yu Guo",
+        "Zhen-Xing Zhang",
+        "Guiming Shi",
+        "Mingyu Gao",
+        "Kai-Sheng Ma",
+        "Ming-Hui Yu"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "ByteDanceの本番LLM推論ワークロードを分析し、命令・演算子・モデル階層にわたる評価フレームワークXPU-Perfを提案・四つのアクセラレータを比較する。IEEE HPCA 2026の一次要旨はXPU-Perfと明記しており、旧原稿の「ByteMLPerfが正式名」という版差の推測を訂正した。サービング負荷とアクセラレータ設計・スケジューリング上の課題が推論システム研究に直接関係する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_checked_at_repair; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EchoPrune: Interpreting Redundancy as Temporal Echoes for Efficient VideoLLMs",
+      "source_url": "https://arxiv.org/abs/2605.10050",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-form video understanding remains challenging for Video Large Language Models (VideoLLMs), as the dense frame sampling introduces massive visual tokens while sparse sampling risks missing critical temporal evidence and leading to LLM hallucination. Existing training-free token reduction methods either treat videos equally as static images or rely on segment-level merging heuristics, which weaken fine-grained spatiotemporal modeling and introduce additional overhead. In this paper, we propose EchoPrune, a lightweight and training-free token pruning method that improves temporal resolution under a fixed LLM-side visual token budget. Our core idea is to interpret redundant video tokens as temporal echoes: if a token is well reconstructed from the previous frame, it is merely a temporally redundant echo; otherwise, it may capture new events, motion, or query-relevant visual evidence. Based on this insight, EchoPrune scores visual tokens by (i) query-guided crossmodal relevance and (ii) temporal reconstruction error, measured by correspondence matching and echo matching across consecutive frames. The selected tokens preserve task-relevant cues and temporal novelty while suppressing predictable redundancy, allowing VideoLLMs to observe more frames without increasing the decoding budget. Extensive experiments on LLaVA-OV, Qwen2.5VL, and Qwen3VL across six video understanding benchmarks show that EchoPrune enables VideoLLMs to process up to 20x frames under the same token budget, yielding improved performance (+8.6%) and inference speedup (5.6x for prefilling) on Qwen2.5VL-7B.",
+      "identifiers": [
+        "SemanticScholar:6ec88d9f735b90ac3b15c9f3aa6eb5e76c590b0b"
+      ],
+      "semantic_scholar_id": "6ec88d9f735b90ac3b15c9f3aa6eb5e76c590b0b",
+      "canonical_id": "arXiv:2605.10050",
+      "arxiv_id": "2605.10050",
+      "doi": "10.48550/arXiv.2605.10050",
+      "authors": [
+        "Jia-Meng Li",
+        "Min-Ye Wu",
+        "Jie-Zhang Cao",
+        "A. Tiulpin",
+        "M. Blaschko"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "質問との関連度と隣接フレームからの再構成誤差で視覚トークンを選別する学習不要な動画LLM向け圧縮。Qwen2.5VL-7Bで同じトークン予算下に最大20倍のフレームを扱い、精度+8.6%、prefill最大5.6倍高速化と著者が報告。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_checked_at_repair; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a3e8694e58a6",
+    "round": "libimp-a3e8694e58a64803-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a3e8694e58a64803-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a3e8694e58a64803-pre01.json",
+    "receipt": "sha256:a249333a240709e97622e1b459062893c896b05b4496fa44147de15115d4f10f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a3e8694e58a6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
