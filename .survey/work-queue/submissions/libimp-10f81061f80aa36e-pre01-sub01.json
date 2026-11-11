@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Low-Bit Recurrent States in Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2609.30950",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid language models maintain fixed-size recurrent states, but existing quantizers typically use eight bits or more. Quantization errors persist according to channel decay rates. We derive distortion weights from the observability Gramian and combine them with normalized state ranges for mixed-precision bit allocation, without calibration data, rotation, or training. We also quantize decay rates logarithmically. With per-token state quantization, a four-bit mean payload reduces excess negative log-likelihood by factors of 3.3--27.9 relative to the best of seven baselines across three hybrid models; metadata costs vary. At six bits, negative log-likelihood differs from the FP32-state baseline by less than 0.005 nats. Ablations separate gains from variable bit widths, decay weighting, and range normalization. With less frequent write-backs, gains diminish and depend on the model and budget.",
+      "identifiers": [
+        "SemanticScholar:624f9b4ca00c304a0aa10d60ec550d06cb363229"
+      ],
+      "semantic_scholar_id": "624f9b4ca00c304a0aa10d60ec550d06cb363229",
+      "canonical_id": "arXiv:2609.30950",
+      "arxiv_id": "2609.30950",
+      "doi": "10.48550/arXiv.2609.30950",
+      "authors": [
+        "Hong-Ren Chen",
+        "Jia-Yang He"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ハイブリッド言語モデルの固定長recurrent stateを、observability Gramian由来の減衰重みと正規化state rangeで混合精度量子化する学習・較正不要の手法。著者は平均4bitでexcess NLLを7 baseline中最良比3.3〜27.9倍縮小、6bitではFP32 stateとの差0.005 nats未満と報告。状態メモリ圧縮に直接関連。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-10f81061f80a",
+    "round": "libimp-10f81061f80aa36e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-10f81061f80aa36e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-10f81061f80aa36e-pre01.json",
+    "receipt": "sha256:b489e667b7d613930bdec8052ffc11e8cd2cd1640c8a27afc50a21c6452d0cdb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-10f81061f80a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
