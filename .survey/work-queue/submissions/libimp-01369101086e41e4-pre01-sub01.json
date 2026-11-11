@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Achieving binary weight and activation for LLMs using Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2504.05352",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantizing large language models (LLMs) to 1-bit precision significantly reduces computational costs, but existing quantization techniques suffer from noticeable performance degradation when using weight and activation precisions below 4 bits (W4A4). In this paper, we propose a post-training quantization framework with W(1+1)A(1*4) configuration, where weights are quantized to 1 bit with an additional 1 bit for fine-grain grouping and activations are quantized to 1 bit with a 4-fold increase in the number of channels. For weight quantization, we propose utilizing Hessian-aware fine-grained grouping along with an EM-based quantization scheme. For activation quantization, we decompose INT4-quantized activations into a 4 * INT1 format equivalently and simultaneously smooth the scaling factors based on quantization errors, which further reduces the quantization errors in activations. Our method surpasses state-of-the-art (SOTA) LLM quantization baselines on W2A4 across multiple tasks, pushing the boundaries of existing LLM quantization methods toward fully binarized models. Code is available at https://github.com/JimmyCrave/LLM-PTQ-binarization.",
+      "identifiers": [
+        "SemanticScholar:eaf07136bf28eeed00e67cef8aec9d73075d53fd"
+      ],
+      "semantic_scholar_id": "eaf07136bf28eeed00e67cef8aec9d73075d53fd",
+      "canonical_id": "arXiv:2504.05352",
+      "arxiv_id": "2504.05352",
+      "doi": "10.48550/arXiv.2504.05352",
+      "authors": [
+        "Si-Qing Song",
+        "Chuang Wang",
+        "Ruiqi Wang",
+        "Yi Yang",
+        "Xu-Yao Zhang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 584,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "LLMの事後量子化により重みを1bit+細粒度グループ情報、活性化をINT4の4×INT1等価分解として処理する。Hessian-aware grouping、EM量子化、スケール平滑化でW2A4比較方式を上回ると一次要旨で報告。LLMの低ビット推論・計算削減に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-01369101086e",
+    "round": "libimp-01369101086e41e4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-01369101086e41e4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-01369101086e41e4-pre01.json",
+    "receipt": "sha256:a43ddfa6fbd27adc166739fc977c2de64fb9c6b3832d5726909e15532489a37a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-01369101086e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
