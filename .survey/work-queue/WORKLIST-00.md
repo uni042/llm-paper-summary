@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-11T00:47:02+00:00`
+Generated: `2026-11-11T01:02:48+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -574,8 +574,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 491 | 101 | 4 | 5 | arXiv:2610.05416 | Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training | 2026-10-04 |  | 1 | 5 | 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2610.05416) |
 | 492 | 10 | 4 | 5 | DOI:10.1109/ISPASS69572.2026.00073 | Power Ranger: A Comprehensive Framework for GPU Power Characterization | 2026-04-26 | IEEE International Symposium on Performance Analysis of Systems and Software | 0 | 5 | LLM serving / energy management / cluster scheduling / dynamic reconfiguration, inference-systems | [source](https://doi.org/10.1109/ISPASS69572.2026.00073) |
 | 493 | 122 | 4 | 5 | arXiv:2607.06540 | Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs | 2026-07-07 | Annual Meeting of the Association for Computational Linguistics | 12 | 5 |  | [source](https://arxiv.org/abs/2607.06540) |
-| 494 | 103 | 4 | 5 | arXiv:2603.22267 | TiCo: Time-Controllable Spoken Dialogue Model | 2026-03-23 | arXiv.org | 3 | 5 |  | [source](https://arxiv.org/abs/2603.22267) |
-| 495 | 102 | 4 | 5 | arXiv:2608.22516 | TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding | 2026-08-23 |  | 2 | 5 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2608.22516) |
+| 494 | 102 | 4 | 5 | arXiv:2605.14310 | CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding | 2026-05-14 | arXiv.org | 2 | 6 |  | [source](https://arxiv.org/abs/2605.14310) |
+| 495 | 102 | 4 | 5 | arXiv:2609.37818 | Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue | 2026-09-29 | arXiv.org | 2 | 5 |  | [source](https://arxiv.org/abs/2609.37818) |
 | 496 | 101 | 4 | 5 | arXiv:2605.08985 | LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs? | 2026-05-09 | arXiv.org | 1 | 5 | 12-multimodal-inference | [source](https://arxiv.org/abs/2605.08985) |
 | 497 | 101 | 4 | 5 | arXiv:2608.11593 | Luna-TTS Family Technical Report | 2026-08-12 | arXiv.org | 1 | 5 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2608.11593) |
 | 498 | 44 | 4 | 5 | arXiv:2405.16440 | MambaTS: Improved Selective State Space Models for Long-term Time Series Forecasting | 2024-05-26 | Pattern Recognition | 44 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2405.16440) |
