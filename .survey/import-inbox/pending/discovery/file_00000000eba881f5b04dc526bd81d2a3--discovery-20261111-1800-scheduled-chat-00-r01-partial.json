@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-1800-scheduled-chat-00/r01",
+  "reference_main_sha": "522ca0104792bd08a3150f7a22e1acc67b120ca4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.05352",
+      "identity_tokens": [
+        "arxiv:2504.05352"
+      ],
+      "title": "Achieving binary weight and activation for LLMs using Post-Training Quantization",
+      "reason": "LLMの事後量子化により重みを1bit+細粒度グループ情報、活性化をINT4の4×INT1等価分解として処理する。Hessian-aware grouping、EM量子化、スケール平滑化でW2A4比較方式を上回ると一次要旨で報告。LLMの低ビット推論・計算削減に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2504.05352",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T18:00:55+09:00",
+      "last_checked_at": "2026-11-11T18:00:55+09:00",
+      "linked_from": [],
+      "worklist_rank": 53
+    }
+  ]
+}
