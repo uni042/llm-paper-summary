@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-11T00:04:35+00:00",
+  "generated_at": "2026-11-11T00:16:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -825,8 +825,8 @@
       "canonical_id": "arXiv:2605.20950",
       "title": "Focus-then-Context: Subject-Centric Progressive Visual Token Reduction for Vision-Language Models",
       "source_url": "https://arxiv.org/html/2605.20950v2",
-      "returned_at": "2026-11-11T00:04:34+00:00",
-      "return_count": 1,
+      "returned_at": "2026-11-11T00:16:36+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -844,8 +844,8 @@
           "評価説明量 486 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/file_000000006570820686bb3324f5c6a932--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/file_000000006570820686bb3324f5c6a932--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dc7ab3cfa6b2--file_000000006570820686bb3324f5c6a932--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-dc7ab3cfa6b2--file_000000006570820686bb3324f5c6a932--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r01.json",
       "worker_run_key": "20261111-0745-scheduled-chat-45/r01"
     }
   ]
