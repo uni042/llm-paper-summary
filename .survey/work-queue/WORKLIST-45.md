@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T23:45:54+00:00`
+Generated: `2026-11-11T00:03:52+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128176** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121944** / 監査再投入 **0** / 機械規則適用後 **124622** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128175** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121944** / 監査再投入 **0** / 機械規則適用後 **124620** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -566,7 +566,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 483 | 10 | 4 | 5 | arXiv:2605.26628 | Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2 | 2026-05-26 | arXiv.org | 0 | 5 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2605.26628) |
 | 484 | 10 | 4 | 5 | arXiv:2610.10871 | Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values | 2026-10-07 |  | 0 | 5 | inference-systems | [source](https://arxiv.org/abs/2610.10871) |
 | 485 | 1 | 4 | 5 | DOI:10.1145/3599957.3606231 | FulltextAttention: Full-text Classification of Scientific Papers Using Combined Model of BiGRU and Bahdanau Attention | 2023-08-06 | Research in Adaptive and Convergent Systems | 1 | 5 | inference-systems, sparse attention / long-context Transformer | [source](https://doi.org/10.1145/3599957.3606231) |
-| 486 | 114 | 4 | 5 | arXiv:2605.20755 | DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action | 2026-05-20 |  | 14 | 5 |  | [source](https://arxiv.org/abs/2605.20755) |
+| 486 | 116 | 4 | 5 | arXiv:2605.20755 | DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action | 2026-05-20 |  | 16 | 5 |  | [source](https://arxiv.org/abs/2605.20755) |
 | 487 | 10 | 4 | 5 | arXiv:2609.26488 | Spoken Language Models that Think Aloud | 2026-09-22 | arXiv.org | 0 | 5 |  | [source](https://arxiv.org/abs/2609.26488) |
 | 488 | 1 | 4 | 5 | arXiv:2510.07355 | AV-EMO-Reasoning: Benchmarking Emotional Reasoning Capabilities in Omni-modal LLMS with Audio-visual Cues | 2025-10-08 | arXiv.org | 1 | 5 |  | [source](https://arxiv.org/abs/2510.07355) |
 | 489 | 108 | 4 | 5 | DOI:10.1109/ijcnn69854.2026.11729328 | Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation | 2026-06-01 | IEEE International Joint Conference on Neural Network | 8 | 1 |  | [source](https://doi.org/10.1109/ijcnn69854.2026.11729328) |
