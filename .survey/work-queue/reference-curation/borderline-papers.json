@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-10T19:50:57+00:00",
-  "record_count": 5603,
+  "updated_at": "2026-11-11T00:22:42+00:00",
+  "record_count": 5604,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86495,6 +86495,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video"
+    },
+    "arXiv:2604.15764": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.15764",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.15764",
+        "arXiv:2604.15764"
+      ],
+      "reason": "適応的深さ・早期退出の汎化理論。推論2–8倍高速化は早期退出一般の背景説明であり本論文の実測高速化ではない。6アーキテクチャ7ベンチマークでPAC-Bayes boundのtightnessを検証するがLLM推論実測は一次要旨にない。",
+      "first_checked_at": "2026-11-11T00:22:42+00:00",
+      "last_checked_at": "2026-11-11T00:22:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "When Do Early-Exit Networks Generalize? A PAC-Bayesian Theory of Adaptive Depth"
     }
   }
 }
