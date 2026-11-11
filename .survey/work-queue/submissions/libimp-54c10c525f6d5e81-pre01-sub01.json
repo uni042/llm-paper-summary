@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Where Prefill Expert Reduction Hurts MoE Models: A Few Prompt Tokens Carry Most of the Short-Answer F1 Loss",
+      "source_url": "https://arxiv.org/abs/2610.22454",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Running prompt tokens through fewer routed experts during prefill makes mixture-of-experts (MoE) serving cheaper, but what it damages has not been measured. We locate the damage with token-, layer- and attention-path interventions in four MoE families on short-answer question answering. At half the experts the F1 loss is mostly answer form: the model still finds the answer but no longer answers briefly. The loss is made at a few tokens: the two chat-template tokens before the answer in Qwen3-30B-A3B, and the first 8-32 tokens, where the instruction sits, in DeepSeek-V2-Lite. Keeping them at full experts removes most of the F1 loss and about half and a fifth of the increase in answer NLL. Reduction changes the first-token sink statistics by less than 4%, and restoring super experts or massive activations recovers at most a quarter of the loss. We then test placement on real prompts with about 4% of tokens at full experts. Putting them on the task interface keeps F1 within one point of the unmodified model, while the same budget scattered in the documents is about 3 points worse in both prespecified primary tests of this comparison. Time to first token falls about 14% on 11K-token prompts.",
+      "identifiers": [
+        "SemanticScholar:3e4b093a415fbe5f2a8fbe576ffe566b4fe09e7d"
+      ],
+      "semantic_scholar_id": "3e4b093a415fbe5f2a8fbe576ffe566b4fe09e7d",
+      "canonical_id": "arXiv:2610.22454",
+      "arxiv_id": "2610.22454",
+      "authors": [
+        "Zhi-Yuan Wang",
+        "Han-Mo Wang",
+        "Shuo Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE prefillでexpert数を半減した際の短答F1低下をtoken・layer・attention経路ごとに解析。指示境界付近の少数tokenをfull expertsで処理すると品質をほぼ保持し、11K-token promptのTTFTを約14%短縮した著者報告。推論時のexpert計算削減に直接関係する。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Introducing Cluster Efficiency to LLM Serving: Pooling Economical Accelerators over Fast Interconnects",
+      "source_url": "https://arxiv.org/abs/2611.02975",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language model (LLM) serving places substantial demands on compute, memory capacity, and memory bandwidth. Economical accelerators can offer these resources at lower cost, but their limited per-device capacity requires pooling across devices, making communication overhead critical. We study cluster efficiency, measured in tokens per dollar and per joule, and show how low-latency, high-bandwidth interconnects enable economical accelerators to retain their cost advantage. Guided by a characterization of coding-agent workloads and accelerator scaling, we realize this design on the Tenstorrent Galaxy, a cluster of Blackhole chips. The serving stack combines integrated communication engines, pipelined ring transfers, communication-computation overlap, and device-side decode replay to reduce collective overhead. Across three dense models in BF16 and 8-bit configurations with 8K-256K-token contexts, the Galaxy achieves 1.07-2.24$\\times$ the tokens per dollar of an eight-GPU RTX PRO 6000 Blackwell server under a three-year acquisition-and-electricity cost model. Emulating TCP-class communication on the same chips reduces throughput by 23.5-67.4% and eliminates the cost advantage in every evaluated configuration. These results demonstrate how fast interconnects translate the per-dollar resource advantages of economical accelerators into cost-efficient long-context LLM serving.",
+      "identifiers": [
+        "SemanticScholar:1ffb83c59ee4ab1527bcdc972a3a91f1f58d72ba"
+      ],
+      "semantic_scholar_id": "1ffb83c59ee4ab1527bcdc972a3a91f1f58d72ba",
+      "canonical_id": "arXiv:2611.02975",
+      "arxiv_id": "2611.02975",
+      "authors": [
+        "You-He Jiang",
+        "Pavle Glušac",
+        "Bin-Hang Yuan",
+        "Eiko Yoneki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Tenstorrent Galaxy上で高速相互接続とリング転送・通信計算重畳・decode replayを統合。8K～256K文脈、BF16/8-bitの3 denseモデルでRTX PRO 6000 Blackwell 8GPUサーバー比1.07～2.24倍のtokens/$を著者報告。分散LLM推論の費用効率に直接関係。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-54c10c525f6d",
+    "round": "libimp-54c10c525f6d5e81-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-54c10c525f6d5e81-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-54c10c525f6d5e81-pre01.json",
+    "receipt": "sha256:e78cd40965e2f4acc846b6561ae1b877558961d74a56e51c1773e5abf7682880"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-54c10c525f6d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
