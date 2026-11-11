@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "scheduled_slot": "45",
+  "run_key": "20261111-0903-scheduled-chat-45/r01",
+  "reference_main_sha": "695f2b17bf56535e80444b880283d5c8d6eecdfb",
+  "mode": "Discovery",
+  "partial_round": true,
+  "record_count": 1,
+  "records": [
+    {
+      "canonical_id": "arXiv:2610.26531",
+      "identity_tokens": [
+        "arXiv:2610.26531"
+      ],
+      "title": "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2610.26531",
+      "reason": "投機的復号の検証で棄却位置以降に生じたhidden statesを再利用し、学習不要で拡散draftの並列ブロックを再生成する。DFlashに対して4モデル×8ベンチマークの温度0条件で平均受理長15.2%、デコード速度13.4%改善と著者要旨で報告。LLM推論高速化の直接対象。",
+      "body_check": "primary_publisher_or_arxiv_abstract_checked_at_repair; full_body_not_read",
+      "first_checked_at": "2026-11-11T09:03:32+09:00",
+      "last_checked_at": "2026-11-11T09:03:32+09:00",
+      "linked_from": [],
+      "old_worklist_rank": 10,
+      "record_origin": "corrected_v1_partial_round_from_scheduled_chat_00"
+    }
+  ],
+  "repair_of": {
+    "original_basename": "discovery-20261111-0801-scheduled-chat-00-r01-partial.json",
+    "original_file_id": "file_000000007f9081f89eec11878cda3aa2",
+    "original_run_key": "20261111-0801-scheduled-chat-00/r01",
+    "original_sha256": "3a02f0c28ec02aa240ea3c8ecfedaeecf0bad4dfa2cbb72720d6da63a1bc0268",
+    "original_record_count": 1,
+    "original_verification_status": "pending_library_retrieval"
+  },
+  "repair_verified_at": "2026-11-11T09:03:32+09:00",
+  "repair_notes": "旧schema欠損・reason_jaのみの形式不備を正規v2へ補正。各レコードの一次abstractを修復時に再照合し、本文未読を明示。original rankは当時のsnapshotの記録であり現行rankではない。",
+  "record_count_verified": true
+}
