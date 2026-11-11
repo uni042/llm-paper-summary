@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+      "source_url": "https://arxiv.org/abs/2607.06202",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Mixture-of-Experts (MoE) models on production high-bandwidth superpods, such as NVIDIA's NVL72/576 and Huawei's CloudMatrix384, introduces critical challenges beyond raw interconnect bandwidth. While these systems provide unified global address spaces and high-bandwidth fabrics, their full potential for sparse MoE communication is hindered by three fundamental bottlenecks: (1) Strict execution serialization imposed by coarse-grained Bulk Synchronous Parallel (BSP) orchestration of interdependent communication phases; (2) Prohibitive synchronization overhead that fails to scale alongside high interconnect bandwidth; and (3) Severe load imbalance resulting from distance-agnostic scheduling of irregular token traffic. To eliminate these bottlenecks, we introduce UBEP (Unified-Bus Expert Parallelism), a production-ready communication library that rethinks MoE's All-to-All primitives for modern superpod architectures. Through large-scale experiments, UBEP reduces All-to-All latency by up to 52.4% and MoE inference Time Per Output Token (TPOT) by up to 11.1%.",
+      "identifiers": [
+        "SemanticScholar:5da1eaa0da5f14c5133b44466a979e282b87ac32"
+      ],
+      "semantic_scholar_id": "5da1eaa0da5f14c5133b44466a979e282b87ac32",
+      "canonical_id": "arXiv:2607.06202",
+      "arxiv_id": "2607.06202",
+      "doi": "10.1145/3789240.3829183",
+      "authors": [
+        "Yi-Peng Liu",
+        "Chang Liu",
+        "Si-Tan Shen",
+        "Jia-Qi Zheng",
+        "Ming-Fan Li",
+        "Yu-Yang Yang",
+        "Guan-Hua Li",
+        "Yu-Quan Zhang",
+        "Yimeng Xu",
+        "Zhong-Zhe Hu",
+        "Zhi-Yuan Huang",
+        "Qi-Hang Duan",
+        "Jun-Sheng Wang",
+        "Wen-Kai Ling",
+        "Bao-Chun Yang",
+        "Xianzhi Yu",
+        "Han Bao",
+        "Yi-Jie Chen",
+        "Guihai Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 127,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEのAll-to-All通信におけるBSP直列化、同期負荷、トポロジーを無視した負荷不均衡を、依存関係に沿うカーネル分解と階層的トークン割当で緩和する。著者はAll-to-All遅延最大52.4%削減、推論TPOT最大11.1%削減と報告。MoE分散推論に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Semantic caching, reusing responses to answer semantically similar queries, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversary pollutes the cache by injecting adversarial queries, corrupting responses to subsequent legitimate requests. We present LaCache, a simple yet principled redesign of semantic caching that provides provable defense against such attacks. The key insight is that while the adversary has full control over the adversarial query, it has far less control over the corresponding LLM-generated response, which must simultaneously satisfy multiple competing constraints. Thus, LaCache shifts the integrity check from the query to the response: rather than checking only the cache hit of a query, LaCache additionally checks the cache hit of its first $k$ speculatively decoded tokens. Analytically, we prove that LaCache detects any cache-collision attack that produces a semantically distinct response with provably high probability. Empirically, evaluation across diverse LLMs and benchmarks confirms that LaCache reduces attack hit rate to near zero while preserving over 90% of benign cache utility. To our best knowledge, this work is the first to exploit the inherent constraints on adversarial responses in cache-collision attacks to provide provable security, pointing to a promising direction for building robust semantic caching.",
+      "identifiers": [
+        "SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada"
+      ],
+      "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+      "canonical_id": "arXiv:2608.01718",
+      "arxiv_id": "2608.01718",
+      "doi": "10.48550/arXiv.2608.01718",
+      "authors": [
+        "Jiacheng Liang",
+        "Yu-Hui Wang",
+        "Tan-Qiu Jiang",
+        "Ting Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "クエリ埋め込みの類似性だけで応答を再利用するとcache collisionによる汚染を受けるため、最初のk生成トークンの類似性も検査するセマンティックキャッシュを提案。推論サービングのキャッシュ安全性と再利用効率に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+      "source_url": "https://arxiv.org/abs/2608.24973",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": "IEEE Transactions on Emerging Topics in Computational Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid development of large-scale pre-trained language models based on Transformer architectures, their high computational and memory costs have become a major obstacle to deployment, especially in resource-constrained environments. Traditional pruning methods typically depend on full gradient-based importance estimation, and they necessitate prior finetuning of the model to achieve satisfactory performance. This process often results in intolerable resource consumption. This paper proposes REP-LIE, a new approach to enable resource-efficient pruning during the process of finetuning. REP-LIE leverages the gradients of LoRA low-rank matrices to estimate the importance of weights without requiring full gradient computation. To address the inherent randomness in importance estimation, a stability score is introduced, serving as the basis for iterative pruning of unimportant model parameters. The pruned model is further finetuned through lightweight updates, eliminating the need for full-parameter optimization in the process of finetuning. Extensive experiments on both medium-scale encoder models and large-scale generative models (LLaMA-7B and Mistral-7B) demonstrate that REP-LIE still achieves competitive performance compared to existing approaches.",
+      "identifiers": [
+        "SemanticScholar:5a478848e7707acca122bb648ac8907fbc11b92d"
+      ],
+      "semantic_scholar_id": "5a478848e7707acca122bb648ac8907fbc11b92d",
+      "canonical_id": "arXiv:2608.24973",
+      "arxiv_id": "2608.24973",
+      "doi": "10.1109/TETCI.2026.3727362",
+      "authors": [
+        "Peng Liu",
+        "Hui-Bing Zeng",
+        "Yi-Qun Zhang",
+        "Yang Yi",
+        "Ji-Gang Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 78,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoRA低ランク行列の勾配から重み重要度を推定し、安定性スコアに基づいて反復的に枝刈りするREP-LIE。全パラメータ勾配を使わずLLaMA-7BとMistral-7Bを含むモデルで競争力ある性能を著者が報告。LLM圧縮に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BitNest: Bit-Nested Speculative Decoding for Memory-Efficient LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2610.02800",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by using a lightweight draft to propose multiple tokens for parallel verification. However, existing methods often require an additional draft model or weight representation, introducing non-negligible memory overhead on resource-constrained devices. Self-speculative approaches reduce this overhead, yet still face trade-offs between draft quality, target quality, and storage efficiency. We propose BitNest, a bit-nested speculative decoding framework that embeds a low-precision draft directly into the higher-precision target representation. Instead of deriving a draft from a predefined target, BitNest first constructs a strong low-precision base and then recovers the higher-precision target through residual refinement, enabling both models to share a single physical weight representation. BitNest further extends this progressive-precision design to the KV cache for long-context inference. Across multiple 7B--8B edge-friendly LLMs and diverse workloads, BitNest achieves an average speculative acceptance rate of 95.2% while closely preserving higher-precision model quality, and delivers 1.48--1.61x end-to-end speedup over FP16 autoregressive decoding. On the LLaMA models supported by all representative self-speculative baselines, BitNest also achieves consistently competitive or higher decoding speedup.",
+      "identifiers": [
+        "SemanticScholar:4a33096d4683c166c23c75086f16352a450be61a"
+      ],
+      "semantic_scholar_id": "4a33096d4683c166c23c75086f16352a450be61a",
+      "canonical_id": "arXiv:2610.02800",
+      "arxiv_id": "2610.02800",
+      "authors": [
+        "Chen-Ce Yang",
+        "Ning-Xi Cheng",
+        "Arash Akbari",
+        "Qi-Tao Tan",
+        "Qin Zhu",
+        "Ci Zhang",
+        "Chang-Di Yang",
+        "Yan-Zhi Wang",
+        "Wei Niu",
+        "Jin-Hui Wang",
+        "Jin Lu",
+        "Geng Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低精度ドラフトを高精度ターゲット重み表現に内包し、残差で高精度を復元。KVキャッシュにも拡張。7B～8Bの評価で平均受理率95.2%、FP16自己回帰比1.48～1.61倍のE2E高速化を著者報告。投機的復号とメモリ効率化に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c438bca089aa",
+    "round": "libimp-c438bca089aa9696-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c438bca089aa9696-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c438bca089aa9696-pre01.json",
+    "receipt": "sha256:7ee0c360082b49132654287a2f795d303adfbe96d6edea513838bfde2a506b8b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c438bca089aa",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

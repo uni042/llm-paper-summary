@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
+      "source_url": "https://arxiv.org/abs/2410.18701",
+      "year": 2024,
+      "published": "2024-10-24",
+      "venue": "The Web Conference",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The advanced capabilities of Large Language Models (LLMs) have inspired the development of various interactive web services or applications, such as ChatGPT, which offer query inference services for users. Unlike traditional DNN model, the inference of LLM entails different iterations of forward computation for different queries, which result in efficiency challenges for existing run-to-completion batch-wise inference. Hence, some methods refine batch-wise inference to iteration-level by duplicating all nonlinear layers of LLM. However, this approach not only increases resource usage but also introduces idle computations to the batch due to the prefilling of newly added queries. Therefore, we propose BATON, an efficient batch-wise LLM inference scheme by dynamically adjusting processing batch, which can achieve near-zero idle computations without incurring additional resource consumption. To do so, BATON 1) shapes the vectors involved in the inference of the newly inserted query and processing batch to align dimensions and generates a new attention mask based on vector shaping to ensure inference correctness, which enables query inserting without consuming additional resource; 2) embeds prefilled Keys and Values of the new query into the KV_Cache of the processing batch by leveraging the prefilling and decoding separation mechanism, eliminating idle computations to the batch introduced by the prefilling process of the new query. Experimental results show that compared to the state-of-the-art solution Orca, BATON outperforms improves query processing by up to 1.75x.",
+      "identifiers": [
+        "SemanticScholar:ff53557b55dc8d2aa746b1298590835929f21432"
+      ],
+      "semantic_scholar_id": "ff53557b55dc8d2aa746b1298590835929f21432",
+      "canonical_id": "arXiv:2410.18701",
+      "arxiv_id": "2410.18701",
+      "doi": "10.1145/3696410.3714950",
+      "authors": [
+        "Pei-Zhuang Cong",
+        "Qizhi Chen",
+        "Haochen Zhao",
+        "Tong Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 748,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの動的re-batchingで新規queryのベクトル形状とattention maskを整合させ、prefill済みKVを実行中batchへ挿入してidle computationを抑制する。一次arXiv要旨ではOrca比でquery処理最大1.75倍を報告。LLM serving schedulingの直接的研究でありaccept。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-abcf278aa756",
+    "round": "libimp-abcf278aa75641e8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-abcf278aa75641e8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-abcf278aa75641e8-pre01.json",
+    "receipt": "sha256:36f68a7074de2476318f986197089884c215ccbaff9aaa857447f120b199978b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-abcf278aa756",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
