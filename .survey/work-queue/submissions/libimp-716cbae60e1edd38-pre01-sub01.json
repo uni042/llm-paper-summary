@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+      "source_url": "https://arxiv.org/abs/2609.39819",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+      "identifiers": [
+        "SemanticScholar:90977290d9c326ca54d1edcef2ef38018e790eba"
+      ],
+      "semantic_scholar_id": "90977290d9c326ca54d1edcef2ef38018e790eba",
+      "canonical_id": "arXiv:2609.39819",
+      "arxiv_id": "2609.39819",
+      "doi": "10.48550/arXiv.2609.39819",
+      "authors": [
+        "Kai-Hua Fu",
+        "Yu-Kun Zhou",
+        "Chaokun Chang",
+        "Ying-Hao Yu",
+        "Lu-Ping Wang",
+        "Guo-Dong Yang",
+        "Jiu-Chen Shi",
+        "Quan Chen",
+        "Wei Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ReActエージェントのharnessで発生する文脈変更・ツール実行・subagent連携を観測し、メッセージの生存・一時休止・破棄状態をKVキャッシュへ写像する。死んだKVを回収し再利用待ちのKVを優先保持する。著者報告ではLMCache/MORI比のend-to-end要求遅延最大26.3%/17.4%減、平均推定タスクコスト40.0%/33.2%減。LLM servingのKV管理に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-716cbae60e1e",
+    "round": "libimp-716cbae60e1edd38-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-716cbae60e1edd38-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-716cbae60e1edd38-pre01.json",
+    "receipt": "sha256:f1d3d353451fc46f3cdd16715fab90ae77da619b927df70abd781b3ce8414150"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-716cbae60e1e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
