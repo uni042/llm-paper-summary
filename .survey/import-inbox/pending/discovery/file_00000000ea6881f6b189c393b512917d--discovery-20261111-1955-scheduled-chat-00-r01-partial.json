@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-1955-scheduled-chat-00/r01",
+  "reference_main_sha": "5c76ff80565a4826a3837b480f8a46a88e0308ce",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.01371",
+      "identity_tokens": ["arxiv:2611.01371"],
+      "title": "Token-as-a-Utility: A Model-Agnostic Architecture for Metering and Provisioning AI Inference Services",
+      "reason": "異種LLM推論サービスで単純トークン数が計算資源消費を正しく反映しない問題を扱い、prefillとdecode需要からReference Inference Unitsを定義、同居負荷を反映した課金係数、監査可能な利用記録、容量リースと品質制約付きルーティングを組み合わせる。RTX 5000 Ada 3基で測定した資源モデルと較正した複数テナント実験で、固定占有率課金のエネルギー誤差最大70.5%に対して占有率連動方式は9%以内、テナント誤課金倍率は単純トークン課金7.36倍から調整後1.06倍に改善したと一次要旨で報告。LLMサービング資源計測・容量管理への直接的貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2611.01371",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T19:55:15+09:00",
+      "last_checked_at": "2026-11-11T19:55:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 55
+    }
+  ]
+}
