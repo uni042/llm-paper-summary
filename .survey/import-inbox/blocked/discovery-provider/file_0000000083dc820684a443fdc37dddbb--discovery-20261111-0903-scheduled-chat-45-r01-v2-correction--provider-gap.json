@@ -3,7 +3,7 @@
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-45",
   "scheduled_slot": "45",
-  "run_key": "20261111-0903-scheduled-chat-45/r01",
+  "run_key": "20261111-0903-scheduled-chat-45/r01::provider-gap",
   "reference_main_sha": "695f2b17bf56535e80444b880283d5c8d6eecdfb",
   "mode": "Discovery",
   "partial_round": true,
@@ -36,5 +36,10 @@
   },
   "repair_verified_at": "2026-11-11T09:03:32+09:00",
   "repair_notes": "旧schema欠損・reason_jaのみの形式不備を正規v2へ補正。各レコードの一次abstractを修復時に再照合し、本文未読を明示。original rankは当時のsnapshotの記録であり現行rankではない。",
-  "record_count_verified": true
+  "record_count_verified": true,
+  "parent_run_key": "20261111-0903-scheduled-chat-45/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/file_0000000083dc820684a443fdc37dddbb--discovery-20261111-0903-scheduled-chat-45-r01-v2-correction.json",
+  "provider_gap_ids": [
+    "arXiv:2610.26531"
+  ]
 }
