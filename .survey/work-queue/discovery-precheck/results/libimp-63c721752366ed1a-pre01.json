@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-63c721752366ed1a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-63c721752366",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2604.10898"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "099f398d9c7ae3c223737ed30083f2b7b58f7ce9",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-11T22:57:46.458318+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2604.10898",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
+      "source_url": "https://arxiv.org/abs/2604.10898",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown great performance on complex reasoning tasks but often require generating long intermediate thoughts before reaching a final answer. During generation, LLMs rely on a key-value (KV) cache for autoregressive decoding. However, the memory footprint of the KV cache grows with output length. Prior work on KV cache optimization mostly focus on compressing the long input context, while retaining the full KV cache for decoding. For tasks requiring long output generation, this leads to increased computational and memory costs. In this paper, we introduce ZoomR, a novel approach that enables LLMs to adaptively compress verbose reasoning thoughts into summaries and uses a dynamic KV cache selection policy that leverages these summaries while also strategically\"zooming in\"on fine-grained details. By using summary keys as a coarse-grained index during decoding, ZoomR uses the query to retrieve details for only the most important thoughts. This hierarchical strategy significantly reduces memory usage by avoiding full-cache attention at each step. Experiments across math and reasoning tasks show that our approach achieves competitive performance compared to baselines, while reducing inference memory requirements by more than $4\\times$. These results demonstrate that a multi-granularity KV selection enables more memory efficient decoding, especially for long output generation.",
+      "identifiers": [
+        "SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82"
+      ],
+      "semantic_scholar_id": "3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+      "canonical_id": "arXiv:2604.10898",
+      "arxiv_id": "2604.10898",
+      "doi": "10.48550/arXiv.2604.10898",
+      "authors": [
+        "David Yang",
+        "Yuxuan Zhu",
+        "Mohammad Mohammadi Amiri",
+        "K. Murugesan",
+        "Tejaswini Pedapati",
+        "Subhajit Chaudhury",
+        "Pin-Yu Chen"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.10898",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.10898",
+        "id:SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+        "id:arXiv:2604.10898",
+        "title:zoomr memory efficient reasoning through multigranularity key value retrieval",
+        "url:https://arxiv.org/abs/2604.10898"
+      ],
+      "record": {
+        "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
+        "source_url": "https://arxiv.org/abs/2604.10898",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown great performance on complex reasoning tasks but often require generating long intermediate thoughts before reaching a final answer. During generation, LLMs rely on a key-value (KV) cache for autoregressive decoding. However, the memory footprint of the KV cache grows with output length. Prior work on KV cache optimization mostly focus on compressing the long input context, while retaining the full KV cache for decoding. For tasks requiring long output generation, this leads to increased computational and memory costs. In this paper, we introduce ZoomR, a novel approach that enables LLMs to adaptively compress verbose reasoning thoughts into summaries and uses a dynamic KV cache selection policy that leverages these summaries while also strategically\"zooming in\"on fine-grained details. By using summary keys as a coarse-grained index during decoding, ZoomR uses the query to retrieve details for only the most important thoughts. This hierarchical strategy significantly reduces memory usage by avoiding full-cache attention at each step. Experiments across math and reasoning tasks show that our approach achieves competitive performance compared to baselines, while reducing inference memory requirements by more than $4\\times$. These results demonstrate that a multi-granularity KV selection enables more memory efficient decoding, especially for long output generation.",
+        "identifiers": [
+          "SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82"
+        ],
+        "semantic_scholar_id": "3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+        "canonical_id": "arXiv:2604.10898",
+        "arxiv_id": "2604.10898",
+        "doi": "10.48550/arXiv.2604.10898",
+        "authors": [
+          "David Yang",
+          "Yuxuan Zhu",
+          "Mohammad Mohammadi Amiri",
+          "K. Murugesan",
+          "Tejaswini Pedapati",
+          "Subhajit Chaudhury",
+          "Pin-Yu Chen"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:35a7b3f5ea082b2ced6addae063097dc59aa08349d4097c5190fcc5507e5153c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
