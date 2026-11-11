@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-0501-scheduled-chat-00/r01",
+  "reference_main_sha": "6f61bfd03bac4e8b404795f7eb6e34034763ac2d",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.06202",
+      "identity_tokens": [
+        "arxiv:2607.06202"
+      ],
+      "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+      "reason": "MoEのAll-to-All通信におけるBSP直列化、同期負荷、トポロジーを無視した負荷不均衡を、依存関係に沿うカーネル分解と階層的トークン割当で緩和する。著者はAll-to-All遅延最大52.4%削減、推論TPOT最大11.1%削減と報告。MoE分散推論に直接関連。",
+      "source_url": "https://arxiv.org/abs/2607.06202",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T05:01:21+09:00",
+      "last_checked_at": "2026-11-12T05:01:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01718",
+      "identity_tokens": [
+        "arxiv:2608.01718"
+      ],
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "reason": "クエリ埋め込みの類似性だけで応答を再利用するとcache collisionによる汚染を受けるため、最初のk生成トークンの類似性も検査するセマンティックキャッシュを提案。推論サービングのキャッシュ安全性と再利用効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T05:01:21+09:00",
+      "last_checked_at": "2026-11-12T05:01:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.24973",
+      "identity_tokens": [
+        "arxiv:2608.24973"
+      ],
+      "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+      "reason": "LoRA低ランク行列の勾配から重み重要度を推定し、安定性スコアに基づいて反復的に枝刈りするREP-LIE。全パラメータ勾配を使わずLLaMA-7BとMistral-7Bを含むモデルで競争力ある性能を著者が報告。LLM圧縮に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.24973",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T05:01:21+09:00",
+      "last_checked_at": "2026-11-12T05:01:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02800",
+      "identity_tokens": [
+        "arxiv:2610.02800"
+      ],
+      "title": "BitNest: Bit-Nested Speculative Decoding for Memory-Efficient LLM Inference Acceleration",
+      "reason": "低精度ドラフトを高精度ターゲット重み表現に内包し、残差で高精度を復元。KVキャッシュにも拡張。7B～8Bの評価で平均受理率95.2%、FP16自己回帰比1.48～1.61倍のE2E高速化を著者報告。投機的復号とメモリ効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2610.02800",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T05:01:21+09:00",
+      "last_checked_at": "2026-11-12T05:01:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 83
+    }
+  ]
+}
