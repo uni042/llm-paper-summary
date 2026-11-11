@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-1900-scheduled-chat-00/r01",
+  "reference_main_sha": "e7fc9833df78ab53c0e14babe6ce48e7b47c8c81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22967",
+      "identity_tokens": ["arxiv:2605.22967"],
+      "title": "Learned Relay Representations for Forward-Thinking Discrete Diffusion Models",
+      "reason": "マスク拡散モデルの反復denoisingで破棄される潜在表現を、微分可能なtoken別Relayチャネルとtruncated BPTT学習で次ステップへ伝播する。Fast-dLLM v2で通常の教師ありfine-tuningよりcoding課題の性能を改善し、推論遅延を最大32%削減と著者が報告。block diffusionとKV cacheにも対応し、拡散言語モデルの推論効率へ直接寄与。",
+      "source_url": "https://arxiv.org/abs/2605.22967",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T19:00:00+09:00",
+      "last_checked_at": "2026-11-11T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 54
+    }
+  ]
+}
