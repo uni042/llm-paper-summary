@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation",
+      "source_url": "https://arxiv.org/abs/2604.21221",
+      "year": 2026,
+      "published": "2026-04-23",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Sparse Forcing, a training-and-inference paradigm for autoregressive video diffusion models that improves long-horizon generation quality while reducing decoding latency. Sparse Forcing is motivated by an empirical observation in autoregressive diffusion rollouts: attention concentrates on a persistent subset of salient visual blocks, forming an implicit spatiotemporal memory in the KV cache, and exhibits a locally structured block-sparse pattern within sliding windows. Building on this observation, we propose a trainable native sparsity mechanism that learns to compress, preserve, and update these persistent blocks while restricting computation within each local window to a dynamically selected local neighborhood. To make the approach practical at scale for both training and inference, we further propose Persistent Block-Sparse Attention (PBSA), an efficient GPU kernel that accelerates sparse attention and memory updates for low-latency, memory-efficient decoding. Experiments show that Sparse Forcing improves the VBench score by +0.26 over Self-Forcing on 5-second text-to-video generation while delivering a 1.11-1.17x decoding speedup and 42% lower peak KV-cache footprint. The gains are more pronounced on longer-horizon rollouts, delivering improved visual quality with +0.68 and +2.74 VBench improvements, and 1.22x and 1.27x speedups on 20-second and 1-minute generations, respectively.",
+      "identifiers": [
+        "SemanticScholar:06ebd557b1b73d02f723523ece2fb120aa7d51d5"
+      ],
+      "semantic_scholar_id": "06ebd557b1b73d02f723523ece2fb120aa7d51d5",
+      "canonical_id": "arXiv:2604.21221",
+      "arxiv_id": "2604.21221",
+      "doi": "10.48550/arXiv.2604.21221",
+      "authors": [
+        "Bo-Xun Xu",
+        "Yuming Du",
+        "Zi-Chang Liu",
+        "Siyu Yang",
+        "Zi-Yang Jiang",
+        "Siqi Yan",
+        "Rajasi Saha",
+        "Albert Pumarola",
+        "Wenchen Wang",
+        "Peng Li"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰動画拡散モデルの長時間生成で、永続的な重要視覚ブロックをKVキャッシュに保持・更新し、局所窓を動的に疎化する学習可能なSparse ForcingとPersistent Block-Sparse Attention GPUカーネルを提案。Self-Forcing比で5秒動画のVBench +0.26、decode 1.11～1.17倍高速化、KVキャッシュピーク42%削減を著者が報告。注意計算・KVキャッシュ効率化の関連手法だが、評価対象は動画生成でありLLMテキスト推論ではない。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-366d334156c3",
+    "round": "libimp-366d334156c359a9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-366d334156c359a9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-366d334156c359a9-pre01.json",
+    "receipt": "sha256:d4333ab4fe1a9ecdb5fd5e1dfe3916be555d904c3c3d1ab3e1a73f3d7259ef51"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-366d334156c3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
