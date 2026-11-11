@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-11T08:55:18+00:00`
+Generated: `2026-11-11T09:46:50+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -17,7 +17,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
+| 1 | 110 | research | DOI:10.1016/j.adhoc.2025.104080 | Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference | [primary](https://doi.org/10.1016/j.adhoc.2025.104080) | `papers/inference/99-other-inference-systems/2026-611c010063f8-collaborative-deployment-of-large-ai-models-on-the-edge-a-microservice-approach-to-heterogeneous-training-and-quantized.md` |
 | 2 | 103 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
 | 3 | 102 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
 | 4 | 101 | research | DOI:10.1007/s11831-026-10598-4 | Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference | [primary](https://doi.org/10.1007/s11831-026-10598-4) | `papers/inference/99-other-inference-systems/2026-328ede95d0dd-building-expert-small-models-a-comprehensive-survey-of-model-compression-knowledge-distillation-and-augmented-inference.md` |
@@ -539,7 +539,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 457 | 4 | 4 | 5 | arXiv:2306.16601 | An Efficient Sparse Inference Software Accelerator for Transformer-based Language Models on CPUs | 2023-06-28 | arXiv.org | 4 | 5 |  | [source](https://arxiv.org/abs/2306.16601) |
 | 458 | 0 | 4 | 5 | arXiv:2511.11729 | Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms | 2025-11-13 | arXiv.org | 0 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2511.11729) |
 | 459 | 106 | 4 | 5 | DOI:10.1109/JIOT.2025.3633487 | A Survey on Binary and Ternary Neural Networks and Their Realization in Compute-in-Memory for Edge Intelligence | 2026-01-15 | IEEE Internet of Things Journal | 6 | 5 | Weight Quantization / Compression, inference-systems | [source](https://doi.org/10.1109/JIOT.2025.3633487) |
-| 460 | 19 | 4 | 5 | arXiv:2502.07244 | Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting | 2025-02-11 | International Conference on Machine Learning | 9 | 5 |  | [source](https://arxiv.org/abs/2502.07244) |
+| 460 | 20 | 4 | 5 | arXiv:2601.12033 | Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection | 2026-01-17 | Annual Meeting of the Association for Computational Linguistics | 0 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.12033) |
 | 461 | 10 | 4 | 5 | DOI:10.1109/2575-8411.2026.00111 | BridgeLoRA: Privacy-Preserving Collaborative Skip-Layer Connectors for Efficient Transformer Fine-Tuning at the Edge | 2026-06-01 | IEEE International Conference on Distributed Computing Systems | 0 | 5 | Conditional Computation | [source](https://doi.org/10.1109/2575-8411.2026.00111) |
 | 462 | 10 | 4 | 5 | arXiv:2605.05994 | DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression | 2026-05-07 | arXiv.org | 0 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2605.05994) |
 | 463 | 10 | 4 | 5 | arXiv:2606.19993 | Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs | 2026-06-18 | arXiv.org | 0 | 5 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2606.19993) |

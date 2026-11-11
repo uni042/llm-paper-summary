@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-11T08:55:18+00:00`
+Generated: `2026-11-11T09:46:50+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -540,7 +540,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 457 | 10 | 4 | 5 | DOI:10.1109/IPDPSW71298.2026.00091 | ViSched: Reinforcement Learning-Based Scheduling for Vision-Language Model Inference on a Heterogeneous GPU Cluster | 2026-05-01 | IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum | 0 | 5 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/IPDPSW71298.2026.00091) |
 | 458 | 0 | 4 | 5 | arXiv:2410.20488 | FIRP: Faster LLM Inference via Future Intermediate Representation Prediction | 2024-10-27 | Natural Language Processing and Chinese Computing | 0 | 5 | 07-kv-cache-optimization-compression, Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2410.20488) |
 | 459 | 116 | 4 | 5 | DOI:10.1109/CISCE69494.2026.11504731 | Multi-Objective Scheduling for Large Language Model Inference with Prompt-Level Cost Prediction and SLO Awareness | 2026-03-27 | 2026 IEEE 8th International Conference on Communications, Information System and Computer Engineering (CISCE) | 16 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/CISCE69494.2026.11504731) |
-| 460 | 20 | 4 | 5 | arXiv:2601.12033 | Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection | 2026-01-17 | Annual Meeting of the Association for Computational Linguistics | 0 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.12033) |
+| 460 | 21 | 4 | 5 | arXiv:2502.07244 | Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting | 2025-02-11 | International Conference on Machine Learning | 11 | 5 |  | [source](https://arxiv.org/abs/2502.07244) |
 | 461 | 10 | 4 | 5 | DOI:10.1007/s44443-026-00724-4 | Layer-wise heterogeneity-guided heterogeneous pruning: An LLM compression method | 2026-04-30 | Journal of King Saud University: Computer and Information Sciences | 0 | 5 | inference-systems | [source](https://doi.org/10.1007/s44443-026-00724-4) |
 | 462 | 10 | 4 | 5 | DOI:10.23919/DATE69613.2026.11539287 | Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration | 2026-04-20 | Design, Automation and Test in Europe | 0 | 5 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.23919/DATE69613.2026.11539287) |
 | 463 | 10 | 4 | 5 | arXiv:2606.04063 | LLM Compression with Jointly Optimizing Architectural and Quantization choices | 2026-06-02 | arXiv.org | 0 | 5 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2606.04063) |
