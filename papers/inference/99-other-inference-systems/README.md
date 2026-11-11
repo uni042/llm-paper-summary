@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（871本）
+## 自動生成の論文一覧（872本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1181,6 +1181,10 @@
 - **2026-05 · [Fre-Res: Frequency-Residual Video Token Compression for Efficient Video MLLMs](2026-2605.16366-fre-res-frequency-residual-video-token-compression-for-efficient-video-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動画対応マルチモーダルLLMにおいて、疎な高精細空間アンカーフレームと、フレーム間残差の時間方向DCT低周波成分を別経路で圧縮・統合するFre-Resを提案。Qwen2-VL-7Bの約2.1倍圧縮でNExT-QA 70.08、LongVideoBench 53.52、EgoSchema 63.58を達成。
+
+- **2026-05 · [Focus-then-Context: Subject-Centric Progressive Visual Token Reduction for Vision-Language Models](2026-2605.20950-focus-then-context-subject-centric-progressive-visual-token-reduction-fo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SPprunerは視覚言語モデルの推論時に、質問と一致する画像領域だけでなく目立つ被写体とその周囲の構造情報を残す二段階の視覚トークン間引き方式である。
 
 - **2026-05 · [Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding](2026-2605.22078-enhancing-visual-token-representations-for-video-large-language-models-v.md)**  
   実装：[✓](https://github.com/bingjunluo/ST-GridPool) ・ リポジトリ内被引用：0  
