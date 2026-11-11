@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-2057-scheduled-chat-00/r01",
+  "reference_main_sha": "c2486292530d2523e6cf66ba98aaaff40e99026c",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14630",
+      "identity_tokens": ["arxiv:2607.14630"],
+      "title": "Cross-Layer Error Compensation and Finite-Sample Feature-Statistics Matching for Extreme Low-Bit Quantization of Large Language Models",
+      "reason": "一次arXiv論文の本文・要旨を確認。層間で累積する量子化誤差を再帰的に補償し、有限標本の特徴統計整合を併用する極低ビットLLM量子化。Qwen2.5-1.5Bの1.125-bitでFP16比perplexity比9.56±0.15、logit distillationの14.09±0.53より改善。推論用重み圧縮に直接関連するためaccept。",
+      "source_url": "https://arxiv.org/abs/2607.14630",
+      "body_check": "primary_arxiv_abstract_and_html_body_read",
+      "first_checked_at": "2026-11-11T20:57:30+09:00",
+      "last_checked_at": "2026-11-11T20:57:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22324",
+      "identity_tokens": ["arxiv:2603.22324"],
+      "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
+      "reason": "一次arXiv論文の本文・要旨を確認。ベースモデルとpost-training後の重み差分ΔWの符号保持率・コサイン類似度を最適化するdata-free FP8量子化。通常MSE量子化で失われるpost-training固有の挙動を保持する予備実験を報告。LLM圧縮・量子化に直接関連するためaccept。",
+      "source_url": "https://arxiv.org/abs/2603.22324",
+      "body_check": "primary_arxiv_abstract_and_html_body_read",
+      "first_checked_at": "2026-11-11T20:57:30+09:00",
+      "last_checked_at": "2026-11-11T20:57:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 61
+    }
+  ]
+}
