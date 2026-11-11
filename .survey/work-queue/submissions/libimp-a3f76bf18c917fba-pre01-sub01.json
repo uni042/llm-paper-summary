@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
+      "source_url": "https://arxiv.org/abs/2603.17946",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Converting pretrained attention modules such as grouped-query attention (GQA) into multi-head latent attention (MLA) can improve expressivity without increasing KV-cache cost, making it attractive for efficient inference. However, many practical conversion baselines rely on weight-only low-rank approximations (e.g., SVD-style initializations) and uniform rank allocation. They focus on minimizing the difference between weight matrices rather than on how those weights affect input activations, ignore the covariance structure of activations, and enforce uniform rank across layers, causing activation drift and degraded attention fidelity. To address these issues, we propose CARE, a Covariance-Aware, Rank-Enhanced MLA conversion pipeline under a fixed KV width. CARE introduces three key steps: (i) activation-preserving factorization, which aligns the approximation with the actual input activations rather than just the weights; (ii) adjusted-rank allocation, which spreads a fixed KV budget across layers by giving more capacity to layers that need it most; and (iii) KV-parity mapping, which reparameterizes the converted K and V to fit the MLA format while keeping the KV-cache size unchanged. Our method outperforms a uniform-rank SVD baseline on Qwen3-4B/30B-A3B-Instruct-2507 and Llama-3.1-8B/70B-Instruct, reducing one-shot perplexity by up to 215x and improving mean accuracy by up to 1.70x at matched KV budgets. With a brief post-SVD healing fine-tune, we fully recover the original model's accuracy.",
+      "identifiers": [
+        "SemanticScholar:2298dfb993fcbea7f252aafd6a5fd6ba6845f66d"
+      ],
+      "semantic_scholar_id": "2298dfb993fcbea7f252aafd6a5fd6ba6845f66d",
+      "canonical_id": "arXiv:2603.17946",
+      "arxiv_id": "2603.17946",
+      "doi": "10.48550/arXiv.2603.17946",
+      "authors": [
+        "Zhong Zhou",
+        "Fengxiang Bie",
+        "Zi-Yang Chen",
+        "Zhenyu Zhang",
+        "Yi-Bo Yang",
+        "Jun-Xiong Wang",
+        "B. Athiwaratkun",
+        "Xiao-Xia Wu",
+        "S. Song"
+      ],
+      "priority": 117,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 117,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "GQAなどの事前学習済みattentionを固定KV幅のMLAへ変換する際、活性値共分散を考慮した分解、層別ランク配分、KV-parity写像を組み合わせる。等しいKV予算の一様ランクSVD基準に対し、one-shot perplexity最大215倍改善、平均精度最大1.70倍と著者報告。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2608.02032",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern language models are built primarily from Transformers, recurrent models, and their hybrid architectures. Transformers rely on token-level attention memories, while recurrent models such as state space models (SSMs) and linear attention maintain compact recurrent states. These architectures are typically instantiated separately or interleaved at the layer level, leaving open whether a shared memory representation can support both recurrent compression and attention-style retrieval. We study this question through the state space duality (SSD) view of Mamba-2, where the SSM state can be interpreted as a compressed associative key--value (KV) cache. We observe that Mamba-2 decodes token-conditioned values from this state but does not decode token-conditioned keys. Based on this observation, we propose DART (Decoded Attention over Recurrent sTates), which retains the chunk state contributions produced by the Mamba-2 chunked scan as chunk state memories, decodes token-conditioned keys and values from these memories, and performs state-memory attention (SMA) over the resulting KV pairs. The retrieved output is then combined with the native Mamba-2 output through a gated residual connection. DART supports practical training by reusing the Mamba-2 chunked scan and implementing SMA as a FlashAttention-style computation. Our analysis and experiments show that DART substantially reduces the length-dependent inference cache compared with a matched attention baseline (e.g., $75\\%$ savings when the chunk size is $S=256$ and the state size is $N=128$). Compared with Mamba-2, DART substantially improves associative recall and retrieval while preserving general language-modeling quality.",
+      "identifiers": [
+        "SemanticScholar:e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28"
+      ],
+      "semantic_scholar_id": "e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28",
+      "canonical_id": "arXiv:2608.02032",
+      "arxiv_id": "2608.02032",
+      "doi": "10.48550/arXiv.2608.02032",
+      "authors": [
+        "Yi-Xiao Qian",
+        "Song Chen",
+        "Peng-Kai Wang",
+        "Jia-Xu Liu",
+        "Sheng-Ze Cai",
+        "Chao Xu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mamba-2のSSDチャンク状態を記憶として残し、トークン条件付き鍵・値を復号して状態記憶注意を実行し、元のMamba出力にゲート付き残差で結合する。チャンク256・状態128の例でattention基準の長さ依存キャッシュを75%削減し、連想想起性能を改善したと報告。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+      "identifiers": [
+        "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+      ],
+      "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+      "canonical_id": "arXiv:2602.06822",
+      "arxiv_id": "2602.06822",
+      "doi": "10.48550/arXiv.2602.06822",
+      "authors": [
+        "Yi Chen",
+        "Wonjin Shin",
+        "Shuhong Liu",
+        "Tho Mai",
+        "Jeongmo Lee",
+        "Chuan-Bo Hua",
+        "Kunlun Wang",
+        "Jun Liu",
+        "Jooyul Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefillで保持・候補・削除チャネルを粗く分割し、decode中に候補領域のみ文脈依存マスクを更新するオンライン構造枝刈り。オフライン較正・再学習・予測器なしでLLM、MoE、VLMの推論計算量と遅延を削減する研究。要旨に改善率の定量値はない。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+      "identifiers": [
+        "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+      ],
+      "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+      "canonical_id": "arXiv:2609.34330",
+      "arxiv_id": "2609.34330",
+      "doi": "10.48550/arXiv.2609.34330",
+      "authors": [
+        "Ting-Hao Wang",
+        "Yi-Chen Guo",
+        "Qi-Zhe Zhang",
+        "Yuan Zhang",
+        "Wei-Min Ouyang",
+        "Rui Huang",
+        "Jia-Jun Cao",
+        "Si-Xiang Chen",
+        "Hao-Kai Jiang",
+        "Ji-Xin Wu",
+        "Zheng Lu",
+        "Bo-Fan Zhu",
+        "Ren-Yuan Li",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "意味消去モデルから相互情報量被覆の目的関数を導出し、言語モデル投入前の視覚候補抽出とタスク依存部分集合選択を劣モジュラ最適化する学習不要の二段階視覚トークン削減。LLaVA-NEXT-13Bで視覚トークン5.6%のみ使用、元性能97.5%維持、推論3.8倍高速化と著者報告。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a3f76bf18c91",
+    "round": "libimp-a3f76bf18c917fba-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a3f76bf18c917fba-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a3f76bf18c917fba-pre01.json",
+    "receipt": "sha256:3a2eff1ae167f7ef10ecbd9582c3b29d042428a6207a54daffde7a3a949013bb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a3f76bf18c91",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
