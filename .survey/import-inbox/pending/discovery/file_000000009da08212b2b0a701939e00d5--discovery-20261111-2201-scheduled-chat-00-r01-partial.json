@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-2201-scheduled-chat-00/r01",
+  "reference_main_sha": "083cf2388333b11cf6797c20adcea3bca4a4e477",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34330",
+      "identity_tokens": [
+        "arxiv:2609.34330"
+      ],
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "reason": "意味消去モデルから相互情報量被覆の目的関数を導出し、言語モデル投入前の視覚候補抽出とタスク依存部分集合選択を劣モジュラ最適化する学習不要の二段階視覚トークン削減。LLaVA-NEXT-13Bで視覚トークン5.6%のみ使用、元性能97.5%維持、推論3.8倍高速化と著者報告。",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T22:01:07+09:00",
+      "last_checked_at": "2026-11-11T22:01:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 62
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06822",
+      "identity_tokens": [
+        "arxiv:2602.06822"
+      ],
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "reason": "prefillで保持・候補・削除チャネルを粗く分割し、decode中に候補領域のみ文脈依存マスクを更新するオンライン構造枝刈り。オフライン較正・再学習・予測器なしでLLM、MoE、VLMの推論計算量と遅延を削減する研究。要旨に改善率の定量値はない。",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T22:01:07+09:00",
+      "last_checked_at": "2026-11-11T22:01:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 64
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02032",
+      "identity_tokens": [
+        "arxiv:2608.02032"
+      ],
+      "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling",
+      "reason": "Mamba-2のSSDチャンク状態を記憶として残し、トークン条件付き鍵・値を復号して状態記憶注意を実行し、元のMamba出力にゲート付き残差で結合する。チャンク256・状態128の例でattention基準の長さ依存キャッシュを75%削減し、連想想起性能を改善したと報告。",
+      "source_url": "https://arxiv.org/abs/2608.02032",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T22:01:07+09:00",
+      "last_checked_at": "2026-11-11T22:01:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17946",
+      "identity_tokens": [
+        "arxiv:2603.17946"
+      ],
+      "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
+      "reason": "GQAなどの事前学習済みattentionを固定KV幅のMLAへ変換する際、活性値共分散を考慮した分解、層別ランク配分、KV-parity写像を組み合わせる。等しいKV予算の一様ランクSVD基準に対し、one-shot perplexity最大215倍改善、平均精度最大1.70倍と著者報告。",
+      "source_url": "https://arxiv.org/abs/2603.17946",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T22:01:07+09:00",
+      "last_checked_at": "2026-11-11T22:01:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 66
+    }
+  ]
+}
