@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Token-as-a-Utility: A Model-Agnostic Architecture for Metering and Provisioning AI Inference Services",
+      "source_url": "https://arxiv.org/abs/2611.01371",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token-based subscriptions are emerging as a commercial model for large language model inference, but extending them into interoperable utility services requires comparable consumption accounting. Raw token counts do not consistently measure inference resource use because demand varies with model architecture, context length, tokenisation, and concurrent serving conditions. This paper presents Token-as-a-Utility, a model-agnostic architecture integrating inference metering, service-level-aware provisioning, and inter-operator settlement. We prove that, under batched serving, no per-request meter can be additive, independent of co-resident traffic, and exactly cost-reflective at once. This motivates separating provisioned capacity, metered consumption, and contracted quality into distinct service products. Consumption is expressed in Reference Inference Units (RIUs) derived from prefill and decode demand, while occupancy-indexed operator ratings recover shared serving costs without altering the common unit. Versioned inference records support auditing and re-rating across operators; software-enforced capacity leases and quality-constrained routing enable provisioning on shared accelerators. The resource model is measured on three NVIDIA RTX 5000 Ada GPUs, and multi-tenant behaviour is evaluated with a trace-driven model calibrated to them. For the reference model, occupancy-indexed rating limits statement energy error to 9% under measured traffic, compared with up to 70.5% under fixed-occupancy rating. In calibrated multi-tenant experiments, tenant mispricing decreases from 7.36 times under flat token counting to 2.39 times with RIUs and 1.06 times after occupancy-based reconciliation. These findings demonstrate how portable inference accounting can be combined with load-dependent cost recovery and contract-based provisioning to support heterogeneous inference services across operators.",
+      "identifiers": [
+        "SemanticScholar:137f531b9a4500e37b084bcea8c2314e5d9d2621"
+      ],
+      "semantic_scholar_id": "137f531b9a4500e37b084bcea8c2314e5d9d2621",
+      "canonical_id": "arXiv:2611.01371",
+      "arxiv_id": "2611.01371",
+      "authors": [
+        "Yichiet Aun",
+        "Soung-Yue Liew",
+        "Yu-Liang Lai",
+        "Jing Jie Tan",
+        "Dong Chen",
+        "P. Khotimah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種LLM推論サービスで単純トークン数が計算資源消費を正しく反映しない問題を扱い、prefillとdecode需要からReference Inference Unitsを定義、同居負荷を反映した課金係数、監査可能な利用記録、容量リースと品質制約付きルーティングを組み合わせる。RTX 5000 Ada 3基で測定した資源モデルと較正した複数テナント実験で、固定占有率課金のエネルギー誤差最大70.5%に対して占有率連動方式は9%以内、テナント誤課金倍率は単純トークン課金7.36倍から調整後1.06倍に改善したと一次要旨で報告。LLMサービング資源計測・容量管理への直接的貢献としてaccept。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-57b5ab189ba8",
+    "round": "libimp-57b5ab189ba8d6a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-57b5ab189ba8d6a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-57b5ab189ba8d6a7-pre01.json",
+    "receipt": "sha256:f33a4e7b362d099901eaa74cae44ae58eec5d4e643ee4eb7e07ce7cc4a343c50"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-57b5ab189ba8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
