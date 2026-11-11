@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ef1f571f69e47a2a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ef1f571f69e4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.17302"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4fff08e212b77df0587f1be06231c30d57f8015a",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-11T23:55:09.147129+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.17302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems",
+      "source_url": "https://arxiv.org/abs/2603.17302",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The transition to open, distributed Multi-Agent Systems (MAS) promises scalable intelligence but introduces a non-trivial tension: maximizing global efficiency requires cooperative, resource-aware scheduling, yet autonomous agents may be self-interested and cannot be managed by a centralized controller. Prior approaches fall short in two key areas: they typically focus on single-query routing, neglecting long-term resource reuse (e.g., KV-caching) and the complexities of system-level many-to-many matching; furthermore, they rely on generic incentive mechanisms that ignore the distinct characteristics of LLM inference. To bridge this gap, we propose IEMAS (Incentive-Efficiency Mechanism for Multi-Agent Systems), a distributed framework that aligns economic incentives with system performance. IEMAS integrates a probabilistic predictive model to estimate Quality of Service (QoS) under uncertainty, which feeds into a VCG-based bipartite matching mechanism. This design guarantees truthful capability reporting and social optimality while explicitly leveraging KV cache-affinity to minimize computational redundancy. We implement IEMAS on top of vLLM and evaluate it via extensive simulations. Results demonstrate that our incentive-efficiency co-design reducing average service cost by 35% and end-to-end latency by up to 2.9 compared to baselines.",
+      "identifiers": [
+        "SemanticScholar:e27296112fc847b7f0e925486fbd1530f322b291"
+      ],
+      "semantic_scholar_id": "e27296112fc847b7f0e925486fbd1530f322b291",
+      "canonical_id": "arXiv:2603.17302",
+      "arxiv_id": "2603.17302",
+      "doi": "10.48550/arXiv.2603.17302",
+      "authors": [
+        "Hong-Ze Liu",
+        "Chang Guo",
+        "Yingze Li",
+        "Meng-Ru Wang",
+        "Jiong Lou",
+        "Shi-Jing Yuan",
+        "He-Feng Zhou",
+        "Chen-Tao Wu",
+        "Jie Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.17302",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.17302",
+        "id:SemanticScholar:e27296112fc847b7f0e925486fbd1530f322b291",
+        "id:arXiv:2603.17302",
+        "title:iemas an incentiveefficiency routing framework for open agentic web ecosystems",
+        "url:https://arxiv.org/abs/2603.17302"
+      ],
+      "record": {
+        "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems",
+        "source_url": "https://arxiv.org/abs/2603.17302",
+        "year": 2026,
+        "published": "2026-03-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The transition to open, distributed Multi-Agent Systems (MAS) promises scalable intelligence but introduces a non-trivial tension: maximizing global efficiency requires cooperative, resource-aware scheduling, yet autonomous agents may be self-interested and cannot be managed by a centralized controller. Prior approaches fall short in two key areas: they typically focus on single-query routing, neglecting long-term resource reuse (e.g., KV-caching) and the complexities of system-level many-to-many matching; furthermore, they rely on generic incentive mechanisms that ignore the distinct characteristics of LLM inference. To bridge this gap, we propose IEMAS (Incentive-Efficiency Mechanism for Multi-Agent Systems), a distributed framework that aligns economic incentives with system performance. IEMAS integrates a probabilistic predictive model to estimate Quality of Service (QoS) under uncertainty, which feeds into a VCG-based bipartite matching mechanism. This design guarantees truthful capability reporting and social optimality while explicitly leveraging KV cache-affinity to minimize computational redundancy. We implement IEMAS on top of vLLM and evaluate it via extensive simulations. Results demonstrate that our incentive-efficiency co-design reducing average service cost by 35% and end-to-end latency by up to 2.9 compared to baselines.",
+        "identifiers": [
+          "SemanticScholar:e27296112fc847b7f0e925486fbd1530f322b291"
+        ],
+        "semantic_scholar_id": "e27296112fc847b7f0e925486fbd1530f322b291",
+        "canonical_id": "arXiv:2603.17302",
+        "arxiv_id": "2603.17302",
+        "doi": "10.48550/arXiv.2603.17302",
+        "authors": [
+          "Hong-Ze Liu",
+          "Chang Guo",
+          "Yingze Li",
+          "Meng-Ru Wang",
+          "Jiong Lou",
+          "Shi-Jing Yuan",
+          "He-Feng Zhou",
+          "Chen-Tao Wu",
+          "Jie Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 238,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6b3e0edca0b064ab4e5c4ae7a1a11247c920c90b0d2d00e1b3266960e5e69122",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
