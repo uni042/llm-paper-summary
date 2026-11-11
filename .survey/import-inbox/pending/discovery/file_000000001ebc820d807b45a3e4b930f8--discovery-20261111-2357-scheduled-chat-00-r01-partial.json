@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-2357-scheduled-chat-00/r01",
+  "reference_main_sha": "0133a9b2d0e70f968acb01ab09497644e8beb1b6",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.21221",
+      "identity_tokens": [
+        "arxiv:2604.21221"
+      ],
+      "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation",
+      "reason": "自己回帰動画拡散モデルの長時間生成で、永続的な重要視覚ブロックをKVキャッシュに保持・更新し、局所窓を動的に疎化する学習可能なSparse ForcingとPersistent Block-Sparse Attention GPUカーネルを提案。Self-Forcing比で5秒動画のVBench +0.26、decode 1.11～1.17倍高速化、KVキャッシュピーク42%削減を著者が報告。注意計算・KVキャッシュ効率化の関連手法だが、評価対象は動画生成でありLLMテキスト推論ではない。",
+      "source_url": "https://arxiv.org/abs/2604.21221",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T23:57:54+09:00",
+      "last_checked_at": "2026-11-11T23:57:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 70
+    }
+  ]
+}
