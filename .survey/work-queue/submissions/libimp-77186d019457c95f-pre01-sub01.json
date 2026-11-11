@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing",
+      "source_url": "https://arxiv.org/abs/2609.01925",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention prefilling phase of long-context LLM inference scales quadratically, making self-attention a severe computational bottleneck. Traditional sparse attention methods mitigate this through fixed patterns or offline profiling, but lack the flexibility to adapt to input-dependent attention structure. Recent dynamic methods address this by routing heads to sparse patterns in real-time, but rely on indirect routing proxies with overhead and budget allocation mechanisms that overlook the post-softmax mass hierarchy. We present CRISP (Cliff-awaRe Input-adaptive Sparse Prefilling), which identifies and addresses two structural challenges in this dynamic routing paradigm. First, we show that the routing decision can be read directly off the structure of the proxy attention map. We replace the Jensen-Shannon Divergence (JSD) routing with C_struct, a structural proxy that measures mass at Vertical-Slash compatible positions and reproduces JSD's routing decisions while eliminating both the pooled matmul and subsequent KL divergence overhead. Second, we formalize the post-softmax mass cliff and demonstrate theoretically that strictly cumulative coverage thresholds accumulate O(n) background noise at long contexts. CRISP navigates this via a sink-aware threshold grounded in the noise floor. Empirically, across InfiniteBench, RULER and LongBench on two model families, CRISP is the strongest sparse method overall and matches or exceeds exact dense attention on retrieval-heavy benchmarks, recovering up to +28.0 pp on retrieval tasks over baselines and achieving up to a 5.30x attention speedup at 512k tokens, driven primarily by our O(n) noise elimination during selection while preserving structural integrity.",
+      "identifiers": [
+        "SemanticScholar:5adda150bd5951b70bf4a30e2986884d05a68f99"
+      ],
+      "semantic_scholar_id": "5adda150bd5951b70bf4a30e2986884d05a68f99",
+      "canonical_id": "arXiv:2609.01925",
+      "arxiv_id": "2609.01925",
+      "doi": "10.18653/2026.emnlp-main.184",
+      "authors": [
+        "Huy Huu Nguyen",
+        "Chien Van Nguyen",
+        "Franck Dernoncourt",
+        "Ryan A. Rossi",
+        "Linh Ngo Van",
+        "Jie-Yang Chen",
+        "Thien Huu Nguyen"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 71,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "長文脈LLMのprefill疎注意で、代理注意行列の構造的質量C_structによるhead routingと、softmax後の背景雑音floorを考慮したblock選択を組み合わせる。InfiniteBench/RULER/LongBenchの評価で検索課題最大+28.0ポイント、512Kトークン時attention計算最大5.30倍高速化を著者が報告。LLM推論高速化に直接関連。速度値はattention部分の評価でありE2Eではない。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-77186d019457",
+    "round": "libimp-77186d019457c95f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-77186d019457c95f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-77186d019457c95f-pre01.json",
+    "receipt": "sha256:2e129b3f47890f6bba5c7ab4262fab34dd0e32d6e849bcc742d41c33ab6c9425"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-77186d019457",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
