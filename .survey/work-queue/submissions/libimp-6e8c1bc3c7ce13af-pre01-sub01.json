@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2603.02737",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference demands vast memory capacity and hierarchical memory structures, but conventional architectures suffer from excessive energy and latency costs due to frequent data movement across deep memory tiers. To address this, we propose a wafer-scale SRAM-based Computing-in-Memory (CIM) architecture that performs all LLM operations in situ within the first-level SRAM, eliminating off-chip data migration and achieving unprecedented energy efficiency. However, wafer-scale SRAM CIM presents multiple challenges due to the limited first-level memory capacity, which requires efficient compute-memory resource allocation. To enable efficient LLM execution on this architecture, we propose three key innovations: Token-Grained Pipelining – Conventional sequence-level pipelining suffers from underutilization due to varying input sequence lengths and batching policies. We introduce a fine-grained token-level pipeline that mitigates sequence length variations, enhancing the utilization of CIM cores while minimizing the storage capacity required for activation. Distributed Dynamic KV Cache Management – KV cache storage occupies significant memory in LLM inference. We optimize on-chip KV caching by decoupling CIM memory from compute assignment, leveraging fragmented SRAM CIM memory within already-allocated cores for efficient KV storage, and reducing dedicated memory overhead. Communication-Aware and Fault-Tolerant Core Mapping – Efficient execution on wafer-scale CIM requires optimal mapping from transformer blocks to CIM cores to minimize inter-(pipeline) stage communication while ensuring intra-stage compute locality. We design a network-on-wafer-aware mapping strategy that places pipeline stages in close proximity while also distributing large layers efficiently across multiple cores. This mapping accounts for core-level defects, improving fault tolerance in wafer-scale deployment. Experimental results demonstrate that Ouroboros achieves 4.1× average throughput improvement and 4.2× average energy efficiency gain over state-of-the-art systems, peaking at 9.1× throughput and 17× energy efficiency for the 13B model.",
+      "identifiers": [
+        "SemanticScholar:c426b1b033a0cdc1d3f62f83b1df85a8685314e6"
+      ],
+      "semantic_scholar_id": "c426b1b033a0cdc1d3f62f83b1df85a8685314e6",
+      "canonical_id": "arXiv:2603.02737",
+      "arxiv_id": "2603.02737",
+      "doi": "10.1145/3779212.3790197",
+      "authors": [
+        "Yi-Qi Liu",
+        "Yu-Dong Pan",
+        "Meng-Di Wang",
+        "Shi-Xin Zhao",
+        "Hao-Nan Zhu",
+        "Yi Han",
+        "Lei Zhang",
+        "Ying Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      },
+      "reason": "wafer-scale SRAM computing-in-memoryによりオフチップ移動を抑制し、token粒度パイプライン、分散動的KV管理、通信考慮配置を統合。著者報告の平均スループット4.1倍・エネルギー効率4.2倍、13B最大9.1倍・17倍は比較条件を本文で検証する必要がある。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Chain-of-Model Learning for Language Model",
+      "source_url": "https://arxiv.org/abs/2505.11820",
+      "year": 2025,
+      "published": "2025-05-17",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose a novel learning paradigm, termed Chain-of-Model (CoM), which incorporates the causal relationship into the hidden states of each layer as a chain style, thereby introducing great scaling efficiency in model training and inference flexibility in deployment. We introduce the concept of Chain-of-Representation (CoR), which formulates the hidden states at each layer as a combination of multiple sub-representations (i.e., chains) at the hidden dimension level. In each layer, each chain from the output representations can only view all of its preceding chains in the input representations. Consequently, the model built upon CoM framework can progressively scale up the model size by increasing the chains based on the previous models (i.e., chains), and offer multiple sub-models at varying sizes for elastic inference by using different chain numbers. Based on this principle, we devise Chain-of-Language-Model (CoLM), which incorporates the idea of CoM into each layer of Transformer architecture. Based on CoLM, we further introduce CoLM-Air by introducing a KV sharing mechanism, that computes all keys and values within the first chain and then shares across all chains. This design demonstrates additional extensibility, such as enabling seamless LM switching, prefilling acceleration and so on. Experimental results demonstrate our CoLM family can achieve comparable performance to the standard Transformer, while simultaneously enabling greater flexiblity, such as progressive scaling to improve training efficiency and offer multiple varying model sizes for elastic inference, paving a a new way toward building language models. Our code will be released in the future at: https://github.com/microsoft/CoLM.",
+      "identifiers": [
+        "SemanticScholar:fd312c7a18b26c114644b5245938cfaa1a5c308c"
+      ],
+      "semantic_scholar_id": "fd312c7a18b26c114644b5245938cfaa1a5c308c",
+      "canonical_id": "arXiv:2505.11820",
+      "arxiv_id": "2505.11820",
+      "doi": "10.48550/arXiv.2505.11820",
+      "authors": [
+        "Xiao-Hua Wang",
+        "Kai-Tao Song",
+        "Xu Tan",
+        "Huiqiang Jiang",
+        "Chengruidong Zhang",
+        "Yong-Liang Shen",
+        "Cen Lu",
+        "Zihao Li",
+        "Zi-Fan Song",
+        "Caihua Shan",
+        "Yansen Wang",
+        "Kan Ren",
+        "Xiao-Qing Zheng",
+        "Tao Qin",
+        "Yu-Qing Yang",
+        "Dong-Sheng Li",
+        "Lili Qiu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 543,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Transformer各層の隠れ次元を因果的なchainに分割するCoM/CoLM。使用chain数を変えるelastic inferenceと、先頭chainで計算したKVを共有するCoLM-Airによりprefill効率化を狙う。一次要旨には具体的な推論速度改善率がなくResearchで確認が必要。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+      "source_url": "https://arxiv.org/abs/2610.00465",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Next-generation large language models (LLMs) are expanding from the cloud to ubiquitous edge devices. However, edge devices typically either lack the memory to store increasingly large LLM weights or, even with enough memory, spend unaffordable energy on loading the weights. This raises our question: can an edge device run an LLM without storing or loading its weights, but receive them over the air and consume them on the fly? Inspired by wireless broadcasting, we present AIR-LLM, an LLM inference architecture for edge devices, which is composed of: (i) a central radio (e.g., 5G base stations) that broadcasts the LLM weights into the air, and (ii) the edge user that receives the weights and completes the general matrix-vector multiplication (GEMV) of LLM inference directly in the radio frequency (RF) domain using RF mixers. To further shorten the airtime, AIR-LLM exploits MIMO spatial multiplexing and proposes an energy-efficient precoder-postcoder pair on the edge to calibrate its own wireless channel. Since the central radio stays user-unaware, AIR-LLM is user-scalable so that one broadcast serves unlimited users within its coverage. We implement AIR-LLM on the NVIDIA Sionna ray-traced channels of two real-world urban scenes and the profiling of a real RF mixer. With a WikiText-2 perplexity degradation of 4.0% on LLaMA-3.1-8B, AIR-LLM saves the energy by 157.7x/40.4x against the FP16 and weight-only quantization baselines; with 20 users, its airtime is 104.1x/26.0x shorter, respectively.",
+      "identifiers": [
+        "SemanticScholar:18f820cededbe9c51406d158961567d3385be8bc"
+      ],
+      "semantic_scholar_id": "18f820cededbe9c51406d158961567d3385be8bc",
+      "canonical_id": "arXiv:2610.00465",
+      "arxiv_id": "2610.00465",
+      "authors": [
+        "Zhi-Hui Gao",
+        "Ting-Jun Chen",
+        "Dirk R. Englund"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "基地局から重みを無線配信し、端末側RFミキサでGEMVを実行する特殊なedge LLM構成。Sionna都市シーンと実RF mixer profilingによる評価で、LLaMA-3.1-8BのWikiText-2 perplexity劣化4.0%条件下、FP16/weight-only量子化比エネルギー157.7/40.4倍削減と著者報告。シミュレーション・モデル化に依存する点に注意。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Are We Scaling the Right Thing? A System Perspective on Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2509.19645",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling (TTS) has recently emerged as a promising direction to exploit the hidden reasoning capabilities of pre-trained large language models (LLMs). However, existing scaling methods narrowly focus on the compute-optimal Pareto-frontier, ignoring the simple fact that compute-optimal is not always system-optimal. In this work, we propose a system-driven perspective on TTS, analyzing how reasoning models scale against practical metrics, such as latency and cost-per-token. By evaluating the impact of popular optimizations such as tensor parallelism and speculative decoding, our preliminary analysis reveals the limitations of current methods and calls for a paradigm shift toward holistic, system-aware evaluations that capture the true essence of scaling laws at inference time.",
+      "identifiers": [
+        "SemanticScholar:9ecba1007441dbbada1d00624d3207634a260cbe"
+      ],
+      "semantic_scholar_id": "9ecba1007441dbbada1d00624d3207634a260cbe",
+      "canonical_id": "arXiv:2509.19645",
+      "arxiv_id": "2509.19645",
+      "doi": "10.48550/arXiv.2509.19645",
+      "authors": [
+        "You-Peng Zhao",
+        "J. Lv",
+        "Di Wu",
+        "Jun Wang",
+        "Chris Gooley"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 414,
+        "matched_prestigious_venue": null
+      },
+      "reason": "test-time scalingを計算量最適性だけでなくレイテンシ・token単価・tensor parallelism・投機復号のシステム指標から評価する問題提起と予備分析。新しい高速化アルゴリズムの定量実証ではなく、system-aware TTSの評価方法論として採用。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6e8c1bc3c7ce",
+    "round": "libimp-6e8c1bc3c7ce13af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6e8c1bc3c7ce13af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6e8c1bc3c7ce13af-pre01.json",
+    "receipt": "sha256:462604f5b47cdf90537013071d00ec14dc6dbd704ec568bd5aa7afd8d38cd766"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6e8c1bc3c7ce",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
