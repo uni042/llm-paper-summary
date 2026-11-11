@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Neural Garbage Collection: Learning to Forget while Learning to Reason",
+      "source_url": "https://arxiv.org/abs/2604.18002",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought reasoning has driven striking advances in language model capability, yet every reasoning step grows the KV cache, creating a bottleneck to scaling this paradigm further. Current approaches manage these constraints on the model's behalf using hand-designed criteria. A more scalable approach would let end-to-end learning subsume this design choice entirely, following a broader pattern in deep learning. After all, if a model can learn to reason, why can't it learn to forget? We introduce Neural Garbage Collection (NGC), in which a language model learns to forget while learning to reason, trained end-to-end from outcome-based task reward alone. As the model reasons, it periodically pauses, decides which KV cache entries to evict, and continues to reason conditioned on the remaining cache. By treating tokens in a chain-of-thought and cache-eviction decisions as discrete actions sampled from the language model, we can use reinforcement learning to jointly optimize how the model reasons and how it manages its own memory: what the model evicts shapes what it remembers, what it remembers shapes its reasoning, and the correctness of that reasoning determines its reward. Crucially, the model learns this behavior entirely from a single learning signal - the outcome-based task reward - without supervised fine-tuning or proxy objectives. On Countdown, AMC, and AIME tasks, NGC maintains strong accuracy relative to the full-cache upper bound at 2-3x peak KV cache size compression and substantially outperforms eviction baselines. Our results are a first step towards a broader vision where end-to-end optimization drives both capability and efficiency in language models.",
+      "identifiers": [
+        "SemanticScholar:2a0a80a2bac24fb306865f0251dcb93f929498a9"
+      ],
+      "semantic_scholar_id": "2a0a80a2bac24fb306865f0251dcb93f929498a9",
+      "canonical_id": "arXiv:2604.18002",
+      "arxiv_id": "2604.18002",
+      "doi": "10.48550/arXiv.2604.18002",
+      "authors": [
+        "Michael Y. Li",
+        "Jubayer Ibn Hamid",
+        "Emily B. Fox",
+        "Noah D. Goodman"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論時のCoT生成に伴うKVキャッシュ肥大化に対し、推論トークン生成とKVブロック保持・破棄の選択を、正答に基づく単一の報酬で共同強化学習するNeural Garbage Collection。Countdown、AMC、AIMEでピークKVキャッシュを約2～3倍圧縮して全保持に近い正答率を報告。速度向上を直接実測した成果ではなく、主眼はメモリ削減。LLMのKV管理と推論効率に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
+      "source_url": "https://arxiv.org/abs/2609.37062",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic layer skipping reduces LLM computation by allowing each token to execute only a subset of the model's layers. However, existing skippers rely on specialized generation loops and do not integrate with modern serving engines. As a result, fewer executed layers do not necessarily translate into lower serving latency: FlexiDepth skips 8 of Llama-3-8B's 32 layers on average, yet its standard generation loop decodes 14.6--21.0% more slowly than the base model. We present vSkipper, a virtualization layer that makes dynamic layer skippers pluggable in serving engines while preserving continuous batching, fixed-shape batches, paged KV caching, and captured decode graphs. At each routed layer, vSkipper groups tokens by the skipper's decision and uses routed execution only when predicted to be profitable. We implement vSkipper in SGLang and evaluate the released FlexiDepth checkpoint against upstream SGLang under identical prompts, arrivals, output lengths, and launch settings. At the knee of upstream's load curve, vSkipper reduces mean end-to-end latency by 36.8% on GSM8K and 13.6% on BBH. Under saturation, it increases request throughput by 11.3% and 7.4%. Serving adds no statistically resolved quality loss beyond the checkpoint's own. Across synthetic skip policies, two Qwen3 skippers, and three GPUs, we demonstrate reuse without workload-specific tuning. To our knowledge, vSkipper is the first system to realize serving-efficiency gains from per-token interior layer skipping within a modern LLM serving engine. The code is open-sourced as an SGLang fork at https://github.com/AKafakA/sglang-vskipper/tree/vskipper-ref",
+      "identifiers": [
+        "SemanticScholar:639ef2217fa2ef14d2d9bc77749392d27d60b927"
+      ],
+      "semantic_scholar_id": "639ef2217fa2ef14d2d9bc77749392d27d60b927",
+      "canonical_id": "arXiv:2609.37062",
+      "arxiv_id": "2609.37062",
+      "doi": "10.48550/arXiv.2609.37062",
+      "authors": [
+        "Wei Da",
+        "Yavuz Ferhatosmanoglu",
+        "E. Kalyvianaki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      },
+      "reason": "トークンごとの動的レイヤースキップをSGLangのcontinuous batching、paged KV、captured decode graphと両立させる仮想化実行層。route別にトークンをまとめ、採算が合う場合のみスキップ経路を実行する。FlexiDepthチェックポイントとupstream SGLangを同条件比較し、負荷曲線のkneeで平均E2E遅延GSM8K 36.8%、BBH 13.6%減、飽和時throughput 11.3%、7.4%増と著者報告。LLM servingの直接的な改善。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a8c8f4767756",
+    "round": "libimp-a8c8f4767756b0ae-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a8c8f4767756b0ae-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a8c8f4767756b0ae-pre01.json",
+    "receipt": "sha256:9a4f6c3f7351054ee547e411ce463865ba02b77860f901933c8738a9a3849017"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a8c8f4767756",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
