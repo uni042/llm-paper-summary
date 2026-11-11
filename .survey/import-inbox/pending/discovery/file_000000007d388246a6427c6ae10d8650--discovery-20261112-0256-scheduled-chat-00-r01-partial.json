@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-0256-scheduled-chat-00/r01",
+  "reference_main_sha": "acacfa6d8491c0446ec3962c106e19335e5733c1",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01925",
+      "identity_tokens": [
+        "arxiv:2609.01925"
+      ],
+      "title": "CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing",
+      "reason": "長文脈LLMのprefill疎注意で、代理注意行列の構造的質量C_structによるhead routingと、softmax後の背景雑音floorを考慮したblock選択を組み合わせる。InfiniteBench/RULER/LongBenchの評価で検索課題最大+28.0ポイント、512Kトークン時attention計算最大5.30倍高速化を著者が報告。LLM推論高速化に直接関連。速度値はattention部分の評価でありE2Eではない。",
+      "source_url": "https://arxiv.org/abs/2609.01925",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T02:56:24+09:00",
+      "last_checked_at": "2026-11-12T02:56:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 77
+    }
+  ]
+}
