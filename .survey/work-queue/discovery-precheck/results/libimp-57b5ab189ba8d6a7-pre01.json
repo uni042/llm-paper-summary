@@ -1,0 +1,150 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-57b5ab189ba8d6a7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-57b5ab189ba8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2611.01371"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "564a95766848a8c6c72f3b85fd27cab4068d99ab",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-11T12:16:26.095723+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2611.01371",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Token-as-a-Utility: A Model-Agnostic Architecture for Metering and Provisioning AI Inference Services",
+      "source_url": "https://arxiv.org/abs/2611.01371",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token-based subscriptions are emerging as a commercial model for large language model inference, but extending them into interoperable utility services requires comparable consumption accounting. Raw token counts do not consistently measure inference resource use because demand varies with model architecture, context length, tokenisation, and concurrent serving conditions. This paper presents Token-as-a-Utility, a model-agnostic architecture integrating inference metering, service-level-aware provisioning, and inter-operator settlement. We prove that, under batched serving, no per-request meter can be additive, independent of co-resident traffic, and exactly cost-reflective at once. This motivates separating provisioned capacity, metered consumption, and contracted quality into distinct service products. Consumption is expressed in Reference Inference Units (RIUs) derived from prefill and decode demand, while occupancy-indexed operator ratings recover shared serving costs without altering the common unit. Versioned inference records support auditing and re-rating across operators; software-enforced capacity leases and quality-constrained routing enable provisioning on shared accelerators. The resource model is measured on three NVIDIA RTX 5000 Ada GPUs, and multi-tenant behaviour is evaluated with a trace-driven model calibrated to them. For the reference model, occupancy-indexed rating limits statement energy error to 9% under measured traffic, compared with up to 70.5% under fixed-occupancy rating. In calibrated multi-tenant experiments, tenant mispricing decreases from 7.36 times under flat token counting to 2.39 times with RIUs and 1.06 times after occupancy-based reconciliation. These findings demonstrate how portable inference accounting can be combined with load-dependent cost recovery and contract-based provisioning to support heterogeneous inference services across operators.",
+      "identifiers": [
+        "SemanticScholar:137f531b9a4500e37b084bcea8c2314e5d9d2621"
+      ],
+      "semantic_scholar_id": "137f531b9a4500e37b084bcea8c2314e5d9d2621",
+      "canonical_id": "arXiv:2611.01371",
+      "arxiv_id": "2611.01371",
+      "authors": [
+        "Yichiet Aun",
+        "Soung-Yue Liew",
+        "Yu-Liang Lai",
+        "Jing Jie Tan",
+        "Dong Chen",
+        "P. Khotimah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2611.01371",
+      "identity_tokens": [
+        "id:SemanticScholar:137f531b9a4500e37b084bcea8c2314e5d9d2621",
+        "id:arXiv:2611.01371",
+        "title:tokenasautility a modelagnostic architecture for metering and provisioning ai inference services",
+        "url:https://arxiv.org/abs/2611.01371"
+      ],
+      "record": {
+        "title": "Token-as-a-Utility: A Model-Agnostic Architecture for Metering and Provisioning AI Inference Services",
+        "source_url": "https://arxiv.org/abs/2611.01371",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Token-based subscriptions are emerging as a commercial model for large language model inference, but extending them into interoperable utility services requires comparable consumption accounting. Raw token counts do not consistently measure inference resource use because demand varies with model architecture, context length, tokenisation, and concurrent serving conditions. This paper presents Token-as-a-Utility, a model-agnostic architecture integrating inference metering, service-level-aware provisioning, and inter-operator settlement. We prove that, under batched serving, no per-request meter can be additive, independent of co-resident traffic, and exactly cost-reflective at once. This motivates separating provisioned capacity, metered consumption, and contracted quality into distinct service products. Consumption is expressed in Reference Inference Units (RIUs) derived from prefill and decode demand, while occupancy-indexed operator ratings recover shared serving costs without altering the common unit. Versioned inference records support auditing and re-rating across operators; software-enforced capacity leases and quality-constrained routing enable provisioning on shared accelerators. The resource model is measured on three NVIDIA RTX 5000 Ada GPUs, and multi-tenant behaviour is evaluated with a trace-driven model calibrated to them. For the reference model, occupancy-indexed rating limits statement energy error to 9% under measured traffic, compared with up to 70.5% under fixed-occupancy rating. In calibrated multi-tenant experiments, tenant mispricing decreases from 7.36 times under flat token counting to 2.39 times with RIUs and 1.06 times after occupancy-based reconciliation. These findings demonstrate how portable inference accounting can be combined with load-dependent cost recovery and contract-based provisioning to support heterogeneous inference services across operators.",
+        "identifiers": [
+          "SemanticScholar:137f531b9a4500e37b084bcea8c2314e5d9d2621"
+        ],
+        "semantic_scholar_id": "137f531b9a4500e37b084bcea8c2314e5d9d2621",
+        "canonical_id": "arXiv:2611.01371",
+        "arxiv_id": "2611.01371",
+        "authors": [
+          "Yichiet Aun",
+          "Soung-Yue Liew",
+          "Yu-Liang Lai",
+          "Jing Jie Tan",
+          "Dong Chen",
+          "P. Khotimah"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f33a4e7b362d099901eaa74cae44ae58eec5d4e643ee4eb7e07ce7cc4a343c50",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
