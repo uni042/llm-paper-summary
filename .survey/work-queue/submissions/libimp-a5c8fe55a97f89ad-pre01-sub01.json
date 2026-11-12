@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ShaRP: SHAllow-LayeR Pruning for Efficient Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.05385",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video Large Language Models (VLLMs) incur substantial prefilling cost due to the large number of visual tokens. While attention-based token pruning offers a promising acceleration strategy, applying it at shallow decoder layers often causes severe performance degradation under high compression ratios, limiting its practical benefits. In this work, we uncover an overlooked failure mode in shallow-layer attention pruning: attention scores in early decoder layers can become unreliable indicators of token utility, resulting in unstable token selection under aggressive compression. We show that this effect arises from the joint influence of insufficient token interaction, content-agnostic positional bias, and redundancy among high-attention tokens, which together distort attention-based importance estimation before informative representations fully emerge. Motivated by this insight, we propose ShaRP, a unified pruning framework that restores reliable attention-based token selection by jointly improving local information aggregation, calibrating positional bias, and reducing redundancy. Extensive evaluations show that ShaRP preserves about 97.2% of the original performance while reducing TFLOPs by 86% and achieving a 5.1x speedup in the prefilling stage, providing a scalable solution for efficient training-free VLLM inference.",
+      "identifiers": [
+        "SemanticScholar:c00f57c101169012da21ea8a0e7173d9c140f32f"
+      ],
+      "semantic_scholar_id": "c00f57c101169012da21ea8a0e7173d9c140f32f",
+      "canonical_id": "arXiv:2512.05385",
+      "arxiv_id": "2512.05385",
+      "authors": [
+        "Ying-Na Xia",
+        "Tao Liu",
+        "Jing-Lei Shi",
+        "Qin Xie",
+        "Heng Guo",
+        "Jian Yang",
+        "Xi Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 342,
+        "matched_prestigious_venue": null
+      },
+      "reason": "動画LLMの浅いdecoder層におけるattention重要度推定の不安定性を、局所情報集約・位置バイアス補正・冗長性低減で改善する学習不要の視覚トークン枝刈り。著者は元性能約97.2%維持、TFLOPs86%削減、prefill5.1倍高速化を報告。推論高速化に直接関連するためaccept。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Scaling laws for post-training quantized large language models",
+      "source_url": "https://arxiv.org/abs/2410.12119",
+      "year": 2024,
+      "published": "2024-10-15",
+      "venue": "ENLSP",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generalization abilities of well-trained large language models (LLMs) are known to scale predictably as a function of model size. In contrast to the existence of practical scaling laws governing pre-training, the quality of LLMs after post-training compression remains highly unpredictable, often requiring case-by-case validation in practice. In this work, we attempted to close this gap for post-training weight quantization of LLMs by conducting a systematic empirical study on multiple LLM families quantized to numerous low-precision tensor data types using popular weight quantization techniques. We identified key scaling factors pertaining to characteristics of the local loss landscape, based on which the performance of quantized LLMs can be reasonably well predicted by a statistical model.",
+      "identifiers": [
+        "SemanticScholar:2de3248087730baf0e53790cad6b34644f019570"
+      ],
+      "semantic_scholar_id": "2de3248087730baf0e53790cad6b34644f019570",
+      "canonical_id": "arXiv:2410.12119",
+      "arxiv_id": "2410.12119",
+      "doi": "10.48550/arXiv.2410.12119",
+      "authors": [
+        "Zifei Xu",
+        "Alexander Lan",
+        "W. Yazar",
+        "Tristan Webb",
+        "Sayeh Sharify",
+        "Xin Wang"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 758,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数LLM系列・低精度データ型・重み量子化手法を比較し、量子化後の性能を局所損失地形の特徴から統計的に予測するスケーリング則を調査。重み量子化の精度予測に直接関連するためaccept。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a5c8fe55a97f",
+    "round": "libimp-a5c8fe55a97f89ad-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a5c8fe55a97f89ad-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a5c8fe55a97f89ad-pre01.json",
+    "receipt": "sha256:708c35800cc75f74e65036c1e2be1a49d079664af9562e3c6051208a6bb0753b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a5c8fe55a97f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
