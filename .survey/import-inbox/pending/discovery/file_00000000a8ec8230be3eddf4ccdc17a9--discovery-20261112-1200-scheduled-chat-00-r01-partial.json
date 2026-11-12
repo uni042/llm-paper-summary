@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1200-scheduled-chat-00/r01",
+  "reference_main_sha": "dae16d03e7b02033170672a52698e230829def25",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09558",
+      "identity_tokens": [
+        "arxiv:2604.09558"
+      ],
+      "title": "VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination",
+      "reason": "仮想テンソルと索引写像で演算子間のデータ移動を物理的なメモリ転送なしに表現し、収益性を考慮した仮想テンソル生成戦略を自動選択するDNNコンパイラ。LLMを含むGPU推論で既存MLコンパイラ比最大1.93倍（平均1.28倍）、推論メモリ最大60%（平均17.5%）削減を著者報告。推論のメモリ移動最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.09558",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T12:00:00+09:00",
+      "last_checked_at": "2026-11-12T12:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24766",
+      "identity_tokens": [
+        "arxiv:2610.24766"
+      ],
+      "title": "ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction",
+      "reason": "補助MTPモジュールではなくbackbone最終層自身で複数未来位置を予測し、Dynamic Depth Samplingで深い予測地平の学習コストを抑える。学習済みモデルをそのまま投機的復号のドラフタとして使う設計で、学習と推論の両面で直接的に関連。",
+      "source_url": "https://arxiv.org/abs/2610.24766",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T12:00:00+09:00",
+      "last_checked_at": "2026-11-12T12:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02082",
+      "identity_tokens": [
+        "arxiv:2611.02082"
+      ],
+      "title": "Fairway: Load-Aware KV Cache Reuse for LLM Prefill Scheduling",
+      "reason": "KV再利用優先のFast laneと待機時間を考慮したFair laneを仮想的に切り替え、キャッシュ再利用と高コスト要求の飢餓回避を両立するprefillスケジューラ。著者はprefix-aware方式比でp99 TTFT最大8.6倍低減と報告。LLM配信・KV再利用スケジューリングに直接関連。",
+      "source_url": "https://arxiv.org/abs/2611.02082",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T12:00:00+09:00",
+      "last_checked_at": "2026-11-12T12:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40287",
+      "identity_tokens": [
+        "arxiv:2610.40287"
+      ],
+      "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+      "reason": "H100/H200とSGLangの実配信条件で投機的復号の受理率、バッチサイズ、消費エネルギー、遅延制約の相互作用を測定。大バッチや低受理率では投機的復号が逆にトークン当たりエネルギーを増やす場合を示す。推論効率の評価研究として直接関連。",
+      "source_url": "https://arxiv.org/abs/2610.40287",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T12:00:00+09:00",
+      "last_checked_at": "2026-11-12T12:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 98
+    }
+  ]
+}
