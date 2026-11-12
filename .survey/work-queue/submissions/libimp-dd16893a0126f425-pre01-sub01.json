@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs",
+      "source_url": "https://arxiv.org/abs/2510.05069",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 29,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work shows that, beyond discrete reasoning through explicit chain-of-thought steps, which are limited by the boundaries of natural languages, large language models (LLMs) can also reason continuously in latent space, allowing richer information per step and thereby improving token efficiency. Despite this promise, latent reasoning still faces two challenges, especially in training-free settings: 1) purely latent reasoning broadens the search distribution by maintaining multiple implicit paths, which diffuses probability mass, introduces noise, and impedes convergence to a single high-confidence solution, thereby hurting accuracy; and 2) overthinking persists even without explicit text, wasting tokens and degrading efficiency. To address these issues, we introduce SwiReasoning, a training-free framework for LLM reasoning which features two key innovations: 1) SwiReasoning dynamically switches between explicit and latent reasoning, guided by block-wise confidence estimated from entropy trends in next-token distributions, to balance exploration and exploitation and promote timely convergence. 2) By limiting the maximum number of thinking-block switches, SwiReasoning curbs overthinking and improves token efficiency across varying problem difficulties. On widely used mathematics, STEM, coding, and general benchmarks, SwiReasoning consistently improves average accuracy by 1.8%-3.1% across reasoning LLMs of different model families and scales. Furthermore, under constrained budgets, SwiReasoning improves average token efficiency by 57%-79%, with larger gains as budgets tighten.",
+      "identifiers": [
+        "SemanticScholar:13e4df024956363fe8dd2b21ccd2291eab8527f9"
+      ],
+      "semantic_scholar_id": "13e4df024956363fe8dd2b21ccd2291eab8527f9",
+      "canonical_id": "arXiv:2510.05069",
+      "arxiv_id": "2510.05069",
+      "doi": "10.48550/arXiv.2510.05069",
+      "authors": [
+        "Dachuan Shi",
+        "Abedelkadir Asi",
+        "Keying Li",
+        "Xiang-Chi Yuan",
+        "Le-Yan Pan",
+        "Wen-Ke Lee",
+        "W. Xiao"
+      ],
+      "priority": 39,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 29,
+        "citation_count": 29,
+        "total": 39,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 402,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "学習不要の推論方式。次トークン分布のエントロピー推移からブロック単位の確信度を推定し、明示的chain-of-thoughtと潜在推論を動的に切り替える。切替回数上限で過剰思考を抑制。数学・STEM・コード等で平均精度1.8～3.1%改善、予算制約下で平均トークン効率57～79%改善と著者報告。LLM推論トークン効率化の直接研究。",
+      "library_body_check": "primary_arxiv_abstract_read_v3_2026-03-01; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dd16893a0126",
+    "round": "libimp-dd16893a0126f425-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dd16893a0126f425-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dd16893a0126f425-pre01.json",
+    "receipt": "sha256:c54162090cfb27f4e4164694ca226e0a65c6c21041c96a6419591c7ff0ceae96"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dd16893a0126",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
