@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient self-attention with smart pruning for sustainable large language models",
+      "source_url": "https://doi.org/10.1038/s41598-025-92586-5",
+      "year": 2025,
+      "published": "2025-03-24",
+      "venue": "Scientific Reports",
+      "citation_count": 44,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized artificial intelligence by enabling multitasking across diverse fields. However, their high computational demands result in significant environmental impacts, particularly in terms of energy and water consumption. This paper addresses these issues by proposing an innovative compression approach to reducing LLM sizes. We focus on compressing the internal transformer layers, which are critical contributors to LLMs’ computational complexity. Our approach combines new mathematical and structural key methods for model compression. We begin by applying Forward Propagation Pruning (FPP) to compress the embedding and feed-forward layers, utilizing a weight freezing and zeroing technique for suspected unused parameters. This reduces the number of trainable parameters, accelerating the overall training process and enabling faster convergence. Second, the Weight Matrix Folding method is introduced to efficiently prune the self-attention layer matrices in a simple and efficient mathematical model. This method integrates Identical Row Compression (IRC) to optimize the compression of the Query and Key matrices, alongside Diagonal Weight Compression (DWC), which reformulates the Value matrix into a diagonal structure. Consequently, this technique significantly diminishes parameter variability across the three metrics, enhancing consistency and performance while simplifying complexity. The compression approach is evaluated on three language modeling datasets and eight widely used classification datasets, comparing it to various pruning methods. Our method successfully compresses transformer layers by 99% and linear layers by 70%, resulting in an overall model compression of around 70%, while maintaining nearly the same accuracy. Notably, with moderate compression rates of 20% to 40%, model performance not only remained stable but even improved. This leads to substantial reductions in memory usage and computational demands, making LLMs more resource-efficient and highlighting the potential to optimize them for a more sustainable AI future.",
+      "identifiers": [
+        "SemanticScholar:6a75b227672ac3ee14e1167f8f6498c7e0abe122"
+      ],
+      "semantic_scholar_id": "6a75b227672ac3ee14e1167f8f6498c7e0abe122",
+      "doi": "10.1038/s41598-025-92586-5",
+      "canonical_id": "DOI:10.1038/s41598-025-92586-5",
+      "authors": [
+        "S. Belhaouari",
+        "Insaf Kraidia"
+      ],
+      "priority": 44,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 44,
+        "citation_count": 44,
+        "total": 44,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 598,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformerの埋め込み・FFNにForward Propagation Pruningを適用し、self-attentionのQ/K行列にIdentical Row Compression、V行列にDiagonal Weight Compressionを施すWeight Matrix Foldingを提案。3つの言語モデリングデータセットと8つの分類データセットで比較し、著者は全体で約70%のモデル圧縮と精度の概ね維持を報告。LLMの構造的圧縮・注意機構最適化に直接関連。",
+      "library_body_check": "primary_publisher_full_text_read_2026-11-13",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ae762a681888",
+    "round": "libimp-ae762a681888a02b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ae762a681888a02b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ae762a681888a02b-pre01.json",
+    "receipt": "sha256:e8dc49ab47fcd5c54960baa113d08c3ee4420cb44de323c643e4412a02348875"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ae762a681888",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
