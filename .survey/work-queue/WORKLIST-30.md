@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-12T18:18:36+00:00`
+Generated: `2026-11-12T19:07:06+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -269,7 +269,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 186 | 20 | 5 | 8 | arXiv:2603.25385 | GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs | 2026-03-26 | International Conference on Learning Representations | 0 | 8 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2603.25385) |
 | 187 | 10 | 5 | 8 | DOI:10.18653/v1/2026.acl-long.1631 | Octopus: Gated Selective Attention for Memory-Bounded Long-Context Inference in Large Language Models | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 8 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://doi.org/10.18653/v1/2026.acl-long.1631) |
 | 188 | 10 | 5 | 8 | arXiv:2610.35804 | Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models | 2026-10-26 |  | 0 | 8 | Diffusion LLM Inference, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.35804) |
-| 189 | 10 | 5 | 8 | arXiv:2610.02670 | LEAP: Learning Efficient Action Proposals For LLM Agents | 2026-10-02 |  | 0 | 9 | llm-serving-scheduling-disaggregation, エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング | [source](https://arxiv.org/abs/2610.02670) |
+| 189 | 101 | 5 | 8 | arXiv:2610.02670 | LEAP: Learning Efficient Action Proposals For LLM Agents | 2026-10-02 |  | 1 | 9 | llm-serving-scheduling-disaggregation, エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング | [source](https://arxiv.org/abs/2610.02670) |
 | 190 | 10 | 5 | 8 | arXiv:2610.19026 | Joint Subspace Sparse Attention for Efficient Long-Context Decoding | 2026-10-13 |  | 0 | 8 | KV Cache Optimization / Compression, inference-systems | [source](https://arxiv.org/abs/2610.19026) |
 | 191 | 117 | 5 | 8 | arXiv:2601.15892 | Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model | 2026-01-22 | arXiv.org | 17 | 8 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, parallel-and-non-autoregressive-decoding, speculative-parallel-decoding, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2601.15892) |
 | 192 | 106 | 5 | 8 | arXiv:2512.13368 | BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations | 2025-12-15 | The Web Conference | 6 | 8 | inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2512.13368) |
