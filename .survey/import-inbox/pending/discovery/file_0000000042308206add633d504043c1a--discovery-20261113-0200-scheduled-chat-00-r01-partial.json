@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0200-scheduled-chat-00/r01",
+  "reference_main_sha": "7dcc4f23b5bfdd364a751ae4f04b98f99fc01e4b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02159",
+      "identity_tokens": ["arxiv:2602.02159"],
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "reason": "長文脈拡散型LLMで双方向full attentionの計算量が大きい問題に対し、直前の拡散ステップにおけるtoken confidenceからunmask領域を推定し、attention sinkを保護しながら冗長な注意計算を枝刈りする学習不要のFocus-dLLMを提案。sink位置を層間で再利用して追加負荷も削減。著者は32K contextで29倍超のlossless speedupを報告。拡散型LLMの推論効率化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "body_check": "primary_arxiv_abstract_read_v1_2026-02-02; full_body_not_read",
+      "first_checked_at": "2026-11-13T02:00:00+09:00",
+      "last_checked_at": "2026-11-13T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 145
+    }
+  ]
+}
