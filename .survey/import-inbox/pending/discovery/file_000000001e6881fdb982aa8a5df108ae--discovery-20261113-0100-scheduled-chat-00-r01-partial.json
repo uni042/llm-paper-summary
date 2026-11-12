@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0100-scheduled-chat-00/r01",
+  "reference_main_sha": "08582f0f5081fad0eeb58014d6ed95926cd72b0a",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.05475",
+      "identity_tokens": [
+        "arxiv:2607.05475"
+      ],
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "reason": "モバイルLLM推論のCPU/GPU/NPUを5種のフレームワーク・3種のbackendで計測し、PowerBenchでスループットとbackend別エネルギーを分析。NPUはprefillに強くCPUはmemory-bound decodeで優位、NPUフレームワーク間に最大10倍の性能差を報告。推論実装とエネルギー最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T01:02:00+09:00",
+      "last_checked_at": "2026-11-13T01:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 140
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.07911",
+      "identity_tokens": [
+        "arxiv:2310.07911"
+      ],
+      "title": "Pit One Against Many: Leveraging Attention-head Embeddings for Parameter-efficient Multi-head Attention",
+      "reason": "複数のattention headに個別の射影行列を用いる代わりに単一の共有射影行列とhead embeddingを使うMHE注意機構を提案。追加パラメータを削減しつつ下流タスクの予測性能を維持する実験を報告。注意機構のモデルメモリ削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2310.07911",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T01:02:00+09:00",
+      "last_checked_at": "2026-11-13T01:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 141
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22107",
+      "identity_tokens": [
+        "arxiv:2505.22107"
+      ],
+      "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling",
+      "reason": "長文脈Transformerのattention計算の冗長性を理論分析し、重要度の低いtokenをgroup codingで集約するDynamic Group Attentionを提案。計算コスト削減と競争力のある性能維持を報告。長文脈推論効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2505.22107",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T01:02:00+09:00",
+      "last_checked_at": "2026-11-13T01:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 144
+    }
+  ]
+}
