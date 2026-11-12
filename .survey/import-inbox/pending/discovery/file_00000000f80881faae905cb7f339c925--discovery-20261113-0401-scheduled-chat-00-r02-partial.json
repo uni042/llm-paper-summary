@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0401-scheduled-chat-00/r02",
+  "reference_main_sha": "e10eecbfd645b5596305c577312ce887a5262cac",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26660",
+      "identity_tokens": [
+        "arxiv:2610.26660"
+      ],
+      "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+      "reason": "スマートフォンGUIエージェントの連続要求で変化する入力境界に合わせて再帰状態を保存し、前回文脈の再利用とNPU行列演算器によるprefillを両立するruntime。hybrid linear attentionモデルのモバイル推論遅延・メモリ最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2610.26660",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 165
+    }
+  ]
+}
