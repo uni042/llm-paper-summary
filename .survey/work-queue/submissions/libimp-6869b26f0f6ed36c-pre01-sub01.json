@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs",
+      "source_url": "https://arxiv.org/abs/2607.11368",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reported serving speedups from quantized kernels typically bundle the weight format, the kernel, and the inference runtime into one number. We present an attribution study on four NVIDIA RTX A5000 GPUs, 24 GiB each, on a single host with NVLink-bridged pairs. A matched intermediate stack that keeps the faster runtime without the quantized kernel splits the full speedup into a runtime part and a kernel and quantization part. Under matched greedy decoding the full stack reaches $2.58\\times$ end to end, with the runtime change accounting for about two thirds of that gain on a logarithmic scale; across three similar model families the kernel and quantization part moves by at most 1.5%. Sharding one instance across all four cards falls well below doubling: a profiler trace attributes about 80% of the per token shortfall to coordination, and an NVLink versus PCIe control on the same hardware shows similar realized bandwidth on both links, pointing away from link bandwidth as the cause. Whether to run one sharded instance or several independent ones depends on the workload and the model, with the ranking reversing on the larger model: the smaller model splits between sharding and multiple instances by workload, while the larger model favors two paired instances on every workload. Quantization extends sustainable concurrent users roughly four times past a reproducible half precision memory cliff. Differences in sampling mode and prompt pool between the two stacks are documented as threats to validity.",
+      "identifiers": [
+        "SemanticScholar:af8fe4d0c19d59d954ba3f0cb0caf019ae260293"
+      ],
+      "semantic_scholar_id": "af8fe4d0c19d59d954ba3f0cb0caf019ae260293",
+      "canonical_id": "arXiv:2607.11368",
+      "arxiv_id": "2607.11368",
+      "doi": "10.48550/arXiv.2607.11368",
+      "authors": [
+        "Wei-Jia Han",
+        "Li-Sha Qu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の量子化高速化をruntime・kernel・weight formatに分解する実機研究。RTX A5000 24GiBを4枚使いmatched FP16中間stackで比較し、総合2.58倍高速化のうち対数スケールで約3分の2がruntime由来と報告。sharding通信負荷とメモリ制約も分析。",
+      "library_body_check": "primary_arxiv_abstract_metadata_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+      "source_url": "https://arxiv.org/abs/2609.23371",
+      "year": 2026,
+      "published": "2026-09-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language models interface with external knowledge through raw natural language. In retrieval-augmented systems, this creates a persistent index-payload schism: dense vectors enable searchable routing, but models must re-ingest lengthy text payloads for reasoning at O(N^2) attention cost. Existing compression methods further produce private states tied to specific architectures. We introduce Machine-Interpretable Information (MII), the first agent-to-agent (A2A) document-to-state protocol. A dual-timescale state-space Writer compiles documents into a canonical, fixed-bandwidth state (56 tokens), and a lightweight Translator maps it into any frozen Reader's embedding space, reducing query-time cost to O(K). The resulting .mii artifact unifies Retrieval (searchable geometry), Reasoning (global memory), and Reconstruction (grounded details) in a single transferable medium. We demonstrate strong cross-model interoperability across heterogeneous LLMs (e.g., Llama, Qwen, Mistral) -- despite the Writer using a legacy GPT-2 vocabulary, forcing genuine semantic translation rather than token-level memorization. Mechanistic probes reveal modular latent structure: entity representations can be causally traced and zero-shot transplanted between unrelated document states while remaining decodable. To address lexical reconstruction under fixed bandwidth, we propose Residual-MII, a cache hierarchy combining compiled global memory with sparse local evidence. On HotpotQA (7,405 queries), Residual-MII exceeds full-context Exact Match at approximately 7% of the attention FLOPs, suggesting a paradigm shift toward compiled, transferable neural document formats.",
+      "identifiers": [
+        "SemanticScholar:2d139ad26a47df5c417812774161eba65924ceb0"
+      ],
+      "semantic_scholar_id": "2d139ad26a47df5c417812774161eba65924ceb0",
+      "canonical_id": "arXiv:2609.23371",
+      "arxiv_id": "2609.23371",
+      "doi": "10.48550/arXiv.2609.23371",
+      "authors": [
+        "Yi-Fan Wang",
+        "De-Jing Dou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈LLMの外部知識再読込コストを削減する推論効率化研究。dual-timescale state-space Writerが文書を56 token固定幅stateへ変換し、Translatorが凍結Readerのembeddingへ写像。Residual-MIIで局所証拠を併用しHotpotQA 7405問で全文文脈を超えるEMをattention FLOPs約7%で報告。",
+      "library_body_check": "primary_arxiv_abstract_metadata_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+      "identifiers": [
+        "SemanticScholar:0469b1d19d084c64cf860f19adf5523e166dff34"
+      ],
+      "semantic_scholar_id": "0469b1d19d084c64cf860f19adf5523e166dff34",
+      "canonical_id": "arXiv:2609.34380",
+      "arxiv_id": "2609.34380",
+      "doi": "10.48550/arXiv.2609.34380",
+      "authors": [
+        "Xuan Truong Nguyen",
+        "Tien-Son Pham",
+        "Tuan-Duc Chu",
+        "Wookeun Jung",
+        "Thanh Tuan Dao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMサービングにおける重み領域とKV cacheの共有を実装した直接的システム研究。通常はFP16相当、KV圧迫時はnested低精度重みに切替えて残余領域をKV blockに転用するSUMをvLLM上に実装。dense・MoEとproduction traceで評価し、Static FP16比の持続throughput 2.1–3.3倍を報告。",
+      "library_body_check": "primary_arxiv_abstract_metadata_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6869b26f0f6e",
+    "round": "libimp-6869b26f0f6ed36c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6869b26f0f6ed36c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6869b26f0f6ed36c-pre01.json",
+    "receipt": "sha256:63e1d571a743f640818807b0facaf5b585cd8ac4d6234f3a98c5c4b69d09494f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6869b26f0f6e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
