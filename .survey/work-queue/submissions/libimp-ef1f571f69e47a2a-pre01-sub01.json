@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems",
+      "source_url": "https://arxiv.org/abs/2603.17302",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The transition to open, distributed Multi-Agent Systems (MAS) promises scalable intelligence but introduces a non-trivial tension: maximizing global efficiency requires cooperative, resource-aware scheduling, yet autonomous agents may be self-interested and cannot be managed by a centralized controller. Prior approaches fall short in two key areas: they typically focus on single-query routing, neglecting long-term resource reuse (e.g., KV-caching) and the complexities of system-level many-to-many matching; furthermore, they rely on generic incentive mechanisms that ignore the distinct characteristics of LLM inference. To bridge this gap, we propose IEMAS (Incentive-Efficiency Mechanism for Multi-Agent Systems), a distributed framework that aligns economic incentives with system performance. IEMAS integrates a probabilistic predictive model to estimate Quality of Service (QoS) under uncertainty, which feeds into a VCG-based bipartite matching mechanism. This design guarantees truthful capability reporting and social optimality while explicitly leveraging KV cache-affinity to minimize computational redundancy. We implement IEMAS on top of vLLM and evaluate it via extensive simulations. Results demonstrate that our incentive-efficiency co-design reducing average service cost by 35% and end-to-end latency by up to 2.9 compared to baselines.",
+      "identifiers": [
+        "SemanticScholar:e27296112fc847b7f0e925486fbd1530f322b291"
+      ],
+      "semantic_scholar_id": "e27296112fc847b7f0e925486fbd1530f322b291",
+      "canonical_id": "arXiv:2603.17302",
+      "arxiv_id": "2603.17302",
+      "doi": "10.48550/arXiv.2603.17302",
+      "authors": [
+        "Hong-Ze Liu",
+        "Chang Guo",
+        "Yingze Li",
+        "Meng-Ru Wang",
+        "Jiong Lou",
+        "Shi-Jing Yuan",
+        "He-Feng Zhou",
+        "Chen-Tao Wu",
+        "Jie Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分散型マルチエージェント推論でQoS予測とVCG型二部マッチングを組み合わせ、KVキャッシュ親和性を考慮して重複計算を削減するvLLM上のルーティング方式。著者はシミュレーションで平均サービス費用35%削減、E2E遅延最大2.9倍改善を報告。LLM serving・KV再利用の関連研究として採択。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ef1f571f69e4",
+    "round": "libimp-ef1f571f69e47a2a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ef1f571f69e47a2a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ef1f571f69e47a2a-pre01.json",
+    "receipt": "sha256:6b3e0edca0b064ab4e5c4ae7a1a11247c920c90b0d2d00e1b3266960e5e69122"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ef1f571f69e4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
