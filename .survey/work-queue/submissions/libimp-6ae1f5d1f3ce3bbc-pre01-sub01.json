@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
+      "source_url": "https://arxiv.org/abs/2603.22324",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-training. Standard quantization objectives minimize reconstruction error but are agnostic to the base model, allowing quantization noise to disproportionately corrupt the small-magnitude parameter deltas ($\\Delta W$) that encode post-training behavior -- an effect we analyze through the lens of quantization as implicit regularization. DAQ replaces reconstruction-based objectives with two delta-aware metrics -- Sign Preservation Rate and Cosine Similarity -- that directly optimize for directional fidelity of $\\Delta W$, requiring only the base and post-trained weight matrices. In a pilot FP8 study, DAQ recovers style-specific capabilities lost under standard quantization while maintaining general performance.",
+      "identifiers": [
+        "SemanticScholar:00481397a6710208311793bf06d60b1ad8416953"
+      ],
+      "semantic_scholar_id": "00481397a6710208311793bf06d60b1ad8416953",
+      "canonical_id": "arXiv:2603.22324",
+      "arxiv_id": "2603.22324",
+      "doi": "10.48550/arXiv.2603.22324",
+      "authors": [
+        "Xiaoming Yu",
+        "Shi-Ze Tang",
+        "Guang-Hua Yu",
+        "Li Xie",
+        "Song Liu",
+        "Jian-Chen Zhu",
+        "Feng Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事後学習で得た小さな重み差分ΔWが通常の重み再構成誤差最小化による量子化で損なわれる問題に対し、ベースモデルと事後学習済みモデルの重みから差分の符号保持率・コサイン類似度を最大化するデータ不要の量子化スケール選択を提案。FP8の予備評価で事後学習によるスタイル特性を回復し一般性能を維持すると著者が報告。LLMの低精度推論と重み圧縮に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6ae1f5d1f3ce",
+    "round": "libimp-6ae1f5d1f3ce3bbc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6ae1f5d1f3ce3bbc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6ae1f5d1f3ce3bbc-pre01.json",
+    "receipt": "sha256:d632707ec3bb43a3219f1d7d2c76f74b08be645f33aeb939e27ccbf170618f5c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6ae1f5d1f3ce",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
