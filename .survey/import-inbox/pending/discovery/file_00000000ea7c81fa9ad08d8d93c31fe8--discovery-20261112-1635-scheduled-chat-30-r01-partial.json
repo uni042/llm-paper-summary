@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261112-1635-scheduled-chat-30/r01",
+  "reference_main_sha": "03859c8dc251870bd9926f64e743dd9045e81c35",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.28418",
+      "identity_tokens": ["arxiv:2607.28418", "doi:10.48550/arxiv.2607.28418"],
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "reason": "一次abstractによると、トークンごとにGQA整合のquery-head群とGPU tile整合のFFN channel群を選択する動的構造化幅枝刈りと、routing maskの並べ替え・GPU kernel協調設計を提案。Llama3/Qwen3系の推論でdense基準比prefill最大1.68倍、decode最大1.55倍の著者報告があり、LLM推論計算の削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T16:35:58+09:00",
+      "last_checked_at": "2026-11-12T16:35:58+09:00",
+      "linked_from": ["worker-worklist-30 discovery rank 63"],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37538",
+      "identity_tokens": ["arxiv:2609.37538", "doi:10.48550/arxiv.2609.37538"],
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "reason": "一次abstractによると、動的疎注意で選択されたKVをHBM buffer内のvectorized hash matchingで再利用し、転送対象だけをアクセラレータ間に分散する。単一NPUで8K entry bufferのhit率94.83%、実運用データを用いたserving stackで出力トークン時間39%削減・throughput 1.27倍を報告。KV cache offloadと長文脈LLM servingに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T16:35:58+09:00",
+      "last_checked_at": "2026-11-12T16:35:58+09:00",
+      "linked_from": ["worker-worklist-30 discovery rank 64"],
+      "worklist_rank": 64
+    }
+  ]
+}
