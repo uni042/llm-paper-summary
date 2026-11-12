@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-12T09:38:04+00:00`
+Generated: `2026-11-12T10:19:46+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -419,7 +419,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 336 | 0 | 4 | 8 | SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85 | XC-C ACHE : Cross-Attending to Cached Context for Efﬁcient LLM Inference |  |  | 0 | 8 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/0a67ea2eb99ed714c97215d131aec03917531d85) |
 | 337 | 16 | 4 | 8 | arXiv:2210.15523 | COST-EFF: Collaborative Optimization of Spatial and Temporal Efficiency with Slenderized Multi-exit Language Models | 2022-10-27 | Conference on Empirical Methods in Natural Language Processing | 6 | 8 | Inference / Structured Model Compression and Pruning | [source](https://arxiv.org/abs/2210.15523) |
 | 338 | 10 | 4 | 8 | arXiv:2608.21247 | Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models | 2026-08-21 | arXiv.org | 0 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference | [source](https://arxiv.org/abs/2608.21247) |
-| 339 | 102 | 4 | 8 | arXiv:2605.02821 | When Is the Same Model Not the Same Service? A Measurement Study of Hosted Open-Weight LLM APIs | 2026-05-04 | arXiv.org | 2 | 8 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2605.02821) |
+| 339 | 102 | 4 | 8 | arXiv:2604.02570 | WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models | 2026-04-02 | arXiv.org | 2 | 8 | inference-systems, kv-cache-optimization-compression, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.02570) |
 | 340 | 26 | 4 | 8 | arXiv:2510.24605 | Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way | 2025-10-28 | arXiv.org | 26 | 8 | Diffusion LLM Inference, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2510.24605) |
 | 341 | 6 | 4 | 8 | arXiv:2410.14578 | Large Language Models Are Overparameterized Text Encoders | 2024-10-18 | Workshop on Representation Learning for NLP | 6 | 8 | 03-model-compression-pruning, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2410.14578) |
 | 342 | 1 | 4 | 8 | arXiv:2509.06174 | From Long to Short: LLMs Excel at Trimming Own Reasoning Chains | 2025-09-07 | arXiv.org | 1 | 8 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2509.06174) |
