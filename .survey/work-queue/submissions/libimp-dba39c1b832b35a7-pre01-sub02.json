@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
+      "source_url": "https://arxiv.org/abs/2608.20427",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dense causal attention remains expensive at long context even when implemented with highly optimized exact kernels. We study BF1, a deterministic block-aligned dyadic sparse-attention route that combines a small exact local neighborhood, a global first block, and logarithmically spaced historical blocks. The route is related to prior log-sparse and dilated attention patterns; our contribution is a correctness-gated pretrained-model retrofit, a matched topology-control study, and a systems characterization that connects per-layer sparsity to whole-model latency. For fixed block width, every converted layer uses O(n log n) selected token interactions and has O(log n) graph communication depth. On an NVIDIA RTX PRO 6000 Blackwell GPU, an optimized BF16 implementation crosses dense attention between 2K and 4K tokens and reaches a 10.91x per-layer prefill speedup at 32K. Retrofitting eight of 28 Qwen3-0.6B attention layers lowers warm whole-model time to first token by 7.7%, 11.3%, and 15.3% at 8K, 16K, and 32K, respectively, while the remaining dense layers keep the complete model asymptotically quadratic. Under a matched 1,000-step, 16.384M-token adaptation protocol, BF1 ranks first across three training seeds: mean report perplexity is 1.68639 versus 1.69154 for a matched static-random nonlocal graph, 1.69258 for dense continued training, and 1.81505 for equal-budget local sliding. At seed 1234, the packed-report paired interval places Dense-CT 0.3169-0.4055% above BF1 and static-random graph 17 0.2441-0.3642% above BF1. These results establish BF1 as a reproducible sparse operator and selective retrofit primitive with real long-context systems value. This paper evaluates numerical correctness, selected-interaction scaling, kernel performance, partial-model inference, and matched next-token language modeling.",
+      "identifiers": [
+        "SemanticScholar:ea8d456714c4a9332777bd535e87fd37d7505568"
+      ],
+      "semantic_scholar_id": "ea8d456714c4a9332777bd535e87fd37d7505568",
+      "canonical_id": "arXiv:2608.20427",
+      "arxiv_id": "2608.20427",
+      "doi": "10.48550/arXiv.2608.20427",
+      "authors": [
+        "Hina Dixit"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "局所窓・先頭block・対数間隔の過去blockを組み合わせるdyadic疎注意。Qwen3-0.6Bの28層中8層を置換し、32Kで全体TTFT15.3%短縮。層単体10.91倍だが残りdense層により全体計算量は二次のまま。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+      "identifiers": [
+        "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+      ],
+      "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+      "canonical_id": "arXiv:2609.32395",
+      "arxiv_id": "2609.32395",
+      "doi": "10.48550/arXiv.2609.32395",
+      "authors": [
+        "Sheng-Yao Wang",
+        "Jiang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SMemはブロック独立encoderとcross-attention readerにより、位置・編集履歴に依存しない正確なメモリ合成と削除を実現。帯域律速decodeは1.4〜1.7倍高速、KV行34〜38%削減。LLMキャッシュアーキテクチャの直接研究。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+      "source_url": "https://arxiv.org/abs/2610.11134",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces the cost of long-context attention, but existing kernels typically process queries independently, repeatedly loading and dequantizing KV entries shared across queries. We observe substantial overlap in the KV entries selected by neighboring queries, creating opportunities for cross-query reuse. We present QUILT, a workload-aware sparse-attention execution mechanism that jointly processes neighboring queries and reuses shared KV entries to reduce redundant memory traffic and computation. QUILT introduces Shift-and-Compare Set Decomposition (SCSD), which transforms irregular set operations into regular data-parallel primitives suitable for modern accelerators, and pipelines SCSD with attention computation to hide its overhead. Cascaded sharing captures reuse hierarchically at multiple granularities. A tile-aware execution strategy balances sharing granularity with hardware tile utilization and selectively removes low-importance query-specific tails to eliminate underutilized tiles. We evaluate QUILT on LongBench using GLM-5.3 and DeepSeek-3.2 under both tensor and sequence parallelism. Compared with the state-of-the-art sparse-attention kernel, QUILT reduces average kernel latency by up to 55.1% and processed KV data by up to 55.9%, while reducing time-to-first-token (TTFT) latency by up to 36.8% with negligible accuracy degradation.",
+      "identifiers": [
+        "SemanticScholar:0683788412136a4a0f57cd663abf1a66bb2eb999"
+      ],
+      "semantic_scholar_id": "0683788412136a4a0f57cd663abf1a66bb2eb999",
+      "canonical_id": "arXiv:2610.11134",
+      "arxiv_id": "2610.11134",
+      "authors": [
+        "Zhen-Duo Zhao",
+        "Qi-Hui Zhou",
+        "Ming-Cong Song",
+        "Zhi-Yi Chen",
+        "Chuang-Guan Ye",
+        "Feng-Fan Hou",
+        "Ze-Qun Gong",
+        "Jing Li",
+        "Hong-Jie Si",
+        "Guo-Ping Long"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "近接query間で重なるKV参照を共有し、SCSDで不規則集合操作をGPU向け並列演算に変換する疎注意prefill kernel。GLM-5.3/DeepSeek-3.2のLongBenchでkernel遅延最大55.1%、TTFT最大36.8%削減と報告。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2610.33379",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) language models generate tokens sequentially, so generating long outputs is costly. Speculative decoding mitigates this by using a lightweight drafter to propose multiple tokens for the target AR model to verify in parallel, while a diffusion-based drafter can produce an entire draft block in one forward pass. In models with AR and diffusion modes, one network both drafts and verifies, but drafting still waits for verification, so the standard schedule needs two sequential model calls per iteration. Existing one-call schedules avoid the wait but incur input size quadratic in the speculative width. Motivated by this efficiency bottleneck, we introduce Packed-SS, a self-speculative decoding schedule that verifies and drafts in a single model call with input size linear in the speculative width, while preserving the target model's distribution. The key idea is to let the diffusion drafter run one call ahead: while verifying the current draft, the model simultaneously constructs the next draft from an older verified prefix and keeps its unresolved suffix for the next iteration. Under a mild monotonicity assumption on the drafter, we further show that Packed-SS requires no more model calls than the standard two-call decoding in the greedy setting. Experiments on Nemotron 3B/8B and SetDLM 1.7B show higher throughput and lower mean wall time than both baselines under greedy decoding.",
+      "identifiers": [
+        "SemanticScholar:d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e"
+      ],
+      "semantic_scholar_id": "d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e",
+      "canonical_id": "arXiv:2610.33379",
+      "arxiv_id": "2610.33379",
+      "authors": [
+        "Yun-Xia Chen",
+        "Chang-Xiao Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Packed-SSはARとdiffusionの両モードを持つモデルで、現在draftの検証と次draft生成を単一callに統合する。投機幅に線形な入力長を維持しtarget分布を保存。NemotronとSetDLMでgreedy復号のスループット向上を報告。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching",
+      "source_url": "https://arxiv.org/abs/2611.01735",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Position-independent caching reuses chunk KV caches across positions and requests. Independent encoding, however, omits cross-chunk interactions and can degrade accuracy. In our study, neither PIC training nor rule-based recomputation, alone or combined, consistently recovers full-prefill accuracy. Oracle-guided recomputation on PIC-trained models improves accuracy at the same budget, motivating better selection. We present CacheWeave, which adapts the full backbone to PIC, then freezes it and trains a model-native block selector on the adapted model's oracles. The selector uses compact cached chunk features and question hidden states without extracting backbone attention scores. It selects contiguous token blocks aligned with KV blocks to support efficient recomputation and limit copy-on-write amplification. Its runtime, CacheWeave-Serve, supports private and shared KV caches, keeps selection and recomputation on the GPU, and stages sliding-window KV for hybrid attention models. Across three models and four tasks, CacheWeave outperforms CacheBlend and ProphetKV by 7.2 and 3.5 percentage points on average at a 5% recomputation budget, with a mean relative accuracy loss of 1.6% to full prefill. With 32-token blocks, CacheWeave-Serve cuts single-request TTFT by up to 16.1x over full prefill and 1.7x over ProphetKV, and raises SLO goodput under load by up to 7.8x.",
+      "identifiers": [
+        "SemanticScholar:3aa6364f9797cb28027472512affb5145d26463b"
+      ],
+      "semantic_scholar_id": "3aa6364f9797cb28027472512affb5145d26463b",
+      "canonical_id": "arXiv:2611.01735",
+      "arxiv_id": "2611.01735",
+      "authors": [
+        "Yue-Yang Pan",
+        "Qian-Chao Zhu",
+        "Yu-Liang Liu",
+        "Teng Ma",
+        "Sanidhya Kashyap"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "位置非依存KVチャンクの再利用時に精度を回復するため、学習済みblock selectorが必要なトークンブロックを再計算する。5%再計算予算でCacheBlend/ProphetKVより平均7.2/3.5ポイント高精度、単一要求TTFT最大16.1倍改善。KVキャッシュ再利用の直接研究。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dba39c1b832b",
+    "round": "libimp-dba39c1b832b35a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dba39c1b832b35a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dba39c1b832b35a7-pre01.json",
+    "receipt": "sha256:c1615f1d688f94213d06e4ae3c1aad953a22a484b6da6194d6ab3958128cc688"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dba39c1b832b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
