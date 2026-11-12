@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-12T23:06:41+00:00`
+Generated: `2026-11-12T23:28:48+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -23,7 +23,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 4 | 101 | research | DOI:10.1007/s11831-026-10598-4 | Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference | [primary](https://doi.org/10.1007/s11831-026-10598-4) | `papers/inference/99-other-inference-systems/2026-328ede95d0dd-building-expert-small-models-a-comprehensive-survey-of-model-compression-knowledge-distillation-and-augmented-inference.md` |
 | 5 | 101 | research | DOI:10.1109/ISSCC49663.2026.11408953 | A 28nm Speculative-Decoding LLM Processor Achieving 105-to-685µs/Token Latency for Billion-Parameter Models | [primary](https://doi.org/10.1109/ISSCC49663.2026.11408953) | `papers/inference/99-other-inference-systems/2026-fa8532638842-a-28nm-speculative-decoding-llm-processor-achieving-105-to-685s-token-latency-for-billion-parameter-models.md` |
 | 6 | 78 | research | arXiv:2405.21060 | Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality | [primary](https://arxiv.org/abs/2405.21060) | `papers/inference/20-linear-recurrent-language-models/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.md` |
-| 7 | 46 | research | DOI:10.1109/CVPR52734.2025.01360 | Conical Visual Concentration for Efficient Large Vision-Language Models | [primary](https://doi.org/10.1109/CVPR52734.2025.01360) | `papers/inference/99-other-inference-systems/2025-e9cbe5a73795-conical-visual-concentration-for-efficient-large-vision-language-models.md` |
+| 7 | 47 | research | DOI:10.1109/CVPR52734.2025.01360 | Conical Visual Concentration for Efficient Large Vision-Language Models | [primary](https://doi.org/10.1109/CVPR52734.2025.01360) | `papers/inference/99-other-inference-systems/2025-e9cbe5a73795-conical-visual-concentration-for-efficient-large-vision-language-models.md` |
 | 8 | 20 | research | DOI:10.1109/ISCA66397.2026.00175 | MXFFP: Microscaling Flexible Floating Point Format for Large-Scale AI Model Acceleration | [primary](https://doi.org/10.1109/ISCA66397.2026.00175) | `papers/inference/99-other-inference-systems/2026-d8478fb20d9d-mxffp-microscaling-flexible-floating-point-format-for-large-scale-ai-model-acceleration.md` |
 | 9 | 19 | research | SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4 | Resource Multiplexing in Tuning and Serving Large Language Models | [primary](https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4) | `papers/inference/99-other-inference-systems/0000-8cb04afbcb9b-resource-multiplexing-in-tuning-and-serving-large-language-models.md` |
 | 10 | 14 | research | SemanticScholar:72493d38ed8c95e0f49ee5b6cf672470d69261df | GEAR: An Efficient Error Reduction Framework for KV Cache Compression in LLM Inference | [primary](https://www.semanticscholar.org/paper/72493d38ed8c95e0f49ee5b6cf672470d69261df) | `papers/inference/99-other-inference-systems/0000-c379d42c3a2a-gear-an-efficient-error-reduction-framework-for-kv-cache-compression-in-llm-inference.md` |
