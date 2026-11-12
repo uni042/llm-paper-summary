@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
+      "source_url": "https://arxiv.org/abs/2601.14910",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid expansion of Transformer-based large language models has dramatically increased the need for highperformance GPUs. As a result, there is growing demand for fast, accurate, and widely generalizable GPU performance models to support next-generation hardware selection and system-level exploration. However, current data-driven methods are limited, exhibiting poor generalization across hardware and inadequate modeling of complex production-level kernels common in modern inference stacks. To address these issues, we present PipeWeave, a unified GPU modeling framework. This approach first employs an analytical model to quantify a given kernel's demands on the GPU's heterogeneous instruction pipelines. These analytical features are then fed into a machine learning (ML) model to capture complex cross-pipeline interactions and resource dependencies, enabling high-fidelity performance prediction. Our evaluation across 11 GPU types from four generations of major architectures on two widely-used serving systems demonstrates that PipeWeave delivers high fidelity and strong generalizability. It achieves accurate predictions, with only 6.1% average error at the kernel level and 8.5% for end-to-end inference-reducing the error of state-of-the-art methods by $\\mathbf{6. 7} \\times$ and $\\mathbf{4. 4} \\times$, respectively. We also demonstrate PipeWeave's value “beyond simulation” by utilizing its performance ceiling to diagnose implementation shortcomings and guide the optimization of a production fused MoE Triton kernel, achieving up to $\\mathbf{1. 7} \\times$ speedup. Code is available online.11https://github.com/zksainx/pipeweave",
+      "identifiers": [
+        "SemanticScholar:a409a89806fb62f74ac27d17c4e60bc42bed0571"
+      ],
+      "semantic_scholar_id": "a409a89806fb62f74ac27d17c4e60bc42bed0571",
+      "canonical_id": "arXiv:2601.14910",
+      "arxiv_id": "2601.14910",
+      "doi": "10.1109/ISCA66397.2026.00126",
+      "authors": [
+        "Kai-Xuan Zhang",
+        "Yu Cui",
+        "Shu-Hao Zhang",
+        "Chu-Tong Ding",
+        "Shi-You Qian",
+        "Lu-Ping Wang",
+        "Jian Cao",
+        "Guang-Tao Xue",
+        "Cheng-Huan Huang",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 295,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "GPU命令パイプラインの解析特徴量と機械学習を組み合わせ、11種類のGPUと2種類のLLM servingシステムで性能を予測する。kernel平均誤差6.1%、end-to-end 8.5%、MoE Triton kernel最適化で最大1.7倍。LLM推論システムの性能予測に直接関連。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+      "identifiers": [
+        "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+      ],
+      "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+      "canonical_id": "arXiv:2607.04302",
+      "arxiv_id": "2607.04302",
+      "doi": "10.48550/arXiv.2607.04302",
+      "authors": [
+        "Hui-Lin Dong",
+        "Yanzhao Li",
+        "Jie Gao",
+        "Chunlu Li",
+        "Zhiyuan Zhang",
+        "Yupeng Sun",
+        "Zhen-Yuan Chen",
+        "Zhiqiang Zou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Ascend NPUでFlashAttentionのQK・PV両GEMMを4-bit HIF4化し、Smooth-QKとP-Reorderingで量子化誤差を緩和。Qwen3-8BのMMLU精度差を1.12から0.70ポイントへ縮小。35.4%の遅延短縮は予測値で実機検証未了。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Training Hybrid Block Diffusion Language Models with Partial Bidirectionality",
+      "source_url": "https://arxiv.org/abs/2607.02805",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-throughput long-context generation is one of the central challenges for large language models. Generation is typically memory-bandwidth-bound rather than compute-bound: each decoding step must stream the accumulated key/value (KV) cache from memory, so bandwidth demand grows with context length while only one token is emitted. Two parallel approaches have therefore emerged: reducing memory access with efficient attention variants and linear-time mixers such as Mamba, or increasing parallel computation by generating blocks of tokens at once. However, technical challenges arise when combining these two ideas. Earlier hybrid diffusion models such as DiffuMamba use bidirectional Mamba mixing, including a reverse-direction scan relative to causal generation. This reverse scan needs to scan the entire sequence, so its states are not prefix-only and cannot be precisely reused as a cache even when diffusion is performed block by block. We propose a BDLM Mamba--attention hybrid that addresses this challenge by restricting the reverse Mamba scan to the active denoising block, which enables exact caching across blocks. In an 87M-parameter DCLM sweep, BDLM Mamba-H achieves the best C4-en validation perplexity compared to BDLM attention and full-sequence baselines. At 350M parameters, it remains competitive with BDLM attention. For long-context inference, BDLM Mamba-H reaches 19.7x the throughput of full-sequence DiffuMamba-H at 65K tokens and 3.7x the throughput of BDLM attention at 262K, showing that Mamba hybrids are a potential long-context diffusion architecture.",
+      "identifiers": [
+        "SemanticScholar:e6d985448b097bee32f33a5d38d6a3558f31cd51"
+      ],
+      "semantic_scholar_id": "e6d985448b097bee32f33a5d38d6a3558f31cd51",
+      "canonical_id": "arXiv:2607.02805",
+      "arxiv_id": "2607.02805",
+      "doi": "10.48550/arXiv.2607.02805",
+      "authors": [
+        "Pranshu Chaturvedi",
+        "Parth Shroff",
+        "Tarun Suresh",
+        "Hangoo Kang",
+        "Kaiyue Wen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BDLM Mamba-Hは逆方向Mamba scanを現在のdenoising blockに制限し、ブロック間の厳密なprefix cacheを可能にする。65K文脈でfull-sequence DiffuMamba-H比19.7倍のthroughputと報告。拡散型LLM推論効率化に直接関連。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+      "identifiers": [
+        "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+      ],
+      "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+      "canonical_id": "arXiv:2604.08077",
+      "arxiv_id": "2604.08077",
+      "doi": "10.48550/arXiv.2604.08077",
+      "authors": [
+        "Han-Dong Li",
+        "Zi-Kang Liu",
+        "Long-Teng Guo",
+        "Tong-Tian Yue",
+        "Ye-Peng Tang",
+        "Xin-Xin Zhu",
+        "Chuanyang Zheng",
+        "Zi-Ming Wang",
+        "Zhi-Bin Wang",
+        "Jun Song",
+        "Chenglin Yu",
+        "Bo Zheng",
+        "Jing Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Video-LLM入力を時空間cubeに分割し、queryごとのcube選択注意とtoken選択FFNを組み合わせる。Top-pに基づき計算量を動的配分し、長尺動画評価で最大57% FLOPs削減を報告。VLM推論効率化に直接関連。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+      "identifiers": [
+        "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+      ],
+      "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+      "canonical_id": "arXiv:2606.03113",
+      "arxiv_id": "2606.03113",
+      "doi": "10.1109/icassp55912.2026.11464968",
+      "authors": [
+        "Yan-Yu Zhu",
+        "Hoilam Pao",
+        "Niu Hu",
+        "Wei Guo",
+        "Shaoxiong Zhan",
+        "Bo-Yu Lai",
+        "Zi-Tai Wang",
+        "Yong-Qin Zeng",
+        "Hai-Tao Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LEDEは自己投機的復号のexit layerとdraft lengthを、オフライン強化学習により文脈依存で動的に選ぶ。Llama-2/3で通常自己回帰復号比最大2.0〜2.7倍、静的投機設定比さらに17%高速化と報告。",
+      "library_body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dba39c1b832b",
+    "round": "libimp-dba39c1b832b35a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dba39c1b832b35a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dba39c1b832b35a7-pre01.json",
+    "receipt": "sha256:c1615f1d688f94213d06e4ae3c1aad953a22a484b6da6194d6ab3958128cc688"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dba39c1b832b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
