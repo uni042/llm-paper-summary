@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1855-scheduled-chat-00/r01",
+  "reference_main_sha": "85b49718390971b6ff8bf06a6fc2282f17344db4",
+  "reference_main_sha_verification": "previous observed main commit reference; current HEAD exact verification unavailable",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.19191",
+      "identity_tokens": ["arxiv:2509.19191"],
+      "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models",
+      "reason": "VLM内部の視覚トークン表現を物体認識と空間知覚に分けて分析し、浅層から深層にかけて属性認識から意味的曖昧性解消へ進むことを示す。解析から導いたinstruction-agnosticな視覚トークン圧縮アルゴリズムでdecode効率を改善し、RoPE scalingで空間推論を改善する。VLM推論のトークン圧縮と効率化に直接関連するためaccept。性能数値は要旨にないため未記載。",
+      "source_url": "https://arxiv.org/abs/2509.19191",
+      "body_check": "primary_arxiv_abstract_metadata_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T18:55:12+09:00",
+      "last_checked_at": "2026-11-12T18:55:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 118
+    }
+  ]
+}
