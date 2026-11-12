@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-12T11:47:24+00:00`
+Generated: `2026-11-12T12:38:15+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -193,7 +193,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 110 | 10 | 6 | 7 | arXiv:2512.06727 | KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models | 2025-12-07 | arXiv.org | 0 | 7 | 07-kv-cache-optimization-compression, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2512.06727) |
 | 111 | 10 | 6 | 7 | arXiv:2610.07822 | Nucleus Speculative Decoding: Plausibility-Aware Verification Beyond Exact Distribution | 2026-10-06 |  | 0 | 7 | inference-systems, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.07822) |
 | 112 | 116 | 6 | 7 | arXiv:2601.14277 | Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct | 2026-01-11 | arXiv.org | 16 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.14277) |
-| 113 | 108 | 6 | 7 | arXiv:2604.13349 | When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration | 2026-04-14 | arXiv.org | 8 | 7 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression | [source](https://arxiv.org/abs/2604.13349) |
+| 113 | 109 | 6 | 7 | arXiv:2604.13349 | When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration | 2026-04-14 | arXiv.org | 9 | 7 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression | [source](https://arxiv.org/abs/2604.13349) |
 | 114 | 10 | 6 | 7 | arXiv:2510.26446 | 1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models | 2025-10-30 | Conference on Empirical Methods in Natural Language Processing | 0 | 8 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2510.26446) |
 | 115 | 102 | 6 | 7 | arXiv:2604.01881 | HieraVid: Hierarchical Token Pruning for Fast Video Large Language Models | 2026-04-02 | Proceedings of the 34th ACM International Conference on Multimedia | 2 | 8 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2604.01881) |
 | 116 | 7 | 6 | 7 | arXiv:2507.11959 | PoTPTQ: A Two-step Power-of-Two Post-training for LLMs | 2025-07-16 | arXiv.org | 7 | 7 | Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2507.11959) |
