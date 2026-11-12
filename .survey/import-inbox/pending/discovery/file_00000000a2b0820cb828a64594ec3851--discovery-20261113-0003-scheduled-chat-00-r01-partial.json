@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0003-scheduled-chat-00/r01",
+  "reference_main_sha": "2e4ee7e5329385999836a1d92d84ca8abb54d4ca",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38166",
+      "identity_tokens": ["arxiv:2609.38166"],
+      "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+      "reason": "Gated DeltaNetやKimi Delta Attentionの再帰状態に対する学習不要8-bit量子化。トークン窓の末尾でのみ状態を量子化し、窓内は高精度の更新をバッファする。外れ値を高精度Compensator Tokensとして保持し、残差を平滑化する。Qwen/Kimi/GLM系列で検証し、FP32に近い精度でkernel 2.05–3.70倍、end-to-end 1.47倍の高速化を報告。LLM推論の状態圧縮・効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.38166",
+      "body_check": "primary_arxiv_abstract_read_v2_2026-11-10; full_body_not_read",
+      "first_checked_at": "2026-11-13T00:03:31+09:00",
+      "last_checked_at": "2026-11-13T00:03:31+09:00",
+      "linked_from": [],
+      "worklist_rank": 139
+    }
+  ]
+}
