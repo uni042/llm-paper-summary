@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-2303-scheduled-chat-00/r01",
+  "reference_main_sha": "986ce231aa6fcab4c34b29e8ca05b2c58f5aaf9f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.21231",
+      "identity_tokens": [
+        "arxiv:2604.21231"
+      ],
+      "title": "SparKV: Overhead-Aware KV Cache Loading for Efficient On-Device LLM Inference",
+      "reason": "一次arXiv要旨を直接確認。クラウドからのKVチャンク転送と端末上のKV計算の費用をチャンク別に見積もり、通信と計算を重ね合わせ、無線帯域変動時にスケジュールを再調整する端末LLM推論高速化。著者報告ではTTFTを1.3〜5.1倍、要求当たりエネルギーを1.5〜3.3倍改善。KV cache offload・端末推論に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.21231",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T23:03:00+09:00",
+      "last_checked_at": "2026-11-12T23:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 138
+    }
+  ]
+}
