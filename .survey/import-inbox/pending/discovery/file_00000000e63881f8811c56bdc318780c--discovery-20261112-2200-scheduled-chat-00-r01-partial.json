@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-2200-scheduled-chat-00/r01",
+  "reference_main_sha": null,
+  "reference_main_sha_status": "unverified; GitHub connector supplied file blob SHA only; HEAD commit SHA unavailable",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.08958",
+      "identity_tokens": [
+        "arxiv:2402.08958"
+      ],
+      "title": "Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers",
+      "reason": "NeurIPS 2024採録のaespa。Transformerのattention内にある層間依存性を考慮し、layer-wiseな計算効率とattention-wise reconstructionを両立する学習後量子化。arXiv一次要旨で手法と評価対象を確認したためLLM量子化の直接研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2402.08958",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T22:00:44+09:00",
+      "last_checked_at": "2026-11-12T22:00:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 129
+    }
+  ]
+}
