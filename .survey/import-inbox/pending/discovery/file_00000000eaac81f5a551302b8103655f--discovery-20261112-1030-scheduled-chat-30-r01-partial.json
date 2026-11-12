@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261112-1030-scheduled-chat-30/r01",
+  "reference_main_sha": "d6471bd0e643efe7f14662833b5d969566f55a01",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22324",
+      "identity_tokens": ["arxiv:2603.22324", "doi:10.48550/arxiv.2603.22324"],
+      "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
+      "reason": "事後学習で得た小さな重み差分ΔWが通常の重み再構成誤差最小化による量子化で損なわれる問題に対し、ベースモデルと事後学習済みモデルの重みから差分の符号保持率・コサイン類似度を最大化するデータ不要の量子化スケール選択を提案。FP8の予備評価で事後学習によるスタイル特性を回復し一般性能を維持すると著者が報告。LLMの低精度推論と重み圧縮に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2603.22324",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T10:30:00+09:00",
+      "last_checked_at": "2026-11-12T10:30:00+09:00",
+      "linked_from": ["worker-worklist-30 discovery rank 61"],
+      "worklist_rank": 61
+    }
+  ]
+}
