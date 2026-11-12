@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1703-scheduled-chat-00/r01",
+  "reference_main_sha": "f19fded01be04f5c6a059b8dfdb9e94d3dfef924",
+  "record_count": 2,
+  "records": [
+    {
+      "canonical_id": "arXiv:2605.05023",
+      "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+      "source_url": "https://arxiv.org/abs/2605.05023",
+      "classification": "accept",
+      "reason": "専門家作成のCUDA attention kernelを実行可能な中間表現へliftし、PyTorch仕様に合わせて検証・transfer・lowerすることで、注意機構のGPUカーネルを再構築する推論カーネル最適化の直接研究。arXiv一次要旨を確認。",
+      "worklist_rank": 113
+    },
+    {
+      "canonical_id": "arXiv:2511.13223",
+      "title": "TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs",
+      "source_url": "https://arxiv.org/abs/2511.13223",
+      "classification": "accept",
+      "reason": "自己生成データから問題難度に応じて推論深度を選択し、論理経路を保つ言語的圧縮で推論トークン数を削減。MATH500でDeepSeek-R1-Distill-Qwen-7Bの精度を維持しつつ平均50%のトークン削減を報告する推論効率化の直接研究。arXiv一次要旨を確認。",
+      "worklist_rank": 114
+    }
+  ]
+}
