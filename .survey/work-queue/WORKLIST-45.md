@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-12T18:18:36+00:00`
+Generated: `2026-11-12T19:07:06+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -148,7 +148,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 66 | 10 | 6 | 16 | arXiv:2609.40118 | Persistent Context Graphs for Efficient Memory Compaction in LLM Agents | 2026-09-30 | arXiv.org | 0 | 16 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, LLM Serving / Scheduling / Disaggregation, Long-context serving / KV cache benchmark, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2609.40118) |
 | 67 | 10 | 6 | 15 | DOI:10.1145/3801489.3806878 | Optimal Scheduling Algorithms for LLM Inference: Theory and Practice | 2026-06-08 | Measurement and Modeling of Computer Systems | 0 | 1 |  | [source](https://doi.org/10.1145/3801489.3806878) |
 | 68 | 40 | 6 | 15 | SemanticScholar:bc4bf86b9bd3bc4311ca64485a02323024f81ad4 | Accelerating Attention through Gradient-Based Learned Runtime Pruning | 2022 |  | 40 | 15 | Sparse Attention, inference-systems, sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/bc4bf86b9bd3bc4311ca64485a02323024f81ad4) |
-| 69 | 10 | 6 | 14 | arXiv:2609.33477 | Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs | 2026-09-27 | arXiv.org | 0 | 15 | LLM Serving / Scheduling / Disaggregation, inference-systems, kv-cache, kv-cache-offload-recomputation, kv-cache-reuse-position-independent-caching, prefix caching / hybrid attention-SSM serving | [source](https://arxiv.org/abs/2609.33477) |
+| 69 | 101 | 6 | 14 | arXiv:2609.33477 | Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs | 2026-09-27 | arXiv.org | 1 | 15 | LLM Serving / Scheduling / Disaggregation, inference-systems, kv-cache, kv-cache-offload-recomputation, kv-cache-reuse-position-independent-caching, prefix caching / hybrid attention-SSM serving | [source](https://arxiv.org/abs/2609.33477) |
 | 70 | 117 | 6 | 14 | arXiv:2602.04705 | ERNIE 5.0 Technical Report | 2026-02-04 | arXiv.org | 17 | 14 | 03-model-compression-pruning, distributed attention / sequence parallelism / blockwise attention / long-context transformers, inference-systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2602.04705) |
 | 71 | 10 | 6 | 13 | arXiv:2610.31098 | RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training | 2026-10-22 |  | 0 | 13 | 08-speculative-decoding, KV Cache Optimization / Compression, inference-systems, speculative decoding / edge-assisted serving / distributed inference / pipeline scheduling, 投機的復号 / EAGLE, 投機的復号 / LLMサービング・ベンチマーク, 長文LLM推論、疎注意、自己投機復号、鍵値キャッシュ選択 | [source](https://arxiv.org/abs/2610.31098) |
 | 72 | 102 | 6 | 13 | arXiv:2608.08506 | Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs | 2026-08-09 | arXiv.org | 2 | 15 | Inference / Structured Model Compression and Pruning, arXiv:2405.16406のICLR 2025採録版。, inference-systems | [source](https://arxiv.org/abs/2608.08506) |
