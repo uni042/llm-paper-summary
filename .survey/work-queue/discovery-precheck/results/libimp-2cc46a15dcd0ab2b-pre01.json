@@ -1,0 +1,335 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2cc46a15dcd0ab2b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2cc46a15dcd0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.07911",
+    "arXiv:2505.22107",
+    "arXiv:2607.05475"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "174fe82de2d1191a9cc0df51afcd6e501853b028",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-12T16:50:47.979451+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.07911",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.22107",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.05475",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "year": 2026,
+      "published": "2026-07-06",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely constrained by hardware inefficiencies. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, spanning five mainstream frameworks (e.g., llama.cpp and GENIE) and three hardware backends (CPU, GPU, and NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that measures LLM throughput and provides the first backend-specific energy attribution for mobile LLM inference, going beyond traditional device-level measurements. We further conduct hardware microbenchmarks to characterize the memory-system performance and compute capabilities of mobile CPUs, GPUs, and NPUs. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to $10\\times$ due to differences in offloading strategies, hardware-underutilizing operators, and activation quantization strategies. (2) We identify a distinct ``phase split,''in which NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This split is driven by NPUs'preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in unnecessary energy consumption. For example, tuning CPU frequency alone reduces energy consumption by up to $39.7\\%$. Leveraging these findings, we estimate that an energy-oriented configuration can reduce energy consumption by up to $53.2\\%$ on the NPU backend across three datasets, highlighting the substantial potential for further efficiency improvements in mobile LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:70ea82273ae258725936011cf4ed651f71ed7b5b"
+      ],
+      "semantic_scholar_id": "70ea82273ae258725936011cf4ed651f71ed7b5b",
+      "canonical_id": "arXiv:2607.05475",
+      "arxiv_id": "2607.05475",
+      "doi": "10.48550/arXiv.2607.05475",
+      "authors": [
+        "Guanyu Cai",
+        "Ruiming Tian",
+        "Lang Yang",
+        "Zhouhong Ren",
+        "Jinliang Yuan",
+        "Ling-Kun Li",
+        "Ji-Liang Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling",
+      "source_url": "https://arxiv.org/abs/2505.22107",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) excel in natural language processing tasks by capturing long-range dependencies through self-attention mechanisms. However, long-context modeling faces significant computational inefficiencies due to \\textit{redundant} attention computations: while attention weights are often \\textit{sparse}, all tokens consume \\textit{equal} computational resources. In this paper, we reformulate traditional probabilistic sequence modeling as a \\textit{supervised learning task}, enabling the separation of relevant and irrelevant tokens and providing a clearer understanding of redundancy. Based on this reformulation, we theoretically analyze attention sparsity, revealing that only a few tokens significantly contribute to predictions. Building on this, we formulate attention optimization as a linear coding problem and propose a \\textit{group coding strategy}, theoretically showing its ability to improve robustness against random noise and enhance learning efficiency. Motivated by this, we propose \\textit{Dynamic Group Attention} (DGA), which leverages the group coding to explicitly reduce redundancy by aggregating less important tokens during attention computation. Empirical results show that our DGA significantly reduces computational costs while maintaining competitive performance.Code is available at https://github.com/bolixinyu/DynamicGroupAttention.",
+      "identifiers": [
+        "SemanticScholar:8c99036877c646d4149d376652d6f0d4b37a6594"
+      ],
+      "semantic_scholar_id": "8c99036877c646d4149d376652d6f0d4b37a6594",
+      "canonical_id": "arXiv:2505.22107",
+      "arxiv_id": "2505.22107",
+      "doi": "10.48550/arXiv.2505.22107",
+      "authors": [
+        "Shu-Hai Zhang",
+        "Z. You",
+        "Yao-Fo Chen",
+        "Zhi-Quan Wen",
+        "Qianyue Wang",
+        "Zhijie Qiu",
+        "Yuan-Qing Li",
+        "Ming-Kui Tan"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 533,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Pit One Against Many: Leveraging Attention-head Embeddings for Parameter-efficient Multi-head Attention",
+      "source_url": "https://arxiv.org/abs/2310.07911",
+      "year": 2023,
+      "published": "2023-10-11",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling pre-trained language models has resulted in large performance gains in various natural language processing tasks but comes with a large cost in memory requirements. Inspired by the position embeddings in transformers, we aim to simplify and reduce the memory footprint of the multi-head attention (MHA) mechanism. We propose an alternative module that uses only a single shared projection matrix and multiple head embeddings (MHE), i.e. one per head. We empirically demonstrate that our MHE attention is substantially more memory efficient compared to alternative attention mechanisms while achieving high predictive performance retention ratio to vanilla MHA on several downstream tasks. MHE attention only requires a negligible fraction of additional parameters ($3nd$, where $n$ is the number of attention heads and $d$ the size of the head embeddings) compared to a single-head attention, while MHA requires $(3n^2-3n)d^2-3nd$ additional parameters.",
+      "identifiers": [
+        "SemanticScholar:c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e"
+      ],
+      "semantic_scholar_id": "c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e",
+      "canonical_id": "arXiv:2310.07911",
+      "arxiv_id": "2310.07911",
+      "doi": "10.48550/arXiv.2310.07911",
+      "authors": [
+        "Huiyin Xue",
+        "Nikolaos Aletras"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1128,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.05475",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.05475",
+        "id:SemanticScholar:70ea82273ae258725936011cf4ed651f71ed7b5b",
+        "id:arXiv:2607.05475",
+        "title:is your npu ready for llms dissecting the hidden efficiency bottlenecks in mobile llm inference",
+        "url:https://arxiv.org/abs/2607.05475"
+      ],
+      "record": {
+        "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.05475",
+        "year": 2026,
+        "published": "2026-07-06",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) on mobile devices enhances privacy and reduces latency, but is severely constrained by hardware inefficiencies. We present the first comprehensive, cross-layer measurement study of mobile LLM inference, spanning five mainstream frameworks (e.g., llama.cpp and GENIE) and three hardware backends (CPU, GPU, and NPU). To enable this analysis, we develop PowerBench, a fine-grained profiling tool that measures LLM throughput and provides the first backend-specific energy attribution for mobile LLM inference, going beyond traditional device-level measurements. We further conduct hardware microbenchmarks to characterize the memory-system performance and compute capabilities of mobile CPUs, GPUs, and NPUs. Our study yields three critical insights: (1) Framework-induced performance gaps are substantially amplified on NPUs, reaching up to $10\\times$ due to differences in offloading strategies, hardware-underutilizing operators, and activation quantization strategies. (2) We identify a distinct ``phase split,''in which NPUs excel at compute-bound prefilling, while CPUs outperform all other backends in memory-bound decoding. This split is driven by NPUs'preference for large, fixed-shape workloads, which conflicts with the small-kernel, dynamic nature of decoding. (3) Backend-specific profiling uncovers substantial scheduling headroom missed by prior work. Suboptimal thread configurations, uncoordinated NPU sleep latencies, and CPU polling intervals result in unnecessary energy consumption. For example, tuning CPU frequency alone reduces energy consumption by up to $39.7\\%$. Leveraging these findings, we estimate that an energy-oriented configuration can reduce energy consumption by up to $53.2\\%$ on the NPU backend across three datasets, highlighting the substantial potential for further efficiency improvements in mobile LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:70ea82273ae258725936011cf4ed651f71ed7b5b"
+        ],
+        "semantic_scholar_id": "70ea82273ae258725936011cf4ed651f71ed7b5b",
+        "canonical_id": "arXiv:2607.05475",
+        "arxiv_id": "2607.05475",
+        "doi": "10.48550/arXiv.2607.05475",
+        "authors": [
+          "Guanyu Cai",
+          "Ruiming Tian",
+          "Lang Yang",
+          "Zhouhong Ren",
+          "Jinliang Yuan",
+          "Ling-Kun Li",
+          "Ji-Liang Wang"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.22107",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.22107",
+        "id:SemanticScholar:8c99036877c646d4149d376652d6f0d4b37a6594",
+        "id:arXiv:2505.22107",
+        "title:curse of high dimensionality issue in transformer for longcontext modeling",
+        "url:https://arxiv.org/abs/2505.22107"
+      ],
+      "record": {
+        "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling",
+        "source_url": "https://arxiv.org/abs/2505.22107",
+        "year": 2025,
+        "published": "2025-05-28",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) excel in natural language processing tasks by capturing long-range dependencies through self-attention mechanisms. However, long-context modeling faces significant computational inefficiencies due to \\textit{redundant} attention computations: while attention weights are often \\textit{sparse}, all tokens consume \\textit{equal} computational resources. In this paper, we reformulate traditional probabilistic sequence modeling as a \\textit{supervised learning task}, enabling the separation of relevant and irrelevant tokens and providing a clearer understanding of redundancy. Based on this reformulation, we theoretically analyze attention sparsity, revealing that only a few tokens significantly contribute to predictions. Building on this, we formulate attention optimization as a linear coding problem and propose a \\textit{group coding strategy}, theoretically showing its ability to improve robustness against random noise and enhance learning efficiency. Motivated by this, we propose \\textit{Dynamic Group Attention} (DGA), which leverages the group coding to explicitly reduce redundancy by aggregating less important tokens during attention computation. Empirical results show that our DGA significantly reduces computational costs while maintaining competitive performance.Code is available at https://github.com/bolixinyu/DynamicGroupAttention.",
+        "identifiers": [
+          "SemanticScholar:8c99036877c646d4149d376652d6f0d4b37a6594"
+        ],
+        "semantic_scholar_id": "8c99036877c646d4149d376652d6f0d4b37a6594",
+        "canonical_id": "arXiv:2505.22107",
+        "arxiv_id": "2505.22107",
+        "doi": "10.48550/arXiv.2505.22107",
+        "authors": [
+          "Shu-Hai Zhang",
+          "Z. You",
+          "Yao-Fo Chen",
+          "Zhi-Quan Wen",
+          "Qianyue Wang",
+          "Zhijie Qiu",
+          "Yuan-Qing Li",
+          "Ming-Kui Tan"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 533,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07911",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07911",
+        "id:SemanticScholar:c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e",
+        "id:arXiv:2310.07911",
+        "title:pit one against many leveraging attentionhead embeddings for parameterefficient multihead attention",
+        "url:https://arxiv.org/abs/2310.07911"
+      ],
+      "record": {
+        "title": "Pit One Against Many: Leveraging Attention-head Embeddings for Parameter-efficient Multi-head Attention",
+        "source_url": "https://arxiv.org/abs/2310.07911",
+        "year": 2023,
+        "published": "2023-10-11",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling pre-trained language models has resulted in large performance gains in various natural language processing tasks but comes with a large cost in memory requirements. Inspired by the position embeddings in transformers, we aim to simplify and reduce the memory footprint of the multi-head attention (MHA) mechanism. We propose an alternative module that uses only a single shared projection matrix and multiple head embeddings (MHE), i.e. one per head. We empirically demonstrate that our MHE attention is substantially more memory efficient compared to alternative attention mechanisms while achieving high predictive performance retention ratio to vanilla MHA on several downstream tasks. MHE attention only requires a negligible fraction of additional parameters ($3nd$, where $n$ is the number of attention heads and $d$ the size of the head embeddings) compared to a single-head attention, while MHA requires $(3n^2-3n)d^2-3nd$ additional parameters.",
+        "identifiers": [
+          "SemanticScholar:c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e"
+        ],
+        "semantic_scholar_id": "c30deb8f4b0e942a36e5ef5c87bed01f575c0c6e",
+        "canonical_id": "arXiv:2310.07911",
+        "arxiv_id": "2310.07911",
+        "doi": "10.48550/arXiv.2310.07911",
+        "authors": [
+          "Huiyin Xue",
+          "Nikolaos Aletras"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1128,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cafc4fe859e63f9f70fef5e66b139b6673eaadd48a8338e2a258be8a9fd11378",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
