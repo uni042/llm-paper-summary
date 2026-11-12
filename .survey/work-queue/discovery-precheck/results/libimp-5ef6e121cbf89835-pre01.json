@@ -1,0 +1,438 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5ef6e121cbf89835-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5ef6e121cbf8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.16219",
+    "arXiv:2609.27294",
+    "arXiv:2609.34680",
+    "arXiv:2611.03517"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "1886dbcaa3a1e3bbf67795e467eb3c46025be094",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-12T07:23:10.075639+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.16219",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.27294",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.03517",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+      "identifiers": [
+        "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+      ],
+      "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+      "canonical_id": "arXiv:2603.16219",
+      "arxiv_id": "2603.16219",
+      "doi": "10.48550/arXiv.2603.16219",
+      "authors": [
+        "Hang Lv",
+        "Sheng Liang",
+        "Hao Wang",
+        "Yong-Yue Zhang",
+        "Hongchao Gu",
+        "Wei Guo",
+        "De-Fu Lian",
+        "Yong Liu",
+        "En-Hong Chen"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling",
+      "source_url": "https://arxiv.org/abs/2609.27294",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling a language model is not only a question of final quality: the architectural choice determines how much computation is spent during training, prompt processing, and autoregressive decoding to achieve certain model quality. An ideal model architecture should lower all above computation costs to facilitate scaling to a larger model, while ensure the larger model indeed outperforms smaller baselines. We introduce KV-Invariant Transformer Expansion (KITE), a scaling paradigm that achieves this goal. It trains the model from a smaller size to a larger size (i.e., saving training costs via upcycling), while places newly added parameters in regions that do not affect attention KV. Consequently, during inference, prefilling KV only relies on the smaller part of the model, so the inference costs are saved. As a concrete instantiation, we present Step Scale Transformer (SST), a two-tower decoder in which one tower produces KV and the other reads them. At comparable cumulative training compute, SST, a 67B MoE model with 2.15B active body parameters per decode token, achieves lower training loss than 47B and 63B MoE Transformers with 1.48B and 2.02B active body parameters, respectively, while reducing estimated inference cost by 6.7% and 31.6%.",
+      "identifiers": [
+        "SemanticScholar:de4d4d46cccc961c53f70fa27d8b66ab3bb62eec"
+      ],
+      "semantic_scholar_id": "de4d4d46cccc961c53f70fa27d8b66ab3bb62eec",
+      "canonical_id": "arXiv:2609.27294",
+      "arxiv_id": "2609.27294",
+      "doi": "10.48550/arXiv.2609.27294",
+      "authors": [
+        "Zhi-Heng Hu",
+        "Yi-Xun Wei",
+        "Jian Zhou",
+        "Yi-Zhuang Zhou",
+        "Ji Li",
+        "Xing Chen",
+        "Yang Li",
+        "Bo-Jun Wang",
+        "Yi-Bo Zhu",
+        "Xiang-Yu Zhang",
+        "Da-Xin Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2609.34680",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes. We have open-sourced the QuantForge search framework.",
+      "identifiers": [
+        "SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1"
+      ],
+      "semantic_scholar_id": "9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+      "canonical_id": "arXiv:2609.34680",
+      "arxiv_id": "2609.34680",
+      "doi": "10.48550/arXiv.2609.34680",
+      "authors": [
+        "Qiu-Lin Shang",
+        "Zhou-Tong Wu",
+        "Jie Hu",
+        "Kun Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization",
+      "source_url": "https://arxiv.org/abs/2611.03517",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents for GPU kernel optimization sit at two ends of a structure-freedom tradeoff. Scripted agents fix what the model does at each step, via a learned policy, an optimization menu, or fixed roles, and are sample-efficient where the recipe applies and stall where it does not. Open-ended agents let a self-directed model mutate a population of kernels and pay for the freedom in trials: thousands of evaluations, repeated edits, and wrong candidates. Both respond to hard targets by equipping the agent with more: parsed profiler output, disassembly analysis, retrieval over documentation and libraries, and stores of lessons. We argue that both lack direction, a hypothesis about where the remaining gap is, and that a short question asked at the right moment supplies it without narrowing what the agent may do next. We present KernelSeek, a question-driven agent that makes an existing CUDA kernel faster with no operator-specific knowledge and no faster implementation to imitate: a general-purpose coding agent, a minimal harness that enforces a verifiable goal, and questions at decision points, first from a human, then from a bank the agent applies to itself. On the same task, evaluator, hardware, and week, a tool-rich autonomous agent built in the prevailing style plateaued at 0.50x FlashAttention-3 after 133 model-driven steps; KernelSeek reached 1.13x. It then produced dependency-free FlashAttention forward kernels for Hopper and Blackwell, single CUDA files with no CUTLASS, CuTe, cuBLAS, or cuDNN, correct on all 182 scenarios per architecture and 1.16x FlashAttention-3 and 1.46x FlashAttention-4 (geometric mean). Across 162 human messages and 11.5K agent tool calls, every large gain followed a question that moved the agent to a different layer of the system or rejected a claimed limit, never one that supplied information. We release the kernels, harness, question bank, and all traces.",
+      "identifiers": [
+        "SemanticScholar:63d792673707487f80a8ab8008682913079944eb"
+      ],
+      "semantic_scholar_id": "63d792673707487f80a8ab8008682913079944eb",
+      "canonical_id": "arXiv:2611.03517",
+      "arxiv_id": "2611.03517",
+      "authors": [
+        "Gabriele Oliaro",
+        "Jaeseong Lee",
+        "Zhao-Yuan Su",
+        "Sreeram Vennam",
+        "Zhi-Hao Jia",
+        "Samyam Rajbhandari"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 10,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.16219",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.16219",
+        "id:SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+        "id:arXiv:2603.16219",
+        "title:specsteer synergizing local context and global reasoning for efficient personalized generation",
+        "url:https://arxiv.org/abs/2603.16219"
+      ],
+      "record": {
+        "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+        "source_url": "https://arxiv.org/abs/2603.16219",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+        "identifiers": [
+          "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+        ],
+        "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+        "canonical_id": "arXiv:2603.16219",
+        "arxiv_id": "2603.16219",
+        "doi": "10.48550/arXiv.2603.16219",
+        "authors": [
+          "Hang Lv",
+          "Sheng Liang",
+          "Hao Wang",
+          "Yong-Yue Zhang",
+          "Hongchao Gu",
+          "Wei Guo",
+          "De-Fu Lian",
+          "Yong Liu",
+          "En-Hong Chen"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 240,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27294",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.27294",
+        "id:SemanticScholar:de4d4d46cccc961c53f70fa27d8b66ab3bb62eec",
+        "id:arXiv:2609.27294",
+        "title:kite kvinvariant transformer expansion for efficient agentic llm scaling",
+        "url:https://arxiv.org/abs/2609.27294"
+      ],
+      "record": {
+        "title": "KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling",
+        "source_url": "https://arxiv.org/abs/2609.27294",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling a language model is not only a question of final quality: the architectural choice determines how much computation is spent during training, prompt processing, and autoregressive decoding to achieve certain model quality. An ideal model architecture should lower all above computation costs to facilitate scaling to a larger model, while ensure the larger model indeed outperforms smaller baselines. We introduce KV-Invariant Transformer Expansion (KITE), a scaling paradigm that achieves this goal. It trains the model from a smaller size to a larger size (i.e., saving training costs via upcycling), while places newly added parameters in regions that do not affect attention KV. Consequently, during inference, prefilling KV only relies on the smaller part of the model, so the inference costs are saved. As a concrete instantiation, we present Step Scale Transformer (SST), a two-tower decoder in which one tower produces KV and the other reads them. At comparable cumulative training compute, SST, a 67B MoE model with 2.15B active body parameters per decode token, achieves lower training loss than 47B and 63B MoE Transformers with 1.48B and 2.02B active body parameters, respectively, while reducing estimated inference cost by 6.7% and 31.6%.",
+        "identifiers": [
+          "SemanticScholar:de4d4d46cccc961c53f70fa27d8b66ab3bb62eec"
+        ],
+        "semantic_scholar_id": "de4d4d46cccc961c53f70fa27d8b66ab3bb62eec",
+        "canonical_id": "arXiv:2609.27294",
+        "arxiv_id": "2609.27294",
+        "doi": "10.48550/arXiv.2609.27294",
+        "authors": [
+          "Zhi-Heng Hu",
+          "Yi-Xun Wei",
+          "Jian Zhou",
+          "Yi-Zhuang Zhou",
+          "Ji Li",
+          "Xing Chen",
+          "Yang Li",
+          "Bo-Jun Wang",
+          "Yi-Bo Zhu",
+          "Xiang-Yu Zhang",
+          "Da-Xin Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 50,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34680",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34680",
+        "id:SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+        "id:arXiv:2609.34680",
+        "title:quantforge discovering residual decompositions for mxfp4 posttraining quantization",
+        "url:https://arxiv.org/abs/2609.34680"
+      ],
+      "record": {
+        "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2609.34680",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes. We have open-sourced the QuantForge search framework.",
+        "identifiers": [
+          "SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1"
+        ],
+        "semantic_scholar_id": "9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+        "canonical_id": "arXiv:2609.34680",
+        "arxiv_id": "2609.34680",
+        "doi": "10.48550/arXiv.2609.34680",
+        "authors": [
+          "Qiu-Lin Shang",
+          "Zhou-Tong Wu",
+          "Jie Hu",
+          "Kun Yuan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.03517",
+      "identity_tokens": [
+        "id:SemanticScholar:63d792673707487f80a8ab8008682913079944eb",
+        "id:arXiv:2611.03517",
+        "title:ask dont equip questiondriven coding agents for deep kernel optimization",
+        "url:https://arxiv.org/abs/2611.03517"
+      ],
+      "record": {
+        "title": "Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization",
+        "source_url": "https://arxiv.org/abs/2611.03517",
+        "year": 2026,
+        "published": "2026-11-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents for GPU kernel optimization sit at two ends of a structure-freedom tradeoff. Scripted agents fix what the model does at each step, via a learned policy, an optimization menu, or fixed roles, and are sample-efficient where the recipe applies and stall where it does not. Open-ended agents let a self-directed model mutate a population of kernels and pay for the freedom in trials: thousands of evaluations, repeated edits, and wrong candidates. Both respond to hard targets by equipping the agent with more: parsed profiler output, disassembly analysis, retrieval over documentation and libraries, and stores of lessons. We argue that both lack direction, a hypothesis about where the remaining gap is, and that a short question asked at the right moment supplies it without narrowing what the agent may do next. We present KernelSeek, a question-driven agent that makes an existing CUDA kernel faster with no operator-specific knowledge and no faster implementation to imitate: a general-purpose coding agent, a minimal harness that enforces a verifiable goal, and questions at decision points, first from a human, then from a bank the agent applies to itself. On the same task, evaluator, hardware, and week, a tool-rich autonomous agent built in the prevailing style plateaued at 0.50x FlashAttention-3 after 133 model-driven steps; KernelSeek reached 1.13x. It then produced dependency-free FlashAttention forward kernels for Hopper and Blackwell, single CUDA files with no CUTLASS, CuTe, cuBLAS, or cuDNN, correct on all 182 scenarios per architecture and 1.16x FlashAttention-3 and 1.46x FlashAttention-4 (geometric mean). Across 162 human messages and 11.5K agent tool calls, every large gain followed a question that moved the agent to a different layer of the system or rejected a claimed limit, never one that supplied information. We release the kernels, harness, question bank, and all traces.",
+        "identifiers": [
+          "SemanticScholar:63d792673707487f80a8ab8008682913079944eb"
+        ],
+        "semantic_scholar_id": "63d792673707487f80a8ab8008682913079944eb",
+        "canonical_id": "arXiv:2611.03517",
+        "arxiv_id": "2611.03517",
+        "authors": [
+          "Gabriele Oliaro",
+          "Jaeseong Lee",
+          "Zhao-Yuan Su",
+          "Sreeram Vennam",
+          "Zhi-Hao Jia",
+          "Samyam Rajbhandari"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 10,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:dbaedb589e23ad15a19ab350448813c23c50a853b48d6c58bdbab2ac665e1f64",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
