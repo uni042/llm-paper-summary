@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-12T14:06:29+00:00`
+Generated: `2026-11-12T14:51:34+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -542,9 +542,9 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 459 | 1 | 4 | 5 | arXiv:2508.08343 | A Data-driven ML Approach for Maximizing Performance in LLM-Adapter Serving | 2025-08-11 |  | 1 | 5 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation, many-adapter LLM serving / LoRA serving / inference scheduling, multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling | [source](https://arxiv.org/abs/2508.08343) |
 | 460 | 10 | 4 | 5 | arXiv:2603.23495 | VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions | 2026-03-24 | arXiv.org | 0 | 5 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.23495) |
 | 461 | 101 | 4 | 5 | arXiv:2604.13440 | A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models | 2026-04-15 | arXiv.org | 1 | 5 | Weight Quantization / Compression, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2604.13440) |
-| 462 | 13 | 4 | 5 | arXiv:2405.20202 | One QuantLLM for ALL: Fine-tuning Quantized LLMs Once for Efficient Deployments | 2024-05-30 | Annual Meeting of the Association for Computational Linguistics | 3 | 5 | 99-other-inference-systems, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2405.20202) |
-| 463 | 10 | 4 | 5 | DOI:10.18653/v1/2026.acl-srw.63 | PE-QAT: Parameter-Efficient Quantization-Aware Training for Large Language Models | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.18653/v1/2026.acl-srw.63) |
-| 464 | 10 | 4 | 5 | arXiv:2605.14929 | A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models | 2026-05-14 | arXiv.org | 0 | 5 | Weight Quantization / Compression, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2605.14929) |
+| 462 | 20 | 4 | 5 | arXiv:2601.12033 | Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection | 2026-01-17 | Annual Meeting of the Association for Computational Linguistics | 0 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.12033) |
+| 463 | 10 | 4 | 5 | DOI:10.1109/2575-8411.2026.00111 | BridgeLoRA: Privacy-Preserving Collaborative Skip-Layer Connectors for Efficient Transformer Fine-Tuning at the Edge | 2026-06-01 | IEEE International Conference on Distributed Computing Systems | 0 | 5 | Conditional Computation | [source](https://doi.org/10.1109/2575-8411.2026.00111) |
+| 464 | 10 | 4 | 5 | arXiv:2605.05994 | DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression | 2026-05-07 | arXiv.org | 0 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2605.05994) |
 | 465 | 10 | 4 | 5 | arXiv:2607.10137 | RDQ: Residual Distribution Quantization for Large Language Models | 2026-07-11 | arXiv.org | 0 | 6 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2607.10137) |
 | 466 | 10 | 4 | 5 | arXiv:2610.12124 | Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents | 2026-10-08 |  | 0 | 5 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2610.12124) |
 | 467 | 1 | 4 | 5 | arXiv:2410.12187 | DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs | 2024-10-16 | arXiv.org | 1 | 5 | 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2410.12187) |
