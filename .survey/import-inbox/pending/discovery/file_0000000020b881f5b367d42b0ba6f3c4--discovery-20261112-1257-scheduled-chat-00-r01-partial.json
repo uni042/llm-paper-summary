@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1257-scheduled-chat-00/r01",
+  "reference_main_sha": "685bf29dbd2f57dbf1acc24dbe04e544f5e6979e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.15732",
+      "identity_tokens": ["arxiv:2604.15732"],
+      "title": "Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving",
+      "reason": "長文脈の分散LLMサービングで回答精度の変動が再試行を増やし、ユーザーが正答を得るまでの累積遅延を悪化させる問題を扱う。Time-to-Correct-Answer（TTCA）を導入し、プロンプト長・言語による精度差を考慮したLightweight Accuracy-Aware Routing（LAAR）を提案。LLM servingのルーティング・性能評価に直接関連するため採択。",
+      "source_url": "https://arxiv.org/abs/2604.15732",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T12:57:08+09:00",
+      "last_checked_at": "2026-11-12T12:57:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 99
+    }
+  ]
+}
