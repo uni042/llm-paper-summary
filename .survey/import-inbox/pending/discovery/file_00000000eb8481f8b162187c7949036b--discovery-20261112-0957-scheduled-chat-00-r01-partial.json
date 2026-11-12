@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-0957-scheduled-chat-00/r01",
+  "reference_main_sha": "d220589b11479eeeebe48a3207bbc738b30472a0",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.27875",
+      "identity_tokens": [
+        "arxiv:2608.27875"
+      ],
+      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+      "reason": "注意行列の縦線状に繰り返し参照される重要トークンと局所窓のみを高精度で保持し、残余のattention状態を低ビット量子化する。prefillとdecodeの両方に適用し、decodeではKV逆量子化と注意計算を融合する。長文脈LLMの低精度注意計算・KV圧縮に直接関連するため採択。",
+      "source_url": "https://arxiv.org/abs/2608.27875",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T09:57:29+09:00",
+      "last_checked_at": "2026-11-12T09:57:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 89
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06052",
+      "identity_tokens": [
+        "arxiv:2605.06052"
+      ],
+      "title": "XtraMAC: An Efficient MAC Architecture for Mixed-Precision LLM Inference on FPGA",
+      "reason": "FPGA上で整数・浮動小数点・混合精度の積和演算を共通の整数仮数積と符号・指数処理へ分解し、動的オペランドパッキングとDSP資源共有を実現する。AMD Xilinx U55c評価で計算密度1.4～2.0倍、演算当たりLUT/FF/DSP消費27～51%減、LLM混合精度ワークロードで最大1.2倍高速化を著者報告。低精度LLM推論のハードウェア効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.06052",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T09:57:29+09:00",
+      "last_checked_at": "2026-11-12T09:57:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 90
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.03599",
+      "identity_tokens": [
+        "arxiv:2412.03599"
+      ],
+      "title": "CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models",
+      "reason": "層間正準相関に基づくCMPQ、枝刈り感度に基づくPMPQ、Taylor分解で入力摂動感度を測るTDMPQという3種の混合精度割当を提案。BERTとOPT系列で最大4倍圧縮、FP16比で最大2倍の効率向上を著者報告。LLM学習後量子化・圧縮の直接的な関連研究。",
+      "source_url": "https://arxiv.org/abs/2412.03599",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T09:57:29+09:00",
+      "last_checked_at": "2026-11-12T09:57:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 91
+    }
+  ]
+}
