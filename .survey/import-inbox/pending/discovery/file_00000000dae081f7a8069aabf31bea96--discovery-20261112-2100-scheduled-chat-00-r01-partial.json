@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "4b44a109482030538f8ecba2deac248ccd1221e0",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.13358",
+      "identity_tokens": [
+        "arxiv:2405.13358"
+      ],
+      "title": "AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs",
+      "reason": "較正データ不要の学習後量子化。Adaptive LASSOに着想を得たsoft-thresholdingで重要重みと外れ値の影響を扱い、3-bit量子化で精度を維持しつつ量子化時間を少なくとも10倍短縮したと著者が報告。LLM重み圧縮の直接研究。",
+      "source_url": "https://arxiv.org/abs/2405.13358",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T21:00:09+09:00",
+      "last_checked_at": "2026-11-12T21:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 127
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01224",
+      "identity_tokens": [
+        "arxiv:2609.01224"
+      ],
+      "title": "S²Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+      "reason": "学習不要の視覚トークン枝刈り。画像を領域に分けて空間被覆を保証し、Laplacian variationで領域別予算を配分、初期decoder blockの表現変化から残すトークンを選択。Qwen2.5-VL-7Bで576中32トークンでも元性能の79.3%を維持したと報告。",
+      "source_url": "https://arxiv.org/abs/2609.01224",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T21:00:09+09:00",
+      "last_checked_at": "2026-11-12T21:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 128
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.06970",
+      "identity_tokens": [
+        "arxiv:2604.06970"
+      ],
+      "title": "Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale",
+      "reason": "内部が見えないLLM API向けのクライアント側スケジューリング。adaptive DRRによるクラス間配分、クラス内順序付け、admit/defer/rejectの過負荷制御を分離。出力トークン数の粗い予測が有効であることを評価したLLM serving直接研究。",
+      "source_url": "https://arxiv.org/abs/2604.06970",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T21:00:09+09:00",
+      "last_checked_at": "2026-11-12T21:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 130
+    }
+  ]
+}
