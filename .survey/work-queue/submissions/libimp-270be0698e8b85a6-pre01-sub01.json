@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+      "source_url": "https://arxiv.org/abs/2605.05023",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient CUDA implementations of attention mechanisms are critical to modern deep learning systems, yet supporting diverse and evolving attention variants remains challenging. Existing frameworks and compilers trade performance for flexibility, while expert-written kernels achieve high efficiency but are difficult to adapt. Recent work explores large language models (LLMs) for GPU kernel generation, but prior studies report unstable correctness and significant performance gaps for complex operators such as attention. We present CuBridge, an LLM-based framework that adapts expert-written attention kernels through a structured lift-transfer-lower workflow. CuBridge starts from expert-written CUDA attention kernels and lifts them into an executable intermediate representation that makes execution orchestration explicit while abstracting low-level CUDA syntax. Given a user-provided PyTorch specification, CuBridge generates and verifies a target IR program, then reconstructs optimized CUDA code via reference-guided lowering. Across diverse attention variants and GPU platforms, CuBridge consistently produces correct kernels and substantially outperforms general frameworks, compiler-based approaches, and prior LLM-based methods.",
+      "identifiers": [
+        "SemanticScholar:89c891ca4dfded59bb90cc1f15bb06d36e767543"
+      ],
+      "semantic_scholar_id": "89c891ca4dfded59bb90cc1f15bb06d36e767543",
+      "canonical_id": "arXiv:2605.05023",
+      "arxiv_id": "2605.05023",
+      "doi": "10.18653/v1/2026.acl-long.500",
+      "authors": [
+        "Xing-Chen Ma",
+        "Yang-Jie Zhou",
+        "Wu Sun",
+        "Zi-Han Liu",
+        "Jingwen Leng",
+        "Yun Lin",
+        "Shi-Xuan Sun",
+        "Min-Yi Guo",
+        "Jingyao Dong"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "専門家作成のCUDA attention kernelを実行可能な中間表現へliftし、PyTorch仕様に合わせて検証・transfer・lowerすることで、注意機構のGPUカーネルを再構築する推論カーネル最適化の直接研究。arXiv一次要旨を確認。",
+      "library_body_check": null,
+      "library_source_run_file": null
+    },
+    {
+      "title": "TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs",
+      "source_url": "https://arxiv.org/abs/2511.13223",
+      "year": 2025,
+      "published": "2025-11-17",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging reasoning LLMs such as OpenAI-o1 and DeepSeek-R1 have achieved strong performance on complex reasoning tasks by generating long chain-of-thought (CoT) traces. However, these long CoTs result in increased token usage, leading to higher inference latency and memory consumption. As a result, balancing accuracy and reasoning efficiency has become essential for deploying reasoning LLMs in practical applications. Existing long-to-short (Long2Short) methods aim to reduce inference length but often sacrifice accuracy, revealing a need for an approach that maintains performance while lowering token costs. To address this efficiency-accuracy tradeoff, we propose TokenSqueeze, a novel Long2Short method that condenses reasoning paths while preserving performance and relying exclusively on self-generated data. First, to prevent performance degradation caused by excessive compression of reasoning depth, we propose to select self-generated samples whose reasoning depth is adaptively matched to the complexity of the problem. To further optimize the linguistic expression without altering the underlying reasoning paths, we introduce a distribution-aligned linguistic refinement method that enhances the clarity and conciseness of the reasoning path while preserving its logical integrity. Comprehensive experimental results demonstrate the effectiveness of TokenSqueeze in reducing token usage while maintaining accuracy. Notably, DeepSeek-R1-Distill-Qwen-7B fine-tuned using our proposed method achieved a 50\\% average token reduction while preserving accuracy on the MATH500 benchmark. TokenSqueeze exclusively utilizes the model's self-generated data, enabling efficient and high-fidelity reasoning without relying on manually curated short-answer datasets across diverse applications. Our code is available at https://github.com/zhangyx1122/TokenSqueeze.",
+      "identifiers": [
+        "SemanticScholar:733d146403976b8bbf625b67f5f95b793ebfb239"
+      ],
+      "semantic_scholar_id": "733d146403976b8bbf625b67f5f95b793ebfb239",
+      "canonical_id": "arXiv:2511.13223",
+      "arxiv_id": "2511.13223",
+      "doi": "10.48550/arXiv.2511.13223",
+      "authors": [
+        "Yuxiang Zhang",
+        "Zhengxu Yu",
+        "Wei-Hang Pan",
+        "Zhong-Ming Jin",
+        "Qiang Fu",
+        "Deng Cai",
+        "Binbin Lin",
+        "Jie-Ping Ye"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 360,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "自己生成データから問題難度に応じて推論深度を選択し、論理経路を保つ言語的圧縮で推論トークン数を削減。MATH500でDeepSeek-R1-Distill-Qwen-7Bの精度を維持しつつ平均50%のトークン削減を報告する推論効率化の直接研究。arXiv一次要旨を確認。",
+      "library_body_check": null,
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-270be0698e8b",
+    "round": "libimp-270be0698e8b85a6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-270be0698e8b85a6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-270be0698e8b85a6-pre01.json",
+    "receipt": "sha256:8570a8210d5956572e3dac88f944c5438f1163e9657e63ea02485034a13e38f6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-270be0698e8b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
