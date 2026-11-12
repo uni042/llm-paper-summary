@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0401-scheduled-chat-00/r01",
+  "reference_main_sha": "e10eecbfd645b5596305c577312ce887a5262cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.14910",
+      "identity_tokens": [
+        "arxiv:2601.14910"
+      ],
+      "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
+      "reason": "GPU命令パイプラインの解析特徴量と機械学習を組み合わせ、11種類のGPUと2種類のLLM servingシステムで性能を予測する。kernel平均誤差6.1%、end-to-end 8.5%、MoE Triton kernel最適化で最大1.7倍。LLM推論システムの性能予測に直接関連。",
+      "source_url": "https://arxiv.org/abs/2601.14910",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.01735",
+      "identity_tokens": [
+        "arxiv:2611.01735"
+      ],
+      "title": "CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching",
+      "reason": "位置非依存KVチャンクの再利用時に精度を回復するため、学習済みblock selectorが必要なトークンブロックを再計算する。5%再計算予算でCacheBlend/ProphetKVより平均7.2/3.5ポイント高精度、単一要求TTFT最大16.1倍改善。KVキャッシュ再利用の直接研究。",
+      "source_url": "https://arxiv.org/abs/2611.01735",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 150
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03113",
+      "identity_tokens": [
+        "arxiv:2606.03113"
+      ],
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "reason": "LEDEは自己投機的復号のexit layerとdraft lengthを、オフライン強化学習により文脈依存で動的に選ぶ。Llama-2/3で通常自己回帰復号比最大2.0〜2.7倍、静的投機設定比さらに17%高速化と報告。",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04302",
+      "identity_tokens": [
+        "arxiv:2607.04302"
+      ],
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "reason": "Ascend NPUでFlashAttentionのQK・PV両GEMMを4-bit HIF4化し、Smooth-QKとP-Reorderingで量子化誤差を緩和。Qwen3-8BのMMLU精度差を1.12から0.70ポイントへ縮小。35.4%の遅延短縮は予測値で実機検証未了。",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 155
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32395",
+      "identity_tokens": [
+        "arxiv:2609.32395"
+      ],
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "reason": "SMemはブロック独立encoderとcross-attention readerにより、位置・編集履歴に依存しない正確なメモリ合成と削除を実現。帯域律速decodeは1.4〜1.7倍高速、KV行34〜38%削減。LLMキャッシュアーキテクチャの直接研究。",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 158
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.08077",
+      "identity_tokens": [
+        "arxiv:2604.08077"
+      ],
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "reason": "Video-LLM入力を時空間cubeに分割し、queryごとのcube選択注意とtoken選択FFNを組み合わせる。Top-pに基づき計算量を動的配分し、長尺動画評価で最大57% FLOPs削減を報告。VLM推論効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 159
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11134",
+      "identity_tokens": [
+        "arxiv:2610.11134"
+      ],
+      "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+      "reason": "近接query間で重なるKV参照を共有し、SCSDで不規則集合操作をGPU向け並列演算に変換する疎注意prefill kernel。GLM-5.3/DeepSeek-3.2のLongBenchでkernel遅延最大55.1%、TTFT最大36.8%削減と報告。",
+      "source_url": "https://arxiv.org/abs/2610.11134",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 160
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33379",
+      "identity_tokens": [
+        "arxiv:2610.33379"
+      ],
+      "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+      "reason": "Packed-SSはARとdiffusionの両モードを持つモデルで、現在draftの検証と次draft生成を単一callに統合する。投機幅に線形な入力長を維持しtarget分布を保存。NemotronとSetDLMでgreedy復号のスループット向上を報告。",
+      "source_url": "https://arxiv.org/abs/2610.33379",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 161
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02805",
+      "identity_tokens": [
+        "arxiv:2607.02805"
+      ],
+      "title": "Training Hybrid Block Diffusion Language Models with Partial Bidirectionality",
+      "reason": "BDLM Mamba-Hは逆方向Mamba scanを現在のdenoising blockに制限し、ブロック間の厳密なprefix cacheを可能にする。65K文脈でfull-sequence DiffuMamba-H比19.7倍のthroughputと報告。拡散型LLM推論効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2607.02805",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 163
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20427",
+      "identity_tokens": [
+        "arxiv:2608.20427"
+      ],
+      "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
+      "reason": "局所窓・先頭block・対数間隔の過去blockを組み合わせるdyadic疎注意。Qwen3-0.6Bの28層中8層を置換し、32Kで全体TTFT15.3%短縮。層単体10.91倍だが残りdense層により全体計算量は二次のまま。",
+      "source_url": "https://arxiv.org/abs/2608.20427",
+      "body_check": "primary_paper_metadata_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-13T04:01:51+09:00",
+      "last_checked_at": "2026-11-13T04:01:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 164
+    }
+  ]
+}
