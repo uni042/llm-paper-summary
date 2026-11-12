@@ -1,0 +1,984 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dba39c1b832b35a7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dba39c1b832b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.14910",
+    "arXiv:2604.08077",
+    "arXiv:2606.03113",
+    "arXiv:2607.02805",
+    "arXiv:2607.04302",
+    "arXiv:2608.20427",
+    "arXiv:2609.32395",
+    "arXiv:2610.11134",
+    "arXiv:2610.33379",
+    "arXiv:2611.01735"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "acb93d9f8154b5827de3c3720ff88f40bf82d0a9",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-12T22:10:15.421691+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.14910",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.03113",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.02805",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04302",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.20427",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.11134",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.33379",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.01735",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
+      "source_url": "https://arxiv.org/abs/2601.14910",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid expansion of Transformer-based large language models has dramatically increased the need for highperformance GPUs. As a result, there is growing demand for fast, accurate, and widely generalizable GPU performance models to support next-generation hardware selection and system-level exploration. However, current data-driven methods are limited, exhibiting poor generalization across hardware and inadequate modeling of complex production-level kernels common in modern inference stacks. To address these issues, we present PipeWeave, a unified GPU modeling framework. This approach first employs an analytical model to quantify a given kernel's demands on the GPU's heterogeneous instruction pipelines. These analytical features are then fed into a machine learning (ML) model to capture complex cross-pipeline interactions and resource dependencies, enabling high-fidelity performance prediction. Our evaluation across 11 GPU types from four generations of major architectures on two widely-used serving systems demonstrates that PipeWeave delivers high fidelity and strong generalizability. It achieves accurate predictions, with only 6.1% average error at the kernel level and 8.5% for end-to-end inference-reducing the error of state-of-the-art methods by $\\mathbf{6. 7} \\times$ and $\\mathbf{4. 4} \\times$, respectively. We also demonstrate PipeWeave's value “beyond simulation” by utilizing its performance ceiling to diagnose implementation shortcomings and guide the optimization of a production fused MoE Triton kernel, achieving up to $\\mathbf{1. 7} \\times$ speedup. Code is available online.11https://github.com/zksainx/pipeweave",
+      "identifiers": [
+        "SemanticScholar:a409a89806fb62f74ac27d17c4e60bc42bed0571"
+      ],
+      "semantic_scholar_id": "a409a89806fb62f74ac27d17c4e60bc42bed0571",
+      "canonical_id": "arXiv:2601.14910",
+      "arxiv_id": "2601.14910",
+      "doi": "10.1109/ISCA66397.2026.00126",
+      "authors": [
+        "Kai-Xuan Zhang",
+        "Yu Cui",
+        "Shu-Hao Zhang",
+        "Chu-Tong Ding",
+        "Shi-You Qian",
+        "Lu-Ping Wang",
+        "Jian Cao",
+        "Guang-Tao Xue",
+        "Cheng-Huan Huang",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 295,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+      "identifiers": [
+        "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+      ],
+      "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+      "canonical_id": "arXiv:2607.04302",
+      "arxiv_id": "2607.04302",
+      "doi": "10.48550/arXiv.2607.04302",
+      "authors": [
+        "Hui-Lin Dong",
+        "Yanzhao Li",
+        "Jie Gao",
+        "Chunlu Li",
+        "Zhiyuan Zhang",
+        "Yupeng Sun",
+        "Zhen-Yuan Chen",
+        "Zhiqiang Zou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training Hybrid Block Diffusion Language Models with Partial Bidirectionality",
+      "source_url": "https://arxiv.org/abs/2607.02805",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "High-throughput long-context generation is one of the central challenges for large language models. Generation is typically memory-bandwidth-bound rather than compute-bound: each decoding step must stream the accumulated key/value (KV) cache from memory, so bandwidth demand grows with context length while only one token is emitted. Two parallel approaches have therefore emerged: reducing memory access with efficient attention variants and linear-time mixers such as Mamba, or increasing parallel computation by generating blocks of tokens at once. However, technical challenges arise when combining these two ideas. Earlier hybrid diffusion models such as DiffuMamba use bidirectional Mamba mixing, including a reverse-direction scan relative to causal generation. This reverse scan needs to scan the entire sequence, so its states are not prefix-only and cannot be precisely reused as a cache even when diffusion is performed block by block. We propose a BDLM Mamba--attention hybrid that addresses this challenge by restricting the reverse Mamba scan to the active denoising block, which enables exact caching across blocks. In an 87M-parameter DCLM sweep, BDLM Mamba-H achieves the best C4-en validation perplexity compared to BDLM attention and full-sequence baselines. At 350M parameters, it remains competitive with BDLM attention. For long-context inference, BDLM Mamba-H reaches 19.7x the throughput of full-sequence DiffuMamba-H at 65K tokens and 3.7x the throughput of BDLM attention at 262K, showing that Mamba hybrids are a potential long-context diffusion architecture.",
+      "identifiers": [
+        "SemanticScholar:e6d985448b097bee32f33a5d38d6a3558f31cd51"
+      ],
+      "semantic_scholar_id": "e6d985448b097bee32f33a5d38d6a3558f31cd51",
+      "canonical_id": "arXiv:2607.02805",
+      "arxiv_id": "2607.02805",
+      "doi": "10.48550/arXiv.2607.02805",
+      "authors": [
+        "Pranshu Chaturvedi",
+        "Parth Shroff",
+        "Tarun Suresh",
+        "Hangoo Kang",
+        "Kaiyue Wen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+      "identifiers": [
+        "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+      ],
+      "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+      "canonical_id": "arXiv:2604.08077",
+      "arxiv_id": "2604.08077",
+      "doi": "10.48550/arXiv.2604.08077",
+      "authors": [
+        "Han-Dong Li",
+        "Zi-Kang Liu",
+        "Long-Teng Guo",
+        "Tong-Tian Yue",
+        "Ye-Peng Tang",
+        "Xin-Xin Zhu",
+        "Chuanyang Zheng",
+        "Zi-Ming Wang",
+        "Zhi-Bin Wang",
+        "Jun Song",
+        "Chenglin Yu",
+        "Bo Zheng",
+        "Jing Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+      "identifiers": [
+        "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+      ],
+      "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+      "canonical_id": "arXiv:2606.03113",
+      "arxiv_id": "2606.03113",
+      "doi": "10.1109/icassp55912.2026.11464968",
+      "authors": [
+        "Yan-Yu Zhu",
+        "Hoilam Pao",
+        "Niu Hu",
+        "Wei Guo",
+        "Shaoxiong Zhan",
+        "Bo-Yu Lai",
+        "Zi-Tai Wang",
+        "Yong-Qin Zeng",
+        "Hai-Tao Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
+      "source_url": "https://arxiv.org/abs/2608.20427",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dense causal attention remains expensive at long context even when implemented with highly optimized exact kernels. We study BF1, a deterministic block-aligned dyadic sparse-attention route that combines a small exact local neighborhood, a global first block, and logarithmically spaced historical blocks. The route is related to prior log-sparse and dilated attention patterns; our contribution is a correctness-gated pretrained-model retrofit, a matched topology-control study, and a systems characterization that connects per-layer sparsity to whole-model latency. For fixed block width, every converted layer uses O(n log n) selected token interactions and has O(log n) graph communication depth. On an NVIDIA RTX PRO 6000 Blackwell GPU, an optimized BF16 implementation crosses dense attention between 2K and 4K tokens and reaches a 10.91x per-layer prefill speedup at 32K. Retrofitting eight of 28 Qwen3-0.6B attention layers lowers warm whole-model time to first token by 7.7%, 11.3%, and 15.3% at 8K, 16K, and 32K, respectively, while the remaining dense layers keep the complete model asymptotically quadratic. Under a matched 1,000-step, 16.384M-token adaptation protocol, BF1 ranks first across three training seeds: mean report perplexity is 1.68639 versus 1.69154 for a matched static-random nonlocal graph, 1.69258 for dense continued training, and 1.81505 for equal-budget local sliding. At seed 1234, the packed-report paired interval places Dense-CT 0.3169-0.4055% above BF1 and static-random graph 17 0.2441-0.3642% above BF1. These results establish BF1 as a reproducible sparse operator and selective retrofit primitive with real long-context systems value. This paper evaluates numerical correctness, selected-interaction scaling, kernel performance, partial-model inference, and matched next-token language modeling.",
+      "identifiers": [
+        "SemanticScholar:ea8d456714c4a9332777bd535e87fd37d7505568"
+      ],
+      "semantic_scholar_id": "ea8d456714c4a9332777bd535e87fd37d7505568",
+      "canonical_id": "arXiv:2608.20427",
+      "arxiv_id": "2608.20427",
+      "doi": "10.48550/arXiv.2608.20427",
+      "authors": [
+        "Hina Dixit"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+      "identifiers": [
+        "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+      ],
+      "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+      "canonical_id": "arXiv:2609.32395",
+      "arxiv_id": "2609.32395",
+      "doi": "10.48550/arXiv.2609.32395",
+      "authors": [
+        "Sheng-Yao Wang",
+        "Jiang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+      "source_url": "https://arxiv.org/abs/2610.11134",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces the cost of long-context attention, but existing kernels typically process queries independently, repeatedly loading and dequantizing KV entries shared across queries. We observe substantial overlap in the KV entries selected by neighboring queries, creating opportunities for cross-query reuse. We present QUILT, a workload-aware sparse-attention execution mechanism that jointly processes neighboring queries and reuses shared KV entries to reduce redundant memory traffic and computation. QUILT introduces Shift-and-Compare Set Decomposition (SCSD), which transforms irregular set operations into regular data-parallel primitives suitable for modern accelerators, and pipelines SCSD with attention computation to hide its overhead. Cascaded sharing captures reuse hierarchically at multiple granularities. A tile-aware execution strategy balances sharing granularity with hardware tile utilization and selectively removes low-importance query-specific tails to eliminate underutilized tiles. We evaluate QUILT on LongBench using GLM-5.3 and DeepSeek-3.2 under both tensor and sequence parallelism. Compared with the state-of-the-art sparse-attention kernel, QUILT reduces average kernel latency by up to 55.1% and processed KV data by up to 55.9%, while reducing time-to-first-token (TTFT) latency by up to 36.8% with negligible accuracy degradation.",
+      "identifiers": [
+        "SemanticScholar:0683788412136a4a0f57cd663abf1a66bb2eb999"
+      ],
+      "semantic_scholar_id": "0683788412136a4a0f57cd663abf1a66bb2eb999",
+      "canonical_id": "arXiv:2610.11134",
+      "arxiv_id": "2610.11134",
+      "authors": [
+        "Zhen-Duo Zhao",
+        "Qi-Hui Zhou",
+        "Ming-Cong Song",
+        "Zhi-Yi Chen",
+        "Chuang-Guan Ye",
+        "Feng-Fan Hou",
+        "Ze-Qun Gong",
+        "Jing Li",
+        "Hong-Jie Si",
+        "Guo-Ping Long"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2610.33379",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) language models generate tokens sequentially, so generating long outputs is costly. Speculative decoding mitigates this by using a lightweight drafter to propose multiple tokens for the target AR model to verify in parallel, while a diffusion-based drafter can produce an entire draft block in one forward pass. In models with AR and diffusion modes, one network both drafts and verifies, but drafting still waits for verification, so the standard schedule needs two sequential model calls per iteration. Existing one-call schedules avoid the wait but incur input size quadratic in the speculative width. Motivated by this efficiency bottleneck, we introduce Packed-SS, a self-speculative decoding schedule that verifies and drafts in a single model call with input size linear in the speculative width, while preserving the target model's distribution. The key idea is to let the diffusion drafter run one call ahead: while verifying the current draft, the model simultaneously constructs the next draft from an older verified prefix and keeps its unresolved suffix for the next iteration. Under a mild monotonicity assumption on the drafter, we further show that Packed-SS requires no more model calls than the standard two-call decoding in the greedy setting. Experiments on Nemotron 3B/8B and SetDLM 1.7B show higher throughput and lower mean wall time than both baselines under greedy decoding.",
+      "identifiers": [
+        "SemanticScholar:d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e"
+      ],
+      "semantic_scholar_id": "d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e",
+      "canonical_id": "arXiv:2610.33379",
+      "arxiv_id": "2610.33379",
+      "authors": [
+        "Yun-Xia Chen",
+        "Chang-Xiao Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching",
+      "source_url": "https://arxiv.org/abs/2611.01735",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Position-independent caching reuses chunk KV caches across positions and requests. Independent encoding, however, omits cross-chunk interactions and can degrade accuracy. In our study, neither PIC training nor rule-based recomputation, alone or combined, consistently recovers full-prefill accuracy. Oracle-guided recomputation on PIC-trained models improves accuracy at the same budget, motivating better selection. We present CacheWeave, which adapts the full backbone to PIC, then freezes it and trains a model-native block selector on the adapted model's oracles. The selector uses compact cached chunk features and question hidden states without extracting backbone attention scores. It selects contiguous token blocks aligned with KV blocks to support efficient recomputation and limit copy-on-write amplification. Its runtime, CacheWeave-Serve, supports private and shared KV caches, keeps selection and recomputation on the GPU, and stages sliding-window KV for hybrid attention models. Across three models and four tasks, CacheWeave outperforms CacheBlend and ProphetKV by 7.2 and 3.5 percentage points on average at a 5% recomputation budget, with a mean relative accuracy loss of 1.6% to full prefill. With 32-token blocks, CacheWeave-Serve cuts single-request TTFT by up to 16.1x over full prefill and 1.7x over ProphetKV, and raises SLO goodput under load by up to 7.8x.",
+      "identifiers": [
+        "SemanticScholar:3aa6364f9797cb28027472512affb5145d26463b"
+      ],
+      "semantic_scholar_id": "3aa6364f9797cb28027472512affb5145d26463b",
+      "canonical_id": "arXiv:2611.01735",
+      "arxiv_id": "2611.01735",
+      "authors": [
+        "Yue-Yang Pan",
+        "Qian-Chao Zhu",
+        "Yu-Liang Liu",
+        "Teng Ma",
+        "Sanidhya Kashyap"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.14910",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00126",
+        "id:SemanticScholar:a409a89806fb62f74ac27d17c4e60bc42bed0571",
+        "id:arXiv:2601.14910",
+        "title:pipeweave synergizing analytical and learning models for unified gpu performance prediction",
+        "url:https://arxiv.org/abs/2601.14910"
+      ],
+      "record": {
+        "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
+        "source_url": "https://arxiv.org/abs/2601.14910",
+        "year": 2026,
+        "published": "2026-01-21",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid expansion of Transformer-based large language models has dramatically increased the need for highperformance GPUs. As a result, there is growing demand for fast, accurate, and widely generalizable GPU performance models to support next-generation hardware selection and system-level exploration. However, current data-driven methods are limited, exhibiting poor generalization across hardware and inadequate modeling of complex production-level kernels common in modern inference stacks. To address these issues, we present PipeWeave, a unified GPU modeling framework. This approach first employs an analytical model to quantify a given kernel's demands on the GPU's heterogeneous instruction pipelines. These analytical features are then fed into a machine learning (ML) model to capture complex cross-pipeline interactions and resource dependencies, enabling high-fidelity performance prediction. Our evaluation across 11 GPU types from four generations of major architectures on two widely-used serving systems demonstrates that PipeWeave delivers high fidelity and strong generalizability. It achieves accurate predictions, with only 6.1% average error at the kernel level and 8.5% for end-to-end inference-reducing the error of state-of-the-art methods by $\\mathbf{6. 7} \\times$ and $\\mathbf{4. 4} \\times$, respectively. We also demonstrate PipeWeave's value “beyond simulation” by utilizing its performance ceiling to diagnose implementation shortcomings and guide the optimization of a production fused MoE Triton kernel, achieving up to $\\mathbf{1. 7} \\times$ speedup. Code is available online.11https://github.com/zksainx/pipeweave",
+        "identifiers": [
+          "SemanticScholar:a409a89806fb62f74ac27d17c4e60bc42bed0571"
+        ],
+        "semantic_scholar_id": "a409a89806fb62f74ac27d17c4e60bc42bed0571",
+        "canonical_id": "arXiv:2601.14910",
+        "arxiv_id": "2601.14910",
+        "doi": "10.1109/ISCA66397.2026.00126",
+        "authors": [
+          "Kai-Xuan Zhang",
+          "Yu Cui",
+          "Shu-Hao Zhang",
+          "Chu-Tong Ding",
+          "Shi-You Qian",
+          "Lu-Ping Wang",
+          "Jian Cao",
+          "Guang-Tao Xue",
+          "Cheng-Huan Huang",
+          "Guo-Dong Yang",
+          "Li-Ping Zhang"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 295,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.04302",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04302",
+        "id:SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6",
+        "id:arXiv:2607.04302",
+        "title:hifa4 trainingfree 4bit flashattention on ascend hif4 npus for llm inference",
+        "url:https://arxiv.org/abs/2607.04302"
+      ],
+      "record": {
+        "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2607.04302",
+        "year": 2026,
+        "published": "2026-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+        "identifiers": [
+          "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+        ],
+        "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+        "canonical_id": "arXiv:2607.04302",
+        "arxiv_id": "2607.04302",
+        "doi": "10.48550/arXiv.2607.04302",
+        "authors": [
+          "Hui-Lin Dong",
+          "Yanzhao Li",
+          "Jie Gao",
+          "Chunlu Li",
+          "Zhiyuan Zhang",
+          "Yupeng Sun",
+          "Zhen-Yuan Chen",
+          "Zhiqiang Zou"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 130,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02805",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.02805",
+        "id:SemanticScholar:e6d985448b097bee32f33a5d38d6a3558f31cd51",
+        "id:arXiv:2607.02805",
+        "title:training hybrid block diffusion language models with partial bidirectionality",
+        "url:https://arxiv.org/abs/2607.02805"
+      ],
+      "record": {
+        "title": "Training Hybrid Block Diffusion Language Models with Partial Bidirectionality",
+        "source_url": "https://arxiv.org/abs/2607.02805",
+        "year": 2026,
+        "published": "2026-07-02",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "High-throughput long-context generation is one of the central challenges for large language models. Generation is typically memory-bandwidth-bound rather than compute-bound: each decoding step must stream the accumulated key/value (KV) cache from memory, so bandwidth demand grows with context length while only one token is emitted. Two parallel approaches have therefore emerged: reducing memory access with efficient attention variants and linear-time mixers such as Mamba, or increasing parallel computation by generating blocks of tokens at once. However, technical challenges arise when combining these two ideas. Earlier hybrid diffusion models such as DiffuMamba use bidirectional Mamba mixing, including a reverse-direction scan relative to causal generation. This reverse scan needs to scan the entire sequence, so its states are not prefix-only and cannot be precisely reused as a cache even when diffusion is performed block by block. We propose a BDLM Mamba--attention hybrid that addresses this challenge by restricting the reverse Mamba scan to the active denoising block, which enables exact caching across blocks. In an 87M-parameter DCLM sweep, BDLM Mamba-H achieves the best C4-en validation perplexity compared to BDLM attention and full-sequence baselines. At 350M parameters, it remains competitive with BDLM attention. For long-context inference, BDLM Mamba-H reaches 19.7x the throughput of full-sequence DiffuMamba-H at 65K tokens and 3.7x the throughput of BDLM attention at 262K, showing that Mamba hybrids are a potential long-context diffusion architecture.",
+        "identifiers": [
+          "SemanticScholar:e6d985448b097bee32f33a5d38d6a3558f31cd51"
+        ],
+        "semantic_scholar_id": "e6d985448b097bee32f33a5d38d6a3558f31cd51",
+        "canonical_id": "arXiv:2607.02805",
+        "arxiv_id": "2607.02805",
+        "doi": "10.48550/arXiv.2607.02805",
+        "authors": [
+          "Pranshu Chaturvedi",
+          "Parth Shroff",
+          "Tarun Suresh",
+          "Hangoo Kang",
+          "Kaiyue Wen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08077",
+        "id:SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa",
+        "id:arXiv:2604.08077",
+        "title:adaspark adaptive sparsity for efficient longvideo understanding",
+        "url:https://arxiv.org/abs/2604.08077"
+      ],
+      "record": {
+        "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+        "source_url": "https://arxiv.org/abs/2604.08077",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+        "identifiers": [
+          "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+        ],
+        "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+        "canonical_id": "arXiv:2604.08077",
+        "arxiv_id": "2604.08077",
+        "doi": "10.48550/arXiv.2604.08077",
+        "authors": [
+          "Han-Dong Li",
+          "Zi-Kang Liu",
+          "Long-Teng Guo",
+          "Tong-Tian Yue",
+          "Ye-Peng Tang",
+          "Xin-Xin Zhu",
+          "Chuanyang Zheng",
+          "Zi-Ming Wang",
+          "Zhi-Bin Wang",
+          "Jun Song",
+          "Chenglin Yu",
+          "Bo Zheng",
+          "Jing Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.03113",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11464968",
+        "id:SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+        "id:arXiv:2606.03113",
+        "title:experiencedriven dynamic exits for llms with reinforcement learning",
+        "url:https://arxiv.org/abs/2606.03113"
+      ],
+      "record": {
+        "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2606.03113",
+        "year": 2026,
+        "published": "2026-05-03",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+        "identifiers": [
+          "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+        ],
+        "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+        "canonical_id": "arXiv:2606.03113",
+        "arxiv_id": "2606.03113",
+        "doi": "10.1109/icassp55912.2026.11464968",
+        "authors": [
+          "Yan-Yu Zhu",
+          "Hoilam Pao",
+          "Niu Hu",
+          "Wei Guo",
+          "Shaoxiong Zhan",
+          "Bo-Yu Lai",
+          "Zi-Tai Wang",
+          "Yong-Qin Zeng",
+          "Hai-Tao Zheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 193,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20427",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.20427",
+        "id:SemanticScholar:ea8d456714c4a9332777bd535e87fd37d7505568",
+        "id:arXiv:2608.20427",
+        "title:bf1 a causal dyadic sparseattention retrofit for efficient longcontext transformers",
+        "url:https://arxiv.org/abs/2608.20427"
+      ],
+      "record": {
+        "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
+        "source_url": "https://arxiv.org/abs/2608.20427",
+        "year": 2026,
+        "published": "2026-08-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dense causal attention remains expensive at long context even when implemented with highly optimized exact kernels. We study BF1, a deterministic block-aligned dyadic sparse-attention route that combines a small exact local neighborhood, a global first block, and logarithmically spaced historical blocks. The route is related to prior log-sparse and dilated attention patterns; our contribution is a correctness-gated pretrained-model retrofit, a matched topology-control study, and a systems characterization that connects per-layer sparsity to whole-model latency. For fixed block width, every converted layer uses O(n log n) selected token interactions and has O(log n) graph communication depth. On an NVIDIA RTX PRO 6000 Blackwell GPU, an optimized BF16 implementation crosses dense attention between 2K and 4K tokens and reaches a 10.91x per-layer prefill speedup at 32K. Retrofitting eight of 28 Qwen3-0.6B attention layers lowers warm whole-model time to first token by 7.7%, 11.3%, and 15.3% at 8K, 16K, and 32K, respectively, while the remaining dense layers keep the complete model asymptotically quadratic. Under a matched 1,000-step, 16.384M-token adaptation protocol, BF1 ranks first across three training seeds: mean report perplexity is 1.68639 versus 1.69154 for a matched static-random nonlocal graph, 1.69258 for dense continued training, and 1.81505 for equal-budget local sliding. At seed 1234, the packed-report paired interval places Dense-CT 0.3169-0.4055% above BF1 and static-random graph 17 0.2441-0.3642% above BF1. These results establish BF1 as a reproducible sparse operator and selective retrofit primitive with real long-context systems value. This paper evaluates numerical correctness, selected-interaction scaling, kernel performance, partial-model inference, and matched next-token language modeling.",
+        "identifiers": [
+          "SemanticScholar:ea8d456714c4a9332777bd535e87fd37d7505568"
+        ],
+        "semantic_scholar_id": "ea8d456714c4a9332777bd535e87fd37d7505568",
+        "canonical_id": "arXiv:2608.20427",
+        "arxiv_id": "2608.20427",
+        "doi": "10.48550/arXiv.2608.20427",
+        "authors": [
+          "Hina Dixit"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32395",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.32395",
+        "id:SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634",
+        "id:arXiv:2609.32395",
+        "title:memory as a cache exact context reuse and deletion by construction",
+        "url:https://arxiv.org/abs/2609.32395"
+      ],
+      "record": {
+        "title": "Memory as a cache: Exact context reuse and deletion by construction",
+        "source_url": "https://arxiv.org/abs/2609.32395",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+        "identifiers": [
+          "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+        ],
+        "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+        "canonical_id": "arXiv:2609.32395",
+        "arxiv_id": "2609.32395",
+        "doi": "10.48550/arXiv.2609.32395",
+        "authors": [
+          "Sheng-Yao Wang",
+          "Jiang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.11134",
+      "identity_tokens": [
+        "id:SemanticScholar:0683788412136a4a0f57cd663abf1a66bb2eb999",
+        "id:arXiv:2610.11134",
+        "title:quilt rethinking sparseattention prefill through shared query execution",
+        "url:https://arxiv.org/abs/2610.11134"
+      ],
+      "record": {
+        "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+        "source_url": "https://arxiv.org/abs/2610.11134",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention reduces the cost of long-context attention, but existing kernels typically process queries independently, repeatedly loading and dequantizing KV entries shared across queries. We observe substantial overlap in the KV entries selected by neighboring queries, creating opportunities for cross-query reuse. We present QUILT, a workload-aware sparse-attention execution mechanism that jointly processes neighboring queries and reuses shared KV entries to reduce redundant memory traffic and computation. QUILT introduces Shift-and-Compare Set Decomposition (SCSD), which transforms irregular set operations into regular data-parallel primitives suitable for modern accelerators, and pipelines SCSD with attention computation to hide its overhead. Cascaded sharing captures reuse hierarchically at multiple granularities. A tile-aware execution strategy balances sharing granularity with hardware tile utilization and selectively removes low-importance query-specific tails to eliminate underutilized tiles. We evaluate QUILT on LongBench using GLM-5.3 and DeepSeek-3.2 under both tensor and sequence parallelism. Compared with the state-of-the-art sparse-attention kernel, QUILT reduces average kernel latency by up to 55.1% and processed KV data by up to 55.9%, while reducing time-to-first-token (TTFT) latency by up to 36.8% with negligible accuracy degradation.",
+        "identifiers": [
+          "SemanticScholar:0683788412136a4a0f57cd663abf1a66bb2eb999"
+        ],
+        "semantic_scholar_id": "0683788412136a4a0f57cd663abf1a66bb2eb999",
+        "canonical_id": "arXiv:2610.11134",
+        "arxiv_id": "2610.11134",
+        "authors": [
+          "Zhen-Duo Zhao",
+          "Qi-Hui Zhou",
+          "Ming-Cong Song",
+          "Zhi-Yi Chen",
+          "Chuang-Guan Ye",
+          "Feng-Fan Hou",
+          "Ze-Qun Gong",
+          "Jing Li",
+          "Hong-Jie Si",
+          "Guo-Ping Long"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.33379",
+      "identity_tokens": [
+        "id:SemanticScholar:d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e",
+        "id:arXiv:2610.33379",
+        "title:one call ahead packed selfspeculative decoding with diffusion drafting",
+        "url:https://arxiv.org/abs/2610.33379"
+      ],
+      "record": {
+        "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+        "source_url": "https://arxiv.org/abs/2610.33379",
+        "year": 2026,
+        "published": "2026-10-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive (AR) language models generate tokens sequentially, so generating long outputs is costly. Speculative decoding mitigates this by using a lightweight drafter to propose multiple tokens for the target AR model to verify in parallel, while a diffusion-based drafter can produce an entire draft block in one forward pass. In models with AR and diffusion modes, one network both drafts and verifies, but drafting still waits for verification, so the standard schedule needs two sequential model calls per iteration. Existing one-call schedules avoid the wait but incur input size quadratic in the speculative width. Motivated by this efficiency bottleneck, we introduce Packed-SS, a self-speculative decoding schedule that verifies and drafts in a single model call with input size linear in the speculative width, while preserving the target model's distribution. The key idea is to let the diffusion drafter run one call ahead: while verifying the current draft, the model simultaneously constructs the next draft from an older verified prefix and keeps its unresolved suffix for the next iteration. Under a mild monotonicity assumption on the drafter, we further show that Packed-SS requires no more model calls than the standard two-call decoding in the greedy setting. Experiments on Nemotron 3B/8B and SetDLM 1.7B show higher throughput and lower mean wall time than both baselines under greedy decoding.",
+        "identifiers": [
+          "SemanticScholar:d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e"
+        ],
+        "semantic_scholar_id": "d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e",
+        "canonical_id": "arXiv:2610.33379",
+        "arxiv_id": "2610.33379",
+        "authors": [
+          "Yun-Xia Chen",
+          "Chang-Xiao Cai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.01735",
+      "identity_tokens": [
+        "id:SemanticScholar:3aa6364f9797cb28027472512affb5145d26463b",
+        "id:arXiv:2611.01735",
+        "title:cacheweave learning to recompute for efficient positionindependent kv caching",
+        "url:https://arxiv.org/abs/2611.01735"
+      ],
+      "record": {
+        "title": "CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching",
+        "source_url": "https://arxiv.org/abs/2611.01735",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Position-independent caching reuses chunk KV caches across positions and requests. Independent encoding, however, omits cross-chunk interactions and can degrade accuracy. In our study, neither PIC training nor rule-based recomputation, alone or combined, consistently recovers full-prefill accuracy. Oracle-guided recomputation on PIC-trained models improves accuracy at the same budget, motivating better selection. We present CacheWeave, which adapts the full backbone to PIC, then freezes it and trains a model-native block selector on the adapted model's oracles. The selector uses compact cached chunk features and question hidden states without extracting backbone attention scores. It selects contiguous token blocks aligned with KV blocks to support efficient recomputation and limit copy-on-write amplification. Its runtime, CacheWeave-Serve, supports private and shared KV caches, keeps selection and recomputation on the GPU, and stages sliding-window KV for hybrid attention models. Across three models and four tasks, CacheWeave outperforms CacheBlend and ProphetKV by 7.2 and 3.5 percentage points on average at a 5% recomputation budget, with a mean relative accuracy loss of 1.6% to full prefill. With 32-token blocks, CacheWeave-Serve cuts single-request TTFT by up to 16.1x over full prefill and 1.7x over ProphetKV, and raises SLO goodput under load by up to 7.8x.",
+        "identifiers": [
+          "SemanticScholar:3aa6364f9797cb28027472512affb5145d26463b"
+        ],
+        "semantic_scholar_id": "3aa6364f9797cb28027472512affb5145d26463b",
+        "canonical_id": "arXiv:2611.01735",
+        "arxiv_id": "2611.01735",
+        "authors": [
+          "Yue-Yang Pan",
+          "Qian-Chao Zhu",
+          "Yu-Liang Liu",
+          "Teng Ma",
+          "Sanidhya Kashyap"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 11,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c1615f1d688f94213d06e4ae3c1aad953a22a484b6da6194d6ab3958128cc688",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
