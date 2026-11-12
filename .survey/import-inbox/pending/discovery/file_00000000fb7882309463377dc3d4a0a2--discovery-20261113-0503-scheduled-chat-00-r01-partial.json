@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0503-scheduled-chat-00/r01",
+  "reference_main_sha": "e03b057c1837e7dae2a4209287f0239103542689",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20839",
+      "identity_tokens": [
+        "arxiv:2505.20839"
+      ],
+      "title": "FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration",
+      "reason": "LLM推論の帯域制約に対して、線形層の重みとKVをINT4、活性化とqueryをFP8へ量子化する共同設計。線形層のper-tensor/channel-wise scalingと注意層のRoPE前後スケーリングで量子化誤差を抑え、FlashAttention-3改変の3段パイプラインでprefillを高速化。著者報告はLlama2-7B FFNでQServe比1.68倍、Llama3-8B prefillで1.26倍。量子化と推論カーネルの直接研究。",
+      "source_url": "https://arxiv.org/abs/2505.20839",
+      "body_check": "primary_arxiv_abstract_read_v3_2025-07-18; full_body_not_read",
+      "first_checked_at": "2026-11-13T05:03:28+09:00",
+      "last_checked_at": "2026-11-13T05:03:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 169
+    }
+  ]
+}
