@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-12 21:49:58 JST**
+> 自動生成: **2026-11-12 22:03:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **570** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-11 09:07:49 JST** |
-| 最終Discovery探索完了 | **11-12 19:57:00 JST** |
+| 最終Discovery探索完了 | **11-12 21:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-12 13:22:25 JST（8時間27分前）** |
+| 最終maintenance完了 | **11-12 13:22:25 JST（8時間41分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **5** |
-| 直近6hのDiscovery本文確認・分類 | **11** |
+| 直近6hのDiscovery run | **6** |
+| 直近6hのDiscovery本文確認・分類 | **14** |
 | 最終Research完了 | **11-11 09:07:49 JST** |
-| 最終Discovery完了 | **11-12 19:57:00 JST** |
+| 最終Discovery完了 | **11-12 21:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-11 09:07:49 JST** / worker scheduled-chat-45 / run 20261111-0903-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/file_0000000045788206b2c6eef050998c04--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r02-corrected.json
-- Discovery: **11-12 19:57:00 JST** / worker scheduled-chat-00 / run 20261112-1957-scheduled-chat-00/r01
+- Discovery: **11-12 21:00:00 JST** / worker scheduled-chat-00 / run 20261112-2100-scheduled-chat-00/r01
   - 本文確認・分類 **3件** / accept **3件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/file_00000000841881f5a53b99eb3079d9e9--discovery-20261112-1957-scheduled-chat-00-r01-partial.json
+  - evidence: .survey/import-inbox/waiting/discovery/file_00000000dae081f7a8069aabf31bea96--discovery-20261112-2100-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
