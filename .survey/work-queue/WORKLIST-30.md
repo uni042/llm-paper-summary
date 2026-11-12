@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-12T10:19:46+00:00`
+Generated: `2026-11-12T10:42:13+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128357** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122117** / 監査再投入 **0** / 機械規則適用後 **124798** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128358** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122118** / 監査再投入 **0** / 機械規則適用後 **124799** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -150,7 +150,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 67 | 106 | 6 | 16 | DOI:10.1145/3774904.3793014 | GreenTune: Energy-Efficient Low-Rank Tuning of LLMs with ThreeE Evaluation under 4-/8-bit Quantization | 2026-04-13 | The Web Conference | 6 | 16 | 16-weight-quantization-compression, CPUオフロード / 活性化疎性 / 階層メモリ, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://doi.org/10.1145/3774904.3793014) |
 | 68 | 101 | 6 | 15 | arXiv:2607.11368 | Decomposing Runtime, Kernel, and Quantization Speedups via a Matched FP16 Intermediate: A Hardware-Conditioned Case Study on Four NVIDIA RTX A5000 GPUs | 2026-07-13 | arXiv.org | 1 | 15 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2607.11368) |
 | 69 | 17 | 6 | 14 | arXiv:2503.09657 | Týr-the-Pruner: Unlocking Accurate 50% Structural Pruning for LLMs via Global Sparsity Distribution Optimization | 2025-03-12 | Neural Information Processing Systems | 7 | 14 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2503.09657) |
-| 70 | 10 | 6 | 14 | arXiv:2607.19358 | LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning | 2026-05-29 | arXiv.org | 0 | 14 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2607.19358) |
+| 70 | 10 | 6 | 14 | DOI:10.48550/arXiv.2607.19358 | LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning | 2026-05-29 | arXiv.org | 0 | 14 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://doi.org/10.48550/arXiv.2607.19358) |
 | 71 | 10 | 6 | 14 | arXiv:2609.23371 | Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States | 2026-09-20 |  | 0 | 14 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, inference-systems, multi-LLM communication / KV-cache semantic transfer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2609.23371) |
 | 72 | 101 | 6 | 13 | DOI:10.48550/arXiv.2608.08730 | Measuring and Reducing WebGPU Dispatch Overhead for LLM Inference | 2026-08-09 | arXiv.org | 1 | 13 | LLM Serving / Scheduling / Disaggregation, LLM推論カーネル融合／メガカーネル／GPUコンパイラ・ランタイム, PyTorch 2 torch.compileの設計と評価を報告する論文。, Weight Quantization / Compression, dynamic megakernel compilation and GPU task scheduling, kernel-runtime-compilation, llama.cpp・WebGPU・ブラウザ内オンデバイス推論・量子化カーネル, on-device LLM inference / multi-LoRA runtime / speculative decoding / mobile NPU optimization, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.48550/arXiv.2608.08730) |
 | 73 | 102 | 6 | 13 | DOI:10.48550/arXiv.2609.15160 | T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning with Dynamic Routing | 2026-09-14 | arXiv.org | 2 | 13 | Adaptive Expert Computation / Compression, Conditional Computation, KV-cache compression / attention-based token selection / long-context inference, inference-systems | [source](https://doi.org/10.48550/arXiv.2609.15160) |
