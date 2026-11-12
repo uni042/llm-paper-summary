@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-12T02:12:19+00:00`
+Generated: `2026-11-12T03:15:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128346** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122106** / 監査再投入 **0** / 機械規則適用後 **124787** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128349** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122109** / 監査再投入 **0** / 機械規則適用後 **124790** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -182,7 +182,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 99 | 20 | 6 | 8 | arXiv:2604.15732 | Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving | 2026-04-17 | EuroMLSys@EuroSys | 0 | 9 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, Long-context serving / KV cache benchmark, inference-systems | [source](https://arxiv.org/abs/2604.15732) |
 | 100 | 103 | 6 | 8 | arXiv:2606.24165 | Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models | 2026-06-23 | European Conference on Computer Vision | 3 | 9 |  | [source](https://arxiv.org/abs/2606.24165) |
 | 101 | 5 | 6 | 8 | arXiv:2410.12119 | Scaling laws for post-training quantized large language models | 2024-10-15 | ENLSP | 5 | 8 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2410.12119) |
-| 102 | 10 | 6 | 8 | arXiv:2512.05385 | ShaRP: SHAllow-LayeR Pruning for Efficient Video Large Language Models | 2025-12-05 |  | 0 | 10 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.05385) |
+| 102 | 10 | 6 | 8 | DOI:10.48550/arXiv.2512.05385 | ShaRP: SHAllow-LayeR Pruning for Video Large Language Models Acceleration | 2025-12-05 | arXiv.org | 0 | 10 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.48550/arXiv.2512.05385) |
 | 103 | 3 | 6 | 8 | DOI:10.1109/TASLPRO.2025.3613948 | MixPQ: Joint Pruning and Quantization for Speech and Language Foundation Models Compression | 2025 | IEEE Transactions on Audio, Speech, and Language Processing | 3 | 8 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/TASLPRO.2025.3613948) |
 | 104 | 10 | 6 | 8 | arXiv:2609.27294 | KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling | 2026-09-23 |  | 0 | 8 | 07-kv-cache-optimization-compression, KVキャッシュ・注意アーキテクチャ, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論 | [source](https://arxiv.org/abs/2609.27294) |
 | 105 | 10 | 6 | 8 | arXiv:2611.03517 | Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization | 2026-11-02 |  | 0 | 8 | 02-hardware-accelerators, agentic GPU kernel generation / harness engineering / profile-guided optimization, dynamic megakernel compilation and GPU task scheduling, inference-systems | [source](https://arxiv.org/abs/2611.03517) |
@@ -198,7 +198,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 115 | 0 | 6 | 7 | DOI:10.1109/HPCC67675.2025.00060 | VIFMM: Custom RISC-V Vector Instructions with INT-FP Mixed-Precision Computing for Accelerating LLM Inference | 2025-08-13 | IEEE International Conference on High Performance Computing and Communications | 0 | 7 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, survey-transformer-compression-inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/HPCC67675.2025.00060) |
 | 116 | 10 | 6 | 7 | arXiv:2602.02151 | Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization | 2026-02-02 | arXiv.org | 0 | 8 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2602.02151) |
 | 117 | 101 | 6 | 7 | arXiv:2609.14144 | One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks | 2026-09-12 |  | 1 | 7 | Speculative Decoding, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.14144) |
-| 118 | 13 | 6 | 7 | arXiv:2509.19191 | Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models | 2025-09-23 | International Conference on Learning Representations | 3 | 8 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2509.19191) |
+| 118 | 13 | 6 | 7 | arXiv:2509.19191 | Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models | 2025-09-23 | International Conference on Learning Representations | 3 | 9 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2509.19191) |
 | 119 | 104 | 6 | 7 | arXiv:2606.18681 | Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs | 2026-06-17 | arXiv.org | 4 | 9 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.18681) |
 | 120 | 20 | 6 | 7 | arXiv:2505.19812 | Efficient Multi-modal Long Context Learning for Training-free Adaptation | 2025-05-26 | International Conference on Machine Learning | 10 | 7 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ最適化／適応圧縮 | [source](https://arxiv.org/abs/2505.19812) |
 | 121 | 11 | 6 | 7 | arXiv:2510.08647 | Can Reasoning Path still be Effective as Input? Bridging Post-Reasoning to Chain-of-Thought Compression | 2025-10-09 | Annual Meeting of the Association for Computational Linguistics | 1 | 7 | inference-systems | [source](https://arxiv.org/abs/2510.08647) |
@@ -483,7 +483,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 400 | 1 | 4 | 6 | DOI:10.1109/ICEECT61758.2024.10739061 | Scaling Up the Transformers: A Survey of Training and Inference Optimization Techniques | 2024-08-29 | 2024 International Conference on Electrical Electronics and Computing Technologies (ICEECT) | 1 | 6 | Transformer inference runtime and variable-length request batching, sparse attention / long-context Transformer | [source](https://doi.org/10.1109/ICEECT61758.2024.10739061) |
 | 401 | 103 | 4 | 6 | arXiv:2601.07212 | MI-PRUN: Optimize Large Language Model Pruning via Mutual Information | 2026-01-12 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 3 | 6 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2601.07212) |
 | 402 | 102 | 4 | 6 | DOI:10.48550/arXiv.2602.05243 | CORP: Closed-Form One-shot Representation-Preserving Structured Pruning for Vision Transformers | 2026-02-05 | arXiv.org | 2 | 6 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.48550/arXiv.2602.05243) |
-| 403 | 101 | 4 | 6 | arXiv:2608.03112 | Content-Aware Adaptive Token Pruning for Video-Language Models | 2026-08-04 |  | 1 | 7 | 07-kv-cache-optimization-compression | [source](https://arxiv.org/abs/2608.03112) |
+| 403 | 101 | 4 | 6 | arXiv:2606.04594 | Ekka: Automated Diagnosis of Silent Errors in LLM Inference | 2026-06-03 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.04594) |
 | 404 | 10 | 4 | 6 | DOI:10.1109/LANMAN69841.2026.11623563 | Improving the Performance of LLM Inference: Understanding the Role of CUDA Graphs | 2026-06-01 | IEEE Workshop on Local and Metropolitan Area Networks | 0 | 6 | LLM Serving / Scheduling / Disaggregation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://doi.org/10.1109/LANMAN69841.2026.11623563) |
 | 405 | 10 | 4 | 6 | arXiv:2610.31768 | Efficient Omni-modal Large Language Model Inference via Per-Query Modality Selection | 2026-10-22 |  | 0 | 6 | inference-systems | [source](https://arxiv.org/abs/2610.31768) |
 | 406 | 6 | 4 | 6 | arXiv:2506.07416 | LiteVLM: A Low-Latency Vision-Language Model Inference Pipeline for Resource-Constrained Environments | 2025-06-09 | arXiv.org | 6 | 6 | Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2506.07416) |
