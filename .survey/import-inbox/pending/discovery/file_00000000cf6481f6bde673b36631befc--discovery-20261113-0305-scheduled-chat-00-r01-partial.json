@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0305-scheduled-chat-00/r01",
+  "reference_main_sha": "e058d4b87c45a0f8c4b967aab661a8bf9b3b7459",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.05069",
+      "identity_tokens": [
+        "arxiv:2510.05069"
+      ],
+      "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs",
+      "reason": "学習不要の推論方式。次トークン分布のエントロピー推移からブロック単位の確信度を推定し、明示的chain-of-thoughtと潜在推論を動的に切り替える。切替回数上限で過剰思考を抑制。数学・STEM・コード等で平均精度1.8～3.1%改善、予算制約下で平均トークン効率57～79%改善と著者報告。LLM推論トークン効率化の直接研究。",
+      "source_url": "https://arxiv.org/abs/2510.05069",
+      "body_check": "primary_arxiv_abstract_read_v3_2026-03-01; full_body_not_read",
+      "first_checked_at": "2026-11-13T03:05:00+09:00",
+      "last_checked_at": "2026-11-13T03:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 146
+    }
+  ]
+}
