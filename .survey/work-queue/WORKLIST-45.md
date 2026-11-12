@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-12T02:12:19+00:00`
+Generated: `2026-11-12T03:15:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -75,8 +75,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128346** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122106** / 監査再投入 **0** / 機械規則適用後 **124787** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128349** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122109** / 監査再投入 **0** / 機械規則適用後 **124790** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -303,7 +303,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 221 | 101 | 5 | 6 | arXiv:2512.11221 | Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference | 2025-12-12 | arXiv.org | 1 | 6 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, KVキャッシュ最適化／適応圧縮, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.11221) |
 | 222 | 20 | 5 | 6 | arXiv:2606.21869 | The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference | 2026-06-20 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing | 0 | 6 | LLM Serving / Scheduling / Disaggregation, inference-systems, 大規模言語モデル推論サービング／装置内演算スケジューリング | [source](https://arxiv.org/abs/2606.21869) |
 | 223 | 10 | 5 | 6 | DOI:10.48550/arXiv.2607.20507 | MiniCache: Reusable Program Caching with Small Model Interfaces for Efficient LLM Inference | 2026-07-03 | arXiv.org | 0 | 6 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.48550/arXiv.2607.20507) |
-| 224 | 3 | 5 | 6 | arXiv:2507.20630 | TransPrune: Token Transition Pruning for Efficient Large Vision-Language Model | 2025-07-28 | arXiv.org | 3 | 6 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2507.20630) |
+| 224 | 3 | 5 | 6 | arXiv:2507.20630 | TransPrune: Token Transition Pruning for Efficient Large Vision-Language Model | 2025-07-28 | Computer Vision and Pattern Recognition | 3 | 7 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2507.20630) |
 | 225 | 101 | 5 | 6 | arXiv:2604.02816 | QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models | 2026-04-03 | arXiv.org | 1 | 6 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2604.02816) |
 | 226 | 10 | 5 | 6 | DOI:10.23919/DATE69613.2026.11539329 | AO-BFP: An Adaptive Mixed-Precision and Outlier-Aware Block Floating-Point Accelerator for Large Language Model Inference | 2026-04-20 | Design, Automation and Test in Europe | 0 | 6 | Weight Quantization / Compression | [source](https://doi.org/10.23919/DATE69613.2026.11539329) |
 | 227 | 1 | 5 | 6 | DOI:10.1109/UBMK63289.2024.10773573 | Adaptive Batch Budget for LLM Inference | 2024-10-26 | 2024 9th International Conference on Computer Science and Engineering (UBMK) | 1 | 6 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, Offload / Hierarchical Memory | [source](https://doi.org/10.1109/UBMK63289.2024.10773573) |
@@ -481,7 +481,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 399 | 101 | 4 | 6 | DOI:10.1002/sys.70061 | Balancing Accuracy and Cost: Trade‐Offs in Large Language Model Quantization for the Systems Engineering Domain | 2026-05-17 | Systems Engineering | 1 | 6 | Weight Quantization / Compression, inference-systems | [source](https://doi.org/10.1002/sys.70061) |
 | 400 | 106 | 4 | 6 | arXiv:2601.12698 | A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization | 2026-01-19 | arXiv.org | 6 | 6 | GPU Kernel Framework, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2601.12698) |
 | 401 | 102 | 4 | 6 | DOI:10.1109/JIOT.2026.3654102 | Adaptive Pruning for Large Language Models With Structural Importance Awareness | 2026-04-01 | IEEE Internet of Things Journal | 2 | 6 | Structured Pruning / Architecture Search | [source](https://doi.org/10.1109/JIOT.2026.3654102) |
-| 402 | 101 | 4 | 6 | arXiv:2606.04594 | Ekka: Automated Diagnosis of Silent Errors in LLM Inference | 2026-06-03 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.04594) |
+| 402 | 101 | 4 | 6 | arXiv:2602.12618 | Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models | 2025-12-08 | BigData Congress [Services Society] | 1 | 6 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.12618) |
 | 403 | 12 | 4 | 6 | arXiv:2505.22757 | Pre-Training Curriculum for Multi-Token Prediction in Language Models | 2025-05-28 | Annual Meeting of the Association for Computational Linguistics | 2 | 6 | Conditional Computation, Speculative Decoding, inference-systems | [source](https://arxiv.org/abs/2505.22757) |
 | 404 | 10 | 4 | 6 | arXiv:2608.02341 | Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference | 2026-08-03 | arXiv.org | 0 | 6 | Expert Prefetch, MoE専門家オフロード / 混合精度 / 専門家キャッシュ, オフロード／階層メモリ | [source](https://arxiv.org/abs/2608.02341) |
 | 405 | 8 | 4 | 6 | arXiv:2405.02267 | Structural Pruning of Pre-trained Language Models via Neural Architecture Search | 2024-05-03 | Trans. Mach. Learn. Res. | 8 | 6 | 03-model-compression-pruning, Weight Quantization / Compression | [source](https://arxiv.org/abs/2405.02267) |

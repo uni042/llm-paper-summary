@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-12T02:12:19+00:00`
+Generated: `2026-11-12T03:15:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128346** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122106** / 監査再投入 **0** / 機械規則適用後 **124787** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128349** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122109** / 監査再投入 **0** / 機械規則適用後 **124790** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -100,7 +100,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 17 | 10 | 9 | 12 | arXiv:2610.37200 | PipeLink: Contract-Guided Linking of GPU Kernel Components | 2026-10-27 |  | 0 | 12 | LLM推論カーネル融合／メガカーネル／GPUコンパイラ・ランタイム, inference-systems, kernel-runtime-compilation, llm-serving-scheduling-disaggregation, other-inference-systems, テンソル並列推論／通信計算重畳／集合通信融合／配信カーネル | [source](https://arxiv.org/abs/2610.37200) |
 | 18 | 10 | 9 | 10 | DOI:10.1109/IWQoS70441.2026.11661114 | UPServe: Backend Agnostic Proxy for Black-box Heterogeneous LLM Scheduling | 2026-06-01 | International Workshop on Quality of Service | 0 | 11 | 02-hardware-accelerators, LLM Serving / Scheduling / Disaggregation, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, llm-serving-scheduling-disaggregation, serving-scheduling | [source](https://doi.org/10.1109/IWQoS70441.2026.11661114) |
 | 19 | 10 | 9 | 9 | arXiv:2610.11750 | Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding | 2026-10-08 |  | 0 | 10 | inference-systems, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.11750) |
-| 20 | 5 | 8 | 19 | arXiv:2508.03351 | SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models | 2025-08-05 | arXiv.org | 5 | 21 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2508.03351) |
+| 20 | 5 | 8 | 19 | arXiv:2508.03351 | SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models | 2025-08-05 | arXiv.org | 5 | 22 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2508.03351) |
 | 21 | 10 | 8 | 16 | arXiv:2610.18451 | FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving | 2026-10-13 |  | 0 | 16 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM inference serving / parameter-centric GPU memory management, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.18451) |
 | 22 | 101 | 8 | 15 | arXiv:2604.07173 | InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models | 2026-04-08 | Workshop Proceedings of the 55th International Conference on Parallel Processing | 1 | 15 | LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, inference-systems, llm-serving-scheduling-disaggregation, many-adapter LLM serving / LoRA serving / inference scheduling, moe-parallelism-communication | [source](https://arxiv.org/abs/2604.07173) |
 | 23 | 10 | 8 | 14 | DOI:10.1109/ASP-DAC66049.2026.11420717 | CoLoRA: A Collaborative Scheduling Framework for Multi-Tenant LoRA LLM Inference | 2026-01-19 | Asia and South Pacific Design Automation Conference | 0 | 14 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, inference-systems, kv-cache-optimization-compression, llm-serving-scheduling-disaggregation, many-adapter LLM serving / LoRA serving / inference scheduling, multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling | [source](https://doi.org/10.1109/ASP-DAC66049.2026.11420717) |
@@ -482,7 +482,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 399 | 102 | 4 | 6 | arXiv:2605.01858 | Decouple and Cache: KV Cache Construction for Streaming Video Understanding | 2026-05-03 | arXiv.org | 2 | 6 | 11-llm-serving-scheduling-disaggregation, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2605.01858) |
 | 400 | 32 | 4 | 6 | arXiv:2302.06117 | The Framework Tax: Disparities Between Inference Efficiency in Research and Deployment | 2023-02-13 | Conference on Empirical Methods in Natural Language Processing | 22 | 6 | 99-other-inference-systems | [source](https://arxiv.org/abs/2302.06117) |
 | 401 | 103 | 4 | 6 | arXiv:2602.10953 | Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models | 2026-02-11 | arXiv.org | 3 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2602.10953) |
-| 402 | 101 | 4 | 6 | arXiv:2602.12618 | Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models | 2025-12-08 | BigData Congress [Services Society] | 1 | 6 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.12618) |
+| 402 | 101 | 4 | 6 | DOI:10.48550/arXiv.2608.03112 | Adaptive Two-Stage Visual Token Pruning for Efficient Inference in Video-Language Models | 2026-08-04 | arXiv.org | 1 | 7 | 07-kv-cache-optimization-compression | [source](https://doi.org/10.48550/arXiv.2608.03112) |
 | 403 | 101 | 4 | 6 | arXiv:2608.21142 | COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models | 2026-08-21 |  | 1 | 6 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2608.21142) |
 | 404 | 10 | 4 | 6 | DOI:10.1145/3767295.3803611 | PointShuffler: Accelerating Point Cloud Neural Networks on General-Purpose GPUs | 2026-04-26 | European Conference on Computer Systems | 0 | 7 | 02-hardware-accelerators, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ動的メモリ管理／PagedAttention代替, KVキャッシュ最適化／適応圧縮, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3767295.3803611) |
 | 405 | 9 | 4 | 6 | arXiv:2104.09393 | Improving Transformer-Kernel Ranking Model Using Conformer and Query Term Independence | 2021-04-19 | Annual International ACM SIGIR Conference on Research and Development in Information Retrieval | 9 | 6 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2104.09393) |
