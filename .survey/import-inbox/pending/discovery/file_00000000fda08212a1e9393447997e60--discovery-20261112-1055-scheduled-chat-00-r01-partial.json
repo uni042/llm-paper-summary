@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1055-scheduled-chat-00/r01",
+  "reference_main_sha": "2d3edafb20295e1dafcb379e2ae511d0d2056fce",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34538",
+      "identity_tokens": [
+        "arxiv:2609.34538"
+      ],
+      "title": "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
+      "reason": "ループ型Transformerの浅い層で得るqueryと、検証済み深層prefixのvalueを非同期に組み合わせるMature-VとDAS-Waveを提案。4種類の再帰モデルcheckpointで数学・コード推論の同一stack全深度自己回帰復号に対し平均throughput 4.00～6.96倍を著者報告。投機復号による推論高速化の直接研究。",
+      "source_url": "https://arxiv.org/abs/2609.34538",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T10:55:21+09:00",
+      "last_checked_at": "2026-11-12T10:55:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03190",
+      "identity_tokens": [
+        "arxiv:2605.03190"
+      ],
+      "title": "VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU",
+      "reason": "GPU非同期実行資源を仮想コアとして分離し、依存関係を持つmicro-opの準備状況で計算とメモリアクセスを自動重畳する実行モデル。GH200、H100、RTX 6000 ProでLLM推論4ワークロードを評価し、decode throughput平均24%、動的入力時最大77%改善を著者報告。LLM推論カーネル・GPU実行系の直接研究。",
+      "source_url": "https://arxiv.org/abs/2605.03190",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T10:55:21+09:00",
+      "last_checked_at": "2026-11-12T10:55:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 93
+    }
+  ]
+}
