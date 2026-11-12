@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0600-scheduled-chat-00/r01",
+  "reference_main_sha": null,
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.01410",
+      "identity_tokens": ["arxiv:2602.01410", "doi:10.1145/3779212.3790223"],
+      "title": "SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training",
+      "reason": "LLM事前学習のサブバイト混合精度を層ごとに適応選択する。活性化・勾配・optimizer状態の統計を定期取得し、forward loss divergenceとbackward weight divergenceに基づく整数線形計画で精度割当を最適化。1B/3B/7B/70B Llama型モデルの実験で品質を維持し最大80% FLOPs削減と報告。LLM学習計算効率化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2602.01410",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T06:00:00+09:00",
+      "last_checked_at": "2026-11-13T06:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 171
+    }
+  ],
+  "notes": "Main HEAD commit SHA was not verified; null intentionally. Rank 170 arXiv:2609.33586 primary page fetch failed and is deferred, not classified."
+}
