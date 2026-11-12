@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Short Chains, Deep Thoughts: Balancing Reasoning Efficiency and Intra-Segment Capability via Split-Merge Optimization",
+      "source_url": "https://arxiv.org/abs/2602.03141",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Reasoning Models (LRMs) have demonstrated impressive capabilities in solving complex tasks through the generation of long reasoning chains, this reliance on verbose generation results in significant latency and computational overhead. To address these challenges, we propose \\textbf{CoSMo} (\\textbf{Co}nsistency-Guided \\textbf{S}plit-\\textbf{M}erge \\textbf{O}ptimization), a framework designed to eliminate structural redundancy rather than indiscriminately restricting token volume. Specifically, CoSMo utilizes a split-merge algorithm that dynamically refines reasoning chains by merging redundant segments and splitting logical gaps to ensure coherence. We then employ structure-aligned reinforcement learning with a novel segment-level budget to supervise the model in maintaining efficient reasoning structures throughout training. Extensive experiments across multiple benchmarks and backbones demonstrate that CoSMo achieves superior performance, improving accuracy by \\textbf{3.3} points while reducing segment usage by \\textbf{28.7\\%} on average compared to reasoning efficiency baselines.",
+      "identifiers": [
+        "SemanticScholar:26fa765767460b912f220e1f8a84c42d743bfce6"
+      ],
+      "semantic_scholar_id": "26fa765767460b912f220e1f8a84c42d743bfce6",
+      "canonical_id": "arXiv:2602.03141",
+      "arxiv_id": "2602.03141",
+      "doi": "10.48550/arXiv.2602.03141",
+      "authors": [
+        "Run-Quan Gui",
+        "Jie Wang",
+        "Zhi-Hai Wang",
+        "Chi Ma",
+        "Jian-Ye Hao",
+        "Feng Wu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoSMoは冗長な推論区間を統合し論理的欠落を分割するsplit-merge処理と、区間単位の予算を使う構造整合強化学習で推論の冗長性を削減。推論効率ベースライン比で平均精度+3.3ポイント、区間使用量28.7%減を著者が報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Multi-modal Long Context Learning for Training-free Adaptation",
+      "source_url": "https://arxiv.org/abs/2505.19812",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional approaches to adapting multi-modal large language models (MLLMs) to new tasks have relied heavily on fine-tuning. This paper introduces Efficient Multi-Modal Long Context Learning (EMLoC), a novel training-free alternative that embeds demonstration examples directly into the model input. EMLoC offers a more efficient, flexible, and scalable solution for task adaptation. Because extremely lengthy inputs introduce prohibitive computational and memory overhead, EMLoC contributes a chunk-wise compression mechanism combined with layer-wise adaptive pruning. It condenses long-context multimodal inputs into compact, task-specific memory representations. By adaptively pruning tokens at each layer under a Jensen-Shannon divergence constraint, our method achieves a dramatic reduction in inference complexity without sacrificing performance. This approach is the first to seamlessly integrate compression and pruning techniques for multi-modal long-context learning, offering a scalable and efficient solution for real-world applications. Extensive experiments on diverse vision-language benchmarks demonstrate that EMLoC achieves performance on par with or superior to naive long-context approaches. Our results highlight the potential of EMLoC as a groundbreaking framework for efficient and flexible adaptation of multi-modal models in resource-constrained environments. Codes are publicly available at https://github.com/Zehong-Ma/EMLoC.",
+      "identifiers": [
+        "SemanticScholar:68317564a47bc88cf9856c69a27b13cd4ff88e8d"
+      ],
+      "semantic_scholar_id": "68317564a47bc88cf9856c69a27b13cd4ff88e8d",
+      "canonical_id": "arXiv:2505.19812",
+      "arxiv_id": "2505.19812",
+      "doi": "10.48550/arXiv.2505.19812",
+      "authors": [
+        "Zehong Ma",
+        "Shi-Liang Zhang",
+        "Long-Hui Wei",
+        "Qi Tian"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 535,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "EMLoCは学習不要のマルチモーダル長文脈タスク適応方式。例示入力をチャンク単位で圧縮し、Jensen-Shannon divergence制約の下で層ごとにトークンを適応的に枝刈りする。長文脈推論の計算・メモリ削減を直接扱い、ICML 2025採録。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Can Reasoning Path still be Effective as Input? Bridging Post-Reasoning to Chain-of-Thought Compression",
+      "source_url": "https://arxiv.org/abs/2510.08647",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent developments have enabled advanced reasoning in Large Language Models (LLMs) via long Chain-of-Thought (CoT), trading efficiency during inference for performance. Existing works focus on compressing generated CoT in reasoning, which impairs the necessary information for deriving the correct answer. In this work, we propose post-reasoning, a reasoning paradigm that takes CoT as a part of context to simplify the reasoning task for LLMs. We find that post-reasoning significantly reduces the generation length of LLMs, but its effectiveness hinges on the efficiency and the reliability of the contextual CoT generation. Therefore, we propose Upfront CoT (UCoT), an efficient post-reasoning framework for CoT compression. UCoT trains a lightweight model (compressor) to provide contextual CoT in form of soft tokens and trains the LLM (executor) to leverage this contextual CoT for producing the final answer. Extensive experiments show that UCoT maintains the powerful reasoning ability of executor while significantly reducing the length of CoT. It is worth mentioning that when applying UCoT to the Qwen2.5-7B-Instruct model, the usage of tokens on GSM8K dataset is reduced by 50%, while the performance is 3.08% higher than that of the state-of-the-art (SOTA) method.",
+      "identifiers": [
+        "SemanticScholar:e9d4b1cf31dfd7d9c1258f981ea34a8ab0911917"
+      ],
+      "semantic_scholar_id": "e9d4b1cf31dfd7d9c1258f981ea34a8ab0911917",
+      "canonical_id": "arXiv:2510.08647",
+      "arxiv_id": "2510.08647",
+      "doi": "10.18653/v1/2026.acl-long.1810",
+      "authors": [
+        "Chengzhengxu Li",
+        "Xiao-Ming Liu",
+        "Zhao-Han Zhang",
+        "Sheng-Chao Liu",
+        "Guo-Xin Ma",
+        "Yu Lan",
+        "Cong Wang",
+        "Chao Shen"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 399,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "UCoTは軽量compressorがsoft token形式の文脈CoTを生成し、executorがそれを利用して短い推論で回答する。Qwen2.5-7B-Instruct/GSM8Kでトークン使用量50%削減、既存SOTA方式より性能3.08%高いと著者が報告。推論計算量削減の直接研究。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a7384d263d42",
+    "round": "libimp-a7384d263d42475a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a7384d263d42475a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a7384d263d42475a-pre01.json",
+    "receipt": "sha256:8a07107c06a2f14a936cde1ff63540a9427da3d0d919d1227ce848b08c2b344c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a7384d263d42",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
