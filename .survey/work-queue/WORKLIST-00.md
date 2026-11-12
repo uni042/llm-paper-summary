@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-12T20:07:50+00:00`
+Generated: `2026-11-12T20:54:26+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128404** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122161** / 監査再投入 **0** / 機械規則適用後 **124844** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128416** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122173** / 監査再投入 **0** / 機械規則適用後 **124856** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -378,7 +378,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 295 | 0 | 4 | 10 | SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6 | Accelerating On-Device LLM Inference via Activation-guided FFN Distillation on Raspberry Pi |  |  | 0 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/0d44c22c05f777b6f269846c4c6ebfff98747ea6) |
 | 296 | 109 | 4 | 10 | arXiv:2607.14557 | Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation | 2026-07-16 | Proceedings of the 34th ACM International Conference on Multimedia | 9 | 12 | Speculative Decoding, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, speculative decoding / parallel drafting / diffusion-inspired language modeling, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2607.14557) |
 | 297 | 13 | 4 | 10 | arXiv:2511.15503 | DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures | 2025-11-19 | International Symposium on Computer Architecture | 3 | 10 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, cpu-offload, inference-systems, kernel-runtime-compilation, kv-cache-memory | [source](https://arxiv.org/abs/2511.15503) |
-| 298 | 10 | 4 | 10 | arXiv:2609.00791 | Instella-MoE Technical Report | 2026-09-01 |  | 0 | 10 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.00791) |
+| 298 | 10 | 4 | 10 | arXiv:2609.00791 | Instella-MoE Technical Report | 2026-09-01 | arXiv.org | 0 | 10 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.00791) |
 | 299 | 103 | 4 | 10 | DOI:10.1145/3774904.3793001 | Fair and Carbon-Aware LLM Routing for Web Services | 2026-04-13 | The Web Conference | 3 | 11 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1145/3774904.3793001) |
 | 300 | 18 | 4 | 10 | DOI:10.1145/3730567.3764441 | Hello, GenAI? Dissecting Human to Generative AI Calling | 2025-10-28 | ACM/SIGCOMM Internet Measurement Conference | 8 | 10 | KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation, llm-serving-scheduling-disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1145/3730567.3764441) |
 | 301 | 16 | 4 | 10 | arXiv:2505.14709 | FastCar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge | 2025-05-17 | arXiv.org | 16 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ最適化／適応圧縮, inference-systems | [source](https://arxiv.org/abs/2505.14709) |
