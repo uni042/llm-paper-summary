@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1400-scheduled-chat-00/r01",
+  "reference_main_sha": "1b6ae78f1f9a63faf0ffc2bdf3c6db4d35e844d8",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.12119",
+      "identity_tokens": [
+        "arxiv:2410.12119"
+      ],
+      "title": "Scaling Laws for Post Training Quantized Large Language Models",
+      "reason": "複数LLM系列・低精度データ型・重み量子化手法を比較し、量子化後の性能を局所損失地形の特徴から統計的に予測するスケーリング則を調査。重み量子化の精度予測に直接関連するためaccept。",
+      "source_url": "https://arxiv.org/abs/2410.12119",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T14:01:00+09:00",
+      "last_checked_at": "2026-11-12T14:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.05385",
+      "identity_tokens": [
+        "arxiv:2512.05385"
+      ],
+      "title": "ShaRP: SHAllow-LayeR Pruning for Efficient Video Large Language Models",
+      "reason": "動画LLMの浅いdecoder層におけるattention重要度推定の不安定性を、局所情報集約・位置バイアス補正・冗長性低減で改善する学習不要の視覚トークン枝刈り。著者は元性能約97.2%維持、TFLOPs86%削減、prefill5.1倍高速化を報告。推論高速化に直接関連するためaccept。",
+      "source_url": "https://arxiv.org/abs/2512.05385",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T14:01:00+09:00",
+      "last_checked_at": "2026-11-12T14:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 102
+    }
+  ]
+}
