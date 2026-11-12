@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-12T20:54:26+00:00`
+Generated: `2026-11-12T21:11:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -175,7 +175,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 92 | 110 | 6 | 9 | DOI:10.1016/j.neucom.2026.135448 | Toward sustainable on-device intelligence: A survey on energy-efficient RAG systems with small language models | 2026-10-01 | Neurocomputing | 10 | 9 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, survey-edge-llm, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.neucom.2026.135448) |
 | 93 | 10 | 6 | 9 | arXiv:2610.27815 | ProVe: Proposer-Verifier Decoding | 2026-10-20 |  | 0 | 9 | inference-systems, speculative-decoding, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.27815) |
 | 94 | 3 | 6 | 9 | SemanticScholar:e545797fd29206a6b77f26fa89f17401f5f365b5 | ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents | 2026 | Trans. Mach. Learn. Res. | 3 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/e545797fd29206a6b77f26fa89f17401f5f365b5) |
-| 95 | 102 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 | arXiv.org | 2 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
+| 95 | 103 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 | arXiv.org | 3 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
 | 96 | 10 | 6 | 9 | arXiv:2610.16484 | SLEM: Spectrum-Aware Latent Expert Merging | 2026-10-12 |  | 0 | 9 | MoE compression / expert merging / output approximation / least-squares compression, MoE圧縮 / expert merging / subspace alignment / SVD / adaptive clustering, adaptive expert computation / expert merging / curvature-aware merging / game-theoretic optimization, survey-moe-inference-optimization | [source](https://arxiv.org/abs/2610.16484) |
 | 97 | 101 | 6 | 8 | arXiv:2608.27514 | Trajectory-Level Speculative Decoding for Diffusion Language Models | 2026-08-27 | arXiv.org | 1 | 8 | Speculative Decoding, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2608.27514) |
 | 98 | 10 | 6 | 8 | arXiv:2610.23935 | Factorization-Guided Training and Inference for Diffusion-Drafted Speculative Decoding | 2026-10-07 |  | 0 | 8 | 02-hardware-accelerators, inference-systems, speculative decoding / parallel drafting / diffusion-inspired language modeling, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.23935) |
