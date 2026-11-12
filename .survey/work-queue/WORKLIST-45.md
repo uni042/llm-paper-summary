@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-12T16:59:48+00:00`
+Generated: `2026-11-12T17:26:57+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -75,8 +75,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128397** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122155** / 監査再投入 **0** / 機械規則適用後 **124837** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128400** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122158** / 監査再投入 **0** / 機械規則適用後 **124840** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -87,8 +87,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 5 | 10 | 13 | 14 | arXiv:2611.04313 | Coarse Semantic Blocks for Efficient Training-Free Sparse Attention | 2026-11-03 |  | 0 | 14 | 13-sparse-attention, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。, inference-systems, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2611.04313) |
 | 6 | 24 | 12 | 20 | arXiv:2505.16162 | KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization | 2025-05-22 | Conference of the European Chapter of the Association for Computational Linguistics | 14 | 20 | 06-speculative-decoding, Conditional Computation, Speculative Decoding, inference-systems, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2505.16162) |
 | 7 | 10 | 12 | 13 | arXiv:2610.15579 | Approximation Algorithms for Dual-Memory Request Scheduling in Disaggregated LLM Inference | 2026-10-11 |  | 0 | 13 | KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling, KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching, KVキャッシュ制約下のLLMサービング・スケジューリング, LLM Serving / Scheduling / Disaggregation, LLM配信／スケジューリング／分離, Prefill/Decode Disaggregation / Selective KV Transfer, llm-serving-scheduling-disaggregation, serving-scheduling, 異種GPU・事前充填/復号分離サービング | [source](https://arxiv.org/abs/2610.15579) |
-| 8 | 0 | 11 | 15 | SemanticScholar:ce78d34d199711d2e89de1956c5661dc8c1f2ab6 | HyperDFlash: MHC-Aligned Block Speculative Decoding with Gated Residual Reduction |  |  | 0 | 15 | Conditional Computation, LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/ce78d34d199711d2e89de1956c5661dc8c1f2ab6) |
-| 9 | 0 | 11 | 13 | SemanticScholar:259801b7832915cbb6b9760b891991d00498931a | I-LLM: E FFICIENT I NTEGER -O NLY I NFERENCE FOR F ULLY -Q UANTIZED |  |  | 0 | 13 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://www.semanticscholar.org/paper/259801b7832915cbb6b9760b891991d00498931a) |
+| 8 | 0 | 11 | 17 | SemanticScholar:e802d5eb3143d9690e8049f93ec6c198c415853e | Speculative Diffusion Decoding for Accelerated Language Generation |  |  | 0 | 17 | Inference / Parallel and Non-Autoregressive Decoding, Speculative Decoding, inference-systems, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/e802d5eb3143d9690e8049f93ec6c198c415853e) |
+| 9 | 10 | 11 | 13 | DOI:10.1109/JIOT.2026.3669144 | SEC: Enabling MLLMs for Low-Latency IoT Video Analysis via Semantic-Aware Edge–Cloud Collaboration | 2026-06-01 | IEEE Internet of Things Journal | 0 | 13 | Speculative Decoding, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1109/JIOT.2026.3669144) |
 | 10 | 10 | 11 | 11 | DOI:10.1016/j.patcog.2026.113599 | Structure prediction and opportunity-cost scheduler for LLM inference | 2026-03-01 | Pattern Recognition | 0 | 11 | LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, inference-systems | [source](https://doi.org/10.1016/j.patcog.2026.113599) |
 | 11 | 10 | 10 | 18 | arXiv:2610.37386 | Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data | 2026-10-27 |  | 0 | 18 | 06-moe-quantization-compression, MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM, MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation, adaptive-expert-computation-compression, arXiv:2405.16406のICLR 2025採録版。, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2610.37386) |
 | 12 | 101 | 10 | 12 | arXiv:2610.28355 | Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding | 2026-10-20 |  | 1 | 13 | Other Inference Systems / Lossless Parallel Decoding, inference-systems, speculative decoding / parallel drafting / diffusion-inspired language modeling, speculative-decoding, 投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号・ブロック拡散提案・検証器中間表現の再利用 | [source](https://arxiv.org/abs/2610.28355) |
