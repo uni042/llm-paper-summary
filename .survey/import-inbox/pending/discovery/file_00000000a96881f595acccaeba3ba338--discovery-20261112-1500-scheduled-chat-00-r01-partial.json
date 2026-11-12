@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1500-scheduled-chat-00/r01",
+  "reference_main_sha": "c7b6e3081201642ddcf59b9655aee094f99a1d70",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27294",
+      "identity_tokens": [
+        "arxiv:2609.27294"
+      ],
+      "title": "KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling",
+      "reason": "KV生成経路を小型Prefillerに限定し、追加パラメータをKVを変更しないDecoder側に配置するSST二塔構造。67B MoEと47B/63B比較で推論コスト推定6.7%/31.6%減と著者報告。推論時のprefill計算量に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.27294",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T15:00:00+09:00",
+      "last_checked_at": "2026-11-12T15:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.03517",
+      "identity_tokens": [
+        "arxiv:2611.03517"
+      ],
+      "title": "Ask, Don’t Equip: Question-Driven Coding Agents for Deep Kernel Optimization",
+      "reason": "質問駆動のKernelSeekがCUDAカーネル最適化の探索方針を改善し、FlashAttention-3/4比較で高速な依存なしカーネルを生成。GPU推論カーネル自動最適化に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2611.03517",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T15:00:00+09:00",
+      "last_checked_at": "2026-11-12T15:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 105
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34680",
+      "identity_tokens": [
+        "arxiv:2609.34680"
+      ],
+      "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+      "reason": "MXFP4 W4A4量子化における残差誤差の原因仮説・対照実験・コード改訂を循環させHiRes量子化器を探索。LLM低ビット推論の精度維持に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.34680",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T15:00:00+09:00",
+      "last_checked_at": "2026-11-12T15:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.16219",
+      "identity_tokens": [
+        "arxiv:2603.16219"
+      ],
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "reason": "端末側小型モデルが私的文脈からdraftを生成し、クラウドモデルが検証・回復するDraft–Verify–Recover型の分散投機復号。著者は標準比較に対し2.36倍高速化を報告。分散推論と投機復号に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T15:00:00+09:00",
+      "last_checked_at": "2026-11-12T15:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 108
+    }
+  ]
+}
