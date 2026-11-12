@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1957-scheduled-chat-00/r01",
+  "reference_main_sha": "0a0f14590a16fa3a36cbba8524f3f12f1478842a",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.19812",
+      "identity_tokens": [
+        "arxiv:2505.19812"
+      ],
+      "title": "Efficient Multi-modal Long Context Learning for Training-free Adaptation",
+      "reason": "EMLoCは学習不要のマルチモーダル長文脈タスク適応方式。例示入力をチャンク単位で圧縮し、Jensen-Shannon divergence制約の下で層ごとにトークンを適応的に枝刈りする。長文脈推論の計算・メモリ削減を直接扱い、ICML 2025採録。",
+      "source_url": "https://arxiv.org/abs/2505.19812",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T19:57:22+09:00",
+      "last_checked_at": "2026-11-12T19:57:22+09:00",
+      "linked_from": [],
+      "worklist_rank": 120
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.08647",
+      "identity_tokens": [
+        "arxiv:2510.08647"
+      ],
+      "title": "Can Reasoning Path still be Effective as Input? Bridging Post-Reasoning to Chain-of-Thought Compression",
+      "reason": "UCoTは軽量compressorがsoft token形式の文脈CoTを生成し、executorがそれを利用して短い推論で回答する。Qwen2.5-7B-Instruct/GSM8Kでトークン使用量50%削減、既存SOTA方式より性能3.08%高いと著者が報告。推論計算量削減の直接研究。",
+      "source_url": "https://arxiv.org/abs/2510.08647",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T19:57:22+09:00",
+      "last_checked_at": "2026-11-12T19:57:22+09:00",
+      "linked_from": [],
+      "worklist_rank": 121
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03141",
+      "identity_tokens": [
+        "arxiv:2602.03141"
+      ],
+      "title": "Short Chains, Deep Thoughts: Balancing Reasoning Efficiency and Intra-Segment Capability via Split-Merge Optimization",
+      "reason": "CoSMoは冗長な推論区間を統合し論理的欠落を分割するsplit-merge処理と、区間単位の予算を使う構造整合強化学習で推論の冗長性を削減。推論効率ベースライン比で平均精度+3.3ポイント、区間使用量28.7%減を著者が報告。",
+      "source_url": "https://arxiv.org/abs/2602.03141",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T19:57:22+09:00",
+      "last_checked_at": "2026-11-12T19:57:22+09:00",
+      "linked_from": [],
+      "worklist_rank": 123
+    }
+  ]
+}
