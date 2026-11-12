@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SLaNC: Static LayerNorm Calibration",
+      "source_url": "https://arxiv.org/abs/2410.10553",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The ever increasing sizes of Large Language Models (LLMs) beyond hundreds of billions of parameters have generated enormous pressure on the manufacturers of dedicated hardware accelerators and made the innovative design of the latter one of the most rapidly expanding fields of the AI industry. Various approaches have been explored to enable efficient and accurate processing of LLMs on the available accelerators given their computational and storage limitations. Among these, various quantization techniques have become the main focus of the community as a means of reducing the compute, communication and storage requirements. Quantization to lower precision formats naturally poses a number of challenges caused by the limited range of the available value representations. When it comes to processing the popular Transformer models on hardware, one of the main issues becomes calculation of the LayerNorm simply because accumulation of the variance requires a much wider dynamic range than the hardware enables. In this article, we address this matter and propose a computationally-efficient scaling technique that can be easily applied to Transformer models during inference. Our method suggests a straightforward way of scaling the LayerNorm inputs based on the static weights of the immediately preceding linear layers. The scaling factors are computed offline, based solely on the linear layer weights, hence no latency or computational overhead is added during inference. Most importantly, our technique ensures that no numerical issues such as overflow or underflow could happen during the compute. This approach offers smooth, accurate and resource-effective inference across a wide range of hardware architectures. The article provides theoretical justification as well as supporting numerical simulations.",
+      "identifiers": [
+        "SemanticScholar:98c82adb76c494534c20ba4d8a346bf815886891"
+      ],
+      "semantic_scholar_id": "98c82adb76c494534c20ba4d8a346bf815886891",
+      "canonical_id": "arXiv:2410.10553",
+      "arxiv_id": "2410.10553",
+      "doi": "10.48550/arXiv.2410.10553",
+      "authors": [
+        "Mahsa Salmani",
+        "Nikita Trukhanov",
+        "I. Soloveychik"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 759,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer推論のLayerNorm分散計算で低精度アクセラレータの数値範囲不足によるoverflow/underflowを防ぐため、直前線形層の静的重みだけから入力スケール係数をオフライン計算する手法。推論時追加演算・遅延を発生させず、理論的正当化と数値シミュレーションを提示。LLMの低精度推論・数値安定性に直接関連するため採択。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c4968fd1f500",
+    "round": "libimp-c4968fd1f500d42e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c4968fd1f500d42e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c4968fd1f500d42e-pre01.json",
+    "receipt": "sha256:824e6d11e6314f01cce80054629fc95cdb0950f64764c554b33a97014148b4a8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c4968fd1f500",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
