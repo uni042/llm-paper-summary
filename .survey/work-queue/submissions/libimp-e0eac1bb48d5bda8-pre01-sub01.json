@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2509.19191",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable performance across a variety of real-world tasks. However, existing VLMs typically process visual information by serializing images, a method that diverges significantly from the parallel nature of human vision. Moreover, their opaque internal mechanisms hinder both deeper understanding and architectural innovation. Inspired by the dual-stream hypothesis of human vision, which distinguishes the\"what\"and\"where\"pathways, we deconstruct the visual processing in VLMs into object recognition and spatial perception for separate study. For object recognition, we convert images into text token maps and find that the model's perception of image content unfolds as a two-stage process from shallow to deep layers, beginning with attribute recognition and culminating in semantic disambiguation. For spatial perception, we theoretically derive and empirically verify the geometric structure underlying the positional representation in VLMs. Based on these findings, we introduce an instruction-agnostic token compression algorithm based on a plug-and-play visual decoder to improve decoding efficiency, and a RoPE scaling technique to enhance spatial reasoning. Through rigorous experiments, our work validates these analyses, offering a deeper understanding of VLM internals and providing clear principles for designing more capable future architectures.",
+      "identifiers": [
+        "SemanticScholar:c2dc39d71289debc9cb27a562aacdad2eb59fb0b"
+      ],
+      "semantic_scholar_id": "c2dc39d71289debc9cb27a562aacdad2eb59fb0b",
+      "canonical_id": "arXiv:2509.19191",
+      "arxiv_id": "2509.19191",
+      "doi": "10.48550/arXiv.2509.19191",
+      "authors": [
+        "Yue-Yan Li",
+        "Cheng Zhao",
+        "Zeyuan Zang",
+        "Cai-Xia Yuan",
+        "Xiao-Jie Wang"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "VLM内部の視覚トークン表現を物体認識と空間知覚に分けて分析し、浅層から深層にかけて属性認識から意味的曖昧性解消へ進むことを示す。解析から導いたinstruction-agnosticな視覚トークン圧縮アルゴリズムでdecode効率を改善し、RoPE scalingで空間推論を改善する。VLM推論のトークン圧縮と効率化に直接関連するためaccept。性能数値は要旨にないため未記載。",
+      "library_body_check": "primary_arxiv_abstract_metadata_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e0eac1bb48d5",
+    "round": "libimp-e0eac1bb48d5bda8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e0eac1bb48d5bda8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e0eac1bb48d5bda8-pre01.json",
+    "receipt": "sha256:04772ba1767347114d897183af4b6d283f7fe2d24ebe5c61ac4959f1f99befb1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e0eac1bb48d5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
