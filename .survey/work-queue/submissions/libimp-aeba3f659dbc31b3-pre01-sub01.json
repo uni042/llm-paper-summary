@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+      "source_url": "https://arxiv.org/abs/2604.12928",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speech-to-speech language models have recently emerged to enhance the naturalness of conversational AI. In particular, full-duplex models are distinguished by their real-time interactivity, including handling of pauses, interruptions, and backchannels. However, improving their factuality remains an open challenge. While scaling the model size could address this gap, it would make real-time inference prohibitively expensive. In this work, we propose MoshiRAG, a modular approach that combines a compact full-duplex interface with selective retrieval to access more powerful knowledge sources. Our asynchronous framework enables the model to identify knowledge-demanding queries and ground its responses in external information. By leveraging the natural temporal gap between response onset and the delivery of core information, the retrieval process can be completed while maintaining a natural conversation flow. With this approach, MoshiRAG achieves factuality comparable to the best publicly released non-duplex speech language models while preserving the interactivity inherent to full-duplex systems. Moreover, our flexible design supports plug-and-play retrieval methods without retraining and demonstrates strong performance on out-of-domain mathematical reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:109df6b2f6f70f87d506b3819d0589578269ef23"
+      ],
+      "semantic_scholar_id": "109df6b2f6f70f87d506b3819d0589578269ef23",
+      "canonical_id": "arXiv:2604.12928",
+      "arxiv_id": "2604.12928",
+      "doi": "10.48550/arXiv.2604.12928",
+      "authors": [
+        "Chung-Ming Chien",
+        "Manu Orsini",
+        "E. Kharitonov",
+        "Neil Zeghidour",
+        "Karen Livescu",
+        "Alexandre Défossez"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 213,
+        "matched_prestigious_venue": null
+      },
+      "reason": "全二重音声言語モデルの低遅延対話を維持しつつ、知識を要する質問を選択して非同期検索を実行する。応答開始から主要情報提示までの時間差に検索を重ね、巨大モデル化によるリアルタイム推論負荷を避ける設計。著者は公開非全二重音声モデルの上位と同等の事実性を報告しており、推論時の非同期実行・サービング効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EdgeProfiler: A Fast Profiling Framework for Lightweight LLMs on Edge Using Analytical Model",
+      "source_url": "https://arxiv.org/abs/2506.09061",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "International Conference on Machine Learning and Applications",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces EdgeProfiler, a fast profiling framework designed for evaluating lightweight Large Language Models (LLMs) on edge systems. While LLMs offer remarkable capabilities in natural language understanding and generation, their high computational, memory, and power requirements often confine them to cloud environments. EdgeProfiler addresses these challenges by providing a systematic methodology for assessing LLM performance in resource-constrained edge settings. The framework profiles compact LLMs, including TinyLLaMA, Gemma3-1B, LLaMA3-1B, and DeepSeek-R1-1.5B, using aggressive quantization techniques and strict memory constraints. Analytical modeling is used to estimate latency, FLOPs, and energy consumption. The profiling reveals that 4-bit quantization reduces model memory usage by approximately 60–70%, while maintaining accuracy within 2–5% of full-precision baselines. Inference speeds are observed to improve by 2–3× compared to FP16 baselines across various edge devices. Power modeling estimates a 35–50% reduction in energy consumption for INT4 configurations, enabling practical deployment on hardware such as Raspberry Pi 4/5 and Jetson Orin Nano Super. Our findings emphasize the importance of efficient profiling tailored to lightweight LLMs in edge environments, balancing accuracy, energy efficiency, and computational feasibility.",
+      "identifiers": [
+        "SemanticScholar:8bb7f6f44a88da532fc866d4e3874cca069ecd8a"
+      ],
+      "semantic_scholar_id": "8bb7f6f44a88da532fc866d4e3874cca069ecd8a",
+      "canonical_id": "arXiv:2506.09061",
+      "arxiv_id": "2506.09061",
+      "doi": "10.1109/ICMLA66185.2025.00119",
+      "authors": [
+        "Alyssa Pinnock",
+        "Shakya Jayakody",
+        "Kawsher A. Roxy",
+        "Md Rubel Ahmed"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 525,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "エッジ上の小型LLMについて遅延・演算量・エネルギーを解析モデルで推定する高速プロファイリング枠組み。TinyLLaMA、Gemma、Llama、DeepSeekの小型モデルを量子化して評価し、著者は4bit化によるメモリ60〜70%削減、FP16比2〜3倍の推論速度を報告する。エッジ推論のハードウェア制約下での性能推定に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-aeba3f659dbc",
+    "round": "libimp-aeba3f659dbc31b3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-aeba3f659dbc31b3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-aeba3f659dbc31b3-pre01.json",
+    "receipt": "sha256:a1379055e5f63aa7a93fa6f6dbb9c440c6a50cbb7ca5273a034a0e5c772f62e2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-aeba3f659dbc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
