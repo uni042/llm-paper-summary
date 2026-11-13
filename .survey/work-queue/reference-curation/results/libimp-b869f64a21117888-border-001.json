@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b869f64a21117888-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.15038",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.15038",
+    "identity_tokens": [
+      "arXiv:2512.15038"
+    ],
+    "reason": "自動運転の生成的経路計画を対象に軽量線形cross-attention (LICA)を導入し、長期履歴の推論計算・メモリを履歴長に対してO(1)とする。効率的attentionには関連するが、主対象は自動運転のマルチモーダル計画でLLM推論そのものではないためborderline。NAVSIM/Bench2Driveで評価。",
+    "first_checked_at": "2026-11-13T16:55:25+00:00",
+    "last_checked_at": "2026-11-13T16:55:25+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers"
+  },
+  "processed_at": "2026-11-13T16:55:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b869f64a2111",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
