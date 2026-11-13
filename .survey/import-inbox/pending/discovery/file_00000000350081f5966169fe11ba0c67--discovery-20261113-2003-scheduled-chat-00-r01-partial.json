@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-2003-scheduled-chat-00/r01",
+  "reference_main_sha": "21ccf87b2d829591e57d74b3a287b64b1ffe372a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24019",
+      "identity_tokens": [
+        "arxiv:2605.24019"
+      ],
+      "title": "MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization",
+      "reason": "VLMの低ビット重みベクトル量子化で、視覚・言語間の重み分布差と一次勾配を無視した二次誤差補償の偏りを解決する。チャネル感度に基づく混合精度割当と勾配・Hessian融合補償を提案し、LLaVA-OneVision、InternVL2、Qwen2-VLで検証。2bit InternVL2-26Bでは比較手法67.0%に対し71.4%と報告。VLMのメモリ削減・エッジ推論に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.24019",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T20:03:26+09:00",
+      "last_checked_at": "2026-11-13T20:03:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 238
+    }
+  ]
+}
