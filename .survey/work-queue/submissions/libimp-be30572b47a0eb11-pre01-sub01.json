@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2605.24019",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) achieve outstanding performance, yet their huge model size severely hinders deployment on edge devices with limited resources. As an efficient model compression technique, vector quantization (VQ) excels in ultra-low-bit representation, which maps model weights to discrete codewords in a compact codebook to cut memory consumption and transmission overhead while preserving model capability. Direct VQ application to VLMs still has two core limitations. First, cross-modality weight distribution differences brought by visual and textual inputs cannot be well fitted by a single unified codebook. Second, current second-order error compensation ignores first-order gradient information, causing weight deviation from pre-trained optimal states, gradient drift and biased compensation results. This work proposes MGVQ, a novel vector quantization framework integrating multi-dimensional sensitivity perception and gradient-Hessian fusion. It consists of two core modules: sensitivity-guided structured mixed-precision quantization dynamically assigns different bit-widths according to channel sensitivity via combined global and local sensitivity analysis for refined resource allocation; gradient-aware second-order error compensation embeds first-order gradients into error correction, and adopts Kronecker and Block-LDL decomposition to ensure low computational cost. Extensive experiments on mainstream VLMs including LLaVA-onevision, InternVL2 and Qwen2-VL verify the effectiveness of MGVQ. In 2-bit quantization settings, MGVQ surpasses existing advanced post-training quantization methods significantly, achieving a maximum accuracy improvement of 4.9 points (71.4% vs 67.0% on InternVL2-26B). The proposed method realizes stable and efficient ultra-low-bit VLM quantization, greatly promoting the practical deployment of multimodal large models in resource-limited environments.",
+      "identifiers": [
+        "SemanticScholar:8a520a6a62800e46694c37fadd57a63f595f333c"
+      ],
+      "semantic_scholar_id": "8a520a6a62800e46694c37fadd57a63f595f333c",
+      "canonical_id": "arXiv:2605.24019",
+      "arxiv_id": "2605.24019",
+      "doi": "10.48550/arXiv.2605.24019",
+      "authors": [
+        "Zhong Wang",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Da-Wei Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLMの低ビット重みベクトル量子化で、視覚・言語間の重み分布差と一次勾配を無視した二次誤差補償の偏りを解決する。チャネル感度に基づく混合精度割当と勾配・Hessian融合補償を提案し、LLaVA-OneVision、InternVL2、Qwen2-VLで検証。2bit InternVL2-26Bでは比較手法67.0%に対し71.4%と報告。VLMのメモリ削減・エッジ推論に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-be30572b47a0",
+    "round": "libimp-be30572b47a0eb11-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-be30572b47a0eb11-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-be30572b47a0eb11-pre01.json",
+    "receipt": "sha256:fcf68c53ef70565888009291e8ab638ea479f22426bc51d36142f8e76ccd4862"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-be30572b47a0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
