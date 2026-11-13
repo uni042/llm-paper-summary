@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-13T16:55:25+00:00",
-  "record_count": 5606,
+  "updated_at": "2026-11-13T21:56:57+00:00",
+  "record_count": 5607,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86535,6 +86535,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers"
+    },
+    "arXiv:2604.10946": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10946",
+      "identity_tokens": [
+        "arXiv:2604.10946"
+      ],
+      "reason": "非定常回帰のin-context learningにおけるgated linear attentionの理論解析。GLAが過去入力の寄与を適応的に減衰させるrecency biasを実装し、通常のlinear attentionより学習・テスト誤差が低いことを理論と実験で検証。効率的attention機構に関連するが、主眼は推論システムの速度・メモリ効率ではなく学習理論であるためborderline。",
+      "first_checked_at": "2026-11-13T21:56:57+00:00",
+      "last_checked_at": "2026-11-13T21:56:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Adapt: In-Context Learning Beyond Stationarity"
     }
   }
 }

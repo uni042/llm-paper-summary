@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a50751851c8fe1f8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.10946",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.10946",
+    "identity_tokens": [
+      "arXiv:2604.10946"
+    ],
+    "reason": "非定常回帰のin-context learningにおけるgated linear attentionの理論解析。GLAが過去入力の寄与を適応的に減衰させるrecency biasを実装し、通常のlinear attentionより学習・テスト誤差が低いことを理論と実験で検証。効率的attention機構に関連するが、主眼は推論システムの速度・メモリ効率ではなく学習理論であるためborderline。",
+    "first_checked_at": "2026-11-13T21:56:57+00:00",
+    "last_checked_at": "2026-11-13T21:56:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Learning to Adapt: In-Context Learning Beyond Stationarity"
+  },
+  "processed_at": "2026-11-13T21:56:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a50751851c8f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
