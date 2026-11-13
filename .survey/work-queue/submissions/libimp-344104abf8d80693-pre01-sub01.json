@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ReSpinQuant: Efficient Layer-Wise LLM Quantization via Subspace Residual Rotation Approximation",
+      "source_url": "https://arxiv.org/abs/2604.11080",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rotation-based Post-Training Quantization (PTQ) has emerged as a promising solution for mitigating activation outliers in the quantization of Large Language Models (LLMs). Global rotation methods achieve inference efficiency by fusing activation rotations into attention and FFN blocks, but suffer from limited expressivity as they are constrained to use a single learnable rotation matrix across all layers. To tackle this, layer-wise transformation methods emerged, achieving superior accuracy through localized adaptation. However, layer-wise methods cannot fuse activation rotation matrices into weights, requiring online computations and causing significant overhead. In this paper, we propose ReSpinQuant, a quantization framework that resolves such overhead by leveraging offline activation rotation fusion and matching basis using efficient residual subspace rotation. This design reconciles the high expressivity of layer-wise adaptation with only negligible inference overhead. Extensive experiments on W4A4 and W3A3 quantization demonstrate that ReSpinQuant achieves state-of-the-art performance, outperforming global rotation methods and matching the accuracy of computationally expensive layer-wise methods with minimal overhead.",
+      "identifiers": [
+        "SemanticScholar:ab97e5e7b48ac3bc02e676d9a4b58d697db6c5c8"
+      ],
+      "semantic_scholar_id": "ab97e5e7b48ac3bc02e676d9a4b58d697db6c5c8",
+      "canonical_id": "arXiv:2604.11080",
+      "arxiv_id": "2604.11080",
+      "doi": "10.48550/arXiv.2604.11080",
+      "authors": [
+        "Suyoung Kim",
+        "Sunghyun Wee",
+        "Hyeonjin Kim",
+        "Kyomin Hwang",
+        "Hyunho Lee",
+        "N. Kwak"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      },
+      "reason": "回転型PTQで全層共通の回転行列は表現力が不足し、層別回転はオンライン演算負荷が大きい問題に対し、残差部分空間の回転と基底対応によりオフライン融合を可能にする。W4A4・W3A3量子化でグローバル回転方式より精度を改善し、層別方式と同程度の精度を低い推論負荷で達成したと著者は報告。LLM低ビット量子化の直接関連研究。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GPU-Tile-Sim: A Tile-Centric GPU Simulation Framework for LLM Hardware-Software Co-Design",
+      "source_url": "https://arxiv.org/abs/2607.11262",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLM (large language model) workloads increasingly rely on optimized GPU kernels through hardware-software co-design. These kernels achieve high-performance through fine-grained dependency scheduling and computation-memory overlap. As such, they incur new challenges on existing GPU performance models. Instruction-driven simulators are costly to adapt to evolving architectures, while analytical models are too coarse to capture kernels'characteristics. We propose GPU-Tile-Sim, a tile-centric GPU simulation framework for LLM hardware-software co-design. The key insight is that modern LLM kernel performance is governed less by individual instruction latency than by the dependency structure that controls execution order and overlap. Accordingly, GTSim represents kernel execution as a warp-level tile graph whose nodes capture tile-level operations and whose edges encode data and ordering constraints. Using this representation, we design an automatic tile-graph frontend and a graph-driven simulation backend. We evaluate GTSim on representative GEMM, attention, and end-to-end LLM inference workloads. On A100 and H100 across both conventional and highly optimized kernels, GTSim achieves high performance-modeling accuracy (MAPE, Mean Absolute Percentage Error, 1.22%--8.71%). We further extend GTSim to Blackwell with preliminary validation, and demonstrate its effectiveness in analyzing software and architectural design choices.",
+      "identifiers": [
+        "SemanticScholar:b20c720a634db3cfb6f1c9120e3e2ac4a544c501"
+      ],
+      "semantic_scholar_id": "b20c720a634db3cfb6f1c9120e3e2ac4a544c501",
+      "canonical_id": "arXiv:2607.11262",
+      "arxiv_id": "2607.11262",
+      "doi": "10.48550/arXiv.2607.11262",
+      "authors": [
+        "Yitong Ding",
+        "Jiawei Huang",
+        "Renyang Guan",
+        "Yang-Jie Zhou",
+        "Zi-Han Liu",
+        "Yu Feng",
+        "Shi-Xuan Sun",
+        "Ming-Yi Guo",
+        "Jingwen Leng",
+        "Jian Weng"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM向けGPUカーネルの性能予測を、warpレベルのタイル演算と依存関係を表すグラフでモデル化するシミュレーション基盤。自動タイルグラフ生成とグラフ駆動シミュレーションを備え、GEMM・attention・LLM推論をA100/H100で検証しMAPE 1.22〜8.71%と報告。GPU推論カーネル最適化とハードウェア・ソフトウェア協調設計に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-344104abf8d8",
+    "round": "libimp-344104abf8d80693-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-344104abf8d80693-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-344104abf8d80693-pre01.json",
+    "receipt": "sha256:8503e909e994f8bf18e3c6c3aadd6c3919039b5ad6a0e01d24b7f264c9f0b0cd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-344104abf8d8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
