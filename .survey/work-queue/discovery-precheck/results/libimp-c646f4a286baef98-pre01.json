@@ -1,0 +1,606 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c646f4a286baef98-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c646f4a286ba",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2511.05832",
+    "arXiv:2603.02170",
+    "arXiv:2604.23798",
+    "arXiv:2608.09703",
+    "arXiv:2609.34044",
+    "arXiv:2609.38878"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b5e6bb253bd80d7ed52186a86c033f79994048bd",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-13T00:07:23.496544+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2511.05832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.02170",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.09703",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38878",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SageBwd: A Trainable Low-bit Attention",
+      "source_url": "https://arxiv.org/abs/2603.02170",
+      "year": 2026,
+      "published": "2026-03-02",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit attention, such as SageAttention, has emerged as an effective approach for accelerating model inference, but its applicability to training remains poorly understood. In prior work, we introduced SageBwd, a trainable INT8 attention that quantizes six of seven attention matrix multiplications while preserving fine-tuning performance. However, SageBwd exhibited a persistent performance gap to full-precision attention (FPA) during pre-training. In this work, we investigate why this gap occurs and demonstrate that SageBwd matches full-precision attention during pretraining. Through experiments and theoretical analysis, we reach a few important insights and conclusions: (i) QK-norm is necessary for stable training at large tokens per step, (ii) quantization errors primarily arise from the backward-pass score gradient dS, (iii) reducing tokens per step enables SageBwd to match FPA performance in pre-training, and (iv) K-smoothing remains essential for training stability, while Q-smoothing provides limited benefit during pre-training.",
+      "identifiers": [
+        "SemanticScholar:fac5826dee18e44dba1f09bbd9fd481f56fa48e2"
+      ],
+      "semantic_scholar_id": "fac5826dee18e44dba1f09bbd9fd481f56fa48e2",
+      "canonical_id": "arXiv:2603.02170",
+      "arxiv_id": "2603.02170",
+      "doi": "10.48550/arXiv.2603.02170",
+      "authors": [
+        "Jintao Zhang",
+        "Marco Chen",
+        "Hao-Xu Wang",
+        "Kai Jiang",
+        "Ion Stoica",
+        "Joseph Gonzalez",
+        "Jian-Fei Chen",
+        "Jun Zhu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hilbert-Guided Sparse Local Attention",
+      "source_url": "https://arxiv.org/abs/2511.05832",
+      "year": 2025,
+      "published": "2025-11-08",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic compute and memory costs of global self-attention severely limit its use in high-resolution images. Local attention reduces complexity by restricting attention to neighborhoods. Block-sparse kernels can further improve the efficiency of local attention, but conventional local attention patterns often fail to deliver significant speedups because tokens within a window are not contiguous in the 1D sequence. This work proposes a novel method for constructing windows and neighborhoods based on the Hilbert curve. Image tokens are first reordered along a Hilbert curve, and windows and neighborhoods are then formed on the reordered 1D sequence. From a block-sparse perspective, this strategy significantly increases block sparsity and can be combined with existing block-sparse kernels to improve the efficiency of 2D local attention. Experiments show that the proposed Hilbert Window Attention and Hilbert Slide Attention can accelerate window attention and slide attention by about $4\\times$ and $18\\times$, respectively. To assess practicality, the strategy is instantiated as the Hilbert Window Transformer and the Hilbert Neighborhood Transformer, both of which achieve end-to-end speedups with minimal accuracy loss. Overall, combining Hilbert-guided local attention with block-sparse kernels offers a general and practical approach to enhancing the efficiency of 2D local attention for images.",
+      "identifiers": [
+        "SemanticScholar:c8850588efa0f655ed2e4ed5bb4e16febfa6e9a7"
+      ],
+      "semantic_scholar_id": "c8850588efa0f655ed2e4ed5bb4e16febfa6e9a7",
+      "canonical_id": "arXiv:2511.05832",
+      "arxiv_id": "2511.05832",
+      "authors": [
+        "Yun-Ge Li",
+        "Lan-Yu Xu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2604.23798",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing attention accelerators often trade exact softmax semantics, depend on fused Tensor Core kernels, or incur sequential depth that limits FP32 throughput on long sequences. We present ELSA, an algorithmic reformulation of online softmax attention that (i) preserves exact softmax semantics in real arithmetic with a provable $\\mathcal{O}(u \\log n)$ FP32 relative error bound; (ii) casts the online softmax update as a prefix scan over an associative monoid $(m, S, W)$, yielding $O(n)$ extra memory and $O(\\log n)$ parallel depth; and (iii) is Tensor-Core independent, implemented in Triton and CUDA C++, and deployable as a drop-in replacement requiring no retraining or weight modification. Unlike FlashAttention-2/3, which rely on HMMA/GMMA Tensor Core instructions and provide no compatible FP32 path, ELSA operates identically on A100s and resourceconstrained edge devices such as Jetson TX2-making it the only hardware-agnostic exact-attention kernel that reduces parallel depth to $O(\\log n)$ at full precision. On A100 and Jetson TX2, ELSA delivers $1.3-3.5\\times$ FP32 speedup over memory-efficient SDPA on attention-only benchmarks (1K-16K tokens), $1.97-2.27\\times$ speedup on BERT benchmarks, and 17.8-20.2% throughput gains under LLaMA-13B offloading at $\\geq 32 K$ tokens. In FP16, ELSA approaches hardware-fused baselines at long sequences while retaining full FP32 capability, offering a unified kernel for highprecision inference across platforms. Our code and implementation is available at https://github.com/ming0531/ELSA.",
+      "identifiers": [
+        "SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981"
+      ],
+      "semantic_scholar_id": "1d2311ec84451e14856008a993ae9cb3b9530981",
+      "canonical_id": "arXiv:2604.23798",
+      "arxiv_id": "2604.23798",
+      "doi": "10.1109/CVPRF71909.2026.00291",
+      "authors": [
+        "Chih-Chung Hsu",
+        "Xing-Chen Ma",
+        "Wo-Ting Liao",
+        "Chia-Ming Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Matryoshka Language Model Suites",
+      "source_url": "https://arxiv.org/abs/2608.09703",
+      "year": 2026,
+      "published": "2026-08-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training a language model suite classically requires training each model separately and serving them independently. We improve both training and inference efficiency by stacking sub-models of increasing size into a single nested architecture trained end-to-end. This Matryoshka training framework reduces the total parameter count of the suite, enables low-cost distillation from the largest to all smaller sub-models at every training step, and is well-suited for speculative decoding as the draft model is contained within the verifier. We validate our approach by training a Matryoshka suite comprising 500M, 1.5B, and 3B sub-models. Our suite is on par with independently trained baselines on benchmark performance and validation and out-of-domain perplexities, while using 36% less training compute and improving the throughput of speculative decoding by 14-26%. We also ablate key architectural choices, offering guidance for building strong Matryoshka LM suites.",
+      "identifiers": [
+        "SemanticScholar:8d21d24d271fbef81a23f452fa0a5e80329062e2"
+      ],
+      "semantic_scholar_id": "8d21d24d271fbef81a23f452fa0a5e80329062e2",
+      "canonical_id": "arXiv:2608.09703",
+      "arxiv_id": "2608.09703",
+      "doi": "10.48550/arXiv.2608.09703",
+      "authors": [
+        "Nathan Godey",
+        "Yoav Artzi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 95,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SCOPD: Sparse-Context On-Policy Self-Distillation for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.34044",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning vision-language models (VLMs) process images and videos as long sequences of visual tokens, making inference expensive. Training-free token pruning reduces this cost, but aggressive compression can sharply degrade performance, often attributed to irreversible loss of task-relevant visual information. We show that this explanation is incomplete. In a fixed-context Pass@K analysis, repeated sampling from the same pruned visual representation recovers many examples missed by greedy decoding, indicating that useful visual evidence can remain accessible but be used unreliably. We call this the representation-utilization gap. Motivated by this observation, we introduce SCOPD, a sparse-context on-policy self-distillation framework in which a student generates reasoning trajectories from pruned visual tokens while a privileged full-context teacher supervises the same on-policy prefixes. SCOPD requires no ground-truth responses, architectural changes, or additional inference-time computation. We further introduce SCOPD+, which uses a small visual-budget intervention to identify visually sensitive response positions and selectively distill them. At 10% visual-token retention, the Vanilla model retains 86.37% of its unpruned performance across 13 benchmarks. SCOPD raises this to 90.49%, while SCOPD+ further improves it to 92.43%. Across token budgets, benchmarks, and pruning operators, our results show that efficient reasoning depends not only on which visual information survives pruning, but also on how reliably the model learns to use it.",
+      "identifiers": [
+        "SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8"
+      ],
+      "semantic_scholar_id": "0f686e71256401f7c405a76b108ba0ae83d715b8",
+      "canonical_id": "arXiv:2609.34044",
+      "arxiv_id": "2609.34044",
+      "doi": "10.48550/arXiv.2609.34044",
+      "authors": [
+        "Ahmadreza Jeddi",
+        "En-Ming Zhang",
+        "Jasper Gerigk",
+        "H. Karaimer",
+        "Mozhgan Nasr Azadani",
+        "Jia-Yun Luo",
+        "M. Le",
+        "Gholamali Aminian",
+        "Hugo Buurmeijer",
+        "Yong-Chao Chen",
+        "Leonid Sigal",
+        "Igor Gilitschenski",
+        "K. Derpanis",
+        "Marco Pavone",
+        "Babak Taati"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Audio Token Attention Is Predictable Before the Language Model Runs",
+      "source_url": "https://arxiv.org/abs/2609.38878",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A large audio language model (LALM) turns a minute of speech into 750-1,500 tokens and prefills every one. Image-token pruning often cuts after the language model's first layers, where image tokens draw little attention. Audio tokens draw much more attention there, and their ranking is still far from final, so audio needs a ranking before the language model runs. Surprisingly, the attention an audio token will receive across the language model is already linearly predictable from its encoder output, before the language model runs. A linear map, fitted in closed form without labels, predicts this all-layer attention ranking at $\\rho \\geq .69$ on eleven of thirteen LALMs. Our method, Triage, cuts audio tokens by this prediction and, on multiple choice, cuts again at layer 2, correcting the prediction with the attention observed there. Triage sets its compression without labels, under two budgets that limit how far its output may differ from the model's own full-audio output. At the conservative budget, its word error rate and accuracy stay within .04 of full audio. At the aggressive budget, Triage beats every baseline in all twelve transcription cases. On multiple choice, at 2.2-5x compression, it outperforms DART, the strongest baseline on average, by .043 in mean accuracy. Because it cuts before the language model, it raises the audio that fits in Qwen2.5-Omni-3B's context window from 21.8 to about 62 minutes. At its most compressive point, Triage lets one GPU serve 4x as many concurrent 5-minute streams of that model. Project page: https://audio-triage.github.io",
+      "identifiers": [
+        "SemanticScholar:6cf84e32e69487759bda968c04e065df0649f522"
+      ],
+      "semantic_scholar_id": "6cf84e32e69487759bda968c04e065df0649f522",
+      "canonical_id": "arXiv:2609.38878",
+      "arxiv_id": "2609.38878",
+      "doi": "10.48550/arXiv.2609.38878",
+      "authors": [
+        "Kyoungjun Park",
+        "Yun-Zhe Li",
+        "Li-Li Qiu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.02170",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.02170",
+        "id:SemanticScholar:fac5826dee18e44dba1f09bbd9fd481f56fa48e2",
+        "id:arXiv:2603.02170",
+        "title:sagebwd a trainable lowbit attention",
+        "url:https://arxiv.org/abs/2603.02170"
+      ],
+      "record": {
+        "title": "SageBwd: A Trainable Low-bit Attention",
+        "source_url": "https://arxiv.org/abs/2603.02170",
+        "year": 2026,
+        "published": "2026-03-02",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit attention, such as SageAttention, has emerged as an effective approach for accelerating model inference, but its applicability to training remains poorly understood. In prior work, we introduced SageBwd, a trainable INT8 attention that quantizes six of seven attention matrix multiplications while preserving fine-tuning performance. However, SageBwd exhibited a persistent performance gap to full-precision attention (FPA) during pre-training. In this work, we investigate why this gap occurs and demonstrate that SageBwd matches full-precision attention during pretraining. Through experiments and theoretical analysis, we reach a few important insights and conclusions: (i) QK-norm is necessary for stable training at large tokens per step, (ii) quantization errors primarily arise from the backward-pass score gradient dS, (iii) reducing tokens per step enables SageBwd to match FPA performance in pre-training, and (iv) K-smoothing remains essential for training stability, while Q-smoothing provides limited benefit during pre-training.",
+        "identifiers": [
+          "SemanticScholar:fac5826dee18e44dba1f09bbd9fd481f56fa48e2"
+        ],
+        "semantic_scholar_id": "fac5826dee18e44dba1f09bbd9fd481f56fa48e2",
+        "canonical_id": "arXiv:2603.02170",
+        "arxiv_id": "2603.02170",
+        "doi": "10.48550/arXiv.2603.02170",
+        "authors": [
+          "Jintao Zhang",
+          "Marco Chen",
+          "Hao-Xu Wang",
+          "Kai Jiang",
+          "Ion Stoica",
+          "Joseph Gonzalez",
+          "Jian-Fei Chen",
+          "Jun Zhu"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.05832",
+      "identity_tokens": [
+        "id:SemanticScholar:c8850588efa0f655ed2e4ed5bb4e16febfa6e9a7",
+        "id:arXiv:2511.05832",
+        "title:hilbertguided sparse local attention",
+        "url:https://arxiv.org/abs/2511.05832"
+      ],
+      "record": {
+        "title": "Hilbert-Guided Sparse Local Attention",
+        "source_url": "https://arxiv.org/abs/2511.05832",
+        "year": 2025,
+        "published": "2025-11-08",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic compute and memory costs of global self-attention severely limit its use in high-resolution images. Local attention reduces complexity by restricting attention to neighborhoods. Block-sparse kernels can further improve the efficiency of local attention, but conventional local attention patterns often fail to deliver significant speedups because tokens within a window are not contiguous in the 1D sequence. This work proposes a novel method for constructing windows and neighborhoods based on the Hilbert curve. Image tokens are first reordered along a Hilbert curve, and windows and neighborhoods are then formed on the reordered 1D sequence. From a block-sparse perspective, this strategy significantly increases block sparsity and can be combined with existing block-sparse kernels to improve the efficiency of 2D local attention. Experiments show that the proposed Hilbert Window Attention and Hilbert Slide Attention can accelerate window attention and slide attention by about $4\\times$ and $18\\times$, respectively. To assess practicality, the strategy is instantiated as the Hilbert Window Transformer and the Hilbert Neighborhood Transformer, both of which achieve end-to-end speedups with minimal accuracy loss. Overall, combining Hilbert-guided local attention with block-sparse kernels offers a general and practical approach to enhancing the efficiency of 2D local attention for images.",
+        "identifiers": [
+          "SemanticScholar:c8850588efa0f655ed2e4ed5bb4e16febfa6e9a7"
+        ],
+        "semantic_scholar_id": "c8850588efa0f655ed2e4ed5bb4e16febfa6e9a7",
+        "canonical_id": "arXiv:2511.05832",
+        "arxiv_id": "2511.05832",
+        "authors": [
+          "Yun-Ge Li",
+          "Lan-Yu Xu"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 370,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23798",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00291",
+        "id:SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981",
+        "id:arXiv:2604.23798",
+        "title:elsa exact linearscan attention for fast and memorylight vision transformers",
+        "url:https://arxiv.org/abs/2604.23798"
+      ],
+      "record": {
+        "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
+        "source_url": "https://arxiv.org/abs/2604.23798",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing attention accelerators often trade exact softmax semantics, depend on fused Tensor Core kernels, or incur sequential depth that limits FP32 throughput on long sequences. We present ELSA, an algorithmic reformulation of online softmax attention that (i) preserves exact softmax semantics in real arithmetic with a provable $\\mathcal{O}(u \\log n)$ FP32 relative error bound; (ii) casts the online softmax update as a prefix scan over an associative monoid $(m, S, W)$, yielding $O(n)$ extra memory and $O(\\log n)$ parallel depth; and (iii) is Tensor-Core independent, implemented in Triton and CUDA C++, and deployable as a drop-in replacement requiring no retraining or weight modification. Unlike FlashAttention-2/3, which rely on HMMA/GMMA Tensor Core instructions and provide no compatible FP32 path, ELSA operates identically on A100s and resourceconstrained edge devices such as Jetson TX2-making it the only hardware-agnostic exact-attention kernel that reduces parallel depth to $O(\\log n)$ at full precision. On A100 and Jetson TX2, ELSA delivers $1.3-3.5\\times$ FP32 speedup over memory-efficient SDPA on attention-only benchmarks (1K-16K tokens), $1.97-2.27\\times$ speedup on BERT benchmarks, and 17.8-20.2% throughput gains under LLaMA-13B offloading at $\\geq 32 K$ tokens. In FP16, ELSA approaches hardware-fused baselines at long sequences while retaining full FP32 capability, offering a unified kernel for highprecision inference across platforms. Our code and implementation is available at https://github.com/ming0531/ELSA.",
+        "identifiers": [
+          "SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981"
+        ],
+        "semantic_scholar_id": "1d2311ec84451e14856008a993ae9cb3b9530981",
+        "canonical_id": "arXiv:2604.23798",
+        "arxiv_id": "2604.23798",
+        "doi": "10.1109/CVPRF71909.2026.00291",
+        "authors": [
+          "Chih-Chung Hsu",
+          "Xing-Chen Ma",
+          "Wo-Ting Liao",
+          "Chia-Ming Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.09703",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.09703",
+        "id:SemanticScholar:8d21d24d271fbef81a23f452fa0a5e80329062e2",
+        "id:arXiv:2608.09703",
+        "title:matryoshka language model suites",
+        "url:https://arxiv.org/abs/2608.09703"
+      ],
+      "record": {
+        "title": "Matryoshka Language Model Suites",
+        "source_url": "https://arxiv.org/abs/2608.09703",
+        "year": 2026,
+        "published": "2026-08-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training a language model suite classically requires training each model separately and serving them independently. We improve both training and inference efficiency by stacking sub-models of increasing size into a single nested architecture trained end-to-end. This Matryoshka training framework reduces the total parameter count of the suite, enables low-cost distillation from the largest to all smaller sub-models at every training step, and is well-suited for speculative decoding as the draft model is contained within the verifier. We validate our approach by training a Matryoshka suite comprising 500M, 1.5B, and 3B sub-models. Our suite is on par with independently trained baselines on benchmark performance and validation and out-of-domain perplexities, while using 36% less training compute and improving the throughput of speculative decoding by 14-26%. We also ablate key architectural choices, offering guidance for building strong Matryoshka LM suites.",
+        "identifiers": [
+          "SemanticScholar:8d21d24d271fbef81a23f452fa0a5e80329062e2"
+        ],
+        "semantic_scholar_id": "8d21d24d271fbef81a23f452fa0a5e80329062e2",
+        "canonical_id": "arXiv:2608.09703",
+        "arxiv_id": "2608.09703",
+        "doi": "10.48550/arXiv.2608.09703",
+        "authors": [
+          "Nathan Godey",
+          "Yoav Artzi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 95,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34044",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34044",
+        "id:SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8",
+        "id:arXiv:2609.34044",
+        "title:scopd sparsecontext onpolicy selfdistillation for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2609.34044"
+      ],
+      "record": {
+        "title": "SCOPD: Sparse-Context On-Policy Self-Distillation for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.34044",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning vision-language models (VLMs) process images and videos as long sequences of visual tokens, making inference expensive. Training-free token pruning reduces this cost, but aggressive compression can sharply degrade performance, often attributed to irreversible loss of task-relevant visual information. We show that this explanation is incomplete. In a fixed-context Pass@K analysis, repeated sampling from the same pruned visual representation recovers many examples missed by greedy decoding, indicating that useful visual evidence can remain accessible but be used unreliably. We call this the representation-utilization gap. Motivated by this observation, we introduce SCOPD, a sparse-context on-policy self-distillation framework in which a student generates reasoning trajectories from pruned visual tokens while a privileged full-context teacher supervises the same on-policy prefixes. SCOPD requires no ground-truth responses, architectural changes, or additional inference-time computation. We further introduce SCOPD+, which uses a small visual-budget intervention to identify visually sensitive response positions and selectively distill them. At 10% visual-token retention, the Vanilla model retains 86.37% of its unpruned performance across 13 benchmarks. SCOPD raises this to 90.49%, while SCOPD+ further improves it to 92.43%. Across token budgets, benchmarks, and pruning operators, our results show that efficient reasoning depends not only on which visual information survives pruning, but also on how reliably the model learns to use it.",
+        "identifiers": [
+          "SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8"
+        ],
+        "semantic_scholar_id": "0f686e71256401f7c405a76b108ba0ae83d715b8",
+        "canonical_id": "arXiv:2609.34044",
+        "arxiv_id": "2609.34044",
+        "doi": "10.48550/arXiv.2609.34044",
+        "authors": [
+          "Ahmadreza Jeddi",
+          "En-Ming Zhang",
+          "Jasper Gerigk",
+          "H. Karaimer",
+          "Mozhgan Nasr Azadani",
+          "Jia-Yun Luo",
+          "M. Le",
+          "Gholamali Aminian",
+          "Hugo Buurmeijer",
+          "Yong-Chao Chen",
+          "Leonid Sigal",
+          "Igor Gilitschenski",
+          "K. Derpanis",
+          "Marco Pavone",
+          "Babak Taati"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38878",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.38878",
+        "id:SemanticScholar:6cf84e32e69487759bda968c04e065df0649f522",
+        "id:arXiv:2609.38878",
+        "title:audio token attention is predictable before the language model runs",
+        "url:https://arxiv.org/abs/2609.38878"
+      ],
+      "record": {
+        "title": "Audio Token Attention Is Predictable Before the Language Model Runs",
+        "source_url": "https://arxiv.org/abs/2609.38878",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A large audio language model (LALM) turns a minute of speech into 750-1,500 tokens and prefills every one. Image-token pruning often cuts after the language model's first layers, where image tokens draw little attention. Audio tokens draw much more attention there, and their ranking is still far from final, so audio needs a ranking before the language model runs. Surprisingly, the attention an audio token will receive across the language model is already linearly predictable from its encoder output, before the language model runs. A linear map, fitted in closed form without labels, predicts this all-layer attention ranking at $\\rho \\geq .69$ on eleven of thirteen LALMs. Our method, Triage, cuts audio tokens by this prediction and, on multiple choice, cuts again at layer 2, correcting the prediction with the attention observed there. Triage sets its compression without labels, under two budgets that limit how far its output may differ from the model's own full-audio output. At the conservative budget, its word error rate and accuracy stay within .04 of full audio. At the aggressive budget, Triage beats every baseline in all twelve transcription cases. On multiple choice, at 2.2-5x compression, it outperforms DART, the strongest baseline on average, by .043 in mean accuracy. Because it cuts before the language model, it raises the audio that fits in Qwen2.5-Omni-3B's context window from 21.8 to about 62 minutes. At its most compressive point, Triage lets one GPU serve 4x as many concurrent 5-minute streams of that model. Project page: https://audio-triage.github.io",
+        "identifiers": [
+          "SemanticScholar:6cf84e32e69487759bda968c04e065df0649f522"
+        ],
+        "semantic_scholar_id": "6cf84e32e69487759bda968c04e065df0649f522",
+        "canonical_id": "arXiv:2609.38878",
+        "arxiv_id": "2609.38878",
+        "doi": "10.48550/arXiv.2609.38878",
+        "authors": [
+          "Kyoungjun Park",
+          "Yun-Zhe Li",
+          "Li-Li Qiu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:edae48467a04b190c033bf1226295cf15b6429b858b0900b2c967398dfa578fc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
