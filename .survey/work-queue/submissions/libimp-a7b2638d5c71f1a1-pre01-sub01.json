@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs",
+      "source_url": "https://arxiv.org/abs/2606.14277",
+      "year": 2026,
+      "published": "2026-06-12",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved remarkable success across diverse multimodal tasks, yet their practical deployment remains constrained by the computational burden arising from lengthy visual tokens. While visual token pruning has emerged as a promising solution, existing methods suffer from a fundamental limitation: once tokens are pruned at a specific layer, they become inaccessible to all subsequent layers, leading to premature information loss that can compromise model performance. Through empirical studies, we observe that different layers exhibit distinct visual region focus, indicating a varying optimal token subset across layers. Motivated by this insight, we propose Adaptive Layer-wise Visual Token Selection (ALVTS), a novel framework that breaks away from the conventional static token pruning paradigm. ALVTS incorporates a lightweight token selector to identify and route important tokens for further processing, while allowing less important tokens to skip the layer, thus minimizing computational redundancy. These two streams of tokens are seamlessly reintegrated before being fed into subsequent layers, facilitating adaptive compression across the entire model. Grounded in our importance consistency constrained low-rank approximation, the proposed token selection module closely emulates the full attention mechanism, effectively capturing its essential patterns without requiring model retraining. Extensive experiments on LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL validate the effectiveness of our method. With an 89% token compression ratio, ALVTS retains 96.7% of the original model's accuracy, achieving a superior efficiency-accuracy trade-off for LVLM inference.",
+      "identifiers": [
+        "SemanticScholar:65e16ddacc0629277ee1aa176ef3288ccfba21c8"
+      ],
+      "semantic_scholar_id": "65e16ddacc0629277ee1aa176ef3288ccfba21c8",
+      "canonical_id": "arXiv:2606.14277",
+      "arxiv_id": "2606.14277",
+      "doi": "10.48550/arXiv.2606.14277",
+      "authors": [
+        "Yong-Rui Chen",
+        "Kai Zhang",
+        "Zeliang Zong",
+        "Yu-Chen Lu",
+        "Wen-Ming Tan",
+        "Ye Ren",
+        "Ji-Lin Hu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ALVTSは重要な視覚トークンだけを層ごとに処理し、非重要トークンを当該層でスキップさせ、次層前に再統合する。従来の不可逆剪定と異なり後続層が別領域を参照できる。LLaVA-1.5、LLaVA-NeXT、Qwen2.5-VLで評価し、著者は89%トークン圧縮で元精度96.7%保持を報告。マルチモーダル推論の計算削減に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BellowsKV: One Latent for Many Layers, Expanded on Demand",
+      "source_url": "https://arxiv.org/abs/2610.35023",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) now serve as the backbone of agents that reason over many turns, call tools, and pursue long-horizon tasks. To avoid recomputation, a model stores the attention keys and values of all past tokens in a key-value (KV) cache. Each layer maintains its own cache, so KV-cache memory can become the main bottleneck for GPU serving. Most compression methods operate within a single layer, by quantizing the cache entries, reducing the channel dimension, or evicting less important tokens. All three lose substantial accuracy at high compression ratios. Cross-layer methods share one compressed cache across adjacent layers to go beyond this limit. However, these methods also degrade sharply at high compression ratios. We find that the KV-cache representations of adjacent layers are quite different, whereas the input hidden states of adjacent layers are highly similar. We also find that, under the same memory budget, reducing the dimension of this shared latent loses far more accuracy than quantizing it. Based on these findings, we propose BellowsKV, a training-free method that maps the hidden states of n adjacent layers to one shared latent per token. At inference time, each layer reads its own keys and values from this latent through a layer-specific projection. We keep the latent at full dimension and compress it in two other ways: BellowsKV-Quant stores the latent at low precision, which is nearly lossless because the latent has no dominant outlier channels; BellowsKV-Evict makes one shared eviction decision per block, because the layers rank token importance very similarly. Across Llama-3.1-8B, Mistral-7B and Qwen2.5-7B, BellowsKV-Quant retains about 99% of full-cache accuracy at 3.6x compression and 97-98% at 13-14x, where the strongest cross-layer method retains at most 84% at 16x. Code: https://github.com/MorrisZJ/BellowsKV",
+      "identifiers": [
+        "SemanticScholar:19b48dfa7e11d2b770b291c1c53384bfcae427a5"
+      ],
+      "semantic_scholar_id": "19b48dfa7e11d2b770b291c1c53384bfcae427a5",
+      "canonical_id": "arXiv:2610.35023",
+      "arxiv_id": "2610.35023",
+      "authors": [
+        "Jia-Mu Zhang",
+        "Han-Jie Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "隣接Transformer層のhidden stateの類似性を利用して層横断で単一潜在表現を保持し、層固有射影でKVを再構成する学習不要のKVキャッシュ圧縮。低精度量子化と共有evictionを組み合わせ、Llama-3.1-8B、Mistral-7B、Qwen2.5-7Bで著者は3.6倍圧縮時に元精度約99%、13～14倍圧縮時に97～98%保持を報告。推論メモリ効率化に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a7b2638d5c71",
+    "round": "libimp-a7b2638d5c71f1a1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a7b2638d5c71f1a1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a7b2638d5c71f1a1-pre01.json",
+    "receipt": "sha256:5f4a5998ea3cdc634dbd9a33225e9f50ecd42dc0afeed27352b088614d82da6f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a7b2638d5c71",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
