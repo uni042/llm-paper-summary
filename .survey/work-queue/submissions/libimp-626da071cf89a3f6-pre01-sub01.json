@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs",
+      "source_url": "https://arxiv.org/abs/2605.17260",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The fundamental challenge in scaling Video Large Language Models (Video LLMs) to long-form video lies in managing the explosion of visual-token context length. Existing strategies predominantly focus on\"post-hoc\"token reduction -- reducing visual tokens after feature extraction to alleviate the LLM's computational overhead. While these methods effectively reduce the number of visual tokens, we observe that the primary latency bottleneck then shifts from the LLM to the expensive per-frame processing of the vision encoder. To address this, we introduce LiteFrame, a strong, yet highly efficient video encoder backbone for Video LLMs. To train LiteFrame, we propose Compressed Token Distillation (CTD), a novel training framework that teaches a compact student vision encoder to directly predict information-dense, spatio-temporally compressed representations produced by a large teacher vision model, effectively bypassing redundant computation. When coupled with further Language Model Adaptation (LMA), this approach results in a new latency-accuracy Pareto frontier -- compared with InternVL3-8B, LiteFrame provides a 35% reduction in end-to-end latency while processing 8$\\times$ more frames and improves average video understanding accuracy across multiple benchmarks. Our results demonstrate a new potential path to unlocking longer-form video understanding under fixed compute budgets.",
+      "identifiers": [
+        "SemanticScholar:42cd9bd117f67ede27581455d2adacc8eb3c4dbe"
+      ],
+      "semantic_scholar_id": "42cd9bd117f67ede27581455d2adacc8eb3c4dbe",
+      "canonical_id": "arXiv:2605.17260",
+      "arxiv_id": "2605.17260",
+      "doi": "10.48550/arXiv.2605.17260",
+      "authors": [
+        "Jihwan Kim",
+        "Nikhil Parthasarathy",
+        "Danfeng Qin",
+        "Junhwa Hur",
+        "De-Qing Sun",
+        "Bo Han",
+        "Ming-Hsuan Yang",
+        "Boqing Gong"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長尺Video LLMのフレーム数増加でvision encoderが推論遅延のボトルネックとなる問題を扱う。Compressed Token Distillationで小型encoderが教師の時空間圧縮表現を直接予測し、Language Model Adaptationを併用。著者はInternVL3-8B比で8倍のフレームを処理しつつend-to-end遅延35%削減、動画理解平均精度改善と報告。動画LLM推論効率に直接関連。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+      "source_url": "https://arxiv.org/abs/2405.13938",
+      "year": 2024,
+      "published": "2024-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "eXmY is a novel data type for quantization of ML models. It supports both arbitrary bit widths and arbitrary integer and floating point formats. For example, it seamlessly supports 3, 5, 6, 7, 9 bit formats. For a specific bit width, say 7, it defines all possible formats e.g. e0m6, e1m5, e2m4, e3m3, e4m2, e5m1 and e6m0. For non-power of two bit widths e.g. 5, 6, 7, we created a novel encoding and decoding scheme which achieves perfect compression, byte addressability and is amenable to sharding and vector processing. We implemented libraries for emulation, encoding and decoding tensors and checkpoints in C++, TensorFlow, JAX and PAX. For optimal performance, the codecs use SIMD instructions on CPUs and vector instructions on TPUs and GPUs. eXmY is also a technique and exploits the statistical distribution of exponents in tensors. It can be used to quantize weights, static and dynamic activations, gradients, master weights and optimizer state. It can reduce memory (CPU DRAM and accelerator HBM), network and disk storage and transfers. It can increase multi tenancy and accelerate compute. eXmY has been deployed in production for almost 2 years.",
+      "identifiers": [
+        "SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd"
+      ],
+      "semantic_scholar_id": "29573bcc2a626793ef97d39352c83af4aa7d83bd",
+      "canonical_id": "arXiv:2405.13938",
+      "arxiv_id": "2405.13938",
+      "doi": "10.48550/arXiv.2405.13938",
+      "authors": [
+        "Aditya Agrawal",
+        "Matthew Hedlund",
+        "Blake A. Hechtman"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 905,
+        "matched_prestigious_venue": null
+      },
+      "reason": "3/5/6/7/9bit等の任意ビット幅と指数・仮数配分を扱う量子化データ型。非2冪ビット幅でbyte-addressabilityと圧縮率を両立する符号化を提案し、CPU SIMD・GPU/TPU vector処理に対応。重み・activation・gradient等の転送/格納効率に関係し、低ビット推論とモデル圧縮の直接的研究対象。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-626da071cf89",
+    "round": "libimp-626da071cf89a3f6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-626da071cf89a3f6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-626da071cf89a3f6-pre01.json",
+    "receipt": "sha256:d5382db0f6f8963324fa8d22885f9535cb94643352776b766306931b6cfaf467"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-626da071cf89",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
