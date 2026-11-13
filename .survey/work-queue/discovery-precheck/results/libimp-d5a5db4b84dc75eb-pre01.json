@@ -1,0 +1,333 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d5a5db4b84dc75eb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d5a5db4b84dc",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2508.09471",
+    "arXiv:2606.21869",
+    "arXiv:2607.20507"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "03ebce74c34e95e86484b5be4b997f6004d2461a",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-13T10:13:14.478453+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2508.09471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.21869",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.20507",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.21869",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed in multilingual settings, yet the energy costs of serving these models across different languages remain poorly understood. We present a systematic study of inference energy consumption across languages with ML.Energy framework (Chung et al., 2026). We find striking disparities: energy consumption per output token varies by up to 8.3 times across languages, while total energy for a fixed set of requests varies by up to 179 times between the cheapest (English, 17.6 kJ) and the most expensive (Pashto, 3,147 kJ) languages. Our analysis shows that this disparity is driven by two compounding factors: (1) higher per-token energy costs for languages using complex or rare scripts, and (2) more tokens generated for low-resource languages. Moreover, we find a double cost + performance penalty: languages with the highest energy footprints also tend to achieve the lowest task accuracy. We reveal that the energy divide persists across models, hardware, and tasks, suggesting a systemic energy inequity in multilingual LLM deployment. Finally, we recommend that the community treat energy as a first-class evaluation axis, extend reporting checklists and model cards to include it, and adopt deployment-side mitigations for better energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:f6fcb807f6b2010b6366c707a357ea56aceced85"
+      ],
+      "semantic_scholar_id": "f6fcb807f6b2010b6366c707a357ea56aceced85",
+      "canonical_id": "arXiv:2606.21869",
+      "arxiv_id": "2606.21869",
+      "doi": "10.48550/arXiv.2606.21869",
+      "authors": [
+        "Nai-Hao Deng",
+        "Alissa Shen",
+        "Yi-Ming Feng",
+        "Joan Nwatu",
+        "Jae-Won Chung",
+        "Mosharaf Chowdhury",
+        "Yu-Long Chen",
+        "Rada Mihalcea"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "CacheSpec: Finding the Sweet Spot for Small Models in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.20507",
+      "year": 2026,
+      "published": "2026-07-03",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly used for program-aided reasoning, agentic decision making, and structured task execution, but these settings often incur substantial inference cost. Many such requests share similar computational structures while differing in variables, constraints, or contexts, creating opportunities for program-level caching. Since program caches need to reapply reusable computation logic to new requests, their key steps often involve lightweight and structured operations such as variable extraction, program binding, and generation acceleration, which are well suited for small models. We propose CacheSpec, an inference optimization framework centered on reusable program caches. The framework converts Program-of-Thoughts (PoT)-style programs from one-time reasoning artifacts into reusable cache objects, and reuses the same small model for two roles: semantic variable extraction on the cache-hit path and speculative drafting during target-LLM generation. Experiments on shopping-style request datasets, WebShop, Formula, and CodeTAT-QA show that CacheSpec reduces inference latency and improves effective cache reuse while preserving comparable or better task quality than existing caching and generation baselines, achieving up to about 3.1$\\times$ latency speedup; in parallel serving experiments, it improves throughput by about 2.8$\\times$ over PoT-style methods. These results suggest that the sweet spot for small models in large-model inference systems lies not in solving complex tasks independently, but in performing lightweight, structured, and verifiable auxiliary operations.",
+      "identifiers": [
+        "SemanticScholar:6a69bb5d619e253a5c8179a5b64b5e886994f3e7"
+      ],
+      "semantic_scholar_id": "6a69bb5d619e253a5c8179a5b64b5e886994f3e7",
+      "canonical_id": "arXiv:2607.20507",
+      "arxiv_id": "2607.20507",
+      "doi": "10.18653/2026.emnlp-main.1223",
+      "authors": [
+        "Jing-Quan Chen",
+        "Jie Feng",
+        "Jing-Hua Piao",
+        "Shao-Gang Hu",
+        "Yong Li"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning Method for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.09471",
+      "year": 2025,
+      "published": "2025-08-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) become more widely adopted and scale up in size, the computational and memory challenges involved in deploying these massive foundation models have grown increasingly severe. This underscores the urgent need to develop more efficient model variants. Faced with this challenge, the present work introduces EGGS-PTP: an Expander-Graph Guided Structured Post-training Pruning method. The proposed approach leverages graph theory to guide the design of N:M structured pruning, effectively reducing model size and computational demands. By incorporating concepts from expander graphs, EGGS-PTP ensures information flow within the pruned network, preserving essential model functionality. Extensive numerical experiments demonstrate that EGGS-PTP not only achieves significant acceleration and memory savings due to structured sparsity but also outperforms existing structured pruning techniques in terms of accuracy across various LLMs.",
+      "identifiers": [
+        "SemanticScholar:89c9c7663ffdabcaee9b94a436628c91d43a69a9"
+      ],
+      "semantic_scholar_id": "89c9c7663ffdabcaee9b94a436628c91d43a69a9",
+      "canonical_id": "arXiv:2508.09471",
+      "arxiv_id": "2508.09471",
+      "doi": "10.48550/arXiv.2508.09471",
+      "authors": [
+        "Omar Bazarbachi",
+        "Zijun Sun",
+        "Yanning Shen"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.21869",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.21869",
+        "id:SemanticScholar:f6fcb807f6b2010b6366c707a357ea56aceced85",
+        "id:arXiv:2606.21869",
+        "title:the languageenergy divide measuring energy costs of multilingual llm inference",
+        "url:https://arxiv.org/abs/2606.21869"
+      ],
+      "record": {
+        "title": "The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.21869",
+        "year": 2026,
+        "published": "2026-06-20",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly deployed in multilingual settings, yet the energy costs of serving these models across different languages remain poorly understood. We present a systematic study of inference energy consumption across languages with ML.Energy framework (Chung et al., 2026). We find striking disparities: energy consumption per output token varies by up to 8.3 times across languages, while total energy for a fixed set of requests varies by up to 179 times between the cheapest (English, 17.6 kJ) and the most expensive (Pashto, 3,147 kJ) languages. Our analysis shows that this disparity is driven by two compounding factors: (1) higher per-token energy costs for languages using complex or rare scripts, and (2) more tokens generated for low-resource languages. Moreover, we find a double cost + performance penalty: languages with the highest energy footprints also tend to achieve the lowest task accuracy. We reveal that the energy divide persists across models, hardware, and tasks, suggesting a systemic energy inequity in multilingual LLM deployment. Finally, we recommend that the community treat energy as a first-class evaluation axis, extend reporting checklists and model cards to include it, and adopt deployment-side mitigations for better energy efficiency.",
+        "identifiers": [
+          "SemanticScholar:f6fcb807f6b2010b6366c707a357ea56aceced85"
+        ],
+        "semantic_scholar_id": "f6fcb807f6b2010b6366c707a357ea56aceced85",
+        "canonical_id": "arXiv:2606.21869",
+        "arxiv_id": "2606.21869",
+        "doi": "10.48550/arXiv.2606.21869",
+        "authors": [
+          "Nai-Hao Deng",
+          "Alissa Shen",
+          "Yi-Ming Feng",
+          "Joan Nwatu",
+          "Jae-Won Chung",
+          "Mosharaf Chowdhury",
+          "Yu-Long Chen",
+          "Rada Mihalcea"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 146,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20507",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.1223",
+        "id:SemanticScholar:6a69bb5d619e253a5c8179a5b64b5e886994f3e7",
+        "id:arXiv:2607.20507",
+        "title:cachespec finding the sweet spot for small models in large language models",
+        "url:https://arxiv.org/abs/2607.20507"
+      ],
+      "record": {
+        "title": "CacheSpec: Finding the Sweet Spot for Small Models in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.20507",
+        "year": 2026,
+        "published": "2026-07-03",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly used for program-aided reasoning, agentic decision making, and structured task execution, but these settings often incur substantial inference cost. Many such requests share similar computational structures while differing in variables, constraints, or contexts, creating opportunities for program-level caching. Since program caches need to reapply reusable computation logic to new requests, their key steps often involve lightweight and structured operations such as variable extraction, program binding, and generation acceleration, which are well suited for small models. We propose CacheSpec, an inference optimization framework centered on reusable program caches. The framework converts Program-of-Thoughts (PoT)-style programs from one-time reasoning artifacts into reusable cache objects, and reuses the same small model for two roles: semantic variable extraction on the cache-hit path and speculative drafting during target-LLM generation. Experiments on shopping-style request datasets, WebShop, Formula, and CodeTAT-QA show that CacheSpec reduces inference latency and improves effective cache reuse while preserving comparable or better task quality than existing caching and generation baselines, achieving up to about 3.1$\\times$ latency speedup; in parallel serving experiments, it improves throughput by about 2.8$\\times$ over PoT-style methods. These results suggest that the sweet spot for small models in large-model inference systems lies not in solving complex tasks independently, but in performing lightweight, structured, and verifiable auxiliary operations.",
+        "identifiers": [
+          "SemanticScholar:6a69bb5d619e253a5c8179a5b64b5e886994f3e7"
+        ],
+        "semantic_scholar_id": "6a69bb5d619e253a5c8179a5b64b5e886994f3e7",
+        "canonical_id": "arXiv:2607.20507",
+        "arxiv_id": "2607.20507",
+        "doi": "10.18653/2026.emnlp-main.1223",
+        "authors": [
+          "Jing-Quan Chen",
+          "Jie Feng",
+          "Jing-Hua Piao",
+          "Shao-Gang Hu",
+          "Yong Li"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.09471",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.09471",
+        "id:SemanticScholar:89c9c7663ffdabcaee9b94a436628c91d43a69a9",
+        "id:arXiv:2508.09471",
+        "title:eggsptp an expandergraph guided structured posttraining pruning method for large language models",
+        "url:https://arxiv.org/abs/2508.09471"
+      ],
+      "record": {
+        "title": "EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning Method for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2508.09471",
+        "year": 2025,
+        "published": "2025-08-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) become more widely adopted and scale up in size, the computational and memory challenges involved in deploying these massive foundation models have grown increasingly severe. This underscores the urgent need to develop more efficient model variants. Faced with this challenge, the present work introduces EGGS-PTP: an Expander-Graph Guided Structured Post-training Pruning method. The proposed approach leverages graph theory to guide the design of N:M structured pruning, effectively reducing model size and computational demands. By incorporating concepts from expander graphs, EGGS-PTP ensures information flow within the pruned network, preserving essential model functionality. Extensive numerical experiments demonstrate that EGGS-PTP not only achieves significant acceleration and memory savings due to structured sparsity but also outperforms existing structured pruning techniques in terms of accuracy across various LLMs.",
+        "identifiers": [
+          "SemanticScholar:89c9c7663ffdabcaee9b94a436628c91d43a69a9"
+        ],
+        "semantic_scholar_id": "89c9c7663ffdabcaee9b94a436628c91d43a69a9",
+        "canonical_id": "arXiv:2508.09471",
+        "arxiv_id": "2508.09471",
+        "doi": "10.48550/arXiv.2508.09471",
+        "authors": [
+          "Omar Bazarbachi",
+          "Zijun Sun",
+          "Yanning Shen"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 457,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:421dd3797cddfa82cfb6770d101303c4606675d597b17dce47ef8da6dd535b3a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
