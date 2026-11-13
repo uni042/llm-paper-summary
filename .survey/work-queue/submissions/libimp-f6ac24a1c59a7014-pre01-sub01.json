@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.20175",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel drafters such as DFlash and DSpark reduce proposal latency, but early mismatches limit how much of each block can be accepted. Retaining alternatives introduces parent states and candidate choices that reference-conditioned training does not directly supervise. We introduce TreeSpark, a unified training and inference framework extending the semi-autoregressive DSpark architecture. It constructs parent-conditioned candidate trees from one backbone pass and replays their expansion, pruning, and budgeted packing during training. Survival negative log-likelihood weights retained edges by reference-derived path mass, while a capped coverage hinge promotes target-important alternatives near local selection boundaries. Both objectives reuse reference-chain target distributions without additional target forward passes. We evaluate greedy decoding with Qwen3-4B and Qwen3-8B on nine general benchmarks and six writing domains. Across targets and suites, TreeSpark improves mean acceptance length over DSpark by 23.4% to 31.6% and mean single-request throughput by 15.1% to 25.0%. Batched Qwen3-4B throughput improves by 12.6% to 17.2%. At fixed attention capacity and inference policy, the proposed supervision further improves mean acceptance length by approximately 6.4% and mean system throughput by 4.2% to 5.0% on Qwen3-4B.",
+      "identifiers": [
+        "SemanticScholar:d5b59e91785cf586464e6b8248dfd8cc7a0c0be2"
+      ],
+      "semantic_scholar_id": "d5b59e91785cf586464e6b8248dfd8cc7a0c0be2",
+      "canonical_id": "arXiv:2610.20175",
+      "arxiv_id": "2610.20175",
+      "authors": [
+        "Jihao Zhao",
+        "Qian-Yu Jiang",
+        "Shuai-Shuai Zu",
+        "Peng-Fei Li",
+        "Guang-Huan Fang",
+        "Ben Feng",
+        "Biao Qin",
+        "Zhi-Bin Wang",
+        "Bao-Chuan Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DSparkの半自己回帰ドラフトを親条件付き候補木へ拡張し、木の展開・剪定・予算内packingを学習時にも再現。survival NLLとcoverage hingeで代替候補を教師化し、追加target forwardなしに推測復号を改善。Qwen3-4B/8B、一般9ベンチマークと執筆6領域でDSpark比平均acceptance length 23.4–31.6%改善、単一要求throughput 15.1–25.0%改善を著者が報告。投機的復号の推論高速化に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f6ac24a1c59a",
+    "round": "libimp-f6ac24a1c59a7014-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f6ac24a1c59a7014-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f6ac24a1c59a7014-pre01.json",
+    "receipt": "sha256:a171d6575c5126c6645e3a71db71ed216ef6f2d36af0560bd3261d6a49748e4f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f6ac24a1c59a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
