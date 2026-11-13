@@ -1,0 +1,156 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f6ac24a1c59a7014-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f6ac24a1c59a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.20175"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b2476f1e576b0e7a4c85cdb28cce41c28d7c5b75",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-13T08:12:10.876024+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.20175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.20175",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel drafters such as DFlash and DSpark reduce proposal latency, but early mismatches limit how much of each block can be accepted. Retaining alternatives introduces parent states and candidate choices that reference-conditioned training does not directly supervise. We introduce TreeSpark, a unified training and inference framework extending the semi-autoregressive DSpark architecture. It constructs parent-conditioned candidate trees from one backbone pass and replays their expansion, pruning, and budgeted packing during training. Survival negative log-likelihood weights retained edges by reference-derived path mass, while a capped coverage hinge promotes target-important alternatives near local selection boundaries. Both objectives reuse reference-chain target distributions without additional target forward passes. We evaluate greedy decoding with Qwen3-4B and Qwen3-8B on nine general benchmarks and six writing domains. Across targets and suites, TreeSpark improves mean acceptance length over DSpark by 23.4% to 31.6% and mean single-request throughput by 15.1% to 25.0%. Batched Qwen3-4B throughput improves by 12.6% to 17.2%. At fixed attention capacity and inference policy, the proposed supervision further improves mean acceptance length by approximately 6.4% and mean system throughput by 4.2% to 5.0% on Qwen3-4B.",
+      "identifiers": [
+        "SemanticScholar:d5b59e91785cf586464e6b8248dfd8cc7a0c0be2"
+      ],
+      "semantic_scholar_id": "d5b59e91785cf586464e6b8248dfd8cc7a0c0be2",
+      "canonical_id": "arXiv:2610.20175",
+      "arxiv_id": "2610.20175",
+      "authors": [
+        "Jihao Zhao",
+        "Qian-Yu Jiang",
+        "Shuai-Shuai Zu",
+        "Peng-Fei Li",
+        "Guang-Huan Fang",
+        "Ben Feng",
+        "Biao Qin",
+        "Zhi-Bin Wang",
+        "Bao-Chuan Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.20175",
+      "identity_tokens": [
+        "id:SemanticScholar:d5b59e91785cf586464e6b8248dfd8cc7a0c0be2",
+        "id:arXiv:2610.20175",
+        "title:treespark learning to draft the trees you verify for speculative decoding",
+        "url:https://arxiv.org/abs/2610.20175"
+      ],
+      "record": {
+        "title": "TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.20175",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parallel drafters such as DFlash and DSpark reduce proposal latency, but early mismatches limit how much of each block can be accepted. Retaining alternatives introduces parent states and candidate choices that reference-conditioned training does not directly supervise. We introduce TreeSpark, a unified training and inference framework extending the semi-autoregressive DSpark architecture. It constructs parent-conditioned candidate trees from one backbone pass and replays their expansion, pruning, and budgeted packing during training. Survival negative log-likelihood weights retained edges by reference-derived path mass, while a capped coverage hinge promotes target-important alternatives near local selection boundaries. Both objectives reuse reference-chain target distributions without additional target forward passes. We evaluate greedy decoding with Qwen3-4B and Qwen3-8B on nine general benchmarks and six writing domains. Across targets and suites, TreeSpark improves mean acceptance length over DSpark by 23.4% to 31.6% and mean single-request throughput by 15.1% to 25.0%. Batched Qwen3-4B throughput improves by 12.6% to 17.2%. At fixed attention capacity and inference policy, the proposed supervision further improves mean acceptance length by approximately 6.4% and mean system throughput by 4.2% to 5.0% on Qwen3-4B.",
+        "identifiers": [
+          "SemanticScholar:d5b59e91785cf586464e6b8248dfd8cc7a0c0be2"
+        ],
+        "semantic_scholar_id": "d5b59e91785cf586464e6b8248dfd8cc7a0c0be2",
+        "canonical_id": "arXiv:2610.20175",
+        "arxiv_id": "2610.20175",
+        "authors": [
+          "Jihao Zhao",
+          "Qian-Yu Jiang",
+          "Shuai-Shuai Zu",
+          "Peng-Fei Li",
+          "Guang-Huan Fang",
+          "Ben Feng",
+          "Biao Qin",
+          "Zhi-Bin Wang",
+          "Bao-Chuan Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a171d6575c5126c6645e3a71db71ed216ef6f2d36af0560bd3261d6a49748e4f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
