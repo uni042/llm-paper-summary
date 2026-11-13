@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-13T04:10:46+00:00`
+Generated: `2026-11-13T04:45:59+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -439,7 +439,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 356 | 10 | 4 | 7 | DOI:10.1109/EITCE70137.2026.11634352 | Adapting FlexLLMGen to Qwen3 Dense and Mixture-of-Experts Models | 2026-06-01 | 2026 10th International Conference on Electronic Information Technology and Computer Engineering (EITCE) | 0 | 8 | LLM Serving / Scheduling / Disaggregation, MoE offloading / high-throughput inference / module-based batching, MoE専門家オフロード / 混合精度 / 専門家キャッシュ, Offload / Hierarchical Memory, オフロード／階層メモリ | [source](https://doi.org/10.1109/EITCE70137.2026.11634352) |
 | 357 | 104 | 4 | 7 | arXiv:2605.26118 | Xe-Forge: Multi-Stage LLM-Powered Kernel Optimization for Intel GPU | 2026-04-16 | arXiv.org | 4 | 7 | LLM Serving / Scheduling / Disaggregation, PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2605.26118) |
 | 358 | 12 | 4 | 7 | arXiv:2301.06813 | AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost | 2023-01-17 | IEEE Transactions on Parallel and Distributed Systems | 12 | 7 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2301.06813) |
-| 359 | 10 | 4 | 7 | arXiv:2510.11052 | Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by Refining Belief States | 2025-10-13 | arXiv.org | 10 | 7 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2510.11052) |
+| 359 | 10 | 4 | 7 | DOI:10.1109/HPSC69479.2026.00019 | Optimization of the Generation Phase in Post-Training of Large Language Models Based on RLHF | 2026-05-01 | International Conference on High Performance Scientific Computing | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/HPSC69479.2026.00019) |
 | 360 | 10 | 4 | 7 | arXiv:2609.34683 | AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs | 2026-09-28 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34683) |
 | 361 | 10 | 4 | 7 | arXiv:2610.14754 | GateSight: Recurrent Memory Anticipates Attention Memory for Query-Agnostic KV Eviction in Hybrid LLMs | 2026-10-10 |  | 0 | 7 | Long-context serving / KV cache benchmark, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。, inference-systems, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.14754) |
 | 362 | 116 | 4 | 7 | arXiv:2605.04956 | KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels | 2026-05-06 | arXiv.org | 16 | 7 | inference-systems | [source](https://arxiv.org/abs/2605.04956) |
