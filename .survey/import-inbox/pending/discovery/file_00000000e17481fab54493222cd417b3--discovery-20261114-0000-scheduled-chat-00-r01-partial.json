@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0000-scheduled-chat-00/r01",
+  "reference_main_sha": "a545432d851d44b07f19d7e6f96a569868cc269a",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.10315",
+      "identity_tokens": [
+        "arxiv:2505.10315"
+      ],
+      "title": "Private Transformer Inference in MLaaS: A Survey",
+      "reason": "暗号学的なプライバシー保護Transformer推論を、秘密分散型の安全な多者計算と準同型暗号を中心に分類するサーベイ。MLaaSにおける利用者データとモデルの秘匿性、計算・通信負荷のトレードオフ、方式別評価枠組みを扱う。推論効率と安全なサービングの関連研究として採用。",
+      "source_url": "https://arxiv.org/abs/2505.10315",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T00:00:00+09:00",
+      "last_checked_at": "2026-11-14T00:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18599",
+      "identity_tokens": [
+        "arxiv:2603.18599"
+      ],
+      "title": "SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation",
+      "reason": "自己回帰のテキスト画像生成を対象とする、別のドラフトモデルを不要とする投機的Jacobi復号の高速化。高エントロピー領域での先行ドラフト生成と、棄却後も検証を継続する適応機構により平均受理長を改善し、著者は画像品質を維持した3.8倍の高速化を報告。言語モデルの投機的復号と機構が近いが画像生成対象であるため境界的関連として分類。",
+      "source_url": "https://arxiv.org/abs/2603.18599",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T00:00:00+09:00",
+      "last_checked_at": "2026-11-14T00:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.06564",
+      "identity_tokens": [
+        "arxiv:2608.06564"
+      ],
+      "title": "Which Decisions Low-Bit Quantization Breaks, and How to Predict Them",
+      "reason": "8系列16言語モデルの4/3/2bit量子化で、ツール呼出しや選択判断が反転する現象を検証。量子化前後の最初のトークンの判断マージンに近似線形関係があり、量子化方法と判断種別に依存することを示す。1082条件で判断反転率の予測中央値誤差1.0パーセントポイントを報告。低ビットLLM推論の品質劣化と運用判断に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.06564",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T00:00:00+09:00",
+      "last_checked_at": "2026-11-14T00:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 262
+    }
+  ]
+}
