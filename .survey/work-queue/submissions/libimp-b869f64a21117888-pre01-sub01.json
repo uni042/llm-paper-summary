@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+      "identifiers": [
+        "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+      ],
+      "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+      "canonical_id": "arXiv:2603.10030",
+      "arxiv_id": "2603.10030",
+      "doi": "10.48550/arXiv.2603.10030",
+      "authors": [
+        "Marco Graziano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LinuxカーネルのdmaplaneでDMAバッファのライフサイクル、NUMA配置、RDMA転送、GPU BAR pinning、credit制御を統合する。二台間のKV-cache chunk転送・受信側tensor view再構築によるdisaggregated inferenceを実証し、LLM推論サービングのメモリ転送基盤に直接関連。RDMA評価はSoft-RoCEであり実機RDMAへの外挿に注意。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b869f64a2111",
+    "round": "libimp-b869f64a21117888-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b869f64a21117888-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b869f64a21117888-pre01.json",
+    "receipt": "sha256:2243ff919ae9fa13b9a56a53109556c9d0352f7a8c9e3b2e8fc18b0187f6ef96"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b869f64a2111",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
