@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+      "identifiers": [
+        "SemanticScholar:64cc6645122436c28af6dd66c5d574f103bf089a"
+      ],
+      "semantic_scholar_id": "64cc6645122436c28af6dd66c5d574f103bf089a",
+      "canonical_id": "arXiv:2609.39334",
+      "arxiv_id": "2609.39334",
+      "doi": "10.48550/arXiv.2609.39334",
+      "authors": [
+        "Jinwoo Jeong",
+        "Woohyun Choi",
+        "Myeongjae Jeon",
+        "Jeongseob Ahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpecScaleは推論時の複数推論経路の投機実行に伴う探索空間増大と細粒度検証負荷に対し、低品質経路の早期枝刈り、重複計算の除去、検証遅延を組み合わせるLLMサービング方式。MATHとOlympiadで非投機・既存投機方式とスループット、遅延を比較。LLMサービングとtest-time scalingに直接関連する。要旨に定量的倍率はないため捏造しない。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a50751851c8f",
+    "round": "libimp-a50751851c8fe1f8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a50751851c8fe1f8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a50751851c8fe1f8-pre01.json",
+    "receipt": "sha256:6db212448258d36647889ef86c66276d8f3368624b8c168d216f2c7d6aa232e1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a50751851c8f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
