@@ -1,0 +1,243 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-626da071cf89a3f6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-626da071cf89",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2405.13938",
+    "arXiv:2605.17260"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "b266728d921d8bd865df91a318e6d9bb81313f70",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-13T21:06:47.277390+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2405.13938",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.17260",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs",
+      "source_url": "https://arxiv.org/abs/2605.17260",
+      "year": 2026,
+      "published": "2026-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The fundamental challenge in scaling Video Large Language Models (Video LLMs) to long-form video lies in managing the explosion of visual-token context length. Existing strategies predominantly focus on\"post-hoc\"token reduction -- reducing visual tokens after feature extraction to alleviate the LLM's computational overhead. While these methods effectively reduce the number of visual tokens, we observe that the primary latency bottleneck then shifts from the LLM to the expensive per-frame processing of the vision encoder. To address this, we introduce LiteFrame, a strong, yet highly efficient video encoder backbone for Video LLMs. To train LiteFrame, we propose Compressed Token Distillation (CTD), a novel training framework that teaches a compact student vision encoder to directly predict information-dense, spatio-temporally compressed representations produced by a large teacher vision model, effectively bypassing redundant computation. When coupled with further Language Model Adaptation (LMA), this approach results in a new latency-accuracy Pareto frontier -- compared with InternVL3-8B, LiteFrame provides a 35% reduction in end-to-end latency while processing 8$\\times$ more frames and improves average video understanding accuracy across multiple benchmarks. Our results demonstrate a new potential path to unlocking longer-form video understanding under fixed compute budgets.",
+      "identifiers": [
+        "SemanticScholar:42cd9bd117f67ede27581455d2adacc8eb3c4dbe"
+      ],
+      "semantic_scholar_id": "42cd9bd117f67ede27581455d2adacc8eb3c4dbe",
+      "canonical_id": "arXiv:2605.17260",
+      "arxiv_id": "2605.17260",
+      "doi": "10.48550/arXiv.2605.17260",
+      "authors": [
+        "Jihwan Kim",
+        "Nikhil Parthasarathy",
+        "Danfeng Qin",
+        "Junhwa Hur",
+        "De-Qing Sun",
+        "Bo Han",
+        "Ming-Hsuan Yang",
+        "Boqing Gong"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+      "source_url": "https://arxiv.org/abs/2405.13938",
+      "year": 2024,
+      "published": "2024-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "eXmY is a novel data type for quantization of ML models. It supports both arbitrary bit widths and arbitrary integer and floating point formats. For example, it seamlessly supports 3, 5, 6, 7, 9 bit formats. For a specific bit width, say 7, it defines all possible formats e.g. e0m6, e1m5, e2m4, e3m3, e4m2, e5m1 and e6m0. For non-power of two bit widths e.g. 5, 6, 7, we created a novel encoding and decoding scheme which achieves perfect compression, byte addressability and is amenable to sharding and vector processing. We implemented libraries for emulation, encoding and decoding tensors and checkpoints in C++, TensorFlow, JAX and PAX. For optimal performance, the codecs use SIMD instructions on CPUs and vector instructions on TPUs and GPUs. eXmY is also a technique and exploits the statistical distribution of exponents in tensors. It can be used to quantize weights, static and dynamic activations, gradients, master weights and optimizer state. It can reduce memory (CPU DRAM and accelerator HBM), network and disk storage and transfers. It can increase multi tenancy and accelerate compute. eXmY has been deployed in production for almost 2 years.",
+      "identifiers": [
+        "SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd"
+      ],
+      "semantic_scholar_id": "29573bcc2a626793ef97d39352c83af4aa7d83bd",
+      "canonical_id": "arXiv:2405.13938",
+      "arxiv_id": "2405.13938",
+      "doi": "10.48550/arXiv.2405.13938",
+      "authors": [
+        "Aditya Agrawal",
+        "Matthew Hedlund",
+        "Blake A. Hechtman"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 905,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.17260",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.17260",
+        "id:SemanticScholar:42cd9bd117f67ede27581455d2adacc8eb3c4dbe",
+        "id:arXiv:2605.17260",
+        "title:liteframe efficient vision encoders unlock frame scaling in video llms",
+        "url:https://arxiv.org/abs/2605.17260"
+      ],
+      "record": {
+        "title": "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs",
+        "source_url": "https://arxiv.org/abs/2605.17260",
+        "year": 2026,
+        "published": "2026-05-17",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The fundamental challenge in scaling Video Large Language Models (Video LLMs) to long-form video lies in managing the explosion of visual-token context length. Existing strategies predominantly focus on\"post-hoc\"token reduction -- reducing visual tokens after feature extraction to alleviate the LLM's computational overhead. While these methods effectively reduce the number of visual tokens, we observe that the primary latency bottleneck then shifts from the LLM to the expensive per-frame processing of the vision encoder. To address this, we introduce LiteFrame, a strong, yet highly efficient video encoder backbone for Video LLMs. To train LiteFrame, we propose Compressed Token Distillation (CTD), a novel training framework that teaches a compact student vision encoder to directly predict information-dense, spatio-temporally compressed representations produced by a large teacher vision model, effectively bypassing redundant computation. When coupled with further Language Model Adaptation (LMA), this approach results in a new latency-accuracy Pareto frontier -- compared with InternVL3-8B, LiteFrame provides a 35% reduction in end-to-end latency while processing 8$\\times$ more frames and improves average video understanding accuracy across multiple benchmarks. Our results demonstrate a new potential path to unlocking longer-form video understanding under fixed compute budgets.",
+        "identifiers": [
+          "SemanticScholar:42cd9bd117f67ede27581455d2adacc8eb3c4dbe"
+        ],
+        "semantic_scholar_id": "42cd9bd117f67ede27581455d2adacc8eb3c4dbe",
+        "canonical_id": "arXiv:2605.17260",
+        "arxiv_id": "2605.17260",
+        "doi": "10.48550/arXiv.2605.17260",
+        "authors": [
+          "Jihwan Kim",
+          "Nikhil Parthasarathy",
+          "Danfeng Qin",
+          "Junhwa Hur",
+          "De-Qing Sun",
+          "Bo Han",
+          "Ming-Hsuan Yang",
+          "Boqing Gong"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.13938",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.13938",
+        "id:SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd",
+        "id:arXiv:2405.13938",
+        "title:exmy a data type and technique for arbitrary bit precision quantization",
+        "url:https://arxiv.org/abs/2405.13938"
+      ],
+      "record": {
+        "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+        "source_url": "https://arxiv.org/abs/2405.13938",
+        "year": 2024,
+        "published": "2024-05-22",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "eXmY is a novel data type for quantization of ML models. It supports both arbitrary bit widths and arbitrary integer and floating point formats. For example, it seamlessly supports 3, 5, 6, 7, 9 bit formats. For a specific bit width, say 7, it defines all possible formats e.g. e0m6, e1m5, e2m4, e3m3, e4m2, e5m1 and e6m0. For non-power of two bit widths e.g. 5, 6, 7, we created a novel encoding and decoding scheme which achieves perfect compression, byte addressability and is amenable to sharding and vector processing. We implemented libraries for emulation, encoding and decoding tensors and checkpoints in C++, TensorFlow, JAX and PAX. For optimal performance, the codecs use SIMD instructions on CPUs and vector instructions on TPUs and GPUs. eXmY is also a technique and exploits the statistical distribution of exponents in tensors. It can be used to quantize weights, static and dynamic activations, gradients, master weights and optimizer state. It can reduce memory (CPU DRAM and accelerator HBM), network and disk storage and transfers. It can increase multi tenancy and accelerate compute. eXmY has been deployed in production for almost 2 years.",
+        "identifiers": [
+          "SemanticScholar:29573bcc2a626793ef97d39352c83af4aa7d83bd"
+        ],
+        "semantic_scholar_id": "29573bcc2a626793ef97d39352c83af4aa7d83bd",
+        "canonical_id": "arXiv:2405.13938",
+        "arxiv_id": "2405.13938",
+        "doi": "10.48550/arXiv.2405.13938",
+        "authors": [
+          "Aditya Agrawal",
+          "Matthew Hedlund",
+          "Blake A. Hechtman"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 905,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d5382db0f6f8963324fa8d22885f9535cb94643352776b766306931b6cfaf467",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
