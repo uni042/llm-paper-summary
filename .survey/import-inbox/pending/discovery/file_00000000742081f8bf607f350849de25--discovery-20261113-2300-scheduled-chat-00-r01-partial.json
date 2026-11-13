@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "99544700624265a8652e1018350f7e700940ec9d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.02530",
+      "identity_tokens": [
+        "arxiv:2411.02530"
+      ],
+      "title": "A Comprehensive Study on Quantization Techniques for Large Language Models",
+      "reason": "大規模言語モデルの量子化の数学的基礎、主要な量子化方式と実装、LLMへの適用と性能比較を整理する総説。メモリ・計算資源が制約されるIoT/組込み環境への展開を動機とし、推論効率と量子化の技術系統に直接関連する。一次arXiv要旨に基づく分類であり、性能数値の独立検証は未実施。",
+      "source_url": "https://arxiv.org/abs/2411.02530",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T23:00:00+09:00",
+      "last_checked_at": "2026-11-13T23:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 253
+    }
+  ]
+}
