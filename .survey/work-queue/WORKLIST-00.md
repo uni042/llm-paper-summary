@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-13T07:38:30+00:00`
+Generated: `2026-11-13T07:55:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -469,7 +469,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 386 | 101 | 4 | 7 | arXiv:2605.11111 | ShardTensor: Domain Parallelism for Scientific Machine Learning | 2026-05-11 | arXiv.org | 1 | 7 | PyTorch 2 torch.compileの設計と評価を報告する論文。, distributed attention / sequence parallelism / blockwise attention / long-context transformers, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.11111) |
 | 387 | 10 | 4 | 7 | DOI:10.1016/j.sysarc.2026.103839 | AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs | 2026-08-01 | Journal of systems architecture | 0 | 7 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, on-device LLM / heterogeneous inference / NPU offloading, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2026.103839) |
 | 388 | 1 | 4 | 7 | arXiv:2407.18601 | Reorganizing attention-space geometry with expressive attention | 2024-07-26 |  | 1 | 7 | inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2407.18601) |
-| 389 | 106 | 4 | 7 | arXiv:2609.14005 | StepAudio 3 Realtime Technical Report | 2026-09-12 | arXiv.org | 6 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.14005) |
+| 389 | 106 | 4 | 7 | arXiv:2604.26940 | Select to Think: Unlocking SLM Potential with Local Sufficiency | 2026-04-29 | arXiv.org | 6 | 7 | inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2604.26940) |
 | 390 | 102 | 4 | 7 | arXiv:2604.22577 | QuantClaw: Precision Where It Matters for OpenClaw | 2026-04-24 | arXiv.org | 2 | 9 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2604.22577) |
 | 391 | 101 | 4 | 7 | arXiv:2609.17416 | Never Stop Thinking: Continuous-Time Language Agents | 2026-07-11 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング | [source](https://arxiv.org/abs/2609.17416) |
 | 392 | 23 | 4 | 7 | arXiv:2305.11916 | F-PABEE: Flexible-Patience-Based Early Exiting For Single-Label and Multi-Label Text Classification Tasks | 2023-05-21 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 23 | 7 |  | [source](https://arxiv.org/abs/2305.11916) |
