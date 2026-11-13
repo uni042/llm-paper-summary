@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-12T23:49:06+00:00`
+Generated: `2026-11-13T00:27:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -410,7 +410,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 328 | 10 | 4 | 8 | arXiv:2604.26039 | RaMP: Runtime-Aware Megakernel Polymorphism for Mixture-of-Experts | 2026-04-28 | arXiv.org | 0 | 9 | 02-hardware-accelerators, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2604.26039) |
 | 329 | 101 | 4 | 8 | DOI:10.1109/SoutheastCon63549.2026.11476566 | DeepServe: Hierarchical Model Placement and Dynamic Batching for Cost-Efficient Multi-Tenant LLM Inference at Scale | 2026-02-20 | SoutheastCon | 1 | 8 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://doi.org/10.1109/SoutheastCon63549.2026.11476566) |
 | 330 | 10 | 4 | 8 | arXiv:2607.22587 | TriSP: Tri-Signal Structured Pruning for Large Language Models | 2026-06-09 | arXiv.org | 0 | 8 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2607.22587) |
-| 331 | 113 | 4 | 8 | arXiv:2601.12247 | Plan, Verify and Fill: A Structured Parallel Decoding Approach for Diffusion Language Models | 2026-01-18 | Conference on Empirical Methods in Natural Language Processing | 3 | 9 | Diffusion LLM Inference, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2601.12247) |
+| 331 | 114 | 4 | 8 | arXiv:2601.12247 | Plan, Verify and Fill: A Structured Parallel Decoding Approach for Diffusion Language Models | 2026-01-18 | Conference on Empirical Methods in Natural Language Processing | 4 | 9 | Diffusion LLM Inference, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2601.12247) |
 | 332 | 102 | 4 | 8 | arXiv:2604.17068 | Stability-Weighted Decoding for Diffusion Language Models | 2026-04-18 | arXiv.org | 2 | 8 | diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2604.17068) |
 | 333 | 35 | 4 | 8 | arXiv:2410.21352 | LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment | 2024-10-28 | Neural Information Processing Systems | 25 | 8 | LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2410.21352) |
 | 334 | 11 | 4 | 8 | arXiv:2501.16376 | SwiftPrune: Hessian-Free Weight Pruning for Large Language Models | 2025-01-24 | Conference on Empirical Methods in Natural Language Processing | 1 | 8 | Conditional Computation, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2501.16376) |
