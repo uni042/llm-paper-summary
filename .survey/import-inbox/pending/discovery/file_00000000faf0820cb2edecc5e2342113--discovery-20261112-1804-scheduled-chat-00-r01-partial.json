@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1804-scheduled-chat-00/r01",
+  "reference_main_sha": "c6243400e443ef8796be3dce1c01ce7d636da64b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02151",
+      "identity_tokens": [
+        "arxiv:2602.02151"
+      ],
+      "title": "Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization",
+      "reason": "VQRoundはLLMのPTQにおけるadaptive roundingの高密度行列を小規模codebookで再パラメータ化し、L∞最大誤差を抑える。128サンプルで全層codebookを最適化し、OPT/LLaMA/LLaMA2/Qwen3で評価。学習対象パラメータを最小0.2%に抑えつつ収束を改善する量子化直接研究。",
+      "source_url": "https://arxiv.org/abs/2602.02151",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T18:04:53+09:00",
+      "last_checked_at": "2026-11-12T18:04:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 116
+    }
+  ]
+}
