@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Comprehensive Study on Quantization Techniques for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2411.02530",
+      "year": 2024,
+      "published": "2024-10-30",
+      "venue": "2024 4th International Conference on Artificial Intelligence, Robotics, and Communication (ICAIRC)",
+      "citation_count": 84,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have been extensively researched and used in both academia and industry since the rise in popularity of the Transformer model, which demonstrates excellent performance in AI. However, the computational demands of LLMs are immense, and the energy resources required to run them are often limited. For instance, popular models like GPT-3, with 175 billion parameters and a storage requirement of 350 GB, present significant challenges for deployment on resource-constrained IoT devices and embedded systems. These systems often lack the computational capacity to handle such large models. Quantization, a technique that reduces the precision of model values to a smaller set of discrete values, offers a promising solution by reducing the size of LLMs and accelerating inference. In this research, we provide a comprehensive analysis of quantization techniques within the machine learning field, with a particular focus on their application to LLMs. We begin by exploring the mathematical theory of quantization, followed by a review of common quantization methods and how they are implemented. Furthermore, we examine several prominent quantization methods applied to LLMs, detailing their algorithms and performance outcomes.",
+      "identifiers": [
+        "SemanticScholar:b7dc9589304180d7bc60b695847b5dba25847ecc"
+      ],
+      "semantic_scholar_id": "b7dc9589304180d7bc60b695847b5dba25847ecc",
+      "canonical_id": "arXiv:2411.02530",
+      "arxiv_id": "2411.02530",
+      "doi": "10.1109/ICAIRC64177.2024.10899941",
+      "authors": [
+        "Jiedong Lang",
+        "Zhehao Guo",
+        "Shuyu Huang"
+      ],
+      "priority": 84,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 84,
+        "citation_count": 84,
+        "total": 84,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 744,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大規模言語モデルの量子化の数学的基礎、主要な量子化方式と実装、LLMへの適用と性能比較を整理する総説。メモリ・計算資源が制約されるIoT/組込み環境への展開を動機とし、推論効率と量子化の技術系統に直接関連する。一次arXiv要旨に基づく分類であり、性能数値の独立検証は未実施。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-07e633173cb2",
+    "round": "libimp-07e633173cb20f08-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-07e633173cb20f08-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-07e633173cb20f08-pre01.json",
+    "receipt": "sha256:54fa76b285049352916cee9125ade6408c4aec8557db8b8f3a8421fec4e7039a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-07e633173cb2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
