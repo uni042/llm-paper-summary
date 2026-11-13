@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0900-scheduled-chat-00/r01",
+  "reference_main_sha": "fff1ac1ac7b459cf5879b3416f2ae1dc1781f73b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34612",
+      "identity_tokens": [
+        "arxiv:2609.34612"
+      ],
+      "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
+      "reason": "MoE推論でexpert routing・block-sparse attention・KV evictionを組み合わせSRAM/HBM PIMへ分散。著者はA100比最大8.35倍のE2E高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2609.34612",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 185
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00365",
+      "identity_tokens": [
+        "arxiv:2606.00365"
+      ],
+      "title": "SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference",
+      "reason": "量子化活性化を密な下位bitとbitmap付き疎な上位bitへ分離するハードウェア共同設計。著者はprefill遅延16–24.3%、decode遅延13.5–23.4%削減を報告。",
+      "source_url": "https://arxiv.org/abs/2606.00365",
+      "body_check": "primary_arxiv_abstract_read_via_indexed_primary_excerpt; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 188
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.12560",
+      "identity_tokens": [
+        "arxiv:2512.12560"
+      ],
+      "title": "StreamingAssistant: Efficient Visual Token Pruning for Accelerating Online Video Understanding",
+      "reason": "空間隣接トークンの類似度とmask pruning、時間方向の冗長性削減を組み合わせる動画MLLMのトークン削減。著者は精度最大4%改善、pruning遅延1ms未満を報告。",
+      "source_url": "https://arxiv.org/abs/2512.12560",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 190
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28441",
+      "identity_tokens": [
+        "arxiv:2610.28441"
+      ],
+      "title": "Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity",
+      "reason": "高スコアtokenの決定的選択と残余のスコア誘導サンプリングを結合。50倍sparsityのRULER-HARD 128Kで63.8%から69.3%、1M文脈で最大2.96倍decode高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2610.28441",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 191
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.19506",
+      "identity_tokens": [
+        "arxiv:2605.19506"
+      ],
+      "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+      "reason": "イベントカメラ由来の動き情報を使う学習不要の動画トークン削減。視覚token80%削減で推論1.89倍、GFLOPs52%削減と報告。",
+      "source_url": "https://arxiv.org/abs/2605.19506",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 193
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.23052",
+      "identity_tokens": [
+        "arxiv:2510.23052"
+      ],
+      "title": "Knocking-Heads Attention",
+      "reason": "head間で共有射影を通じて相互作用させる注意構造。6.1B MoEで1T token学習評価。直接の推論高速化ではないがattention設計の効率・性能トレードオフの参考としてborderline。",
+      "source_url": "https://arxiv.org/abs/2510.23052",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 194
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.19001",
+      "identity_tokens": [
+        "arxiv:2601.19001"
+      ],
+      "title": "FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning",
+      "reason": "attention重みで不要な推論文を削減。Phi-4-Reasoning/GPT-OSS-20Bを含む評価でtoken使用量平均69.68%削減、精度26.70%改善と著者報告。",
+      "source_url": "https://arxiv.org/abs/2601.19001",
+      "body_check": "primary_arxiv_abstract_read_v2; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 195
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.06274",
+      "identity_tokens": [
+        "arxiv:2509.06274"
+      ],
+      "title": "IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs",
+      "reason": "軽量品質予測と利用者指定許容度でモデルを動的選択。11候補・150万例の品質ラベルを用い商用環境で43.9%コスト削減を報告。",
+      "source_url": "https://arxiv.org/abs/2509.06274",
+      "body_check": "primary_arxiv_abstract_read_v4; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 198
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01790",
+      "identity_tokens": [
+        "arxiv:2606.01790"
+      ],
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "reason": "GUIエージェントのKV重要度をsubspace・時間安定性・entropyで適応重み付け。20% KV budgetでピークGPUメモリ約40%削減と報告。",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 199
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.20706",
+      "identity_tokens": [
+        "arxiv:2601.20706"
+      ],
+      "title": "NPU Design for Diffusion Language Model Inference",
+      "reason": "拡散型LLMのblock KV更新・samplingに適したNPU ISAとcompiler、Block-Adaptive Online Smoothing量子化を提案し7nm RTLを合成。",
+      "source_url": "https://arxiv.org/abs/2601.20706",
+      "body_check": "primary_arxiv_abstract_read_v2; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 201
+    }
+  ]
+}
