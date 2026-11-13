@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-13T03:23:48+00:00`
+Generated: `2026-11-13T03:42:31+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -431,8 +431,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 348 | 113 | 4 | 8 | arXiv:2602.12113 | Stop Unnecessary Reflection: Training LRMs for Efficient Reasoning with Adaptive Reflection and Length Coordinated Penalty | 2026-02-12 | International Conference on Learning Representations | 3 | 9 | Conditional Computation | [source](https://arxiv.org/abs/2602.12113) |
 | 349 | 0 | 4 | 8 | SemanticScholar:0f8416693b3fc1bc42166a574328a10decdcaf6b | Reducing Costs - The Path of Optimization for Chain of Thought Reasoning via Sparse Attention Mechanism |  |  | 0 | 8 | 15-inference-early-exit, inference-systems | [source](https://www.semanticscholar.org/paper/0f8416693b3fc1bc42166a574328a10decdcaf6b) |
 | 350 | 102 | 4 | 8 | arXiv:2602.06454 | RelayGen: Intra-Generation Model Switching for Efficient Reasoning | 2026-02-06 | arXiv.org | 2 | 8 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2602.06454) |
-| 351 | 12 | 4 | 8 | arXiv:2505.15252 | An Efficient Private GPT Never Autoregressively Decodes | 2025-05-21 | International Conference on Machine Learning | 2 | 8 | 99-other-inference-systems, Speculative Decoding, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/2505.15252) |
-| 352 | 10 | 4 | 8 | arXiv:2609.33051 | SketchSSM: Write to the Full State, Read from a Compact Sketch | 2026-09-27 | arXiv.org | 0 | 9 | LLM Serving / Scheduling / Disaggregation, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。 | [source](https://arxiv.org/abs/2609.33051) |
+| 351 | 17 | 4 | 8 | DOI:10.18653/v1/2025.findings-acl.1356 | Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval | 2025 | Annual Meeting of the Association for Computational Linguistics | 7 | 8 | KV Cache Optimization / Compression, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.18653/v1/2025.findings-acl.1356) |
+| 352 | 10 | 4 | 8 | arXiv:2604.04250 | CAWN: Continuous Acoustic Wave Networks for Autoregressive Language Modeling | 2026-04-05 | arXiv.org | 0 | 8 | inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.04250) |
 | 353 | 101 | 4 | 7 | arXiv:2610.17970 | AlignPred: Error-Controlled KV Cache Compression via Alignment and Predictive Coding | 2026-10-13 |  | 1 | 7 | KV Cache Offload / Recomputation, KV Cache Optimization / Compression | [source](https://arxiv.org/abs/2610.17970) |
 | 354 | 111 | 4 | 7 | DOI:10.1145/3805621.3807633 | Sampling Where It Matters: Predicting LLM Serving Performance | 2026-04-27 | EuroMLSys@EuroSys | 1 | 7 | 15-inference-simulation-emulation, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3805621.3807633) |
 | 355 | 10 | 4 | 7 | arXiv:2604.02945 | MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference | 2026-04-03 | arXiv.org | 0 | 8 | multi-tier LLM serving / task offloading / model cascading / edge-cloud collaboration, survey-edge-llm | [source](https://arxiv.org/abs/2604.02945) |

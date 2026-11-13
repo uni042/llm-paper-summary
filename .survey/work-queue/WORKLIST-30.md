@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-13T03:23:48+00:00`
+Generated: `2026-11-13T03:42:31+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -430,8 +430,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 347 | 11 | 4 | 8 | DOI:10.52202/085713-2027 | Compress Large Language Models via Collaboration Between Learning and Matrix Approximation | 2025 | Neural Information Processing Systems | 1 | 8 |  | [source](https://doi.org/10.52202/085713-2027) |
 | 348 | 9 | 4 | 8 | DOI:10.1145/3649329.3655982 | TSAcc: An Efficient Tempo-Spatial Similarity Aware Accelerator for Attention Acceleration | 2024-06-23 | Design Automation Conference | 9 | 8 | Sparse Attention, inference-systems | [source](https://doi.org/10.1145/3649329.3655982) |
 | 349 | 119 | 4 | 8 | arXiv:2607.00053 | SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks | 2026-06-30 | arXiv.org | 19 | 8 | inference-systems | [source](https://arxiv.org/abs/2607.00053) |
-| 350 | 20 | 4 | 8 | DOI:10.1109/ISCA66397.2026.00104 | Bringing Near Data Processing Into the Low-Bit Floating-Point Era | 2026-06-01 | International Symposium on Computer Architecture | 0 | 8 | inference-systems, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ISCA66397.2026.00104) |
-| 351 | 10 | 4 | 8 | arXiv:2603.02348 | Same Pieces, Different Servers: A Tetris Benchmark for AI Agents as Served | 2026-03-02 |  | 0 | 8 | 13-sparse-attention, KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2603.02348) |
+| 350 | 101 | 4 | 8 | arXiv:2609.33051 | SketchSSM: Write to the Full State, Read from a Compact Sketch | 2026-09-27 | arXiv.org | 1 | 9 | LLM Serving / Scheduling / Disaggregation, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。 | [source](https://arxiv.org/abs/2609.33051) |
+| 351 | 12 | 4 | 8 | arXiv:2505.15252 | An Efficient Private GPT Never Autoregressively Decodes | 2025-05-21 | International Conference on Machine Learning | 2 | 8 | 99-other-inference-systems, Speculative Decoding, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/2505.15252) |
 | 352 | 0 | 4 | 8 | arXiv:2507.12769 | Synergy: End-to-end Concept Model | 2025-07-17 | arXiv.org | 0 | 8 | KV cache memory management / streaming inference / attention sinks / length extrapolation, long-context inference / dynamic sparse attention / prefill acceleration, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2507.12769) |
 | 353 | 10 | 4 | 7 | arXiv:2611.00506 | Weights That Stay: On-Chip Megakernels for Serial Heads in Speculative Decoding | 2026-10-31 |  | 0 | 7 | 02-hardware-accelerators, dynamic megakernel compilation and GPU task scheduling, inference-systems, kernel-runtime-compilation, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷 | [source](https://arxiv.org/abs/2611.00506) |
 | 354 | 104 | 4 | 7 | arXiv:2605.11202 | Continuous Discovery of Vulnerabilities in LLM Serving Systems with Fuzzing | 2026-05-11 | arXiv.org | 4 | 7 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, Speculative Decoding, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2605.11202) |
