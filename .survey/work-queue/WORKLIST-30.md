@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-13T13:37:32+00:00`
+Generated: `2026-11-13T14:32:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128526** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122277** / 監査再投入 **0** / 機械規則適用後 **124966** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128542** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122292** / 監査再投入 **0** / 機械規則適用後 **124981** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -185,7 +185,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 102 | 5 | 6 | 8 | arXiv:2410.12119 | Scaling laws for post-training quantized large language models | 2024-10-15 | ENLSP | 5 | 8 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2410.12119) |
 | 103 | 10 | 6 | 8 | arXiv:2512.05385 | ShaRP: SHAllow-LayeR Pruning for Efficient Video Large Language Models | 2025-12-05 | arXiv.org | 0 | 10 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.05385) |
 | 104 | 3 | 6 | 8 | DOI:10.1109/TASLPRO.2025.3613948 | MixPQ: Joint Pruning and Quantization for Speech and Language Foundation Models Compression | 2025 | IEEE Transactions on Audio, Speech, and Language Processing | 3 | 8 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/TASLPRO.2025.3613948) |
-| 105 | 10 | 6 | 8 | arXiv:2609.27294 | KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling | 2026-09-23 |  | 0 | 8 | 07-kv-cache-optimization-compression, KVキャッシュ・注意アーキテクチャ, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論 | [source](https://arxiv.org/abs/2609.27294) |
+| 105 | 10 | 6 | 8 | arXiv:2609.27294 | KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling | 2026-09-23 | arXiv.org | 0 | 8 | 07-kv-cache-optimization-compression, KVキャッシュ・注意アーキテクチャ, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論 | [source](https://arxiv.org/abs/2609.27294) |
 | 106 | 10 | 6 | 8 | arXiv:2611.03517 | Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization | 2026-11-02 |  | 0 | 8 | 02-hardware-accelerators, agentic GPU kernel generation / harness engineering / profile-guided optimization, dynamic megakernel compilation and GPU task scheduling, inference-systems | [source](https://arxiv.org/abs/2611.03517) |
 | 107 | 10 | 6 | 8 | arXiv:2609.34680 | QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization | 2026-09-28 |  | 0 | 9 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.34680) |
 | 108 | 10 | 6 | 8 | arXiv:2609.08345 | CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs | 2026-09-08 | arXiv.org | 0 | 8 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2609.08345) |

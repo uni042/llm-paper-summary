@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-13T13:37:32+00:00`
+Generated: `2026-11-13T14:32:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128526** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122277** / 監査再投入 **0** / 機械規則適用後 **124966** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128542** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122292** / 監査再投入 **0** / 機械規則適用後 **124981** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -173,7 +173,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 90 | 10 | 6 | 9 | arXiv:2608.27875 | HyQuant: Hybrid-Precision Quantization for LLM Attention | 2026-08-28 |  | 0 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KV-cache compression / attention-based token selection / long-context inference, long-context inference / dynamic sparse attention / prefill acceleration, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2608.27875) |
 | 91 | 20 | 6 | 9 | arXiv:2605.06052 | XtraMAC: An Efficient MAC Architecture for Mixed-Precision LLM Inference on FPGA | 2026-05-07 | International Symposium on Computer Architecture | 0 | 9 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2605.06052) |
 | 92 | 4 | 6 | 9 | arXiv:2412.03599 | CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models | 2024-12-03 | arXiv.org | 4 | 9 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2412.03599) |
-| 93 | 104 | 6 | 9 | arXiv:2609.34538 | Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers | 2026-09-28 |  | 4 | 10 | Conditional Computation, Speculative Decoding, inference-systems, 投機復号・自己投機・ループ型Transformer・推論パイプライン, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.34538) |
+| 93 | 104 | 6 | 9 | arXiv:2609.34538 | Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers | 2026-09-28 | arXiv.org | 4 | 10 | Conditional Computation, Speculative Decoding, inference-systems, 投機復号・自己投機・ループ型Transformer・推論パイプライン, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.34538) |
 | 94 | 10 | 6 | 9 | arXiv:2610.27815 | ProVe: Proposer-Verifier Decoding | 2026-10-20 |  | 0 | 9 | inference-systems, speculative-decoding, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.27815) |
 | 95 | 3 | 6 | 9 | SemanticScholar:e545797fd29206a6b77f26fa89f17401f5f365b5 | ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents | 2026 | Trans. Mach. Learn. Res. | 3 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/e545797fd29206a6b77f26fa89f17401f5f365b5) |
 | 96 | 103 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 | arXiv.org | 3 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
