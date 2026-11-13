@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs",
+      "source_url": "https://arxiv.org/abs/2412.11242",
+      "year": 2024,
+      "published": "2024-12-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Specializing large language models (LLMs) for local deployment in domain-specific use cases is necessary for strong performance while meeting latency and privacy constraints. However, conventional task-specific adaptation approaches do not show simultaneous memory saving and inference speedup at deployment time. Practical compression techniques like quantization and pruning require dedicated hardware or kernel support to achieve measured inference speedup. We develop TrimLLM based on the layer-wise specialization phenomenon we empirically observed and verified on contemporary LLMs. TrimLLM reduces the depth of LLMs via progressive layer dropping. We show it retains LLMs' capacity in specific domains and achieves inference speedup irrespective of hardware and deep learning frameworks. We evaluated TrimLLM on LLMs of various sizes for inference; models adapted on medical, legal, and financial datasets all demonstrate $2.1-5.7\\times$ inference speedup on consumer GPUs and up to $3.1\\times$ speedup on A100 when compared to state-of-the-art model compression algorithms, with no loss in accuracy at 50$\\sim$60\\% model compression ratio.",
+      "identifiers": [
+        "SemanticScholar:73c001565de2c7bc9a3b49202e6902493065ce21"
+      ],
+      "semantic_scholar_id": "73c001565de2c7bc9a3b49202e6902493065ce21",
+      "canonical_id": "arXiv:2412.11242",
+      "arxiv_id": "2412.11242",
+      "doi": "10.48550/arXiv.2412.11242",
+      "authors": [
+        "Lan-Xiang Hu",
+        "T. Šimunić",
+        "Hao Zhang"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 698,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "領域特化時に層ごとの専門化が生じる観測を利用し、層を段階的に除去してモデル深度を削減する。医療・法律・金融のデータセットで、50～60%のモデル圧縮率において精度を維持しつつ、著者は消費者向けGPUで2.1～5.7倍、A100で最大3.1倍の推論高速化を報告。専用量子化カーネルに依存しない構造的圧縮として直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read_v2; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c045a1117085",
+    "round": "libimp-c045a1117085d43e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c045a1117085d43e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c045a1117085d43e-pre01.json",
+    "receipt": "sha256:9ef6c06cd2bd1cbdb7a94517d29b33c54900268ec1323992050b3af9cf6c7d0c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c045a1117085",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
