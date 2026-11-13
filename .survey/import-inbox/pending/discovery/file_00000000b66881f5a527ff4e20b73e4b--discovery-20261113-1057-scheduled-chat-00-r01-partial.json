@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-1057-scheduled-chat-00/r01",
+  "reference_main_sha": "df154e5516eca5c8a8bffa3d65013a626a426531",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.08644",
+      "identity_tokens": [
+        "arxiv:2402.08644"
+      ],
+      "title": "Tandem Transformers for Inference Efficient LLMs",
+      "reason": "小型自己回帰モデルが大規模ブロック処理モデルの表現を参照するTandem Transformersを提案。PaLM2-Bison/Geckoの組み合わせでGecko単体比次トークン予測精度3.3%改善、同等下流性能のPaLM2-Otter比1.16倍高速化、SPEED投機的復号では従来Gecko draft比約1.14倍高速化を報告。推論高速化とモデル協調構造に直接関連。",
+      "source_url": "https://arxiv.org/abs/2402.08644",
+      "body_check": "primary_arxiv_abstract_read_v4; full_body_not_read",
+      "first_checked_at": "2026-11-13T10:57:06+09:00",
+      "last_checked_at": "2026-11-13T10:57:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 205
+    }
+  ]
+}
