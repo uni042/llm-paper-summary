@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0202-scheduled-chat-00/r01",
+  "reference_main_sha": null,
+  "reference_main_sha_status": "unverified_HEAD; STATUS.md blob fetched 2026-11-14 02:02 JST",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03295",
+      "identity_tokens": ["arxiv:2602.03295"],
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "reason": "prefill時だけ深層を省略しdecodeでは全層を保持するstage-aware pruning。独立KV投影と境界処理でキャッシュ整合性と初回生成トークンを扱う。Llama-3.1、Qwen3-VL、Gemma-3でprefill latency最大1.37倍高速化と著者報告。LLM/VLM推論効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T02:02:00+09:00",
+      "last_checked_at": "2026-11-14T02:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 275
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.02737",
+      "identity_tokens": ["arxiv:2603.02737"],
+      "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+      "reason": "wafer-scale SRAM computing-in-memory、token単位pipeline、分散動的KV管理、通信認識mappingを組み合わせLLM推論のデータ移動・エネルギーを削減。著者は平均throughput 4.1倍、エネルギー効率4.2倍と報告。推論アクセラレータ研究に直接関連。",
+      "source_url": "https://arxiv.org/abs/2603.02737",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T02:02:00+09:00",
+      "last_checked_at": "2026-11-14T02:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 272
+    }
+  ]
+}
