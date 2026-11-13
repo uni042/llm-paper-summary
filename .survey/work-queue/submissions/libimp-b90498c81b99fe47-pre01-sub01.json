@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.02816",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown strong reasoning ability, but their high computational and memory costs hinder deployment in resource-constrained settings. While Post-Training Quantization (PTQ) and vision token pruning are standard compression techniques, they are usually treated as independent optimizations. In this paper, we show that these two techniques are strongly coupled: naively applying semantic-based token pruning to PTQ-optimized MLLMs can discard activation outliers that are important for numerical stability and thus worsen quantization errors in low-bit regimes (\\textit{e.g.}, W4A4). To address this issue, we propose a quantization-aware vision token pruning framework. Our method introduces a lightweight hybrid sensitivity metric that combines simulated group-wise quantization error with outlier intensity. By combining this metric with standard semantic relevance scores, the method retains tokens that are both semantically informative and robust to quantization. Experiments on standard LLaVA architectures show that our method consistently outperforms naive integration baselines. At an aggressive pruning ratio that retains only 12.5\\% of visual tokens, our framework improves accuracy by 2.24\\% over the baseline and even surpasses dense quantization without pruning. To the best of our knowledge, this is the first method that explicitly co-optimizes vision token pruning and PTQ for accurate low-bit MLLM inference.",
+      "identifiers": [
+        "SemanticScholar:c85dc53a7258caaf5e6b40dc643cdb4b81985452"
+      ],
+      "semantic_scholar_id": "c85dc53a7258caaf5e6b40dc643cdb4b81985452",
+      "canonical_id": "arXiv:2604.02816",
+      "arxiv_id": "2604.02816",
+      "doi": "10.48550/arXiv.2604.02816",
+      "authors": [
+        "Xinhao Wang",
+        "Z. Xia",
+        "Zhi-Wei Lin",
+        "Zhe Li",
+        "Yong-Tao Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      },
+      "reason": "W4A4等の低ビットMLLMで意味的な剪定が量子化に重要な活性値外れ値を落とす問題に対し、グループ別模擬量子化誤差と外れ値強度を意味関連度に組み合わせる。視覚トークン12.5%保持で単純統合ベースライン比精度2.24%改善と著者が報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Language Models (LoopLMs) improve parameter efficiency by recursively reusing shared Transformer modules, yet their repeated computation over evolving recurrent states poses new challenges for low-bit deployment. Existing post-training quantization (PTQ) methods, largely designed for feed-forward Transformers, fail to account for cross-loop activation dynamics, heterogeneous loop sensitivity, and recursive error propagation, leading to substantial performance degradation at low precision. To address these challenges, we propose LoopQuant, a loop-aware PTQ framework for accurate and efficient low-bit quantization of LoopLMs. LoopQuant is built on three core components: 1) Cross-Loop Distribution Canonicalization (CLDC) learns a shared quantization-friendly representation across recurrent states while preserving parameter sharing; 2) Interaction-Aware Loop-wise Precision Allocation (ILPA) allocates activation precision under a fixed bit budget by modeling task-level loop sensitivity and cross-loop interactions; and 3) Loop-Conditioned Task Calibration (LCTC) further aligns quantized inference with the low-bit recursive trajectory through lightweight task-space calibration. Extensive experiments across LoopLM architectures demonstrate that LoopQuant consistently outperforms existing low-bit PTQ methods. On Ouro-2.6B, LoopQuant under W4A4 surpasses all W4A8 baselines in performance, while reducing model memory by 65.3% with only 3.4% additional storage overhead over naive INT4 and achieving a 1.7 times decoding speedup over BF16. These results demonstrate a strong balance among accuracy, compression, and inference efficiency, providing a practical and deployment-friendly solution for low-bit LoopLM inference. The code is available at [https://github.com/Kishon-zzx/LoopQuant].",
+      "identifiers": [
+        "SemanticScholar:0d3e2c75117b17ce7e634f26d88ff89cc68897e2"
+      ],
+      "semantic_scholar_id": "0d3e2c75117b17ce7e634f26d88ff89cc68897e2",
+      "canonical_id": "arXiv:2610.16368",
+      "arxiv_id": "2610.16368",
+      "authors": [
+        "Zhi-Xiong Zhao",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Li-Feng Liu",
+        "Guang-Yu Sun",
+        "Da-Wei Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LoopLMの反復状態に伴う量子化誤差に対し、CLDCによる反復間分布の整合、ILPAによる反復別精度配分、LCTCによるタスク較正を組み合わせる。Ouro-2.6BでW4A4がW4A8比較方式を上回り、BF16比1.7倍の復号高速化、メモリ65.3%削減を著者が報告。低ビット推論の効率化に直接関係。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TransPrune: Token Transition Pruning for Efficient Large Vision-Language Model",
+      "source_url": "https://arxiv.org/abs/2507.20630",
+      "year": 2025,
+      "published": "2025-07-28",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have advanced multimodal learning but face high computational costs due to the large number of visual tokens, motivating token pruning to improve inference efficiency. The key challenge lies in identifying which tokens are truly important. Most existing approaches rely on attention-based criteria to estimate token importance. However, they inherently suffer from certain limitations, such as positional bias. In this work, we explore a new perspective on token importance based on token transitions in LVLMs. We observe that the transition of token representations provides a meaningful signal of semantic information. Based on this insight, we propose TransPrune, a training-free and efficient token pruning method. Specifically, TransPrune progressively prunes tokens by assessing their importance through a combination of Token Transition Variation (TTV)-which measures changes in both the magnitude and direction of token representations-and Instruction-Guided Attention (IGA), which measures how strongly the instruction attends to image tokens via attention. Extensive experiments demonstrate that TransPrune achieves comparable multimodal performance to original LVLMs, such as LLaVA-v1.5 and LLaVA-Next, across eight benchmarks, while reducing inference TFLOPs by more than half. Moreover, TTV alone can serve as an effective criterion without relying on attention, achieving performance comparable to attention-based methods. The code will be made publicly available upon acceptance of the paper at https://github.com/liaolea/TransPrune.",
+      "identifiers": [
+        "SemanticScholar:23be95d998d9b9a5da3a3859cae9a8b195adb152"
+      ],
+      "semantic_scholar_id": "23be95d998d9b9a5da3a3859cae9a8b195adb152",
+      "canonical_id": "arXiv:2507.20630",
+      "arxiv_id": "2507.20630",
+      "doi": "10.48550/arXiv.2507.20630",
+      "authors": [
+        "Ao Li",
+        "Yu-Xiang Duan",
+        "Jinghui Zhang",
+        "Cong-Bo Ma",
+        "Yu-Tong Xie",
+        "Gustavo Carneiro",
+        "Mohammad Yaqub",
+        "Hu Wang"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 473,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚言語モデルの視覚トークンを、表現の大きさと方向の変化を測るTTVと指示文からの注意IGAで段階的に剪定する学習不要方式。LLaVA-v1.5/Nextを含む8ベンチマークで性能を概ね維持し、推論TFLOPsを半分以下に削減したと著者が報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b90498c81b99",
+    "round": "libimp-b90498c81b99fe47-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b90498c81b99fe47-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b90498c81b99fe47-pre01.json",
+    "receipt": "sha256:0322d7a53fb7c5bd5bf4ce118ec4fc188d27ee30cbd7d87b28d5b7d6cb3c4a4b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b90498c81b99",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
