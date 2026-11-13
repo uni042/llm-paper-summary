@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-1702-scheduled-chat-00/r01",
+  "reference_main_sha": "b2476f1e576b0e7a4c85cdb28cce41c28d7c5b75",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.16368",
+      "identity_tokens": [
+        "arxiv:2610.16368"
+      ],
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "reason": "LoopLMの反復状態に伴う量子化誤差に対し、CLDCによる反復間分布の整合、ILPAによる反復別精度配分、LCTCによるタスク較正を組み合わせる。Ouro-2.6BでW4A4がW4A8比較方式を上回り、BF16比1.7倍の復号高速化、メモリ65.3%削減を著者が報告。低ビット推論の効率化に直接関係。",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T17:02:26+09:00",
+      "last_checked_at": "2026-11-13T17:02:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 224
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.20630",
+      "identity_tokens": [
+        "arxiv:2507.20630"
+      ],
+      "title": "TransPrune: Token Transition Pruning for Efficient Large Vision-Language Model",
+      "reason": "視覚言語モデルの視覚トークンを、表現の大きさと方向の変化を測るTTVと指示文からの注意IGAで段階的に剪定する学習不要方式。LLaVA-v1.5/Nextを含む8ベンチマークで性能を概ね維持し、推論TFLOPsを半分以下に削減したと著者が報告。",
+      "source_url": "https://arxiv.org/abs/2507.20630",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T17:02:26+09:00",
+      "last_checked_at": "2026-11-13T17:02:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 227
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02816",
+      "identity_tokens": [
+        "arxiv:2604.02816"
+      ],
+      "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+      "reason": "W4A4等の低ビットMLLMで意味的な剪定が量子化に重要な活性値外れ値を落とす問題に対し、グループ別模擬量子化誤差と外れ値強度を意味関連度に組み合わせる。視覚トークン12.5%保持で単純統合ベースライン比精度2.24%改善と著者が報告。",
+      "source_url": "https://arxiv.org/abs/2604.02816",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T17:02:26+09:00",
+      "last_checked_at": "2026-11-13T17:02:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 228
+    }
+  ]
+}
