@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Task-Phase-Conditioned Expert Routing Is Not a Reliable Proxy for Quantization Sensitivity in MoE FFN Tensors",
+      "source_url": "https://arxiv.org/abs/2610.20826",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We investigate whether per-layer, per-task-phase (prompt/reasoning/response) expert-routing statistics in a Mixture-of-Experts (MoE) language model can guide layer-wise mixed-precision quantization of routed-expert FFN tensors (down/gate and up). To attain layerwise routing statistics, we build a routing-capture and profiling pipeline for Qwen-3.6-35B-A3B in ik_llama.cpp, derive a composite sensitivity score from routing entropy/decisiveness, coefficient of variation (CV), Jaccard/phase-fragility, and top-1 expert strength, and use coordinate descent to tune a layer allocation that respects a fixed average bits-per-weight budget. Notably, the profiling pipeline is applicable to standard top-k MoE architectures. Across independent experimental conditions (about 4.0 bpw flat, about 2.7 bpw steep, and about 2.7 bpw random allocation as a control), reallocation fails to outperform the uniform baseline within each quality tier. In the flat regime, reallocation is statistically neutral (z about 0.9). For the steep tier, the random reallocation performs within 1 SE of the routing-guided reallocation at the same tier, indicating a structural loss at this quality rung caused by mandatory downgrades and Kullback-Leibler Divergence (KLD) tail injection. This aggressive-budget condition shows a decisive loss (z greater than 4 SE) replicated across three independent weight vectors. We argue that the deeper issue is that routing-behavior statistics are an unvalidated proxy for true per-layer quantization cost.",
+      "identifiers": [
+        "SemanticScholar:f08a9196e8eff7370d56715effdcd987946c8226"
+      ],
+      "semantic_scholar_id": "f08a9196e8eff7370d56715effdcd987946c8226",
+      "canonical_id": "arXiv:2610.20826",
+      "arxiv_id": "2610.20826",
+      "authors": [
+        "Yi-Fan Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEのexpert routing統計（entropy、CV、phase間Jaccard、top-1強度）から層別量子化感度を推定する仮説を検証した負の結果。Qwen-3.6-35B-A3Bで約4.0bpwと約2.7bpwを比較し、ルーティング誘導再配分は同品質帯の均一量子化を上回らず、低ビット帯ではランダム再配分とほぼ同等。MoE混合精度量子化の設計・評価に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9f106e974b19",
+    "round": "libimp-9f106e974b19cac3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9f106e974b19cac3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9f106e974b19cac3-pre01.json",
+    "receipt": "sha256:18ec999b64fc51bc31b9d0685821d47ecde982ef400a2b87edd4a80b459e09f7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9f106e974b19",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
