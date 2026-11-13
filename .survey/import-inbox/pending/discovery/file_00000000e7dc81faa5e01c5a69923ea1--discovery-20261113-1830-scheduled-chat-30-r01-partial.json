@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261113-1830-scheduled-chat-30/r01",
+  "reference_main_sha": "47bda5ffa4795cbeee9f4d6187a0f1e73a4738f9",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39216",
+      "identity_tokens": [
+        "arxiv:2610.39216"
+      ],
+      "title": "PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference",
+      "reason": "一次要旨による判定。CPU-GPU混在ノードでMoE expertの大部分をCPUメモリへ置く場合、prefillは計算律速、decodeはPCIe I/O律速となる。PDScopeはフェーズ別expert活性予測、cross-layer cost modeling、静的計算グラフとzero-copy非同期I/Oによる配置・prefetch最適化を提案し、既存方式比prefill 2.5〜10.3倍、decode 2.1〜6.1倍のスループットを報告。MoE推論の実行・オフロード最適化に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2610.39216",
+      "body_check": "primary_arxiv_abstract_checked; body_not_read",
+      "first_checked_at": "2026-11-13T18:26:31+09:00",
+      "last_checked_at": "2026-11-13T18:26:31+09:00",
+      "linked_from": [
+        "scheduled-chat-30 WORKLIST-30.md rank 90"
+      ],
+      "worklist_rank": 90
+    }
+  ]
+}
