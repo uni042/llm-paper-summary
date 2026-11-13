@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-0900-scheduled-chat-00/r02",
+  "reference_main_sha": "fff1ac1ac7b459cf5879b3416f2ae1dc1781f73b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.08128",
+      "identity_tokens": [
+        "arxiv:2511.08128"
+      ],
+      "title": "Sentence-Anchored Gist Compression for Long-Context LLMs",
+      "reason": "学習した圧縮トークンを用い長文脈を2–8倍圧縮し、3B LLaMAで既存法と同程度の精度をより高い圧縮率で維持したと報告。",
+      "source_url": "https://arxiv.org/abs/2511.08128",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T09:00:26+09:00",
+      "last_checked_at": "2026-11-13T09:00:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 204
+    }
+  ]
+}
