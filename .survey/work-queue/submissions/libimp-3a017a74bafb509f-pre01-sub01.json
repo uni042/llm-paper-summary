@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PerCache: Predictive Hierarchical Cache for RAG Applications on Mobile Devices",
+      "source_url": "https://arxiv.org/abs/2601.11553",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) has become a de facto paradigm in various large language model (LLM)-driven applications on mobile devices, such as mobile assistants leveraging personal emails or meeting records. However, due to lengthy prompts and resource constraints, mobile RAG systems exhibit significantly high response latency. To address this issue, one promising approach is to reuse intermediate computational results across different queries to eliminate redundant computation. But most existing approaches, such as key-value (KV) cache reuse and semantic cache reuse, are designed for cloud settings and perform poorly on mobile devices as they overlook the distinctive characteristics of mobile RAG. We propose PerCache, a novel hierarchical cache framework designed for reducing end-to-end latency of personalized RAG applications on mobile platforms. PerCache adopts a hierarchical architecture that progressively matches similar queries and query-key-value (QKV) cache to maximize the reuse of intermediate results at different computing stages. To improve cache hit rate, PerCache applies a predictive method to populate the cache with queries that are likely to be raised in the future. In addition, PerCache can adapt its configurations to dynamic system loads, aiming to maximize caching utility with constrained resource consumption. We implement PerCache on top of an existing mobile LLM inference engine and deploy it on commodity mobile phones. Extensive evaluations show that PerCache achieves the lowest average end-to-end latency across five datasets and two LLM architectures, reducing latency by up to 63.5% over the strongest baseline while maintaining comparable answer quality.",
+      "identifiers": [
+        "SemanticScholar:20d68aed5f4814c1b39df4481d580ba89ed4d733"
+      ],
+      "semantic_scholar_id": "20d68aed5f4814c1b39df4481d580ba89ed4d733",
+      "canonical_id": "arXiv:2601.11553",
+      "arxiv_id": "2601.11553",
+      "doi": "10.48550/arXiv.2601.11553",
+      "authors": [
+        "Kai-Wei Liu",
+        "Lie-Kang Zeng",
+        "Li-Lin Xu",
+        "Bu-Fang Yang",
+        "Zhen-Yu Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 338,
+        "matched_prestigious_venue": null
+      },
+      "reason": "モバイル端末上のRAG推論で、類似クエリとQKVキャッシュを段階的に照合する階層キャッシュ、将来の質問予測による先行充填、負荷に応じた構成調整を組み合わせる。著者は市販スマートフォン、5データセット、2種類のLLMアーキテクチャで、最良比較方式に対しエンドツーエンド遅延を最大63.5%削減し、回答品質は同程度と報告。オンデバイスLLMのKV再利用と推論効率に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3a017a74bafb",
+    "round": "libimp-3a017a74bafb509f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3a017a74bafb509f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3a017a74bafb509f-pre01.json",
+    "receipt": "sha256:95ef5cba58e879178495d4aa18c68837e6331bc94333a7d3c2ff2769283a18b7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3a017a74bafb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
