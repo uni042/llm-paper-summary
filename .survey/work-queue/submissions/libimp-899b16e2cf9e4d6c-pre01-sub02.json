@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Audio Token Attention Is Predictable Before the Language Model Runs",
+      "source_url": "https://arxiv.org/abs/2609.38878",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A large audio language model (LALM) turns a minute of speech into 750-1,500 tokens and prefills every one. Image-token pruning often cuts after the language model's first layers, where image tokens draw little attention. Audio tokens draw much more attention there, and their ranking is still far from final, so audio needs a ranking before the language model runs. Surprisingly, the attention an audio token will receive across the language model is already linearly predictable from its encoder output, before the language model runs. A linear map, fitted in closed form without labels, predicts this all-layer attention ranking at $\\rho \\geq .69$ on eleven of thirteen LALMs. Our method, Triage, cuts audio tokens by this prediction and, on multiple choice, cuts again at layer 2, correcting the prediction with the attention observed there. Triage sets its compression without labels, under two budgets that limit how far its output may differ from the model's own full-audio output. At the conservative budget, its word error rate and accuracy stay within .04 of full audio. At the aggressive budget, Triage beats every baseline in all twelve transcription cases. On multiple choice, at 2.2-5x compression, it outperforms DART, the strongest baseline on average, by .043 in mean accuracy. Because it cuts before the language model, it raises the audio that fits in Qwen2.5-Omni-3B's context window from 21.8 to about 62 minutes. At its most compressive point, Triage lets one GPU serve 4x as many concurrent 5-minute streams of that model. Project page: https://audio-triage.github.io",
+      "identifiers": [
+        "SemanticScholar:6cf84e32e69487759bda968c04e065df0649f522"
+      ],
+      "semantic_scholar_id": "6cf84e32e69487759bda968c04e065df0649f522",
+      "canonical_id": "arXiv:2609.38878",
+      "arxiv_id": "2609.38878",
+      "doi": "10.48550/arXiv.2609.38878",
+      "authors": [
+        "Kyoungjun Park",
+        "Yun-Zhe Li",
+        "Li-Li Qiu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "音声エンコーダ出力から後段LLMの注意重要度を線形予測し、LLM実行前に音声トークンを間引くTriage。13モデル中11モデルで順位相関0.69以上、2.2–5倍圧縮の多肢選択でDARTを平均精度0.043上回る。音声LLMのprefillと文脈容量を直接改善する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-899b16e2cf9e",
+    "round": "libimp-899b16e2cf9e4d6c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-899b16e2cf9e4d6c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-899b16e2cf9e4d6c-pre01.json",
+    "receipt": "sha256:3207f4927c8600cb6cd7ff03a1fac181201fbbac97d8c9ee67f6ebb283f616bb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-899b16e2cf9e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
