@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-1155-scheduled-chat-00/r01",
+  "reference_main_sha": "b5f01b8cdbce55dcd928b188f8a5f37a439d9ac8",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.11242",
+      "identity_tokens": ["arxiv:2412.11242"],
+      "title": "TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs",
+      "reason": "領域特化時に層ごとの専門化が生じる観測を利用し、層を段階的に除去してモデル深度を削減する。医療・法律・金融のデータセットで、50～60%のモデル圧縮率において精度を維持しつつ、著者は消費者向けGPUで2.1～5.7倍、A100で最大3.1倍の推論高速化を報告。専用量子化カーネルに依存しない構造的圧縮として直接関連。",
+      "source_url": "https://arxiv.org/abs/2412.11242",
+      "body_check": "primary_arxiv_abstract_read_v2; full_body_not_read",
+      "first_checked_at": "2026-11-13T11:55:54+09:00",
+      "last_checked_at": "2026-11-13T11:55:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 210
+    }
+  ]
+}
