@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0500-scheduled-chat-00/r01",
+  "reference_main_sha": "cefb61f54a6837f9d217a77a30f66891b4b86cbd",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17260",
+      "identity_tokens": ["arxiv:2605.17260"],
+      "title": "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs",
+      "reason": "長尺Video LLMのフレーム数増加でvision encoderが推論遅延のボトルネックとなる問題を扱う。Compressed Token Distillationで小型encoderが教師の時空間圧縮表現を直接予測し、Language Model Adaptationを併用。著者はInternVL3-8B比で8倍のフレームを処理しつつend-to-end遅延35%削減、動画理解平均精度改善と報告。動画LLM推論効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.17260",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T05:00:00+09:00",
+      "last_checked_at": "2026-11-14T05:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 260
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.13938",
+      "identity_tokens": ["arxiv:2405.13938"],
+      "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+      "reason": "3/5/6/7/9bit等の任意ビット幅と指数・仮数配分を扱う量子化データ型。非2冪ビット幅でbyte-addressabilityと圧縮率を両立する符号化を提案し、CPU SIMD・GPU/TPU vector処理に対応。重み・activation・gradient等の転送/格納効率に関係し、低ビット推論とモデル圧縮の直接的研究対象。",
+      "source_url": "https://arxiv.org/abs/2405.13938",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T05:00:00+09:00",
+      "last_checked_at": "2026-11-14T05:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 264
+    }
+  ]
+}
