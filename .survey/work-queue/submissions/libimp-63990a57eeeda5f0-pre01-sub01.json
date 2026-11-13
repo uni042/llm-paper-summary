@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Sentence-Anchored Gist Compression for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2511.08128",
+      "year": 2025,
+      "published": "2025-11-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This work investigates context compression for Large Language Models (LLMs) using learned compression tokens to reduce the memory and computational demands of processing long sequences. We demonstrate that pre-trained LLMs can be fine-tuned to compress their context by factors of 2x to 8x without significant performance degradation, as evaluated on both short-context and long-context benchmarks. Furthermore, in experiments on a 3-billion-parameter LLaMA model, our method achieves results on par with alternative compression techniques while attaining higher compression ratios.",
+      "identifiers": [
+        "SemanticScholar:ed200bba9b74808c50d2bf189363410e9aa33bd9"
+      ],
+      "semantic_scholar_id": "ed200bba9b74808c50d2bf189363410e9aa33bd9",
+      "canonical_id": "arXiv:2511.08128",
+      "arxiv_id": "2511.08128",
+      "doi": "10.48550/arXiv.2511.08128",
+      "authors": [
+        "Dmitrii Tarasov",
+        "E. Goncharova",
+        "Kuznetsov Andrey"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 367,
+        "matched_prestigious_venue": null
+      },
+      "reason": "学習した圧縮トークンを用い長文脈を2–8倍圧縮し、3B LLaMAで既存法と同程度の精度をより高い圧縮率で維持したと報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-63990a57eeed",
+    "round": "libimp-63990a57eeeda5f0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-63990a57eeeda5f0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-63990a57eeeda5f0-pre01.json",
+    "receipt": "sha256:0732277e953ca5fccd00894bf927e3ea4d60ab0cabeb5a86b8937da9ef6030c4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-63990a57eeed",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
