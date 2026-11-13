@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0055-scheduled-chat-00/r01",
+  "reference_main_sha": "ae4375c75b67bab66be1b0e8817a475d389f5ddd",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15038",
+      "identity_tokens": [
+        "arxiv:2512.15038"
+      ],
+      "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers",
+      "reason": "自動運転の生成的経路計画を対象に軽量線形cross-attention (LICA)を導入し、長期履歴の推論計算・メモリを履歴長に対してO(1)とする。効率的attentionには関連するが、主対象は自動運転のマルチモーダル計画でLLM推論そのものではないためborderline。NAVSIM/Bench2Driveで評価。",
+      "source_url": "https://arxiv.org/abs/2512.15038",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T00:55:00+09:00",
+      "last_checked_at": "2026-11-14T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.10030",
+      "identity_tokens": [
+        "arxiv:2603.10030"
+      ],
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "reason": "LinuxカーネルのdmaplaneでDMAバッファのライフサイクル、NUMA配置、RDMA転送、GPU BAR pinning、credit制御を統合する。二台間のKV-cache chunk転送・受信側tensor view再構築によるdisaggregated inferenceを実証し、LLM推論サービングのメモリ転送基盤に直接関連。RDMA評価はSoft-RoCEであり実機RDMAへの外挿に注意。",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T00:55:00+09:00",
+      "last_checked_at": "2026-11-14T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 259
+    }
+  ]
+}
