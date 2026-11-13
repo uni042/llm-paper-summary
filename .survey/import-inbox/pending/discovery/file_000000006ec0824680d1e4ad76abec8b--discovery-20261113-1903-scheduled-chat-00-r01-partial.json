@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-1903-scheduled-chat-00/r01",
+  "reference_main_sha": "2c6e023d8b219b970f310173c9f3c3b84a4994a3",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.12928",
+      "identity_tokens": ["arxiv:2604.12928"],
+      "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+      "reason": "全二重音声言語モデルの低遅延対話を維持しつつ、知識を要する質問を選択して非同期検索を実行する。応答開始から主要情報提示までの時間差に検索を重ね、巨大モデル化によるリアルタイム推論負荷を避ける設計。著者は公開非全二重音声モデルの上位と同等の事実性を報告しており、推論時の非同期実行・サービング効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2604.12928",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T19:03:34+09:00",
+      "last_checked_at": "2026-11-13T19:03:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 234
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.09061",
+      "identity_tokens": ["arxiv:2506.09061"],
+      "title": "EdgeProfiler: A Fast Profiling Framework for Lightweight LLMs on Edge Using Analytical Model",
+      "reason": "エッジ上の小型LLMについて遅延・演算量・エネルギーを解析モデルで推定する高速プロファイリング枠組み。TinyLLaMA、Gemma、Llama、DeepSeekの小型モデルを量子化して評価し、著者は4bit化によるメモリ60〜70%削減、FP16比2〜3倍の推論速度を報告する。エッジ推論のハードウェア制約下での性能推定に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2506.09061",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T19:03:34+09:00",
+      "last_checked_at": "2026-11-13T19:03:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 235
+    }
+  ]
+}
