@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0603-scheduled-chat-00/r01",
+  "reference_main_sha": "3a01bb24be53abf633237c29ed5977d49a860afe",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10946",
+      "identity_tokens": ["arxiv:2604.10946"],
+      "title": "Learning to Adapt: In-Context Learning Beyond Stationarity",
+      "reason": "非定常回帰のin-context learningにおけるgated linear attentionの理論解析。GLAが過去入力の寄与を適応的に減衰させるrecency biasを実装し、通常のlinear attentionより学習・テスト誤差が低いことを理論と実験で検証。効率的attention機構に関連するが、主眼は推論システムの速度・メモリ効率ではなく学習理論であるためborderline。",
+      "source_url": "https://arxiv.org/abs/2604.10946",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T06:03:00+09:00",
+      "last_checked_at": "2026-11-14T06:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 265
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39334",
+      "identity_tokens": ["arxiv:2609.39334"],
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "reason": "SpecScaleは推論時の複数推論経路の投機実行に伴う探索空間増大と細粒度検証負荷に対し、低品質経路の早期枝刈り、重複計算の除去、検証遅延を組み合わせるLLMサービング方式。MATHとOlympiadで非投機・既存投機方式とスループット、遅延を比較。LLMサービングとtest-time scalingに直接関連する。要旨に定量的倍率はないため捏造しない。",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T06:03:00+09:00",
+      "last_checked_at": "2026-11-14T06:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 270
+    }
+  ]
+}
