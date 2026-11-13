@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-2200-scheduled-chat-00/r01",
+  "reference_main_sha": "1d4a5964657bc04b1bc89bcb306eeeb2b17c8bba",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.11080",
+      "identity_tokens": [
+        "arxiv:2604.11080"
+      ],
+      "title": "ReSpinQuant: Efficient Layer-Wise LLM Quantization via Subspace Residual Rotation Approximation",
+      "reason": "回転型PTQで全層共通の回転行列は表現力が不足し、層別回転はオンライン演算負荷が大きい問題に対し、残差部分空間の回転と基底対応によりオフライン融合を可能にする。W4A4・W3A3量子化でグローバル回転方式より精度を改善し、層別方式と同程度の精度を低い推論負荷で達成したと著者は報告。LLM低ビット量子化の直接関連研究。",
+      "source_url": "https://arxiv.org/abs/2604.11080",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T22:00:00+09:00",
+      "last_checked_at": "2026-11-13T22:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11262",
+      "identity_tokens": [
+        "arxiv:2607.11262"
+      ],
+      "title": "GPU-Tile-Sim: A Tile-Centric GPU Simulation Framework for LLM Hardware-Software Co-Design",
+      "reason": "LLM向けGPUカーネルの性能予測を、warpレベルのタイル演算と依存関係を表すグラフでモデル化するシミュレーション基盤。自動タイルグラフ生成とグラフ駆動シミュレーションを備え、GEMM・attention・LLM推論をA100/H100で検証しMAPE 1.22〜8.71%と報告。GPU推論カーネル最適化とハードウェア・ソフトウェア協調設計に直接関連。",
+      "source_url": "https://arxiv.org/abs/2607.11262",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T22:00:00+09:00",
+      "last_checked_at": "2026-11-13T22:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 252
+    }
+  ]
+}
