@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0400-scheduled-chat-00/r01",
+  "reference_main_sha": "aac3bf01bb8561dcb1f01778682fabc3bf07e54a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03430",
+      "identity_tokens": [
+        "arxiv:2610.03430"
+      ],
+      "title": "Jumping the Line: Exploiting Length Predictions in LLM Scheduling",
+      "reason": "LLMサービングの出力長予測に基づくスケジューリングを攻撃するJILを提案。TRAILを対象に予測長を最大83.4%過小評価させ、攻撃リクエストの完了を最大平均1.53倍高速化。長さ予測の粗い区間化による防御も評価し、LLMスケジューラの堅牢性と公平性に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.03430",
+      "body_check": "primary_paper_metadata_and_abstract_read_via_research_index; full_body_not_read",
+      "first_checked_at": "2026-11-14T04:00:00+09:00",
+      "last_checked_at": "2026-11-14T04:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 261
+    }
+  ]
+}
