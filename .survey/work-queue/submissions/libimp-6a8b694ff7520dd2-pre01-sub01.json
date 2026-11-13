@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
+      "source_url": "https://arxiv.org/abs/2604.22281",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in vision-language models have demonstrated remarkable performance across diverse multi-modal tasks, including document question answering that leverages structured visual cues from text, tables, and figures. However, unlike natural images, document images contain large backgrounds and only sparse supporting evidence, leading to the inefficient consumption of substantial computational resources, especially for long documents. We observe that existing token-reduction methods for natural images and videos fall short in utilizing the structural sparsity unique to documents. To address this, we propose DocPrune, a training-free and progressive document token pruning framework designed for efficient long-document understanding. The proposed method preserves only the essential tokens for the task while removing unnecessary ones, such as background or question-irrelevant tokens. Moreover, it automatically selects the appropriate layers to initiate token pruning based on the model's level of comprehension. Our experiments on the M3DocRAG show that DocPrune improves throughput by 3.0x and 3.3x in the encoder and decoder, respectively, while boosting the F1 score by +1.0, achieving both higher accuracy and efficiency without any additional training.",
+      "identifiers": [
+        "SemanticScholar:b41e5cd1b1400a8a9a89e97607ade22236ef6f30"
+      ],
+      "semantic_scholar_id": "b41e5cd1b1400a8a9a89e97607ade22236ef6f30",
+      "canonical_id": "arXiv:2604.22281",
+      "arxiv_id": "2604.22281",
+      "doi": "10.48550/arXiv.2604.22281",
+      "authors": [
+        "Joonmyung Choi",
+        "Sanghyeok Lee",
+        "Jongha Kim",
+        "Sehyung Kim",
+        "Dohwan Ko",
+        "Jihyung Kil",
+        "Hyunwoo J. Kim"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "文書画像の背景・質問無関連領域を除去する学習不要の段階的視覚トークン剪定。モデルの理解段階に応じて剪定開始層を選ぶ。M3DocRAGでencoder throughput 3.0倍、decoder 3.3倍、F1 +1.0を報告。文書VLM推論効率化に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read_v3; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPIN: Shadow Predictive Indexer for Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.09025",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Indexer-based sparse attention reduces the cost of core attention by passing only a fixed, small number of important tokens to it. However, the indexer must still score the entire KV cache at every decoding step. This scoring overhead becomes a major bottleneck as the context length grows. We propose SPIN (Shadow Predictive Indexer) to reduce this indexer overhead. SPIN uses lightweight, history-based prediction to identify important KV blocks, avoiding the need to score the full KV cache at every decoding step. SPIN keeps the score history fresh with random exploration and allocates the block budget across layers by their measured miss rates. SPIN treats KV blocks and speculative decoding as first-class design and implementation considerations. Across extensive evaluations on long-context and agentic benchmarks, SPIN achieves 30-40% sparsity while preserving task quality. With larger exploration shares and per-layer block budgets, SPIN keeps task quality on the especially difficult MRCRv2 benchmark close to baseline at 50-57% effective block sparsity. In end-to-end vLLM serving, SPIN improves output throughput by up to 13.9% and reduces median inter-token latency by up to 13.6%.",
+      "identifiers": [
+        "SemanticScholar:7e7b80e3695b50b0bb06278abb1073fed7691d4a"
+      ],
+      "semantic_scholar_id": "7e7b80e3695b50b0bb06278abb1073fed7691d4a",
+      "canonical_id": "arXiv:2610.09025",
+      "arxiv_id": "2610.09025",
+      "authors": [
+        "Yao Fu",
+        "Jian Chang",
+        "Yue-Ying Li",
+        "Ritchie Zhao",
+        "B. Long",
+        "Mohammad Mahdi Kamani",
+        "Samkit Jain",
+        "Rahul Raman",
+        "T. Safavi",
+        "Shreya Gupta",
+        "Parsa Ashrafi Fashi",
+        "Minseok Lee",
+        "Julien Demouth",
+        "B. Rouhani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈疎注意の索引器が全KVキャッシュを毎decode step走査する負荷を、履歴に基づく軽量な重要KV block予測、ランダム探索、層別miss率に応じた予算配分で削減。vLLM servingでoutput throughput最大13.9%増、median inter-token latency最大13.6%減を報告。",
+      "library_body_check": "primary_arxiv_abstract_read_v3; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6a8b694ff752",
+    "round": "libimp-6a8b694ff7520dd2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6a8b694ff7520dd2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6a8b694ff7520dd2-pre01.json",
+    "receipt": "sha256:27084588417bfd8cb3665f25ad376cc85fb54fdf9a3616b3513fa24d4b0313dc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6a8b694ff752",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
