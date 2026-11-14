@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+      "source_url": "https://arxiv.org/abs/2209.05948",
+      "year": 2022,
+      "published": "2022-09-13",
+      "venue": "2023 IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
+      "citation_count": 40,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Currently, large pre-trained language models are widely applied in neural code completion systems. Though large code models significantly outperform their smaller counterparts, around 70% of displayed code completions from Copilot are not accepted by developers. Being reviewed but not accepted, their help to developer productivity is considerably limited. Even worse, considering the high cost of the large code models, it is a huge waste of computing resources and energy. To fill this significant gap, we propose an early-rejection mechanism to turn down low-return prompts by foretelling the code completion qualities without sending them to the code completion system. Furthermore, we propose a lightweight Transformer-based es-timator to demonstrate the feasibility of the mechanism. The experimental results show that the proposed estimator helps save 23.3% of computational cost measured in floating-point operations for the code completion systems, and 80.2% of rejected prompts lead to unhelpful completion.",
+      "identifiers": [
+        "SemanticScholar:e73a16490c29530c37b49f6a30592790e7caaaa4"
+      ],
+      "semantic_scholar_id": "e73a16490c29530c37b49f6a30592790e7caaaa4",
+      "canonical_id": "arXiv:2209.05948",
+      "arxiv_id": "2209.05948",
+      "doi": "10.1145/3688831",
+      "authors": [
+        "Zhensu Sun",
+        "Xiaoning Du",
+        "Fu Song",
+        "Shang-Wen Wang",
+        "Ming-Ze Ni",
+        "Li Li",
+        "David Lo"
+      ],
+      "priority": 40,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 40,
+        "citation_count": 40,
+        "total": 40,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1523,
+        "matched_prestigious_venue": null
+      },
+      "reason": "コード補完の低価値な入力を軽量な推定器で事前棄却し、大規模言語モデルへの無駄な推論要求と計算資源消費を削減する方式。一次arXiv要旨では低価値な補完要求の20%をprecision 97.4%で棄却したと報告。LLM推論の要求入口における計算回避・省エネルギー化に直接関係するためaccept。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6655fa0046da",
+    "round": "libimp-6655fa0046daa96d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6655fa0046daa96d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6655fa0046daa96d-pre01.json",
+    "receipt": "sha256:e51ff6e99395427a79be10e81bf80bf4bcaf2ac5400282def1b76957caa8c9cb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6655fa0046da",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
