@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-0200-scheduled-chat-00/r01",
+  "reference_main_sha": "27fec3981ce4715febc4eb81f369521ee11fd191",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.18486",
+      "identity_tokens": [
+        "arxiv:2608.18486"
+      ],
+      "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+      "reason": "層を横断して過去トークンのKV表現を学習済みmixerで共有し、KV容量を半減しても同規模標準Transformerより良い性能を報告。循環反復による学習・prefill依存性への対処も含む。",
+      "source_url": "https://arxiv.org/abs/2608.18486",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 323
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.24004",
+      "identity_tokens": [
+        "arxiv:2608.24004"
+      ],
+      "title": "AgentSpec: Speculative Decoding for Batch Inference of LLM Agents",
+      "reason": "エージェントの大規模batch推論における投機デコードの棄却とtoken予算浪費を、構造を分離したdraftと冗長性を考慮した予算割当で改善。5 workloadと4モデルで評価。",
+      "source_url": "https://arxiv.org/abs/2608.24004",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 324
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34440",
+      "identity_tokens": [
+        "arxiv:2610.34440"
+      ],
+      "title": "Speculative Decoding for Mixture-of-Experts Models: Expert Bytes, Kernel Bandwidth and the Best Draft Length",
+      "reason": "MoE投機デコードでexpert重みの重複読込を削減する効果と実効kernel帯域のトレードオフをモデル化し、最適draft長を推定。CUDA/MLX-LM/Metalで測定。",
+      "source_url": "https://arxiv.org/abs/2610.34440",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 325
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11232",
+      "identity_tokens": [
+        "arxiv:2605.11232"
+      ],
+      "title": "Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack",
+      "reason": "AML・不正検知のprefix-heavy短出力workloadに対しprefix cache、batching、speculative decoding等を組み合わせたサービング構成を実測。著者は612–650から3600 requests/hourへの改善を報告。応用依存の複合効果として扱う。",
+      "source_url": "https://arxiv.org/abs/2605.11232",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 327
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01655",
+      "identity_tokens": [
+        "arxiv:2608.01655"
+      ],
+      "title": "PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs",
+      "reason": "異種workerの転送・計算費を考慮したprefix KV配置を近似最適化。432設定で最適値の平均99.84%、RAG replayでvLLM APC比40.3%のmaterialization費削減を報告。",
+      "source_url": "https://arxiv.org/abs/2608.01655",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 328
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14517",
+      "identity_tokens": [
+        "arxiv:2603.14517"
+      ],
+      "title": "Learning to Forget: Sleep-Inspired Memory Consolidation for Resolving Proactive Interference in Large Language Models",
+      "reason": "KV内の古い情報が検索を妨げるproactive interferenceを忘却・統合機構で抑える。小型Transformerで検索精度を評価するが、実用LLM推論の速度・メモリ改善の定量根拠は要旨から不足。",
+      "source_url": "https://arxiv.org/abs/2603.14517",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 329
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.23410",
+      "identity_tokens": [
+        "arxiv:2509.23410"
+      ],
+      "title": "PATCH: Learnable Tile-level Hybrid Sparsity for LLMs",
+      "reason": "tile単位でdenseと2:4疎性を学習選択し、0–50%の連続的疎性率とGPU実効高速化を両立。LLaMA-2 7B/A6000でdense比1.18–1.38倍のend-to-end高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2509.23410",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 331
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01004",
+      "identity_tokens": [
+        "arxiv:2609.01004"
+      ],
+      "title": "SinkPruner: Sink-Free Visual Token Pruning for Multimodal Large Language Models",
+      "reason": "高ノルムの冗長視覚tokenを除去し、text-guided pruningで意味関連tokenを保持。著者は89% token削減でLLaVA-1.5性能96.5%維持を報告。",
+      "source_url": "https://arxiv.org/abs/2609.01004",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 332
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.19322",
+      "identity_tokens": [
+        "arxiv:2605.19322"
+      ],
+      "title": "DynaTok: Temporally Adaptive and Positional Bias-Aware Token Compression for Video-LLMs",
+      "reason": "動画フレーム間の時間的冗長性と位置バイアスを考慮し、時空間token予算を適応配分する学習不要圧縮。著者は90% token削減時に元性能95%超維持を報告。",
+      "source_url": "https://arxiv.org/abs/2605.19322",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 333
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.530",
+      "identity_tokens": [
+        "doi:10.18653/v1/2026.acl-long.530"
+      ],
+      "title": "Evolving Sparsity: Leveraging Token Importance Dynamics for Efficient LLM Decoding with Sparse Attention",
+      "reason": "Cross-Step AccumulationとCross-Layer Propagationでtoken重要度を逐次更新し、毎stepの再計算を削減。ACL一次要旨はattention latency最大5.36倍、end-to-end decoding最大2.33倍を報告。",
+      "source_url": "https://aclanthology.org/2026.acl-long.530/",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T02:00:00+09:00",
+      "last_checked_at": "2026-11-15T02:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 337
+    }
+  ]
+}
