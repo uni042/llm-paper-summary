@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+      "source_url": "https://arxiv.org/abs/2503.12167",
+      "year": 2025,
+      "published": "2025-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.",
+      "identifiers": [
+        "SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553"
+      ],
+      "semantic_scholar_id": "b23bcfec5cd63bdb4047bd70bb439798b0562553",
+      "canonical_id": "arXiv:2503.12167",
+      "arxiv_id": "2503.12167",
+      "doi": "10.48550/arXiv.2503.12167",
+      "authors": [
+        "Cheng Deng",
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yong-Cheng Zeng",
+        "Xin-Jian Wu",
+        "Wen-Xin Zhao",
+        "Q. Xiao",
+        "Jia-Chuan Wang",
+        "Hao-Yang Li",
+        "Lei Chen",
+        "Lionel M. Ni",
+        "Hai-Feng Zhang",
+        "Jun Wang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 609,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジ機器の記憶容量・帯域制約に合わせてMulti-head Latent Attentionとsquared ReLU活性化の疎性を共同設計し、推論時ピークメモリを削減する。GPU、スマートフォン、Raspberry Piへの配備評価を含み、オンデバイスLLMの推論効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ae65ced1beab",
+    "round": "libimp-ae65ced1beabbd8d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ae65ced1beabbd8d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ae65ced1beabbd8d-pre01.json",
+    "receipt": "sha256:cfd9f694730387331f90963bfadcfe4221cff17412403a4e3ac26d59906f9f42"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ae65ced1beab",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
