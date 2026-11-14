@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261114-2305-scheduled-chat-00/r01",
+  "reference_main_sha": "15c311d77994ac62a204c502cf8966e8f9d35321",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.30709",
+      "identity_tokens": [
+        "arxiv:2606.30709",
+        "2606.30709"
+      ],
+      "title": "Hierarchical Global Attention (HGA)",
+      "reason": "事前学習済みTransformerのQ/K/V/O射影を変更せず、RoPE対応のコンパクトなチャンク要約による二段階ルーティングで必要なKVだけをホストRAM/NVMeからGPUへ取得し、取得集合内で正確なattentionを計算する。Qwen3-30B-A3BをRTX 5090上で64K文脈まで実行し、KVの約3%を使う条件でdenseとの差を約0.01–0.02 natsと報告。長文脈LLM推論のGPUメモリ削減と階層メモリ活用に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2606.30709",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-14T23:05:02+09:00",
+      "last_checked_at": "2026-11-14T23:05:02+09:00",
+      "linked_from": ".survey/work-queue/WORKLIST-00.md",
+      "worklist_rank": 313
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08357",
+      "identity_tokens": [
+        "arxiv:2606.08357",
+        "2606.08357"
+      ],
+      "title": "Forward-Free Diffusion Language Models with BPTT-Free Looped Refinement",
+      "reason": "FReDAは人為的なforward corruptionを使わず、モデルが生成したdraftを再帰的に修正する拡散言語モデルである。BPTTを回避した学習とBest-of-N refinementを採用し、既存拡散モデル比1.5–1.8倍の平均速度を報告する。ただし主貢献は生成モデルの学習定式化と品質改善で、独立した推論システムの資源最適化・カーネル設計が主題ではないため境界候補とする。",
+      "source_url": "https://arxiv.org/abs/2606.08357",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-14T23:05:02+09:00",
+      "last_checked_at": "2026-11-14T23:05:02+09:00",
+      "linked_from": ".survey/work-queue/WORKLIST-00.md",
+      "worklist_rank": 314
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.15413",
+      "identity_tokens": [
+        "arxiv:2605.15413",
+        "2605.15413"
+      ],
+      "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models",
+      "reason": "118種類のTransformerを7つの構造群に分け、系列長に応じたロード時間・メモリ・処理速度・実行可能性を実測する。要旨では512 tokenで88.1%、1024で44.9%、2048で0%のモデルが処理可能だったと報告し、圧縮モデルのパラメータ当たりスループットを比較する。新しい推論アルゴリズムではないが、LLMを含むモデル配備の実測・資源制約分析に直接関係するため収録候補とする。",
+      "source_url": "https://arxiv.org/abs/2605.15413",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-14T23:05:02+09:00",
+      "last_checked_at": "2026-11-14T23:05:02+09:00",
+      "linked_from": ".survey/work-queue/WORKLIST-00.md",
+      "worklist_rank": 315
+    }
+  ]
+}
