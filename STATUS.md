@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-14 20:58:47 JST**
+> 自動生成: **2026-11-14 21:17:14 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-14 12:42:45 JST（8時間16分前）** |
+| 最終maintenance完了 | **11-14 12:42:45 JST（8時間34分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/file_0000000045788206b2c6eef050998c04--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r02-corrected.json
 - Discovery: **11-14 20:00:00 JST** / worker scheduled-chat-00 / run 20261114-2000-scheduled-chat-00/r01
   - 本文確認・分類 **2件** / accept **2件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/file_00000000080481fa8e226c25e8f553d0--discovery-20261114-2000-scheduled-chat-00-r01-partial.json
+  - evidence: .survey/import-inbox/waiting/discovery/file_00000000080481fa8e226c25e8f553d0--discovery-20261114-2000-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
