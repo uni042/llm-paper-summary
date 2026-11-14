@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-14T00:38:28+00:00`
+Generated: `2026-11-14T01:42:06+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128548** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122298** / 監査再投入 **0** / 機械規則適用後 **124987** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128551** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122301** / 監査再投入 **0** / 機械規則適用後 **124990** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -175,7 +175,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 92 | 10 | 6 | 9 | arXiv:2609.34866 | From Attention Sensitivity to Layer Role: Revisiting Mixed-Precision Quantization of Transformers | 2026-09-28 |  | 0 | 9 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.34866) |
 | 93 | 10 | 6 | 9 | arXiv:2608.01185 | 3DZip: Spatial-Aware Feature Diversity-Guided Token Compression for 3D Question Answering | 2026-08-02 | European Conference on Computer Vision | 0 | 10 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2608.01185) |
 | 94 | 102 | 6 | 9 | arXiv:2605.03190 | VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU | 2026-05-04 | arXiv.org | 2 | 9 | GPU Kernel Framework, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2605.03190) |
-| 95 | 101 | 6 | 9 | arXiv:2606.06532 | GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory | 2026-06-03 | arXiv.org | 1 | 10 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2606.06532) |
+| 95 | 101 | 6 | 9 | arXiv:2606.06532 | GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory | 2026-06-03 | arXiv.org | 1 | 11 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2606.06532) |
 | 96 | 20 | 6 | 9 | arXiv:2604.09558 | VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination | 2026-02-11 | USENIX Symposium on Operating Systems Design and Implementation | 0 | 10 | 02-hardware-accelerators, 05-kv-キャッシュ-メモリ-management, LLM Serving / Scheduling / Disaggregation, PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.09558) |
 | 97 | 0 | 6 | 9 | SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8 | V ESTIGE KV: T HE N O PE-MLA KV C ACHE C ARRIES I TS O WN E VICTION S IGNAL IN A V ESTIGIAL B RANCH |  |  | 0 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/c4a54a26100d339d10c59db6b8cc56ac481534c8) |
 | 98 | 10 | 6 | 8 | arXiv:2609.27981 | Risk-Controlled KV-Cache Eviction: From Memory Budgets to Risk Targets | 2026-09-23 | arXiv.org | 0 | 8 | KV-cache compression / attention-based token selection / long-context inference, kv-cache-offload-recomputation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.27981) |
@@ -274,7 +274,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 191 | 10 | 5 | 8 | arXiv:2610.33008 | TraceQuery: learning what to recompute from full-denoising trajectory in diffusion language models | 2026-10-07 |  | 0 | 8 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.33008) |
 | 192 | 10 | 5 | 8 | arXiv:2610.28441 | Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity | 2026-10-20 |  | 0 | 8 | inference-systems, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.28441) |
 | 193 | 10 | 5 | 8 | DOI:10.3390/jlpea15010008 | Optimizing BFloat16 Deployment of Tiny Transformers on Ultra-Low Power Extreme Edge SoCs | 2025-02-05 | Journal of Low Power Electronics and Applications | 10 | 8 | Conditional Computation, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.3390/jlpea15010008) |
-| 194 | 35 | 5 | 8 | arXiv:2510.12422 | VideoLucy: Deep Memory Backtracking for Long Video Understanding | 2025-10-14 | Neural Information Processing Systems | 25 | 8 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2510.12422) |
+| 194 | 35 | 5 | 8 | arXiv:2510.12422 | VideoLucy: Deep Memory Backtracking for Long Video Understanding | 2025-10-14 | Neural Information Processing Systems | 25 | 9 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2510.12422) |
 | 195 | 42 | 5 | 8 | arXiv:2403.16899 | State Space Models as Foundation Models: A Control Theoretic Overview | 2024-03-25 | American Control Conference | 42 | 8 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2403.16899) |
 | 196 | 10 | 5 | 8 | arXiv:2606.10932 | Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2 | 2026-04-28 | arXiv.org | 0 | 8 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2606.10932) |
 | 197 | 105 | 5 | 8 | arXiv:2604.00886 | PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding | 2026-04-01 | arXiv.org | 5 | 10 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.00886) |
