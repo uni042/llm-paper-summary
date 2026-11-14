@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6655fa0046daa96d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6655fa0046da",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2209.05948"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4ff814bd9cf3c3f5392d0563fdbaf77096ae6ff4",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-14T03:09:13.703135+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2209.05948",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+      "source_url": "https://arxiv.org/abs/2209.05948",
+      "year": 2022,
+      "published": "2022-09-13",
+      "venue": "2023 IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
+      "citation_count": 40,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Currently, large pre-trained language models are widely applied in neural code completion systems. Though large code models significantly outperform their smaller counterparts, around 70% of displayed code completions from Copilot are not accepted by developers. Being reviewed but not accepted, their help to developer productivity is considerably limited. Even worse, considering the high cost of the large code models, it is a huge waste of computing resources and energy. To fill this significant gap, we propose an early-rejection mechanism to turn down low-return prompts by foretelling the code completion qualities without sending them to the code completion system. Furthermore, we propose a lightweight Transformer-based es-timator to demonstrate the feasibility of the mechanism. The experimental results show that the proposed estimator helps save 23.3% of computational cost measured in floating-point operations for the code completion systems, and 80.2% of rejected prompts lead to unhelpful completion.",
+      "identifiers": [
+        "SemanticScholar:e73a16490c29530c37b49f6a30592790e7caaaa4"
+      ],
+      "semantic_scholar_id": "e73a16490c29530c37b49f6a30592790e7caaaa4",
+      "canonical_id": "arXiv:2209.05948",
+      "arxiv_id": "2209.05948",
+      "doi": "10.1145/3688831",
+      "authors": [
+        "Zhensu Sun",
+        "Xiaoning Du",
+        "Fu Song",
+        "Shang-Wen Wang",
+        "Ming-Ze Ni",
+        "Li Li",
+        "David Lo"
+      ],
+      "priority": 40,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 40,
+        "citation_count": 40,
+        "total": 40,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1523,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2209.05948",
+      "identity_tokens": [
+        "id:DOI:10.1145/3688831",
+        "id:SemanticScholar:e73a16490c29530c37b49f6a30592790e7caaaa4",
+        "id:arXiv:2209.05948",
+        "title:dont complete it preventing unhelpful code completion for productive and sustainable neural code completion systems",
+        "url:https://arxiv.org/abs/2209.05948"
+      ],
+      "record": {
+        "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+        "source_url": "https://arxiv.org/abs/2209.05948",
+        "year": 2022,
+        "published": "2022-09-13",
+        "venue": "2023 IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
+        "citation_count": 40,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Currently, large pre-trained language models are widely applied in neural code completion systems. Though large code models significantly outperform their smaller counterparts, around 70% of displayed code completions from Copilot are not accepted by developers. Being reviewed but not accepted, their help to developer productivity is considerably limited. Even worse, considering the high cost of the large code models, it is a huge waste of computing resources and energy. To fill this significant gap, we propose an early-rejection mechanism to turn down low-return prompts by foretelling the code completion qualities without sending them to the code completion system. Furthermore, we propose a lightweight Transformer-based es-timator to demonstrate the feasibility of the mechanism. The experimental results show that the proposed estimator helps save 23.3% of computational cost measured in floating-point operations for the code completion systems, and 80.2% of rejected prompts lead to unhelpful completion.",
+        "identifiers": [
+          "SemanticScholar:e73a16490c29530c37b49f6a30592790e7caaaa4"
+        ],
+        "semantic_scholar_id": "e73a16490c29530c37b49f6a30592790e7caaaa4",
+        "canonical_id": "arXiv:2209.05948",
+        "arxiv_id": "2209.05948",
+        "doi": "10.1145/3688831",
+        "authors": [
+          "Zhensu Sun",
+          "Xiaoning Du",
+          "Fu Song",
+          "Shang-Wen Wang",
+          "Ming-Ze Ni",
+          "Li Li",
+          "David Lo"
+        ],
+        "priority": 40,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 40,
+          "citation_count": 40,
+          "total": 40,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1523,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e51ff6e99395427a79be10e81bf80bf4bcaf2ac5400282def1b76957caa8c9cb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
