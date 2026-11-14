@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LV-XAttn: Distributed Cross-Attention for Long Visual Inputs in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2502.02406",
+      "year": 2025,
+      "published": "2025-02-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-attention is commonly adopted in multimodal large language models (MLLMs) for integrating visual information into the language backbone. However, in applications with large visual inputs, such as video understanding, processing a large number of visual tokens in cross-attention layers leads to high memory demands and often necessitates distributed computation across multiple GPUs. Existing distributed attention mechanisms face significant communication overheads, making cross-attention layers a critical bottleneck for efficient training and inference of MLLMs. To address this, we propose LV-XAttn, a distributed, exact cross-attention mechanism with minimal communication overhead. We observe that in applications involving large visual inputs, the size of the query block is typically much smaller than that of the key-value blocks. Thus, in LV-XAttn we keep the large key-value blocks locally on each GPU and exchange smaller query blocks across GPUs. We also introduce an efficient activation recomputation technique to support longer visual context. We theoretically analyze the communication benefits of LV-XAttn and show that it can achieve speedups for a wide range of models. Our evaluations with Llama 3-V, mPLUG-Owl3 and OpenFlamingo models find that LV-XAttn achieves up to 10.62$\\times$ end-to-end speedup compared to existing approaches.",
+      "identifiers": [
+        "SemanticScholar:56fedabc27221397757a8cc0b89901cf26c4f358"
+      ],
+      "semantic_scholar_id": "56fedabc27221397757a8cc0b89901cf26c4f358",
+      "canonical_id": "arXiv:2502.02406",
+      "arxiv_id": "2502.02406",
+      "doi": "10.48550/arXiv.2502.02406",
+      "authors": [
+        "Tzu-Tao Chang",
+        "Shivaram Venkataraman"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 648,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "長い視覚入力を持つMLLMの分散cross-attentionで、GPU間の大きなKVブロック通信を避け、各GPUにKVを保持して小さいqueryブロックを交換する正確な分散注意機構。activation recomputationも組み合わせる。Llama 3-V、mPLUG-Owl3、OpenFlamingoで既存方式比最大10.62倍のエンドツーエンド高速化を著者が報告。分散推論と長文脈視覚入力の通信効率に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2640f1618081",
+    "round": "libimp-2640f16180814020-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2640f16180814020-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2640f16180814020-pre01.json",
+    "receipt": "sha256:f3dfa040bd1444a793538489ffb3187a18a86a36f7512dd72f8124c902034e48"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2640f1618081",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
