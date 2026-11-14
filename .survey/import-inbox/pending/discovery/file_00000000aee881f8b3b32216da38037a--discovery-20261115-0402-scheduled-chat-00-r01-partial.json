@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-0402-scheduled-chat-00/r01",
+  "reference_main_sha": "fd4808b155541c3dd25c3b98251fcfc910a05118",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.14578",
+      "identity_tokens": ["arxiv:2410.14578"],
+      "title": "Large Language Models Are Overparameterized Text Encoders",
+      "reason": "テキスト埋め込み用LLMの最終層を剪定し、1000ステップの教師あり対照学習で再適応する。4モデルで最大30%の層剪定は性能影響が小さく、L3 Pruneの大モデル構成は平均21%のパラメータ削減と評価指標-0.3、小構成は74%削減と-5.1を報告。推論時間・メモリ削減に直接関係する。ただし生成LLM全般への一般化は未検証。",
+      "source_url": "https://arxiv.org/abs/2410.14578",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T04:02:44+09:00",
+      "last_checked_at": "2026-11-15T04:02:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 342
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.06174",
+      "identity_tokens": ["arxiv:2509.06174"],
+      "title": "From Long to Short: LLMs Excel at Trimming Own Reasoning Chains",
+      "reason": "EDITは推論時の制約付き生成で回答正確性と推論長の分布を同時に追跡し、短い正答推論系列を選択する。過剰思考による生成トークンを減らす推論効率化に関係する。要旨に具体的な高速化率やトークン削減率はなく、Research段階で実測条件の確認が必要。",
+      "source_url": "https://arxiv.org/abs/2509.06174",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T04:02:44+09:00",
+      "last_checked_at": "2026-11-15T04:02:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 343
+    }
+  ]
+}
