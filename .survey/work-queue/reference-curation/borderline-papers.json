@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-13T21:56:57+00:00",
-  "record_count": 5607,
+  "updated_at": "2026-11-14T13:02:22+00:00",
+  "record_count": 5608,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86548,6 +86548,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Learning to Adapt: In-Context Learning Beyond Stationarity"
+    },
+    "arXiv:2603.27965": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.27965",
+      "identity_tokens": [
+        "arXiv:2603.27965"
+      ],
+      "reason": "FFNを複数expertへ展開して学習中に重み付き融合し、単一expertとしてforward実行する。最終モデルは通常dense FFNへ統合され配備時の追加パラメータを回避するが、一次要旨の主目的は学習効率とモデル品質であり、推論時高速化の具体的測定は示されないため境界判定。",
+      "first_checked_at": "2026-11-14T13:02:22+00:00",
+      "last_checked_at": "2026-11-14T13:02:22+00:00",
+      "linked_from": [
+        "worklist-00"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ExFusion: Efficient Transformer Training via Multi-Experts Fusion"
     }
   }
 }
