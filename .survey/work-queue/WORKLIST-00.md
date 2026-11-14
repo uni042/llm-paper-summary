@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-14T00:38:28+00:00`
+Generated: `2026-11-14T01:42:06+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128548** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122298** / 監査再投入 **0** / 機械規則適用後 **124987** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128551** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122301** / 監査再投入 **0** / 機械規則適用後 **124990** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -534,7 +534,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 451 | 10 | 4 | 6 | arXiv:2605.09742 | TIDES: Implicit Time-Awareness in Selective State Space Models | 2026-05-10 | arXiv.org | 0 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2605.09742) |
 | 452 | 10 | 4 | 6 | arXiv:2608.18410 | Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies | 2026-08-19 |  | 0 | 6 | KV cache compression / cross-layer state merging, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2608.18410) |
 | 453 | 10 | 4 | 6 | arXiv:2610.03286 | VenusRL: A Fully Disaggregated Agentic RL System with Priority Scheduling and Scalable Interaction | 2026-10-02 |  | 0 | 6 | 14-agentic-inference-serving-runtime, KVキャッシュ動的メモリ管理／PagedAttention代替, LLMサービング・スケジューリング・KVキャッシュ保持, llm-serving-scheduling-disaggregation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2610.03286) |
-| 454 | 9 | 4 | 6 | arXiv:2506.04953 | APVR: Hour-Level Long Video Understanding with Adaptive Pivot Visual Information Retrieval | 2025-06-05 | AAAI Conference on Artificial Intelligence | 9 | 6 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2506.04953) |
+| 454 | 9 | 4 | 6 | arXiv:2506.04953 | APVR: Hour-Level Long Video Understanding with Adaptive Pivot Visual Information Retrieval | 2025-06-05 | AAAI Conference on Artificial Intelligence | 9 | 7 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2506.04953) |
 | 455 | 2 | 4 | 6 | arXiv:2508.03333 | CTTS: Collective Test-Time Scaling | 2025-08-05 | arXiv.org | 2 | 6 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2508.03333) |
 | 456 | 0 | 4 | 6 | arXiv:2412.12486 | Boosting Long-Context Management via Query-Guided Activation Refilling | 2024-12-17 | arXiv.org | 0 | 6 | KV Cache Optimization / Compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, long-context inference / dynamic sparse attention / prefill acceleration | [source](https://arxiv.org/abs/2412.12486) |
 | 457 | 101 | 4 | 5 | arXiv:2610.05106 | SharpDraft: Accelerating Long-Context Speculative Decoding with Cardinality-Aware Query Scaling | 2026-10-04 |  | 1 | 5 | inference-systems, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.05106) |

@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-14T00:38:28+00:00`
+Generated: `2026-11-14T01:42:06+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -75,8 +75,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128548** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122298** / 監査再投入 **0** / 機械規則適用後 **124987** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128551** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122301** / 監査再投入 **0** / 機械規則適用後 **124990** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -443,7 +443,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 361 | 0 | 4 | 7 | DOI:10.1109/JSTQE.2026.3715241 | Intra-Matrix Flexible Optical-Electronic Configuration Algorithms for Energy-Efficient Large Language Model Inference | 2026 | IEEE Journal of Selected Topics in Quantum Electronics | 0 | 7 | LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/JSTQE.2026.3715241) |
 | 362 | 102 | 4 | 7 | arXiv:2608.26574 | Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference | 2026-08-27 | arXiv.org | 2 | 9 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2608.26574) |
 | 363 | 101 | 4 | 7 | arXiv:2603.00357 | SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs | 2026-02-27 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2603.00357) |
-| 364 | 12 | 4 | 7 | DOI:10.1109/DAC56929.2023.10247993 | Efficient Transformer Inference with Statically Structured Sparse Attention | 2023-07-09 | Design Automation Conference | 12 | 7 | Sparse Attention, sparse attention / long-context Transformer | [source](https://doi.org/10.1109/DAC56929.2023.10247993) |
+| 364 | 20 | 4 | 7 | DOI:10.1109/DAC56929.2023.10247993 | Efficient Transformer Inference with Statically Structured Sparse Attention | 2023-07-09 | Design Automation Conference | 20 | 7 | Sparse Attention, sparse attention / long-context Transformer | [source](https://doi.org/10.1109/DAC56929.2023.10247993) |
 | 365 | 10 | 4 | 7 | arXiv:2609.34861 | When Text Matters: Design Principles for Visual Token Pruning in Vision-Language Model | 2026-09-28 | arXiv.org | 0 | 8 |  | [source](https://arxiv.org/abs/2609.34861) |
 | 366 | 1 | 4 | 7 | DOI:10.1109/AANN66429.2025.11257670 | A Survey on Visual Token Compression for Efficient Vision-Language Models | 2025-08-15 | 2025 5th International Conference on Advanced Algorithms and Neural Networks (AANN) | 1 | 7 | inference-systems | [source](https://doi.org/10.1109/AANN66429.2025.11257670) |
 | 367 | 1 | 4 | 7 | arXiv:2503.17101 | Large Language Model Compression via the Nested Activation-Aware Decomposition | 2025-03-21 | arXiv.org | 1 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2503.17101) |
@@ -515,7 +515,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 433 | 101 | 4 | 6 | arXiv:2605.09982 | ERASE: Eliminating Redundant Visual Tokens via Adaptive Two-Stage Token Pruning | 2026-05-11 | arXiv.org | 1 | 9 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2605.09982) |
 | 434 | 17 | 4 | 6 | arXiv:2306.02307 | Finding the SWEET Spot: Analysis and Improvement of Adaptive Inference in Low Resource Settings | 2023-06-04 | Annual Meeting of the Association for Computational Linguistics | 7 | 6 |  | [source](https://arxiv.org/abs/2306.02307) |
 | 435 | 10 | 4 | 6 | arXiv:2610.14481 | Optimize Once, Execute Fast: Latency-Aware Multi-Agent Workflow Learning for Recurrent Queries | 2026-10-10 |  | 0 | 6 | 14-agentic-inference-serving-runtime, agentic serving / workflow-aware scheduling / memory-aware dispatch, inference-systems, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.14481) |
-| 436 | 1 | 4 | 6 | DOI:10.1109/FCN66513.2025.11296658 | Joint Request Batching and Worker Assignment in AI-RAN Edge Inference Systems | 2025-08-18 | 2025 International Conference on Future Communications and Networks (FCN) | 1 | 6 | Conditional Computation, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://doi.org/10.1109/FCN66513.2025.11296658) |
+| 436 | 2 | 4 | 6 | DOI:10.1109/FCN66513.2025.11296658 | Joint Request Batching and Worker Assignment in AI-RAN Edge Inference Systems | 2025-08-18 | 2025 International Conference on Future Communications and Networks (FCN) | 2 | 6 | Conditional Computation, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://doi.org/10.1109/FCN66513.2025.11296658) |
 | 437 | 0 | 4 | 6 | DOI:10.1109/IJCNN64981.2025.11228370 | Accelerated Dropout: A Bitmask Approach to Speed Up Model Training | 2025-06-30 | IEEE International Joint Conference on Neural Network | 0 | 6 | dense-to-MoE conversion / conditional FFN computation / expert routing, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/IJCNN64981.2025.11228370) |
 | 438 | 43 | 4 | 6 | arXiv:2505.15154 | Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning | 2025-05-21 | arXiv.org | 43 | 6 | KV cache eviction / heavy hitters / sparse attention / efficient inference | [source](https://arxiv.org/abs/2505.15154) |
 | 439 | 0 | 4 | 6 | DOI:10.1109/TNSM.2026.3734530 | RoQuant: Resilient LLM Service Provisioning and Resource Management in Soft-Error-Prone Satellite Networks | 2026 | IEEE Transactions on Network and Service Management | 0 | 6 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.1109/TNSM.2026.3734530) |
@@ -578,7 +578,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 496 | 10 | 4 | 5 | arXiv:2611.04814 | Think Less, Locally: Local Preference Learning for Reasoning Compression | 2026-11-03 |  | 0 | 5 |  | [source](https://arxiv.org/abs/2611.04814) |
 | 497 | 0 | 4 | 5 | SemanticScholar:df2b9ba93735783ff1bb3ec8943b57172c9c49a6 | ZeRO from Scratch: Evaluating Memory Savings, Communication Overhead, and Bandwidth Sensitivity |  |  | 0 | 5 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://www.semanticscholar.org/paper/df2b9ba93735783ff1bb3ec8943b57172c9c49a6) |
 | 498 | 112 | 4 | 5 | arXiv:2606.08684 | BLUE: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving | 2026-06-07 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing | 2 | 6 |  | [source](https://arxiv.org/abs/2606.08684) |
-| 499 | 102 | 4 | 5 | arXiv:2608.22516 | TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding | 2026-08-23 |  | 2 | 5 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2608.22516) |
+| 499 | 102 | 4 | 5 | arXiv:2608.22516 | TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding | 2026-08-23 |  | 2 | 6 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2608.22516) |
 | 500 | 101 | 4 | 5 | arXiv:2605.08985 | LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs? | 2026-05-09 | arXiv.org | 1 | 5 | 12-multimodal-inference | [source](https://arxiv.org/abs/2605.08985) |
 
 ## Machine-readable
