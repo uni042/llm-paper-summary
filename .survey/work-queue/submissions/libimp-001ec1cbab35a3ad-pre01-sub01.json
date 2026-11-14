@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+      "source_url": "https://arxiv.org/abs/2602.03060",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) achieve impressive performance across multiple tasks. A significant challenge, however, is their prohibitive inference cost when processing high-resolution visual inputs. While visual token pruning has emerged as a promising solution, existing methods that primarily focus on semantic relevance often discard tokens that are crucial for spatial reasoning. We address this gap through a novel insight into \\emph{how LVLMs process spatial reasoning}. Specifically, we reveal that LVLMs implicitly establish visual coordinate systems through Rotary Position Embeddings (RoPE), where specific token positions serve as \\textbf{implicit visual coordinates} (IVC tokens) that are essential for spatial reasoning. Based on this insight, we propose \\textbf{IVC-Prune}, a training-free, prompt-aware pruning strategy that retains both IVC tokens and semantically relevant foreground tokens. IVC tokens are identified by theoretically analyzing the mathematical properties of RoPE, targeting positions at which its rotation matrices approximate identity matrix or the $90^\\circ$ rotation matrix. Foreground tokens are identified through a robust two-stage process: semantic seed discovery followed by contextual refinement via value-vector similarity. Extensive evaluations across four representative LVLMs and twenty diverse benchmarks show that IVC-Prune reduces visual tokens by approximately 50\\% while maintaining $\\geq$ 99\\% of the original performance and even achieving improvements on several benchmarks. Source codes are available at https://github.com/FireRedTeam/IVC-Prune.",
+      "identifiers": [
+        "SemanticScholar:96fa519ec0cde7cbe1c4a4548698402db36c70b7"
+      ],
+      "semantic_scholar_id": "96fa519ec0cde7cbe1c4a4548698402db36c70b7",
+      "canonical_id": "arXiv:2602.03060",
+      "arxiv_id": "2602.03060",
+      "doi": "10.48550/arXiv.2602.03060",
+      "authors": [
+        "Zhichao Sun",
+        "Yi-Dong Ma",
+        "Gang Liu",
+        "Yi-Bo Chen",
+        "Xu Tang",
+        "Yao Hu",
+        "Yong-Chao Xu"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "RoPEから空間推論に重要な暗黙座標トークンを同定し、前景意味トークンと併せて保持する学習不要の視覚トークン剪定。4モデル20ベンチマークで約50%の視覚トークン削減、性能99%以上維持と著者報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Tying the Loop - Tied Expert Layers in Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "year": 2026,
+      "published": "2026-06-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures efficiently scale Large Language Models (LLMs) by activating only a small fraction of their experts per token, yet the full parameter count - dominated by the expert parameters - must be held in training and inference memory. To address this, we introduce Expert Tying, an architectural modification that shares expert parameters across consecutive transformer layers while preserving independent, layer-wise routing and attention. We evaluate this approach across common, state-of-the-art architectures, including OLMoE, Qwen3, and DeepSeek-style MoEs. Our pretraining experiments demonstrate that tying experts can reduce memory footprint by almost 2x at virtually no degradation in perplexity or downstream quality. By exploiting the parameter redundancy inherent in MoE pathways, our method provides a highly favorable compute-to-memory trade-off, advancing efficient training and scaling of next-generation LLMs.",
+      "identifiers": [
+        "SemanticScholar:a0c74570a4cf010b5f08e1ce68d79e5519efa912"
+      ],
+      "semantic_scholar_id": "a0c74570a4cf010b5f08e1ce68d79e5519efa912",
+      "canonical_id": "arXiv:2606.16825",
+      "arxiv_id": "2606.16825",
+      "doi": "10.48550/arXiv.2606.16825",
+      "authors": [
+        "Martin Jaggi"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "連続Transformer層間でexpert重みを共有しながらroutingとattentionを層ごとに独立させるExpert Tying。OLMoE、Qwen3、DeepSeek型MoEで学習・推論の重みメモリをほぼ半減できると著者報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2601.22132",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) deliver state-of-the-art performance on complex reasoning tasks, but their inference costs limit deployment at scale. Small Language Models (SLMs) offer dramatic cost savings yet lag substantially in accuracy. Existing approaches - routing and cascading - treat the LLM as an all-or-nothing resource: either the query bypasses the LLM entirely, or the LLM generates a complete response at full cost. We introduce LLM Shepherding, a framework that requests only a short prefix (a hint) from the LLM and provides it to SLM. This simple mechanism is surprisingly effective for math and coding tasks: even hints comprising 10-30% of the full LLM response improve SLM accuracy significantly. Shepherding generalizes both routing and cascading, and it achieves lower cost under oracle decision-making. We develop a two-stage predictor that jointly determines whether a hint is needed and how many tokens to request. On the widely-used mathematical reasoning (GSM8K, CNK12) and code generation (HumanEval, MBPP) benchmarks, Shepherding reduces costs by 42-94% relative to LLM-only inference. Compared to state-of-the-art routing and cascading baselines, shepherding delivers up to 2.8x cost reduction while matching accuracy. To our knowledge, this is the first work to exploit token-level budget control for SLM-LLM collaboration.",
+      "identifiers": [
+        "SemanticScholar:ed8903f29e424e4a96582bc1de47d675b8fda3b4"
+      ],
+      "semantic_scholar_id": "ed8903f29e424e4a96582bc1de47d675b8fda3b4",
+      "canonical_id": "arXiv:2601.22132",
+      "arxiv_id": "2601.22132",
+      "doi": "10.48550/arXiv.2601.22132",
+      "authors": [
+        "Ziming Dong",
+        "Hardik Sharma",
+        "E. O'Toole",
+        "J. Champati",
+        "Kui Wu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大型LLMの全回答ではなく短いprefixヒントだけを小型モデルへ与え、必要性とトークン長を二段階で予測。GSM8K等の推論・コード生成でLLM単独比42～94%の費用削減を著者報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation",
+      "source_url": "https://arxiv.org/abs/2609.39740",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context reasoning faces two complementary bottlenecks: retaining evidence across long inputs and sustaining computation across many reasoning steps. Existing approaches largely address them separately, with external memory extending access to distant evidence and latent reasoning compressing multi-step computation. We introduce LatentHarness, which unifies memory access and latent reasoning as sequential latent action selection. At each internal step, the model chooses THINK for further computation, RECALL from a fast-weight memory of input evidence and intermediate reasoning states, or EXIT to emit the next token. We train this policy with counterfactual policy distillation, which branches every action for one step and scores its effect on the emitted token. These gains teach the policy when memory is more useful than further reasoning, while gradients through counterfactual recall teach which intermediate states should be retained in memory for future use. Across six general and long-context reasoning benchmarks, LatentHarness at 1.4B improves on the strongest baselines by 2.8% and 10.0% relative, respectively, and runs 5.9x faster than the strongest long-context baseline.",
+      "identifiers": [
+        "SemanticScholar:adf137b7a3d8d7024d9232972c0a9fc86c66e85d"
+      ],
+      "semantic_scholar_id": "adf137b7a3d8d7024d9232972c0a9fc86c66e85d",
+      "canonical_id": "arXiv:2609.39740",
+      "arxiv_id": "2609.39740",
+      "doi": "10.48550/arXiv.2609.39740",
+      "authors": [
+        "Xiao-Qiang Wang",
+        "Suyuchen Wang",
+        "Bang Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      },
+      "reason": "内部状態でTHINK・RECALL・EXITを選択する潜在アクション方策を反実仮想蒸留で学習し、長文脈メモリ検索と計算ステップを統合。1.4Bモデルで長文脈baseline比5.9倍高速と著者報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 54,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on pruning large language models (LLMs) has shown that one can eliminate a large number of parameters without compromising performance, making pruning a promising strategy to reduce LLM model size. Existing LLM pruning strategies typically assign uniform pruning ratios across layers, limiting overall pruning ability; and recent work on layerwise pruning of LLMs is often based on heuristics that can easily lead to suboptimal performance. In this paper, we leverage Heavy-Tailed Self-Regularization (HT-SR) Theory, in particular the shape of empirical spectral densities (ESDs) of weight matrices, to design improved layerwise pruning ratios for LLMs. Our analysis reveals a wide variability in how well-trained, and thus relatedly how prunable, different layers of an LLM are. Based on this, we propose AlphaPruning, which uses shape metrics to allocate layerwise sparsity ratios in a more theoretically principled manner. AlphaPruning can be used in conjunction with multiple existing LLM pruning methods. Our empirical results show that AlphaPruning prunes LLaMA-7B to 80% sparsity while maintaining reasonable perplexity, marking a first in the literature on LLMs. We have open-sourced our code at https://github.com/haiquanlu/AlphaPruning.",
+      "identifiers": [
+        "SemanticScholar:46daae2a932aa02e307fd3317e9f3719c56d6010"
+      ],
+      "semantic_scholar_id": "46daae2a932aa02e307fd3317e9f3719c56d6010",
+      "canonical_id": "arXiv:2410.10912",
+      "arxiv_id": "2410.10912",
+      "doi": "10.48550/arXiv.2410.10912",
+      "authors": [
+        "Haiquan Lu",
+        "Ye-Fan Zhou",
+        "Shi-Wei Liu",
+        "Zhang-Yang Wang",
+        "Michael W. Mahoney",
+        "Yao-Qing Yang"
+      ],
+      "priority": 64,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 54,
+        "citation_count": 54,
+        "total": 64,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 761,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "重み行列の経験スペクトル分布とheavy-tailed自己正則化指標により層別剪定率を配分する。LLaMA-7Bの80%疎性におけるperplexity評価を報告し、LLMのパラメータ圧縮に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-001ec1cbab35",
+    "round": "libimp-001ec1cbab35a3ad-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-001ec1cbab35a3ad-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-001ec1cbab35a3ad-pre01.json",
+    "receipt": "sha256:7c1ef065039e177488cd60a7ac5802946f054fdabc05a79c7d122dd2848f2ac9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-001ec1cbab35",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
