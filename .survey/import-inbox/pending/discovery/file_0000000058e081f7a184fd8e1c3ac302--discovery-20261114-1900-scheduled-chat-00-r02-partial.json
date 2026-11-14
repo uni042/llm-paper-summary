@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1900-scheduled-chat-00/r02",
+  "reference_main_sha": "313d0828b84d2d92da1416ba7aaf97dfe7f61dde",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.07239",
+      "identity_tokens": [
+        "arxiv:2505.07239"
+      ],
+      "title": "Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity",
+      "reason": "秘密分散計算MPCを使うLLM推論に対し活性化疎性を予測し、ゼロ演算を回避する秘密推論プロトコルとKVキャッシュ補充・prefetchを組み合わせる。4モデル・6比較システムに対し速度1.87～2.63倍、通信量1.94～2.64倍削減を著者報告。",
+      "source_url": "https://arxiv.org/abs/2505.07239",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 306
+    }
+  ]
+}
