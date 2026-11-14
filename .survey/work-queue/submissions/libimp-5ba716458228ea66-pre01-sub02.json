@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs",
+      "source_url": "https://arxiv.org/abs/2608.01655",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix Key-Value (KV) reuse avoids repeated prefill in Large Language Model (LLM) inference, but local misses require recomputation or replica fetches. Their relative cost varies with hardware, prefix depth, KV goodput, and replica location, making hit-rate-based placement suboptimal. To address this issue, we propose an epoch-level planner, PrefixPlace, which assigns prefix-complete targets under memory budgets and profiled demand, compute, and transfer costs. The objective decomposes into local-copy value plus first-replica coverage, and source-dependent costs yield a monotone facility-location objective; each worker update is an additive rooted-tree problem solved exactly in O(nk) time for n chunks and capacity k, giving a fixed-order 1/2-approximation that coordinate refinement and order-diverse starts improve without weakening. T4, L4, and A100 measurements reveal distinct regimes. Across 432 instances with exact optima, PrefixPlace averages 99.84% of optimum and never falls below 98.02%. In Retrieval-Augmented Generation (RAG) replays, it improves materialization-cost saving by 40.3% over vLLM Automatic Prefix Caching (vLLM-APC) and 6.3% over the best offline baseline. On WikiQA, gains are 40.4% and 5.3%. Finally, PrefixPlace solves a 50,000-node, 16-worker placement in 12.3 s on one processor, enabling timely replanning.",
+      "identifiers": [
+        "SemanticScholar:d462125803c28c3e87d2afa0dc6798c38773935f"
+      ],
+      "semantic_scholar_id": "d462125803c28c3e87d2afa0dc6798c38773935f",
+      "canonical_id": "arXiv:2608.01655",
+      "arxiv_id": "2608.01655",
+      "doi": "10.48550/arXiv.2608.01655",
+      "authors": [
+        "Zhi-Yu Wang",
+        "Rajkummar Buyya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 103,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種workerの転送・計算費を考慮したprefix KV配置を近似最適化。432設定で最適値の平均99.84%、RAG replayでvLLM APC比40.3%のmaterialization費削減を報告。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+      "source_url": "https://arxiv.org/abs/2608.18486",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When generating text, a Transformer produces representations of past tokens at every layer, but each layer can normally use only representations from the same depth. This restriction prevents the model from fully reusing information it has already computed. We introduce WhiteMatter, which allows every layer to draw on past-token representations from any depth. A learned mixer selects the most useful depths for the current context and combines their representations into shared key-value (KV) cache channels. Sharing these channels across layers can reduce the cache size. Given the same number of training tokens, WhiteMatter with a full-size cache performs comparably to a standard Transformer with 50% more layers. With half the KV cache, WhiteMatter outperforms matched standard Transformers at two model scales, up to 1.3B parameters. Cross-layer connections, however, introduce dependencies that slow training and prompt processing. We address this problem with cyclic iteration, which updates interleaved groups of tokens in turn while processing the tokens within each group in parallel. On a reference model trained with exact autoregressive execution, cyclic iteration converges 12.5x faster than standard Jacobi iteration.",
+      "identifiers": [
+        "SemanticScholar:75c41579732ae953d61016dfc79231363f9ff23b"
+      ],
+      "semantic_scholar_id": "75c41579732ae953d61016dfc79231363f9ff23b",
+      "canonical_id": "arXiv:2608.18486",
+      "arxiv_id": "2608.18486",
+      "authors": [
+        "Wen-Bo Zhang",
+        "Xiang Ren"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層を横断して過去トークンのKV表現を学習済みmixerで共有し、KV容量を半減しても同規模標準Transformerより良い性能を報告。循環反復による学習・prefill依存性への対処も含む。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Speculative Decoding for Mixture-of-Experts Models: Expert Bytes, Kernel Bandwidth and the Best Draft Length",
+      "source_url": "https://arxiv.org/abs/2610.34440",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding checks several drafted tokens in one verification pass. On a mixture-of-experts (MoE) model, consecutive tokens often select the same experts. A deduplicating engine reads each selected expert once per pass, so it requests fewer bytes than a per-slot engine, which reads it once per token. We write a step's time as the bytes each kernel requests over its effective bandwidth, plus fixed time. Under geometric acceptance, we derive from this step time when speculation is faster than plain decoding. The best draft length is a monotone staircase in the acceptance rate. We bound how a bandwidth error moves each result, and we check the main steps in Lean. Deduplication is faster exactly where its share $\\bar u(n)$ of the per-slot bytes is below its ratio $r(n)$ of the per-slot bandwidth. On llama.cpp Metal, MLX-LM and llama.cpp CUDA, which we modified to deduplicate, the per-slot kernel has the higher effective bandwidth (r = 0.32 to 0.75). Thus deduplication is faster only from 5 to 8 tokens per pass, or never. We fit the bandwidths on one layer's expert operation, run alone, in under an hour per model. Bytes from routing traces over these bandwidths predict the time that deduplication saves. The measured saving lies inside its error bound at every point on CUDA and MLX-LM and at 36 of 48 points on Metal. The crossover is the first pass size at which deduplication is faster. The prediction places it within one pass size in 10 of 12 configurations of engine, model and depth. We computed these predictions after the measurements. On DeepSeek-V2-Lite, operation times measured before its speculative runs give the best draft length on CUDA within one at all 22 acceptance values.",
+      "identifiers": [
+        "SemanticScholar:79263edbb6a9478715f76af966e2228829208e49"
+      ],
+      "semantic_scholar_id": "79263edbb6a9478715f76af966e2228829208e49",
+      "canonical_id": "arXiv:2610.34440",
+      "arxiv_id": "2610.34440",
+      "authors": [
+        "Yu-Zheng Lan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE投機デコードでexpert重みの重複読込を削減する効果と実効kernel帯域のトレードオフをモデル化し、最適draft長を推定。CUDA/MLX-LM/Metalで測定。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PATCH: Learnable Tile-level Hybrid Sparsity for LLMs",
+      "source_url": "https://arxiv.org/abs/2509.23410",
+      "year": 2025,
+      "published": "2025-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) deliver impressive performance but incur prohibitive memory and compute costs at deployment. Model pruning is an effective way to reduce these overheads, yet existing approaches face challenges: unstructured sparsity, where nonzeros can appear anywhere, preserves accuracy but yields irregular access patterns that prevent GPU acceleration, while semi-structured 2:4 sparsity is hardware-friendly but enforces a rigid 50% pattern that degrades model quality. To bridge this gap, we introduce PATCH, a hybrid sparsity framework that enables a continuous sparsity ratio between 0% and 50%. PATCH partitions weight matrices into tiles, assigning each tile to be either dense or 2:4 sparse via a learnable mask selection mechanism. This design provides fine-grained control over accuracy-acceleration tradeoffs and supports non-uniform sparsity across layers, leading to superior overall quality. Across models from 0.5B to 13B parameters, PATCH consistently narrows the gap to dense accuracy while delivering practical speedups. For instance, on LLaMA-2 7B with an A6000 GPU, PATCH achieves 1.18x-1.38x end-to-end speedup over dense baselines while improving accuracy by 0.37%-2.96% compared to the state-of-the-art 2:4 pruning method, MaskLLM.",
+      "identifiers": [
+        "SemanticScholar:8bf317891001f836afe891dbc702b276e5db3a5d"
+      ],
+      "semantic_scholar_id": "8bf317891001f836afe891dbc702b276e5db3a5d",
+      "canonical_id": "arXiv:2509.23410",
+      "arxiv_id": "2509.23410",
+      "doi": "10.48550/arXiv.2509.23410",
+      "authors": [
+        "Younes Hourri",
+        "Mohammad Mozaffari",
+        "Maryam Mehri Dehnavi"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 413,
+        "matched_prestigious_venue": null
+      },
+      "reason": "tile単位でdenseと2:4疎性を学習選択し、0–50%の連続的疎性率とGPU実効高速化を両立。LLaMA-2 7B/A6000でdense比1.18–1.38倍のend-to-end高速化を報告。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5ba716458228",
+    "round": "libimp-5ba716458228ea66-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5ba716458228ea66-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5ba716458228ea66-pre01.json",
+    "receipt": "sha256:7c5d41bfc0c2c093b82914f5b66b8134925db35810c07c7aa4e2f99b57f65040"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5ba716458228",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
