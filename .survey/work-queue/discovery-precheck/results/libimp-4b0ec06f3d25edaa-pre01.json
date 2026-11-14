@@ -1,0 +1,231 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4b0ec06f3d25edaa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4b0ec06f3d25",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.15413",
+    "arXiv:2606.30709"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "75ab6dff4feac27540b3ca12618c0d8a5b418a79",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-14T15:15:39.232435+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.15413",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.30709",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models",
+      "source_url": "https://arxiv.org/abs/2605.15413",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the remarkable success of transformer architectures in natural language processing, their scalability limitations remain poorly understood through systematic empirical analysis. This paper presents the first comprehensive large-scale evaluation of 118 transformer models across seven distinct architectural categories, revealing fundamental performance walls that manifest as hard deployment constraints. Our systematic benchmarking methodology uncovers a critical scalability crisis: while 88.1 % of models successfully process sequences up to 512 tokens, this drops dramatically to 44.9 % at 1024 tokens, with complete failure (0 %) at 2048 tokens. Through rigorous analysis of loading times, memory consumption, and computational efficiency across sequence lengths from 128 to 2048 tokens, we demonstrate that compressed models achieve superior parameter efficiency (649.2 tokens/sec/M parameters) compared to large generative models (12.5 tokens/ sec/M). Our findings challenge prevailing scaling assumptions and provide the first quantitative evidence that the theoretical $O\\left(n^{2}\\right)$ attention complexity translates into measurable performance walls. This work establishes new benchmarking methodologies for transformer evaluation and provides critical insights for practical deployment decisions in production environments.",
+      "identifiers": [
+        "SemanticScholar:9e7beabb3dad1a2e24d391d625da9054f28625a6"
+      ],
+      "semantic_scholar_id": "9e7beabb3dad1a2e24d391d625da9054f28625a6",
+      "canonical_id": "arXiv:2605.15413",
+      "arxiv_id": "2605.15413",
+      "doi": "10.1109/BigData66926.2025.11401965",
+      "authors": [
+        "M. Moghadasi",
+        "Faezeh Ghaderi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 341,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical Global Attention (HGA)",
+      "source_url": "https://arxiv.org/abs/2606.30709",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hierarchical Global Attention (HGA) is a drop-in replacement for dense causal attention in pretrained long-context transformers. HGA preserves the original checkpoint parameters: the pretrained $W_Q$, $W_K$, $W_V$, and $W_O$ projections remain unchanged, no calibration parameters are introduced, and no retraining is required. Applied to Qwen3-30B-A3B-Instruct-2507-FP8 on a single RTX~5090 (32GB), the patched model runs out of the box at a 64K-token context, where token-level K/V storage is not feasible on this hardware. Unlike previous sparse-attention methods, HGA performs hierarchical two-level routing. It first retrieves relevant chunks using compact RoPE-aware summaries and then refines the selection by routing only the most relevant groups before performing exact token-level attention. This hierarchical retrieval significantly reduces the number of fetched tokens while preserving exact attention over the retrieved token set, making RAM- and NVMe-backed storage practical. The full historical token K/V resides in host RAM or NVMe storage, while only a small routed working set is transferred to GPU memory during attention. Consequently, GPU memory consumption depends primarily on model weights and the routed working set rather than on the total context length. Across all tested context lengths (4K - 64K tokens), routed attention remains within approximately $0.01$--$0.02$ nats of dense attention while the sparsity used is just about 3%. These results suggest that the approximation introduced by hierarchical routing is small, and that the remaining quality gap is likely dominated by long-context positional encoding rather than by the routing algorithm itself.",
+      "identifiers": [
+        "SemanticScholar:989039d128bd05489ca0f98cad6e10893c7fe1fc"
+      ],
+      "semantic_scholar_id": "989039d128bd05489ca0f98cad6e10893c7fe1fc",
+      "canonical_id": "arXiv:2606.30709",
+      "arxiv_id": "2606.30709",
+      "doi": "10.48550/arXiv.2606.30709",
+      "authors": [
+        "Woernle Frank",
+        "F. Vladimir",
+        "Grinenko Artemiy"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.15413",
+      "identity_tokens": [
+        "id:DOI:10.1109/bigdata66926.2025.11401965",
+        "id:SemanticScholar:9e7beabb3dad1a2e24d391d625da9054f28625a6",
+        "id:arXiv:2605.15413",
+        "title:transformer scalability crisis the first comprehensive empirical analysis of performance walls in modern language models",
+        "url:https://arxiv.org/abs/2605.15413"
+      ],
+      "record": {
+        "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models",
+        "source_url": "https://arxiv.org/abs/2605.15413",
+        "year": 2025,
+        "published": "2025-12-08",
+        "venue": "BigData Congress [Services Society]",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite the remarkable success of transformer architectures in natural language processing, their scalability limitations remain poorly understood through systematic empirical analysis. This paper presents the first comprehensive large-scale evaluation of 118 transformer models across seven distinct architectural categories, revealing fundamental performance walls that manifest as hard deployment constraints. Our systematic benchmarking methodology uncovers a critical scalability crisis: while 88.1 % of models successfully process sequences up to 512 tokens, this drops dramatically to 44.9 % at 1024 tokens, with complete failure (0 %) at 2048 tokens. Through rigorous analysis of loading times, memory consumption, and computational efficiency across sequence lengths from 128 to 2048 tokens, we demonstrate that compressed models achieve superior parameter efficiency (649.2 tokens/sec/M parameters) compared to large generative models (12.5 tokens/ sec/M). Our findings challenge prevailing scaling assumptions and provide the first quantitative evidence that the theoretical $O\\left(n^{2}\\right)$ attention complexity translates into measurable performance walls. This work establishes new benchmarking methodologies for transformer evaluation and provides critical insights for practical deployment decisions in production environments.",
+        "identifiers": [
+          "SemanticScholar:9e7beabb3dad1a2e24d391d625da9054f28625a6"
+        ],
+        "semantic_scholar_id": "9e7beabb3dad1a2e24d391d625da9054f28625a6",
+        "canonical_id": "arXiv:2605.15413",
+        "arxiv_id": "2605.15413",
+        "doi": "10.1109/BigData66926.2025.11401965",
+        "authors": [
+          "M. Moghadasi",
+          "Faezeh Ghaderi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 341,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.30709",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.30709",
+        "id:SemanticScholar:989039d128bd05489ca0f98cad6e10893c7fe1fc",
+        "id:arXiv:2606.30709",
+        "title:hierarchical global attention hga",
+        "url:https://arxiv.org/abs/2606.30709"
+      ],
+      "record": {
+        "title": "Hierarchical Global Attention (HGA)",
+        "source_url": "https://arxiv.org/abs/2606.30709",
+        "year": 2026,
+        "published": "2026-06-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hierarchical Global Attention (HGA) is a drop-in replacement for dense causal attention in pretrained long-context transformers. HGA preserves the original checkpoint parameters: the pretrained $W_Q$, $W_K$, $W_V$, and $W_O$ projections remain unchanged, no calibration parameters are introduced, and no retraining is required. Applied to Qwen3-30B-A3B-Instruct-2507-FP8 on a single RTX~5090 (32GB), the patched model runs out of the box at a 64K-token context, where token-level K/V storage is not feasible on this hardware. Unlike previous sparse-attention methods, HGA performs hierarchical two-level routing. It first retrieves relevant chunks using compact RoPE-aware summaries and then refines the selection by routing only the most relevant groups before performing exact token-level attention. This hierarchical retrieval significantly reduces the number of fetched tokens while preserving exact attention over the retrieved token set, making RAM- and NVMe-backed storage practical. The full historical token K/V resides in host RAM or NVMe storage, while only a small routed working set is transferred to GPU memory during attention. Consequently, GPU memory consumption depends primarily on model weights and the routed working set rather than on the total context length. Across all tested context lengths (4K - 64K tokens), routed attention remains within approximately $0.01$--$0.02$ nats of dense attention while the sparsity used is just about 3%. These results suggest that the approximation introduced by hierarchical routing is small, and that the remaining quality gap is likely dominated by long-context positional encoding rather than by the routing algorithm itself.",
+        "identifiers": [
+          "SemanticScholar:989039d128bd05489ca0f98cad6e10893c7fe1fc"
+        ],
+        "semantic_scholar_id": "989039d128bd05489ca0f98cad6e10893c7fe1fc",
+        "canonical_id": "arXiv:2606.30709",
+        "arxiv_id": "2606.30709",
+        "doi": "10.48550/arXiv.2606.30709",
+        "authors": [
+          "Woernle Frank",
+          "F. Vladimir",
+          "Grinenko Artemiy"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 138,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5fef8bab0bcc2441fdb8f2f24b79ca8ad21a12f01b2e5b6a4e62535a5b5879ee",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
