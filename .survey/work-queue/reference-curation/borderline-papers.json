@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-14T17:03:44+00:00",
-  "record_count": 5610,
+  "updated_at": "2026-11-14T18:04:04+00:00",
+  "record_count": 5611,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86614,6 +86614,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Glider: Global and Local Instruction-Driven Expert Router"
+    },
+    "arXiv:2603.14517": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14517",
+      "identity_tokens": [
+        "arXiv:2603.14517"
+      ],
+      "reason": "KV内の古い情報が検索を妨げるproactive interferenceを忘却・統合機構で抑える。小型Transformerで検索精度を評価するが、実用LLM推論の速度・メモリ改善の定量根拠は要旨から不足。",
+      "first_checked_at": "2026-11-14T18:04:04+00:00",
+      "last_checked_at": "2026-11-14T18:04:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Forget: Sleep-Inspired Memory Consolidation for Resolving Proactive Interference in Large Language Models"
     }
   }
 }
