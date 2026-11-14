@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1402-scheduled-chat-00/r01",
+  "reference_main_sha": "6a8aeb376bb3b7da5d565b1ca8e59c6fdb177b54",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.22013",
+      "identity_tokens": ["arxiv:2606.22013"],
+      "title": "Load Testing for Machine Learning Model Serving Systems at Scale",
+      "reason": "機械学習モデルのサービング能力をSLO制約下で推定する適応的負荷試験フレームワークVanguardを提案。実運用14事例で評価し、実トラフィックに基づく負荷校正で容量推定誤差を約30%から2〜6%へ改善したと報告する。LLMを含む推論サービング基盤のGPU容量計画、遅延制約、資源効率に直接関連する。評価対象はNLPだけでなく推薦・ランキング・画像モデルも含む点に注意する。",
+      "source_url": "https://arxiv.org/abs/2606.22013",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T14:02:00+09:00",
+      "last_checked_at": "2026-11-14T14:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 264
+    }
+  ]
+}
