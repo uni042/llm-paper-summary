@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-2155-scheduled-chat-00/r01",
+  "reference_main_sha": "047206d8dcc7f878b707c33b3e66f88152b4bbba",
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.00030",
+      "identity_tokens": [
+        "arxiv:2406.00030"
+      ],
+      "title": "Large Language Model Pruning",
+      "reason": "相互情報量に基づいて冗長なニューロンを検出し、モデルの構造的剪定を行う。LLM圧縮と計算量削減に直接関連する。ただし要旨の定量性能は限定的であり、詳細な評価条件はResearch時に検証する。",
+      "source_url": "https://arxiv.org/abs/2406.00030",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T21:55:00+09:00",
+      "last_checked_at": "2026-11-14T21:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 310
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.5220/0014920500004039",
+      "identity_tokens": [
+        "doi:10.5220/0014920500004039"
+      ],
+      "title": "MoE-Pipe: A Pipelined MoE Model Loading Framework for Reducing the Cold Start Delays in Serverless Inference",
+      "reason": "MoEのexpert重み転送と推論計算をCPU-GPU間、GPU間、GPU内で重畳し、サーバーレス推論のコールドスタートを短縮する。著者はロード時間約65%の隠蔽、end-to-end遅延最大1.85倍改善、TTFT最大2倍改善を報告。",
+      "source_url": "https://www.scitepress.org/PublishedPapers/2026/149205/",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T21:55:00+09:00",
+      "last_checked_at": "2026-11-14T21:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 311
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.05678",
+      "identity_tokens": [
+        "arxiv:2406.05678"
+      ],
+      "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models",
+      "reason": "LongLoRAのshifted sparse attentionを再構成しsink tokenのglobal attentionを導入するSF-AttnとH2O KVキャッシュ圧縮を組み合わせる。長文脈微調整および推論メモリ・効率に直接関連。92%という値はfull attentionに対するperplexity改善の割合であり推論高速化率ではない。",
+      "source_url": "https://arxiv.org/abs/2406.05678",
+      "body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T21:55:00+09:00",
+      "last_checked_at": "2026-11-14T21:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 312
+    }
+  ],
+  "record_count": 3
+}
