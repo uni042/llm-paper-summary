@@ -1,17 +1,13 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-14T00:06:50.935659+00:00",
+  "checked_at": "2026-11-14T03:32:29.300878+00:00",
   "mode": "apply",
   "job_retention_days": 7,
   "transport_retention_days": 1,
-  "candidate_count": 1,
-  "candidate_counts_by_kind": {
-    "terminal_job": 1
-  },
-  "deleted_count": 1,
-  "deleted": [
-    ".survey/work-queue/jobs/job-research-a5747997d3f54138.json"
-  ],
+  "candidate_count": 0,
+  "candidate_counts_by_kind": {},
+  "deleted_count": 0,
+  "deleted": [],
   "skipped": [
     {
       "path": ".survey/work-queue/submissions/libimp-01369101086e41e4-pre01-sub01.json",
@@ -131,6 +127,10 @@
     },
     {
       "path": ".survey/work-queue/submissions/libimp-24c2a4953405a248-pre01-sub01.json",
+      "reason": "submission_not_settled"
+    },
+    {
+      "path": ".survey/work-queue/submissions/libimp-2640f16180814020-pre01-sub01.json",
       "reason": "submission_not_settled"
     },
     {
