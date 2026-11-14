@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1803-scheduled-chat-00/r01",
+  "reference_main_sha": "2cef2aa9678e9f859496815473af2d96a7e8ed73",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.11553",
+      "identity_tokens": [
+        "arxiv:2601.11553"
+      ],
+      "title": "PerCache: Predictive Hierarchical Cache for RAG Applications on Mobile Devices",
+      "reason": "モバイルRAGにおける長いプロンプトと端末資源制約に対し、クエリ類似性とQKVキャッシュを段階的に照合する階層キャッシュ、将来クエリ予測による事前充填、負荷に応じた構成調整を提案。スマートフォン上で5データセット・2種類のLLMを評価し、著者は最強比較対象比でエンドツーエンド遅延を最大63.5%削減と報告。モバイルLLM推論のキャッシュ再利用に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2601.11553",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T18:03:00+09:00",
+      "last_checked_at": "2026-11-14T18:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 273
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.30310",
+      "identity_tokens": [
+        "arxiv:2608.30310"
+      ],
+      "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
+      "reason": "全注意層と線形注意層が混在するLLMで、線形注意の再帰状態が任意prefix境界に巻き戻せない問題に対し、短い末尾系列のreplayで状態を近似再構築する。3種類のGated DeltaNet系モデルでLongBench・RULERを評価し、5–10%のreplay予算でfull-prefill品質の92.8–99.9%を維持、32K一致prefixではTTFT最大9.1–14.3倍高速化を著者は報告。hybrid LLMのprefix caching効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2608.30310",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T18:03:00+09:00",
+      "last_checked_at": "2026-11-14T18:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38832",
+      "identity_tokens": [
+        "arxiv:2609.38832"
+      ],
+      "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+      "reason": "NAMOHは各トークンでH個のheadのうちK個を活性化し、各headが割り当てられたトークンのみ保持・因果注意を行う。Hを増やしKを固定することでheadごとのKV履歴アクセスを減らし、head相対RoPEで位置雑音の軽減を狙う。GQAや既存疎注意と互換で、長文脈推論効率を評価。LLMの注意計算とKVアクセス削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.38832",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T18:03:00+09:00",
+      "last_checked_at": "2026-11-14T18:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09051",
+      "identity_tokens": [
+        "arxiv:2610.09051"
+      ],
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "reason": "Universal AttentionはRoPEとSoftmax注意を保持したまま複合減衰機構を学習し、注意への寄与が小さいトークンを適応的に削除する。著者は自然言語・合成タスクで10倍KV圧縮と下流性能改善、16K文脈で25倍圧縮を報告。LLM KVキャッシュ圧縮と長文脈効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T18:03:00+09:00",
+      "last_checked_at": "2026-11-14T18:03:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 282
+    }
+  ]
+}
