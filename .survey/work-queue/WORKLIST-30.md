@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-14T01:42:06+00:00`
+Generated: `2026-11-14T02:44:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -274,7 +274,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 191 | 10 | 5 | 8 | arXiv:2610.33008 | TraceQuery: learning what to recompute from full-denoising trajectory in diffusion language models | 2026-10-07 |  | 0 | 8 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.33008) |
 | 192 | 10 | 5 | 8 | arXiv:2610.28441 | Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity | 2026-10-20 |  | 0 | 8 | inference-systems, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.28441) |
 | 193 | 10 | 5 | 8 | DOI:10.3390/jlpea15010008 | Optimizing BFloat16 Deployment of Tiny Transformers on Ultra-Low Power Extreme Edge SoCs | 2025-02-05 | Journal of Low Power Electronics and Applications | 10 | 8 | Conditional Computation, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.3390/jlpea15010008) |
-| 194 | 35 | 5 | 8 | arXiv:2510.12422 | VideoLucy: Deep Memory Backtracking for Long Video Understanding | 2025-10-14 | Neural Information Processing Systems | 25 | 9 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2510.12422) |
+| 194 | 36 | 5 | 8 | arXiv:2510.12422 | VideoLucy: Deep Memory Backtracking for Long Video Understanding | 2025-10-14 | Neural Information Processing Systems | 26 | 9 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2510.12422) |
 | 195 | 42 | 5 | 8 | arXiv:2403.16899 | State Space Models as Foundation Models: A Control Theoretic Overview | 2024-03-25 | American Control Conference | 42 | 8 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2403.16899) |
 | 196 | 10 | 5 | 8 | arXiv:2606.10932 | Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2 | 2026-04-28 | arXiv.org | 0 | 8 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2606.10932) |
 | 197 | 105 | 5 | 8 | arXiv:2604.00886 | PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding | 2026-04-01 | arXiv.org | 5 | 10 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.00886) |
@@ -579,7 +579,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 496 | 10 | 4 | 5 | arXiv:2610.34336 | Improving the Chain-of-Thought Compressibility of Pruned Reasoning Models via Long--Short Contrastive Pruning | 2026-10-25 |  | 0 | 5 |  | [source](https://arxiv.org/abs/2610.34336) |
 | 497 | 0 | 4 | 5 | SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1 | Shenbi: accelerating video diﬀusion models with INT8-attention |  |  | 0 | 5 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/a97223331cab0e2573cc6322b3c4e19920995aa1) |
 | 498 | 112 | 4 | 5 | arXiv:2605.08813 | AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems | 2026-05-09 | Annual Meeting of the Association for Computational Linguistics | 2 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2605.08813) |
-| 499 | 102 | 4 | 5 | arXiv:2606.12199 | Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation | 2026-06-10 | Interspeech | 2 | 5 |  | [source](https://arxiv.org/abs/2606.12199) |
+| 499 | 102 | 4 | 5 | arXiv:2605.14310 | CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding | 2026-05-14 | arXiv.org | 2 | 7 |  | [source](https://arxiv.org/abs/2605.14310) |
 | 500 | 101 | 4 | 5 | arXiv:2602.11748 | Think Longer to Explore Deeper: Learn to Explore In-Context via Length-Incentivized Reinforcement Learning | 2026-02-12 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2602.11748) |
 
 ## Machine-readable

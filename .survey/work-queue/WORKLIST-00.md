@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-14T01:42:06+00:00`
+Generated: `2026-11-14T02:44:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -579,7 +579,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 496 | 10 | 4 | 5 | DOI:10.1109/ISPASS69572.2026.00073 | Power Ranger: A Comprehensive Framework for GPU Power Characterization | 2026-04-26 | IEEE International Symposium on Performance Analysis of Systems and Software | 0 | 5 | LLM serving / energy management / cluster scheduling / dynamic reconfiguration, inference-systems | [source](https://doi.org/10.1109/ISPASS69572.2026.00073) |
 | 497 | 8 | 4 | 5 | arXiv:2511.18950 | Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation | 2025-11-24 | IEEE International Joint Conference on Neural Network | 8 | 2 |  | [source](https://arxiv.org/abs/2511.18950) |
 | 498 | 122 | 4 | 5 | arXiv:2607.06540 | Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs | 2026-07-07 | Annual Meeting of the Association for Computational Linguistics | 12 | 5 |  | [source](https://arxiv.org/abs/2607.06540) |
-| 499 | 102 | 4 | 5 | arXiv:2605.14310 | CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding | 2026-05-14 | arXiv.org | 2 | 7 |  | [source](https://arxiv.org/abs/2605.14310) |
+| 499 | 105 | 4 | 5 | arXiv:2608.22516 | TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding | 2026-08-23 |  | 5 | 6 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2608.22516) |
 | 500 | 102 | 4 | 5 | arXiv:2609.37818 | Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue | 2026-09-29 | arXiv.org | 2 | 5 |  | [source](https://arxiv.org/abs/2609.37818) |
 
 ## Machine-readable
