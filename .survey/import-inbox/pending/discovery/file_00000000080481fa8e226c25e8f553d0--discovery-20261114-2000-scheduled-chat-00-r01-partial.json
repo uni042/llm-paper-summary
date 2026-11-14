@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-2000-scheduled-chat-00/r01",
+  "reference_main_sha": "7fe772905a4915f9c6a62c75ebe4cb9fb59abad0",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02560",
+      "identity_tokens": ["arxiv:2608.02560"],
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "reason": "PRECOGは文書をSSMの固定長隠れ状態に事前符号化し、検索した状態をクエリ時に注入して文脈再prefillを回避する。TENNs-LLM 1.2Bと192KB隠れ状態で、エッジ機器のprefill約27秒から6ms未満への短縮を著者が報告。SSM長文脈推論・検索・メモリ階層の効率化に直接関係する。Transformerへの同等適用可能性は示されていない。",
+      "source_url": "https://arxiv.org/abs/2608.02560",
+      "body_check": "primary_arxiv_abstract_direct_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T20:00:00+09:00",
+      "last_checked_at": "2026-11-14T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 305
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.01320",
+      "identity_tokens": ["arxiv:2611.01320"],
+      "title": "Step-dLLM: Adaptive Step-aware Sparse Attention for Efficient Diffusion LLM Inference",
+      "reason": "拡散LLMの反復denoisingでattention maskを一定間隔のanchor stepで再生成し、head別に疎性予算を割り当てる。IO-aware Triton block-sparse kernelと組み合わせ、LLaDA-1.5の8K文脈・256step・90%疎性でdense FlashAttention比2.78倍のエンドツーエンド高速化を著者が報告。再学習不要の拡散LLM推論高速化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2611.01320",
+      "body_check": "primary_arxiv_abstract_direct_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T20:00:00+09:00",
+      "last_checked_at": "2026-11-14T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 307
+    }
+  ]
+}
