@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1557-scheduled-chat-00/r01",
+  "reference_main_sha": "bea668a6cb0c31040faad931c0a6b122d94c8279",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03440",
+      "identity_tokens": [
+        "arxiv:2410.03440"
+      ],
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "reason": "Transformerの事前学習中に活性化疎性とニューロン間相関の変化を分析し、MoE型の疎学習とdense学習を切り替えるSwitchable Sparse-Dense Learning（SSD）を提案。著者は同一モデルサイズでdense学習と同程度の品質・学習費用削減、疎推論で最大2倍の高速化を報告。LLMの学習と推論の計算効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T15:57:44+09:00",
+      "last_checked_at": "2026-11-14T15:57:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.23431",
+      "identity_tokens": [
+        "arxiv:2506.23431"
+      ],
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "reason": "自己回帰モデルの逐次生成を改善するため複数の部分系列を同時に開始し、各ステップで部分系列ごとに1トークン生成するパイプラインデコーダを提案。質問応答・要約・キーフレーズ生成で速度改善と品質・メモリ維持を報告。LLM推論の並列化とデコード効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T15:57:44+09:00",
+      "last_checked_at": "2026-11-14T15:57:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 281
+    }
+  ]
+}
