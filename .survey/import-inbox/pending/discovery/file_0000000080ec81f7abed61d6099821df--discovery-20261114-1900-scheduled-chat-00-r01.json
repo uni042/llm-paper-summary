@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1900-scheduled-chat-00/r01",
+  "reference_main_sha": "313d0828b84d2d92da1416ba7aaf97dfe7f61dde",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.02456",
+      "identity_tokens": [
+        "arxiv:2507.02456"
+      ],
+      "title": "System-performance and cost modeling of Large Language Model training and inference",
+      "reason": "計算・メモリ帯域・通信トポロジーと5次元並列化、MoE、FlashAttention、チップレット費用を統合する学習・推論性能費用モデル。LLMのハードウェア／ソフトウェア協調設計と資源効率を直接評価する。",
+      "source_url": "https://arxiv.org/abs/2507.02456",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 284
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10912",
+      "identity_tokens": [
+        "arxiv:2410.10912"
+      ],
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "reason": "重み行列の経験スペクトル分布とheavy-tailed自己正則化指標により層別剪定率を配分する。LLaMA-7Bの80%疎性におけるperplexity評価を報告し、LLMのパラメータ圧縮に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 285
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.18417",
+      "identity_tokens": [
+        "arxiv:2603.18417"
+      ],
+      "title": "Self-Tuning Sparse Attention: Multi-Fidelity Hyperparameter Optimization for Transformer Acceleration",
+      "reason": "ベイズ最適化・二分探索・系列長別の多忠実度評価により疎attentionの層／head別ハイパーパラメータを自動探索。Llama-2-7Bでgrid search比探索3.4倍高速、評価回数8.8分の1と著者報告。",
+      "source_url": "https://arxiv.org/abs/2603.18417",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 286
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.21265",
+      "identity_tokens": [
+        "arxiv:2608.21265"
+      ],
+      "title": "Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning",
+      "reason": "履歴推論軌跡から再利用可能な推論メモリを構築してprefill側で検索し、短縮されたCoTを補う。著者は通常CoT比1.14～1.49倍の遅延改善と複数ベンチマークの精度改善を報告。推論トークン費用の削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.21265",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 288
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39740",
+      "identity_tokens": [
+        "arxiv:2609.39740"
+      ],
+      "title": "LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation",
+      "reason": "内部状態でTHINK・RECALL・EXITを選択する潜在アクション方策を反実仮想蒸留で学習し、長文脈メモリ検索と計算ステップを統合。1.4Bモデルで長文脈baseline比5.9倍高速と著者報告。",
+      "source_url": "https://arxiv.org/abs/2609.39740",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 289
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.00797",
+      "identity_tokens": [
+        "arxiv:2507.00797"
+      ],
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "reason": "投票に基づくKV削除と再構成可能なPE配列・柔軟データフローを組み合わせる専用LLM推論アクセラレータ。エッジ環境でのメモリ効率と生成遅延を対象とする。",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 291
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16825",
+      "identity_tokens": [
+        "arxiv:2606.16825"
+      ],
+      "title": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+      "reason": "連続Transformer層間でexpert重みを共有しながらroutingとattentionを層ごとに独立させるExpert Tying。OLMoE、Qwen3、DeepSeek型MoEで学習・推論の重みメモリをほぼ半減できると著者報告。",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 292
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22132",
+      "identity_tokens": [
+        "arxiv:2601.22132"
+      ],
+      "title": "Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference",
+      "reason": "大型LLMの全回答ではなく短いprefixヒントだけを小型モデルへ与え、必要性とトークン長を二段階で予測。GSM8K等の推論・コード生成でLLM単独比42～94%の費用削減を著者報告。",
+      "source_url": "https://arxiv.org/abs/2601.22132",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 294
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03060",
+      "identity_tokens": [
+        "arxiv:2602.03060"
+      ],
+      "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+      "reason": "RoPEから空間推論に重要な暗黙座標トークンを同定し、前景意味トークンと併せて保持する学習不要の視覚トークン剪定。4モデル20ベンチマークで約50%の視覚トークン削減、性能99%以上維持と著者報告。",
+      "source_url": "https://arxiv.org/abs/2602.03060",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 297
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.15503",
+      "identity_tokens": [
+        "arxiv:2511.15503"
+      ],
+      "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures",
+      "reason": "PIMでのデータ再配置と演算ループ分割を共同最適化するコンパイラ。AttAcc上のGPT-3・LLaMA-2推論でGPU比平均4.52倍の高速化と著者報告。LLM実行カーネルとPIM配置の効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2511.15503",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T19:00:00+09:00",
+      "last_checked_at": "2026-11-14T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 298
+    }
+  ]
+}
