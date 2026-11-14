@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-2356-scheduled-chat-00/r01",
+  "reference_main_sha": "85467eab986afe5e90a99c2ce1243e0a2201ed98",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31574",
+      "identity_tokens": [
+        "arxiv:2610.31574"
+      ],
+      "title": "Rethinking Sequence Compression with Test-time Regression",
+      "reason": "TTR-Compressorは入力トークンから回帰問題を構成し、forward時に閉形式で求める係数を圧縮表現にする。block-wise sparse attentionのRULER性能を改善し、視覚トークン統合では標準MLP mergerと同等性能を55.6%少ない視覚トークンで達成したと著者は報告。長文脈・マルチモーダル推論の圧縮に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.31574",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T23:56:00+09:00",
+      "last_checked_at": "2026-11-14T23:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 317
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.12784",
+      "identity_tokens": [
+        "arxiv:2502.12784"
+      ],
+      "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture",
+      "reason": "Volta GPUのTensor Coreとkernel fusionを利用し、MHA学習のHBMアクセスとオーバーヘッドを削減する。V100でPyTorch比平均1.80倍、最大2.46倍のend-to-end高速化を報告。推論専用ではないがTransformerのGPU計算効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2502.12784",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T23:56:00+09:00",
+      "last_checked_at": "2026-11-14T23:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 318
+    }
+  ]
+}
