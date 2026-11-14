@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-14T22:37:43+00:00`
+Generated: `2026-11-14T23:39:15+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -75,8 +75,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128562** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122311** / 監査再投入 **0** / 機械規則適用後 **125001** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128565** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122314** / 監査再投入 **0** / 機械規則適用後 **125004** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -511,7 +511,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 429 | 9 | 4 | 6 | arXiv:2508.18773 | ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models | 2025-08-26 | arXiv.org | 9 | 7 |  | [source](https://arxiv.org/abs/2508.18773) |
 | 430 | 0 | 4 | 6 | arXiv:2505.11153 | Bi-directional Recurrence Improves Transformer in Partially Observable Markov Decision Processes | 2025-05-16 | arXiv.org | 0 | 6 |  | [source](https://arxiv.org/abs/2505.11153) |
 | 431 | 102 | 4 | 6 | arXiv:2602.12526 | Constraint-Rectified Training for Efficient Chain-of-Thought | 2026-02-13 | arXiv.org | 2 | 6 |  | [source](https://arxiv.org/abs/2602.12526) |
-| 432 | 101 | 4 | 6 | arXiv:2609.01507 | LatentPress: Context Compression Beyond Text and Vision | 2026-09-01 |  | 1 | 6 | LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2609.01507) |
+| 432 | 101 | 4 | 6 | arXiv:2609.01507 | LatentPress: Context Compression Beyond Text and Vision | 2026-09-01 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2609.01507) |
 | 433 | 14 | 4 | 6 | arXiv:2507.23539 | Improved Algorithms for Kernel Matrix-Vector Multiplication Under Sparsity Assumptions | 2025-07-31 | International Conference on Learning Representations | 4 | 6 | inference-systems | [source](https://arxiv.org/abs/2507.23539) |
 | 434 | 10 | 4 | 6 | arXiv:2610.37642 | Metacognitive Decoding: Efficient Inference for Diffusion Language Agents | 2026-10-27 |  | 0 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2610.37642) |
 | 435 | 1 | 4 | 6 | DOI:10.1109/ICME57554.2024.10688073 | Efficient Speech-to-Text Translation: Progressive Pruning for Accelerated Speech Pre-trained Model | 2024-07-15 | IEEE International Conference on Multimedia and Expo | 1 | 6 | 03-model-compression-pruning | [source](https://doi.org/10.1109/ICME57554.2024.10688073) |
