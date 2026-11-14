@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-14T13:50:23+00:00`
+Generated: `2026-11-14T14:16:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -212,7 +212,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 130 | 101 | 6 | 6 | arXiv:2603.24680 | ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs | 2026-03-25 | arXiv.org | 1 | 9 |  | [source](https://arxiv.org/abs/2603.24680) |
 | 131 | 1 | 6 | 6 | arXiv:2510.06750 | Gold-Switch: Training-Free Superposition of Slow- and Fast- Thinking LLMs | 2025-10-08 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2510.06750) |
 | 132 | 10 | 6 | 6 | DOI:10.1109/IJCNN69854.2026.11729267 | PrismKV: Harmonizing Heterogeneous Compression Strategies through Layer-adaptive Partition Scoring | 2026-06-01 | IEEE International Joint Conference on Neural Network | 0 | 6 | 07-kv-cache-optimization-compression, kv-cache-optimization-compression | [source](https://doi.org/10.1109/IJCNN69854.2026.11729267) |
-| 133 | 14 | 6 | 6 | DOI:10.1109/ISIT63088.2025.11195544 | Optimal Quantization for Matrix Multiplication | 2025-06-22 | International Symposium on Information Theory | 14 | 6 |  | [source](https://doi.org/10.1109/ISIT63088.2025.11195544) |
+| 133 | 10 | 6 | 6 | DOI:10.24963/ijcai.2026/237 | SeGO: Sensitivity-Aware Golden Optimization for Large-Scale VLM Quantization | 2026-09-01 | IJCAI/ECAI | 0 | 7 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.24963/ijcai.2026/237) |
 | 134 | 0 | 6 | 6 | DOI:10.1109/CCMCC67628.2025.11380554 | A Blueprint for Accurate, Energy-Efficient DNN Inference via Capacitive In-Memory Processing | 2025-10-08 | 2025 Cross-Disciplinary Conference on Memory-Centric Computing (CCMCC) | 0 | 6 | 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/CCMCC67628.2025.11380554) |
 | 135 | 102 | 6 | 6 | arXiv:2603.06731 | PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks | 2026-03-06 | arXiv.org | 2 | 6 | GPU Kernel Framework, PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.06731) |
 | 136 | 10 | 6 | 6 | DOI:10.1109/icassp55912.2026.11461874 | Alleviating Overthinking in Large Reasoning Models via Self-Iterative Preference Optimization | 2026-05-03 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 0 | 6 |  | [source](https://doi.org/10.1109/icassp55912.2026.11461874) |

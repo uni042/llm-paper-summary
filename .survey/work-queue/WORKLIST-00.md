@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-14T13:50:23+00:00`
+Generated: `2026-11-14T14:16:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -214,7 +214,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 131 | 20 | 6 | 6 | arXiv:2402.08958 | Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers | 2024-02-14 | Neural Information Processing Systems | 10 | 6 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2402.08958) |
 | 132 | 101 | 6 | 6 | arXiv:2604.06970 | Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale | 2026-04-08 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2604.06970) |
 | 133 | 101 | 6 | 6 | DOI:10.48550/arXiv.2606.07248 | Clairvoyant: Predictive SJF Scheduling to Mitigate Head-of-Line Blocking in Serial LLM Backends | 2026-06-05 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, inference-systems | [source](https://doi.org/10.48550/arXiv.2606.07248) |
-| 134 | 10 | 6 | 6 | DOI:10.24963/ijcai.2026/237 | SeGO: Sensitivity-Aware Golden Optimization for Large-Scale VLM Quantization | 2026-09-01 | IJCAI/ECAI | 0 | 7 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.24963/ijcai.2026/237) |
+| 134 | 10 | 6 | 6 | arXiv:2611.03768 | Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention | 2026-11-02 |  | 0 | 6 | 13-sparse-attention, inference-systems, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2611.03768) |
 | 135 | 10 | 6 | 6 | arXiv:2609.38386 | Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits | 2026-09-29 | arXiv.org | 0 | 6 | LLM Serving / Scheduling / Disaggregation, chunked-prefill scheduling / fairness / latency control | [source](https://arxiv.org/abs/2609.38386) |
 | 136 | 30 | 6 | 6 | arXiv:2506.09853 | Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning | 2025-06-11 | Neural Information Processing Systems | 20 | 6 |  | [source](https://arxiv.org/abs/2506.09853) |
 | 137 | 1 | 6 | 6 | SemanticScholar:7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c | T WIN KV: A C OMPOSABLE R EPAIR P ASS FOR KV C ACHE E VICTION VIA P AIRWISE K EY R EDUNDANCY |  |  | 1 | 6 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, kv-cache-optimization-compression | [source](https://www.semanticscholar.org/paper/7a1ad871ad53bf6dc201101f7d2f59e1ebc2f61c) |
