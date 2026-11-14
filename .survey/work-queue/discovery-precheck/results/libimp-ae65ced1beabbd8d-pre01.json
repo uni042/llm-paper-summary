@@ -1,0 +1,167 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ae65ced1beabbd8d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ae65ced1beab",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.12167"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "24d3ed74efb1a36c1d8c96bce55f671c24ee05c8",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-14T05:09:09.169568+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.12167",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+      "source_url": "https://arxiv.org/abs/2503.12167",
+      "year": 2025,
+      "published": "2025-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.",
+      "identifiers": [
+        "SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553"
+      ],
+      "semantic_scholar_id": "b23bcfec5cd63bdb4047bd70bb439798b0562553",
+      "canonical_id": "arXiv:2503.12167",
+      "arxiv_id": "2503.12167",
+      "doi": "10.48550/arXiv.2503.12167",
+      "authors": [
+        "Cheng Deng",
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yong-Cheng Zeng",
+        "Xin-Jian Wu",
+        "Wen-Xin Zhao",
+        "Q. Xiao",
+        "Jia-Chuan Wang",
+        "Hao-Yang Li",
+        "Lei Chen",
+        "Lionel M. Ni",
+        "Hai-Feng Zhang",
+        "Jun Wang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 609,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2503.12167",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.12167",
+        "id:SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553",
+        "id:arXiv:2503.12167",
+        "title:plm efficient peripheral language models hardwarecodesigned for ubiquitous computing",
+        "url:https://arxiv.org/abs/2503.12167"
+      ],
+      "record": {
+        "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+        "source_url": "https://arxiv.org/abs/2503.12167",
+        "year": 2025,
+        "published": "2025-03-15",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.",
+        "identifiers": [
+          "SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553"
+        ],
+        "semantic_scholar_id": "b23bcfec5cd63bdb4047bd70bb439798b0562553",
+        "canonical_id": "arXiv:2503.12167",
+        "arxiv_id": "2503.12167",
+        "doi": "10.48550/arXiv.2503.12167",
+        "authors": [
+          "Cheng Deng",
+          "Luo-Yang Sun",
+          "Jiwen Jiang",
+          "Yong-Cheng Zeng",
+          "Xin-Jian Wu",
+          "Wen-Xin Zhao",
+          "Q. Xiao",
+          "Jia-Chuan Wang",
+          "Hao-Yang Li",
+          "Lei Chen",
+          "Lionel M. Ni",
+          "Hai-Feng Zhang",
+          "Jun Wang"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 609,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cfd9f694730387331f90963bfadcfe4221cff17412403a4e3ac26d59906f9f42",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
