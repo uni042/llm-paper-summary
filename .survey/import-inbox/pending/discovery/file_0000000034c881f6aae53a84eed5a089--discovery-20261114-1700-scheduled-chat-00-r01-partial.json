@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1700-scheduled-chat-00/r01",
+  "reference_main_sha": "ae71e914f957a4ad03bf699d7f37f2cbd36e12d8",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39334",
+      "identity_tokens": [
+        "arxiv:2609.39334"
+      ],
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "reason": "SpecScaleは推論時の探索経路の爆発と頻繁な検証処理に対し、低品質経路の早期枝刈り、経路間の重複計算排除、細粒度検証の遅延実行を組み合わせる。MATHやOlympiadを含む推論ベンチマークで回答品質を維持しつつスループットと遅延を改善したと著者は報告。LLMサービングの実行効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T17:00:00+09:00",
+      "last_checked_at": "2026-11-14T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 270
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18502",
+      "identity_tokens": [
+        "arxiv:2606.18502"
+      ],
+      "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications",
+      "reason": "企業向けマルチエージェント構築で継続事前学習、教師あり微調整、選好最適化による小型モデルのドメイン適応と、投機的デコード・FP8量子化・較正による推論最適化を統合。著者は企業ワークロードでスループット4.48倍を報告。推論最適化を含むため採用するが、複合システムの効果であり個別最適化の寄与とは区別する。",
+      "source_url": "https://arxiv.org/abs/2606.18502",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T17:00:00+09:00",
+      "last_checked_at": "2026-11-14T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 266
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01296",
+      "identity_tokens": [
+        "arxiv:2610.01296"
+      ],
+      "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models",
+      "reason": "MoE拡散言語モデル向けに、活性化・勾配重要度を用いた適応Tucker圧縮と、hot tokenへの低ランク補償・cold tokenのexpert候補制限を統合。著者はSDAR-30B-A3B-Chat-b32で圧縮率30%設定のMultiArith精度96.33%、最大7.22倍のエンドツーエンド高速化を報告。MoE圧縮と推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.01296",
+      "body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T17:00:00+09:00",
+      "last_checked_at": "2026-11-14T17:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 271
+    }
+  ]
+}
