@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-0900-scheduled-chat-00/r01",
+  "reference_main_sha": "89349cc16af77ccb79cba84091eff38e222a0e3f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00815",
+      "identity_tokens": ["arxiv:2610.00815"],
+      "title": "SafeDepth: Safety-Aware Token-Level Adaptive Computation",
+      "reason": "トークン単位のTransformer層スキップによる計算削減と安全性の両立を扱う。推論フェーズ、層位置、トークン表現に基づくrouterとadapterを学習し、基盤モデルを凍結したまま演算量を削減する。Llama-3-8B-InstructでFlexiDepth比較時のHarmBench-HJ有害応答率55.44%から25.25%、XSTest誤拒否率12.0%から4.0%を著者が報告。LLM条件付き計算と推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.00815",
+      "body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T09:00:00+09:00",
+      "last_checked_at": "2026-11-14T09:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 265
+    }
+  ]
+}
