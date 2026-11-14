@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-15 01:24:06 JST**
+> 自動生成: **2026-11-15 01:45:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **570** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-11 09:07:49 JST** |
-| 最終Discovery探索完了 | **11-14 23:56:00 JST** |
+| 最終Discovery探索完了 | **11-15 01:03:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **150045** |
+| 探索候補総数 | **150046** |
 | 処理済み | **21920** |
-| 未処理Discovery候補 | **128125** |
+| 未処理Discovery候補 | **128126** |
 | 収録済み | **3820** |
 | Research / Audit候補へ昇格済み | **167** |
 | 無関係として除外 | **12537** |
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **128125** |
+| 未処理候補（フィルタ前） | **128126** |
 | 機械規則による暫定隔離 | **2172** |
 | 拡張機械規則による追加隔離 | **1384** |
-| 機械規則通過後 | **124569** |
-| 系統内前方引用スコアによる選抜保留 | **118340** |
-| 暫定隔離合計 | **121896** |
+| 機械規則通過後 | **124570** |
+| 系統内前方引用スコアによる選抜保留 | **118341** |
+| 暫定隔離合計 | **121897** |
 | **読解可能候補（隔離後）** | **6229** |
 | 前方引用が同一系統で2本以上の候補 | **12075** |
 | 前方引用が同一系統で3本以上の候補 | **4313** |
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.6%**
-- 現在の生在庫: 後方references **59021件** / 前方引用 **70452件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128733件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **59021件** / 前方引用 **70453件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128734件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -103,12 +103,12 @@
 | 1周以上完了 | **3801** |
 | 巡回中 | **19** |
 | 未巡回 | **0** |
-| 今回run開始時due | **19** |
-| 前方引用から保持中の未処理候補 | **70452** |
+| 今回run開始時due | **22** |
+| 前方引用から保持中の未処理候補 | **70453** |
 | エラー状態保持seed | **19** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-15 00:34:28 JST**
+- state最終更新: **11-15 01:36:55 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-14 12:42:45 JST（12時間41分前）** |
+| 最終maintenance完了 | **11-14 12:42:45 JST（13時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **5** |
-| 直近6hのDiscovery本文確認・分類 | **12** |
+| 直近6hのDiscovery run | **6** |
+| 直近6hのDiscovery本文確認・分類 | **13** |
 | 最終Research完了 | **11-11 09:07:49 JST** |
-| 最終Discovery完了 | **11-14 23:56:00 JST** |
+| 最終Discovery完了 | **11-15 01:03:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-11 09:07:49 JST** / worker scheduled-chat-45 / run 20261111-0903-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/file_0000000045788206b2c6eef050998c04--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r02-corrected.json
-- Discovery: **11-14 23:56:00 JST** / worker scheduled-chat-00 / run 20261114-2356-scheduled-chat-00/r01
-  - 本文確認・分類 **2件** / accept **2件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/file_00000000a65481f7879ffde3b16902c4--discovery-20261114-2356-scheduled-chat-00-r01-partial.json
+- Discovery: **11-15 01:03:00 JST** / worker scheduled-chat-00 / run 20261115-0103-scheduled-chat-00/r01
+  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/pending/discovery/file_00000000122c820caefd0210aae8d093--discovery-20261115-0103-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
