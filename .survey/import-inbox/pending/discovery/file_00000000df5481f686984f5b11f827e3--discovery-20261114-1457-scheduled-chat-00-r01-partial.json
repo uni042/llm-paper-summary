@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1457-scheduled-chat-00/r01",
+  "reference_main_sha": "a43515c3ad820ac94416dd09aa32c134b7e43026",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.06672",
+      "identity_tokens": ["arxiv:2410.06672"],
+      "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures",
+      "reason": "TransformerとMambaの特徴・induction circuitの機構的類似性をSAEで分析する。SSMの動作理解には関係するが、推論時間・メモリ・ハードウェア効率の改善手法やシステム評価が主目的ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2410.06672",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T14:57:39+09:00",
+      "last_checked_at": "2026-11-14T14:57:39+09:00",
+      "linked_from": [],
+      "worklist_rank": 263
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08817",
+      "identity_tokens": ["arxiv:2602.08817"],
+      "title": "Kirin: Improving ANN efficiency with SNN Hybridization",
+      "reason": "ANNからSNNへの変換で低ビット値をspike、高ビット値を整数のまま保持するhybrid表現とsilence thresholdを提案。LLMを含む推論の量子化・省電力・低遅延化を扱い、W4A4&8で最大84.66%のエネルギー削減と93.75%のtime-step短縮を著者が報告しているためaccept。",
+      "source_url": "https://arxiv.org/abs/2602.08817",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T14:57:39+09:00",
+      "last_checked_at": "2026-11-14T14:57:39+09:00",
+      "linked_from": [],
+      "worklist_rank": 265
+    }
+  ]
+}
