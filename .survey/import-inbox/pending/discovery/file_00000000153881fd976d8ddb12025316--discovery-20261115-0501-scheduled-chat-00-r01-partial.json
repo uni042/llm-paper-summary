@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-0501-scheduled-chat-00/r01",
+  "reference_main_sha": "42c13c95465e3265e7229950a8efeb9dac067aa5",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.05840",
+      "identity_tokens": [
+        "arxiv:2503.05840"
+      ],
+      "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+      "reason": "MHAのKV文脈メモリを数学的同値なK-cache表現で半減する手法。著者は長文脈推論で最大2倍、Whisperでメモリ8分の1・batch64で生成最大5倍、T5-11Bでメモリ32分の1を報告。推論メモリ効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2503.05840",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T05:01:00+09:00",
+      "last_checked_at": "2026-11-15T05:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 345
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.12113",
+      "identity_tokens": [
+        "arxiv:2602.12113"
+      ],
+      "title": "Stop Unnecessary Reflection: Training LRMs for Efficient Reasoning with Adaptive Reflection and Length Coordinated Penalty",
+      "reason": "ARLCPは不要な反省過程への適応的ペナルティと問題難度に応じた系列長ペナルティを強化学習で組み合わせる。数学5ベンチマークで1.5Bモデルの出力長53.1%削減・正答率5.8%改善、7Bの長さ35.0%削減・正答率2.7%改善を報告。推論トークン削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.12113",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T05:01:00+09:00",
+      "last_checked_at": "2026-11-15T05:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 347
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06454",
+      "identity_tokens": [
+        "arxiv:2602.06454"
+      ],
+      "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+      "reason": "生成中の難度変化に応じ、大規模モデルから小規模モデルへセグメント単位で切り替える学習不要の推論方式。投機デコード併用で最大2.2倍のend-to-end高速化、正答率低下2%未満を報告。推論サービング効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.06454",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T05:01:00+09:00",
+      "last_checked_at": "2026-11-15T05:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 349
+    }
+  ]
+}
