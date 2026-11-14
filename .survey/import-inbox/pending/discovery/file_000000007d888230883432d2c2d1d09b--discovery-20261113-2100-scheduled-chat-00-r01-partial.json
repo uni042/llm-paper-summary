@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "40db799c570cbef84e9b34bca1a1568f6f42f52d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20826",
+      "identity_tokens": [
+        "arxiv:2610.20826"
+      ],
+      "title": "Task-Phase-Conditioned Expert Routing Is Not a Reliable Proxy for Quantization Sensitivity in MoE FFN Tensors",
+      "reason": "MoEのexpert routing統計（entropy、CV、phase間Jaccard、top-1強度）から層別量子化感度を推定する仮説を検証した負の結果。Qwen-3.6-35B-A3Bで約4.0bpwと約2.7bpwを比較し、ルーティング誘導再配分は同品質帯の均一量子化を上回らず、低ビット帯ではランダム再配分とほぼ同等。MoE混合精度量子化の設計・評価に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2610.20826",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T21:00:00+09:00",
+      "last_checked_at": "2026-11-13T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 249
+    }
+  ]
+}
