@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications",
+      "source_url": "https://arxiv.org/abs/2606.18502",
+      "year": 2026,
+      "published": "2026-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM)-based multi-agent systems demonstrate strong performance on complex reasoning and task execution, enabling broad enterprise applications. However, production deployment remains challenging due to domain-specific customization requirements and high latency and inference costs in agentic workflows. We propose a unified framework for customization and efficient deployment of multi-agent systems in real-world settings. The first stage, Agentic Model Customization, combines continual pretraining, supervised fine-tuning, and preference optimization to adapt a compact model to specialized domains while retaining strong agentic capabilities. The second stage, Inference Optimization, integrates speculative decoding and FP8 quantization with targeted calibration to enable cost-efficient serving with minimal quality loss. Across enterprise workloads, our framework enables rapid domain adaptation and achieves a 4.48x speedup in throughput while maintaining performance and improving robustness on long-tail scenarios.",
+      "identifiers": [
+        "SemanticScholar:f9cc6ce45c49e70e9cc30c3270f89f64a6cf03b0"
+      ],
+      "semantic_scholar_id": "f9cc6ce45c49e70e9cc30c3270f89f64a6cf03b0",
+      "canonical_id": "arXiv:2606.18502",
+      "arxiv_id": "2606.18502",
+      "doi": "10.48550/arXiv.2606.18502",
+      "authors": [
+        "Paresh Dashore",
+        "S. Kulkarni",
+        "Uttam Gurram",
+        "Nadia Bathaee",
+        "Kartik Balasubramaniam",
+        "Genta Indra Winata",
+        "Sambit Sahu",
+        "Shi-Xiong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "企業向けマルチエージェント構築で継続事前学習、教師あり微調整、選好最適化による小型モデルのドメイン適応と、投機的デコード・FP8量子化・較正による推論最適化を統合。著者は企業ワークロードでスループット4.48倍を報告。推論最適化を含むため採用するが、複合システムの効果であり個別最適化の寄与とは区別する。",
+      "library_body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+      "identifiers": [
+        "SemanticScholar:64cc6645122436c28af6dd66c5d574f103bf089a"
+      ],
+      "semantic_scholar_id": "64cc6645122436c28af6dd66c5d574f103bf089a",
+      "canonical_id": "arXiv:2609.39334",
+      "arxiv_id": "2609.39334",
+      "doi": "10.48550/arXiv.2609.39334",
+      "authors": [
+        "Jinwoo Jeong",
+        "Woohyun Choi",
+        "Myeongjae Jeon",
+        "Jeongseob Ahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpecScaleは推論時の探索経路の爆発と頻繁な検証処理に対し、低品質経路の早期枝刈り、経路間の重複計算排除、細粒度検証の遅延実行を組み合わせる。MATHやOlympiadを含む推論ベンチマークで回答品質を維持しつつスループットと遅延を改善したと著者は報告。LLMサービングの実行効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01296",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) Diffusion Language Models (DLMs) offer flexible parallel decoding and increased model capacity, but their large number of expert parameters incurs substantial computation and storage costs. Existing low-rank MoE compression methods largely rely on static factorization and fixed rank allocation, which overlook the distinctive properties of MoE DLMs. Specifically, we identify two properties: cross-mode non-uniform redundancy, where parameter redundancy and sensitivity to rank truncation vary across the input, output, and expert modes, and token-wise utilization variation, where hot and cold tokens exhibit distinct spectral characteristics and expert activation patterns. To address these challenges, we propose ITC-MoE, an Importance-guided Token-aware Compression framework for MoE DLMs. ITC-MoE consists of two complementary components. First, Importance-guided Adaptive Tucker Compression (IATC) incorporates activation and gradient importance into expert weight transformation, jointly factorizes expert weights across multiple modes, and adaptively allocates ranks under a fixed parameter budget. Second, Token-aware Compensation and Routing (TCR) applies lightweight low-rank compensation to compression-sensitive hot tokens and restricts the candidate expert set for cold tokens with concentrated routing patterns. By jointly adapting compression capacity and inference execution to both parameter redundancy and token-wise variation, ITC-MoE substantially reduces the computation and storage costs of MoE DLMs while preserving their generation quality. For example, on SDAR-30B-A3B-Chat-b32, ITC-MoE maintains an accuracy of 96.33% on MultiArith under a 30% compression budget, while achieving up to a 7.22x end-to-end speedup. The code is publicly available at https://github.com/lianjunl13-sudo/ITC-MoE.",
+      "identifiers": [
+        "SemanticScholar:0644bbd85b308a2892ae10bc245f80d0a0791ea4"
+      ],
+      "semantic_scholar_id": "0644bbd85b308a2892ae10bc245f80d0a0791ea4",
+      "canonical_id": "arXiv:2610.01296",
+      "arxiv_id": "2610.01296",
+      "authors": [
+        "Lian Liu",
+        "Shi-Peng Li",
+        "You Huang",
+        "Wei-Qi Yan",
+        "Ming-Te Qiu",
+        "Hua-Zhong Liu",
+        "Xiao-Feng Zhu",
+        "Yunshan Zhong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE拡散言語モデル向けに、活性化・勾配重要度を用いた適応Tucker圧縮と、hot tokenへの低ランク補償・cold tokenのexpert候補制限を統合。著者はSDAR-30B-A3B-Chat-b32で圧縮率30%設定のMultiArith精度96.33%、最大7.22倍のエンドツーエンド高速化を報告。MoE圧縮と推論効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ca8a58890aa8",
+    "round": "libimp-ca8a58890aa80443-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ca8a58890aa80443-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ca8a58890aa80443-pre01.json",
+    "receipt": "sha256:38ec0620ec447623ffb0a1f1ab01e5799897eb302efcbb219fc9876f555919b5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ca8a58890aa8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
