@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-14 11:37:43 JST**
+> 自動生成: **2026-11-14 12:00:37 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **570** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-11 09:07:49 JST** |
-| 最終Discovery探索完了 | **11-14 10:00:00 JST** |
+| 最終Discovery探索完了 | **11-14 11:01:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **150032** |
+| 探索候補総数 | **150034** |
 | 処理済み | **21918** |
-| 未処理Discovery候補 | **128114** |
+| 未処理Discovery候補 | **128116** |
 | 収録済み | **3820** |
 | Research / Audit候補へ昇格済み | **167** |
 | 無関係として除外 | **12537** |
@@ -63,15 +63,15 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **128114** |
+| 未処理候補（フィルタ前） | **128116** |
 | 機械規則による暫定隔離 | **2172** |
 | 拡張機械規則による追加隔離 | **1384** |
-| 機械規則通過後 | **124558** |
-| 系統内前方引用スコアによる選抜保留 | **118330** |
-| 暫定隔離合計 | **121886** |
+| 機械規則通過後 | **124560** |
+| 系統内前方引用スコアによる選抜保留 | **118332** |
+| 暫定隔離合計 | **121888** |
 | **読解可能候補（隔離後）** | **6228** |
-| 前方引用が同一系統で2本以上の候補 | **12074** |
-| 前方引用が同一系統で3本以上の候補 | **4312** |
+| 前方引用が同一系統で2本以上の候補 | **12075** |
+| 前方引用が同一系統で3本以上の候補 | **4314** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
 - 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6228件**（監査復活枠なし）。
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.6%**
-- 現在の生在庫: 後方references **59021件** / 前方引用 **70441件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128722件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **59021件** / 前方引用 **70443件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128724件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -103,12 +103,12 @@
 | 1周以上完了 | **3801** |
 | 巡回中 | **19** |
 | 未巡回 | **0** |
-| 今回run開始時due | **24** |
-| 前方引用から保持中の未処理候補 | **70441** |
+| 今回run開始時due | **30** |
+| 前方引用から保持中の未処理候補 | **70443** |
 | エラー状態保持seed | **19** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-14 10:30:27 JST**
+- state最終更新: **11-14 11:41:55 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-14 09:14:18 JST（2時間23分前）** |
+| 最終maintenance完了 | **11-14 09:14:18 JST（2時間46分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **3** |
-| 直近6hのDiscovery本文確認・分類 | **4** |
+| 直近6hのDiscovery run | **4** |
+| 直近6hのDiscovery本文確認・分類 | **5** |
 | 最終Research完了 | **11-11 09:07:49 JST** |
-| 最終Discovery完了 | **11-14 10:00:00 JST** |
+| 最終Discovery完了 | **11-14 11:01:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-11 09:07:49 JST** / worker scheduled-chat-45 / run 20261111-0903-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/file_0000000045788206b2c6eef050998c04--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r02-corrected.json
-- Discovery: **11-14 10:00:00 JST** / worker scheduled-chat-00 / run 20261114-1000-scheduled-chat-00/r01
+- Discovery: **11-14 11:01:00 JST** / worker scheduled-chat-00 / run 20261114-1101-scheduled-chat-00/r01
   - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/file_00000000266881f6b4bd2f6ed6fee2d2--discovery-20261114-1000-scheduled-chat-00-r01-partial.json
+  - evidence: .survey/import-inbox/waiting/discovery/file_00000000648481f5be25835803d8ca66--discovery-20261114-1101-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
