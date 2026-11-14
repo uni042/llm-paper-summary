@@ -1,0 +1,324 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b7674e9572f45e53-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b7674e9572f4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.05840",
+    "arXiv:2602.06454",
+    "arXiv:2602.12113"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "0f358f8ea87fe5b0499e64b6e37ef18ad501d499",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-14T21:13:30.534749+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.05840",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.06454",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.12113",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Stop Unnecessary Reflection: Training LRMs for Efficient Reasoning with Adaptive Reflection and Length Coordinated Penalty",
+      "source_url": "https://arxiv.org/abs/2602.12113",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have demonstrated remarkable performance on complex reasoning tasks by employing test-time scaling. However, they often generate over-long chains-of-thought that, driven by substantial reflections such as repetitive self-questioning and circular reasoning, lead to high token consumption, substantial computational overhead, and increased latency without improving accuracy, particularly in smaller models. Our observation reveals that increasing problem complexity induces more excessive and unnecessary reflection, which in turn reduces accuracy and increases token overhead. To address this challenge, we propose Adaptive Reflection and Length Coordinated Penalty (ARLCP), a novel reinforcement learning framework designed to dynamically balance reasoning efficiency and solution accuracy. ARLCP introduces two key innovations: (1) a reflection penalty that adaptively curtails unnecessary reflective steps while preserving essential reasoning, and (2) a length penalty calibrated to the estimated complexity of the problem. By coordinating these penalties, ARLCP encourages the model to generate more concise and effective reasoning paths. We evaluate our method on five mathematical reasoning benchmarks using DeepSeek-R1-Distill-Qwen-1.5B and DeepSeek-R1-Distill-Qwen-7B models. Experimental results show that ARLCP achieves a superior efficiency-accuracy trade-off compared to existing approaches. For the 1.5B model, it reduces the average response length by 53.1% while simultaneously improving accuracy by 5.8%. For the 7B model, it achieves a 35.0% reduction in length with a 2.7% accuracy gain. The code is released at https://github.com/ZeweiYu1/ARLCP .",
+      "identifiers": [
+        "SemanticScholar:4888d8d6808634aceba613fa1fdbb049a244c980"
+      ],
+      "semantic_scholar_id": "4888d8d6808634aceba613fa1fdbb049a244c980",
+      "canonical_id": "arXiv:2602.12113",
+      "arxiv_id": "2602.12113",
+      "doi": "10.48550/arXiv.2602.12113",
+      "authors": [
+        "Zewei Yu",
+        "Li-Rong Gao",
+        "Yu-Ke Zhu",
+        "Boyuan Zheng",
+        "Jun-Bo Zhao",
+        "Sheng Guo",
+        "Hao-Bo Wang"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.06454",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks by generating long, multi-step reasoning trajectories, but inference-time scaling incurs substantial deployment cost. A key challenge is that generation difficulty varies within a single output, whereas existing efficiency-oriented approaches either ignore this intra-generation variation or rely on supervised token-level routing with high system complexity. We present \\textbf{RelayGen}, a training-free, segment-level runtime model switching framework that exploits difficulty variation in long-form reasoning. Through offline analysis of generation uncertainty using token probability margins, we show that coarse-grained segment-level control is sufficient to capture difficulty transitions within a reasoning trajectory. RelayGen identifies model-specific switch cues that signal transitions to lower-difficulty segments and dynamically delegates their continuation to a smaller model, while preserving high-difficulty reasoning on the large model. Across multiple reasoning benchmarks, RelayGen substantially reduces inference latency while preserving most of the accuracy of large models. When combined with speculative decoding, RelayGen achieves up to 2.2$\\times$ end-to-end speedup with less than 2\\% accuracy degradation, without requiring additional training or learned routing components.",
+      "identifiers": [
+        "SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62"
+      ],
+      "semantic_scholar_id": "a5c80bad3b95f238137b81231eb5705980d8fb62",
+      "canonical_id": "arXiv:2602.06454",
+      "arxiv_id": "2602.06454",
+      "doi": "10.48550/arXiv.2602.06454",
+      "authors": [
+        "Jiwon Song",
+        "Yoon Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 281,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+      "source_url": "https://arxiv.org/abs/2503.05840",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Slim attention shrinks the context memory size by 2x for transformer models with MHA (multi-head attention), which can speed up inference by up to 2x for large context windows. Slim attention is an exact, mathematically identical implementation of the standard attention mechanism and therefore doesn't compromise model accuracy. In other words, slim attention losslessly compresses the context memory by a factor of 2. For encoder-decoder transformers, the context memory size can be reduced even further: For the Whisper models for example, slim attention reduces the context memory by 8x, which can speed up token generation by 5x for batch size 64 for example. And for the T5-11B model for example, the memory can be reduced by 32x because its MHA projection dimension is larger than the embedding dimension. See https://github.com/OpenMachine-ai/transformer-tricks for code and more transformer tricks, and https://www.youtube.com/watch?v=uVtk3B6YO4Y for this paper's YouTube video.",
+      "identifiers": [
+        "SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193"
+      ],
+      "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
+      "canonical_id": "arXiv:2503.05840",
+      "arxiv_id": "2503.05840",
+      "authors": [
+        "Nils Graef",
+        "Kayvan Zahiri",
+        "Andrew Wasielewski"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.12113",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.12113",
+        "id:SemanticScholar:4888d8d6808634aceba613fa1fdbb049a244c980",
+        "id:arXiv:2602.12113",
+        "title:stop unnecessary reflection training lrms for efficient reasoning with adaptive reflection and length coordinated penalty",
+        "url:https://arxiv.org/abs/2602.12113"
+      ],
+      "record": {
+        "title": "Stop Unnecessary Reflection: Training LRMs for Efficient Reasoning with Adaptive Reflection and Length Coordinated Penalty",
+        "source_url": "https://arxiv.org/abs/2602.12113",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) have demonstrated remarkable performance on complex reasoning tasks by employing test-time scaling. However, they often generate over-long chains-of-thought that, driven by substantial reflections such as repetitive self-questioning and circular reasoning, lead to high token consumption, substantial computational overhead, and increased latency without improving accuracy, particularly in smaller models. Our observation reveals that increasing problem complexity induces more excessive and unnecessary reflection, which in turn reduces accuracy and increases token overhead. To address this challenge, we propose Adaptive Reflection and Length Coordinated Penalty (ARLCP), a novel reinforcement learning framework designed to dynamically balance reasoning efficiency and solution accuracy. ARLCP introduces two key innovations: (1) a reflection penalty that adaptively curtails unnecessary reflective steps while preserving essential reasoning, and (2) a length penalty calibrated to the estimated complexity of the problem. By coordinating these penalties, ARLCP encourages the model to generate more concise and effective reasoning paths. We evaluate our method on five mathematical reasoning benchmarks using DeepSeek-R1-Distill-Qwen-1.5B and DeepSeek-R1-Distill-Qwen-7B models. Experimental results show that ARLCP achieves a superior efficiency-accuracy trade-off compared to existing approaches. For the 1.5B model, it reduces the average response length by 53.1% while simultaneously improving accuracy by 5.8%. For the 7B model, it achieves a 35.0% reduction in length with a 2.7% accuracy gain. The code is released at https://github.com/ZeweiYu1/ARLCP .",
+        "identifiers": [
+          "SemanticScholar:4888d8d6808634aceba613fa1fdbb049a244c980"
+        ],
+        "semantic_scholar_id": "4888d8d6808634aceba613fa1fdbb049a244c980",
+        "canonical_id": "arXiv:2602.12113",
+        "arxiv_id": "2602.12113",
+        "doi": "10.48550/arXiv.2602.12113",
+        "authors": [
+          "Zewei Yu",
+          "Li-Rong Gao",
+          "Yu-Ke Zhu",
+          "Boyuan Zheng",
+          "Jun-Bo Zhao",
+          "Sheng Guo",
+          "Hao-Bo Wang"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 275,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06454",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.06454",
+        "id:SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62",
+        "id:arXiv:2602.06454",
+        "title:relaygen intrageneration model switching for efficient reasoning",
+        "url:https://arxiv.org/abs/2602.06454"
+      ],
+      "record": {
+        "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2602.06454",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks by generating long, multi-step reasoning trajectories, but inference-time scaling incurs substantial deployment cost. A key challenge is that generation difficulty varies within a single output, whereas existing efficiency-oriented approaches either ignore this intra-generation variation or rely on supervised token-level routing with high system complexity. We present \\textbf{RelayGen}, a training-free, segment-level runtime model switching framework that exploits difficulty variation in long-form reasoning. Through offline analysis of generation uncertainty using token probability margins, we show that coarse-grained segment-level control is sufficient to capture difficulty transitions within a reasoning trajectory. RelayGen identifies model-specific switch cues that signal transitions to lower-difficulty segments and dynamically delegates their continuation to a smaller model, while preserving high-difficulty reasoning on the large model. Across multiple reasoning benchmarks, RelayGen substantially reduces inference latency while preserving most of the accuracy of large models. When combined with speculative decoding, RelayGen achieves up to 2.2$\\times$ end-to-end speedup with less than 2\\% accuracy degradation, without requiring additional training or learned routing components.",
+        "identifiers": [
+          "SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62"
+        ],
+        "semantic_scholar_id": "a5c80bad3b95f238137b81231eb5705980d8fb62",
+        "canonical_id": "arXiv:2602.06454",
+        "arxiv_id": "2602.06454",
+        "doi": "10.48550/arXiv.2602.06454",
+        "authors": [
+          "Jiwon Song",
+          "Yoon Kim",
+          "Jae-Joon Kim"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 281,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.05840",
+      "identity_tokens": [
+        "id:SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193",
+        "id:arXiv:2503.05840",
+        "title:slim attention cut your context memory in half without loss kcache is all you need for mha",
+        "url:https://arxiv.org/abs/2503.05840"
+      ],
+      "record": {
+        "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+        "source_url": "https://arxiv.org/abs/2503.05840",
+        "year": 2025,
+        "published": "2025-03-07",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Slim attention shrinks the context memory size by 2x for transformer models with MHA (multi-head attention), which can speed up inference by up to 2x for large context windows. Slim attention is an exact, mathematically identical implementation of the standard attention mechanism and therefore doesn't compromise model accuracy. In other words, slim attention losslessly compresses the context memory by a factor of 2. For encoder-decoder transformers, the context memory size can be reduced even further: For the Whisper models for example, slim attention reduces the context memory by 8x, which can speed up token generation by 5x for batch size 64 for example. And for the T5-11B model for example, the memory can be reduced by 32x because its MHA projection dimension is larger than the embedding dimension. See https://github.com/OpenMachine-ai/transformer-tricks for code and more transformer tricks, and https://www.youtube.com/watch?v=uVtk3B6YO4Y for this paper's YouTube video.",
+        "identifiers": [
+          "SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193"
+        ],
+        "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
+        "canonical_id": "arXiv:2503.05840",
+        "arxiv_id": "2503.05840",
+        "authors": [
+          "Nils Graef",
+          "Kayvan Zahiri",
+          "Andrew Wasielewski"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 617,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5fd79763e8f6f2e747c612be8707760b8ed49b80ad4b48faa5ef469c621220bd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
