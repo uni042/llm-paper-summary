@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1301-scheduled-chat-00/r01",
+  "reference_main_sha": "ece14f00681176dca1f0819192d1d97f028c6208",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.12167",
+      "identity_tokens": [
+        "arxiv:2503.12167"
+      ],
+      "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+      "reason": "エッジ機器の記憶容量・帯域制約に合わせてMulti-head Latent Attentionとsquared ReLU活性化の疎性を共同設計し、推論時ピークメモリを削減する。GPU、スマートフォン、Raspberry Piへの配備評価を含み、オンデバイスLLMの推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2503.12167",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T13:01:00+09:00",
+      "last_checked_at": "2026-11-14T13:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 268
+    }
+  ]
+}
