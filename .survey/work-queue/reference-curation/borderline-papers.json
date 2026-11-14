@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-14T13:02:22+00:00",
-  "record_count": 5608,
+  "updated_at": "2026-11-14T15:03:19+00:00",
+  "record_count": 5609,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86563,6 +86563,44 @@
       ],
       "borderline_recheck_count": 0,
       "title": "ExFusion: Efficient Transformer Training via Multi-Experts Fusion"
+    },
+    "arXiv:2606.08357": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.08357",
+      "identity_tokens": [
+        "arXiv:2606.08357"
+      ],
+      "reason": "FReDAは人為的なforward corruptionを使わず、モデルが生成したdraftを再帰的に修正する拡散言語モデルである。BPTTを回避した学習とBest-of-N refinementを採用し、既存拡散モデル比1.5–1.8倍の平均速度を報告する。ただし主貢献は生成モデルの学習定式化と品質改善で、独立した推論システムの資源最適化・カーネル設計が主題ではないため境界候補とする。",
+      "first_checked_at": "2026-11-14T15:03:19+00:00",
+      "last_checked_at": "2026-11-14T15:03:19+00:00",
+      "linked_from": [
+        "-",
+        ".",
+        "/",
+        "0",
+        "I",
+        "K",
+        "L",
+        "O",
+        "R",
+        "S",
+        "T",
+        "W",
+        "d",
+        "e",
+        "k",
+        "m",
+        "o",
+        "q",
+        "r",
+        "s",
+        "u",
+        "v",
+        "w",
+        "y"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Forward-Free Diffusion Language Models with BPTT-Free Looped Refinement"
     }
   }
 }
