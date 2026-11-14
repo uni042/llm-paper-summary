@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-14T15:03:19+00:00",
-  "record_count": 5609,
+  "updated_at": "2026-11-14T17:03:44+00:00",
+  "record_count": 5610,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86601,6 +86601,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Forward-Free Diffusion Language Models with BPTT-Free Looped Refinement"
+    },
+    "arXiv:2410.07172": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.07172",
+      "identity_tokens": [
+        "arXiv:2410.07172"
+      ],
+      "reason": "複数のfine-tuned expertを統合するModel MoErgingに対し、LLMで生成したタスク意味指示に基づくglobal routerとトークン単位のlocal routerを組み合わせる。T5系のT0/FLANタスクでheld-in性能とheld-out汎化を評価している。専門家ルーティングに関係するが、要旨に推論速度・計算量・メモリの改善値はなく、効率改善を主目的とするサーベイでは境界候補。",
+      "first_checked_at": "2026-11-14T17:03:44+00:00",
+      "last_checked_at": "2026-11-14T17:03:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Glider: Global and Local Instruction-Driven Expert Router"
     }
   }
 }
