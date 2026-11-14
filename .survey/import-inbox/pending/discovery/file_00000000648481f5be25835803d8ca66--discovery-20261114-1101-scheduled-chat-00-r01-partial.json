@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1101-scheduled-chat-00/r01",
+  "reference_main_sha": "47a17f1581cf832987bd668458dd2ef698bb5575",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2209.05948",
+      "identity_tokens": [
+        "arxiv:2209.05948",
+        "doi:10.48550/arxiv.2209.05948"
+      ],
+      "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+      "reason": "コード補完の低価値な入力を軽量な推定器で事前棄却し、大規模言語モデルへの無駄な推論要求と計算資源消費を削減する方式。一次arXiv要旨では低価値な補完要求の20%をprecision 97.4%で棄却したと報告。LLM推論の要求入口における計算回避・省エネルギー化に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2209.05948",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T11:01:32+09:00",
+      "last_checked_at": "2026-11-14T11:01:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 266
+    }
+  ]
+}
