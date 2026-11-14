@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-14T00:14:31+00:00`
+Generated: `2026-11-14T00:38:28+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128545** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122295** / 監査再投入 **0** / 機械規則適用後 **124984** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128548** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122298** / 監査再投入 **0** / 機械規則適用後 **124987** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -96,7 +96,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 13 | 123 | 10 | 12 | DOI:10.61784/adsj3036 | TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING | 2025-12-29 | AI and Data Science Journal | 23 | 12 | LLM Serving / Scheduling / Disaggregation, LLM serving / energy management / cluster scheduling / dynamic reconfiguration | [source](https://doi.org/10.61784/adsj3036) |
 | 14 | 347 | 9 | 19 | SemanticScholar:ea3126b88dc191200ea0bf275f092cb70cbad319 | Mooncake: Trading More Storage for Less Computation - A KVCache-centric Architecture for Serving LLM Chatbot | 2025 | USENIX Conference on File and Storage Technologies | 347 | 19 | KV cache quantization / long-context inference / activation compression, KVキャッシュ・注意アーキテクチャ, KVキャッシュ再利用／圧縮／ネットワーク転送, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers | [source](https://www.semanticscholar.org/paper/ea3126b88dc191200ea0bf275f092cb70cbad319) |
 | 15 | 101 | 9 | 18 | arXiv:2610.36355 | WAKMan: Workload Aware KVCache Manager | 2026-10-26 |  | 1 | 18 | Adaptive Replacement Cache (ARC)をvLLMのprefix KV-キャッシュ blockの追い出しへ適用。比較系統はLRUと固定1:1分割のDBL。, KV Cache Optimization / Compression, KVキャッシュ退避・分散接頭辞キャッシュ・SmartNICオフロード, LLMサービング・スケジューリング・KVキャッシュ保持, agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling, kv-cache-memory, kv-cache-offload-recomputation, prefix caching・LLM scheduling・KV eviction・queue-aware serving | [source](https://arxiv.org/abs/2610.36355) |
-| 16 | 10 | 9 | 15 | arXiv:2611.08299 | Should You Split Decode? Disaggregation Across Future Models and Accelerators | 2026-11-05 |  | 0 | 15 | 15-inference-simulation-emulation, LLM inference simulation / disaggregated serving / performance modeling, LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, llm-serving-scheduling-disaggregation, 拡散言語モデルサービング・KVキャッシュ・プリフィル/デコード分離・連続バッチング, 異種GPUクラスタ／LLMサービング構成選択／性能予測／不確実性校正, 異種GPU・事前充填/復号分離サービング | [source](https://arxiv.org/abs/2611.08299) |
+| 16 | 10 | 9 | 16 | arXiv:2611.08299 | Should You Split Decode? Disaggregation Across Future Models and Accelerators | 2026-11-05 |  | 0 | 16 | 15-inference-simulation-emulation, LLM inference simulation / disaggregated serving / performance modeling, LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design, llm-serving-scheduling-disaggregation, 拡散言語モデルサービング・KVキャッシュ・プリフィル/デコード分離・連続バッチング, 異種GPUクラスタ／LLMサービング構成選択／性能予測／不確実性校正, 異種GPU・事前充填/復号分離サービング | [source](https://arxiv.org/abs/2611.08299) |
 | 17 | 3 | 9 | 13 | SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d | Snakes and Ladders: Accelerating State Space Model Inference with Speculative Decoding |  |  | 3 | 13 | Speculative Decoding, inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/78ef7ffcaf721ce31653636dc320f7ead131539d) |
 | 18 | 2 | 9 | 10 | arXiv:2409.02026 | Foundations of Large Language Model Compression - Part 1: Weight Quantization | 2024-09-03 | arXiv.org | 2 | 10 | LLM inference surveys、roofline performance analysis, Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2409.02026) |
 | 19 | 10 | 9 | 9 | arXiv:2611.01617 | Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models | 2026-11-01 |  | 0 | 9 | inference-systems, 投機的復号 / EAGLE, 投機的復号・並列ドラフト・対象分布保存・推論スケジューリング | [source](https://arxiv.org/abs/2611.01617) |
