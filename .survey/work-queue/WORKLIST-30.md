@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-14T09:30:39+00:00`
+Generated: `2026-11-14T10:40:05+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -452,8 +452,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 369 | 104 | 4 | 7 | arXiv:2603.06222 | SPOT: Span-level Pause-of-Thought for Efficient and Interpretable Latent Reasoning in Large Language Models | 2026-03-06 | Knowledge Discovery and Data Mining | 4 | 7 | Conditional Computation | [source](https://arxiv.org/abs/2603.06222) |
 | 370 | 2 | 4 | 7 | arXiv:2503.20362 | Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding | 2025-03-26 | IEEE International Conference on Multimedia and Expo | 2 | 7 | Inference / Multimodal Long-Context Memory Compression, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2503.20362) |
 | 371 | 101 | 4 | 7 | arXiv:2607.14327 | PReM: Learning What to Preserve and When to Refresh for Context Compression | 2026-07-15 | arXiv.org | 1 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2607.14327) |
-| 372 | 20 | 4 | 7 | arXiv:2609.01613 | Skim and Skip: Hierarchical Adaptive Inference for Efficient Multimodal Retrieval | 2026-06-24 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing | 0 | 9 |  | [source](https://arxiv.org/abs/2609.01613) |
-| 373 | 10 | 4 | 7 | arXiv:2608.24204 | WiCi: Wireless GPU Computing Infrastructure | 2026-08-25 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2608.24204) |
+| 372 | 59 | 4 | 7 | arXiv:2505.23648 | Continuous Chain of Thought Enables Parallel Exploration and Reasoning | 2025-05-29 | International Conference on Learning Representations | 49 | 7 |  | [source](https://arxiv.org/abs/2505.23648) |
+| 373 | 10 | 4 | 7 | arXiv:2606.00543 | ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs | 2026-05-30 | arXiv.org | 0 | 7 |  | [source](https://arxiv.org/abs/2606.00543) |
 | 374 | 0 | 4 | 7 | DOI:10.1117/12.3053346 | SHA: sparse adaptive head of attention | 2025-01-03 | International Conference on Signal Processing and Computer Science | 0 | 7 | 07-kv-cache-optimization-compression, Conditional Computation, KV cache eviction / heavy hitters / sparse attention / efficient inference, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1117/12.3053346) |
 | 375 | 109 | 4 | 7 | arXiv:2607.24904 | Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model | 2026-07-27 | arXiv.org | 9 | 7 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2607.24904) |
 | 376 | 101 | 4 | 7 | arXiv:2604.02340 | Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models | 2026-02-04 | arXiv.org | 1 | 9 | 02-hardware-accelerators, 11-llm-serving-scheduling-disaggregation, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems | [source](https://arxiv.org/abs/2604.02340) |

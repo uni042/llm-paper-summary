@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-14T09:30:39+00:00`
+Generated: `2026-11-14T10:40:04+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -452,9 +452,9 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 369 | 0 | 4 | 7 | SemanticScholar:bcf4003639957f66421e086d2e21d97d310fb34c | Performance Evaluation of LLM Inference Engines |  |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 推論エンジン／推論基盤, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/bcf4003639957f66421e086d2e21d97d310fb34c) |
 | 370 | 10 | 4 | 7 | arXiv:2608.25068 | SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs | 2026-08-25 |  | 0 | 7 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2608.25068) |
 | 371 | 101 | 4 | 7 | arXiv:2602.00686 | Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching | 2026-01-31 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2602.00686) |
-| 372 | 59 | 4 | 7 | arXiv:2505.23648 | Continuous Chain of Thought Enables Parallel Exploration and Reasoning | 2025-05-29 | International Conference on Learning Representations | 49 | 7 |  | [source](https://arxiv.org/abs/2505.23648) |
-| 373 | 10 | 4 | 7 | arXiv:2606.00543 | ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs | 2026-05-30 | arXiv.org | 0 | 7 |  | [source](https://arxiv.org/abs/2606.00543) |
-| 374 | 10 | 4 | 7 | arXiv:2610.42148 | Flide: Accelerating Decision Inference with Exact State Forking | 2026-10-30 |  | 0 | 7 | 02-hardware-accelerators, kv-cache, llm-serving-scheduling-disaggregation, その他の推論システム | [source](https://arxiv.org/abs/2610.42148) |
+| 372 | 101 | 4 | 7 | arXiv:2610.42148 | Flide: Accelerating Decision Inference with Exact State Forking | 2026-10-30 |  | 1 | 7 | 02-hardware-accelerators, kv-cache, llm-serving-scheduling-disaggregation, その他の推論システム | [source](https://arxiv.org/abs/2610.42148) |
+| 373 | 16 | 4 | 7 | arXiv:2509.22144 | From Long to Lean: Performance-aware and Adaptive Chain-of-Thought Compression via Multi-round Refinement | 2025-09-26 | Conference on Empirical Methods in Natural Language Processing | 6 | 7 | inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2509.22144) |
+| 374 | 10 | 4 | 7 | arXiv:2610.36623 | God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation | 2026-10-27 |  | 0 | 7 | inference-systems, kernel-runtime-compilation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.36623) |
 | 375 | 116 | 4 | 7 | arXiv:2607.20519 | Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts | 2026-07-08 | arXiv.org | 16 | 7 | Conditional Computation | [source](https://arxiv.org/abs/2607.20519) |
 | 376 | 104 | 4 | 7 | arXiv:2607.14277 | Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making | 2026-07-15 | arXiv.org | 4 | 8 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2607.14277) |
 | 377 | 101 | 4 | 7 | arXiv:2609.07129 | Line-Coupled Language Model | 2026-09-07 |  | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.07129) |

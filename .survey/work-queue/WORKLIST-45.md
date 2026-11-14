@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-14T09:30:39+00:00`
+Generated: `2026-11-14T10:40:05+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -451,8 +451,8 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 369 | 10 | 4 | 7 | DOI:10.1109/CIML69155.2026.11692797 | A Dual-Roofline Runtime Model for Capacity Planning in Shared-Backend LLM Multi-Agent Social Simulation: A Case Study of AgentSociety | 2026-03-01 | 2026 International Conference on Computational Intelligence and Machine Learning (CIML) | 0 | 7 | LLM Serving / Scheduling / Disaggregation, LLM配信／スケジューリング／分離, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/CIML69155.2026.11692797) |
 | 370 | 121 | 4 | 7 | arXiv:2602.08382 | Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning | 2026-02-09 | Annual Meeting of the Association for Computational Linguistics | 11 | 7 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, agentic inference / persistent memory | [source](https://arxiv.org/abs/2602.08382) |
 | 371 | 101 | 4 | 7 | arXiv:2607.24148 | A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference | 2026-07-27 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2607.24148) |
-| 372 | 16 | 4 | 7 | arXiv:2509.22144 | From Long to Lean: Performance-aware and Adaptive Chain-of-Thought Compression via Multi-round Refinement | 2025-09-26 | Conference on Empirical Methods in Natural Language Processing | 6 | 7 | inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2509.22144) |
-| 373 | 10 | 4 | 7 | arXiv:2610.36623 | God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation | 2026-10-27 |  | 0 | 7 | inference-systems, kernel-runtime-compilation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.36623) |
+| 372 | 20 | 4 | 7 | arXiv:2609.01613 | Skim and Skip: Hierarchical Adaptive Inference for Efficient Multimodal Retrieval | 2026-06-24 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing | 0 | 9 |  | [source](https://arxiv.org/abs/2609.01613) |
+| 373 | 10 | 4 | 7 | arXiv:2608.24204 | WiCi: Wireless GPU Computing Infrastructure | 2026-08-25 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2608.24204) |
 | 374 | 0 | 4 | 7 | arXiv:2402.15991 | C3: Confidence Calibration Model Cascade for Inference-Efficient Cross-Lingual Natural Language Understanding | 2024-02-25 | arXiv.org | 0 | 7 |  | [source](https://arxiv.org/abs/2402.15991) |
 | 375 | 106 | 4 | 7 | DOI:10.48550/arXiv.2606.30005 | LLM Agents Are Latent Context Managers: Eliciting Self-Managed Context via a Proprioceptive Dashboard | 2026-06-29 | arXiv.org | 6 | 7 | 07-kv-cache-optimization-compression, 99-other-inference-systems, Inference / Agent Memory and Context Management, agent context management / virtual memory / demand paging / prompt compression / working-set management, agentic inference / persistent memory | [source](https://doi.org/10.48550/arXiv.2606.30005) |
 | 376 | 101 | 4 | 7 | arXiv:2606.03092 | The Shadow Price of Reasoning: Economic Perspective on Optimal Budget Allocation for LLMs | 2026-06-02 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2606.03092) |
