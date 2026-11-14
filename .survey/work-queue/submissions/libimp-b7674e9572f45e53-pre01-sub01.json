@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Stop Unnecessary Reflection: Training LRMs for Efficient Reasoning with Adaptive Reflection and Length Coordinated Penalty",
+      "source_url": "https://arxiv.org/abs/2602.12113",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have demonstrated remarkable performance on complex reasoning tasks by employing test-time scaling. However, they often generate over-long chains-of-thought that, driven by substantial reflections such as repetitive self-questioning and circular reasoning, lead to high token consumption, substantial computational overhead, and increased latency without improving accuracy, particularly in smaller models. Our observation reveals that increasing problem complexity induces more excessive and unnecessary reflection, which in turn reduces accuracy and increases token overhead. To address this challenge, we propose Adaptive Reflection and Length Coordinated Penalty (ARLCP), a novel reinforcement learning framework designed to dynamically balance reasoning efficiency and solution accuracy. ARLCP introduces two key innovations: (1) a reflection penalty that adaptively curtails unnecessary reflective steps while preserving essential reasoning, and (2) a length penalty calibrated to the estimated complexity of the problem. By coordinating these penalties, ARLCP encourages the model to generate more concise and effective reasoning paths. We evaluate our method on five mathematical reasoning benchmarks using DeepSeek-R1-Distill-Qwen-1.5B and DeepSeek-R1-Distill-Qwen-7B models. Experimental results show that ARLCP achieves a superior efficiency-accuracy trade-off compared to existing approaches. For the 1.5B model, it reduces the average response length by 53.1% while simultaneously improving accuracy by 5.8%. For the 7B model, it achieves a 35.0% reduction in length with a 2.7% accuracy gain. The code is released at https://github.com/ZeweiYu1/ARLCP .",
+      "identifiers": [
+        "SemanticScholar:4888d8d6808634aceba613fa1fdbb049a244c980"
+      ],
+      "semantic_scholar_id": "4888d8d6808634aceba613fa1fdbb049a244c980",
+      "canonical_id": "arXiv:2602.12113",
+      "arxiv_id": "2602.12113",
+      "doi": "10.48550/arXiv.2602.12113",
+      "authors": [
+        "Zewei Yu",
+        "Li-Rong Gao",
+        "Yu-Ke Zhu",
+        "Boyuan Zheng",
+        "Jun-Bo Zhao",
+        "Sheng Guo",
+        "Hao-Bo Wang"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "ARLCPは不要な反省過程への適応的ペナルティと問題難度に応じた系列長ペナルティを強化学習で組み合わせる。数学5ベンチマークで1.5Bモデルの出力長53.1%削減・正答率5.8%改善、7Bの長さ35.0%削減・正答率2.7%改善を報告。推論トークン削減に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.06454",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks by generating long, multi-step reasoning trajectories, but inference-time scaling incurs substantial deployment cost. A key challenge is that generation difficulty varies within a single output, whereas existing efficiency-oriented approaches either ignore this intra-generation variation or rely on supervised token-level routing with high system complexity. We present \\textbf{RelayGen}, a training-free, segment-level runtime model switching framework that exploits difficulty variation in long-form reasoning. Through offline analysis of generation uncertainty using token probability margins, we show that coarse-grained segment-level control is sufficient to capture difficulty transitions within a reasoning trajectory. RelayGen identifies model-specific switch cues that signal transitions to lower-difficulty segments and dynamically delegates their continuation to a smaller model, while preserving high-difficulty reasoning on the large model. Across multiple reasoning benchmarks, RelayGen substantially reduces inference latency while preserving most of the accuracy of large models. When combined with speculative decoding, RelayGen achieves up to 2.2$\\times$ end-to-end speedup with less than 2\\% accuracy degradation, without requiring additional training or learned routing components.",
+      "identifiers": [
+        "SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62"
+      ],
+      "semantic_scholar_id": "a5c80bad3b95f238137b81231eb5705980d8fb62",
+      "canonical_id": "arXiv:2602.06454",
+      "arxiv_id": "2602.06454",
+      "doi": "10.48550/arXiv.2602.06454",
+      "authors": [
+        "Jiwon Song",
+        "Yoon Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 281,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成中の難度変化に応じ、大規模モデルから小規模モデルへセグメント単位で切り替える学習不要の推論方式。投機デコード併用で最大2.2倍のend-to-end高速化、正答率低下2%未満を報告。推論サービング効率に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+      "source_url": "https://arxiv.org/abs/2503.05840",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Slim attention shrinks the context memory size by 2x for transformer models with MHA (multi-head attention), which can speed up inference by up to 2x for large context windows. Slim attention is an exact, mathematically identical implementation of the standard attention mechanism and therefore doesn't compromise model accuracy. In other words, slim attention losslessly compresses the context memory by a factor of 2. For encoder-decoder transformers, the context memory size can be reduced even further: For the Whisper models for example, slim attention reduces the context memory by 8x, which can speed up token generation by 5x for batch size 64 for example. And for the T5-11B model for example, the memory can be reduced by 32x because its MHA projection dimension is larger than the embedding dimension. See https://github.com/OpenMachine-ai/transformer-tricks for code and more transformer tricks, and https://www.youtube.com/watch?v=uVtk3B6YO4Y for this paper's YouTube video.",
+      "identifiers": [
+        "SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193"
+      ],
+      "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
+      "canonical_id": "arXiv:2503.05840",
+      "arxiv_id": "2503.05840",
+      "authors": [
+        "Nils Graef",
+        "Kayvan Zahiri",
+        "Andrew Wasielewski"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MHAのKV文脈メモリを数学的同値なK-cache表現で半減する手法。著者は長文脈推論で最大2倍、Whisperでメモリ8分の1・batch64で生成最大5倍、T5-11Bでメモリ32分の1を報告。推論メモリ効率に直接関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b7674e9572f4",
+    "round": "libimp-b7674e9572f45e53-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b7674e9572f45e53-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b7674e9572f45e53-pre01.json",
+    "receipt": "sha256:5fd79763e8f6f2e747c612be8707760b8ed49b80ad4b48faa5ef469c621220bd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b7674e9572f4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
