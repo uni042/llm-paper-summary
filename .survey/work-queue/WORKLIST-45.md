@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-14T01:42:06+00:00`
+Generated: `2026-11-14T02:44:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -578,7 +578,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 496 | 10 | 4 | 5 | arXiv:2611.04814 | Think Less, Locally: Local Preference Learning for Reasoning Compression | 2026-11-03 |  | 0 | 5 |  | [source](https://arxiv.org/abs/2611.04814) |
 | 497 | 0 | 4 | 5 | SemanticScholar:df2b9ba93735783ff1bb3ec8943b57172c9c49a6 | ZeRO from Scratch: Evaluating Memory Savings, Communication Overhead, and Bandwidth Sensitivity |  |  | 0 | 5 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://www.semanticscholar.org/paper/df2b9ba93735783ff1bb3ec8943b57172c9c49a6) |
 | 498 | 112 | 4 | 5 | arXiv:2606.08684 | BLUE: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving | 2026-06-07 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing | 2 | 6 |  | [source](https://arxiv.org/abs/2606.08684) |
-| 499 | 102 | 4 | 5 | arXiv:2608.22516 | TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding | 2026-08-23 |  | 2 | 6 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2608.22516) |
+| 499 | 102 | 4 | 5 | arXiv:2606.12199 | Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation | 2026-06-10 | Interspeech | 2 | 5 |  | [source](https://arxiv.org/abs/2606.12199) |
 | 500 | 101 | 4 | 5 | arXiv:2605.08985 | LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs? | 2026-05-09 | arXiv.org | 1 | 5 | 12-multimodal-inference | [source](https://arxiv.org/abs/2605.08985) |
 
 ## Machine-readable
