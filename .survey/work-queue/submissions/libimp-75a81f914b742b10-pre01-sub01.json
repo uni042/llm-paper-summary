@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models",
+      "source_url": "https://arxiv.org/abs/2406.05678",
+      "year": 2024,
+      "published": "2024-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extending the functionality of the Transformer model to accommodate longer sequence lengths has become a critical challenge. This extension is crucial not only for improving tasks such as language translation and long-context processing but also for enabling novel applications like chatbots, code generation, and multimedia content creation. The primary obstacle is the self-attention mechanism, which scales quadratically with sequence length in terms of computation time and memory requirements. LongLoRA proposed shifted sparse attention (S\\(^2\\)-Attn), effectively enabling context extension and leading to non-trivial computation savings with similar performance to fine-tuning with vanilla attention. However, LongLoRA is still not as efficient as vanilla attention, reaching only 39\\% of the perplexity improvement compared to full attention. This inefficiency is due to the cyclic shift applied within different attention head patterns, causing either chaos in the attention head structure or unnecessary information exchange between token groups. To address these issues, We propose \\textbf{SinkLoRA}, which features better work partitioning. Specifically, (1) we developed SF-Attn with a segmentation and reassembly algorithm to proportionally return cyclically shifted groups of attention heads to their un-shifted state together with global attention of\"sink attention tokens\", achieving 92\\% of the perplexity improvement compared to full attention after fine tuning, and (2) applied a SOTA KV cache compression algorithm H$_2$O to accelerate inference. Furthermore, We conducted supervised fine-tuning with SinkLoRA using a self collected LongAlpaca-plus dataset. All our code, models, datasets, and demos are available at \\url{https://github.com/Dexter-GT-86/SinkLoRA}.",
+      "identifiers": [
+        "SemanticScholar:7777c897ea1abd046dd30a5d13504ef0afa02fca"
+      ],
+      "semantic_scholar_id": "7777c897ea1abd046dd30a5d13504ef0afa02fca",
+      "canonical_id": "arXiv:2406.05678",
+      "arxiv_id": "2406.05678",
+      "doi": "10.48550/arXiv.2406.05678",
+      "authors": [
+        "Heng-Yu Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 888,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LongLoRAのshifted sparse attentionを再構成しsink tokenのglobal attentionを導入するSF-AttnとH2O KVキャッシュ圧縮を組み合わせる。長文脈微調整および推論メモリ・効率に直接関連。92%という値はfull attentionに対するperplexity改善の割合であり推論高速化率ではない。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Large Language Model Pruning",
+      "source_url": "https://arxiv.org/abs/2406.00030",
+      "year": 2024,
+      "published": "2024-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We surely enjoy the larger the better models for their superior performance in the last couple of years when both the hardware and software support the birth of such extremely huge models. The applied fields include text mining and others. In particular, the success of LLMs on text understanding and text generation draws attention from researchers who have worked on NLP and related areas for years or even decades. On the side, LLMs may suffer from problems like model overfitting, hallucination, and device limitation to name a few. In this work, we suggest a model pruning technique specifically focused on LLMs. The proposed methodology emphasizes the explainability of deep learning models. By having the theoretical foundation, we obtain a trustworthy deep model so that huge models with a massive number of model parameters become not quite necessary. A mutual information-based estimation is adopted to find neurons with redundancy to eliminate. Moreover, an estimator with well-tuned parameters helps to find precise estimation to guide the pruning procedure. At the same time, we also explore the difference between pruning on large-scale models vs. pruning on small-scale models. The choice of pruning criteria is sensitive in small models but not for large-scale models. It is a novel finding through this work. Overall, we demonstrate the superiority of the proposed model to the state-of-the-art models.",
+      "identifiers": [
+        "SemanticScholar:63ba701d867e4773f5d16cd13b0c7cc53f44f24f"
+      ],
+      "semantic_scholar_id": "63ba701d867e4773f5d16cd13b0c7cc53f44f24f",
+      "canonical_id": "arXiv:2406.00030",
+      "arxiv_id": "2406.00030",
+      "doi": "10.48550/arXiv.2406.00030",
+      "authors": [
+        "Han-Juan Huang",
+        "Hao-Jia Song",
+        "H. Pao"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 904,
+        "matched_prestigious_venue": null
+      },
+      "reason": "相互情報量に基づいて冗長なニューロンを検出し、モデルの構造的剪定を行う。LLM圧縮と計算量削減に直接関連する。ただし要旨の定量性能は限定的であり、詳細な評価条件はResearch時に検証する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MoE-Pipe: A Pipelined MoE Model Loading Framework for Reducing the Cold Start Delays in Serverless Inference",
+      "source_url": "https://doi.org/10.5220/0014920500004039",
+      "year": 2026,
+      "published": null,
+      "venue": "International Conference on Cloud Computing and Services Science",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": The Mixture-of-Experts (MoE) architecture enables the scaling of Large Language Models (LLMs) with high computational efficiency by sparsely activating a fraction of the model’s weights during inference. However, the substantial memory footprint of MoE models presents a critical challenge in serverless environments, leading to prohibitive cold-start latencies due to the extensive time required for model loading. To mitigate this bottleneck, we propose MoE-Pipe, a framework that significantly reduces cold-start latency by leveraging the inherent sparse activation property of MoE models. MoE-Pipe introduces a methodology to overlap the loading of expert weights with the ongoing model computation. Instead of a sequential load-then-compute process, our approach initiates inference and weight transfer simultaneously, orchestrated through a multi-level strategy of CPU-GPU, inter-GPU, and intra-GPU overlapping. Our experiments demonstrate that MoE-Pipe successfully hides approximately 65% of the loading time within the computation phase, achieving up to 1 . 85 × improvement in end-to-end latency and 2 × improvement in the time to first token latency. To facilitate further research and reproducibility, the source code of MoE-Pipe is publicly available at https://github.com/johnson684/MoE-Pipe.",
+      "identifiers": [
+        "SemanticScholar:2d015e48d97f365da10d4db3be645f4ceae314fd"
+      ],
+      "semantic_scholar_id": "2d015e48d97f365da10d4db3be645f4ceae314fd",
+      "doi": "10.5220/0014920500004039",
+      "canonical_id": "DOI:10.5220/0014920500004039",
+      "authors": [
+        "Zhan-Wei Wu",
+        "Chih-Ta Tsai",
+        "Sao-Hsuan Lin",
+        "Yi-Syuan Ke",
+        "Jerry Chou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEのexpert重み転送と推論計算をCPU-GPU間、GPU間、GPU内で重畳し、サーバーレス推論のコールドスタートを短縮する。著者はロード時間約65%の隠蔽、end-to-end遅延最大1.85倍改善、TTFT最大2倍改善を報告。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-75a81f914b74",
+    "round": "libimp-75a81f914b742b10-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-75a81f914b742b10-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-75a81f914b742b10-pre01.json",
+    "receipt": "sha256:928c03801d4c7713a052cb785a35c2964a85dc9ad914a2b3a70045bad35fc221"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-75a81f914b74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
