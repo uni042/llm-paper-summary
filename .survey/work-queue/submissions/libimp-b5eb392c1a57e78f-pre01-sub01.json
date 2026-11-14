@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity",
+      "source_url": "https://arxiv.org/abs/2505.07239",
+      "year": 2025,
+      "published": "2025-05-12",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing use of large language models (LLMs) hosted on cloud platforms to offer inference services, privacy concerns about the potential leakage of sensitive information are escalating. Secure Multi-Party Computation (MPC) is a promising solution to protect the privacy in LLM inference. However, MPC requires frequent inter-server communication, causing high performance overhead. Inspired by the prevalent activation sparsity of LLMs, where most neuron are not activated after non-linear activation functions, we propose an efficient private inference system, Comet. This system employs an accurate and fast predictor to predict the sparsity distribution of activation function output. Additionally, we introduce a new private inference protocol. It efficiently and securely avoids computations involving zero values by exploiting the spatial locality of the predicted sparsity distribution. While this computation-avoidance approach impacts the spatiotemporal continuity of KV cache entries, we address this challenge with a low-communication overhead cache refilling strategy that merges miss requests and incorporates a prefetching mechanism. Finally, we evaluate Comet on four common LLMs and compare it with six state-of-the-art private inference systems. Comet achieves a $1.87\\times-2.63\\times$ speedup and a $1.94\\times-2.64\\times$ communication reduction.",
+      "identifiers": [
+        "SemanticScholar:bd7f594215a228135936300690be7af689cd74c7"
+      ],
+      "semantic_scholar_id": "bd7f594215a228135936300690be7af689cd74c7",
+      "canonical_id": "arXiv:2505.07239",
+      "arxiv_id": "2505.07239",
+      "doi": "10.1109/SP61157.2025.00182",
+      "authors": [
+        "Guang Yan",
+        "Yuhui Zhang",
+        "Zimu Guo",
+        "Lu-Tan Zhao",
+        "Xiao-Jun Chen",
+        "Chen Wang",
+        "Wen-Hao Wang",
+        "Dan Meng",
+        "Rui Hou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 551,
+        "matched_prestigious_venue": null
+      },
+      "reason": "秘密分散計算MPCを使うLLM推論に対し活性化疎性を予測し、ゼロ演算を回避する秘密推論プロトコルとKVキャッシュ補充・prefetchを組み合わせる。4モデル・6比較システムに対し速度1.87～2.63倍、通信量1.94～2.64倍削減を著者報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b5eb392c1a57",
+    "round": "libimp-b5eb392c1a57e78f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b5eb392c1a57e78f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b5eb392c1a57e78f-pre01.json",
+    "receipt": "sha256:84edeab28de86ccdcd5d25acbd4a149aadf64a4fc26ca4e56731b70c211aa27e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b5eb392c1a57",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
