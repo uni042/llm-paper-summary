@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Stacked from One: Multi-Scale Self-Injection for Context Window Extension",
+      "source_url": "https://arxiv.org/abs/2603.04759",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The limited context window of contemporary large language models (LLMs) remains a primary bottleneck for their broader application across diverse domains. Although continual pre-training on long-context data offers a straightforward solution, it incurs prohibitive data acquisition and computational costs. To address this challenge, we propose~\\modelname, a novel framework based on multi-grained context compression and query-aware information acquisition. SharedLLM comprises two stacked short-context LLMs: a lower model serving as a compressor and an upper model acting as a decoder. The lower model compresses long inputs into compact, multi-grained representations, which are then forwarded to the upper model for context-aware processing. To maximize efficiency, this information transfer occurs exclusively at the lowest layers, bypassing lengthy forward passes and redundant cross-attention operations. This entire process, wherein the upper and lower models are derived from the same underlying LLM layers, is termed~\\textit{self-injection}. To support this architecture, a specialized tree-based data structure enables the efficient encoding and query-aware retrieval of contextual information. Despite being trained on sequences of only 8K tokens, \\modelname~effectively generalizes to inputs exceeding 128K tokens. Across a comprehensive suite of long-context modeling and understanding benchmarks, \\modelname~achieves performance superior or comparable to strong baselines, striking an optimal balance between efficiency and accuracy. Furthermore, these design choices allow \\modelname~to substantially reduce the memory footprint and yield notable inference speedups ($2\\times$ over streaming and $3\\times$ over encoder-decoder architectures).",
+      "identifiers": [
+        "SemanticScholar:900c5ab294e23bf2a5a2abd9349c8da5b34ca050"
+      ],
+      "semantic_scholar_id": "900c5ab294e23bf2a5a2abd9349c8da5b34ca050",
+      "canonical_id": "arXiv:2603.04759",
+      "arxiv_id": "2603.04759",
+      "doi": "10.48550/arXiv.2603.04759",
+      "authors": [
+        "Wei Han",
+        "Pan Zhou",
+        "Soujanya Poria",
+        "Shuicheng Yan"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "同じLLM層から構築した圧縮側と復号側の二段構成、低層での情報転送、木構造検索によって長文脈推論を効率化する。著者は8K学習で128K超へ一般化し、比較対象に対し推論速度2～3倍を報告する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) encounter challenges in processing long sequences on edge devices due to the quadratic complexity of attention mechanisms and growing memory demands from Key-Value (KV) cache. Existing KV cache optimizations struggle with irreversible token eviction in long-output tasks, while alternative sequence modeling architectures prove costly to adopt within established Transformer infrastructure. We present EdgeInfinite, a memory-efficient solution for infinite contexts that integrates compressed memory into Transformer-based LLMs through a trainable memory-gating module. This approach maintains full compatibility with standard Transformer architectures, requiring fine-tuning only a small part of parameters, and enables selective activation of the memory-gating module for long and short context task routing. The experimental result shows that EdgeInfinite achieves comparable performance to baseline Transformer-based LLM on long context benchmarks while optimizing memory consumption and time to first token.",
+      "identifiers": [
+        "SemanticScholar:300207a7cc2644859813dbc477bec1e90b90a41a"
+      ],
+      "semantic_scholar_id": "300207a7cc2644859813dbc477bec1e90b90a41a",
+      "canonical_id": "arXiv:2503.22196",
+      "arxiv_id": "2503.22196",
+      "doi": "10.48550/arXiv.2503.22196",
+      "authors": [
+        "Jiyu Chen",
+        "Shuang Peng",
+        "Daxiong Luo",
+        "Fan Yang",
+        "Ren-Shou Wu",
+        "Fangyuan Li",
+        "Xiao-Xin Chen"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 596,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "学習可能なメモリゲートで圧縮メモリをTransformerに組み込み、長文脈でのKVキャッシュの増大を抑える。長文脈ベンチマークで性能を維持しつつメモリ使用量と初回トークン時間を改善すると著者は報告しており、エッジ推論効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+      ],
+      "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+      "canonical_id": "arXiv:2505.02380",
+      "arxiv_id": "2505.02380",
+      "doi": "10.1109/ICASSP55912.2026.11464777",
+      "authors": [
+        "Arnab Sanyal",
+        "G. Datta",
+        "Prithwish Mukherjee",
+        "Sandeep P. Chinchali",
+        "M. Orshansky"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 558,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非対称・混合量子化とHuffman符号化を組み合わせ、エッジLLMの重み格納量とメモリ帯域を削減する。著者はJetson P3450でメモリ制約時の推論速度31.9～146.6%向上を報告しており、圧縮と実行効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Are We Scaling the Right Thing? A System Perspective on Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2509.19645",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling (TTS) has recently emerged as a promising direction to exploit the hidden reasoning capabilities of pre-trained large language models (LLMs). However, existing scaling methods narrowly focus on the compute-optimal Pareto-frontier, ignoring the simple fact that compute-optimal is not always system-optimal. In this work, we propose a system-driven perspective on TTS, analyzing how reasoning models scale against practical metrics, such as latency and cost-per-token. By evaluating the impact of popular optimizations such as tensor parallelism and speculative decoding, our preliminary analysis reveals the limitations of current methods and calls for a paradigm shift toward holistic, system-aware evaluations that capture the true essence of scaling laws at inference time.",
+      "identifiers": [
+        "SemanticScholar:9ecba1007441dbbada1d00624d3207634a260cbe"
+      ],
+      "semantic_scholar_id": "9ecba1007441dbbada1d00624d3207634a260cbe",
+      "canonical_id": "arXiv:2509.19645",
+      "arxiv_id": "2509.19645",
+      "doi": "10.48550/arXiv.2509.19645",
+      "authors": [
+        "You-Peng Zhao",
+        "J. Lv",
+        "Di Wu",
+        "Jun Wang",
+        "Chris Gooley"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 417,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論時スケーリングを計算量最適だけでなく遅延・トークン当たり費用のシステム指標で評価する。テンソル並列と投機的デコードの影響を比較する予備的研究で、LLM推論サービングの効率評価に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e30f657fc948",
+    "round": "libimp-e30f657fc948ed7d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e30f657fc948ed7d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e30f657fc948ed7d-pre01.json",
+    "receipt": "sha256:e3aae27961730f27fad2eb49cd776663b64dc5814de7a880f53d13b68a6dd32c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e30f657fc948",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
