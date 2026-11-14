@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2aa8d92ec0a32193-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.27965",
+  "reason": "FFNを複数expertへ展開して学習中に重み付き融合し、単一expertとしてforward実行する。最終モデルは通常dense FFNへ統合され配備時の追加パラメータを回避するが、一次要旨の主目的は学習効率とモデル品質であり、推論時高速化の具体的測定は示されないため境界判定。",
+  "title": "ExFusion: Efficient Transformer Training via Multi-Experts Fusion",
+  "identity_tokens": [
+    "arxiv:2603.27965",
+    "2603.27965"
+  ],
+  "linked_from": [
+    "worklist-00"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2aa8d92ec0a3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
