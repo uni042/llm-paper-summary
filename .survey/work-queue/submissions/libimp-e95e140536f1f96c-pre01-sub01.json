@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "source_url": "https://arxiv.org/abs/2608.02560",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+      "identifiers": [
+        "SemanticScholar:bade37db80da222397e32494ba983509eb2179d5"
+      ],
+      "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
+      "canonical_id": "arXiv:2608.02560",
+      "arxiv_id": "2608.02560",
+      "doi": "10.48550/arXiv.2608.02560",
+      "authors": [
+        "Anusha Madan Gopal",
+        "Aras Pirbadian",
+        "Kristofor D. Carlson",
+        "M. A. Lewis",
+        "Jon Tapson"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 103,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PRECOGは文書をSSMの固定長隠れ状態に事前符号化し、検索した状態をクエリ時に注入して文脈再prefillを回避する。TENNs-LLM 1.2Bと192KB隠れ状態で、エッジ機器のprefill約27秒から6ms未満への短縮を著者が報告。SSM長文脈推論・検索・メモリ階層の効率化に直接関係する。Transformerへの同等適用可能性は示されていない。",
+      "library_body_check": "primary_arxiv_abstract_direct_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Step-dLLM: Adaptive Step-aware Sparse Attention for Efficient Diffusion LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.01320",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) generate tokens in parallel via iterative denoising, but their bidirectional attention prevents the KV caching used by autoregressive models and recomputes the full attention map at every step, incurring quadratic per-step cost. Existing sparse attention methods for dLLMs construct a sparse mask after an initial full-attention warm-up and reuse it for the remaining steps, while allocating the sparsity budget uniformly across heads. We argue both choices ignore key structural properties of attention in dLLMs: empirically, attention patterns are only locally consistent across steps and shift abruptly at certain transitions, and different heads concentrate their attention mass to very different extents. To this end, we design Step-dLLM, which periodically refreshes a block-sparse mask at anchor steps along the denoising trajectory and reuses it within each locally consistent interval, while employing a head-adaptive global budget that more aggressively compresses heads with concentrated attention. Backed by a fused IO-aware Triton kernel for block-sparse attention, Step-dLLM applies to pre-trained LLaDA-1.5 and Dream-7B-Instruct without retraining, achieving a 2.78x end-to-end speedup over dense FlashAttention on LLaDA-1.5 at 8K context with 256 denoising steps and 90% sparsity, while improving the accuracy-latency trade-off over prior sparse-attention methods.",
+      "identifiers": [
+        "SemanticScholar:c55af5b883737b6e3a1816bb1b5eef211dc60636"
+      ],
+      "semantic_scholar_id": "c55af5b883737b6e3a1816bb1b5eef211dc60636",
+      "canonical_id": "arXiv:2611.01320",
+      "arxiv_id": "2611.01320",
+      "authors": [
+        "Zhi-Chen Zeng",
+        "Xi-Chong Zhang",
+        "Jun-Pan Wu",
+        "Yi-Fei Zuo",
+        "Chi-Chih Chang",
+        "Jia-Yi Wang",
+        "Mao-Hua Nie",
+        "Jian Liu",
+        "Ang Li",
+        "Bang-Hua Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMの反復denoisingでattention maskを一定間隔のanchor stepで再生成し、head別に疎性予算を割り当てる。IO-aware Triton block-sparse kernelと組み合わせ、LLaDA-1.5の8K文脈・256step・90%疎性でdense FlashAttention比2.78倍のエンドツーエンド高速化を著者が報告。再学習不要の拡散LLM推論高速化に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_direct_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e95e140536f1",
+    "round": "libimp-e95e140536f1f96c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e95e140536f1f96c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e95e140536f1f96c-pre01.json",
+    "receipt": "sha256:51330c172020fbef9f0543f1243c22823a16540c48761870c45dd7b4afd34c09"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e95e140536f1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
