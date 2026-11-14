@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261114-1202-scheduled-chat-00/r01",
+  "reference_main_sha": "a611a27346712be3a27e62baa96682d7d3e82872",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.19645",
+      "identity_tokens": [
+        "arxiv:2509.19645"
+      ],
+      "title": "Are We Scaling the Right Thing? A System Perspective on Test-Time Scaling",
+      "reason": "推論時スケーリングを計算量最適だけでなく遅延・トークン当たり費用のシステム指標で評価する。テンソル並列と投機的デコードの影響を比較する予備的研究で、LLM推論サービングの効率評価に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2509.19645",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T12:02:00+09:00",
+      "last_checked_at": "2026-11-14T12:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 276
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.02380",
+      "identity_tokens": [
+        "arxiv:2505.02380"
+      ],
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "reason": "非対称・混合量子化とHuffman符号化を組み合わせ、エッジLLMの重み格納量とメモリ帯域を削減する。著者はJetson P3450でメモリ制約時の推論速度31.9～146.6%向上を報告しており、圧縮と実行効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T12:02:00+09:00",
+      "last_checked_at": "2026-11-14T12:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.04759",
+      "identity_tokens": [
+        "arxiv:2603.04759"
+      ],
+      "title": "Stacked from One: Multi-Scale Self-Injection for Context Window Extension",
+      "reason": "同じLLM層から構築した圧縮側と復号側の二段構成、低層での情報転送、木構造検索によって長文脈推論を効率化する。著者は8K学習で128K超へ一般化し、比較対象に対し推論速度2～3倍を報告する。",
+      "source_url": "https://arxiv.org/abs/2603.04759",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T12:02:00+09:00",
+      "last_checked_at": "2026-11-14T12:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 281
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.22196",
+      "identity_tokens": [
+        "arxiv:2503.22196"
+      ],
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "reason": "学習可能なメモリゲートで圧縮メモリをTransformerに組み込み、長文脈でのKVキャッシュの増大を抑える。長文脈ベンチマークで性能を維持しつつメモリ使用量と初回トークン時間を改善すると著者は報告しており、エッジ推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-14T12:02:00+09:00",
+      "last_checked_at": "2026-11-14T12:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 283
+    }
+  ]
+}
