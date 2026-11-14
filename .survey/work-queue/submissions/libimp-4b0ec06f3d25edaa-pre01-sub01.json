@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models",
+      "source_url": "https://arxiv.org/abs/2605.15413",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the remarkable success of transformer architectures in natural language processing, their scalability limitations remain poorly understood through systematic empirical analysis. This paper presents the first comprehensive large-scale evaluation of 118 transformer models across seven distinct architectural categories, revealing fundamental performance walls that manifest as hard deployment constraints. Our systematic benchmarking methodology uncovers a critical scalability crisis: while 88.1 % of models successfully process sequences up to 512 tokens, this drops dramatically to 44.9 % at 1024 tokens, with complete failure (0 %) at 2048 tokens. Through rigorous analysis of loading times, memory consumption, and computational efficiency across sequence lengths from 128 to 2048 tokens, we demonstrate that compressed models achieve superior parameter efficiency (649.2 tokens/sec/M parameters) compared to large generative models (12.5 tokens/ sec/M). Our findings challenge prevailing scaling assumptions and provide the first quantitative evidence that the theoretical $O\\left(n^{2}\\right)$ attention complexity translates into measurable performance walls. This work establishes new benchmarking methodologies for transformer evaluation and provides critical insights for practical deployment decisions in production environments.",
+      "identifiers": [
+        "SemanticScholar:9e7beabb3dad1a2e24d391d625da9054f28625a6"
+      ],
+      "semantic_scholar_id": "9e7beabb3dad1a2e24d391d625da9054f28625a6",
+      "canonical_id": "arXiv:2605.15413",
+      "arxiv_id": "2605.15413",
+      "doi": "10.1109/BigData66926.2025.11401965",
+      "authors": [
+        "M. Moghadasi",
+        "Faezeh Ghaderi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 341,
+        "matched_prestigious_venue": null
+      },
+      "reason": "118種類のTransformerを7つの構造群に分け、系列長に応じたロード時間・メモリ・処理速度・実行可能性を実測する。要旨では512 tokenで88.1%、1024で44.9%、2048で0%のモデルが処理可能だったと報告し、圧縮モデルのパラメータ当たりスループットを比較する。新しい推論アルゴリズムではないが、LLMを含むモデル配備の実測・資源制約分析に直接関係するため収録候補とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Hierarchical Global Attention (HGA)",
+      "source_url": "https://arxiv.org/abs/2606.30709",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hierarchical Global Attention (HGA) is a drop-in replacement for dense causal attention in pretrained long-context transformers. HGA preserves the original checkpoint parameters: the pretrained $W_Q$, $W_K$, $W_V$, and $W_O$ projections remain unchanged, no calibration parameters are introduced, and no retraining is required. Applied to Qwen3-30B-A3B-Instruct-2507-FP8 on a single RTX~5090 (32GB), the patched model runs out of the box at a 64K-token context, where token-level K/V storage is not feasible on this hardware. Unlike previous sparse-attention methods, HGA performs hierarchical two-level routing. It first retrieves relevant chunks using compact RoPE-aware summaries and then refines the selection by routing only the most relevant groups before performing exact token-level attention. This hierarchical retrieval significantly reduces the number of fetched tokens while preserving exact attention over the retrieved token set, making RAM- and NVMe-backed storage practical. The full historical token K/V resides in host RAM or NVMe storage, while only a small routed working set is transferred to GPU memory during attention. Consequently, GPU memory consumption depends primarily on model weights and the routed working set rather than on the total context length. Across all tested context lengths (4K - 64K tokens), routed attention remains within approximately $0.01$--$0.02$ nats of dense attention while the sparsity used is just about 3%. These results suggest that the approximation introduced by hierarchical routing is small, and that the remaining quality gap is likely dominated by long-context positional encoding rather than by the routing algorithm itself.",
+      "identifiers": [
+        "SemanticScholar:989039d128bd05489ca0f98cad6e10893c7fe1fc"
+      ],
+      "semantic_scholar_id": "989039d128bd05489ca0f98cad6e10893c7fe1fc",
+      "canonical_id": "arXiv:2606.30709",
+      "arxiv_id": "2606.30709",
+      "doi": "10.48550/arXiv.2606.30709",
+      "authors": [
+        "Woernle Frank",
+        "F. Vladimir",
+        "Grinenko Artemiy"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習済みTransformerのQ/K/V/O射影を変更せず、RoPE対応のコンパクトなチャンク要約による二段階ルーティングで必要なKVだけをホストRAM/NVMeからGPUへ取得し、取得集合内で正確なattentionを計算する。Qwen3-30B-A3BをRTX 5090上で64K文脈まで実行し、KVの約3%を使う条件でdenseとの差を約0.01–0.02 natsと報告。長文脈LLM推論のGPUメモリ削減と階層メモリ活用に直接該当する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4b0ec06f3d25",
+    "round": "libimp-4b0ec06f3d25edaa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4b0ec06f3d25edaa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4b0ec06f3d25edaa-pre01.json",
+    "receipt": "sha256:5fef8bab0bcc2441fdb8f2f24b79ca8ad21a12f01b2e5b6a4e62535a5b5879ee"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4b0ec06f3d25",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
