@@ -1,0 +1,449 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b31::chunk-0001-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.06857",
+      "identity_tokens": [
+        "arXiv:2009.06857",
+        "https://arxiv.org/abs/2009.06857"
+      ],
+      "title": "Current Limitations of Language Models: What You Need is Retrieval",
+      "reason": "言語モデルの現在の限界：必要なのは検索である。性能と計算のトレードオフを改善する諸アプローチを分類し限界を論じる論考。対象は論考であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2009.06857",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "sparse attention / long-context Transformer",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "worklist_rank": 342,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.09211",
+      "identity_tokens": [
+        "arXiv:2312.09211",
+        "https://arxiv.org/abs/2312.09211"
+      ],
+      "title": "Mitigating Outlier Activations in Low-Precision Fine-Tuning of Language Models",
+      "reason": "低精度微調整における外れ値活性の緩和。低精度の整数微調整で活性の外れ値がスケール因子を歪める問題への対処。対象は微調整であり、推論機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2312.09211",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 256,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.13358",
+      "identity_tokens": [
+        "arXiv:2405.13358",
+        "https://arxiv.org/abs/2405.13358"
+      ],
+      "title": "AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs",
+      "reason": "ゼロショット較正不要の適応学習後量子化AdpQ。較正を要する既存PTQに対し、適応LASSOに着想を得て顕著な重みを分離し、較正データなしで低精度量子化の最先端性能を得る。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2405.13358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 129,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02013",
+      "identity_tokens": [
+        "arXiv:2406.02013",
+        "https://arxiv.org/abs/2406.02013"
+      ],
+      "title": "Mamba as Decision Maker: Exploring Multi-scale Sequence Modeling in Offline Reinforcement Learning",
+      "reason": "意思決定者としてのMamba。オフライン強化学習における多規模系列モデリングの探求。対象は強化学習であり、LLM推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2406.02013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 395,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.02026",
+      "identity_tokens": [
+        "arXiv:2409.02026",
+        "https://arxiv.org/abs/2409.02026"
+      ],
+      "title": "Foundations of Large Language Model Compression - Part 1: Weight Quantization",
+      "reason": "LLM圧縮の基礎：重み量子化CVXQ。凸最適化の観点から量子化の基礎を築き、数千億パラメータへスケールする量子化手法を提案する。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2409.02026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "LLM inference surveys、roofline performance analysis",
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 18,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.16337",
+      "identity_tokens": [
+        "arXiv:2501.16337",
+        "https://arxiv.org/abs/2501.16337"
+      ],
+      "title": "Explore Activation Sparsity in Recurrent LLMs for Energy-Efficient Neuromorphic Computing",
+      "reason": "エネルギー効率的エッジ推論のための再帰LLMの活性疎性の探求。再帰型LLMの活性を訓練不要で疎化し、神経形態ハードウェアでのエネルギー効率を高める。エッジ推論の効率化ではあるが、神経形態向けであり境界。",
+      "source_url": "https://arxiv.org/abs/2501.16337",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 416,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02581",
+      "identity_tokens": [
+        "arXiv:2502.02581",
+        "https://arxiv.org/abs/2502.02581"
+      ],
+      "title": "Themis: Efficient Sparse Model Training Through Fully Sharded Sparse Data Parallelism",
+      "reason": "完全シャード疎データ並列による効率的疎モデル訓練Themis。専門家負荷の偏りによるストラグラーへの対処。対象はMoEの訓練であり、推論ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2502.02581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "その他システム研究",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "worklist_rank": 299,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03884",
+      "identity_tokens": [
+        "arXiv:2502.03884",
+        "https://arxiv.org/abs/2502.03884"
+      ],
+      "title": "Rank Also Matters: Hierarchical Configuration for Mixture of Adapter Experts in LLM Fine-Tuning",
+      "reason": "ランクも重要である：アダプタ専門家の階層構成。LoRAと専門家の混合によるパラメータ効率微調整の研究。対象は微調整であり、推論機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2502.03884",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "Adaptive Expert Computation / Compression",
+        "MoE routing / expert choice / heterogeneous conditional computation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "worklist_rank": 191,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.18627",
+      "identity_tokens": [
+        "arXiv:2502.18627",
+        "https://arxiv.org/abs/2502.18627"
+      ],
+      "title": "PacQ: A SIMT Microarchitecture for Efficient Dataflow in Hyper-asymmetric GEMMs",
+      "reason": "超非対称量子化の効率的データフローのためのSIMTマイクロアーキテクチャPacQ。重みのみ量子化で、GEMM前に重みを浮動小数へ戻す展開と逆量子化が性能利得を制限する問題に対し、データフローを効率化するマイクロアーキテクチャ。推論ハードウェアそのもの。",
+      "source_url": "https://arxiv.org/abs/2502.18627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 395,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.14985",
+      "identity_tokens": [
+        "arXiv:2503.14985",
+        "https://arxiv.org/abs/2503.14985"
+      ],
+      "title": "ML-Triton, A Multi-Level Compilation and Language Extension to Triton GPU Programming",
+      "reason": "多レベルコンパイルと言語拡張ML-Triton。Tritonがワークグループレベルから直接下げることで失われる最適化を、多レベル化で取り戻す。推論を含む計算のコンパイラであり境界。",
+      "source_url": "https://arxiv.org/abs/2503.14985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "inference-systems",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "worklist_rank": 214,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20362",
+      "identity_tokens": [
+        "arXiv:2503.20362",
+        "https://arxiv.org/abs/2503.20362"
+      ],
+      "title": "Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding",
+      "reason": "長尺動画のための大規模視覚言語モデルの自己反射Self-ReS。非線形の時空間サンプリングで重要な動画断片を選ぶ。対象は動画理解であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2503.20362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 369,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.07247",
+      "identity_tokens": [
+        "arXiv:2504.07247",
+        "https://arxiv.org/abs/2504.07247"
+      ],
+      "title": "Resource-efficient Inference with Foundation Model Programs",
+      "reason": "基盤モデルプログラムによる資源効率的推論。課題をプログラムへ変換し、モジュールごとに安い後端と高性能な後端を使い分ける資源配分の方針を学ぶ。推論時の配分ではあるが、プログラム抽象の提案であり境界。",
+      "source_url": "https://arxiv.org/abs/2504.07247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "投機的復号 / 無損失復号高速化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 278,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.02380",
+      "identity_tokens": [
+        "arXiv:2505.02380",
+        "https://arxiv.org/abs/2505.02380"
+      ],
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "reason": "エントロピー符号化重み圧縮EntroLLM。混合量子化とエントロピー符号化を組み合わせ、テンソル単位の量子化が重みの圧縮可能性を高める効果と並列復号で、保存とメモリ帯域の要求を下げる。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "LLM Serving / Scheduling / Disaggregation",
+        "Quantization × MoE × Offload",
+        "Weight Quantization / Compression",
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 277,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.20643",
+      "identity_tokens": [
+        "arXiv:2505.20643",
+        "https://arxiv.org/abs/2505.20643"
+      ],
+      "title": "Can Past Experience Accelerate LLM Reasoning?",
+      "reason": "過去の経験はLLMの推論を加速できるか。関連課題への反復曝露で推論が速くなるかを、課題関連性と計算の次元で定式化して調べる研究。推論時短の研究であり、機構の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2505.20643",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md"
+      ],
+      "worklist_rank": 230,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.20480",
+      "identity_tokens": [
+        "arXiv:2506.20480",
+        "https://arxiv.org/abs/2506.20480"
+      ],
+      "title": "GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching",
+      "reason": "層の切断と縫合によるLLM剪定GPTailor。単一モデルの剪定が中心だった構造化剪定に対し、微調整された変種の層を戦略的に組み合わせ・統合して圧縮する。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2506.20480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+      ],
+      "worklist_rank": 335,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02456",
+      "identity_tokens": [
+        "arXiv:2507.02456",
+        "https://arxiv.org/abs/2507.02456"
+      ],
+      "title": "System-performance and cost modeling of Large Language Model training and inference",
+      "reason": "LLM訓練のシステム性能と費用のモデリング。分散システムでの訓練のスケーラビリティの課題と対処を論じる。対象は訓練であり、推論ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2507.02456",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 284,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.10059",
+      "identity_tokens": [
+        "arXiv:2507.10059",
+        "https://arxiv.org/abs/2507.10059"
+      ],
+      "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+      "reason": "層圧縮への進化的アプローチGeLaCo。高価な手作業のハイパーパラメータ探索や局所ヒューリスティクスに依る構造化剪定に対し、進化的探索で層圧縮を行う。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2507.10059",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 88,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.00305",
+      "identity_tokens": [
+        "arXiv:2508.00305",
+        "https://arxiv.org/abs/2508.00305"
+      ],
+      "title": "Systematic Evaluation of Optimization Techniques for Long-Context Language Models",
+      "reason": "長文脈言語モデルの最適化技法の系統的評価。剪定、量子化、トークン除去などの最適化を、メモリ・遅延・スループットと生成品質の観点でベンチマークする研究。最適化の評価であり、機構の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2508.00305",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "KV cache quantization / long-context inference / activation compression",
+        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+        "Offload / Hierarchical Memory",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 312,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.15371",
+      "identity_tokens": [
+        "arXiv:2508.15371",
+        "https://arxiv.org/abs/2508.15371"
+      ],
+      "title": "Confidence-Modulated Speculative Decoding for Large Language Models",
+      "reason": "信頼度変調投機的デコード。下書きの長さと検証基準が静的な既存法に対し、下書き役の出力分布のエントロピーとマージンによる不確実性で動的に変調する情報理論的枠組み。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2508.15371",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "Inference / Parallel and Non-Autoregressive Decoding",
+        "inference-systems",
+        "speculative decoding / draft-model design",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的デコード / 知識蒸留 / ドラフトモデル整合",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 79,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18672",
+      "identity_tokens": [
+        "arXiv:2508.18672",
+        "https://arxiv.org/abs/2508.18672"
+      ],
+      "title": "Optimal Sparsity of Mixture-of-Experts Language Models for Reasoning Tasks",
+      "reason": "推論課題のためのMoE言語モデルの最適疎性。MoEの疎性が記憶と推論の能力体制にどう影響するかを訓練して調べるスケーリング研究。対象はモデルの訓練研究であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2508.18672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:25:00+09:00",
+      "last_checked_at": "2026-11-16T06:25:00+09:00",
+      "linked_from": [
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "worklist_rank": 352,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b31",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

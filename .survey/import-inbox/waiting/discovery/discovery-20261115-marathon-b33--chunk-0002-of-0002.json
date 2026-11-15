@@ -1,0 +1,226 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b33::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06750",
+      "identity_tokens": [
+        "arXiv:2510.06750",
+        "https://arxiv.org/abs/2510.06750"
+      ],
+      "title": "Gold-Switch: Training-Free Superposition of Slow- and Fast- Thinking LLMs",
+      "reason": "遅い思考と速い思考の重ね合わせGold-Switch。過剰思考する推論モデルを別モデルと併せて振り分ける代わりに、推論時に選択的に忘却させて1つのモデルを切り替える訓練不要の調整。推論時の制御ではあるが、忘却による調整であり境界。",
+      "source_url": "https://arxiv.org/abs/2510.06750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+      ],
+      "worklist_rank": 131,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.16045",
+      "identity_tokens": [
+        "arXiv:2510.16045",
+        "https://arxiv.org/abs/2510.16045"
+      ],
+      "title": "AMS-QUANT: Adaptive Mantissa Sharing for Floating-point Quantization",
+      "reason": "浮動小数量子化のための適応仮数共有AMS-QUANT。浮動小数量子化を整数ビット幅から非整数ビット幅へ進め、仮数の共有で量子化の最適点へ近づける。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2510.16045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 239,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.18525",
+      "identity_tokens": [
+        "arXiv:2510.18525",
+        "https://arxiv.org/abs/2510.18525"
+      ],
+      "title": "From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing",
+      "reason": "浮動小数点の部分利用による投機的LLMデコードの高速化SPEQ。量子化は性能を落とし投機的デコードは追加のオーバーヘッドを持つ問題に対し、完全モデルの重みビットの一部で量子化した下書きモデルを構成する、アルゴリズム・ハードウェア共同設計。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2510.18525",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "投機的復号 / 無損失復号高速化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 172,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.00295",
+      "identity_tokens": [
+        "arXiv:2511.00295",
+        "https://arxiv.org/abs/2511.00295"
+      ],
+      "title": "H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention",
+      "reason": "ハードウェア高速化のためのハイブリッド浮動小数・対数アプローチH-FA。FlashAttentionを浮動小数と固定小数対数領域の混合表現で計算し、直接ハードウェア実装に適するようにする。注意カーネルのハードウェア実装であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.00295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "flashattention-asic-fused-exponential-vector-multiplication",
+        "sparse attention / long-context Transformer",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 163,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02681",
+      "identity_tokens": [
+        "arXiv:2511.02681",
+        "https://arxiv.org/abs/2511.02681"
+      ],
+      "title": "Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes",
+      "reason": "最適特異ダメージ：低保存領域での効率的LLM推論。微調整が一部のパラメータにしか影響しない性質を使い、微調整済みモデルの保存を効率化する。配備の保存効率ではあるが、差分保存の研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.02681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2021-2102.08124-accelerated-sparse-neural-training-a-provable-and-efficient-method-to-fi.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+      ],
+      "worklist_rank": 417,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.04686",
+      "identity_tokens": [
+        "arXiv:2511.04686",
+        "https://arxiv.org/abs/2511.04686"
+      ],
+      "title": "Stateful KV Cache Management for LLMs: Balancing Space, Time, Accuracy, and Positional Fidelity",
+      "reason": "状態つきKVキャッシュ管理の経験的分析。多ターンで蓄積するKVキャッシュがモデルの訓練文脈に近づくと生成品質が急激に劣化することなどを、状態つきベンチマークで示す分析。KV管理の分析であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.04686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+        "sparse attention / long-context Transformer"
+      ],
+      "worklist_rank": 325,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.11729",
+      "identity_tokens": [
+        "arXiv:2511.11729",
+        "https://arxiv.org/abs/2511.11729"
+      ],
+      "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+      "reason": "SLO配慮型のLLM推論とPEFT微調整の共配置Harli。デコードインスタンスのGPU利用率が低い問題に対し、パラメータ効率微調整のタスクをデコードと共配置して利用率を上げる提供システム。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2511.11729",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 461,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13147",
+      "identity_tokens": [
+        "arXiv:2511.13147",
+        "https://arxiv.org/abs/2511.13147"
+      ],
+      "title": "OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs",
+      "reason": "全精度のための一度のチューニングOTARo。量子化の構造的制約が微調整と配備の柔軟さを妨げる問題に対し、精度ごとに異なる要求へ一度の調整で対応する。装置上配備の量子化ではあるが、微調整と一体であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.13147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 421,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.18920",
+      "identity_tokens": [
+        "arXiv:2511.18920",
+        "https://arxiv.org/abs/2511.18920"
+      ],
+      "title": "EventSTU: Event-Guided Efficient Spatio-Temporal Understanding for Video Large Language Models",
+      "reason": "イベント誘導の効率的時空間理解EventSTU。長い動画のトークン数による推論費用に対し、イベントカメラの変化駆動性質を使ったキーフレームサンプリングと適応トークン剪定。動画理解の推論効率化であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.18920",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 120,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.22889",
+      "identity_tokens": [
+        "arXiv:2511.22889",
+        "https://arxiv.org/abs/2511.22889"
+      ],
+      "title": "The Immutable Tensor Architecture: A Pure Dataflow Approach for Secure, Energy-Efficient AI Inference",
+      "reason": "不変テンソルアーキテクチャ。重みをデータではなく物理回路のトポロジとして符号化し、DRAMからの読み出しの帯域とエネルギーの壁を回避する範式転換の提案。推論ハードウェアの提案ではあるが、概念的な範式であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.22889",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T07:00:00+09:00",
+      "last_checked_at": "2026-11-16T07:00:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "sparse attention / long-context Transformer"
+      ],
+      "worklist_rank": 234,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b33",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7492c623c58ff0c9-border-008",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.02170",
+  "reason": "低ビット注意SageBwdの訓練可能性の研究。INT8注意が事前学習で全精度に劣る原因を、逆伝播のスコア勾配dSの量子化誤差やステップ当たりトークン数に求め、QK-normやK平滑化で全精度に一致させる条件を示す。低ビット注意カーネル自体は推論と関わるが、本論文の貢献は訓練側の安定化であり境界。",
+  "title": "SageBwd: A Trainable Low-bit Attention",
+  "identity_tokens": [
+    "arXiv:2603.02170",
+    "https://arxiv.org/abs/2603.02170"
+  ],
+  "linked_from": [
+    "inference-systems",
+    "long-context inference / dynamic sparse attention / prefill acceleration",
+    "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+    "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7492c623c58f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

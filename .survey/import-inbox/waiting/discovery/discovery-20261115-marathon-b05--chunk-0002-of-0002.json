@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b05::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.01308",
+      "identity_tokens": [
+        "arXiv:2607.01308",
+        "https://arxiv.org/abs/2607.01308"
+      ],
+      "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
+      "reason": "マルチエージェント潜在推論向けキャッシュマージ。エージェントごとのKVキャッシュを連結する従来法が入力順序に依存する問題に対し、内容で決まる正準順序でレイアウトを固定し、順序に依らずバイト同一になる収束複製状態としてキャッシュ交換を設計する。KVキャッシュ管理機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2607.01308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "agent serving / KV-cache reuse / latent communication / DAG workflows"
+      ],
+      "worklist_rank": 321,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.03050",
+      "identity_tokens": [
+        "arXiv:2607.03050",
+        "https://arxiv.org/abs/2607.03050"
+      ],
+      "title": "OmniFocus: Query-Guided Modality-Balanced Token Compression for Omni-Modal Large Language Models",
+      "reason": "オムニモーダル向けクエリ誘導トークン圧縮OmniFocus。音声と映像で重要度推定を独立に行い、モダリティ対称な圧縮で各モダリティの顕著な証拠を保ちながら音声映像の整合も維持する学習不要の圧縮。オムニLLM推論のトークン圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2607.03050",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/13-sparse-attention/2024-2410.08584-zipvl-accelerating-vision-language-models-through-dynamic-token-sparsity.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "worklist_rank": 328,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.05475",
+      "identity_tokens": [
+        "arXiv:2607.05475",
+        "https://arxiv.org/abs/2607.05475"
+      ],
+      "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
+      "reason": "モバイルLLM推論の横断計測研究。5つのフレームワークとCPU・GPU・NPUの3バックエンドにわたり、バックエンド別エネルギー帰属まで行う粒度のプロファイラPowerBenchで、フレームワーク起因の性能差などを実測する。推論基盤の計測そのもの。",
+      "source_url": "https://arxiv.org/abs/2607.05475",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "CPUオフロード / 活性化疎性 / 階層メモリ",
+        "Edge／on-device MoE",
+        "LLM Serving / Scheduling / Disaggregation",
+        "MoE inference / on-device LLM / expert offloading / expert caching",
+        "inference-systems",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "投機的復号 / 無損失復号高速化",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 141,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27756",
+      "identity_tokens": [
+        "arXiv:2607.27756",
+        "https://arxiv.org/abs/2607.27756"
+      ],
+      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO",
+      "reason": "騒がしい多話者環境向け音声対話モデルCocktail-Talker。応答・傾聴・無視の行動トークンで、複数話者の中での発話要否判断をモデル化する。音声対話モデルの設計と訓練が中核で、推論システム機構の提案はない。対象外。",
+      "source_url": "https://arxiv.org/abs/2607.27756",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 243,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11212",
+      "identity_tokens": [
+        "arXiv:2608.11212",
+        "https://arxiv.org/abs/2608.11212"
+      ],
+      "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts",
+      "reason": "MoEルーティング反転の因果分析。4ビットKV量子化の数値擾乱がゲートの決定境界を越えて専門家選択を反転させる経路を、因果的な帰属装置で定量化し、検出限界を示す。著者ら自身が緩和策の提案でないと述べており、推論挙動の計測・分析にとどまる。境界。",
+      "source_url": "https://arxiv.org/abs/2608.11212",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "04-moe-expert-compression",
+        "KV cache quantization / long-context inference / activation compression",
+        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+        "MoE expert pruning / causal interpretability / expert importance metrics",
+        "MoE routing / expert choice / heterogeneous conditional computation",
+        "Quantization × MoE × Offload",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "worklist_rank": 139,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01224",
+      "identity_tokens": [
+        "arXiv:2609.01224",
+        "https://arxiv.org/abs/2609.01224"
+      ],
+      "title": "S2Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+      "reason": "空間構造つき視覚トークン剪定S2Prune。重要度や冗長性の基準が安定した空間バイアスを生む問題に対し、画像を領域に分けて最低1トークンを保証し、残り予算をラプラシアン変動で局所構造の豊かな領域へ配る学習不要の剪定。MLLM推論のトークン削減機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.01224",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+        "papers/inference/04-conditional-computation/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "worklist_rank": 130,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.18916",
+      "identity_tokens": [
+        "arXiv:2609.18916",
+        "https://arxiv.org/abs/2609.18916"
+      ],
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "reason": "MoE専門家剪定の高次目的HOPE。専門家を独立に剪定する前提をやめ、専門家間の協調を入れた2次の剪定目的が誤差の上限を provably 最小化し、一次手法REAPを特殊ケースとして含む。最大122BのMoEで検証された推論メモリ削減機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction",
+        "inference-systems",
+        "moe-training-scaling-law-and-router-dynamics"
+      ],
+      "worklist_rank": 399,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30950",
+      "identity_tokens": [
+        "arXiv:2609.30950",
+        "https://arxiv.org/abs/2609.30950"
+      ],
+      "title": "Low-Bit Recurrent States in Hybrid Language Models",
+      "reason": "ハイブリッド言語モデル向け低ビット循環状態量子化。観測可能性グラミアンから歪み重みを導き、正規化した状態範囲と組み合わせて混合精度のビット配分を行い、減衰率も対数量子化する。4ビット平均で過剰負対数尤度を大幅に下げる、較正不要の状態量子化。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.30950",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "KV cache quantization / long-context inference / activation compression",
+        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+        "hybrid linear attention serving / recurrent-state prefix caching / cache compression / tensor parallelism",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "選択的状態空間モデルのMamba-2に特化した、SSD内部の活性値経路を対象とする学習後量子化。"
+      ],
+      "worklist_rank": 75,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.09051",
+      "identity_tokens": [
+        "arXiv:2610.09051",
+        "https://arxiv.org/abs/2610.09051"
+      ],
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "reason": "自己剪定Transformer（Universal Attention）。RoPEを保ちながら減衰機構を合成した汎用注意を端から端まで学習可能にし、その減衰が推論時のKV剪定基準として働くアーキテクチャ。KV圧縮の効果はあるが、機構は訓練で作るアーキテクチャ変更であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "99-other-inference-systems",
+        "kv-cache-optimization-compression",
+        "選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き"
+      ],
+      "worklist_rank": 282,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22543",
+      "identity_tokens": [
+        "arXiv:2610.22543",
+        "https://arxiv.org/abs/2610.22543"
+      ],
+      "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+      "reason": "拡散言語モデル向け投機的デコードSPOT。前回のパスの予測が位置の9割以上で正しい一方で順序が欠けていることに着目し、対象モデルの出力分布だけを読む0.62Mパラメータの順序予測器が候補継続の木を提案し、対象が検証する。拡散デコードの推論機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.22543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:20:00+09:00",
+      "last_checked_at": "2026-11-15T23:20:00+09:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "投機的復号 / EAGLE",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 45,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b05",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

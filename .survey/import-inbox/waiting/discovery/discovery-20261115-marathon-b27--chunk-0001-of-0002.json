@@ -1,0 +1,446 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b27::chunk-0001-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.23792",
+      "identity_tokens": [
+        "arXiv:2602.23792",
+        "https://arxiv.org/abs/2602.23792"
+      ],
+      "title": "Divide and Conquer: Accelerating Diffusion-Based Large Language Models via Adaptive Parallel Decoding",
+      "reason": "拡散型大規模言語モデルの高速化のための分割統治。複数マスクトークンの同時デコードで品質と安定性が落ちる問題に対処する解法。デコード法ではあるが、拡散型言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2602.23792",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 205,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03263",
+      "identity_tokens": [
+        "arXiv:2604.03263",
+        "https://arxiv.org/abs/2604.03263"
+      ],
+      "title": "LPC-SM: Local Predictive Coding and Sparse Memory for Long-Context Language Modeling",
+      "reason": "長文脈言語モデリング向け局所予測符号化と疎メモリLPC-SM。局所注意、永続メモリ、予測補正、実行時制御を分離したハイブリッド自己回帰アーキテクチャ。長文脈の効率が狙いだが、モデルアーキテクチャであり境界。",
+      "source_url": "https://arxiv.org/abs/2604.03263",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 160,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26660",
+      "identity_tokens": [
+        "arXiv:2605.26660",
+        "https://arxiv.org/abs/2605.26660"
+      ],
+      "title": "WINDQuant: Weight-Informed Neural Decision-Making for Global Mixed-Precision LLM Quantization",
+      "reason": "重み情報つき神経意思決定による大域混合精度量子化WINDQuant。超低ビットで精度劣化が大きい問題に対し、強化学習の配分制御器で混合精度を決める。量子化機構ではあるが、配分の学習が中心であり境界。",
+      "source_url": "https://arxiv.org/abs/2605.26660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 227,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.29873",
+      "identity_tokens": [
+        "arXiv:2605.29873",
+        "https://arxiv.org/abs/2605.29873"
+      ],
+      "title": "Moment-KV: Momentum-Based Decode-Time KV Cache Compression for Long Generation",
+      "reason": "運動量に基づくデコード時KVキャッシュ圧縮Moment-KV。プリフィルキャッシュの圧縮が文脈を壊す一方でデコード段階の圧縮が未開拓な問題に対し、注意の時間的パターンを使いデコード時のみ圧縮する。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2605.29873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "KV-cache compression / attention-based token selection / long-context inference"
+      ],
+      "worklist_rank": 248,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11634",
+      "identity_tokens": [
+        "arXiv:2606.11634",
+        "https://arxiv.org/abs/2606.11634"
+      ],
+      "title": "Architecture-Aware Reinforcement Learning Makes Sliding-Window Attention Competitive in Math Reasoning",
+      "reason": "アーキテクチャ配慮型強化学習によるスライディングウィンドウ注意の適応SWARR。訓練済みモデルを教師あり微調整で変換し方針を強化学習で適応させる実践的レシピ。長文脈推論の効率化が目的だが、機構の実体は適応訓練であり境界。",
+      "source_url": "https://arxiv.org/abs/2606.11634",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 195,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27660",
+      "identity_tokens": [
+        "arXiv:2606.27660",
+        "https://arxiv.org/abs/2606.27660"
+      ],
+      "title": "MVPruner: Dynamic Token Pruning for Accelerating Multi-view Vision-Language Models in Autonomous Driving",
+      "reason": "多視点視覚言語モデルのための動的トークン剪定MVPruner。視点ごとの重要度の動的差異と推論中の情報要求の変化を無視する固定剪定の問題に対処する。自動運転VLMのトークン削減であり境界。",
+      "source_url": "https://arxiv.org/abs/2606.27660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ],
+      "worklist_rank": 254,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02963",
+      "identity_tokens": [
+        "arXiv:2607.02963",
+        "https://arxiv.org/abs/2607.02963"
+      ],
+      "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+      "reason": "オムニモーダル稠密動画キャプションのための並列自己回帰デコード。動画イベントの時間的根拠つき記述の生成効率を上げる枠組み。対象は動画キャプション生成であり、LLM推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2607.02963",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "11-llm-serving-scheduling-disaggregation",
+        "Diffusion LLM Inference",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "worklist_rank": 209,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.07740",
+      "identity_tokens": [
+        "arXiv:2607.07740",
+        "https://arxiv.org/abs/2607.07740"
+      ],
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+      "reason": "動的双焦点による効率的長文脈拡張Jet-Long。ゼロショット文脈拡張で単一の再スケーリング係数を固定すると短文脈の忠実度か長文脈での破綻かのどちらかになる問題に対し、長さ配慮の適応を行う。推論時の文脈拡張ではあるが、位置符号の適応であり境界。",
+      "source_url": "https://arxiv.org/abs/2607.07740",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 281,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.06630",
+      "identity_tokens": [
+        "arXiv:2608.06630",
+        "https://arxiv.org/abs/2608.06630"
+      ],
+      "title": "The Sparsity Whisperer",
+      "reason": "疎性のささやき手。剪定の基準が大きな活性や層出力の再構成しか見ず、似た入力を異なる出力へ分ける計算を見落とす問題に対し、出力の差分を保つ差分配慮型の剪定。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2608.06630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 192,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15943",
+      "identity_tokens": [
+        "arXiv:2608.15943",
+        "https://arxiv.org/abs/2608.15943"
+      ],
+      "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+      "reason": "KV共有とパイプライン並列効率の関係KV-Pipe。層跨ぎKV共有を推論のKV費用削減としてだけでなく、訓練のパイプラインの段不均衡を直す制御つまみとして使う。KV機構ではあるが、対象は訓練のパイプラインであり境界。",
+      "source_url": "https://arxiv.org/abs/2608.15943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism"
+      ],
+      "worklist_rank": 202,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16944",
+      "identity_tokens": [
+        "arXiv:2608.16944",
+        "https://arxiv.org/abs/2608.16944"
+      ],
+      "title": "A Tight Linear Deterministic Competitive Ratio for Fully Online KV-Cache Scheduling",
+      "reason": "完全オンラインKVキャッシュバッチングの競合比。増え続けるKVメモリ制約の下での要請バッチングについて、決定性アルゴリズムの競合比のギャップを閉じる理論結果。推論スケジューリングの理論であり境界。",
+      "source_url": "https://arxiv.org/abs/2608.16944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+        "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
+        "KVキャッシュ制約下のLLMサービング・スケジューリング",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM Serving / Scheduling / KV-Constrained Scheduling"
+      ],
+      "worklist_rank": 223,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20427",
+      "identity_tokens": [
+        "arXiv:2608.20427",
+        "https://arxiv.org/abs/2608.20427"
+      ],
+      "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
+      "reason": "効率的長文脈のための因果二進疎注意レトロフィットBF1。稠密因果注意が長文脈で高くつく問題に対し、局所近傍と大域ブロックと対数間隔の歴史ブロックを組み合わせた決定論的な疎注意を、訓練済みモデルへ正しさゲートつきで後付けする。推論の注意機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2608.20427",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "inference-systems",
+        "sparse attention / long-context Transformer",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "疎注意 / KVキャッシュ選択 / 長文脈推論"
+      ],
+      "worklist_rank": 165,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23167",
+      "identity_tokens": [
+        "arXiv:2608.23167",
+        "https://arxiv.org/abs/2608.23167"
+      ],
+      "title": "Accelerating Diffusion Language Models via Structured Suffix Modeling",
+      "reason": "構造化サフィックスモデリングによる拡散言語モデルの高速化。各ステップで全サフィックスと相互作用する費用に対し、サフィックス領域の構造的異種性を使う。デコード法ではあるが、拡散言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2608.23167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+        "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+      ],
+      "worklist_rank": 186,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32046",
+      "identity_tokens": [
+        "arXiv:2609.32046",
+        "https://arxiv.org/abs/2609.32046"
+      ],
+      "title": "Receiver-Conditioned Latent Communication gives 94% CacheBack",
+      "reason": "受信者条件付き潜在通信CacheBack。エージェント間の通信でKVキャッシュを転送すると文脈とエージェント数に比例して膨らむ問題に対し、受信者に条件づけた潜在通信で圧縮する。推論基盤に隣接するが、主題はエージェント間通信であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.32046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "multi-LLM communication / KV-cache semantic transfer"
+      ],
+      "worklist_rank": 219,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34370",
+      "identity_tokens": [
+        "arXiv:2609.34370",
+        "https://arxiv.org/abs/2609.34370"
+      ],
+      "title": "Spexis: Speculative Lookahead Scheduling for LLM Inference",
+      "reason": "LLM推論向け投機的先読みスケジューリングSpexis。投機的デコードをトークン生成の高速化だけでなく並列の軸として使い、パイプライン並列とテンソル並列と並行に投機を実行し、先読みスケジューリングで無駄な投機とKV排除を減らす、vLLM上の多GPU枠組み。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.34370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "Conditional Computation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLMサービング／予測型スケジューリング",
+        "Speculative Decoding",
+        "inference-systems",
+        "survey-speculative-decoding",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 292,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36800",
+      "identity_tokens": [
+        "arXiv:2609.36800",
+        "https://arxiv.org/abs/2609.36800"
+      ],
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "reason": "コンパイラとしてのAI。TritonカーネルをTritonコンパイラなしにLLMエージェントがPTXへ直接翻訳するAIロワリングの研究。推論カーネルの生成ではあるが、主題はコンパイラの代替であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 245,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00465",
+      "identity_tokens": [
+        "arXiv:2610.00465",
+        "https://arxiv.org/abs/2610.00465"
+      ],
+      "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+      "reason": "メモリ不要エッジLLM推論のための無線による重み放送AIR-LLM。エッジ装置が重みを保存も読み込みもせず、無線で受けてその場で消費する推論アーキテクチャ。推論基盤ではあるが、無線放送の提案であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.00465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "CPUオフロード / 活性化疎性 / 階層メモリ",
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "オフロード／階層メモリ",
+        "端末内LLM推論／フラッシュ計算／チップレット／重み退避",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 272,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03007",
+      "identity_tokens": [
+        "arXiv:2610.03007",
+        "https://arxiv.org/abs/2610.03007"
+      ],
+      "title": "AvoKV-E: Payload-Aware KV Cache Eviction for Long Reasoning",
+      "reason": "長推論向けペイロード配慮型KVキャッシュ排除AvoKV-E。生成跡がKVのボトルネックになる長出力推論で、排除法がキーの読まれ方だけを見て値ペイロードの大きさを見落とす問題に対し、適格性を遅らせてペイロードを配慮する訓練不要の方針。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.03007",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "kv-cache-optimization-compression"
+      ],
+      "worklist_rank": 250,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.03430",
+      "identity_tokens": [
+        "arXiv:2610.03430",
+        "https://arxiv.org/abs/2610.03430"
+      ],
+      "title": "Jumping the Line: Exploiting Length Predictions in LLM Scheduling",
+      "reason": "列に割り込む：LLMスケジューリングにおける長さ予測の悪用JIL。出力長予測に依るスケジューラへの攻撃で、敵対的サフィックスで予測を過小にさせ優先度を得る。推論基盤のスケジューリングに関わるが、主題は攻撃であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.03430",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving scheduling / response-length prediction / continuous batching / SRTF"
+      ],
+      "worklist_rank": 261,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15384",
+      "identity_tokens": [
+        "arXiv:2610.15384",
+        "https://arxiv.org/abs/2610.15384"
+      ],
+      "title": "E8 Lattice Key Quantization for Low-Bit KV-Cache Compression",
+      "reason": "低ビットKVキャッシュ圧縮のためのE8格子キー量子化。スカラー量子化が2ビットで不安定か3ビットを要する問題に対し、E8格子に基づくベクトル量子化でキーを2ビット化し、キー・値とも2ビットで基線に近い品質を保つ。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.15384",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 221,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b27",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

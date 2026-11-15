@@ -1,0 +1,238 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b27::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.20826",
+      "identity_tokens": [
+        "arXiv:2610.20826",
+        "https://arxiv.org/abs/2610.20826"
+      ],
+      "title": "Task-Phase-Conditioned Expert Routing Is Not a Reliable Proxy for Quantization Sensitivity in MoE FFN Tensors",
+      "reason": "課題位相条件付き専門家ルーティングは量子化の信頼できる代理ではない。ルーティング統計から混合精度量子化の層配分を導けるかを、プロファイリング基盤を構築して検証する研究。量子化の配分の研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.20826",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/06-moe-quantization-compression/2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md",
+        "papers/inference/06-moe-quantization-compression/2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md"
+      ],
+      "worklist_rank": 249,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26660",
+      "identity_tokens": [
+        "arXiv:2610.26660",
+        "https://arxiv.org/abs/2610.26660"
+      ],
+      "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+      "reason": "モバイルNPU上のハイブリッド線形注意GUIエージェントの提供Tandem。スマートフォンのGUIエージェントで、ハイブリッド線形注意モデルの再帰状態の再利用に要るチェックポイントが、履歴を書き換えるエージェント要請では外れる問題に対し、ロールバック状態を保つ方針。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.26660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "08-edge-on-device-llm-systems",
+        "inference-systems",
+        "kv-cache",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 166,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26991",
+      "identity_tokens": [
+        "arXiv:2610.26991",
+        "https://arxiv.org/abs/2610.26991"
+      ],
+      "title": "3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP",
+      "reason": "相補性誘導のハードウェア・ソフトウェア共同設計3D-MoE。MoEデコードがメモリ律速で専門家の負荷が偏り時間変動する問題に対し、3D積層DRAMの近メモリ処理で局所性と負荷バランスの衝突に対処する共同設計。推論ハードウェアそのもの。",
+      "source_url": "https://arxiv.org/abs/2610.26991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "MoE専門家オフロード / 混合精度 / 専門家キャッシュ",
+        "MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散",
+        "cpu-offload",
+        "inference-systems",
+        "オフロード／階層メモリ"
+      ],
+      "worklist_rank": 283,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.28620",
+      "identity_tokens": [
+        "arXiv:2610.28620",
+        "https://arxiv.org/abs/2610.28620"
+      ],
+      "title": "Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs",
+      "reason": "重み配置だけでは不十分：複数ノードCPUデコードにおける同期。三値LLMの高速ランタイムがメモリ帯域の半分未満しか使えない原因を、ノード局所の重み配置ではなくスレッド間の同期待ちとして同定する分析。CPU推論の分析であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.28620",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "LLM推論カーネル融合／メガカーネル／GPUコンパイラ・ランタイム",
+        "llm-serving-scheduling-disaggregation",
+        "other-inference-systems"
+      ],
+      "worklist_rank": 187,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.31169",
+      "identity_tokens": [
+        "arXiv:2610.31169",
+        "https://arxiv.org/abs/2610.31169"
+      ],
+      "title": "SARIA: Persistence-Aware KV Caching with Coordinated DRAM--SSD Reload for LLM Agents",
+      "reason": "永続性配慮型KVキャッシュSARIA。多ターンエージェントが長い接頭辞を再利用する一方、全ブロックをSSDへ書くと書き込み量と寿命が問題になり、読み戻し帯域も限られる問題に対し、選択的な受付と読み戻しを協調させるKVキャッシュシステム。推論基盤の保存機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.31169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "KV Cache Offload / Recomputation",
+        "KV cache offload / SSD swapping / GPU Direct Storage",
+        "KV cache offloading / hierarchical memory / SSD-backed long-context serving",
+        "KVキャッシュ管理 / エージェント型LLM配信 / 接頭辞優先スケジューリング / 予測型追い出し",
+        "kv-cache-offload-recomputation",
+        "kv-cache-optimization-compression",
+        "llm-serving-scheduling-disaggregation"
+      ],
+      "worklist_rank": 286,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.35804",
+      "identity_tokens": [
+        "arXiv:2610.35804",
+        "https://arxiv.org/abs/2610.35804"
+      ],
+      "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
+      "reason": "いつ確定するかを学ぶ：高速拡散言語生成のための予定蒸留dSpark。予測しやすいトークンが有用な文脈になるとは限らない問題に対し、確定の予定を蒸留で学ぶ。デコード法ではあるが、拡散言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2610.35804",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 190,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.03992",
+      "identity_tokens": [
+        "arXiv:2611.03992",
+        "https://arxiv.org/abs/2611.03992"
+      ],
+      "title": "FlagRot: Selective Rotation for Low-Bit KV Caches",
+      "reason": "低ビットKVキャッシュのための選択的回転FlagRot。キーを量子化前に回転すると常に助かるという前提が、平坦な部分に新たな峰を作って成り立たないことを示し、32チャネルごとに回転するか否かを較正誤差で選ぶ。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.03992",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "arXiv:2405.16406のICLR 2025採録版。"
+      ],
+      "worklist_rank": 246,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.04104",
+      "identity_tokens": [
+        "arXiv:2611.04104",
+        "https://arxiv.org/abs/2611.04104"
+      ],
+      "title": "ModelBlaster: Closing the Performance Gap through Learning-Augmented Agents Across Models, Kernels and Hardware Backends",
+      "reason": "学習増強型アクセラレータ最適化ModelBlaster。コンパイラの探索とLLM誘導最適化が単一のツールチェーンやカーネル単位に限られる問題に対し、記憶増強型の文脈内強化学習でモデルレベルの変換まで扱う。カーネル最適化のエージェント研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2611.04104",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "LLM serving / programmable inference / KV cache / agentic workflows",
+        "inference-systems",
+        "kernel-runtime-compilation",
+        "大規模言語モデルによるカーネル最適化、配備状況を考慮した推論最適化、エージェント型コード最適化"
+      ],
+      "worklist_rank": 200,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06324",
+      "identity_tokens": [
+        "arXiv:2609.06324",
+        "https://arxiv.org/abs/2609.06324"
+      ],
+      "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+      "reason": "周辺分布から結合分布への切符：1ステップ読み出しのための結合雑音蒸留CONDOR。拡散言語モデルが1回の前方計算で一貫したトークンブロックを生成できるかを、ゼロから訓練して探る。対象は拡散モデルの生成手法であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2609.06324",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "Inference / Parallel and Non-Autoregressive Decoding",
+        "Speculative Decoding",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "投機的復号 / 無損失復号高速化",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 179,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04875",
+      "identity_tokens": [
+        "arXiv:2610.04875",
+        "https://arxiv.org/abs/2610.04875"
+      ],
+      "title": "SpecFold: Folding Multi-Branch Redundancy for Faster Speculative Decoding in Diffusion Language Models",
+      "reason": "多分岐冗長性の畳み込みによる投機的高速化SpecFold。拡散LLMの多分岐投機的デコードで、分岐が親からほとんどのトークンを継承して隠れ状態の大部分が重なる冗長性を利用する。投機的検証の高速化ではあるが、拡散LLMに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2610.04875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T05:20:00+09:00",
+      "last_checked_at": "2026-11-16T05:20:00+09:00",
+      "linked_from": [
+        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+      ],
+      "worklist_rank": 290,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b27",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

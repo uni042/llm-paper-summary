@@ -1,0 +1,238 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b25::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37386",
+      "identity_tokens": [
+        "arXiv:2610.37386",
+        "https://arxiv.org/abs/2610.37386"
+      ],
+      "title": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data",
+      "reason": "較正不要のMoEデコード向けチャネル選択。対話的デコードで専門家の重み読み込みが律速になる問題に対し、閾値を較正しても読む量が入力で変動する欠陥を示し、較正データなしでチャネルを選ぶ。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.37386",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "06-moe-quantization-compression",
+        "MoE inference / intra-expert activation sparsity / sparse GPU kernels / vLLM",
+        "MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation",
+        "adaptive-expert-computation-compression",
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
+      ],
+      "worklist_rank": 11,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42147",
+      "identity_tokens": [
+        "arXiv:2610.42147",
+        "https://arxiv.org/abs/2610.42147"
+      ],
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "reason": "潜在疎注意。100万トークンを超える超長文脈で、索引付けが二次費用か精度喪失のどちらかになる問題に対し、潜在空間での疎注意で精度を保ちながら準二次を狙う。推論の注意機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.42147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "13-sparse-attention",
+        "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+        "KVキャッシュ最適化・CPU退避・疎注意・ページ化KV管理",
+        "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "worklist_rank": 4,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.00486",
+      "identity_tokens": [
+        "arXiv:2611.00486",
+        "https://arxiv.org/abs/2611.00486"
+      ],
+      "title": "Integer-Exact Microscaling: Running MXFP4 Language Models on INT8 Matrix Units",
+      "reason": "整数厳密マイクロスケーリング。最速の行列データパスがINT8のハードウェアでMXFP4モデルを動かす際、ブロック指数の広がりが3以内の行は1つのINT8ベクトルと2の冪スケールに厳密に等しいことを示し、ブロックごとの作業を省く。推論カーネルそのもの。",
+      "source_url": "https://arxiv.org/abs/2611.00486",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。"
+      ],
+      "worklist_rank": 429,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.02846",
+      "identity_tokens": [
+        "arXiv:2611.02846",
+        "https://arxiv.org/abs/2611.02846"
+      ],
+      "title": "SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding",
+      "reason": "投機的デコード向け分岐並列オンポリシー蒸留SpecOPD。並列下書きの受理長を伸ばすオンポリシー蒸留で、監督の収集が逐次な下書き・検証に依る問題を分岐並列で解く。下書きの改善だが、機構の実体は蒸留であり境界。",
+      "source_url": "https://arxiv.org/abs/2611.02846",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "05-speculative-decoding-moe",
+        "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+        "inference-systems",
+        "speculative-decoding",
+        "投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+        "投機的デコード／動的候補木／高同時実行LLMサービング",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 2,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.04055",
+      "identity_tokens": [
+        "arXiv:2611.04055",
+        "https://arxiv.org/abs/2611.04055"
+      ],
+      "title": "HybridSpec: Throughput-Aware Speculative Decoding for Hybrid GDN-MoE Models",
+      "reason": "ハイブリッドGDN-MoE向けスループット配慮型投機的デコードHybridSpec。並列下書きで検証が支配的になる中、検証長を増やすと最初の棄却後の作業が無駄になる問題に対し、ハイブリッド目標モデルで検証時間が長さに強く伸びる性質を踏まえて検証長を選ぶ。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.04055",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "05-speculative-decoding-moe",
+        "inference-systems",
+        "speculative decoding / hybrid-attention serving / recurrent linear attention / SGLang runtime",
+        "speculative-decoding",
+        "投機的復号 / EAGLE",
+        "投機的復号 / LLMサービング・ベンチマーク"
+      ],
+      "worklist_rank": 13,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.07025",
+      "identity_tokens": [
+        "arXiv:2611.07025",
+        "https://arxiv.org/abs/2611.07025"
+      ],
+      "title": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
+      "reason": "合成可能なKVキャッシュ圧縮のための低ランクキーと償却値LowRAM。各ヘッド内で値がキーから概ね予測できる冗長性を使い、テスト時に軽量な予測器を合わせ、再構成の悪いトークンだけ残差を保存する。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.07025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.19392-cache-me-if-you-must-adaptive-key-value-quantization-for-large-language-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "worklist_rank": 457,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.10137",
+      "identity_tokens": [
+        "arXiv:2607.10137",
+        "https://arxiv.org/abs/2607.10137"
+      ],
+      "title": "RDQ: Residual Distribution Quantization for Large Language Models",
+      "reason": "残差分布量子化RDQ。4ビット未満で学習後量子化が急激に劣化する根本原因を、層ごとに注入される量子化雑音が残差流に蓄積する分布ドリフトとして同定し、残差分布の観点から量子化する。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2607.10137",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "worklist_rank": 466,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02713",
+      "identity_tokens": [
+        "arXiv:2610.02713",
+        "https://arxiv.org/abs/2610.02713"
+      ],
+      "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+      "reason": "反応的で可逆なKV常駐WakeKV。ヘッドの分類を生成前に固定する既存圧縮に対し、多くのヘッドが生成中に読み方を変えることを測り、冷えたヘッドの状態を破棄せずCPUの貯留へ移して戻せる常駐方針。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.02713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "KV Cache Offload / Recomputation",
+        "KV Cache Optimization / Compression",
+        "kv-cache-optimization-compression"
+      ],
+      "worklist_rank": 29,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12338",
+      "identity_tokens": [
+        "arXiv:2610.12338",
+        "https://arxiv.org/abs/2610.12338"
+      ],
+      "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+      "reason": "対称性配慮型の層跨ぎ値キャッシュ圧縮VFold。層間のキャッシュ類似性を利用する際のアーキテクチャ変更やオーバーヘッドを避け、対称性に配慮した値キャッシュの統合でデコード中のメモリを減らす。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.12338",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "07-kv-cache-optimization-compression",
+        "KV Cache Optimization / Compression",
+        "arXiv:2405.16406のICLR 2025採録版。"
+      ],
+      "worklist_rank": 28,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18451",
+      "identity_tokens": [
+        "arXiv:2610.18451",
+        "https://arxiv.org/abs/2610.18451"
+      ],
+      "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+      "reason": "専門家並列MoE提供向けインスタンス内高速弾力スケーリングFastEEP。大規模専門家並列が標準構成になる一方、需要変動への容量調整がインスタンスの破棄と再構築に依る問題に対し、既存インスタンス内で専門家並列グループを素早く組み替える。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.18451",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:50:00+09:00",
+      "last_checked_at": "2026-11-16T04:50:00+09:00",
+      "linked_from": [
+        "KVキャッシュ動的メモリ管理／PagedAttention代替",
+        "LLM inference serving / parameter-centric GPU memory management",
+        "llm-serving-scheduling-disaggregation"
+      ],
+      "worklist_rank": 21,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b25",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,229 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b20::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33977",
+      "identity_tokens": [
+        "arXiv:2609.33977",
+        "https://arxiv.org/abs/2609.33977"
+      ],
+      "title": "GroupMask: Layer-Adaptive Group-wise Sparsity for Semi-Structured LLM Pruning",
+      "reason": "半構造化LLM剪定向け層適応グループ単位疎性GroupMask。N:Mパターンが全層で同じ疎性率を固定する問題に対し、重み行列を規則的なグループに分けて層適応に疎性を配分する。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.33977",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "Inference / Structured Model Compression and Pruning",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "worklist_rank": 335,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34683",
+      "identity_tokens": [
+        "arXiv:2609.34683",
+        "https://arxiv.org/abs/2609.34683"
+      ],
+      "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+      "reason": "エージェント推論性能のベンチマークスイートAgentPerfBench。提供エンジンの最適化が単発チャットのベンチマークに依る一方、実用途は多ターンで文脈が伸びるエージェントである乖離に対し、実トレースで測る。推論基盤の計測であり、機構そのものではないため境界。",
+      "source_url": "https://arxiv.org/abs/2609.34683",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 359,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38832",
+      "identity_tokens": [
+        "arXiv:2609.38832",
+        "https://arxiv.org/abs/2609.38832"
+      ],
+      "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+      "reason": "注意におけるパラメータと文脈のスケーリングNAMOH。トークンごとにH個中K個のヘッドを活性化し、各ヘッドが割り当てられたトークンだけを保持する、アーキテクチャ原生の疎注意。長文脈推論の効率に関わるが、モデルアーキテクチャの設計であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.38832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "疎注意 / KVキャッシュ選択 / 長文脈推論",
+        "疎注意／長文脈学習"
+      ],
+      "worklist_rank": 280,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.40127",
+      "identity_tokens": [
+        "arXiv:2609.40127",
+        "https://arxiv.org/abs/2609.40127"
+      ],
+      "title": "Learning Functional Subspaces for Neural Network Compression",
+      "reason": "神経網圧縮のための学習可能関数部分空間。低ランク因数分解で除く部分空間を局所的な閉形式基準で選ぶと誤差が深さとともに複合する問題に対し、誤差の伝播を考慮して部分空間を学習する圧縮。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.40127",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 293,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05285",
+      "identity_tokens": [
+        "arXiv:2610.05285",
+        "https://arxiv.org/abs/2610.05285"
+      ],
+      "title": "Quality-Aware Cross-Model Computation Reuse",
+      "reason": "品質配慮型のモデル跨ぎ計算再利用。あるモデルの中間結果を他モデルが再利用する際の、品質の不確実性と準備費用の共有による結合スケジューリングを理論的に最適化する。推論基盤に隣接するが、再利用判断の理論であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.05285",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.12872-kvcomm-online-cross-context-kv-cache-communication-for-efficient-llm-bas.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.06940-unified-ai-gateway-a-framework-for-joint-model-routing-and-kv-cache-mana.md"
+      ],
+      "worklist_rank": 394,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14754",
+      "identity_tokens": [
+        "arXiv:2610.14754",
+        "https://arxiv.org/abs/2610.14754"
+      ],
+      "title": "GateSight: Recurrent Memory Anticipates Attention Memory for Query-Agnostic KV Eviction in Hybrid LLMs",
+      "reason": "再帰メモリが注意メモリを先取りするGateSight。ハイブリッドモデルの再帰層の書き込みゲートから、全注意層のKV項目の将来有用性を予測できることを示す分析。提供メモリの削減につながるが、分析であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.14754",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "Long-context serving / KV cache benchmark",
+        "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+        "inference-systems",
+        "kv-cache-optimization-compression"
+      ],
+      "worklist_rank": 360,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.27583",
+      "identity_tokens": [
+        "arXiv:2610.27583",
+        "https://arxiv.org/abs/2610.27583"
+      ],
+      "title": "TeCoP: Accelerating Diffusion Large Language Model Decoding via Tentative Context Pipelining",
+      "reason": "暫定文脈パイプラインによる拡散LLMデコードの高速化TeCoP。予測の確定可能性と文脈としての有用性を分離し、ブロック並列のパイプラインと下書き検証で再計算を減らす訓練不要デコーダ。デコード機構ではあるが、拡散型言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2610.27583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 365,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.36153",
+      "identity_tokens": [
+        "arXiv:2610.36153",
+        "https://arxiv.org/abs/2610.36153"
+      ],
+      "title": "Stratum: Repository Memory for Coding Agents Beyond the Context Window",
+      "reason": "文脈窓を超えるコーディングエージェント向けリポジトリメモリStratum。セッションをまたいで知識を持続させるメモリの設計。対象はエージェントの記憶であり、LLM推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2610.36153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "10-kv-cache-offload-recomputation",
+        "KV Cache Offload / Recomputation",
+        "Long-context serving / KV cache benchmark"
+      ],
+      "worklist_rank": 386,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.01320",
+      "identity_tokens": [
+        "arXiv:2611.01320",
+        "https://arxiv.org/abs/2611.01320"
+      ],
+      "title": "Step-dLLM: Adaptive Step-aware Sparse Attention for Efficient Diffusion LLM Inference",
+      "reason": "拡散LLM向け適応ステップ配慮型疎注意Step-dLLM。双方向注意でKVキャッシュが使えず全注意マップを毎ステップ再計算する拡散LLMに対し、ステップに応じた疎注意を行う。注意機構ではあるが、拡散型言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2611.01320",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "Diffusion LLM Inference",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+      ],
+      "worklist_rank": 307,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.03899",
+      "identity_tokens": [
+        "arXiv:2611.03899",
+        "https://arxiv.org/abs/2611.03899"
+      ],
+      "title": "EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL",
+      "reason": "低精度GEMMへ多数のLoRAアダプタを融合するEpiLoRA。マルチテナント提供で、アダプタが基盤モデルのGEMMの脇で小カーネルとして走りデコードの遅延を占める問題に対し、下射影がGEMMに必要なことだけを使う観察で融合する。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.03899",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:35:00+09:00",
+      "last_checked_at": "2026-11-16T03:35:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "kv-cache-offload-recomputation",
+        "llm-serving-scheduling-disaggregation",
+        "many-adapter LLM serving / LoRA serving / inference scheduling",
+        "moe-inference-expert-placement-caching"
+      ],
+      "worklist_rank": 382,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b20",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

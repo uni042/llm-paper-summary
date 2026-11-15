@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b24::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.15177",
+      "identity_tokens": [
+        "arXiv:2609.15177",
+        "https://arxiv.org/abs/2609.15177"
+      ],
+      "title": "Temporal Self-Distillation: Faster Inference in Discrete Diffusion Language Models",
+      "reason": "離散拡散言語モデルの高速推論のための時間的自己蒸留。並列デコードを攻めると性能が劣化する問題に対し、早い時刻の分布を確定時刻の分布へ蒸留して早い予測を良くする。推論高速化が目的だが、機構の実体は蒸留であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.15177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 415,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35394",
+      "identity_tokens": [
+        "arXiv:2609.35394",
+        "https://arxiv.org/abs/2609.35394"
+      ],
+      "title": "Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline",
+      "reason": "動画LLMの視覚トークン圧縮の再考。複雑化する選択・剪定・統合の戦略に対し、視覚表現に符号化された構造を保つだけの単純で訓練不要な基線SimpleClusterで、圧縮性能のどこまでが得られるかを問う研究。動画トークン圧縮の研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.35394",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2603.01400-token-reduction-via-local-and-global-contexts-optimization-for-efficient.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md"
+      ],
+      "worklist_rank": 359,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37241",
+      "identity_tokens": [
+        "arXiv:2609.37241",
+        "https://arxiv.org/abs/2609.37241"
+      ],
+      "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+      "reason": "PyTorch Triton向け保護付きディスパッチとホスト実行の統一Trident。利用者のTritonカーネルで、装置実行が短いとホスト側の編成が遅延を支配する問題に対し、特殊化キャッシュのヒット経路から繰り返しオーバーヘッドを取り除くコンパイラ後段。推論を含む実行基盤だが、汎用であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.37241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "inference-systems",
+        "kernel-runtime-compilation"
+      ],
+      "worklist_rank": 393,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39334",
+      "identity_tokens": [
+        "arXiv:2609.39334",
+        "https://arxiv.org/abs/2609.39334"
+      ],
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "reason": "LLM提供におけるテスト時スケーリングの投機的探索の制御。推論時に追加計算を配るテスト時スケーリングで、投機的実行が候補経路の探索空間の爆発と細粒度の検証課題を提供システムに課す問題に対処する。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "KV Cache Optimization / Compression",
+        "LLM Serving / Scheduling / Disaggregation",
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "Speculative Decoding",
+        "inference-systems",
+        "kv-cache-offload-recomputation",
+        "speculative-decoding-test-time-scaling",
+        "復号注意・共有接頭辞・鍵値キャッシュ・GPUカーネル・vLLM",
+        "投機的復号 / 無損失復号高速化",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 270,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01296",
+      "identity_tokens": [
+        "arXiv:2610.01296",
+        "https://arxiv.org/abs/2610.01296"
+      ],
+      "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models",
+      "reason": "MoE拡散言語モデル向け重要度誘導トークン配慮圧縮ITC-MoE。静的な因数分解と固定ランク配分が、モードごとの冗長性の非一様さを見落とす問題に対処する低ランク圧縮。圧縮機構ではあるが、拡散言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2610.01296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "MoE compression / expert matrix decomposition / shared basis reparameterization",
+        "MoE inference / expert offloading / lookup-table reparameterization / storage hierarchy",
+        "MoE routing / expert choice / heterogeneous conditional computation",
+        "Quantization × MoE × Offload",
+        "inference-systems",
+        "オフロード／階層メモリ"
+      ],
+      "worklist_rank": 271,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02233",
+      "identity_tokens": [
+        "arXiv:2610.02233",
+        "https://arxiv.org/abs/2610.02233"
+      ],
+      "title": "Budgeted Cache Repair for Cross-Context KV-Cache Reuse",
+      "reason": "文脈跨ぎKVキャッシュ再利用のための予算つきキャッシュ修復。再利用が無損失という報告に反して精度費用があることを示し、再利用するかではなく、キャッシュのどの部分を再計算するかを選ぶことで誤差を取り除く。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.02233",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "10-kv-cache-offload-recomputation",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 327,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.15246",
+      "identity_tokens": [
+        "arXiv:2610.15246",
+        "https://arxiv.org/abs/2610.15246"
+      ],
+      "title": "ObsSpec: Accelerating Agentic Reinforcement Learning with Observation Speculation",
+      "reason": "観測投機によるエージェント強化学習の高速化ObsSpec。ツール実行の待ちで逐次になるエージェントRLのロールアウトを、小さな世界モデルでツール出力を予測して投機的に進める。投機の応用だが、主題はRL訓練であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.15246",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "llm-serving-scheduling-disaggregation",
+        "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング"
+      ],
+      "worklist_rank": 320,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.25999",
+      "identity_tokens": [
+        "arXiv:2610.25999",
+        "https://arxiv.org/abs/2610.25999"
+      ],
+      "title": "TempoMoE: Identifying and Steering Fast-Slow Thinking Experts for Efficient Multimodal Reasoning",
+      "reason": "高速・低速思考専門家の同定と操縦TempoMoE。マルチモーダルMoE推論モデルが易しい入力でも過剰に考える問題に対し、思考の速さで異なる専門家ルーティングのパターンを使い、低速思考の専門家を抑えて推論を短くする。推論時の制御ではあるが、モデルの振る舞い制御であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.25999",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "Conditional Computation",
+        "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
+      ],
+      "worklist_rank": 394,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.00506",
+      "identity_tokens": [
+        "arXiv:2611.00506",
+        "https://arxiv.org/abs/2611.00506"
+      ],
+      "title": "Weights That Stay: On-Chip Megakernels for Serial Heads in Speculative Decoding",
+      "reason": "投機的デコードの直列ヘッド向けオンチップメガカーネル。並列下書きの直列ヘッドが、語彙規模の射影行列をステップごとに繰り返し転送して遅延源になる問題に対し、射影の断片をチップ上に常駐させる永続メガカーネル。推論カーネルそのもの。",
+      "source_url": "https://arxiv.org/abs/2611.00506",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "dynamic megakernel compilation and GPU task scheduling",
+        "inference-systems",
+        "kernel-runtime-compilation",
+        "speculative-decoding",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷"
+      ],
+      "worklist_rank": 352,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.07263",
+      "identity_tokens": [
+        "arXiv:2611.07263",
+        "https://arxiv.org/abs/2611.07263"
+      ],
+      "title": "HyFlash: A Prefix-Memory Prior for On-Device Speculative Decoding",
+      "reason": "オンデバイス投機的デコード向け接頭辞メモリ事前分布HyFlash。並列ブロック下書きで、装置上の容量と文脈保存の制約の下、下書き役が長距離依存と位置相互作用を扱えない問題に対し、接頭辞メモリの事前分布で分離するコンパクトな下書き役。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.07263",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:35:00+09:00",
+      "last_checked_at": "2026-11-16T04:35:00+09:00",
+      "linked_from": [
+        "speculative-decoding",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷"
+      ],
+      "worklist_rank": 398,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b24",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

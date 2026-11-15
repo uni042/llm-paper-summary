@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-68836ccad17c8205-unrel-007",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.14256",
+  "reason": "ウェハースケールチップ上のLLM訓練向けテンソル分割マッピングTEMP。テンソルストリーム分割とトポロジ配慮マッピングでオンチップメモリ制約を緩和するが、対象は一貫して訓練であり、推論への具体的な適用は要旨に示されていない。学習単独の高速化は凍結範囲。",
+  "title": "TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips",
+  "identity_tokens": [
+    "arXiv:2512.14256",
+    "https://arxiv.org/abs/2512.14256"
+  ],
+  "linked_from": [
+    "Ring Attention / sequence parallelism / exact distributed attention",
+    "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+    "serving-scheduling",
+    "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+    "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

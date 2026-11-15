@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e02e1d6b42d3cf2f-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.10886",
+  "reason": "推薦モデル向け低精度カーネル基盤LoKA。FP8の安全な適用部位を統計的に探るProbe、数値安定化のモデル改変Mods、精度条件を満たす最速カーネルを選ぶ実行時Dispatchからなる。しかし対象ワークロードは通信集約的な訓練が中心で、LLM推論ではなく推薦モデルの訓練効率が主眼。カーネル実行時の要素はあるが境界。",
+  "title": "LoKA: Low-Precision Kernel Applications for Recommendation Models at Scale",
+  "identity_tokens": [
+    "arXiv:2605.10886",
+    "https://arxiv.org/abs/2605.10886"
+  ],
+  "linked_from": [
+    "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+    "Weight Quantization / Compression",
+    "inference-systems",
+    "重み専用量子化 / 推論カーネル"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e02e1d6b42d3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

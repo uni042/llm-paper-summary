@@ -1,0 +1,229 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b08::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.14144",
+      "identity_tokens": [
+        "arXiv:2609.14144",
+        "https://arxiv.org/abs/2609.14144"
+      ],
+      "title": "One Size Does Not Fit All: Setting Inference Depth from the Questions a Deployment Actually Asks",
+      "reason": "質問の範囲から推論深さを決める早期終了の研究。配備先の質問範囲が狭いことに着目し、中間層へ読み出し部品を付けて信頼度で残り層の実行を判断する早期終了で、避けられる計算量を実測する。モデルは凍結し、監督は通常トラフィックでのモデル自身の出力だけ。推論の計算配分機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.14144",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "inference-systems",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 119,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.18005",
+      "identity_tokens": [
+        "arXiv:2609.18005",
+        "https://arxiv.org/abs/2609.18005"
+      ],
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "reason": "推論最適化の品質影響を測る較正済み測定法。量子化・早期終了・投機的デコードなど手法ごとにバラバラな品質指標を、LLM審査員の系統的偏りを同等出力同士の比較で較正し、帰無条件まで置く厳密な測定方法論で統一する。推論基盤の計測そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.18005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "Conditional Computation",
+        "inference-systems",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 87,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28769",
+      "identity_tokens": [
+        "arXiv:2609.28769",
+        "https://arxiv.org/abs/2609.28769"
+      ],
+      "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+      "reason": "バイナリ水準計装によるGPUカーネル内トレーシングXtrace。コンパイル済みバイナリへ直接プローブを挿入し、コンパイラ最適化への干渉をほぼなくして実行時オーバーヘッドも抑える。推論カーネルの性能最適化を支える道具であり、推論機構そのものではないため境界。",
+      "source_url": "https://arxiv.org/abs/2609.28769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "その他システム研究",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 209,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32831",
+      "identity_tokens": [
+        "arXiv:2609.32831",
+        "https://arxiv.org/abs/2609.32831"
+      ],
+      "title": "UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models",
+      "reason": "統合マルチモーダル向けタスク・型配慮型KV圧縮UniCache。理解・生成・編集を1つの網で行うモデルで、タスクごとにKVキャッシュの型構成と動態が変わる問題に対し、タスクと型の両方に配慮した圧縮方策で重要情報の損失を防ぐ。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.32831",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems"
+      ],
+      "worklist_rank": 90,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04198",
+      "identity_tokens": [
+        "arXiv:2610.04198",
+        "https://arxiv.org/abs/2610.04198"
+      ],
+      "title": "ALoDLM: Adaptively Looped Diffusion Language Models",
+      "reason": "適応ループ型拡散言語モデルALoDLM。デノイズの各ステップで全位置へ一様な計算深さを与える前提をやめ、トークンの難しさに応じて潜在再帰の計算を配る。拡散生成の効率化が狙いだが、貢献は訓練を要するアーキテクチャであり境界。",
+      "source_url": "https://arxiv.org/abs/2610.04198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "Other Inference Systems / Lossless Parallel Decoding",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "speculative-parallel-decoding",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 156,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.16368",
+      "identity_tokens": [
+        "arXiv:2610.16368",
+        "https://arxiv.org/abs/2610.16368"
+      ],
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "reason": "ループ言語モデル向け学習後量子化LoopQuant。共有モジュールの再帰再利用で生じるループ間活性動態、ループごとの感度の異質性、再帰的な誤差伝播に、ループ配慮の3要素で対処する低ビット量子化。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "16-weight-quantization-compression",
+        "arXiv:2405.16406のICLR 2025採録版。"
+      ],
+      "worklist_rank": 225,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17970",
+      "identity_tokens": [
+        "arXiv:2610.17970",
+        "https://arxiv.org/abs/2610.17970"
+      ],
+      "title": "AlignPred: Error-Controlled KV Cache Compression via Alignment and Predictive Coding",
+      "reason": "整合と予測による誤差制御KV圧縮AlignPred。数時間から数日保たれるエージェントの永続KVキャッシュに対し、局所直交変換による整合とトークン間・ヘッド間の予測符号化を、再構成誤差予算の下で組み合わせるコーデック。学習した予測器を使わない点が固有。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.17970",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "KV Cache Offload / Recomputation",
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 352,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.20175",
+      "identity_tokens": [
+        "arXiv:2610.20175",
+        "https://arxiv.org/abs/2610.20175"
+      ],
+      "title": "TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding",
+      "reason": "投機的デコード向けドラフト木の学習TreeSpark。並列ドラフタの初期不一致で受理が伸びない問題に対し、親条件つき候補木の構築と、その展開・剪定・予算詰めを訓練時に再生する統一枠組み。推論機構とドラフタ訓練が一体であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.20175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "speculative-decoding",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 222,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22130",
+      "identity_tokens": [
+        "arXiv:2610.22130",
+        "https://arxiv.org/abs/2610.22130"
+      ],
+      "title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
+      "reason": "残差・出力摂動の分離によるKV排除DropKV。出力摂動最小化がNP困難な組合せ問題になる問題を、共同の排除判断をトークンごとの独立したスコアへ分離することで回避し、カーネル化しやすい原理的な排除枠組みにする。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.22130",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "kv-cache-optimization-compression"
+      ],
+      "worklist_rank": 250,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23787",
+      "identity_tokens": [
+        "arXiv:2610.23787",
+        "https://arxiv.org/abs/2610.23787"
+      ],
+      "title": "DLite: History-free Speculative Decoding for Agentic AI",
+      "reason": "エージェント向け履歴なし投機的デコードDLite。長い進化する文脈でドラフトモデルの受理長が最大80%劣化し、履歴KVの保持もオーバーヘッドになる問題に対し、対象モデルの文脈隠れ状態を直接再利用して履歴を持たない投機的デコードを行う。推論デコード機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.23787",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "speculative-decoding",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+        "投機的復号 / EAGLE",
+        "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+      ],
+      "worklist_rank": 221,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b08",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

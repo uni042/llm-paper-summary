@@ -1,0 +1,240 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b17::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.11052",
+      "identity_tokens": [
+        "arXiv:2510.11052",
+        "https://arxiv.org/abs/2510.11052"
+      ],
+      "title": "Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by Refining Belief States",
+      "reason": "拡散型言語モデル向け潜在洗練デコードLRD。非最終トークンの予測分布が捨てられる情報損失と、局所決定の不整合に対し、潜在洗練と予測フィードバックの2段階デコードを行う。デコード機構ではあるが、拡散型言語モデルに特化し境界。",
+      "source_url": "https://arxiv.org/abs/2510.11052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+        "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+      ],
+      "worklist_rank": 357,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.14961",
+      "identity_tokens": [
+        "arXiv:2510.14961",
+        "https://arxiv.org/abs/2510.14961"
+      ],
+      "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+      "reason": "再帰深度モデル向け効率的並列サンプラー。拡散強制のサンプラーで、毎回の前方計算で新トークンをデコードしながら生成を加速する。再帰深度という特殊なアーキテクチャ向けの生成手法であり境界。",
+      "source_url": "https://arxiv.org/abs/2510.14961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "Speculative Decoding",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 364,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05832",
+      "identity_tokens": [
+        "arXiv:2511.05832",
+        "https://arxiv.org/abs/2511.05832"
+      ],
+      "title": "Hilbert-Guided Sparse Local Attention",
+      "reason": "ヒルベルト誘導の疎局所注意。高解像度画像の局所注意を、ヒルベルト曲線で並べ替えてブロック疎に高速化する。対象は画像の注意であり、LLM推論の機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2511.05832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 179,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23314",
+      "identity_tokens": [
+        "arXiv:2609.23314",
+        "https://arxiv.org/abs/2609.23314"
+      ],
+      "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+      "reason": "値幾何によるKVキャッシュ排除ValueDiff。注意シンクが弱い近年のモデルでは既存の排除法が効かない問題に対し、値ベクトルのキャッシュ平均からの偏差でトークンを順位付けして排除する。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.23314",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "kv-cache-optimization-compression",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 42,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13328",
+      "identity_tokens": [
+        "arXiv:2610.13328",
+        "https://arxiv.org/abs/2610.13328"
+      ],
+      "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+      "reason": "MoE向け専門家ごとの2レート精度配分DuoRate。常駐フットプリントとデコード時トラフィックが異なるレート汎関数であるのに、既存の配分器は前者しか制約しない保存・読み取りギャップを同定し、一度保存してワークロードごとに読む配分を行う。推論提供の量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.13328",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "Edge／on-device MoE",
+        "LLM serving scheduling / chunked prefill / MoE inference",
+        "MoE serving / expert offloading / prefill-only serving",
+        "MoE専門家オフロード / 混合精度 / 専門家キャッシュ",
+        "Quantization × MoE × Offload",
+        "offload-hierarchical-memory"
+      ],
+      "worklist_rank": 37,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17689",
+      "identity_tokens": [
+        "arXiv:2610.17689",
+        "https://arxiv.org/abs/2610.17689"
+      ],
+      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+      "reason": "サーバレスLLM推論向け安定トークンレベルスケジューリング。プリフィルの新規受付が進行中のデコードを乱してトークン間遅延を悪化させる問題に対し、トークンウィンドウで受付を制御する。推論基盤のスケジューリング機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.17689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "llm-serving-scheduling-disaggregation",
+        "serverless LLM cold-start / model loading / GPU memory reuse"
+      ],
+      "worklist_rank": 28,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20392",
+      "identity_tokens": [
+        "arXiv:2610.20392",
+        "https://arxiv.org/abs/2610.20392"
+      ],
+      "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
+      "reason": "長文脈投機的デコード向け位置自由な遠方メモリFOLD。下書きモデルが短系列で訓練され長入力で劣化する問題に対し、目標モデルの隠れ状態が文脈と位置を既に符号化していることを利用する。投機的デコード機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.20392",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "speculative-decoding",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+        "投機的復号 / EAGLE",
+        "投機的復号 / LLMサービング・ベンチマーク",
+        "長文LLM推論、疎注意、自己投機復号、鍵値キャッシュ選択"
+      ],
+      "worklist_rank": 31,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.28369",
+      "identity_tokens": [
+        "arXiv:2610.28369",
+        "https://arxiv.org/abs/2610.28369"
+      ],
+      "title": "Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs",
+      "reason": "基線を飛ばすな：動的専門家スキップの統制比較。較正済み重要度や学習済み配分器など代表的な4手法を統一した分類の下でベンチマークし、比較条件の不統一を正す研究。推論時の専門家削減の評価研究であり、機構の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2610.28369",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "adaptive-expert-computation-compression",
+        "fine-grained MoE inference / expert skipping / expert pruning / serving efficiency",
+        "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
+      ],
+      "worklist_rank": 30,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41508",
+      "identity_tokens": [
+        "arXiv:2610.41508",
+        "https://arxiv.org/abs/2610.41508"
+      ],
+      "title": "HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads",
+      "reason": "ハイブリッドLLM提供向け階層プレフィックスキャッシュ管理HiState。全注意層と再帰線形層を混ぜたモデルでは、短い接頭辞の状態をチェックポイントから復元できない問題に対し、階層的な接頭辞キャッシュ管理を行う。推論基盤のキャッシュ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.41508",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "14-agentic-inference-serving-runtime",
+        "KV Cache Offload / Recomputation",
+        "LLMサービング・スケジューリング・KVキャッシュ保持",
+        "agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling",
+        "kv-cache",
+        "llm-serving-scheduling-disaggregation",
+        "エージェント向けKVキャッシュ管理・階層メモリ・プログラム単位スケジューリング"
+      ],
+      "worklist_rank": 40,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.00588",
+      "identity_tokens": [
+        "arXiv:2611.00588",
+        "https://arxiv.org/abs/2611.00588"
+      ],
+      "title": "TVP: TV is Almost All You Need for Speculative Decoding",
+      "reason": "投機的デコード向け全変動距離による下書き訓練TVP。無損失投機的サンプリングの受理率が全変動距離で決まるのに、下書きの訓練が交差エントロピーやKLで行われる問題を正す。投機的デコードの改善だが、機構の実体は下書きモデルの訓練目的であり境界。",
+      "source_url": "https://arxiv.org/abs/2611.00588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:50:00+09:00",
+      "last_checked_at": "2026-11-16T02:50:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "speculative-decoding",
+        "投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 34,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b17",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
