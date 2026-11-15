@@ -1,0 +1,245 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2aa35976e2f6d4f3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2aa35976e2f6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.06571",
+    "arXiv:2408.07802"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "fa858c7242052278bc5d8299a32d7e4ec212fcde",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-15T13:45:57.746605+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.06571",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.07802",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+      "source_url": "https://arxiv.org/abs/2408.07802",
+      "year": 2024,
+      "published": "2024-08-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Transformer networks are increasingly used in settings where low inference latency can improve the end-user experience and enable new applications. However, autoregressive inference is resource intensive and requires parallelism for efficiency. Parallelism introduces collective communication that is both expensive and represents a phase when hardware resources are underutilized. Towards mitigating this, Kraken is an evolution of the standard Transformer architecture that is designed to complement existing tensor parallelism schemes for efficient inference on multi-device systems. By introducing a fixed degree of intra-layer model parallelism, the architecture allows collective operations to be overlapped with compute, decreasing latency and increasing hardware utilization. When trained on OpenWebText, Kraken models reach a similar perplexity as standard Transformers while also preserving their language modeling capabilities when evaluated on the SuperGLUE benchmark. Importantly, when tested on multi-GPU systems using TensorRT-LLM engines, Kraken speeds up Time To First Token by a mean of 35.6% across a range of model sizes, context lengths, and degrees of tensor parallelism.",
+      "identifiers": [
+        "SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6"
+      ],
+      "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+      "canonical_id": "arXiv:2408.07802",
+      "arxiv_id": "2408.07802",
+      "doi": "10.48550/arXiv.2408.07802",
+      "authors": [
+        "R. Prabhakar",
+        "Heng-Rui Zhang",
+        "David Wentzlaff"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 823,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+      "source_url": "https://arxiv.org/abs/2406.06571",
+      "year": 2024,
+      "published": "2024-06-03",
+      "venue": "European Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) have achieved remarkable success in various fields, the efficiency of training and inference remains a major challenge. To address this issue, we propose SUBLLM, short for Subsampling-Upsampling-Bypass Large Language Model, an innovative architecture that extends the core decoder-only framework by incorporating subsampling, upsampling, and bypass modules. The subsampling modules are responsible for shortening the sequence, while the upsampling modules restore the sequence length, and the bypass modules enhance convergence. In comparison to LLaMA, the proposed SUBLLM exhibits significant enhancements in both training and inference speeds as well as memory usage, while maintaining competitive few-shot performance. During training, SUBLLM increases speeds by 26% and cuts memory by 10GB per GPU. In inference, it boosts speeds by up to 37% and reduces memory by 1GB per GPU. The training and inference speeds can be enhanced by 34% and 52% respectively when the context window is expanded to 8192. Our code is available at https://github.com/XiaoMi/subllm.",
+      "identifiers": [
+        "SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8"
+      ],
+      "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+      "canonical_id": "arXiv:2406.06571",
+      "arxiv_id": "2406.06571",
+      "doi": "10.48550/arXiv.2406.06571",
+      "authors": [
+        "Quandong Wang",
+        "Yuxuan Yuan",
+        "Xiao-Yu Yang",
+        "Rui-Ke Zhang",
+        "K. Zhao",
+        "Wei Liu",
+        "Jian Luan",
+        "Daniel Povey",
+        "Bin Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 895,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2408.07802",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.07802",
+        "id:SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+        "id:arXiv:2408.07802",
+        "title:kraken inherently parallel transformers for efficient multidevice inference",
+        "url:https://arxiv.org/abs/2408.07802"
+      ],
+      "record": {
+        "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+        "source_url": "https://arxiv.org/abs/2408.07802",
+        "year": 2024,
+        "published": "2024-08-14",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Transformer networks are increasingly used in settings where low inference latency can improve the end-user experience and enable new applications. However, autoregressive inference is resource intensive and requires parallelism for efficiency. Parallelism introduces collective communication that is both expensive and represents a phase when hardware resources are underutilized. Towards mitigating this, Kraken is an evolution of the standard Transformer architecture that is designed to complement existing tensor parallelism schemes for efficient inference on multi-device systems. By introducing a fixed degree of intra-layer model parallelism, the architecture allows collective operations to be overlapped with compute, decreasing latency and increasing hardware utilization. When trained on OpenWebText, Kraken models reach a similar perplexity as standard Transformers while also preserving their language modeling capabilities when evaluated on the SuperGLUE benchmark. Importantly, when tested on multi-GPU systems using TensorRT-LLM engines, Kraken speeds up Time To First Token by a mean of 35.6% across a range of model sizes, context lengths, and degrees of tensor parallelism.",
+        "identifiers": [
+          "SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6"
+        ],
+        "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+        "canonical_id": "arXiv:2408.07802",
+        "arxiv_id": "2408.07802",
+        "doi": "10.48550/arXiv.2408.07802",
+        "authors": [
+          "R. Prabhakar",
+          "Heng-Rui Zhang",
+          "David Wentzlaff"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 823,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.06571",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.06571",
+        "id:SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+        "id:arXiv:2406.06571",
+        "title:subllm a novel efficient architecture with token sequence subsampling for llm",
+        "url:https://arxiv.org/abs/2406.06571"
+      ],
+      "record": {
+        "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+        "source_url": "https://arxiv.org/abs/2406.06571",
+        "year": 2024,
+        "published": "2024-06-03",
+        "venue": "European Conference on Artificial Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Large Language Models (LLMs) have achieved remarkable success in various fields, the efficiency of training and inference remains a major challenge. To address this issue, we propose SUBLLM, short for Subsampling-Upsampling-Bypass Large Language Model, an innovative architecture that extends the core decoder-only framework by incorporating subsampling, upsampling, and bypass modules. The subsampling modules are responsible for shortening the sequence, while the upsampling modules restore the sequence length, and the bypass modules enhance convergence. In comparison to LLaMA, the proposed SUBLLM exhibits significant enhancements in both training and inference speeds as well as memory usage, while maintaining competitive few-shot performance. During training, SUBLLM increases speeds by 26% and cuts memory by 10GB per GPU. In inference, it boosts speeds by up to 37% and reduces memory by 1GB per GPU. The training and inference speeds can be enhanced by 34% and 52% respectively when the context window is expanded to 8192. Our code is available at https://github.com/XiaoMi/subllm.",
+        "identifiers": [
+          "SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8"
+        ],
+        "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+        "canonical_id": "arXiv:2406.06571",
+        "arxiv_id": "2406.06571",
+        "doi": "10.48550/arXiv.2406.06571",
+        "authors": [
+          "Quandong Wang",
+          "Yuxuan Yuan",
+          "Xiao-Yu Yang",
+          "Rui-Ke Zhang",
+          "K. Zhao",
+          "Wei Liu",
+          "Jian Luan",
+          "Daniel Povey",
+          "Bin Wang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 895,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c440184d595d3a93da77ace0fbaff255022fdcbbdb615d73617f31afb9bf1d20",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
