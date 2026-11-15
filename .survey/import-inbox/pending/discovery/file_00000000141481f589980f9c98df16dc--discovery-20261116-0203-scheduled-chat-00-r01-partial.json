@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261116-0203-scheduled-chat-00/r01",
+  "reference_main_sha": "a401bcae78aa1f67c203ee4b5edf358935fd45ba",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18799",
+      "identity_tokens": [
+        "arXiv:2505.18799"
+      ],
+      "title": "ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models",
+      "reason": "一次abstractによれば、タスク感度の高いattention headだけを微調整することで下流タスクへのalignment学習コストを減らす研究。attention parameterの10%のみをfine-tuningし性能を改善したとの評価であり、推論時のattention剪定、レイテンシ、KVキャッシュ、サービング等の改善を提案・評価していないため推論システムサーベイの対象外。",
+      "source_url": "https://arxiv.org/abs/2505.18799",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T02:03:46+09:00",
+      "last_checked_at": "2026-11-16T02:03:46+09:00",
+      "linked_from": []
+    }
+  ]
+}
