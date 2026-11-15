@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261112-1600-scheduled-chat-00/r01",
+  "reference_main_sha": "1477c2657fbe89f106bbf298cc5204f9ab54124b",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.08345",
+      "identity_tokens": [
+        "arxiv:2609.08345"
+      ],
+      "title": "CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs",
+      "reason": "多視点3D推論における空間重複を、座標だけを使う学習不要の被覆選択で除去。シーン単位の厳密なトークン予算を守り、約8%の視覚トークンでフルトークン性能の93.5%を保持したと報告。視覚言語モデルの推論計算削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.08345",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T16:00:00+09:00",
+      "last_checked_at": "2026-11-12T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04048",
+      "identity_tokens": [
+        "arxiv:2606.04048"
+      ],
+      "title": "Unlocking Feature Learning in Gated Delta Networks at Scale",
+      "reason": "Gated Delta Networkの再帰状態とゲートを含むパラメータスケーリング則を導出し、AdamW・SGDでモデル幅を跨ぐ学習率転移を検証。推論効率型線形再帰アーキテクチャのスケーリング基礎として関連。",
+      "source_url": "https://arxiv.org/abs/2606.04048",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T16:00:00+09:00",
+      "last_checked_at": "2026-11-12T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00188",
+      "identity_tokens": [
+        "arxiv:2603.00188"
+      ],
+      "title": "ST-Lite: Training-Free KV Cache Compression with Spatio-Trajectory Guidance for Long-Horizon GUI Agents",
+      "reason": "GUIエージェントの画面間重複と小さなUI要素を考慮したKVキャッシュ圧縮。軌跡認識ゲート、部品中心の空間顕著性、層別均等予算で、20%キャッシュ予算時に主要バックボーンでFull Cache相当以上の精度、最大2.35倍の復号高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2603.00188",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T16:00:00+09:00",
+      "last_checked_at": "2026-11-12T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.04361",
+      "identity_tokens": [
+        "arxiv:2602.04361"
+      ],
+      "title": "SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration",
+      "reason": "視覚自己回帰生成の注意シンク、スケール間活性類似性、局所性を利用した学習不要の疎注意。効率的なブロック疎カーネルにより、FlashAttention利用のVAR基準比で1.57倍の生成高速化を報告。画像生成推論の計算効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.04361",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-12T16:00:00+09:00",
+      "last_checked_at": "2026-11-12T16:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 112
+    }
+  ]
+}
