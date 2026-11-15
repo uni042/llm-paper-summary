@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261116-0300-scheduled-chat-00/r01",
+  "reference_main_sha": "474d9c2260669b24b17b8daf2ce452feb807f9de",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04594",
+      "identity_tokens": [
+        "arXiv:2606.04594",
+        "DOI:10.48550/arXiv.2606.04594"
+      ],
+      "title": "Ekka: Automated Diagnosis of Silent Errors in LLM Inference",
+      "reason": "LLMサービングフレームワークのsilent errorを、意味的に正しい参照実装と対象実装の中間実行状態の整列・差分比較で根本原因診断するシステム。実フレームワーク由来のsilent errorベンチマークで診断精度pass@1=80%、pass@5=88%、新規4件を発見して開発者が確認。推論サービングの正しさとデバッグ自動化への直接貢献。",
+      "source_url": "https://arxiv.org/abs/2606.04594",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:00:57+09:00",
+      "last_checked_at": "2026-11-16T03:00:57+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
