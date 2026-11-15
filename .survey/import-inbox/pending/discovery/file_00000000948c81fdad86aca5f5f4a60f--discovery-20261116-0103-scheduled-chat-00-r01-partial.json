@@ -1,0 +1,22 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261116-0103-scheduled-chat-00/r01",
+  "reference_main_sha": "67b7ecc05ce13ab37fccc31127b5133b802e2c51",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.09897",
+      "identity_tokens": ["arXiv:2504.09897"],
+      "title": "TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models",
+      "reason": "一次arXiv要旨を確認。多モーダル出力トークンの多様性に基づき層ごとの疎性率を調整するDiversity-Aware Sparsityと、注意スコアから代表入力トークンを選んで非構造化重み剪定を誘導するAdaptive Multimodal Input Activationを組み合わせる。LLaVA-NeXTとVideoLLaMA2の評価を報告しており、MLLMのモデル圧縮・推論効率に直接関連する。要旨に定量的な推論速度値はなく、速度改善率は断定しない。",
+      "source_url": "https://arxiv.org/abs/2504.09897",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:03:06+09:00",
+      "last_checked_at": "2026-11-16T01:03:06+09:00",
+      "linked_from": []
+    }
+  ]
+}
