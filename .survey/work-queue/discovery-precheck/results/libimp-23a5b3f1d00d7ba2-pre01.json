@@ -1,0 +1,273 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-23a5b3f1d00d7ba2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-23a5b3f1d00d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2604.02340",
+    "arXiv:2607.24904"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f486e7150f734a5c80e0ae0dfbb259fa0fbe0090",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-15T06:16:01.899015+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2604.02340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.24904",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model",
+      "source_url": "https://arxiv.org/abs/2607.24904",
+      "year": 2026,
+      "published": "2026-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Standard vision-language models (VLMs) suffer from Moravec's paradox: they excel at complex offline visual reasoning but struggle with simple streaming perception tasks and process them inefficiently. We present Mage-VL, an efficient codec-native streaming foundation model for real-time multimodal understanding and interaction. At its core, our custom tokenizer, Mage-ViT, replaces uniform frame sampling by selectively encoding dynamic, entropy-rich regions using motion vectors and residual energy across sparse anchor (I) and predicted (P) frames. Operating at a 16 x 16 patch level, this reduces visual token consumption by over 75% while preserving spatiotemporal context. Trained from scratch on approximately 560M unlabeled images and 100M unlabeled video frames, Mage-ViT matches or outperforms flagship encoders trained on billions of image-text pairs. We establish AI4AI data pipelines encompassing prompt-code joint optimization for multimodal captioning and AI-driven performance diagnosis to guide training recipes. Furthermore, through a bio-inspired dual-system architecture - a lightweight System 1 event gate and a causal System 2 decoder - Mage-VL enables proactive streaming perception. Extensive evaluations show that Mage-VL-4B matches Qwen3-VL-4B on static tasks while achieving strong gains in video understanding and 2D/3D spatial reasoning, with up to a 3.5x wall-clock inference speedup, and comprehensively surpasses the 15B Phi-4-reasoning-vision baseline. Beyond model artifacts, we deliver seven key empirical findings covering pre-training data efficiency, variable-resolution scaling, codec system acceleration, VideoQA SFT redundancy, motion-spatial synergy, AI4AI data pipelines, and Zero-Vision SFT for multimodal RL.",
+      "identifiers": [
+        "SemanticScholar:625e912e2c03834747c1ab8240aec6cc8b62ec99"
+      ],
+      "semantic_scholar_id": "625e912e2c03834747c1ab8240aec6cc8b62ec99",
+      "canonical_id": "arXiv:2607.24904",
+      "arxiv_id": "2607.24904",
+      "doi": "10.48550/arXiv.2607.24904",
+      "authors": [
+        "Sen-Qiao Yang",
+        "Kai-Chen Zhang",
+        "Zhao-Yang Jia",
+        "Jing-Hao Guo",
+        "Yi-Fei Shen",
+        "Xin-Jie Zhang",
+        "Xiao-Yi Zhang",
+        "Hao-Qing Wang",
+        "Xiao Li",
+        "Peng Zhang",
+        "Xiang An",
+        "Yin Xie",
+        "Zhe-Ning Liu",
+        "Xun Guo",
+        "Jia-Hao Li",
+        "Shi-Cheng Zheng",
+        "Jing-Lu Wang",
+        "Zong-Yu Guo",
+        "Wen-Xuan Xie",
+        "Zi-Han Zheng",
+        "Yuxuan Luo",
+        "Bin Li",
+        "Yan Lu"
+      ],
+      "priority": 117,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 117,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 111,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.02340",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in masked diffusion language models (MDLMs) narrow the quality gap to autoregressive LMs, but their sampling remains expensive because generation requires many full-sequence denoising passes with a large Transformer and, unlike autoregressive decoding, cannot benefit from KV caching. In this work, we exploit the flexibility of the diffusion framework and study model scheduling, where a smaller MDLM replaces the full model at a subset of denoising steps. Across models trained on OpenWebText and LM1B, we show that early and late denoising steps are substantially more robust to such replacement than middle steps, enabling up to a 17% reduction in FLOPs with only modest degradation in generative perplexity under both unconditional and prefix-conditional generation, while preserving sample diversity. We support these findings with a step-importance analysis based on loss and KL divergence between small and large models across timesteps, as well as an exhaustive search over coarse step segments, both of which identify the middle of the diffusion trajectory as most sensitive consistently across datasets. Our results suggest that simple, architecture-agnostic scheduling rules can significantly accelerate MDLM sampling while largely preserving generation quality.",
+      "identifiers": [
+        "SemanticScholar:405380c8b650ed4e6e5a0cc5a2813f1b46303862"
+      ],
+      "semantic_scholar_id": "405380c8b650ed4e6e5a0cc5a2813f1b46303862",
+      "canonical_id": "arXiv:2604.02340",
+      "arxiv_id": "2604.02340",
+      "doi": "10.48550/arXiv.2604.02340",
+      "authors": [
+        "I. Sedykh",
+        "N. Sorokin",
+        "V. Malykh"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.24904",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.24904",
+        "id:SemanticScholar:625e912e2c03834747c1ab8240aec6cc8b62ec99",
+        "id:arXiv:2607.24904",
+        "title:magevl an efficient codecnative streaming multimodal foundation model",
+        "url:https://arxiv.org/abs/2607.24904"
+      ],
+      "record": {
+        "title": "Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model",
+        "source_url": "https://arxiv.org/abs/2607.24904",
+        "year": 2026,
+        "published": "2026-07-27",
+        "venue": "arXiv.org",
+        "citation_count": 17,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Standard vision-language models (VLMs) suffer from Moravec's paradox: they excel at complex offline visual reasoning but struggle with simple streaming perception tasks and process them inefficiently. We present Mage-VL, an efficient codec-native streaming foundation model for real-time multimodal understanding and interaction. At its core, our custom tokenizer, Mage-ViT, replaces uniform frame sampling by selectively encoding dynamic, entropy-rich regions using motion vectors and residual energy across sparse anchor (I) and predicted (P) frames. Operating at a 16 x 16 patch level, this reduces visual token consumption by over 75% while preserving spatiotemporal context. Trained from scratch on approximately 560M unlabeled images and 100M unlabeled video frames, Mage-ViT matches or outperforms flagship encoders trained on billions of image-text pairs. We establish AI4AI data pipelines encompassing prompt-code joint optimization for multimodal captioning and AI-driven performance diagnosis to guide training recipes. Furthermore, through a bio-inspired dual-system architecture - a lightweight System 1 event gate and a causal System 2 decoder - Mage-VL enables proactive streaming perception. Extensive evaluations show that Mage-VL-4B matches Qwen3-VL-4B on static tasks while achieving strong gains in video understanding and 2D/3D spatial reasoning, with up to a 3.5x wall-clock inference speedup, and comprehensively surpasses the 15B Phi-4-reasoning-vision baseline. Beyond model artifacts, we deliver seven key empirical findings covering pre-training data efficiency, variable-resolution scaling, codec system acceleration, VideoQA SFT redundancy, motion-spatial synergy, AI4AI data pipelines, and Zero-Vision SFT for multimodal RL.",
+        "identifiers": [
+          "SemanticScholar:625e912e2c03834747c1ab8240aec6cc8b62ec99"
+        ],
+        "semantic_scholar_id": "625e912e2c03834747c1ab8240aec6cc8b62ec99",
+        "canonical_id": "arXiv:2607.24904",
+        "arxiv_id": "2607.24904",
+        "doi": "10.48550/arXiv.2607.24904",
+        "authors": [
+          "Sen-Qiao Yang",
+          "Kai-Chen Zhang",
+          "Zhao-Yang Jia",
+          "Jing-Hao Guo",
+          "Yi-Fei Shen",
+          "Xin-Jie Zhang",
+          "Xiao-Yi Zhang",
+          "Hao-Qing Wang",
+          "Xiao Li",
+          "Peng Zhang",
+          "Xiang An",
+          "Yin Xie",
+          "Zhe-Ning Liu",
+          "Xun Guo",
+          "Jia-Hao Li",
+          "Shi-Cheng Zheng",
+          "Jing-Lu Wang",
+          "Zong-Yu Guo",
+          "Wen-Xuan Xie",
+          "Zi-Han Zheng",
+          "Yuxuan Luo",
+          "Bin Li",
+          "Yan Lu"
+        ],
+        "priority": 117,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 17,
+          "citation_count": 17,
+          "total": 117,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 111,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02340",
+        "id:SemanticScholar:405380c8b650ed4e6e5a0cc5a2813f1b46303862",
+        "id:arXiv:2604.02340",
+        "title:not all denoising steps are equal model scheduling for faster masked diffusion language models",
+        "url:https://arxiv.org/abs/2604.02340"
+      ],
+      "record": {
+        "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.02340",
+        "year": 2026,
+        "published": "2026-02-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in masked diffusion language models (MDLMs) narrow the quality gap to autoregressive LMs, but their sampling remains expensive because generation requires many full-sequence denoising passes with a large Transformer and, unlike autoregressive decoding, cannot benefit from KV caching. In this work, we exploit the flexibility of the diffusion framework and study model scheduling, where a smaller MDLM replaces the full model at a subset of denoising steps. Across models trained on OpenWebText and LM1B, we show that early and late denoising steps are substantially more robust to such replacement than middle steps, enabling up to a 17% reduction in FLOPs with only modest degradation in generative perplexity under both unconditional and prefix-conditional generation, while preserving sample diversity. We support these findings with a step-importance analysis based on loss and KL divergence between small and large models across timesteps, as well as an exhaustive search over coarse step segments, both of which identify the middle of the diffusion trajectory as most sensitive consistently across datasets. Our results suggest that simple, architecture-agnostic scheduling rules can significantly accelerate MDLM sampling while largely preserving generation quality.",
+        "identifiers": [
+          "SemanticScholar:405380c8b650ed4e6e5a0cc5a2813f1b46303862"
+        ],
+        "semantic_scholar_id": "405380c8b650ed4e6e5a0cc5a2813f1b46303862",
+        "canonical_id": "arXiv:2604.02340",
+        "arxiv_id": "2604.02340",
+        "doi": "10.48550/arXiv.2604.02340",
+        "authors": [
+          "I. Sedykh",
+          "N. Sorokin",
+          "V. Malykh"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 284,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cb95c2d174db5a288a3baf73bce0bcfc12bc426f6e887954b74058552dea859b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
