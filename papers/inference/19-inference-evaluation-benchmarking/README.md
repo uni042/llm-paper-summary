@@ -13,7 +13,7 @@
   特にGPUメモリが限られる場合、未使用時間の長い専門家であっても保存・読込み費用がかかる。この方式は代表入力の分布に依存し、校正用入力の収集・推論・統計保存が必要となる。Qwen3-30Bの専門家50%削減ではコード評価平均がAIMERで0.361、REAPで0.046となった。
 
 - **2025-12 · [Less Is More, but Where? Dynamic Token Compression via LLM-Guided Keyframe Prior](2025-2512.06866-less-is-more-but-where-dynamic-token-compression-via-llm-guided-keyframe.md)**  
-  実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：6  
   映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
 
 - **2026-03 · [QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression](2026-2603.21232-qmop-query-guided-mixture-of-projector-for-efficient-visual-token-compre.md)**  
@@ -24,6 +24,10 @@
   実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：2  
   PILLは、拡散言語モデル（diffusion language モデル）が文章やプログラムの既知の前半と後半の間を補完する課題（infilling）において、欠落部分の長さをあらかじめ固定しなければならない制約を扱う。既存の可変長方式は長さを反復探索したり生成途中に伸縮操作を挿入したりするため、推論回数が増える。
 
+- **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
+  実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：2  
+  既存の圧縮方式の多くは、視覚符号化器が全トークンを処理し終えた後に間引く。単一NVIDIA A100上のLLaVA-OneVision-7Bでは、言語モデルへ入る視覚トークンを元の10%に保つ条件で、最初のトークンまでの時間（Time to First Token; TTFT）が889.9ミリ秒から336.2ミリ秒へ短縮し、約2.65倍の逆数比となる。
+
 - **2026-04 · [Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures](2026-2604.09048-watt-counts-energy-aware-benchmark-for-sustainable-llm-inference-on-hete.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
@@ -31,10 +35,6 @@
 - **2026-06 · [NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation](2026-2606.27791-nll-guided-full-attention-layer-selection-for-training-free-sliding-wind.md)**  
   実装：[✓](https://gitlab.com/fars-a/nll-guided-swaa-layer-selection) ・ リポジトリ内被引用：1  
   長文脈LLMの事前充填（プリフィル）では、通常の全注意（full 注意機構; FA）の計算量が入力長に対して二乗で増える。36層のQwen3-4B-Thinking-2507とLongMemEval24kの評価では、9層（1/4）を全注意としたNLL-guidedが64.6%の正解率を得た。
-
-- **2026-05 · [EarlyTom: Early Token Compression Completes Fast Video Understanding](2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md)**  
-  実装：[✓](https://github.com/viridisGreen/EarlyTom) ・ リポジトリ内被引用：1  
-  既存の圧縮方式の多くは、視覚符号化器が全トークンを処理し終えた後に間引く。単一NVIDIA A100上のLLaVA-OneVision-7Bでは、言語モデルへ入る視覚トークンを元の10%に保つ条件で、最初のトークンまでの時間（Time to First Token; TTFT）が889.9ミリ秒から336.2ミリ秒へ短縮し、約2.65倍の逆数比となる。
 
 - **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
   実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：1  
@@ -289,7 +289,7 @@
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：27  
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
@@ -352,13 +352,13 @@
   実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：2  
   RWKVは、過去の情報を固定形状の再帰状態へ畳み込むことで、生成時に全トークンのKVを保持しない設計を取る。
 
+- **2025-11 · [TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding](2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md)**  
+  実装：[✓](https://github.com/xiaomi-research/timeviper) ・ リポジトリ内被引用：1  
+  1時間の動画を毎秒1枚、1フレーム768トークンで表現すると約276万トークンになり、通常の全注意では処理費用とメモリが大きい。TimeViperは、状態空間モデル（State Space モデル; SSM）のMamba-2とTransformerの注意層を混ぜた基盤を使い、さらに言語モデルの途中で視覚トークンを圧縮する。
+
 - **2025-02 · [Binary Neural Networks for Large Language Model: A Survey](2025-2502.19008-binary-neural-networks-for-large-language-model-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   中心となるのは、BitNet、BitNet b1.58、BitNet a4.8、FBI-LLM、Bi-Mambaなど、重みの二値化・三値化を学習時から組み込む方式である。
-
-- **2025-11 · [TimeViper: A Hybrid Mamba-Transformer Vision-Language Model for Efficient Long Video Understanding](2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md)**  
-  実装：[✓](https://github.com/xiaomi-research/timeviper) ・ リポジトリ内被引用：0  
-  1時間の動画を毎秒1枚、1フレーム768トークンで表現すると約276万トークンになり、通常の全注意では処理費用とメモリが大きい。TimeViperは、状態空間モデル（State Space モデル; SSM）のMamba-2とTransformerの注意層を混ぜた基盤を使い、さらに言語モデルの途中で視覚トークンを圧縮する。
 
 - **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
   実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：0  
@@ -471,7 +471,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-02 · [A Survey on Model Compression and Acceleration for Pretrained Language Models](2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   著者らは推論段階を対象に、重み共有、低ランク分解、枝刈り、量子化、知識蒸留、早期終了、トークン省略の七系統を比較する。
 
 - **2022-08 · [Momentum Transformer: Closing the Performance Gap Between Self-attention and Its Linearization](2022-2208.00579-momentum-transformer-closing-the-performance-gap-between-self-attention-.md)**  

@@ -44,6 +44,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
 
+- **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
+  実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：5  
+  入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
+
 - **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：5  
   コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
@@ -55,10 +59,6 @@
 - **2026-02 · [Is Retraining-Free Enough? The Necessity of Router Calibration for Efficient MoE Compression](2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
-
-- **2026-02 · [FlashVID: Efficient Video Large Language Models via Training-free Tree-based Spatiotemporal Token Merging](2026-2602.08024-flashvid-efficient-video-large-language-models-via-training-free-tree-ba.md)**  
-  実装：[✓](https://github.com/Fanziyang-v/FlashVID) ・ リポジトリ内被引用：4  
-  入力フレームが増えるとトークン列が長くなり、注意機構だけでなく全結合層の計算、鍵値キャッシュ、初回応答までの時間が増える。LLaVA-OneVisionでは、視覚トークンを10%まで減らしても四つの主要評価群の平均点58.4から57.9へと小幅な低下にとどまり、元精度の99.1%を維持した。
 
 - **2026-01 · [Native LLM and MLLM Inference at Scale on Apple Silicon](2026-2601.19139-native-llm-and-mllm-inference-at-scale-on-apple-silicon.md)**  
   実装：[✓](https://github.com/waybarrios/vllm-mlx) ・ リポジトリ内被引用：4  
@@ -355,6 +355,10 @@
 - **2026-03 · [OneComp: One-Line Revolution for Generative AI Model Compression](2026-2603.28845-onecomp-one-line-revolution-for-generative-ai-model-compression.md)**  
   実装：[✓](https://github.com/FujitsuResearch/OneCompression) ・ リポジトリ内被引用：1  
   大規模言語モデル（Large Language モデル; LLM）の重み量子化では、同じ平均ビット幅でも層ごとの感度、較正用入力の分布、丸め誤差の伝播、量子化後の品質回復方法によって性能が大きく変わる。Llama-3-8BとQwen3系の実験では、感度に応じた混合ビット幅割当や誤差伝播補正が量子化後の困惑度を改善した。
+
+- **2026-03 · [DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression](2026-2603.15685-dash-dynamic-audio-driven-semantic-chunking-for-efficient-omnimodal-toke.md)**  
+  実装：[✓](https://github.com/laychou666/DASH) ・ リポジトリ内被引用：1  
+  LLMへ渡す前の入力列が長くなると、プリフィル（プリフィル）の注意演算とKVキャッシュのメモリ消費が増える。DASH（動的 Audio-driven Semantic cHunking）は、音声埋め込みの隣接トークンの変化を意味境界の手掛かりにし、音声と映像を可変長の区間へ分ける学習不要の圧縮方式である。
 
 - **2026-03 · [CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference](2026-2604.08584-csattention-centroid-scoring-attention-for-accelerating-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1534,10 +1538,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ESP（Embedding-Space Probing）は、通常は次トークンだけを学習した自己回帰LLMから、重みを変更せずに複数の将来トークン候補を取り出すための推論時手法である。
 
-- **2026-03 · [DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression](2026-2603.15685-dash-dynamic-audio-driven-semantic-chunking-for-efficient-omnimodal-toke.md)**  
-  実装：[✓](https://github.com/laychou666/DASH) ・ リポジトリ内被引用：0  
-  LLMへ渡す前の入力列が長くなると、プリフィル（プリフィル）の注意演算とKVキャッシュのメモリ消費が増える。DASH（動的 Audio-driven Semantic cHunking）は、音声埋め込みの隣接トークンの変化を意味境界の手掛かりにし、音声と映像を可変長の区間へ分ける学習不要の圧縮方式である。
-
 - **2026-03 · [CRISP: Compressed Reasoning via Iterative Self-Policy Distillation](2026-2603.05433-crisp-compressed-reasoning-via-iterative-self-policy-distillation.md)**  
   実装：[✓](https://github.com/HJSang/CRISP_Reasoning_Compression) ・ リポジトリ内被引用：0  
   CRISP（Compressed Reasoning via Iterative Self-Policy Distillation）は、この余分な思考を生成後に切り落とすのではなく、モデルが自発的に短い推論を出すように学習する方式である。
@@ -2013,7 +2013,7 @@
   大規模言語モデル（Large Language モデル; LLM）が長い文章を扱うと、注意機構の鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）は入力文脈の長さと同時処理要求数に比例して増える。
 
 - **2024-12 · [NVILA: Efficient Frontier Visual Language Models](2024-2412.04468-nvila-efficient-frontier-visual-language-models.md)**  
-  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：14  
   NVILAは解像度を先に上げて必要な情報を取り込み、その後に空間・時間方向の冗長性を圧縮する「拡大してから圧縮する（scale-then-compress）」設計を採用する。
 
 - **2025-05 · [Llama-Nemotron: Efficient Reasoning Models](2025-2505.00949-llama-nemotron-efficient-reasoning-models.md)**  
@@ -2135,6 +2135,10 @@
 - **2025-05 · [Cross-Attention Speculative Decoding](2025-2505.24544-cross-attention-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Beagle（Budget EAGLE）は、投機的復号の小型下書きモデルに単層のcross-注意機構 Transformerを採用し、EAGLE-v2のようなself-注意機構型下書きに近い速度を、単純な構造と少ないメモリで得る方式である。
+
+- **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  μ-MoEは、モデルをあらかじめ一度だけ枝刈りするのではなく、実際に与えられたプロンプトをその場の校正データとして使い、線形層の重みのうち重要なものだけを有効化する方式である。
 
 - **2025-04 · [Hawkeye: Model Collaboration for Efficient Reasoning](2025-2504.00424-hawkeye-model-collaboration-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -2263,10 +2267,6 @@
 - **2025-05 · [NeUQI: Near-Optimal Uniform Quantization Parameter Initialization for Low-Bit LLMs](2025-2505.17595-neuqi-near-optimal-uniform-quantization-parameter-initialization-for-low.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
-
-- **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  μ-MoEは、モデルをあらかじめ一度だけ枝刈りするのではなく、実際に与えられたプロンプトをその場の校正データとして使い、線形層の重みのうち重要なものだけを有効化する方式である。
 
 - **2025-04 · [Entropy-Based Block Pruning for Efficient Large Language Models](2025-2504.03794-entropy-based-block-pruning-for-efficient-large-language-models.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/EntroDrop) ・ リポジトリ内被引用：1  
@@ -2795,7 +2795,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：76  
+  実装：✓ ・ リポジトリ内被引用：77  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
@@ -3189,7 +3189,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：250  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：251  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3335,11 +3335,11 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：267  
+  実装：✓ ・ リポジトリ内被引用：268  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：178  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：179  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
