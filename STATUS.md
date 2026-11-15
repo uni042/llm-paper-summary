@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-15 10:28:50 JST**
+> 自動生成: **2026-11-15 10:43:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **570** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-11 09:07:49 JST** |
-| 最終Discovery探索完了 | **11-15 09:03:00 JST** |
+| 最終Discovery探索完了 | **11-15 10:02:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **150050** |
+| 探索候補総数 | **150051** |
 | 処理済み | **21922** |
-| 未処理Discovery候補 | **128128** |
+| 未処理Discovery候補 | **128129** |
 | 収録済み | **3820** |
 | Research / Audit候補へ昇格済み | **167** |
 | 無関係として除外 | **12537** |
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **128128** |
+| 未処理候補（フィルタ前） | **128129** |
 | 機械規則による暫定隔離 | **2172** |
 | 拡張機械規則による追加隔離 | **1384** |
-| 機械規則通過後 | **124572** |
-| 系統内前方引用スコアによる選抜保留 | **118343** |
-| 暫定隔離合計 | **121899** |
+| 機械規則通過後 | **124573** |
+| 系統内前方引用スコアによる選抜保留 | **118344** |
+| 暫定隔離合計 | **121900** |
 | **読解可能候補（隔離後）** | **6229** |
 | 前方引用が同一系統で2本以上の候補 | **12074** |
 | 前方引用が同一系統で3本以上の候補 | **4311** |
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.6%**
-- 現在の生在庫: 後方references **59021件** / 前方引用 **70455件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128736件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **59021件** / 前方引用 **70456件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128737件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -103,12 +103,12 @@
 | 1周以上完了 | **3801** |
 | 巡回中 | **21** |
 | 未巡回 | **0** |
-| 今回run開始時due | **46** |
-| 前方引用から保持中の未処理候補 | **70455** |
+| 今回run開始時due | **42** |
+| 前方引用から保持中の未処理候補 | **70456** |
 | エラー状態保持seed | **21** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-15 09:25:31 JST**
+- state最終更新: **11-15 10:28:44 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-15 09:26:51 JST（1時間1分前）** |
+| 最終maintenance完了 | **11-15 09:26:51 JST（1時間16分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **5** |
-| 直近6hのDiscovery本文確認・分類 | **9** |
+| 直近6hのDiscovery run | **6** |
+| 直近6hのDiscovery本文確認・分類 | **10** |
 | 最終Research完了 | **11-11 09:07:49 JST** |
-| 最終Discovery完了 | **11-15 09:03:00 JST** |
+| 最終Discovery完了 | **11-15 10:02:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-11 09:07:49 JST** / worker scheduled-chat-45 / run 20261111-0903-scheduled-chat-45/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/file_0000000045788206b2c6eef050998c04--2026-2605.20950-sppruner-research-20261111-scheduled-chat-45-r02-corrected.json
-- Discovery: **11-15 09:03:00 JST** / worker scheduled-chat-00 / run 20261115-0903-scheduled-chat-00/r01
+- Discovery: **11-15 10:02:00 JST** / worker scheduled-chat-00 / run 20261115-1002-scheduled-chat-00/r01
   - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/file_000000004830823090ba843c6b2000bf--discovery-20261115-0903-scheduled-chat-00-r01-partial.json
+  - evidence: .survey/import-inbox/pending/discovery/file_00000000ca2481f583ef9d8c6a719d81--discovery-20261115-1002-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **480** |
+| 成功result未照合のimmutable submission | **481** |
 | └ Research | **72** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **263** |
+| └ Other/Unknown | **264** |
 
 ### 厳格検証が未成立のcompleted job
 
