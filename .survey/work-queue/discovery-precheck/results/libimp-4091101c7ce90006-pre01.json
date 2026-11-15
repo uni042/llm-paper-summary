@@ -1,0 +1,147 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4091101c7ce90006-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4091101c7ce9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.14350"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a6398ae5de205f97da85780699daf72e393ce59a",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-15T08:51:18.269758+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.14350",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems",
+      "source_url": "https://arxiv.org/abs/2606.14350",
+      "year": 2026,
+      "published": "2026-06-12",
+      "venue": "IEEE International Conference on Cloud Computing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial Intelligence (AI) systems must typically satisfy service-level objectives including accuracy, latency, and cost. The prevailing model-centric approaches select a monolithic model at design time and use it to process all inputs. Monolithic models apply identical computation regardless of input difficulty, cannot decompose tasks across specialized components, and have knowledge that is fixed at training time. During runtime, this can lead to performance degradation and increasing costs. Because the model is the most important design variable, it determines the majority of system behavior, coupling operational objectives to a single design-time choice. Addressing these limitations requires shifting from model-centric to system-centric design. Compound AI systems realize this shift by orchestrating multiple models, algorithms, and tools as distributed AI systems through explicit control logic. The performance of such systems depends on their workflow topology, the models assigned to each task, and the parameters governing runtime behavior. We present a design methodology that organizes this space along two dimensions, workflow topology and configuration selection, and identifies eight design patterns, each consolidating techniques to address a specific limitation of monolithic deployment. We validate our methodology through three case studies spanning object detection, question answering, and mathematical reasoning. Across our case studies, Compound AI configurations approach accuracy of monolithic models within 2.5 to 4 percentage points while reducing latency by up to 60% and cost by up to 71%. We show that model selection and parameter configuration jointly determine system performance, but the resulting design space grows combinatorially, as workflows compose more patterns and components. Thus, we identify five open challenges that define a roadmap from manually configured prototypes towards systems that automatically discover and maintain SLO-compliance in Compound and Distributed AI systems.",
+      "identifiers": [
+        "SemanticScholar:1cfc933c0d2185bb4e44604d941c1526fb790d57"
+      ],
+      "semantic_scholar_id": "1cfc933c0d2185bb4e44604d941c1526fb790d57",
+      "canonical_id": "arXiv:2606.14350",
+      "arxiv_id": "2606.14350",
+      "doi": "10.1109/CLOUD72782.2026.00049",
+      "authors": [
+        "Milos Gravara",
+        "Andrija Stanisic",
+        "Stefan Nastic"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.14350",
+      "identity_tokens": [
+        "id:DOI:10.1109/cloud72782.2026.00049",
+        "id:SemanticScholar:1cfc933c0d2185bb4e44604d941c1526fb790d57",
+        "id:arXiv:2606.14350",
+        "title:design methodology and performance tradeoffs management for distributed and compound ai systems",
+        "url:https://arxiv.org/abs/2606.14350"
+      ],
+      "record": {
+        "title": "Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems",
+        "source_url": "https://arxiv.org/abs/2606.14350",
+        "year": 2026,
+        "published": "2026-06-12",
+        "venue": "IEEE International Conference on Cloud Computing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Artificial Intelligence (AI) systems must typically satisfy service-level objectives including accuracy, latency, and cost. The prevailing model-centric approaches select a monolithic model at design time and use it to process all inputs. Monolithic models apply identical computation regardless of input difficulty, cannot decompose tasks across specialized components, and have knowledge that is fixed at training time. During runtime, this can lead to performance degradation and increasing costs. Because the model is the most important design variable, it determines the majority of system behavior, coupling operational objectives to a single design-time choice. Addressing these limitations requires shifting from model-centric to system-centric design. Compound AI systems realize this shift by orchestrating multiple models, algorithms, and tools as distributed AI systems through explicit control logic. The performance of such systems depends on their workflow topology, the models assigned to each task, and the parameters governing runtime behavior. We present a design methodology that organizes this space along two dimensions, workflow topology and configuration selection, and identifies eight design patterns, each consolidating techniques to address a specific limitation of monolithic deployment. We validate our methodology through three case studies spanning object detection, question answering, and mathematical reasoning. Across our case studies, Compound AI configurations approach accuracy of monolithic models within 2.5 to 4 percentage points while reducing latency by up to 60% and cost by up to 71%. We show that model selection and parameter configuration jointly determine system performance, but the resulting design space grows combinatorially, as workflows compose more patterns and components. Thus, we identify five open challenges that define a roadmap from manually configured prototypes towards systems that automatically discover and maintain SLO-compliance in Compound and Distributed AI systems.",
+        "identifiers": [
+          "SemanticScholar:1cfc933c0d2185bb4e44604d941c1526fb790d57"
+        ],
+        "semantic_scholar_id": "1cfc933c0d2185bb4e44604d941c1526fb790d57",
+        "canonical_id": "arXiv:2606.14350",
+        "arxiv_id": "2606.14350",
+        "doi": "10.1109/CLOUD72782.2026.00049",
+        "authors": [
+          "Milos Gravara",
+          "Andrija Stanisic",
+          "Stefan Nastic"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 156,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:20f008dc916d2b43091905ad186539a299739753dc363d47a46f46b0ba59983d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
