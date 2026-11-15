@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+      "source_url": "https://arxiv.org/abs/2408.07802",
+      "year": 2024,
+      "published": "2024-08-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Transformer networks are increasingly used in settings where low inference latency can improve the end-user experience and enable new applications. However, autoregressive inference is resource intensive and requires parallelism for efficiency. Parallelism introduces collective communication that is both expensive and represents a phase when hardware resources are underutilized. Towards mitigating this, Kraken is an evolution of the standard Transformer architecture that is designed to complement existing tensor parallelism schemes for efficient inference on multi-device systems. By introducing a fixed degree of intra-layer model parallelism, the architecture allows collective operations to be overlapped with compute, decreasing latency and increasing hardware utilization. When trained on OpenWebText, Kraken models reach a similar perplexity as standard Transformers while also preserving their language modeling capabilities when evaluated on the SuperGLUE benchmark. Importantly, when tested on multi-GPU systems using TensorRT-LLM engines, Kraken speeds up Time To First Token by a mean of 35.6% across a range of model sizes, context lengths, and degrees of tensor parallelism.",
+      "identifiers": [
+        "SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6"
+      ],
+      "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+      "canonical_id": "arXiv:2408.07802",
+      "arxiv_id": "2408.07802",
+      "doi": "10.48550/arXiv.2408.07802",
+      "authors": [
+        "R. Prabhakar",
+        "Heng-Rui Zhang",
+        "David Wentzlaff"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 823,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "Transformer層内並列構造によりtensor parallelismのcollective通信と計算を重ね、GPU利用率とTTFTを改善する。著者はTensorRT-LLMを使った複数GPU評価でTTFT平均35.6%高速化を報告。分散LLM推論効率に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+      "source_url": "https://arxiv.org/abs/2406.06571",
+      "year": 2024,
+      "published": "2024-06-03",
+      "venue": "European Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) have achieved remarkable success in various fields, the efficiency of training and inference remains a major challenge. To address this issue, we propose SUBLLM, short for Subsampling-Upsampling-Bypass Large Language Model, an innovative architecture that extends the core decoder-only framework by incorporating subsampling, upsampling, and bypass modules. The subsampling modules are responsible for shortening the sequence, while the upsampling modules restore the sequence length, and the bypass modules enhance convergence. In comparison to LLaMA, the proposed SUBLLM exhibits significant enhancements in both training and inference speeds as well as memory usage, while maintaining competitive few-shot performance. During training, SUBLLM increases speeds by 26% and cuts memory by 10GB per GPU. In inference, it boosts speeds by up to 37% and reduces memory by 1GB per GPU. The training and inference speeds can be enhanced by 34% and 52% respectively when the context window is expanded to 8192. Our code is available at https://github.com/XiaoMi/subllm.",
+      "identifiers": [
+        "SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8"
+      ],
+      "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+      "canonical_id": "arXiv:2406.06571",
+      "arxiv_id": "2406.06571",
+      "doi": "10.48550/arXiv.2406.06571",
+      "authors": [
+        "Quandong Wang",
+        "Yuxuan Yuan",
+        "Xiao-Yu Yang",
+        "Rui-Ke Zhang",
+        "K. Zhao",
+        "Wei Liu",
+        "Jian Luan",
+        "Daniel Povey",
+        "Bin Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 895,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Decoder-only Transformerにsubsampling、upsampling、bypassを導入して中間系列長を短縮する。著者はLLaMA比較で学習速度26%改善、GPU当たりメモリ10GB削減、推論速度最大37%改善、メモリ1GB削減を報告。LLM学習・推論効率に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2aa35976e2f6",
+    "round": "libimp-2aa35976e2f6d4f3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2aa35976e2f6d4f3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2aa35976e2f6d4f3-pre01.json",
+    "receipt": "sha256:c440184d595d3a93da77ace0fbaff255022fdcbbdb615d73617f31afb9bf1d20"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2aa35976e2f6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
