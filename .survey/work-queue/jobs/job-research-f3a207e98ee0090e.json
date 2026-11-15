@@ -35,10 +35,15 @@
   "selection_reason": "MpFAはBlackwellのFP4 Tensor CoreでQKを計算し、softmax後のPVはFP8に留めるQK4PV8混合精度カーネルである。rank-one補正と非同期パイプラインでFP4の再量子化負荷を抑え、B200上の16K～128K文脈でLLM生成スループットを評価するため、推論カーネル最適化に直接貢献する。",
   "semantic_scholar_id": "032842614df0403a58774e7ddd6d4374d73414b4",
   "source_url": "https://arxiv.org/abs/2609.33135",
-  "status": "ready",
+  "status": "superseded",
   "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-15T22:13:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-black.md",
+  "represented_canonical_id": "arXiv:2609.33135",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

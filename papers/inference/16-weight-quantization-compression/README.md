@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（177本）
+## 自動生成の論文一覧（178本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -291,6 +291,10 @@
 - **2026-04 · [Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization](2026-2604.08118-initialisation-determines-the-basin-efficient-codebook-optimisation-for-.md)**  
   実装：[✓](https://github.com/kenno94-IK/aqlm-oaem) ・ リポジトリ内被引用：0  
   LLMを2ビット/重み（2 bpp）程度へ圧縮する際、各重みを独立に少数の整数へ丸めるスカラー量子化では品質低下が大きくなる。
+
+- **2026-03 · [TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly](2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化の較正を配置前に済ませる前提をやめ、プロンプト自身の活性値からその場で尺度を決めることで、ドメインシフトに弱い静的量子化を、較正データなしで適応できる量子化へ変えた方式。
 
 - **2026-03 · [HALO: Hardware-Aware Quantization with Low Critical-Path-Delay Weights for LLM Acceleration](2026-2502.19662-halo-hardware-aware-quantization-with-low-critical-path-delay-weights-fo.md)**  
   実装：[✓](https://github.com/ecolab-nus/HALO) ・ リポジトリ内被引用：0  
@@ -608,13 +612,13 @@
   実装：✓ ・ リポジトリ内被引用：2  
   元の行列を16ビットで保存する代わりに、学習済みの小型デコーダ、量子化した埋め込み、コードブック、必要な逆置換、低ランク行列とスケールを保存する。
 
+- **2024-02 · [SparseLLM: Towards Global Pruning for Pre-trained Language Models](2024-2402.17946-sparsellm-towards-global-pruning-for-pre-trained-language-models.md)**  
+  実装：[✓](https://github.com/BaiTheBest/SparseLLM) ・ リポジトリ内被引用：2  
+  大規模言語モデルの重みを間引く非構造化枝刈りは、モデルの保存容量と演算の理論上の非ゼロ要素数を減らせる。原著のOPT-1.3B、WikiText2、重みの80%を疎化した条件では、SparseGPTの困惑度69.67に対しSparseLLMは58.92である。
+
 - **2024-02 · [FlattenQuant: Breaking Through the Inference Compute-bound for Large Language Models with Per-tensor Quantization](2024-2402.17985-flattenquant-breaking-through-the-inference-compute-bound-for-large-lang.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   FlattenQuantは、大規模言語モデル（LLM）の推論で、重みだけを低ビット化しても行列演算が半精度のまま残るという問題を解く後学習量子化（post-学習 量子化; PTQ）方式である。難点は、LLMの活性値に他のチャネルより20〜100倍程度大きい外れ値チャネルが存在することだ。
-
-- **2024-02 · [SparseLLM: Towards Global Pruning for Pre-trained Language Models](2024-2402.17946-sparsellm-towards-global-pruning-for-pre-trained-language-models.md)**  
-  実装：[✓](https://github.com/BaiTheBest/SparseLLM) ・ リポジトリ内被引用：1  
-  大規模言語モデルの重みを間引く非構造化枝刈りは、モデルの保存容量と演算の理論上の非ゼロ要素数を減らせる。原著のOPT-1.3B、WikiText2、重みの80%を疎化した条件では、SparseGPTの困惑度69.67に対しSparseLLMは58.92である。
 
 - **2024-09 · [Accumulator-Aware Post-Training Quantization for Large Language Models](2024-2409.17092-accumulator-aware-post-training-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -623,7 +627,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：282  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：284  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
@@ -709,7 +713,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：593  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：594  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  

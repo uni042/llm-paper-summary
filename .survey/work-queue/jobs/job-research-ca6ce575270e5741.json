@@ -35,10 +35,15 @@
   "selection_reason": "arXiv原著要旨は、較正データに依存する既存活性対応量子化のドメインシフトを避けるため、推論時に入力プロンプトごとにオンライン較正して圧縮するTTQを提案。再学習不要で推論速度と量子化品質を改善する狙いであり、推論向け動的量子化に直接該当。",
   "semantic_scholar_id": "6416144455cf320c9420a0c61a7cd2669b927585",
   "source_url": "https://arxiv.org/abs/2603.19296",
-  "status": "ready",
+  "status": "superseded",
   "title": "TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-15T22:13:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-.md",
+  "represented_canonical_id": "arXiv:2603.19296",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
