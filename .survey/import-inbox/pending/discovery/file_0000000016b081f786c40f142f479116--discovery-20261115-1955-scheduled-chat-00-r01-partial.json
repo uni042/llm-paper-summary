@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-1955-scheduled-chat-00/r01",
+  "reference_main_sha": "0272218b8c58a5962b53915c12e7b98f15c8372a",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00390",
+      "identity_tokens": [
+        "arxiv:2606.00390"
+      ],
+      "title": "Zamba2-VL Technical Report",
+      "reason": "Zamba2のMamba2状態空間層と共有Transformer層を組み合わせたVLM。1.2B・2.7B・7Bを公開し、同規模Transformer系VLMに対しTTFTが約1桁小さいと著者が報告。recurrent stateとprefill計算の削減を通じてエッジ推論効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2606.00390",
+      "body_check": "primary_arxiv_abstract_read_via_indexed_paper_metadata; full_body_not_read",
+      "first_checked_at": "2026-11-15T19:55:00+09:00",
+      "last_checked_at": "2026-11-15T19:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 392
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20495",
+      "identity_tokens": [
+        "arxiv:2607.20495"
+      ],
+      "title": "Workload-Aware Caching for Multi-Agent Systems",
+      "reason": "マルチエージェントDAGの中間結果キャッシュを再計算費用、依存数、呼出頻度で評価するeviction policy。3ベンチマークで無キャッシュ比最大64.7%、次善の容量制限付き方式比平均31.1%の遅延削減を報告。LLMエージェント実行基盤の効率化に関連する。",
+      "source_url": "https://arxiv.org/abs/2607.20495",
+      "body_check": "primary_arxiv_abstract_read_via_indexed_paper_metadata; full_body_not_read",
+      "first_checked_at": "2026-11-15T19:55:00+09:00",
+      "last_checked_at": "2026-11-15T19:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 393
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05285",
+      "identity_tokens": [
+        "arxiv:2610.05285"
+      ],
+      "title": "Quality-Aware Cross-Model Computation Reuse",
+      "reason": "モデル間で中間計算結果を再利用する際の品質不確実性と共有準備コストを同時最適化するQARSを提案。オンライン品質学習と共同スケジューリングを行い、計算費用と品質損失の合計を最大18.0%削減したと報告。複合モデル実行効率に関連する。",
+      "source_url": "https://arxiv.org/abs/2610.05285",
+      "body_check": "primary_arxiv_abstract_read_via_indexed_paper_metadata; full_body_not_read",
+      "first_checked_at": "2026-11-15T19:55:00+09:00",
+      "last_checked_at": "2026-11-15T19:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 394
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06011",
+      "identity_tokens": [
+        "arxiv:2610.06011"
+      ],
+      "title": "D-Loop: Looped Diffusion Drafting for Speculative Decoding",
+      "reason": "拡散型draftの隣接位置で同一tokenが重複するrepetition trapを解決するため、同じbackboneを2回使いprefixを条件にsuffixを並列再生成する。追加モデルなしで投機的復号の受理長改善を狙い、Qwen3-4B/8Bの8ベンチマークで既存draft方式を上回る結果を報告。",
+      "source_url": "https://arxiv.org/abs/2610.06011",
+      "body_check": "primary_arxiv_abstract_read_via_indexed_paper_metadata; full_body_not_read",
+      "first_checked_at": "2026-11-15T19:55:00+09:00",
+      "last_checked_at": "2026-11-15T19:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 398
+    }
+  ]
+}
