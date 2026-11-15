@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261110-0657-scheduled-chat-00/r01",
+  "reference_main_sha": "32e963e403f9630c03b2b96d8b1a436c74b33330",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00077",
+      "identity_tokens": ["doi:10.1109/2575-8411.2026.00077"],
+      "title": "Exploring the Feasibility and Performance of Distributed Llm Serving on Consumer-Grade Gpus",
+      "reason": "IEEE ICDCS 2026の出版社一次要旨に基づく判定。民生用GPUによるLLM分散サービングを6種のベンチマークで検証し、PCIe制約下ではtensor parallelismよりpipeline parallelismが有利な条件があること、prefillがdecodeを妨害する問題、異種GPUのメモリ未活用を指摘。著者らの対策は比較対象に対してTTFT最大37.82%、TPOT最大18.72%削減、全体throughput最大21.86%改善、異種構成で最大11.2%改善と報告。いずれも著者報告の最大値であり全構成での改善を意味しない。LLMサービングのメモリ・スケジューリング・並列化に直接関連するためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11618998/",
+      "body_check": "publisher_primary_abstract_screen_only; full_body_not_read",
+      "first_checked_at": "2026-11-10T06:57:14+09:00",
+      "last_checked_at": "2026-11-10T06:57:14+09:00",
+      "linked_from": "worker-worklist-00 discovery rank 218",
+      "worklist_rank": 218
+    }
+  ]
+}
