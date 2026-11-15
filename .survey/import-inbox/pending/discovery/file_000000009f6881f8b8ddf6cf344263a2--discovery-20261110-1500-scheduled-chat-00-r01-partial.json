@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-1500-scheduled-chat-00/r01",
+  "reference_main_sha": "17b620dd3ddec8e3a8853456ca9fcb7bac0f5fb1",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06034",
+      "identity_tokens": [
+        "arXiv:2606.06034",
+        "DOI:10.48550/arXiv.2606.06034"
+      ],
+      "title": "When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet",
+      "reason": "チャンク単位線形注意の下三角行列逆行列計算を、打ち切りNeumann級数、構造マスク、並列残差補正によるMatMul中心の計算に置き換える。低ビットINTにも対応。著者要旨はQwen3.5系列でカーネル最大5倍高速化、decode層のオーバーヘッド20%削減を報告。NPU向け線形注意の推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2606.06034",
+      "body_check": "primary_author_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T15:02:00+09:00",
+      "last_checked_at": "2026-11-10T15:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10769",
+      "identity_tokens": [
+        "arXiv:2604.10769",
+        "DOI:10.48550/arXiv.2604.10769"
+      ],
+      "title": "Workload composition smooths aggregate power demand while sustaining short-horizon ramps in AI data centers",
+      "reason": "推論ジョブとバッチジョブの混合比が共有GPU設備の消費電力変動と短時間ランプを異なる形で変えることを、トレース較正した到着・待ち行列・スケジューリング・GPU電力モデルで評価。中間混合比ではバッチが推論の空き容量を埋め電力変動を抑える一方、短時間ランプは残る。LLM専用の最適化ではないがAI推論サービングの電力管理に関連するためborderline。",
+      "source_url": "https://arxiv.org/abs/2604.10769",
+      "body_check": "primary_author_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T15:02:00+09:00",
+      "last_checked_at": "2026-11-10T15:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 238
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.27301",
+      "identity_tokens": [
+        "arXiv:2610.27301",
+        "DOI:10.48550/arXiv.2610.27301"
+      ],
+      "title": "Evaluating Context Compaction on the Questions That Come Later",
+      "reason": "エージェントのコンテキスト圧縮を後続質問への回答品質で評価。MultiRCで現質問に必要な文を選ぶ方法は後続質問で同予算のランダム文削除を有意に上回らず、LLMLingua-2の単語削除は後続質問で12.5ポイント上回る。コンテキスト削減と将来の証拠保持のトレードオフを測定するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.27301",
+      "body_check": "primary_author_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T15:02:00+09:00",
+      "last_checked_at": "2026-11-10T15:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36800",
+      "identity_tokens": [
+        "arXiv:2609.36800",
+        "DOI:10.48550/arXiv.2609.36800"
+      ],
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "reason": "LLMエージェントがTritonカーネルからNVIDIA PTXを直接生成し、組立・数値差分テスト・ベンチマーク・プロファイルを反復するAI lowering。Ada/Hopper/Blackwellの計22カーネルでautotuned Triton比0.83〜3.34倍、FlashAttention例1.37倍を報告。高速化しない例もあり、検証拡張の健全性・完全性は未証明。GPU推論カーネル最適化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "body_check": "primary_author_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T15:02:00+09:00",
+      "last_checked_at": "2026-11-10T15:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 241
+    }
+  ],
+  "round_complete": false,
+  "identity_uniqueness_global": "not_fully_verified",
+  "skipped": [
+    {
+      "rank": 237,
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463309",
+      "reason": "primary_abstract_not_verified"
+    },
+    {
+      "rank": 240,
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1335",
+      "reason": "primary_abstract_not_verified"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "reason": "PQCache manuscript not located; later receipt not verified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "reason": "retry_deferred_no_new_evidence; method 553 < 700; independent candidates actually examined"
+    }
+  ],
+  "next_rank": 242,
+  "next_identity": "arXiv:2509.04226",
+  "returned_research_count": 11,
+  "returned_research_later_receipts_verified": false,
+  "library_global_sha256_verified": false
+}
