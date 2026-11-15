@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost",
+      "source_url": "https://arxiv.org/abs/2301.06813",
+      "year": 2023,
+      "published": "2023-01-17",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in deep learning are driven by the growing scale of computation, data, and models. However, efficiently training large-scale models on distributed systems requires an intricate combination of data, operator, and pipeline parallelism, which exerts heavy burden on machine learning practitioners. To this end, we propose AutoDDL, a distributed training framework that automatically explores and exploits new parallelization schemes with near-optimal bandwidth cost. AutoDDL facilitates the description and implementation of different schemes by utilizing OneFlow's Split, Broadcast, and Partial Sum (SBP) abstraction. AutoDDL is equipped with an analytical performance model combined with a customized Coordinate Descent algorithm, which significantly reduces the scheme searching overhead. We conduct evaluations on Multi-Node-Single-GPU and Multi-Node-Multi-GPU machines using different models, including VGG and Transformer. Compared to the expert-optimized implementations, AutoDDL reduces the end-to-end training time by up to 31.1% and 10% for Transformer and up to 17.7% and 71.5% for VGG on the two parallel systems, respectively.",
+      "identifiers": [
+        "SemanticScholar:cba1fb71b14d211639dbabb2d4cfd4a2295c985f"
+      ],
+      "semantic_scholar_id": "cba1fb71b14d211639dbabb2d4cfd4a2295c985f",
+      "canonical_id": "arXiv:2301.06813",
+      "arxiv_id": "2301.06813",
+      "doi": "10.1109/TPDS.2024.3397800",
+      "authors": [
+        "Jinfan Chen",
+        "Shi-Gang Li",
+        "Ran Guo",
+        "Jin-Hui Yuan",
+        "T. Hoefler"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1398,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OneFlowのSplit/Broadcast/Partial Sum表現と解析性能モデル、座標降下探索によりデータ・演算子・パイプライン並列化を自動選択し、分散学習の帯域費用を最適化する。Transformerのend-to-end学習時間は専門家実装比で二つの並列システムにおいて最大31.1%および10%削減と著者が報告。分散Transformer学習の通信効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-192003c53696",
+    "round": "libimp-192003c53696d963-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-192003c53696d963-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-192003c53696d963-pre01.json",
+    "receipt": "sha256:6b496fed5f3b4210ee99233db76bb01c6729f82cdc4f209163412c6d30a2c679"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-192003c53696",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
