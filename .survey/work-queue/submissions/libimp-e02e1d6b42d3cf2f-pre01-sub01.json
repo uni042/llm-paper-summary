@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Agentic Chain-of-Thought Steering for Efficient and Controllable LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.03965",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models improve final-answer accuracy through extended chain-of-thought reasoning, but often spend tokens inefficiently and offer little inference-time control. Existing efficient reasoning methods control thinking length by shortening, early-stopping, or compressing traces, leaving how the model thinks implicit. In this paper, we propose Agentic Chain-of-Thought Steering (ACTS), which formulates reasoning steering as a Markov decision process where a controller agent adaptively steers a frozen reasoner during inference. At each step, the controller observes the reasoning trace and remaining thinking budget, then issues a steering action consisting of a reasoning strategy and a steering phrase that initiates the next reasoner step. This enables budget-aware strategy control for efficient reasoning while preserving the reasoner's generation continuity. We initialize the controller agent from our constructed synthetic steering trajectories with multi-budget augmentation, and further optimize it via reinforcement learning with budget-conditioned reward shaping. Experiments across multiple benchmarks show that ACTS achieves competitive accuracy with substantial token savings, and enables controllable accuracy-token trade-offs across different reasoners and tasks. The code is available at https://github.com/Andree-9/ACTS.",
+      "identifiers": [
+        "SemanticScholar:9451359dad7d844ed73e04bdd7534aa23e3d7b08"
+      ],
+      "semantic_scholar_id": "9451359dad7d844ed73e04bdd7534aa23e3d7b08",
+      "canonical_id": "arXiv:2606.03965",
+      "arxiv_id": "2606.03965",
+      "doi": "10.48550/arXiv.2606.03965",
+      "authors": [
+        "Yu Xia",
+        "Zhou-Hang Xie",
+        "Xin Xu",
+        "Byungkyu Kang",
+        "Prarit Lamba",
+        "Xiang-Bo Gao",
+        "Julian J. McAuley"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "推論時CoTステアリングACTS。凍結した推論器を、痕跡と残り思考予算を観測する制御エージェントが推論中にマルコフ決定過程として操舵し、推論戦略と誘導句を各ステップで出す。予算に応じた精度とトークンのトレードオフを推論時の制御で実現する機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2606.14782",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) achieve strong vision-language reasoning but incur large KV caches and high decoding latency with long visual contexts. Existing compression methods rely on observation window attention for stable token importance estimation, yet this aggregation can dilute sparse critical evidence and discard answer-relevant tokens under aggressive compression. We identify last query attention as a complementary signal for recovering such evidence, though its irrelevant signals may introduce additional noise. We propose BACON, a plug-and-play method that calibrates observation window attention with last query evidence while suppressing noise through intra-layer coherence and inter-layer persistence. Across diverse benchmarks, models, budgets, and compression methods, BACON improves multimodal KV-cache compression by 7.5% on average under the most aggressive budget, with gains up to 30.9%.",
+      "identifiers": [
+        "SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086"
+      ],
+      "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+      "canonical_id": "arXiv:2606.14782",
+      "arxiv_id": "2606.14782",
+      "doi": "10.48550/arXiv.2606.14782",
+      "authors": [
+        "Tian-Hao Chen",
+        "Yuheng Wu",
+        "Ke-Lu Yao",
+        "Xiao-Gang Xu",
+        "Xiao-Bin Hu",
+        "Dong-Man Lee"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "マルチモーダルKVキャッシュ圧縮の較正BACON。観測窓注意による重要度推定が疎な決定的証拠を取りこぼす問題に対し、最終クエリ注意を層内一貫性と層間持続性でノイズ抑制して較正に使うプラグアンドプレイ方式。最も攻撃的な予算で平均7.5%の圧縮品質改善。KVキャッシュ圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AgentSpec: Speculative Decoding for Batch Inference of LLM Agents",
+      "source_url": "https://arxiv.org/abs/2608.24004",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM)-based agent applications often incur high response time. Speculative decoding is a promising solution to improve the inference efficiency of LLM agents without impacting generation quality. However, state-of-the-art speculative decoding algorithms exhibit substantial speed degradation under large batch sizes, limiting their effectiveness to deploy in real-world agent applications. In this work, we first present a systematic analysis of speculative decoding for LLM agents and identify two dominant factors of speedup degradation: high rejection rate of speculative tokens, and under-utilization of dynamic token budgets.B ased on these observations, we propose AgentSpec, a speculative decoding algorithm that addresses the limitations of existing methods for LLM agents. AgentSpec incorporates structure-isolated drafting that constrains speculation to semantically coherent segments of the agent workflow, reducing the drafts of irrelevant semantic paths and achieving an extremely low rejection rate. Moreover, AgentSpec adopts redundancy-aware budget allocation that exploits agent-level information to better utilize the dynamically-free token budget during the agent inference. We implement and evaluate AgentSpec on five different workloads and four different models from four different LLM families in vLLM. Our results demonstrate the superiority of AgentSpec over state-of-the-arts.",
+      "identifiers": [
+        "SemanticScholar:bd40b2f9e84a8c2205977865417884b96febd2b7"
+      ],
+      "semantic_scholar_id": "bd40b2f9e84a8c2205977865417884b96febd2b7",
+      "canonical_id": "arXiv:2608.24004",
+      "arxiv_id": "2608.24004",
+      "doi": "10.48550/arXiv.2608.24004",
+      "authors": [
+        "Xin Wang",
+        "Zi-Ming Miao",
+        "Yi Zhu",
+        "Hui Shen",
+        "Zhong-Wei Wan",
+        "Fan Yang",
+        "Mi Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 82,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "LLMエージェントのバッチ推論向け投機的デコードAgentSpec。大バッチで投機的デコードの速度が落ちる要因を、投機トークンの高い棄却率と動的トークン予算の未活用と特定し、意味的に一貫した区間へ投機を隔離するドラフトと、エージェント情報を用いる冗長性配慮型の予算配分で解く。vLLM実装で評価された推論機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SinkPruner: Sink-Free Visual Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.01004",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their strong multimodal understanding ability, multimodal large language models (MLLMs) incur substantial computational overhead when processing long visual token sequences. To reduce inference costs, recent studies have explored visual token pruning through vision-centric or text-guided strategies. However, these methods often overlook high-norm outlier tokens, i.e., tokens with abnormally large feature norms, leading to suboptimal pruning decisions. In this work, we show that such high-norm outlier tokens are highly redundant in both feature and spatial dimensions, yet are often mistakenly preserved as informative cues by existing methods. Motivated by this observation, we propose SinkPruner, a training-free visual token pruning framework for efficient MLLM inference. SinkPruner follows a coarse-to-fine design with two key modules: a visual sanitizer that filters high-norm redundancies and alleviates attention sink and attention dispersion, and a text-guided pruner that further retains tokens semantically aligned with the text query. Extensive experiments on twelve image-language and four video-language benchmarks demonstrate the effectiveness, efficiency, and generalizability of our framework. Notably, SinkPruner preserves 96.5% (91.8%) of the original performance of LLaVA-1.5 (Qwen2.5-VL) under an 89% token reduction. Experiments further indicate that our visual sanitizer exhibits promising transferability in enhancing the performance of existing pruning methods. Our code is available at https://github.com/LaVi-Lab/SinkPruner.",
+      "identifiers": [
+        "SemanticScholar:84b7b3681947a661b6fb496067dacb844492d486"
+      ],
+      "semantic_scholar_id": "84b7b3681947a661b6fb496067dacb844492d486",
+      "canonical_id": "arXiv:2609.01004",
+      "arxiv_id": "2609.01004",
+      "doi": "10.18653/2026.findings-emnlp.657",
+      "authors": [
+        "Shi-Yu Li",
+        "Zi-Yuan Hu",
+        "Shijia Huang",
+        "Yanyang Li",
+        "Yiwu Zhong",
+        "Liwei Wang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "MLLM向け視覚トークン剪定SinkPruner。高ノルム外れ値トークンが特徴・空間両面で冗長なのに既存手法が保持してしまう問題に対し、視覚サニタイザで外れ値を除き注意シンクを緩和した後、テキスト誘導で意味的に合うトークンを残す学習不要の剪定。89%のトークン削減で性能96.5%を維持する推論コスト削減機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation",
+      "source_url": "https://arxiv.org/abs/2607.14557",
+      "year": 2026,
+      "published": "2026-07-16",
+      "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Multimodal Large Language Models (DMLLMs) are highly effective for multimodal reasoning, yet their inference efficiency is significantly hindered by fixed-length generation constraints. Since the actual output length is unknown, output sequences are padded to a predefined maximum length, resulting in substantial redundant computation over unnecessary [EOS] tokens. In this work, we discover that DMLLMs implicitly reveal their valid semantic boundary at the very first denoising step through a distinct shift in MLP activation sparsity. Leveraging this observation, we propose Seer, a training-free framework that detects this boundary using a Signal-to-Noise Ratio (SNR)-based criterion and performs one-shot truncation of the redundant suffix for all subsequent computations. To preserve these theoretical gains during batched serving, Seer incorporates a hybrid execution strategy that maximizes throughput while seamlessly accommodating dynamic sequence lengths. Experimental results demonstrate that Seer effectively eliminates padding waste, accelerating throughput by up to approximately 31×. Across nine benchmarks, Seer robustly maintains overall performance and even improves accuracy on complex visual tasks by mitigating noise leakage (e.g., the DocVQA score increases from 63.52 to 63.66), offering a highly efficient, plug-and-play solution for DMLLM acceleration.",
+      "identifiers": [
+        "SemanticScholar:030a0d9963382da0f8eaa5e3b79b6cf6b405fbad"
+      ],
+      "semantic_scholar_id": "030a0d9963382da0f8eaa5e3b79b6cf6b405fbad",
+      "canonical_id": "arXiv:2607.14557",
+      "arxiv_id": "2607.14557",
+      "doi": "10.1145/3767308.3836260",
+      "authors": [
+        "Qi-Cheng Zhao",
+        "Qi Sun",
+        "Zhe-Yu Yan"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散MLLMの冗長パディング除去Seer。固定長生成で最大長まで埋められたEOS後続が無駄な計算になる問題に対し、初回デノイズステップのMLP活性化疎性の変化から有効な意味境界を検出し、冗長サフィックスを一括で切り捨てる学習不要の方式。バッチサービング向け混在実行も備え、スループット最大約31倍。推論機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e02e1d6b42d3",
+    "round": "libimp-e02e1d6b42d3cf2f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e02e1d6b42d3cf2f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e02e1d6b42d3cf2f-pre01.json",
+    "receipt": "sha256:d285422bf84656435ff6cbe0c0f0be9f19e52e2eb36817d71b14265911755cca"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e02e1d6b42d3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

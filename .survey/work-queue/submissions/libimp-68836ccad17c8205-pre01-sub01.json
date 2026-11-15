@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
+      "source_url": "https://arxiv.org/abs/2512.13586",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive models (ARMs) are hindered by slow sequential inference. While masked diffusion models (MDMs) offer a parallel alternative, they suffer from critical drawbacks: high computational overhead from precluding Key-Value (KV) caching, and incoherent generation arising from learning dependencies over an intractable space of token combinations. To address these limitations, we introduce \\textsc{ReFusion}, a novel masked diffusion model that integrates sequence reorganization into the causal attention framework. By elevating parallel decoding from the token level to a higher slot level, \\textsc{ReFusion} interleaves inter-slot diffusion-based selection with intra-slot autoregressive infilling, while reordering newly generated slots ahead of the remaining masks after each iteration. Consequently, this design simultaneously unlocks full KV cache reuse and reduces learning complexity from an intractable token combination space to a manageable slot-level permutation space. Extensive experiments on seven diverse benchmarks show that \\textsc{ReFusion} not only overwhelmingly surpasses prior MDMs with a 34\\% performance gain and an over 18$\\times$ speedup on average, but also bridges the performance gap to strong ARMs while maintaining a 2.33$\\times$ average speedup.",
+      "identifiers": [
+        "SemanticScholar:bf3e93d83229d7acd95596d0cf92371d0f28c7b5"
+      ],
+      "semantic_scholar_id": "bf3e93d83229d7acd95596d0cf92371d0f28c7b5",
+      "canonical_id": "arXiv:2512.13586",
+      "arxiv_id": "2512.13586",
+      "doi": "10.48550/arXiv.2512.13586",
+      "authors": [
+        "Jia-Nan Li",
+        "Jian Guan",
+        "Wei Wu",
+        "Chong Li"
+      ],
+      "priority": 132,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 132,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 335,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "マスク拡散モデルでKVキャッシュ再利用を可能にする再編成デコード。並列デコードをトークン単位からスロット単位へ引き上げ、スロット間は拡散で選びスロット内は自己回帰で埋め、生成済みスロットをマスク前方へ並べ替えることで因果注意の枠組みのまま全KV再利用を解禁する。拡散言語モデルの推論機構そのものへの直接貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING",
+      "source_url": "https://doi.org/10.61784/adsj3036",
+      "year": 2025,
+      "published": "2025-12-29",
+      "venue": "AI and Data Science Journal",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Production platforms that serve large language models (LLMs) must continuously decide how many GPU replicas to keep online. Conventional autoscalers inherited from microservice stacks scale on request rate or coarse utilization, but LLM requests differ by up to three orders of magnitude in the number of tokens they process, arrive in extreme bursts, and run on replicas whose cold start takes minutes and whose idle power remains a large fraction of peak. We present TEAS (Token- and Energy-Aware Scaling), a horizontal autoscaler for LLM serving that (i) measures load in phase-weighted effective tokens rather than requests, (ii) forecasts load over the replica cold-start horizon with an empirical-residual safety margin, (iii) adapts its utilization headroom to the measured burstiness of the arrival process, and (iv) applies an energy-aware asymmetric hysteresis that delays scale-in until the projected idle-energy waste exceeds the energy cost of a replica restart. We evaluate TEAS in a trace-driven cluster simulator with a calibrated power and cost model, replaying real production traces from Azure LLM inference services alongside synthetic diurnal and composition-drift workloads derived from the real token distributions. Across all four workloads TEAS is the only dynamic policy that sustains at least 96% SLO attainment; on a bursty production code-assistant trace it improves attainment by 32 percentage points over a Kubernetes-HPA-style baseline and by 11 points over static peak provisioning, and on a 24-hour diurnal workload it meets a 95% SLO target at 11.6% lower monetary cost than peak provisioning. We release the simulator, policies, and experiment scripts.",
+      "identifiers": [
+        "SemanticScholar:2150c3e9b29756166493be9dda6601f9770ec3b3"
+      ],
+      "semantic_scholar_id": "2150c3e9b29756166493be9dda6601f9770ec3b3",
+      "doi": "10.61784/adsj3036",
+      "canonical_id": "DOI:10.61784/adsj3036",
+      "authors": [
+        "Dai Teng"
+      ],
+      "priority": 126,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 126,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 321,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMサービング向け水平オートスケーラTEAS。負荷をリクエスト数でなく位相重み付き実効トークンで測り、レプリカのコールドスタート時間を見越して負荷を予測し、トークン量とエネルギーでスケール判断する。GPUレプリカ数の運用を決めるサービング基盤の機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+      "source_url": "https://arxiv.org/abs/2602.03060",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) achieve impressive performance across multiple tasks. A significant challenge, however, is their prohibitive inference cost when processing high-resolution visual inputs. While visual token pruning has emerged as a promising solution, existing methods that primarily focus on semantic relevance often discard tokens that are crucial for spatial reasoning. We address this gap through a novel insight into \\emph{how LVLMs process spatial reasoning}. Specifically, we reveal that LVLMs implicitly establish visual coordinate systems through Rotary Position Embeddings (RoPE), where specific token positions serve as \\textbf{implicit visual coordinates} (IVC tokens) that are essential for spatial reasoning. Based on this insight, we propose \\textbf{IVC-Prune}, a training-free, prompt-aware pruning strategy that retains both IVC tokens and semantically relevant foreground tokens. IVC tokens are identified by theoretically analyzing the mathematical properties of RoPE, targeting positions at which its rotation matrices approximate identity matrix or the $90^\\circ$ rotation matrix. Foreground tokens are identified through a robust two-stage process: semantic seed discovery followed by contextual refinement via value-vector similarity. Extensive evaluations across four representative LVLMs and twenty diverse benchmarks show that IVC-Prune reduces visual tokens by approximately 50\\% while maintaining $\\geq$ 99\\% of the original performance and even achieving improvements on several benchmarks. Source codes are available at https://github.com/FireRedTeam/IVC-Prune.",
+      "identifiers": [
+        "SemanticScholar:96fa519ec0cde7cbe1c4a4548698402db36c70b7"
+      ],
+      "semantic_scholar_id": "96fa519ec0cde7cbe1c4a4548698402db36c70b7",
+      "canonical_id": "arXiv:2602.03060",
+      "arxiv_id": "2602.03060",
+      "doi": "10.48550/arXiv.2602.03060",
+      "authors": [
+        "Zhichao Sun",
+        "Yi-Dong Ma",
+        "Gang Liu",
+        "Yi-Bo Chen",
+        "Xu Tang",
+        "Yao Hu",
+        "Yong-Chao Xu"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "LVLMの視覚トークン剪定IVC-Prune。RoPEの回転行列が単位行列や90度回転に近づく位置を暗黙の視覚座標トークンとして理論的に特定し、意味的に重要な前景トークンと併せて保持する学習不要・プロンプト対応の剪定。高解像度入力の推論コスト削減に直接効く機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WorldKV: Efficient World Memory with World Retrieval and Compression",
+      "source_url": "https://arxiv.org/abs/2605.22718",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive video diffusion models have enabled real-time, action-conditioned world generation. However, sustaining a persistent world, where revisiting a previously seen viewpoint yields consistent content, remains an open problem. Full KV-cache attention preserves this consistency but breaks real-time constraints: memory footprint and attention cost grow linearly with rollout length. Sliding window inference restores throughput but discards long-term consistency. We propose WorldKV, a training-free framework with two components: World Retrieval and World Compression. World Retrieval stores evicted KV-cache chunks in GPU/CPU memory and selectively retrieves scene-relevant chunks via camera/ action correspondence, inserting them back into the native attention window without re-encoding. World Compression prunes redundant tokens within each chunk via key-key similarity to an anchor frame, halving per-chunk storage to fit 2x more history under a fixed budget. On Matrix-Game-2.0 and LingBot- World-Fast, WorldKV matches or exceeds full-KV memory fidelity at roughly 2x the throughput, and is competitive with memory-trained baselines without any fine-tuning. Project Page: https://cvlab-kaist.github.io/WorldKV/",
+      "identifiers": [
+        "SemanticScholar:fbd11d178d51d75a95c1662d9e10f45ea7edbdbe"
+      ],
+      "semantic_scholar_id": "fbd11d178d51d75a95c1662d9e10f45ea7edbdbe",
+      "canonical_id": "arXiv:2605.22718",
+      "arxiv_id": "2605.22718",
+      "doi": "10.48550/arXiv.2605.22718",
+      "authors": [
+        "Jung Yi",
+        "Minjae Kim",
+        "Paul Hyunbin Cho",
+        "Wooseok Jang",
+        "Sangdoo Yun",
+        "Seungryong Kim"
+      ],
+      "priority": 121,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 121,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰ビデオ拡散の世界モデル向けWorldKV。退避したKVチャンクをGPU/CPUメモリに保持しカメラ・行動対応で選んで注意窓へ戻すWorld Retrievalと、キー間類似度でチャンク内トークンを間引くWorld Compressionで、full-KVと同等の記憶忠実度を約2倍のスループットで得る。KVキャッシュ管理機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) deliver strong long-context processing capability in a non-autoregressive decoding paradigm. However, the considerable computational cost of bidirectional full attention limits the inference efficiency. Although sparse attention is promising, existing methods remain ineffective. This stems from the need to estimate attention importance for tokens yet to be decoded, while the unmasked token positions are unknown during diffusion. In this paper, we present Focus-dLLM, a novel training-free attention sparsification framework tailored for accurate and efficient long-context dLLM inference. Based on the finding that token confidence strongly correlates across adjacent steps, we first design a past confidence-guided indicator to predict unmasked regions. Built upon this, we propose a sink-aware pruning strategy to accurately estimate and remove redundant attention computation, while preserving highly influential attention sinks. To further reduce overhead, this strategy reuses identified sink locations across layers, leveraging the observed cross-layer consistency. Experimental results show that our method offers more than $29\\times$ lossless speedup under $32K$ context length. The code is publicly available at: https://github.com/Longxmas/Focus-dLLM",
+      "identifiers": [
+        "SemanticScholar:00792499cb94c54a514b07d19cc6e1e64f3ea3ba"
+      ],
+      "semantic_scholar_id": "00792499cb94c54a514b07d19cc6e1e64f3ea3ba",
+      "canonical_id": "arXiv:2602.02159",
+      "arxiv_id": "2602.02159",
+      "doi": "10.48550/arXiv.2602.02159",
+      "authors": [
+        "Lingkun Long",
+        "Yu-Shi Huang",
+        "Shi-Hao Bai",
+        "Rui-Hao Gong",
+        "Jun Zhang",
+        "Ao Zhou",
+        "Jian-Lei Yang"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 286,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "拡散LLMの長文文脈推論を高速化するFocus-dLLM。隣接ステップ間でトークン信頼度が強く相関する性質を使い、過去の信頼度から未マスク領域を予測し、注意シンクを保ちながら冗長な注意計算を間引く学習不要の疎注意化。双方向全注意のコストが律速という推論側の問題への直接の機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-68836ccad17c",
+    "round": "libimp-68836ccad17c8205-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-68836ccad17c8205-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-68836ccad17c8205-pre01.json",
+    "receipt": "sha256:12d50b8541df43edbb312e7507b9cdbc940bef3e4c142a0772174a56f03c7845"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-68836ccad17c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

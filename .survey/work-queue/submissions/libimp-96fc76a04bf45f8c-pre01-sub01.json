@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.02570",
+      "year": 2026,
+      "published": "2026-04-02",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Singular Value Decomposition (SVD) has become an important technique for reducing the computational burden of Vision Language Models (VLMs), which play a central role in tasks such as image captioning and visual question answering. Although multiple prior works have proposed efficient SVD variants to enable low-rank operations, we find that in practice it remains difficult to achieve substantial latency reduction during model execution. To address this limitation, we introduce a new computational pattern and apply SVD at a finer granularity, enabling real and measurable improvements in execution latency. Furthermore, recognizing that weight elements differ in their relative importance, we adaptively allocate relative importance to each element during SVD process to better preserve accuracy, then extend this framework with quantization applied to both weights and activations, resulting in a highly efficient VLM. Collectively, we introduce~\\textit{Weighted SVD} (WSVD), which outperforms other approaches by achieving over $1.8\\times$ decoding speedup while preserving accuracy. We open source our code at: \\href{https://github.com/SAI-Lab-NYU/WSVD}{\\texttt{https://github.com/SAI-Lab-NYU/WSVD}",
+      "identifiers": [
+        "SemanticScholar:1db738763082d49f0d8ca654742fe889281da227"
+      ],
+      "semantic_scholar_id": "1db738763082d49f0d8ca654742fe889281da227",
+      "canonical_id": "arXiv:2604.02570",
+      "arxiv_id": "2604.02570",
+      "doi": "10.48550/arXiv.2604.02570",
+      "authors": [
+        "Hai-Yu Wang",
+        "Yu-Tong Wang",
+        "Jackson Jiang",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "VLM実行向け重み付き低ランク近似WSVD。SVD系手法が実測の遅延削減に結びつきにくい問題に対し、より細かい粒度で適用する新しい計算パターンと、重み要素の相対重要度に応じた適応配分、量子化への拡張で、実行遅延の実測改善を得る。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers",
+      "source_url": "https://arxiv.org/abs/2604.02344",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "WebGPU's security-focused design imposes per-operation validation that compounds across the many small dispatches in neural network inference, yet the true cost of this overhead is poorly characterized. We present a systematic characterization of WebGPU dispatch overhead for LLM inference at batch size 1, spanning four GPU vendors (NVIDIA, AMD, Apple, Intel), two native implementations (Dawn, wgpu-native) and three browsers (Chrome, Safari, Firefox), and two model sizes (Qwen2.5-0.5B and 1.5B). Our primary contribution is a sequential-dispatch methodology that reveals naive single-operation benchmarks overestimate dispatch cost by ${\\sim}20\\times$. The true per-dispatch cost of WebGPU API overhead alone is 24-36 $\\mu$s on Vulkan and 32-71 $\\mu$s on Metal, while the total per-operation overhead including Python cost is ${\\sim}95$~$\\mu$s, which turns out to be a distinction critical for optimization. On Vulkan, kernel fusion improves throughput by 53%, while CUDA fusion provides no benefit, confirming that per-operation overhead is a primary differentiator. LLM inference was tested across three major operating systems (Linux, Windows, macOS). We built $\\texttt{torch-webgpu}$, a PrivateUse1-based out-of-tree PyTorch backend and an FX-to-WebGPU compiler, which on our reference platform achieves 11--12% of CUDA performance. At dtype-matched float32, RTX PRO 2000 achieves 1.4$\\times$ WebGPU's throughput despite ${\\sim}6\\times$ less compute than RTX 5090. For dispatch overhead, backend choice is the dominant factor, although implementation choice also matters substantially within a backend (2.2$\\times$ for Metal). In terms of dispatch vs kernel compute efficiency, we conclude that at batch=1 with the current dispatch-heavy pipeline, per-operation overhead dominates regardless of kernel quality. All code, benchmarks, and raw data are open source.",
+      "identifiers": [
+        "SemanticScholar:7b2ebe1739b3d2ad981841ebf12191d8d8c9b649"
+      ],
+      "semantic_scholar_id": "7b2ebe1739b3d2ad981841ebf12191d8d8c9b649",
+      "canonical_id": "arXiv:2604.02344",
+      "arxiv_id": "2604.02344",
+      "doi": "10.48550/arXiv.2604.02344",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WebGPUディスパッチオーバーヘッドの特性評価。4ベンダーのGPU、2つのネイティブ実装、3ブラウザで、逐次ディスパッチ方法論により単一演算ベンチマークの約20倍という過大評価を正し、実コストを定量化する。推論ランタイムの計測そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+      "source_url": "https://doi.org/10.1145/3777471",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have achieved remarkable success. However, their growing size presents challenges due to the increasing mismatch between model scale and hardware capacity. Model compression techniques have been proposed to address this issue, but existing methods often struggle to cope with the large dynamic range of model parameters, including both activations and weights. Additionally, current outlier-aware encoding schemes introduce complex logic, which limits their effectiveness in both compression ratio and hardware efficiency. To overcome these challenges, we propose SPADE, a co-designed algorithm–architecture solution for post-training quantized INT8 large language models, introducing a hybrid-precision encoding scheme. SPADE employs variable-length data representation guided by metadata, enabling local, value-dependent encoding with only 3.66% hardware area overhead while delivering up to 4.88× speedup and 70.5% energy reduction compared with state-of-the-art encoding-based accelerators. Our key insight is that only a small portion of activations are outliers that require high-precision such as INT8, while the vast majority can be accurately represented with INT4. This allows us to exploit the sparsity of high-significance bits across the data. By assigning an identifier bit to each data element, SPADE dynamically selects between compact INT4 encoding for normal values and higher INT8 encoding for rare outliers, eliminating unnecessary bit-width and reducing data redundancy. Moreover, we analyze the limitations of existing variable-length encoding methods, which typically require serialization and deserialization due to uncertainty in the precision format of loaded data blocks. SPADE integrates precision information directly into its encoding rules, enabling parallel decoding and computation on systolic arrays. This design significantly boosts computational throughput and helps realize the theoretical performance advantages of structured encoding. We evaluate SPADE-based accelerators against state-of-the-art encoding-based accelerators, and our results demonstrate that the SPADE-based accelerator achieves up to 4.88× speedup and 70.5% energy reduction, while maintaining superior model accuracy. The codes are available at https://github.com/jlsbz/SPADE.",
+      "identifiers": [
+        "SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d"
+      ],
+      "semantic_scholar_id": "f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+      "doi": "10.1145/3777471",
+      "canonical_id": "DOI:10.1145/3777471",
+      "authors": [
+        "Ning Yang",
+        "Fang-Xin Liu",
+        "Jun-Jie Wang",
+        "Chen-Yang Guan",
+        "Zong-Wu Wang",
+        "Junping Zhao",
+        "Li Jiang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 349,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化LLM向け可変長符号化SPADE。ビット疎性を利用するメタデータ誘導の混合精度符号化で、大きな動的範囲を持つ重みと活性をINT8学習後量子化の枠組みで効率よく表し、並列復号を可能にするアルゴリズム・アーキテクチャ協調設計。推論のメモリ表現機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NPU Design for Diffusion Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2601.20706",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based LLMs (dLLMs) fundamentally depart from traditional autoregressive (AR) LLM inference: they leverage bidirectional attention, block-wise KV cache refreshing, cross-step reuse, and a non-GEMM-centric sampling phase. These characteristics make current dLLMs incompatible with most existing NPUs, as their inference patterns, in particular the reduction-heavy, top-$k$-driven sampling stage, demand new ISA and memory hierarchy support beyond that of AR accelerators. In addition, the blocked diffusion KV cache breaks from the append-only paradigm assumed by AR NPUs, and conventional AR-derived KV quantization schemes were designed for static activation distributions and do not account for the step-wise distribution shifts introduced by iterative block-wise refinement in dLLMs. In this paper, we introduce the first NPU accelerator specifically designed for dLLMs. It delivers: a dLLM-oriented ISA and compiler; a hardware-optimized execution model for both the transformer inference and diffusion sampling used in dLLMs; a novel Block-Adaptive Online Smoothing (BAOS) for quantizing KV cache in dLLMs; and a complete RTL implementation synthesized in 7nm. To evaluate and validate our design, we introduce a tri-path simulation framework that comprises analytical, cycle-accurate, and accuracy simulators, together with cross-validations against physical hardware. The full NPU stack, including ISA, simulation tools, and quantization software, will be open-sourced upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503"
+      ],
+      "semantic_scholar_id": "6e3001d2aa0d51b77b977dcac725abddfe46f503",
+      "canonical_id": "arXiv:2601.20706",
+      "arxiv_id": "2601.20706",
+      "authors": [
+        "Binglei Lou",
+        "Hao-Ran Wu",
+        "Kevin Lau",
+        "Gregor Macdonald",
+        "Jia-Yi Nie",
+        "Yao Lai",
+        "Can Xiao",
+        "Xuan Guo",
+        "Jian-Yi Cheng",
+        "R. Antonova",
+        "Robert Mullins",
+        "Aaron Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデル推論向けNPU設計。双方向注意、ブロック単位のKVキャッシュ更新、ステップ間再利用、非GEMM中心のサンプリングというdLLM固有の推論パターンが既存NPUと合わない問題に対し、ISAとメモリ階層を新設する初のアーキテクチャ提案。推論ハードウェアそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.13556",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-layer key-value (KV) compression has been found to be effective in efficient inference of large language models (LLMs). Although they reduce the memory consumption of the KV cache, such methods usually introduce non-negligible performance degradation. In this work, we aim to enhance the performance of YOCO, a cross-layer KV compression method that shares the KVs of the middle layer with the top-half layers. We propose YOCO++, an enhanced YOCO that incorporates a weighted residual connection between the KVs of each bottom-half layer and the bottom layer. Compared to YOCO, YOCO++ increases model capacity while maintaining the same training and inference efficiency. Our experiments show that YOCO++ achieves state-of-the-art performance among the cross-layer KV compression methods at a 50% KV cache compression rate, outperforming the standard Transformer.",
+      "identifiers": [
+        "SemanticScholar:81a95fd396080960c74197b25805a289e19cf279"
+      ],
+      "semantic_scholar_id": "81a95fd396080960c74197b25805a289e19cf279",
+      "canonical_id": "arXiv:2604.13556",
+      "arxiv_id": "2604.13556",
+      "doi": "10.48550/arXiv.2604.13556",
+      "authors": [
+        "You Wu",
+        "Zi-Heng Chen",
+        "Yi-Zhe Zhang",
+        "Haoyi Wu",
+        "Cheng-Ting Yu",
+        "Yu-Chi Xu",
+        "Wen-Bo Su",
+        "Bo Zheng",
+        "Ke-Wei Tu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層間KV圧縮YOCOの強化YOCO++。中間層のKVを上半分の層と共有するYOCOに対し、下半分各層のKVと最下層のKVの間に重み付き残差接続を入れることで、訓練と推論の効率を保ったまま容量を増やす。50%のKV圧縮率で層間圧縮手法の最良性能を示す推論メモリ機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-96fc76a04bf4",
+    "round": "libimp-96fc76a04bf45f8c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-96fc76a04bf45f8c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-96fc76a04bf45f8c-pre01.json",
+    "receipt": "sha256:c03de5364715b4e4a3019f135cc658b08a5ba9bca0b93aac7929863640b1c576"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-96fc76a04bf4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

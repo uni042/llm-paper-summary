@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration",
+      "source_url": "https://arxiv.org/abs/2604.13349",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent LLM systems are moving beyond discrete-token messages toward richer relays that preserve internal state. Recent work such as LatentMAS transmits full key-value (KV) caches between agents but pays a high memory and communication cost. We adapt KV-cache eviction to this setting and introduce \\textbf{Orthogonal BackFill (OBF)}, which injects a low-rank residual from the discarded KV states back into the retained ones, orthogonal to what is already kept. With only $9.9\\%$-$20.2\\%$ of the prompt KV retained, compressed relay cuts bandwidth by $4.7\\times$ and GPU memory by $8\\%$ at under $5\\%$ wall-clock overhead, and stays close to full relay in accuracy across nine benchmarks, ahead of it on several. OBF matches or improves over headwise eviction on all nine, and its gain is proportional to the accuracy gap eviction opens against full relay ($r{=}0.78$ across three model scales), so it gives back part of what eviction takes. Code is available at https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay.",
+      "identifiers": [
+        "SemanticScholar:1e7ae20af25c9992951223a15f71fb4ee18d339b"
+      ],
+      "semantic_scholar_id": "1e7ae20af25c9992951223a15f71fb4ee18d339b",
+      "canonical_id": "arXiv:2604.13349",
+      "arxiv_id": "2604.13349",
+      "doi": "10.48550/arXiv.2604.13349",
+      "authors": [
+        "Yiping Li",
+        "Zhi-Yu An",
+        "Wan Du"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチエージェント潜在リレーのKV圧縮Orthogonal BackFill。エージェント間でKVキャッシュごと渡す潜在リレーにKV退避を適用し、捨てる状態の低ランク残差を保持側へ直交成分として埋め戻す。プロンプトKVの9.9〜20.2%保持で帯域4.7倍減とGPUメモリ8%減を実測した推論時メモリ機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SAFE-Pruner: Semantic Attention-Guided Future-Aware Token Pruning for Efficient Vision-Language-Action Manipulation",
+      "source_url": "https://arxiv.org/abs/2605.29662",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-time inference of vision-language-action (VLA) models is essential for robotic control. While visual token pruning has shown strong potential for accelerating inference, most existing methods mainly base pruning decisions on shallow-layer cues and risk discarding visual information required by deep layers. To address this issue, we propose SAFE-Pruner, a plug-and-play pruning framework that incorporates attention cues of future layers into pruning decisions. Specifically, we identify semantic attention consistency, the tendency that VLA models concentrate their attention probability mass on the same semantic entity across control timesteps. Based on this observation, we design a forward-looking strategy to forecast the token saliency in deep layers, which prevents the premature removal of critical tokens and leads to more stable acceleration. We further introduce a reference timestep refresh strategy that triggers updates upon attention shifts, thereby improving forecasting accuracy and pruning reliability. Extensive experiments across diverse evaluation settings demonstrate that our method achieves up to 1.89x speedup with a minimal degradation in success rate of less than 1.5%, while outperforming state-of-the-art methods by up to 1.9%.",
+      "identifiers": [
+        "SemanticScholar:40f37c471d01dda63dc533e9645877466c81a3f1"
+      ],
+      "semantic_scholar_id": "40f37c471d01dda63dc533e9645877466c81a3f1",
+      "canonical_id": "arXiv:2605.29662",
+      "arxiv_id": "2605.29662",
+      "doi": "10.48550/arXiv.2605.29662",
+      "authors": [
+        "Shi-Lin Ma",
+        "Chu-Bin Zhang",
+        "Chang-Yuan Wang",
+        "Yujin Wang",
+        "Yue Wu",
+        "Zi-Xuan Wang",
+        "Jing-Qi Tian",
+        "Zheng Zhu",
+        "Yansong Tang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLA向け将来配慮型トークン剪定SAFE-Pruner。浅い層の手がかりだけで剪定すると深層で要る視覚情報を捨てる問題に対し、意味注意の一貫性から深層でのトークン顕著性を予測して剪定判断へ組み込む。ロボット制御のリアルタイム推論を速くする視覚トークン削減機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation",
+      "source_url": "https://arxiv.org/abs/2604.18348",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video diffusion transformers (DiTs) suffer from prohibitive inference latency due to quadratic attention complexity. Existing sparse attention methods either overlook semantic similarity or fail to adapt to heterogeneous token distributions across layers, leading to model performance degradation. We propose AdaCluster, a training-free adaptive clustering framework that accelerates the generation of DiTs while preserving accuracy. AdaCluster applies an angle-similarity-preserving clustering method to query vectors for higher compression, and designs a euclidean-similarity-preserving clustering method for keys, covering cluster number assignment, threshold-wise adaptive clustering, and efficient critical cluster selection. Experiments on CogVideoX-2B, HunyuanVideo, and Wan-2.1 on one A40 GPU demonstrate up to 1.67-4.31x speedup with negligible quality degradation.",
+      "identifiers": [
+        "SemanticScholar:142a2fb999971391ffbeede56c3bf0731745d870"
+      ],
+      "semantic_scholar_id": "142a2fb999971391ffbeede56c3bf0731745d870",
+      "canonical_id": "arXiv:2604.18348",
+      "arxiv_id": "2604.18348",
+      "doi": "10.48550/arXiv.2604.18348",
+      "authors": [
+        "Haoyue Tan",
+        "Sheng-Nan Wang",
+        "Yu Qiao",
+        "Jun-Cheng Zhang",
+        "You-Hui Bai",
+        "Ping Gong",
+        "Ze-Wen Jin",
+        "Cheng Li"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ビデオ拡散Transformer向け学習不要の適応クラスタリング疎注意AdaCluster。クエリは角度類似度、キーはユークリッド類似度を保つクラスタリングで層ごとの異質なトークン分布へ適応し、重要なクラスタを選ぶ。CogVideoXやWan-2.1で1.67〜4.31倍の高速化を実測した推論注意機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.",
+      "identifiers": [
+        "SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2"
+      ],
+      "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+      "canonical_id": "arXiv:2605.22269",
+      "arxiv_id": "2605.22269",
+      "doi": "10.48550/arXiv.2605.22269",
+      "authors": [
+        "Jun Xiao",
+        "Jiajun Chen",
+        "Tianxiang Sun",
+        "Xun Yang",
+        "Angela Yao"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミングビデオQA向け多粒度KVキャッシュ圧縮MuKV。パッチ・フレーム・セグメントの3粒度で視覚表現を保持し、自己注意と周波数の二重信号でトークンを圧縮、オンライン側は半階層検索で必要な詳細を引く。長時間ストリームのKVメモリ削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces",
+      "source_url": "https://arxiv.org/abs/2602.11683",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work explores latent reasoning to improve reasoning efficiency by replacing explicit reasoning trajectories with continuous representations in a latent space, yet its effectiveness varies across settings. Analysis of model confidence dynamics under latent reasoning reveals that thinking trajectories ending in incorrect answers contain fewer low-confidence steps than those ending in correct answers. Meanwhile, we suggest that soft embeddings aggregated by multiple low-confidence thinking alternatives may introduce and propagate noise, leading to high confidence in unreliable reasoning trajectories. Motivated by these observations, ThinkRouter, an inference-time confidence-aware routing mechanism is proposed to avoid high confidence and noise for efficient reasoning. ThinkRouter routes thinking to the discrete token space when model confidence is low, and to the latent space otherwise. Extensive experiments on STEM reasoning and coding benchmarks across diverse large reasoning models demonstrate that ThinkRouter outperforms explicit CoT, random routing, and latent reasoning baselines in terms of accuracy, achieving an average improvement of 19.70 points in Pass@1, while reducing generation length by up to 15.55%. Further comprehensive analysis reveals that ThinkRouter can calibrate errors arising from explicit CoT and latent reasoning, and accelerates end-of-thinking token generation by globally lowering model confidence.",
+      "identifiers": [
+        "SemanticScholar:ff5278d847e5da85b14359c6d104f060f22d9620"
+      ],
+      "semantic_scholar_id": "ff5278d847e5da85b14359c6d104f060f22d9620",
+      "canonical_id": "arXiv:2602.11683",
+      "arxiv_id": "2602.11683",
+      "doi": "10.48550/arXiv.2602.11683",
+      "authors": [
+        "Xin Xu",
+        "Tong Yu",
+        "Xiang Chen",
+        "Hao-Liang Wang",
+        "Julian J. McAuley",
+        "Saayan Mitra"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      },
+      "reason": "潜在思考と離散思考の推論時ルーティングThinkRouter。中間信頼度の動態分析に基づき、信頼度が低い局面では離散トークン空間、高い局面では潜在空間へ思考を振り分け、潜在推論のノイズ伝播と高信頼の誤りを避ける。推論時の計算経路選択機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-70d0c1b62bad",
+    "round": "libimp-70d0c1b62bad44fd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-70d0c1b62bad44fd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-70d0c1b62bad44fd-pre01.json",
+    "receipt": "sha256:dcf172fc84cb9041d033281ff888ebaee6858d57d77046c7c4bf49b8ada31e4f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-70d0c1b62bad",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

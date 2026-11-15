@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+      "source_url": "https://arxiv.org/abs/2610.10411",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by using a low-cost draft model to propose tokens that the full-size target model verifies in parallel. Parallel and semi-autoregressive (semi- AR) drafters improve drafting efficiency by proposing an entire block in a single forward pass, but training them raises a new difficulty: the draft distribution for a given position depends on where the decoding round starts, and where rounds start depends on how many tokens earlier rounds accepted. Existing training objectives typically rely on block-local surrogates that ignore this cross-round coupling, and therefore do not directly optimize the global decoding efficiency. In this work, we develop a theoretical framework for training and evaluating these drafters by representing speculative decoding as a Markov reward process. This formulation yields the Expected Decoding Rounds (EDR) objective, which weights local rejection costs by state occupancies and exactly equals the expected number of decoding rounds. Unlike prior surrogate objectives, EDR introduces no auxiliary hyperparameters. We then derive an exact temporal-difference gradient that supports unbiased stochastic optimization from target-model rollouts. The same framework also yields an exact offline evaluator for round counts, enabling paired drafter comparisons on shared target rollouts without running speculative decoding. Finetuning two state-of-the- art drafters, DSpark and DFly, with EDR consistently improves mean accepted length and outperforms existing training objectives across nine benchmarks spanning math reasoning, code generation, and chat.",
+      "identifiers": [
+        "SemanticScholar:03c1c5f03f9455620d81cd322496dfa4557764ca"
+      ],
+      "semantic_scholar_id": "03c1c5f03f9455620d81cd322496dfa4557764ca",
+      "canonical_id": "arXiv:2610.10411",
+      "arxiv_id": "2610.10411",
+      "authors": [
+        "Yun-Xiao Zhao",
+        "Chang-Xiao Cai"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      },
+      "reason": "並列ドラフトモデルの学習目的として、ラウンド間の結合（前ラウンドの受理数が次ラウンドの開始位置を決める）を捉えた期待デコードラウンド数EDRを導く理論枠組み。学習は手段であり、評価軸は受理長とデコード効率そのもの。既存ドラフトモデル2種の微調整で9ベンチマークを通じ受理長の改善を示しており、投機的デコードの推論効率化が最終目的のため対象に含める。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.28355",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In speculative decoding, a lightweight draft model proposes tokens that the target model verifies in parallel, speeding up generation without changing the target distribution. D-PACE (Wu et al., 2026) trains such drafters with a loss that weights each position by its contribution to the expected accepted length. Both its weights and its cross-entropy (CE) loss use only the draft's probability of the recorded target token, treating the target as a point mass. Under rejection sampling, however, a sampled draft token is accepted with probability equal to the overlap of the draft and target distributions, one minus their total variation (TV). We derive D-PAL (Dynamic Position-wise Acceptance Loss) from the exact expected accepted length, using this overlap as the acceptance signal. This yields overlap-based position weights with log acceptance (LA) as the per-position loss, and the objective reduces to D-PACE for a point-mass target. Since the weights are detached, any per-position loss can replace LA in practice. We show that forward KL divergence and R\\'enyi divergence of order 1/2 match or exceed LA, and that R\\'enyi-1/2 provably bounds the true acceptance rate from above and below. Replacing CE with R\\'enyi-1/2 improves acceptance length under both D-PACE's weights and ours. On six benchmarks with a Qwen3-4B target, D-PAL raises mean acceptance length over D-PACE from 4.50 to 4.57 at T=0 and from 4.20 to 4.28 at T=1, and consistently achieves higher throughput at both temperatures.",
+      "identifiers": [
+        "SemanticScholar:0a9396a43370956ebadd897c5da2a6c9bee4fefe"
+      ],
+      "semantic_scholar_id": "0a9396a43370956ebadd897c5da2a6c9bee4fefe",
+      "canonical_id": "arXiv:2610.28355",
+      "arxiv_id": "2610.28355",
+      "authors": [
+        "Tian-Yu Wu",
+        "Zhuo-Hang Wang",
+        "Jonathan Geuter",
+        "Yu-Rong Yao",
+        "Wei-Fan Jiang",
+        "Cheng-Xi Zhang",
+        "Ju Li",
+        "Min-Lan Yu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的デコードのドラフトモデル学習損失を、棄却サンプリングでの受理確率（ドラフト分布と対象分布の重なり）から導くD-PALの提案。学習は手段であり最適化対象は受理長と推論スループットで、Qwen3-4Bを対象とする6ベンチマークで受理長（温度0で4.50→4.57）とスループットの改善を測っている。最終目的が推論高速化のため対象に含める。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Understanding KV Residency in Production-Scale Agentic LLM Workloads",
+      "source_url": "https://arxiv.org/abs/2610.22863",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic large language model (LLM) applications turn one user request into a sequence of model and tool calls over a growing context. Retaining this context's key-value (KV) state in GPU memory lets later calls reuse it instead of recomputing it, but at fleet scale this needs substantial memory. We characterize four production Microsoft M365 workload traces (Deep Research, Enterprise Assistant, Coding Agent and Enterprise Chat) spanning more than 121 million model calls. In Deep Research, the application issues 89% of model calls and the median context grows from about 10K to 68K tokens by the 30th call. About 80% of context tokens are served from the prefix cache. With the public Llama-2-70B KV layout standing in for confidential models, one 99th-percentile Deep Research session exceeds the 80 GB HBM of an NVIDIA H100, and holding all live sessions at their peak needs an estimated 501.8 TB of HBM, although inference occupies only 5.6% of that retention time. Trace-driven replay shows that a one-hour idle cap cuts this ceiling by 3.6x while raising the share of calls that recompute context only from 4.07% to 4.53%. Under tighter budgets, eviction alone is insufficient: at one tenth of the busiest hour's demand, LRU eviction makes 63% of Deep Research calls recompute and clairvoyant furthest-next-use 31%, whereas multi-resolution retention (MRR), which demotes the LRU session's KV state to int4, lowers this to 13.6%. Placement imposes a separate limit: when the next call reaches a different deployment, cached-context reuse drops from 89% to 29%, and treating KV state as deployment-local raises the recompute floor under unlimited memory from 5.4% to 20.2%. These findings motivate retention that changes the representation of KV state, together with deployment-aware routing or migration. We plan to release AgenticTraceSim, a parametric trace generator, and a residency replay framework.",
+      "identifiers": [
+        "SemanticScholar:ca841e0e0b933dcedafb7b118e02c04cc5832696"
+      ],
+      "semantic_scholar_id": "ca841e0e0b933dcedafb7b118e02c04cc5832696",
+      "canonical_id": "arXiv:2610.22863",
+      "arxiv_id": "2610.22863",
+      "authors": [
+        "Mayank Arya",
+        "Agrim Bari",
+        "Anjaly Parayil",
+        "Y. Simmhan",
+        "Renée St. Amant",
+        "Victor Ruhle",
+        "S. Rajmohan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Microsoft M365の実運用エージェントワークロード4種・1億2,100万回超のモデル呼出しを特性解析し、KVキャッシュの保持・追い出し・配置が再計算率へ与える影響を定量化した計測研究。1時間のアイドル上限で保持量上限を3.6倍削減できること、多解像度保持（MRR）が再計算率を63%（LRU）から13.6%へ下げること等を示し、サービング基盤のKV管理への直接の知見がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Long Context to Selective Memory:A Survey of Memory-Centric Compression for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.21165",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context capability has become essential for large language models (LLMs) to handle complex tasks, yet continuously expanding the context window does not remove the computational, storage, and information-selection pressures incurred at inference time. Existing work on prompt compression, KV-cache management, efficient serving, retrieval augmentation, and agent memory is usually discussed in isolation, leaving the flow of information between storage and computation insufficiently understood. This survey reframes long-context compression as a memory-management problem for allocating inference-time resources. We distinguish compute-active memory, which directly participates in model computation, from compute-inactive memory, which lies outside the computation path but can be stored, retrieved, updated, or forgotten, and we characterize offloaded KV caches, persistent prefix caches, and precomputed KV states as intermediate states on the activation path. On this basis, we formulate writing, offloading, recall, retrieval-and-injection, materialization, eviction, consolidation, and forgetting as state transitions within an information lifecycle, and introduce a budgeted cost model that places these operations in a single cost account. The resulting framework unifies short-term context compression, long-term memory management, and the transitions between them, and shows that the central challenge is not merely reducing information volume but deciding which information should participate in costly inference, when, and in what form. We further summarize evaluation dimensions, benchmark gaps, and open challenges, and argue that future research should move from static, pointwise compression toward dynamic, governable, lifecycle-aware memory management.",
+      "identifiers": [
+        "SemanticScholar:fb1b5bc9aaad20ca80aaabdfb68347e834dcfb88"
+      ],
+      "semantic_scholar_id": "fb1b5bc9aaad20ca80aaabdfb68347e834dcfb88",
+      "canonical_id": "arXiv:2610.21165",
+      "arxiv_id": "2610.21165",
+      "authors": [
+        "Chao Gou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈圧縮を推論時メモリ管理の問題として再定義するサーベイ。KVキャッシュのオフロード、永続接頭辞キャッシュ、事前計算済みKV状態を活性化経路上の状態遷移として統一し、書込み・退避・想起・追い出し等を単一の予算コストモデルで扱う。対象は推論時メモリ管理のシステム技術そのものであり、サーベイ系統への収録が妥当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Understanding Target Probability Reuse in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.29210",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding uses a target model to verify a tree of draft tokens in parallel. We study whether the resulting next-token distributions can help select the next tree. For unrestricted target models, we show that guaranteed exact reuse requires a distribution computed at the next round's complete context. We characterize when retaining this distribution requires sacrificing accepted tokens and establish conditions under which this loss persists across decoding rounds. Across six targets, we find that reranking first-token branches with a separately computed distribution at the current context improves expected acceptance over draft ranking, especially with small tree budgets. Drawing the first token from this distribution before allocating the tree further improves expected acceptance over pruning a preselected tree, even at equal mean tree size. In our experiments, both selection rules also decode faster than draft ranking when the separate target pass overlaps standalone drafting. Our findings show that making target probabilities available before tree allocation can improve the efficiency of speculative decoding. Our code is available at https://github.com/js-lee-AI/TargetRows.",
+      "identifiers": [
+        "SemanticScholar:f0969b0d4b9a8719e72ffbd4c773258d38dcac72"
+      ],
+      "semantic_scholar_id": "f0969b0d4b9a8719e72ffbd4c773258d38dcac72",
+      "canonical_id": "arXiv:2610.29210",
+      "arxiv_id": "2610.29210",
+      "authors": [
+        "Jungseob Lee",
+        "Giyoon Jang",
+        "Chailin Nam",
+        "Jiwoo Kum",
+        "Sihyeon Lee",
+        "Kyo-Nam Choo",
+        "Ji-Hun Song",
+        "Eunseo Song",
+        "Chanjun Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的デコードの検証で得た対象モデルの次トークン分布を、次ラウンドの候補木の選択へ再利用できる条件を理論的に整理し、木配分の前に第一トークンをこの分布から引く方式で受理期待値とデコード速度の改善を示した研究。デコード機構の効率化への直接貢献があり、コードも公開されている。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2ca9fd050806",
+    "round": "libimp-2ca9fd050806b575-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2ca9fd050806b575-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2ca9fd050806b575-pre01.json",
+    "receipt": "sha256:f0f07cab09c84ad65c83a2f890403da923cf14647f18656b6f82027bf21a2b44"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2ca9fd050806",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
