@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PTQ4ARVG: Post-Training Quantization for AutoRegressive Visual Generation Models",
+      "source_url": "https://arxiv.org/abs/2601.21238",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AutoRegressive Visual Generation (ARVG) models retain an architecture compatible with language models, while achieving performance comparable to diffusion-based models. Quantization is commonly employed in neural networks to reduce model size and computational latency. However, applying quantization to ARVG remains largely underexplored, and existing quantization methods fail to generalize effectively to ARVG models. In this paper, we explore this issue and identify three key challenges: (1) severe outliers at channel-wise level, (2) highly dynamic activations at token-wise level, and (3) mismatched distribution information at sample-wise level. To these ends, we propose PTQ4ARVG, a training-free post-training quantization (PTQ) framework consisting of: (1) Gain-Projected Scaling (GPS) mitigates the channel-wise outliers, which expands the quantization loss via a Taylor series to quantify the gain of scaling for activation-weight quantization, and derives the optimal scaling factor through differentiation.(2) Static Token-Wise Quantization (STWQ) leverages the inherent properties of ARVG, fixed token length and position-invariant distribution across samples, to address token-wise variance without incurring dynamic calibration overhead.(3) Distribution-Guided Calibration (DGC) selects samples that contribute most to distributional entropy, eliminating the sample-wise distribution mismatch. Extensive experiments show that PTQ4ARVG can effectively quantize the ARVG family models to 8-bit and 6-bit while maintaining competitive performance. Code is available at http://github.com/BienLuky/PTQ4ARVG .",
+      "identifiers": [
+        "SemanticScholar:0af4b04db9f81539f3edc0b427f718267bef9e05"
+      ],
+      "semantic_scholar_id": "0af4b04db9f81539f3edc0b427f718267bef9e05",
+      "canonical_id": "arXiv:2601.21238",
+      "arxiv_id": "2601.21238",
+      "doi": "10.48550/arXiv.2601.21238",
+      "authors": [
+        "Xue-Wen Liu",
+        "Zhikai Li",
+        "Jing Zhang",
+        "Meng-Juan Chen",
+        "Jian-Quan Li",
+        "Qing-Yi Gu"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 290,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "自己回帰視覚生成モデル向け学習後量子化PTQ4ARVG。チャネル方向の深刻な外れ値、トークン方向の動的活性、サンプル方向の分布ずれという3課題に対し、ゲイン射影スケーリング等で対処する学習不要の量子化。視覚生成モデルの推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration",
+      "source_url": "https://arxiv.org/abs/2602.04361",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual AutoRegressive (VAR) modeling has garnered significant attention for its innovative next-scale prediction paradigm. However, mainstream VAR paradigms attend to all tokens across historical scales at each autoregressive step. As the next scale resolution grows, the computational complexity of attention increases quartically with resolution, causing substantial latency. Prior accelerations often skip high-resolution scales, which speeds up inference but discards high-frequency details and harms image quality. To address these problems, we present \\textbf{SparVAR}, a training-free acceleration framework that exploits three properties of VAR attention: \\textbf{(i) strong attention sinks}, \\textbf{(ii) cross-scale activation similarity}, and \\textbf{(iii) pronounced locality}. Specifically, we dynamically predict the sparse attention pattern of later high-resolution scales from a sparse decision scale, and construct scale self-similar sparse attention via an efficient index-mapping mechanism, enabling high-efficiency sparse attention computation at large scales. Furthermore, we propose cross-scale local sparse attention and implement an efficient block-wise sparse kernel, which achieves $\\mathbf{>5\\times}$ faster forward speed than FlashAttention. Extensive experiments demonstrate that the proposed SparVAR can reduce the generation time of an 8B model producing $1024\\times1024$ high-resolution images to the \\textbf{1s}, \\textbf{without skipping the last scales}. Compared with the VAR baseline accelerated by FlashAttention, our method achieves a $\\mathbf{1.57\\times}$ speed-up while preserving almost all high-frequency details. When combined with existing scale-skipping strategies, SparVAR attains up to a $\\mathbf{2.28\\times}$ acceleration, while maintaining competitive visual generation quality. Code is available at \\href{https://github.com/CAS-CLab/SparVAR}{SparVAR}.",
+      "identifiers": [
+        "SemanticScholar:84fabe985a4a502f0142009778c8b516f5e9d9a0"
+      ],
+      "semantic_scholar_id": "84fabe985a4a502f0142009778c8b516f5e9d9a0",
+      "canonical_id": "arXiv:2602.04361",
+      "arxiv_id": "2602.04361",
+      "doi": "10.48550/arXiv.2602.04361",
+      "authors": [
+        "Ze-Kun Li",
+        "Ning Wang",
+        "T. Bai",
+        "Changwang Mei",
+        "Pei-Song Wang",
+        "Shuang Qiu",
+        "Jian Cheng"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚自己回帰生成の学習不要高速化SparVAR。強い注意シンク、スケール間の活性類似、局所性という3性質を使い、高解像度スケールの疎注意パターンを動的に予測して、解像度とともに4次で増える注意計算を抑える。推論注意機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+      "source_url": "https://arxiv.org/abs/2603.26796",
+      "year": 2026,
+      "published": "2026-03-25",
+      "venue": "CAIS",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study the problem of routing queries to large language models (LLMs) under cost, GPU resources, and concurrency constraints. Prior per-query routing methods often fail to control batch-level cost, especially under non-uniform or adversarial batching. To address this, we propose a batch-level, resource-aware routing framework that jointly optimizes model assignment for each batch while respecting cost and model capacity limits. We further introduce a robust variant that accounts for uncertainty in predicted LLM performance, along with an offline instance allocation procedure that balances quality and throughput across multiple models. Experiments on two multi-task LLM benchmarks show that robustness improves accuracy by 1–14% over non-robust counterparts (depending on the performance estimator), batch-level routing outperforms per-query methods by up to 24% under adversarial batching, and optimized instance allocation yields additional gains of up to 3% compared to a non-optimized allocation, all while strictly controlling cost and GPU resource constraints.",
+      "identifiers": [
+        "SemanticScholar:4560307e867ec8e67a4b1477c4067242383699d7"
+      ],
+      "semantic_scholar_id": "4560307e867ec8e67a4b1477c4067242383699d7",
+      "canonical_id": "arXiv:2603.26796",
+      "arxiv_id": "2603.26796",
+      "doi": "10.1145/3786335.3813134",
+      "authors": [
+        "Jelena Markovic-Voronov",
+        "Kayhan Behdin",
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "Zhi-Peng Wang",
+        "R. Mazumder"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      },
+      "reason": "コストと資源制約下のバッチ水準クエリルーティング。クエリ単位でなくバッチ単位でモデル割当てを共同最適化し、コストとモデル容量の制約を守り、予測性能の不確かさに頑健な変種とオフラインのインスタンス配分を備える。LLMサービングのルーティング機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding",
+      "source_url": "https://arxiv.org/abs/2604.00886",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Document understanding and GUI interaction are among the highest-value applications of Vision-Language Models (VLMs), yet they impose exceptionally heavy computational burden: fine-grained text and small UI elements demand high-resolution inputs that produce tens of thousands of visual tokens. We observe that this cost is largely wasteful -- across document and GUI benchmarks, only 22--71\\% of image patches are pixel-unique, the rest being exact duplicates of another patch in the same image. We propose \\textbf{PixelPrune}, which exploits this pixel-level redundancy through predictive-coding-based compression, pruning redundant patches \\emph{before} the Vision Transformer (ViT) encoder. Because it operates in pixel space prior to any neural computation, PixelPrune accelerates both the ViT encoder and the downstream LLM, covering the full inference pipeline. The method is training-free, requires no learnable parameters, and supports pixel-lossless compression ($\\tau{=}0$) as well as controlled lossy compression ($\\tau{>}0$). Experiments across three model scales and document and GUI benchmarks show that PixelPrune maintains competitive task accuracy while delivering up to 4.2$\\times$ inference speedup and 1.9$\\times$ training acceleration. Code is available at https://github.com/OPPO-Mente-Lab/PixelPrune.",
+      "identifiers": [
+        "SemanticScholar:d830315b2a6a2d6a5f32a697bc4e8252ce00a796"
+      ],
+      "semantic_scholar_id": "d830315b2a6a2d6a5f32a697bc4e8252ce00a796",
+      "canonical_id": "arXiv:2604.00886",
+      "arxiv_id": "2604.00886",
+      "doi": "10.48550/arXiv.2604.00886",
+      "authors": [
+        "Nan Wang",
+        "Zhi-Wei Jin",
+        "Chen Chen",
+        "H. Lu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ピクセル水準の適応的視覚トークン削減PixelPrune。文書・GUI画像ではパッチの22〜71%しかピクセル一意でない冗長性を使い、予測符号化に基づく圧縮でViTエンコーダの前段で重複パッチを落とす。エンコーダとLLMの両方を速くする学習不要の推論パイプライン機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "R2-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction",
+      "source_url": "https://arxiv.org/abs/2604.18995",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Large Language Models (dLLMs) have emerged as a promising alternative to autoregressive generation by enabling parallel token prediction. However, practical dLLM decoding still suffers from high inference latency, which limits deployment. In this work, we observe that a substantial part of this inefficiency comes from recurring redundancy in the decoding process, including spatial redundancy caused by confidence clusters and positional ambiguity, and temporal redundancy caused by repeatedly remasking predictions that have already stabilized. Motivated by these patterns, we propose $R^{2}$-dLLM, a unified framework for reducing decoding redundancy from both inference and training perspectives. At inference time, we introduce training-free decoding rules that aggregate local confidence and token predictions, and finalize temporally stable tokens to avoid redundant decoding steps. We further propose a redundancy-aware supervised fine-tuning pipeline that aligns the model with efficient decoding trajectories and reduces reliance on manually tuned thresholds. Experiments demonstrate that $R^{2}$-dLLM consistently reduces the number of decoding steps by up to 88\\% compared to existing decoding strategies, while maintaining competitive generation quality across different models and tasks. These results validate that decoding redundancy is a central bottleneck in dLLMs, and that explicitly reducing it yields substantial practical efficiency gains. Our code and models are available at https://github.com/GATECH-EIC/R2-dLLM.",
+      "identifiers": [
+        "SemanticScholar:63c54d315754dba7b61b798f7d456e378fe5dccc"
+      ],
+      "semantic_scholar_id": "63c54d315754dba7b61b798f7d456e378fe5dccc",
+      "canonical_id": "arXiv:2604.18995",
+      "arxiv_id": "2604.18995",
+      "doi": "10.48550/arXiv.2604.18995",
+      "authors": [
+        "Zhen-Bang Du",
+        "Kejing Xia",
+        "Xin-Rui Zhong",
+        "Yong-Gan Fu",
+        "Nicolai Oswald",
+        "Bin Ji",
+        "Brucek Khailany",
+        "Pavlo Molchanov",
+        "Ying-Jia Lin"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMのデコード冗長性削減R2-dLLM。信頼度クラスタと位置曖昧性による空間冗長性、安定した予測の再マスクによる時間冗長性に対し、局所信頼度の集約と時間的に安定したトークンの確定という学習不要のデコード規則で対処する。拡散デコードの推論機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d1764f5ce31d",
+    "round": "libimp-d1764f5ce31dd4c6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d1764f5ce31dd4c6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d1764f5ce31dd4c6-pre01.json",
+    "receipt": "sha256:7ca815de11dbe4c1f64cfaa6d59ba2c58b7f7529e69d4107b0862715d87ead88"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d1764f5ce31d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

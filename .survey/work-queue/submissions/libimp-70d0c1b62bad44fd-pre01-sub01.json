@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
+      "source_url": "https://arxiv.org/abs/2603.17946",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Converting pretrained attention modules such as grouped-query attention (GQA) into multi-head latent attention (MLA) can improve expressivity without increasing KV-cache cost, making it attractive for efficient inference. However, many practical conversion baselines rely on weight-only low-rank approximations (e.g., SVD-style initializations) and uniform rank allocation. They focus on minimizing the difference between weight matrices rather than on how those weights affect input activations, ignore the covariance structure of activations, and enforce uniform rank across layers, causing activation drift and degraded attention fidelity. To address these issues, we propose CARE, a Covariance-Aware, Rank-Enhanced MLA conversion pipeline under a fixed KV width. CARE introduces three key steps: (i) activation-preserving factorization, which aligns the approximation with the actual input activations rather than just the weights; (ii) adjusted-rank allocation, which spreads a fixed KV budget across layers by giving more capacity to layers that need it most; and (iii) KV-parity mapping, which reparameterizes the converted K and V to fit the MLA format while keeping the KV-cache size unchanged. Our method outperforms a uniform-rank SVD baseline on Qwen3-4B/30B-A3B-Instruct-2507 and Llama-3.1-8B/70B-Instruct, reducing one-shot perplexity by up to 215x and improving mean accuracy by up to 1.70x at matched KV budgets. With a brief post-SVD healing fine-tune, we fully recover the original model's accuracy.",
+      "identifiers": [
+        "SemanticScholar:2298dfb993fcbea7f252aafd6a5fd6ba6845f66d"
+      ],
+      "semantic_scholar_id": "2298dfb993fcbea7f252aafd6a5fd6ba6845f66d",
+      "canonical_id": "arXiv:2603.17946",
+      "arxiv_id": "2603.17946",
+      "doi": "10.48550/arXiv.2603.17946",
+      "authors": [
+        "Zhong Zhou",
+        "Fengxiang Bie",
+        "Zi-Yang Chen",
+        "Zhenyu Zhang",
+        "Yi-Bo Yang",
+        "Jun-Xiong Wang",
+        "B. Athiwaratkun",
+        "Xiao-Xia Wu",
+        "S. Song"
+      ],
+      "priority": 117,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 117,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 242,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "GQAからMLAへの変換パイプラインCARE。固定したKV幅のまま、重みだけでなく入力活性の共分散に合わせた活性保存分解、重要度に基づくランク配分、ランク強化で注意の忠実度を保ち、KVキャッシュのコストを増やさず表現力を上げる。推論メモリ効率に直結する変換機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+      "identifiers": [
+        "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+      ],
+      "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+      "canonical_id": "arXiv:2603.16219",
+      "arxiv_id": "2603.16219",
+      "doi": "10.48550/arXiv.2603.16219",
+      "authors": [
+        "Hang Lv",
+        "Sheng Liang",
+        "Hao Wang",
+        "Yong-Yue Zhang",
+        "Hongchao Gu",
+        "Wei Guo",
+        "De-Fu Lian",
+        "Yong Liu",
+        "En-Hong Chen"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "端末・クラウド協調推論SpecSteer。投機的デコードを分散整合プロトコルとして再解釈し、端末モデルが個人文脈で下書きし、クラウドが比率ベース検証で論理欠陥だけを弾き、生データを渡さずに下書き・検証・回復を行う非対称協調推論。推論基盤の機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
+      "source_url": "https://arxiv.org/abs/2604.10898",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown great performance on complex reasoning tasks but often require generating long intermediate thoughts before reaching a final answer. During generation, LLMs rely on a key-value (KV) cache for autoregressive decoding. However, the memory footprint of the KV cache grows with output length. Prior work on KV cache optimization mostly focus on compressing the long input context, while retaining the full KV cache for decoding. For tasks requiring long output generation, this leads to increased computational and memory costs. In this paper, we introduce ZoomR, a novel approach that enables LLMs to adaptively compress verbose reasoning thoughts into summaries and uses a dynamic KV cache selection policy that leverages these summaries while also strategically\"zooming in\"on fine-grained details. By using summary keys as a coarse-grained index during decoding, ZoomR uses the query to retrieve details for only the most important thoughts. This hierarchical strategy significantly reduces memory usage by avoiding full-cache attention at each step. Experiments across math and reasoning tasks show that our approach achieves competitive performance compared to baselines, while reducing inference memory requirements by more than $4\\times$. These results demonstrate that a multi-granularity KV selection enables more memory efficient decoding, especially for long output generation.",
+      "identifiers": [
+        "SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82"
+      ],
+      "semantic_scholar_id": "3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+      "canonical_id": "arXiv:2604.10898",
+      "arxiv_id": "2604.10898",
+      "doi": "10.48550/arXiv.2604.10898",
+      "authors": [
+        "David Yang",
+        "Yuxuan Zhu",
+        "Mohammad Mohammadi Amiri",
+        "K. Murugesan",
+        "Tejaswini Pedapati",
+        "Subhajit Chaudhury",
+        "Pin-Yu Chen"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "推論出力向け多粒度KV圧縮ZoomR。冗長な推論思考を要約へ適応的に圧縮し、要約キーを粗粒度索引としてデコード中に詳細へズームインする動的KV選択ポリシーで、長い生成でもKVキャッシュのメモリ増大を抑える。KVキャッシュ管理機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers",
+      "source_url": "https://arxiv.org/abs/2512.03673",
+      "year": 2025,
+      "published": "2025-12-03",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion transformers have demonstrated strong capabilities in generating high-quality images. However, as model size increases, the growing memory footprint and inference latency pose significant challenges for practical deployment. Recent studies in large language models (LLMs) show that rotation-based techniques can smooth outliers and enable 4-bit quantization, but these approaches often incur substantial overhead and struggle with row-wise outliers in diffusion transformers. To address these challenges, we propose ConvRot, a group-wise rotation-based quantization method that leverages regular Hadamard transform (RHT) to suppress both row-wise and column-wise outliers while reducing complexity from quadratic to linear. Building on this, we design ConvLinear4bit, a plug-and-play module that integrates rotation, quantization, GEMM, and dequantization, enabling W4A4 inference without retraining and preserving visual quality. Experiments on FLUX.1-dev demonstrate a 2.26$\\times$ speedup and 4.05$\\times$ memory reduction while maintaining image fidelity. To our knowledge, this is the first application of rotation-based quantization for plug-and-play W4A4 inference in diffusion transformers.",
+      "identifiers": [
+        "SemanticScholar:e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b"
+      ],
+      "semantic_scholar_id": "e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b",
+      "canonical_id": "arXiv:2512.03673",
+      "arxiv_id": "2512.03673",
+      "doi": "10.48550/arXiv.2512.03673",
+      "authors": [
+        "Fei Huang",
+        "Zuliang Han",
+        "Xing Zhou",
+        "Yi-Huang Chen",
+        "Li-Fei Zhu",
+        "Hao-Qian Wang"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 347,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散Transformer向け回転ベース4ビット量子化ConvRot。グループ単位の正規アダマール変換で行・列両方向の外れ値を抑え、回転・量子化・GEMM・逆量子化を一体化したプラグアンドプレイのConvLinear4bitで再訓練なしのW4A4推論を可能にする。推論量子化の機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+      "source_url": "https://arxiv.org/abs/2604.04930",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+      "identifiers": [
+        "SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed"
+      ],
+      "semantic_scholar_id": "7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+      "canonical_id": "arXiv:2604.04930",
+      "arxiv_id": "2604.04930",
+      "doi": "10.48550/arXiv.2604.04930",
+      "authors": [
+        "Parsa Hosseini",
+        "Sumit Nawathe",
+        "Mahdi Salmani",
+        "Meisam Razaviyayn",
+        "S. Feizi"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 223,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論モデルの早期停止CoDE-Stop。正しい軌跡は早期に高信頼の答えへ達し、誤った軌跡は長く非生産的になるという中間回答の信頼度動態を使い、追加訓練なしで推論の打ち切り時点を決める。推論時計算量の削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-70d0c1b62bad",
+    "round": "libimp-70d0c1b62bad44fd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-70d0c1b62bad44fd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-70d0c1b62bad44fd-pre01.json",
+    "receipt": "sha256:dcf172fc84cb9041d033281ff888ebaee6858d57d77046c7c4bf49b8ada31e4f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-70d0c1b62bad",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

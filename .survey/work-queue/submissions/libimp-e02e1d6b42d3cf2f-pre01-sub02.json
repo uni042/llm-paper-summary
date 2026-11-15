@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets",
+      "source_url": "https://arxiv.org/abs/2606.23961",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context and agentic LLM workloads push the KV cache past any fixed memory budget, forcing the inference stack to permanently evict tokens at every step of a continuous-inference stream. Existing methods all share the same template, a per-step direct-attention score followed by deterministic top-$K$ selection, which converts a single below-cutoff step into an irreversible verdict and permanently erases any subtly important token that direct attention cannot single out from noise. To address this challenge, we propose Nexus Sampling, a training-free eviction method that pairs Nexus scoring, an iterative walk over direct attention that surfaces bridge tokens, with weighted reservoir sampling, which retains tokens with inclusion probability in place of deterministic top-$K$. Theoretically, we show that Nexus Sampling dominates deterministic top-$K$ in long-run survival of subtly important tokens. Empirically, at 80% KV cache eviction, Nexus Sampling matches dense attention within 1% on LongBench while outperforming top-$K$ baselines on retrieval-heavy tasks, with up to 10x smaller per-sequence cache memory.",
+      "identifiers": [
+        "SemanticScholar:ffcd70216357af991a7e1691bbb576215b003f6b"
+      ],
+      "semantic_scholar_id": "ffcd70216357af991a7e1691bbb576215b003f6b",
+      "canonical_id": "arXiv:2606.23961",
+      "arxiv_id": "2606.23961",
+      "doi": "10.48550/arXiv.2606.23961",
+      "authors": [
+        "D. Duong",
+        "H. Le",
+        "Jian-Wen Xie",
+        "Anshumali Shrivastava",
+        "Zhao-Zhuo Xu"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "固定予算ストリーミング向けKVキャッシュ退避Nexus Sampling。逐次直接注意スコアと決定的top-Kでは一度切り捨てた重要トークンが不可逆に失われる問題に対し、直接注意上の反復ウォークで橋渡しトークンを拾うNexusスコアと、包含確率で保持する重み付きリザーバサンプリングを組み合わせる。80%退避でLongBenchの密注意から1%以内の劣化に抑えるKV管理機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SeDeM: Selective Decompression of Hidden-State Memories for Long-Context Question Answering",
+      "source_url": "https://arxiv.org/abs/2608.00311",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference with large language models (LLMs) is costly: self-attention during prefill scales quadratically with sequence length, and the key-value (KV) cache grows with the number of processed tokens. Larger context windows also do not ensure reliable evidence use. Context compression reduces this cost, but many soft-compression methods use LLMs as compressors and rely on compact memory tokens both to preserve information and to condition the decoder. We propose SeDeM, a selective decompression framework that decouples compact memory storage from decoder conditioning. SeDeM stores context as compact hidden-state memory blocks, selects query-relevant blocks, and decompresses only the selected blocks for decoder conditioning. Thus, the decoder avoids both full-context processing and direct generation from highly compressed memory slots. On four long-context QA benchmarks, SeDeM achieves higher QA scores than the compression baselines in our main comparison in both 1B and 3B same-backbone settings, and with the 3B backbone exceeds full-context fine-tuning on three datasets. SeDeM also provides favorable quality--efficiency trade-offs, achieving 1.74--2.46$\\times$ lower online time-to-first-token and 1.08--1.10$\\times$ higher autoregressive decoding throughput relative to ICAE while maintaining strong answer quality.",
+      "identifiers": [
+        "SemanticScholar:5d20a64cd25b3c13e65c446bebe8dd01aa454b5d"
+      ],
+      "semantic_scholar_id": "5d20a64cd25b3c13e65c446bebe8dd01aa454b5d",
+      "canonical_id": "arXiv:2608.00311",
+      "arxiv_id": "2608.00311",
+      "doi": "10.48550/arXiv.2608.00311",
+      "authors": [
+        "Maryam Haghifam",
+        "Jason Cong",
+        "Yi-Zhou Sun"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "長文脈質問応答向け隠れ状態メモリの選択的解凍SeDeM。文脈をコンパクトな隠れ状態メモリブロックとして保持し、クエリに関連するブロックだけを選んで解凍してデコーダ条件付けに使うことで、全⽂脈処理も高圧縮スロットからの直接生成も避ける。TTFT 1.74〜2.46倍低下とデコードスループット向上を実測した推論メモリ機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing",
+      "source_url": "https://arxiv.org/abs/2608.27963",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong reasoning capabilities, yet long-chain reasoning becomes inefficient once the intermediate answer stabilizes across reasoning steps: additional reasoning yields little marginal benefit while incurring substantial inference cost. Existing early-exit methods based on confidence or entropy poorly capture reasoning stability, while consistency-based approaches rely on multi-step trajectory agreement, requiring sequential evaluations that delay exit. To better balance efficiency and reliability, we propose SABER, a training-free framework for stability-aware early exit via adversarial branch probing. SABER constructs simple yet effective semantic perturbations around intermediate reasoning states to form adversarial branches, and applies lightweight probing to estimate their likely final outcomes without full trajectory rollouts. When the probed outcomes remain consistent across branches, SABER exits early; otherwise, it continues reasoning. Experiments across multiple reasoning benchmarks and model architectures show that SABER reduces reasoning token consumption by 30.2\\%--39.8\\% on average while maintaining competitive accuracy with full-length reasoning.",
+      "identifiers": [
+        "SemanticScholar:99adcbc414d03a7cf4cccdf685affe86314dee76"
+      ],
+      "semantic_scholar_id": "99adcbc414d03a7cf4cccdf685affe86314dee76",
+      "canonical_id": "arXiv:2608.27963",
+      "arxiv_id": "2608.27963",
+      "doi": "10.48550/arXiv.2608.27963",
+      "authors": [
+        "Wanzhe Cheng",
+        "Hai-Yang Xiang",
+        "Jun-Tao Li",
+        "Hong-Ling Wang",
+        "Wen-Liang Chen"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 79,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "推論モデル向け安定性配慮型早期終了SABER。中間推論状態の周りに意味的摂動の敵対分岐を作り、完全なロールアウトなしに最終結果の見込みを軽量に探って、結果が分岐間で一致すれば早期終了する学習不要の枠組み。推論トークンを30.2〜39.8%削減する推論時の機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e02e1d6b42d3",
+    "round": "libimp-e02e1d6b42d3cf2f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e02e1d6b42d3cf2f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e02e1d6b42d3cf2f-pre01.json",
+    "receipt": "sha256:d285422bf84656435ff6cbe0c0f0be9f19e52e2eb36817d71b14265911755cca"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e02e1d6b42d3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

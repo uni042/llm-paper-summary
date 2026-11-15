@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "muse",
-  "run_key": "muse-discovery-20261115-marathon-b05::chunk-0002-of-0002",
+  "run_key": "muse-discovery-20261115-marathon-b05::provider-gap",
   "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
-  "record_count": 10,
+  "record_count": 7,
   "records": [
     {
       "classification": "accept",
@@ -80,52 +80,6 @@
       "worklist_source": "worker-worklist-45.json discovery_review"
     },
     {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2607.27756",
-      "identity_tokens": [
-        "arXiv:2607.27756",
-        "https://arxiv.org/abs/2607.27756"
-      ],
-      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO",
-      "reason": "騒がしい多話者環境向け音声対話モデルCocktail-Talker。応答・傾聴・無視の行動トークンで、複数話者の中での発話要否判断をモデル化する。音声対話モデルの設計と訓練が中核で、推論システム機構の提案はない。対象外。",
-      "source_url": "https://arxiv.org/abs/2607.27756",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-15T23:20:00+09:00",
-      "last_checked_at": "2026-11-15T23:20:00+09:00",
-      "linked_from": [
-        "LLM Serving / Scheduling / Disaggregation"
-      ],
-      "worklist_rank": 243,
-      "worklist_source": "worker-worklist-00.json discovery_review"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2608.11212",
-      "identity_tokens": [
-        "arXiv:2608.11212",
-        "https://arxiv.org/abs/2608.11212"
-      ],
-      "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts",
-      "reason": "MoEルーティング反転の因果分析。4ビットKV量子化の数値擾乱がゲートの決定境界を越えて専門家選択を反転させる経路を、因果的な帰属装置で定量化し、検出限界を示す。著者ら自身が緩和策の提案でないと述べており、推論挙動の計測・分析にとどまる。境界。",
-      "source_url": "https://arxiv.org/abs/2608.11212",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-15T23:20:00+09:00",
-      "last_checked_at": "2026-11-15T23:20:00+09:00",
-      "linked_from": [
-        "04-moe-expert-compression",
-        "KV cache quantization / long-context inference / activation compression",
-        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
-        "MoE expert pruning / causal interpretability / expert importance metrics",
-        "MoE routing / expert choice / heterogeneous conditional computation",
-        "Quantization × MoE × Offload",
-        "inference-systems",
-        "post-training quantization / second-order compression / weight-only LLM inference",
-        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
-      ],
-      "worklist_rank": 139,
-      "worklist_source": "worker-worklist-00.json discovery_review"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2609.01224",
       "identity_tokens": [
@@ -193,28 +147,6 @@
       "worklist_source": "worker-worklist-00.json discovery_review"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.09051",
-      "identity_tokens": [
-        "arXiv:2610.09051",
-        "https://arxiv.org/abs/2610.09051"
-      ],
-      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
-      "reason": "自己剪定Transformer（Universal Attention）。RoPEを保ちながら減衰機構を合成した汎用注意を端から端まで学習可能にし、その減衰が推論時のKV剪定基準として働くアーキテクチャ。KV圧縮の効果はあるが、機構は訓練で作るアーキテクチャ変更であり境界。",
-      "source_url": "https://arxiv.org/abs/2610.09051",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-15T23:20:00+09:00",
-      "last_checked_at": "2026-11-15T23:20:00+09:00",
-      "linked_from": [
-        "02-hardware-accelerators",
-        "99-other-inference-systems",
-        "kv-cache-optimization-compression",
-        "選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き"
-      ],
-      "worklist_rank": 282,
-      "worklist_source": "worker-worklist-00.json discovery_review"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2610.22543",
       "identity_tokens": [
@@ -240,5 +172,15 @@
   "parent_run_key": "muse-discovery-20261115-marathon-b05",
   "chunk_index": 2,
   "chunk_count": 2,
-  "source_record_count": 30
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261115-marathon-b05--chunk-0002-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2607.01308",
+    "arXiv:2607.03050",
+    "arXiv:2607.05475",
+    "arXiv:2609.01224",
+    "arXiv:2609.18916",
+    "arXiv:2609.30950",
+    "arXiv:2610.22543"
+  ]
 }

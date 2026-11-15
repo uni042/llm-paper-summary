@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ForestPrune: High-Ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling",
+      "source_url": "https://arxiv.org/abs/2603.22911",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to the great saving of computation and memory overhead, token compression has become a research hot-spot for MLLMs and achieved remarkable progress in imagelanguage tasks. However, for the video, existing methods still fall short of high-ratio token compression. We attribute this shortcoming to the insufficient modeling of temporal and continual video content, and propose a novel and training-free token pruning method for video MLLMs, termed ForestPrune, which achieves effective and highratio pruning via Spatial-temporal Forest Modeling. In practice, ForestPrune construct token forests across video frames based on the semantic, spatial and temporal constraints, making an overall comprehension of videos. Afterwards, ForestPrune evaluates the importance of token trees and nodes based on tree depth and node roles, thereby obtaining a globally optimal pruning decision. To validate ForestPrune, we apply it to two representative video MLLMs, namely LLaVA-Video and LLaVA-OneVision, and conduct extensive experiments on a bunch of video benchmarks. The experimental results not only show the great effectiveness for video MLLMs, e.g., retaining 95.8% average accuracy while reducing 90% tokens for LLaVA-OneVision, but also show its superior performance and efficiency than the compared token compression methods, e.g., +10.1% accuracy on MLVU and -81.4% pruning time than FrameFusion on LLaVA-Video. Our code is given in the ForestPrune.",
+      "identifiers": [
+        "SemanticScholar:88b85af6d96d51a07218256ab6893bcf281e98b4"
+      ],
+      "semantic_scholar_id": "88b85af6d96d51a07218256ab6893bcf281e98b4",
+      "canonical_id": "arXiv:2603.22911",
+      "arxiv_id": "2603.22911",
+      "doi": "10.1109/CVPRF71909.2026.00799",
+      "authors": [
+        "Shao-Bo Ju",
+        "Baiyang Song",
+        "Tao Chen",
+        "Jia-Peng Zhang",
+        "Qiong Wu",
+        "Chaokun Chang",
+        "Huai-Xi Wang",
+        "Yi-Yi Zhou",
+        "Rong-Rong Ji"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ビデオMLLM向け学習不要トークン剪定ForestPrune。意味・空間・時間の制約でフレームをまたぐトークンフォレストを構築し、木の深さとノード役割で重要度を評価して大域的に剪定を決める。高圧縮率でも時間的・連続的な内容を保つ視覚トークン削減機構。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When to Commit? Towards Variable-Size Self-Contained Blocks for Discrete Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.23994",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models (dLLMs) enable parallel token updates with bidirectional attention, yet practical generation typically adopts blockwise semi-autoregressive decoding. This switch creates a training-inference mismatch: training denoises with full-sequence context, while inference commits tokens within a bounded block without future context. Therefore, decoding with fixed-size or heuristic-based blocks can lead to premature token commitments, as decisions are made without full access to future context that could alter those choices. Motivated by this, we propose self-containedness as a principled criterion for block commitment. A block is self-contained if its predictions remain consistent with Future-Aware (FA) or without No-Future (NF) access to future context, reframing block boundary selection as a test of self-containedness rather than a heuristic choice. Based on this principle, we introduce Variable-size Self-contained Blocks (VSB) for dLLMs. VSB scores and selects block boundaries using the divergence between token-level predictive distributions under NF and FA conditioning, which quantifies how predictions would change if future context were revealed. We provide theoretical justification linking self-containedness to predictive consistency, and extensive experiments validate VSB's efficacy over fixed-size and heuristic blockwise decoding.",
+      "identifiers": [
+        "SemanticScholar:bc4827f89593011927c5d59673bfd8e4ed64be08"
+      ],
+      "semantic_scholar_id": "bc4827f89593011927c5d59673bfd8e4ed64be08",
+      "canonical_id": "arXiv:2604.23994",
+      "arxiv_id": "2604.23994",
+      "doi": "10.48550/arXiv.2604.23994",
+      "authors": [
+        "D. Wang",
+        "Rui-Hong Qiu",
+        "Zifei Huang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": null
+      },
+      "reason": "離散拡散言語モデルの可変サイズブロックコミット。将来文脈の有無で予測が変わらない自己完結性をブロック境界の原理的基準とし、固定サイズやヒューリスティクスでなく自己完結な単位でトークンを確定するデコード方式。拡散デコードの推論機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-70d0c1b62bad",
+    "round": "libimp-70d0c1b62bad44fd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 12,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-70d0c1b62bad44fd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-70d0c1b62bad44fd-pre01.json",
+    "receipt": "sha256:dcf172fc84cb9041d033281ff888ebaee6858d57d77046c7c4bf49b8ada31e4f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-70d0c1b62bad",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
