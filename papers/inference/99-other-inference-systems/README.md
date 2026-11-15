@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（872本）
+## 自動生成の論文一覧（873本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2543,6 +2543,10 @@
 - **2025-07 · [Assigning Distinct Roles to Quantized and Low-Rank Matrices Toward Optimal Weight Decomposition](2025-2506.02077-assigning-distinct-roles-to-quantized-and-low-rank-matrices-toward-optim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CALDERAなどの方式はWを量子化行列Qと低ランク行列積LRの和、すなわちW ≈ Q + LRで近似し、Qの量子化とLRの更新を交互に行う。一方、同じ条件のARC-Easy正答率は66.35%から65.49%へ下がり、すべての下流タスクを改善するわけではない。
+
+- **2025-07 · [Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance in Adaptation](2025-2407.17029-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-th.md)**  
+  実装：[✓](https://github.com/xiaocaigou/qbaraqahira) ・ リポジトリ内被引用：0  
+  量子化モデルの低ランク適応が学習不足になる原因を、複雑な入出力と低いランクの不均衡と捉え、平均プーリングで入出力を圧縮してランクを広げることで釣り合いを取り、さらにブロック量子化へ合わせて4ビット推論モデルを直接作れるようにした方式。
 
 - **2025-07 · [A Comprehensive Evaluation on Quantization Techniques for Large Language Models](2025-2507.17417-a-comprehensive-evaluation-on-quantization-techniques-for-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
