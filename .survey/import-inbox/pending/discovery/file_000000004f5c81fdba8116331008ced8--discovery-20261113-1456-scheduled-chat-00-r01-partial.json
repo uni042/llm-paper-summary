@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261113-1456-scheduled-chat-00/r01",
+  "reference_main_sha": "6246a42dcbd77d9ee064669f2d0d8a949b1f358b",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.14277",
+      "identity_tokens": ["arxiv:2606.14277"],
+      "title": "One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs",
+      "reason": "ALVTSは重要な視覚トークンだけを層ごとに処理し、非重要トークンを当該層でスキップさせ、次層前に再統合する。従来の不可逆剪定と異なり後続層が別領域を参照できる。LLaVA-1.5、LLaVA-NeXT、Qwen2.5-VLで評価し、著者は89%トークン圧縮で元精度96.7%保持を報告。マルチモーダル推論の計算削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2606.14277",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T14:56:32+09:00",
+      "last_checked_at": "2026-11-13T14:56:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 216
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35023",
+      "identity_tokens": ["arxiv:2610.35023"],
+      "title": "BellowsKV: One Latent for Many Layers, Expanded on Demand",
+      "reason": "隣接Transformer層のhidden stateの類似性を利用して層横断で単一潜在表現を保持し、層固有射影でKVを再構成する学習不要のKVキャッシュ圧縮。低精度量子化と共有evictionを組み合わせ、Llama-3.1-8B、Mistral-7B、Qwen2.5-7Bで著者は3.6倍圧縮時に元精度約99%、13～14倍圧縮時に97～98%保持を報告。推論メモリ効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2610.35023",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-13T14:56:32+09:00",
+      "last_checked_at": "2026-11-13T14:56:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 219
+    }
+  ]
+}
