@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261116-0402-scheduled-chat-00/r01",
+  "reference_main_sha": "3b70119523d6533864b5eda53b69a4dc17ac1a42",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02681",
+      "identity_tokens": [
+        "arXiv:2511.02681",
+        "DOI:10.48550/arXiv.2511.02681"
+      ],
+      "title": "Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes",
+      "reason": "一次abstractでは微調整後の低ランクかつ疎なパラメータ更新を選択的に圧縮し、同一ストレージ予算で精度を改善する。主評価は複数タスクのfine-tuned modelの保存効率と精度で、推論レイテンシ、KV、servingの直接評価は確認できないため境界的。",
+      "source_url": "https://arxiv.org/abs/2511.02681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:03:01.013403+09:00",
+      "last_checked_at": "2026-11-16T04:03:01.013403+09:00",
+      "linked_from": []
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08864",
+      "identity_tokens": [
+        "arXiv:2602.08864",
+        "DOI:10.48550/arXiv.2602.08864"
+      ],
+      "title": "Understanding Dynamic Compute Allocation in Recurrent Transformers",
+      "reason": "一次abstractでtoken単位の可変深度計算をANIRA recurrent Transformerで評価し、計算割当が難易度に沿う場合と未見入力長への外挿失敗を検証。推論計算配分と直接関連するが主貢献は制御された解析であり、実サービングの速度/費用削減が確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.08864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:03:01.013403+09:00",
+      "last_checked_at": "2026-11-16T04:03:01.013403+09:00",
+      "linked_from": []
+    }
+  ]
+}
