@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-0903-scheduled-chat-00/r01",
+  "reference_main_sha": "2bde6b67ab84d62013bac1cd34c75e09de3ae8fb",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.04956",
+      "identity_tokens": [
+        "arxiv:2605.04956"
+      ],
+      "title": "KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels",
+      "reason": "176タスク・15カテゴリでLLM生成Triton GPUカーネルの正しさとハードウェア効率を評価。正しいカーネルの46.6%がPyTorch eagerより遅く、量子化タスク成功0/30という結果からGPUカーネル自動最適化の性能制約を実証。推論基盤のkernel generationおよびhardware efficiencyに直接関係する。",
+      "source_url": "https://arxiv.org/abs/2605.04956",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T09:03:52+09:00",
+      "last_checked_at": "2026-11-15T09:03:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 361
+    }
+  ]
+}
