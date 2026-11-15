@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-1900-scheduled-chat-00/r02",
+  "reference_main_sha": "89982bd1d8ce198a19387b4b386a89d808768b95",
+  "candidate_inventory": 571,
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10946",
+      "identity_tokens": [
+        "arXiv:2604.10946",
+        "DOI:10.48550/arXiv.2604.10946"
+      ],
+      "title": "Learning to Adapt: In-Context Learning Beyond Stationarity",
+      "reason": "非定常回帰でGated Linear Attentionの学習可能な近時バイアスと適応性を理論解析。LLMの推論効率・速度を直接評価する研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2604.10946",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 262
+    }
+  ],
+  "round_complete": false,
+  "identity_uniqueness_global": "not_fully_verified",
+  "skipped": [
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "reason": "no completed Library research manuscript found; receipt follow-up unverified; defer"
+    },
+    {
+      "canonical_id": "arXiv:2510.17196",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2505.07861",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2508.08289",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2404.04759",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2509.17428",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2606.29223",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2309.05210",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "reason": "retry_deferred_no_new_evidence; method_chars 553 < 700; primary re-audit pending"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ETAI68332.2026.11485199",
+      "reason": "primary abstract not verified; rank 253 deferred"
+    }
+  ],
+  "next_rank": 263,
+  "next_identity": "arXiv:2604.15764",
+  "returned_research_count": 11,
+  "returned_research_later_receipts_verified": false,
+  "library_global_sha256_verified": false
+}
