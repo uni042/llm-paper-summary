@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c640b917f71aff4078b6f08b09d7c23aa95c1aa8597e111d1787e06f11537a61",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/file_0000000071ec81f59b7fa3659622581e--2022-2210.17114-quala-minilm-research-20261113-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2210.17114",
+  "worker_completed_at": "2026-11-13T04:44:00+09:00",
+  "worker_run_key": "20261113-0445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3156,
+    "body_paragraphs": 15,
+    "method_chars": 1101,
+    "method_paragraphs": 5,
+    "evaluation_chars": 114,
+    "limitation_chars": 472,
+    "insufficiency_flags": [
+      "評価説明量 114 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 114 < 500"
+  ],
+  "processed_at": "2026-11-15T22:23:28+00:00"
+}
