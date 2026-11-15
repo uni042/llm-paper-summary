@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-1503-scheduled-chat-00/r01",
+  "reference_main_sha": "aa688df07f79bf0b96f8b195da123c49c8ecd1c0",
+  "record_count": 3,
+  "records": [
+    {"classification":"accept","canonical_id":"arXiv:2302.10360","identity_tokens":["arxiv:2302.10360"],"title":"Optical Transformers","reason":"光学行列ベクトル積をTransformer演算へ適用し、小規模光学試作実験と実験に基づくシミュレーションでエネルギー効率を評価。著者は光学MACのエネルギーがTransformer幅dに対し1/dでスケールするとし、将来の大規模光学ハードウェアで最大100倍以上の効率改善可能性を試算。実測大規模LLM高速化ではないが推論アクセラレータの省電力化に直接関係する。","source_url":"https://arxiv.org/abs/2302.10360","body_check":"primary_arxiv_abstract_read; full_body_not_read","first_checked_at":"2026-11-15T15:03:00+09:00","last_checked_at":"2026-11-15T15:03:00+09:00","linked_from":[],"worklist_rank":376},
+    {"classification":"accept","canonical_id":"arXiv:2502.00046","identity_tokens":["arxiv:2502.00046"],"title":"Optimization Strategies for Enhancing Resource Efficiency in Transformers & Large Language Models","reason":"Transformer/LLMの量子化、蒸留、剪定を比較し、計算・エネルギー効率と精度のトレードオフを整理する短報。4-bit量子化と蒸留・構造化剪定の併用を取り上げ、最適化手法比較の枠組みを提案する。独自の大規模実測優位は要旨から確認できないが、LLM圧縮・推論効率の系統整理に直接関係する。","source_url":"https://arxiv.org/abs/2502.00046","body_check":"primary_arxiv_abstract_read; full_body_not_read","first_checked_at":"2026-11-15T15:03:00+09:00","last_checked_at":"2026-11-15T15:03:00+09:00","linked_from":[],"worklist_rank":378},
+    {"classification":"accept","canonical_id":"arXiv:2511.13274","identity_tokens":["arxiv:2511.13274"],"title":"KForge: Program Synthesis for Diverse AI Hardware Accelerators","reason":"LLMベースの生成エージェントと性能分析エージェントがコンパイル・正当性・プロファイリング結果を用いてGPUカーネルを反復最適化する。NVIDIA CUDAとApple Metalでプラットフォーム横断のプログラム合成を実証し、推論カーネル自動最適化の研究対象として直接関係する。要旨には具体的なLLM全体速度改善率はない。","source_url":"https://arxiv.org/abs/2511.13274","body_check":"primary_arxiv_abstract_read; full_body_not_read","first_checked_at":"2026-11-15T15:03:00+09:00","last_checked_at":"2026-11-15T15:03:00+09:00","linked_from":[],"worklist_rank":383}
+  ]
+}
