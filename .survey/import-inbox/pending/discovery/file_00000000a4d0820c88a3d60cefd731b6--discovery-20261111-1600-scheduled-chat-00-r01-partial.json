@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-1600-scheduled-chat-00/r01",
+  "reference_main_sha": "c8d6d2740f8440583515dc3065c6e93ab07062ba",
+  "record_count": 6,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32759",
+      "identity_tokens": [
+        "arxiv:2609.32759"
+      ],
+      "title": "The Extender: A Log-Structured Transformer",
+      "reason": "残差更新とは別に小さな拡張ベクトルを層ごとに連結し、attentionのKV投影入力をその連結チャネルに限定する。924Mパラメータ、幅1664でMHA比の永続attentionメモリを104分の1に削減した著者報告。推論時KVメモリ効率に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2609.32759",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T16:00:09+09:00",
+      "last_checked_at": "2026-11-11T16:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03088",
+      "identity_tokens": [
+        "arxiv:2610.03088"
+      ],
+      "title": "Coda: Exploiting Admission Flexibility for Coding-Agent Serving",
+      "reason": "coding-agentのKV状態の階層別配置、context長の混在、workerルーティングを考慮した二段階admission制御。単一/複数worker実験で出力トークンthroughput平均20.3%、SLO準拠throughput平均70.5%改善を著者報告。LLM servingに直接関係。",
+      "source_url": "https://arxiv.org/abs/2610.03088",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T16:00:09+09:00",
+      "last_checked_at": "2026-11-11T16:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23314",
+      "identity_tokens": [
+        "arxiv:2609.23314"
+      ],
+      "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+      "reason": "attention sinkが弱いモデルに対してvalueベクトルの平均からのL2偏差を使うKV eviction。LongBench 4k cacheでdense性能の92%保持、既存最良baselineは83%という著者報告。KV圧縮の直接的手法。",
+      "source_url": "https://arxiv.org/abs/2609.23314",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T16:00:09+09:00",
+      "last_checked_at": "2026-11-11T16:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22911",
+      "identity_tokens": [
+        "arxiv:2603.22911"
+      ],
+      "title": "ForestPrune: High-ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling",
+      "reason": "フレーム横断の意味・空間・時間関係からtoken forestを構築し重要度でvideo tokenを削減。LLaVA-OneVisionで90%のtoken削減時に平均精度95.8%を保持と報告。マルチモーダルLLM推論計算量に関係。",
+      "source_url": "https://arxiv.org/abs/2603.22911",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T16:00:09+09:00",
+      "last_checked_at": "2026-11-11T16:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28577",
+      "identity_tokens": [
+        "arxiv:2610.28577"
+      ],
+      "title": "Cache Engineering for Agents",
+      "reason": "agentがdrop/reposition操作で履歴の再prefillなしにactive KVを制御するAKV serving engine。要約方式比で平均コスト27.7%減、P95要求遅延最大1.5倍高速化を報告。agent servingとKV管理に直接関係。",
+      "source_url": "https://arxiv.org/abs/2610.28577",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T16:00:09+09:00",
+      "last_checked_at": "2026-11-11T16:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09342",
+      "identity_tokens": [
+        "arxiv:2610.09342"
+      ],
+      "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+      "reason": "expert間の共有低ランク基底によるdata-free重み再構成を提案し、routingとexpert構造を保持。16B～122Bの5種類のMoEでpruning/merging/再構成の比較手法を上回ると報告。MoE重みメモリ削減に直接関係。",
+      "source_url": "https://arxiv.org/abs/2610.09342",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-11T16:00:09+09:00",
+      "last_checked_at": "2026-11-11T16:00:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    }
+  ]
+}
