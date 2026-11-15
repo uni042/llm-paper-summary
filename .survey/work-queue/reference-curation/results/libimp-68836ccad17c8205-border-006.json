@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68836ccad17c8205-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.15892",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.15892",
+    "identity_tokens": [
+      "arXiv:2601.15892"
+    ],
+    "reason": "コード向け拡散言語モデルStable-DiffCoder。ブロック拡散の継続事前学習とノイズスケジュールで、同一アーキテクチャ・同一データの自己回帰版を上回る品質を示す研究。拡散デコードという推論パラダイムには関わるが、貢献の実体は訓練手法とモデリング品質であり、推論機構の提示はない。",
+    "first_checked_at": "2026-11-15T21:43:02+00:00",
+    "last_checked_at": "2026-11-15T21:43:02+00:00",
+    "linked_from": [
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "parallel-and-non-autoregressive-decoding",
+      "speculative-parallel-decoding",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model"
+  },
+  "processed_at": "2026-11-15T21:43:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

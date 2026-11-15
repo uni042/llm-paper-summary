@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68836ccad17c8205-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.12928",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.12928",
+    "identity_tokens": [
+      "arXiv:2604.12928"
+    ],
+    "reason": "全二重音声言語モデルの事実性を上げる非同期検索（MoshiRAG）。応答開始から核心情報の提示までの時間差に検索を隠す設計は推論時の遅延隠蔽として工夫があるが、主貢献は検索による事実性向上であり、推論システム機構としての新規性は補助的。",
+    "first_checked_at": "2026-11-15T21:43:01+00:00",
+    "last_checked_at": "2026-11-15T21:43:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models"
+  },
+  "processed_at": "2026-11-15T21:43:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

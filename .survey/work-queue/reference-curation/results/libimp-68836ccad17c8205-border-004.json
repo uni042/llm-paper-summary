@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68836ccad17c8205-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.08382",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.08382",
+    "identity_tokens": [
+      "arXiv:2602.08382"
+    ],
+    "reason": "長文文脈推論をチャンク圧縮メモリと選択的想起で行う枠組み。圧縮器・ゲーティング・推論器を強化学習で共同最適化する学習済みモデルアーキテクチャであり、推論メモリの考え方は含むが、システム機構というより訓練で作るモデル側の解法。Researchの根拠としては境界。",
+    "first_checked_at": "2026-11-15T21:43:01+00:00",
+    "last_checked_at": "2026-11-15T21:43:01+00:00",
+    "linked_from": [
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "agentic inference / persistent memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning"
+  },
+  "processed_at": "2026-11-15T21:43:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

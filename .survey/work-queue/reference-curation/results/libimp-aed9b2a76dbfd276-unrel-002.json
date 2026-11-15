@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aed9b2a76dbfd276-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14005",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14005",
+    "identity_tokens": [
+      "arXiv:2609.14005"
+    ],
+    "reason": "音声言語基盤モデルStepAudio 3 Realtimeの技術報告。発話と並行して私的推論を回すThink-While-Speakingなど遅延への工夫は含むが、実体はモデルの設計と訓練の発表であり、推論システム機構の提案ではない。対象外。",
+    "first_checked_at": "2026-11-15T21:43:16+00:00",
+    "last_checked_at": "2026-11-15T21:43:16+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "title": "StepAudio 3 Realtime Technical Report"
+  },
+  "processed_at": "2026-11-15T21:43:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aed9b2a76dbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7492c623c58ff0c9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.18137",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.18137",
+    "identity_tokens": [
+      "arXiv:2405.18137"
+    ],
+    "reason": "LLM量子化の悪用に関するセキュリティ研究。良性に見える全精度モデルが量子化後に有害化する3段階の攻撃枠組みを示すもので、量子化は攻撃の媒体として扱われており、推論効率化の技術や機構の提案ではない。対象外。",
+    "first_checked_at": "2026-11-15T21:43:10+00:00",
+    "last_checked_at": "2026-11-15T21:43:10+00:00",
+    "linked_from": [
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+    ],
+    "title": "Exploiting LLM Quantization"
+  },
+  "processed_at": "2026-11-15T21:43:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7492c623c58f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

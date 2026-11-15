@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-603f140dadfe052d-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.13768",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.13768",
+    "identity_tokens": [
+      "arXiv:2605.13768"
+    ],
+    "reason": "高レート量子化行列積の理論解析（第II部）。重みのみ学習後量子化を重み付き平均二乗誤差の情報源符号化として捉え、共分散が既知の場合の逆ウォーターフィリングで座標間のレート配分を決め、GPTQ系の均等配分を改善する。量子化の機構に触れるが、貢献は情報理論的な解析であり境界。",
+    "first_checked_at": "2026-11-15T21:42:58+00:00",
+    "last_checked_at": "2026-11-15T21:42:58+00:00",
+    "linked_from": [
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "High-Rate Quantized Matrix Multiplication II"
+  },
+  "processed_at": "2026-11-15T21:42:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-603f140dadfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

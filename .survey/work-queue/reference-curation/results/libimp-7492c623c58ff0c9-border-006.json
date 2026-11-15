@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7492c623c58ff0c9-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.04096",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.04096",
+    "identity_tokens": [
+      "arXiv:2602.04096"
+    ],
+    "reason": "拡散言語モデル向け推論時リビジョンCORE。文脈摂動への感度で文脈脆弱なトークンを特定し再マスクする学習不要の枠組みで、生成品質を上げる。デコード時のアルゴリズムではあるが目的は品質改善で、計算量はむしろ増える方向であり、効率化機構ではない。",
+    "first_checked_at": "2026-11-15T21:43:09+00:00",
+    "last_checked_at": "2026-11-15T21:43:09+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CORE: Context-Robust Remasking for Diffusion Language Models"
+  },
+  "processed_at": "2026-11-15T21:43:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7492c623c58f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

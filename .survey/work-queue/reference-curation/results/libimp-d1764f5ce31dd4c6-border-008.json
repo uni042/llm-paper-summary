@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1764f5ce31dd4c6-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.26118",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.26118",
+    "identity_tokens": [
+      "arXiv:2605.26118"
+    ],
+    "reason": "Intel GPU向けLLM駆動カーネル最適化Xe-Forge。機能的に正しいTritonカーネルへ、アルゴリズム再構成から演算子融合、GPU固有調整までの最大9段の最適化をLLMパイプラインで適用する。推論カーネルの生産には関わるが、貢献の実体はコード変換の道具立てであり実行時機構ではない。境界。",
+    "first_checked_at": "2026-11-15T21:43:20+00:00",
+    "last_checked_at": "2026-11-15T21:43:20+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Xe-Forge: Multi-Stage LLM-Powered Kernel Optimization for Intel GPU"
+  },
+  "processed_at": "2026-11-15T21:43:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1764f5ce31d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

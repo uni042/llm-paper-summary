@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96fc76a04bf45f8c-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.13486",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.13486",
+    "identity_tokens": [
+      "arXiv:2605.13486"
+    ],
+    "reason": "メモリ探索エージェント向け反省的経験R2-Mem。過去の探索軌跡の良し悪しをルーブリック評価で学び、検索行動の質を上げる枠組み。対象はエージェントの検索品質であり、推論効率の機構ではない。対象外。",
+    "first_checked_at": "2026-11-15T21:43:14+00:00",
+    "last_checked_at": "2026-11-15T21:43:14+00:00",
+    "linked_from": [
+      "Inference / Agent Memory and Context Management",
+      "agentic inference / persistent memory"
+    ],
+    "title": "R^2-Mem: Reflective Experience for Memory Search"
+  },
+  "processed_at": "2026-11-15T21:43:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96fc76a04bf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

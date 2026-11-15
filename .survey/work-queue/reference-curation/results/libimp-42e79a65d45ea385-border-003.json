@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42e79a65d45ea385-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.02032",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.02032",
+    "identity_tokens": [
+      "arXiv:2608.02032"
+    ],
+    "reason": "循環状態上の復号注意DART。Mamba-2の状態空間双対性でSSM状態を圧縮された連想KVキャッシュと見なし、トークン条件付きキーの復号を加えて、循環圧縮と注意型検索を単一メモリ表現で両立させるアーキテクチャ提案。推論メモリへの含意はあるが、モデルアーキテクチャの研究であり境界。",
+    "first_checked_at": "2026-11-15T21:42:52+00:00",
+    "last_checked_at": "2026-11-15T21:42:52+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling"
+  },
+  "processed_at": "2026-11-15T21:42:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42e79a65d45e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

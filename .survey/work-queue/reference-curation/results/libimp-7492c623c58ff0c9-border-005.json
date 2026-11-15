@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7492c623c58ff0c9-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21919",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21919",
+    "identity_tokens": [
+      "arXiv:2601.21919"
+    ],
+    "reason": "マルチエージェント強化学習による思考連鎖の自己圧縮SCMA。推論の冗長チャンクを分割エージェントと評価エージェントで特定し、重要度重み付き長さペナルティで推論エージェントを訓練する。狙いは推論オーバーヘッド削減だが、機構の実体は訓練側の報酬設計であり、推論時の機構は提示されない。境界。",
+    "first_checked_at": "2026-11-15T21:43:08+00:00",
+    "last_checked_at": "2026-11-15T21:43:08+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning"
+  },
+  "processed_at": "2026-11-15T21:43:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7492c623c58f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

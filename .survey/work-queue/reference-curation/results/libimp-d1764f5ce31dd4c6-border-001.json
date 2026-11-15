@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1764f5ce31dd4c6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2603.21465",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2603.21465",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.21465",
+      "arXiv:2603.21465"
+    ],
+    "reason": "Tritonカーネル生成LLMの学習基盤DRTriton。演算子空間を一様に覆う合成データ生成、変換成功と実行速度を分離したカリキュラム強化学習、テスト時探索で、PyTorchから最適化Tritonカーネルへの変換を学ばせる。推論カーネルの生産性には関わるが、貢献の実体はコード生成モデルの訓練基盤であり、実行時機構そのものではない。境界。",
+    "first_checked_at": "2026-11-15T21:43:19+00:00",
+    "last_checked_at": "2026-11-15T21:43:19+00:00",
+    "linked_from": [
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "inference-systems",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DRTriton: Large-Scale Synthetic Data Reinforcement Learning for Triton Kernel Generation"
+  },
+  "processed_at": "2026-11-15T21:43:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1764f5ce31d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

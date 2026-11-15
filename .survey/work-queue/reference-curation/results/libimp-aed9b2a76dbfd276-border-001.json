@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aed9b2a76dbfd276-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.24904",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.24904",
+    "identity_tokens": [
+      "arXiv:2607.24904"
+    ],
+    "reason": "コーデックネイティブなストリーミング基盤モデルMage-VL。動画コーデックの動きベクトルと残差エネルギーで動的領域だけを選ぶトークナイザにより視覚トークンを75%以上削減する。トークン削減は実在の効率機構だが、貢献の実体は基盤モデルとその大規模訓練であり境界。",
+    "first_checked_at": "2026-11-15T21:43:15+00:00",
+    "last_checked_at": "2026-11-15T21:43:15+00:00",
+    "linked_from": [
+      "11-llm-serving-scheduling-disaggregation",
+      "Inference / Multimodal Long-Context Memory Compression",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model"
+  },
+  "processed_at": "2026-11-15T21:43:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aed9b2a76dbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-293fd7a7097de145-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05023",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05023",
+    "identity_tokens": [
+      "arXiv:2605.05023"
+    ],
+    "reason": "専門家記述の注意カーネルをLLMで適応させるCuBridge。カーネルを持ち上げ・転移・下ろしの手順でIR経由に変換し、PyTorch仕様から生成・検証する枠組み。推論カーネルを作る道具立てとしては関連するが、貢献の実体はコード変換パイプラインであり、実行時機構そのものではない。",
+    "first_checked_at": "2026-11-15T21:42:49+00:00",
+    "last_checked_at": "2026-11-15T21:42:49+00:00",
+    "linked_from": [
+      "02-hardware-accelerators",
+      "03-attention-kernels",
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels"
+  },
+  "processed_at": "2026-11-15T21:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-293fd7a7097d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

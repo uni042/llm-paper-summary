@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7492c623c58ff0c9-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.12113",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.12113",
+    "identity_tokens": [
+      "arXiv:2602.12113"
+    ],
+    "reason": "適応的反省ペナルティと長さペナルティを協調させる強化学習ARLCP。不要な反省ステップと過剰な思考長を訓練時の報酬で抑え、効率的な推論経路を学ばせる。目的は推論トークン削減だが、提示される機構は訓練側のペナルティ設計にとどまり、推論時の仕組みではない。境界。",
+    "first_checked_at": "2026-11-15T21:43:09+00:00",
+    "last_checked_at": "2026-11-15T21:43:09+00:00",
+    "linked_from": [
+      "Conditional Computation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stop Unnecessary Reflection: Training LRMs for Efficient Reasoning with Adaptive Reflection and Length Coordinated Penalty"
+  },
+  "processed_at": "2026-11-15T21:43:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7492c623c58f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

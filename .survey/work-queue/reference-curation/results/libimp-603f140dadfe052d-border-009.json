@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-603f140dadfe052d-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.22967",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.22967",
+    "identity_tokens": [
+      "arXiv:2605.22967"
+    ],
+    "reason": "拡散言語モデル向け学習型リレー表現。デノイズの各ラウンドで捨てられるマスク位置の内部計算を、トークンごとの微分可能なチャネルで将来のステップへ伝播させる表現を、切り詰めた時間方向逆伝播で学習する。推論の再計算削減が狙いだが、機構は学習で作る表現であり境界。",
+    "first_checked_at": "2026-11-15T21:42:59+00:00",
+    "last_checked_at": "2026-11-15T21:42:59+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learned Relay Representations for Forward-Thinking Discrete Diffusion Models"
+  },
+  "processed_at": "2026-11-15T21:42:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-603f140dadfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

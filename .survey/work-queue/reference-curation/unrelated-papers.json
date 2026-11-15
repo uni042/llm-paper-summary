@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-02T08:58:52+00:00",
-  "record_count": 12675,
+  "updated_at": "2026-11-15T21:43:22+00:00",
+  "record_count": 12699,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182253,6 +182253,377 @@
       "last_checked_at": "2026-11-02T08:58:52+00:00",
       "linked_from": [],
       "title": "Think Before You Act: Decision Gate for LLM Agents"
+    },
+    "arXiv:2605.05227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05227",
+      "identity_tokens": [
+        "arXiv:2605.05227"
+      ],
+      "reason": "LLM訓練のデータキュレーションをオンライン再重み付けにするADAPT。事前学習と微調整のサンプル重要度を類似度ベースの品質信号で動的に変える訓練手法であり、推論への適用はない。学習側のみの研究は対象外。",
+      "first_checked_at": "2026-11-15T21:42:50+00:00",
+      "last_checked_at": "2026-11-15T21:42:50+00:00",
+      "linked_from": [
+        "モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "異種GPU・事前充填/復号分離サービング"
+      ],
+      "title": "Rethinking Data Curation in LLM Training: Online Reweighting Offers Better Generalization than Offline Methods"
+    },
+    "arXiv:2605.20755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20755",
+      "identity_tokens": [
+        "arXiv:2605.20755"
+      ],
+      "reason": "全二重音声・言語・行動モデルDuplexSLA。聞く・話す・計画・ツール呼び出しを160msチャンクの共有時計で同時デコードする基盤モデルの設計と訓練が中核で、推論システム機構の提案はない。モデル自体の発表であり対象外。",
+      "first_checked_at": "2026-11-15T21:42:50+00:00",
+      "last_checked_at": "2026-11-15T21:42:50+00:00",
+      "linked_from": [],
+      "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action"
+    },
+    "arXiv:2602.14917": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14917",
+      "identity_tokens": [
+        "arXiv:2602.14917"
+      ],
+      "reason": "最良優先探索で訓練時の推論チェーンを木に組織化し、最も短い正解列を選んで強化学習で大規模推論モデルに簡潔な回答を学習させる学習アルゴリズムの提案。出力の短縮は学習されたモデル挙動の結果であり、推論時のデコード・サービング・メモリ機構への技術的貢献はないため、凍結範囲（学習単独の最適化）に該当する。",
+      "first_checked_at": "2026-11-15T21:42:51+00:00",
+      "last_checked_at": "2026-11-15T21:42:51+00:00",
+      "linked_from": [],
+      "title": "BFS-PO: Best-First Search for Large Reasoning Models"
+    },
+    "arXiv:2606.19475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19475",
+      "identity_tokens": [
+        "arXiv:2606.19475"
+      ],
+      "reason": "拡散言語モデルの実験的分析。8つの拡散LMを8つのベンチマークで統一条件に近づけて比較し、能力とトレードオフを整理する。対象はモデル能力の評価であり、推論システムの技術や機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:42:53+00:00",
+      "last_checked_at": "2026-11-15T21:42:53+00:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "title": "Diffusion Language Models: An Experimental Analysis"
+    },
+    "arXiv:2607.20466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20466",
+      "identity_tokens": [
+        "arXiv:2607.20466"
+      ],
+      "reason": "自律TPUカーネル最適化のベンチマークJAXBench。AI生成カーネルの最適化手法を競わせるための課題集と専門家の上限ベースラインを提供する。対象はカーネル最適化手法の能力評価であり、推論システムの技術や機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:42:55+00:00",
+      "last_checked_at": "2026-11-15T21:42:55+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "kernel-runtime-compilation",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "JAXBench: Benchmarking Autonomous TPU Kernel Optimization"
+    },
+    "arXiv:2608.22516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22516",
+      "identity_tokens": [
+        "arXiv:2608.22516"
+      ],
+      "reason": "長尺ビデオ質問応答の証拠監査ベンチマークVES-BenchとエージェントTRACE。答えが依存する証拠区間を復号フレームが覆っているかを監査する評価と、証拠束を育てる訓練不要エージェントの提案。主眼は回答の証拠完全性という能力評価であり、推論効率の機構ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:42:56+00:00",
+      "last_checked_at": "2026-11-15T21:42:56+00:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression"
+      ],
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding"
+    },
+    "arXiv:2604.18131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18131",
+      "identity_tokens": [
+        "arXiv:2604.18131"
+      ],
+      "reason": "報酬なし自己進化エージェントの訓練。未知環境で自発的に探索・要約して下流タスクの成功率を上げる内的メタ進化能力を、結果ベース報酬で訓練する。エージェント能力の学習が中核で、推論システムの効率機構ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:00+00:00",
+      "last_checked_at": "2026-11-15T21:43:00+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "agentic inference / persistent memory"
+      ],
+      "title": "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration"
+    },
+    "arXiv:2604.24351": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24351",
+      "identity_tokens": [
+        "arXiv:2604.24351"
+      ],
+      "reason": "制御可能拡散の統合プラグイン基盤Diffusion Templates。バックボーンごとに分断された制御手法を、能力表現への写像・キャッシュ・注入パイプラインで統一する枠組み。対象は画像生成の制御基盤であり、LLM推論システムの効率機構ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:00+00:00",
+      "last_checked_at": "2026-11-15T21:43:00+00:00",
+      "linked_from": [
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "LLM Serving / Scheduling / Disaggregation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion"
+    },
+    "arXiv:2607.06540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06540",
+      "identity_tokens": [
+        "arXiv:2607.06540"
+      ],
+      "reason": "全二重音声言語モデルLychee-FD。音響と意味の勾配競合という学習 dynamics の分析と、深層でのモダリティ分離というモデルアーキテクチャの提案が中核で、推論効率やサービング機構への貢献は要旨に示されていない。モデル自体の改良であり対象外。",
+      "first_checked_at": "2026-11-15T21:43:03+00:00",
+      "last_checked_at": "2026-11-15T21:43:03+00:00",
+      "linked_from": [],
+      "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs"
+    },
+    "arXiv:2512.14256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.14256",
+      "identity_tokens": [
+        "arXiv:2512.14256"
+      ],
+      "reason": "ウェハースケールチップ上のLLM訓練向けテンソル分割マッピングTEMP。テンソルストリーム分割とトポロジ配慮マッピングでオンチップメモリ制約を緩和するが、対象は一貫して訓練であり、推論への具体的な適用は要旨に示されていない。学習単独の高速化は凍結範囲。",
+      "first_checked_at": "2026-11-15T21:43:03+00:00",
+      "last_checked_at": "2026-11-15T21:43:03+00:00",
+      "linked_from": [
+        "Ring Attention / sequence parallelism / exact distributed attention",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "serving-scheduling",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips"
+    },
+    "arXiv:2605.04956": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04956",
+      "identity_tokens": [
+        "arXiv:2605.04956"
+      ],
+      "reason": "LLM生成GPUカーネルのベンチマークKernelBenchX。176課題15カテゴリで生成手法の正しさとハードウェア効率を測るが、評価対象はLLMのコード生成能力そのものであり、推論システムの技術や機構の提案ではない。能力評価のみは対象外。",
+      "first_checked_at": "2026-11-15T21:43:04+00:00",
+      "last_checked_at": "2026-11-15T21:43:04+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "title": "KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels"
+    },
+    "arXiv:2512.13368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13368",
+      "identity_tokens": [
+        "arXiv:2512.13368"
+      ],
+      "reason": "逐次推薦向け疎注意BlossomRec。長期・短期の関心を2種の疎注意パターンで計算しゲートで合成して注意の計算量とメモリを減らす。対象は推薦モデルの注意効率であり、LLM推論システムの研究ではない。異分野応用のため対象外。",
+      "first_checked_at": "2026-11-15T21:43:06+00:00",
+      "last_checked_at": "2026-11-15T21:43:06+00:00",
+      "linked_from": [
+        "inference-systems",
+        "long-context inference / dynamic sparse attention / prefill acceleration",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "疎注意／長文脈学習"
+      ],
+      "title": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations"
+    },
+    "arXiv:2602.19091": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19091",
+      "identity_tokens": [
+        "arXiv:2602.19091"
+      ],
+      "reason": "マルチモーダル検索向け表現強化CREM。学習可能なコーラストークンで情報を集約する圧縮型プロンプト設計により、生成能力を保ちながら埋め込み検索の表現を改善する。圧縮は表現整列のためのもので、推論効率化の機構ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:06+00:00",
+      "last_checked_at": "2026-11-15T21:43:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.09906-generative-representational-instruction-tuning.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+      ],
+      "title": "CREM: Compression-Driven Representation Enhancement for Multimodal Retrieval and Comprehension"
+    },
+    "arXiv:2605.28873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28873",
+      "identity_tokens": [
+        "arXiv:2605.28873"
+      ],
+      "reason": "4ビット量子化ベンチマークの検出可能効果量を事前登録する計画法ノート。対になった二値結果の標本サイズ計算を量子化ベンチの信頼性予算へ適応した統計的方法の提示であり、推論技術やシステム機構の提案ではない。評価方法論のみで対象外。",
+      "first_checked_at": "2026-11-15T21:43:07+00:00",
+      "last_checked_at": "2026-11-15T21:43:07+00:00",
+      "linked_from": [
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Pre-Registering the Detectable Effect: A Paired-MDE Budget for 4-bit Quantization Benchmarks, with a Pilot Audit"
+    },
+    "arXiv:2405.18137": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18137",
+      "identity_tokens": [
+        "arXiv:2405.18137"
+      ],
+      "reason": "LLM量子化の悪用に関するセキュリティ研究。良性に見える全精度モデルが量子化後に有害化する3段階の攻撃枠組みを示すもので、量子化は攻撃の媒体として扱われており、推論効率化の技術や機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:10+00:00",
+      "last_checked_at": "2026-11-15T21:43:10+00:00",
+      "linked_from": [
+        "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+      ],
+      "title": "Exploiting LLM Quantization"
+    },
+    "arXiv:2603.06577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06577",
+      "identity_tokens": [
+        "arXiv:2603.06577"
+      ],
+      "reason": "マスク離散拡散による統合マルチモーダルモデルOmni-Diffusion。テキスト・音声・画像を単一の拡散バックボーンで理解と生成の両方を行うモデルアーキテクチャの提案が中核で、推論効率やサービング機構への貢献は要旨に示されていない。モデル自体の改良であり対象外。",
+      "first_checked_at": "2026-11-15T21:43:10+00:00",
+      "last_checked_at": "2026-11-15T21:43:10+00:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion"
+    },
+    "arXiv:2602.01410": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01410",
+      "identity_tokens": [
+        "arXiv:2602.01410"
+      ],
+      "reason": "サブバイト混合精度の学習基盤SNIP。LLM事前学習の全GEMMへ統計収集に基づく適応的混合精度を適用し、収束と安定性を保つ。対象は一貫して訓練であり、推論への具体的な適用は要旨に示されていない。学習単独の高速化は凍結範囲。",
+      "first_checked_at": "2026-11-15T21:43:14+00:00",
+      "last_checked_at": "2026-11-15T21:43:14+00:00",
+      "linked_from": [
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training"
+    },
+    "arXiv:2605.08467": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08467",
+      "identity_tokens": [
+        "arXiv:2605.08467"
+      ],
+      "reason": "専門級CUDA最適化のベンチマークCUDAHercules。生成されたCUDAコードを人間専門家の最良実装と端から端まで比較する評価課題集。対象はコード生成モデルの能力評価であり、推論システムの技術や機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:14+00:00",
+      "last_checked_at": "2026-11-15T21:43:14+00:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "CUDAHercules: Benchmarking Hardware-Aware Expert-level CUDA Optimization for LLMs"
+    },
+    "arXiv:2605.13486": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13486",
+      "identity_tokens": [
+        "arXiv:2605.13486"
+      ],
+      "reason": "メモリ探索エージェント向け反省的経験R2-Mem。過去の探索軌跡の良し悪しをルーブリック評価で学び、検索行動の質を上げる枠組み。対象はエージェントの検索品質であり、推論効率の機構ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:14+00:00",
+      "last_checked_at": "2026-11-15T21:43:14+00:00",
+      "linked_from": [
+        "Inference / Agent Memory and Context Management",
+        "agentic inference / persistent memory"
+      ],
+      "title": "R^2-Mem: Reflective Experience for Memory Search"
+    },
+    "arXiv:2609.14005": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14005",
+      "identity_tokens": [
+        "arXiv:2609.14005"
+      ],
+      "reason": "音声言語基盤モデルStepAudio 3 Realtimeの技術報告。発話と並行して私的推論を回すThink-While-Speakingなど遅延への工夫は含むが、実体はモデルの設計と訓練の発表であり、推論システム機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:16+00:00",
+      "last_checked_at": "2026-11-15T21:43:16+00:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "title": "StepAudio 3 Realtime Technical Report"
+    },
+    "arXiv:2607.27756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27756",
+      "identity_tokens": [
+        "arXiv:2607.27756"
+      ],
+      "reason": "騒がしい多話者環境向け音声対話モデルCocktail-Talker。応答・傾聴・無視の行動トークンで、複数話者の中での発話要否判断をモデル化する。音声対話モデルの設計と訓練が中核で、推論システム機構の提案はない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:17+00:00",
+      "last_checked_at": "2026-11-15T21:43:17+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO"
+    },
+    "arXiv:2512.05865": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.05865",
+      "identity_tokens": [
+        "arXiv:2512.05865"
+      ],
+      "reason": "解釈可能性のための疎な注意の学習後形成。疎性正則化で注意接続を約0.4%まで落としても事前学習損失を保てることを示し、回路の単純化を分析する。要旨自身が計算効率目的の疎注意とは異なると述べており、狙いは解釈可能性であって推論効率化の機構ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:21+00:00",
+      "last_checked_at": "2026-11-15T21:43:21+00:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "title": "Intrinsically Interpretable Attention via Sparse Post-Training"
+    },
+    "arXiv:2601.17836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17836",
+      "identity_tokens": [
+        "arXiv:2601.17836"
+      ],
+      "reason": "推薦システム向け疎自己注意SparseCTR。長期のユーザ行動列を、個人化と時間変化に合わせた疎注意で効率的にモデル化する。対象は推薦モデルの注意効率であり、LLM推論システムではない。異分野応用のため対象外。",
+      "first_checked_at": "2026-11-15T21:43:22+00:00",
+      "last_checked_at": "2026-11-15T21:43:22+00:00",
+      "linked_from": [
+        "inference-systems",
+        "sparse attention / long-context Transformer",
+        "疎注意／長文脈学習"
+      ],
+      "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction"
+    },
+    "arXiv:2606.03002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03002",
+      "identity_tokens": [
+        "arXiv:2606.03002"
+      ],
+      "reason": "量子化によるSAE特徴損傷の計測研究。パープレキシティが保たれても解釈用スパース自己符号化器の特徴は劣化しうることを、固定したSAEを測定基盤として示す。量子化配置の評価には関わるが、提示はモデル内部表現の分析であり、推論技術や機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-15T21:43:22+00:00",
+      "last_checked_at": "2026-11-15T21:43:22+00:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Perplexity Can Miss SAE Feature Damage Under Quantization"
     }
   }
 }

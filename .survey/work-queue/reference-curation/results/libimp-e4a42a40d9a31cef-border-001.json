@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4a42a40d9a31cef-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.02522",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.02522",
+    "identity_tokens": [
+      "arXiv:2607.02522"
+    ],
+    "reason": "6Gエッジ・クラウドにおけるMoE推論の配置を扱うが、全文精読の結果、貢献の実体はLyapunov最適化と深層強化学習によるネットワーク資源配分・スライシングであり、LLM推論機構（専門家ルーティング、KVキャッシュ、推論スケジューリング等）への直接貢献はない。境界として記録。",
+    "first_checked_at": "2026-11-15T21:43:24+00:00",
+    "last_checked_at": "2026-11-15T21:43:24+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks"
+  },
+  "processed_at": "2026-11-15T21:43:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4a42a40d9a3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
