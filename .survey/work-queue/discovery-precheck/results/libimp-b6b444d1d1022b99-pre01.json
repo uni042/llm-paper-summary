@@ -1,0 +1,429 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b6b444d1d1022b99-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b6b444d1d102",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.00390",
+    "arXiv:2607.20495",
+    "arXiv:2610.05285",
+    "arXiv:2610.06011"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "132f38c2b0ce8caa0ab25edf63f68f8e00b314a1",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-15T12:18:47.149646+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.00390",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.20495",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.05285",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06011",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Zamba2-VL Technical Report",
+      "source_url": "https://arxiv.org/abs/2606.00390",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Zamba2-VL, a suite of vision-language models built on Zamba2, a hybrid language-model architecture combining Mamba2 state-space layers with a small number of shared transformer blocks. Across a broad range of image understanding, reasoning, OCR, grounding, and counting benchmarks, Zamba2-VL is competitive with leading Transformer-based open-weight VLMs of comparable scale, including the Molmo2, Qwen3-VL, and InternVL3.5 families, and substantially outperforms prior SSM-based and hybrid VLMs such as VL-Mamba, Cobra, and mmMamba. Inheriting the near-linear prefill compute and small, near-constant recurrent state of its Zamba2 backbone, Zamba2-VL delivers roughly an order of magnitude lower time-to-first-token (TTFT) than these Transformer baselines at matched parameter scale, with the efficiency gap most pronounced at the smaller 1.2B and 2.7B scales most relevant to on-device and edge deployment. We release three models -- 1.2B, 2.7B, and 7B -- together with inference code at https://huggingface.co/collections/Zyphra/zamba2-vl.",
+      "identifiers": [
+        "SemanticScholar:c1733d726316e7d6bc5fb7d7547daa502315ee68"
+      ],
+      "semantic_scholar_id": "c1733d726316e7d6bc5fb7d7547daa502315ee68",
+      "canonical_id": "arXiv:2606.00390",
+      "arxiv_id": "2606.00390",
+      "doi": "10.48550/arXiv.2606.00390",
+      "authors": [
+        "Hassan Shapourian",
+        "Kasra Hejazi",
+        "O. M. Sule",
+        "Beren Millidge"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Workload-Aware Caching for Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2607.20495",
+      "year": 2026,
+      "published": "2026-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems decompose complex tasks into directed acyclic graphs (DAGs) of specialized agent executions, creating natural opportunities for caching intermediate results across queries. However, existing cache eviction policies treat all cached entries uniformly based on access history, ignoring structural and workload signals uniquely available in agentic execution environments. We present a workload-aware eviction policy that combines three signals, namely recomputation cost, DAG dependency count, and agent invocation frequency, into a unified scoring function that retains the most valuable entries under memory constraints. Evaluated across three multi-agent benchmarks spanning diverse reuse regimes, our policy reduces latency by up to 64.7% relative to the uncached baseline and achieves on average a 31.1% latency reduction over the next best finite-capacity baseline, while approaching the performance of an unbounded cache and maintaining accuracy on par with or exceeding all competing finite-capacity methods. We further show that workload-aware content caching is complementary to other agentic system optimization methods, including plan-level caching and parallel agent execution, with each technique targeting a distinct efficiency bottleneck in multi-agent pipelines.",
+      "identifiers": [
+        "SemanticScholar:09aff806894d12dc38040d2dfa6954583c7de35a"
+      ],
+      "semantic_scholar_id": "09aff806894d12dc38040d2dfa6954583c7de35a",
+      "canonical_id": "arXiv:2607.20495",
+      "arxiv_id": "2607.20495",
+      "doi": "10.48550/arXiv.2607.20495",
+      "authors": [
+        "Anas Mohamed",
+        "Kaizan Haque",
+        "A. Khan",
+        "C. Sharma",
+        "Shu-Wen Ge",
+        "Ali Anwar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quality-Aware Cross-Model Computation Reuse",
+      "source_url": "https://arxiv.org/abs/2610.05285",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "An intermediate result computed by one model can be reused by other models to perform their tasks. Existing work mainly focuses on practical execution, leaving a theoretical gap in optimizing reuse decisions. This optimization faces two challenges: quality uncertainty, because the effect of reuse on task quality is uncertain across models, and coupled scheduling, because tasks need to share the cost of preparing reusable results. These challenges compound each other: quality must be learned online, but the shared preparation structure makes scheduling NP-hard even with known quality, breaking the key assumption in existing methods. We formulate cross-model computation reuse as an online decision problem and develop the Quality-Aware Reuse Scheduling (QARS) algorithm to address it. For quality uncertainty, QARS learns task-dependent reuse quality from selected, possibly delayed feedback and uses optimistic estimates to guide decisions. For coupled scheduling, it jointly chooses which results to prepare and which tasks should use them, adapting scheduling accuracy to the remaining quality uncertainty. For the considered problem, our analysis separates learning and optimization error in regret and quantifies the tradeoff between scheduling accuracy and computation. Completing the quality-aware stopping rule yields $\\widetilde O(\\sqrt{T})$ regret while preserving feasibility. Experiments demonstrate the effectiveness of QARS in optimizing cross-model reuse, reducing the combined cost of computation and quality loss by up to 18.0%, and mean regret by 63.9% over the strongest scheduling baseline.",
+      "identifiers": [
+        "SemanticScholar:d5a4d56974091aae60614b060dc5c7141984057e"
+      ],
+      "semantic_scholar_id": "d5a4d56974091aae60614b060dc5c7141984057e",
+      "canonical_id": "arXiv:2610.05285",
+      "arxiv_id": "2610.05285",
+      "authors": [
+        "Jin Cheng",
+        "Xiang-Xiang Dai",
+        "Mao-Li Liu",
+        "Zi-Yi Han",
+        "Zhuohua Li",
+        "John C. S. Lui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "D-Loop: Looped Diffusion Drafting for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.06011",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block diffusion accelerates speculative decoding by drafting multiple tokens in one forward pass. However, each position predicts a marginal distribution without observing earlier proposed tokens, limiting draft quality and acceptance length. We identify a concrete failure, the \\emph{repetition trap}, in which neighboring positions produce redundant copies of the same token. We explain this tendency theoretically and empirically examine its association with shorter accepted drafts. Recent methods refine marginal predictions with an additional causal head or a separately trained drafter, increasing parameter storage and introducing separate training objectives. We instead propose D-Loop, which introduces \\emph{intra-block causal conditioning} within the original diffusion drafter without additional model components. Inspired by semi-autoregressive generation and parameter sharing, D-Loop reuses the same backbone across looped passes. The first pass proposes a block, and the second conditions on a selected prefix to regenerate the suffix in parallel. A complementary prefix--suffix objective trains the shared drafter for both anchor-only prefix prediction and prefix-conditioned suffix prediction. Across eight math, code, and chat benchmarks, D-Loop can beat DFlash and DSpark on Qwen3-4B and Qwen3-8B with obvious gains.",
+      "identifiers": [
+        "SemanticScholar:9bf51aa4763881a8bfb76a190ead9af13457d1de"
+      ],
+      "semantic_scholar_id": "9bf51aa4763881a8bfb76a190ead9af13457d1de",
+      "canonical_id": "arXiv:2610.06011",
+      "arxiv_id": "2610.06011",
+      "authors": [
+        "Ke-Cheng Chen",
+        "Yu-Yang He",
+        "Cheng Gong",
+        "Hui Liu",
+        "Guo-Ping Long",
+        "Jia-Jun Li",
+        "Shi-Qu Wu",
+        "Sui-Yun Zhang",
+        "Hao-Liang Li",
+        "Zi-Rui Liu",
+        "Rui Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.00390",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.00390",
+        "id:SemanticScholar:c1733d726316e7d6bc5fb7d7547daa502315ee68",
+        "id:arXiv:2606.00390",
+        "title:zamba2vl technical report",
+        "url:https://arxiv.org/abs/2606.00390"
+      ],
+      "record": {
+        "title": "Zamba2-VL Technical Report",
+        "source_url": "https://arxiv.org/abs/2606.00390",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Zamba2-VL, a suite of vision-language models built on Zamba2, a hybrid language-model architecture combining Mamba2 state-space layers with a small number of shared transformer blocks. Across a broad range of image understanding, reasoning, OCR, grounding, and counting benchmarks, Zamba2-VL is competitive with leading Transformer-based open-weight VLMs of comparable scale, including the Molmo2, Qwen3-VL, and InternVL3.5 families, and substantially outperforms prior SSM-based and hybrid VLMs such as VL-Mamba, Cobra, and mmMamba. Inheriting the near-linear prefill compute and small, near-constant recurrent state of its Zamba2 backbone, Zamba2-VL delivers roughly an order of magnitude lower time-to-first-token (TTFT) than these Transformer baselines at matched parameter scale, with the efficiency gap most pronounced at the smaller 1.2B and 2.7B scales most relevant to on-device and edge deployment. We release three models -- 1.2B, 2.7B, and 7B -- together with inference code at https://huggingface.co/collections/Zyphra/zamba2-vl.",
+        "identifiers": [
+          "SemanticScholar:c1733d726316e7d6bc5fb7d7547daa502315ee68"
+        ],
+        "semantic_scholar_id": "c1733d726316e7d6bc5fb7d7547daa502315ee68",
+        "canonical_id": "arXiv:2606.00390",
+        "arxiv_id": "2606.00390",
+        "doi": "10.48550/arXiv.2606.00390",
+        "authors": [
+          "Hassan Shapourian",
+          "Kasra Hejazi",
+          "O. M. Sule",
+          "Beren Millidge"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.20495",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.20495",
+        "id:SemanticScholar:09aff806894d12dc38040d2dfa6954583c7de35a",
+        "id:arXiv:2607.20495",
+        "title:workloadaware caching for multiagent systems",
+        "url:https://arxiv.org/abs/2607.20495"
+      ],
+      "record": {
+        "title": "Workload-Aware Caching for Multi-Agent Systems",
+        "source_url": "https://arxiv.org/abs/2607.20495",
+        "year": 2026,
+        "published": "2026-06-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent systems decompose complex tasks into directed acyclic graphs (DAGs) of specialized agent executions, creating natural opportunities for caching intermediate results across queries. However, existing cache eviction policies treat all cached entries uniformly based on access history, ignoring structural and workload signals uniquely available in agentic execution environments. We present a workload-aware eviction policy that combines three signals, namely recomputation cost, DAG dependency count, and agent invocation frequency, into a unified scoring function that retains the most valuable entries under memory constraints. Evaluated across three multi-agent benchmarks spanning diverse reuse regimes, our policy reduces latency by up to 64.7% relative to the uncached baseline and achieves on average a 31.1% latency reduction over the next best finite-capacity baseline, while approaching the performance of an unbounded cache and maintaining accuracy on par with or exceeding all competing finite-capacity methods. We further show that workload-aware content caching is complementary to other agentic system optimization methods, including plan-level caching and parallel agent execution, with each technique targeting a distinct efficiency bottleneck in multi-agent pipelines.",
+        "identifiers": [
+          "SemanticScholar:09aff806894d12dc38040d2dfa6954583c7de35a"
+        ],
+        "semantic_scholar_id": "09aff806894d12dc38040d2dfa6954583c7de35a",
+        "canonical_id": "arXiv:2607.20495",
+        "arxiv_id": "2607.20495",
+        "doi": "10.48550/arXiv.2607.20495",
+        "authors": [
+          "Anas Mohamed",
+          "Kaizan Haque",
+          "A. Khan",
+          "C. Sharma",
+          "Shu-Wen Ge",
+          "Ali Anwar"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.05285",
+      "identity_tokens": [
+        "id:SemanticScholar:d5a4d56974091aae60614b060dc5c7141984057e",
+        "id:arXiv:2610.05285",
+        "title:qualityaware crossmodel computation reuse",
+        "url:https://arxiv.org/abs/2610.05285"
+      ],
+      "record": {
+        "title": "Quality-Aware Cross-Model Computation Reuse",
+        "source_url": "https://arxiv.org/abs/2610.05285",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "An intermediate result computed by one model can be reused by other models to perform their tasks. Existing work mainly focuses on practical execution, leaving a theoretical gap in optimizing reuse decisions. This optimization faces two challenges: quality uncertainty, because the effect of reuse on task quality is uncertain across models, and coupled scheduling, because tasks need to share the cost of preparing reusable results. These challenges compound each other: quality must be learned online, but the shared preparation structure makes scheduling NP-hard even with known quality, breaking the key assumption in existing methods. We formulate cross-model computation reuse as an online decision problem and develop the Quality-Aware Reuse Scheduling (QARS) algorithm to address it. For quality uncertainty, QARS learns task-dependent reuse quality from selected, possibly delayed feedback and uses optimistic estimates to guide decisions. For coupled scheduling, it jointly chooses which results to prepare and which tasks should use them, adapting scheduling accuracy to the remaining quality uncertainty. For the considered problem, our analysis separates learning and optimization error in regret and quantifies the tradeoff between scheduling accuracy and computation. Completing the quality-aware stopping rule yields $\\widetilde O(\\sqrt{T})$ regret while preserving feasibility. Experiments demonstrate the effectiveness of QARS in optimizing cross-model reuse, reducing the combined cost of computation and quality loss by up to 18.0%, and mean regret by 63.9% over the strongest scheduling baseline.",
+        "identifiers": [
+          "SemanticScholar:d5a4d56974091aae60614b060dc5c7141984057e"
+        ],
+        "semantic_scholar_id": "d5a4d56974091aae60614b060dc5c7141984057e",
+        "canonical_id": "arXiv:2610.05285",
+        "arxiv_id": "2610.05285",
+        "authors": [
+          "Jin Cheng",
+          "Xiang-Xiang Dai",
+          "Mao-Li Liu",
+          "Zi-Yi Han",
+          "Zhuohua Li",
+          "John C. S. Lui"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 42,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06011",
+      "identity_tokens": [
+        "id:SemanticScholar:9bf51aa4763881a8bfb76a190ead9af13457d1de",
+        "id:arXiv:2610.06011",
+        "title:dloop looped diffusion drafting for speculative decoding",
+        "url:https://arxiv.org/abs/2610.06011"
+      ],
+      "record": {
+        "title": "D-Loop: Looped Diffusion Drafting for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.06011",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block diffusion accelerates speculative decoding by drafting multiple tokens in one forward pass. However, each position predicts a marginal distribution without observing earlier proposed tokens, limiting draft quality and acceptance length. We identify a concrete failure, the \\emph{repetition trap}, in which neighboring positions produce redundant copies of the same token. We explain this tendency theoretically and empirically examine its association with shorter accepted drafts. Recent methods refine marginal predictions with an additional causal head or a separately trained drafter, increasing parameter storage and introducing separate training objectives. We instead propose D-Loop, which introduces \\emph{intra-block causal conditioning} within the original diffusion drafter without additional model components. Inspired by semi-autoregressive generation and parameter sharing, D-Loop reuses the same backbone across looped passes. The first pass proposes a block, and the second conditions on a selected prefix to regenerate the suffix in parallel. A complementary prefix--suffix objective trains the shared drafter for both anchor-only prefix prediction and prefix-conditioned suffix prediction. Across eight math, code, and chat benchmarks, D-Loop can beat DFlash and DSpark on Qwen3-4B and Qwen3-8B with obvious gains.",
+        "identifiers": [
+          "SemanticScholar:9bf51aa4763881a8bfb76a190ead9af13457d1de"
+        ],
+        "semantic_scholar_id": "9bf51aa4763881a8bfb76a190ead9af13457d1de",
+        "canonical_id": "arXiv:2610.06011",
+        "arxiv_id": "2610.06011",
+        "authors": [
+          "Ke-Cheng Chen",
+          "Yu-Yang He",
+          "Cheng Gong",
+          "Hui Liu",
+          "Guo-Ping Long",
+          "Jia-Jun Li",
+          "Shi-Qu Wu",
+          "Sui-Yun Zhang",
+          "Hao-Liang Li",
+          "Zi-Rui Liu",
+          "Rui Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:29fc20b5c03c9f13ec9c872ca3cd8a607a91736773d5cb316c4d50df7306cd19",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
