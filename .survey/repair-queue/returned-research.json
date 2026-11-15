@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-15T22:23:29+00:00",
+  "generated_at": "2026-11-15T22:47:45+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 26,
+  "count": 25,
   "entries": [
     {
       "canonical_id": "arXiv:2605.06850",
@@ -707,33 +707,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-95b522386159--file_00000000f95481fd9b258bb37c3c4380--2025-iiswc-performance-cost-returned-repair-20261109-1630-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-95b522386159--file_00000000f95481fd9b258bb37c3c4380--2025-iiswc-performance-cost-returned-repair-20261109-1630-scheduled-chat-30-r01.json",
       "worker_run_key": "20261109-1630-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2210.17114",
-      "title": "QuaLA-MiniLM: a Quantized Length Adaptive MiniLM",
-      "source_url": "https://arxiv.org/html/2210.17114v3",
-      "returned_at": "2026-11-15T22:23:28+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 114 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3156,
-        "body_paragraphs": 15,
-        "method_chars": 1101,
-        "method_paragraphs": 5,
-        "evaluation_chars": 114,
-        "limitation_chars": 472,
-        "insufficiency_flags": [
-          "評価説明量 114 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/file_0000000071ec81f59b7fa3659622581e--2022-2210.17114-quala-minilm-research-20261113-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/file_0000000071ec81f59b7fa3659622581e--2022-2210.17114-quala-minilm-research-20261113-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261113-0445-scheduled-chat-45/r01"
     }
   ]
 }
