@@ -1,0 +1,426 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b12::chunk-0001-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1002/sys.70061",
+      "identity_tokens": [
+        "DOI:10.1002/sys.70061",
+        "https://doi.org/10.1002/sys.70061"
+      ],
+      "title": "Balancing Accuracy and Cost: Trade‐Offs in Large Language Model Quantization for the Systems Engineering Domain",
+      "reason": "システムズ工学文脈でのLLM量子化の精度・費用トレードオフ実証研究。4・8・16ビット浮動小数の量子化水準ごとに、領域ベンチマークSysEngBenchでの性能と計算資源に対する費用を実測し、配備判断の材料を示す。推論の計測そのもの。",
+      "source_url": "https://doi.org/10.1002/sys.70061",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "inference-systems"
+      ],
+      "worklist_rank": 400,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.10207",
+      "identity_tokens": [
+        "arXiv:2106.10207",
+        "https://arxiv.org/abs/2106.10207"
+      ],
+      "title": "Distributed Deep Learning in Open Collaborations",
+      "reason": "開放的協働での分散深層学習。計算資源を出し合うボランティア計算で大規模モデルを訓練する枠組みの研究。対象は学習の実行形態であり、推論システムではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2106.10207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "worklist_rank": 412,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.08545",
+      "identity_tokens": [
+        "arXiv:2302.08545",
+        "https://arxiv.org/abs/2302.08545"
+      ],
+      "title": "THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression",
+      "reason": "テンソル準同型圧縮による分散深層学習の高速化THC。作業者間の勾配交換の通信オーバーヘッドを双方向圧縮で下げる学習基盤の手法。対象は訓練の通信であり、推論機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2302.08545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation"
+      ],
+      "worklist_rank": 225,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10912",
+      "identity_tokens": [
+        "arXiv:2410.10912",
+        "https://arxiv.org/abs/2410.10912"
+      ],
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "reason": "重尾自己正則化理論による層別剪定率AlphaPruning。重み行列の経験スペクトル密度の形状から層ごとの訓練の進み具合と剪定しやすさを読み、一様な剪定率をやめて層別に配分する。LLM推論の圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 285,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.02530",
+      "identity_tokens": [
+        "arXiv:2411.02530",
+        "https://arxiv.org/abs/2411.02530"
+      ],
+      "title": "A Comprehensive Study on Quantization Techniques for Large Language Models",
+      "reason": "LLM量子化技術の包括的研究。量子化手法の分類と動向を整理する総説的な研究。推論効率化の基盤知識ではあるが、新しい機構の提案ではなく境界。",
+      "source_url": "https://arxiv.org/abs/2411.02530",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 253,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.13359",
+      "identity_tokens": [
+        "arXiv:2504.13359",
+        "https://arxiv.org/abs/2504.13359"
+      ],
+      "title": "Cost-of-Pass: An Economic Framework for Evaluating Language Models",
+      "reason": "言語モデル評価の経済枠組みCost-of-Pass。正しい解1つを得るまでの期待貨幣費用として、精度と推論費用を組み合わせた生産性指標を定式化する。推論費用の評価ではあるが、機構ではなく評価枠組みであり境界。",
+      "source_url": "https://arxiv.org/abs/2504.13359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "worklist_rank": 471,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23648",
+      "identity_tokens": [
+        "arXiv:2505.23648",
+        "https://arxiv.org/abs/2505.23648"
+      ],
+      "title": "Continuous Chain of Thought Enables Parallel Exploration and Reasoning",
+      "reason": "連続的な思考連鎖CoT2。離散トークンの代わりに連続値トークンで推論し、複数の離散軌跡を並行に追えることの理論保証とアルゴリズムを与える。推論効率への含意はあるが、理論とアーキテクチャの研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2505.23648",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md"
+      ],
+      "worklist_rank": 371,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.02847",
+      "identity_tokens": [
+        "arXiv:2506.02847",
+        "https://arxiv.org/abs/2506.02847"
+      ],
+      "title": "CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge",
+      "reason": "エッジ向け遅延配慮推論のアルゴリズム・ハードウェア協調設計CLONE。市販エッジ機器でのLLM配置の課題を定量化した上で、モデル水準とシステム水準の両方で実時間のエネルギ最適化と精度維持を統合する。推論基盤そのもの。",
+      "source_url": "https://arxiv.org/abs/2506.02847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "CPUオフロード / 活性化疎性 / 階層メモリ",
+        "LLM Serving / Scheduling / Disaggregation",
+        "Offload / Hierarchical Memory",
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "オフロード／階層メモリ"
+      ],
+      "worklist_rank": 270,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.18269",
+      "identity_tokens": [
+        "arXiv:2510.18269",
+        "https://arxiv.org/abs/2510.18269"
+      ],
+      "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
+      "reason": "ストリーミング動画向けトークン圧縮StreamingTOM。因果性と蓄積という2つの制約の下で、LLM前のプリフィルとLLM後の両方のボトルネックに対し、フレームごとの固定予算と隣接フレーム変化・顕著性による選択を行う学習不要の2段階枠組み。推論のトークン削減機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2510.18269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "11-llm-serving-scheduling-disaggregation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "worklist_rank": 159,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20345",
+      "identity_tokens": [
+        "arXiv:2512.20345",
+        "https://arxiv.org/abs/2512.20345"
+      ],
+      "title": "A Comprehensive Study of Bugs in Modern Distributed Deep Learning Systems",
+      "reason": "現代の分散深層学習システムのバグの包括的研究。DeepSpeed等の専用フレームワークの849件の課題を分析し症状の分類を作る実証研究。対象は学習フレームワークの品質であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2512.20345",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "worklist_rank": 458,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21797",
+      "identity_tokens": [
+        "arXiv:2601.21797",
+        "https://arxiv.org/abs/2601.21797"
+      ],
+      "title": "Enhancing Conversational Agents via Task-Oriented Adversarial Memory Adaptation",
+      "reason": "タスク志向の敵対的メモリ増強による会話エージェント強化。オフラインのメモリ構築と更新をタスクに合わせて行うメモリシステム。エージェントの文脈管理ではあるが、推論システム機構とは距離があり境界。",
+      "source_url": "https://arxiv.org/abs/2601.21797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression",
+        "agentic inference / persistent memory"
+      ],
+      "worklist_rank": 493,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23157",
+      "identity_tokens": [
+        "arXiv:2601.23157",
+        "https://arxiv.org/abs/2601.23157"
+      ],
+      "title": "No More, No Less: Least-Privilege Language Models",
+      "reason": "最小権限言語モデル。配備されたモデルへのアクセスを、リクエストに必要な最小限の内部計算への到達可能性として定義し、再訓練なしに強制する枠組み。推論時の制御ではあるが、主題はセキュリティであり境界。",
+      "source_url": "https://arxiv.org/abs/2601.23157",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "survey-speculative-decoding"
+      ],
+      "worklist_rank": 477,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00686",
+      "identity_tokens": [
+        "arXiv:2602.00686",
+        "https://arxiv.org/abs/2602.00686"
+      ],
+      "title": "Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching",
+      "reason": "適応方策によるVLAモデルの推論高速化。静的なトークンキャッシュや剪定に代え、推論高速化を学習可能な方策最適化として定式化し、タスク目的に結びついた動的判断をモデルへ組み込む。推論高速化が目的だが、機構は学習する方策であり境界。",
+      "source_url": "https://arxiv.org/abs/2602.00686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "worklist_rank": 369,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00357",
+      "identity_tokens": [
+        "arXiv:2603.00357",
+        "https://arxiv.org/abs/2603.00357"
+      ],
+      "title": "SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs",
+      "reason": "大規模事前学習向け耐障害フレームワークSPARe。10万GPU級の学習で再起動費用が支配的になる問題に対し、冗長なデータシャードの積み重ねと適応的再順序付けでノード障害を隠す。対象は学習基盤であり、推論システムではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2603.00357",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/15-inference-simulation-emulation/2023-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "worklist_rank": 362,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02226",
+      "identity_tokens": [
+        "arXiv:2603.02226",
+        "https://arxiv.org/abs/2603.02226"
+      ],
+      "title": "Efficient Sparse Selective-Update RNNs for Long-Range Sequence Modeling",
+      "reason": "疎な選択的更新RNN。音声や動画のような長い無音・ノイズ区間を含む信号向けに、冗長な入力では内部状態を保つ選択的更新を学ぶ系列モデルのアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2603.02226",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 444,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.14892",
+      "identity_tokens": [
+        "arXiv:2603.14892",
+        "https://arxiv.org/abs/2603.14892"
+      ],
+      "title": "Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs",
+      "reason": "顕著性と被覆のバランスを取る視覚トークン剪定PromPrune。意味的顕著性の分布がサンプルごとに大きく変わり、静的な圧縮戦略では最適なトレードオフがずれる問題に対し、サンプル適応に顕著性保存と大域被覆の配分を変える。VLM推論のトークン削減機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2603.14892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 379,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08985",
+      "identity_tokens": [
+        "arXiv:2605.08985",
+        "https://arxiv.org/abs/2605.08985"
+      ],
+      "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+      "reason": "MLLMの効率的視覚符号化の研究LLaVA-UHD v4。大域符号化の後に圧縮する慣行が、圧縮前にViTの二次注意費用を払う問題に対し、スライス型符号化と視覚トークン圧縮の2次元で統制実験を行い、効率的な符号化戦略を示す。推論の計測と設計そのもの。",
+      "source_url": "https://arxiv.org/abs/2605.08985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "12-multimodal-inference"
+      ],
+      "worklist_rank": 499,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11111",
+      "identity_tokens": [
+        "arXiv:2605.11111",
+        "https://arxiv.org/abs/2605.11111"
+      ],
+      "title": "ShardTensor: Domain Parallelism for Scientific Machine Learning",
+      "reason": "科学機械学習向けドメイン並列ShardTensor。バッチサイズ1未満への入力データ分割を一般化する並列化パラダイム。対象は科学計算の学習・推論基盤であり、LLM推論システムではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2605.11111",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 384,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.14929",
+      "identity_tokens": [
+        "arXiv:2605.14929",
+        "https://arxiv.org/abs/2605.14929"
+      ],
+      "title": "A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models",
+      "reason": "ハードウェア配慮型の層別学習後量子化手法SOP。層ごとのLUT復号を持つハードウェア向けに、固定と動的の符号帳ペアの層別探索、符号つきブロック尺度、活性重みつき選択、敏感層の昇格を組み合わせ、4.5〜6ビットでほぼ無損失の忠実度を得る。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2605.14929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+      ],
+      "worklist_rank": 462,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04594",
+      "identity_tokens": [
+        "arXiv:2606.04594",
+        "https://arxiv.org/abs/2606.04594"
+      ],
+      "title": "Ekka: Automated Diagnosis of Silent Errors in LLM Inference",
+      "reason": "LLM推論のサイレントエラーの自動診断Ekka。提供フレームワークの最適化が品質を静かに劣化させる問題に対し、意味的に正しい参照実装との中間実行状態の整合比較で根本原因を特定する差分デバッグとして定式化する。推論基盤の診断そのもの。",
+      "source_url": "https://arxiv.org/abs/2606.04594",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T01:35:00+09:00",
+      "last_checked_at": "2026-11-16T01:35:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "大規模言語モデル推論サービング／装置内演算スケジューリング",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 403,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b12",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

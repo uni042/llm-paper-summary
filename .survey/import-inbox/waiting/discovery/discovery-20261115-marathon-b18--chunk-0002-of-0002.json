@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b18::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11134",
+      "identity_tokens": [
+        "arXiv:2610.11134",
+        "https://arxiv.org/abs/2610.11134"
+      ],
+      "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+      "reason": "共有クエリ実行による疎注意プリフィルの再考QUILT。疎注意カーネルがクエリごとに共有KVを繰り返し読み量子化解除する無駄に対し、近傍クエリを共同処理して共有KVを再利用する、ワークロード配慮型の実行機構。推論カーネルそのもの。",
+      "source_url": "https://arxiv.org/abs/2610.11134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "10-kv-キャッシュ-オフロード-recomputation",
+        "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論"
+      ],
+      "worklist_rank": 162,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.13202",
+      "identity_tokens": [
+        "arXiv:2610.13202",
+        "https://arxiv.org/abs/2610.13202"
+      ],
+      "title": "S$^3$R: Fast and Faithful RL Rollouts via Self-Sparse Speculative Decoding",
+      "reason": "自己疎投機的デコードによる高速で忠実なRLロールアウトS3R。検証可能報酬つき強化学習のロールアウト生成で、疎注意が学習に使う応答群を変えてしまう問題を避けながらKVトラフィックを減らす。投機的デコードの応用だが、主題はRL訓練のロールアウトであり境界。",
+      "source_url": "https://arxiv.org/abs/2610.13202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "99-other-inference-systems",
+        "inference-systems",
+        "llm-serving-scheduling-disaggregation",
+        "speculative-decoding",
+        "training-reinforcement-learning-quantization",
+        "投機的復号 / EAGLE",
+        "長文LLM推論、疎注意、自己投機復号、鍵値キャッシュ選択"
+      ],
+      "worklist_rank": 80,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17436",
+      "identity_tokens": [
+        "arXiv:2610.17436",
+        "https://arxiv.org/abs/2610.17436"
+      ],
+      "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
+      "reason": "スキーマ誘導によるオンデバイスモバイルエージェントAIの高速化SchemaWeaver。モバイルでのLLMツール呼び出しはメモリ帯域律速のデコードが遅延の主因であることに対し、スキーマ誘導の並列デコードで複数トークンを一度に生み遅延を下げる。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.17436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "llm-serving-scheduling-disaggregation",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "on-device LLM inference / mobile inference / Flash offload",
+        "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 68,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21129",
+      "identity_tokens": [
+        "arXiv:2610.21129",
+        "https://arxiv.org/abs/2610.21129"
+      ],
+      "title": "Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search",
+      "reason": "成長する疎性による動画生成の疎注意加速。拡散Transformerの動画生成で、ノイズ除去の進行に伴い注意が集中する性質を使い疎性を育てる。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2610.21129",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "worklist_rank": 56,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21808",
+      "identity_tokens": [
+        "arXiv:2610.21808",
+        "https://arxiv.org/abs/2610.21808"
+      ],
+      "title": "RoleQ: Role-Aligned Scales for Converting Language Models to Ternary",
+      "reason": "言語モデルを三値へ変換する役割整合スケールRoleQ。4ビット未満の量子化が困惑度の見かけに反して事実知識を損なう問題に対し、Transformerユニットの機能的役割でスケールを配置する構造的規則で、探索も較正もなしに三値化する。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.21808",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "04-quantization",
+        "arXiv:2405.16406のICLR 2025採録版。"
+      ],
+      "worklist_rank": 83,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29873",
+      "identity_tokens": [
+        "arXiv:2610.29873",
+        "https://arxiv.org/abs/2610.29873"
+      ],
+      "title": "HAWK: Heterogeneity-Aware KV Cache Transfer for Efficient GPU-NPU Phase-Disaggregated LLM Inference",
+      "reason": "GPU-NPU位相分離向け異種KVキャッシュ転送HAWK。プリフィルは計算律速、デコードはメモリ律速という位相差から、プリフィルをGPU、デコードをNPUに割り当てる異種構成で、位相分離に伴うKV転送を効率化する。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.29873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "KVキャッシュ動的メモリ管理／PagedAttention代替",
+        "llm-serving-scheduling-disaggregation",
+        "prefill-decode disaggregation / attention offloading / LLM serving",
+        "serving-scheduling",
+        "異種GPU・事前充填/復号分離サービング"
+      ],
+      "worklist_rank": 85,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.31819",
+      "identity_tokens": [
+        "arXiv:2610.31819",
+        "https://arxiv.org/abs/2610.31819"
+      ],
+      "title": "Speculative Diffusion is a Tale of Two Tradeoffs",
+      "reason": "投機的拡散は2つのトレードオフの物語。無損失が特徴の投機的デコードと、品質を落として速くする拡散LLMを下書き役として比べる分析。投機的デコードの分析であり、機構の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2610.31819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "Other Inference Systems / Lossless Parallel Decoding",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "speculative-decoding",
+        "speculative-parallel-decoding"
+      ],
+      "worklist_rank": 76,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33379",
+      "identity_tokens": [
+        "arXiv:2610.33379",
+        "https://arxiv.org/abs/2610.33379"
+      ],
+      "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+      "reason": "拡散下書きによる詰め込み自己投機的デコードPacked-SS。自己投機で下書きが検証待ちになる2回呼び出しの予定と、1回化した際の二次的な入力サイズの問題に対し、詰め込みで1回のモデル呼び出しにまとめる。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.33379",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "speculative-decoding",
+        "投機的復号 / EAGLE",
+        "投機的復号・ブロック拡散提案・検証器中間表現の再利用"
+      ],
+      "worklist_rank": 77,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39216",
+      "identity_tokens": [
+        "arXiv:2610.39216",
+        "https://arxiv.org/abs/2610.39216"
+      ],
+      "title": "PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference",
+      "reason": "メモリ律速MoE推論のプリフィル・デコードシーソーを破るPDScope。専門家をCPUメモリに置く局所配備で、プリフィルの積極的読み込みとデコードの保守的転送が衝突する問題に対し、位相ごとに予測可能な専門家ルーティングで両者を分離する。推論基盤機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.39216",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "MoE inference / CPU-GPU hybrid execution / expert offloading / expert cache and prefetch",
+        "MoE offloading / high-throughput inference / module-based batching",
+        "MoE専門家オフロード / 混合精度 / 専門家キャッシュ",
+        "オフロード／階層メモリ"
+      ],
+      "worklist_rank": 91,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.03768",
+      "identity_tokens": [
+        "arXiv:2611.03768",
+        "https://arxiv.org/abs/2611.03768"
+      ],
+      "title": "Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention",
+      "reason": "DeepSeek疎注意における選択と注意の重ね合わせ（多層索引器）。索引器の走査がデコード時間の主因になる一方で、隣接層がほぼ同じトークンを選ぶ性質を使い、前の索引器層の選択を流用して走査を重ね合わせる。推論の注意機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.03768",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T03:05:00+09:00",
+      "last_checked_at": "2026-11-16T03:05:00+09:00",
+      "linked_from": [
+        "13-sparse-attention",
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "worklist_rank": 134,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b18",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

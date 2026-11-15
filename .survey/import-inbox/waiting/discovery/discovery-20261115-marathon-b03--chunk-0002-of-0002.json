@@ -1,0 +1,222 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b03::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16825",
+      "identity_tokens": [
+        "arXiv:2606.16825",
+        "https://arxiv.org/abs/2606.16825"
+      ],
+      "title": "Tying the Loop - Tied Expert Layers in Mixture-of-Experts Language Models",
+      "reason": "MoEの専門家タイミング（Expert Tying）。連続する層間で専門家パラメータを共有し、ルーティングと注意は層ごとに独立に保つことで、推論メモリの大半を占める専門家パラメータをほぼ2倍削減する。推論メモリへの効果は実在だが、事前学習で検証されるモデルアーキテクチャの変更であり境界。",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "MoE routing / expert choice / heterogeneous conditional computation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "worklist_rank": 292,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18681",
+      "identity_tokens": [
+        "arXiv:2606.18681",
+        "https://arxiv.org/abs/2606.18681"
+      ],
+      "title": "Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs",
+      "reason": "視覚トークン剪定の部分空間再構成SPARE。多様性最大化が大きさ情報を捨てる問題に対し、列部分集合選択として定式化し、射影残差の大きいトークンを反復選択して元の特徴表現の再構成誤差を直接最小化する。VLM推論のトークン削減機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2606.18681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 121,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24187",
+      "identity_tokens": [
+        "arXiv:2606.24187",
+        "https://arxiv.org/abs/2606.24187"
+      ],
+      "title": "Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling",
+      "reason": "長尺ビデオ理解向け適応キーフレーム選択AdaQ。フレーム選択を準ガウスサンプリングとして定式化し、局所的質問には狭く大域的質問には広い3σ区間を例ごとに適応させる学習不要の方式で、過剰な計算とメモリを抑える。MLLM推論の入力削減機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2606.24187",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 177,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20466",
+      "identity_tokens": [
+        "arXiv:2607.20466",
+        "https://arxiv.org/abs/2607.20466"
+      ],
+      "title": "JAXBench: Benchmarking Autonomous TPU Kernel Optimization",
+      "reason": "自律TPUカーネル最適化のベンチマークJAXBench。AI生成カーネルの最適化手法を競わせるための課題集と専門家の上限ベースラインを提供する。対象はカーネル最適化手法の能力評価であり、推論システムの技術や機構の提案ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2607.20466",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "kernel-runtime-compilation",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 312,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.22629",
+      "identity_tokens": [
+        "arXiv:2607.22629",
+        "https://arxiv.org/abs/2607.22629"
+      ],
+      "title": "Masked Self-Distillation: Internalizing the Chain-of-Thought in Language Models",
+      "reason": "マスク自己蒸留によるCoTの内在化。同一モデルの教師・生徒コピーで中間推論痕跡をパラメータへ内在化し、推論時のはるかに短い痕跡で答えを出すモデルを学習する。狙いは推論の遅延とサービングコスト削減だが、機構の実体は知識蒸留の学習枠組みであり境界。",
+      "source_url": "https://arxiv.org/abs/2607.22629",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+      ],
+      "worklist_rank": 471,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15008",
+      "identity_tokens": [
+        "arXiv:2608.15008",
+        "https://arxiv.org/abs/2608.15008"
+      ],
+      "title": "Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents",
+      "reason": "エージェントメモリ基盤の総合評価。書込み・読出し・管理の各段に補助LLMコストまで含めた26の性能・効率指標で、11種のメモリ方式を基盤だけを変えて比較する。メモリ基盤はエージェント推論の基盤だが、本論文は新機構でなく評価と選択指針の提示であり境界。",
+      "source_url": "https://arxiv.org/abs/2608.15008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "agentic inference / persistent memory"
+      ],
+      "worklist_rank": 87,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22516",
+      "identity_tokens": [
+        "arXiv:2608.22516",
+        "https://arxiv.org/abs/2608.22516"
+      ],
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+      "reason": "長尺ビデオ質問応答の証拠監査ベンチマークVES-BenchとエージェントTRACE。答えが依存する証拠区間を復号フレームが覆っているかを監査する評価と、証拠束を育てる訓練不要エージェントの提案。主眼は回答の証拠完全性という能力評価であり、推論効率の機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2608.22516",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression"
+      ],
+      "worklist_rank": 498,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32961",
+      "identity_tokens": [
+        "arXiv:2609.32961",
+        "https://arxiv.org/abs/2609.32961"
+      ],
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "reason": "LLMエージェントの文脈圧縮の系統研究。何を・いつ・どれだけ圧縮するかの判断を分離して約35,000回の実行で測り、トークンが減っても速くも安くもならない場合があることを示す。文脈圧縮は推論コストの機構だが、本論文は新機構でなく方針の特性評価であり境界。",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "14-agentic-inference-serving-runtime",
+        "LLM Serving / Scheduling / Disaggregation",
+        "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation",
+        "inference-systems",
+        "llm-serving-scheduling-disaggregation"
+      ],
+      "worklist_rank": 284,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01560",
+      "identity_tokens": [
+        "arXiv:2610.01560",
+        "https://arxiv.org/abs/2610.01560"
+      ],
+      "title": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+      "reason": "音声言語モデル向け適応潜在推論AURAL。潜在空間で複数の推論継続の分布をモデル化し、将来状態のチャンクを共同予測して逐次フォワードを減らす。推論遅延の削減を狙うが、音声推論データセット構築を含むモデル側の推論方式であり、システム機構としての提示は薄い。境界。",
+      "source_url": "https://arxiv.org/abs/2610.01560",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "worklist_rank": 260,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.10381",
+      "identity_tokens": [
+        "arXiv:2610.10381",
+        "https://arxiv.org/abs/2610.10381"
+      ],
+      "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+      "reason": "ループ型Transformer向けKVキャッシュ量子化ResidualQuant。ループ間でKV状態がよく似る性質を使い、最終ループのKVを参照として他ループを低精度残差で表し、最小二乗スケーリングと回転量子化、ループ別混合精度で2ビット級でも精度を保つ。KVキャッシュ量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.10381",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:05:00+09:00",
+      "last_checked_at": "2026-11-16T00:05:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "投機復号・自己投機・ループ型Transformer・推論パイプライン"
+      ],
+      "worklist_rank": 324,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b03",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

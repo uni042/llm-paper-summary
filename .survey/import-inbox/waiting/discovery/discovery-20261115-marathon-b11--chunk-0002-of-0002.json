@@ -1,0 +1,235 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b11::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28048",
+      "identity_tokens": [
+        "arXiv:2608.28048",
+        "https://arxiv.org/abs/2608.28048"
+      ],
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "reason": "LLM向けAIハードウェアアクセラレータの総覧。GPU、ASIC、FPGA、メモリ内処理、神経模倣・光学的手法まで、訓練と提供の両方を対象にルーフライン分析で整理するレビュー。推論ハードウェアを含むが、総説であり境界。",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM inference surveys、roofline performance analysis",
+        "Weight Quantization / Compression",
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "inference-systems",
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "投機的復号 / 無損失復号高速化",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 137,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05760",
+      "identity_tokens": [
+        "arXiv:2609.05760",
+        "https://arxiv.org/abs/2609.05760"
+      ],
+      "title": "RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems",
+      "reason": "RAGベンチマーク基盤RAGMark。小規模マルチGPU環境で、検索器・ベクトルDB・プロンプト処理・生成モデルの各段階の遅延やGPU利用率、電力などを測るモジュール型のベンチマーク枠組み。推論基盤の計測道具ではあるが、機構の提案ではなく境界。",
+      "source_url": "https://arxiv.org/abs/2609.05760",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLMサービング、ワークフロー実行、分散スケジューリング、RAG/エージェント基盤。",
+        "kv-cache-offload-recomputation"
+      ],
+      "worklist_rank": 168,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.14706",
+      "identity_tokens": [
+        "arXiv:2609.14706",
+        "https://arxiv.org/abs/2609.14706"
+      ],
+      "title": "WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians",
+      "reason": "WaterKronとFlipFlopヘッセ行列。学習後量子化のクロネッカー型ヘッセ近似の選び方を、高レート歪みの理論から両側GPTQとウォーターフィリング型スケール、エントロピー符号化で原理づけ、近似の不一致因子を最小化する因子選択基準を与える。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.14706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "inference-systems"
+      ],
+      "worklist_rank": 108,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33477",
+      "identity_tokens": [
+        "arXiv:2609.33477",
+        "https://arxiv.org/abs/2609.33477"
+      ],
+      "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+      "reason": "接頭辞キャッシュSuffixReplay。ハイブリッドLLMで線形注意層の循環状態が任意の接頭辞境界へ戻せない問題に対し、線形状態に遠い過去を忘れさせることで、チェックポイントを実体化せずに全てのページ境界で接頭辞再利用を可能にする初の方式。推論のキャッシュ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2609.33477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "kv-cache",
+        "kv-cache-offload-recomputation",
+        "kv-cache-reuse-position-independent-caching",
+        "prefix caching / hybrid attention-SSM serving"
+      ],
+      "worklist_rank": 70,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00815",
+      "identity_tokens": [
+        "arXiv:2610.00815",
+        "https://arxiv.org/abs/2610.00815"
+      ],
+      "title": "SafeDepth: Safety-Aware Token-Level Adaptive Computation",
+      "reason": "安全性配慮型のトークン水準適応計算SafeDepth。層スキップの実行選択が安全性にも影響し、有害応答率が上がることを示し、選択的層実行で安全性と効率を両立させる軽量な差し込み枠組み。適応計算の推論機構ではあるが、学習を要し主題も安全性との両立であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.00815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "Conditional Computation"
+      ],
+      "worklist_rank": 265,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02670",
+      "identity_tokens": [
+        "arXiv:2610.02670",
+        "https://arxiv.org/abs/2610.02670"
+      ],
+      "title": "LEAP: Learning Efficient Action Proposals For LLM Agents",
+      "reason": "LLMエージェント向け行動提案の学習LEAP。エージェントのロールアウトが逐次で遅い問題に対し、推論トークンの投機的デコードと同様の考えを行動段階へ広げ、下書きモデルの大きさと一致率が端から端までの高速化をどう決めるかを一般化して問う。エージェント推論の高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.02670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "llm-serving-scheduling-disaggregation",
+        "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング"
+      ],
+      "worklist_rank": 191,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.08678",
+      "identity_tokens": [
+        "arXiv:2610.08678",
+        "https://arxiv.org/abs/2610.08678"
+      ],
+      "title": "Secure Speculative Decoding for Large Language Models",
+      "reason": "安全な投機的デコードの研究。損失あり投機的デコードの安全性への含意を大規模な測定研究で初めて体系化し、安全性と有用性の非対称を示す。推論デコードの計測ではあるが、主題はセキュリティ評価であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.08678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 247,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.27301",
+      "identity_tokens": [
+        "arXiv:2610.27301",
+        "https://arxiv.org/abs/2610.27301"
+      ],
+      "title": "Evaluating Context Compaction on the Questions That Come Later",
+      "reason": "後の質問に対する文脈圧縮の評価。エージェントが目の前の質問向けに圧縮した文脈が後の質問にも役立つかを、複数質問の証拠を注釈したコーパスで評価し、現在の質問向けの選択が後の質問ではランダム削除と変わらないことを示す。エージェント文脈管理の評価研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.27301",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "Long-context serving / KV cache benchmark"
+      ],
+      "worklist_rank": 243,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.02543",
+      "identity_tokens": [
+        "arXiv:2611.02543",
+        "https://arxiv.org/abs/2611.02543"
+      ],
+      "title": "When Cache Pressure Becomes a Trap: Metastability in Agent Serving",
+      "reason": "エージェント提供の準安定性（キャッシュ圧力の罠）。短い過負荷が接頭辞再利用を壊し、到着が元に戻っても性能劣化が続く準安定故障を、プリフィル・デコード分離エンジンで実測し、人口とキャッシュのフィードバックとして流体モデルで同定する。推論基盤の計測・分析そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.02543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "11-llm-serving-scheduling-disaggregation",
+        "14-agentic-inference-serving-runtime",
+        "KV cache working-set analysis / online capacity planning / prefix caching",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving / programmable inference / KV cache / agentic workflows",
+        "LLMサービング・スケジューリング・KVキャッシュ保持",
+        "LLM配信／KVキャッシュ制約／連続バッチ処理／待ち行列・力学系",
+        "MoE serving / expert offload / dynamic HBM repartitioning / KV-cache management / multi-turn agentic serving",
+        "agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling",
+        "agentic serving / production workload characterization / KV-cache lifecycle / resource reclamation",
+        "kv-cache-optimization-compression",
+        "llm-serving-scheduling-disaggregation"
+      ],
+      "worklist_rank": 14,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03815",
+      "identity_tokens": [
+        "arXiv:2604.03815",
+        "https://arxiv.org/abs/2604.03815"
+      ],
+      "title": "k-Maximum Inner Product Attention for Graph Transformers and the Expressive Power of GraphGPS",
+      "reason": "グラフTransformer向けk最大内積注意。大きなグラフへの全対全注意の二次費用に対し、上位kの鍵ノードだけを選ぶ疎な注意パターンの提案。対象はグラフ学習モデルであり、LLM推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2604.03815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T00:50:00+09:00",
+      "last_checked_at": "2026-11-16T00:50:00+09:00",
+      "linked_from": [
+        "CPU長文推論・近似注意",
+        "inference-systems"
+      ],
+      "worklist_rank": 173,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b11",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

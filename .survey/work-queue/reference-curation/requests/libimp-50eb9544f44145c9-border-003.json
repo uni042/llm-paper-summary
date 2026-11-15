@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-50eb9544f44145c9-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.22629",
+  "reason": "マスク自己蒸留によるCoTの内在化。同一モデルの教師・生徒コピーで中間推論痕跡をパラメータへ内在化し、推論時のはるかに短い痕跡で答えを出すモデルを学習する。狙いは推論の遅延とサービングコスト削減だが、機構の実体は知識蒸留の学習枠組みであり境界。",
+  "title": "Masked Self-Distillation: Internalizing the Chain-of-Thought in Language Models",
+  "identity_tokens": [
+    "arXiv:2607.22629",
+    "https://arxiv.org/abs/2607.22629"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+    "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+    "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+    "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-50eb9544f441",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

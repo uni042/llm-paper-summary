@@ -1,0 +1,223 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b32::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03333",
+      "identity_tokens": [
+        "arXiv:2508.03333",
+        "https://arxiv.org/abs/2508.03333"
+      ],
+      "title": "CTTS: Collective Test-Time Scaling",
+      "reason": "集合的テスト時スケーリングCTTS。単一エージェントと単一報酬モデルの枠組みが性能の天井に制約される問題に対し、集合的な方法でテスト時スケーリングを行う。推論時の枠組みではあるが、複数モデルの協調であり境界。",
+      "source_url": "https://arxiv.org/abs/2508.03333",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 453,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03726",
+      "identity_tokens": [
+        "arXiv:2508.03726",
+        "https://arxiv.org/abs/2508.03726"
+      ],
+      "title": "Hierarchical Verification of Speculative Beams for Accelerating LLM Inference",
+      "reason": "LLM推論を高速化する投機的ビームの階層検証HVT。投機的ビームの検証が優先度なく逐次に行われ無駄な計算が生む問題に対し、尤度の高い下書きを優先し見込みのないものを早期に剪定する階層検証木。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2508.03726",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Speculative Decoding",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 103,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.03760",
+      "identity_tokens": [
+        "arXiv:2508.03760",
+        "https://arxiv.org/abs/2508.03760"
+      ],
+      "title": "FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication",
+      "reason": "任意ビット通信のためのビット分割とスパイク保持FlashCommunication V2。分散訓練と配備の通信ボトルネックに対し、不規則なビット幅を基本単位へ分解して任意ビット幅のGPU間伝送を可能にする通信パラダイム。推論基盤の通信機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2508.03760",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Weight Quantization / Compression",
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "inference-systems",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 157,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.08343",
+      "identity_tokens": [
+        "arXiv:2508.08343",
+        "https://arxiv.org/abs/2508.08343"
+      ],
+      "title": "A Data-driven ML Approach for Maximizing Performance in LLM-Adapter Serving",
+      "reason": "LLMアダプタ提供の性能最大化のためのデータ駆動MLアプローチ。何百ものアダプタを単一GPUで提供する際、飢餓を起こさずスループットを最大化する同時・並列アダプタの共同構成を、解釈可能なモデルで決める。推論基盤の運用研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2508.08343",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "llm-serving-scheduling-disaggregation",
+        "many-adapter LLM serving / LoRA serving / inference scheduling",
+        "multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling"
+      ],
+      "worklist_rank": 460,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.04226",
+      "identity_tokens": [
+        "arXiv:2509.04226",
+        "https://arxiv.org/abs/2509.04226"
+      ],
+      "title": "LISM: Long-range Integrative State space Models via Input-Latent State Interactions",
+      "reason": "入力潜在状態による長距離統合状態空間モデルLISM。状態空間モデルの記憶の呪いへの対処。対象はSSMのアーキテクチャであり、LLM推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2509.04226",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 247,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.06174",
+      "identity_tokens": [
+        "arXiv:2509.06174",
+        "https://arxiv.org/abs/2509.06174"
+      ],
+      "title": "From Long to Short: LLMs Excel at Trimming Own Reasoning Chains",
+      "reason": "長から短へ：自身の推論鎖のトリミングに長けるLLM。過剰思考の傾向に対し、推論効率を系統的に調査する研究。推論時の振る舞いの研究であり、機構の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2509.06174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 343,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24416",
+      "identity_tokens": [
+        "arXiv:2509.24416",
+        "https://arxiv.org/abs/2509.24416"
+      ],
+      "title": "CLQ: Cross-Layer Guided Orthogonal-based Quantization for Diffusion Transformers",
+      "reason": "拡散Transformer向け層跨ぎ誘導直交量子化CLQ。視覚生成モデルの配備のための学習後量子化。対象は画像生成モデルであり、LLM推論の機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2509.24416",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "worklist_rank": 256,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16325",
+      "identity_tokens": [
+        "arXiv:2510.16325",
+        "https://arxiv.org/abs/2510.16325"
+      ],
+      "title": "UltraImageGen: Efficient Ultra-High-Resolution Image Generation with Hierarchical Local Attention",
+      "reason": "階層注意による超高解像度画像生成UltraImageGen。テキストから画像の拡散モデルの解像度を上げる枠組み。対象は画像生成であり、LLM推論の機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2510.16325",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 424,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.23766",
+      "identity_tokens": [
+        "arXiv:2510.23766",
+        "https://arxiv.org/abs/2510.23766"
+      ],
+      "title": "BitSkip: An Empirical Analysis of Quantization and Early Exit Composition",
+      "reason": "量子化と早期終了の複合効果の実証分析BitSkip。極端な量子化と動的ルーティングの個別の利得は知られる一方で複合効果が分からない問題を、ハイブリッドな枠組みで系統的に探る研究。推論効率の研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2510.23766",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "Conditional Computation",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 317,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.26690",
+      "identity_tokens": [
+        "arXiv:2510.26690",
+        "https://arxiv.org/abs/2510.26690"
+      ],
+      "title": "LoRAQuant: Mixed-Precision Quantization of LoRA to Ultra-Low Bits",
+      "reason": "超低ビットへのLoRAの混合精度量子化LoRAQuant。多数のアダプタを同時読み込みする際の総費用に対し、アダプタを特異値分解で再パラメータ化して混合精度に量子化する。アダプタの量子化であり境界。",
+      "source_url": "https://arxiv.org/abs/2510.26690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "llm-serving-scheduling-disaggregation",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 487,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b32",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

@@ -1,0 +1,234 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b23::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.14255",
+      "identity_tokens": [
+        "arXiv:2610.14255",
+        "https://arxiv.org/abs/2610.14255"
+      ],
+      "title": "Simulate Before You Scale: High-Fidelity LLM Inference Planning Without GPUs",
+      "reason": "スケールする前にシミュレーション：GPUなしの高忠実LLM推論計画。ハードウェア配置、並列戦略、スケジューリング、受付制御、ルーティングの相互作用を、実クラスタで試す費用なしに評価する計画道具。推論基盤の計測・計画であり、機構そのものではないため境界。",
+      "source_url": "https://arxiv.org/abs/2610.14255",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "15-inference-simulation-emulation",
+        "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+        "inference-systems",
+        "serving-disaggregation"
+      ],
+      "worklist_rank": 187,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.20687",
+      "identity_tokens": [
+        "arXiv:2610.20687",
+        "https://arxiv.org/abs/2610.20687"
+      ],
+      "title": "On-Policy Residual Learning for Diffusion Language Models",
+      "reason": "拡散言語モデルのためのオンポリシー残差学習。ノイズ除去ステップをまたいで予測分布を持ち越す残差文脈の学習パラダイム。対象は拡散言語モデルの学習であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2610.20687",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "speculative-decoding",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+        "投機的復号 / EAGLE",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "worklist_rank": 150,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.23818",
+      "identity_tokens": [
+        "arXiv:2610.23818",
+        "https://arxiv.org/abs/2610.23818"
+      ],
+      "title": "Acceptance Is Not Speed: Length Inflation in Training-Free Lossy Speculative Decoding",
+      "reason": "受理は速度ではない：訓練不要の損失あり投機的検証における長さ膨張。緩和した検証が完了長を伸ばして、ラウンドあたり受理数の見かけの利得を相殺する現象を同定する研究。投機的デコードの測定であり、機構の提案ではないため境界。",
+      "source_url": "https://arxiv.org/abs/2610.23818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "speculative-decoding",
+        "投機的復号 / EAGLE",
+        "投機的復号 / LLMサービング・ベンチマーク"
+      ],
+      "worklist_rank": 221,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.27379",
+      "identity_tokens": [
+        "arXiv:2610.27379",
+        "https://arxiv.org/abs/2610.27379"
+      ],
+      "title": "DStill: Trajectory Consistency Distillation for Accelerated One-Step Drafting in Block Diffusion Speculative Decoding",
+      "reason": "1ステップ拡散下書きのための軌跡一貫性蒸留DStill。ブロック拡散の1ステップ下書きがトークン因数分解誤差で一貫しない問題に対し、軌跡一貫性の蒸留で対処する。投機的デコードの下書き改善だが、機構の実体は蒸留であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.27379",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "speculative-decoding",
+        "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 202,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.28500",
+      "identity_tokens": [
+        "arXiv:2610.28500",
+        "https://arxiv.org/abs/2610.28500"
+      ],
+      "title": "BitMTP: When Multi-Token Prediction Meets Low-Bit Large Language Models",
+      "reason": "低ビットLLMと複数トークン予測が出会うBitMTP。超低ビット骨格と複数トークン予測の単純な組み合わせが、因果KV更新などで相殺される問題に対処する。推論高速化の組み合わせではあるが、下書きの設計が中心であり境界。",
+      "source_url": "https://arxiv.org/abs/2610.28500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "KVキャッシュ動的メモリ管理／PagedAttention代替",
+        "inference-systems",
+        "投機的復号 / EAGLE"
+      ],
+      "worklist_rank": 194,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.33404",
+      "identity_tokens": [
+        "arXiv:2610.33404",
+        "https://arxiv.org/abs/2610.33404"
+      ],
+      "title": "COPE: Composable Performance Emulation for Mixture-of-Experts Offloading Policies",
+      "reason": "MoEオフロード向け構成可能性能エミュレーションCOPE。モデルや基盤の構成でオフロード方針の順位が変わるのに、全構成を実装して評価する費用が高い問題へのエミュレーション。推論基盤の評価道具であり、機構そのものではないため境界。",
+      "source_url": "https://arxiv.org/abs/2610.33404",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+        "MoE compression / expert pruning / neuron-level recombination / expert reconstruction",
+        "MoE inference / CPU-GPU hybrid execution / expert offloading / expert cache and prefetch",
+        "MoE inference / expert offloading / expert cache / edge inference / CPU-GPU scheduling",
+        "MoE圧縮 / expert merging / subspace alignment / SVD / adaptive clustering",
+        "端末MoE推論、エキスパートオフロード、無損失圧縮、階層キャッシュ、異種資源スケジューリング"
+      ],
+      "worklist_rank": 152,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35023",
+      "identity_tokens": [
+        "arXiv:2610.35023",
+        "https://arxiv.org/abs/2610.35023"
+      ],
+      "title": "BellowsKV: One Latent for Many Layers, Expanded on Demand",
+      "reason": "層をまたぐ潜在の共有BellowsKV。層ごとにキャッシュを持つKVメモリが提供のボトルネックになる問題に対し、1つの潜在を多層で共有し需要に応じて展開する層跨ぎの圧縮で、高圧縮でも精度を保つ。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2610.35023",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "10-kv-cache-offload-recomputation",
+        "KV Cache Optimization / Compression",
+        "arXiv:2405.16406のICLR 2025採録版。"
+      ],
+      "worklist_rank": 220,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.00408",
+      "identity_tokens": [
+        "arXiv:2611.00408",
+        "https://arxiv.org/abs/2611.00408"
+      ],
+      "title": "TileWeave: Heterogeneous Tiling for Sparse Prefill on Mobile SoCs",
+      "reason": "モバイルSoC向け疎プリフィルの異種タイリングTileWeave。ブロック疎注意の不規則な選択がモバイルNPUの大きな規則タイルと衝突する問題に対し、クエリ跨ぎの再利用で疎注意を分割し粗いタイルと細かいタイルに振り分ける。推論カーネルそのもの。",
+      "source_url": "https://arxiv.org/abs/2611.00408",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "08-edge-on-device-llm-systems",
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "worklist_rank": 200,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2611.01022",
+      "identity_tokens": [
+        "arXiv:2611.01022",
+        "https://arxiv.org/abs/2611.01022"
+      ],
+      "title": "Jet-QSparse: Accelerating Agentic LLM Inference with 4-Bit Sparse Attention",
+      "reason": "4ビット疎注意によるエージェントLLM推論の高速化Jet-QSparse。長期エージェントのワークロードでKV容量とデコード注意のスループットが逼迫する問題に対し、NVFP4のキャッシュ保存とFP4のクエリ・キー計算を訓練不要で組み合わせる。推論高速化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2611.01022",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "inference-systems"
+      ],
+      "worklist_rank": 172,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.07605",
+      "identity_tokens": [
+        "arXiv:2611.07605",
+        "https://arxiv.org/abs/2611.07605"
+      ],
+      "title": "The Gating Mechanism of KV Cache Eviction",
+      "reason": "KVキャッシュ排除のゲーティング機構。学習可能なゲートで排除を推定する自然な方法を、モデル自身の目的で訓練して検討する分析。ゲートがほぼ定数に留まるなど、排除機構の理解が主題であり境界。",
+      "source_url": "https://arxiv.org/abs/2611.07605",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T04:20:00+09:00",
+      "last_checked_at": "2026-11-16T04:20:00+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "inference-systems",
+        "sparse attention / learned context ranking / long-context LLM inference"
+      ],
+      "worklist_rank": 171,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b23",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

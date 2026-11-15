@@ -1,0 +1,230 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b30::chunk-0002-of-0002",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07919",
+      "identity_tokens": [
+        "arXiv:2506.07919",
+        "https://arxiv.org/abs/2506.07919"
+      ],
+      "title": "Uncovering the Computational Roles of Nonlinearity in Sequence Modeling Using Almost-Linear RNNs",
+      "reason": "系列モデリングにおける非線形性の計算的役割の解明。再帰網の非線形性がいつ計算的に必要かを体系的に解剖する理論研究。対象は理論であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2506.07919",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 394,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.00797",
+      "identity_tokens": [
+        "arXiv:2507.00797",
+        "https://arxiv.org/abs/2507.00797"
+      ],
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "reason": "投票ベースKVキャッシュ排除による効率的LLM生成VEDA。エッジ配備の計算とメモリの課題に対し、投票で重要でないKVベクトルを適応的に同定する排除アルゴリズムと、柔軟なデータフローと再構成可能なPEアレイを組み合わせる。推論メモリ機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "Sparse Attention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 291,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.03117",
+      "identity_tokens": [
+        "arXiv:2507.03117",
+        "https://arxiv.org/abs/2507.03117"
+      ],
+      "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers",
+      "reason": "ブロック疎Transformerによる高性能推論と事前学習BLaST。データ移動がエネルギー消費を支配する問題に対し、線形層などへ適用できる疎化の一般手法。推論と事前学習の双方を対象とし境界。",
+      "source_url": "https://arxiv.org/abs/2507.03117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "sparse attention / long-context Transformer",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+      ],
+      "worklist_rank": 138,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18061",
+      "identity_tokens": [
+        "arXiv:2507.18061",
+        "https://arxiv.org/abs/2507.18061"
+      ],
+      "title": "TELEVAL: A Benchmark Designed for Spoken Language Models in Chinese Interactive Scenarios",
+      "reason": "中国語話し言葉対話のための音声言語モデルベンチマークTELEVAL。音響文脈に基づく対話行動の評価。対象は音声モデルの評価であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2507.18061",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "worklist_rank": 490,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.20630",
+      "identity_tokens": [
+        "arXiv:2507.20630",
+        "https://arxiv.org/abs/2507.20630"
+      ],
+      "title": "TransPrune: Token Transition Pruning for Efficient Large Vision-Language Model",
+      "reason": "大規模視覚言語モデルのためのトークン遷移剪定TransPrune。注意ベースの重要度が位置バイアスに悩む問題に対し、トークン表現の遷移から重要度を見る新しい観点。LVLMの視覚トークン削減であり境界。",
+      "source_url": "https://arxiv.org/abs/2507.20630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 228,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03351",
+      "identity_tokens": [
+        "arXiv:2508.03351",
+        "https://arxiv.org/abs/2508.03351"
+      ],
+      "title": "SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models",
+      "reason": "視覚言語モデルのための細粒度顕著性誘導量子化SalQ-VLM。VLMの活性の性質、視覚トークンの過剰表現などを使った学習後量子化。VLMの量子化であり境界。",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
+      ],
+      "worklist_rank": 20,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18177",
+      "identity_tokens": [
+        "arXiv:2508.18177",
+        "https://arxiv.org/abs/2508.18177"
+      ],
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+      "reason": "視覚障害者のための場面配慮型多エージェント枠組み。視覚言語モデルの計算要求が配備を制限する問題への統合的支援システム。対象は支援技術の応用であり、推論システムの機構ではない。対象外。",
+      "source_url": "https://arxiv.org/abs/2508.18177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "weight-activation-quantization-outlier-decomposition",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 214,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.01581",
+      "identity_tokens": [
+        "arXiv:2510.01581",
+        "https://arxiv.org/abs/2510.01581"
+      ],
+      "title": "Think Right: Learning to Mitigate Under-Over Thinking via Adaptive, Attentive Compression",
+      "reason": "適応的で原子的な推論量の学習Think Right。課題の難しさに応じてテスト時計算を配るべきなのに、不足と過剰の両方の不適応がある問題に対処する学習。推論量の制御ではあるが、機構の実体は訓練であり境界。",
+      "source_url": "https://arxiv.org/abs/2510.01581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md",
+        "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+      ],
+      "worklist_rank": 386,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02132",
+      "identity_tokens": [
+        "arXiv:2511.02132",
+        "https://arxiv.org/abs/2511.02132"
+      ],
+      "title": "Optimizing Attention on GPUs by Exploiting GPU Architectural NUMA Effects",
+      "reason": "GPUアーキテクチャのNUMA効果を利用した注意の最適化。分離型GPUでメモリ遅延と帯域が計算領域ごとに大きく異なる問題に対し、注意ヘッドをNUMAドメインに合わせる空間配慮型スケジューリング。推論カーネルそのもの。",
+      "source_url": "https://arxiv.org/abs/2511.02132",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 259,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13274",
+      "identity_tokens": [
+        "arXiv:2511.13274",
+        "https://arxiv.org/abs/2511.13274"
+      ],
+      "title": "KForge: Program Synthesis for Diverse AI Hardware Accelerators",
+      "reason": "多様なAIハードウェア加速器のためのプログラム合成KForge。生成エージェントと性能分析エージェントの協調でカーネルを反復洗練する基盤非依存の枠組み。カーネル最適化のエージェント研究であり境界。",
+      "source_url": "https://arxiv.org/abs/2511.13274",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:10:00+09:00",
+      "last_checked_at": "2026-11-16T06:10:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "LLM Serving / Scheduling / Disaggregation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 383,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b30",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

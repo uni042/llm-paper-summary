@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-2325-r02::chunk-0002-of-0002",
+  "reference_main_sha": "85d1757e6c62ef3df5ffbf13ff43395f19452a34",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.20954",
+      "identity_tokens": [
+        "arXiv:2606.20954",
+        "https://arxiv.org/abs/2606.20954"
+      ],
+      "title": "Learning What Not to Forget: Long-Horizon Agent Memory from a Few Kilobytes of Learning",
+      "reason": "長期エージェントの文脈メモリ向け学習型退避LRE。履歴のどの単位が課題遂行に必須かを学ぶキロバイト規模・CPUのみ・言語モデル不要のスコアラで逐語抽出により保持し、全履歴保持の93%の精度を最悪時ピークプロンプト52%削減で得る。推論時の文脈退避ポリシーという実行時機構。",
+      "source_url": "https://arxiv.org/abs/2606.20954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling"
+      ],
+      "worklist_rank": 378,
+      "worklist_source": "wl45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07854",
+      "identity_tokens": [
+        "arXiv:2602.07854",
+        "https://arxiv.org/abs/2602.07854"
+      ],
+      "title": "Geometry-Aware Rotary Position Embedding for Consistent Video World Model",
+      "reason": "ビデオ世界モデルの幾何一貫性のためのViewRopeとGeometry-Aware Frame-Sparse Attention。カメラ光線方向を注意へ注入する位置符号化が主貢献で、疎注意による効率化は従属的。主目的は3D一貫性というモデル品質であり、推論効率の機構としては二次的。",
+      "source_url": "https://arxiv.org/abs/2602.07854",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "worklist_rank": 387,
+      "worklist_source": "wl30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05227",
+      "identity_tokens": [
+        "arXiv:2605.05227",
+        "https://arxiv.org/abs/2605.05227"
+      ],
+      "title": "Rethinking Data Curation in LLM Training: Online Reweighting Offers Better Generalization than Offline Methods",
+      "reason": "LLM訓練のデータキュレーションをオンライン再重み付けにするADAPT。事前学習と微調整のサンプル重要度を類似度ベースの品質信号で動的に変える訓練手法であり、推論への適用はない。学習側のみの研究は対象外。",
+      "source_url": "https://arxiv.org/abs/2605.05227",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "異種GPU・事前充填/復号分離サービング"
+      ],
+      "worklist_rank": 408,
+      "worklist_source": "wl45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.05505",
+      "identity_tokens": [
+        "arXiv:2601.05505",
+        "https://arxiv.org/abs/2601.05505"
+      ],
+      "title": "FlashMem: Distilling Intrinsic Latent Memory via Computation Reuse",
+      "reason": "計算再利用による潜在メモリ蒸留FlashMem。推論中の最後の隠れ状態を対話履歴の十分統計量とみなし、凍結したKVキャッシュへ直接注意するShared-KV Consolidatorでメモリを合成し、注意エントロピーで統合の要否を判断する。履歴の再処理を省くエージェント推論のメモリ機構。",
+      "source_url": "https://arxiv.org/abs/2601.05505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "KV-cache compression / attention-based token selection / long-context inference",
+        "KVキャッシュ最適化／適応圧縮",
+        "inference-systems"
+      ],
+      "worklist_rank": 472,
+      "worklist_source": "wl30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20755",
+      "identity_tokens": [
+        "arXiv:2605.20755",
+        "https://arxiv.org/abs/2605.20755"
+      ],
+      "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action",
+      "reason": "全二重音声・言語・行動モデルDuplexSLA。聞く・話す・計画・ツール呼び出しを160msチャンクの共有時計で同時デコードする基盤モデルの設計と訓練が中核で、推論システム機構の提案はない。モデル自体の発表であり対象外。",
+      "source_url": "https://arxiv.org/abs/2605.20755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "worklist_source": "wl00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.21221",
+      "identity_tokens": [
+        "arXiv:2604.21221",
+        "https://arxiv.org/abs/2604.21221"
+      ],
+      "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation",
+      "reason": "自己回帰ビデオ拡散向けSparse Forcing。KVキャッシュ内に永続する顕著ブロックと局所的なブロック疎パターンが観測されることに基づき、永続ブロックの圧縮・保持・更新を学ぶネイティブ疎性と、それを高速化するGPUカーネルPBSAを提案。デコード遅延とメモリを減らす注意機構とカーネルの組合せ。",
+      "source_url": "https://arxiv.org/abs/2604.21221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "GPU Kernel Framework",
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "Sparse Attention / VLM Inference",
+        "long-context inference / dynamic sparse attention / prefill acceleration",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+        "疎注意 / KVキャッシュ選択 / 長文脈推論"
+      ],
+      "worklist_rank": 71,
+      "worklist_source": "wl00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05023",
+      "identity_tokens": [
+        "arXiv:2605.05023",
+        "https://arxiv.org/abs/2605.05023"
+      ],
+      "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+      "reason": "専門家記述の注意カーネルをLLMで適応させるCuBridge。カーネルを持ち上げ・転移・下ろしの手順でIR経由に変換し、PyTorch仕様から生成・検証する枠組み。推論カーネルを作る道具立てとしては関連するが、貢献の実体はコード変換パイプラインであり、実行時機構そのものではない。",
+      "source_url": "https://arxiv.org/abs/2605.05023",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "03-attention-kernels",
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 115,
+      "worklist_source": "wl00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.19870",
+      "identity_tokens": [
+        "arXiv:2602.19870",
+        "https://arxiv.org/abs/2602.19870"
+      ],
+      "title": "ApET: Approximation-Error Guided Token Compression for Efficient VLMs",
+      "reason": "VLM向け近似誤差誘導トークン圧縮ApET。視覚トークンを基底トークンの線形近似で再構成し、その近似誤差で情報量を測って圧縮するため、注意重みに依存せずFlashAttentionと両立する。視覚トークンの冗長性による推論コストへの直接の機構。",
+      "source_url": "https://arxiv.org/abs/2602.19870",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 159,
+      "worklist_source": "wl30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.31779",
+      "identity_tokens": [
+        "arXiv:2606.31779",
+        "https://arxiv.org/abs/2606.31779"
+      ],
+      "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers",
+      "reason": "潜在CoTと明示的CoTの差を埋めるLOTUS。潜在ブロックを並列に処理し、各潜在位置へ参照CoTステップの損失を課すループ型Transformerの訓練レシピが中核。推論時の深さ再利用という計算パラダイムには関わるが、貢献の実体は学習方法であり、推論機構としての提示は薄い。",
+      "source_url": "https://arxiv.org/abs/2606.31779",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "speculative-parallel-decoding",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "worklist_rank": 160,
+      "worklist_source": "wl30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03295",
+      "identity_tokens": [
+        "arXiv:2602.03295",
+        "https://arxiv.org/abs/2602.03295"
+      ],
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "reason": "プリフィル専用プルーニングPOP。深い層はデコードの次トークン予測には必須だがプリフィルの文脈符号化では冗長という非対称性を仮想ゲートの重要度分析で示し、プリフィル時だけ深層を省略し、独立したKV射影でキャッシュ整合を保つ。段階非対称の推論戦略。",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-15T23:25:00+09:00",
+      "last_checked_at": "2026-11-15T23:25:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Sparse Attention / VLM Inference",
+        "inference-systems",
+        "kv-cache-optimization-compression",
+        "long-context inference / dynamic sparse attention / prefill acceleration",
+        "疎注意 / KVキャッシュ選択 / 長文脈推論"
+      ],
+      "worklist_rank": 274,
+      "worklist_source": "wl45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-2325-r02",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

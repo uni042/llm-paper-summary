@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-603f140dadfe052d-border-010",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.15682",
+  "reason": "推論モデル向けFP4量子化認識訓練ReQAT。重み・活性・KVの全面FP4化で推論が崩れる原因を低エントロピートークンへの量子化ノイズ集中と特定し、痕跡整合QATなどで回復を図る訓練基盤。配置先はFP4推論だが、機構の実体は訓練側であり境界。",
+  "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+  "identity_tokens": [
+    "arXiv:2606.15682",
+    "https://arxiv.org/abs/2606.15682"
+  ],
+  "linked_from": [
+    "16-weight-quantization-compression",
+    "KV cache quantization / long-context inference / activation compression",
+    "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+    "Weight Quantization / Compression",
+    "重み専用量子化 / 推論カーネル"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-603f140dadfe",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

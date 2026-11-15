@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-96fc76a04bf45f8c-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.09536",
+  "reason": "軌跡自己蒸留によるdLLM高速化TAD。教師のデコード軌跡の中間マスク状態を記録し、開示までの残りステップで近いトークンと遠いトークンを分けて生徒を訓練する。狙いは拡散推論の高速化だが、機構の実体は自己蒸留の学習枠組みであり境界。",
+  "title": "TAD: Temporal-Aware Trajectory Self-Distillation for Fast and Accurate Diffusion LLM",
+  "identity_tokens": [
+    "arXiv:2605.09536",
+    "https://arxiv.org/abs/2605.09536"
+  ],
+  "linked_from": [
+    "Diffusion LLM Inference",
+    "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+    "diffusion language model inference / KV cache / training-free acceleration",
+    "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+    "parallel-and-non-autoregressive-decoding",
+    "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御",
+    "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96fc76a04bf4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
