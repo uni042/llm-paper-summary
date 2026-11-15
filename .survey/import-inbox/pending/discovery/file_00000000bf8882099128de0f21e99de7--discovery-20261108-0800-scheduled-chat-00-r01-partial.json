@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261108-0800-scheduled-chat-00/r01",
+  "reference_main_sha": "7e5c28e3dba8551a98841066d340893dcdf011c4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17302",
+      "identity_tokens": [
+        "arxiv:2603.17302"
+      ],
+      "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems",
+      "reason": "vLLM上の分散エージェント要求ルーティングで、KV再利用親和性とQoS予測をVCG型二部マッチングへ組み込む。サービス費用と遅延の改善を評価しておりLLMサービングに直接関係する。",
+      "source_url": "https://arxiv.org/abs/2603.17302",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 80"
+      ],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10553",
+      "identity_tokens": [
+        "arxiv:2410.10553"
+      ],
+      "title": "SLaNC: Static LayerNorm Calibration",
+      "reason": "Transformer推論のLayerNormにおける低精度演算の範囲外・桁落ち問題に対し、直前の線形層重みからオフラインで入力倍率を計算する。推論時追加負荷なしの量子化・アクセラレータ適合技術。",
+      "source_url": "https://arxiv.org/abs/2410.10553",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 81"
+      ],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.957",
+      "identity_tokens": [
+        "doi:10.18653/v1/2025.findings-emnlp.957"
+      ],
+      "title": "Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication",
+      "reason": "MoLinkは民生GPU間のprefill大量通信を分割し、decode要求との送信公平性と分割量を動的に決める。分散LLMサービングのTTFT・TPOT・遅延に直接寄与する。",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.957/",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 82"
+      ],
+      "worklist_rank": 82
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06052",
+      "identity_tokens": [
+        "arxiv:2605.06052"
+      ],
+      "title": "XtraMAC: An Efficient MAC Architecture for Mixed-Precision LLM Inference on FPGA",
+      "reason": "整数・浮動小数・混合精度MACを共通仮数積と符号・指数処理で統合し、FPGA DSP共有を改善する。U55c上の混合精度LLM推論負荷を評価する推論アクセラレータ研究。",
+      "source_url": "https://arxiv.org/abs/2605.06052",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 83"
+      ],
+      "worklist_rank": 83
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.03599",
+      "identity_tokens": [
+        "arxiv:2412.03599"
+      ],
+      "title": "CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models",
+      "reason": "層間正準相関・剪定感度・Taylor展開に基づく三つの混合精度割当を提案し、OPT等のモデル圧縮と推論効率を比較する。LLM推論向け量子化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2412.03599",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 84"
+      ],
+      "worklist_rank": 84
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.03190",
+      "identity_tokens": [
+        "arxiv:2605.03190"
+      ],
+      "title": "VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU",
+      "reason": "非同期GPU演算資源を仮想コアと依存関係付きmicro-opへ分離し、メモリ・計算の重畳を自動化する。GH200/H100/RTX 6000 Pro上のLLM decode throughputを評価する。",
+      "source_url": "https://arxiv.org/abs/2605.03190",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 86"
+      ],
+      "worklist_rank": 86
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06532",
+      "identity_tokens": [
+        "arxiv:2606.06532"
+      ],
+      "title": "GOPAgen: Motion-Aware and Efficient Agentic Long-Video Understanding with Structural Memory and Hierarchical Reasoning",
+      "reason": "動画codecのGOP単位motion agent、構造化ページメモリと粗密検索を使う長動画QA手法。メモリ構造は関連するがLLM推論カーネルやKVキャッシュ効率への直接的な実証が要旨にない。",
+      "source_url": "https://arxiv.org/abs/2606.06532",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 87"
+      ],
+      "worklist_rank": 87
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.15732",
+      "identity_tokens": [
+        "arxiv:2604.15732"
+      ],
+      "title": "Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving",
+      "reason": "長文脈要求の正答までの再試行を含むTime-to-Correct-Answerを指標化し、モデル能力に応じた軽量ルーティングLAARを検証する。分散LLMサービングの要求割当最適化に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2604.15732",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 91"
+      ],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.17404",
+      "identity_tokens": [
+        "arxiv:2406.17404"
+      ],
+      "title": "Make Some Noise: Unlocking Language Model Parallel Inference Capability through Noisy Training",
+      "reason": "ノイズ入力のdenoising学習とTR-Jacobi木検索復号により、追加ドラフトモデルを用いない並列復号を可能にする。汎用・コード生成の推論速度を比較する投機的復号関連研究。",
+      "source_url": "https://arxiv.org/abs/2406.17404",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 92"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3735452.3735523",
+      "identity_tokens": [
+        "doi:10.1145/3735452.3735523"
+      ],
+      "title": "SPARQ: An Accelerator Architecture for Large Language Models with Joint Sparsity and Quantization Techniques",
+      "reason": "N:M半構造化疎性を支援するシストリックアレイと量子化MACを組み合わせたLLM推論アクセラレータを提案。面積効率・電力効率を既存方式と比較する。",
+      "source_url": "https://doi.org/10.1145/3735452.3735523",
+      "body_check": "primary_abstract_screened; full_body_not_read",
+      "first_checked_at": "2026-11-08T08:00:00+09:00",
+      "last_checked_at": "2026-11-08T08:00:00+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 93"
+      ],
+      "worklist_rank": 93
+    }
+  ],
+  "partial_round": true,
+  "verification_status": "pending_full_GitHub_and_Library_seen_reconstruction",
+  "next_worklist_rank": 94
+}
