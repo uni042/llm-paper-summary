@@ -1,0 +1,46 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-discovery-20261115-marathon-b08-postread",
+ "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+ "record_count": 2,
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2505.21835",
+   "identity_tokens": [
+    "arXiv:2505.21835",
+    "https://arxiv.org/abs/2505.21835"
+   ],
+   "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+   "reason": "微調整と圧縮の同時最適化という訓練手順の改善であり、評価も視覚モデルの画像分類のみ。全文精読による再判定で対象外として記録。",
+   "source_url": "https://arxiv.org/abs/2505.21835",
+   "body_check": "research_fulltext_relevance_review: 全文を通読した結果、本論文はLLM推論システムへの直接貢献がなく対象外と判定した。(1) 手法の中核は訓練時の同時最適化であり、推論時にリクエスト・トークン・KVキャッシュ・重み配置を観測/選択/転送/削除する実行時機構はなく、推論ランタイムやサービングへの寄与はない。(2) 評価はViT-BaseのImageNet1KからCIFAR100への転移学習・画像分類のみで、LLMでの実験、生成品質、遅延・スループット・メモリの実機推論測定は一切ない。(3) 主張は逐次パイプラインを避けて微調整と蒸留・低ランク近似・枝刈りを同時に行う訓練手順の改善であり、圧縮済みモデルが小さくなる点は間接的な含意に留まる。",
+   "first_checked_at": "2026-11-16T01:15:00+09:00",
+   "last_checked_at": "2026-11-16T01:15:00+09:00",
+   "linked_from": [],
+   "worklist_rank": 33,
+   "worklist_source": "worker-worklist-30.json discovery_review",
+   "origin": "research_postread_relevance"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2405.13088",
+   "identity_tokens": [
+    "arXiv:2405.13088",
+    "https://arxiv.org/abs/2405.13088"
+   ],
+   "title": "Combining Relevance and Magnitude for Resource-Saving DNN Pruning",
+   "reason": "画像分類DNN（VGG16+ImageNet）向けの汎用チャネル剪定手法であり、LLM/Transformerへの適用・検証はない。全文精読による再判定で対象外として記録。",
+   "source_url": "https://arxiv.org/abs/2405.13088",
+   "body_check": "research_fulltext_relevance_review: 全文を通読した結果、本論文はLLM推論システムへの直接貢献がなく対象外と判定した。(1) 提案手法FlexRelは学習時のパラメータの大きさと推論時入力から求める関連性を合成したスコアで畳み込み層のチャネルを構造化剪定する汎用DNN剪定手法であり、画像分類DNNに設計されている。(2) 実験はVGG16+ImageNetの単一構成のみで、言語モデル、Transformer、トークン生成、KVキャッシュ、サービング遅延・スループットといったLLM推論固有の対象・指標は一切評価されていない。(3) Transformerへの言及は関連研究での引用1箇所のみで、本手法のTransformer/LLMへの適用・検証・考察はない。",
+   "first_checked_at": "2026-11-16T01:15:00+09:00",
+   "last_checked_at": "2026-11-16T01:15:00+09:00",
+   "linked_from": [],
+   "worklist_rank": 34,
+   "worklist_source": "worker-worklist-45.json discovery_review",
+   "origin": "research_postread_relevance"
+  }
+ ]
+}
