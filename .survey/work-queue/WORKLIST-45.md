@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-15T16:14:15+00:00`
+Generated: `2026-11-15T16:56:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -561,7 +561,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **55**
 | 479 | 10 | 4 | 5 | arXiv:2610.18001 | Match the Canvas, Not Just the Answer: Predictability-Aware SFT for Diffusion Language Models | 2026-10-13 |  | 0 | 5 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.18001) |
 | 480 | 7 | 4 | 5 | arXiv:2507.20783 | On The Role of Pretrained Language Models in General-Purpose Text Embeddings: A Survey | 2025-07-28 | arXiv.org | 7 | 5 | inference-systems, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2507.20783) |
 | 481 | 0 | 4 | 5 | DOI:10.1109/COOLCHIPS65488.2025.11018598 | Hybrid ReRAM-NMC & SRAM-CiM Matrix Multiplication for Large Language Model | 2025-04-16 | International Symposium on Low-Power and High-Speed Chips | 0 | 5 | Weight Quantization / Compression, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/COOLCHIPS65488.2025.11018598) |
-| 482 | 104 | 4 | 5 | arXiv:2605.13768 | High-Rate Quantized Matrix Multiplication II | 2026-05-13 | IEEE BITS the Information Theory Magazine | 4 | 5 | inference-systems | [source](https://arxiv.org/abs/2605.13768) |
+| 482 | 105 | 4 | 5 | arXiv:2606.03002 | Perplexity Can Miss SAE Feature Damage Under Quantization | 2026-06-02 | arXiv.org | 5 | 5 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2606.03002) |
 | 483 | 49 | 4 | 5 | arXiv:2507.04742 | Activation Steering for Chain-of-Thought Compression | 2025-07-07 | Annual Meeting of the Association for Computational Linguistics | 39 | 5 | Conditional Computation | [source](https://arxiv.org/abs/2507.04742) |
 | 484 | 11 | 4 | 5 | arXiv:2505.04081 | QStore: Quantization-Aware Compressed Model Storage | 2025-05-07 | Proceedings of the VLDB Endowment | 11 | 5 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2505.04081) |
 | 485 | 10 | 4 | 5 | arXiv:2605.19645 | K-Quantization and its Impact on Output Performance | 2026-05-19 | arXiv.org | 0 | 5 | Training / Optimizer State Quantization and Memory Reduction, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2605.19645) |

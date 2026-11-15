@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-15T16:14:15+00:00`
+Generated: `2026-11-15T16:56:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -562,7 +562,7 @@ ready総数: **167** / 未claim総数: **167** / このworker向け: **56**
 | 479 | 10 | 4 | 5 | arXiv:2607.19704 | Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale | 2026-07-22 |  | 0 | 5 | LLM Serving / Scheduling / Disaggregation, LLM配信／スケジューリング／分離, 大規模言語モデル推論サービング／装置内演算スケジューリング | [source](https://arxiv.org/abs/2607.19704) |
 | 480 | 9 | 4 | 5 | arXiv:2505.16723 | LLM Fingerprinting via Semantically Conditioned Watermarks | 2025-05-22 |  | 9 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2505.16723) |
 | 481 | 2 | 4 | 5 | arXiv:2509.23625 | RIV: Recursive Introspection Mask Diffusion Vision Language Model | 2025-09-28 | arXiv.org | 2 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2509.23625) |
-| 482 | 105 | 4 | 5 | arXiv:2606.03002 | Perplexity Can Miss SAE Feature Damage Under Quantization | 2026-06-02 | arXiv.org | 5 | 5 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2606.03002) |
+| 482 | 105 | 4 | 5 | arXiv:2605.13768 | High-Rate Quantized Matrix Multiplication II | 2026-05-13 | IEEE BITS the Information Theory Magazine | 5 | 5 | inference-systems | [source](https://arxiv.org/abs/2605.13768) |
 | 483 | 101 | 4 | 5 | arXiv:2609.21834 | Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent | 2026-09-18 |  | 1 | 5 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.21834) |
 | 484 | 15 | 4 | 5 | arXiv:2503.19604 | GIViC: Generative Implicit Video Compression | 2025-03-25 | IEEE International Conference on Computer Vision | 15 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2503.19604) |
 | 485 | 10 | 4 | 5 | DOI:10.1109/ISCAS66217.2026.11562456 | Efficient Token Compression for the Understanding and Generation Unified MLLMs | 2026-05-24 | International Symposium on Circuits and Systems | 0 | 6 | 12-multimodal-inference | [source](https://doi.org/10.1109/ISCAS66217.2026.11562456) |
