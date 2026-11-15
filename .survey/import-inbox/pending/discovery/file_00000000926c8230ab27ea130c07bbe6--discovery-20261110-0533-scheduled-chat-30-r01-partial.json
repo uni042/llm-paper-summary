@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261110-0533-scheduled-chat-30/r01",
+  "reference_main_sha": "e0615221d1b2af912854ba407c80448b6191d823",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42147",
+      "identity_tokens": ["arxiv:2610.42147", "doi:10.48550/arxiv.2610.42147"],
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "reason": "一次要旨v2に基づく判定。学習された潜在空間でキーを階層的にクラスタリングし、クエリが全キーではなくクラスタ階層を探索することで超長文脈注意の索引コストを削減する。既存モデルへの蒸留適用型D-LSAと次トークン予測損失によるネイティブ学習型N-LSAを提案。著者はGLM-5.3-FLASH（QWEN-3.8-27B）の1000万トークン条件で、従来疎注意比の注意層prefill 22.7倍、decode 4.6倍高速化と類似精度を報告。これはモデル全体の高速化ではない。長文脈推論の疎注意計算に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2610.42147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-10T05:33:06+09:00",
+      "last_checked_at": "2026-11-10T05:33:06+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 6",
+      "worklist_rank": 6
+    }
+  ]
+}
