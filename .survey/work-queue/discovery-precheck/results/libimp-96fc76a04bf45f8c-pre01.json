@@ -1,0 +1,1069 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-96fc76a04bf45f8c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-96fc76a04bf4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3777471",
+    "arXiv:2512.13494",
+    "arXiv:2601.20706",
+    "arXiv:2602.06454",
+    "arXiv:2604.02344",
+    "arXiv:2604.02570",
+    "arXiv:2604.02816",
+    "arXiv:2604.13556",
+    "arXiv:2604.17068",
+    "arXiv:2604.21231",
+    "arXiv:2605.23914",
+    "arXiv:2606.24165"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c91bc910aa802bcc56f5807696baa4f42bca0832",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-15T21:53:14.766272+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3777471",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.13494",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.06454",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02344",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02570",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02816",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.13556",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.17068",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.21231",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2604.21231"
+    },
+    {
+      "requested_id": "arXiv:2605.23914",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.24165",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.02570",
+      "year": 2026,
+      "published": "2026-04-02",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Singular Value Decomposition (SVD) has become an important technique for reducing the computational burden of Vision Language Models (VLMs), which play a central role in tasks such as image captioning and visual question answering. Although multiple prior works have proposed efficient SVD variants to enable low-rank operations, we find that in practice it remains difficult to achieve substantial latency reduction during model execution. To address this limitation, we introduce a new computational pattern and apply SVD at a finer granularity, enabling real and measurable improvements in execution latency. Furthermore, recognizing that weight elements differ in their relative importance, we adaptively allocate relative importance to each element during SVD process to better preserve accuracy, then extend this framework with quantization applied to both weights and activations, resulting in a highly efficient VLM. Collectively, we introduce~\\textit{Weighted SVD} (WSVD), which outperforms other approaches by achieving over $1.8\\times$ decoding speedup while preserving accuracy. We open source our code at: \\href{https://github.com/SAI-Lab-NYU/WSVD}{\\texttt{https://github.com/SAI-Lab-NYU/WSVD}",
+      "identifiers": [
+        "SemanticScholar:1db738763082d49f0d8ca654742fe889281da227"
+      ],
+      "semantic_scholar_id": "1db738763082d49f0d8ca654742fe889281da227",
+      "canonical_id": "arXiv:2604.02570",
+      "arxiv_id": "2604.02570",
+      "doi": "10.48550/arXiv.2604.02570",
+      "authors": [
+        "Hai-Yu Wang",
+        "Yu-Tong Wang",
+        "Jackson Jiang",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers",
+      "source_url": "https://arxiv.org/abs/2604.02344",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "WebGPU's security-focused design imposes per-operation validation that compounds across the many small dispatches in neural network inference, yet the true cost of this overhead is poorly characterized. We present a systematic characterization of WebGPU dispatch overhead for LLM inference at batch size 1, spanning four GPU vendors (NVIDIA, AMD, Apple, Intel), two native implementations (Dawn, wgpu-native) and three browsers (Chrome, Safari, Firefox), and two model sizes (Qwen2.5-0.5B and 1.5B). Our primary contribution is a sequential-dispatch methodology that reveals naive single-operation benchmarks overestimate dispatch cost by ${\\sim}20\\times$. The true per-dispatch cost of WebGPU API overhead alone is 24-36 $\\mu$s on Vulkan and 32-71 $\\mu$s on Metal, while the total per-operation overhead including Python cost is ${\\sim}95$~$\\mu$s, which turns out to be a distinction critical for optimization. On Vulkan, kernel fusion improves throughput by 53%, while CUDA fusion provides no benefit, confirming that per-operation overhead is a primary differentiator. LLM inference was tested across three major operating systems (Linux, Windows, macOS). We built $\\texttt{torch-webgpu}$, a PrivateUse1-based out-of-tree PyTorch backend and an FX-to-WebGPU compiler, which on our reference platform achieves 11--12% of CUDA performance. At dtype-matched float32, RTX PRO 2000 achieves 1.4$\\times$ WebGPU's throughput despite ${\\sim}6\\times$ less compute than RTX 5090. For dispatch overhead, backend choice is the dominant factor, although implementation choice also matters substantially within a backend (2.2$\\times$ for Metal). In terms of dispatch vs kernel compute efficiency, we conclude that at batch=1 with the current dispatch-heavy pipeline, per-operation overhead dominates regardless of kernel quality. All code, benchmarks, and raw data are open source.",
+      "identifiers": [
+        "SemanticScholar:7b2ebe1739b3d2ad981841ebf12191d8d8c9b649"
+      ],
+      "semantic_scholar_id": "7b2ebe1739b3d2ad981841ebf12191d8d8c9b649",
+      "canonical_id": "arXiv:2604.02344",
+      "arxiv_id": "2604.02344",
+      "doi": "10.48550/arXiv.2604.02344",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+      "source_url": "https://doi.org/10.1145/3777471",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have achieved remarkable success. However, their growing size presents challenges due to the increasing mismatch between model scale and hardware capacity. Model compression techniques have been proposed to address this issue, but existing methods often struggle to cope with the large dynamic range of model parameters, including both activations and weights. Additionally, current outlier-aware encoding schemes introduce complex logic, which limits their effectiveness in both compression ratio and hardware efficiency. To overcome these challenges, we propose SPADE, a co-designed algorithm–architecture solution for post-training quantized INT8 large language models, introducing a hybrid-precision encoding scheme. SPADE employs variable-length data representation guided by metadata, enabling local, value-dependent encoding with only 3.66% hardware area overhead while delivering up to 4.88× speedup and 70.5% energy reduction compared with state-of-the-art encoding-based accelerators. Our key insight is that only a small portion of activations are outliers that require high-precision such as INT8, while the vast majority can be accurately represented with INT4. This allows us to exploit the sparsity of high-significance bits across the data. By assigning an identifier bit to each data element, SPADE dynamically selects between compact INT4 encoding for normal values and higher INT8 encoding for rare outliers, eliminating unnecessary bit-width and reducing data redundancy. Moreover, we analyze the limitations of existing variable-length encoding methods, which typically require serialization and deserialization due to uncertainty in the precision format of loaded data blocks. SPADE integrates precision information directly into its encoding rules, enabling parallel decoding and computation on systolic arrays. This design significantly boosts computational throughput and helps realize the theoretical performance advantages of structured encoding. We evaluate SPADE-based accelerators against state-of-the-art encoding-based accelerators, and our results demonstrate that the SPADE-based accelerator achieves up to 4.88× speedup and 70.5% energy reduction, while maintaining superior model accuracy. The codes are available at https://github.com/jlsbz/SPADE.",
+      "identifiers": [
+        "SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d"
+      ],
+      "semantic_scholar_id": "f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+      "doi": "10.1145/3777471",
+      "canonical_id": "DOI:10.1145/3777471",
+      "authors": [
+        "Ning Yang",
+        "Fang-Xin Liu",
+        "Jun-Jie Wang",
+        "Chen-Yang Guan",
+        "Zong-Wu Wang",
+        "Junping Zhao",
+        "Li Jiang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 349,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NPU Design for Diffusion Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2601.20706",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based LLMs (dLLMs) fundamentally depart from traditional autoregressive (AR) LLM inference: they leverage bidirectional attention, block-wise KV cache refreshing, cross-step reuse, and a non-GEMM-centric sampling phase. These characteristics make current dLLMs incompatible with most existing NPUs, as their inference patterns, in particular the reduction-heavy, top-$k$-driven sampling stage, demand new ISA and memory hierarchy support beyond that of AR accelerators. In addition, the blocked diffusion KV cache breaks from the append-only paradigm assumed by AR NPUs, and conventional AR-derived KV quantization schemes were designed for static activation distributions and do not account for the step-wise distribution shifts introduced by iterative block-wise refinement in dLLMs. In this paper, we introduce the first NPU accelerator specifically designed for dLLMs. It delivers: a dLLM-oriented ISA and compiler; a hardware-optimized execution model for both the transformer inference and diffusion sampling used in dLLMs; a novel Block-Adaptive Online Smoothing (BAOS) for quantizing KV cache in dLLMs; and a complete RTL implementation synthesized in 7nm. To evaluate and validate our design, we introduce a tri-path simulation framework that comprises analytical, cycle-accurate, and accuracy simulators, together with cross-validations against physical hardware. The full NPU stack, including ISA, simulation tools, and quantization software, will be open-sourced upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503"
+      ],
+      "semantic_scholar_id": "6e3001d2aa0d51b77b977dcac725abddfe46f503",
+      "canonical_id": "arXiv:2601.20706",
+      "arxiv_id": "2601.20706",
+      "authors": [
+        "Binglei Lou",
+        "Hao-Ran Wu",
+        "Kevin Lau",
+        "Gregor Macdonald",
+        "Jia-Yi Nie",
+        "Yao Lai",
+        "Can Xiao",
+        "Xuan Guo",
+        "Jian-Yi Cheng",
+        "R. Antonova",
+        "Robert Mullins",
+        "Aaron Zhao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.13556",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-layer key-value (KV) compression has been found to be effective in efficient inference of large language models (LLMs). Although they reduce the memory consumption of the KV cache, such methods usually introduce non-negligible performance degradation. In this work, we aim to enhance the performance of YOCO, a cross-layer KV compression method that shares the KVs of the middle layer with the top-half layers. We propose YOCO++, an enhanced YOCO that incorporates a weighted residual connection between the KVs of each bottom-half layer and the bottom layer. Compared to YOCO, YOCO++ increases model capacity while maintaining the same training and inference efficiency. Our experiments show that YOCO++ achieves state-of-the-art performance among the cross-layer KV compression methods at a 50% KV cache compression rate, outperforming the standard Transformer.",
+      "identifiers": [
+        "SemanticScholar:81a95fd396080960c74197b25805a289e19cf279"
+      ],
+      "semantic_scholar_id": "81a95fd396080960c74197b25805a289e19cf279",
+      "canonical_id": "arXiv:2604.13556",
+      "arxiv_id": "2604.13556",
+      "doi": "10.48550/arXiv.2604.13556",
+      "authors": [
+        "You Wu",
+        "Zi-Heng Chen",
+        "Yi-Zhe Zhang",
+        "Haoyi Wu",
+        "Cheng-Ting Yu",
+        "Yu-Chi Xu",
+        "Wen-Bo Su",
+        "Bo Zheng",
+        "Ke-Wei Tu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 214,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2606.24165",
+      "year": 2026,
+      "published": "2026-06-23",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reducing visual token redundancy is critical for accelerating Multimodal Large Language Models (MLLMs) without degrading cross-modal reasoning performance. Existing token pruning methods typically rely on single-layer signals, such as attention scores or token similarities, which overlook the cross-layer transformation of visual representations and may exhibit positional bias in multimodal token sequences. To address this limitation, we propose a training-free token pruning framework based on Cross-Layer Spectral Evolution (CLSE). Instead of measuring token importance from single-layer feature magnitudes, CLSE quantifies how token representations evolve across Transformer layers in the frequency domain. This evolution reflects the transition from high-frequency structural details to low-frequency semantic abstractions. We observe that tokens with stronger spectral redistribution across layers are more likely to be semantically active and should therefore be preserved. By modeling cross-layer token dynamics, CLSE provides a stable importance criterion that mitigates positional bias. Extensive experiments on both image and video benchmarks demonstrate that CLSE achieves a superior trade-off between efficiency and accuracy under aggressive token reduction. Across multiple MLLMs, CLSE reduces FLOPs, KV cache memory, and latency while maintaining competitive or improved performance.",
+      "identifiers": [
+        "SemanticScholar:d6df4fd5c5d7a940bc470807c99dab2c0628e701"
+      ],
+      "semantic_scholar_id": "d6df4fd5c5d7a940bc470807c99dab2c0628e701",
+      "canonical_id": "arXiv:2606.24165",
+      "arxiv_id": "2606.24165",
+      "doi": "10.48550/arXiv.2606.24165",
+      "authors": [
+        "Bin Chen",
+        "Yuxiang Cai",
+        "Ya-Dan Luo",
+        "Yi Zhang",
+        "Jian-Wei Yin",
+        "Zhi Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping",
+      "source_url": "https://arxiv.org/abs/2512.13494",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLM) have achieved remarkable performance across a wide range of tasks. However, their substantial parameter sizes pose significant challenges for deployment on edge devices with limited computational and memory resources. Low-rank compression is a promising approach to address this issue, as it reduces both computational and memory costs, making LLM more suitable for resource-constrained environments. Nonetheless, naïve low-rank compression methods require a significant reduction in the retained rank to achieve meaningful memory and computation savings. For a low-rank model, the ranks need to be reduced by more than half to yield efficiency gains. Such aggressive truncation, however, typically results in substantial performance degradation. To address this trade-off, we propose SkipCat, a novel low-rank compression framework that enables the use of higher ranks while achieving the same compression rates. First, we introduce an intra-layer shared low-rank projection method, where multiple matrices that share the same input use a common projection. This reduces redundancy and improves compression efficiency. Second, we propose a block skipping technique that omits computations and memory transfers for selected sub-blocks within the low-rank decomposition. These two techniques jointly enable our compressed model to retain more effective ranks under the same compression budget. Experimental results show that, without any additional fine-tuning, our method outperforms previous low-rank compression approaches by 7% accuracy improvement on zero-shot tasks under the same compression rate. These results highlight the effectiveness of our rank-maximized compression strategy in preserving model performance under tight resource constraints.",
+      "identifiers": [
+        "SemanticScholar:4c315e01a7df1be48a223bcbfbd3b30447956e87"
+      ],
+      "semantic_scholar_id": "4c315e01a7df1be48a223bcbfbd3b30447956e87",
+      "canonical_id": "arXiv:2512.13494",
+      "arxiv_id": "2512.13494",
+      "doi": "10.48550/arXiv.2512.13494",
+      "authors": [
+        "Yu-Chen Lu",
+        "Sheng Yu",
+        "H. Weng",
+        "Pei-Shuo Wang",
+        "Yu-Fang Hu",
+        "Hung-Chun Liang",
+        "Hung-Yueh Chiang",
+        "Kai-Chiang Wu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 335,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.06454",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks by generating long, multi-step reasoning trajectories, but inference-time scaling incurs substantial deployment cost. A key challenge is that generation difficulty varies within a single output, whereas existing efficiency-oriented approaches either ignore this intra-generation variation or rely on supervised token-level routing with high system complexity. We present \\textbf{RelayGen}, a training-free, segment-level runtime model switching framework that exploits difficulty variation in long-form reasoning. Through offline analysis of generation uncertainty using token probability margins, we show that coarse-grained segment-level control is sufficient to capture difficulty transitions within a reasoning trajectory. RelayGen identifies model-specific switch cues that signal transitions to lower-difficulty segments and dynamically delegates their continuation to a smaller model, while preserving high-difficulty reasoning on the large model. Across multiple reasoning benchmarks, RelayGen substantially reduces inference latency while preserving most of the accuracy of large models. When combined with speculative decoding, RelayGen achieves up to 2.2$\\times$ end-to-end speedup with less than 2\\% accuracy degradation, without requiring additional training or learned routing components.",
+      "identifiers": [
+        "SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62"
+      ],
+      "semantic_scholar_id": "a5c80bad3b95f238137b81231eb5705980d8fb62",
+      "canonical_id": "arXiv:2602.06454",
+      "arxiv_id": "2602.06454",
+      "doi": "10.48550/arXiv.2602.06454",
+      "authors": [
+        "Jiwon Song",
+        "Yoon Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.02816",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown strong reasoning ability, but their high computational and memory costs hinder deployment in resource-constrained settings. While Post-Training Quantization (PTQ) and vision token pruning are standard compression techniques, they are usually treated as independent optimizations. In this paper, we show that these two techniques are strongly coupled: naively applying semantic-based token pruning to PTQ-optimized MLLMs can discard activation outliers that are important for numerical stability and thus worsen quantization errors in low-bit regimes (\\textit{e.g.}, W4A4). To address this issue, we propose a quantization-aware vision token pruning framework. Our method introduces a lightweight hybrid sensitivity metric that combines simulated group-wise quantization error with outlier intensity. By combining this metric with standard semantic relevance scores, the method retains tokens that are both semantically informative and robust to quantization. Experiments on standard LLaVA architectures show that our method consistently outperforms naive integration baselines. At an aggressive pruning ratio that retains only 12.5\\% of visual tokens, our framework improves accuracy by 2.24\\% over the baseline and even surpasses dense quantization without pruning. To the best of our knowledge, this is the first method that explicitly co-optimizes vision token pruning and PTQ for accurate low-bit MLLM inference.",
+      "identifiers": [
+        "SemanticScholar:c85dc53a7258caaf5e6b40dc643cdb4b81985452"
+      ],
+      "semantic_scholar_id": "c85dc53a7258caaf5e6b40dc643cdb4b81985452",
+      "canonical_id": "arXiv:2604.02816",
+      "arxiv_id": "2604.02816",
+      "doi": "10.48550/arXiv.2604.02816",
+      "authors": [
+        "Xinhao Wang",
+        "Z. Xia",
+        "Zhi-Wei Lin",
+        "Zhe Li",
+        "Yong-Tao Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VineLM: Trie-Based Fine-Grained Control for Agentic Workflows",
+      "source_url": "https://arxiv.org/abs/2605.23914",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workflows interleave configurable LLM stages with tool stages and often include retries or refinement loops. Existing workflow managers profile full workflow configurations offline and assign each request a static workflow-level plan that binds each configurable LLM stage to a single model, reuses that model across repeated loop iterations, and does not revisit those choices at runtime. We present VineLM, a workflow manager that enables fine-grained control by choosing the model for each stage invocation as execution unfolds under request-level objectives such as maximizing accuracy under cost or latency budgets. VineLM represents feasible executions as an annotated trie of model-choice prefixes and uses checkpointing and cascade profiling to estimate path accuracy, cost, and latency without exhaustively profiling every request on every path. At runtime, VineLM re-roots the trie after each stage invocation and replans over the remaining subtrie using the realized execution prefix and remaining latency budget. On NL2SQL and math reasoning workflows, VineLM improves the cost-latency-accuracy frontier over coarse workflow-level baselines, achieving up to 18% higher accuracy at the same per-request budget with its sparse profiling reducing offline profiling cost by 98-99.8% when compared to exhaustive profiling.",
+      "identifiers": [
+        "SemanticScholar:ffc0bf7a0bcd955590873e302ff9825e86195dc8"
+      ],
+      "semantic_scholar_id": "ffc0bf7a0bcd955590873e302ff9825e86195dc8",
+      "canonical_id": "arXiv:2605.23914",
+      "arxiv_id": "2605.23914",
+      "doi": "10.48550/arXiv.2605.23914",
+      "authors": [
+        "Nikos Pagonas",
+        "M. Lou",
+        "Tian-Yi Peng",
+        "Dan Rubenstein",
+        "Kostis Kaffes"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 220,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Stability-Weighted Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.17068",
+      "year": 2026,
+      "published": "2026-04-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) enable parallel text generation by iteratively denoising a fully masked sequence, unmasking a subset of masked tokens at each step. Existing decoding strategies rely on static confidence metrics computed at a single denoising step, ignoring temporal history and often leading to premature unmasking of unstable tokens. In this work, we theoretically establish that a token's temporal instability, quantified by the KL divergence between consecutive prediction distributions, provides a strict lower bound on its mutual information with the remaining masked context, indicating that temporally unstable tokens are inherently unsafe to unmask. Based on this insight, we propose Stability-Weighted Decoding (SWD), a training-free, plug-and-play strategy that incorporates temporal stability into token scoring and acts as a universal modulator for arbitrary score-based decoding policies. Experiments on code generation and mathematical reasoning benchmarks demonstrate that SWD consistently improves generation accuracy across representative scoring metrics and selection policies, and exhibits exceptional robustness, maintaining a significant performance lead over standard baselines across varying acceleration ratios.",
+      "identifiers": [
+        "SemanticScholar:74a962523680ff184dfb910923a2aae03619738b"
+      ],
+      "semantic_scholar_id": "74a962523680ff184dfb910923a2aae03619738b",
+      "canonical_id": "arXiv:2604.17068",
+      "arxiv_id": "2604.17068",
+      "doi": "10.48550/arXiv.2604.17068",
+      "authors": [
+        "Yue Wu",
+        "Jian Huang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.02570",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02570",
+        "id:SemanticScholar:1db738763082d49f0d8ca654742fe889281da227",
+        "id:arXiv:2604.02570",
+        "title:wsvd weighted lowrank approximation for fast and efficient execution of lowprecision visionlanguage models",
+        "url:https://arxiv.org/abs/2604.02570"
+      ],
+      "record": {
+        "title": "WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2604.02570",
+        "year": 2026,
+        "published": "2026-04-02",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Singular Value Decomposition (SVD) has become an important technique for reducing the computational burden of Vision Language Models (VLMs), which play a central role in tasks such as image captioning and visual question answering. Although multiple prior works have proposed efficient SVD variants to enable low-rank operations, we find that in practice it remains difficult to achieve substantial latency reduction during model execution. To address this limitation, we introduce a new computational pattern and apply SVD at a finer granularity, enabling real and measurable improvements in execution latency. Furthermore, recognizing that weight elements differ in their relative importance, we adaptively allocate relative importance to each element during SVD process to better preserve accuracy, then extend this framework with quantization applied to both weights and activations, resulting in a highly efficient VLM. Collectively, we introduce~\\textit{Weighted SVD} (WSVD), which outperforms other approaches by achieving over $1.8\\times$ decoding speedup while preserving accuracy. We open source our code at: \\href{https://github.com/SAI-Lab-NYU/WSVD}{\\texttt{https://github.com/SAI-Lab-NYU/WSVD}",
+        "identifiers": [
+          "SemanticScholar:1db738763082d49f0d8ca654742fe889281da227"
+        ],
+        "semantic_scholar_id": "1db738763082d49f0d8ca654742fe889281da227",
+        "canonical_id": "arXiv:2604.02570",
+        "arxiv_id": "2604.02570",
+        "doi": "10.48550/arXiv.2604.02570",
+        "authors": [
+          "Hai-Yu Wang",
+          "Yu-Tong Wang",
+          "Jackson Jiang",
+          "Sai-Qian Zhang"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02344",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02344",
+        "id:SemanticScholar:7b2ebe1739b3d2ad981841ebf12191d8d8c9b649",
+        "id:arXiv:2604.02344",
+        "title:characterizing webgpu dispatch overhead for llm inference across four gpu vendors three backends and three browsers",
+        "url:https://arxiv.org/abs/2604.02344"
+      ],
+      "record": {
+        "title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers",
+        "source_url": "https://arxiv.org/abs/2604.02344",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "WebGPU's security-focused design imposes per-operation validation that compounds across the many small dispatches in neural network inference, yet the true cost of this overhead is poorly characterized. We present a systematic characterization of WebGPU dispatch overhead for LLM inference at batch size 1, spanning four GPU vendors (NVIDIA, AMD, Apple, Intel), two native implementations (Dawn, wgpu-native) and three browsers (Chrome, Safari, Firefox), and two model sizes (Qwen2.5-0.5B and 1.5B). Our primary contribution is a sequential-dispatch methodology that reveals naive single-operation benchmarks overestimate dispatch cost by ${\\sim}20\\times$. The true per-dispatch cost of WebGPU API overhead alone is 24-36 $\\mu$s on Vulkan and 32-71 $\\mu$s on Metal, while the total per-operation overhead including Python cost is ${\\sim}95$~$\\mu$s, which turns out to be a distinction critical for optimization. On Vulkan, kernel fusion improves throughput by 53%, while CUDA fusion provides no benefit, confirming that per-operation overhead is a primary differentiator. LLM inference was tested across three major operating systems (Linux, Windows, macOS). We built $\\texttt{torch-webgpu}$, a PrivateUse1-based out-of-tree PyTorch backend and an FX-to-WebGPU compiler, which on our reference platform achieves 11--12% of CUDA performance. At dtype-matched float32, RTX PRO 2000 achieves 1.4$\\times$ WebGPU's throughput despite ${\\sim}6\\times$ less compute than RTX 5090. For dispatch overhead, backend choice is the dominant factor, although implementation choice also matters substantially within a backend (2.2$\\times$ for Metal). In terms of dispatch vs kernel compute efficiency, we conclude that at batch=1 with the current dispatch-heavy pipeline, per-operation overhead dominates regardless of kernel quality. All code, benchmarks, and raw data are open source.",
+        "identifiers": [
+          "SemanticScholar:7b2ebe1739b3d2ad981841ebf12191d8d8c9b649"
+        ],
+        "semantic_scholar_id": "7b2ebe1739b3d2ad981841ebf12191d8d8c9b649",
+        "canonical_id": "arXiv:2604.02344",
+        "arxiv_id": "2604.02344",
+        "doi": "10.48550/arXiv.2604.02344",
+        "authors": [
+          "Jędrzej Maczan"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 279,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3777471",
+      "identity_tokens": [
+        "id:DOI:10.1145/3777471",
+        "id:SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+        "title:rethinking variablelength encoding exploiting bit sparsity for parallel decoding in llm accelerators",
+        "url:https://doi.org/10.1145/3777471"
+      ],
+      "record": {
+        "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+        "source_url": "https://doi.org/10.1145/3777471",
+        "year": 2025,
+        "published": "2025-12-01",
+        "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) have achieved remarkable success. However, their growing size presents challenges due to the increasing mismatch between model scale and hardware capacity. Model compression techniques have been proposed to address this issue, but existing methods often struggle to cope with the large dynamic range of model parameters, including both activations and weights. Additionally, current outlier-aware encoding schemes introduce complex logic, which limits their effectiveness in both compression ratio and hardware efficiency. To overcome these challenges, we propose SPADE, a co-designed algorithm–architecture solution for post-training quantized INT8 large language models, introducing a hybrid-precision encoding scheme. SPADE employs variable-length data representation guided by metadata, enabling local, value-dependent encoding with only 3.66% hardware area overhead while delivering up to 4.88× speedup and 70.5% energy reduction compared with state-of-the-art encoding-based accelerators. Our key insight is that only a small portion of activations are outliers that require high-precision such as INT8, while the vast majority can be accurately represented with INT4. This allows us to exploit the sparsity of high-significance bits across the data. By assigning an identifier bit to each data element, SPADE dynamically selects between compact INT4 encoding for normal values and higher INT8 encoding for rare outliers, eliminating unnecessary bit-width and reducing data redundancy. Moreover, we analyze the limitations of existing variable-length encoding methods, which typically require serialization and deserialization due to uncertainty in the precision format of loaded data blocks. SPADE integrates precision information directly into its encoding rules, enabling parallel decoding and computation on systolic arrays. This design significantly boosts computational throughput and helps realize the theoretical performance advantages of structured encoding. We evaluate SPADE-based accelerators against state-of-the-art encoding-based accelerators, and our results demonstrate that the SPADE-based accelerator achieves up to 4.88× speedup and 70.5% energy reduction, while maintaining superior model accuracy. The codes are available at https://github.com/jlsbz/SPADE.",
+        "identifiers": [
+          "SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d"
+        ],
+        "semantic_scholar_id": "f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+        "doi": "10.1145/3777471",
+        "canonical_id": "DOI:10.1145/3777471",
+        "authors": [
+          "Ning Yang",
+          "Fang-Xin Liu",
+          "Jun-Jie Wang",
+          "Chen-Yang Guan",
+          "Zong-Wu Wang",
+          "Junping Zhao",
+          "Li Jiang",
+          "Hai-Bing Guan"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 349,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.20706",
+      "identity_tokens": [
+        "id:SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503",
+        "id:arXiv:2601.20706",
+        "title:npu design for diffusion language model inference",
+        "url:https://arxiv.org/abs/2601.20706"
+      ],
+      "record": {
+        "title": "NPU Design for Diffusion Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2601.20706",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based LLMs (dLLMs) fundamentally depart from traditional autoregressive (AR) LLM inference: they leverage bidirectional attention, block-wise KV cache refreshing, cross-step reuse, and a non-GEMM-centric sampling phase. These characteristics make current dLLMs incompatible with most existing NPUs, as their inference patterns, in particular the reduction-heavy, top-$k$-driven sampling stage, demand new ISA and memory hierarchy support beyond that of AR accelerators. In addition, the blocked diffusion KV cache breaks from the append-only paradigm assumed by AR NPUs, and conventional AR-derived KV quantization schemes were designed for static activation distributions and do not account for the step-wise distribution shifts introduced by iterative block-wise refinement in dLLMs. In this paper, we introduce the first NPU accelerator specifically designed for dLLMs. It delivers: a dLLM-oriented ISA and compiler; a hardware-optimized execution model for both the transformer inference and diffusion sampling used in dLLMs; a novel Block-Adaptive Online Smoothing (BAOS) for quantizing KV cache in dLLMs; and a complete RTL implementation synthesized in 7nm. To evaluate and validate our design, we introduce a tri-path simulation framework that comprises analytical, cycle-accurate, and accuracy simulators, together with cross-validations against physical hardware. The full NPU stack, including ISA, simulation tools, and quantization software, will be open-sourced upon acceptance.",
+        "identifiers": [
+          "SemanticScholar:6e3001d2aa0d51b77b977dcac725abddfe46f503"
+        ],
+        "semantic_scholar_id": "6e3001d2aa0d51b77b977dcac725abddfe46f503",
+        "canonical_id": "arXiv:2601.20706",
+        "arxiv_id": "2601.20706",
+        "authors": [
+          "Binglei Lou",
+          "Hao-Ran Wu",
+          "Kevin Lau",
+          "Gregor Macdonald",
+          "Jia-Yi Nie",
+          "Yao Lai",
+          "Can Xiao",
+          "Xuan Guo",
+          "Jian-Yi Cheng",
+          "R. Antonova",
+          "Robert Mullins",
+          "Aaron Zhao"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.13556",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.13556",
+        "id:SemanticScholar:81a95fd396080960c74197b25805a289e19cf279",
+        "id:arXiv:2604.13556",
+        "title:yoco enhancing yoco with kv residual connections for efficient llm inference",
+        "url:https://arxiv.org/abs/2604.13556"
+      ],
+      "record": {
+        "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2604.13556",
+        "year": 2026,
+        "published": "2026-04-15",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cross-layer key-value (KV) compression has been found to be effective in efficient inference of large language models (LLMs). Although they reduce the memory consumption of the KV cache, such methods usually introduce non-negligible performance degradation. In this work, we aim to enhance the performance of YOCO, a cross-layer KV compression method that shares the KVs of the middle layer with the top-half layers. We propose YOCO++, an enhanced YOCO that incorporates a weighted residual connection between the KVs of each bottom-half layer and the bottom layer. Compared to YOCO, YOCO++ increases model capacity while maintaining the same training and inference efficiency. Our experiments show that YOCO++ achieves state-of-the-art performance among the cross-layer KV compression methods at a 50% KV cache compression rate, outperforming the standard Transformer.",
+        "identifiers": [
+          "SemanticScholar:81a95fd396080960c74197b25805a289e19cf279"
+        ],
+        "semantic_scholar_id": "81a95fd396080960c74197b25805a289e19cf279",
+        "canonical_id": "arXiv:2604.13556",
+        "arxiv_id": "2604.13556",
+        "doi": "10.48550/arXiv.2604.13556",
+        "authors": [
+          "You Wu",
+          "Zi-Heng Chen",
+          "Yi-Zhe Zhang",
+          "Haoyi Wu",
+          "Cheng-Ting Yu",
+          "Yu-Chi Xu",
+          "Wen-Bo Su",
+          "Bo Zheng",
+          "Ke-Wei Tu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 214,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.24165",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.24165",
+        "id:SemanticScholar:d6df4fd5c5d7a940bc470807c99dab2c0628e701",
+        "id:arXiv:2606.24165",
+        "title:spectral evolutionguided token pruning in multimodal large language models",
+        "url:https://arxiv.org/abs/2606.24165"
+      ],
+      "record": {
+        "title": "Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2606.24165",
+        "year": 2026,
+        "published": "2026-06-23",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reducing visual token redundancy is critical for accelerating Multimodal Large Language Models (MLLMs) without degrading cross-modal reasoning performance. Existing token pruning methods typically rely on single-layer signals, such as attention scores or token similarities, which overlook the cross-layer transformation of visual representations and may exhibit positional bias in multimodal token sequences. To address this limitation, we propose a training-free token pruning framework based on Cross-Layer Spectral Evolution (CLSE). Instead of measuring token importance from single-layer feature magnitudes, CLSE quantifies how token representations evolve across Transformer layers in the frequency domain. This evolution reflects the transition from high-frequency structural details to low-frequency semantic abstractions. We observe that tokens with stronger spectral redistribution across layers are more likely to be semantically active and should therefore be preserved. By modeling cross-layer token dynamics, CLSE provides a stable importance criterion that mitigates positional bias. Extensive experiments on both image and video benchmarks demonstrate that CLSE achieves a superior trade-off between efficiency and accuracy under aggressive token reduction. Across multiple MLLMs, CLSE reduces FLOPs, KV cache memory, and latency while maintaining competitive or improved performance.",
+        "identifiers": [
+          "SemanticScholar:d6df4fd5c5d7a940bc470807c99dab2c0628e701"
+        ],
+        "semantic_scholar_id": "d6df4fd5c5d7a940bc470807c99dab2c0628e701",
+        "canonical_id": "arXiv:2606.24165",
+        "arxiv_id": "2606.24165",
+        "doi": "10.48550/arXiv.2606.24165",
+        "authors": [
+          "Bin Chen",
+          "Yuxiang Cai",
+          "Ya-Dan Luo",
+          "Yi Zhang",
+          "Jian-Wei Yin",
+          "Zhi Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.13494",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.13494",
+        "id:SemanticScholar:4c315e01a7df1be48a223bcbfbd3b30447956e87",
+        "id:arXiv:2512.13494",
+        "title:skipcat rankmaximized lowrank compression of large language models via shared projection and block skipping",
+        "url:https://arxiv.org/abs/2512.13494"
+      ],
+      "record": {
+        "title": "SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping",
+        "source_url": "https://arxiv.org/abs/2512.13494",
+        "year": 2025,
+        "published": "2025-12-15",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLM) have achieved remarkable performance across a wide range of tasks. However, their substantial parameter sizes pose significant challenges for deployment on edge devices with limited computational and memory resources. Low-rank compression is a promising approach to address this issue, as it reduces both computational and memory costs, making LLM more suitable for resource-constrained environments. Nonetheless, naïve low-rank compression methods require a significant reduction in the retained rank to achieve meaningful memory and computation savings. For a low-rank model, the ranks need to be reduced by more than half to yield efficiency gains. Such aggressive truncation, however, typically results in substantial performance degradation. To address this trade-off, we propose SkipCat, a novel low-rank compression framework that enables the use of higher ranks while achieving the same compression rates. First, we introduce an intra-layer shared low-rank projection method, where multiple matrices that share the same input use a common projection. This reduces redundancy and improves compression efficiency. Second, we propose a block skipping technique that omits computations and memory transfers for selected sub-blocks within the low-rank decomposition. These two techniques jointly enable our compressed model to retain more effective ranks under the same compression budget. Experimental results show that, without any additional fine-tuning, our method outperforms previous low-rank compression approaches by 7% accuracy improvement on zero-shot tasks under the same compression rate. These results highlight the effectiveness of our rank-maximized compression strategy in preserving model performance under tight resource constraints.",
+        "identifiers": [
+          "SemanticScholar:4c315e01a7df1be48a223bcbfbd3b30447956e87"
+        ],
+        "semantic_scholar_id": "4c315e01a7df1be48a223bcbfbd3b30447956e87",
+        "canonical_id": "arXiv:2512.13494",
+        "arxiv_id": "2512.13494",
+        "doi": "10.48550/arXiv.2512.13494",
+        "authors": [
+          "Yu-Chen Lu",
+          "Sheng Yu",
+          "H. Weng",
+          "Pei-Shuo Wang",
+          "Yu-Fang Hu",
+          "Hung-Chun Liang",
+          "Hung-Yueh Chiang",
+          "Kai-Chiang Wu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 335,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06454",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.06454",
+        "id:SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62",
+        "id:arXiv:2602.06454",
+        "title:relaygen intrageneration model switching for efficient reasoning",
+        "url:https://arxiv.org/abs/2602.06454"
+      ],
+      "record": {
+        "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2602.06454",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks by generating long, multi-step reasoning trajectories, but inference-time scaling incurs substantial deployment cost. A key challenge is that generation difficulty varies within a single output, whereas existing efficiency-oriented approaches either ignore this intra-generation variation or rely on supervised token-level routing with high system complexity. We present \\textbf{RelayGen}, a training-free, segment-level runtime model switching framework that exploits difficulty variation in long-form reasoning. Through offline analysis of generation uncertainty using token probability margins, we show that coarse-grained segment-level control is sufficient to capture difficulty transitions within a reasoning trajectory. RelayGen identifies model-specific switch cues that signal transitions to lower-difficulty segments and dynamically delegates their continuation to a smaller model, while preserving high-difficulty reasoning on the large model. Across multiple reasoning benchmarks, RelayGen substantially reduces inference latency while preserving most of the accuracy of large models. When combined with speculative decoding, RelayGen achieves up to 2.2$\\times$ end-to-end speedup with less than 2\\% accuracy degradation, without requiring additional training or learned routing components.",
+        "identifiers": [
+          "SemanticScholar:a5c80bad3b95f238137b81231eb5705980d8fb62"
+        ],
+        "semantic_scholar_id": "a5c80bad3b95f238137b81231eb5705980d8fb62",
+        "canonical_id": "arXiv:2602.06454",
+        "arxiv_id": "2602.06454",
+        "doi": "10.48550/arXiv.2602.06454",
+        "authors": [
+          "Jiwon Song",
+          "Yoon Kim",
+          "Jae-Joon Kim"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 282,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02816",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02816",
+        "id:SemanticScholar:c85dc53a7258caaf5e6b40dc643cdb4b81985452",
+        "id:arXiv:2604.02816",
+        "title:qapruner quantizationaware vision token pruning for multimodal large language models",
+        "url:https://arxiv.org/abs/2604.02816"
+      ],
+      "record": {
+        "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.02816",
+        "year": 2026,
+        "published": "2026-04-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have shown strong reasoning ability, but their high computational and memory costs hinder deployment in resource-constrained settings. While Post-Training Quantization (PTQ) and vision token pruning are standard compression techniques, they are usually treated as independent optimizations. In this paper, we show that these two techniques are strongly coupled: naively applying semantic-based token pruning to PTQ-optimized MLLMs can discard activation outliers that are important for numerical stability and thus worsen quantization errors in low-bit regimes (\\textit{e.g.}, W4A4). To address this issue, we propose a quantization-aware vision token pruning framework. Our method introduces a lightweight hybrid sensitivity metric that combines simulated group-wise quantization error with outlier intensity. By combining this metric with standard semantic relevance scores, the method retains tokens that are both semantically informative and robust to quantization. Experiments on standard LLaVA architectures show that our method consistently outperforms naive integration baselines. At an aggressive pruning ratio that retains only 12.5\\% of visual tokens, our framework improves accuracy by 2.24\\% over the baseline and even surpasses dense quantization without pruning. To the best of our knowledge, this is the first method that explicitly co-optimizes vision token pruning and PTQ for accurate low-bit MLLM inference.",
+        "identifiers": [
+          "SemanticScholar:c85dc53a7258caaf5e6b40dc643cdb4b81985452"
+        ],
+        "semantic_scholar_id": "c85dc53a7258caaf5e6b40dc643cdb4b81985452",
+        "canonical_id": "arXiv:2604.02816",
+        "arxiv_id": "2604.02816",
+        "doi": "10.48550/arXiv.2604.02816",
+        "authors": [
+          "Xinhao Wang",
+          "Z. Xia",
+          "Zhi-Wei Lin",
+          "Zhe Li",
+          "Yong-Tao Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.23914",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.23914",
+        "id:SemanticScholar:ffc0bf7a0bcd955590873e302ff9825e86195dc8",
+        "id:arXiv:2605.23914",
+        "title:vinelm triebased finegrained control for agentic workflows",
+        "url:https://arxiv.org/abs/2605.23914"
+      ],
+      "record": {
+        "title": "VineLM: Trie-Based Fine-Grained Control for Agentic Workflows",
+        "source_url": "https://arxiv.org/abs/2605.23914",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic workflows interleave configurable LLM stages with tool stages and often include retries or refinement loops. Existing workflow managers profile full workflow configurations offline and assign each request a static workflow-level plan that binds each configurable LLM stage to a single model, reuses that model across repeated loop iterations, and does not revisit those choices at runtime. We present VineLM, a workflow manager that enables fine-grained control by choosing the model for each stage invocation as execution unfolds under request-level objectives such as maximizing accuracy under cost or latency budgets. VineLM represents feasible executions as an annotated trie of model-choice prefixes and uses checkpointing and cascade profiling to estimate path accuracy, cost, and latency without exhaustively profiling every request on every path. At runtime, VineLM re-roots the trie after each stage invocation and replans over the remaining subtrie using the realized execution prefix and remaining latency budget. On NL2SQL and math reasoning workflows, VineLM improves the cost-latency-accuracy frontier over coarse workflow-level baselines, achieving up to 18% higher accuracy at the same per-request budget with its sparse profiling reducing offline profiling cost by 98-99.8% when compared to exhaustive profiling.",
+        "identifiers": [
+          "SemanticScholar:ffc0bf7a0bcd955590873e302ff9825e86195dc8"
+        ],
+        "semantic_scholar_id": "ffc0bf7a0bcd955590873e302ff9825e86195dc8",
+        "canonical_id": "arXiv:2605.23914",
+        "arxiv_id": "2605.23914",
+        "doi": "10.48550/arXiv.2605.23914",
+        "authors": [
+          "Nikos Pagonas",
+          "M. Lou",
+          "Tian-Yi Peng",
+          "Dan Rubenstein",
+          "Kostis Kaffes"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 220,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.17068",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.17068",
+        "id:SemanticScholar:74a962523680ff184dfb910923a2aae03619738b",
+        "id:arXiv:2604.17068",
+        "title:stabilityweighted decoding for diffusion language models",
+        "url:https://arxiv.org/abs/2604.17068"
+      ],
+      "record": {
+        "title": "Stability-Weighted Decoding for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.17068",
+        "year": 2026,
+        "published": "2026-04-18",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) enable parallel text generation by iteratively denoising a fully masked sequence, unmasking a subset of masked tokens at each step. Existing decoding strategies rely on static confidence metrics computed at a single denoising step, ignoring temporal history and often leading to premature unmasking of unstable tokens. In this work, we theoretically establish that a token's temporal instability, quantified by the KL divergence between consecutive prediction distributions, provides a strict lower bound on its mutual information with the remaining masked context, indicating that temporally unstable tokens are inherently unsafe to unmask. Based on this insight, we propose Stability-Weighted Decoding (SWD), a training-free, plug-and-play strategy that incorporates temporal stability into token scoring and acts as a universal modulator for arbitrary score-based decoding policies. Experiments on code generation and mathematical reasoning benchmarks demonstrate that SWD consistently improves generation accuracy across representative scoring metrics and selection policies, and exhibits exceptional robustness, maintaining a significant performance lead over standard baselines across varying acceleration ratios.",
+        "identifiers": [
+          "SemanticScholar:74a962523680ff184dfb910923a2aae03619738b"
+        ],
+        "semantic_scholar_id": "74a962523680ff184dfb910923a2aae03619738b",
+        "canonical_id": "arXiv:2604.17068",
+        "arxiv_id": "2604.17068",
+        "doi": "10.48550/arXiv.2604.17068",
+        "authors": [
+          "Yue Wu",
+          "Jian Huang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 211,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c03de5364715b4e4a3019f135cc658b08a5ba9bca0b93aac7929863640b1c576",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

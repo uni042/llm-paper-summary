@@ -1,0 +1,1179 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-70d0c1b62bad44fd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-70d0c1b62bad",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.03673",
+    "arXiv:2602.11683",
+    "arXiv:2603.16219",
+    "arXiv:2603.17946",
+    "arXiv:2603.22911",
+    "arXiv:2604.04930",
+    "arXiv:2604.10898",
+    "arXiv:2604.13349",
+    "arXiv:2604.18348",
+    "arXiv:2604.23994",
+    "arXiv:2605.22269",
+    "arXiv:2605.29662"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c91bc910aa802bcc56f5807696baa4f42bca0832",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-15T21:52:43.827281+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.03673",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.11683",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.16219",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.17946",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22911",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.04930",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.10898",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.13349",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.18348",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.23994",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22269",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.29662",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
+      "source_url": "https://arxiv.org/abs/2603.17946",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Converting pretrained attention modules such as grouped-query attention (GQA) into multi-head latent attention (MLA) can improve expressivity without increasing KV-cache cost, making it attractive for efficient inference. However, many practical conversion baselines rely on weight-only low-rank approximations (e.g., SVD-style initializations) and uniform rank allocation. They focus on minimizing the difference between weight matrices rather than on how those weights affect input activations, ignore the covariance structure of activations, and enforce uniform rank across layers, causing activation drift and degraded attention fidelity. To address these issues, we propose CARE, a Covariance-Aware, Rank-Enhanced MLA conversion pipeline under a fixed KV width. CARE introduces three key steps: (i) activation-preserving factorization, which aligns the approximation with the actual input activations rather than just the weights; (ii) adjusted-rank allocation, which spreads a fixed KV budget across layers by giving more capacity to layers that need it most; and (iii) KV-parity mapping, which reparameterizes the converted K and V to fit the MLA format while keeping the KV-cache size unchanged. Our method outperforms a uniform-rank SVD baseline on Qwen3-4B/30B-A3B-Instruct-2507 and Llama-3.1-8B/70B-Instruct, reducing one-shot perplexity by up to 215x and improving mean accuracy by up to 1.70x at matched KV budgets. With a brief post-SVD healing fine-tune, we fully recover the original model's accuracy.",
+      "identifiers": [
+        "SemanticScholar:2298dfb993fcbea7f252aafd6a5fd6ba6845f66d"
+      ],
+      "semantic_scholar_id": "2298dfb993fcbea7f252aafd6a5fd6ba6845f66d",
+      "canonical_id": "arXiv:2603.17946",
+      "arxiv_id": "2603.17946",
+      "doi": "10.48550/arXiv.2603.17946",
+      "authors": [
+        "Zhong Zhou",
+        "Fengxiang Bie",
+        "Zi-Yang Chen",
+        "Zhenyu Zhang",
+        "Yi-Bo Yang",
+        "Jun-Xiong Wang",
+        "B. Athiwaratkun",
+        "Xiao-Xia Wu",
+        "S. Song"
+      ],
+      "priority": 117,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 117,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 242,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+      "identifiers": [
+        "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+      ],
+      "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+      "canonical_id": "arXiv:2603.16219",
+      "arxiv_id": "2603.16219",
+      "doi": "10.48550/arXiv.2603.16219",
+      "authors": [
+        "Hang Lv",
+        "Sheng Liang",
+        "Hao Wang",
+        "Yong-Yue Zhang",
+        "Hongchao Gu",
+        "Wei Guo",
+        "De-Fu Lian",
+        "Yong Liu",
+        "En-Hong Chen"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
+      "source_url": "https://arxiv.org/abs/2604.10898",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown great performance on complex reasoning tasks but often require generating long intermediate thoughts before reaching a final answer. During generation, LLMs rely on a key-value (KV) cache for autoregressive decoding. However, the memory footprint of the KV cache grows with output length. Prior work on KV cache optimization mostly focus on compressing the long input context, while retaining the full KV cache for decoding. For tasks requiring long output generation, this leads to increased computational and memory costs. In this paper, we introduce ZoomR, a novel approach that enables LLMs to adaptively compress verbose reasoning thoughts into summaries and uses a dynamic KV cache selection policy that leverages these summaries while also strategically\"zooming in\"on fine-grained details. By using summary keys as a coarse-grained index during decoding, ZoomR uses the query to retrieve details for only the most important thoughts. This hierarchical strategy significantly reduces memory usage by avoiding full-cache attention at each step. Experiments across math and reasoning tasks show that our approach achieves competitive performance compared to baselines, while reducing inference memory requirements by more than $4\\times$. These results demonstrate that a multi-granularity KV selection enables more memory efficient decoding, especially for long output generation.",
+      "identifiers": [
+        "SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82"
+      ],
+      "semantic_scholar_id": "3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+      "canonical_id": "arXiv:2604.10898",
+      "arxiv_id": "2604.10898",
+      "doi": "10.48550/arXiv.2604.10898",
+      "authors": [
+        "David Yang",
+        "Yuxuan Zhu",
+        "Mohammad Mohammadi Amiri",
+        "K. Murugesan",
+        "Tejaswini Pedapati",
+        "Subhajit Chaudhury",
+        "Pin-Yu Chen"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 216,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers",
+      "source_url": "https://arxiv.org/abs/2512.03673",
+      "year": 2025,
+      "published": "2025-12-03",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion transformers have demonstrated strong capabilities in generating high-quality images. However, as model size increases, the growing memory footprint and inference latency pose significant challenges for practical deployment. Recent studies in large language models (LLMs) show that rotation-based techniques can smooth outliers and enable 4-bit quantization, but these approaches often incur substantial overhead and struggle with row-wise outliers in diffusion transformers. To address these challenges, we propose ConvRot, a group-wise rotation-based quantization method that leverages regular Hadamard transform (RHT) to suppress both row-wise and column-wise outliers while reducing complexity from quadratic to linear. Building on this, we design ConvLinear4bit, a plug-and-play module that integrates rotation, quantization, GEMM, and dequantization, enabling W4A4 inference without retraining and preserving visual quality. Experiments on FLUX.1-dev demonstrate a 2.26$\\times$ speedup and 4.05$\\times$ memory reduction while maintaining image fidelity. To our knowledge, this is the first application of rotation-based quantization for plug-and-play W4A4 inference in diffusion transformers.",
+      "identifiers": [
+        "SemanticScholar:e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b"
+      ],
+      "semantic_scholar_id": "e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b",
+      "canonical_id": "arXiv:2512.03673",
+      "arxiv_id": "2512.03673",
+      "doi": "10.48550/arXiv.2512.03673",
+      "authors": [
+        "Fei Huang",
+        "Zuliang Han",
+        "Xing Zhou",
+        "Yi-Huang Chen",
+        "Li-Fei Zhu",
+        "Hao-Qian Wang"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 347,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+      "source_url": "https://arxiv.org/abs/2604.04930",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+      "identifiers": [
+        "SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed"
+      ],
+      "semantic_scholar_id": "7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+      "canonical_id": "arXiv:2604.04930",
+      "arxiv_id": "2604.04930",
+      "doi": "10.48550/arXiv.2604.04930",
+      "authors": [
+        "Parsa Hosseini",
+        "Sumit Nawathe",
+        "Mahdi Salmani",
+        "Meisam Razaviyayn",
+        "S. Feizi"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 223,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration",
+      "source_url": "https://arxiv.org/abs/2604.13349",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent LLM systems are moving beyond discrete-token messages toward richer relays that preserve internal state. Recent work such as LatentMAS transmits full key-value (KV) caches between agents but pays a high memory and communication cost. We adapt KV-cache eviction to this setting and introduce \\textbf{Orthogonal BackFill (OBF)}, which injects a low-rank residual from the discarded KV states back into the retained ones, orthogonal to what is already kept. With only $9.9\\%$-$20.2\\%$ of the prompt KV retained, compressed relay cuts bandwidth by $4.7\\times$ and GPU memory by $8\\%$ at under $5\\%$ wall-clock overhead, and stays close to full relay in accuracy across nine benchmarks, ahead of it on several. OBF matches or improves over headwise eviction on all nine, and its gain is proportional to the accuracy gap eviction opens against full relay ($r{=}0.78$ across three model scales), so it gives back part of what eviction takes. Code is available at https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay.",
+      "identifiers": [
+        "SemanticScholar:1e7ae20af25c9992951223a15f71fb4ee18d339b"
+      ],
+      "semantic_scholar_id": "1e7ae20af25c9992951223a15f71fb4ee18d339b",
+      "canonical_id": "arXiv:2604.13349",
+      "arxiv_id": "2604.13349",
+      "doi": "10.48550/arXiv.2604.13349",
+      "authors": [
+        "Yiping Li",
+        "Zhi-Yu An",
+        "Wan Du"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAFE-Pruner: Semantic Attention-Guided Future-Aware Token Pruning for Efficient Vision-Language-Action Manipulation",
+      "source_url": "https://arxiv.org/abs/2605.29662",
+      "year": 2026,
+      "published": "2026-05-28",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-time inference of vision-language-action (VLA) models is essential for robotic control. While visual token pruning has shown strong potential for accelerating inference, most existing methods mainly base pruning decisions on shallow-layer cues and risk discarding visual information required by deep layers. To address this issue, we propose SAFE-Pruner, a plug-and-play pruning framework that incorporates attention cues of future layers into pruning decisions. Specifically, we identify semantic attention consistency, the tendency that VLA models concentrate their attention probability mass on the same semantic entity across control timesteps. Based on this observation, we design a forward-looking strategy to forecast the token saliency in deep layers, which prevents the premature removal of critical tokens and leads to more stable acceleration. We further introduce a reference timestep refresh strategy that triggers updates upon attention shifts, thereby improving forecasting accuracy and pruning reliability. Extensive experiments across diverse evaluation settings demonstrate that our method achieves up to 1.89x speedup with a minimal degradation in success rate of less than 1.5%, while outperforming state-of-the-art methods by up to 1.9%.",
+      "identifiers": [
+        "SemanticScholar:40f37c471d01dda63dc533e9645877466c81a3f1"
+      ],
+      "semantic_scholar_id": "40f37c471d01dda63dc533e9645877466c81a3f1",
+      "canonical_id": "arXiv:2605.29662",
+      "arxiv_id": "2605.29662",
+      "doi": "10.48550/arXiv.2605.29662",
+      "authors": [
+        "Shi-Lin Ma",
+        "Chu-Bin Zhang",
+        "Chang-Yuan Wang",
+        "Yujin Wang",
+        "Yue Wu",
+        "Zi-Xuan Wang",
+        "Jing-Qi Tian",
+        "Zheng Zhu",
+        "Yansong Tang"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation",
+      "source_url": "https://arxiv.org/abs/2604.18348",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video diffusion transformers (DiTs) suffer from prohibitive inference latency due to quadratic attention complexity. Existing sparse attention methods either overlook semantic similarity or fail to adapt to heterogeneous token distributions across layers, leading to model performance degradation. We propose AdaCluster, a training-free adaptive clustering framework that accelerates the generation of DiTs while preserving accuracy. AdaCluster applies an angle-similarity-preserving clustering method to query vectors for higher compression, and designs a euclidean-similarity-preserving clustering method for keys, covering cluster number assignment, threshold-wise adaptive clustering, and efficient critical cluster selection. Experiments on CogVideoX-2B, HunyuanVideo, and Wan-2.1 on one A40 GPU demonstrate up to 1.67-4.31x speedup with negligible quality degradation.",
+      "identifiers": [
+        "SemanticScholar:142a2fb999971391ffbeede56c3bf0731745d870"
+      ],
+      "semantic_scholar_id": "142a2fb999971391ffbeede56c3bf0731745d870",
+      "canonical_id": "arXiv:2604.18348",
+      "arxiv_id": "2604.18348",
+      "doi": "10.48550/arXiv.2604.18348",
+      "authors": [
+        "Haoyue Tan",
+        "Sheng-Nan Wang",
+        "Yu Qiao",
+        "Jun-Cheng Zhang",
+        "You-Hui Bai",
+        "Ping Gong",
+        "Ze-Wen Jin",
+        "Cheng Li"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.",
+      "identifiers": [
+        "SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2"
+      ],
+      "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+      "canonical_id": "arXiv:2605.22269",
+      "arxiv_id": "2605.22269",
+      "doi": "10.48550/arXiv.2605.22269",
+      "authors": [
+        "Jun Xiao",
+        "Jiajun Chen",
+        "Tianxiang Sun",
+        "Xun Yang",
+        "Angela Yao"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces",
+      "source_url": "https://arxiv.org/abs/2602.11683",
+      "year": 2026,
+      "published": "2026-02-12",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work explores latent reasoning to improve reasoning efficiency by replacing explicit reasoning trajectories with continuous representations in a latent space, yet its effectiveness varies across settings. Analysis of model confidence dynamics under latent reasoning reveals that thinking trajectories ending in incorrect answers contain fewer low-confidence steps than those ending in correct answers. Meanwhile, we suggest that soft embeddings aggregated by multiple low-confidence thinking alternatives may introduce and propagate noise, leading to high confidence in unreliable reasoning trajectories. Motivated by these observations, ThinkRouter, an inference-time confidence-aware routing mechanism is proposed to avoid high confidence and noise for efficient reasoning. ThinkRouter routes thinking to the discrete token space when model confidence is low, and to the latent space otherwise. Extensive experiments on STEM reasoning and coding benchmarks across diverse large reasoning models demonstrate that ThinkRouter outperforms explicit CoT, random routing, and latent reasoning baselines in terms of accuracy, achieving an average improvement of 19.70 points in Pass@1, while reducing generation length by up to 15.55%. Further comprehensive analysis reveals that ThinkRouter can calibrate errors arising from explicit CoT and latent reasoning, and accelerates end-of-thinking token generation by globally lowering model confidence.",
+      "identifiers": [
+        "SemanticScholar:ff5278d847e5da85b14359c6d104f060f22d9620"
+      ],
+      "semantic_scholar_id": "ff5278d847e5da85b14359c6d104f060f22d9620",
+      "canonical_id": "arXiv:2602.11683",
+      "arxiv_id": "2602.11683",
+      "doi": "10.48550/arXiv.2602.11683",
+      "authors": [
+        "Xin Xu",
+        "Tong Yu",
+        "Xiang Chen",
+        "Hao-Liang Wang",
+        "Julian J. McAuley",
+        "Saayan Mitra"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ForestPrune: High-Ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling",
+      "source_url": "https://arxiv.org/abs/2603.22911",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to the great saving of computation and memory overhead, token compression has become a research hot-spot for MLLMs and achieved remarkable progress in imagelanguage tasks. However, for the video, existing methods still fall short of high-ratio token compression. We attribute this shortcoming to the insufficient modeling of temporal and continual video content, and propose a novel and training-free token pruning method for video MLLMs, termed ForestPrune, which achieves effective and highratio pruning via Spatial-temporal Forest Modeling. In practice, ForestPrune construct token forests across video frames based on the semantic, spatial and temporal constraints, making an overall comprehension of videos. Afterwards, ForestPrune evaluates the importance of token trees and nodes based on tree depth and node roles, thereby obtaining a globally optimal pruning decision. To validate ForestPrune, we apply it to two representative video MLLMs, namely LLaVA-Video and LLaVA-OneVision, and conduct extensive experiments on a bunch of video benchmarks. The experimental results not only show the great effectiveness for video MLLMs, e.g., retaining 95.8% average accuracy while reducing 90% tokens for LLaVA-OneVision, but also show its superior performance and efficiency than the compared token compression methods, e.g., +10.1% accuracy on MLVU and -81.4% pruning time than FrameFusion on LLaVA-Video. Our code is given in the ForestPrune.",
+      "identifiers": [
+        "SemanticScholar:88b85af6d96d51a07218256ab6893bcf281e98b4"
+      ],
+      "semantic_scholar_id": "88b85af6d96d51a07218256ab6893bcf281e98b4",
+      "canonical_id": "arXiv:2603.22911",
+      "arxiv_id": "2603.22911",
+      "doi": "10.1109/CVPRF71909.2026.00799",
+      "authors": [
+        "Shao-Bo Ju",
+        "Baiyang Song",
+        "Tao Chen",
+        "Jia-Peng Zhang",
+        "Qiong Wu",
+        "Chaokun Chang",
+        "Huai-Xi Wang",
+        "Yi-Yi Zhou",
+        "Rong-Rong Ji"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When to Commit? Towards Variable-Size Self-Contained Blocks for Discrete Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.23994",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models (dLLMs) enable parallel token updates with bidirectional attention, yet practical generation typically adopts blockwise semi-autoregressive decoding. This switch creates a training-inference mismatch: training denoises with full-sequence context, while inference commits tokens within a bounded block without future context. Therefore, decoding with fixed-size or heuristic-based blocks can lead to premature token commitments, as decisions are made without full access to future context that could alter those choices. Motivated by this, we propose self-containedness as a principled criterion for block commitment. A block is self-contained if its predictions remain consistent with Future-Aware (FA) or without No-Future (NF) access to future context, reframing block boundary selection as a test of self-containedness rather than a heuristic choice. Based on this principle, we introduce Variable-size Self-contained Blocks (VSB) for dLLMs. VSB scores and selects block boundaries using the divergence between token-level predictive distributions under NF and FA conditioning, which quantifies how predictions would change if future context were revealed. We provide theoretical justification linking self-containedness to predictive consistency, and extensive experiments validate VSB's efficacy over fixed-size and heuristic blockwise decoding.",
+      "identifiers": [
+        "SemanticScholar:bc4827f89593011927c5d59673bfd8e4ed64be08"
+      ],
+      "semantic_scholar_id": "bc4827f89593011927c5d59673bfd8e4ed64be08",
+      "canonical_id": "arXiv:2604.23994",
+      "arxiv_id": "2604.23994",
+      "doi": "10.48550/arXiv.2604.23994",
+      "authors": [
+        "D. Wang",
+        "Rui-Hong Qiu",
+        "Zifei Huang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.17946",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.17946",
+        "id:SemanticScholar:2298dfb993fcbea7f252aafd6a5fd6ba6845f66d",
+        "id:arXiv:2603.17946",
+        "title:care covarianceaware and rankenhanced decomposition for enabling multihead latent attention",
+        "url:https://arxiv.org/abs/2603.17946"
+      ],
+      "record": {
+        "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
+        "source_url": "https://arxiv.org/abs/2603.17946",
+        "year": 2026,
+        "published": "2026-03-18",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Converting pretrained attention modules such as grouped-query attention (GQA) into multi-head latent attention (MLA) can improve expressivity without increasing KV-cache cost, making it attractive for efficient inference. However, many practical conversion baselines rely on weight-only low-rank approximations (e.g., SVD-style initializations) and uniform rank allocation. They focus on minimizing the difference between weight matrices rather than on how those weights affect input activations, ignore the covariance structure of activations, and enforce uniform rank across layers, causing activation drift and degraded attention fidelity. To address these issues, we propose CARE, a Covariance-Aware, Rank-Enhanced MLA conversion pipeline under a fixed KV width. CARE introduces three key steps: (i) activation-preserving factorization, which aligns the approximation with the actual input activations rather than just the weights; (ii) adjusted-rank allocation, which spreads a fixed KV budget across layers by giving more capacity to layers that need it most; and (iii) KV-parity mapping, which reparameterizes the converted K and V to fit the MLA format while keeping the KV-cache size unchanged. Our method outperforms a uniform-rank SVD baseline on Qwen3-4B/30B-A3B-Instruct-2507 and Llama-3.1-8B/70B-Instruct, reducing one-shot perplexity by up to 215x and improving mean accuracy by up to 1.70x at matched KV budgets. With a brief post-SVD healing fine-tune, we fully recover the original model's accuracy.",
+        "identifiers": [
+          "SemanticScholar:2298dfb993fcbea7f252aafd6a5fd6ba6845f66d"
+        ],
+        "semantic_scholar_id": "2298dfb993fcbea7f252aafd6a5fd6ba6845f66d",
+        "canonical_id": "arXiv:2603.17946",
+        "arxiv_id": "2603.17946",
+        "doi": "10.48550/arXiv.2603.17946",
+        "authors": [
+          "Zhong Zhou",
+          "Fengxiang Bie",
+          "Zi-Yang Chen",
+          "Zhenyu Zhang",
+          "Yi-Bo Yang",
+          "Jun-Xiong Wang",
+          "B. Athiwaratkun",
+          "Xiao-Xia Wu",
+          "S. Song"
+        ],
+        "priority": 117,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 117,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 242,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.16219",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.16219",
+        "id:SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+        "id:arXiv:2603.16219",
+        "title:specsteer synergizing local context and global reasoning for efficient personalized generation",
+        "url:https://arxiv.org/abs/2603.16219"
+      ],
+      "record": {
+        "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+        "source_url": "https://arxiv.org/abs/2603.16219",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+        "identifiers": [
+          "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+        ],
+        "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+        "canonical_id": "arXiv:2603.16219",
+        "arxiv_id": "2603.16219",
+        "doi": "10.48550/arXiv.2603.16219",
+        "authors": [
+          "Hang Lv",
+          "Sheng Liang",
+          "Hao Wang",
+          "Yong-Yue Zhang",
+          "Hongchao Gu",
+          "Wei Guo",
+          "De-Fu Lian",
+          "Yong Liu",
+          "En-Hong Chen"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.10898",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.10898",
+        "id:SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+        "id:arXiv:2604.10898",
+        "title:zoomr memory efficient reasoning through multigranularity key value retrieval",
+        "url:https://arxiv.org/abs/2604.10898"
+      ],
+      "record": {
+        "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
+        "source_url": "https://arxiv.org/abs/2604.10898",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown great performance on complex reasoning tasks but often require generating long intermediate thoughts before reaching a final answer. During generation, LLMs rely on a key-value (KV) cache for autoregressive decoding. However, the memory footprint of the KV cache grows with output length. Prior work on KV cache optimization mostly focus on compressing the long input context, while retaining the full KV cache for decoding. For tasks requiring long output generation, this leads to increased computational and memory costs. In this paper, we introduce ZoomR, a novel approach that enables LLMs to adaptively compress verbose reasoning thoughts into summaries and uses a dynamic KV cache selection policy that leverages these summaries while also strategically\"zooming in\"on fine-grained details. By using summary keys as a coarse-grained index during decoding, ZoomR uses the query to retrieve details for only the most important thoughts. This hierarchical strategy significantly reduces memory usage by avoiding full-cache attention at each step. Experiments across math and reasoning tasks show that our approach achieves competitive performance compared to baselines, while reducing inference memory requirements by more than $4\\times$. These results demonstrate that a multi-granularity KV selection enables more memory efficient decoding, especially for long output generation.",
+        "identifiers": [
+          "SemanticScholar:3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82"
+        ],
+        "semantic_scholar_id": "3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
+        "canonical_id": "arXiv:2604.10898",
+        "arxiv_id": "2604.10898",
+        "doi": "10.48550/arXiv.2604.10898",
+        "authors": [
+          "David Yang",
+          "Yuxuan Zhu",
+          "Mohammad Mohammadi Amiri",
+          "K. Murugesan",
+          "Tejaswini Pedapati",
+          "Subhajit Chaudhury",
+          "Pin-Yu Chen"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 216,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.03673",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.03673",
+        "id:SemanticScholar:e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b",
+        "id:arXiv:2512.03673",
+        "title:convrot rotationbased plugandplay 4bit quantization for diffusion transformers",
+        "url:https://arxiv.org/abs/2512.03673"
+      ],
+      "record": {
+        "title": "ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers",
+        "source_url": "https://arxiv.org/abs/2512.03673",
+        "year": 2025,
+        "published": "2025-12-03",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion transformers have demonstrated strong capabilities in generating high-quality images. However, as model size increases, the growing memory footprint and inference latency pose significant challenges for practical deployment. Recent studies in large language models (LLMs) show that rotation-based techniques can smooth outliers and enable 4-bit quantization, but these approaches often incur substantial overhead and struggle with row-wise outliers in diffusion transformers. To address these challenges, we propose ConvRot, a group-wise rotation-based quantization method that leverages regular Hadamard transform (RHT) to suppress both row-wise and column-wise outliers while reducing complexity from quadratic to linear. Building on this, we design ConvLinear4bit, a plug-and-play module that integrates rotation, quantization, GEMM, and dequantization, enabling W4A4 inference without retraining and preserving visual quality. Experiments on FLUX.1-dev demonstrate a 2.26$\\times$ speedup and 4.05$\\times$ memory reduction while maintaining image fidelity. To our knowledge, this is the first application of rotation-based quantization for plug-and-play W4A4 inference in diffusion transformers.",
+        "identifiers": [
+          "SemanticScholar:e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b"
+        ],
+        "semantic_scholar_id": "e68f405e5fcaef1b7e9dda3ff59c7f1144a1465b",
+        "canonical_id": "arXiv:2512.03673",
+        "arxiv_id": "2512.03673",
+        "doi": "10.48550/arXiv.2512.03673",
+        "authors": [
+          "Fei Huang",
+          "Zuliang Han",
+          "Xing Zhou",
+          "Yi-Huang Chen",
+          "Li-Fei Zhu",
+          "Hao-Qian Wang"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 347,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.04930",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.04930",
+        "id:SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+        "id:arXiv:2604.04930",
+        "title:early stopping for large reasoning models via confidence dynamics",
+        "url:https://arxiv.org/abs/2604.04930"
+      ],
+      "record": {
+        "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+        "source_url": "https://arxiv.org/abs/2604.04930",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+        "identifiers": [
+          "SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed"
+        ],
+        "semantic_scholar_id": "7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+        "canonical_id": "arXiv:2604.04930",
+        "arxiv_id": "2604.04930",
+        "doi": "10.48550/arXiv.2604.04930",
+        "authors": [
+          "Parsa Hosseini",
+          "Sumit Nawathe",
+          "Mahdi Salmani",
+          "Meisam Razaviyayn",
+          "S. Feizi"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 223,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.13349",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.13349",
+        "id:SemanticScholar:1e7ae20af25c9992951223a15f71fb4ee18d339b",
+        "id:arXiv:2604.13349",
+        "title:when less latent leads to better relay informationpreserving compression for latent multiagent llm collaboration",
+        "url:https://arxiv.org/abs/2604.13349"
+      ],
+      "record": {
+        "title": "When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration",
+        "source_url": "https://arxiv.org/abs/2604.13349",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "arXiv.org",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent LLM systems are moving beyond discrete-token messages toward richer relays that preserve internal state. Recent work such as LatentMAS transmits full key-value (KV) caches between agents but pays a high memory and communication cost. We adapt KV-cache eviction to this setting and introduce \\textbf{Orthogonal BackFill (OBF)}, which injects a low-rank residual from the discarded KV states back into the retained ones, orthogonal to what is already kept. With only $9.9\\%$-$20.2\\%$ of the prompt KV retained, compressed relay cuts bandwidth by $4.7\\times$ and GPU memory by $8\\%$ at under $5\\%$ wall-clock overhead, and stays close to full relay in accuracy across nine benchmarks, ahead of it on several. OBF matches or improves over headwise eviction on all nine, and its gain is proportional to the accuracy gap eviction opens against full relay ($r{=}0.78$ across three model scales), so it gives back part of what eviction takes. Code is available at https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay.",
+        "identifiers": [
+          "SemanticScholar:1e7ae20af25c9992951223a15f71fb4ee18d339b"
+        ],
+        "semantic_scholar_id": "1e7ae20af25c9992951223a15f71fb4ee18d339b",
+        "canonical_id": "arXiv:2604.13349",
+        "arxiv_id": "2604.13349",
+        "doi": "10.48550/arXiv.2604.13349",
+        "authors": [
+          "Yiping Li",
+          "Zhi-Yu An",
+          "Wan Du"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 215,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.29662",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.29662",
+        "id:SemanticScholar:40f37c471d01dda63dc533e9645877466c81a3f1",
+        "id:arXiv:2605.29662",
+        "title:safepruner semantic attentionguided futureaware token pruning for efficient visionlanguageaction manipulation",
+        "url:https://arxiv.org/abs/2605.29662"
+      ],
+      "record": {
+        "title": "SAFE-Pruner: Semantic Attention-Guided Future-Aware Token Pruning for Efficient Vision-Language-Action Manipulation",
+        "source_url": "https://arxiv.org/abs/2605.29662",
+        "year": 2026,
+        "published": "2026-05-28",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Real-time inference of vision-language-action (VLA) models is essential for robotic control. While visual token pruning has shown strong potential for accelerating inference, most existing methods mainly base pruning decisions on shallow-layer cues and risk discarding visual information required by deep layers. To address this issue, we propose SAFE-Pruner, a plug-and-play pruning framework that incorporates attention cues of future layers into pruning decisions. Specifically, we identify semantic attention consistency, the tendency that VLA models concentrate their attention probability mass on the same semantic entity across control timesteps. Based on this observation, we design a forward-looking strategy to forecast the token saliency in deep layers, which prevents the premature removal of critical tokens and leads to more stable acceleration. We further introduce a reference timestep refresh strategy that triggers updates upon attention shifts, thereby improving forecasting accuracy and pruning reliability. Extensive experiments across diverse evaluation settings demonstrate that our method achieves up to 1.89x speedup with a minimal degradation in success rate of less than 1.5%, while outperforming state-of-the-art methods by up to 1.9%.",
+        "identifiers": [
+          "SemanticScholar:40f37c471d01dda63dc533e9645877466c81a3f1"
+        ],
+        "semantic_scholar_id": "40f37c471d01dda63dc533e9645877466c81a3f1",
+        "canonical_id": "arXiv:2605.29662",
+        "arxiv_id": "2605.29662",
+        "doi": "10.48550/arXiv.2605.29662",
+        "authors": [
+          "Shi-Lin Ma",
+          "Chu-Bin Zhang",
+          "Chang-Yuan Wang",
+          "Yujin Wang",
+          "Yue Wu",
+          "Zi-Xuan Wang",
+          "Jing-Qi Tian",
+          "Zheng Zhu",
+          "Yansong Tang"
+        ],
+        "priority": 109,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 109,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 171,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.18348",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18348",
+        "id:SemanticScholar:142a2fb999971391ffbeede56c3bf0731745d870",
+        "id:arXiv:2604.18348",
+        "title:adacluster adaptive querykey clustering for sparse attention in video generation",
+        "url:https://arxiv.org/abs/2604.18348"
+      ],
+      "record": {
+        "title": "AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation",
+        "source_url": "https://arxiv.org/abs/2604.18348",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video diffusion transformers (DiTs) suffer from prohibitive inference latency due to quadratic attention complexity. Existing sparse attention methods either overlook semantic similarity or fail to adapt to heterogeneous token distributions across layers, leading to model performance degradation. We propose AdaCluster, a training-free adaptive clustering framework that accelerates the generation of DiTs while preserving accuracy. AdaCluster applies an angle-similarity-preserving clustering method to query vectors for higher compression, and designs a euclidean-similarity-preserving clustering method for keys, covering cluster number assignment, threshold-wise adaptive clustering, and efficient critical cluster selection. Experiments on CogVideoX-2B, HunyuanVideo, and Wan-2.1 on one A40 GPU demonstrate up to 1.67-4.31x speedup with negligible quality degradation.",
+        "identifiers": [
+          "SemanticScholar:142a2fb999971391ffbeede56c3bf0731745d870"
+        ],
+        "semantic_scholar_id": "142a2fb999971391ffbeede56c3bf0731745d870",
+        "canonical_id": "arXiv:2604.18348",
+        "arxiv_id": "2604.18348",
+        "doi": "10.48550/arXiv.2604.18348",
+        "authors": [
+          "Haoyue Tan",
+          "Sheng-Nan Wang",
+          "Yu Qiao",
+          "Jun-Cheng Zhang",
+          "You-Hui Bai",
+          "Ping Gong",
+          "Ze-Wen Jin",
+          "Cheng Li"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 209,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22269",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22269",
+        "id:SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+        "id:arXiv:2605.22269",
+        "title:mukv multigrained kv cache compression for long streaming video questionanswering",
+        "url:https://arxiv.org/abs/2605.22269"
+      ],
+      "record": {
+        "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+        "source_url": "https://arxiv.org/abs/2605.22269",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.",
+        "identifiers": [
+          "SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2"
+        ],
+        "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+        "canonical_id": "arXiv:2605.22269",
+        "arxiv_id": "2605.22269",
+        "doi": "10.48550/arXiv.2605.22269",
+        "authors": [
+          "Jun Xiao",
+          "Jiajun Chen",
+          "Tianxiang Sun",
+          "Xun Yang",
+          "Angela Yao"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.11683",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.11683",
+        "id:SemanticScholar:ff5278d847e5da85b14359c6d104f060f22d9620",
+        "id:arXiv:2602.11683",
+        "title:thinkrouter efficient reasoning via routing thinking between latent and discrete spaces",
+        "url:https://arxiv.org/abs/2602.11683"
+      ],
+      "record": {
+        "title": "ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces",
+        "source_url": "https://arxiv.org/abs/2602.11683",
+        "year": 2026,
+        "published": "2026-02-12",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work explores latent reasoning to improve reasoning efficiency by replacing explicit reasoning trajectories with continuous representations in a latent space, yet its effectiveness varies across settings. Analysis of model confidence dynamics under latent reasoning reveals that thinking trajectories ending in incorrect answers contain fewer low-confidence steps than those ending in correct answers. Meanwhile, we suggest that soft embeddings aggregated by multiple low-confidence thinking alternatives may introduce and propagate noise, leading to high confidence in unreliable reasoning trajectories. Motivated by these observations, ThinkRouter, an inference-time confidence-aware routing mechanism is proposed to avoid high confidence and noise for efficient reasoning. ThinkRouter routes thinking to the discrete token space when model confidence is low, and to the latent space otherwise. Extensive experiments on STEM reasoning and coding benchmarks across diverse large reasoning models demonstrate that ThinkRouter outperforms explicit CoT, random routing, and latent reasoning baselines in terms of accuracy, achieving an average improvement of 19.70 points in Pass@1, while reducing generation length by up to 15.55%. Further comprehensive analysis reveals that ThinkRouter can calibrate errors arising from explicit CoT and latent reasoning, and accelerates end-of-thinking token generation by globally lowering model confidence.",
+        "identifiers": [
+          "SemanticScholar:ff5278d847e5da85b14359c6d104f060f22d9620"
+        ],
+        "semantic_scholar_id": "ff5278d847e5da85b14359c6d104f060f22d9620",
+        "canonical_id": "arXiv:2602.11683",
+        "arxiv_id": "2602.11683",
+        "doi": "10.48550/arXiv.2602.11683",
+        "authors": [
+          "Xin Xu",
+          "Tong Yu",
+          "Xiang Chen",
+          "Hao-Liang Wang",
+          "Julian J. McAuley",
+          "Saayan Mitra"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 276,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.22911",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00799",
+        "id:SemanticScholar:88b85af6d96d51a07218256ab6893bcf281e98b4",
+        "id:arXiv:2603.22911",
+        "title:forestprune highratio visual token compression for video multimodal large language models via spatialtemporal forest modeling",
+        "url:https://arxiv.org/abs/2603.22911"
+      ],
+      "record": {
+        "title": "ForestPrune: High-Ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling",
+        "source_url": "https://arxiv.org/abs/2603.22911",
+        "year": 2026,
+        "published": "2026-03-24",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Due to the great saving of computation and memory overhead, token compression has become a research hot-spot for MLLMs and achieved remarkable progress in imagelanguage tasks. However, for the video, existing methods still fall short of high-ratio token compression. We attribute this shortcoming to the insufficient modeling of temporal and continual video content, and propose a novel and training-free token pruning method for video MLLMs, termed ForestPrune, which achieves effective and highratio pruning via Spatial-temporal Forest Modeling. In practice, ForestPrune construct token forests across video frames based on the semantic, spatial and temporal constraints, making an overall comprehension of videos. Afterwards, ForestPrune evaluates the importance of token trees and nodes based on tree depth and node roles, thereby obtaining a globally optimal pruning decision. To validate ForestPrune, we apply it to two representative video MLLMs, namely LLaVA-Video and LLaVA-OneVision, and conduct extensive experiments on a bunch of video benchmarks. The experimental results not only show the great effectiveness for video MLLMs, e.g., retaining 95.8% average accuracy while reducing 90% tokens for LLaVA-OneVision, but also show its superior performance and efficiency than the compared token compression methods, e.g., +10.1% accuracy on MLVU and -81.4% pruning time than FrameFusion on LLaVA-Video. Our code is given in the ForestPrune.",
+        "identifiers": [
+          "SemanticScholar:88b85af6d96d51a07218256ab6893bcf281e98b4"
+        ],
+        "semantic_scholar_id": "88b85af6d96d51a07218256ab6893bcf281e98b4",
+        "canonical_id": "arXiv:2603.22911",
+        "arxiv_id": "2603.22911",
+        "doi": "10.1109/CVPRF71909.2026.00799",
+        "authors": [
+          "Shao-Bo Ju",
+          "Baiyang Song",
+          "Tao Chen",
+          "Jia-Peng Zhang",
+          "Qiong Wu",
+          "Chaokun Chang",
+          "Huai-Xi Wang",
+          "Yi-Yi Zhou",
+          "Rong-Rong Ji"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 236,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.23994",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.23994",
+        "id:SemanticScholar:bc4827f89593011927c5d59673bfd8e4ed64be08",
+        "id:arXiv:2604.23994",
+        "title:when to commit towards variablesize selfcontained blocks for discrete diffusion language models",
+        "url:https://arxiv.org/abs/2604.23994"
+      ],
+      "record": {
+        "title": "When to Commit? Towards Variable-Size Self-Contained Blocks for Discrete Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.23994",
+        "year": 2026,
+        "published": "2026-04-27",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Discrete diffusion language models (dLLMs) enable parallel token updates with bidirectional attention, yet practical generation typically adopts blockwise semi-autoregressive decoding. This switch creates a training-inference mismatch: training denoises with full-sequence context, while inference commits tokens within a bounded block without future context. Therefore, decoding with fixed-size or heuristic-based blocks can lead to premature token commitments, as decisions are made without full access to future context that could alter those choices. Motivated by this, we propose self-containedness as a principled criterion for block commitment. A block is self-contained if its predictions remain consistent with Future-Aware (FA) or without No-Future (NF) access to future context, reframing block boundary selection as a test of self-containedness rather than a heuristic choice. Based on this principle, we introduce Variable-size Self-contained Blocks (VSB) for dLLMs. VSB scores and selects block boundaries using the divergence between token-level predictive distributions under NF and FA conditioning, which quantifies how predictions would change if future context were revealed. We provide theoretical justification linking self-containedness to predictive consistency, and extensive experiments validate VSB's efficacy over fixed-size and heuristic blockwise decoding.",
+        "identifiers": [
+          "SemanticScholar:bc4827f89593011927c5d59673bfd8e4ed64be08"
+        ],
+        "semantic_scholar_id": "bc4827f89593011927c5d59673bfd8e4ed64be08",
+        "canonical_id": "arXiv:2604.23994",
+        "arxiv_id": "2604.23994",
+        "doi": "10.48550/arXiv.2604.23994",
+        "authors": [
+          "D. Wang",
+          "Rui-Hong Qiu",
+          "Zifei Huang"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 202,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:dcf172fc84cb9041d033281ff888ebaee6858d57d77046c7c4bf49b8ada31e4f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
