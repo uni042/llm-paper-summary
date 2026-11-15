@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-1801-scheduled-chat-00/r01",
+  "reference_main_sha": "8f7fc033be23f2684e1f0ecde86e730e80c5ce68",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.14005",
+      "identity_tokens": ["arxiv:2609.14005"],
+      "title": "StepAudio 3 Realtime Technical Report",
+      "reason": "音声対話の低遅延化に向けてThink-While-Speakingで内部推論と音声出力を並行実行し、Seamless Duplexで割込みや相槌を処理する。音声LLMの推論時スケジューリングとリアルタイム応答に関連する。著者はStepAudioChat reasoning modeのmacro average 73.0、MMSU 90.6、tau-Voice task success 56.0%を報告するが、これらは推論速度改善率ではない。",
+      "source_url": "https://arxiv.org/abs/2609.14005",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T18:01:00+09:00",
+      "last_checked_at": "2026-11-15T18:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 388
+    }
+  ]
+}
