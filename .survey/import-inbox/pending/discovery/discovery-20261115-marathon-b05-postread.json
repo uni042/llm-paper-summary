@@ -1,0 +1,28 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-discovery-20261115-marathon-b05-postread",
+ "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+ "record_count": 1,
+ "records": [
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2505.20320",
+   "identity_tokens": [
+    "arXiv:2505.20320",
+    "https://arxiv.org/abs/2505.20320"
+   ],
+   "title": "Less Context, Same Performance: A RAG Framework for Resource-Efficient LLM-Based Clinical NLP",
+   "reason": "臨床NLPの応用評価が主目的で、機構は既存RAGの標準的組合せにとどまり、推論システムへの直接貢献が薄い。全文精読による再判定で境界として記録。",
+   "source_url": "https://arxiv.org/abs/2505.20320",
+   "body_check": "research_fulltext_relevance_review: 全文通読の結果、主目的はMount Sinaiの手術合併症識別という臨床NLP応用評価であり、LLM推論システムへの直接の技術的貢献は確認できない。機構は512語までの分割、Transformerエンコーダによる埋め込み、FAISS索引、上位チャンクを元の順序で連結して4,000トークン未満にするという既存RAGの標準的な組み合わせにとどまり、新しい検索・分割・推論・KVキャッシュ・スケジューリング等の機構、感度実験や構成要素除去実験はない。資源評価も副次的で、GPT-4oの総トークン数とAPI費用、および開源モデル100患者分の患者当たり時間だけで、索引構築・埋め込み・検索の費用、メモリ、スループット、遅延分布は未評価のため、Research化の根拠が弱い境界論文と判定した。",
+   "first_checked_at": "2026-11-16T01:05:00+09:00",
+   "last_checked_at": "2026-11-16T01:05:00+09:00",
+   "linked_from": [],
+   "worklist_rank": 27,
+   "worklist_source": "worker-worklist-00.json discovery_review",
+   "origin": "research_postread_relevance"
+  }
+ ]
+}

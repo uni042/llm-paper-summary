@@ -1,0 +1,46 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-discovery-20261115-marathon-b07-postread",
+ "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+ "record_count": 2,
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2211.08842",
+   "identity_tokens": [
+    "arXiv:2211.08842",
+    "https://arxiv.org/abs/2211.08842"
+   ],
+   "title": "Fast and Accurate FSA System Using ELBERT: An Efficient and Lightweight BERT",
+   "reason": "全文精読の結果、対象はALBERT系符号器による金融感情分析の分類システムであり、LLM推論機構への直接貢献はない。読解後再判定により対象外として記録。",
+   "source_url": "https://arxiv.org/abs/2211.08842",
+   "body_check": "research_fulltext_relevance_review: 全文を通読した結果、本論文はLLM推論システムへの直接貢献がなく対象外と判定した。(1) 対象は符号器のみのBERT系分類モデル（ALBERT-large骨格のELBERT、18Mパラメータ）による文単位3値分類で、自己回帰生成・KVキャッシュ・プリフィル/デコード分離といったLLMサービングのボトルネックは扱われていない。(2) 中核のGPU高速化法は全符号器層のパラメータ共有を前提に異なる反復まで進んだサンプルを同一バッチへ詰め直すもので、層ごとに異なる重みを持つ通常のLLMへは移せない。(3) 早期終了も分類器出力のエントロピーに基づく文単位の分類専用の形である。なおFSAは音声認識ではなくFinancial Sentiment Analysisの略である。",
+   "first_checked_at": "2026-11-16T01:15:00+09:00",
+   "last_checked_at": "2026-11-16T01:15:00+09:00",
+   "linked_from": [],
+   "worklist_rank": 30,
+   "worklist_source": "worker-worklist-30.json discovery_review",
+   "origin": "research_postread_relevance"
+  },
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2404.04759",
+   "identity_tokens": [
+    "arXiv:2404.04759",
+    "https://arxiv.org/abs/2404.04759"
+   ],
+   "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models",
+   "reason": "小データ事前学習モデルAfriBERTaへの既存圧縮手法の適用評価であり、新しい推論機構の提案はない。全文精読による再判定で境界として記録。",
+   "source_url": "https://arxiv.org/abs/2404.04759",
+   "body_check": "research_fulltext_relevance_review: 全文を通読して再判定した。対象は生成型LLMではなくXLM-R系エンコーダ専用事前学習モデルAfriBERTaであり、評価はMasakhaNERの固有表現認識1タスクのF1のみに限られる。自己回帰デコード、KVキャッシュ、サービング、スループット/遅延のシステム評価といったLLM推論システム固有の機構は扱われず、手法自体も著者らが明言するとおり既存の圧縮手法（蒸留・枝刈り・量子化）を低資源設定へ適用・評価した点だけが新規性で、新しい圧縮機構・推論機構の提案はない。よって境界と判定した。",
+   "first_checked_at": "2026-11-16T01:15:00+09:00",
+   "last_checked_at": "2026-11-16T01:15:00+09:00",
+   "linked_from": [],
+   "worklist_rank": 35,
+   "worklist_source": "worker-worklist-00.json discovery_review",
+   "origin": "research_postread_relevance"
+  }
+ ]
+}
