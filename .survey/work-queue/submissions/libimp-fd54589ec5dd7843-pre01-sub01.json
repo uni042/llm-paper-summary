@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+      "identifiers": [
+        "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+      ],
+      "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+      "canonical_id": "arXiv:2609.18916",
+      "arxiv_id": "2609.18916",
+      "doi": "10.48550/arXiv.2609.18916",
+      "authors": [
+        "Alex M. Tseng",
+        "Prannay Kaul",
+        "L. Zancato",
+        "Wei Xia",
+        "Stefano Soatto"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HOPEはMoEのexpert間の協調的相互作用を考慮した二次の剪定目的関数を導出し、剪定誤差上界の最小化を狙う。一次要旨では122Bまでの3モデル、2校正集合、複数ベンチマークで評価し、50%剪定時に5手法中平均順位1.58（次点REAPは2.42）、agentic codingで最大6.1%の改善を報告。大規模MoEのメモリ圧縮と推論資源効率に直接関連する。実測推論レイテンシ改善率は要旨からは不明。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fd54589ec5dd",
+    "round": "libimp-fd54589ec5dd7843-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fd54589ec5dd7843-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fd54589ec5dd7843-pre01.json",
+    "receipt": "sha256:630d19a098b3b6134ea602832b69620b46fe2321d7e2d08eedcce1b871e5b233"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fd54589ec5dd",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
