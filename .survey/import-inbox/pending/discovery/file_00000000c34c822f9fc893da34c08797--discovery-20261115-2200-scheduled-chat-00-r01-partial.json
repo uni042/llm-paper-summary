@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-2200-scheduled-chat-00/r01",
+  "reference_main_sha": "15949aa6275944e7482c55f1c63eacf0dc5d58ee",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.07212",
+      "identity_tokens": [
+        "arxiv:2601.07212"
+      ],
+      "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
+      "reason": "LLMの連続ブロック剪定で隠れ状態間の相互情報量から冗長性を評価し、Data Processing Inequalityで連続ブロックと個別ブロックの重要度を関連付ける。Fast-Block-Selectでブロック組合せを反復更新し、圧縮と推論高速化を狙う。一次要旨は複数モデル・データセットでの安定性と有効性を述べるが定量的高速化値は示さない。",
+      "source_url": "https://arxiv.org/abs/2601.07212",
+      "body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-11-15T22:00:00+09:00",
+      "last_checked_at": "2026-11-15T22:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 402
+    }
+  ]
+}
