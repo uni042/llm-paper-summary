@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Optical Transformers",
+      "source_url": "https://arxiv.org/abs/2302.10360",
+      "year": 2023,
+      "published": "2023-02-20",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 49,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapidly increasing size of deep-learning models has caused renewed and growing interest in alternatives to digital computers to dramatically reduce the energy cost of running state-of-the-art neural networks. Optical matrix-vector multipliers are best suited to performing computations with very large operands, which suggests that large Transformer models could be a good target for optical computing. To test this idea, we performed small-scale optical experiments with a prototype accelerator to demonstrate that Transformer operations can run on optical hardware despite noise and errors. Using simulations, validated by our experiments, we then explored the energy efficiency of optical implementations of Transformers and identified scaling laws for model performance with respect to optical energy usage. We found that the optical energy per multiply-accumulate (MAC) scales as $\\frac{1}{d}$ where $d$ is the Transformer width, an asymptotic advantage over digital systems. We conclude that with well-engineered, large-scale optical hardware, it may be possible to achieve a $100 \\times$ energy-efficiency advantage for running some of the largest current Transformer models, and that if both the models and the optical hardware are scaled to the quadrillion-parameter regime, optical computers could have a $>8,000\\times$ energy-efficiency advantage over state-of-the-art digital-electronic processors that achieve 300 fJ/MAC. We analyzed how these results motivate and inform the construction of future optical accelerators along with optics-amenable deep-learning approaches. With assumptions about future improvements to electronics and Transformer quantization techniques (5$\\times$ cheaper memory access, double the digital--analog conversion efficiency, and 4-bit precision), we estimated that optical computers' advantage against current 300-fJ/MAC digital processors could grow to $>100,000\\times$.",
+      "identifiers": [
+        "SemanticScholar:139ebdcaa3d5f60a3c5289bb61d5865141886d51"
+      ],
+      "semantic_scholar_id": "139ebdcaa3d5f60a3c5289bb61d5865141886d51",
+      "canonical_id": "arXiv:2302.10360",
+      "arxiv_id": "2302.10360",
+      "doi": "10.48550/arXiv.2302.10360",
+      "authors": [
+        "Maxwell G. Anderson",
+        "Shi-Fan Ma",
+        "Tian-Yu Wang",
+        "L. Wright",
+        "P. McMahon"
+      ],
+      "priority": 49,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 49,
+        "citation_count": 49,
+        "total": 49,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1364,
+        "matched_prestigious_venue": null
+      },
+      "reason": "光学行列ベクトル積をTransformer演算へ適用し、小規模光学試作実験と実験に基づくシミュレーションでエネルギー効率を評価。著者は光学MACのエネルギーがTransformer幅dに対し1/dでスケールするとし、将来の大規模光学ハードウェアで最大100倍以上の効率改善可能性を試算。実測大規模LLM高速化ではないが推論アクセラレータの省電力化に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Optimization Strategies for Enhancing Resource Efficiency in Transformers & Large Language Models",
+      "source_url": "https://arxiv.org/abs/2502.00046",
+      "year": 2025,
+      "published": "2025-01-16",
+      "venue": "International Conference on Performance Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advancements in Natural Language Processing are heavily reliant on Transformer architectures, whose improvements come at substantial resource costs due to ever-growing model sizes. This study explores optimization techniques, including quantization, knowledge distillation, and pruning, focusing on energy and computational efficiency while retaining performance. Among standalone methods, 4-Bit quantization significantly reduces energy use with minimal accuracy loss. Hybrid approaches, like NVIDIA's Minitron approach combining KD and structured pruning, further demonstrate promising trade-offs between size reduction and accuracy retention. A novel optimization framework is introduced, offering a flexible framework for comparing various methods. Through the investigation of these compression methods, we provide valuable insights for developing more sustainable and efficient LLMs, shining a light on the often-ignored concern of energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:ce68fb6929a08d7c29d0ec9a17b42b10f33b733a"
+      ],
+      "semantic_scholar_id": "ce68fb6929a08d7c29d0ec9a17b42b10f33b733a",
+      "canonical_id": "arXiv:2502.00046",
+      "arxiv_id": "2502.00046",
+      "doi": "10.1145/3676151.3719379",
+      "authors": [
+        "T. Wallace",
+        "Naser Ezzati-jivan",
+        "Beatrice Ombuki-Berman"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 668,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer/LLMの量子化、蒸留、剪定を比較し、計算・エネルギー効率と精度のトレードオフを整理する短報。4-bit量子化と蒸留・構造化剪定の併用を取り上げ、最適化手法比較の枠組みを提案する。独自の大規模実測優位は要旨から確認できないが、LLM圧縮・推論効率の系統整理に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KForge: Program Synthesis for Diverse AI Hardware Accelerators",
+      "source_url": "https://arxiv.org/abs/2511.13274",
+      "year": 2025,
+      "published": "2025-11-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GPU kernels are critical for ML performance but difficult to optimize across diverse accelerators. We present KForge, a platform-agnostic framework built on two collaborative LLM-based agents: a generation agent that produces and iteratively refines programs through compilation and correctness feedback, and a performance analysis agent that interprets profiling data to guide optimization. This agent-based architecture requires only a single-shot example to target new platforms. We make three key contributions: (1) introducing an iterative refinement system where the generation agent and performance analysis agent collaborate through functional and optimization passes, interpreting diverse profiling data (from programmatic APIs to GUI-based tools) to generate actionable recommendations that guide program synthesis for arbitrary accelerators; (2) demonstrating that the generation agent effectively leverages cross-platform knowledge transfer, where a reference implementation from one architecture substantially improves generation quality for different hardware targets; and (3) validating the platform-agnostic nature of our approach by demonstrating effective program synthesis across fundamentally different parallel computing platforms: NVIDIA CUDA and Apple Metal.",
+      "identifiers": [
+        "SemanticScholar:2a48508a4fdbdec9a567fd2fbe3ce9f8ab950b66"
+      ],
+      "semantic_scholar_id": "2a48508a4fdbdec9a567fd2fbe3ce9f8ab950b66",
+      "canonical_id": "arXiv:2511.13274",
+      "arxiv_id": "2511.13274",
+      "doi": "10.48550/arXiv.2511.13274",
+      "authors": [
+        "Taras Sereda",
+        "Tom St. John",
+        "Burak Bartan",
+        "N. Serrino",
+        "Sachin Katti",
+        "Zain Asgar"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 363,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMベースの生成エージェントと性能分析エージェントがコンパイル・正当性・プロファイリング結果を用いてGPUカーネルを反復最適化する。NVIDIA CUDAとApple Metalでプラットフォーム横断のプログラム合成を実証し、推論カーネル自動最適化の研究対象として直接関係する。要旨には具体的なLLM全体速度改善率はない。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8f87152f3d49",
+    "round": "libimp-8f87152f3d49c664-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8f87152f3d49c664-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8f87152f3d49c664-pre01.json",
+    "receipt": "sha256:554019b11895e1d2cbdca784edf729484ce7a29ad229c161c64e559dd1a56f05"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8f87152f3d49",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
