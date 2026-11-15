@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261109-0030-scheduled-chat-30/r02",
+  "reference_main_sha": "fb9536c85f2d768a4cf158fc928e394fed41ab0d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18451",
+      "identity_tokens": [
+        "arxiv:2610.18451",
+        "doi:10.48550/arxiv.2610.18451"
+      ],
+      "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+      "reason": "MoE推論のエキスパート並列グループを既存インスタンス内部で拡縮する際、実行構造・GPUメモリ・通信状態の再利用可能部分を残すPartial Reuseを導入する。vLLM系のインスタンス再構築方式より4.5～11.7倍速い拡縮を著者が報告しており、推論サービングの弾力的資源管理へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.18451",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-09T00:32:16+09:00",
+      "last_checked_at": "2026-11-09T00:32:16+09:00",
+      "linked_from": "worker-worklist-30 discovery rank 33",
+      "worklist_rank": 33
+    }
+  ]
+}
