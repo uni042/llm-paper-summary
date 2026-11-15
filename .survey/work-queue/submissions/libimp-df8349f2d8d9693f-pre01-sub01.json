@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RLHFless: Serverless Computing for Efficient RLHF",
+      "source_url": "https://arxiv.org/abs/2602.22718",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement Learning from Human Feedback (RLHF) has been widely applied to Large Language Model (LLM) post-training to align model outputs with human preferences. Recent models, such as DeepSeek-R1, have also shown RLHF's potential to improve LLM reasoning on complex tasks. In RL, inference and training co-exist, creating dynamic resource demands throughout the workflow. Compared to traditional RL, RLHF further challenges training efficiency due to expanding model sizes and resource consumption. Several RLHF frameworks aim to balance flexible abstraction and efficient execution. However, they rely on serverful infrastructures, which struggle with fine-grained resource variability. As a result, during synchronous RLHF training, idle time between or within RL components often causes overhead and resource wastage. To address these issues, we present RLHFless, the first scalable training framework for synchronous RLHF, built on serverless computing environments. RLHFless adapts to dynamic resource demands throughout the RLHF pipeline, pre-computes shared prefixes to avoid repeated computation, and uses a cost-aware actor scaling strategy that accounts for response length variation to find sweet spots with lower cost and higher speed. In addition, RLHFless assigns workloads efficiently to reduce intra-function imbalance and idle time. Experiments on both physical testbeds and a large-scale simulated cluster show that RLHFless achieves up to 1.35x speedup and 44.8% cost reduction compared to the state-of-the-art baseline.",
+      "identifiers": [
+        "SemanticScholar:b65aef96d4aa6f041efb548a98336699a7bb29e1"
+      ],
+      "semantic_scholar_id": "b65aef96d4aa6f041efb548a98336699a7bb29e1",
+      "canonical_id": "arXiv:2602.22718",
+      "arxiv_id": "2602.22718",
+      "doi": "10.48550/arXiv.2602.22718",
+      "authors": [
+        "Rui Wei",
+        "Han-Fei Yu",
+        "S. Jain",
+        "Yogarajan Sivakumar",
+        "Devesh Tiwari",
+        "Jian Li",
+        "Seung-Jong Park",
+        "Hao Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同期RLHFの推論・学習フェーズ間で変動するリソース需要に対し、serverless実行、共通prefixの事前計算、出力長を考慮したactorスケーリング、負荷均等化を組み合わせる。実機と大規模シミュレーションで既存方式比最大1.35倍高速化、費用44.8%削減を著者が報告。LLMの後学習・推論基盤の資源効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction",
+      "source_url": "https://arxiv.org/abs/2609.32353",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token reduction is an effective way to accelerate multimodal large language models (MLLMs), but performance deteriorates rapidly under extremely low token budgets. Existing work has explored both visual-token selection and training-based adaptation to reduced visual inputs. We take a step further by asking how a heavily compressed MLLM should learn from the states induced by its own generations. This setting naturally calls for on-policy self-distillation: a heavily compressed model is supervised on the states induced by its own generations, while its full-token counterpart serves as an information-rich teacher. Based on this insight, we propose LT-OPD, a training framework for extreme visual-token reduction. The student rolls out responses with only a small fraction of visual tokens, and a frozen full-token copy of the same MLLM provides distributional supervision along these student-generated trajectories. To stabilize on-policy learning when visual evidence is severely limited, we further introduce a budget-level curriculum that progressively decreases the token budget during training. Across nine benchmarks on Qwen3.5-4B, LT-OPD raises average retained performance under 5% visual-token retention from 68.6% to 82.3%, outperforming training-free, training-based, and reinforcement-learning baselines at the same budget. The gains transfer consistently to Qwen3.5-9B, GLM-4.6V-9B, and LLaVA-OV-1.5-4B. LT-OPD also reduces KV-cache usage by 85.2% and prefill FLOPs by 85.4% without additional inference overhead, demonstrating that on-policy learning can substantially recover capabilities lost to extreme visual-token reduction.",
+      "identifiers": [
+        "SemanticScholar:c948fe951703e0235463e217c77295c7ef252684"
+      ],
+      "semantic_scholar_id": "c948fe951703e0235463e217c77295c7ef252684",
+      "canonical_id": "arXiv:2609.32353",
+      "arxiv_id": "2609.32353",
+      "doi": "10.48550/arXiv.2609.32353",
+      "authors": [
+        "Junxian Li",
+        "Rui-Xuan Yang",
+        "Tian-Ao Zhang",
+        "Tian-Ge Xu",
+        "Wei-Sheng Dong",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LT-OPDは視覚トークンを5%に圧縮したstudentの自己生成軌跡に対してfull-tokenの凍結teacherが分布蒸留を行い、token budget curriculumで学習を安定化する。Qwen3.5-4Bの9ベンチマークで保持性能68.6%から82.3%、KV cache使用量85.2%削減、prefill FLOPs85.4%削減を著者が報告。マルチモーダルLLM推論のメモリ・計算効率に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-df8349f2d8d9",
+    "round": "libimp-df8349f2d8d9693f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-df8349f2d8d9693f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-df8349f2d8d9693f-pre01.json",
+    "receipt": "sha256:f45f9ae727aba06c0bd7146d33121e5f45dc30be7c874739e9fe59f9dc5600f5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-df8349f2d8d9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
