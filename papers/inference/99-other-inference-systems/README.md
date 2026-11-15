@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（875本）
+## 自動生成の論文一覧（876本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3385,6 +3385,10 @@
 - **2022-11 · [AAN+: Generalized Average Attention Network for Accelerating Neural Transformer](2022-ffa88b154f4f-aan-generalized-average-attention-network-for-accelerating-neural-transf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   AAN+は、履歴を位置別・内容別の正のスコアで加重平均したベクトルへ圧縮し、ゲートで現在トークンと混ぜる。WMT14英独翻訳では、通常TransformerのBLEU 27.59に対しNerは27.56とほぼ同等で、デコード速度は1.30倍、学習速度は1.02倍となる。
+
+- **2022-10 · [QuaLA-MiniLM: a Quantized Length Adaptive MiniLM](2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md)**  
+  実装：[✓](https://github.com/intel/intel-extension-for-transformers/tree/main/examples/huggingface/pytorch/question-answering/dynamic) ・ リポジトリ内被引用：0  
+  MiniLMv2の自己注意関係蒸留、層別トークン削減と復元、INT8事後量子化を統合し、SQuAD1.1の質問応答でBERT-base比8.8倍のCPU推論高速化をF1低下約0.90ポイントで達成した研究。
 
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
