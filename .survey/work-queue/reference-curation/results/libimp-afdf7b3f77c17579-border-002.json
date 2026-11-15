@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-afdf7b3f77c17579-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.11212",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.11212",
+    "identity_tokens": [
+      "arXiv:2608.11212"
+    ],
+    "reason": "MoEルーティング反転の因果分析。4ビットKV量子化の数値擾乱がゲートの決定境界を越えて専門家選択を反転させる経路を、因果的な帰属装置で定量化し、検出限界を示す。著者ら自身が緩和策の提案でないと述べており、推論挙動の計測・分析にとどまる。境界。",
+    "first_checked_at": "2026-11-15T21:43:16+00:00",
+    "last_checked_at": "2026-11-15T21:43:16+00:00",
+    "linked_from": [
+      "04-moe-expert-compression",
+      "KV cache quantization / long-context inference / activation compression",
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "MoE expert pruning / causal interpretability / expert importance metrics",
+      "MoE routing / expert choice / heterogeneous conditional computation",
+      "Quantization × MoE × Offload",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Detecting a Route Flip Is Easier Than Knowing Whether to Fix It: Causal Route-Mediated Damage in Quantized Mixture-of-Experts"
+  },
+  "processed_at": "2026-11-15T21:43:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-afdf7b3f77c1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

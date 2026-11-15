@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-603f140dadfe052d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.17697",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.17697",
+    "identity_tokens": [
+      "arXiv:2602.17697"
+    ],
+    "reason": "推論ハイパーパラメータ調整への変動性モデリングの適用。推論サーバの設定空間を構成可能システムとして表し、生成設定がエネルギー消費へ与える影響を体系的に分析する。推論運用の知見ではあるが、提示は設定分析の方法論であり機構そのものではない。境界。",
+    "first_checked_at": "2026-11-15T21:42:57+00:00",
+    "last_checked_at": "2026-11-15T21:42:57+00:00",
+    "linked_from": [
+      "推論エンジン／推論基盤"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pimp My LLM: Leveraging Variability Modeling to Tune Inference Hyperparameters"
+  },
+  "processed_at": "2026-11-15T21:42:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-603f140dadfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

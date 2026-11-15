@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-293fd7a7097de145-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.31779",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.31779",
+    "identity_tokens": [
+      "arXiv:2606.31779"
+    ],
+    "reason": "潜在CoTと明示的CoTの差を埋めるLOTUS。潜在ブロックを並列に処理し、各潜在位置へ参照CoTステップの損失を課すループ型Transformerの訓練レシピが中核。推論時の深さ再利用という計算パラダイムには関わるが、貢献の実体は学習方法であり、推論機構としての提示は薄い。",
+    "first_checked_at": "2026-11-15T21:42:49+00:00",
+    "last_checked_at": "2026-11-15T21:42:49+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "speculative-parallel-decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bridging the Gap Between Latent and Explicit Reasoning with Looped Transformers"
+  },
+  "processed_at": "2026-11-15T21:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-293fd7a7097d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

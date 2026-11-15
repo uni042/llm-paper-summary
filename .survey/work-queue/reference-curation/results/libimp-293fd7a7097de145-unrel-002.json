@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-293fd7a7097de145-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05227",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05227",
+    "identity_tokens": [
+      "arXiv:2605.05227"
+    ],
+    "reason": "LLM訓練のデータキュレーションをオンライン再重み付けにするADAPT。事前学習と微調整のサンプル重要度を類似度ベースの品質信号で動的に変える訓練手法であり、推論への適用はない。学習側のみの研究は対象外。",
+    "first_checked_at": "2026-11-15T21:42:50+00:00",
+    "last_checked_at": "2026-11-15T21:42:50+00:00",
+    "linked_from": [
+      "モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+      "異種GPU・事前充填/復号分離サービング"
+    ],
+    "title": "Rethinking Data Curation in LLM Training: Online Reweighting Offers Better Generalization than Offline Methods"
+  },
+  "processed_at": "2026-11-15T21:42:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-293fd7a7097d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

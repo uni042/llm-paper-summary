@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-70d0c1b62bad44fd-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03249",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03249",
+    "identity_tokens": [
+      "arXiv:2602.03249"
+    ],
+    "reason": "思考の自己調整要約Accordion-Thinking。モデルが推論途中で思考過程を周期的に要約し旧思考を破棄するFold推論モードで、KVキャッシュの線形成長を断つ。推論時の振る舞い自体は機構だが、それを強化学習でモデルに学習させる訓練枠組みが貢献の実体であり境界。",
+    "first_checked_at": "2026-11-15T21:43:05+00:00",
+    "last_checked_at": "2026-11-15T21:43:05+00:00",
+    "linked_from": [
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV cache quantization / long-context inference / activation compression",
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "sparse attention / KV-cache bandwidth reduction"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accordion-Thinking: Self-Regulated Step Summaries for Efficient and Readable LLM Reasoning"
+  },
+  "processed_at": "2026-11-15T21:43:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-70d0c1b62bad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

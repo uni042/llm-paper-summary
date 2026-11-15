@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-603f140dadfe052d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.22815",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.22815",
+    "identity_tokens": [
+      "arXiv:2603.22815"
+    ],
+    "reason": "指示関連領域の特定によるLVLM効率化PinPoint。剪定でなく、指示と視覚入力から関連領域を局在化し細粒度特徴を抽出する二段枠組みで、領域注釈の追加整備も含む。推論効率が目的だが、機構は教師付きの領域特定を含むモデル側処理であり境界。",
+    "first_checked_at": "2026-11-15T21:42:58+00:00",
+    "last_checked_at": "2026-11-15T21:42:58+00:00",
+    "linked_from": [
+      "12-multimodal-inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Focus, Don't Prune: Identifying Instruction-Relevant Regions for Information-Rich Image Understanding"
+  },
+  "processed_at": "2026-11-15T21:42:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-603f140dadfe",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

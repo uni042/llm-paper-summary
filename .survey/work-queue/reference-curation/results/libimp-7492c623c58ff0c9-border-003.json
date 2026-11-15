@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7492c623c58ff0c9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.21627",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.21627",
+    "identity_tokens": [
+      "arXiv:2512.21627"
+    ],
+    "reason": "生涯具身ナビゲーション向け視覚文脈圧縮AstraNav-Memory。画像中心メモリを視覚トークナイザで16倍程度に圧縮し、数十枚から数百枚規模へ文脈容量を広げる。文脈圧縮の機構は汎用的だが、主目的はナビゲーション性能であり応用側が主、推論システムとしての位置づけは二次的。境界。",
+    "first_checked_at": "2026-11-15T21:43:08+00:00",
+    "last_checked_at": "2026-11-15T21:43:08+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AstraNav-Memory: Contexts Compression for Long Memory"
+  },
+  "processed_at": "2026-11-15T21:43:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7492c623c58f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

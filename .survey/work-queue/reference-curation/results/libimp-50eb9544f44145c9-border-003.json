@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-50eb9544f44145c9-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.22629",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.22629",
+    "identity_tokens": [
+      "arXiv:2607.22629"
+    ],
+    "reason": "マスク自己蒸留によるCoTの内在化。同一モデルの教師・生徒コピーで中間推論痕跡をパラメータへ内在化し、推論時のはるかに短い痕跡で答えを出すモデルを学習する。狙いは推論の遅延とサービングコスト削減だが、機構の実体は知識蒸留の学習枠組みであり境界。",
+    "first_checked_at": "2026-11-15T21:42:54+00:00",
+    "last_checked_at": "2026-11-15T21:42:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Masked Self-Distillation: Internalizing the Chain-of-Thought in Language Models"
+  },
+  "processed_at": "2026-11-15T21:42:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-50eb9544f441",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

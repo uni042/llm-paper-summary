@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96fc76a04bf45f8c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.03190",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.03190",
+    "identity_tokens": [
+      "arXiv:2605.03190"
+    ],
+    "reason": "非同期GPU向け資源分離プログラミングVDCores。非同期ハードウェア単位を資源分離した仮想コアとして抽象化し、依存でつながるマイクロ演算として負荷を表すことで、メモリと計算の自動重なりを可能にする。推論カーネルの実行効率に関わるが、貢献はプログラミング・実行モデルの提案であり境界。",
+    "first_checked_at": "2026-11-15T21:43:12+00:00",
+    "last_checked_at": "2026-11-15T21:43:12+00:00",
+    "linked_from": [
+      "GPU Kernel Framework",
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU"
+  },
+  "processed_at": "2026-11-15T21:43:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96fc76a04bf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

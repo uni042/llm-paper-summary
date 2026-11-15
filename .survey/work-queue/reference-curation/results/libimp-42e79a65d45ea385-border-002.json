@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42e79a65d45ea385-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.14277",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.14277",
+    "identity_tokens": [
+      "arXiv:2607.14277"
+    ],
+    "reason": "LLMエージェント向け多ヘッド潜在制御。凍結したLLMの隠れ状態軌跡を読み、継続・強いモデルへの委譲・情報要求・ツール呼出・棄権といった配置時制御信号を出す軽量層。配置時の判断機構ではあるが、推論効率の機構ではなくエージェント制御が主眼であり境界。",
+    "first_checked_at": "2026-11-15T21:42:52+00:00",
+    "last_checked_at": "2026-11-15T21:42:52+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making"
+  },
+  "processed_at": "2026-11-15T21:42:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42e79a65d45e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

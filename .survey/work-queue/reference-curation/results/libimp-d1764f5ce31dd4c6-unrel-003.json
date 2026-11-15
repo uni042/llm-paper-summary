@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1764f5ce31dd4c6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.17836",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.17836",
+    "identity_tokens": [
+      "arXiv:2601.17836"
+    ],
+    "reason": "推薦システム向け疎自己注意SparseCTR。長期のユーザ行動列を、個人化と時間変化に合わせた疎注意で効率的にモデル化する。対象は推薦モデルの注意効率であり、LLM推論システムではない。異分野応用のため対象外。",
+    "first_checked_at": "2026-11-15T21:43:22+00:00",
+    "last_checked_at": "2026-11-15T21:43:22+00:00",
+    "linked_from": [
+      "inference-systems",
+      "sparse attention / long-context Transformer",
+      "疎注意／長文脈学習"
+    ],
+    "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction"
+  },
+  "processed_at": "2026-11-15T21:43:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1764f5ce31d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

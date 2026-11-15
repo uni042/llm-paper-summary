@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-293fd7a7097de145-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.07854",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.07854",
+    "identity_tokens": [
+      "arXiv:2602.07854"
+    ],
+    "reason": "ビデオ世界モデルの幾何一貫性のためのViewRopeとGeometry-Aware Frame-Sparse Attention。カメラ光線方向を注意へ注入する位置符号化が主貢献で、疎注意による効率化は従属的。主目的は3D一貫性というモデル品質であり、推論効率の機構としては二次的。",
+    "first_checked_at": "2026-11-15T21:42:49+00:00",
+    "last_checked_at": "2026-11-15T21:42:49+00:00",
+    "linked_from": [
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Geometry-Aware Rotary Position Embedding for Consistent Video World Model"
+  },
+  "processed_at": "2026-11-15T21:42:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-293fd7a7097d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

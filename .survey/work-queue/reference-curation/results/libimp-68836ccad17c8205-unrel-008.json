@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68836ccad17c8205-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.04956",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.04956",
+    "identity_tokens": [
+      "arXiv:2605.04956"
+    ],
+    "reason": "LLM生成GPUカーネルのベンチマークKernelBenchX。176課題15カテゴリで生成手法の正しさとハードウェア効率を測るが、評価対象はLLMのコード生成能力そのものであり、推論システムの技術や機構の提案ではない。能力評価のみは対象外。",
+    "first_checked_at": "2026-11-15T21:43:04+00:00",
+    "last_checked_at": "2026-11-15T21:43:04+00:00",
+    "linked_from": [
+      "inference-systems"
+    ],
+    "title": "KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels"
+  },
+  "processed_at": "2026-11-15T21:43:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

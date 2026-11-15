@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68836ccad17c8205-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.20519",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.20519",
+    "identity_tokens": [
+      "arXiv:2607.20519"
+    ],
+    "reason": "ループ型Transformerの適応深さに関する診断研究。学習済み停止ゲートが終了選択と軌跡形成を絡ませる問題を、軌跡と読み出しの分離で分析し、事後の信頼度読み出しで学習済みゲートに匹敵することを示す。テスト時計算の分析として有用だが、提示される機構は読み出し手法にとどまりシステム貢献は薄い。",
+    "first_checked_at": "2026-11-15T21:43:02+00:00",
+    "last_checked_at": "2026-11-15T21:43:02+00:00",
+    "linked_from": [
+      "Conditional Computation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts"
+  },
+  "processed_at": "2026-11-15T21:43:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

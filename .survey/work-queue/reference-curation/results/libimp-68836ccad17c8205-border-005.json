@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68836ccad17c8205-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.04705",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.04705",
+    "identity_tokens": [
+      "arXiv:2602.04705"
+    ],
+    "reason": "基盤モデルERNIE 5.0の技術報告。単一の事前学習から深さ・専門家容量・ルーティング疎性の異なるサブモデル群を学ぶ弾性訓練で、配置時の性能・サイズ・推論遅延のトレードオフを狙う点は配置志向だが、実体はモデルと訓練の報告であり、推論システム技術の提示としては弱い。",
+    "first_checked_at": "2026-11-15T21:43:02+00:00",
+    "last_checked_at": "2026-11-15T21:43:02+00:00",
+    "linked_from": [
+      "03-model-compression-pruning",
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "inference-systems",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ERNIE 5.0 Technical Report"
+  },
+  "processed_at": "2026-11-15T21:43:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68836ccad17c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1764f5ce31dd4c6-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.26106",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.26106",
+    "identity_tokens": [
+      "arXiv:2605.26106"
+    ],
+    "reason": "マスク拡散モデル向けループ型アーキテクチャLoopMDM。初期から中間の層を選択的にループさせ、訓練時は深さスケーリング効果で訓練FLOPsを最大3.3倍削減し、推論時はループ数で計算量を可変にする。推論時の計算調整という要素はあるが、貢献の中心はモデルアーキテクチャと訓練効率であり境界。",
+    "first_checked_at": "2026-11-15T21:43:20+00:00",
+    "last_checked_at": "2026-11-15T21:43:20+00:00",
+    "linked_from": [
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Looped Diffusion Language Models"
+  },
+  "processed_at": "2026-11-15T21:43:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1764f5ce31d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
