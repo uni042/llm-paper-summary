@@ -33,7 +33,7 @@
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（6本）
+## 自動生成の論文一覧（7本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/23-model-routing-cascades/)
 
@@ -49,6 +49,10 @@
 該当なし。
 
 ### 2年前（2024-12〜2025-11）
+
+- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
 
 - **2025-07 · [R-Stitch: Dynamic Trajectory Stitching for Efficient Reasoning](2025-2507.17307-r-stitch-dynamic-trajectory-stitching-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
