@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-16T00:49:13+00:00`
+Generated: `2026-11-16T01:54:38+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -73,8 +73,8 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128696** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122439** / 監査再投入 **0** / 機械規則適用後 **125127** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128698** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122441** / 監査再投入 **0** / 機械規則適用後 **125129** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -565,19 +565,19 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 485 | 0 | 4 | 5 | DOI:10.1109/FASTA65681.2025.11138179 | Big Data Analysis From the Perspective of Fully Actuated System | 2025-07-04 | 2025 4th Conference on Fully Actuated System Theory and Applications (FASTA) | 0 | 5 | inference-systems | [source](https://doi.org/10.1109/FASTA65681.2025.11138179) |
 | 486 | 0 | 4 | 5 | SemanticScholar:588cbe93f62ef1235587c7abfc4cac5deb0d1acc | S PECULATIVE D ECODING : L OSSLESS S PEEDUP OF A UTOREGRESSIVE T RANSLATION | 2023 |  | 0 | 5 | Inference / Parallel and Non-Autoregressive Decoding, MoE inference systems / expert parallelism / model compression / knowledge distillation, diffusion-nonautoregressive-text-generation | [source](https://www.semanticscholar.org/paper/588cbe93f62ef1235587c7abfc4cac5deb0d1acc) |
 | 487 | 101 | 4 | 4 | arXiv:2607.09683 | Ablation, Statistical Inference, and Validation for KV-Cache Compression | 2026-06-14 | arXiv.org | 1 | 4 | KV Cache Optimization / Compression, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化 | [source](https://arxiv.org/abs/2607.09683) |
-| 488 | 10 | 4 | 4 | arXiv:2611.14399 | REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding | 2026-11-10 |  | 0 | 4 |  | [source](https://arxiv.org/abs/2611.14399) |
-| 489 | 0 | 4 | 4 | SemanticScholar:13f2881902141fbd5b5a1babeeaa831c53c79a1e | LSH Tells You What To Discard: An Adaptive Locality-Sensitive Strategy for KV Cache Compression |  |  | 0 | 4 | 07-kv-cache-optimization-compression, KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV cache eviction / heavy hitters / sparse attention / efficient inference, KVキャッシュ最適化／適応圧縮 | [source](https://www.semanticscholar.org/paper/13f2881902141fbd5b5a1babeeaa831c53c79a1e) |
-| 490 | 43 | 4 | 4 | DOI:10.1145/3386367.3432728 | Optimizing distributed training deployment in heterogeneous GPU clusters | 2020-11-23 | Conference on Emerging Network Experiment and Technology | 43 | 4 |  | [source](https://doi.org/10.1145/3386367.3432728) |
-| 491 | 101 | 4 | 4 | arXiv:2608.23253 | E2S-Pruner: Progressive Two-Stage Evidence Fusion for Visual Token Pruning in Vision-Language Models | 2026-08-24 | arXiv.org | 1 | 5 |  | [source](https://arxiv.org/abs/2608.23253) |
-| 492 | 15 | 4 | 4 | arXiv:2510.12721 | CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression | 2025-10-14 | Conference on Empirical Methods in Natural Language Processing | 5 | 5 | arXiv:2405.16406のICLR 2025採録版。, inference-systems | [source](https://arxiv.org/abs/2510.12721) |
-| 493 | 10 | 4 | 4 | DOI:10.23919/DATE69613.2026.11592809 | Late Breaking Results: DAIQUIRI: Dynamic Quantization with Layer-wise Sensitivity Ranking for Hardware-Efficient LLMs | 2026-04-20 | Design, Automation and Test in Europe | 0 | 4 | Weight Quantization / Compression, inference-systems, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.23919/DATE69613.2026.11592809) |
-| 494 | 5 | 4 | 4 | arXiv:2505.02390 | Quantitative Analysis of Performance Drop in DeepSeek Model Quantization | 2025-05-05 | arXiv.org | 5 | 4 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2505.02390) |
-| 495 | 101 | 4 | 4 | DOI:10.1145/3737611.3776613 | Transformer-Based Resource and Stage-Aware Scheduling for Model-Parallel LLM Inference | 2026-01-04 | ICDCN Companion | 1 | 4 | LLM Serving / Scheduling / Disaggregation, cross-layer LLM serving / SLO-aware scheduling / predictive routing / heterogeneous inference | [source](https://doi.org/10.1145/3737611.3776613) |
-| 496 | 101 | 4 | 4 | arXiv:2604.19145 | ST-Prune: Training-Free Spatio-Temporal Token Pruning for Vision-Language Models in Autonomous Driving | 2026-04-21 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2604.19145) |
-| 497 | 37 | 4 | 4 | DOI:10.1109/TCAD.2024.3443692 | EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture | 2024-11-01 | IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems | 37 | 4 | Weight Quantization / Compression | [source](https://doi.org/10.1109/TCAD.2024.3443692) |
-| 498 | 10 | 4 | 4 | arXiv:2606.04945 | STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models | 2026-06-03 | arXiv.org | 0 | 4 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2606.04945) |
-| 499 | 4 | 4 | 4 | DOI:10.1145/3689031.3717489 | NeuStream: Bridging Deep Learning Serving and Stream Processing | 2025-03-30 | European Conference on Computer Systems | 4 | 4 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism | [source](https://doi.org/10.1145/3689031.3717489) |
-| 500 | 1 | 4 | 4 | arXiv:2502.16897 | Continual Pre-training for Codec-Based Speech LLMs: Balancing Understanding and Generation | 2025-02-24 | Automatic Speech Recognition & Understanding | 1 | 4 |  | [source](https://arxiv.org/abs/2502.16897) |
+| 488 | 10 | 4 | 4 | arXiv:2611.13442 | ForeSpark: Joint Draft and Verification Budget Scheduling for Parallel Speculative Decoding | 2026-11-10 |  | 0 | 4 | 05-speculative-decoding-moe | [source](https://arxiv.org/abs/2611.13442) |
+| 489 | 10 | 4 | 4 | DOI:10.1109/icassp55912.2026.11461456 | Retrieval-Based Speculative Decoding For Autoregressive Speech Synthesis | 2026-05-03 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 0 | 4 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1109/icassp55912.2026.11461456) |
+| 490 | 12 | 4 | 4 | DOI:10.18653/v1/2025.emnlp-main.408 | MLWQ: Efficient Small Language Model Deployment via Multi-Level Weight Quantization | 2025 | Conference on Empirical Methods in Natural Language Processing | 2 | 4 | Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2025.emnlp-main.408) |
+| 491 | 102 | 4 | 4 | arXiv:2606.09514 | BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference | 2026-06-08 | arXiv.org | 2 | 4 | Conditional Computation | [source](https://arxiv.org/abs/2606.09514) |
+| 492 | 22 | 4 | 4 | DOI:10.1145/3603269.3610856 | Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing | 2023-09-01 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 22 | 4 |  | [source](https://doi.org/10.1145/3603269.3610856) |
+| 493 | 10 | 4 | 4 | DOI:10.1109/ISCAS66217.2026.11562436 | A Hardware-Software Co-design for LLMs with Exponent-Element Quantization Towards Compute-in-Memory | 2026-05-24 | International Symposium on Circuits and Systems | 0 | 4 | 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ISCAS66217.2026.11562436) |
+| 494 | 3 | 4 | 4 | arXiv:2311.01305 | AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models | 2023-11-02 | arXiv.org | 3 | 4 | Weight Quantization / Compression, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2311.01305) |
+| 495 | 104 | 4 | 4 | arXiv:2604.09975 | EncFormer: Secure and Efficient Transformer Inference Over Encrypted Data | 2026-04-11 | IEEE Transactions on Dependable and Secure Computing | 4 | 4 | 99-other-inference-systems | [source](https://arxiv.org/abs/2604.09975) |
+| 496 | 101 | 4 | 4 | arXiv:2603.17891 | RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference | 2026-03-18 | arXiv.org | 1 | 4 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2603.17891) |
+| 497 | 101 | 4 | 4 | arXiv:2610.06325 | Fine-Tuning a 3B-Parameter LLM on a Smartphone: Characterizing Sustained Training | 2026-10-05 |  | 1 | 5 | edge-on-device-llm-systems, inference-systems, other-inference-systems | [source](https://arxiv.org/abs/2610.06325) |
+| 498 | 10 | 4 | 4 | arXiv:2602.02126 | Two-Stage Grid Optimization for Group-wise Quantization of LLMs | 2026-02-02 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 0 | 4 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2602.02126) |
+| 499 | 10 | 4 | 4 | arXiv:2609.15671 | Don't Send What You Don't Need: Question-Guided Token Pruning as a Privacy Defense for Vision-Language Models | 2026-09-14 |  | 0 | 4 |  | [source](https://arxiv.org/abs/2609.15671) |
+| 500 | 2 | 4 | 4 | DOI:10.1109/ICCD63220.2024.00103 | AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models | 2024-11-18 | ICCD | 2 | 4 | Weight Quantization / Compression | [source](https://doi.org/10.1109/ICCD63220.2024.00103) |
 
 ## Machine-readable
 
