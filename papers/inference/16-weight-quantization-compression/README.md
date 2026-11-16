@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（178本）
+## 自動生成の論文一覧（184本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -61,6 +61,10 @@
 - **2026-04 · [Rethinking Residual Errors in Compensation-based LLM Quantization](2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md)**  
   実装：[✓](https://github.com/list0830/ResComp) ・ リポジトリ内被引用：2  
   GPTQなどの学習後量子化（Post-学習 量子化; PTQ）は、線形層の重みを一列ずつ低ビット化し、量子化によって失われる出力を残りの未量子化重みの更新で補償する。Llama3.1-8B-InstructのGPTAQではゼロショット6課題平均70.3%→72.3%となった。
+
+- **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：2  
+  重みと活性値を低ビット化すればメモリ使用量を抑えられるが、量子化誤差の影響は画像と文章という二つのモダリティの間だけでなく、同じモダリティ内の各トークンや層によっても異なる。著者はこれを1.60%の改善と説明するが、表の数値としては1.60ポイントの上昇である。
 
 - **2026-01 · [What Makes Low-Bit Quantization-Aware Training Work for Reasoning LLMs? A Systematic Study](2026-2601.14888-what-makes-low-bit-quantization-aware-training-work-for-reasoning-llms-a.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -101,6 +105,14 @@
 - **2026-05 · [EdgeRazor: A Lightweight Framework for Large Language Models via Mixed-Precision Quantization-Aware Distillation](2026-2605.04062-edgerazor-a-lightweight-framework-for-large-language-models-via-mixed-pr.md)**  
   実装：[✓](https://github.com/zhangsq-nju/EdgeRazor) ・ リポジトリ内被引用：1  
   対象は単なる事後量子化ではなく、量子化した生徒モデルを教師モデルで監督して再学習する混合精度量子化対応蒸留（Mixed-Precision Quantization-Aware Distillation; MPQAD）である。
+
+- **2026-04 · [Structural Pruning of Large Vision Language Models: A Comprehensive Study on Pruning Dynamics, Recovery, and Data Efficiency](2026-2604.24380-structural-pruning-of-large-vision-language-models-a-comprehensive-study.md)**  
+  実装：[✓](https://github.com/YiranHuangIrene/VLMCompression) ・ リポジトリ内被引用：1  
+  本論文は新しい単一の枝刈りアルゴリズムを提案するというより、何を削るか、何を再学習するか、どれだけのデータを使うかの組合せを、異なる視覚言語モデルで統制して比較する研究である。
+
+- **2026-03 · [OneComp: One-Line Revolution for Generative AI Model Compression](2026-2603.28845-onecomp-one-line-revolution-for-generative-ai-model-compression.md)**  
+  実装：[✓](https://github.com/FujitsuResearch/OneCompression) ・ リポジトリ内被引用：1  
+  大規模言語モデル（Large Language モデル; LLM）の重み量子化では、同じ平均ビット幅でも層ごとの感度、較正用入力の分布、丸め誤差の伝播、量子化後の品質回復方法によって性能が大きく変わる。Llama-3-8BとQwen3系の実験では、感度に応じた混合ビット幅割当や誤差伝播補正が量子化後の困惑度を改善した。
 
 - **2026-01 · [HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs](2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md)**  
   実装：[✓](https://github.com/hestia2026/Hestia) ・ リポジトリ内被引用：1  
@@ -252,6 +264,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Transformerの量子化を難しくする活性値の外れ値が、量子化器の選択だけでなくモデルの残差接続（Residual Connection）という構造に起因し得ることを示す。
 
+- **2026-05 · [Search Your Block Floating Point Scales!](2026-2605.12464-search-your-block-floating-point-scales.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ScaleSearchは、ブロック浮動小数点（Block Floating Point、BFP）形式で低ビット量子化するとき、各ブロックに共通する尺度（Scale）を最適化する方法である。これらは異なる評価対象の数値であり、尺度探索だけで全ての改善が生じたと見なしてはならない。
+
 - **2026-05 · [QAM-W: Joint 2D Codebook Quantization for LLM Weights via Hadamard Rotation and Activation-Aware Scaling](2026-2605.26339-qam-w-joint-2d-codebook-quantization-for-llm-weights-via-hadamard-rotati.md)**  
   実装：[✓](https://github.com/white07S/qam-w) ・ リポジトリ内被引用：0  
   通常のスカラー学習後量子化（scalar post-学習 量子化）は各重みをほぼ独立に離散値へ丸める。TinyLlama-1.1B、Qwen2.5-3B、Mistral-7Bの主比較では5.5ビット相当のQAM-WでWikiText-2のパープレキシティー（PPL）がBF16比+0.4%、+0.3%、+0.1%に留まる。
@@ -259,6 +275,10 @@
 - **2026-05 · [MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations](2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MixFP4は、4ビット浮動小数点（FP4）量子化で生じる精度低下を、同じ4ビットの中で表現方式を切り替えて緩和する研究である。テンソル Core相当の合成回路では面積3.1%、電力1.5%増に収まる。
+
+- **2026-05 · [Layer Collapse in Diffusion Language Models](2026-2605.06366-layer-collapse-in-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/Conzel/super-outlier-dlm) ・ リポジトリ内被引用：0  
+  本論文は、離散拡散型言語モデル（Diffusion Language モデル、DLM）と自己回帰型言語モデル（Autoregressive Language モデル、ARモデル）で、隠れ状態の層間類似性と圧縮耐性がどのように異なるかを調べた実証研究である。
 
 - **2026-05 · [LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss](2026-2605.08755-laquant-a-simple-overhead-free-large-reasoning-model-quantization-by-lay.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -275,6 +295,10 @@
 - **2026-05 · [GoQuant: Geometric Orthogonal Residual Projection for Multiplier-Reduced Power-of-Two Transformer Quantization](2026-2605.26092-goquant-geometric-orthogonal-residual-projection-for-multiplier-reduced-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerを低ビットで実行する際、重みを2の冪乗（Power-of-Two、PoT）に量子化すると、一般的な重み乗算をシフトと加算へ置き換えやすい。
+
+- **2026-05 · [Ghosted Layers: Unconstrained Activation Alignment for Recovering Layer-Pruned LLMs](2026-2605.15491-ghosted-layers-unconstrained-activation-alignment-for-recovering-layer-p.md)**  
+  実装：[✓](https://github.com/daniel-eai/ghosted_layers_official_repository) ・ リポジトリ内被引用：0  
+  大規模言語モデルの深さ方向の構造的枝刈りは、トランスフォーマーの復号層を丸ごと削除し、特殊な疎行列カーネルを必要とせずにモデルの演算と重みを減らせる。LLaMA-3.1-8Bで32層中7層をLLM-Streamlineにより削除した場合、9課題平均正答率は無補正の42.60%から60.01%へ回復する。
 
 - **2026-05 · [BCJR-QAT: A Differentiable Relaxation of Trellis-Coded Weight Quantization](2026-2605.10655-bcjr-qat-a-differentiable-relaxation-of-trellis-coded-weight-quantizatio.md)**  
   実装：[✓](https://github.com/Venugopalan2610/quant-2bit) ・ リポジトリ内被引用：0  
