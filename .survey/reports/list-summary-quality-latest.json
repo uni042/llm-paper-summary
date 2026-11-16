@@ -10242,6 +10242,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-black.md",
+      "status": "PASS",
+      "summary": "BlackwellのFP4行列演算をそのまま注意へ使うとsoftmax側の処理が律速になることを突き止め、QK積だけをFP4化し、精度補償を行列演算へ逃がすことで、長文脈推論の注意を学習不要で高速化したカーネル。",
+      "char_count": 106,
+      "japanese_ratio": 0.9176470588235294,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.33889-where-activation-sparsity-and-kv-cache-sparsity-cross-in-llm-decoding.md",
       "status": "PASS",
       "summary": "活性化疎化とKVキャッシュ疎化のどちらが有利かをバイト読出し量と固定カーネル費用で予測し、文脈長に応じた合成・切替を評価する。",
@@ -23674,6 +23683,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-.md",
+      "status": "PASS",
+      "summary": "量子化の較正を配置前に済ませる前提をやめ、プロンプト自身の活性値からその場で尺度を決めることで、ドメインシフトに弱い静的量子化を、較正データなしで適応できる量子化へ変えた方式。",
+      "char_count": 88,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md",
       "status": "PASS",
       "summary": "GPTQ/GPTAQの逐次重み補償で、元の全精度層出力からのずれを補償認識誤差として明示的に補正する事後量子化改良。",
@@ -25083,6 +25101,15 @@
       "status": "PASS",
       "summary": "Wattchmenは定常電力と命令頻度の連立推定でGPU命令別の消費エネルギーを求め、未測定命令の補完を加えてV100/A100/H100で低い予測誤差と具体的な省エネ改善を示した。",
       "char_count": 91,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-.md",
+      "status": "PASS",
+      "summary": "無改造の旗艦スマートフォンで8モデルと2種類の4ビット量子化を速度・エネルギー・品質で実測し、重要度配慮型量子化はメモリを減らしても電池を節約せず、混合専門家モデルは7B級の容量を持ちながら1Bから2B級のエネルギーで動くことを示した計測研究。",
+      "char_count": 122,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -26775,6 +26802,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md",
+      "status": "PASS",
+      "summary": "蒸留・長さ適応・INT8量子化を統合し、CPU質問応答でBERT-baseの56.57msを6.41msへ短縮する。",
+      "char_count": 58,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
       "status": "PASS",
       "summary": "TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。",
@@ -27530,6 +27566,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md",
+      "status": "PASS",
+      "summary": "状態空間モデルを半分離可能行列として捉え直し、注意との双対性から「区間内は行列積、区間間は状態受け渡し」の高速計算とMamba-2を導く。学習は系列長に比例する計算量のまま行列積中心になり、Mambaの走査より2〜8倍速い。",
+      "char_count": 112,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2406.00061-stat-shrinking-transformers-after-training.md",
       "status": "PASS",
       "summary": "非ラベル活性の補間分解で残すFFNニューロンと注意ヘッドを選び、削除分の寄与を後続層へ折り込む再学習不要の構造剪定。Llama-2 7BをA6000一枚で約2.5時間で5.87Bへ圧縮。",
@@ -28171,6 +28216,15 @@
       "summary": "GLU型LLMの局所的な活性化スパイクを、モジュール選択的な非量子化（QFeM）と事前計算prefixのKV再利用（QFeP）で抑え、粗粒度INT8量子化の精度と速度の両立を図る。",
       "char_count": 90,
       "japanese_ratio": 0.9047619047619048,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2407.17029-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-th.md",
+      "status": "PASS",
+      "summary": "量子化モデルの低ランク適応が学習不足になる原因を、複雑な入出力と低いランクの不均衡と捉え、平均プーリングで入出力を圧縮してランクを広げることで釣り合いを取り、さらにブロック量子化へ合わせて4ビット推論モデルを直接作れるようにした方式。",
+      "char_count": 117,
+      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -33848,6 +33902,15 @@
       "warnings": [
         "日本語比率 73.0% < 警告基準 80.0%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechani.md",
+      "status": "PASS",
+      "summary": "動画言語モデルの高費用を、フレーム選択・符号器・接続部・言語モデル実行の4段階のどこで削るかで125件の効率化機構を分類し、条件のそろった比較だけを集約して、保持率25パーセント前後が精度維持の目安になることと、音声側と評価規約の空白を明らかにしたサーベイ。",
+      "char_count": 129,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2609.10970-fengshui-chiplet-neural-accelerator-codesign.md",
