@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（81本）
+## 自動生成の論文一覧（87本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -223,9 +223,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   しかしエージェント型のシステムでは、利用者の一つの目的を達成するまでに計画の生成、道具の呼び出し、途中結果の検査、失敗後の再試行、最終回答の生成など、複数回の推論が連鎖する。x86の対応した目標集合でOOIは4.34倍、GraceのCPUとGPUを含めたローカル測定では7.63倍となった。
 
+- **2026-05 · [Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs](2026-2605.15077-concurrency-without-model-changes-future-based-asynchronous-function-cal.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一般的な同期方式では、モデルがツール呼出しを出力すると、その処理が完了するまで次の生成を止める。GPT-4oを用いたBFCL v4の検索ツール評価では、逐次同期呼出しと比べてタスク完了時間を1.26倍高速化した。
+
 - **2026-05 · [Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost](2026-2605.22502-compiling-agentic-workflows-into-llm-weights-near-frontier-quality-at-tw.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この論文が扱うのは、複雑な業務フローチャートに従う対話型エージェントを、毎回外部の制御プログラムから指示される大規模言語モデルとして実装する必要があるのか、という問題である。別の構成としてフローチャート全体を毎回のシステム入力に含める方法もあるが、手順が長くなるほど入力トークンが増える。
+
+- **2026-05 · [AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices](2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md)**  
+  実装：[✓](https://github.com/brave-experiments/AgentStop) ・ リポジトリ内被引用：0  
+  LLMエージェントは通常の一問一答と異なり、推論、検索、コード実行、失敗後の再試行を何度も繰り返す。これをクラウドではなく利用者の端末で動かすと、ネットワーク依存や外部へのデータ送信を減らせる一方、長時間のGPU稼働、発熱、電池消費が利用者に直接影響する。特に失敗する実行が長く続いた場合、最終的な課題成功に結び付かない電力が大量に消費される。
 
 - **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
   実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：0  
@@ -243,17 +251,33 @@
   実装：✓ ・ リポジトリ内被引用：0  
   一方、複数エージェントが交互に動く場合は、頻繁に再開する重要エージェントの鍵・値キャッシュ（KVキャッシュ）を残し、まれに呼ばれるエージェントのキャッシュを先に退避する方が有利なことがある。
 
+- **2026-04 · [GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)](2026-2604.17091-genericagent-a-token-efficient-self-evolving-llm-agent-via-contextual-in.md)**  
+  実装：[✓](https://github.com/lsdefine/GenericAgent) ・ リポジトリ内被引用：0  
+  GenericAgent（GA）は、この問題を単純な長文対応ではなく、限られた文脈内の意思決定に有効な情報密度を高めるシステム設計として扱う。論文は複数のエージェント基盤との比較を行い、5種類の長期タスクでGAとClaude コードがともに100%成功しながら、GAの総トークン数が188,829、比較方式が537,413だったと報告する。
+
 - **2026-04 · [EvolveRouter: Co-Evolving Routing and Prompt for Multi-Agent Question Answering](2026-2604.05149-evolverouter-co-evolving-routing-and-prompt-for-multi-agent-question-ans.md)**  
   実装：[✓](https://github.com/J-Huang01/EvolveRouter) ・ リポジトリ内被引用：0  
   あるモデルが低い正答率を示す原因は、モデル本体の能力不足だけでなく、与えられた役割指示の不適合にもある。逆に、すべてのエージェントを毎回呼び出す方式は、回答の質が低い参加者まで計算し、応答の待ち時間と呼出費用を増やす。
+
+- **2026-04 · [ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents](2026-2604.10352-clawvm-harness-managed-virtual-memory-for-stateful-tool-using-llm-agents.md)**  
+  実装：[✓](https://github.com/mpi-dsg/clawvm) ・ リポジトリ内被引用：0  
+  ClawVMは、長時間稼働し外部ツールを使うLLMエージェントで、プロンプト文脈を高速・小容量の作業メモリ、永続ファイルを低速・大容量の退避先とみなし、状態の常駐・縮退・書戻しをエージェント実行基盤（agent harness）に強制する仕組みである。
 
 - **2026-04 · [CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades](2026-2604.12262-cascadedebate-multi-agent-deliberation-for-cost-aware-llm-cascades.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、問い合わせを小型LLMから大型LLMへ段階的に委譲するカスケード（cascade）に、必要なときだけ複数エージェントの討論（multi-agent deliberation）を挿入するCascadeDebateを提案する。Llama-3.2のMedQAでは標準カスケード68.20%に対し提案法86.44%を報告する。
 
+- **2026-04 · [AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent](2026-2604.06296-agentopt-v0-1-technical-report-client-side-optimization-for-llm-based-ag.md)**  
+  実装：[✓](https://agentoptimizer.github.io/agentopt/) ・ リポジトリ内被引用：0  
+  AgentOptは、複数のLLM呼び出しから成るエージェントのモデル選択を、開発者側の品質・遅延・API費用の制約に従って最適化する基盤である。9種類のモデルを2役割へ割り当てれば81通りになる。
+
 - **2026-03 · [CUCo: An Agentic Framework for Compute and Communication Co-design](2026-2603.02376-cuco-an-agentic-framework-for-compute-and-communication-co-design.md)**  
   実装：[✓](https://anonymous.4open.science/r/CUCo-06EC/) ・ リポジトリ内被引用：0  
   既存の分散処理では、行列積や注意計算を高速化する担当と、NCCL通信を高速化する担当が分離されやすい。続いて性能探索の低速経路（slow-path）で、コンパイル・数値照合・実機ベンチマークを通した候補だけを残し、進化的な探索で転送と計算の重なり方を改善する。
+
+- **2026-03 · [CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents](2026-2603.15421-clag-adaptive-memory-organization-via-agent-driven-clustering-for-small-.md)**  
+  実装：[✓](https://github.com/dmis-lab/CLAG) ・ リポジトリ内被引用：0  
+  CLAGは、記憶を話題ごとのクラスタへ割り当てるエージェント主導のルーティング、割当先クラスタ内だけでリンク生成・要約更新を行う局所的進化、質問に関連するクラスタを先に選んでから個別記憶を検索する二段階検索の三つを結合する。原著付録Cによれば、200件のBioASQ質問で二段階検索が除外した記憶は平均8.02%にとどまる。
 
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
