@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-16T12:14:57+00:00`
+Generated: `2026-11-16T12:36:52+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -427,7 +427,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 347 | 12 | 4 | 7 | arXiv:2301.06813 | AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost | 2023-01-17 | IEEE Transactions on Parallel and Distributed Systems | 12 | 7 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2301.06813) |
 | 348 | 10 | 4 | 7 | DOI:10.1109/HPSC69479.2026.00019 | Optimization of the Generation Phase in Post-Training of Large Language Models Based on RLHF | 2026-05-01 | International Conference on High Performance Scientific Computing | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/HPSC69479.2026.00019) |
 | 349 | 10 | 4 | 7 | arXiv:2609.35394 | Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline | 2026-09-28 | arXiv.org | 0 | 9 |  | [source](https://arxiv.org/abs/2609.35394) |
-| 350 | 1 | 4 | 7 | arXiv:2507.09010 | Hybrid Systolic Array Accelerator with Optimized Dataflow for Edge Large Language Model Inference | 2025-07-11 | International Symposium on Low Power Electronics and Design | 1 | 7 | 16-weight-quantization-compression, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2507.09010) |
+| 350 | 1 | 4 | 7 | arXiv:2506.23025 | Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models | 2025-06-28 | arXiv.org | 1 | 7 | Offload / Hierarchical Memory, Weight Quantization / Compression, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2506.23025) |
 | 351 | 102 | 4 | 7 | arXiv:2609.34565 | FlowState: Execution State as Memory for Long-Horizon LLM Agents | 2026-09-28 | arXiv.org | 2 | 8 | 07-kv-cache-optimization-compression, agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.34565) |
 | 352 | 101 | 4 | 7 | arXiv:2610.11573 | Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies | 2026-10-08 |  | 1 | 7 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2610.11573) |
 | 353 | 12 | 4 | 7 | arXiv:2510.14961 | Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models | 2025-10-16 | arXiv.org | 12 | 7 | Diffusion LLM Inference, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2510.14961) |
