@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-16T08:51:31+00:00`
+Generated: `2026-11-16T09:18:18+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -230,7 +230,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 | 151 | 101 | 5 | 12 | arXiv:2610.04198 | ALoDLM: Adaptively Looped Diffusion Language Models | 2026-10-03 |  | 1 | 12 | Other Inference Systems / Lossless Parallel Decoding, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, speculative-parallel-decoding, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.04198) |
 | 152 | 1 | 5 | 12 | arXiv:2508.03760 | FlashCommunication V2: Bit Splitting and Spike Reserving for Any Bit Communication | 2025-08-04 | arXiv.org | 1 | 13 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2508.03760) |
 | 153 | 0 | 5 | 11 | SemanticScholar:b4bcd75d8f9bd8c78f99e6106169e033c76dd2da | Collaborative Lossless LLM Inference Serving with Offloading-based Pipeline Parallelism on Edge Devices |  |  | 0 | 11 | KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/b4bcd75d8f9bd8c78f99e6106169e033c76dd2da) |
-| 154 | 10 | 5 | 11 | arXiv:2603.09221 | Beyond Test-Time Memory: State-Space Optimal Control for LLM Reasoning | 2026-03-10 | arXiv.org | 0 | 12 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2603.09221) |
+| 154 | 101 | 5 | 11 | arXiv:2607.02805 | Training Hybrid Block Diffusion Language Models with Partial Bidirectionality | 2026-07-02 | arXiv.org | 1 | 12 | Diffusion LLM Inference, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2607.02805) |
 | 155 | 51 | 5 | 11 | arXiv:2510.18269 | StreamingTOM: Streaming Token Compression for Efficient Video Understanding | 2025-10-21 | Computer Vision and Pattern Recognition | 51 | 12 | 11-llm-serving-scheduling-disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2510.18269) |
 | 156 | 10 | 5 | 11 | arXiv:2604.08077 | AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding | 2026-04-09 | Computer Vision and Pattern Recognition | 0 | 11 | Sparse Attention / VLM Inference, inference-systems, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2604.08077) |
 | 157 | 1 | 5 | 11 | SemanticScholar:f6f9dc13572e3711fb451b73acec68ee96e55c6a | NiNformer: A Network in Network Transformer with Token Mixing as a Gating Function Generator |  |  | 1 | 11 |  | [source](https://www.semanticscholar.org/paper/f6f9dc13572e3711fb451b73acec68ee96e55c6a) |

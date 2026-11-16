@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-16T08:51:31+00:00`
+Generated: `2026-11-16T09:18:18+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -441,7 +441,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 361 | 101 | 4 | 7 | arXiv:2606.03092 | The Shadow Price of Reasoning: Economic Perspective on Optimal Budget Allocation for LLMs | 2026-06-02 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2606.03092) |
 | 362 | 42 | 4 | 7 | arXiv:2505.03739 | VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient Large Speech-Language Model | 2025-05-06 | arXiv.org | 42 | 7 | Speculative Decoding, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2505.03739) |
 | 363 | 10 | 4 | 7 | arXiv:2512.23145 | Reservoir Computing inspired Matrix Multiplication-free Language Model | 2025-12-29 | arXiv.org | 0 | 7 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2512.23145) |
-| 364 | 1 | 4 | 7 | DOI:10.1109/ESIC64052.2025.10962699 | Mamba-Hybrid Language Models: Advancing Detection of AI-Generated Text in Academic Contexts | 2025-02-08 | Educational Sciences International Conference | 1 | 7 |  | [source](https://doi.org/10.1109/ESIC64052.2025.10962699) |
+| 364 | 3 | 4 | 7 | DOI:10.1109/ESIC64052.2025.10962699 | Mamba-Hybrid Language Models: Advancing Detection of AI-Generated Text in Academic Contexts | 2025-02-08 | Educational Sciences International Conference | 3 | 7 |  | [source](https://doi.org/10.1109/ESIC64052.2025.10962699) |
 | 365 | 101 | 4 | 7 | arXiv:2603.14892 | Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs | 2026-03-16 | arXiv.org | 1 | 8 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.14892) |
 | 366 | 14 | 4 | 7 | arXiv:2505.17020 | CrossLMM: Decoupling Long Video Sequences from LMMs via Dual Cross-Attention Mechanisms | 2025-05-22 | arXiv.org | 14 | 7 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2505.17020) |
 | 367 | 10 | 4 | 7 | arXiv:2607.07724 | Uncertainty-gated selection for block-sparse attention | 2026-07-04 | arXiv.org | 0 | 7 | KV cache eviction / heavy hitters / sparse attention / efficient inference, long-context inference / dynamic sparse attention / prefill acceleration, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意 / KVキャッシュ選択 / 長文脈推論, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2607.07724) |
