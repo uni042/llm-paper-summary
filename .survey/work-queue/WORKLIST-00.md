@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-16T22:00:13+00:00`
+Generated: `2026-11-16T22:25:04+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -484,7 +484,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 404 | 13 | 4 | 6 | DOI:10.1007/s11227-025-06993-6 | An efficient quantized GEMV implementation for large language models inference with matrix core | 2025-02-01 | Journal of Supercomputing | 3 | 6 | Weight Quantization / Compression, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://doi.org/10.1007/s11227-025-06993-6) |
 | 405 | 101 | 4 | 6 | arXiv:2606.30944 | Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation | 2026-06-29 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2606.30944) |
 | 406 | 0 | 4 | 6 | arXiv:2511.13147 | OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs | 2025-11-17 | AAAI Conference on Artificial Intelligence | 0 | 7 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2511.13147) |
-| 407 | 101 | 4 | 6 | arXiv:2606.16429 | Taylor-Calibrate: Principled Initialization for Hybrid Linear Attention Distillation | 2026-06-15 | arXiv.org | 1 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2606.16429) |
+| 407 | 101 | 4 | 6 | arXiv:2603.00356 | Token Management in Multi-Tenant AI Inference Platforms | 2026-02-27 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.00356) |
 | 408 | 16 | 4 | 6 | arXiv:2509.18467 | LAWCAT: Efficient Distillation from Quadratic to Linear Attention with Convolution across Tokens for Long Context Modeling | 2025-09-22 | Conference on Empirical Methods in Natural Language Processing | 6 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2509.18467) |
 | 409 | 10 | 4 | 6 | arXiv:2610.15715 | History Replays Itself: Unleashing Long-Context Capability in Linear Attention | 2026-10-11 |  | 0 | 6 | 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2610.15715) |
 | 410 | 2 | 4 | 6 | arXiv:2510.16325 | UltraImageGen: Efficient Ultra-High-Resolution Image Generation with Hierarchical Local Attention | 2025-10-18 | European Conference on Computer Vision | 2 | 6 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2510.16325) |

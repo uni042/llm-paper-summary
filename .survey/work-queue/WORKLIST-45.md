@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-16T22:00:13+00:00`
+Generated: `2026-11-16T22:25:04+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -482,7 +482,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 | 403 | 16 | 4 | 6 | DOI:10.18653/v1/2025.findings-emnlp.645 | Revisiting Pruning vs Quantization for Small Language Models | 2025 | Conference on Empirical Methods in Natural Language Processing | 6 | 6 | Weight Quantization / Compression, edge-on-device-llm-systems, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2025.findings-emnlp.645) |
 | 404 | 0 | 4 | 6 | SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8 | InsNeXt: Training Scalable Insertion-Based Language Models From Scratch |  |  | 0 | 6 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/9b3ef7912c35fb4e92318993a1d208e723e3e5b8) |
 | 405 | 6 | 4 | 6 | arXiv:2506.07627 | Event-Priori-Based Vision-Language Model for Efficient Visual Understanding | 2025-06-09 | arXiv.org | 6 | 6 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2506.07627) |
-| 406 | 101 | 4 | 6 | arXiv:2603.00356 | Token Management in Multi-Tenant AI Inference Platforms | 2026-02-27 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.00356) |
+| 406 | 101 | 4 | 6 | arXiv:2602.02071 | BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling | 2026-02-02 | arXiv.org | 1 | 6 | flashattention-asic-fused-exponential-vector-multiplication, post-training quantization / second-order compression / weight-only LLM inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.02071) |
 | 407 | 37 | 4 | 6 | DOI:10.1109/HPCA56546.2023.10071077 | MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism | 2023-02-01 | International Symposium on High-Performance Computer Architecture | 27 | 7 | Training Offload / Memory Systems | [source](https://doi.org/10.1109/HPCA56546.2023.10071077) |
 | 408 | 10 | 4 | 6 | arXiv:2610.11302 | iCATS: Fast Video Generation via Interaction-Aware Sparse Attention and Timestep-Adaptive Sparsity | 2026-10-08 |  | 0 | 6 | 02-hardware-accelerators, inference-systems | [source](https://arxiv.org/abs/2610.11302) |
 | 409 | 7 | 4 | 6 | arXiv:2510.01394 | Optimal Stopping vs Best-of-N for Inference Time Optimization | 2025-10-01 | arXiv.org | 7 | 6 | speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2510.01394) |
