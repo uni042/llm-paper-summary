@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-18 04:49:07 JST**
+> 自動生成: **2026-11-18 05:30:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -108,7 +108,7 @@
 | エラー状態保持seed | **19** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-18 04:10:24 JST**
+- state最終更新: **11-18 05:13:27 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-17 14:30:26 JST（14時間18分前）** |
+| 最終maintenance完了 | **11-17 14:30:26 JST（15時間0分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
