@@ -100,6 +100,18 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-10-29〜11-18 — llama.cpp b11963〜b12483（開発ビルド）と v1.0.0（正式版）
+
+b11936の続き。対象期間の開発ビルドはb11963（2026-10-29）からb12483（2026-11-18）まで。重要変更だけを拾う。
+
+- **v1.0.0（2026-11-13、正式版）**: 初の正式版タグ。deprecated public API削除、NextN / speculative APIの `llama.h` への昇格（breaking相当）。OCP FP8 KV cache、host-memory MoE expert cache、external PLE shard読込を収録。新text architectureとしてKimi-K3.1-Pro、Ripple、xing4_0等に対応。server側はSSRF / CORS / DNS rebinding対策、MCP tool cancellation、OpenAI互換 `/v1/audio/speech` endpoint追加。対応nightlyはb12359。
+- **量子化**: b12000でOCP FP8 E4M3 supportを追加（新規形式対応として最重要）。b12274でFP8 KV-cache support（`-ctk/-ctv f8_e4m3`、v1.0.0に収録）。OpenCLのq2_0 / iq3 / iq4_xs初期対応、HexagonのQ5_0 / Q5_1 / IQ2_XXS / NVFP4対応などbackend別の拡張も進んだ。
+- **新モデルアーキテクチャ対応**: Nemotron 3.5 Transcribe（b12087、mtmd）、Kimi-K3.1-Pro（b12180）、Kimi K3.1 vision（b12259、mtmd）、Inkling 2（b12406）、Recursive Ripple-65B-Preview向けDFLASH2対応（b12416）、MiniMax-M3.1（b12420）等。TTS / ASR系の追加も多い。
+- **backend / kernel**: host-memory MoE expert cache（b12170〜b12206、miss時はCPU実行、CPU share設定可）、CUDAのNVFP4 gate/up matmul＋GLUのMMQ融合（b12122）、CUDA MoEデータレイアウト線形化（b12144）、CUDA prefill最適化（b12329、NVFP4 checkpoint向け）、OpenCL Flash Attentionによるdecode改善（b12118）、K/V読込順rotationによるL2 cache hit率改善（b12477）等。一般的な生成速度倍率は公表されていない。
+- **server**: reference-counted checkpointsの使用（b12141、deep copy置換）、OpenAI互換 `/v1/audio/speech` endpoint（b12238）。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12000 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12274 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12483
+
 ## 2026-10-27 — llama.cpp b11913〜b11936（開発ビルド）
 
 b11912からb11936までの増分を記録。GitHub上のpre-release開発ビルドであり、正式安定版とは区別する。b11936にはWindows x64 CUDA 12.4 / 13.4配布assetがあるが、Windows 11 + RTX 4070 SUPERでの実測性能は未確認。

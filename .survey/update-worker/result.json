@@ -1,21 +1,52 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261029T234000-oct28",
+  "attempt_id": "muse-fwllm-20261118",
   "kind": "framework_llm_update",
   "updated_paths": [
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/inference-engines/tensorrt-llm/README.md",
+    "framework-updates/inference-engines/tensorrt-edge-llm/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/inference-engines/vllm-omni/README.md",
+    "framework-updates/README.md",
+    "llm-releases/qwen.md",
+    "llm-releases/claude.md",
+    "llm-releases/gemini.md",
+    "llm-releases/openai-gpt.md",
+    "llm-releases/mistral.md",
+    "llm-releases/kimi.md",
+    "llm-releases/meta-muse.md",
+    "llm-releases/minicpm.md",
+    "llm-releases/recursive.md",
     "llm-releases/liquid-ai.md",
-    "llm-releases/README.md",
-    "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
+    "llm-releases/README.md"
   ],
-  "created_paths": [
-    "llm-releases/liquid-ai.md"
-  ],
+  "created_paths": [],
   "updated_existing_paths": [
-    "llm-releases/README.md",
+    "framework-updates/inference-engines/vllm/README.md",
+    "framework-updates/inference-engines/sglang/README.md",
+    "framework-updates/inference-engines/tensorrt-llm/README.md",
+    "framework-updates/inference-engines/tensorrt-edge-llm/README.md",
     "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/inference-engines/vllm-omni/README.md",
+    "framework-updates/README.md",
+    "llm-releases/qwen.md",
+    "llm-releases/claude.md",
+    "llm-releases/gemini.md",
+    "llm-releases/openai-gpt.md",
+    "llm-releases/mistral.md",
+    "llm-releases/kimi.md",
+    "llm-releases/meta-muse.md",
+    "llm-releases/minicpm.md",
+    "llm-releases/recursive.md",
+    "llm-releases/liquid-ai.md",
+    "llm-releases/README.md"
   ],
-  "summary": "2026-10-28 Library maintenance: add Liquid AI LFM3/d1 family page and index; append Ollama v0.40.12 and llama.cpp b11913-b11936 with platform/backend constraints."
+  "summary": "2026-10-29〜11-18 catch-up: vLLM v0.33.0/v0.34.0, SGLang v0.5.23, TensorRT-LLM v1.4.0rc2/rc3, TensorRT Edge-LLM v0.11.1/v0.12.0, Ollama v0.40.13-16, llama.cpp b11963-b12483+v1.0.0, ExLlamaV3 v1.6.6/v1.6.7, vLLM-Omni v0.32.0/v0.33.0rc1; LLM: Qwen4-Max GA, Kimi K3.1 Pro weights, Mistral Large 4 weights, Ripple-65B Preview, Claude Fable/Mythos 5.2, Gemini 4 Carbon GA/Hydrogen, GPT-6.2 Astra/Sol, GPT-6 Cyber, Muse Ember, MiniCPM-OCR 1.0/Jev, Liquid d1.2; index dates refreshed."
 }

@@ -8,6 +8,7 @@ Qwenファミリーの主要な新規公開・一般提供モデルを、新し�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-11-16 | Qwen4-Max | Qwen4世代のflagshipが一般提供（GA）。11月11日のToken Plan限定previewを経て、従量課金API（Model Studio / QwenCloud）でも利用可能に。context length 1,000,000-token、text / image / video入力、thinkingは既定で有効、最大出力は131,072-token（thinking時は262,144-token）。総parameterは2.4T級とされるがactive parameter等の内訳は未公表。**重みは非公開で、fine-tuningも不可のAPI専用モデル**としてopen-weightと区別する。価格はシンガポールregionで入力$1.50 / 出力$4.50（各100万token）。 | https://www.alibabacloud.com/help/en/model-studio/qwen4-max |
 | 2026-09-02 | Qwen3.8-Max-0902 | Qwen3.8-Maxの更新snapshot。software開発、長時間tool実行、複数toolをまたぐ処理、chart / document / image / video理解を強化したAPIモデル。基盤は2.4T級MoEで、最大1M-token contextとmultimodal入力を維持する。**0902 snapshot自体のopen-weight checkpointは確認されておらず、ローカル実行用weightの公開とは別扱い。** | https://www.qwencloud.com/models/qwen3.8-max-0902 |
 | 2026-08-26 | Qwen3.8-Flash-Next | Qwen4へ向けた次世代architectureを先行採用したopen-weight multimodal MoE。非常に大きい総parameterを持ちながら、各tokenで選択するexpertを絞ってactive parametersを小さくし、dense modelより計算量を抑える設計。長contextとtext / visual入力を対象とする。 | https://qwen.ai/blog?id=qwen3.8-flash-next |
 | 2026-08-02 | Qwen3.8-Max | Qwen3.8世代の最大級モデル。Max-classのweight公開も発表され、Qwen3.8-2.4T-A95Bなど大規模MoEへ展開。`2.4T-A95B`のような表記では、前半が総parameter規模、`A95B`がtokenあたり約95Bを有効化する構成を表す。 | https://qwen.ai/blog?id=qwen3.8 |

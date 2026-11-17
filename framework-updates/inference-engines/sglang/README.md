@@ -29,6 +29,15 @@ SGLangの主要な機能・性能更新を継続的に記録する集約ペー�
 
 以下の更新履歴は、**cache階層、長文処理、MoE負荷分散、speculative path、GPU同期削減**の拡張を追う。
 
+## 2026-11-03 — v0.5.23（正式版）
+
+- 1,007 PRs / 257 contributors。新モデル: Muse Spark Open、Beam-1.0、MiniMax-M3.1-Flash、MiniCPM-V 4.7等。Google TPU7x対応（SGLang-TorchTPUプラグイン経由）。DockerはCUDA 13、ROCm 10等を提供。FlashInfer 0.7.2へ更新。
+- 公式benchmark（著者報告・条件付き）: DeepSeek-V4.1（GB300）で負荷時prefill throughput最大1.5倍、32K〜64K promptでfirst-token latency約28%低下。low-latency modeのmegakernel / monokernel（opt-in）でDeepSeek-V4.1-Flashのsingle-user decodeがGB300で最大44%、MI350Xで75%高速化。MoEモデルではFlashInfer CUTLASS MoE autotuneのprefill拡張でH200・8K promptのTTFTが30〜58%低下する一方、初回起動時のautotuneが長くなる副作用が明記されている（DeepSeek-V4.1-Flash、8×H200で約41秒→約177秒、保存後は再利用）。
+- Paged Experts（opt-in）でGPU memoryを超えるMoEを単一consumer GPUで実行可能に（CPU offload比最大30倍、著者報告）。
+- KV / prefix cache: DeepSeek系MLA + decode context parallelismでprefix cacheをHiCacheのfile-based L3へ保持可能に。
+- **Breaking change**: DeepSeek-V4 / V4.1のchatがdeepseek-recipe準拠へ変更（自前encoding削除、tool-call id形式変更）。DeepSeek-V4.1はPD時にMegaAttentionがデフォルトとなり、prefill / decodeの同時アップグレードが必須。decoder SWA bounded replayがデフォルト有効（full prefillと数値的に同一ではない）。`tokenspeed_mla` backend、`--speculative-skip-dp-mlp-sync`、`kitchen_int8`量子化名、legacy tar形式 `.pt` checkpoint読み込みを削除。
+- [v0.5.23 release](https://github.com/sgl-project/sglang/releases/tag/v0.5.23)
+
 ## 2026-10-19 — v0.5.22（正式版）
 
 - 公式releaseは950 PR / 245 contributorsを記録。DeepSeek-V4.1のH200上のGPU当たり処理量最大2.3倍、DSparkのMI350X / MI355X上最大1.9倍を報告。GLM-5.2 / 5.3ではdecode context parallelism + MTPを追加し、GLM-5.3で最大2.1倍とされる。いずれも対象model・hardware・benchmarkに限定した値。

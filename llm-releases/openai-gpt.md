@@ -6,6 +6,8 @@ OpenAI GPT系の主要モデルを新しい順に記録する。初回バック�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-11-17 | GPT-6.2 Astra / GPT-6.2 Sol | GPT-6世代の更新。Astraはprofessional work / science向け上位、Solは日常業務向け。ChatGPT WorkとCodex（Plus / Pro / Enterprise / Edu）およびAPIで提供し、通常のChatには追加されない。API価格はAstraが入力$8 / cached $0.40 / 出力$40、Solが入力$2 / cached $0.10 / 出力$10（各100万token）で、AstraはGPT-6 Astra比で入出力20%引下げ。最大1,050,000-token context、最大128,000-token output（公式モデルページ）。Astraは外部公開モデルとして初めてAI自己改善でHigh評価とOpenAIが報告するが、評価は同社報告値。 | https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531 |
+| 2026-11-05 | GPT-6 Cyber | GPT-6 Astraのcybersecurity特化バリアント（脆弱性の発見・再現・修正検証）。**一般提供ではなく、Daybreak Redの審査済み顧客のみ**（Codex / API）。trusted-access価格は入力$20 / 出力$100（各100万token）。Preparedness Framework上の評価は同社報告で、cybersecurity Critical、生物・化学High。 | https://deploymentsafety.openai.com/gpt-6-cyber/gpt-6-cyber.pdf |
 | 2026-09-23 | GPT-6 Sol / Luna | GPT-6 Astraと同系統の学習手法を使い、professional work、factuality、coding、computer use、alignmentの改善を高速・低cost帯へ展開。API model IDは`gpt-6-sol` / `gpt-6-luna`。API価格はSolが入力$2 / 出力$10、Lunaが入力$0.10 / 出力$0.50（各100万token）で、GPT-5.6 promotional pricingから大幅に低価格化。prompt cachingも改善され、cached input readは90% discount。 | https://openai.com/index/introducing-gpt-6-sol-and-luna/ |
 | 2026-09-03 | GPT-6 Astra | GPT-6世代の上位モデルとして、computer use、browser操作、software engineering、cybersecurity、science、professional workなどtoolを伴う長いtaskを重点強化。API model IDは`gpt-6-astra`。最大1,050,000-token context、最大128,000-token outputとして記録。 | https://openai.com/index/gpt-6-astra/ |
 | 2026-07-09 | GPT-5.6 Sol / Terra / Luna | GPT-5.6世代のmodel群。Solは高能力側、Terraは性能・latency・costのbalance、Lunaは高速・低cost側という役割分担で、coding、knowledge work、science、エージェント型処理（agentic work）を対象とする。 | https://openai.com/index/gpt-5-6/ |

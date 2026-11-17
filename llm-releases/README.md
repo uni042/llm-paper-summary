@@ -3,7 +3,7 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-10-22**
+- リリース情報の最終確認: **2026-11-18**
 - 用語・可読性の最終監査: **2026-09-07**
 
 2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。
@@ -28,23 +28,23 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 | リリース日 | モデル | 系統 | 概要 | 詳細 |
 |---|---|---|---|---|
-| 2026-10-27 | Liquid AI LFM3 / d1 | Liquid AI | 1.73B text tri-hybridを含む用途別6派生とbase。text modelは256K context、LFM Open License v1.0。Ollama v0.40.12のLFM3/d1 2B対応はApple hardware限定。 | [Liquid AI系](liquid-ai.md) |
-| 2026-10-21 | Recursive Flint 40B-A2.5B | Recursive | 総39.8B / 有効約2.5BのApache-2.0 MoE。公式BF16 checkpointは約80GB、設定上の最大262K context。Ollama対応はmacOS限定。 | [Recursive系](recursive.md) |
+| 2026-11-17 | GPT-6.2 Astra / Sol | OpenAI GPT | GPT-6世代の更新。Astraは入力$8 / 出力$40へ20%値下げし、ChatGPT Work / CodexとAPIで提供（通常のChatには追加されない）。最大1,050,000-token context。 | [OpenAI GPT系](openai-gpt.md) |
+| 2026-11-16 | Qwen4-Max | Qwen | Qwen4世代flagshipの一般提供。最大1M-token context、text / image / video入力。重み非公開・fine-tuning不可のAPI専用。 | [Qwen系](qwen.md) |
+| 2026-11-16 | Liquid AI d1.2 / d1.2-ultra | Liquid AI | 判断モデルの新版。音声入力と新task 5種を追加したhostedモデル（重み非公開）。旧d1系は非推奨化。 | [Liquid AI系](liquid-ai.md) |
+| 2026-11-12 | Gemini 4 Hydrogen | Gemini | 高速・実行tierの新モデル。最大1M-token context、一律価格$1.50 / $7.50。SearchのAI Modeで3.8 Flashのデフォルトを置換。 | [Gemini系](gemini.md) |
+| 2026-11-09 | Claude Fable 5.2 / Mythos 5.2 | Claude | 同一基盤の2構成。Fableは一般提供、Mythosは審査済み組織向け。$8 / $40へ値下げし出力は最大30%高速（Anthropic報告）。 | [Claude系](claude.md) |
+| 2026-11-09 | Muse Ember | Meta Muse | Muse系最小のclosedモデル。agentの反復作業向けで、1,048,576-token context、$0.10 / $0.50。 | [Meta Muse系](meta-muse.md) |
+| 2026-11-04 | Kimi K3.1 Pro | Kimi | K3の事後学習強化版の重みを公開。総2.8T / 有効104B、MXFP4重み約1.56TB、最大1,048,576-token context。 | [Kimi系](kimi.md) |
+| 2026-11-04 | Ripple-65B Preview | Recursive | Ricursive Intelligence初の汎用公開モデル。65B dense、Apache-2.0、最大1,048,576-token context。 | [Recursive系](recursive.md) |
+| 2026-10-29 | Mistral Large 4（重み公開） | Mistral | previewを経て改良版checkpointの重みを公開しopen-weight化。約1.05T / 52B active、最大1M-token context。 | [Mistral系](mistral.md) |
 | 2026-10-15 | Nemotron 3.5 Super VL | NVIDIA Nemotron | 総120B / 有効12Bのopen-weight視覚言語MoE。Mamba-2 / TransformerとC-RADIOを組み合わせ、最大1M context。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | NVIDIA Nemotron | 総74B / 有効9Bの視覚言語MoE。24GB GPU向け設計値と約25GBの配布ファイル表示を区別する。 | [NVIDIA Nemotron系](nvidia.md) |
-| 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |
-| 2026-09-02 | Qwen3.8-Max-0902 | Qwen | 2.4T級MoEを基盤とするQwen3.8-MaxのAPI snapshot。1M contextとtext / image / video入力を維持し、coding・長時間tool taskを更新。0902自体のopen-weight checkpointとは区別。 | [Qwen系](qwen.md) |
 | 2026-09-20 | Step 5 Preview | StepFun | 総600B / 有効27Bの疎MoE。公式BF16重みのrepo commitは2026-09-20、最大1M context。画像入力は仕様表に記載。 | [StepFun系](stepfun.md) |
-| 2026-09-15 | Gemini 3.8 Live / Live Extended Thinking | Gemini | Live API向けaudio-to-audioモデル。標準Liveは低latencyのreal-time dialogue、Extended Thinkingはlive audio中のbackground reasoningを重視する。両方とも一般提供（GA）。 | [Gemini系](gemini.md) |
-| 2026-10-15 | Muse Spark Open | Meta Muse | 総816B / 有効42B、256 expertsから8を選ぶopen-weight multimodal MoE。最大1M context。NVFP4/BF16重みのGPU memory要件は700GB / 2TBと公式案内。 | [Meta Muse系](meta-muse.md) |
 | 2026-08-26 | GLM-5.3-Flash | GLM | 総320B / 約18B activeのnative multimodal MoE。sparse / linear attentionを組み合わせ、長context時のattention計算とKV増加を抑える設計。 | [GLM系](glm.md) |
-| 2026-09-22 | Claude Opus 5.5 | Claude | Claude 5.5 familyの最初のmodel。Opus 5からagentic coding、computer use、knowledge work、効率、安全性を更新し、通常workloadで約40%低cost、出力速度も30%以上高速化とAnthropicが報告。 | [Claude系](claude.md) |
 | 2026-10-17 | DeepSeek-V4.1-Flash-1017 | DeepSeek | 10月17日に公式更新されたAPI snapshot。APIのmodel IDは`deepseek-flash`のまま。公式公表ベンチマークはタスクごとの条件付き比較で、hardware実測tokens/sの倍率とは区別する。 | [DeepSeek系](deepseek.md) |
 | 2026-08-12 | Grok 4.6 | Grok | 長時間agent、coding、visual / interactive taskを重点にした上位model。最大500K-token context。 | [Grok系](grok.md) |
-| 2026-07-16 | Kimi K3 | Kimi | 総2.8T、896 routed experts、16 experts/tokenのopen-weight native multimodal MoE。1M contextでimage / videoと長時間coding taskを対象。 | [Kimi系](kimi.md) |
 | 2026-06-03 | Gemma 4 12B Unified | Gemma | Gemma 4世代の12B級open-weight Unified model。大規模MoEよりweight規模が小さく、量子化時のローカル利用も検討しやすい帯域。 | [Gemma系](gemma.md) |
 | 2026-06-01 | MiniMax M3 | MiniMax | 1M contextとimage / video入力を持つopen-weight multimodal model。coding・multi-step agent workを対象。 | [MiniMax系](minimax.md) |
-| 2026-10-06 | Mistral Large 4 | Mistral | 1T total / 49B activeのnative multimodal flagship。APIはpublic preview、weightsは2026年10月末公開予定で、現時点ではopen-weight配布済みではない。 | [Mistral系](mistral.md) |
 | 2026-03-04 | Phi-4-reasoning-vision-15B | Phi | 約15B parameterのopen-weight multimodal reasoning model。math / science、UI・image理解を重点対象。 | [Phi系](phi.md) |
 | 2025-04-05 | Llama 4 Scout / Maverick | Llama | **期間外最新**。Meta Llama初のnative multimodal MoE世代。Scout / Maverickとも約17B activeでopen weights。 | [Llama系](llama.md) |
 

@@ -14,6 +14,18 @@ vLLM-Omniの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-11-04 — vLLM-Omni v0.33.0rc1（公開候補版）
+
+- upstream vLLM 0.33.0（正式版）への整合を目的とするRC。runtime integration、依存更新、インストール手順、upgrade-validation修正が中心で、release notesに新モデル・benchmark・breaking changeの記載はない。
+- [公式release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.33.0rc1)
+
+### 2026-10-28 — vLLM-Omni v0.32.0（正式版）
+
+- v0.32.0rc1からの正式版。vLLM 0.32.0への整合。Rayベースのmulti-node inference（任意）、`/v1/realtime` のserver VAD、full-duplex serving。
+- 新モデル: YuE2-3B（text-to-music）、Qwen-Image-2.1 / 2.1-Turbo、Kandinsky6、MOSS-Image、TaoMate-H3、LTX 2.5 text-to-audio、single-stage Qwen3-TTS。
+- 互換性: Python >=3.11,<3.14 と vLLM 0.32.0が必須。output-type名はcanonical spelling（`text` / `image` / `audio` / `latent` / `token_ids`）が必須となり、legacy aliasは拒否される（breaking的変更）。インストール例はCUDA 13.0。
+- [公式release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.32.0)
+
 ### 2026-10-19 — vLLM-Omni v0.32.0rc1（公開候補版）
 
 - v0.31.0rc1から297件の変更を取り込み、vLLM本体v0.32.0へ整合。正式版ではなくrelease candidate。

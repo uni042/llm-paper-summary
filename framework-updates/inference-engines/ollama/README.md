@@ -25,6 +25,30 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 2026-06-03〜2026-09-03
 
+### 2026-11-10 — Ollama v0.40.16（正式版）
+
+- 新モデル: Ripple Preview（Ricursive Intelligence、65B dense、agentic coding向け）をlibraryへ追加（`ollama run ripple-preview`）。
+- **Apple silicon限定の変更**: Qwen3.8 Flash Nextのメモリ使用量が約27 GiB減少。プラットフォーム限定として、Windows on ARM向けCUDA 13.5 supportも含む。Apple向けの変更からWindows CUDAの性能を推定しない。
+- `/v1/responses`が `truncation` を尊重するようになり、`/v1/models`はモデルなし時に空リストを返す。llama.cpp更新を含む。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.16)
+
+### 2026-11-04 — Ollama v0.40.15（正式版）
+
+- 新モデル: MiMo V2.6（Xiaomi、9B、code / agent向け、`ollama run mimo-v2.6`）と、AutoTrust decision models（autotrust-jev、9b / 35b / 27b-vl）。**AutoTrustはこのreleaseではApple siliconのみ対応と明記**。35b / 27b-vlは画像入力可。
+- `ollama launch`がKimi Code CLI対応。recurrent / vision GGUFの複数リクエスト同時処理、Qwen3 / Qwen3.5のlong-context（YaRN）scaling記載。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.15)
+
+### 2026-11-03 — Ollama v0.40.14（正式版）
+
+- `ollama launch claude`がモデルのoutput token limitをClaude Codeへ適用（cloudモデルの128kデフォルトcap回避）。
+- Cloud web searchの `/api/chat` 応答デコード修正、OpenAI互換endpointのsampler defaults扱いの変更、`/v1/responses`でのreadable input content保持。MLXでlarge vocabulary向けtop-k sampling高速化（プラットフォームはMLXと明記）。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.14)
+
+### 2026-10-29 — Ollama v0.40.13（正式版）
+
+- **LFM3がLinux / Windowsでも動作**するようになった（v0.40.12ではApple hardware限定だった対応の拡張）。対象はLFM3本体、TTSのlfm3-audio、lfm3-omni。
+- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.13)
+
 ### 2026-10-27 — Ollama v0.40.12（正式版）
 
 v0.40.11からの正式更新。LFM3 text/VL/audio/omniとd1:2b、d1-omniをOllama libraryに追加。**このreleaseでのLFM3とd1 2B対応はApple hardware向けで、公式案内ではLinux/Windows対応は今後**としている。各multimodal variantのOS対応も個別に確認する。

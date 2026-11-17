@@ -15,6 +15,21 @@ TensorRT Edge-LLMの主要な機能・性能更新を継続的に記録する集
 
 ## 主要更新
 
+### 2026-11-14 — v0.12.0（released）
+
+- InternVL3向け初版Safety Runtime（QNX Standard互換）。
+- 新モデル: Qwen3.8-Flash-Next（NVFP4、per-layer embedding cache）、Nemotron-3.5-Bolt-74B-A9B（IQ2 MoE / Q8_0 Linear）、MiniMax-H3 FP16 text-to-video、GR00T N1.7 FP16 policy、pi0.5 checkpoint-direct builder。
+- speculative decoding拡張: EAGLE-4、greedy-only Domino、LiLiCorr draft（Nemotron-3.5-Bolt-74B-A9B用）、JetSpec（一部MoE）、dense Qwen3向けMTP、DFlash2 tree decoding。
+- in-flight batching拡張（単一デバイス、opt-in、mixed prefill/decode、per-request sampling）。FP8 KV-cache storageをAmpere / Jetson Orinでも対応（attentionはFP16）。PyTorch 2.14.0 / Transformers 5.17.0へ更新。legacy system-prompt KV cacheは削除（context-cache reuseへ移行）。
+- [公式release](https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.12.0)
+
+### 2026-10-29 — v0.11.1（released）
+
+- 統合 `trtedge` CLIを追加（HTTP serving / engine build / ONNX export / 量子化 / モデル準備）と、対話型text chat（streaming・履歴・timing metrics）。
+- 新モデル: Nemotron 3.5 Bolt E4B＋DFlash draft、Qwen3.8 / Muse-Glimmer向けDFlash2 checkpoint拡張、Gemma 4 12B DFlash draftのexport / 量子化。
+- TensorRT RTX-1.7でWindows上のengine building / 推論対応、NVFP4-A16 MoE重み準備、TensorRT-RTX JIT-kernel caching。
+- [公式release](https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.11.1)
+
 ### 2026-09-29 — v0.11.0（released）
 
 - **Python wheel配布**: 対応x86-64 / AArch64 platform向けにpublished wheelを追加。

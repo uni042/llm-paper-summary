@@ -24,6 +24,16 @@ Liquid AIはWebArena-Verifiedで38.42を報告し、比較としてLFM2.5-2.6B�
 
 公式model cardはTransformers利用を案内する。GGUFはLFM3対応のllama.cpp buildが必要。FP8のSGLang対応は確認時点でPR審査中であり、現行stable release全般で使えるとは限らない。Ollama v0.40.12はLFM3およびd1 2BのApple hardware対応を告知し、Linux/Windows対応は今後としている。
 
+## d1.2 / d1.2-ultra（2026-11-16）
+
+判断（decision）モデルの新版をLiquid APIで公開。重み非公開のhostedモデルで、parameter数は公表されていない。
+
+- text / 画像に加えて**音声入力**へ対応し、生成tokenゼロで較正済みの型付き回答を返す形式は継続。
+- 新task 5種を追加（値の読取、span検出、box位置推定、範囲付き数推定、複数ラベル選択）。
+- 価格は入力のみ課金で、d1.2が$0.02、d1.2-ultraが$0.042（各100万入力token）。旧d1、d1.1、d1-ultraは非推奨化された。
+- 著者側の数値として、Artificial Analysis Decision Index v2.1でd1.2-ultraが75（decision model中最高とLiquidが引用）。新taskの精度は同社の内部test setによる値で、公開benchmarkではない。
+- 一次資料: [Liquid AI公式発表](https://www.liquid.ai/blog/d1-2)
+
 ## 一次資料
 
 - [Liquid AI公式発表](https://www.liquid.ai/blog/lfm3)

@@ -6,6 +6,7 @@ Claude系はmodel名だけでは用途差が分かりにくいため、このペ
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-11-09 | Claude Fable 5.2 / Claude Mythos 5.2 | 同一基盤モデルの2構成。Fable 5.2は一般提供でcybersecurity / biology面のsafeguardが強め、Mythos 5.2はsafeguardを緩和した構成で審査済み組織のみ（Cyber / Life Sciences Verification Program経由）。価格は入力$8 / 出力$40（各100万token）で5.1世代から20%引下げ。出力は5.1比で最大30%高速とAnthropicが報告し、任意のfast modeは最大2.5倍速（$16 / $80）。著者評価ではFrontierCode 2.0で49.1%（Fable 5.2、Xhigh effort）。数値はいずれもAnthropic報告値で独立検証ではない。 | https://www.anthropic.com/claude-fable-and-mythos-5-2 |
 | 2026-09-22 | Claude Opus 5.5 | Claude 5.5 familyの最初のmodel。agentic coding、computer use、knowledge workを重点更新し、Anthropicは通常workloadでOpus 5より約40%低cost、出力速度30%以上高速と報告。API価格は入力$4 / 出力$20、cache read $0.20（各100万token）。prompt injection耐性や長時間taskを含むalignment評価も強化。 | https://www.anthropic.com/claude-opus-5-5 |
 | 2026-09-01 | Claude Fable 5.1 / Claude Mythos 5.1 | 5.1世代の上位モデル群。coding、knowledge work、科学研究など長いmulti-step taskを重点更新。Mythos 5.1は特にcybersecurity / biologyなど専門領域を重視する位置づけ。 | https://www.anthropic.com/news |
 | 2026-07-24 | Claude Opus 5 | 長時間動くエージェント（long-running agents）、software development、専門的なknowledge workを主対象とするOpus系上位モデル。単発回答より、複数file・tool・stepをまたぐ仕事を想定する。 | https://www.anthropic.com/news/claude-opus-5 |

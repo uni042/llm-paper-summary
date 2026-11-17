@@ -6,6 +6,8 @@ Google Geminiファミリーの主要リリースを新しい順に記録する�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
+| 2026-11-12 | Gemini 4 Hydrogen | 高速・実行tierの新モデル。日常のcodingとagentic workflow向けで、SearchのAI ModeではGemini 3.8 Flashのデフォルトを置き換える。最大1M-token contextで、window全域一律の入力$1.50 / 出力$7.50（各100万token）。著者評価ではArtificial Analysis Intelligence Indexがdefault high thinkingで51（Argonの50を上回る）、xhighで54（いずれもGoogle報告値）。AI Studio、Gemini API、Gemini app、Search等へ展開。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-Hydrogen/ |
+| 2026-11-10 | Gemini 4 Carbon | Gemini 4世代の最上位モデルが一般提供（GA）。約2週間前のFairwind Program経由のcyber defender向け限定提供を経て、API（有料開発者・企業）とGoogle AI Ultra向けに展開。長時間agentic workflow、cybersecurity、科学的推論を重点とする。導入価格は入力$2 / 出力$10（各100万token）でArgonと同額。評価値はGoogle報告値で独立検証ではない。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ |
 | 2026-09-15 | Gemini 3.8 Live | Live API向けの低latency audio-to-audioモデル。real-time voice agentと対話を主用途とし、interleaved reasoning、既定のasynchronous function calling、session client content updateを備える。一般提供（GA）。 | https://ai.google.dev/gemini-api/docs/changelog |
 | 2026-09-15 | Gemini 3.8 Live Extended Thinking | Live API向けの高reasoning audio-to-audioモデル。live audio interaction中のbackground reasoningを支援し、より深い推論が必要な音声agent用途を対象とする。一般提供（GA）。 | https://ai.google.dev/gemini-api/docs/changelog |
 | 2026-09-02 | Gemini 3.8 Flash | software engineering、エージェント型タスク（agentic tasks）、複数段階推論を3.7 Flashから強化した高速・汎用モデル。text / image / audio / video入力に対応し、最大1M-token入力文脈と64K-token出力を持つ。Gemini API等で一般利用できるproduction向けモデル。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/ |

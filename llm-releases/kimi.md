@@ -6,7 +6,7 @@ Kimiの大規模MoEでは、model file全体の大きさと1 tokenを処理す�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
-| 2026-10-23 | Kimi K3.1 Pro / Highspeed | K3の事後学習を強化したAPI提供モデル。MoonshotはHighspeedを通常Pro比2〜3倍と説明するが、API提供間のベンダー値でローカル性能ではない。最大1M-token context・3T級MoEと説明される一方、2026-10-25時点でK3.1固有の重み・検証可能なmodel cardは未公開。11-04までの公開は予定であり、公開済みcheckpointとして扱わない。 | https://www.kimi.com/en/blog/kimi-k3-1-pro |\n| 2026-07-16 | Kimi K3 | 総2.8T parameterの重み公開（open-weight）native multimodal MoE。896個のrouted expertを持ち、各tokenではそのうち16 expertを選んで実行するため、2.8T全parameterを毎token計算するわけではない。最大1M-token context、image / video理解、長時間のcoding / agent taskを対象とする。full weightは7月27日公開。 | https://github.com/MoonshotAI/Kimi-K3 |
+| 2026-11-04 | Kimi K3.1 Pro（重み公開） | 2026-10-23にAPI提供を開始したK3の事後学習強化版について、2026-11-04に重みとmodel cardを公開。総2.8T / 有効104Bのnative multimodal MoE（93層、routed experts 896から16/token＋shared 2、視覚encoder MoonViT-V2 401M）。K3のGated MLAをGated DSAへ置換し長context効率を改善。最大1,048,576-token context。重みはMXFP4（活性化MXFP8、量子化対応学習）で約1.56TB。licenseは専用のKimi K3.1 Pro License（大規模MaaSには別途契約条件あり）。推奨runtimeはvLLM、SGLang、TokenSpeed。著者評価ではTerminal-Bench 4.0で65.7、GPQA-Diamondで94.2（Moonshot報告値、独立検証ではない）。API版Highspeed（通常Pro比2〜3倍）はAPI提供間のベンダー値でローカル性能ではない。 | https://huggingface.co/moonshotai/Kimi-K3.1-Pro |\n| 2026-07-16 | Kimi K3 | 総2.8T parameterの重み公開（open-weight）native multimodal MoE。896個のrouted expertを持ち、各tokenではそのうち16 expertを選んで実行するため、2.8T全parameterを毎token計算するわけではない。最大1M-token context、image / video理解、長時間のcoding / agent taskを対象とする。full weightは7月27日公開。 | https://github.com/MoonshotAI/Kimi-K3 |
 | 2026-04-20 | Kimi K2.6 | coding、長時間実行、複数agentを並行利用するAgent Swarmを強化したKimi K2系更新。重みも公開され、自前runtimeでの実行対象にできる。 | https://github.com/MoonshotAI/kimi-help-center/blob/master/en-US/agent/overview.md |
 
 ## Kimi K3の構造を読むときの注意

@@ -26,6 +26,18 @@ ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同�
 
 固定的に「このlayerは全部CPU」と決めるのではなく、GPU memory残量や利用状況に合わせて一部expert・cacheをCPUへ移すため、VRAM容量とPCIe / CPU RAM bandwidthのtrade-offを細かく調整できる。
 
+## 2026-11-14 — ExLlamaV3 v1.6.7（正式版）
+
+- split-device量子化の問題修正、checkpointing改善、pipelined prefill。
+- 複数インスタンスで共有するdisk tierの問題修正。expert routingとsparse attention indexingの精度改善。その他最適化・bugfix。新モデル対応・breaking changeの明記なし。
+- [公式release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.7)
+
+## 2026-10-31 — ExLlamaV3 v1.6.6（正式版）
+
+- 新モデル対応: DeepseekV41ForCausalLM、Lfm3ForCausalLM、Lfm3VlForConditionalGeneration。
+- 量子化時のVRAM使用量を大幅に削減し、量子化capture passを高速化。disk cacheのeviction policy修正（多数モデル切替時のchurn防止）、loop detection改善。その他最適化・bugfix・QoL改善。breaking changeの明記なし。
+- [公式release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.6)
+
 ## 2026-10-25 — ExLlamaV3 v1.6.5（正式版）
 
 2026-10-25に正式公開されたv1.6.5を追加。v1.6.4から、VRAM上のprefill cache削減、hot/sparse vocabularyを用いたdraft latency削減、Gemma 4 MTP（Gemma4AssistantForCausalLM）対応、AVX2/AVX512 MoE CPU offload、Nemotron Super VL対応、tokenizer prompt cache修正が含まれる。Windows向けCUDA 12.8/13.2 wheelも公開された。個別機能の説明から全モデル共通のE2E生成速度倍率は推定できず、実測倍率は記載しない。

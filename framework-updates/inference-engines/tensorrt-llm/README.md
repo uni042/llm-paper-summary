@@ -40,6 +40,22 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 主要更新
 
+### 2026-11-07 — TensorRT-LLM v1.4.0rc3（公開候補版）
+
+- 新モデル: Muse Spark Open、GLM-5.2 NVFP4 Modeling V2（GB300 / SM103）、MiniMax-M3 NVFP4 low-latency decode（Blackwell）、MiniMax-M3.1-Flash DSpark、Kimi K3 native modeling統合＋NVFP4 KV cache、DeepSeek-V4.1-Flash on SM120、LTX-2.3等。
+- 機能: unified KV cache manager基盤（sparse attention arena / host-backed pool）、native sparse MLA（DeepSeek-V4）、DSA Vanilla sparse attention、native FP8 MoE LoRA、DynamicEPLB、one-model speculative decoding最適化、Blackwell向けQwen3.5 / Qwen3.8-Flash-Next / GLM-5.3-Flash高速化。
+- **BREAKING**: 未使用LlmRequestフィールド削除、旧TensorRT-backend互換面削除、serving frontendのデフォルト変更。
+- Known Issuesとして、DSAモデル（GLM-5.2含む）のNVFP4 KV cacheでの誤出力可能性、Kimi K3 DSpark＋MegaMoE＋CUDA graphsでのGB300 warmup中hang可能性等が明記されている。release notes内に公式benchmark数値の記載はない。
+- [公式release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc3)
+
+### 2026-10-29 — TensorRT-LLM v1.4.0rc2（公開候補版）
+
+- Python wheelは1.4.0rc2.post1として公開（wheel-only patch）。コンテナ／文書は1.4.0rc2のまま。
+- 新モデル: GLM-5.2 NVFP4 low-latency decode on Rubin（Modeling V2）、MiniMax-M3 on Rubin、Qwen3.8-Flash-Next Modeling V2拡張（MTP・video・quantized KV）、Cosmos3-Edge Reasoner、SM103向けGPT-OSS-120B / DeepSeek-R1-0528 NVFP4デフォルト等。
+- **BREAKING**: LlmRequestフィールドのC++→Python移行、transceiver V2からKV cache manager V1削除、旧executor backend互換パス削除。n-gram / user-provided speculative decodingは非推奨化。
+- 機能: KV cache V2のnative retention / cross-turn reuse、FP4 MLA（disaggregated serving）、MXFP8 refitting、DeepSeek-V4 / DSpark on Rubin最適化。
+- [公式release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc2)
+
 ### 2026-10-22 — TensorRT-LLM v1.4.0rc1（公開候補版）
 - **RC1であり正式版ではない。** KV cache manager V2とPython KV cache transceiverを既定にし、未使用の`LlmRequest` fieldを削除、C++ `ArrayView`を`std::span`へ変更するなど破壊的API変更を含む。既存連携は互換性試験が必要。
 - **追加モデル経路**: DeepSeek-V4.1-Flash、GLM-5.3-Flash NVFP4、Qwen3.8-Flash-Next NVFP4（実験的Modeling V2）、DFlashのLiLiCorr草稿checkpoint。対応範囲はモデルごとに異なる。

@@ -44,6 +44,25 @@ vLLMの主要な機能・性能更新を継続的に記録する集約ページ�
 
 - **ROCm DeepSeek-V4.1のmHC post + delayed pre projectionを融合 — merged 2026-09-14 UTC**: AITER fused kernelで小batch decodeの各seamから1 launchを除去。40 layer × 2 seamでforward stepあたり80 launchを削減し、MI355X・TP4の二方向crossover測定でmean ITL **6.9015 → 6.8141 ms（-1.28%）**。[PR #56513](https://github.com/vllm-project/vllm/pull/56513)
 
+## 2026-11-16 — v0.34.0（正式版）
+
+- 1,061 commits / 412 contributors。**Extensible KV cacheがデフォルト有効**になり、warmupとCUDA graph capture後に実際に空いているmemoryからKV cacheサイズを決める。`gpu_memory_utilization`のデフォルトは1.0。公式例ではMiniMax-M3（H200）でKV容量が433k→672k tokensへ拡大し高concurrencyでthroughput向上・TTFT低下、一方で一部モデルではTPOTがconcurrency 128で+6〜18%になり得ると明記されている。無効化は `--gpu-memory-utilization 0.9` または `--no-enable-extensible-kv-cache`。
+- **Breaking change**: Model Runner V1を削除しMRV2のみ（`VLLM_USE_V2_MODEL_RUNNER=0`は起動時エラー）。デフォルト `--block-size` が16→64（ROCm paged attentionは16のまま）。**ROCm 7.2の成果物を廃止しROCm 10.0のみ**。`huggingface_hub>=2.0.0`必須。QuTLASS / `fp_quant` とMarlin W4A8を削除（checkpointが読めなくなるものを含む）。
+- 新モデル: Mistral Large 4（1T total / 52B active、FP8・NVFP4）、MiniMax-M3.1-Flash、Liquid AI LFM3系、Ripple-65B Preview等10モデル。
+- speculative decoding: Suffix decodingがMRV2で動作しArctic Inferenceが不要に。custom speculator向けの宣言的configとプラグインAPI、draft KV cacheのdtypeをtargetへ一致（FP8 target→FP8 draft cache）。
+- serving: DP+EPのfault-tolerant scale-down（dead rankを再起動なしで除去しexpert再配置）、checkpoint/restore（CRIU + cuda-checkpoint）、cache-aware admission（opt-in）。
+- 公式benchmark（著者報告・条件付き）: Step5 NVFP4 MoE on TRTLLM-Genでdecode最大1.95倍（4×GB200）、GLM-5.3-Flashのtoken-sharded sparse-MLA prefillでTTFT 1.24〜1.40倍（GB200、32K〜128K）。hardware・モデル・入力長に依存する値であり、一般化しない。
+- [v0.34.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.34.0)
+
+## 2026-11-02 — v0.33.0（正式版）
+
+- **CUDA 12.9のwheel・`-cu129`イメージを廃止し、CUDA 13.0 only**へ移行（breaking）。PyTorch 2.14.0 / Triton 3.8.0へ更新。ROCmはデフォルト10.0（7.2は `-rocm72` で継続、この版限り）。GitHub Releaseのタグは `v0.33.0rc3` だが、notes見出しと扱いは正式版v0.33.0。
+- 新モデル: Reflection Beam-1.0（501B MoE / 23B active、DFlash2 drafter付き）、Recursive Flint、Muse Spark Open、Step-5 Preview、MiniCPM-OCR 1.0等。
+- speculative decoding: block-diffusion drafter（DFlash / DSpark等）向けXPress refinerを新設。opt-inのlossy verification「FLy」はMI355X / B300でdecode throughput 1.04〜1.31倍（公式PR benchmark）。DSparkのdraft slot予約廃止によりDeepSeek-V4.1-Flash + DSpark（GB300）で1,373→3,390 output tok/s（公式PR benchmark）。
+- KV cache: EAGLE/MTPのprefix-cache hitを保つlookahead block hashesがデフォルト有効。ROCm向け3〜4bit KV cache（ROCM_OCTAVE、RX 7900 XTXでfp16比4.6倍のKV tokens、著者報告）。
+- **Breaking change**: Medusa / MLP speculator削除、legacy Ray compiled-graph executor削除、NIXLは1.5以上が必須。生成一時停止中のrequestはHTTP 503を返す。
+- [v0.33.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3)
+
 ## 2026-10-18 — v0.32.0（正式版）
 
 - `/v1/systemone` に `choice` / `noul` / `score` を返す構造化判定APIを追加。モデルカードに基づく汎用HF tool callと推論parserにも対応。
