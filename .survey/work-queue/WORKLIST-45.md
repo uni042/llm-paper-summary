@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-17T15:11:19+00:00`
+Generated: `2026-11-17T16:24:14+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -72,8 +72,8 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **129153** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122875** / 監査再投入 **0** / 機械規則適用後 **125545** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **129154** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122876** / 監査再投入 **0** / 機械規則適用後 **125546** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -481,7 +481,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 | 402 | 2 | 4 | 6 | arXiv:2505.18799 | ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models | 2025-05-24 | arXiv.org | 2 | 6 |  | [source](https://arxiv.org/abs/2505.18799) |
 | 403 | 0 | 4 | 6 | arXiv:2511.02681 | Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes | 2025-11-04 | arXiv.org | 0 | 6 |  | [source](https://arxiv.org/abs/2511.02681) |
 | 404 | 12 | 4 | 6 | DOI:10.18653/v1/2026.acl-long.819 | Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising | 2026 | Annual Meeting of the Association for Computational Linguistics | 2 | 7 | Diffusion LLM Inference, LLM Serving / Scheduling / Disaggregation, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://doi.org/10.18653/v1/2026.acl-long.819) |
-| 405 | 10 | 4 | 6 | arXiv:2607.20357 | Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs | 2026-07-22 | European Conference on Computer Vision | 0 | 6 | 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2607.20357) |
+| 405 | 10 | 4 | 6 | arXiv:2607.20357 | Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs | 2026-07-22 | European Conference on Computer Vision | 0 | 7 | 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2607.20357) |
 | 406 | 102 | 4 | 6 | arXiv:2606.29350 | Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs | 2026-06-28 | arXiv.org | 2 | 7 | 小型VLA・視覚トークン削減・非同期ロボット推論, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.29350) |
 | 407 | 101 | 4 | 6 | arXiv:2606.16429 | Taylor-Calibrate: Principled Initialization for Hybrid Linear Attention Distillation | 2026-06-15 | arXiv.org | 1 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2606.16429) |
 | 408 | 10 | 4 | 6 | arXiv:2604.02007 | Apriel-Reasoner: RL Post-Training for General-Purpose and Efficient Reasoning | 2026-04-02 |  | 0 | 7 |  | [source](https://arxiv.org/abs/2604.02007) |

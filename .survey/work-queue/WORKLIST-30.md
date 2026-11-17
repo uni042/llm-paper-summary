@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-17T15:11:19+00:00`
+Generated: `2026-11-17T16:24:14+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -73,8 +73,8 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **129153** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122875** / 監査再投入 **0** / 機械規則適用後 **125545** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **129154** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122876** / 監査再投入 **0** / 機械規則適用後 **125546** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -355,7 +355,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 275 | 118 | 4 | 11 | arXiv:2512.12279 | WATOS: Efficient LLM Training Strategies and Architecture Co-Exploration for Wafer-Scale Chip | 2025-12-13 | International Symposium on High-Performance Computer Architecture | 8 | 11 | Training Offload / Memory Systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2512.12279) |
 | 276 | 51 | 4 | 11 | arXiv:2108.02347 | FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention | 2021-08-05 | Neural Information Processing Systems | 41 | 11 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2108.02347) |
 | 277 | 10 | 4 | 11 | arXiv:2610.35089 | Learning to remember: advances in memory mechanisms for large language models | 2026-10-26 | Vicinagearth | 0 | 11 | 07-kv-cache-optimization-compression, Inference / Agent Memory and Context Management | [source](https://arxiv.org/abs/2610.35089) |
-| 278 | 111 | 4 | 11 | arXiv:2607.14557 | Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation | 2026-07-16 | Proceedings of the 34th ACM International Conference on Multimedia | 11 | 13 | Speculative Decoding, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, speculative decoding / parallel drafting / diffusion-inspired language modeling, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2607.14557) |
+| 278 | 111 | 4 | 11 | arXiv:2607.14557 | Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation | 2026-07-16 | Proceedings of the 34th ACM International Conference on Multimedia | 11 | 14 | Speculative Decoding, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, speculative decoding / parallel drafting / diffusion-inspired language modeling, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2607.14557) |
 | 279 | 10 | 4 | 11 | arXiv:2608.21265 | Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning | 2026-08-21 | arXiv.org | 0 | 11 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.21265) |
 | 280 | 101 | 4 | 11 | arXiv:2609.39740 | LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation | 2026-09-30 | arXiv.org | 1 | 12 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39740) |
 | 281 | 10 | 4 | 10 | arXiv:2610.04875 | SpecFold: Folding Multi-Branch Redundancy for Faster Speculative Decoding in Diffusion Language Models | 2026-10-04 |  | 0 | 11 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2610.04875) |
@@ -477,7 +477,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 397 | 101 | 4 | 6 | arXiv:2603.20219 | Thinking into the Future: Latent Lookahead Training for Transformers | 2026-03-03 | arXiv.org | 1 | 7 | Speculative Decoding | [source](https://arxiv.org/abs/2603.20219) |
 | 398 | 101 | 4 | 6 | arXiv:2609.39138 | MoSE: Mode-Switching Expander for Mixed LLM Training and Inference | 2026-09-30 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, llm-serving-scheduling-disaggregation, prefill-decode disaggregation / KV-cache transfer / energy-aware serving / DVFS | [source](https://arxiv.org/abs/2609.39138) |
 | 399 | 35 | 4 | 6 | arXiv:2405.05525 | Ditto: Quantization-aware Secure Inference of Transformers upon MPC | 2024-05-09 | International Conference on Machine Learning | 25 | 6 | 99-other-inference-systems, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2405.05525) |
-| 400 | 10 | 4 | 6 | DOI:10.23919/DATE69613.2026.11539390 | Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling | 2026-04-20 | Design, Automation and Test in Europe | 0 | 6 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.23919/DATE69613.2026.11539390) |
+| 400 | 10 | 4 | 6 | DOI:10.23919/DATE69613.2026.11539390 | Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling | 2026-04-20 | Design, Automation and Test in Europe | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.23919/DATE69613.2026.11539390) |
 | 401 | 10 | 4 | 6 | arXiv:2606.03328 | Rethinking Calibration for High-Sparsity LLM Pruning: From Single Sources to Capability Coverage | 2026-06-02 | arXiv.org | 0 | 6 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2606.03328) |
 | 402 | 3 | 4 | 6 | DOI:10.1145/3746027.3755526 | ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process | 2025-10-27 | ACM Multimedia | 3 | 7 | Conditional Computation | [source](https://doi.org/10.1145/3746027.3755526) |
 | 403 | 0 | 4 | 6 | DOI:10.1109/TMM.2025.3639997 | EEformer: Early Exiting for Transformer With Global-Local Exits and Progressive Fine-Tuning | 2026 | IEEE transactions on multimedia | 0 | 6 |  | [source](https://doi.org/10.1109/TMM.2025.3639997) |
