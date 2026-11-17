@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-17 11:59:20 JST**
+> 自動生成: **2026-11-17 12:04:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-17 09:48:51 JST（2時間10分前）** |
+| 最終maintenance完了 | **11-17 09:48:51 JST（2時間16分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-trade-offs-in-on-device-intelligence.json
 - Discovery: **11-17 10:30:00 JST** / worker scheduled-chat-30 / run 20261117-1030-scheduled-chat-30/r01
   - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_18f8679b45a48191894981b91a1d53fb--discovery-20261117-1030-scheduled-chat-30-r01.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_18f8679b45a48191894981b91a1d53fb--discovery-20261117-1030-scheduled-chat-30-r01.json
 
 ### Codex探索成果の反映状況
 
