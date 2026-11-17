@@ -1,0 +1,454 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261118-0735-x01::chunk-0001-of-0002",
+  "reference_main_sha": "6ec75e51713dfd12786530f51be456d1b6884673",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25583",
+      "identity_tokens": [
+        "arXiv:2608.25583",
+        "https://arxiv.org/abs/2608.25583"
+      ],
+      "title": "GRIP: Granular Reward-Guided Parameter Interpolation for Efficient Reasoning",
+      "reason": "推論モデルと指示モデルのモジュール別パラメータ補間により、長い推論を短縮して推論コストとレイテンシの改善を狙う。ただし機構は重み補間（比率学習）であり、サービング機構への直接貢献は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2608.25583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+      ],
+      "worklist_rank": 485,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01638",
+      "identity_tokens": [
+        "arXiv:2608.01638",
+        "https://arxiv.org/abs/2608.01638"
+      ],
+      "title": "Dynamic Resolution Routing for Efficient Egocentric Grounding",
+      "reason": "一人称視点グラウンディング向けに低解像度全体像＋対象領域だけ高解像度化する動的解像度ルーティングで視覚トークンを最大67%削減し、MLLM推論を1.66倍高速化する推論効率化機構が一次要旨で具体的。",
+      "source_url": "https://arxiv.org/abs/2608.01638",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md"
+      ],
+      "worklist_rank": 487,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2212.14041",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2212.14041",
+        "https://doi.org/10.48550/arXiv.2212.14041"
+      ],
+      "title": "Deciphering RNA Secondary Structure Prediction: A Probabilistic K-Rook Matching Perspective",
+      "reason": "RNA二次構造予測をK-Rookマッチングとして定式化するバイオインフォマティクス応用であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2212.14041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md"
+      ],
+      "worklist_rank": 486,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19613",
+      "identity_tokens": [
+        "arXiv:2409.19613",
+        "https://arxiv.org/abs/2409.19613"
+      ],
+      "title": "Hybrid Mamba for Few-Shot Segmentation",
+      "reason": "少数ショット分割向けにcross-Mambaで線形計算量化を図る視覚アーキテクチャであり、LLM推論システムではなく汎用モデルアーキテクチャの能力研究にあたる。",
+      "source_url": "https://arxiv.org/abs/2409.19613",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "worklist_rank": 482,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2407.18559",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2407.18559",
+        "https://doi.org/10.48550/arXiv.2407.18559"
+      ],
+      "title": "VSSD: Vision Mamba with Non-Causal State Space Duality",
+      "reason": "視覚向け非因果SSDアーキテクチャの提案で、対象は画像分類・検出・分割でありLLM推論システムへの適用は確認できない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2407.18559",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "worklist_rank": 434,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2506.21864",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.21864",
+        "https://doi.org/10.48550/arXiv.2506.21864"
+      ],
+      "title": "DeepOmni: Towards Seamless and Smart Speech Interaction with Adaptive Modality-Specific MoE",
+      "reason": "音声LLMのモダリティ別MoE専門家を適応的に学習する枠組みで、対話レイテンシ0.5秒以内も示すが、主貢献は破滅的忘却を抑える学習方法であり推論機構への貢献は副次的。",
+      "source_url": "https://doi.org/10.48550/arXiv.2506.21864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "worklist_rank": 335,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02923",
+      "identity_tokens": [
+        "arXiv:2406.02923",
+        "https://arxiv.org/abs/2406.02923"
+      ],
+      "title": "P-SpikeSSM: Harnessing Probabilistic Spiking State Space Models for Long-Range Dependency Tasks",
+      "reason": "確率的スパイキングSSMによる長距離依存タスク向けSNNアーキテクチャであり、LLM推論システムの対象外。",
+      "source_url": "https://arxiv.org/abs/2406.02923",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md"
+      ],
+      "worklist_rank": 483,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12202",
+      "identity_tokens": [
+        "arXiv:2502.12202",
+        "https://arxiv.org/abs/2502.12202"
+      ],
+      "title": "To Think or Not to Think: Exploring the Unthinking Vulnerability in Large Reasoning Models",
+      "reason": "推論モデルの思考バイパス脆弱性（Unthinking）の分析が主で、外部監視で冗長な推論を打ち切るMoTは推論効率にも触れるが、主眼は安全性・信頼性の評価にあるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2502.12202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+      ],
+      "worklist_rank": 484,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08595",
+      "identity_tokens": [
+        "arXiv:2412.08595",
+        "https://arxiv.org/abs/2412.08595"
+      ],
+      "title": "Numerical Analysis of HiPPO-LegS ODE for Deep State Space Models",
+      "reason": "HiPPO-LegS ODEの数値解析というSSMの数学的基礎研究であり、推論システムへの具体的適用は示されていない。",
+      "source_url": "https://arxiv.org/abs/2412.08595",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "worklist_rank": 439,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2209.05948",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2209.05948",
+        "https://doi.org/10.48550/arXiv.2209.05948"
+      ],
+      "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+      "reason": "コード補完リクエストの低収益プロンプトを早期棄却して大規模モデルの計算浪費を防ぐ機構で、サービング段の計算削減には触れるが、対象は補完プロダクトの生産性改善が主目的のため境界とする。",
+      "source_url": "https://doi.org/10.48550/arXiv.2209.05948",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2016-1606.09274-compression-of-neural-machine-translation-models-via-pruning.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+        "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md"
+      ],
+      "worklist_rank": 257,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02214",
+      "identity_tokens": [
+        "arXiv:2607.02214",
+        "https://arxiv.org/abs/2607.02214"
+      ],
+      "title": "Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Models without Instruction Tuning",
+      "reason": "音声言語モデルを指示チューニングなしで得るための重み結合による学習手法であり、推論への具体的適用は確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.02214",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "worklist_rank": 229,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.12698",
+      "identity_tokens": [
+        "arXiv:2601.12698",
+        "https://arxiv.org/abs/2601.12698"
+      ],
+      "title": "A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization",
+      "reason": "SGLangから抽出した実カーネルを対象に、意味的リファクタリングでテンプレート化し探索型自動チューニングで最大3倍超の高速化を得るGPUカーネル最適化手法であり、推論フレームワークのカーネル改善へ直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2601.12698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "worklist_rank": 389,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2603.22267",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.22267",
+        "https://doi.org/10.48550/arXiv.2603.22267"
+      ],
+      "title": "TiCo: Time-Controllable Spoken Dialogue Model",
+      "reason": "発話時間を指定できる音声対話モデルの能力研究であり、LLM推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2603.22267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "worklist_rank": 474,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22425",
+      "identity_tokens": [
+        "arXiv:2505.22425",
+        "https://arxiv.org/abs/2505.22425"
+      ],
+      "title": "Scaling Reasoning without Attention",
+      "reason": "Mamba-2のSSD層で自己注意とKVキャッシュを排除し、固定メモリ・定数時間推論を実現する線形／再帰型言語モデルアーキテクチャであり、推論効率が中核の主張として評価されている。",
+      "source_url": "https://arxiv.org/abs/2505.22425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "worklist_rank": 470,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13890",
+      "identity_tokens": [
+        "arXiv:2609.13890",
+        "https://arxiv.org/abs/2609.13890"
+      ],
+      "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation",
+      "reason": "マルチエージェントコード生成で難易度に応じて通信トポロジーを選びトークンコストと成功率の釣り合いを取る選択器。コスト意識は推論費用に直結するが、対象はエージェントワークフロー層でありサービング機構ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.13890",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "worklist_rank": 487,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22588",
+      "identity_tokens": [
+        "arXiv:2510.22588",
+        "https://arxiv.org/abs/2510.22588"
+      ],
+      "title": "UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models",
+      "reason": "音声対話のスタイル制御用データセットの構築と微調整評価であり、推論システムへの貢献はない。",
+      "source_url": "https://arxiv.org/abs/2510.22588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "worklist_rank": 485,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05815",
+      "identity_tokens": [
+        "arXiv:2610.05815",
+        "https://arxiv.org/abs/2610.05815"
+      ],
+      "title": "Plan Canvas: Fixed Reasoning Regions for Continuous Language Flows",
+      "reason": "拡散型言語モデル（continuous language flows）で推論トレース領域を固定容量に分けるPlan Canvasの提案。推論パラダイム上の工夫ではあるが、評価は小規模グラフベンチマークの精度のみで、効率・システム面の検証がないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2610.05815",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "worklist_rank": 488,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2608.03112",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2608.03112",
+        "https://doi.org/10.48550/arXiv.2608.03112"
+      ],
+      "title": "Content-Aware Adaptive Token Pruning for Video-Language Models",
+      "reason": "映像内容の冗長度に応じてプルーニング率を適応させる学習不要の視覚トークン削減で、計算量を95%削減しつつ精度を改善しており、ビデオ言語モデルの推論効率化へ直接貢献する。",
+      "source_url": "https://doi.org/10.48550/arXiv.2608.03112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+        "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "worklist_rank": 393,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2511.21397",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2511.21397",
+        "https://doi.org/10.48550/arXiv.2511.21397"
+      ],
+      "title": "Understanding the Effects of Distractors on Reasoning Vision-Language Models",
+      "reason": "視覚的ディストラクタが推論VLMへ与える影響の分析・評価研究であり、推論システムへの技術的貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2511.21397",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "worklist_rank": 473,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2506.21875",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.21875",
+        "https://doi.org/10.48550/arXiv.2506.21875"
+      ],
+      "title": "WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild",
+      "reason": "エンドツーエンド音声LLMのベンチマーク構築であり、能力評価のみで推論システムへの貢献はない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2506.21875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-18T07:22:00+09:00",
+      "last_checked_at": "2026-11-18T07:38:55+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "worklist_rank": 232,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261118-0735-x01",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 35
+}
