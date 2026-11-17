@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-18 00:04:50 JST**
+> 自動生成: **2026-11-18 00:29:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-17 14:30:26 JST（9時間34分前）** |
+| 最終maintenance完了 | **11-17 14:30:26 JST（9時間59分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,7 +137,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **2** |
+| 直近6hのDiscovery run | **3** |
 | 直近6hのDiscovery本文確認・分類 | **32** |
 | 最終Research完了 | **11-15 23:58:00 JST** |
 | 最終Discovery完了 | **11-17 23:55:00 JST** |
@@ -146,9 +146,9 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 - Research: **11-15 23:58:00 JST** / worker — / run muse-research-20261115-b04-sust / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-trade-offs-in-on-device-intelligence.json
-- Discovery: **11-17 23:55:00 JST** / worker muse / run muse-discovery-20261117-prod-r01
-  - 本文確認・分類 **30件** / accept **10件** / unrelated+borderline **20件**
-  - evidence: .survey/import-inbox/pending/discovery/discovery-20261117-2355-muse-r01.json
+- Discovery: **11-17 23:55:00 JST** / worker muse / run muse-discovery-20261117-prod-r01::chunk-0001-of-0002
+  - 本文確認・分類 **20件** / accept **8件** / unrelated+borderline **12件**
+  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261117-2355-muse-r01--chunk-0001-of-0002.json
 
 ### Codex探索成果の反映状況
 
