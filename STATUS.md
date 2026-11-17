@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-17 11:41:17 JST**
+> 自動生成: **2026-11-17 11:59:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **562** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-15 23:58:00 JST** |
-| 最終Discovery探索完了 | **11-17 03:00:00 JST** |
+| 最終Discovery探索完了 | **11-17 10:30:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -103,12 +103,12 @@
 | 1周以上完了 | **3808** |
 | 巡回中 | **19** |
 | 未巡回 | **0** |
-| 今回run開始時due | **22** |
+| 今回run開始時due | **19** |
 | 前方引用から保持中の未処理候補 | **70942** |
 | エラー状態保持seed | **19** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-17 10:44:03 JST**
+- state最終更新: **11-17 11:46:53 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-17 09:48:51 JST（1時間52分前）** |
+| 最終maintenance完了 | **11-17 09:48:51 JST（2時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **0** |
-| 直近6hのDiscovery本文確認・分類 | **0** |
+| 直近6hのDiscovery run | **1** |
+| 直近6hのDiscovery本文確認・分類 | **1** |
 | 最終Research完了 | **11-15 23:58:00 JST** |
-| 最終Discovery完了 | **11-17 03:00:00 JST** |
+| 最終Discovery完了 | **11-17 10:30:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-15 23:58:00 JST** / worker — / run muse-research-20261115-b04-sust / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-trade-offs-in-on-device-intelligence.json
-- Discovery: **11-17 03:00:00 JST** / worker scheduled-chat-00 / run 20261117-0300-scheduled-chat-00/r01
+- Discovery: **11-17 10:30:00 JST** / worker scheduled-chat-30 / run 20261117-1030-scheduled-chat-30/r01
   - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_7134f895a3988191aa1c83620bc8f39e--discovery-20261117-0300-scheduled-chat-00-r01-partial.json
+  - evidence: .survey/import-inbox/pending/discovery/libfile_18f8679b45a48191894981b91a1d53fb--discovery-20261117-1030-scheduled-chat-30-r01.json
 
 ### Codex探索成果の反映状況
 
