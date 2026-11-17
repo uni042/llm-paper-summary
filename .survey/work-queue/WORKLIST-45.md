@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-16T23:51:08+00:00`
+Generated: `2026-11-17T00:21:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -133,7 +133,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 | 54 | 12 | 7 | 8 | arXiv:2504.05352 | Achieving binary weight and activation for LLMs using Post-Training Quantization | 2025-04-06 | Annual Meeting of the Association for Computational Linguistics | 2 | 9 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2504.05352) |
 | 55 | 20 | 7 | 8 | DOI:10.1109/ISCA66397.2026.00038 | QiMeng-Tensify: Scaling Up Tensor Computation Optimization via Architecture-Aware LLM-Guided MCTS | 2026-06-01 | International Symposium on Computer Architecture | 0 | 8 | PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/ISCA66397.2026.00038) |
 | 56 | 18 | 7 | 8 | arXiv:2505.24550 | A*-Thought: Efficient Reasoning via Bidirectional Compression for Low-Resource Settings | 2025-05-30 | Neural Information Processing Systems | 8 | 8 |  | [source](https://arxiv.org/abs/2505.24550) |
-| 57 | 102 | 7 | 8 | arXiv:2604.06916 | FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling | 2026-04-08 | arXiv.org | 2 | 8 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, training-reinforcement-learning-quantization, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2604.06916) |
+| 57 | 103 | 7 | 8 | arXiv:2604.06916 | FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling | 2026-04-08 | arXiv.org | 3 | 8 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, training-reinforcement-learning-quantization, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2604.06916) |
 | 58 | 10 | 7 | 7 | arXiv:2611.05611 | Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter | 2026-11-03 |  | 0 | 7 | 05-speculative-decoding-moe, inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的デコード／動的候補木／高同時実行LLMサービング | [source](https://arxiv.org/abs/2611.05611) |
 | 59 | 0 | 7 | 7 | SemanticScholar:3ce4934467503e25801e8bc7ab94425fb2d65380 | Smart Routing: Cost-Effective Multi-LLM Serving in AIOS |  |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, inference-systems | [source](https://www.semanticscholar.org/paper/3ce4934467503e25801e8bc7ab94425fb2d65380) |
 | 60 | 101 | 7 | 7 | arXiv:2607.20757 | GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries | 2026-07-22 | arXiv.org | 1 | 8 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2607.20757) |
