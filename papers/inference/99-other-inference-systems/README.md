@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（876本）
+## 自動生成の論文一覧（878本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2044,13 +2044,13 @@
   実装：✓ ・ リポジトリ内被引用：6  
   GMSAは、原文を文字列として間引くのではなく、少数の連続表現トークン（soft トークン）へ変換する文脈圧縮方式である。NaturalQuestionsの4倍圧縮では完全一致（Exact Match、EM）が58.12%で、元文脈をそのまま与える条件の15.07%を上回った。
 
+- **2025-04 · [Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models](2025-2405.14428-mitigating-quantization-errors-due-to-activation-spikes-in-gated-linear-.md)**  
+  実装：[✓](https://github.com/onnoo/activation-spikes) ・ リポジトリ内被引用：6  
+  Yangらは、SwiGLUなどのゲート付き線形ユニット（GLU）を用いる大規模言語モデルで、少数のトークン位置に非常に大きい活性化値が現れ、活性化の量子化スケールを過大にする現象を調べた。著者はLLaMA-2を中心にW8A8量子化の精度低下を軽減し、代表的なzero-shot指標で量子化ベースラインより約7〜16%の改善を報告する。
+
 - **2025-08 · [Towards Efficient and Practical GPU Multitasking in the Era of LLM](2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md)**  
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
   この論文は、GPUの単独実行（Singletasking）から多重実行（Multitasking）への移行を主張する設計論・立場論文（Position Paper）である。本文の「10%まで下がる利用率」やGPU世代間の成長率は背景の参考値であり、提案法がGPU使用率を何ポイント改善したという実験結果ではない。
-
-- **2025-04 · [Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models](2025-2405.14428-mitigating-quantization-errors-due-to-activation-spikes-in-gated-linear-.md)**  
-  実装：[✓](https://github.com/onnoo/activation-spikes) ・ リポジトリ内被引用：5  
-  Yangらは、SwiGLUなどのゲート付き線形ユニット（GLU）を用いる大規模言語モデルで、少数のトークン位置に非常に大きい活性化値が現れ、活性化の量子化スケールを過大にする現象を調べた。著者はLLaMA-2を中心にW8A8量子化の精度低下を軽減し、代表的なzero-shot指標で量子化ベースラインより約7〜16%の改善を報告する。
 
 - **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -2451,6 +2451,10 @@
 - **2025-09 · [SBVR: Summation of BitVector Representation for Efficient LLM Quantization](2025-2509.18172-sbvr-summation-of-bitvector-representation-for-efficient-llm-quantizatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの重みを4ビット程度へ圧縮する事後量子化では、表現可能な値を減らすことで重みの転送量を節約できる。ただしRTX 3090・バッチ1のTPOTはSBVR 10.24msに対しAWQ 8.61msで、速度の絶対首位ではない。
+
+- **2025-09 · [QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models](2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-for-parameter-efficien.md)**  
+  実装：[✓](https://github.com/vantaa89/qwha) ・ リポジトリ内被引用：0  
+  量子化誤差の大きいチャネルへ係数予算を寄せて初期化するウォルシュ・アダマール変換型の疎アダプタで、低ビット量子化モデルの適応精度を低ランク型より高め、変換型の学習の遅さも単一変換と加減算だけの核で解消した方式。
 
 - **2025-09 · [Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance](2025-2509.15704-pyramid-token-pruning-for-high-resolution-large-vision-language-models-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3018,6 +3022,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   ESPACEはこの順序を逆転させ、入力活性化を較正済みの低次元空間へ射影してから元の重みで学習し、推論時だけ結合則で圧縮重みへ置き換える。GPT3、Llama2、Nemotron4の複数モデルで、20〜55%程度の圧縮に対するPPL、下流精度、GEMMレイテンシ、プリフィル TTFTを評価する。
 
+- **2024-07 · [Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners](2024-2407.15508-compensate-quantization-errors-quantized-models-are-inquisitive-learners.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Compensate Quantization Errors+（CQE+）は、学習済み大規模言語モデルの重みを2〜4ビットへ量子化する際、量子化の整数格子に適した重み分布へ調整する方法を提案する。
+
 - **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：1  
   通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
@@ -3098,6 +3106,10 @@
   実装：[✓](https://github.com/amazon-science/Approximately-Aligned-Decoding) ・ リポジトリ内被引用：0  
   Approximately Aligned Decoding（AprAD）は、大規模言語モデルの生成途中で禁止文字、構文違反、存在しないAPIの呼び出しなどを検出したとき、生成済み接頭辞をどこまで残して再開するかを投機的サンプリング（投機的 sampling）の受理・棄却計算で決める方式である。
 
+- **2024-09 · [PASS: Pruning Attention Heads with Almost-sure Sparsity Targets](2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md)**  
+  実装：[✓](https://github.com/DujianDing/PASS) ・ リポジトリ内被引用：0  
+  ゲートの閉じ・開き確率を確率1へ二極化させる「ほぼ確実な疎さ」で、閾値調整なしに指定本数どおり注意ヘッドを枝刈りし、残すヘッドを少数層へ集中させて層ごと省略できるようにした枝刈り方式。
+
 - **2024-09 · [Internalizing ASR with Implicit Chain of Thought for Efficient Speech-to-Speech Conversational LLM](2024-2409.17353-internalizing-asr-with-implicit-chain-of-thought-for-efficient-speech-to.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声入力から音声出力を生成する大規模言語モデルでは、音声を文字へ転写し、文字で回答を考え、再び音声へ変換する方式が使われる。RTX 3090を使った測定では、初回出力音声トークンの遅延が1.09秒から0.87秒へ低下した。
@@ -3113,10 +3125,6 @@
 - **2024-07 · [Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference](2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md)**  
   実装：[✓](https://github.com/oshindutta/TVAprune) ・ リポジトリ内被引用：0  
   TVA-Pruneは、大規模言語モデルの注意ヘッド、フィードフォワード層の中間次元、トークン表現の隠れ次元を構造的に削除する圧縮方式である。A100 40GBでLLaMA-2-7Bを枝刈りした条件では、無圧縮のWikiText2困惑度5.11に対し、TVA-Pruneの困惑度は14.15へ悪化するが、推論速度は1.8倍となる。
-
-- **2024-07 · [Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners](2024-2407.15508-compensate-quantization-errors-quantized-models-are-inquisitive-learners.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Compensate Quantization Errors+（CQE+）は、学習済み大規模言語モデルの重みを2〜4ビットへ量子化する際、量子化の整数格子に適した重み分布へ調整する方法を提案する。
 
 - **2024-07 · [Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models](2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3473,7 +3481,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：260  
+  実装：✓ ・ リポジトリ内被引用：261  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  

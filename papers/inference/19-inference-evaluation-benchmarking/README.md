@@ -451,7 +451,7 @@
   著者らは推論をモデルパラメータ数だけで比較する慣習にも疑問を投げかけ、層の深さ、注意・フィードフォワードの並列化、バッチ数、量子化形式の実行実装を分けて検証した。
 
 - **2024-09 · [Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview](2024-2409.11650-art-and-science-of-quantizing-large-scale-models-a-comprehensive-overvie.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   本論文は、大規模モデルの量子化（量子化）を、重みと活性値の数値表現、学習後量子化（post-学習 量子化; PTQ）、量子化認識学習（量子化-aware 学習; QAT）、知識蒸留（knowledge distillation）、鍵・値キャッシュ（key-value キャッシュ; KV キャッシュ）の圧縮という複数の切り口から整理した概説論文である。
 
 ### 4年前（2022-12〜2023-11）

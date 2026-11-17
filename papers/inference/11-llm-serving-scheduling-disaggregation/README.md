@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（526本）
+## 自動生成の論文一覧（527本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1720,6 +1720,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   SLINFERは、個別モデルへの要求が少なく断続的に発生する私設大規模言語モデル（LLM）サービスを対象に、CPUとGPUの両方を推論実行先として扱い、同一ノードで複数モデルを弾力的に共有するシステムである。論文の事前調査では、ServerlessLLMで各インスタンスへGPU全体を割り当てたときの平均GPUメモリ利用率が23%にとどまる条件が示される。
 
+- **2025-07 · [Toppings: CPU-Assisted, Rank-Aware Adapter Serving for LLM Inference](2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アダプタ読み込みの裏でCPUに適応計算を先行させて読み込み待ちを隠し、ランクからデコード遅延を予測する性能モデルで要求の配置先を選ぶことで、多人数向けアダプタ提供の平均遅延を最大1.7倍改善し、目標達成率99パーセントを達成した提供基盤。
+
 - **2025-07 · [MoLink: Distributed and Efficient Serving Framework for Large Models](2025-2507.05043-molink-distributed-and-efficient-serving-framework-for-large-models.md)**  
   実装：[✓](https://github.com/oldcpple/MoLink) ・ リポジトリ内被引用：0  
   MoLinkは、専用の高速相互接続を持たないGPUを複数台集め、大きな言語モデルをパイプライン並列で提供するシステムである。100 Mbps・往復遅延10 ms・毎秒1要求のとき、MoLinkは196.142 トークン/sで、Petals 45.343、vLLM 135.86を上回る。
@@ -1783,7 +1787,7 @@
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：121  
+  実装：✓ ・ リポジトリ内被引用：122  
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
 - **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  

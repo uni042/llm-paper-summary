@@ -826,13 +826,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/ScaledFoundations/MatMamba) ・ リポジトリ内被引用：1  
   MatMambaは最大サイズのモデルの先頭部分に小さなモデルのパラメータを含める構造を採り、複数の粒度を共同学習することで、モデルの再学習なしにサイズを選べるようにする。原著§4.1.2は計算量を55%減らしつつ、検索精度の低下を0.5%未満に抑えた例を報告する。
 
+- **2024-09 · [Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference](2024-2409.20361-rotated-runtime-smooth-training-free-activation-smoother-for-accurate-in.md)**  
+  実装：[✓](https://github.com/Coco58323/Rotated_Runtime_Smooth) ・ リポジトリ内被引用：1  
+  大規模言語モデルの重みと活性値をともに四ビットへ量子化すれば、行列積を低精度演算器で実行でき、重みだけを圧縮する方式よりも演算費用を減らせる可能性がある。一方、論文の速度評価は主に単一の融合行列積カーネルであり、モデル全体の生成速度や電力削減を実証したものではない。
+
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   前者は8ビット整数（int8）へ量子化すると、整数積和演算器を高密度に並べたシストリック配列（systolic array）で効率よく実行できる。比較する既存FPGA研究に対してエンドツーエンド処理量最大1.45倍、DSP当たりの効率最大2.29倍、GPUとの比較ではRTX 4090に対し特定BERT条件で電力効率2.19倍を示す。
-
-- **2024-09 · [Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference](2024-2409.20361-rotated-runtime-smooth-training-free-activation-smoother-for-accurate-in.md)**  
-  実装：[✓](https://github.com/Coco58323/Rotated_Runtime_Smooth) ・ リポジトリ内被引用：0  
-  大規模言語モデルの重みと活性値をともに四ビットへ量子化すれば、行列積を低精度演算器で実行でき、重みだけを圧縮する方式よりも演算費用を減らせる可能性がある。一方、論文の速度評価は主に単一の融合行列積カーネルであり、モデル全体の生成速度や電力削減を実証したものではない。
 
 - **2024-09 · [Efficiently Dispatching Flash Attention For Partially Filled Attention Masks](2024-2409.15097-efficiently-dispatching-flash-attention-for-partially-filled-attention-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -845,7 +845,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：521  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：522  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -925,7 +925,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：39  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-12〜2018-11）

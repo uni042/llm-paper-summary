@@ -35,10 +35,15 @@
   "selection_reason": "USENIX ATC 2025のToppingsは基盤LLMをGPUへ常駐させ、LoRAアダプタ転送中のprefill補正をCPUで並行処理し、転送後GPUへ移す。ランク認識SLOスケジューリングにより遅延最大1.7倍改善・SLO達成率最大99%を報告するmulti-LoRAサービング研究。",
   "semantic_scholar_id": "69d631b3875149050ab3088501cfc9d5cbea9e99",
   "source_url": "https://www.semanticscholar.org/paper/69d631b3875149050ab3088501cfc9d5cbea9e99",
-  "status": "ready",
+  "status": "superseded",
   "title": "Toppings: CPU-Assisted, Rank-Aware Adapter Serving for LLM Inference",
   "type": "research",
   "venue": "USENIX Annual Technical Conference",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-17T23:23:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-4c4870e17ce2-toppings-cpu-assisted-rank-aware-adapter-serving-for-llm-inference.md",
+  "represented_canonical_id": "SemanticScholar:69d631b3875149050ab3088501cfc9d5cbea9e99",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
