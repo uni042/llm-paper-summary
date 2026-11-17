@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-17T14:28:12+00:00`
+Generated: `2026-11-17T15:11:19+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -73,8 +73,8 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **129149** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122871** / 監査再投入 **0** / 機械規則適用後 **125541** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **129153** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122875** / 監査再投入 **0** / 機械規則適用後 **125545** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -180,7 +180,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 | 100 | 20 | 6 | 8 | arXiv:2604.15732 | Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving | 2026-04-17 | EuroMLSys@EuroSys | 0 | 9 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, Long-context serving / KV cache benchmark, inference-systems | [source](https://arxiv.org/abs/2604.15732) |
 | 101 | 103 | 6 | 8 | arXiv:2606.24165 | Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models | 2026-06-23 | European Conference on Computer Vision | 3 | 10 |  | [source](https://arxiv.org/abs/2606.24165) |
 | 102 | 10 | 6 | 8 | arXiv:2610.24499 | TideKV: Delayed KV eviction via layer-wise chunked prefill for memory-efficient long-context LLM inference | 2026-10-17 | Journal of systems architecture | 0 | 8 | KV Cache Offload / Recomputation, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.24499) |
-| 103 | 2 | 6 | 8 | arXiv:2508.03726 | Hierarchical Verification of Speculative Beams for Accelerating LLM Inference | 2025-07-30 | arXiv.org | 2 | 8 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2508.03726) |
+| 103 | 2 | 6 | 8 | arXiv:2508.03726 | Hierarchical Verification of Speculative Beams for Accelerating LLM Inference | 2025-07-30 | arXiv.org | 2 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2508.03726) |
 | 104 | 10 | 6 | 8 | arXiv:2610.32009 | GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning | 2026-10-23 |  | 0 | 8 | MoE compression / expert matrix decomposition / shared basis reparameterization, MoE compression / expert pruning / neuron-level recombination / expert reconstruction, MoE圧縮 / expert merging / subspace alignment / SVD / adaptive clustering, MoE専門家圧縮 / ルータ維持型低ランク分解 / 専門家共活性クラスタリング / 推論計算償却, adaptive expert computation / expert-neuron pruning / structured MoE compression | [source](https://arxiv.org/abs/2610.32009) |
 | 105 | 0 | 6 | 8 | SemanticScholar:a44462bf27c68cf1265dcef4400d2e7e5d9e46f6 | STIP: Secure Three-Party Transformer Inference Protocol with Lossless Accuracy and Millisecond-Level Latency |  |  | 0 | 8 | 99-other-inference-systems, Weight Quantization / Compression, sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/a44462bf27c68cf1265dcef4400d2e7e5d9e46f6) |
 | 106 | 101 | 6 | 8 | arXiv:2607.23264 | X-Stage: Modeling Post-Issue Backpressure in GPU Communication--Computation Fusion | 2026-07-25 |  | 1 | 10 | inference-systems, その他システム研究, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2607.23264) |

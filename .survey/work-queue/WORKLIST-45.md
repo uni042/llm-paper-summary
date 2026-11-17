@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-17T14:28:12+00:00`
+Generated: `2026-11-17T15:11:19+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -72,8 +72,8 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **129149** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122871** / 監査再投入 **0** / 機械規則適用後 **125541** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **129153** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122875** / 監査再投入 **0** / 機械規則適用後 **125545** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -96,7 +96,7 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **52**
 | 17 | 0 | 9 | 14 | SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df | KBVQ-M O E: KLT-GUIDED SVD WITH B IAS - C ORRECTED V ECTOR Q UANTIZATION FOR M O E |  |  | 0 | 14 | MoE圧縮 / expert merging / subspace alignment / SVD / adaptive clustering, Quantization × MoE × Offload, Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://www.semanticscholar.org/paper/99738f798827c4e360223c4182a7a766c9a522df) |
 | 18 | 10 | 9 | 10 | DOI:10.1109/IWQoS70441.2026.11661114 | UPServe: Backend Agnostic Proxy for Black-box Heterogeneous LLM Scheduling | 2026-06-01 | International Workshop on Quality of Service | 0 | 11 | 02-hardware-accelerators, LLM Serving / Scheduling / Disaggregation, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, llm-serving-scheduling-disaggregation, serving-scheduling | [source](https://doi.org/10.1109/IWQoS70441.2026.11661114) |
 | 19 | 10 | 9 | 9 | arXiv:2610.11750 | Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding | 2026-10-08 |  | 0 | 10 | inference-systems, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.11750) |
-| 20 | 4 | 8 | 19 | arXiv:2508.03351 | SalQ-VLM: Fine-Grained Saliency-Guided Quantization for Vision-Language Models | 2025-08-05 | arXiv.org | 4 | 22 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2508.03351) |
+| 20 | 15 | 8 | 19 | DOI:10.48550/arXiv.2508.03351 | VLMQ: Efficient Post-Training Quantization for Large Vision-Language Models via Hessian Augmentation | 2025-08-05 | arXiv.org | 15 | 23 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://doi.org/10.48550/arXiv.2508.03351) |
 | 21 | 10 | 8 | 16 | arXiv:2610.18451 | FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving | 2026-10-13 |  | 0 | 16 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM inference serving / parameter-centric GPU memory management, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.18451) |
 | 22 | 101 | 8 | 15 | arXiv:2604.07173 | InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models | 2026-04-08 | Workshop Proceedings of the 55th International Conference on Parallel Processing | 1 | 15 | LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, inference-systems, llm-serving-scheduling-disaggregation, many-adapter LLM serving / LoRA serving / inference scheduling, moe-parallelism-communication | [source](https://arxiv.org/abs/2604.07173) |
 | 23 | 10 | 8 | 14 | DOI:10.1109/ASP-DAC66049.2026.11420717 | CoLoRA: A Collaborative Scheduling Framework for Multi-Tenant LoRA LLM Inference | 2026-01-19 | Asia and South Pacific Design Automation Conference | 0 | 14 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, LLMサービング／スケジューリング, inference-systems, kv-cache-optimization-compression, llm-serving-scheduling-disaggregation, many-adapter LLM serving / LoRA serving / inference scheduling, multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling | [source](https://doi.org/10.1109/ASP-DAC66049.2026.11420717) |

@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-17T14:28:12+00:00`
+Generated: `2026-11-17T15:11:19+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -73,12 +73,12 @@ ready総数: **158** / 未claim総数: **158** / このworker向け: **53**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **129149** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **122871** / 監査再投入 **0** / 機械規則適用後 **125541** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **129153** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **122875** / 監査再投入 **0** / 機械規則適用後 **125545** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
-| 1 | 0 | 48 | 52 | SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112 | Speculative Decoding and Beyond: An In-Depth Review of Techniques |  |  | 0 | 53 | 05-speculative-decoding-moe, 06-speculative-decoding, Conditional Computation, Speculative Decoding, inference-systems, speculative decoding / heterogeneous CPU-GPU inference / consumer hardware, 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的デコード・バッチ推論, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留, 投機的復号・補助モデル不要のN-gram候補生成 | [source](https://www.semanticscholar.org/paper/0714adf1ed0529190998000c7965d8db1ffd6112) |
+| 1 | 0 | 48 | 52 | SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112 | Speculative Decoding and Beyond: An In-Depth Review of Techniques |  |  | 0 | 54 | 05-speculative-decoding-moe, 06-speculative-decoding, Conditional Computation, Speculative Decoding, inference-systems, speculative decoding / heterogeneous CPU-GPU inference / consumer hardware, 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的デコード・バッチ推論, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留, 投機的復号・補助モデル不要のN-gram候補生成 | [source](https://www.semanticscholar.org/paper/0714adf1ed0529190998000c7965d8db1ffd6112) |
 | 2 | 0 | 15 | 33 | SemanticScholar:83ed89b3781db80ec170d5d95af594379401ea89 | This paper is included in the Proceedings of the 23rd USENIX Conference on File and Storage Technologies. |  |  | 0 | 19 | KV cache quantization / long-context inference / activation compression, KVキャッシュ・注意アーキテクチャ, KVキャッシュ再利用／圧縮／ネットワーク転送, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers | [source](https://www.semanticscholar.org/paper/83ed89b3781db80ec170d5d95af594379401ea89) |
 | 3 | 4 | 15 | 19 | SemanticScholar:f2f88de3b46d64383509d5b64ec22cc0d92e613f | Nexus: Taming Throughput-Latency Tradeoff in LLM Serving via Efficient GPU Sharing |  |  | 4 | 20 | 02-hardware-accelerators, KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, kernel-runtime-compilation, llm-serving-scheduling-disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング | [source](https://www.semanticscholar.org/paper/f2f88de3b46d64383509d5b64ec22cc0d92e613f) |
 | 4 | 10 | 14 | 15 | arXiv:2611.04313 | Coarse Semantic Blocks for Efficient Training-Free Sparse Attention | 2026-11-03 |  | 0 | 15 | 13-sparse-attention, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。, inference-systems, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2611.04313) |
