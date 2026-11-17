@@ -1,0 +1,98 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-discovery-20261118-0735-x03",
+ "reference_main_sha": "b10e46ab0a15853b641644228991f14f4030a894",
+ "record_count": 4,
+ "records": [
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.08463",
+   "identity_tokens": [
+    "arXiv:2610.08463",
+    "https://arxiv.org/abs/2610.08463"
+   ],
+   "title": "UNREAL: Unifying Retrieval and Long-Context with a Single Model",
+   "reason": "凍結LLMの内部表現から検索クエリを導くモデル内蔵の証拠選択で、コーパス検索と長文脈推論を統一し、注意散漫要素の除去により長文脈精度を上げつつFLOPsとTTFTを削減する、長文脈推論の効率化機構が一次要旨で具体的。",
+   "source_url": "https://arxiv.org/abs/2610.08463",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-18T08:01:00+09:00",
+   "last_checked_at": "2026-11-18T07:53:01+09:00",
+   "linked_from": [
+    "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+    "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+    "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md",
+    "papers/inference/13-sparse-attention/2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md"
+   ],
+   "worklist_rank": 238,
+   "worklist_source": "worker-worklist-00.json discovery_review"
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2610.19232",
+   "identity_tokens": [
+    "arXiv:2610.19232",
+    "https://arxiv.org/abs/2610.19232"
+   ],
+   "title": "Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion",
+   "reason": "密モデルをMoEへ変換する際に層ごとの活性専門家数（利用率）を静的・動的に配分し、推論時の演算コスト削減と性能の釣り合いを均一配分より改善する、推論向けモデル変換の研究。",
+   "source_url": "https://arxiv.org/abs/2610.19232",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-18T08:01:00+09:00",
+   "last_checked_at": "2026-11-18T07:53:01+09:00",
+   "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md"
+   ],
+   "worklist_rank": 253,
+   "worklist_source": "worker-worklist-00.json discovery_review"
+  },
+  {
+   "classification": "accept",
+   "canonical_id": "arXiv:2602.18846",
+   "identity_tokens": [
+    "arXiv:2602.18846",
+    "https://arxiv.org/abs/2602.18846"
+   ],
+   "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+   "reason": "視覚エンコーダ出力の冗長性圧縮と、言語バックボーン内でのテキスト誘導型トークン除去を組み合わせ、視覚トークンを67〜89%削減しつつ精度を保持する、VLM推論にも適用される二段トークン削減機構が具体的。",
+   "source_url": "https://arxiv.org/abs/2602.18846",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-18T08:01:00+09:00",
+   "last_checked_at": "2026-11-18T07:53:01+09:00",
+   "linked_from": [
+    "papers/inference/99-other-inference-systems/2022-2107.00910-learned-token-pruning-for-transformers.md",
+    "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+    "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+    "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
+   ],
+   "worklist_rank": 254,
+   "worklist_source": "worker-worklist-00.json discovery_review"
+  },
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2502.12784",
+   "identity_tokens": [
+    "arXiv:2502.12784",
+    "https://arxiv.org/abs/2502.12784"
+   ],
+   "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture",
+   "reason": "Volta GPUのテンソルコア向けに多頭注意を高速化するライブラリだが、対象はTransformerの学習時間短縮であり、推論への具体的適用は示されていない（学習のみの高速化は範囲外）。",
+   "source_url": "https://arxiv.org/abs/2502.12784",
+   "body_check": "abstract_screen_only; body_not_read",
+   "first_checked_at": "2026-11-18T08:01:00+09:00",
+   "last_checked_at": "2026-11-18T07:53:01+09:00",
+   "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+    "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+   ],
+   "worklist_rank": 308,
+   "worklist_source": "worker-worklist-00.json discovery_review"
+  }
+ ]
+}
