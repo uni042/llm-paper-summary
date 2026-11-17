@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-18 07:32:28 JST**
+> 自動生成: **2026-11-18 07:49:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **562** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-15 23:58:00 JST** |
-| 最終Discovery探索完了 | **11-17 23:55:00 JST** |
+| 最終Discovery探索完了 | **11-18 07:38:55 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-17 14:30:26 JST（17時間2分前）** |
+| 最終maintenance完了 | **11-17 14:30:26 JST（17時間19分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **0** |
-| 直近6hのDiscovery本文確認・分類 | **0** |
+| 直近6hのDiscovery run | **2** |
+| 直近6hのDiscovery本文確認・分類 | **35** |
 | 最終Research完了 | **11-15 23:58:00 JST** |
-| 最終Discovery完了 | **11-17 23:55:00 JST** |
+| 最終Discovery完了 | **11-18 07:38:55 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-15 23:58:00 JST** / worker — / run muse-research-20261115-b04-sust / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/2026-2603.26603-sustainability-is-not-linear-quantifying-performance-energy-and-privacy-trade-offs-in-on-device-intelligence.json
-- Discovery: **11-17 23:55:00 JST** / worker muse / run muse-discovery-20261117-prod-r01::chunk-0001-of-0002
-  - 本文確認・分類 **20件** / accept **8件** / unrelated+borderline **12件**
-  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261117-2355-muse-r01--chunk-0001-of-0002.json
+- Discovery: **11-18 07:38:55 JST** / worker muse / run muse-discovery-20261118-0735-x01::chunk-0001-of-0002
+  - 本文確認・分類 **20件** / accept **4件** / unrelated+borderline **16件**
+  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261118-0738-muse-x01--chunk-0001-of-0002.json
 
 ### Codex探索成果の反映状況
 
