@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（75本）
+## 自動生成の論文一覧（76本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -271,6 +271,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-08 · [COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives](2025-2509.00599-comet-a-framework-for-modeling-compound-operation-dataflows-with-explici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   原著はLlama-3とGPT-2由来の演算形状を使い、GEMM-Softmax、GEMM-LayerNorm、self-注意機構を、edge/cloudの二つの仮想アクセラレータ構成で評価する。非融合のデータフローを基準に、最適化したマッピングの幾何平均速度比は順に1.42倍、3.46倍、1.82倍と報告する。
+
+- **2025-08 · [Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers](2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意の書き込み規則が古典的条件付けの学習モデルと項ごとに一致することを示し、ブロッキングや消去や容量の法則を導出と測定で分け、誤差訂正型だけが手がかり競合を示すことと、状態容量の2体制を確かめた対応辞書の研究。
 
 - **2025-07 · [Temporal-Aware GPU Resource Allocation for Distributed LLM Inference via Reinforcement Learning](2025-2507.10259-temporal-aware-gpu-resource-allocation-for-distributed-llm-inference-via.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
