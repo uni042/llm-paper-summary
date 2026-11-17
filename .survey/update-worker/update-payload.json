@@ -1,50 +1,278 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261029T234000-oct28",
+  "attempt_id": "muse-fwllm-20261118",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "llm-releases/liquid-ai.md",
-      "content": "# Liquid AI LFM3 / d1\n\nLiquid AIが2026-10-27に公開した、用途別のopen-weight LFM3 familyをまとめる。公式発表は6つの派生モデルを示し、共通基盤のLFM3-1.7B-Baseを加えると少なくとも7系統のcheckpointがある。\n\n| 公開日 | モデル | 主な用途・仕様 | 提供形態・注意 |\n|---|---|---|---|\n| 2026-10-27 | LFM3-1.7B-Base | 共通基盤となるtext model | open-weight。各checkpointの配布形式を個別確認 |\n| 2026-10-27 | LFM3-1.7B | text・tool use・構造化出力。1.73B parameters、24 layers、128K語彙、事前学習22T tokens | LFM Open License v1.0。4bit版のweight footprintは約1GBとの公式説明 |\n| 2026-10-27 | LFM3-VL-2B | 画像・動画対応 | モダリティと実行対応をcheckpointごとに確認 |\n| 2026-10-27 | LFM3-Audio-2B | 音声用途 | checkpoint固有の音声入出力条件を確認 |\n| 2026-10-27 | LFM3-Omni-2B | 音声・画像・動画を統合 | 配布形式とruntime対応はvariantごとに確認 |\n| 2026-10-27 | d1-2B | 判断・agent用途 | Ollama v0.40.12はこのreleaseでApple hardware対応と案内 |\n| 2026-10-27 | d1-omni-2B | 音声付き判断・agent用途 | モダリティ別のruntime対応を確認 |\n\n## LFM3-1.7Bの構造\n\ntext版は13層のgated short convolution、5層のsliding-window attention（window 256 tokens）、6層のglobal attentionを組み合わせるtri-hybrid architecture。model全体のcontext lengthは256K tokensで、SWAの256-token windowとは別の値である。最大contextでの実行可能性や必要RAM/VRAMはKV cacheとruntime設定に依存する。\n\n公式のLFM Open License v1.0を適用する。Apache-2.0やMITと読み替えない。4bit text checkpointの約1GBはweight footprintであり、長contextを動かすための総メモリ量ではない。\n\n## 評価と実行互換性\n\nLiquid AIはWebArena-Verifiedで38.42を報告し、比較としてLFM2.5-2.6Bの3.02を示す。著者評価はbenchmark構成・agent harnessに依存し、独立再現や全タスクでの優位を意味しない。Q4_0 GGUFを用いた著者のedge比較はRyzen AI Max+ 395、Apple M5 Max、iPhone 17 Proで行われたもので、RTX 4070 SUPERの性能へ外挿できない。\n\n公式model cardはTransformers利用を案内する。GGUFはLFM3対応のllama.cpp buildが必要。FP8のSGLang対応は確認時点でPR審査中であり、現行stable release全般で使えるとは限らない。Ollama v0.40.12はLFM3およびd1 2BのApple hardware対応を告知し、Linux/Windows対応は今後としている。\n\n## 一次資料\n\n- [Liquid AI公式発表](https://www.liquid.ai/blog/lfm3)\n- [Liquid AI Hugging Face記事](https://huggingface.co/blog/LiquidAI/lfm3)\n- [LFM3-1.7B model card](https://huggingface.co/LiquidAI/LFM3-1.7B)\n- [LFM3-1.7B-Base model card](https://huggingface.co/LiquidAI/LFM3-1.7B-Base)\n- [LFM3 GGUF model card](https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF)\n- [LFM3 FP8 model card](https://huggingface.co/LiquidAI/LFM3-1.7B-FP8)\n"
-    },
-    {
-      "path": "llm-releases/README.md",
-      "expected_blob_sha": "03cc4f54b414ae93a576cee68dbe0241c7be3aa1",
+      "path": "framework-updates/inference-engines/vllm/README.md",
+      "expected_blob_sha": "ea15cdbd29fdc47dab8b49d722c56b513df849ad",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "| 2026-10-21 | Recursive Flint",
-          "text": "| 2026-10-27 | Liquid AI LFM3 / d1 | Liquid AI | 1.73B text tri-hybridを含む用途別6派生とbase。text modelは256K context、LFM Open License v1.0。Ollama v0.40.12のLFM3/d1 2B対応はApple hardware限定。 | [Liquid AI系](liquid-ai.md) |\n"
-        },
+          "anchor": "## 2026-10-18 — v0.32.0（正式版）",
+          "text": "## 2026-11-16 — v0.34.0（正式版）\n\n- 1,061 commits / 412 contributors。**Extensible KV cacheがデフォルト有効**になり、warmupとCUDA graph capture後に実際に空いているmemoryからKV cacheサイズを決める。`gpu_memory_utilization`のデフォルトは1.0。公式例ではMiniMax-M3（H200）でKV容量が433k→672k tokensへ拡大し高concurrencyでthroughput向上・TTFT低下、一方で一部モデルではTPOTがconcurrency 128で+6〜18%になり得ると明記されている。無効化は `--gpu-memory-utilization 0.9` または `--no-enable-extensible-kv-cache`。\n- **Breaking change**: Model Runner V1を削除しMRV2のみ（`VLLM_USE_V2_MODEL_RUNNER=0`は起動時エラー）。デフォルト `--block-size` が16→64（ROCm paged attentionは16のまま）。**ROCm 7.2の成果物を廃止しROCm 10.0のみ**。`huggingface_hub>=2.0.0`必須。QuTLASS / `fp_quant` とMarlin W4A8を削除（checkpointが読めなくなるものを含む）。\n- 新モデル: Mistral Large 4（1T total / 52B active、FP8・NVFP4）、MiniMax-M3.1-Flash、Liquid AI LFM3系、Ripple-65B Preview等10モデル。\n- speculative decoding: Suffix decodingがMRV2で動作しArctic Inferenceが不要に。custom speculator向けの宣言的configとプラグインAPI、draft KV cacheのdtypeをtargetへ一致（FP8 target→FP8 draft cache）。\n- serving: DP+EPのfault-tolerant scale-down（dead rankを再起動なしで除去しexpert再配置）、checkpoint/restore（CRIU + cuda-checkpoint）、cache-aware admission（opt-in）。\n- 公式benchmark（著者報告・条件付き）: Step5 NVFP4 MoE on TRTLLM-Genでdecode最大1.95倍（4×GB200）、GLM-5.3-Flashのtoken-sharded sparse-MLA prefillでTTFT 1.24〜1.40倍（GB200、32K〜128K）。hardware・モデル・入力長に依存する値であり、一般化しない。\n- [v0.34.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.34.0)\n\n## 2026-11-02 — v0.33.0（正式版）\n\n- **CUDA 12.9のwheel・`-cu129`イメージを廃止し、CUDA 13.0 only**へ移行（breaking）。PyTorch 2.14.0 / Triton 3.8.0へ更新。ROCmはデフォルト10.0（7.2は `-rocm72` で継続、この版限り）。GitHub Releaseのタグは `v0.33.0rc3` だが、notes見出しと扱いは正式版v0.33.0。\n- 新モデル: Reflection Beam-1.0（501B MoE / 23B active、DFlash2 drafter付き）、Recursive Flint、Muse Spark Open、Step-5 Preview、MiniCPM-OCR 1.0等。\n- speculative decoding: block-diffusion drafter（DFlash / DSpark等）向けXPress refinerを新設。opt-inのlossy verification「FLy」はMI355X / B300でdecode throughput 1.04〜1.31倍（公式PR benchmark）。DSparkのdraft slot予約廃止によりDeepSeek-V4.1-Flash + DSpark（GB300）で1,373→3,390 output tok/s（公式PR benchmark）。\n- KV cache: EAGLE/MTPのprefix-cache hitを保つlookahead block hashesがデフォルト有効。ROCm向け3〜4bit KV cache（ROCM_OCTAVE、RX 7900 XTXでfp16比4.6倍のKV tokens、著者報告）。\n- **Breaking change**: Medusa / MLP speculator削除、legacy Ray compiled-graph executor削除、NIXLは1.5以上が必須。生成一時停止中のrequestはHTTP 503を返す。\n- [v0.33.0 release](https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/sglang/README.md",
+      "expected_blob_sha": "08ed4f3cd2706ef80da84d42bb90988ad0d63660",
+      "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "- [Recursive系](recursive.md)",
-          "text": "- [Liquid AI系](liquid-ai.md)\n"
+          "anchor": "## 2026-10-19 — v0.5.22（正式版）",
+          "text": "## 2026-11-03 — v0.5.23（正式版）\n\n- 1,007 PRs / 257 contributors。新モデル: Muse Spark Open、Beam-1.0、MiniMax-M3.1-Flash、MiniCPM-V 4.7等。Google TPU7x対応（SGLang-TorchTPUプラグイン経由）。DockerはCUDA 13、ROCm 10等を提供。FlashInfer 0.7.2へ更新。\n- 公式benchmark（著者報告・条件付き）: DeepSeek-V4.1（GB300）で負荷時prefill throughput最大1.5倍、32K〜64K promptでfirst-token latency約28%低下。low-latency modeのmegakernel / monokernel（opt-in）でDeepSeek-V4.1-Flashのsingle-user decodeがGB300で最大44%、MI350Xで75%高速化。MoEモデルではFlashInfer CUTLASS MoE autotuneのprefill拡張でH200・8K promptのTTFTが30〜58%低下する一方、初回起動時のautotuneが長くなる副作用が明記されている（DeepSeek-V4.1-Flash、8×H200で約41秒→約177秒、保存後は再利用）。\n- Paged Experts（opt-in）でGPU memoryを超えるMoEを単一consumer GPUで実行可能に（CPU offload比最大30倍、著者報告）。\n- KV / prefix cache: DeepSeek系MLA + decode context parallelismでprefix cacheをHiCacheのfile-based L3へ保持可能に。\n- **Breaking change**: DeepSeek-V4 / V4.1のchatがdeepseek-recipe準拠へ変更（自前encoding削除、tool-call id形式変更）。DeepSeek-V4.1はPD時にMegaAttentionがデフォルトとなり、prefill / decodeの同時アップグレードが必須。decoder SWA bounded replayがデフォルト有効（full prefillと数値的に同一ではない）。`tokenspeed_mla` backend、`--speculative-skip-dp-mlp-sync`、`kitchen_int8`量子化名、legacy tar形式 `.pt` checkpoint読み込みを削除。\n- [v0.5.23 release](https://github.com/sgl-project/sglang/releases/tag/v0.5.23)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
+      "expected_blob_sha": "e636c680ec068755ad4ba9f5a52172db273984e1",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "### 2026-10-22 — TensorRT-LLM v1.4.0rc1（公開候補版）",
+          "text": "### 2026-11-07 — TensorRT-LLM v1.4.0rc3（公開候補版）\n\n- 新モデル: Muse Spark Open、GLM-5.2 NVFP4 Modeling V2（GB300 / SM103）、MiniMax-M3 NVFP4 low-latency decode（Blackwell）、MiniMax-M3.1-Flash DSpark、Kimi K3 native modeling統合＋NVFP4 KV cache、DeepSeek-V4.1-Flash on SM120、LTX-2.3等。\n- 機能: unified KV cache manager基盤（sparse attention arena / host-backed pool）、native sparse MLA（DeepSeek-V4）、DSA Vanilla sparse attention、native FP8 MoE LoRA、DynamicEPLB、one-model speculative decoding最適化、Blackwell向けQwen3.5 / Qwen3.8-Flash-Next / GLM-5.3-Flash高速化。\n- **BREAKING**: 未使用LlmRequestフィールド削除、旧TensorRT-backend互換面削除、serving frontendのデフォルト変更。\n- Known Issuesとして、DSAモデル（GLM-5.2含む）のNVFP4 KV cacheでの誤出力可能性、Kimi K3 DSpark＋MegaMoE＋CUDA graphsでのGB300 warmup中hang可能性等が明記されている。release notes内に公式benchmark数値の記載はない。\n- [公式release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc3)\n\n### 2026-10-29 — TensorRT-LLM v1.4.0rc2（公開候補版）\n\n- Python wheelは1.4.0rc2.post1として公開（wheel-only patch）。コンテナ／文書は1.4.0rc2のまま。\n- 新モデル: GLM-5.2 NVFP4 low-latency decode on Rubin（Modeling V2）、MiniMax-M3 on Rubin、Qwen3.8-Flash-Next Modeling V2拡張（MTP・video・quantized KV）、Cosmos3-Edge Reasoner、SM103向けGPT-OSS-120B / DeepSeek-R1-0528 NVFP4デフォルト等。\n- **BREAKING**: LlmRequestフィールドのC++→Python移行、transceiver V2からKV cache manager V1削除、旧executor backend互換パス削除。n-gram / user-provided speculative decodingは非推奨化。\n- 機能: KV cache V2のnative retention / cross-turn reuse、FP4 MLA（disaggregated serving）、MXFP8 refitting、DeepSeek-V4 / DSpark on Rubin最適化。\n- [公式release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc2)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/tensorrt-edge-llm/README.md",
+      "expected_blob_sha": "28b1df69292b70c09ab94efc7759cbf55ec0626c",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "### 2026-09-29 — v0.11.0（released）",
+          "text": "### 2026-11-14 — v0.12.0（released）\n\n- InternVL3向け初版Safety Runtime（QNX Standard互換）。\n- 新モデル: Qwen3.8-Flash-Next（NVFP4、per-layer embedding cache）、Nemotron-3.5-Bolt-74B-A9B（IQ2 MoE / Q8_0 Linear）、MiniMax-H3 FP16 text-to-video、GR00T N1.7 FP16 policy、pi0.5 checkpoint-direct builder。\n- speculative decoding拡張: EAGLE-4、greedy-only Domino、LiLiCorr draft（Nemotron-3.5-Bolt-74B-A9B用）、JetSpec（一部MoE）、dense Qwen3向けMTP、DFlash2 tree decoding。\n- in-flight batching拡張（単一デバイス、opt-in、mixed prefill/decode、per-request sampling）。FP8 KV-cache storageをAmpere / Jetson Orinでも対応（attentionはFP16）。PyTorch 2.14.0 / Transformers 5.17.0へ更新。legacy system-prompt KV cacheは削除（context-cache reuseへ移行）。\n- [公式release](https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.12.0)\n\n### 2026-10-29 — v0.11.1（released）\n\n- 統合 `trtedge` CLIを追加（HTTP serving / engine build / ONNX export / 量子化 / モデル準備）と、対話型text chat（streaming・履歴・timing metrics）。\n- 新モデル: Nemotron 3.5 Bolt E4B＋DFlash draft、Qwen3.8 / Muse-Glimmer向けDFlash2 checkpoint拡張、Gemma 4 12B DFlash draftのexport / 量子化。\n- TensorRT RTX-1.7でWindows上のengine building / 推論対応、NVFP4-A16 MoE重み準備、TensorRT-RTX JIT-kernel caching。\n- [公式release](https://github.com/NVIDIA/TensorRT-Edge-LLM/releases/tag/v0.11.1)\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "381c6c0261b2a240301eb48aac4f632b400e471c",
+      "expected_blob_sha": "0af60a5da0fcb2809acb63520531b6cb589dfa21",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 主要更新",
-          "text": "### 2026-10-27 — Ollama v0.40.12（正式版）\n\nv0.40.11からの正式更新。LFM3 text/VL/audio/omniとd1:2b、d1-omniをOllama libraryに追加。**このreleaseでのLFM3とd1 2B対応はApple hardware向けで、公式案内ではLinux/Windows対応は今後**としている。各multimodal variantのOS対応も個別に確認する。\n\nApple SiliconのGemma 4、Flint、Laguna prompt processingを最適化し、MLXのDFlash2 draft speculative decodingをサポート。Apple向けの変更からWindows CUDAの性能を推定しない。公式releaseに一般的なE2E速度倍率は示されていない。\n\n[公式release](https://github.com/ollama/ollama/releases/tag/v0.40.12) · [v0.40.11からの差分](https://github.com/ollama/ollama/compare/v0.40.11...v0.40.12)\n\n"
+          "anchor": "### 2026-10-27 — Ollama v0.40.12（正式版）",
+          "text": "### 2026-11-10 — Ollama v0.40.16（正式版）\n\n- 新モデル: Ripple Preview（Ricursive Intelligence、65B dense、agentic coding向け）をlibraryへ追加（`ollama run ripple-preview`）。\n- **Apple silicon限定の変更**: Qwen3.8 Flash Nextのメモリ使用量が約27 GiB減少。プラットフォーム限定として、Windows on ARM向けCUDA 13.5 supportも含む。Apple向けの変更からWindows CUDAの性能を推定しない。\n- `/v1/responses`が `truncation` を尊重するようになり、`/v1/models`はモデルなし時に空リストを返す。llama.cpp更新を含む。\n- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.16)\n\n### 2026-11-04 — Ollama v0.40.15（正式版）\n\n- 新モデル: MiMo V2.6（Xiaomi、9B、code / agent向け、`ollama run mimo-v2.6`）と、AutoTrust decision models（autotrust-jev、9b / 35b / 27b-vl）。**AutoTrustはこのreleaseではApple siliconのみ対応と明記**。35b / 27b-vlは画像入力可。\n- `ollama launch`がKimi Code CLI対応。recurrent / vision GGUFの複数リクエスト同時処理、Qwen3 / Qwen3.5のlong-context（YaRN）scaling記載。\n- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.15)\n\n### 2026-11-03 — Ollama v0.40.14（正式版）\n\n- `ollama launch claude`がモデルのoutput token limitをClaude Codeへ適用（cloudモデルの128kデフォルトcap回避）。\n- Cloud web searchの `/api/chat` 応答デコード修正、OpenAI互換endpointのsampler defaults扱いの変更、`/v1/responses`でのreadable input content保持。MLXでlarge vocabulary向けtop-k sampling高速化（プラットフォームはMLXと明記）。\n- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.14)\n\n### 2026-10-29 — Ollama v0.40.13（正式版）\n\n- **LFM3がLinux / Windowsでも動作**するようになった（v0.40.12ではApple hardware限定だった対応の拡張）。対象はLFM3本体、TTSのlfm3-audio、lfm3-omni。\n- [公式release](https://github.com/ollama/ollama/releases/tag/v0.40.13)\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "4e569710b8c76f717e3902c9936b3e97025debbc",
+      "expected_blob_sha": "c1d32031444ff10564654edab0c46cf64c519b38",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 主要更新",
-          "text": "## 2026-10-27 — llama.cpp b11913〜b11936（開発ビルド）\n\nb11912からb11936までの増分を記録。GitHub上のpre-release開発ビルドであり、正式安定版とは区別する。b11936にはWindows x64 CUDA 12.4 / 13.4配布assetがあるが、Windows 11 + RTX 4070 SUPERでの実測性能は未確認。\n\n- **b11930**: llama-server routerに`--models-memory-max`を追加し、device別メモリ余裕に応じてモデルロード前の使用量推定とidle model unloadを調整。複数モデルを切替えるserver運用向けで、単一モデルの生成速度向上ではない。\n- **b11928**: MiniCPM-OCR-Jevの判定modelを追加。`POST /v1/systemone`で画像に対するOCR textをscoreする。通常の文章生成用LM headはない。\n- **b11926 / b11927 / b11936**: GLM5-Next / QSA / DSAのsparse selectionとdense `kq_mask`依存を整理し、Metal fused top-k maskやQwen4Exp / GLM5-Nextのk-pool選択を追加。一般的な生成速度倍率は未公表。\n- **b11923**: CPU / CUDA / Metalのnon-contiguous view向けSCALEを拡大し、CUDA stride-aware kernelとsoftcap fusionの正確性guardを追加。対象view patternに限る。\n- **b11918**: OpenCLへQ3_K matmulとmatvecを追加。Adreno向けを含み、CUDA backendへの追加ではない。\n- **b11933**: VulkanのMUL_MAT dim-3 broadcastでCPU fallbackになるケースを修正（Vulkan固有）。\n- b11913 Hexagon VTCM override、b11922 replay test、b11929 CLI model指定、b11935 RPC error handlingも含まれる。テストやbackend固有変更を一般的な速度改善と扱わない。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11936 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11930 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11928 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11926 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11927 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11923 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11918 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11933\n\n"
+          "anchor": "## 2026-10-27 — llama.cpp b11913〜b11936（開発ビルド）",
+          "text": "## 2026-10-29〜11-18 — llama.cpp b11963〜b12483（開発ビルド）と v1.0.0（正式版）\n\nb11936の続き。対象期間の開発ビルドはb11963（2026-10-29）からb12483（2026-11-18）まで。重要変更だけを拾う。\n\n- **v1.0.0（2026-11-13、正式版）**: 初の正式版タグ。deprecated public API削除、NextN / speculative APIの `llama.h` への昇格（breaking相当）。OCP FP8 KV cache、host-memory MoE expert cache、external PLE shard読込を収録。新text architectureとしてKimi-K3.1-Pro、Ripple、xing4_0等に対応。server側はSSRF / CORS / DNS rebinding対策、MCP tool cancellation、OpenAI互換 `/v1/audio/speech` endpoint追加。対応nightlyはb12359。\n- **量子化**: b12000でOCP FP8 E4M3 supportを追加（新規形式対応として最重要）。b12274でFP8 KV-cache support（`-ctk/-ctv f8_e4m3`、v1.0.0に収録）。OpenCLのq2_0 / iq3 / iq4_xs初期対応、HexagonのQ5_0 / Q5_1 / IQ2_XXS / NVFP4対応などbackend別の拡張も進んだ。\n- **新モデルアーキテクチャ対応**: Nemotron 3.5 Transcribe（b12087、mtmd）、Kimi-K3.1-Pro（b12180）、Kimi K3.1 vision（b12259、mtmd）、Inkling 2（b12406）、Recursive Ripple-65B-Preview向けDFLASH2対応（b12416）、MiniMax-M3.1（b12420）等。TTS / ASR系の追加も多い。\n- **backend / kernel**: host-memory MoE expert cache（b12170〜b12206、miss時はCPU実行、CPU share設定可）、CUDAのNVFP4 gate/up matmul＋GLUのMMQ融合（b12122）、CUDA MoEデータレイアウト線形化（b12144）、CUDA prefill最適化（b12329、NVFP4 checkpoint向け）、OpenCL Flash Attentionによるdecode改善（b12118）、K/V読込順rotationによるL2 cache hit率改善（b12477）等。一般的な生成速度倍率は公表されていない。\n- **server**: reference-counted checkpointsの使用（b12141、deep copy置換）、OpenAI互換 `/v1/audio/speech` endpoint（b12238）。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12000 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12274 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12483\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/exllama/README.md",
+      "expected_blob_sha": "f5abf2d1a2ff54889b43a36380e97c1f6882cb27",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 2026-10-25 — ExLlamaV3 v1.6.5（正式版）",
+          "text": "## 2026-11-14 — ExLlamaV3 v1.6.7（正式版）\n\n- split-device量子化の問題修正、checkpointing改善、pipelined prefill。\n- 複数インスタンスで共有するdisk tierの問題修正。expert routingとsparse attention indexingの精度改善。その他最適化・bugfix。新モデル対応・breaking changeの明記なし。\n- [公式release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.7)\n\n## 2026-10-31 — ExLlamaV3 v1.6.6（正式版）\n\n- 新モデル対応: DeepseekV41ForCausalLM、Lfm3ForCausalLM、Lfm3VlForConditionalGeneration。\n- 量子化時のVRAM使用量を大幅に削減し、量子化capture passを高速化。disk cacheのeviction policy修正（多数モデル切替時のchurn防止）、loop detection改善。その他最適化・bugfix・QoL改善。breaking changeの明記なし。\n- [公式release](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.6)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/vllm-omni/README.md",
+      "expected_blob_sha": "52d3f4d12f7d8bc3ce70b19b68510f0e40b70776",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "### 2026-10-19 — vLLM-Omni v0.32.0rc1（公開候補版）",
+          "text": "### 2026-11-04 — vLLM-Omni v0.33.0rc1（公開候補版）\n\n- upstream vLLM 0.33.0（正式版）への整合を目的とするRC。runtime integration、依存更新、インストール手順、upgrade-validation修正が中心で、release notesに新モデル・benchmark・breaking changeの記載はない。\n- [公式release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.33.0rc1)\n\n### 2026-10-28 — vLLM-Omni v0.32.0（正式版）\n\n- v0.32.0rc1からの正式版。vLLM 0.32.0への整合。Rayベースのmulti-node inference（任意）、`/v1/realtime` のserver VAD、full-duplex serving。\n- 新モデル: YuE2-3B（text-to-music）、Qwen-Image-2.1 / 2.1-Turbo、Kandinsky6、MOSS-Image、TaoMate-H3、LTX 2.5 text-to-audio、single-stage Qwen3-TTS。\n- 互換性: Python >=3.11,<3.14 と vLLM 0.32.0が必須。output-type名はcanonical spelling（`text` / `image` / `audio` / `latent` / `token_ids`）が必須となり、legacy aliasは拒否される（breaking的変更）。インストール例はCUDA 13.0。\n- [公式release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.32.0)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/README.md",
+      "expected_blob_sha": "17a84feab60247c786404294d96c87b77d553353",
+      "edits": [
+        {
+          "op": "replace_once",
+          "old": "- フレームワーク差分の最終確認: **2026-10-22**",
+          "new": "- フレームワーク差分の最終確認: **2026-11-18**"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/qwen.md",
+      "expected_blob_sha": "bd5c6ce8452d84a21fd4bcea4c3ff04b8de66cde",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-11-16 | Qwen4-Max | Qwen4世代のflagshipが一般提供（GA）。11月11日のToken Plan限定previewを経て、従量課金API（Model Studio / QwenCloud）でも利用可能に。context length 1,000,000-token、text / image / video入力、thinkingは既定で有効、最大出力は131,072-token（thinking時は262,144-token）。総parameterは2.4T級とされるがactive parameter等の内訳は未公表。**重みは非公開で、fine-tuningも不可のAPI専用モデル**としてopen-weightと区別する。価格はシンガポールregionで入力$1.50 / 出力$4.50（各100万token）。 | https://www.alibabacloud.com/help/en/model-studio/qwen4-max |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/claude.md",
+      "expected_blob_sha": "060119f19459a5b740fc53e6275351311bb5735b",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-11-09 | Claude Fable 5.2 / Claude Mythos 5.2 | 同一基盤モデルの2構成。Fable 5.2は一般提供でcybersecurity / biology面のsafeguardが強め、Mythos 5.2はsafeguardを緩和した構成で審査済み組織のみ（Cyber / Life Sciences Verification Program経由）。価格は入力$8 / 出力$40（各100万token）で5.1世代から20%引下げ。出力は5.1比で最大30%高速とAnthropicが報告し、任意のfast modeは最大2.5倍速（$16 / $80）。著者評価ではFrontierCode 2.0で49.1%（Fable 5.2、Xhigh effort）。数値はいずれもAnthropic報告値で独立検証ではない。 | https://www.anthropic.com/claude-fable-and-mythos-5-2 |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/gemini.md",
+      "expected_blob_sha": "cd20e0e2bcb92d5a8ed6c8af58c01b6f5a37a0db",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-11-12 | Gemini 4 Hydrogen | 高速・実行tierの新モデル。日常のcodingとagentic workflow向けで、SearchのAI ModeではGemini 3.8 Flashのデフォルトを置き換える。最大1M-token contextで、window全域一律の入力$1.50 / 出力$7.50（各100万token）。著者評価ではArtificial Analysis Intelligence Indexがdefault high thinkingで51（Argonの50を上回る）、xhighで54（いずれもGoogle報告値）。AI Studio、Gemini API、Gemini app、Search等へ展開。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-Hydrogen/ |\n| 2026-11-10 | Gemini 4 Carbon | Gemini 4世代の最上位モデルが一般提供（GA）。約2週間前のFairwind Program経由のcyber defender向け限定提供を経て、API（有料開発者・企業）とGoogle AI Ultra向けに展開。長時間agentic workflow、cybersecurity、科学的推論を重点とする。導入価格は入力$2 / 出力$10（各100万token）でArgonと同額。評価値はGoogle報告値で独立検証ではない。 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/openai-gpt.md",
+      "expected_blob_sha": "95226eb154702639d1e176cbcf86968d2b845bf9",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-11-17 | GPT-6.2 Astra / GPT-6.2 Sol | GPT-6世代の更新。Astraはprofessional work / science向け上位、Solは日常業務向け。ChatGPT WorkとCodex（Plus / Pro / Enterprise / Edu）およびAPIで提供し、通常のChatには追加されない。API価格はAstraが入力$8 / cached $0.40 / 出力$40、Solが入力$2 / cached $0.10 / 出力$10（各100万token）で、AstraはGPT-6 Astra比で入出力20%引下げ。最大1,050,000-token context、最大128,000-token output（公式モデルページ）。Astraは外部公開モデルとして初めてAI自己改善でHigh評価とOpenAIが報告するが、評価は同社報告値。 | https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531 |\n| 2026-11-05 | GPT-6 Cyber | GPT-6 Astraのcybersecurity特化バリアント（脆弱性の発見・再現・修正検証）。**一般提供ではなく、Daybreak Redの審査済み顧客のみ**（Codex / API）。trusted-access価格は入力$20 / 出力$100（各100万token）。Preparedness Framework上の評価は同社報告で、cybersecurity Critical、生物・化学High。 | https://deploymentsafety.openai.com/gpt-6-cyber/gpt-6-cyber.pdf |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/mistral.md",
+      "expected_blob_sha": "97ee26d9324d92ec6d1ad4763391319a7f1a8fec",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-10-29 | Mistral Large 4（重み公開） | 10月6日のpublic previewを経て、改良版checkpointの重みを公開しopen-weight化。総約1.05T / active 52Bのgranular MoE（routed experts 128から4/token＋shared 1）、text + imageのnative multimodal、最大1M-token context。licenseはMistral Ecosystem Open-Weight License。配布はFP8（約1,061GB）とNVFP4（約610GB）のcheckpointで大規模GPU環境向けであり、consumer GPU向けではない。preview比でcoding / cybersecurity向けRLを3週間追加し、著者評価ではTerminal-Bench 4.0が41%（previewは28.3%）、FrontierCode 2.0が19.7%（いずれもMistral報告値）。DSpark投機的デコード用draft headを内蔵。 | https://mistral.ai/news/mistral-large-4-oss/ |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/kimi.md",
+      "expected_blob_sha": "8389d2675efe39cb87e0dd86105f2e470e8e3b2c",
+      "edits": [
+        {
+          "op": "replace_once",
+          "old": "| 2026-10-23 | Kimi K3.1 Pro / Highspeed | K3の事後学習を強化したAPI提供モデル。MoonshotはHighspeedを通常Pro比2〜3倍と説明するが、API提供間のベンダー値でローカル性能ではない。最大1M-token context・3T級MoEと説明される一方、2026-10-25時点でK3.1固有の重み・検証可能なmodel cardは未公開。11-04までの公開は予定であり、公開済みcheckpointとして扱わない。 | https://www.kimi.com/en/blog/kimi-k3-1-pro |",
+          "new": "| 2026-11-04 | Kimi K3.1 Pro（重み公開） | 2026-10-23にAPI提供を開始したK3の事後学習強化版について、2026-11-04に重みとmodel cardを公開。総2.8T / 有効104Bのnative multimodal MoE（93層、routed experts 896から16/token＋shared 2、視覚encoder MoonViT-V2 401M）。K3のGated MLAをGated DSAへ置換し長context効率を改善。最大1,048,576-token context。重みはMXFP4（活性化MXFP8、量子化対応学習）で約1.56TB。licenseは専用のKimi K3.1 Pro License（大規模MaaSには別途契約条件あり）。推奨runtimeはvLLM、SGLang、TokenSpeed。著者評価ではTerminal-Bench 4.0で65.7、GPQA-Diamondで94.2（Moonshot報告値、独立検証ではない）。API版Highspeed（通常Pro比2〜3倍）はAPI提供間のベンダー値でローカル性能ではない。 | https://huggingface.co/moonshotai/Kimi-K3.1-Pro |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/meta-muse.md",
+      "expected_blob_sha": "f579ece78115bc1cea339ca0ba99971dbd86295c",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-11-09 | Muse Ember | Muse系の最小・最効率モデル（closed、重み非公開、parameter数非公表）。tool call、coding subtask、routing、抽出、長文書解析などagentが繰り返す作業向け。model IDは`muse-ember-1.0`。context 1,048,576-token、最大出力524,288-token、text / image / audio / video / PDF入力。Meta Model APIとMuse Codeで提供。価格は入力$0.10 / cached $0.004 / 出力$0.50（各100万token。入力200K-token超のrequestは3倍のtier）。 | https://research.meta.ai/blog/muse-ember |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/minicpm.md",
+      "expected_blob_sha": "40825f21698d263d6726b55503e8812dd207121a",
+      "edits": [
+        {
+          "op": "insert_after_once",
+          "anchor": "|---|---|---|---|",
+          "text": "\n| 2026-10-31 | MiniCPM-OCR 1.0 / MiniCPM-OCR Jev | OCR特化モデル群を共同発表・open source化。MiniCPM-OCR 1.0は1.3Bの文書解析モデル（MiniCPM-V 4.6ベース、SigLIP encoder + Qwen3.5 LM）で、text・表・数式・印影等の構造化抽出を対象とする。Jevは2BのOCR出力品質スコアラ（自動承認 / 人手レビュー振り分け用）。licenseはApache-2.0。GGUF / AWQ / GPTQ版とDSpark draftも配布され、vLLM、SGLang、llama.cpp、Ollamaへ初日から対応。著者評価ではReal5-OmniDocBench 93.68、OCRBench v2 54.7、RTX 5090の明記条件下で1.2 pages/s（いずれもOpenBMB報告値）。context lengthはmodel cardに明記なし。 | https://huggingface.co/openbmb/MiniCPM-OCR-1.0 |"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/recursive.md",
+      "expected_blob_sha": "00f2989e41d583cc06873aeccfb627fec224cc34",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 一次資料",
+          "text": "## Ripple-65B Preview（2026-11-04）\n\n同じRicursive Intelligence（旧表記Recursive）から、同社初の汎用公開モデルとしてRipple-65B Previewが公開された。\n\n- **規模・構造**: 65B dense Transformer（80層、d_model 5,120）。MoEではなくdenseで、12T tokensで事前学習。最大contextは1,048,576 tokensと案内される。\n- **ライセンス・配布**: Apache-2.0。BF16 instruct checkpoint（約129.6GB）とNVFP4版（実験的、約57.2GB、単体DGX Spark向けスクリプト同梱）、投機的デコード用DFlash2 draft（4.04B）をHugging Faceで公開。hosted提供はTogether AI、GMI Cloud、OpenRouter、Fireworks（$0.20 / $0.60、各100万token）。\n- **開発者報告の評価**: Terminal-Bench 2.1で80.52（著者報告値。実行環境と評価手順に依存し、独立検証ではない）。65B denseでもBF16で約130GB級のcheckpointであり、consumer GPU単体での実行を意味しない。\n- 一次資料: [Ricursive公式発表](https://www.ricursive.com/ripple) / [Ripple-65B-Preview model card](https://huggingface.co/ricursiveAI/Ripple-65B-Preview)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/liquid-ai.md",
+      "expected_blob_sha": "f831b7c90951da0276e677bf3db9504f7cfc115d",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 一次資料",
+          "text": "## d1.2 / d1.2-ultra（2026-11-16）\n\n判断（decision）モデルの新版をLiquid APIで公開。重み非公開のhostedモデルで、parameter数は公表されていない。\n\n- text / 画像に加えて**音声入力**へ対応し、生成tokenゼロで較正済みの型付き回答を返す形式は継続。\n- 新task 5種を追加（値の読取、span検出、box位置推定、範囲付き数推定、複数ラベル選択）。\n- 価格は入力のみ課金で、d1.2が$0.02、d1.2-ultraが$0.042（各100万入力token）。旧d1、d1.1、d1-ultraは非推奨化された。\n- 著者側の数値として、Artificial Analysis Decision Index v2.1でd1.2-ultraが75（decision model中最高とLiquidが引用）。新taskの精度は同社の内部test setによる値で、公開benchmarkではない。\n- 一次資料: [Liquid AI公式発表](https://www.liquid.ai/blog/d1-2)\n\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/README.md",
+      "expected_blob_sha": "b6dbd0054f144020aa799a21d6ab3074bf3b0f3b",
+      "edits": [
+        {
+          "op": "replace_once",
+          "old": "- リリース情報の最終確認: **2026-10-22**",
+          "new": "- リリース情報の最終確認: **2026-11-18**"
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-10-27 | Liquid AI LFM3 / d1 | Liquid AI | 1.73B text tri-hybridを含む用途別6派生とbase。text modelは256K context、LFM Open License v1.0。Ollama v0.40.12のLFM3/d1 2B対応はApple hardware限定。 | [Liquid AI系](liquid-ai.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-10-21 | Recursive Flint 40B-A2.5B | Recursive | 総39.8B / 有効約2.5BのApache-2.0 MoE。公式BF16 checkpointは約80GB、設定上の最大262K context。Ollama対応はmacOS限定。 | [Recursive系](recursive.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-09-02 | Qwen3.8-Max-0902 | Qwen | 2.4T級MoEを基盤とするQwen3.8-MaxのAPI snapshot。1M contextとtext / image / video入力を維持し、coding・長時間tool taskを更新。0902自体のopen-weight checkpointとは区別。 | [Qwen系](qwen.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-09-15 | Gemini 3.8 Live / Live Extended Thinking | Gemini | Live API向けaudio-to-audioモデル。標準Liveは低latencyのreal-time dialogue、Extended Thinkingはlive audio中のbackground reasoningを重視する。両方とも一般提供（GA）。 | [Gemini系](gemini.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-10-15 | Muse Spark Open | Meta Muse | 総816B / 有効42B、256 expertsから8を選ぶopen-weight multimodal MoE。最大1M context。NVFP4/BF16重みのGPU memory要件は700GB / 2TBと公式案内。 | [Meta Muse系](meta-muse.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-09-22 | Claude Opus 5.5 | Claude | Claude 5.5 familyの最初のmodel。Opus 5からagentic coding、computer use、knowledge work、効率、安全性を更新し、通常workloadで約40%低cost、出力速度も30%以上高速化とAnthropicが報告。 | [Claude系](claude.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-07-16 | Kimi K3 | Kimi | 総2.8T、896 routed experts、16 experts/tokenのopen-weight native multimodal MoE。1M contextでimage / videoと長時間coding taskを対象。 | [Kimi系](kimi.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-10-06 | Mistral Large 4 | Mistral | 1T total / 49B activeのnative multimodal flagship。APIはpublic preview、weightsは2026年10月末公開予定で、現時点ではopen-weight配布済みではない。 | [Mistral系](mistral.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "replace_once",
+          "old": "| 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |\n",
+          "new": ""
+        },
+        {
+          "op": "insert_before_once",
+          "anchor": "| 2026-10-15 | Nemotron 3.5 Super VL",
+          "text": "| 2026-11-17 | GPT-6.2 Astra / Sol | OpenAI GPT | GPT-6世代の更新。Astraは入力$8 / 出力$40へ20%値下げし、ChatGPT Work / CodexとAPIで提供（通常のChatには追加されない）。最大1,050,000-token context。 | [OpenAI GPT系](openai-gpt.md) |\n| 2026-11-16 | Qwen4-Max | Qwen | Qwen4世代flagshipの一般提供。最大1M-token context、text / image / video入力。重み非公開・fine-tuning不可のAPI専用。 | [Qwen系](qwen.md) |\n| 2026-11-16 | Liquid AI d1.2 / d1.2-ultra | Liquid AI | 判断モデルの新版。音声入力と新task 5種を追加したhostedモデル（重み非公開）。旧d1系は非推奨化。 | [Liquid AI系](liquid-ai.md) |\n| 2026-11-12 | Gemini 4 Hydrogen | Gemini | 高速・実行tierの新モデル。最大1M-token context、一律価格$1.50 / $7.50。SearchのAI Modeで3.8 Flashのデフォルトを置換。 | [Gemini系](gemini.md) |\n| 2026-11-09 | Claude Fable 5.2 / Mythos 5.2 | Claude | 同一基盤の2構成。Fableは一般提供、Mythosは審査済み組織向け。$8 / $40へ値下げし出力は最大30%高速（Anthropic報告）。 | [Claude系](claude.md) |\n| 2026-11-09 | Muse Ember | Meta Muse | Muse系最小のclosedモデル。agentの反復作業向けで、1,048,576-token context、$0.10 / $0.50。 | [Meta Muse系](meta-muse.md) |\n| 2026-11-04 | Kimi K3.1 Pro | Kimi | K3の事後学習強化版の重みを公開。総2.8T / 有効104B、MXFP4重み約1.56TB、最大1,048,576-token context。 | [Kimi系](kimi.md) |\n| 2026-11-04 | Ripple-65B Preview | Recursive | Ricursive Intelligence初の汎用公開モデル。65B dense、Apache-2.0、最大1,048,576-token context。 | [Recursive系](recursive.md) |\n| 2026-10-29 | Mistral Large 4（重み公開） | Mistral | previewを経て改良版checkpointの重みを公開しopen-weight化。約1.05T / 52B active、最大1M-token context。 | [Mistral系](mistral.md) |\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-28 Library maintenance: add Liquid AI LFM3/d1 family page and index; append Ollama v0.40.12 and llama.cpp b11913-b11936 with platform/backend constraints."
+  "summary": "2026-10-29〜11-18 catch-up: vLLM v0.33.0/v0.34.0, SGLang v0.5.23, TensorRT-LLM v1.4.0rc2/rc3, TensorRT Edge-LLM v0.11.1/v0.12.0, Ollama v0.40.13-16, llama.cpp b11963-b12483+v1.0.0, ExLlamaV3 v1.6.6/v1.6.7, vLLM-Omni v0.32.0/v0.33.0rc1; LLM: Qwen4-Max GA, Kimi K3.1 Pro weights, Mistral Large 4 weights, Ripple-65B Preview, Claude Fable/Mythos 5.2, Gemini 4 Carbon GA/Hydrogen, GPT-6.2 Astra/Sol, GPT-6 Cyber, Muse Ember, MiniCPM-OCR 1.0/Jev, Liquid d1.2; index dates refreshed."
 }
