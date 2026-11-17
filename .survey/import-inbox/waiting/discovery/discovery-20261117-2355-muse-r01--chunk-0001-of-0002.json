@@ -1,0 +1,454 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261117-prod-r01::chunk-0001-of-0002",
+  "reference_main_sha": "62fedb4e9efe0eccb1e506c4642996aed85ad2b5",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.13586",
+      "identity_tokens": [
+        "arXiv:2512.13586",
+        "https://arxiv.org/abs/2512.13586"
+      ],
+      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
+      "reason": "拡散LLMの並列デコードをトークン単位からスロット単位へ引き上げ、因果注意の枠組みで系列再編成を行うことでKVキャッシュ不能という拡散モデルの推論上の欠点を直接解消する推論機構の提案。要旨で機構と推論への適用が具体的に確認できる。",
+      "source_url": "https://arxiv.org/abs/2512.13586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+      ],
+      "worklist_rank": 267,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.05298",
+      "identity_tokens": [
+        "arXiv:2504.05298",
+        "https://arxiv.org/abs/2504.05298"
+      ],
+      "title": "One-Minute Video Generation with Test-Time Training",
+      "reason": "1分動画生成に向けてTest-Time Training層を導入する研究で、長文脈注意の非効率という推論課題は扱うものの、貢献の中心は動画生成モデルとデータセット側にあり、LLM推論システムの機構としては応用寄りで境界。",
+      "source_url": "https://arxiv.org/abs/2504.05298",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "worklist_rank": 305,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.61784/adsj3036",
+      "identity_tokens": [
+        "DOI:10.61784/adsj3036",
+        "https://doi.org/10.61784/adsj3036"
+      ],
+      "title": "TEAS: TOKEN- AND ENERGY-AWARE AUTOSCALING FOR COST-EFFICIENT LLM SERVING",
+      "reason": "LLMサービング向けに、フェーズ重み付き実効トークン量とエネルギーで負荷を測る水平オートスケーラTEASを提案。コールドスタートや待機電力を含む実運用条件でレプリカ数を決めるサービング機構そのもので、推論システムへの直接貢献が要旨で確認できる。",
+      "source_url": "https://doi.org/10.61784/adsj3036",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "worklist_rank": 13,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03060",
+      "identity_tokens": [
+        "arXiv:2602.03060",
+        "https://arxiv.org/abs/2602.03060"
+      ],
+      "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+      "reason": "LVLMの推論コスト削減に向け、RoPEが作る暗黙の視覚座標系という観測に基づき空間推論に要る視覚トークンを残すプルーニング機構IVC-Pruneを提案。推論時のトークン削減機構が具体的に確認できる。",
+      "source_url": "https://arxiv.org/abs/2602.03060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md"
+      ],
+      "worklist_rank": 287,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22718",
+      "identity_tokens": [
+        "arXiv:2605.22718",
+        "https://arxiv.org/abs/2605.22718"
+      ],
+      "title": "WorldKV: Efficient World Memory with World Retrieval and Compression",
+      "reason": "自己回帰型動画拡散モデルで、World RetrievalとWorld CompressionによりKVキャッシュの線形成長を抑える枠組み。KVメモリ機構自体は推論技術だが、対象がワールド生成という応用ドメインであり、LLM推論システムへの貢献は間接的で境界。",
+      "source_url": "https://arxiv.org/abs/2605.22718",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.00979-dialogue-without-limits-constant-sized-kv-caches-for-extended-responses-.md"
+      ],
+      "worklist_rank": 226,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.06787",
+      "identity_tokens": [
+        "arXiv:2604.06787",
+        "https://arxiv.org/abs/2604.06787"
+      ],
+      "title": "When Is Thinking Enough? Early Exit via Sufficiency Assessment for Efficient Reasoning",
+      "reason": "推論モデルの過剰思考に対し、思考の十分性を評価して早期終了するDTSRを提案。推論時の計算量を動的に打ち切る実行時機構であり、推論効率への直接貢献が要旨で確認できる。",
+      "source_url": "https://arxiv.org/abs/2604.06787",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 235,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00053",
+      "identity_tokens": [
+        "arXiv:2607.00053",
+        "https://arxiv.org/abs/2607.00053"
+      ],
+      "title": "SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks",
+      "reason": "エージェント型ソフトウェア工学タスクで、安価なモデルに数ターン試行させてからルーティングを決めるSWE-Router。コスト削減の対象はモデル選択というアプリケーションレベルの判断で、サービング機構そのものではなく境界。",
+      "source_url": "https://arxiv.org/abs/2607.00053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.08731-when-to-reason-semantic-router-for-vllm.md",
+        "papers/inference/23-model-routing-cascades/2025-2508.12491-cost-aware-contrastive-routing-for-llms.md"
+      ],
+      "worklist_rank": 340,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12279",
+      "identity_tokens": [
+        "arXiv:2512.12279",
+        "https://arxiv.org/abs/2512.12279"
+      ],
+      "title": "WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip",
+      "reason": "ウェハースケールチップ上でのLLM学習戦略とアーキテクチャ協調探索であり、対象は学習スループットと資源配分の設計空間探索。推論への具体的適用が要旨から確認できず、学習単独の範囲として対象外。",
+      "source_url": "https://arxiv.org/abs/2512.12279",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/99-other-inference-systems/2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ],
+      "worklist_rank": 275,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02159",
+      "identity_tokens": [
+        "arXiv:2602.02159",
+        "https://arxiv.org/abs/2602.02159"
+      ],
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "reason": "拡散LLMの双方向全注意コストに対し、未確定トークンの重要度推定問題を解く信頼度誘導型の疎注意化Focus-dLLMを提案。推論時の注意計算を直接削減する機構が確認できる。",
+      "source_url": "https://arxiv.org/abs/2602.02159",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.15690-modes-dynamic-expert-skipping.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ],
+      "worklist_rank": 144,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04257",
+      "identity_tokens": [
+        "arXiv:2603.04257",
+        "https://arxiv.org/abs/2603.04257"
+      ],
+      "title": "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory",
+      "reason": "長期エージェント向けに索引付き経験メモリMemexを提案し、文脈要約の情報損失を避ける。メモリ管理の対象はエージェントの作業文脈であり、モデル推論のメモリ階層やKVキャッシュの機構ではなく境界。",
+      "source_url": "https://arxiv.org/abs/2603.04257",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "worklist_rank": 284,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.61784/its3024",
+      "identity_tokens": [
+        "DOI:10.61784/its3024",
+        "https://doi.org/10.61784/its3024"
+      ],
+      "title": "PACO: PREDICTIVE AUTO-CONFIGURATION FOR SLO-CONSTRAINED LARGE LANGUAGE MODEL INFERENCE SERVING",
+      "reason": "SLO制約下のLLM推論サービングで、尾部遅延を予測して最も安い serving 構成を事前に選ぶPACOを提案。静的プロビジョニングと事後反応型の間を埋めるサービング制御機構で、直接貢献が確認できる。",
+      "source_url": "https://doi.org/10.61784/its3024",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2302.11665-alpaserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "worklist_rank": 54,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24574",
+      "identity_tokens": [
+        "arXiv:2512.24574",
+        "https://arxiv.org/abs/2512.24574"
+      ],
+      "title": "Understanding and Steering the Cognitive Behaviors of Reasoning Models at Test-Time",
+      "reason": "推論軌跡中の検証・後戻り等の認知行動と相関する注意ヘッドを特定し、軽い介入で操縦する研究。テスト時の介入はあるが主眼は推論行動の分析であり、推論システム機構としての貢献は薄く境界。",
+      "source_url": "https://arxiv.org/abs/2512.24574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md"
+      ],
+      "worklist_rank": 192,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.05505",
+      "identity_tokens": [
+        "arXiv:2601.05505",
+        "https://arxiv.org/abs/2601.05505"
+      ],
+      "title": "FlashMem: Distilling Intrinsic Latent Memory via Computation Reuse",
+      "reason": "エージェントの潜在メモリを、推論状態の計算再利用で内在化するFlashMem。メモリ保持の仕組みは推論時計算に関わるが、対象はエージェントの長期自律性という応用層であり境界。",
+      "source_url": "https://arxiv.org/abs/2601.05505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ],
+      "worklist_rank": 457,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.20954",
+      "identity_tokens": [
+        "arXiv:2606.20954",
+        "https://arxiv.org/abs/2606.20954"
+      ],
+      "title": "Learning What Not to Forget: Long-Horizon Agent Memory from a Few Kilobytes of Learning",
+      "reason": "長期エージェントの履歴追却ポリシーを数KBの学習器で決めるLRE。文脈予算管理という推論コスト問題は扱うが、対象はエージェント履歴の保持判断であり、モデル推論機構ではなく境界。",
+      "source_url": "https://arxiv.org/abs/2606.20954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md"
+      ],
+      "worklist_rank": 368,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03295",
+      "identity_tokens": [
+        "arXiv:2602.03295",
+        "https://arxiv.org/abs/2602.03295"
+      ],
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "reason": "prefillとdecodeの非対称性に基づき、prefill専用の構造化プルーニングPOPを提案。深層が次トークン予測に必須という分析から推論段階ごとに異なる圧縮を行う推論機構が確認できる。",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "worklist_rank": 265,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.19870",
+      "identity_tokens": [
+        "arXiv:2602.19870",
+        "https://arxiv.org/abs/2602.19870"
+      ],
+      "title": "ApET: Approximation-Error Guided Token Compression for Efficient VLMs",
+      "reason": "VLMの視覚トークン圧縮で、近似誤差を指標にするApETを提案し、FlashAttention互換性という実運用上の制約まで解く。推論時のトークン圧縮機構として直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2602.19870",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "worklist_rank": 157,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.21221",
+      "identity_tokens": [
+        "arXiv:2604.21221",
+        "https://arxiv.org/abs/2604.21221"
+      ],
+      "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation",
+      "reason": "自己回帰型動画拡散モデル向けに、KVキャッシュ内の顕著ブロックへの注意集中を学習するSparse Forcing。疎注意とKV圧縮の機構は推論技術だが、対象はリアルタイム動画生成応用であり境界。",
+      "source_url": "https://arxiv.org/abs/2604.21221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ],
+      "worklist_rank": 71,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.05164",
+      "identity_tokens": [
+        "arXiv:2604.05164",
+        "https://arxiv.org/abs/2604.05164"
+      ],
+      "title": "Not All Turns Are Equally Hard: Adaptive Thinking Budgets For Efficient Multi-Turn Reasoning in Agents",
+      "reason": "多ターンエージェント推論で、ターンごとの難易度に応じて思考予算を配分するTAB。推論時計算の配分ポリシーだが、主眼はエージェントの推論軌跡管理であり、サービング／デコード機構ではなく境界。",
+      "source_url": "https://arxiv.org/abs/2604.05164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "worklist_rank": 281,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.26940",
+      "identity_tokens": [
+        "arXiv:2604.26940",
+        "https://arxiv.org/abs/2604.26940"
+      ],
+      "title": "Select to Think: Unlocking SLM Potential with Local Sufficiency",
+      "reason": "小規模モデルのtop-K内に大規模モデルの選好トークンが含まれる局所十分性を利用するSelect to Think。デコード時の協調に近いが、主たる貢献は推論能力の底上げ手法であり、推論システム機構としては境界。",
+      "source_url": "https://arxiv.org/abs/2604.26940",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.15141-spectr-fast-speculative-decoding-via-optimal-transport.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md"
+      ],
+      "worklist_rank": 376,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30842",
+      "identity_tokens": [
+        "arXiv:2605.30842",
+        "https://arxiv.org/abs/2605.30842"
+      ],
+      "title": "CoMem: Context Management with A Decoupled Long-Context Model",
+      "reason": "エージェントの文脈管理を専用モデルへ分離し、要約をkステップ先行で非同期実行するCoMem。要約デコードの遅延隠蔽という serving 的要素はあるが、対象はエージェント文脈管理の応用枠組みであり境界。",
+      "source_url": "https://arxiv.org/abs/2605.30842",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-17T23:55:00+09:00",
+      "last_checked_at": "2026-11-17T23:55:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md"
+      ],
+      "worklist_rank": 292,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261117-prod-r01",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
