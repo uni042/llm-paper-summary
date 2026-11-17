@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（878本）
+## 自動生成の論文一覧（880本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1574,6 +1574,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、マスク拡散型大規模言語モデル（dLLM）の生成時に、どの位置のマスクを先に確定するかを注意行列から決める学習不要の復号法Attn-Samplerを提案する。
 
+- **2026-02 · [Unlocking Edge Fine-Tuning: A Sample-Efficient Language-Empowered Split Fine-Tuning Framework](2026-e0f5024d7632-unlocking-edge-fine-tuning-a-sample-efficient-language-empowered-split-f.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モデル分割と連合集約に、正解付き参照入力との二経路対比で重要な推論トークンを重く学ぶ損失を組み合わせ、各課題800件の学習で分割微調整の精度を大きく引き上げた端末向け微調整枠組み。
+
 - **2026-02 · [Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL](2026-2602.03839-understanding-and-exploiting-weight-update-sparsity-for-communication-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の強化学習による後学習（reinforcement learning post-学習）では、重みを更新する学習器（trainer）と、現在の方策を用いて回答を生成する推論ワーカー（inference worker）が分離されることが多い。
@@ -2383,6 +2387,10 @@
 - **2025-10 · [LiteStage: Latency-aware Layer Skipping for Multi-stage Reasoning](2025-2510.14211-litestage-latency-aware-layer-skipping-for-multi-stage-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LiteStageは、複雑な質問を短い複数段階に分けて解く小型言語モデルについて、各段階に同じ数の層スキップを適用するのではなく、段階ごとの正答率と実際の推論遅延を測定してスキップ予算を配分する手法である。
+
+- **2025-10 · [Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling](2025-1fee57bdbc55-keeping-up-with-large-language-models-a-holistic-methodology-of-compute-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分散LLMの解析的性能モデルへFlashAttention・MoE・トポロジ別通信を組み込んで並列化空間を5次元化し、チップレットの製造コストモデルまで統合することで、実機を作らずに性能とコストの交換関係を設計初期に探索できるようにしたモデル化方法論。
 
 - **2025-10 · [HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement](2025-2510.20878-ha-rag-hotness-aware-rag-acceleration-via-mixed-precision-and-data-place.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3477,7 +3485,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：328  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：329  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -3527,7 +3535,7 @@
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
-  実装：[✓](https://github.com/uber/horovod) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/uber/horovod) ・ リポジトリ内被引用：21  
   GPU数を増やすと勾配転送と集約のために通信が集中し、著者らの128 GPU試験では、計算資源のほぼ半分を効率的に使えていなかった。提案の価値は通信アルゴリズムだけではない。
 
 - **2018-02 · [Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement](2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md)**  

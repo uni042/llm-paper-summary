@@ -35,10 +35,15 @@
   "selection_reason": "Uses dialogue-derived preference guidance to select KV-cache entries without future queries, targeting memory and computation costs in long-context LLM inference.",
   "semantic_scholar_id": "285c703584d797e71885a6cf3ce87864bbba8ab9",
   "source_url": "https://www.semanticscholar.org/paper/285c703584d797e71885a6cf3ce87864bbba8ab9",
-  "status": "ready",
+  "status": "superseded",
   "title": "OracleKV: Oracle Guidance for Question-Independent KV Cache Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": null
+  "year": null,
+  "superseded_at": "2026-11-17T23:44:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-598fc6b87732-oraclekv-oracle-guidance-for-question-independent-kv-cache-eviction.md",
+  "represented_canonical_id": "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（340本）
+## 自動生成の論文一覧（341本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1102,6 +1102,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   一般目的のドラフト1個をすべての問い合わせに使用する代わりに、既存の生成要求からタスク群を自動抽出し、各群に適応したドラフトを用意する TaskSpec を提案する。
 
+- **2025-05 · [Attention-Level Speculation](2025-d1489180a09a-attention-level-speculation.md)**  
+  実装：[✓](https://github.com/mcj-group/alspec) ・ リポジトリ内被引用：0  
+  自己注意の出力を文脈の端だけを見る近似で予測し、後段の計算を別装置で先行させて正確な注意と並行検証することで、静的近似が数学や推論で崩れる問題を避けながら長文脈の生成遅延を最大1.65倍改善する投機的並列方式。
+
 - **2025-04 · [SPIRe: Boosting LLM Inference Throughput with Speculative Decoding](2025-2504.06419-spire-throughput-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大バッチ投機的デコードの受理率とKV読出し量を実測し、浅くKVを制限したドラフトの性能モデルを構築して、重み読出しよりKV帯域が支配する条件の処理量を比較する研究。
@@ -1339,7 +1343,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
-  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：211  
+  実装：[✓](https://github.com/flexflow/FlexFlow) ・ リポジトリ内被引用：212  
   SpecInferは、小型モデル群が先に作る複数候補を共通接頭辞の木へまとめ、対象LLMを1回で木構造検証することで、逐次デコードの対象重み読出しとGPU間通信を減らし、複数トークンを確定する。
 
 - **2023-09 · [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](2023-2309.08168-draft-verify.md)**  
@@ -1367,7 +1371,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   大規模言語モデルの通常の自己回帰復号は、次のトークンを一つ出すたびに大きなモデルの前向き計算を必要とする。投機的復号（投機的復号）は小さな下書きモデルで将来のトークン列を先に作り、大きな検証モデルでまとめて採否を調べる。採択されたトークンを一度の検証で複数確定できれば、利用者が一つの回答を受け取るまでの時間を短縮できる。
 
 - **2023-10 · [SPEED: Speculative Pipelined Execution for Efficient Decoding](2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：31  
+  実装：✓ ・ リポジトリ内被引用：32  
   周期的に同じ重みを繰り返し使用する復号器で、途中層から未来トークンを先読みし、複数の系列位置を同一の重み行列で並行処理する。投機予測が変わったときは後続処理と鍵・値キャッシュを巻き戻し、深い共有モデルの出力を維持する。
 
 - **2023-07 · [Predictive Pipelined Decoding: A Compute-Latency Trade-off for Exact LLM Decoding](2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md)**  
