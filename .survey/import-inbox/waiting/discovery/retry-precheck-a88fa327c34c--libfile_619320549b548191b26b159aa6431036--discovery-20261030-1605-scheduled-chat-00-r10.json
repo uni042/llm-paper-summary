@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r10",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.12698",
+      "identity_tokens": [
+        "arXiv:2601.12698"
+      ],
+      "title": "A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization",
+      "reason": "arXiv一次要旨はLLMエージェントによるCUDAカーネルの意味的テンプレート化と探索ベースのautotuningを組み合わせる二段階GPUチューナを提案。SGLang由来のCUDAカーネルを含む実験で最大3倍超の高速化を報告。LLM推論カーネル最適化へ直接関連。",
+      "source_url": "https://arxiv.org/abs/2601.12698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 431
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.12618",
+      "identity_tokens": [
+        "arXiv:2602.12618"
+      ],
+      "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
+      "reason": "arXiv一次要旨はMLLM内部の注意機構だけを用いて視覚トークンを層別に減らすADSCを提案。追加スコア計算やattention改造を必要とせずFlashAttentionと両立し、視覚トークンのLLM層内計算を削減する。",
+      "source_url": "https://arxiv.org/abs/2602.12618",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 433
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22757",
+      "identity_tokens": [
+        "arXiv:2505.22757"
+      ],
+      "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models",
+      "reason": "arXiv一次要旨は小型LMがmulti-token predictionを学びにくい問題に対し、NTPからMTPへ段階的に学習するcurriculumを提案。自己投機的復号の速度利点を維持しながら小型モデルの生成品質を改善。MTPの推論高速化を可能にする学習設計として関連。",
+      "source_url": "https://arxiv.org/abs/2505.22757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 434
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.04594",
+      "identity_tokens": [
+        "arXiv:2606.04594"
+      ],
+      "title": "Ekka: Automated Diagnosis of Silent Errors in LLM Inference",
+      "reason": "arXiv一次要旨はLLM配信フレームワークの最適化で生じる静かな精度劣化を参照実装と中間状態の差分照合で診断するEkkaを提案。実際のsilent errorベンチマークでpass@1 80%、pass@5 88%と報告。推論システムの正確性・検証基盤に直接関連。",
+      "source_url": "https://arxiv.org/abs/2606.04594",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 435
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03134",
+      "identity_tokens": [
+        "arXiv:2602.03134"
+      ],
+      "title": "SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass",
+      "reason": "arXiv一次要旨は浅い層で不要とされた視覚トークンが後段で重要になる問題に対し、破棄せず後段の再評価へ迂回させるSwiftVLMを提案。学習不要の層別視覚トークン選択で細粒度画像推論の精度と計算削減を両立。",
+      "source_url": "https://arxiv.org/abs/2602.03134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 439
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06485",
+      "identity_tokens": [
+        "arXiv:2605.06485"
+      ],
+      "title": "Litespark Inference For CPUs: Ultra-Fast SIMD Framework for Ternary (1.58-bit) Language Models",
+      "reason": "arXiv一次要旨は三値重みの乗算を整数加減算に置き換えるSIMDカーネルLitesparkを提案。Apple SiliconのPyTorch比でスループット18.15倍、TTFT7.15倍、メモリ6.03倍削減と報告。低ビットLLMのCPU推論に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.06485",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 443
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.18085",
+      "identity_tokens": [
+        "arXiv:2604.18085"
+      ],
+      "title": "Predicting LLM Compression Degradation from Spectral Statistics",
+      "reason": "arXiv一次要旨はQwen3/Gemma3の低ランク圧縮でstable rankと情報密度から精度悪化を予測する方法を提案。attention層の交差検証Pearson相関0.890、MLP層0.839を報告。圧縮後の高価な評価を減らす事前選択に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.18085",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 444
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15177",
+      "identity_tokens": [
+        "arXiv:2609.15177"
+      ],
+      "title": "Temporal Self-Distillation: Faster Inference in Discrete Diffusion Language Models",
+      "reason": "arXiv一次要旨は拡散LMの早期ステップ予測を最終確定時の分布へ自己蒸留し、より積極的な並列unmaskingを可能にするTSDを提案。数学・計画・コードの7ベンチマークで低計算領域の速度品質Paretoを改善。",
+      "source_url": "https://arxiv.org/abs/2609.15177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 445
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08864",
+      "identity_tokens": [
+        "arXiv:2602.08864"
+      ],
+      "title": "Understanding Dynamic Compute Allocation in Recurrent Transformers",
+      "reason": "arXiv一次要旨はトークン難度と可変深さ計算を分離評価するANIRA再帰Transformerと合成課題の評価法を提案。トークンごとに必要な演算量を割り当てるadaptive computationの有効性を検証し、条件付き推論計算削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.08864",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 449
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.13147",
+      "identity_tokens": [
+        "arXiv:2511.13147"
+      ],
+      "title": "OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs",
+      "reason": "arXiv一次要旨はShared Exponent Floating Pointで複数ビット幅を共通の一度のfine-tuningから扱うOTARoを提案。端末上でタスクに応じて量子化精度を切り替えながら品質を保つための低ビット推論実装に直接関連。",
+      "source_url": "https://arxiv.org/abs/2511.13147",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 450
+    }
+  ]
+}

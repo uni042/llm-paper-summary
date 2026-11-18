@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-45",
-  "run_key": "20261031-0345-scheduled-chat-45/r01",
+  "run_key": "20261031-0345-scheduled-chat-45/r01::provider-gap",
   "reference_main_sha": "cc8c6320c2f95ba28c8ab17a17c878cfbad98b27",
-  "record_count": 10,
+  "record_count": 8,
   "records": [
     {
       "classification": "accept",
@@ -36,22 +36,6 @@
       "last_checked_at": "2026-10-31T03:48:41+09:00",
       "linked_from": [],
       "worklist_rank": 23,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2604.06916",
-      "identity_tokens": [
-        "arXiv:2604.06916"
-      ],
-      "title": "FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling",
-      "reason": "Sol-RLはFLUX.1、SANA、SD3.5など画像生成拡散モデルの強化学習で、FP4で大量候補を探索しBF16で選別候補を再生成して学習する方式。一次要旨の最大4.64倍は画像拡散モデルの学習収束高速化であり、生成LLMの推論エンジン・KV・デコード最適化ではないため対象外。",
-      "source_url": "https://arxiv.org/abs/2604.06916",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T03:48:41+09:00",
-      "last_checked_at": "2026-10-31T03:48:41+09:00",
-      "linked_from": [],
-      "worklist_rank": 40,
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
@@ -119,22 +103,6 @@
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2609.31430",
-      "identity_tokens": [
-        "arXiv:2609.31430"
-      ],
-      "title": "Compress What You See, Not What You Say: Anchored Context Distillation for Latent-Observation Software Engineering Agents",
-      "reason": "LOHA/ACDはソフトウェア開発エージェントの古いツール観測を潜在トークンへ圧縮し、最近の観測と行動履歴はテキストで維持する。SWE-benchでは文脈43〜57%削減と成功率低下が併存し、特定の単一GPU同時実行条件では1.9倍の処理量を報告。LLMの一般的なKV管理や推論カーネルではなくエージェント文脈・行動品質の設計が主眼のため境界的。",
-      "source_url": "https://arxiv.org/abs/2609.31430",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T03:48:41+09:00",
-      "last_checked_at": "2026-10-31T03:48:41+09:00",
-      "linked_from": [],
-      "worklist_rank": 74,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2410.12119",
       "identity_tokens": [
@@ -168,5 +136,17 @@
     }
   ],
   "round_status": "complete",
-  "target_count": 10
+  "target_count": 10,
+  "parent_run_key": "20261031-0345-scheduled-chat-45/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_521d8b43c0c88191b3759fb9af04ac72--discovery-20261031-0345-scheduled-chat-45-r01.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/coins65080.2025.11125768",
+    "DOI:10.1109/icassp55912.2026.11464312",
+    "DOI:10.52202/085713-4538",
+    "arXiv:2410.12119",
+    "arXiv:2503.09387",
+    "arXiv:2512.05385",
+    "arXiv:2603.22324",
+    "arXiv:2606.24286"
+  ]
 }
