@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.31827",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM serving for agentic, coding, and document workloads reuses prefixes whose key-value (KV) cache outgrows GPU and host memory, putting storage I/O on the critical path of the inference step for retrieving prefixes. A single node-local NVMe absorbs all retrievals, while the parallel file system or cloud file store that nodes already mount carries almost no inference traffic. We cast prefix retrieval as aggregate-bandwidth scheduling across these tiers and present KVStream, a KV cache engine that batches a step's reads, defers writes behind the forward pass, replicates each chunk on every tier, and lets each tier adaptively claim the next unread chunks once it is free. Our performance model shows this routing attains the aggregate-bandwidth bound without prediction or tuning, whereas any static split misses it by a margin that grows as per-tier bandwidths drift or fluctuate. It also predicts that the time-to-first-token (TTFT) gain grows with load, as faster retrieval drains the queue, and disappears when host memory or arrival order keeps reuse in cache. Plugged into LMCache and evaluated on four models, six datasets, and up to 128 GPUs, KVStream retrieves within 5% of the bound, delivers up to 1.49$\\times$ higher offline throughput than LMCache, and lowers mean TTFT by up to 6.1$\\times$ under bursty arrivals.",
+      "identifiers": [
+        "SemanticScholar:58c1b733cf61573379acdfb41a3cf19e79e678c7"
+      ],
+      "semantic_scholar_id": "58c1b733cf61573379acdfb41a3cf19e79e678c7",
+      "canonical_id": "arXiv:2610.31827",
+      "arxiv_id": "2610.31827",
+      "authors": [
+        "Avinash Maurya",
+        "Jaiaid Mobin",
+        "Jie Ye",
+        "M. M. Rafique",
+        "F. Cappello",
+        "Bogdan Nicolae"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュのための適応並列保存管理KVStream。接頭辞のKVがGPUとホストメモリを超えて保存I/Oが推論の臨界経路に乗る問題に対し、接頭辞取得を階層をまたぐ総帯域スケジューリングとして扱うKVキャッシュエンジン。推論基盤の保存機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0b086eaec648",
+    "round": "libimp-0b086eaec648fe6f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0b086eaec648fe6f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0b086eaec648fe6f-pre01.json",
+    "receipt": "sha256:faf8295e09ed1e4e969b59112638acb857cd978c689be8b0341b8a3e2f256d7d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0b086eaec648",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

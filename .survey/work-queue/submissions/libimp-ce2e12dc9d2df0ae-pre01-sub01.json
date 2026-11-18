@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Leveraging the true depth of LLMs",
+      "source_url": "https://arxiv.org/abs/2502.02790",
+      "year": 2025,
+      "published": "2025-02-05",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The remarkable capabilities of Large Language Models (LLMs) are overshadowed by their immense computational cost. While recent work has shown that many LLM layers can be reordered or even removed with minimal impact on accuracy, these insights have not been translated into significant inference speedups. To bridge this gap, we introduce a novel method that restructures the computational graph by grouping and evaluating consecutive layer pairs in parallel. This approach, requiring no retraining, yields a 1.19x throughput gain on Llama 2 7B while reducing the average benchmark accuracy by only 1.5\\%. We demonstrate the practical value of this method for large-scale LLM deployment and show that some of the lost accuracy can be recovered with lightweight fine-tuning of the parallelized layers.",
+      "identifiers": [
+        "SemanticScholar:b827cf232e4eefc987692129c1125937b62146c1"
+      ],
+      "semantic_scholar_id": "b827cf232e4eefc987692129c1125937b62146c1",
+      "canonical_id": "arXiv:2502.02790",
+      "arxiv_id": "2502.02790",
+      "doi": "10.48550/arXiv.2502.02790",
+      "authors": [
+        "Ramón González",
+        "Daniele Paliotta",
+        "Matteo Pagliardini",
+        "Martin Jaggi",
+        "François Fleuret"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 651,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの真の深さの活用。多くの層が並べ替えや除去に耐えるのに推論高速化に結びついていない問題に対し、連続する層ペアを並列に評価するよう計算グラフを再構成し、再訓練なしでスループットを得る。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2505.20839",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models become increasingly prevalent, memory bandwidth constraints significantly limit inference throughput, motivating post-training quantization (PTQ). In this paper, we propose FireQ, a co-designed PTQ framework and an INT4-FP8 matrix multiplication kernel that accelerates LLM inference across all linear layers. Specifically, FireQ quantizes linear layer weights and key-values to INT4, and activations and queries to FP8, significantly enhancing throughput. Additionally, we introduce a three-stage pipelining for the prefill phase, which modifies the FlashAttention-3 kernel, effectively reducing time-to-first-token in the prefill phase. To minimize accuracy loss from quantization, we develop novel outlier smoothing techniques tailored separately for linear and attention layers. In linear layers, we explicitly use per-tensor scaling to prevent underflow caused by the FP8 quantization scaling factor of INT4 quantization, and channel-wise scaling to compensate for coarse granularity of INT4. In attention layers, we address quantization challenges posed by rotary positional embeddings (RoPE) by combining pre-RoPE and post-RoPE scaling strategies. FireQ significantly outperforms state-of-the-art methods, achieving 1.68x faster inference in feed-forward network layers on Llama2-7B and 1.26x faster prefill phase performance on Llama3-8B compared to QServe, with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:0f8efd9f5967b1ad4f42e7c96948caf84325a816"
+      ],
+      "semantic_scholar_id": "0f8efd9f5967b1ad4f42e7c96948caf84325a816",
+      "canonical_id": "arXiv:2505.20839",
+      "arxiv_id": "2505.20839",
+      "doi": "10.48550/arXiv.2505.20839",
+      "authors": [
+        "Daehyeon Baek",
+        "Jieun Choi",
+        "Jimyoung Son",
+        "Kyungmin Bin",
+        "Seungbeom Choi",
+        "Kihyo Moon",
+        "Min-Sung Jang",
+        "Hyojung Lee"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 540,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論のための高速INT4-FP8カーネルとRoPE配慮量子化FireQ。メモリ帯域が推論スループットを律速する問題に対し、重みとKVをINT4、活性とクエリをFP8に量子化する学習後量子化と行列積カーネルを共同設計し、プリフィルの3段パイプラインで初回トークン時間も下げる。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "An Efficient Sparse Inference Software Accelerator for Transformer-based Language Models on CPUs",
+      "source_url": "https://arxiv.org/abs/2306.16601",
+      "year": 2023,
+      "published": "2023-06-28",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In recent years, Transformer-based language models have become the standard approach for natural language processing tasks. However, stringent throughput and latency requirements in industrial applications are limiting their adoption. To mitigate the gap, model compression techniques such as structured pruning are being used to improve inference efficiency. However, most existing neural network inference runtimes lack adequate support for structured sparsity. In this paper, we propose an efficient sparse deep learning inference software stack for Transformer-based language models where the weights are pruned with constant block size. Our sparse software accelerator leverages Intel Deep Learning Boost to maximize the performance of sparse matrix - dense matrix multiplication (commonly abbreviated as SpMM) on CPUs. Our SpMM kernel outperforms the existing sparse libraries (oneMKL, TVM, and LIBXSMM) by an order of magnitude on a wide range of GEMM shapes under 5 representative sparsity ratios (70%, 75%, 80%, 85%, 90%). Moreover, our SpMM kernel shows up to 5x speedup over dense GEMM kernel of oneDNN, a well-optimized dense library widely used in industry. We apply our sparse accelerator on widely-used Transformer-based language models including Bert-Mini, DistilBERT, Bert-Base, and BERT-Large. Our sparse inference software shows up to 1.5x speedup over Neural Magic's Deepsparse under same configurations on Xeon on Amazon Web Services under proxy production latency constraints. We also compare our solution with two framework-based inference solutions, ONNX Runtime and PyTorch, and demonstrate up to 37x speedup over ONNX Runtime and 345x over PyTorch on Xeon under the latency constraints. All the source code is publicly available on Github: https://github.com/intel/intel-extension-for-transformers.",
+      "identifiers": [
+        "SemanticScholar:d1864bfc15ab3d99abdb294a197e94ec215e23ef"
+      ],
+      "semantic_scholar_id": "d1864bfc15ab3d99abdb294a197e94ec215e23ef",
+      "canonical_id": "arXiv:2306.16601",
+      "arxiv_id": "2306.16601",
+      "doi": "10.48550/arXiv.2306.16601",
+      "authors": [
+        "Haihao Shen",
+        "Hengyu Meng",
+        "Bo Dong",
+        "Zhe Wang",
+        "Ofir Zafrir",
+        "Yi Ding",
+        "Yu Luo",
+        "Hanwen Chang",
+        "Qun Gao",
+        "Zi-Heng Wang",
+        "Guy Boudoukh",
+        "Moshe Wasserblat"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformerベース言語モデル向け効率的疎推論ソフトウェア加速器。構造化疎性への実行時支援が不足する問題に対し、重みが疎なTransformer言語モデルの推論ソフトウェアスタックを提案する。推論基盤そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ce2e12dc9d2d",
+    "round": "libimp-ce2e12dc9d2df0ae-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ce2e12dc9d2df0ae-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ce2e12dc9d2df0ae-pre01.json",
+    "receipt": "sha256:ac38a9c1b662c49b66cf610b00c19449d1329c190c31b31ee6022a2476fa62a2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ce2e12dc9d2d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

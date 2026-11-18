@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching",
+      "source_url": "https://arxiv.org/abs/2506.20480",
+      "year": 2025,
+      "published": "2025-06-25",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown remarkable capabilities in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges in deployment and inference. While structured pruning of model parameters offers a promising way to reduce computational costs at deployment time, current methods primarily focus on single model pruning. In this work, we develop a novel strategy to compress models by strategically combining or merging layers from finetuned model variants, which preserves the original model's abilities by aggregating capabilities accentuated in different finetunes. We pose the optimal tailoring of these LLMs as a zero-order optimization problem, adopting a search space that supports three different operations: (1) Layer removal, (2) Layer selection from different candidate models, and (3) Layer merging. Our experiments demonstrate that this approach leads to competitive model pruning, for example, for the Llama2-13B model families, our compressed models maintain approximately 97.3\\% of the original performance while removing $\\sim25\\%$ of parameters, significantly outperforming previous state-of-the-art methods. The code is available at https://github.com/Guinan-Su/auto-merge-llm.",
+      "identifiers": [
+        "SemanticScholar:8517462e616e76ac4ebba0fd7ce698a169c485ff"
+      ],
+      "semantic_scholar_id": "8517462e616e76ac4ebba0fd7ce698a169c485ff",
+      "canonical_id": "arXiv:2506.20480",
+      "arxiv_id": "2506.20480",
+      "doi": "10.48550/arXiv.2506.20480",
+      "authors": [
+        "Gui-Nan Su",
+        "Li Shen",
+        "Lu Yin",
+        "Shi-Wei Liu",
+        "Yan-Wu Yang",
+        "Jonas Geiping"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "層の切断と縫合によるLLM剪定GPTailor。単一モデルの剪定が中心だった構造化剪定に対し、微調整された変種の層を戦略的に組み合わせ・統合して圧縮する。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs",
+      "source_url": "https://arxiv.org/abs/2405.13358",
+      "year": 2024,
+      "published": "2024-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The ever-growing computational complexity of Large Language Models (LLMs) necessitates efficient deployment strategies. The current state-of-the-art approaches for Post-training Quantization (PTQ) often require calibration to achieve the desired accuracy. This paper presents AdpQ, a novel zero-shot adaptive PTQ method for LLMs that achieves the state-of-the-art performance in low-precision quantization (e.g. 3-bit) without requiring any calibration data. Inspired by Adaptive LASSO regression model, our proposed approach tackles the challenge of outlier activations by separating salient weights using an adaptive soft-thresholding method. Guided by Adaptive LASSO, this method ensures that the quantized weights distribution closely follows the originally trained weights and eliminates the need for calibration data entirely, setting our method apart from popular approaches such as SpQR and AWQ. Furthermore, our method offers an additional benefit in terms of privacy preservation by eliminating any calibration or training data. We also delve deeper into the information-theoretic underpinnings of the proposed method. We demonstrate that it leverages the Adaptive LASSO to minimize the Kullback-Leibler divergence between the quantized weights and the originally trained weights. This minimization ensures the quantized model retains the Shannon information content of the original model to a great extent, guaranteeing efficient deployment without sacrificing accuracy or information. Our results achieve the same accuracy as the existing methods on various LLM benchmarks while the quantization time is reduced by at least 10x, solidifying our contribution to efficient and privacy-preserving LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:cfb3b0f9a86d6f96d489521434e1cce1e96b85fd"
+      ],
+      "semantic_scholar_id": "cfb3b0f9a86d6f96d489521434e1cce1e96b85fd",
+      "canonical_id": "arXiv:2405.13358",
+      "arxiv_id": "2405.13358",
+      "doi": "10.48550/arXiv.2405.13358",
+      "authors": [
+        "Alireza Ghaffari",
+        "Sharareh Younesian",
+        "Vahid Partovi Nia",
+        "Bo-Xing Chen",
+        "M. Asgharian"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 910,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ゼロショット較正不要の適応学習後量子化AdpQ。較正を要する既存PTQに対し、適応LASSOに着想を得て顕著な重みを分離し、較正データなしで低精度量子化の最先端性能を得る。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+      "source_url": "https://arxiv.org/abs/2507.10059",
+      "year": 2025,
+      "published": "2025-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models have achieved remarkable performance across a large number of tasks, but face critical deployment and usage barriers due to substantial computational requirements. Model compression methods, which aim to reduce model size while preserving its capacity, are an important means to mitigate these issues. Promising approaches along these lines, such as structured pruning, typically require costly manual hyperparameter exploration or rely on local heuristics that may run the risk of ignoring better solutions. In this work we introduce GeLaCo, an evolutionary approach to LLM compression via layer collapse. Our approach supports an efficient exploration of the compression solution space via population-based search and a novel layer collapse formulation based on parametrized weight merging, with a fitness function based on similarity over residual updates and language modeling KL divergence. GeLaCo also supports both single and multi-objective evolutionary compression search, establishing the first Pareto front estimation along compression and quality axes. We evaluate GeLaCo solutions via both perplexity-based and generative evaluations over foundational and instruction-tuned models, outperforming state-of-the-art alternatives.",
+      "identifiers": [
+        "SemanticScholar:20726d2543f7ca4dcf213a25ee648e9e8e522481"
+      ],
+      "semantic_scholar_id": "20726d2543f7ca4dcf213a25ee648e9e8e522481",
+      "canonical_id": "arXiv:2507.10059",
+      "arxiv_id": "2507.10059",
+      "doi": "10.48550/arXiv.2507.10059",
+      "authors": [
+        "David Ponce",
+        "Thierry Etchegoyhen",
+        "J. del Ser"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 492,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層圧縮への進化的アプローチGeLaCo。高価な手作業のハイパーパラメータ探索や局所ヒューリスティクスに依る構造化剪定に対し、進化的探索で層圧縮を行う。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PacQ: A SIMT Microarchitecture for Efficient Dataflow in Hyper-asymmetric GEMMs",
+      "source_url": "https://arxiv.org/abs/2502.18627",
+      "year": 2025,
+      "published": "2025-02-25",
+      "venue": "Design Automation Conference",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only quantization has been widely explored in large language models (LLMs) to reduce memory storage and data loading overhead. During deployment on single-instruction-multiple-threads (SIMT) architectures, weights are stored in low-precision integer (INT) format, while activations remain in full-precision floating-point (FP) format to preserve inference accuracy. Although memory footprint and data loading requirements for weight matrices are reduced, computation performance gains remain limited due to the need to convert weights back to FP format through unpacking and dequantization before GEMM operations. In this work, we investigate methods to accelerate GEMM operations involving packed low-precision INT weights and high-precision FP activations, defining this as the hyper-asymmetric GEMM problem. Our approach co-optimizes tile-level packing and dataflow strategies for INT weight matrices. We further design a specialized FP-INT multiplier unit tailored to our packing and dataflow strategies, enabling parallel processing of multiple INT weights. Finally, we integrate the packing, dataflow, and multiplier unit into PacQ, a SIMT microarchitecture designed to efficiently accelerate hyper-asymmetric GEMMs. We show that PacQ can achieve up to $1.99 \\times$ speedup and $81.4 \\%$ reduction in EDP compared to weight-only quantized LLM workloads running on conventional SIMT baselines.",
+      "identifiers": [
+        "SemanticScholar:0fdad43469669767e9ce55b9eddab6620d989f0b"
+      ],
+      "semantic_scholar_id": "0fdad43469669767e9ce55b9eddab6620d989f0b",
+      "canonical_id": "arXiv:2502.18627",
+      "arxiv_id": "2502.18627",
+      "doi": "10.1109/DAC63849.2025.11132101",
+      "authors": [
+        "Ruokai Yin",
+        "Yu-Hang Li",
+        "P. Panda"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 631,
+        "matched_prestigious_venue": null
+      },
+      "reason": "超非対称量子化の効率的データフローのためのSIMTマイクロアーキテクチャPacQ。重みのみ量子化で、GEMM前に重みを浮動小数へ戻す展開と逆量子化が性能利得を制限する問題に対し、データフローを効率化するマイクロアーキテクチャ。推論ハードウェアそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Confidence-Modulated Speculative Decoding for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.15371",
+      "year": 2025,
+      "published": "2025-08-21",
+      "venue": "2025 IEEE 6th India Council International Subsections Conference (INDISCON)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has proven to be a powerful method for speeding up autoregressive inference by allowing tokens to be generated in parallel using a draft-then-verify approach. However, the current techniques tend to rely on fixed lengths for drafting and strict criteria for verification, which limits their flexibility when faced with different levels of model uncertainty or varying input complexities. In this paper, we propose a new framework for speculative decoding, built on the idea of adjusting drafting based on confidence levels. By using entropy and margin-based uncertainty measures derived from the drafter’s output distribution, the approach can dynamically change the number of tokens it generates at each step. This adaptability not only reduces the need for rollbacks but also makes better use of available resources, all while ensuring that the output remains accurate. The process for verifying these drafts is also adjusted based on confidence signals, which makes it easier to accept tokens without sacrificing the quality of the generation. When tested on machine translation and summarization tasks, this method delivers impressive speedups over standard speculative decoding and even improves BLEU and ROUGE scores. This approach provides a flexible, easy-toimplement solution for more efficient and reliable decoding in large language models, especially when faced with uncertain conditions.",
+      "identifiers": [
+        "SemanticScholar:4969326024776f4ad7d6788aff8b0306b242440f"
+      ],
+      "semantic_scholar_id": "4969326024776f4ad7d6788aff8b0306b242440f",
+      "canonical_id": "arXiv:2508.15371",
+      "arxiv_id": "2508.15371",
+      "doi": "10.1109/INDISCON66021.2025.11254640",
+      "authors": [
+        "Jaydip Sen",
+        "Subhasis Dasgupta",
+        "Hetvi Waghela"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 454,
+        "matched_prestigious_venue": null
+      },
+      "reason": "信頼度変調投機的デコード。下書きの長さと検証基準が静的な既存法に対し、下書き役の出力分布のエントロピーとマージンによる不確実性で動的に変調する情報理論的枠組み。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-222ff5fabd04",
+    "round": "libimp-222ff5fabd047c1d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-222ff5fabd047c1d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-222ff5fabd047c1d-pre01.json",
+    "receipt": "sha256:dec1b70c0fba4cee3e26245cdd8cafaace9730cd9f72db6939208a696b396e99"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-222ff5fabd04",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

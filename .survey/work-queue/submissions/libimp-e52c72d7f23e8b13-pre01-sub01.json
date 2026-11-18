@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+      "source_url": "https://arxiv.org/abs/2608.25068",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Depth pruning removes entire Transformer blocks to reduce the inference cost of large language models, but disrupts the hidden-state distributions expected by downstream layers, leading to significant accuracy loss. We introduce SHIFT-LLM, a training-free post-pruning correction framework that inserts a Linear Residual Adapter (LRA) at each pruning site. Each LRA preserves the identity pathway of the original residual block and adds a lightweight affine residual correction. This correction is calibrated via closed-form least-squares regression on a small held-out set, without gradient computation, to approximate the missing residual update produced by the pruned block. Together with the preserved identity pathway, the resulting LRA output approximates the hidden state produced by the original block, thereby mitigating the distributional mismatch introduced by layer removal while avoiding the expensive attention and feed-forward computations of the removed blocks. The resulting LRAs support low-rank factorization and exact merging across consecutive pruned layers for additional compression, and combine naturally with parameter-efficient fine-tuning for further recovery beyond fine-tuning the pruned model alone. Experiments on five model families, six layer-selection criteria, and seven zero-shot benchmarks show that SHIFT-LLM consistently recovers accuracy lost to depth pruning across most configurations, achieving gains up to +15.7 points on Llama-3.1-8B-Instruct while requiring only a few hundred calibration samples and no gradient computation.",
+      "identifiers": [
+        "SemanticScholar:430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3"
+      ],
+      "semantic_scholar_id": "430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
+      "canonical_id": "arXiv:2608.25068",
+      "arxiv_id": "2608.25068",
+      "doi": "10.48550/arXiv.2608.25068",
+      "authors": [
+        "Ali Bahri",
+        "Hang Li",
+        "Hong-Liang Li",
+        "Zhi-Tang Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "深さ剪定LLMの分布ずれ補正SHIFT-LLM。ブロックを丸ごと除く深さ剪定が隠れ状態の分布を壊す問題に対し、剪定箇所へ線形残差アダプタを挿し、閉形式の最小二乗で較正する訓練不要の補正。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.08891",
+      "year": 2026,
+      "published": "2026-06-08",
+      "venue": "International Symposium on Low Power Electronics and Design",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly deployed on edge devices with tight power and area budgets. While mixed-precision GEMM reduces arithmetic complexity, quantized inference is often dominated by dequantization and nonlinear operators. Lookup Table (LUT)-based method mitigates these costs by precomputing outputs and replacing repeated arithmetic with table lookups, but existing designs incur significant capacity and lookup-latency overheads. This paper presents PALUTE, a LUT-based Processing-In-Memory accelerator built on Monolithic 3D DRAM for efficient edge LLM inference. PALUTE enables in-DRAM LUT queries that exploit the vertical organization of M3D DRAM memory array tiles to achieve high parallelism with low area overhead. A near-memory LUT generator supports low-latency LUT generation for both GEMM and element-wise nonlinear operators, while a system-level tiering and scheduling strategy minimizes data movement across memory tiers. Evaluation using cycle-accurate simulation and RTL synthesis shows that PALUTE achieves 1,264 TPS end-to-end throughput at 0.16 W, improving energy efficiency by 12.8× over CHIME [4] and 1.6× over FIGLUT [21], improving area efficiency by 2.0× over PIMPAL [12] under W4A4 across Qwen3-4B models.",
+      "identifiers": [
+        "SemanticScholar:0de624b1cce656408139d0a2225a1a8cc390a723"
+      ],
+      "semantic_scholar_id": "0de624b1cce656408139d0a2225a1a8cc390a723",
+      "canonical_id": "arXiv:2606.08891",
+      "arxiv_id": "2606.08891",
+      "doi": "10.1145/3816440.3818590",
+      "authors": [
+        "Run-Yang Tian",
+        "Yan-Ru Chen",
+        "Wei-Hong Xu",
+        "T. Rosing"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジLLM向けルックアップ表による処理内メモリ加速PALUTE。量子化推論が逆量子化と非線形演算子に支配される問題に対し、事前計算した表引きで演算を置き換える単一基板3D DRAMのPIMアクセラレータ。推論ハードウェアそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e52c72d7f23e",
+    "round": "libimp-e52c72d7f23e8b13-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e52c72d7f23e8b13-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e52c72d7f23e8b13-pre01.json",
+    "receipt": "sha256:31c765862ed26517f6f331169c069f6b8ca6f0e615ba7939b1fc76a13aadcc29"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e52c72d7f23e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
