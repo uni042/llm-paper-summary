@@ -1,0 +1,283 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6660b9552185caa6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6660b9552185",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2311.01305",
+    "arXiv:2503.14781",
+    "arXiv:2506.10446",
+    "arXiv:2509.06502",
+    "arXiv:2510.27419",
+    "arXiv:2606.09514",
+    "arXiv:2609.13890",
+    "arXiv:2610.30644"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "69778452ca51956c5ed67e7511519f6d420d8039",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:05:23.550418+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2311.01305",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2311.01305"
+    },
+    {
+      "requested_id": "arXiv:2503.14781",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.14781"
+    },
+    {
+      "requested_id": "arXiv:2506.10446",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.06502",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2509.06502"
+    },
+    {
+      "requested_id": "arXiv:2510.27419",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.27419"
+    },
+    {
+      "requested_id": "arXiv:2606.09514",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.09514"
+    },
+    {
+      "requested_id": "arXiv:2609.13890",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.30644",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:476e73c5a7b549577fc4889b1e11a607f55f9bae"
+    }
+  ],
+  "results": [
+    {
+      "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation",
+      "source_url": "https://arxiv.org/abs/2609.13890",
+      "year": 2026,
+      "published": "2026-09-12",
+      "venue": "Neurocomputing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent code-generation systems often use one communication topology for every problem. Across five topologies and 614 problems from APPS, HumanEval+ and LiveCodeBench, the advantage of hierarchical collaboration over a single agent grows from 2.4 points of pass@1 on the easiest third to 21.1 points on the hardest third, at about ten times the token cost. We propose the Difficulty-Aware Topology Selector (DATS), which predicts each topology's success probability and maximises predicted success minus cost. Its graph predictor treats topologies as nodes of a connectivity order. The complete graph-head comparison reports a 1.7-point advantage over a flat multi-label head while changing several mechanisms; capacity-matched adjacency controls show smaller descriptive differences. A scalar cost penalty can be recalibrated without retraining for approximately matched-spend comparisons when targets are attained. With a shared penalty, six methods span 21.6 percentage points of spend; two leading baselines fall behind DATS after method-specific calibration near the common target. At 40% of always-hierarchical cost, DATS reaches 77.7% pass@1 versus 73.6% for always-hierarchical and 74.3% for the strongest learned competitor. The main comparison includes Holm--Bonferroni-adjusted McNemar tests; unequal-cost differences do not imply matched-budget superiority. Backbone-specific gains are 4.07--4.23 points across four backbones. Alternatives to the 39 interpretable features, including a hybrid encoder, yield a largest observed gain of 1.3 points, with no significant pairwise improvement; this establishes neither equivalence nor an upper bound. A study on 400 mathematical reasoning problems reproduces difficulty-dependent collaboration gains, widening from 2.5 to 20.9 points.",
+      "identifiers": [
+        "SemanticScholar:d82a1bd008b92d0c48a6a76371b17305454ff246"
+      ],
+      "semantic_scholar_id": "d82a1bd008b92d0c48a6a76371b17305454ff246",
+      "canonical_id": "arXiv:2609.13890",
+      "arxiv_id": "2609.13890",
+      "doi": "10.1016/j.neucom.2026.135535",
+      "authors": [
+        "Yun-Song Hong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+      "source_url": "https://arxiv.org/abs/2506.10446",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated significant advancements in reasoning capabilities, performing well on various challenging benchmarks. Techniques like Chain-of-Thought prompting have been introduced to further improve reasoning. However, these approaches frequently generate longer outputs, which in turn increase computational latency. Although some methods use reinforcement learning to shorten reasoning, they often apply uniform penalties without considering the problem's complexity, leading to suboptimal outcomes. In this study, we seek to enhance the efficiency of LLM reasoning by promoting conciseness for simpler problems while preserving sufficient reasoning for more complex ones for accuracy, thus improving the model's overall performance. Specifically, we manage the model's reasoning efficiency by dividing the reward function and including a novel penalty for output length. Our approach has yielded impressive outcomes in benchmark evaluations across three datasets: GSM8K, MATH500, and AIME2024. For the comparatively simpler datasets GSM8K and MATH500, our method has effectively shortened output lengths while preserving or enhancing accuracy. On the more demanding AIME2024 dataset, our approach has resulted in improved accuracy.",
+      "identifiers": [
+        "SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33"
+      ],
+      "semantic_scholar_id": "010c508b6e23d253bb47934ea3433251d3aebc33",
+      "canonical_id": "arXiv:2506.10446",
+      "arxiv_id": "2506.10446",
+      "doi": "10.48550/arXiv.2506.10446",
+      "authors": [
+        "Ze-Hui Ling",
+        "De-Shu Chen",
+        "Hong-Wei Zhang",
+        "Yi-Feng Jiao",
+        "Xin Guo",
+        "Yuan Cheng"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 524,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.13890",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.neucom.2026.135535",
+        "id:SemanticScholar:d82a1bd008b92d0c48a6a76371b17305454ff246",
+        "id:arXiv:2609.13890",
+        "title:learning how much to collaborate difficultyaware topology selection for multiagent code generation",
+        "url:https://arxiv.org/abs/2609.13890"
+      ],
+      "record": {
+        "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation",
+        "source_url": "https://arxiv.org/abs/2609.13890",
+        "year": 2026,
+        "published": "2026-09-12",
+        "venue": "Neurocomputing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent code-generation systems often use one communication topology for every problem. Across five topologies and 614 problems from APPS, HumanEval+ and LiveCodeBench, the advantage of hierarchical collaboration over a single agent grows from 2.4 points of pass@1 on the easiest third to 21.1 points on the hardest third, at about ten times the token cost. We propose the Difficulty-Aware Topology Selector (DATS), which predicts each topology's success probability and maximises predicted success minus cost. Its graph predictor treats topologies as nodes of a connectivity order. The complete graph-head comparison reports a 1.7-point advantage over a flat multi-label head while changing several mechanisms; capacity-matched adjacency controls show smaller descriptive differences. A scalar cost penalty can be recalibrated without retraining for approximately matched-spend comparisons when targets are attained. With a shared penalty, six methods span 21.6 percentage points of spend; two leading baselines fall behind DATS after method-specific calibration near the common target. At 40% of always-hierarchical cost, DATS reaches 77.7% pass@1 versus 73.6% for always-hierarchical and 74.3% for the strongest learned competitor. The main comparison includes Holm--Bonferroni-adjusted McNemar tests; unequal-cost differences do not imply matched-budget superiority. Backbone-specific gains are 4.07--4.23 points across four backbones. Alternatives to the 39 interpretable features, including a hybrid encoder, yield a largest observed gain of 1.3 points, with no significant pairwise improvement; this establishes neither equivalence nor an upper bound. A study on 400 mathematical reasoning problems reproduces difficulty-dependent collaboration gains, widening from 2.5 to 20.9 points.",
+        "identifiers": [
+          "SemanticScholar:d82a1bd008b92d0c48a6a76371b17305454ff246"
+        ],
+        "semantic_scholar_id": "d82a1bd008b92d0c48a6a76371b17305454ff246",
+        "canonical_id": "arXiv:2609.13890",
+        "arxiv_id": "2609.13890",
+        "doi": "10.1016/j.neucom.2026.135535",
+        "authors": [
+          "Yun-Song Hong"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 67,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.10446",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.10446",
+        "id:SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33",
+        "id:arXiv:2506.10446",
+        "title:fast on the easy deep on the hard efficient reasoning via powered length penalty",
+        "url:https://arxiv.org/abs/2506.10446"
+      ],
+      "record": {
+        "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+        "source_url": "https://arxiv.org/abs/2506.10446",
+        "year": 2025,
+        "published": "2025-06-12",
+        "venue": "arXiv.org",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated significant advancements in reasoning capabilities, performing well on various challenging benchmarks. Techniques like Chain-of-Thought prompting have been introduced to further improve reasoning. However, these approaches frequently generate longer outputs, which in turn increase computational latency. Although some methods use reinforcement learning to shorten reasoning, they often apply uniform penalties without considering the problem's complexity, leading to suboptimal outcomes. In this study, we seek to enhance the efficiency of LLM reasoning by promoting conciseness for simpler problems while preserving sufficient reasoning for more complex ones for accuracy, thus improving the model's overall performance. Specifically, we manage the model's reasoning efficiency by dividing the reward function and including a novel penalty for output length. Our approach has yielded impressive outcomes in benchmark evaluations across three datasets: GSM8K, MATH500, and AIME2024. For the comparatively simpler datasets GSM8K and MATH500, our method has effectively shortened output lengths while preserving or enhancing accuracy. On the more demanding AIME2024 dataset, our approach has resulted in improved accuracy.",
+        "identifiers": [
+          "SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33"
+        ],
+        "semantic_scholar_id": "010c508b6e23d253bb47934ea3433251d3aebc33",
+        "canonical_id": "arXiv:2506.10446",
+        "arxiv_id": "2506.10446",
+        "doi": "10.48550/arXiv.2506.10446",
+        "authors": [
+          "Ze-Hui Ling",
+          "De-Shu Chen",
+          "Hong-Wei Zhang",
+          "Yi-Feng Jiao",
+          "Xin Guo",
+          "Yuan Cheng"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 524,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:82e531d3be31d0dd676c8d9d061ab65a4d649b1e8b041265b631b06b1bb05f25",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

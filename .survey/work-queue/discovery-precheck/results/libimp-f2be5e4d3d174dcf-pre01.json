@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f2be5e4d3d17",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "69778452ca51956c5ed67e7511519f6d420d8039",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:05:30.116417+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SpecTr++: Improved transport plans for speculative decoding of large language models",
+      "source_url": "https://www.semanticscholar.org/paper/7d043e034224dc21c21b5edd3a622251e2fd7726",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726"
+      ],
+      "semantic_scholar_id": "7d043e034224dc21c21b5edd3a622251e2fd7726",
+      "canonical_id": "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+      "authors": [
+        "Kwangjun Ahn",
+        "Mit Eecs",
+        "Ahmad Beirami",
+        "A. Suresh"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+      "identity_tokens": [
+        "id:SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+        "title:spectr improved transport plans for speculative decoding of large language models",
+        "url:https://www.semanticscholar.org/paper/7d043e034224dc21c21b5edd3a622251e2fd7726"
+      ],
+      "record": {
+        "title": "SpecTr++: Improved transport plans for speculative decoding of large language models",
+        "source_url": "https://www.semanticscholar.org/paper/7d043e034224dc21c21b5edd3a622251e2fd7726",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726"
+        ],
+        "semantic_scholar_id": "7d043e034224dc21c21b5edd3a622251e2fd7726",
+        "canonical_id": "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+        "authors": [
+          "Kwangjun Ahn",
+          "Mit Eecs",
+          "Ahmad Beirami",
+          "A. Suresh"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2c69d4c0dd7e48ce0904ef6cc2173d4bbc842f4537a016d13f7bff0b342826af",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,784 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-088b47f8dda49e16-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-088b47f8dda4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.02732",
+    "arXiv:2610.07348",
+    "arXiv:2610.08231",
+    "arXiv:2610.16890",
+    "arXiv:2610.21378",
+    "arXiv:2610.28223",
+    "arXiv:2610.32638",
+    "arXiv:2610.37442"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "69778452ca51956c5ed67e7511519f6d420d8039",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:05:23.563703+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.02732",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07348",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.08231",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.16890",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21378",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28223",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32638",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37442",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
+      "source_url": "https://arxiv.org/abs/2610.07348",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training large language models (LLMs) is resource-intensive, and adapting them for diverse deployment scenarios with varying computational constraints remains challenging. While elastic architectures enable flexible model deployment and sparsely activated models allow input-adaptive computation, existing approaches treat these dimensions independently. Moreover, models catered towards on-device edge inference need to conform to the memory and compute limitations of the serving devices. In this paper, we introduce a unified framework that combines elastic structures with sparsely gated architectures to create models that adapt simultaneously to both deployment constraints and task requirements. Our approach employs a model backbone that conditions on both the context and target efficiency specifications, enabling fine-grained control over the accuracy-efficiency trade-off at inference time. The model learns to activate task-relevant parameters within elastically-nested sub-networks, allowing a single model to span multiple capacity points while maintaining input-adaptive routing. Through experiments we demonstrate that we can create a model that allows the flexibility to use 1,2,3,4 billion parameters while being more accurate than their dense counter-parts (2-5\\% on knowledge-intensive benchmarks) and at par with their static versions while delivering similar latency metrics as dense models. Overall, we save on device disk space by sharing the model parameters, allow flexibility of serving based on DRAM and compute available while delivering more accurate results.",
+      "identifiers": [
+        "SemanticScholar:f7d5efdda3e02f3e0ef86b1a154505d09a3a7f2f"
+      ],
+      "semantic_scholar_id": "f7d5efdda3e02f3e0ef86b1a154505d09a3a7f2f",
+      "canonical_id": "arXiv:2610.07348",
+      "arxiv_id": "2610.07348",
+      "authors": [
+        "Arnav Kundu",
+        "Zhao-Yang Xu",
+        "Bai-Ru Hou",
+        "Chang Gao",
+        "Reed Li",
+        "Tao Lei"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CRISP: Co-designing Pruning and Scheduling for Efficient MoE Inference on Edge Servers",
+      "source_url": "https://arxiv.org/abs/2610.37442",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": "Proceedings of the 32nd Annual International Conference on Mobile Computing and Networking",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) inference on memory-constrained edge platforms is often dominated by expert-weight movement rather than computation. Although each token activates only a small subset of experts, routing is input-dependent, so all experts must remain accessible and memory movement dominates latency. Existing approaches such as uniform pruning and expert dropping overlook two properties of MoE execution: expert combinations are highly skewed in frequency, and experts contribute asymmetrically within each combination. We present CRISP, a combination-aware framework that co-designs pruning and runtime scheduling for efficient MoE serving on memory-constrained edge platforms. CRISP reorders neurons by importance so one stored expert can support multiple execution widths, assigns differentiated execution to hot, warm, and cold combinations based on frequency and expert role, and exploits heterogeneous widths to overlap expert loading with computation. Across Mixtral-8x7B and DeepSeek-MoE-16B, CRISP improves throughput by up to 2.1× at the same memory budget while limiting accuracy loss to 3.6% relative to full-width inference. Our results highlight that efficient edge MoE serving requires jointly optimizing which expert capacity is preserved and how expert execution is scheduled.",
+      "identifiers": [
+        "SemanticScholar:ca9ae8e1710eb159361773a43ce2b051514ef829"
+      ],
+      "semantic_scholar_id": "ca9ae8e1710eb159361773a43ce2b051514ef829",
+      "canonical_id": "arXiv:2610.37442",
+      "arxiv_id": "2610.37442",
+      "doi": "10.1145/3795866.3844472",
+      "authors": [
+        "Cong-Wei Zhang",
+        "Youming Tao",
+        "Yi-Fei Zou",
+        "Yu Yang",
+        "Rui-Rui Zhang",
+        "Xiao Zhang",
+        "Falko Dressler",
+        "Xiu-Zhen Cheng",
+        "Dong-Xiao Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DPA-MoE: A Runtime Precision Control Framework for MoE Inference",
+      "source_url": "https://arxiv.org/abs/2610.21378",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models reduce computation by routing each token to a small set of experts, but each selected expert is still used at a fixed precision. We present DPA-MoE, a runtime precision control framework that makes routed experts any-precision. DPA-MoE encodes expert feed-forward weights as prefix-decodable chunks using SharedScale AnyBCQ, profiles per-expert reconstruction residuals offline, and allocates chunks at inference time using live router gate scores. This post-routing allocation lets a single encoded MoE checkpoint operate at multiple effective weight budgets without retraining or re-encoding. Experiments on Qwen3-30B-A3B and DeepSeekMoE-16B show that DPA-MoE improves KL divergence and downstream accuracy over uniform chunk allocation at matched budgets, with modest steady-state throughput overhead in our prototype.",
+      "identifiers": [
+        "SemanticScholar:7525a7eba6ea646f76bf4f5929d89124a98ea8ec"
+      ],
+      "semantic_scholar_id": "7525a7eba6ea646f76bf4f5929d89124a98ea8ec",
+      "canonical_id": "arXiv:2610.21378",
+      "arxiv_id": "2610.21378",
+      "doi": "10.18653/2026.findings-emnlp.1076",
+      "authors": [
+        "Jaeyun Kim",
+        "Hoonki Lee",
+        "Su-Mi Shin",
+        "Hyunmin Kim",
+        "Dahyun Lee",
+        "Sangyeob Kim"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "ServeTwin: A Benchmark-Validated Simulator for Distributed LLM Architecture Exploration",
+      "source_url": "https://arxiv.org/abs/2610.02732",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Evaluating distributed LLM serving designs on physical clusters is costly. Yet existing simulators provide only subsets of the capabilities needed for realistic design exploration: stateful closed-loop execution, timing prediction without profiling target hardware, and direct execution of unmodified serving benchmarks. We present ServeTwin, a closed-loop simulator that couples specification-driven analytical timing with a stateful serving loop. This coupling captures feedback among request completion, scheduling, queue state, and KV-cache evolution, including prefill-decode disaggregation and multi-turn agent workloads. ServeTwin avoids target-hardware operator profiling through iSTAGE, an analytical trace generator that derives per-iteration traces from model and engine specifications while representing ragged batches and discrete engine mechanisms such as CUDA-graph batch padding. It further decomposes execution time into component-owned throughput, scheduler, and runtime costs. This ownership lets unaffected parameters transfer across platforms and confines recalibration to changed hardware or software components. ServeTwin implements a vLLM-compatible interface and runs unmodified serving benchmarks. Against real deployments, it reproduces InferenceX's steady-state throughput-interactivity frontier with a 3.6% mean error and predicts LMBenchmark's multi-turn performance with a 9.9% error while tracking KV-cache evolution. Pre-silicon sweeps reveal that the preferred HBM bandwidth-capacity tradeoff reverses across workload states and that increasing concurrency shifts the bottleneck from memory bandwidth to scheduler and runtime overheads. Together, these capabilities enable practical exploration of distributed LLM serving systems before target hardware is available.",
+      "identifiers": [
+        "SemanticScholar:42eaec5ebcb8e43b3cf9c0ba10d4026f9fa87eb2"
+      ],
+      "semantic_scholar_id": "42eaec5ebcb8e43b3cf9c0ba10d4026f9fa87eb2",
+      "canonical_id": "arXiv:2610.02732",
+      "arxiv_id": "2610.02732",
+      "authors": [
+        "Sungjoon Park",
+        "Changue Jung",
+        "Kyung-No Joo",
+        "Mincheol Kang",
+        "Jaehyung Ahn",
+        "Sehwan Lee",
+        "Sangjoon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization",
+      "source_url": "https://arxiv.org/abs/2610.08231",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "NVFP4 is an attractive datatype for large language model (LLM) inference, offering compact storage and native tensor-core acceleration. However, preserving accuracy using NVFP4 requires careful quantization. In this work we develop a novel quantization scheme called Optimized Smoothing and Scaling for NVFP4 (OSFP4). For each linear projection it uses a diagonal smoothing matrix whose entries are optimized to minimize the squared matrix-product quantization error under NVFP4, taking into account the rounding procedure that is used (either round-to-nearest, or GPTQ-style successive interference cancellation). This requires performing joint optimization on the smoothing entries as well as the block scales, which is facilitated by analyzing a multiplicative-dither FP4 quantizer instead of the fixed deterministic one. Experiments show that OSFP4 achieves the highest average accuracy among the evaluated competitors in the corresponding quantization settings, while retaining approximately 94-97\\% of vendor NVFP4 prefill throughput on the measured workloads. Our code is available in https://github.com/neriahbd/OSFP4",
+      "identifiers": [
+        "SemanticScholar:b58e5fe4d11b64f8ea0c4d49556d02fa27454a7d"
+      ],
+      "semantic_scholar_id": "b58e5fe4d11b64f8ea0c4d49556d02fa27454a7d",
+      "canonical_id": "arXiv:2610.08231",
+      "arxiv_id": "2610.08231",
+      "authors": [
+        "N. B. Ben-David",
+        "Ori Meir",
+        "Or Ordentlich"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FORGE: Procedural Weight Generation for Sparse MoE Inference",
+      "source_url": "https://arxiv.org/abs/2610.16890",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce FORGE (Fast On-chip Rotor Generation for Experts), a procedural weight generation system for Sparse Mixture-of-Experts (MoE) inference. Rather than storing and loading every expert weight tensor from HBM, we show how a compact accelerator inside each Streaming Multiprocessor can regenerate them on-the-fly from O(log2 d) rotor parameters per projection. Per replaced layer, gigabytes of stored expert weights are approximated with under a megabyte of seeds. This addresses the dual memory bottleneck of autoregressive Sparse MoE decode, where per-expert FFN operations are HBM-bandwidth-bound at small routed-token counts and the aggregate expert footprint forces multi-node Expert Parallelism (EP) with all-to-all traffic. We realize the approach as the Rotor Generation Unit (RGU), a fixed-function datapath that generates FFN weight tiles without competing with Tensor Core execution. With 30% of the MoE FFN layers replaced across five Sparse MoE models, we estimate 1.3-2.8x higher system throughput at matched GPU count and 1.10-1.15x lower per-user decode latency at short context. In exchange, downstream accuracy on three model families falls below that of the same model fine-tuned without rotor replacement, and the replacement ratio controls this tradeoff. FORGE also expands KV cache capacity by 1.2-2.6x. It is agnostic to the bit width at which weights are stored, so it can compose with quantization. The RGU is fully implemented/verified in SystemVerilog at ~0.9% SM area overhead (0.032 mm2/SM, 7nm).",
+      "identifiers": [
+        "SemanticScholar:48caa67d37d6d639d538b8ea4642fdc81352d5be"
+      ],
+      "semantic_scholar_id": "48caa67d37d6d639d538b8ea4642fdc81352d5be",
+      "canonical_id": "arXiv:2610.16890",
+      "arxiv_id": "2610.16890",
+      "doi": "10.1145/3845814.3850033",
+      "authors": [
+        "Chanyoung Moon",
+        "Travis Pence",
+        "Daisuke Yamada",
+        "Jia-Qi Mo",
+        "Yan-Xin Zhang",
+        "Vikas Singh",
+        "Karthikeyan Sankaralingam"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Local Inference of LLMs on Long Contexts: A Data Systems Perspective",
+      "source_url": "https://arxiv.org/abs/2610.28223",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models can solve complex problems across a variety of subjects, such as mathematics and coding. For such complex analytical tasks, models with a long context perform better. Serving models with long context is currently mostly done on powerful systems with multiple GPUs, which are too expensive for most users. An alternative is local inference, or serving a model on a user's own machine, which removes per-token costs and rate limits, besides keeping sensitive data private and giving users full control over the models they run. The common understanding, however, is that local LLMs need compression (e.g., quantization) to run on a single GPU. In this paper, we set out to study the limitations that prevent serving long-context models for single users, besides the capacity issue. Rather than characterizing a single model on one GPU, we analyze how different models behave across several GPU generations. This lets us uncover not just individual bottlenecks but broader trends in where inefficiencies arise. Our analysis confirms that, as expected, self-attention dominates the runtime for long-context inference. More unexpectedly, our evaluation reveals that the current structure of self-attention leaves key GPU resources significantly underutilized, and the newest GPU is often the least well served. Many of these findings are fundamentally data management problems, from paging the KV cache to improving cache utilization and synchronization in the GPU, which is why we bring this study to the Data Systems community. To engage this community, we present our findings as a series of experimental observations and formulate recommendations for future work.",
+      "identifiers": [
+        "SemanticScholar:ed55fe425237e02baa68912f5078e5a11eacb458"
+      ],
+      "semantic_scholar_id": "ed55fe425237e02baa68912f5078e5a11eacb458",
+      "canonical_id": "arXiv:2610.28223",
+      "arxiv_id": "2610.28223",
+      "authors": [
+        "Mattias Dürrmeier",
+        "Alberto Lerner"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InferSlice: A Reference Architecture for SLO-driven LLM Inference over a Telco Wide-Area Network",
+      "source_url": "https://arxiv.org/abs/2610.32638",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference is increasingly deployed as a core service for enterprise and interactive applications, but sovereignty, compliance, latency and resource-locality requirements can limit the suitability of centralised cloud deployments. Telco operators offer geographically distributed compute and network infrastructure for addressing these constraints. However, existing LLM serving frameworks are designed for tightly coupled data centres and provide limited support for coordinating geographically distributed and heterogeneous resources. We present InferSlice, a reference architecture for Service-Level Objective (SLO)-driven LLM inference over a telco infrastructure, integrating network slicing, GPU partitioning, elastic serving and observability. Led by BT in collaboration with the University of Bristol and NVIDIA, and realised on the JOINER UK national-scale wide-area network (WAN), InferSlice is evaluated on service differentiation across tiers, elastic scale-out, client-edge bandwidth as a bottleneck, and the reach of tensor, pipeline, data parallelism, and prefill/decode disaggregation over the WAN. Our results show that, on a general-purpose telco network, tiers yield distinct latency-throughput regimes, and weight streaming shortens scale-out time. Replication is placement-insensitive but memory-bound; pipeline parallelism tolerates near- and mid-cross-site hops, while tensor parallelism and disaggregation fail beyond a single subnet hop. We share practical insights from operating SLO-driven inference on a telco network, lessons learned and open questions, and hope to encourage further research on distributed and heterogeneous LLM inference systems.",
+      "identifiers": [
+        "SemanticScholar:5a36f4873f8d6161f52c761d66907c2fd7a29cb1"
+      ],
+      "semantic_scholar_id": "5a36f4873f8d6161f52c761d66907c2fd7a29cb1",
+      "canonical_id": "arXiv:2610.32638",
+      "arxiv_id": "2610.32638",
+      "authors": [
+        "J. Parra-Ullauri",
+        "Anthony Chiu",
+        "Hari Madhukumar",
+        "Zhao-Zhou Wu",
+        "A. Bravalheri",
+        "Alex Healing",
+        "Andy Corston-Petrie",
+        "D. Simeonidou",
+        "Nektaria Efthymiou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.07348",
+      "identity_tokens": [
+        "id:SemanticScholar:f7d5efdda3e02f3e0ef86b1a154505d09a3a7f2f",
+        "id:arXiv:2610.07348",
+        "title:stepped moe segmentlevel routing with configurable inference complexity",
+        "url:https://arxiv.org/abs/2610.07348"
+      ],
+      "record": {
+        "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
+        "source_url": "https://arxiv.org/abs/2610.07348",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training large language models (LLMs) is resource-intensive, and adapting them for diverse deployment scenarios with varying computational constraints remains challenging. While elastic architectures enable flexible model deployment and sparsely activated models allow input-adaptive computation, existing approaches treat these dimensions independently. Moreover, models catered towards on-device edge inference need to conform to the memory and compute limitations of the serving devices. In this paper, we introduce a unified framework that combines elastic structures with sparsely gated architectures to create models that adapt simultaneously to both deployment constraints and task requirements. Our approach employs a model backbone that conditions on both the context and target efficiency specifications, enabling fine-grained control over the accuracy-efficiency trade-off at inference time. The model learns to activate task-relevant parameters within elastically-nested sub-networks, allowing a single model to span multiple capacity points while maintaining input-adaptive routing. Through experiments we demonstrate that we can create a model that allows the flexibility to use 1,2,3,4 billion parameters while being more accurate than their dense counter-parts (2-5\\% on knowledge-intensive benchmarks) and at par with their static versions while delivering similar latency metrics as dense models. Overall, we save on device disk space by sharing the model parameters, allow flexibility of serving based on DRAM and compute available while delivering more accurate results.",
+        "identifiers": [
+          "SemanticScholar:f7d5efdda3e02f3e0ef86b1a154505d09a3a7f2f"
+        ],
+        "semantic_scholar_id": "f7d5efdda3e02f3e0ef86b1a154505d09a3a7f2f",
+        "canonical_id": "arXiv:2610.07348",
+        "arxiv_id": "2610.07348",
+        "authors": [
+          "Arnav Kundu",
+          "Zhao-Yang Xu",
+          "Bai-Ru Hou",
+          "Chang Gao",
+          "Reed Li",
+          "Tao Lei"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37442",
+      "identity_tokens": [
+        "id:DOI:10.1145/3795866.3844472",
+        "id:SemanticScholar:ca9ae8e1710eb159361773a43ce2b051514ef829",
+        "id:arXiv:2610.37442",
+        "title:crisp codesigning pruning and scheduling for efficient moe inference on edge servers",
+        "url:https://arxiv.org/abs/2610.37442"
+      ],
+      "record": {
+        "title": "CRISP: Co-designing Pruning and Scheduling for Efficient MoE Inference on Edge Servers",
+        "source_url": "https://arxiv.org/abs/2610.37442",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": "Proceedings of the 32nd Annual International Conference on Mobile Computing and Networking",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) inference on memory-constrained edge platforms is often dominated by expert-weight movement rather than computation. Although each token activates only a small subset of experts, routing is input-dependent, so all experts must remain accessible and memory movement dominates latency. Existing approaches such as uniform pruning and expert dropping overlook two properties of MoE execution: expert combinations are highly skewed in frequency, and experts contribute asymmetrically within each combination. We present CRISP, a combination-aware framework that co-designs pruning and runtime scheduling for efficient MoE serving on memory-constrained edge platforms. CRISP reorders neurons by importance so one stored expert can support multiple execution widths, assigns differentiated execution to hot, warm, and cold combinations based on frequency and expert role, and exploits heterogeneous widths to overlap expert loading with computation. Across Mixtral-8x7B and DeepSeek-MoE-16B, CRISP improves throughput by up to 2.1× at the same memory budget while limiting accuracy loss to 3.6% relative to full-width inference. Our results highlight that efficient edge MoE serving requires jointly optimizing which expert capacity is preserved and how expert execution is scheduled.",
+        "identifiers": [
+          "SemanticScholar:ca9ae8e1710eb159361773a43ce2b051514ef829"
+        ],
+        "semantic_scholar_id": "ca9ae8e1710eb159361773a43ce2b051514ef829",
+        "canonical_id": "arXiv:2610.37442",
+        "arxiv_id": "2610.37442",
+        "doi": "10.1145/3795866.3844472",
+        "authors": [
+          "Cong-Wei Zhang",
+          "Youming Tao",
+          "Yi-Fei Zou",
+          "Yu Yang",
+          "Rui-Rui Zhang",
+          "Xiao Zhang",
+          "Falko Dressler",
+          "Xiu-Zhen Cheng",
+          "Dong-Xiao Yu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21378",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.findings-emnlp.1076",
+        "id:SemanticScholar:7525a7eba6ea646f76bf4f5929d89124a98ea8ec",
+        "id:arXiv:2610.21378",
+        "title:dpamoe a runtime precision control framework for moe inference",
+        "url:https://arxiv.org/abs/2610.21378"
+      ],
+      "record": {
+        "title": "DPA-MoE: A Runtime Precision Control Framework for MoE Inference",
+        "source_url": "https://arxiv.org/abs/2610.21378",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models reduce computation by routing each token to a small set of experts, but each selected expert is still used at a fixed precision. We present DPA-MoE, a runtime precision control framework that makes routed experts any-precision. DPA-MoE encodes expert feed-forward weights as prefix-decodable chunks using SharedScale AnyBCQ, profiles per-expert reconstruction residuals offline, and allocates chunks at inference time using live router gate scores. This post-routing allocation lets a single encoded MoE checkpoint operate at multiple effective weight budgets without retraining or re-encoding. Experiments on Qwen3-30B-A3B and DeepSeekMoE-16B show that DPA-MoE improves KL divergence and downstream accuracy over uniform chunk allocation at matched budgets, with modest steady-state throughput overhead in our prototype.",
+        "identifiers": [
+          "SemanticScholar:7525a7eba6ea646f76bf4f5929d89124a98ea8ec"
+        ],
+        "semantic_scholar_id": "7525a7eba6ea646f76bf4f5929d89124a98ea8ec",
+        "canonical_id": "arXiv:2610.21378",
+        "arxiv_id": "2610.21378",
+        "doi": "10.18653/2026.findings-emnlp.1076",
+        "authors": [
+          "Jaeyun Kim",
+          "Hoonki Lee",
+          "Su-Mi Shin",
+          "Hyunmin Kim",
+          "Dahyun Lee",
+          "Sangyeob Kim"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.02732",
+      "identity_tokens": [
+        "id:SemanticScholar:42eaec5ebcb8e43b3cf9c0ba10d4026f9fa87eb2",
+        "id:arXiv:2610.02732",
+        "title:servetwin a benchmarkvalidated simulator for distributed llm architecture exploration",
+        "url:https://arxiv.org/abs/2610.02732"
+      ],
+      "record": {
+        "title": "ServeTwin: A Benchmark-Validated Simulator for Distributed LLM Architecture Exploration",
+        "source_url": "https://arxiv.org/abs/2610.02732",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Evaluating distributed LLM serving designs on physical clusters is costly. Yet existing simulators provide only subsets of the capabilities needed for realistic design exploration: stateful closed-loop execution, timing prediction without profiling target hardware, and direct execution of unmodified serving benchmarks. We present ServeTwin, a closed-loop simulator that couples specification-driven analytical timing with a stateful serving loop. This coupling captures feedback among request completion, scheduling, queue state, and KV-cache evolution, including prefill-decode disaggregation and multi-turn agent workloads. ServeTwin avoids target-hardware operator profiling through iSTAGE, an analytical trace generator that derives per-iteration traces from model and engine specifications while representing ragged batches and discrete engine mechanisms such as CUDA-graph batch padding. It further decomposes execution time into component-owned throughput, scheduler, and runtime costs. This ownership lets unaffected parameters transfer across platforms and confines recalibration to changed hardware or software components. ServeTwin implements a vLLM-compatible interface and runs unmodified serving benchmarks. Against real deployments, it reproduces InferenceX's steady-state throughput-interactivity frontier with a 3.6% mean error and predicts LMBenchmark's multi-turn performance with a 9.9% error while tracking KV-cache evolution. Pre-silicon sweeps reveal that the preferred HBM bandwidth-capacity tradeoff reverses across workload states and that increasing concurrency shifts the bottleneck from memory bandwidth to scheduler and runtime overheads. Together, these capabilities enable practical exploration of distributed LLM serving systems before target hardware is available.",
+        "identifiers": [
+          "SemanticScholar:42eaec5ebcb8e43b3cf9c0ba10d4026f9fa87eb2"
+        ],
+        "semantic_scholar_id": "42eaec5ebcb8e43b3cf9c0ba10d4026f9fa87eb2",
+        "canonical_id": "arXiv:2610.02732",
+        "arxiv_id": "2610.02732",
+        "authors": [
+          "Sungjoon Park",
+          "Changue Jung",
+          "Kyung-No Joo",
+          "Mincheol Kang",
+          "Jaehyung Ahn",
+          "Sehwan Lee",
+          "Sangjoon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.08231",
+      "identity_tokens": [
+        "id:SemanticScholar:b58e5fe4d11b64f8ea0c4d49556d02fa27454a7d",
+        "id:arXiv:2610.08231",
+        "title:osfp4 joint optimization of diagonal smoothing and block scales for nvfp4 quantization",
+        "url:https://arxiv.org/abs/2610.08231"
+      ],
+      "record": {
+        "title": "OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization",
+        "source_url": "https://arxiv.org/abs/2610.08231",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "NVFP4 is an attractive datatype for large language model (LLM) inference, offering compact storage and native tensor-core acceleration. However, preserving accuracy using NVFP4 requires careful quantization. In this work we develop a novel quantization scheme called Optimized Smoothing and Scaling for NVFP4 (OSFP4). For each linear projection it uses a diagonal smoothing matrix whose entries are optimized to minimize the squared matrix-product quantization error under NVFP4, taking into account the rounding procedure that is used (either round-to-nearest, or GPTQ-style successive interference cancellation). This requires performing joint optimization on the smoothing entries as well as the block scales, which is facilitated by analyzing a multiplicative-dither FP4 quantizer instead of the fixed deterministic one. Experiments show that OSFP4 achieves the highest average accuracy among the evaluated competitors in the corresponding quantization settings, while retaining approximately 94-97\\% of vendor NVFP4 prefill throughput on the measured workloads. Our code is available in https://github.com/neriahbd/OSFP4",
+        "identifiers": [
+          "SemanticScholar:b58e5fe4d11b64f8ea0c4d49556d02fa27454a7d"
+        ],
+        "semantic_scholar_id": "b58e5fe4d11b64f8ea0c4d49556d02fa27454a7d",
+        "canonical_id": "arXiv:2610.08231",
+        "arxiv_id": "2610.08231",
+        "authors": [
+          "N. B. Ben-David",
+          "Ori Meir",
+          "Or Ordentlich"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.16890",
+      "identity_tokens": [
+        "id:DOI:10.1145/3845814.3850033",
+        "id:SemanticScholar:48caa67d37d6d639d538b8ea4642fdc81352d5be",
+        "id:arXiv:2610.16890",
+        "title:forge procedural weight generation for sparse moe inference",
+        "url:https://arxiv.org/abs/2610.16890"
+      ],
+      "record": {
+        "title": "FORGE: Procedural Weight Generation for Sparse MoE Inference",
+        "source_url": "https://arxiv.org/abs/2610.16890",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce FORGE (Fast On-chip Rotor Generation for Experts), a procedural weight generation system for Sparse Mixture-of-Experts (MoE) inference. Rather than storing and loading every expert weight tensor from HBM, we show how a compact accelerator inside each Streaming Multiprocessor can regenerate them on-the-fly from O(log2 d) rotor parameters per projection. Per replaced layer, gigabytes of stored expert weights are approximated with under a megabyte of seeds. This addresses the dual memory bottleneck of autoregressive Sparse MoE decode, where per-expert FFN operations are HBM-bandwidth-bound at small routed-token counts and the aggregate expert footprint forces multi-node Expert Parallelism (EP) with all-to-all traffic. We realize the approach as the Rotor Generation Unit (RGU), a fixed-function datapath that generates FFN weight tiles without competing with Tensor Core execution. With 30% of the MoE FFN layers replaced across five Sparse MoE models, we estimate 1.3-2.8x higher system throughput at matched GPU count and 1.10-1.15x lower per-user decode latency at short context. In exchange, downstream accuracy on three model families falls below that of the same model fine-tuned without rotor replacement, and the replacement ratio controls this tradeoff. FORGE also expands KV cache capacity by 1.2-2.6x. It is agnostic to the bit width at which weights are stored, so it can compose with quantization. The RGU is fully implemented/verified in SystemVerilog at ~0.9% SM area overhead (0.032 mm2/SM, 7nm).",
+        "identifiers": [
+          "SemanticScholar:48caa67d37d6d639d538b8ea4642fdc81352d5be"
+        ],
+        "semantic_scholar_id": "48caa67d37d6d639d538b8ea4642fdc81352d5be",
+        "canonical_id": "arXiv:2610.16890",
+        "arxiv_id": "2610.16890",
+        "doi": "10.1145/3845814.3850033",
+        "authors": [
+          "Chanyoung Moon",
+          "Travis Pence",
+          "Daisuke Yamada",
+          "Jia-Qi Mo",
+          "Yan-Xin Zhang",
+          "Vikas Singh",
+          "Karthikeyan Sankaralingam"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28223",
+      "identity_tokens": [
+        "id:SemanticScholar:ed55fe425237e02baa68912f5078e5a11eacb458",
+        "id:arXiv:2610.28223",
+        "title:local inference of llms on long contexts a data systems perspective",
+        "url:https://arxiv.org/abs/2610.28223"
+      ],
+      "record": {
+        "title": "Local Inference of LLMs on Long Contexts: A Data Systems Perspective",
+        "source_url": "https://arxiv.org/abs/2610.28223",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models can solve complex problems across a variety of subjects, such as mathematics and coding. For such complex analytical tasks, models with a long context perform better. Serving models with long context is currently mostly done on powerful systems with multiple GPUs, which are too expensive for most users. An alternative is local inference, or serving a model on a user's own machine, which removes per-token costs and rate limits, besides keeping sensitive data private and giving users full control over the models they run. The common understanding, however, is that local LLMs need compression (e.g., quantization) to run on a single GPU. In this paper, we set out to study the limitations that prevent serving long-context models for single users, besides the capacity issue. Rather than characterizing a single model on one GPU, we analyze how different models behave across several GPU generations. This lets us uncover not just individual bottlenecks but broader trends in where inefficiencies arise. Our analysis confirms that, as expected, self-attention dominates the runtime for long-context inference. More unexpectedly, our evaluation reveals that the current structure of self-attention leaves key GPU resources significantly underutilized, and the newest GPU is often the least well served. Many of these findings are fundamentally data management problems, from paging the KV cache to improving cache utilization and synchronization in the GPU, which is why we bring this study to the Data Systems community. To engage this community, we present our findings as a series of experimental observations and formulate recommendations for future work.",
+        "identifiers": [
+          "SemanticScholar:ed55fe425237e02baa68912f5078e5a11eacb458"
+        ],
+        "semantic_scholar_id": "ed55fe425237e02baa68912f5078e5a11eacb458",
+        "canonical_id": "arXiv:2610.28223",
+        "arxiv_id": "2610.28223",
+        "authors": [
+          "Mattias Dürrmeier",
+          "Alberto Lerner"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.32638",
+      "identity_tokens": [
+        "id:SemanticScholar:5a36f4873f8d6161f52c761d66907c2fd7a29cb1",
+        "id:arXiv:2610.32638",
+        "title:inferslice a reference architecture for slodriven llm inference over a telco widearea network",
+        "url:https://arxiv.org/abs/2610.32638"
+      ],
+      "record": {
+        "title": "InferSlice: A Reference Architecture for SLO-driven LLM Inference over a Telco Wide-Area Network",
+        "source_url": "https://arxiv.org/abs/2610.32638",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference is increasingly deployed as a core service for enterprise and interactive applications, but sovereignty, compliance, latency and resource-locality requirements can limit the suitability of centralised cloud deployments. Telco operators offer geographically distributed compute and network infrastructure for addressing these constraints. However, existing LLM serving frameworks are designed for tightly coupled data centres and provide limited support for coordinating geographically distributed and heterogeneous resources. We present InferSlice, a reference architecture for Service-Level Objective (SLO)-driven LLM inference over a telco infrastructure, integrating network slicing, GPU partitioning, elastic serving and observability. Led by BT in collaboration with the University of Bristol and NVIDIA, and realised on the JOINER UK national-scale wide-area network (WAN), InferSlice is evaluated on service differentiation across tiers, elastic scale-out, client-edge bandwidth as a bottleneck, and the reach of tensor, pipeline, data parallelism, and prefill/decode disaggregation over the WAN. Our results show that, on a general-purpose telco network, tiers yield distinct latency-throughput regimes, and weight streaming shortens scale-out time. Replication is placement-insensitive but memory-bound; pipeline parallelism tolerates near- and mid-cross-site hops, while tensor parallelism and disaggregation fail beyond a single subnet hop. We share practical insights from operating SLO-driven inference on a telco network, lessons learned and open questions, and hope to encourage further research on distributed and heterogeneous LLM inference systems.",
+        "identifiers": [
+          "SemanticScholar:5a36f4873f8d6161f52c761d66907c2fd7a29cb1"
+        ],
+        "semantic_scholar_id": "5a36f4873f8d6161f52c761d66907c2fd7a29cb1",
+        "canonical_id": "arXiv:2610.32638",
+        "arxiv_id": "2610.32638",
+        "authors": [
+          "J. Parra-Ullauri",
+          "Anthony Chiu",
+          "Hari Madhukumar",
+          "Zhao-Zhou Wu",
+          "A. Bravalheri",
+          "Alex Healing",
+          "Andy Corston-Petrie",
+          "D. Simeonidou",
+          "Nektaria Efthymiou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:284a42592b49bb34fa9218ca92ed679b4b258fdbf760d19f865a008032898e81",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
