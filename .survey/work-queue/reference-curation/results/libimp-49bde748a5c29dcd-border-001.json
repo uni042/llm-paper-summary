@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-49bde748a5c29dcd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540",
+    "identity_tokens": [
+      "SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540"
+    ],
+    "reason": "ICLR 2025 NFAM workshopの原著要旨と本文を確認。Llama3-8B-Instruct、Mamba2およびAttention混合比12.5%・25%・50%のハイブリッドを、GSM8K等の並列test-time scalingと連想記憶課題で比較し、Mamba2の低計算量・長文脈上の利点が、連想検索能力と推論精度の不足によって必ずしも推論時の品質・計算効率改善に直結しないことを示す。例えば純Mamba2はGSM8Kで128サンプルでも20%未満、12.5% Attention混合では60%超と報告。ただし新しいLLM推論サービング・カーネル・キャッシュ・スケジューリング最適化の提案ではなく、モデルアーキテクチャとtest-time scalingの精度/コスト比較が主目的であるため、推論効率サーベイとの関連はあるがborderlineとした。",
+    "first_checked_at": "2026-11-18T13:39:54+00:00",
+    "last_checked_at": "2026-11-18T13:39:54+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Test-Time Scaling Meets Associative Memory: Challenges in Subquadratic Models"
+  },
+  "processed_at": "2026-11-18T13:39:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-49bde748a5c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

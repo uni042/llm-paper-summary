@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fef01798c3e534f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.18950",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.18950",
+    "identity_tokens": [
+      "arXiv:2511.18950"
+    ],
+    "reason": "ロボット操作向けVLAで言語指示を使い、意味的なタスク全体を残すSTCと細かな位置情報を残すSRCを組み合わせて視覚トークンを3分の1未満、FLOPsを59%削減する。推論時の視覚トークン圧縮機構は参考になるが、対象はロボット行動モデルでLLM/VLM一般サービングの直接評価はない。",
+    "first_checked_at": "2026-11-18T07:47:33+00:00",
+    "last_checked_at": "2026-11-18T13:39:54+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/99-other-inference-systems/2022-2203.14380-pyramid-bert-reducing-complexity-via-successive-core-set-based-token-sel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation"
+  },
+  "processed_at": "2026-11-18T13:39:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fef01798c3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

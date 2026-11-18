@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d20145b099241b95-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.06731",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.06731",
+    "identity_tokens": [
+      "arXiv:2603.06731"
+    ],
+    "reason": "PolyBlocksはMLIRパスを組み合わせ、ループタイリング、融合、オンチップscratchpad、行列演算器配置、注意層融合を自動コード生成する。PyTorch/JAXのGPU JITとTorchInductor/XLA比較はあるが、一次要旨で生成LLM固有のモデル・KV・デコード実測が示されない。推論カーネル技術との接点は強い一方、直接収録の証拠は限定的。",
+    "first_checked_at": "2026-11-18T03:45:04+00:00",
+    "last_checked_at": "2026-11-18T13:40:02+00:00",
+    "linked_from": [
+      "GPU Kernel Framework",
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "inference-systems",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks"
+  },
+  "processed_at": "2026-11-18T13:40:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d20145b09924",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

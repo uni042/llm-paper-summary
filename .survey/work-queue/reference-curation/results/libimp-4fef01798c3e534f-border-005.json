@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fef01798c3e534f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.08684",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.08684",
+    "identity_tokens": [
+      "arXiv:2606.08684"
+    ],
+    "reason": "自動運転VLAの隠れ状態から0.11Mパラメータの軽量ゲートが言語生成の必要性をフレーム単位で判定し、不要時は直接行動予測する。Bench2Drive等でバックボーン比2.54倍の推論高速化を報告するが、適用対象は自動運転行動生成で汎用LLMサービングへの移植性は未確認。",
+    "first_checked_at": "2026-11-15T21:43:23+00:00",
+    "last_checked_at": "2026-11-18T13:39:55+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BLUE: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving"
+  },
+  "processed_at": "2026-11-18T13:39:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fef01798c3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

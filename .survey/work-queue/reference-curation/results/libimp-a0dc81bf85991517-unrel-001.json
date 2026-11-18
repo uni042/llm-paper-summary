@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0dc81bf85991517-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.11364",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.11364",
+    "identity_tokens": [
+      "arXiv:2604.11364"
+    ],
+    "reason": "著者のarXiv一次要旨は、AIエージェントのKnowledge/Memory/Wisdom/Intelligenceの4層を異なる永続化・忘却・更新規則で設計する認知アーキテクチャ提案を扱う。Python/Rustの実装可能性には言及するが、LLM推論のGPU実行、KVキャッシュ最適化、推論レイテンシ、スループット、量子化、サービング効率の技術的改善や直接評価を主題としないため、推論システムのサーベイ対象外。",
+    "first_checked_at": "2026-11-18T13:40:00+00:00",
+    "last_checked_at": "2026-11-18T13:40:00+00:00",
+    "linked_from": [
+      "WORKLIST-45.md rank 500; AI agent memory / cognitive architecture"
+    ],
+    "title": "The Missing Knowledge Layer in Cognitive Architectures for AI Agents"
+  },
+  "processed_at": "2026-11-18T13:40:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0dc81bf8599",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

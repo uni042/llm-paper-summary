@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fef01798c3e534f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.21397",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.21397",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.21397",
+      "arXiv:2511.21397"
+    ],
+    "reason": "Idis画像質問応答データセットで無関係な視覚情報がVLMの思考長と正答率へ与える影響を分析し、視覚妨害では思考長を増やさず精度を下げると示す研究。主貢献は推論能力・頑健性の評価とプロンプト対策で、計算量・キャッシュ・サービング・カーネル等の実行系最適化を提案しない。",
+    "first_checked_at": "2026-11-18T08:08:29+00:00",
+    "last_checked_at": "2026-11-18T13:39:55+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+    ],
+    "title": "Understanding the Effects of Distractors on Reasoning Vision-Language Models"
+  },
+  "processed_at": "2026-11-18T13:39:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fef01798c3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

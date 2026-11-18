@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb84374b8332711e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.03141",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.03141",
+    "identity_tokens": [
+      "arXiv:2602.03141"
+    ],
+    "reason": "思考系列の冗長区間を結合し論理的欠落を分割するCoSMoを用いて、セグメント予算に基づく強化学習を実施。生成区間数28.7%減と精度3.3ポイント改善を報告するが、中心寄与は学習時の構造整形と方策訓練で、テスト時推論基盤の直接最適化ではない。",
+    "first_checked_at": "2026-11-15T21:43:12+00:00",
+    "last_checked_at": "2026-11-18T13:40:05+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Short Chains, Deep Thoughts: Balancing Reasoning Efficiency and Intra-Segment Capability via Split-Merge Optimization"
+  },
+  "processed_at": "2026-11-18T13:40:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb84374b8332",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

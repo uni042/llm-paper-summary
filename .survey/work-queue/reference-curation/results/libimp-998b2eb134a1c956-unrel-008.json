@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-998b2eb134a1c956-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.41604",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.41604",
+    "identity_tokens": [
+      "arXiv:2610.41604"
+    ],
+    "reason": "LLM agentの25認知機構モジュールが実際にproduction outputへ寄与するかを静的call-chain監査と介入実験で検証し、18/25モジュールが出力へ未接続と報告。修復でplanner成功率が0.028から1.000へ上昇するが、主貢献は機構名と実装の整合性監査でありLLM推論速度・メモリ階層・量子化・servingスケジューリングの技術を扱わないためunrelated。",
+    "first_checked_at": "2026-11-18T13:40:00+00:00",
+    "last_checked_at": "2026-11-18T13:40:00+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "title": "Real Computation or Merely Naming? A Pre-Registered Mechanism Audit of 25 Cognitive-Architecture Modules in an LLM-Based Agent System"
+  },
+  "processed_at": "2026-11-18T13:40:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-998b2eb134a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fef01798c3e534f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37818",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37818",
+    "identity_tokens": [
+      "arXiv:2609.37818"
+    ],
+    "reason": "LoopSLMは音声対話の韻律・非言語情報を潜在状態へ取り込み、デコーダブロックを反復して明示的CoTなしに応答する。CoT-SFT比で生成トークン64.5%減、遅延約半減を報告するが、主対象は共感的音声対話品質であり汎用LLM推論システムのスケジューラやカーネルは未評価。",
+    "first_checked_at": "2026-11-18T13:39:54+00:00",
+    "last_checked_at": "2026-11-18T13:39:54+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue"
+  },
+  "processed_at": "2026-11-18T13:39:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fef01798c3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

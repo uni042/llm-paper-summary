@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-998b2eb134a1c956-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41072",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41072",
+    "identity_tokens": [
+      "arXiv:2610.41072"
+    ],
+    "reason": "セキュリティ運用のalert分類・rule作成を小型ローカルモデルへ移し、entity相関・人手承認・改竄耐性台帳を併用するagenticシステム。Claude Opus 5.5との比較で特定検出条件で少なくとも650倍の省エネルギー、alert分類とrule作成で5.6〜59倍の省エネルギーを報告。小型モデルへの処理委譲は推論費用に関連するがSOC用途固有で汎用LLM serving最適化ではないためborderline。",
+    "first_checked_at": "2026-11-18T13:39:58+00:00",
+    "last_checked_at": "2026-11-18T13:39:58+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale"
+  },
+  "processed_at": "2026-11-18T13:39:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-998b2eb134a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

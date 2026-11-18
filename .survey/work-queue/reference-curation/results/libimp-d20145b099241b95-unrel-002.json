@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d20145b099241b95-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.04048",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.04048",
+    "identity_tokens": [
+      "arXiv:2606.04048"
+    ],
+    "reason": "Gated Delta Network向け最大更新パラメータ化のスケーリング則を理論導出し、AdamW/SGDの事前学習でモデル幅間の学習率転移を検証する。一次要旨の貢献は学習安定性とハイパーパラメータ調整であり、LLMの推論実行・メモリ削減・サービングの改善は示さないため学習専用の凍結範囲。",
+    "first_checked_at": "2026-11-18T07:17:04+00:00",
+    "last_checked_at": "2026-11-18T13:40:03+00:00",
+    "linked_from": [
+      "adaptive-expert-computation-compression",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "title": "Unlocking Feature Learning in Gated Delta Networks at Scale"
+  },
+  "processed_at": "2026-11-18T13:40:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d20145b09924",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

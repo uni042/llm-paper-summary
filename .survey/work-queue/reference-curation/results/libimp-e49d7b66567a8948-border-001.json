@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e49d7b66567a8948-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.00862",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.00862",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2607.00862",
+      "arXiv:2607.00862"
+    ],
+    "reason": "著者のarXiv一次要旨を確認。CATはモデル自身のself-certaintyを選好最適化に取り込み、容易な問題ではCoT生成長を短縮し、難問では長い推論を維持する。推論時の出力トークン負荷低減には接続するが、主要な新規性はオフライン選好学習であり、サービング実装・実測TTFT/throughputの直接評価は要旨から確認できないため、学習高速化凍結範囲との境界としてborderline。",
+    "first_checked_at": "2026-11-18T13:40:03+00:00",
+    "last_checked_at": "2026-11-18T13:40:03+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md#rank-499"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models"
+  },
+  "processed_at": "2026-11-18T13:40:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e49d7b66567a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

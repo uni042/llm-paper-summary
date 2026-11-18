@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T13:19:35+00:00",
-  "record_count": 6314,
+  "updated_at": "2026-11-18T13:40:05+00:00",
+  "record_count": 6331,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -84262,7 +84262,7 @@
       ],
       "reason": "arXiv一次要旨は検索に強い注意ヘッドから関連トークンを特定し、デコード中に注意重みを増幅して長文脈の回答品質を改善するDYSCOを提案。生成推論アルゴリズムに関連するが、主眼は長文脈推論精度であり、推論計算・メモリ・速度削減の主張が中心ではないためborderline。",
       "first_checked_at": "2026-10-30T07:20:32+00:00",
-      "last_checked_at": "2026-10-30T07:20:32+00:00",
+      "last_checked_at": "2026-11-18T13:40:01+00:00",
       "linked_from": [
         "Long-context Inference"
       ],
@@ -84277,7 +84277,7 @@
       ],
       "reason": "arXiv一次要旨は学習中の注意パターン分散が小さいヘッドを固定パターンへ置換するSelective Attention Freezingを提案。注意計算の一部を省く融合カーネルを設計するが、主要な定量比較は学習トークン予算と訓練速度であり、生成LLMサービングのdecode高速化が中心ではないためborderline。",
       "first_checked_at": "2026-10-30T07:20:33+00:00",
-      "last_checked_at": "2026-10-30T07:20:33+00:00",
+      "last_checked_at": "2026-11-18T13:40:01+00:00",
       "linked_from": [
         "Hardware Accelerators",
         "Sparse Attention"
@@ -84372,7 +84372,7 @@
       ],
       "reason": "arXiv一次要旨は分類精度を維持する量子化でも検索のtop-1結果が14〜46%変化し得ることを示し、上位スコア差に応じて高精度化を配分する方法を提案。検索器の量子化品質には直接関連するが、LLM生成推論やサービングのモデル実測は要旨にないため境界的。",
       "first_checked_at": "2026-10-30T07:20:39+00:00",
-      "last_checked_at": "2026-10-30T07:20:39+00:00",
+      "last_checked_at": "2026-11-18T13:40:01+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It"
@@ -84530,7 +84530,7 @@
       ],
       "reason": "arXiv一次要旨はTransformerの長距離依存能力を滑らかさと局所性の帰納バイアスで改善し、Long Range Arenaで性能を検証する。追加学習パラメータと演算費用がほぼない改変だが、LLM推論の実機メモリ・レイテンシ・サービング改善は直接示さず、モデル表現力の研究として境界的。",
       "first_checked_at": "2026-10-30T07:22:32+00:00",
-      "last_checked_at": "2026-10-30T07:22:32+00:00",
+      "last_checked_at": "2026-11-18T13:39:57+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "On the Long Range Abilities of Transformers"
@@ -86309,9 +86309,9 @@
         "id:DOI:10.48550/arXiv.2610.09894",
         "id:arXiv:2610.09894"
       ],
-      "reason": "database queryのpredicateとmetadataから推論前にTransformer FFN sliceを選ぶQCATSを提案し、offline expert構築、query単位routing、CPU/GPU非同期pipelineとbatchingを組み合わせる。一次要旨はBERT-base/Qwen-0.6Bの4予測query workloadでlatency最大4.42倍削減と報告。推論runtimeに関係するが対象はDB内predictive queryで自回帰LLM servingではないためborderline。",
+      "reason": "データベース内の予測クエリに対してpredicateと統計情報からFFN expert sliceを事前選択し、非同期CPU-GPU pipelineとrouting-aware batchingを組み合わせるQCATSを提案。BERT-baseとQwen-0.6Bを用いる4種の予測クエリで最大4.42倍の遅延短縮を報告。ただし対象はDBのquery-granularity推論であり一般LLM生成サービングへの検証はないためborderline。",
       "first_checked_at": "2026-11-02T05:57:35+00:00",
-      "last_checked_at": "2026-11-18T08:47:45+00:00",
+      "last_checked_at": "2026-11-18T13:39:52+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing"
@@ -86963,25 +86963,6 @@
       "borderline_recheck_count": 0,
       "title": "ERNIE 5.0 Technical Report"
     },
-    "arXiv:2601.15892": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2601.15892",
-      "identity_tokens": [
-        "arXiv:2601.15892"
-      ],
-      "reason": "コード向け拡散言語モデルStable-DiffCoder。ブロック拡散の継続事前学習とノイズスケジュールで、同一アーキテクチャ・同一データの自己回帰版を上回る品質を示す研究。拡散デコードという推論パラダイムには関わるが、貢献の実体は訓練手法とモデリング品質であり、推論機構の提示はない。",
-      "first_checked_at": "2026-11-15T21:43:02+00:00",
-      "last_checked_at": "2026-11-15T21:43:02+00:00",
-      "linked_from": [
-        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
-        "inference-systems",
-        "parallel-and-non-autoregressive-decoding",
-        "speculative-parallel-decoding",
-        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model"
-    },
     "arXiv:2607.20519": {
       "classification": "borderline",
       "canonical_id": "arXiv:2607.20519",
@@ -87109,9 +87090,9 @@
       "identity_tokens": [
         "arXiv:2601.03969"
       ],
-      "reason": "効率的推論モデルの訓練手法Dynamic Outlier Truncation。訓練中に自明な入力へ不要な推論が増える長さシフト現象を特定し、正解ロールアウト群の極端な長さ尾部だけを訓練時に切り詰める。推論トークン78%削減の効果はあるが、機構の実体は訓練側の介入とサンプリング調整であり境界。",
+      "reason": "正答ロールアウト群の極端に長い尾だけを学習中に切り詰めるDynamic Outlier TruncationとKL正則化・動的サンプリングを提案。推論トークン78%減を報告するが、主要機構は強化学習の生成データ・方策最適化であり、推論基盤やテスト時アルゴリズムの直接改良ではない。",
       "first_checked_at": "2026-11-15T21:43:08+00:00",
-      "last_checked_at": "2026-11-15T21:43:08+00:00",
+      "last_checked_at": "2026-11-18T13:40:04+00:00",
       "linked_from": [
         "Conditional Computation",
         "LLM Serving / Scheduling / Disaggregation"
@@ -87210,9 +87191,9 @@
       "identity_tokens": [
         "arXiv:2602.03141"
       ],
-      "reason": "推論チェーンの分割・統合最適化CoSMo。冗長区間の統合と論理的間隙の分割で推論構造を整え、区間水準予算を持つ構造整合強化学習でモデルに効率的な推論構造を保たせる。推論効率が目的だが、機構の実体は訓練枠組みであり境界。",
+      "reason": "思考系列の冗長区間を結合し論理的欠落を分割するCoSMoを用いて、セグメント予算に基づく強化学習を実施。生成区間数28.7%減と精度3.3ポイント改善を報告するが、中心寄与は学習時の構造整形と方策訓練で、テスト時推論基盤の直接最適化ではない。",
       "first_checked_at": "2026-11-15T21:43:12+00:00",
-      "last_checked_at": "2026-11-15T21:43:12+00:00",
+      "last_checked_at": "2026-11-18T13:40:05+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
         "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
@@ -87492,9 +87473,9 @@
       "identity_tokens": [
         "arXiv:2606.08684"
       ],
-      "reason": "自動運転VLA向け言語使用ゲートBLUE。言語が効くフレームは一部だけという分析に基づき、凍結したVLA隠れ状態へ軽量ゲートを訓練し、フレームごとに言語生成の要否を決めて2.54倍の推論高速化を得る。条件付き計算の発想はあるが、機構は自動運転応用に密着したモデル側ゲートであり境界。",
+      "reason": "自動運転VLAの隠れ状態から0.11Mパラメータの軽量ゲートが言語生成の必要性をフレーム単位で判定し、不要時は直接行動予測する。Bench2Drive等でバックボーン比2.54倍の推論高速化を報告するが、適用対象は自動運転行動生成で汎用LLMサービングへの移植性は未確認。",
       "first_checked_at": "2026-11-15T21:43:23+00:00",
-      "last_checked_at": "2026-11-15T21:43:23+00:00",
+      "last_checked_at": "2026-11-18T13:39:55+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
         "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
@@ -87798,9 +87779,9 @@
       "identity_tokens": [
         "arXiv:2603.06731"
       ],
-      "reason": "AIチップ向けMLIRコンパイラ基盤PolyBlocks。ループネストとSSAへの変換をパスパイプラインで構成し、多水準タイリングや融合、注意層の融合などを解析的費用モデルで自動適用する。一般のAIコンパイラ基盤であり、LLM推論に特化した機構ではないため境界。",
+      "reason": "PolyBlocksはMLIRパスを組み合わせ、ループタイリング、融合、オンチップscratchpad、行列演算器配置、注意層融合を自動コード生成する。PyTorch/JAXのGPU JITとTorchInductor/XLA比較はあるが、一次要旨で生成LLM固有のモデル・KV・デコード実測が示されない。推論カーネル技術との接点は強い一方、直接収録の証拠は限定的。",
       "first_checked_at": "2026-11-18T03:45:04+00:00",
-      "last_checked_at": "2026-11-18T03:45:04+00:00",
+      "last_checked_at": "2026-11-18T13:40:02+00:00",
       "linked_from": [
         "GPU Kernel Framework",
         "PyTorch 2 torch.compileの設計と評価を報告する論文。",
@@ -88470,9 +88451,9 @@
       "identity_tokens": [
         "arXiv:2505.23648"
       ],
-      "reason": "arXiv一次要旨は連続値の思考トークンCoT2により複数の離散推論経路を同時表現し、1復号段階でK個の離散トークンを合成するサンプリングを理論・小規模実験で検証。推論並列性の理論的接点はあるが、LLMサービングの実測遅延や既存実行基盤の直接最適化は要旨で確認できないため境界的。",
+      "reason": "arXiv一次要旨は連続値トークンのCoT2で複数の離散推論経路を並列追跡する理論と学習法を提案。並列性が推論効率へ与える可能性を示すが、主たる寄与は表現力・論理推論の理論と学習法であり実機サービングの速度改善は主題でないため境界的。",
       "first_checked_at": "2026-11-18T06:12:10+00:00",
-      "last_checked_at": "2026-11-18T12:39:30+00:00",
+      "last_checked_at": "2026-11-18T13:39:56+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
         "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
@@ -88832,24 +88813,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices"
-    },
-    "arXiv:2505.14709": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2505.14709",
-      "identity_tokens": [
-        "arXiv:2505.14709"
-      ],
-      "reason": "自己回帰動画生成向けキャッシュ注意リプレイFastCar。隣接フレームのMLP出力の時間冗長性を使い、デコード段階を高速化する。デコード高速化の機構ではあるが、対象は動画生成モデルであり境界。",
-      "first_checked_at": "2026-11-18T06:39:32+00:00",
-      "last_checked_at": "2026-11-18T06:39:32+00:00",
-      "linked_from": [
-        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
-        "KV cache quantization / long-context inference / activation compression",
-        "KVキャッシュ最適化／適応圧縮",
-        "inference-systems"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "FastCar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge"
     },
     "arXiv:2505.18298": {
       "classification": "borderline",
@@ -92536,9 +92499,9 @@
       "identity_tokens": [
         "arXiv:2511.18950"
       ],
-      "reason": "効率的VLAのための指示誘導視覚トークン圧縮Compressor-VLA。課題に無関係な剪定が課題criticalな視覚情報を保てない問題に対し、指示で条件づけたハイブリッド圧縮。VLAのトークン圧縮であり境界。",
+      "reason": "ロボット操作向けVLAで言語指示を使い、意味的なタスク全体を残すSTCと細かな位置情報を残すSRCを組み合わせて視覚トークンを3分の1未満、FLOPsを59%削減する。推論時の視覚トークン圧縮機構は参考になるが、対象はロボット行動モデルでLLM/VLM一般サービングの直接評価はない。",
       "first_checked_at": "2026-11-18T07:47:33+00:00",
-      "last_checked_at": "2026-11-18T07:47:33+00:00",
+      "last_checked_at": "2026-11-18T13:39:54+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
         "papers/inference/99-other-inference-systems/2022-2203.14380-pyramid-bert-reducing-complexity-via-successive-core-set-based-token-sel.md"
@@ -93109,9 +93072,9 @@
       "identity_tokens": [
         "arXiv:2603.05087"
       ],
-      "reason": "プロンプトチューニング向けSLO配慮型弾力システムPromptTuner。プロンプトチューニングをサービスとして提供する際の、SLO充足と資源調達費用の最適化。推論基盤に隣接するが、主題はチューニングサービスの資源管理であり境界。",
+      "reason": "arXiv一次要旨はPrompt-Tuning-as-a-ServiceのSLOと費用を改善するPrompt Bank・Workload Schedulerを持つPromptTunerを提案。INFless比SLO違反4.0倍削減、ElasticFlow比7.9倍削減と報告するが、主対象はprompt tuning学習サービスでありLLM生成推論配信ではないため境界的。",
       "first_checked_at": "2026-11-18T07:47:52+00:00",
-      "last_checked_at": "2026-11-18T07:47:52+00:00",
+      "last_checked_at": "2026-11-18T13:39:56+00:00",
       "linked_from": [
         "05-kv-cache-compression-management",
         "LLM Serving / Scheduling / Disaggregation",
@@ -93700,9 +93663,9 @@
       "identity_tokens": [
         "arXiv:2601.22730"
       ],
-      "reason": "長い思考連鎖を視覚トークンへ圧縮するImgCoT。推論時の推論長削減を狙うが、手段はCoT表現の学習的変換であり、推論システムの実行機構ではなく境界。",
+      "reason": "長い思考連鎖を画像として描画し、視覚潜在トークンへ圧縮して推論構造を表現するImgCoTと、低尤度箇所に少量のテキスト推論を補うloose ImgCoTを提案する。思考トークン削減と効率化には関連するが、要旨に推論サービング実測・KV/カーネル最適化の具体的証拠がないため境界候補。",
       "first_checked_at": "2026-11-18T08:08:14+00:00",
-      "last_checked_at": "2026-11-18T08:08:14+00:00",
+      "last_checked_at": "2026-11-18T13:39:54+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
         "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
@@ -94343,9 +94306,9 @@
       "identity_tokens": [
         "arXiv:2402.15991"
       ],
-      "reason": "arXiv一次要旨は多言語分類モデルの確信度を言語別に較正し、軽量モデルから高性能モデルへ段階的に振り分けるC3を提案。推論時のモデル選択・計算削減は関連するが、主対象は多言語NLU分類であり生成LLMサービングへの適用やシステム実測は要旨にないため境界的。",
+      "reason": "arXiv一次要旨は多言語NLU分類で小型モデルの過信を校正し、入力に応じて大きなモデルへ委譲するC3カスケードを提案。推論計算の削減に関連するが、主対象は分類系mPLMであり生成LLMサービングへの直接実証はないため境界的。",
       "first_checked_at": "2026-11-18T08:17:46+00:00",
-      "last_checked_at": "2026-11-18T12:19:37+00:00",
+      "last_checked_at": "2026-11-18T13:39:56+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
         "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
@@ -98287,6 +98250,286 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "High-Rate Quantized Matrix Multiplication I"
+    },
+    "arXiv:2601.22397": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22397",
+      "identity_tokens": [
+        "arXiv:2601.22397"
+      ],
+      "reason": "arXiv一次論文の要旨・導入と関連研究節を確認。複数段ML推論パイプラインのCPU/GPU資源配分を、LLMをin-context強化学習の制御器として用い、Pareto報酬・surprisalに基づく経験検索・ユーザー空間CUDA呼出し制御で調整する。4種類のML serving pipelineでP99遅延最大50%改善・実効費用最大97%削減（GPU rate-control仮定）を報告。ただし論文はLLMをサービング対象ではなく制御器として使い、対象ワークロードは一般MLパイプラインでありLLM推論固有のKV管理・デコード・サービング最適化を示さない。汎用推論基盤への間接的関連にとどまるためborderline。",
+      "first_checked_at": "2026-11-18T13:39:50+00:00",
+      "last_checked_at": "2026-11-18T13:39:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SAIR: Cost-Efficient Multi-Stage ML Pipeline Autoscaling via In-Context Reinforcement Learning"
+    },
+    "arXiv:2304.11520": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.11520",
+      "identity_tokens": [
+        "arXiv:2304.11520"
+      ],
+      "reason": "Raspberry Pi 4、Jetson Nano、UP2、UDOO Boltの2/4GB構成でBERT/RoBERTa/DistilBERT/TinyBERTの推論時間・メモリ・消費電力を実測し、attention head pruningの限界を分析する。推論実装・ハードウェア評価という共通部分はあるが、実験はHuRIC/GoEmotion/CoNLL/WNUT17の分類・NERであり、自己回帰LLMの生成、KVメモリ、prefill/decode最適化には直接踏み込まない。",
+      "first_checked_at": "2026-11-18T13:39:52+00:00",
+      "last_checked_at": "2026-11-18T13:39:52+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Processing Natural Language on Embedded Devices: How Well Do Transformer Models Perform?"
+    },
+    "arXiv:2610.05062": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05062",
+      "identity_tokens": [
+        "arXiv:2610.05062",
+        "id:DOI:10.48550/arXiv.2610.05062",
+        "id:arXiv:2610.05062"
+      ],
+      "reason": "VLAモデル4種をedge GPU serverと車載SoC 2種で計測し、batch=1のロボット制御周期における遅延・電力・制御精度のトレードオフを43,200 closed-loop episodeで評価する。LLMサービングのbatch最適化とは異なるVLA固有の推論実行特性が中心であり、共通するGPU runtime示唆はあるがLLM生成サービングへの直接貢献は限定的なためborderline。",
+      "first_checked_at": "2026-11-18T13:39:52+00:00",
+      "last_checked_at": "2026-11-18T13:39:52+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beyond LLM Serving: Characterizing Vision-Language-Action Workloads for Embodied AI System Design"
+    },
+    "SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540",
+      "identity_tokens": [
+        "SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540"
+      ],
+      "reason": "ICLR 2025 NFAM workshopの原著要旨と本文を確認。Llama3-8B-Instruct、Mamba2およびAttention混合比12.5%・25%・50%のハイブリッドを、GSM8K等の並列test-time scalingと連想記憶課題で比較し、Mamba2の低計算量・長文脈上の利点が、連想検索能力と推論精度の不足によって必ずしも推論時の品質・計算効率改善に直結しないことを示す。例えば純Mamba2はGSM8Kで128サンプルでも20%未満、12.5% Attention混合では60%超と報告。ただし新しいLLM推論サービング・カーネル・キャッシュ・スケジューリング最適化の提案ではなく、モデルアーキテクチャとtest-time scalingの精度/コスト比較が主目的であるため、推論効率サーベイとの関連はあるがborderlineとした。",
+      "first_checked_at": "2026-11-18T13:39:54+00:00",
+      "last_checked_at": "2026-11-18T13:39:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Test-Time Scaling Meets Associative Memory: Challenges in Subquadratic Models"
+    },
+    "arXiv:2609.37818": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37818",
+      "identity_tokens": [
+        "arXiv:2609.37818"
+      ],
+      "reason": "LoopSLMは音声対話の韻律・非言語情報を潜在状態へ取り込み、デコーダブロックを反復して明示的CoTなしに応答する。CoT-SFT比で生成トークン64.5%減、遅延約半減を報告するが、主対象は共感的音声対話品質であり汎用LLM推論システムのスケジューラやカーネルは未評価。",
+      "first_checked_at": "2026-11-18T13:39:54+00:00",
+      "last_checked_at": "2026-11-18T13:39:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue"
+    },
+    "arXiv:2607.09084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09084",
+      "identity_tokens": [
+        "arXiv:2607.09084"
+      ],
+      "reason": "大規模モデルの省資源アーキテクチャ、低精度化、GPU/メモリ、ハードウェア・ソフトウェア協調設計、データセンター持続可能性まで広く扱うサーベイ。LLM推論システムに関係する章を含むが、学習・応用・社会的持続可能性の比重も大きく、独自の推論機構や計測研究ではないため境界扱い。",
+      "first_checked_at": "2026-11-18T13:39:56+00:00",
+      "last_checked_at": "2026-11-18T13:39:56+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design"
+    },
+    "DOI:10.1145/3754598.3754660": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3754598.3754660",
+      "identity_tokens": [
+        "DOI:10.1145/3754598.3754660"
+      ],
+      "reason": "ACM出版社の原著要旨を確認。外れ値の少ないテンソル領域には大きなBFPブロックを、外れ値の多い領域には小さなブロックを用いる動的ブロックサイズ量子化と、ブロックサイズ情報を仮数に埋め込む符号化、可変ブロック長を扱う統合処理要素（PE）を提案する。CNNおよびTransformerを含む6モデルでWinAcc、Bucket、FASTと比較した推論用DNNアクセラレータ研究であり、LLM専用の生成推論・サービング・KVキャッシュの直接評価は原著要旨に記載されていない。LLM推論向け量子化ハードウェアとの技術的接点はあるが、LLM固有の適用根拠が不足するためborderline。",
+      "first_checked_at": "2026-11-18T13:39:57+00:00",
+      "last_checked_at": "2026-11-18T13:39:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SmartBlock: Adaptive Block Floating Point Quantization for Efficient DNN Acceleration"
+    },
+    "arXiv:2602.04361": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04361",
+      "identity_tokens": [
+        "arXiv:2602.04361"
+      ],
+      "reason": "画像生成のVisual AutoRegressiveモデルで、attention sink、スケール間の活性類似性、局所性を利用し、次スケールの疎注意パターンを前スケールから予測する。block-wise疎カーネルにより画像生成を高速化するが、対象はVAR画像生成でありLLMテキスト推論やサービングへの直接適用は示さないため境界候補。",
+      "first_checked_at": "2026-11-18T13:39:58+00:00",
+      "last_checked_at": "2026-11-18T13:39:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration"
+    },
+    "arXiv:2610.42066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.42066",
+      "identity_tokens": [
+        "arXiv:2610.42066"
+      ],
+      "reason": "推論記録へversioned evidence relationとunknownを明示する仕様KLMを提案し、実装例SEDIMでrouting分類137/150件、legacy packingでgoldを含むtextが118/221件失われたのに対し修正版では221/221件保持したと報告。ただし後者は正解率でなく文字列保持の計測で、推論エンジンの性能改善は実証していない。出力検証とrouting診断は隣接領域としてborderline。",
+      "first_checked_at": "2026-11-18T13:39:58+00:00",
+      "last_checked_at": "2026-11-18T13:39:58+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Knowledge Layer Model (KLM): Evidence-Visible AI Output, Routing Diagnostics, and Negative Results"
+    },
+    "arXiv:2610.41072": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41072",
+      "identity_tokens": [
+        "arXiv:2610.41072"
+      ],
+      "reason": "セキュリティ運用のalert分類・rule作成を小型ローカルモデルへ移し、entity相関・人手承認・改竄耐性台帳を併用するagenticシステム。Claude Opus 5.5との比較で特定検出条件で少なくとも650倍の省エネルギー、alert分類とrule作成で5.6〜59倍の省エネルギーを報告。小型モデルへの処理委譲は推論費用に関連するがSOC用途固有で汎用LLM serving最適化ではないためborderline。",
+      "first_checked_at": "2026-11-18T13:39:58+00:00",
+      "last_checked_at": "2026-11-18T13:39:58+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale"
+    },
+    "arXiv:2610.41453": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41453",
+      "identity_tokens": [
+        "arXiv:2610.41453"
+      ],
+      "reason": "tool timeout時に未確定の実行結果を公開証拠・権限・依存関係から絞り込む回復plannerとeffect-history adjudicatorを提案。19 task familyの58ペア比較で完了認証30件対9件、提案数272対399と報告。agent workflowの再試行回数と安全な実行継続には関連するがLLMモデル推論のGPU時間・KV・サービング資源の最適化は対象外でborderline。",
+      "first_checked_at": "2026-11-18T13:39:59+00:00",
+      "last_checked_at": "2026-11-18T13:39:59+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution"
+    },
+    "arXiv:2610.41009": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41009",
+      "identity_tokens": [
+        "arXiv:2610.41009"
+      ],
+      "reason": "VLAモデルの後段residual updateに指数移動平均を適用し、過去のproprioceptive stateで混合強度を調節する学習不要の推論時action表現修正。ロボット操作benchmarkで平均成功率4.0ポイント向上と報告。推論時処理の変更だが目的は視覚接地と行動品質でありレイテンシ・FLOPs・メモリ改善の記載がないためborderline。",
+      "first_checked_at": "2026-11-18T13:39:59+00:00",
+      "last_checked_at": "2026-11-18T13:39:59+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "STAR: Steering Action Representations during Inference"
+    },
+    "arXiv:2610.41564": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41564",
+      "identity_tokens": [
+        "arXiv:2610.41564"
+      ],
+      "reason": "ReAct型agentへgoal stackと二段階の前提検証を追加し、goal activationや実行失敗時にPush/Pop/retry/BacktrackToで計画状態を修正する。Qwen3.5-9B、GPT-4o、DeepSeek-V3.2でAppWorldなどを評価し、AppWorldでReAct比最大22.07ポイントの成功率改善。制御フローの効率に隣接するがtoken費用・GPU latency・serving throughputの改善は要旨にないためborderline。",
+      "first_checked_at": "2026-11-18T13:39:59+00:00",
+      "last_checked_at": "2026-11-18T13:39:59+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Verify--Backtrack Loop: Structured Precondition Recovery for Long-Horizon Language Agents"
+    },
+    "arXiv:2610.41025": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41025",
+      "identity_tokens": [
+        "arXiv:2610.41025"
+      ],
+      "reason": "失敗したagent trajectoryを途中状態へ戻して診断者の単一修正行動を再実行し、placeboと比較するcounterfactual replay benchmark。62件の系統的失敗で最良診断モデルのcausal repairは+51.3ポイント、live oversightでは小型モデルが上位に入ると報告。agent実行監視・失敗回復の選択に有用だが推論資源削減を目的とした方式でなくbenchmarkが主貢献なのでborderline。",
+      "first_checked_at": "2026-11-18T13:40:00+00:00",
+      "last_checked_at": "2026-11-18T13:40:00+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay"
+    },
+    "arXiv:2610.41129": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41129",
+      "identity_tokens": [
+        "arXiv:2610.41129"
+      ],
+      "reason": "複数agentが共有する人間の確認待ちを、search・質問・独立作業継続の選択を含む動的計画として定式化。2 task問題からpairwise coordination policyを組み、864 synthetic caseで最適費用との差0.07%、標準3方策比18〜31%の費用削減を報告。agent workflowの外部待ち時間と調整費用を削減するがLLM推論計算・メモリ・サービングの最適化は直接扱わずborderline。",
+      "first_checked_at": "2026-11-18T13:40:00+00:00",
+      "last_checked_at": "2026-11-18T13:40:00+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Should AI Agents Ask? Clarification Requests Under Limited Human Attention"
+    },
+    "arXiv:2607.00862": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00862",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.00862",
+        "arXiv:2607.00862"
+      ],
+      "reason": "著者のarXiv一次要旨を確認。CATはモデル自身のself-certaintyを選好最適化に取り込み、容易な問題ではCoT生成長を短縮し、難問では長い推論を維持する。推論時の出力トークン負荷低減には接続するが、主要な新規性はオフライン選好学習であり、サービング実装・実測TTFT/throughputの直接評価は要旨から確認できないため、学習高速化凍結範囲との境界としてborderline。",
+      "first_checked_at": "2026-11-18T13:40:03+00:00",
+      "last_checked_at": "2026-11-18T13:40:03+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-499"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models"
+    },
+    "SemanticScholar:e5dcf34235f384371dc498bf3879e531322da252": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e5dcf34235f384371dc498bf3879e531322da252",
+      "identity_tokens": [
+        "IACR:ePrint:2024/1018",
+        "SemanticScholar:e5dcf34235f384371dc498bf3879e531322da252"
+      ],
+      "reason": "著者一次論文IACR ePrint 2024/1018のAbstractを確認。SpaGKRは疎な線形層のゼロ知識証明のprover時間を非ゼロ重み数に比例させ、三値ネットワークの低bit性も利用する。大規模モデルの推論結果の検証には関連するが、主要評価は一般MLの証明生成効率でありLLM本体のトークン生成遅延・メモリ・スループットの直接改善を示さないためborderline。",
+      "first_checked_at": "2026-11-18T13:40:04+00:00",
+      "last_checked_at": "2026-11-18T13:40:04+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-498"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sparsity-Aware Protocol for ZK-friendly ML Models: Shedding Lights on Practical ZKML"
+    },
+    "DOI:10.1145/3534619": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3534619",
+      "identity_tokens": [
+        "DOI:10.1145/3534619"
+      ],
+      "reason": "著者所属大学の正式書誌・一次要旨では、画像と言語を組み合わせる視覚質問応答をクラウドなしで携帯端末上で動かすため、視覚と言語の依存関係を考慮した複数の最適化を提案する。2つのVQA評価系と2種類のモバイル環境を対象に、携帯端末上163ミリ秒の応答、従来高精度モデルの20秒超との比較、正解率低下1ポイント未満を報告する。ただし2022年の専用VQA推論であり、生成LLMのKVキャッシュ、デコード、サービングへの具体的適用やLLM上の測定は要旨で確認できないため、推論効率との接点はあるが直接収録を保留する。",
+      "first_checked_at": "2026-11-18T13:40:05+00:00",
+      "last_checked_at": "2026-11-18T13:40:05+00:00",
+      "linked_from": [
+        "Sparse Attention"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MobiVQA: Efficient On-Device Visual Question Answering"
+    },
+    "arXiv:2610.41333": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41333",
+      "identity_tokens": [
+        "arXiv:2610.41333"
+      ],
+      "reason": "PRMによる数学的推論のbest-of-N候補選択について、推論ステップの固定スコアを積・幾何平均で集約する規則を比較する再現可能な監査プロトコル。7 scoring checkpoint×2 benchmarkの14条件で積集約の削除介入後選択不安定性が幾何平均より高く、平均差+0.0965と報告。推論時の候補選択に関係するが、GPU実行、LLM serving、KV cache、推論レイテンシの最適化を提案・実測した研究ではないためborderline。",
+      "first_checked_at": "2026-11-18T13:40:05+00:00",
+      "last_checked_at": "2026-11-18T13:40:05+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StrictPRMBench: A Replayable Evaluation Benchmark for Auditing Fixed-Score PRM Aggregation"
     }
   }
 }

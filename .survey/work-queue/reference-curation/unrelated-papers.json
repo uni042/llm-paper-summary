@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T13:19:36+00:00",
-  "record_count": 12907,
+  "updated_at": "2026-11-18T13:40:06+00:00",
+  "record_count": 12918,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182537,23 +182537,6 @@
       ],
       "title": "SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning"
     },
-    "arXiv:2609.37818": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2609.37818",
-      "identity_tokens": [
-        "arXiv:2609.37818"
-      ],
-      "reason": "共感的音声対話向けループ潜在推論LoopSLM。音響手がかりの知覚と応答計画のずれを、ループTransformerの潜在推論と2段階訓練で埋める音声対話モデルの提案。対象は対話モデルの設計と訓練であり、推論システム機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T02:48:10+00:00",
-      "last_checked_at": "2026-11-18T02:48:10+00:00",
-      "linked_from": [
-        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
-        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
-        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
-        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
-      ],
-      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue"
-    },
     "arXiv:2211.08842": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2211.08842",
@@ -182925,11 +182908,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2509.03871",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.03871",
         "arXiv:2509.03871"
       ],
-      "reason": "推論するLLMの信頼性の包括的総説。真実性・安全性・頑健性・公平性・プライバシの5次元でCoT推論の信頼性を整理する総説。推論システムの効率機構ではない。対象外。",
+      "reason": "arXiv一次要旨は、長い思考過程（Long-CoT）を伴うLLM推論の信頼性を、真実性・安全性・頑健性・公平性・プライバシーの5軸で整理するサーベイである。幻覚軽減や有害出力検出、推論モデルの脆弱性を扱う一方、推論サービング、KVキャッシュ、実行時メモリ、推論カーネル、量子化、並列化、スケジューリング等のシステム効率化に関する直接の技術的貢献を一次要旨は示さないため、本サーベイの収録対象外と判断した。",
       "first_checked_at": "2026-11-18T06:39:29+00:00",
-      "last_checked_at": "2026-11-18T06:39:29+00:00",
+      "last_checked_at": "2026-11-18T13:39:57+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md",
         "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
@@ -183156,9 +183140,9 @@
       "identity_tokens": [
         "arXiv:2606.04048"
       ],
-      "reason": "ゲート付きデルタネットワークの大規模特徴学習。最大更新パラメータ化を線形モデルへ拡張し、学習のスケーリング則を導く。対象は事前学習であり、推論ではない。対象外。",
+      "reason": "Gated Delta Network向け最大更新パラメータ化のスケーリング則を理論導出し、AdamW/SGDの事前学習でモデル幅間の学習率転移を検証する。一次要旨の貢献は学習安定性とハイパーパラメータ調整であり、LLMの推論実行・メモリ削減・サービングの改善は示さないため学習専用の凍結範囲。",
       "first_checked_at": "2026-11-18T07:17:04+00:00",
-      "last_checked_at": "2026-11-18T07:17:04+00:00",
+      "last_checked_at": "2026-11-18T13:40:03+00:00",
       "linked_from": [
         "adaptive-expert-computation-compression",
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
@@ -183183,11 +183167,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2610.21129",
       "identity_tokens": [
-        "arXiv:2610.21129"
+        "arXiv:2610.21129",
+        "id:DOI:10.48550/arXiv.2610.21129",
+        "id:arXiv:2610.21129"
       ],
-      "reason": "成長する疎性による動画生成の疎注意加速。拡散Transformerの動画生成で、ノイズ除去の進行に伴い注意が集中する性質を使い疎性を育てる。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+      "reason": "動画生成DiTのdenoising過程でattentionが次第に集中する性質を利用し、Top-p sparsityを段階的に高め、初期に見つけたblock候補だけを再探索するGSRSを提案。HunyuanVideo/Wan 2.1で1.55–2.21倍の高速化を報告するが、LLMのtoken-by-token言語生成・KVサービングではなく動画生成の専用最適化であるためunrelated。",
       "first_checked_at": "2026-11-18T07:17:06+00:00",
-      "last_checked_at": "2026-11-18T07:17:06+00:00",
+      "last_checked_at": "2026-11-18T13:39:53+00:00",
       "linked_from": [
         "inference-systems",
         "疎注意／長文脈学習"
@@ -183278,9 +183264,9 @@
       "identity_tokens": [
         "DOI:10.1109/icicse66971.2025.11429888"
       ],
-      "reason": "民間航空におけるエッジ知能のパラダイム・技術・応用の概説。圧縮や協調推論を含むエッジAIの総説であり、LLM推論システムの機構の提案ではない。対象外。",
+      "reason": "題名が民間航空におけるエッジ知能のパラダイム・技術・応用を扱う分野別概説を明示している。LLM推論サービング、KVキャッシュ、量子化、GPU実行・通信最適化などサーベイ対象の直接的な技術貢献を示さず、タイトル段階で対象外と判断。一次要旨・本文は未確認であり通常Discoveryノルマには算入しない。",
       "first_checked_at": "2026-11-18T07:27:51+00:00",
-      "last_checked_at": "2026-11-18T07:27:51+00:00",
+      "last_checked_at": "2026-11-18T13:39:50+00:00",
       "linked_from": [
         "Weight Quantization / Compression",
         "重み専用量子化 / 推論カーネル"
@@ -183569,9 +183555,9 @@
       "identity_tokens": [
         "arXiv:2404.11284"
       ],
-      "reason": "処理内メモリにおける主記憶ベースの隠れ・サイドチャネル攻撃IMPACT。PiMアーキテクチャの特性を悪用するタイミング攻撃。対象はセキュリティ攻撃であり、推論システムの機構ではない。対象外。",
+      "reason": "一次要旨のIMPACTはPIMのDRAM行バッファ競合を使った秘密通信・情報漏洩攻撃であり、8.2/14.8Mb/sの通信速度とサイドチャネルを評価する。LLM推論のメモリ階層・カーネル高速化ではなくセキュリティ攻撃が主目的で、生成モデルでの推論効率評価もない。",
       "first_checked_at": "2026-11-18T07:47:35+00:00",
-      "last_checked_at": "2026-11-18T07:47:35+00:00",
+      "last_checked_at": "2026-11-18T13:40:02+00:00",
       "linked_from": [
         "cpu-offload",
         "inference-systems",
@@ -184167,24 +184153,6 @@
         "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
       ],
       "title": "UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models"
-    },
-    "DOI:10.48550/arxiv.2511.21397": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.48550/arxiv.2511.21397",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2511.21397",
-        "arXiv:2511.21397"
-      ],
-      "reason": "視覚的ディストラクタが推論VLMへ与える影響の分析・評価研究であり、推論システムへの技術的貢献はない。",
-      "first_checked_at": "2026-11-18T08:08:29+00:00",
-      "last_checked_at": "2026-11-18T08:08:29+00:00",
-      "linked_from": [
-        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
-        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
-        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
-        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
-      ],
-      "title": "Understanding the Effects of Distractors on Reasoning Vision-Language Models"
     },
     "arXiv:2510.07355": {
       "classification": "unrelated",
@@ -185722,6 +185690,186 @@
       "last_checked_at": "2026-11-18T13:19:36+00:00",
       "linked_from": [],
       "title": "Persia: A Hybrid System Scaling Deep Learning-based Recommenders up to 100 Trillion Parameters"
+    },
+    "DOI:10.1145/3721146.3721944": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3721146.3721944",
+      "identity_tokens": [
+        "DOI:10.1145/3721146.3721944"
+      ],
+      "reason": "タイトルがLLMのRL fine-tuningを主題とし、推論サービングではないためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T13:39:51+00:00",
+      "last_checked_at": "2026-11-18T13:39:51+00:00",
+      "linked_from": [],
+      "title": "Systems Opportunities for LLM Fine-Tuning using Reinforcement Learning"
+    },
+    "arXiv:2505.14709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14709",
+      "identity_tokens": [
+        "arXiv:2505.14709"
+      ],
+      "reason": "タイトルがvideo generationでありLLM言語生成・サービングとは別領域のためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T13:39:51+00:00",
+      "last_checked_at": "2026-11-18T13:39:51+00:00",
+      "linked_from": [],
+      "title": "FastCar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge"
+    },
+    "DOI:10.1016/j.procs.2024.10.182": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.procs.2024.10.182",
+      "identity_tokens": [
+        "DOI:10.1016/j.procs.2024.10.182"
+      ],
+      "reason": "タイトルがArabic記事の要約モデル設計であり推論・サービング効率の改善を対象としないためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T13:39:52+00:00",
+      "last_checked_at": "2026-11-18T13:39:52+00:00",
+      "linked_from": [],
+      "title": "Fused Transformers: Fused Information of Arabic long Article for Summarization"
+    },
+    "arXiv:2610.32229": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32229",
+      "identity_tokens": [
+        "arXiv:2610.32229",
+        "id:DOI:10.48550/arXiv.2610.32229",
+        "id:arXiv:2610.32229"
+      ],
+      "reason": "GPT-OSS-20B MoEのMXFP4学習を安定化するALTO recipeで、Hadamard変換、stochastic rounding、重みde-oscillationを組み合わせてBF16との学習loss差を縮める。評価はMLPerf Small MoE TrainingとAMD MI300X上のsimulated MXFP4 training kernelであり、著者はwall-clock高速化を未最適化と明記する。推論実行・サービングの寄与を示さない学習専用のためunrelated。",
+      "first_checked_at": "2026-11-18T13:39:53+00:00",
+      "last_checked_at": "2026-11-18T13:39:53+00:00",
+      "linked_from": [],
+      "title": "Training an MoE LLM in MXFP4: How We Closed the Gap to BF16"
+    },
+    "arXiv:2610.22975": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22975",
+      "identity_tokens": [
+        "arXiv:2610.22975",
+        "id:DOI:10.48550/arXiv.2610.22975",
+        "id:arXiv:2610.22975"
+      ],
+      "reason": "テキスト画像・動画生成のDiffusion Transformerで、校正時に抽出したsink maskを固定再利用し、pooled KV branchを加えてdenoising attentionを疎化する。Wan2.1-T2VとZ-Image-Turboで約1.54–1.57倍の生成高速化を報告するが、対象は画像・動画DiTの推論でありLLM言語生成サービングへの適用は示されないため現行スコープではunrelated。",
+      "first_checked_at": "2026-11-18T13:39:53+00:00",
+      "last_checked_at": "2026-11-18T13:39:53+00:00",
+      "linked_from": [],
+      "title": "Sink-Sparse Hybrid Attention for Efficient Inference in T2I/T2V Diffusion Transformers"
+    },
+    "arXiv:2511.21397": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21397",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.21397",
+        "arXiv:2511.21397"
+      ],
+      "reason": "Idis画像質問応答データセットで無関係な視覚情報がVLMの思考長と正答率へ与える影響を分析し、視覚妨害では思考長を増やさず精度を下げると示す研究。主貢献は推論能力・頑健性の評価とプロンプト対策で、計算量・キャッシュ・サービング・カーネル等の実行系最適化を提案しない。",
+      "first_checked_at": "2026-11-18T08:08:29+00:00",
+      "last_checked_at": "2026-11-18T13:39:55+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "title": "Understanding the Effects of Distractors on Reasoning Vision-Language Models"
+    },
+    "DOI:10.1109/wacv61042.2026.00246": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacv61042.2026.00246",
+      "identity_tokens": [
+        "DOI:10.1109/wacv61042.2026.00246"
+      ],
+      "reason": "タイトルが3D LiDARのrange-view表現による点群の意味セグメンテーションを研究対象として明示している。LLMの推論・サービング・KVキャッシュ・メモリ階層・分散実行等を対象とする研究ではないため、タイトル段階の対象外として隔離する。本文・要旨は未確認であり、Retentive Networksという一般技術名のみをLLM向け貢献とはみなさない。",
+      "first_checked_at": "2026-11-18T13:39:58+00:00",
+      "last_checked_at": "2026-11-18T13:39:58+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-500"
+      ],
+      "title": "Revisiting Retentive Networks for Fast Range-View 3D LiDAR Semantic Segmentation"
+    },
+    "arXiv:2610.41604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41604",
+      "identity_tokens": [
+        "arXiv:2610.41604"
+      ],
+      "reason": "LLM agentの25認知機構モジュールが実際にproduction outputへ寄与するかを静的call-chain監査と介入実験で検証し、18/25モジュールが出力へ未接続と報告。修復でplanner成功率が0.028から1.000へ上昇するが、主貢献は機構名と実装の整合性監査でありLLM推論速度・メモリ階層・量子化・servingスケジューリングの技術を扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T13:40:00+00:00",
+      "last_checked_at": "2026-11-18T13:40:00+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new",
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "title": "Real Computation or Merely Naming? A Pre-Registered Mechanism Audit of 25 Cognitive-Architecture Modules in an LLM-Based Agent System"
+    },
+    "arXiv:2604.11364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11364",
+      "identity_tokens": [
+        "arXiv:2604.11364"
+      ],
+      "reason": "著者のarXiv一次要旨は、AIエージェントのKnowledge/Memory/Wisdom/Intelligenceの4層を異なる永続化・忘却・更新規則で設計する認知アーキテクチャ提案を扱う。Python/Rustの実装可能性には言及するが、LLM推論のGPU実行、KVキャッシュ最適化、推論レイテンシ、スループット、量子化、サービング効率の技術的改善や直接評価を主題としないため、推論システムのサーベイ対象外。",
+      "first_checked_at": "2026-11-18T13:40:00+00:00",
+      "last_checked_at": "2026-11-18T13:40:00+00:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 500; AI agent memory / cognitive architecture"
+      ],
+      "title": "The Missing Knowledge Layer in Cognitive Architectures for AI Agents"
+    },
+    "arXiv:2601.15892": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15892",
+      "identity_tokens": [
+        "arXiv:2601.15892"
+      ],
+      "reason": "Stable-DiffCoderはSeed-Coder構造とデータを利用したコード拡散言語モデルで、block diffusion継続事前学習、ウォームアップ、ノイズスケジュール、教師あり微調整を改善しコード生成品質を評価する。一次要旨の主貢献は学習方法とモデル能力であり、推論カーネルや生成速度の定量的高速化を示していない。",
+      "first_checked_at": "2026-11-18T13:40:03+00:00",
+      "last_checked_at": "2026-11-18T13:40:03+00:00",
+      "linked_from": [],
+      "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model"
+    },
+    "arXiv:2605.12992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12992",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.12992",
+        "arXiv:2605.12992"
+      ],
+      "reason": "arXiv一次要旨で、Neuropixels 105セッション・約89,800ニューロンのスパイク数予測を対象に、時系列忠実度・空間パターン・大きさ不変整合性へ分解する評価ベンチマークと確認。比較モデルにSSMやTransformerが含まれても、最終適用先は神経科学の発火予測評価でありLLM推論・サービングの効率化ではないためunrelated。",
+      "first_checked_at": "2026-11-18T13:40:04+00:00",
+      "last_checked_at": "2026-11-18T13:40:04+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md#rank-500"
+      ],
+      "title": "SpikeProphecy: A Large-Scale Benchmark for Autoregressive Neural Population Forecasting"
+    },
+    "arXiv:2610.40871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40871",
+      "identity_tokens": [
+        "arXiv:2610.40871"
+      ],
+      "reason": "TensorSSMの「tensor core」はGPU Tensor Core演算器ではなく、汎用高次元テンソル分解の因子表現を指す。座標列をK進数規則で構成し、動的SSMの隠れ状態にモード間空間依存性を記憶してテンソル再構成精度と保存効率を改善するImplicit Neural Representation。LLM推論、サービング、アクセラレータkernel、KV圧縮の研究ではないためunrelated。",
+      "first_checked_at": "2026-11-18T13:40:06+00:00",
+      "last_checked_at": "2026-11-18T13:40:06+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "TensorSSM: Memorizing Spatial Position in Dynamic State Space for Tensor Core Generation"
+    },
+    "arXiv:2610.41563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41563",
+      "identity_tokens": [
+        "arXiv:2610.41563"
+      ],
+      "reason": "6G通信ネットワークの仮想ネットワーク機能配置とslice admissionが対象。2つのLLM agentがサービス要求と配置計画を作り、RL coordinatorがドメイン間配置を選ぶ。検証済み成否を記録するepisodic memoryによりslice admissionが4.6〜11.5ポイント向上したという結果であり、LLMモデルの推論処理、GPU配置、推論サービング効率を最適化した研究ではないためunrelated。",
+      "first_checked_at": "2026-11-18T13:40:06+00:00",
+      "last_checked_at": "2026-11-18T13:40:06+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "ORION: An Outcome-Driven LLM Advisor for RL-Based Multi-Domain 6G Slice Placement"
     }
   }
 }

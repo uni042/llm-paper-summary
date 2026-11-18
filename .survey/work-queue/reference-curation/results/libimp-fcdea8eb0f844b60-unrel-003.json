@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fcdea8eb0f844b60-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.41563",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.41563",
+    "identity_tokens": [
+      "arXiv:2610.41563"
+    ],
+    "reason": "6G通信ネットワークの仮想ネットワーク機能配置とslice admissionが対象。2つのLLM agentがサービス要求と配置計画を作り、RL coordinatorがドメイン間配置を選ぶ。検証済み成否を記録するepisodic memoryによりslice admissionが4.6〜11.5ポイント向上したという結果であり、LLMモデルの推論処理、GPU配置、推論サービング効率を最適化した研究ではないためunrelated。",
+    "first_checked_at": "2026-11-18T13:40:06+00:00",
+    "last_checked_at": "2026-11-18T13:40:06+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "title": "ORION: An Outcome-Driven LLM Advisor for RL-Based Multi-Domain 6G Slice Placement"
+  },
+  "processed_at": "2026-11-18T13:40:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fcdea8eb0f84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

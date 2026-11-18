@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-998b2eb134a1c956-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41129",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41129",
+    "identity_tokens": [
+      "arXiv:2610.41129"
+    ],
+    "reason": "複数agentが共有する人間の確認待ちを、search・質問・独立作業継続の選択を含む動的計画として定式化。2 task問題からpairwise coordination policyを組み、864 synthetic caseで最適費用との差0.07%、標準3方策比18〜31%の費用削減を報告。agent workflowの外部待ち時間と調整費用を削減するがLLM推論計算・メモリ・サービングの最適化は直接扱わずborderline。",
+    "first_checked_at": "2026-11-18T13:40:00+00:00",
+    "last_checked_at": "2026-11-18T13:40:00+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Should AI Agents Ask? Clarification Requests Under Limited Human Attention"
+  },
+  "processed_at": "2026-11-18T13:40:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-998b2eb134a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

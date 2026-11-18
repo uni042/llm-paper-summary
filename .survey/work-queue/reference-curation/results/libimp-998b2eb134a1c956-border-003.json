@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-998b2eb134a1c956-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41453",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41453",
+    "identity_tokens": [
+      "arXiv:2610.41453"
+    ],
+    "reason": "tool timeout時に未確定の実行結果を公開証拠・権限・依存関係から絞り込む回復plannerとeffect-history adjudicatorを提案。19 task familyの58ペア比較で完了認証30件対9件、提案数272対399と報告。agent workflowの再試行回数と安全な実行継続には関連するがLLMモデル推論のGPU時間・KV・サービング資源の最適化は対象外でborderline。",
+    "first_checked_at": "2026-11-18T13:39:59+00:00",
+    "last_checked_at": "2026-11-18T13:39:59+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution"
+  },
+  "processed_at": "2026-11-18T13:39:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-998b2eb134a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

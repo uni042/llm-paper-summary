@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e49d7b66567a8948-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.12992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.12992",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.12992",
+      "arXiv:2605.12992"
+    ],
+    "reason": "arXiv一次要旨で、Neuropixels 105セッション・約89,800ニューロンのスパイク数予測を対象に、時系列忠実度・空間パターン・大きさ不変整合性へ分解する評価ベンチマークと確認。比較モデルにSSMやTransformerが含まれても、最終適用先は神経科学の発火予測評価でありLLM推論・サービングの効率化ではないためunrelated。",
+    "first_checked_at": "2026-11-18T13:40:04+00:00",
+    "last_checked_at": "2026-11-18T13:40:04+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md#rank-500"
+    ],
+    "title": "SpikeProphecy: A Large-Scale Benchmark for Autoregressive Neural Population Forecasting"
+  },
+  "processed_at": "2026-11-18T13:40:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e49d7b66567a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

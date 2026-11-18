@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb84374b8332711e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.03969",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.03969",
+    "identity_tokens": [
+      "arXiv:2601.03969"
+    ],
+    "reason": "正答ロールアウト群の極端に長い尾だけを学習中に切り詰めるDynamic Outlier TruncationとKL正則化・動的サンプリングを提案。推論トークン78%減を報告するが、主要機構は強化学習の生成データ・方策最適化であり、推論基盤やテスト時アルゴリズムの直接改良ではない。",
+    "first_checked_at": "2026-11-15T21:43:08+00:00",
+    "last_checked_at": "2026-11-18T13:40:04+00:00",
+    "linked_from": [
+      "Conditional Computation",
+      "LLM Serving / Scheduling / Disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Anti-Length Shift: Dynamic Outlier Truncation for Training Efficient Reasoning Models"
+  },
+  "processed_at": "2026-11-18T13:40:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb84374b8332",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

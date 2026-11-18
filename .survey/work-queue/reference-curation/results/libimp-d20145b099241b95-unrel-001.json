@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d20145b099241b95-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.11284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.11284",
+    "identity_tokens": [
+      "arXiv:2404.11284"
+    ],
+    "reason": "一次要旨のIMPACTはPIMのDRAM行バッファ競合を使った秘密通信・情報漏洩攻撃であり、8.2/14.8Mb/sの通信速度とサイドチャネルを評価する。LLM推論のメモリ階層・カーネル高速化ではなくセキュリティ攻撃が主目的で、生成モデルでの推論効率評価もない。",
+    "first_checked_at": "2026-11-18T07:47:35+00:00",
+    "last_checked_at": "2026-11-18T13:40:02+00:00",
+    "linked_from": [
+      "cpu-offload",
+      "inference-systems",
+      "その他システム研究"
+    ],
+    "title": "Revisiting Main Memory-Based Covert and Side Channel Attacks in the Context of Processing-in-Memory"
+  },
+  "processed_at": "2026-11-18T13:40:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d20145b09924",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

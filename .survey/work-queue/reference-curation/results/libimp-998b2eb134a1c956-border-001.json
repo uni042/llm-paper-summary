@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-998b2eb134a1c956-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.42066",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.42066",
+    "identity_tokens": [
+      "arXiv:2610.42066"
+    ],
+    "reason": "推論記録へversioned evidence relationとunknownを明示する仕様KLMを提案し、実装例SEDIMでrouting分類137/150件、legacy packingでgoldを含むtextが118/221件失われたのに対し修正版では221/221件保持したと報告。ただし後者は正解率でなく文字列保持の計測で、推論エンジンの性能改善は実証していない。出力検証とrouting診断は隣接領域としてborderline。",
+    "first_checked_at": "2026-11-18T13:39:58+00:00",
+    "last_checked_at": "2026-11-18T13:39:58+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Knowledge Layer Model (KLM): Evidence-Visible AI Output, Routing Diagnostics, and Negative Results"
+  },
+  "processed_at": "2026-11-18T13:39:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-998b2eb134a1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-239bab3fce497d41-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.14709",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.14709",
+    "identity_tokens": [
+      "arXiv:2505.14709"
+    ],
+    "reason": "タイトルがvideo generationでありLLM言語生成・サービングとは別領域のためタイトル先行除外。",
+    "first_checked_at": "2026-11-18T13:39:51+00:00",
+    "last_checked_at": "2026-11-18T13:39:51+00:00",
+    "linked_from": [],
+    "title": "FastCar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge"
+  },
+  "processed_at": "2026-11-18T13:39:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-239bab3fce49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

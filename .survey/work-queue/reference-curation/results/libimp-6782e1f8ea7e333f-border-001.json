@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6782e1f8ea7e333f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.09084",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.09084",
+    "identity_tokens": [
+      "arXiv:2607.09084"
+    ],
+    "reason": "大規模モデルの省資源アーキテクチャ、低精度化、GPU/メモリ、ハードウェア・ソフトウェア協調設計、データセンター持続可能性まで広く扱うサーベイ。LLM推論システムに関係する章を含むが、学習・応用・社会的持続可能性の比重も大きく、独自の推論機構や計測研究ではないため境界扱い。",
+    "first_checked_at": "2026-11-18T13:39:56+00:00",
+    "last_checked_at": "2026-11-18T13:39:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design"
+  },
+  "processed_at": "2026-11-18T13:39:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6782e1f8ea7e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
