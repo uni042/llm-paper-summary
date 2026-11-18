@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r05::provider-gap",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25431",
+      "identity_tokens": [
+        "id:arXiv:2610.25431",
+        "id:DOI:10.48550/arXiv.2610.25431"
+      ],
+      "title": "MOSAIC: Multi-Objective Search for Allocating Inference Cache Across LLM Decoder Layers",
+      "reason": "長文脈LLMのKV eviction方式へ一律のlayer予算を与える代わりに、精度と平均cache budgetのPareto frontierを探索して層別KV予算を決めるMOSAICを提案。一次要旨はLlama-3-8B/Mistral-7Bと4 eviction方式で154設定中146設定が一律配分より高精度、同じ精度を最大75%少ないKV容量で達成と報告。LLM推論時のKV容量割当としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "parent_run_key": "20261102-1402-scheduled-chat-00/r05",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/file_00000000a16481f4800bf731b486d873--discovery-20261102-1402-scheduled-chat-00-r05.json",
+  "provider_gap_ids": [
+    "arXiv:2610.25431"
+  ]
+}

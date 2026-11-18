@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-84aab8f94b6b5a74-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2604.10769",
+  "reason": "推論ジョブとバッチジョブの混合比が共有GPU設備の消費電力変動と短時間ランプを異なる形で変えることを、トレース較正した到着・待ち行列・スケジューリング・GPU電力モデルで評価。中間混合比ではバッチが推論の空き容量を埋め電力変動を抑える一方、短時間ランプは残る。LLM専用の最適化ではないがAI推論サービングの電力管理に関連するためborderline。",
+  "title": "Workload composition smooths aggregate power demand while sustaining short-horizon ramps in AI data centers",
+  "identity_tokens": [
+    "arXiv:2604.10769",
+    "DOI:10.48550/arXiv.2604.10769"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84aab8f94b6b",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
