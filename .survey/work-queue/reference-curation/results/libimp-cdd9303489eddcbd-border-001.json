@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cdd9303489eddcbd-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.14005",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.14005",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2609.14005",
+      "arXiv:2609.14005"
+    ],
+    "reason": "arXiv原著v3の一次要旨は、音声対話のDeep Perception、Seamless Duplex、発話と非公開推論を並行させるThink-While-Speaking、非同期tool実行を扱うVoice Agentを報告する。発話中の推論並行化は応答遅延・リアルタイム対話に関連するが、主な評価はStepAudioChat 73.0、MMSU 90.6、Full-Duplex Bench 98.9、τ-Voice成功率56.0%など対話能力・音声タスク品質であり、推論サービングのTTFT/TPOT・GPUメモリ・スループットの直接的システム改善を一次要旨から確証できないためborderline。",
+    "first_checked_at": "2026-11-18T10:28:58+00:00",
+    "last_checked_at": "2026-11-18T10:28:58+00:00",
+    "linked_from": [
+      "https://arxiv.org/abs/2609.14005",
+      "worker-worklist-00 discovery_review rank 342"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "StepAudio 3 Realtime Technical Report"
+  },
+  "processed_at": "2026-11-18T10:28:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdd9303489ed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

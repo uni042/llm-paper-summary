@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T10:09:04+00:00",
-  "record_count": 12870,
+  "updated_at": "2026-11-18T10:29:05+00:00",
+  "record_count": 12875,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181249,7 +181249,7 @@
       ],
       "reason": "画像生成DiTの特徴時系列を軽量ドラフタで予測して検証する投機的画像拡散サンプリング方式。ImageNet 512²で最大2.25倍高速化を報告するが、対象は画像拡散であり生成LLMのテキスト推論ではない。",
       "first_checked_at": "2026-10-30T11:54:54+00:00",
-      "last_checked_at": "2026-10-30T11:54:54+00:00",
+      "last_checked_at": "2026-11-18T10:28:54+00:00",
       "linked_from": [],
       "title": "FREE: Uncertainty-Aware Autoregression for Parallel Diffusion Transformers"
     },
@@ -181347,7 +181347,7 @@
       ],
       "reason": "VocalBenchは英語・中国語の音声対話約24,000例で意味、音響、会話行動、頑健性を27モデルに評価するベンチマーク。一次要旨の貢献は対話能力と環境音への頑健性の比較であり、LLM推論速度・メモリ・カーネル・サービング資源を改善する技術ではないためunrelated。",
       "first_checked_at": "2026-10-30T13:55:16+00:00",
-      "last_checked_at": "2026-10-30T13:55:16+00:00",
+      "last_checked_at": "2026-11-18T10:28:55+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
         "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
@@ -182349,9 +182349,9 @@
       "identity_tokens": [
         "arXiv:2604.18131"
       ],
-      "reason": "報酬なし自己進化エージェントの訓練。未知環境で自発的に探索・要約して下流タスクの成功率を上げる内的メタ進化能力を、結果ベース報酬で訓練する。エージェント能力の学習が中核で、推論システムの効率機構ではない。対象外。",
+      "reason": "arXiv一次要旨。エージェントが未知環境の知識を自発的に探索・要約する能力を、学習時の結果ベース報酬で獲得する方式。WebVoyager/WebWalkerのタスク成功率や適応性能を評価するが、LLM推論カーネル、サービング、メモリ、トークン・遅延・計算量削減のシステム技術は提案していない。能力向上を主目的とするため対象外。",
       "first_checked_at": "2026-11-15T21:43:00+00:00",
-      "last_checked_at": "2026-11-15T21:43:00+00:00",
+      "last_checked_at": "2026-11-18T10:29:04+00:00",
       "linked_from": [
         "LLM Serving / Scheduling / Disaggregation",
         "agentic inference / persistent memory"
@@ -182549,22 +182549,6 @@
       ],
       "title": "R^2-Mem: Reflective Experience for Memory Search"
     },
-    "arXiv:2609.14005": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2609.14005",
-      "identity_tokens": [
-        "arXiv:2609.14005"
-      ],
-      "reason": "音声言語基盤モデルStepAudio 3 Realtimeの技術報告。発話と並行して私的推論を回すThink-While-Speakingなど遅延への工夫は含むが、実体はモデルの設計と訓練の発表であり、推論システム機構の提案ではない。対象外。",
-      "first_checked_at": "2026-11-15T21:43:16+00:00",
-      "last_checked_at": "2026-11-15T21:43:16+00:00",
-      "linked_from": [
-        "Speculative Decoding",
-        "投機的デコード / 分布保存型デコード高速化",
-        "投機的復号 / 無損失復号高速化"
-      ],
-      "title": "StepAudio 3 Realtime Technical Report"
-    },
     "arXiv:2607.27756": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2607.27756",
@@ -182754,23 +182738,6 @@
         "inference-systems"
       ],
       "title": "LLA: Enhancing Security and Privacy for Generative Models with Logic-Locked Accelerators"
-    },
-    "arXiv:2602.22718": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.22718",
-      "identity_tokens": [
-        "arXiv:2602.22718"
-      ],
-      "reason": "RLHF向けサーバレス基盤RLHFless。推論と訓練が共存するRLHFの動的な資源需要に、サーバレス計算で細粒度に対応する学習基盤の提案。対象は学習後訓練の実行基盤であり、推論システムではない。対象外。",
-      "first_checked_at": "2026-11-18T03:45:09+00:00",
-      "last_checked_at": "2026-11-18T03:45:09+00:00",
-      "linked_from": [
-        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
-        "LLM Serving / Scheduling / Disaggregation",
-        "inference-systems",
-        "大規模分散学習・整合学習基盤"
-      ],
-      "title": "RLHFless: Serverless Computing for Efficient RLHF"
     },
     "arXiv:2604.21330": {
       "classification": "unrelated",
@@ -183825,9 +183792,9 @@
       "identity_tokens": [
         "arXiv:2605.08885"
       ],
-      "reason": "構造的剪定によるコンパクトなSO(3)同変原子基盤モデル。原子モデルの高次テンソル演算の費用への構造的剪定。対象は科学計算の基盤モデルであり、LLM推論の機構ではない。対象外。",
+      "reason": "arXiv一次要旨で、原子系SO(3)同変グラフニューラルネットのチャネル・次数次元を表現単位で枝刈りし、MACE-MP等の原子力・エネルギー予測に使う方式と確認。推論コスト削減はあるが対象モデルは原子シミュレーション用で、LLM・VLMの推論技術に直接適用・評価していないため対象外。",
       "first_checked_at": "2026-11-18T07:37:43+00:00",
-      "last_checked_at": "2026-11-18T07:37:43+00:00",
+      "last_checked_at": "2026-11-18T10:28:58+00:00",
       "linked_from": [
         "inference-systems"
       ],
@@ -184078,9 +184045,9 @@
       "identity_tokens": [
         "arXiv:2502.02581"
       ],
-      "reason": "完全シャード疎データ並列による効率的疎モデル訓練Themis。専門家負荷の偏りによるストラグラーへの対処。対象はMoEの訓練であり、推論ではない。対象外。",
+      "reason": "arXiv一次要旨。FSSDPでMoE学習時のexpert偏りに対する毎iterationの負荷分散、異種シャーディング、再配置通信の削減を実現し、学習システム比1.26〜2.42倍の高速化を報告する。対象はMoEの分散学習であり、凍結済みの学習専用高速化領域に属する。生成時のMoE推論サービングや復号性能は要旨で示されない。",
       "first_checked_at": "2026-11-18T07:47:38+00:00",
-      "last_checked_at": "2026-11-18T07:47:38+00:00",
+      "last_checked_at": "2026-11-18T10:29:03+00:00",
       "linked_from": [
         "MoE inference systems / expert parallelism / model compression / knowledge distillation",
         "その他システム研究",
@@ -184651,16 +184618,16 @@
         "DOI:10.48550/arxiv.2407.18559",
         "arXiv:2407.18559"
       ],
-      "reason": "視覚向け非因果SSDアーキテクチャの提案で、対象は画像分類・検出・分割でありLLM推論システムへの適用は確認できない。",
+      "reason": "画像認識用Vision Mambaの状態空間双対性を扱う研究であり、タイトルの対象は視覚バックボーン。LLM推論サービングや言語生成効率化ではない。",
       "first_checked_at": "2026-11-18T08:08:27+00:00",
-      "last_checked_at": "2026-11-18T08:08:27+00:00",
+      "last_checked_at": "2026-11-18T10:28:46+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
         "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md",
         "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
       ],
-      "title": "VSSD: Vision Mamba with Non-Causal State Space Duality"
+      "title": "VSSD: Vision Mamba with Non-Casual State Space Duality"
     },
     "arXiv:2406.02923": {
       "classification": "unrelated",
@@ -184765,24 +184732,6 @@
         "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
       ],
       "title": "Understanding the Effects of Distractors on Reasoning Vision-Language Models"
-    },
-    "DOI:10.48550/arxiv.2506.21875": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.48550/arxiv.2506.21875",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2506.21875",
-        "arXiv:2506.21875"
-      ],
-      "reason": "エンドツーエンド音声LLMのベンチマーク構築であり、能力評価のみで推論システムへの貢献はない。",
-      "first_checked_at": "2026-11-18T08:08:29+00:00",
-      "last_checked_at": "2026-11-18T08:08:29+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
-        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
-        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
-      ],
-      "title": "WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild"
     },
     "arXiv:2510.07355": {
       "classification": "unrelated",
@@ -185279,6 +185228,119 @@
       "last_checked_at": "2026-11-18T10:09:04+00:00",
       "linked_from": [],
       "title": "Experiential Networked Intelligence (ENI); Study on AI Agents based Next-generation Network Slicing"
+    },
+    "arXiv:2506.21875": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.21875",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.21875",
+        "arXiv:2506.21875"
+      ],
+      "reason": "arXiv原著v3の本文（導入、データ構築、評価方法、実験結果）を確認。1,100の音声対話クエリを用い、ノイズ、韻律、発話品質などSpeechLLMの対話能力を評価するベンチマーク。推論実装の速度・KVキャッシュ・メモリ・スループットを最適化する研究ではなく、対象サーベイのLLM推論システムから外れる。worklistの旧題「Benchmarking Audio LLMs in Natural Speech Conversation」は原著の正式題と不一致だがarXiv識別子は一致。",
+      "first_checked_at": "2026-11-18T08:08:29+00:00",
+      "last_checked_at": "2026-11-18T10:28:43+00:00",
+      "linked_from": [
+        "DOI:10.48550/arXiv.2506.21875",
+        "WORKLIST-00.md rank 200",
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+      ],
+      "title": "WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild"
+    },
+    "DOI:10.1145/3386367.3432728": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3386367.3432728",
+      "identity_tokens": [
+        "DOI:10.1145/3386367.3432728"
+      ],
+      "reason": "異種GPUクラスタでの分散学習ジョブ配置最適化が主題で、LLM推論・デコード・KV管理ではなく学習配置を扱う。",
+      "first_checked_at": "2026-11-18T10:28:46+00:00",
+      "last_checked_at": "2026-11-18T10:28:46+00:00",
+      "linked_from": [],
+      "title": "Optimizing distributed training deployment in heterogeneous GPU clusters"
+    },
+    "arXiv:2610.41933": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41933",
+      "identity_tokens": [
+        "arXiv:2610.41933"
+      ],
+      "reason": "生物学的皮質表現に着想した二値疎符号について、入力間の類似性を保存する度合いと活性密度のトレードオフを測定する評価指標を提案し、4種の符号化方式を比較。LLM重み剪定・MoE推論・GPU実装・サービングを対象とせず、一般的な表現学習と生物学的疎符号の評価が主題のためunrelated。",
+      "first_checked_at": "2026-11-18T10:28:49+00:00",
+      "last_checked_at": "2026-11-18T10:28:49+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Binary Sparse Codes: Where are we on Energy Efficient Representations?"
+    },
+    "arXiv:2610.41222": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41222",
+      "identity_tokens": [
+        "arXiv:2610.41222"
+      ],
+      "reason": "独立に学習した複数モデルの補完性を保つため、協力モデル表現から応答増分を再構成する学習正則化を提案。6言語タスク・24モデル・36組合せで適応精度を評価し、推論時に相手モデルへの依存を追加しない。研究の主眼は共同学習の予測品質で、LLM推論の計算・メモリ・配信最適化ではないためunrelated。",
+      "first_checked_at": "2026-11-18T10:28:50+00:00",
+      "last_checked_at": "2026-11-18T10:28:50+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Corroborative Learning: Mutual Enhancement through Task-Response Reconstruction"
+    },
+    "arXiv:2610.41213": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41213",
+      "identity_tokens": [
+        "arXiv:2610.41213"
+      ],
+      "reason": "長尾クラス認識で分類器の不均衡補正後にencoderまで再学習すべき条件を、稀少クラスの独立例数と表現学習割当を分離して調査。ImageNet規模の認識精度と学習設定を評価する研究で、生成LLMの推論やメモリ階層・サービングへの技術的適用を示さないためunrelated。",
+      "first_checked_at": "2026-11-18T10:28:50+00:00",
+      "last_checked_at": "2026-11-18T10:28:50+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Beyond Scarcity: When Encoder Adaptation Is Worthwhile"
+    },
+    "arXiv:2610.41445": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41445",
+      "identity_tokens": [
+        "arXiv:2610.41445"
+      ],
+      "reason": "LLMの学習データmembership情報を内部表現から復号可能な量と出力readoutに現れる量へ分け、SFT・RLのmembership inferenceとactivation patchingで機構を分析。対象は記憶・プライバシー・解釈可能性であり、推論計算量やKVキャッシュ・サービング効率の改善は示さないためunrelated。",
+      "first_checked_at": "2026-11-18T10:28:51+00:00",
+      "last_checked_at": "2026-11-18T10:28:51+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "From Representation to Readout: Mechanistic Analysis of Membership Signals in Language Models"
+    },
+    "arXiv:2303.13755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.13755",
+      "identity_tokens": [
+        "arXiv:2303.13755"
+      ],
+      "reason": "原著arXiv要旨は画像分類用Vision Transformerの注意行列を対象とし、軽量なトークン間接続予測器で画像ごとの疎な注意マスクを学習する。ImageNetのtop-1精度とMHSAのFLOPs削減（48〜69%）を評価するが、LLM生成推論、KVキャッシュ、言語モデルのサービングや推論システムへの直接適用を検証していない。画像認識専用の注意最適化であり本サーベイ対象外。",
+      "first_checked_at": "2026-11-18T10:28:52+00:00",
+      "last_checked_at": "2026-11-18T10:28:52+00:00",
+      "linked_from": [],
+      "title": "Sparsifiner: Learning Sparse Instance-Dependent Attention for Efficient Vision Transformers"
+    },
+    "arXiv:2502.06155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.06155",
+      "identity_tokens": [
+        "SemanticScholar:675d98bbe6781e349b20d8e3a55e8500bbd624eb",
+        "arXiv:2502.06155"
+      ],
+      "reason": "原著arXiv要旨は動画生成Diffusion Transformerの3次元注意をAttention Tileに基づいて疎化し、拡散サンプリングの段数を短縮する方式を提示。Open-Sora-Planの720p動画生成を7.4〜7.8倍高速化し、VBenchで品質を確認している。主対象は動画拡散生成であり、自己回帰LLMのトークン生成、KVキャッシュ、LLMサービングの直接的な改善を示していないため、本サーベイのLLM推論システム対象から除外。",
+      "first_checked_at": "2026-11-18T10:28:53+00:00",
+      "last_checked_at": "2026-11-18T10:28:53+00:00",
+      "linked_from": [],
+      "title": "Efficient-vDiT: Efficient Video Diffusion Transformers With Attention Tile"
     }
   }
 }

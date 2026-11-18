@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bbb68ee5ffd4254-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.21875",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.21875",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2506.21875",
+      "arXiv:2506.21875"
+    ],
+    "reason": "arXiv原著v3の本文（導入、データ構築、評価方法、実験結果）を確認。1,100の音声対話クエリを用い、ノイズ、韻律、発話品質などSpeechLLMの対話能力を評価するベンチマーク。推論実装の速度・KVキャッシュ・メモリ・スループットを最適化する研究ではなく、対象サーベイのLLM推論システムから外れる。worklistの旧題「Benchmarking Audio LLMs in Natural Speech Conversation」は原著の正式題と不一致だがarXiv識別子は一致。",
+    "first_checked_at": "2026-11-18T08:08:29+00:00",
+    "last_checked_at": "2026-11-18T10:28:43+00:00",
+    "linked_from": [
+      "DOI:10.48550/arXiv.2506.21875",
+      "WORKLIST-00.md rank 200",
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+      "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
+    ],
+    "title": "WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild"
+  },
+  "processed_at": "2026-11-18T10:28:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bbb68ee5ffd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

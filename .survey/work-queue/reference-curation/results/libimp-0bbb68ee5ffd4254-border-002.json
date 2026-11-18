@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bbb68ee5ffd4254-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:VrowJCm6FY",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:VrowJCm6FY",
+    "identity_tokens": [
+      "OpenReview:VrowJCm6FY",
+      "SemanticScholar:e6257f7df5d0f68f89b85232291768969a16dc8a"
+    ],
+    "reason": "ICML 2025 ES-FoMo-IIIワークショップ原著PDFの本文（手法、GLRU/ Memoraの設計、TinyStories/FineWebEdu/DNAの実験、限界）を確認。長いデータ列をIIDで切断せず連続ストリームとして学習し、状態保持型の軽量リカレントモデルMemora/GLRUで長期依存を扱う。推論時は固定サイズの再帰状態を利用できるため推論アーキテクチャへの周辺的関連性はあるが、論文の主題は学習手順と品質改善で、LLM生成時の実測レイテンシ・スループット・KVメモリ削減を示していない。実験モデルは最大120Mパラメータであり、大規模LLM推論性能への外挿は不可。よってborderline。",
+    "first_checked_at": "2026-11-18T10:28:43+00:00",
+    "last_checked_at": "2026-11-18T10:28:43+00:00",
+    "linked_from": [
+      "SemanticScholar:e6257f7df5d0f68f89b85232291768969a16dc8a",
+      "WORKLIST-00.md rank 352"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multi-stream Sequence Learning"
+  },
+  "processed_at": "2026-11-18T10:28:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bbb68ee5ffd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

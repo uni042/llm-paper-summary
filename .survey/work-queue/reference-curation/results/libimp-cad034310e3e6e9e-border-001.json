@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cad034310e3e6e9e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3730567.3764441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3730567.3764441",
+    "identity_tokens": [
+      "DOI:10.1145/3730567.3764441"
+    ],
+    "reason": "ACM IMC 2025の一次要旨で、Google・Meta・Microsoft・OpenAIの音声対話型生成AIアプリ6種を実測し、入出力形式、ネットワーク通信、会話遅延、負荷耐性を分析する研究と確認。数秒規模の対話遅延と上りストリーミング・下りバッチ伝送の非対称性を示す。LLMサービング周辺の通信・体感遅延の実測として有用だが、推論エンジン自体の最適化ではないため境界候補。",
+    "first_checked_at": "2026-11-18T10:28:56+00:00",
+    "last_checked_at": "2026-11-18T10:28:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Hello, GenAI? Dissecting Human to Generative AI Calling"
+  },
+  "processed_at": "2026-11-18T10:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cad034310e3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

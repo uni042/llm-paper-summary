@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ceed8bf44443ec91-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44",
+    "identity_tokens": [
+      "SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44",
+      "URL:https://openreview.net/forum?id=VGnOJhd5Q1q"
+    ],
+    "reason": "ICLR 2022一次論文は、LSHによる疎注意でqueryとkeyを同一空間へ写す仮定を問題視し、別々の学習可能なハッシュ関数とattention utility指標を用いるLHAを提案する。注意計算の計算量をO(N²)からO(N^1.5)へ減らし、WikiText-103、GLUE、Long-Range-Arenaで検証する。推論時の疎注意最適化として関連するが、現在の大規模生成LLMのKV-cache・デコード・サービング性能は直接評価していないため境界判定。",
+    "first_checked_at": "2026-11-18T10:28:59+00:00",
+    "last_checked_at": "2026-11-18T10:28:59+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 258; main 196b3a840780606864af5ed1869e538ba8ffd39d"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sparse Attention with Learning-to-Hash"
+  },
+  "processed_at": "2026-11-18T10:28:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ceed8bf44443",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

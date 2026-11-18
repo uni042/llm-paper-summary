@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-01f248d948dbda64-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.38095",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.38095",
+    "identity_tokens": [
+      "arXiv:2610.38095",
+      "id:DOI:10.48550/arXiv.2610.38095",
+      "id:arXiv:2610.38095"
+    ],
+    "reason": "120B/12B-activeのSuperと30B/3B-activeのLightningを報告するモデル技術論文。MoE・Mamba/Transformer混合、MTP投機decode、NVFP4量子化等の推論効率要素を含み、MTP受理長最大21.8%改善、GB200でGPU当たり最大4856 output tok/sを報告するが、主貢献はモデル開発・post-training全体で独立した推論システムの新方式に限定されないためborderline。",
+    "first_checked_at": "2026-11-18T10:28:41+00:00",
+    "last_checked_at": "2026-11-18T10:28:41+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Nemotron 3.5 Super and Lightning: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Models for Agentic AI"
+  },
+  "processed_at": "2026-11-18T10:28:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-01f248d948db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0bb387b05f2f864-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.02581",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.02581",
+    "identity_tokens": [
+      "arXiv:2502.02581"
+    ],
+    "reason": "arXiv一次要旨。FSSDPでMoE学習時のexpert偏りに対する毎iterationの負荷分散、異種シャーディング、再配置通信の削減を実現し、学習システム比1.26〜2.42倍の高速化を報告する。対象はMoEの分散学習であり、凍結済みの学習専用高速化領域に属する。生成時のMoE推論サービングや復号性能は要旨で示されない。",
+    "first_checked_at": "2026-11-18T07:47:38+00:00",
+    "last_checked_at": "2026-11-18T10:29:03+00:00",
+    "linked_from": [
+      "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+      "その他システム研究",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+    ],
+    "title": "Themis: Efficient Sparse Model Training Through Fully Sharded Sparse Data Parallelism"
+  },
+  "processed_at": "2026-11-18T10:29:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0bb387b05f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

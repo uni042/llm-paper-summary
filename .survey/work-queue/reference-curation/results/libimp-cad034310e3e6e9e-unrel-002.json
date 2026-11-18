@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cad034310e3e6e9e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.08885",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.08885",
+    "identity_tokens": [
+      "arXiv:2605.08885"
+    ],
+    "reason": "arXiv一次要旨で、原子系SO(3)同変グラフニューラルネットのチャネル・次数次元を表現単位で枝刈りし、MACE-MP等の原子力・エネルギー予測に使う方式と確認。推論コスト削減はあるが対象モデルは原子シミュレーション用で、LLM・VLMの推論技術に直接適用・評価していないため対象外。",
+    "first_checked_at": "2026-11-18T07:37:43+00:00",
+    "last_checked_at": "2026-11-18T10:28:58+00:00",
+    "linked_from": [
+      "inference-systems"
+    ],
+    "title": "Compact SO(3) Equivariant Atomistic Foundation Models via Structural Pruning"
+  },
+  "processed_at": "2026-11-18T10:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cad034310e3e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

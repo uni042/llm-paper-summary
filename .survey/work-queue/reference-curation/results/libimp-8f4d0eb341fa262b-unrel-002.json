@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f4d0eb341fa262b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.06155",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.06155",
+    "identity_tokens": [
+      "SemanticScholar:675d98bbe6781e349b20d8e3a55e8500bbd624eb",
+      "arXiv:2502.06155"
+    ],
+    "reason": "原著arXiv要旨は動画生成Diffusion Transformerの3次元注意をAttention Tileに基づいて疎化し、拡散サンプリングの段数を短縮する方式を提示。Open-Sora-Planの720p動画生成を7.4〜7.8倍高速化し、VBenchで品質を確認している。主対象は動画拡散生成であり、自己回帰LLMのトークン生成、KVキャッシュ、LLMサービングの直接的な改善を示していないため、本サーベイのLLM推論システム対象から除外。",
+    "first_checked_at": "2026-11-18T10:28:53+00:00",
+    "last_checked_at": "2026-11-18T10:28:53+00:00",
+    "linked_from": [],
+    "title": "Efficient-vDiT: Efficient Video Diffusion Transformers With Attention Tile"
+  },
+  "processed_at": "2026-11-18T10:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f4d0eb341fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78325bd9852e2fcb-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.41933",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.41933",
+    "identity_tokens": [
+      "arXiv:2610.41933"
+    ],
+    "reason": "生物学的皮質表現に着想した二値疎符号について、入力間の類似性を保存する度合いと活性密度のトレードオフを測定する評価指標を提案し、4種の符号化方式を比較。LLM重み剪定・MoE推論・GPU実装・サービングを対象とせず、一般的な表現学習と生物学的疎符号の評価が主題のためunrelated。",
+    "first_checked_at": "2026-11-18T10:28:49+00:00",
+    "last_checked_at": "2026-11-18T10:28:49+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "title": "Binary Sparse Codes: Where are we on Energy Efficient Representations?"
+  },
+  "processed_at": "2026-11-18T10:28:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78325bd9852e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4897594a53200086-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.32891",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.32891",
+    "identity_tokens": [
+      "arXiv:2610.32891"
+    ],
+    "reason": "11 open-source LLM・4 decode設定・EffiBench 1000問で、コード最適化agentの生成時エネルギーと出力プログラム実行時エネルギーを計測。出力token上限で推論エネルギー最大69%減、42/44構成で生成コードの消費電力が人手referenceを上回る。推論コストの計測結果は参考になるが、主要目的はコード生成・最適化ワークフローの環境負荷であり、LLMサービング実装への直接改善ではないためborderline。",
+    "first_checked_at": "2026-11-18T10:28:44+00:00",
+    "last_checked_at": "2026-11-18T10:28:44+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/2026-10"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Green Code or Costly Code? Evaluating the Energy Costs of Iterative LLM-Based Code Optimizations"
+  },
+  "processed_at": "2026-11-18T10:28:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4897594a5320",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

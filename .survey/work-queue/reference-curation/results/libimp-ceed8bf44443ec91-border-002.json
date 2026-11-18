@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ceed8bf44443ec91-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/sibgrapi67909.2025.11223371",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/sibgrapi67909.2025.11223371",
+    "identity_tokens": [
+      "DOI:10.1109/sibgrapi67909.2025.11223371",
+      "URL:https://arturjordao.github.io/Files/Papers/SIBGRAPI_2025_CarolinaTavares.pdf"
+    ],
+    "reason": "SIBGRAPI 2025の著者一次原稿は、構造化・非構造化枝刈りの理論、GreenAI指標、コンピュータビジョン・LLMへの適用実習をまとめるチュートリアルである。LLM枝刈りの実装教材は含むが、独自のLLM推論カーネル、サービング方式や新規の定量的性能改善を主張する一次実験研究ではない。効率化の背景資料としては関連するが、研究成果の中心収録対象としては境界的。",
+    "first_checked_at": "2026-11-18T10:28:59+00:00",
+    "last_checked_at": "2026-11-18T10:28:59+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 278; main 196b3a840780606864af5ed1869e538ba8ffd39d"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tiny Titans: Efficient Large Vision, Language and Multimodal Models through Pruning"
+  },
+  "processed_at": "2026-11-18T10:29:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ceed8bf44443",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

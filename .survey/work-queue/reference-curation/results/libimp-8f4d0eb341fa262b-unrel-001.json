@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f4d0eb341fa262b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.13755",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.13755",
+    "identity_tokens": [
+      "arXiv:2303.13755"
+    ],
+    "reason": "原著arXiv要旨は画像分類用Vision Transformerの注意行列を対象とし、軽量なトークン間接続予測器で画像ごとの疎な注意マスクを学習する。ImageNetのtop-1精度とMHSAのFLOPs削減（48〜69%）を評価するが、LLM生成推論、KVキャッシュ、言語モデルのサービングや推論システムへの直接適用を検証していない。画像認識専用の注意最適化であり本サーベイ対象外。",
+    "first_checked_at": "2026-11-18T10:28:52+00:00",
+    "last_checked_at": "2026-11-18T10:28:52+00:00",
+    "linked_from": [],
+    "title": "Sparsifiner: Learning Sparse Instance-Dependent Attention for Efficient Vision Transformers"
+  },
+  "processed_at": "2026-11-18T10:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f4d0eb341fa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

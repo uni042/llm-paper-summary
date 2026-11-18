@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea5b06305ed9a84e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.22718",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.22718",
+    "identity_tokens": [
+      "arXiv:2602.22718"
+    ],
+    "reason": "RLHFlessはRLHF学習のrollout推論と訓練処理が交互に要求する資源をserverless基盤で調整し、prefix事前計算、応答長を考慮したactor拡縮、idle時間削減を組み合わせる。実機・シミュレーションで学習パイプライン最大1.35倍、費用44.8%削減を報告するが、主対象はRLHF post-training全体であり、独立したLLMサービング推論の高速化ではないためborderline。",
+    "first_checked_at": "2026-11-18T10:29:04+00:00",
+    "last_checked_at": "2026-11-18T10:29:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "RLHFless: Serverless Computing for Efficient RLHF"
+  },
+  "processed_at": "2026-11-18T10:29:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea5b06305ed9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

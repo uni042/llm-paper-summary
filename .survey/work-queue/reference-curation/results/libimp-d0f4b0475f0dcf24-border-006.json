@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d0f4b0475f0dcf24-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.40847",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.40847",
+    "identity_tokens": [
+      "arXiv:2610.40847"
+    ],
+    "reason": "CDLM（LangFlow）と投機draft由来のDSpark Markov/RNN headをtarget検証なしの単独生成に揃えて比較。長さ16/128/1024のOpenWebText生成でGenPPL・MAUVEを分析し、128/1024ではLangFlowの品質優位を報告。draft構造に関連するが受理率や実際の投機復号高速化を測定せず、生成品質の比較が主眼のためborderline。",
+    "first_checked_at": "2026-11-18T07:16:43+00:00",
+    "last_checked_at": "2026-11-18T10:29:02+00:00",
+    "linked_from": [
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "https://arxiv.org/list/cs.CL/new",
+      "inference-systems",
+      "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+      "投機的復号 / EAGLE"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model"
+  },
+  "processed_at": "2026-11-18T10:29:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d0f4b0475f0d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

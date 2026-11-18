@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0bb387b05f2f864-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.05678",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.05678",
+    "identity_tokens": [
+      "arXiv:2406.05678"
+    ],
+    "reason": "arXiv一次要旨。長文脈のSFTを目的にshifted sparse attentionのセグメント再配置とsink tokenを使うSF-Attnを提案し、full attentionのPPL改善の92%に達すると報告。推論時のH2O KV圧縮適用にも言及するが、主な新規性はLoRA微調整時の注意構成で、独立した生成時サービング・KV管理の改善は要旨だけでは十分に切り分けられないため境界候補。",
+    "first_checked_at": "2026-11-18T07:47:47+00:00",
+    "last_checked_at": "2026-11-18T10:29:03+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ最適化／適応圧縮",
+      "sparse attention / long-context Transformer",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models"
+  },
+  "processed_at": "2026-11-18T10:29:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0bb387b05f2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
