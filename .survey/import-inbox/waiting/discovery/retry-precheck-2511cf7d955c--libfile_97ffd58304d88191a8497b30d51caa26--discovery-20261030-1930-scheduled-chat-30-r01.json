@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r01",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02574",
+      "identity_tokens": [
+        "arXiv:2607.02574",
+        "DOI:10.48550/arXiv.2607.02574"
+      ],
+      "title": "From Tensor Buffer to Distributed Memory Hierarchy: A Survey of KV Cache Management for LLM Serving",
+      "reason": "KVキャッシュを要求内の一時テンソルでなく分散サービングの管理対象と捉え、局所性・寿命・所有権・記憶媒体の4軸で30超の方式を整理する。local-paged、disaggregated-pipeline、shared-store、memory-pool、hybrid-tierの5類型と、KV固有計測の不足を示す。KV階層・共有・配置のシステム比較に直接使えるサーベイ。",
+      "source_url": "https://arxiv.org/abs/2607.02574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 1,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:f2f88de3b46d64383509d5b64ec22cc0d92e613f",
+      "identity_tokens": [
+        "SemanticScholar:f2f88de3b46d64383509d5b64ec22cc0d92e613f",
+        "arXiv:2507.06608"
+      ],
+      "title": "Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving",
+      "reason": "prefillとdecodeを別GPUエンジンへ分けるのではなく、同一GPU内の計算資源・メモリ・帯域競合を予測して両段階へ動的配分するNexusを提案する。chunked prefillの干渉を緩和し、vLLM比で最大2.2倍のスループット、TTFT最大20倍改善を報告。worklist旧題名「Taming Throughput-Latency Tradeoff...」からarXiv v5で改題済み。",
+      "source_url": "https://arxiv.org/abs/2507.06608",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 2,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+      "identity_tokens": [
+        "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+        "arXiv:2603.04592"
+      ],
+      "title": "From Static Inference to Dynamic Interaction: Navigating the Landscape of Streaming Large Language Models",
+      "reason": "ストリーミングLLMを入力の継続到着・生成・双方向対話のデータフローから再定義し、関連手法と応用を体系化するサーベイ。実時間の推論処理と関係するが、要旨で確認できる主要貢献は定義・分類と研究課題の整理であり、特定のサービング機構やメモリ最適化の新規実装・性能実証ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2603.04592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 3,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.16162",
+      "identity_tokens": [
+        "arXiv:2505.16162"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "reason": "追加ドラフトモデルを使わず層スキップで草案を作る自己投機的復号について、ドメイン変化で最適スキップ層が変わる問題を解く。入力の最終隠れ表現に対するK近傍探索でドメイン別スキップ層集合を選択し、LLM推論で1.3〜1.6倍の高速化を報告。推論時のドラフト構成選択が直接的な貢献。",
+      "source_url": "https://arxiv.org/abs/2505.16162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 5,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:e802d5eb3143d9690e8049f93ec6c198c415853e",
+      "identity_tokens": [
+        "SemanticScholar:e802d5eb3143d9690e8049f93ec6c198c415853e",
+        "arXiv:2408.05636"
+      ],
+      "title": "Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion",
+      "reason": "従来の自己回帰ドラフトが逐次トークン生成で律速される問題に対し、離散拡散言語モデルで複数候補を並列生成してターゲットモデルで検証するSpecDiffを提案。一次要旨では通常生成比最大7.2倍、既存投機的復号比最大1.75倍の高速化を報告する。worklistの短縮題名と正式arXiv題名の差をaliasとして留意。",
+      "source_url": "https://arxiv.org/abs/2408.05636",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 6,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+      "identity_tokens": [
+        "SemanticScholar:acaaa08dba4a23b0b68a2c455ded10f7146674b6",
+        "arXiv:2501.19324"
+      ],
+      "title": "Reward-Guided Speculative Decoding for Efficient LLM Reasoning",
+      "reason": "軽量ドラフトと高性能ターゲットの切替を、推論途中の過程報酬モデルによるステップ品質で決めるRSDを提案。通常の分布不変な投機的復号とは異なり、高報酬出力を優先する制御されたバイアスを許容する。ターゲット単独比で最大4.4倍少ないFLOPsを報告する推論計算量最適化研究。",
+      "source_url": "https://proceedings.mlr.press/v267/liao25f.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 8,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+      "identity_tokens": [
+        "SemanticScholar:998dca0b69dd0b08495d90530db2352be3a04d4a",
+        "arXiv:2502.15075"
+      ],
+      "title": "Quantize What Counts: More for Keys, Less for Values",
+      "reason": "KVキャッシュのKとVへ同一ビット幅を割り当てる慣習に対し、射影重みのスペクトル・フロベニウスノルムの非対称性からK側の精度を優先する理論的根拠を示す。例としてK4bit/V2bitの非対称量子化を評価し、メモリ制約下の精度保持を検証する。worklistの旧題名「Bit Allocation Insights...」と現行arXiv題名は同一IDの版差。",
+      "source_url": "https://arxiv.org/abs/2502.15075",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 10,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "identity_tokens": [
+        "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+        "PMLR:262/wu24a"
+      ],
+      "title": "Snakes and Ladders: Accelerating SSM Inference with Speculative Decoding",
+      "reason": "状態空間モデルは推論時にマルコフ状態を保持するため、通常のTransformer投機的復号の巻き戻しが直接適用できない。Joint Attainment and AdvancementとActivation Replayで状態の整合を保って投機・検証し、3ベンチマーク平均1.82倍の実時間高速化を報告。SSM推論の状態管理と投機実行に直接寄与。",
+      "source_url": "https://proceedings.mlr.press/v262/wu24a.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 11,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415",
+      "identity_tokens": [
+        "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415",
+        "DOI:10.18653/v1/2026.bigpicture-main.6",
+        "arXiv:2510.05364"
+      ],
+      "title": "Challenging Quadratic Attention - A Holistic View On the Rise of Alternative Language Model Architectures",
+      "reason": "二乗計算量の自己注意を代替する準線形注意、再帰型モデル、状態空間モデル、混合アーキテクチャを計算量・メモリ量・ベンチマーク・限界で比較するレビュー。推論効率を扱う重要な背景資料だが、要旨の中心は既存アーキテクチャの比較整理で、新規の推論サービング・カーネル・オフロード機構を提案しないためborderline。",
+      "source_url": "https://aclanthology.org/2026.bigpicture-main.6/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 12,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00078",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00078"
+      ],
+      "title": "FlashServe: Adaptive Kernel Provision for Quantized LLM Serving",
+      "reason": "動的なリクエスト量・バッチサイズに対して量子化推論カーネルを固定すると非最適になり、切替自体にも遅延がある問題を扱う。推論遅延と切替費用のコストモデルでカーネルを選択し、非同期切替と事前準備で実行を重ねるFlashServeを提案。静的量子化ベースライン比で推論遅延9.0〜13.6%減を報告する直接的なサービング最適化。",
+      "source_url": "https://infoscience.epfl.ch/entities/publication/7309972e-4d14-4d79-80dc-3abce7dae15d",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:32:52+09:00",
+      "last_checked_at": "2026-10-30T19:32:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 14,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}
