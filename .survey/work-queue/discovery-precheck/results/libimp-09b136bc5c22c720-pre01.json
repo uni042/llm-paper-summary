@@ -1,0 +1,281 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-09b136bc5c22c720-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-09b136bc5c22",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.02680",
+    "arXiv:2607.22465",
+    "arXiv:2610.02713",
+    "arXiv:2610.11750",
+    "arXiv:2610.15579",
+    "arXiv:2610.17689",
+    "arXiv:2610.22985",
+    "arXiv:2610.28355",
+    "arXiv:2610.34721"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "31d647f3865cb0b76b41932747ce9862592f9535",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:22:11.606665+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.02680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22465",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641"
+    },
+    {
+      "requested_id": "arXiv:2610.02713",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46"
+    },
+    {
+      "requested_id": "arXiv:2610.11750",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15579",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:1a9241f599daabf583f69c34639001e228b1f32d"
+    },
+    {
+      "requested_id": "arXiv:2610.17689",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:84513bc45205cd6bd73ad2a5d75015b284509f3a"
+    },
+    {
+      "requested_id": "arXiv:2610.22985",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6"
+    },
+    {
+      "requested_id": "arXiv:2610.28355",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:0a9396a43370956ebadd897c5da2a6c9bee4fefe"
+    },
+    {
+      "requested_id": "arXiv:2610.34721",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:6950fa79af4cf9537bf00cd53525939520936c9f"
+    }
+  ],
+  "results": [
+    {
+      "title": "Post-Boundary Bridge: Must Local Attention Go Global Between Global Layers?",
+      "source_url": "https://arxiv.org/abs/2606.02680",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid Transformers reduce the cost of long-context modeling by combining local attention with periodic full-attention layers. When global communication is already available, however, the best use of local computation remains unclear. We introduce Post-Boundary Bridge (PBB), which preserves causal attention within blocks and adds direct connections across their boundaries. Rather than extending the range of information relayed through successive local layers, PBB prioritizes within-block modeling and nearby exchange, leaving long-range communication to full-attention layers. Across dense and mixture-of-experts models with 205 million to 2.07 billion stored parameters, PBB hybrids retain near-Full perplexity and competitive performance on standard downstream benchmarks while improving controlled source retrieval. At 205 million parameters, PBB also matches a hybrid using sliding-window attention (SWA) in perplexity and achieves higher source-retrieval accuracy. The same boundary-aligned structure enables Flash-PBB, an exact decoding implementation that updates its key-value cache without relocating retained entries. Compared with Flash-SWA, Flash-PBB delivers 1.82x decode attention-core throughput with half the allocated local key-value cache. These results show that targeted boundary exchange can preserve model quality while enabling faster, more memory-efficient local attention between global layers.",
+      "identifiers": [
+        "SemanticScholar:e67cea6ca985513651ea06d47fcf5870d39b8a92"
+      ],
+      "semantic_scholar_id": "e67cea6ca985513651ea06d47fcf5870d39b8a92",
+      "canonical_id": "arXiv:2606.02680",
+      "arxiv_id": "2606.02680",
+      "authors": [
+        "Zhibo Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.11750",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Tree-based speculative decoding verifies multiple draft continuations in one target-model pass, but finite trees built from draft scores face a fundamental draft-target mismatch. We ask whether better exact verification can increase acceptance on a fixed tree and how target feedback can improve the tree itself. Through a target-flow view, we identify a canonical exit law and prove that one plus target coverage sharply bounds the expected output-block length, including the bonus token, of any exact path verifier. All optimal verifiers share the same exit and bonus-token law, already attained by representative predraw-and-follow and sequential residual verifiers. This yields Tree Exit Verification (TEV), an exact, level-parallel procedure using one exit-node decision and one bonus-token decision. The exit law also identifies missing target probability, providing node-level feedback for Exit-Guided Draft-Tree Training (ExitTrain) on inference-time draft trees. Experiments across dialogue, code, and mathematical reasoning validate fixed-tree equivalence: ExitTrain increases average output-block length by 13%, while TEV reduces verifier-stage latency by 15%, yielding a 14% end-to-end speedup over DDTree. Our results distinguish two opportunities: better draft trees for higher acceptance and more direct verification for lower latency. Code: https://github.com/hsj576/TEV.",
+      "identifiers": [
+        "SemanticScholar:63149e698ae73b7faa81a8063390a3f4812ce8a6"
+      ],
+      "semantic_scholar_id": "63149e698ae73b7faa81a8063390a3f4812ce8a6",
+      "canonical_id": "arXiv:2610.11750",
+      "arxiv_id": "2610.11750",
+      "authors": [
+        "Shi-Jing Hu",
+        "Xuan-Cheng Ren",
+        "Zhi-Hui Lu",
+        "Pan Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.02680",
+      "identity_tokens": [
+        "id:SemanticScholar:e67cea6ca985513651ea06d47fcf5870d39b8a92",
+        "id:arXiv:2606.02680",
+        "title:postboundary bridge must local attention go global between global layers",
+        "url:https://arxiv.org/abs/2606.02680"
+      ],
+      "record": {
+        "title": "Post-Boundary Bridge: Must Local Attention Go Global Between Global Layers?",
+        "source_url": "https://arxiv.org/abs/2606.02680",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid Transformers reduce the cost of long-context modeling by combining local attention with periodic full-attention layers. When global communication is already available, however, the best use of local computation remains unclear. We introduce Post-Boundary Bridge (PBB), which preserves causal attention within blocks and adds direct connections across their boundaries. Rather than extending the range of information relayed through successive local layers, PBB prioritizes within-block modeling and nearby exchange, leaving long-range communication to full-attention layers. Across dense and mixture-of-experts models with 205 million to 2.07 billion stored parameters, PBB hybrids retain near-Full perplexity and competitive performance on standard downstream benchmarks while improving controlled source retrieval. At 205 million parameters, PBB also matches a hybrid using sliding-window attention (SWA) in perplexity and achieves higher source-retrieval accuracy. The same boundary-aligned structure enables Flash-PBB, an exact decoding implementation that updates its key-value cache without relocating retained entries. Compared with Flash-SWA, Flash-PBB delivers 1.82x decode attention-core throughput with half the allocated local key-value cache. These results show that targeted boundary exchange can preserve model quality while enabling faster, more memory-efficient local attention between global layers.",
+        "identifiers": [
+          "SemanticScholar:e67cea6ca985513651ea06d47fcf5870d39b8a92"
+        ],
+        "semantic_scholar_id": "e67cea6ca985513651ea06d47fcf5870d39b8a92",
+        "canonical_id": "arXiv:2606.02680",
+        "arxiv_id": "2606.02680",
+        "authors": [
+          "Zhibo Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.11750",
+      "identity_tokens": [
+        "id:SemanticScholar:63149e698ae73b7faa81a8063390a3f4812ce8a6",
+        "id:arXiv:2610.11750",
+        "title:where draft trees lose target mass exitguided speculative decoding",
+        "url:https://arxiv.org/abs/2610.11750"
+      ],
+      "record": {
+        "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.11750",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Tree-based speculative decoding verifies multiple draft continuations in one target-model pass, but finite trees built from draft scores face a fundamental draft-target mismatch. We ask whether better exact verification can increase acceptance on a fixed tree and how target feedback can improve the tree itself. Through a target-flow view, we identify a canonical exit law and prove that one plus target coverage sharply bounds the expected output-block length, including the bonus token, of any exact path verifier. All optimal verifiers share the same exit and bonus-token law, already attained by representative predraw-and-follow and sequential residual verifiers. This yields Tree Exit Verification (TEV), an exact, level-parallel procedure using one exit-node decision and one bonus-token decision. The exit law also identifies missing target probability, providing node-level feedback for Exit-Guided Draft-Tree Training (ExitTrain) on inference-time draft trees. Experiments across dialogue, code, and mathematical reasoning validate fixed-tree equivalence: ExitTrain increases average output-block length by 13%, while TEV reduces verifier-stage latency by 15%, yielding a 14% end-to-end speedup over DDTree. Our results distinguish two opportunities: better draft trees for higher acceptance and more direct verification for lower latency. Code: https://github.com/hsj576/TEV.",
+        "identifiers": [
+          "SemanticScholar:63149e698ae73b7faa81a8063390a3f4812ce8a6"
+        ],
+        "semantic_scholar_id": "63149e698ae73b7faa81a8063390a3f4812ce8a6",
+        "canonical_id": "arXiv:2610.11750",
+        "arxiv_id": "2610.11750",
+        "authors": [
+          "Shi-Jing Hu",
+          "Xuan-Cheng Ren",
+          "Zhi-Hui Lu",
+          "Pan Zhou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d0359a600a6c0d5e90ca4845d07324c2e7bfe5100ff0957f7038ee3f2219067f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,459 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e37414e3c0833ff6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e37414e3c083",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:bc4bf86b9bd3bc4311ca64485a02323024f81ad4",
+    "arXiv:2505.20112",
+    "arXiv:2608.08730",
+    "arXiv:2608.20397",
+    "arXiv:2610.29210",
+    "arXiv:2610.31433",
+    "arXiv:2610.34721",
+    "arXiv:2611.04313",
+    "arXiv:2611.06425",
+    "arXiv:2611.12356",
+    "arXiv:2611.13442"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "31d647f3865cb0b76b41932747ce9862592f9535",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:22:18.113670+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:bc4bf86b9bd3bc4311ca64485a02323024f81ad4",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:accelerating attention through gradientbased learned runtime pruning"
+    },
+    {
+      "requested_id": "arXiv:2505.20112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08730",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a"
+    },
+    {
+      "requested_id": "arXiv:2608.20397",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:717587f9a25592c8bec90af38876f7f439a82a21"
+    },
+    {
+      "requested_id": "arXiv:2610.29210",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:f0969b0d4b9a8719e72ffbd4c773258d38dcac72"
+    },
+    {
+      "requested_id": "arXiv:2610.31433",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34721",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:6950fa79af4cf9537bf00cd53525939520936c9f"
+    },
+    {
+      "requested_id": "arXiv:2611.04313",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:4b9af297887004320d214444dcd90522d507e068"
+    },
+    {
+      "requested_id": "arXiv:2611.06425",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:dad2bdbb8d92e97f226502d4a87ba4ddec73867e"
+    },
+    {
+      "requested_id": "arXiv:2611.12356",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.13442",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Drift Says When, Budget Says How Much: Rate-Controlled KV Re-selection for Long-Form Multimodal Generation",
+      "source_url": "https://arxiv.org/abs/2610.31433",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache compression for multimodal LLMs usually selects the visual tokens to keep once, at prefill, and reuses that selection for the whole generation. We show that this one-shot selection is severely limited on long-form generation: on detailed image description, even an oracle that selects with the attention of the uncompressed answer reaches only 0.44-0.52 ROUGE-L agreement with the uncompressed output, because the evidence the model reads moves as the description unfolds. Re-selecting whenever attention drifts out of the kept set is the natural remedy, but we find that a fixed drift threshold fails systematically: drift magnitudes are not comparable across samples, so low-drift samples are almost never refreshed although they benefit the most. We propose Rate-Controlled Refresh (RCR), which lets drift decide when and where to re-select while a per-sample controller regulates how often, combined with a low-rank drift detector, candidate-restricted re-selection, and a decision that stays on the GPU. With one setting for all models and tasks, RCR outperforms the per-step retrieval method InfiniGen by 1.6-3.8 ROUGE-L points on five of six model-task settings with no significant difference on the sixth, while staying within 1.7 points of exact per-step re-selection, with comparable estimated data movement per step and a 4x smaller GPU-resident detector. On DetailCaps, drift-chosen timing beats random timing at the same refresh rate and periodic timing even at a higher rate, by 2.0-5.0 points. On pre-registered video description, where drift is homogeneous across samples, RCR is on par with InfiniGen on Qwen2-VL and exceeds it on Qwen3-VL but no longer beats a fixed threshold at the nearest tested rates, consistent with the diagnosis; object-level evaluation shows that RCR achieves higher object F1 against the uncompressed output than InfiniGen on two of three models.",
+      "identifiers": [
+        "SemanticScholar:132262db20f5375b0f84843bbe36ff8ee3140070"
+      ],
+      "semantic_scholar_id": "132262db20f5375b0f84843bbe36ff8ee3140070",
+      "canonical_id": "arXiv:2610.31433",
+      "arxiv_id": "2610.31433",
+      "authors": [
+        "Bin Hu",
+        "Ying Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DForkTree: Accelerating Speculative Decoding with Fork-Aware Block Diffusion Draft Trees",
+      "source_url": "https://arxiv.org/abs/2611.12356",
+      "year": 2026,
+      "published": "2026-11-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding speeds up language models by having a lightweight drafter propose future tokens that the target model verifies in parallel. Block diffusion drafters such as DFlash predict an entire block in one forward pass, and DDTree builds draft trees directly from their per-position distributions. Each distribution implicitly assumes that the drafter's own greedy continuation is accepted, whereas a draft tree improves over a chain only on branches that leave this greedy path. Once a path forks, the drafter's top-1 accuracy drops from 89% to 18% and its top candidates often miss the true token. Re-running the drafter from the fork token largely restores its accuracy, showing that the errors stem from conditioning on an outdated prefix rather than from limited model capacity. In this paper, we introduce DForkTree, a training-free method that re-anchors each branch on its own tokens. It adjusts the drafter's scores with pointwise mutual information from target-generated n-grams, weighted more heavily after a fork, and a layer-wise GPU search recovers the exact optimal tree under these scores. On Qwen3.5-4B and 9B, DForkTree outperforms all baselines on every benchmark, by up to 41.5% over DFlash and 15.1% over DDTree, with average speedups of up to 4.75x over autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:af32863897ee53d3e2f2cbb008218415ba2cd7ec"
+      ],
+      "semantic_scholar_id": "af32863897ee53d3e2f2cbb008218415ba2cd7ec",
+      "canonical_id": "arXiv:2611.12356",
+      "arxiv_id": "2611.12356",
+      "authors": [
+        "Zhi-Cheng Zheng",
+        "Cheng Zhang",
+        "Chen-Kai Tang",
+        "Tian-Xiang Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ForeSpark: Joint Draft and Verification Budget Scheduling for Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.13442",
+      "year": 2026,
+      "published": "2026-11-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel drafters accelerate LLM decoding by proposing a whole block of draft tokens in a single forward pass, making them attractive for LLM serving. Recent systems optimize goodput (i.e., accepted tokens per second) because rejected drafts steal compute from other requests. However, these systems control only how many tokens are verified, so every request still drafts a full block. At high serving load, we find that drafting consumes up to 40% of step time, of which a majority is discarded because it is never verified. Yet, draft-length control from autoregressive drafters does not carry over, because a parallel drafter commits to its length before its single pass. Moreover, draft and verification lengths are coupled across the batch, so they must be selected jointly for every request while keeping the decision computationally cheap at every step. In this paper, we propose work-conserving speculation (WCS), a design that jointly allocates draft and verification budgets per request in LLM serving, and present ForeSpark as its prototype. ForeSpark realizes WCS with (i) a context-aware pre-draft estimator that predicts acceptance for every candidate length from the target model's context features, (ii) a lightweight joint draft-verify scheduler that selects both lengths through a global sort, and (iii) a post-draft budget distribution that spends verification on the most promising tokens. Implemented on vLLM, ForeSpark improves throughput by up to 1.77x over the state-of-the-art DSpark and by 2.49x over autoregressive decoding at a matched per-request generation rate, without changing the output distribution. It also tolerates higher load, sustaining up to 1.51x the request rate of DSpark under latency service level objectives (SLOs).",
+      "identifiers": [
+        "SemanticScholar:0eef89b62e0b5f00cf15f6785489e8515b0943d1"
+      ],
+      "semantic_scholar_id": "0eef89b62e0b5f00cf15f6785489e8515b0943d1",
+      "canonical_id": "arXiv:2611.13442",
+      "arxiv_id": "2611.13442",
+      "authors": [
+        "Jaeyong Song",
+        "Da-Hui Wang",
+        "Pratyush Patel",
+        "Jonny Kong",
+        "Preyas Shah",
+        "S. Kanaujia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ERC-SVD: Error-Controlled SVD for Large Language Model Compression",
+      "source_url": "https://arxiv.org/abs/2505.20112",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": null,
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated impressive capabilities in a wide range of downstream natural language processing tasks. Nevertheless, their considerable sizes and memory demands hinder practical deployment, underscoring the importance of developing efficient compression strategies. Singular value decomposition (SVD) decomposes a matrix into orthogonal components, enabling efficient low-rank approximation. This is particularly suitable for LLM compression, where weight matrices often exhibit significant redundancy. However, current SVD-based methods neglect the residual matrix from truncation, resulting in significant truncation loss. Additionally, compressing all layers of the model results in severe error propagation. To overcome these limitations, we propose ERC-SVD, a new post-training SVD-based LLM compression method from an error-controlled perspective. Specifically, we leverage the residual matrix generated during the truncation process to reduce truncation loss. Moreover, under a fixed overall compression ratio, we selectively compress the last few layers of the model, which mitigates error propagation and improves compressed model performance. Comprehensive evaluations on diverse LLM families and multiple benchmark datasets indicate that ERC-SVD consistently achieves superior performance over existing counterpart methods, demonstrating its practical effectiveness.",
+      "identifiers": [
+        "SemanticScholar:60b9334b477eb1b02b5a9dcbcc2a2a78d50d76e8"
+      ],
+      "semantic_scholar_id": "60b9334b477eb1b02b5a9dcbcc2a2a78d50d76e8",
+      "canonical_id": "arXiv:2505.20112",
+      "arxiv_id": "2505.20112",
+      "authors": [
+        "Hao-Lei Bai",
+        "Si-Yong Jian",
+        "Tuo Liang",
+        "Yu Yin",
+        "Huan Wang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 541,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.31433",
+      "identity_tokens": [
+        "id:SemanticScholar:132262db20f5375b0f84843bbe36ff8ee3140070",
+        "id:arXiv:2610.31433",
+        "title:drift says when budget says how much ratecontrolled kv reselection for longform multimodal generation",
+        "url:https://arxiv.org/abs/2610.31433"
+      ],
+      "record": {
+        "title": "Drift Says When, Budget Says How Much: Rate-Controlled KV Re-selection for Long-Form Multimodal Generation",
+        "source_url": "https://arxiv.org/abs/2610.31433",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache compression for multimodal LLMs usually selects the visual tokens to keep once, at prefill, and reuses that selection for the whole generation. We show that this one-shot selection is severely limited on long-form generation: on detailed image description, even an oracle that selects with the attention of the uncompressed answer reaches only 0.44-0.52 ROUGE-L agreement with the uncompressed output, because the evidence the model reads moves as the description unfolds. Re-selecting whenever attention drifts out of the kept set is the natural remedy, but we find that a fixed drift threshold fails systematically: drift magnitudes are not comparable across samples, so low-drift samples are almost never refreshed although they benefit the most. We propose Rate-Controlled Refresh (RCR), which lets drift decide when and where to re-select while a per-sample controller regulates how often, combined with a low-rank drift detector, candidate-restricted re-selection, and a decision that stays on the GPU. With one setting for all models and tasks, RCR outperforms the per-step retrieval method InfiniGen by 1.6-3.8 ROUGE-L points on five of six model-task settings with no significant difference on the sixth, while staying within 1.7 points of exact per-step re-selection, with comparable estimated data movement per step and a 4x smaller GPU-resident detector. On DetailCaps, drift-chosen timing beats random timing at the same refresh rate and periodic timing even at a higher rate, by 2.0-5.0 points. On pre-registered video description, where drift is homogeneous across samples, RCR is on par with InfiniGen on Qwen2-VL and exceeds it on Qwen3-VL but no longer beats a fixed threshold at the nearest tested rates, consistent with the diagnosis; object-level evaluation shows that RCR achieves higher object F1 against the uncompressed output than InfiniGen on two of three models.",
+        "identifiers": [
+          "SemanticScholar:132262db20f5375b0f84843bbe36ff8ee3140070"
+        ],
+        "semantic_scholar_id": "132262db20f5375b0f84843bbe36ff8ee3140070",
+        "canonical_id": "arXiv:2610.31433",
+        "arxiv_id": "2610.31433",
+        "authors": [
+          "Bin Hu",
+          "Ying Xiao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.12356",
+      "identity_tokens": [
+        "id:SemanticScholar:af32863897ee53d3e2f2cbb008218415ba2cd7ec",
+        "id:arXiv:2611.12356",
+        "title:dforktree accelerating speculative decoding with forkaware block diffusion draft trees",
+        "url:https://arxiv.org/abs/2611.12356"
+      ],
+      "record": {
+        "title": "DForkTree: Accelerating Speculative Decoding with Fork-Aware Block Diffusion Draft Trees",
+        "source_url": "https://arxiv.org/abs/2611.12356",
+        "year": 2026,
+        "published": "2026-11-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding speeds up language models by having a lightweight drafter propose future tokens that the target model verifies in parallel. Block diffusion drafters such as DFlash predict an entire block in one forward pass, and DDTree builds draft trees directly from their per-position distributions. Each distribution implicitly assumes that the drafter's own greedy continuation is accepted, whereas a draft tree improves over a chain only on branches that leave this greedy path. Once a path forks, the drafter's top-1 accuracy drops from 89% to 18% and its top candidates often miss the true token. Re-running the drafter from the fork token largely restores its accuracy, showing that the errors stem from conditioning on an outdated prefix rather than from limited model capacity. In this paper, we introduce DForkTree, a training-free method that re-anchors each branch on its own tokens. It adjusts the drafter's scores with pointwise mutual information from target-generated n-grams, weighted more heavily after a fork, and a layer-wise GPU search recovers the exact optimal tree under these scores. On Qwen3.5-4B and 9B, DForkTree outperforms all baselines on every benchmark, by up to 41.5% over DFlash and 15.1% over DDTree, with average speedups of up to 4.75x over autoregressive decoding.",
+        "identifiers": [
+          "SemanticScholar:af32863897ee53d3e2f2cbb008218415ba2cd7ec"
+        ],
+        "semantic_scholar_id": "af32863897ee53d3e2f2cbb008218415ba2cd7ec",
+        "canonical_id": "arXiv:2611.12356",
+        "arxiv_id": "2611.12356",
+        "authors": [
+          "Zhi-Cheng Zheng",
+          "Cheng Zhang",
+          "Chen-Kai Tang",
+          "Tian-Xiang Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.13442",
+      "identity_tokens": [
+        "id:SemanticScholar:0eef89b62e0b5f00cf15f6785489e8515b0943d1",
+        "id:arXiv:2611.13442",
+        "title:forespark joint draft and verification budget scheduling for parallel speculative decoding",
+        "url:https://arxiv.org/abs/2611.13442"
+      ],
+      "record": {
+        "title": "ForeSpark: Joint Draft and Verification Budget Scheduling for Parallel Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.13442",
+        "year": 2026,
+        "published": "2026-11-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Parallel drafters accelerate LLM decoding by proposing a whole block of draft tokens in a single forward pass, making them attractive for LLM serving. Recent systems optimize goodput (i.e., accepted tokens per second) because rejected drafts steal compute from other requests. However, these systems control only how many tokens are verified, so every request still drafts a full block. At high serving load, we find that drafting consumes up to 40% of step time, of which a majority is discarded because it is never verified. Yet, draft-length control from autoregressive drafters does not carry over, because a parallel drafter commits to its length before its single pass. Moreover, draft and verification lengths are coupled across the batch, so they must be selected jointly for every request while keeping the decision computationally cheap at every step. In this paper, we propose work-conserving speculation (WCS), a design that jointly allocates draft and verification budgets per request in LLM serving, and present ForeSpark as its prototype. ForeSpark realizes WCS with (i) a context-aware pre-draft estimator that predicts acceptance for every candidate length from the target model's context features, (ii) a lightweight joint draft-verify scheduler that selects both lengths through a global sort, and (iii) a post-draft budget distribution that spends verification on the most promising tokens. Implemented on vLLM, ForeSpark improves throughput by up to 1.77x over the state-of-the-art DSpark and by 2.49x over autoregressive decoding at a matched per-request generation rate, without changing the output distribution. It also tolerates higher load, sustaining up to 1.51x the request rate of DSpark under latency service level objectives (SLOs).",
+        "identifiers": [
+          "SemanticScholar:0eef89b62e0b5f00cf15f6785489e8515b0943d1"
+        ],
+        "semantic_scholar_id": "0eef89b62e0b5f00cf15f6785489e8515b0943d1",
+        "canonical_id": "arXiv:2611.13442",
+        "arxiv_id": "2611.13442",
+        "authors": [
+          "Jaeyong Song",
+          "Da-Hui Wang",
+          "Pratyush Patel",
+          "Jonny Kong",
+          "Preyas Shah",
+          "S. Kanaujia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 8,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.20112",
+      "identity_tokens": [
+        "id:SemanticScholar:60b9334b477eb1b02b5a9dcbcc2a2a78d50d76e8",
+        "id:arXiv:2505.20112",
+        "title:ercsvd errorcontrolled svd for large language model compression",
+        "url:https://arxiv.org/abs/2505.20112"
+      ],
+      "record": {
+        "title": "ERC-SVD: Error-Controlled SVD for Large Language Model Compression",
+        "source_url": "https://arxiv.org/abs/2505.20112",
+        "year": 2025,
+        "published": "2025-05-26",
+        "venue": null,
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated impressive capabilities in a wide range of downstream natural language processing tasks. Nevertheless, their considerable sizes and memory demands hinder practical deployment, underscoring the importance of developing efficient compression strategies. Singular value decomposition (SVD) decomposes a matrix into orthogonal components, enabling efficient low-rank approximation. This is particularly suitable for LLM compression, where weight matrices often exhibit significant redundancy. However, current SVD-based methods neglect the residual matrix from truncation, resulting in significant truncation loss. Additionally, compressing all layers of the model results in severe error propagation. To overcome these limitations, we propose ERC-SVD, a new post-training SVD-based LLM compression method from an error-controlled perspective. Specifically, we leverage the residual matrix generated during the truncation process to reduce truncation loss. Moreover, under a fixed overall compression ratio, we selectively compress the last few layers of the model, which mitigates error propagation and improves compressed model performance. Comprehensive evaluations on diverse LLM families and multiple benchmark datasets indicate that ERC-SVD consistently achieves superior performance over existing counterpart methods, demonstrating its practical effectiveness.",
+        "identifiers": [
+          "SemanticScholar:60b9334b477eb1b02b5a9dcbcc2a2a78d50d76e8"
+        ],
+        "semantic_scholar_id": "60b9334b477eb1b02b5a9dcbcc2a2a78d50d76e8",
+        "canonical_id": "arXiv:2505.20112",
+        "arxiv_id": "2505.20112",
+        "authors": [
+          "Hao-Lei Bai",
+          "Si-Yong Jian",
+          "Tuo Liang",
+          "Yu Yin",
+          "Huan Wang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 541,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5eeb12c6dfdbb256d39e904f769d1925f98efcb337eca4f1e570710e87630215",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

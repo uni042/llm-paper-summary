@@ -1,0 +1,607 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-daf44beda9782539-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-daf44beda978",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.04277",
+    "arXiv:2610.04473",
+    "arXiv:2610.08373",
+    "arXiv:2610.19026",
+    "arXiv:2610.19819",
+    "arXiv:2610.22543",
+    "arXiv:2610.22985",
+    "arXiv:2610.36576",
+    "arXiv:2610.39418"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "31d647f3865cb0b76b41932747ce9862592f9535",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:22:13.987907+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.04277",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04473",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.08373",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19026",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2"
+    },
+    {
+      "requested_id": "arXiv:2610.19819",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22543",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+    },
+    {
+      "requested_id": "arXiv:2610.22985",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6"
+    },
+    {
+      "requested_id": "arXiv:2610.36576",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39418",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.19819",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Retrieval-Augmented Generation (RAG) and long-context LLMs has shifted the computational burden toward the prefill phase---the initial stage where the model processes all input tokens in parallel before generating a response---yet its energy impact remains poorly characterised. We investigate the contradiction between massive hardware-level power spikes and the sub-linear marginal cost of input tokens reported in system-level studies. Through high-resolution telemetry of Llama-3.1 and Qwen-2 models on NVIDIA A100 hardware, we identify the efficiency threshold where $O(n^2)$ attention complexity overcomes GPU parallelisation. Our results quantify how optimised memory orchestration (PagedAttention) delays this scaling bottleneck across three orders of context scaling, yielding up to an 8.9$\\times$ energy efficiency advantage at 112,000 tokens compared to standard baselines. Furthermore, we characterise the energy disparity between input and output tokens, demonstrating that optimised serving (vLLM) causes this ratio to narrow (from $\\approx$850$\\times$ to 750$\\times$) as context scales due to high decode efficiency, whereas unoptimised baselines show a much smaller, roughly constant gap ($\\approx$150--230$\\times$) because their prefill is itself expensive. This work establishes context-scaling laws that differentiate engine-level optimisations from inherent model constraints, providing an empirical framework for sustainable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878"
+      ],
+      "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
+      "canonical_id": "arXiv:2610.19819",
+      "arxiv_id": "2610.19819",
+      "authors": [
+        "Boris Ruf",
+        "Marcin Detyniecki"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+      "source_url": "https://arxiv.org/abs/2610.39418",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. We implement these transformations in INT8 and INT4 kernels and evaluate them on the recurrences of Nemotron-H, Qwen3.5, and Kimi Linear, recovering most of the accuracy lost to quantization while accelerating recurrent prefill. We also augment SSDi8, an existing low-precision prefill pipeline for Mamba-2, improving perplexity at matched prefill latency on pretrained Mamba-2 and Nemotron-H models. Altogether, these results demonstrate the practical utility of invariance-based quantization for recurrent models.",
+      "identifiers": [
+        "SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77"
+      ],
+      "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
+      "canonical_id": "arXiv:2610.39418",
+      "arxiv_id": "2610.39418",
+      "authors": [
+        "Neehal Tumma",
+        "Philipp Nazari",
+        "Rohan Cherukuri",
+        "D. Rus",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+      "source_url": "https://arxiv.org/abs/2610.04277",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "New AI accelerators arrive before the kernels that make them fast, because peak kernel performance requires architecture-specific expertise in operand pipelines and data-movement techniques. Coding agents can now write, compile, and tune kernels on their own, so they could greatly accelerate kernel development and optimization. What agents produce depends on the interfaces they are given. These interfaces may expose a machine's raw capabilities or encode the known-good methods for exploiting its hardware features efficiently. We test the performance impact of these two interfaces on Intel GPUs through controlled experiments with five coding models on three kernels. With raw SYCL and execution feedback, Opus 4.8, the strongest of the three models tested with Claude Code, writes a single-GPU GEMM kernel reaching only 57.5% of Intel's tuned oneDNN library. We present SyclKittens, a hardware-aware tile programming model for Intel GPUs that encodes these known-good methods, so its operations place operands in matrix-engine layouts, prefetch through the L1 cache, and communicate over the fabric that links GPU stacks into a node. With SyclKittens under the same agent, task, and feedback budget, the agent reaches 82.1%, showing that encoded methods turn hardware capabilities into performance. Workload-specific policies stay programmable, and engineers and agents jointly refine these schedules in SyclKittens to build a kernel suite that reaches approximately 96% of oneDNN in geometric mean across GEMM shapes. The suite runs Llama-3.1-8B inference 1.59 times faster than torch.compile on one GPU and up to 2.91 times faster than a matched multi-GPU decode path on Intel's oneCCL. SyclKittens is open source and available at https://github.com/intel/SyclKittens.",
+      "identifiers": [
+        "SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad"
+      ],
+      "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+      "canonical_id": "arXiv:2610.04277",
+      "arxiv_id": "2610.04277",
+      "authors": [
+        "Ye-Hong Jiang",
+        "Sheng Chen",
+        "Fang-Wen Fu",
+        "Yen-Kuang Chen",
+        "Xin-Min Tian",
+        "Stuart H. Sul",
+        "Simran Arora"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+      "source_url": "https://arxiv.org/abs/2610.04473",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving an LLM means setting dozens of inference-time knobs, from per-layer KV retention to per-layer expert counts. Practice sets them with mechanism-specific heuristics that return a single operating point and do not scale to layer-wise search spaces. We recast inference configuration as constrained multi-objective black-box optimization and build InferOpt, a reusable search framework that requires only variable bounds, a deterministic resource cost, and an evaluation hook. InferOpt searches on a frozen sampled proxy set, rejects over-budget candidates before any model call, tightens the budget adaptively, and re-validates Pareto representatives on full-scale dataset. One pipeline covers a 28-dimensional continuous KV space (Qwen2.5-7B) and a 26-dimensional discrete MoE space (DeepSeek-V2-Lite). On KV, post-prefill pruning cuts the 16K cache by 64.4% and TPOT by 22.9--48.5%, and the searched layer-wise budget by InferOpt beats a matched uniform budget by 7.3% and 14.0% of the Full KV reference points. On MoE, a searched top-k schedule by InferOpt removes 43.0% of routed token--expert pairs while staying within 0.59 points of the default, closer than the matched-budget baselines. Against Random Search, NSGA-II, and MOTPE, InferOpt leads on both spaces, taking the best proxy hypervolume and the lowest retention on KV and staying closest to the uncompressed reference at the lowest experts on MoE.",
+      "identifiers": [
+        "SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9"
+      ],
+      "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+      "canonical_id": "arXiv:2610.04473",
+      "arxiv_id": "2610.04473",
+      "authors": [
+        "Qi Chen",
+        "Ying-Ying Cheng",
+        "Zhao Sun",
+        "Li Zhou",
+        "Fan Zhang",
+        "Jie Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.08373",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Energy-efficient LLM serving requires minimizing serving GPU energy while meeting latency and throughput service-level objectives (SLOs). Attention--FFN disaggregation (AFD) enables separate resource allocation and operating controls for attention and expert computation, but their energy effects remain coupled through the execution pipeline. Realizing its energy-saving potential therefore requires navigating a hierarchical configuration space in which deployment structures constrain admissible controls and shape their end-to-end effects. Finding low-energy configurations that meet SLOs is challenging because physical evaluations are costly and only a small fraction of candidates can be measured. We present Energy-Oriented Configuration Optimization (ECO), which jointly searches deployment structures and their admissible operating controls under a limited measurement budget. ECO constructs a structure-aware energy prior from calibrated stage behavior and pipeline dependencies, then learns residual prediction errors with a Gaussian process. Its cost-aware constrained Bayesian optimization prioritizes measurements according to expected energy improvement while accounting for SLO feasibility, execution success, and evaluation cost, and returns the lowest-energy measured feasible configuration. Across all 16 scenarios on A6000 and A100 with Qwen and DeepSeek, ECO's frozen configurations, evaluated on disjoint requests, reduce serving energy by 40.5\\% and increase output token rate by 20.7\\% on average relative to baselines while meeting target SLOs. Across the 8 A6000 scenarios, its selected feasible energy averages 33.1\\% below generic constrained Bayesian optimization and 25.8\\% below genetic search.",
+      "identifiers": [
+        "SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012"
+      ],
+      "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
+      "canonical_id": "arXiv:2610.08373",
+      "arxiv_id": "2610.08373",
+      "authors": [
+        "Qing-Yun Zou",
+        "Bin Gao",
+        "Zhuo-Bin Huang",
+        "Weng-Fai Wong",
+        "Tulika Mitra",
+        "Bing-Sheng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Less is more: learning what to profile for GPU kernel optimization",
+      "source_url": "https://arxiv.org/abs/2610.36576",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have recently shown strong potential for automatically optimizing GPU kernels, yet their effectiveness depends critically on the hardware information available to the kernel optimization model. Existing systems typically rely on predefined profiling strategies, leaving what to profile largely outside the optimization process. We show that effective profiling is not simply about collecting more information: increasing the number of profiling metrics does not monotonically improve kernel optimization, while the most useful profiling information varies across kernels. Our theoretical analysis further shows that, under such heterogeneous profiling utility, kernel-conditioned selection can outperform any single fixed profiling configuration. Motivated by this observation, we propose AutoProfiler, a feedback-driven framework for learning a deterministic profiling tree from optimization feedback. The tree is iteratively refined through REWRITE and SPLIT operations, with an LLM generating candidate modifications and empirical evaluation determining their acceptance. Once constructed, the tree quickly gathers the required profiling information for any kernel, allowing the LLM rewriter to be invoked only once. Experiments on KernelBench show that our approach improves kernel optimization over fixed profiling configurations under constrained profiling budgets. These results suggest that hardware profiling should evolve from static metric collection toward profiling reasoning, making profiling itself a new dimension for improving kernel optimization. The codes are available at https://github.com/Satissss/AutoProfiler.",
+      "identifiers": [
+        "SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6"
+      ],
+      "semantic_scholar_id": "1b68c0c28d7cdea39255d6c3a493da21474123d6",
+      "canonical_id": "arXiv:2610.36576",
+      "arxiv_id": "2610.36576",
+      "authors": [
+        "Yi-Han Wang",
+        "Pei-Yu Liu",
+        "Run-Yu Chen",
+        "Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.19819",
+      "identity_tokens": [
+        "id:SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878",
+        "id:arXiv:2610.19819",
+        "title:the cost of context profiling the energy footprint of input tokens in large language models",
+        "url:https://arxiv.org/abs/2610.19819"
+      ],
+      "record": {
+        "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.19819",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid adoption of Retrieval-Augmented Generation (RAG) and long-context LLMs has shifted the computational burden toward the prefill phase---the initial stage where the model processes all input tokens in parallel before generating a response---yet its energy impact remains poorly characterised. We investigate the contradiction between massive hardware-level power spikes and the sub-linear marginal cost of input tokens reported in system-level studies. Through high-resolution telemetry of Llama-3.1 and Qwen-2 models on NVIDIA A100 hardware, we identify the efficiency threshold where $O(n^2)$ attention complexity overcomes GPU parallelisation. Our results quantify how optimised memory orchestration (PagedAttention) delays this scaling bottleneck across three orders of context scaling, yielding up to an 8.9$\\times$ energy efficiency advantage at 112,000 tokens compared to standard baselines. Furthermore, we characterise the energy disparity between input and output tokens, demonstrating that optimised serving (vLLM) causes this ratio to narrow (from $\\approx$850$\\times$ to 750$\\times$) as context scales due to high decode efficiency, whereas unoptimised baselines show a much smaller, roughly constant gap ($\\approx$150--230$\\times$) because their prefill is itself expensive. This work establishes context-scaling laws that differentiate engine-level optimisations from inherent model constraints, providing an empirical framework for sustainable LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878"
+        ],
+        "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
+        "canonical_id": "arXiv:2610.19819",
+        "arxiv_id": "2610.19819",
+        "authors": [
+          "Boris Ruf",
+          "Marcin Detyniecki"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39418",
+      "identity_tokens": [
+        "id:SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77",
+        "id:arXiv:2610.39418",
+        "title:linquant functional invariances for lowprecision linear recurrences",
+        "url:https://arxiv.org/abs/2610.39418"
+      ],
+      "record": {
+        "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+        "source_url": "https://arxiv.org/abs/2610.39418",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. We implement these transformations in INT8 and INT4 kernels and evaluate them on the recurrences of Nemotron-H, Qwen3.5, and Kimi Linear, recovering most of the accuracy lost to quantization while accelerating recurrent prefill. We also augment SSDi8, an existing low-precision prefill pipeline for Mamba-2, improving perplexity at matched prefill latency on pretrained Mamba-2 and Nemotron-H models. Altogether, these results demonstrate the practical utility of invariance-based quantization for recurrent models.",
+        "identifiers": [
+          "SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77"
+        ],
+        "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
+        "canonical_id": "arXiv:2610.39418",
+        "arxiv_id": "2610.39418",
+        "authors": [
+          "Neehal Tumma",
+          "Philipp Nazari",
+          "Rohan Cherukuri",
+          "D. Rus",
+          "T. Konstantin Rusch"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04277",
+      "identity_tokens": [
+        "id:SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+        "id:arXiv:2610.04277",
+        "title:syclkittens a tile programming model for programmers and coding agents on intel gpus",
+        "url:https://arxiv.org/abs/2610.04277"
+      ],
+      "record": {
+        "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+        "source_url": "https://arxiv.org/abs/2610.04277",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "New AI accelerators arrive before the kernels that make them fast, because peak kernel performance requires architecture-specific expertise in operand pipelines and data-movement techniques. Coding agents can now write, compile, and tune kernels on their own, so they could greatly accelerate kernel development and optimization. What agents produce depends on the interfaces they are given. These interfaces may expose a machine's raw capabilities or encode the known-good methods for exploiting its hardware features efficiently. We test the performance impact of these two interfaces on Intel GPUs through controlled experiments with five coding models on three kernels. With raw SYCL and execution feedback, Opus 4.8, the strongest of the three models tested with Claude Code, writes a single-GPU GEMM kernel reaching only 57.5% of Intel's tuned oneDNN library. We present SyclKittens, a hardware-aware tile programming model for Intel GPUs that encodes these known-good methods, so its operations place operands in matrix-engine layouts, prefetch through the L1 cache, and communicate over the fabric that links GPU stacks into a node. With SyclKittens under the same agent, task, and feedback budget, the agent reaches 82.1%, showing that encoded methods turn hardware capabilities into performance. Workload-specific policies stay programmable, and engineers and agents jointly refine these schedules in SyclKittens to build a kernel suite that reaches approximately 96% of oneDNN in geometric mean across GEMM shapes. The suite runs Llama-3.1-8B inference 1.59 times faster than torch.compile on one GPU and up to 2.91 times faster than a matched multi-GPU decode path on Intel's oneCCL. SyclKittens is open source and available at https://github.com/intel/SyclKittens.",
+        "identifiers": [
+          "SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad"
+        ],
+        "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+        "canonical_id": "arXiv:2610.04277",
+        "arxiv_id": "2610.04277",
+        "authors": [
+          "Ye-Hong Jiang",
+          "Sheng Chen",
+          "Fang-Wen Fu",
+          "Yen-Kuang Chen",
+          "Xin-Min Tian",
+          "Stuart H. Sul",
+          "Simran Arora"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04473",
+      "identity_tokens": [
+        "id:SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+        "id:arXiv:2610.04473",
+        "title:inferopt constrained multiobjective search for llm inference configurations",
+        "url:https://arxiv.org/abs/2610.04473"
+      ],
+      "record": {
+        "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+        "source_url": "https://arxiv.org/abs/2610.04473",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving an LLM means setting dozens of inference-time knobs, from per-layer KV retention to per-layer expert counts. Practice sets them with mechanism-specific heuristics that return a single operating point and do not scale to layer-wise search spaces. We recast inference configuration as constrained multi-objective black-box optimization and build InferOpt, a reusable search framework that requires only variable bounds, a deterministic resource cost, and an evaluation hook. InferOpt searches on a frozen sampled proxy set, rejects over-budget candidates before any model call, tightens the budget adaptively, and re-validates Pareto representatives on full-scale dataset. One pipeline covers a 28-dimensional continuous KV space (Qwen2.5-7B) and a 26-dimensional discrete MoE space (DeepSeek-V2-Lite). On KV, post-prefill pruning cuts the 16K cache by 64.4% and TPOT by 22.9--48.5%, and the searched layer-wise budget by InferOpt beats a matched uniform budget by 7.3% and 14.0% of the Full KV reference points. On MoE, a searched top-k schedule by InferOpt removes 43.0% of routed token--expert pairs while staying within 0.59 points of the default, closer than the matched-budget baselines. Against Random Search, NSGA-II, and MOTPE, InferOpt leads on both spaces, taking the best proxy hypervolume and the lowest retention on KV and staying closest to the uncompressed reference at the lowest experts on MoE.",
+        "identifiers": [
+          "SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9"
+        ],
+        "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+        "canonical_id": "arXiv:2610.04473",
+        "arxiv_id": "2610.04473",
+        "authors": [
+          "Qi Chen",
+          "Ying-Ying Cheng",
+          "Zhao Sun",
+          "Li Zhou",
+          "Fan Zhang",
+          "Jie Sun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.08373",
+      "identity_tokens": [
+        "id:SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012",
+        "id:arXiv:2610.08373",
+        "title:eco energyoriented configuration optimization for attention ffn disaggregated llm serving",
+        "url:https://arxiv.org/abs/2610.08373"
+      ],
+      "record": {
+        "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.08373",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Energy-efficient LLM serving requires minimizing serving GPU energy while meeting latency and throughput service-level objectives (SLOs). Attention--FFN disaggregation (AFD) enables separate resource allocation and operating controls for attention and expert computation, but their energy effects remain coupled through the execution pipeline. Realizing its energy-saving potential therefore requires navigating a hierarchical configuration space in which deployment structures constrain admissible controls and shape their end-to-end effects. Finding low-energy configurations that meet SLOs is challenging because physical evaluations are costly and only a small fraction of candidates can be measured. We present Energy-Oriented Configuration Optimization (ECO), which jointly searches deployment structures and their admissible operating controls under a limited measurement budget. ECO constructs a structure-aware energy prior from calibrated stage behavior and pipeline dependencies, then learns residual prediction errors with a Gaussian process. Its cost-aware constrained Bayesian optimization prioritizes measurements according to expected energy improvement while accounting for SLO feasibility, execution success, and evaluation cost, and returns the lowest-energy measured feasible configuration. Across all 16 scenarios on A6000 and A100 with Qwen and DeepSeek, ECO's frozen configurations, evaluated on disjoint requests, reduce serving energy by 40.5\\% and increase output token rate by 20.7\\% on average relative to baselines while meeting target SLOs. Across the 8 A6000 scenarios, its selected feasible energy averages 33.1\\% below generic constrained Bayesian optimization and 25.8\\% below genetic search.",
+        "identifiers": [
+          "SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012"
+        ],
+        "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
+        "canonical_id": "arXiv:2610.08373",
+        "arxiv_id": "2610.08373",
+        "authors": [
+          "Qing-Yun Zou",
+          "Bin Gao",
+          "Zhuo-Bin Huang",
+          "Weng-Fai Wong",
+          "Tulika Mitra",
+          "Bing-Sheng He"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36576",
+      "identity_tokens": [
+        "id:SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6",
+        "id:arXiv:2610.36576",
+        "title:less is more learning what to profile for gpu kernel optimization",
+        "url:https://arxiv.org/abs/2610.36576"
+      ],
+      "record": {
+        "title": "Less is more: learning what to profile for GPU kernel optimization",
+        "source_url": "https://arxiv.org/abs/2610.36576",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have recently shown strong potential for automatically optimizing GPU kernels, yet their effectiveness depends critically on the hardware information available to the kernel optimization model. Existing systems typically rely on predefined profiling strategies, leaving what to profile largely outside the optimization process. We show that effective profiling is not simply about collecting more information: increasing the number of profiling metrics does not monotonically improve kernel optimization, while the most useful profiling information varies across kernels. Our theoretical analysis further shows that, under such heterogeneous profiling utility, kernel-conditioned selection can outperform any single fixed profiling configuration. Motivated by this observation, we propose AutoProfiler, a feedback-driven framework for learning a deterministic profiling tree from optimization feedback. The tree is iteratively refined through REWRITE and SPLIT operations, with an LLM generating candidate modifications and empirical evaluation determining their acceptance. Once constructed, the tree quickly gathers the required profiling information for any kernel, allowing the LLM rewriter to be invoked only once. Experiments on KernelBench show that our approach improves kernel optimization over fixed profiling configurations under constrained profiling budgets. These results suggest that hardware profiling should evolve from static metric collection toward profiling reasoning, making profiling itself a new dimension for improving kernel optimization. The codes are available at https://github.com/Satissss/AutoProfiler.",
+        "identifiers": [
+          "SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6"
+        ],
+        "semantic_scholar_id": "1b68c0c28d7cdea39255d6c3a493da21474123d6",
+        "canonical_id": "arXiv:2610.36576",
+        "arxiv_id": "2610.36576",
+        "authors": [
+          "Yi-Han Wang",
+          "Pei-Yu Liu",
+          "Run-Yu Chen",
+          "Wei Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:24c2356458c3e2b160488137fffef37233d776ab39526b3c3f67bd4f0d572572",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
