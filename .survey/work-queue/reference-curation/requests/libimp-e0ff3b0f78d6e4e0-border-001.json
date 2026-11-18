@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.37019",
+  "reason": "凍結したQwen3-VL-2Bの視覚特徴をコードブックで離散化し、空間ハッシュ・テキスト条件付き関連性による外部lookup記憶をprefillで融合する。容量をパラメータ演算量でなく保存容量に移す設計で、5ベンチマークの品質向上を報告。lookupはprefillで1回でありtoken当たり計算は増やさないが、LLM推論速度・メモリ・エネルギーの定量改善はabstractにないためborderline。",
+  "title": "V-LUMEN: Visual Lookup Memory for Embedding Scaling in Vision-Language Models",
+  "identity_tokens": [
+    "arXiv:2610.37019"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e04dacb11ff70a5c-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41711",
+  "reason": "HiResはTransformerのblock内d次元計算とblock間D次元residual stateを分離し、境界でlearned read/write projectionを使用する。OLMoE-1B-7Bの500B token pretrainingでloss 0.0208改善、downstream accuracy +1.14pt、FLOPs効率1.30倍のfitted scaling lawを報告。モデル構造の計算幅・activation I/O削減は推論効率へ波及し得るが、要旨にdecode token/sやserving latency実測がなく学習評価が中心のためborderline。",
+  "title": "Hierarchical Residuals: A Minimalist Decoupling of Residual Width from Compute Width",
+  "identity_tokens": [
+    "arXiv:2610.41711"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e04dacb11ff7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

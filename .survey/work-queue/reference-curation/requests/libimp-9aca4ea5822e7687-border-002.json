@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9aca4ea5822e7687-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2406.05678",
+  "reason": "LongLoRAのshifted sparse attentionでtoken群とheadの周期shiftが不要な情報交換を生む問題に対し、sink tokenのglobal attentionとhead群の再配置を組み合わせたSF-Attnを提案する。主評価はLongAlpaca-plusによる長文脈SFTで、H2O KV cache圧縮を追加して推論を高速化する。推論効率にも関連するが主貢献は長文脈微調整手法であるためborderline。",
+  "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models",
+  "identity_tokens": [
+    "id:arXiv:2406.05678",
+    "id:DOI:10.48550/arXiv.2406.05678"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9aca4ea5822e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

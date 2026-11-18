@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.36901",
+  "reason": "masked diffusion LMで大きな生成予算の中間表現を小予算へ蒸留し、早期commitによる推論誤りを抑える。GSM8K精度が9.4ポイント向上し、平均可読長が約25%短縮と報告。低予算decodeへの品質転移は効率と関連するが、実行時のdecode latency・throughputの改善実測ではなく事後学習が中心のためborderline。",
+  "title": "HiLo-RD: Cross-Budget Self-Distillation for Masked Diffusion Language Models",
+  "identity_tokens": [
+    "arXiv:2610.36901"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

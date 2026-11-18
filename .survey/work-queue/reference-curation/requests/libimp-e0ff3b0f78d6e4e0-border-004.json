@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.35303",
+  "reason": "agent RLの長いrolloutでW8A8-KV8量子化実行器と学習器の方策乖離を、状態到達履歴を使うprefix補正で修正する。4B〜30Bのdense/MoEで追加model forwardなしにBF16と0.7ポイント以内の最終性能を報告。量子化rolloutのKV/生成費用低減に関係するが、主目的はRL学習品質の補正であり通常のLLMサービング高速化の実証ではないためborderline。",
+  "title": "InterQ-RL: Interaction-Aware Correction of Execution Mismatch in Quantized Agentic RL",
+  "identity_tokens": [
+    "arXiv:2610.35303"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

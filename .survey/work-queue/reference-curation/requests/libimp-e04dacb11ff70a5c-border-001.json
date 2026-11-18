@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e04dacb11ff70a5c-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41073",
+  "reason": "RL post-trainingでfp32 masterからbf16 rollout policyへ丸める際、Qwen3-1.7Bでは各stepで変更される配布重みが0.4〜0.5%にとどまり、policyが50〜150 step遅れると報告。Fair Castは確率的丸め/誤差帰還とserved-copy上のloss計算でこの乖離を抑える。推論エンジンを学習loop内で使う際の数値的一貫性に関連するが、主目的はRL学習品質であり、推論latency・throughput・GPUメモリの改善は示さないためborderline。",
+  "title": "bf16 Rounding Silently Discards Most RL Policy Updates: A Hidden Training-Inference Mismatch and an Unbiased One-Line Fix",
+  "identity_tokens": [
+    "arXiv:2610.41073"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e04dacb11ff7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

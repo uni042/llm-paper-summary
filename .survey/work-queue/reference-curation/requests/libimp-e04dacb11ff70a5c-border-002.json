@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e04dacb11ff70a5c-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41525",
+  "reason": "Megatron-LMの異種GPU学習を対象にiteration time、peak memory、GPU間メモリ不均衡を同時最適化する自動並列化。profilingとXGBoost予測で31,240構成を26.5秒で探索し、20GPU実測から40/60GPUへの拡張はsimulationと区別している。メモリ階層・heterogeneous GPU資源配置の手法は推論システムと隣接するが、実装・評価はtraining専用でLLM servingへの直接効果は未検証のためborderline。",
+  "title": "MemX: Memory-Aware Automatic Parallelism for Cross-Vendor Heterogeneous GPU Training",
+  "identity_tokens": [
+    "arXiv:2610.41525"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.DC/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e04dacb11ff7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

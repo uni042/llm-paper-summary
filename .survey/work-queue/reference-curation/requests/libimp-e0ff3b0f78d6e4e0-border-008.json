@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-border-008",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.36794",
+  "reason": "LLMのIn-Place TTTで全chunkに同じ重みで書き込む問題を、凍結output headから得るquery関連性でchunk別fast-weight更新率を調整する。新規パラメータなしで長文QAの品質を改善しcontext-parallel計算を維持。長文脈の推論時状態管理に関係するが、速度・メモリ削減の実測やシステム最適化は主題ではないためborderline。",
+  "title": "Select-TTT: Query-Conditioned Selective Fast Weight Updates for In-Place Test-Time Training",
+  "identity_tokens": [
+    "arXiv:2610.36794"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
