@@ -35,10 +35,15 @@
   "selection_reason": "RoPEから空間推論に重要な暗黙座標トークンを同定し、前景意味トークンと併せて保持する学習不要の視覚トークン剪定。4モデル20ベンチマークで約50%の視覚トークン削減、性能99%以上維持と著者報告。",
   "semantic_scholar_id": "96fa519ec0cde7cbe1c4a4548698402db36c70b7",
   "source_url": "https://arxiv.org/abs/2602.03060",
-  "status": "ready",
+  "status": "superseded",
   "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:27:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-.md",
+  "represented_canonical_id": "arXiv:2602.03060",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv v2一次要旨では、長時間動画を全探索せず階層的な視覚要約から有益なクリップへ移動し、質問回答に十分な証拠が得られた時点で探索を停止する推論時ナビゲーションを提案。Qwen-3-8BをSFTとRLで適応し、動画QAの精度と計算費用のトレードオフを評価。汎用サービングではなく動画MLLM固有だが、実行時に処理クリップ数を抑える具体的な推論効率化機構があるためaccept。",
   "semantic_scholar_id": "7f9b85329fa3743968ac02255ff96d194274e34f",
   "source_url": "https://arxiv.org/abs/2602.20913",
-  "status": "ready",
+  "status": "superseded",
   "title": "LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:27:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.md",
+  "represented_canonical_id": "arXiv:2602.20913",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

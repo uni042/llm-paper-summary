@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（81本）
+## 自動生成の論文一覧（82本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -258,6 +258,10 @@
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重要なのはモデル内部の注意計算を高速化することではなく、モデルが外部情報を収集するための逐次対話回数と検索の依存鎖を減らす点にある。Qwen3-30B-A3B-Instruct-2507を基盤として学習したSMTL-300は、BrowseComp 48.6%、GAIA 75.7%、XBench-DeepSearch 82.0%を報告する。
+
+- **2026-02 · [LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding](2026-2602.20913-longvideo-r1-smart-navigation-for-low-cost-long-video-understanding.md)**  
+  実装：[✓](https://github.com/qiujihao19/LongVideo-R1) ・ リポジトリ内被引用：0  
+  長尺動画を階層木として粗い要約から掘り下げ、答えに足りると判断したら探索を止めるエージェントで、網羅処理より大幅に少ないモデル呼出しでLVBench最高水準の正解率を得た。
 
 - **2026-02 · [LatentMem: Customizing Latent Memory for Multi-Agent Systems](2026-2602.03036-latentmem-customizing-latent-memory-for-multi-agent-systems.md)**  
   実装：[✓](https://github.com/KANABOON1/LatentMem) ・ リポジトリ内被引用：0  

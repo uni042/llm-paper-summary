@@ -35,10 +35,15 @@
   "selection_reason": "プリフィル専用プルーニングPOP。深い層はデコードの次トークン予測には必須だがプリフィルの文脈符号化では冗長という非対称性を仮想ゲートの重要度分析で示し、プリフィル時だけ深層を省略し、独立したKV射影でキャッシュ整合を保つ。段階非対称の推論戦略。",
   "semantic_scholar_id": "698f327fd4d4deac1942416f3ce6efa2d5d1d287",
   "source_url": "https://arxiv.org/abs/2602.03295",
-  "status": "ready",
+  "status": "superseded",
   "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:27:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.md",
+  "represented_canonical_id": "arXiv:2602.03295",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（164本）
+## 自動生成の論文一覧（165本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -366,6 +366,10 @@
   実装：[✓](https://github.com/chengtao-lv/LightForcing) ・ リポジトリ内被引用：0  
   Light Forcingは、自己回帰型動画拡散モデルの注意演算を疎化するとき、動画の後半に画質劣化が蓄積する問題と、長い履歴の重要フレームを捨ててしまう問題を同時に扱う推論高速化方式である。
 
+- **2026-02 · [Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing](2026-2602.02159-focus-dllm-accelerating-long-context-diffusion-llm-inference-via-confide.md)**  
+  実装：[✓](https://github.com/Longxmas/Focus-dLLM) ・ リポジトリ内被引用：0  
+  前ステップの信頼度で次に復号される位置を予測して注意を絞り、吸着先トークンを層間で共有する学習不要の高速化で、32K文脈で29.6倍のスループットを精度を保ちながら達成した。
+
 - **2026-01 · [Sparse Attention as Compact Kernel Regression](2026-2601.22766-sparse-attention-as-compact-kernel-regression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一方、sparsemaxやα-entmaxなどの疎注意は、関連性の低いトークンへ正確にゼロの重みを割り当てる。
@@ -381,7 +385,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：150  
+  実装：✓ ・ リポジトリ内被引用：151  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
@@ -551,7 +555,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：295  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：296  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
