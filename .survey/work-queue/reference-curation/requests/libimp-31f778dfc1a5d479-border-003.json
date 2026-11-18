@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-31f778dfc1a5d479-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.33008",
+  "reason": "全ノイズ除去軌跡から再計算対象を学ぶTraceQuery。拡散LLMでステップごとに再計算する位置を、固定予定やヒューリスティクスではなくデコード軌跡の近さから選ぶ。キャッシュ機構ではあるが、拡散型言語モデルに特化し境界。",
+  "title": "TraceQuery: learning what to recompute from full-denoising trajectory in diffusion language models",
+  "identity_tokens": [
+    "arXiv:2610.33008",
+    "https://arxiv.org/abs/2610.33008"
+  ],
+  "linked_from": [
+    "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+    "diffusion language model inference / KV cache / training-free acceleration",
+    "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+    "inference-systems",
+    "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御",
+    "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-31f778dfc1a5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-15555ae7461997d2-border-011",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.15816",
+  "reason": "犠牲なく合理化：LMMの計算冗長性を絞り出す。視覚トークンへの重い演算が必ずしも要らないことに着目し、トークンではなく計算レベルの冗長性を段階的に除く設計。MLLM推論の効率化ではあるが、モデル設計の研究であり境界。",
+  "title": "Streamline Without Sacrifice - Squeeze out Computation Redundancy in LMM",
+  "identity_tokens": [
+    "arXiv:2505.15816",
+    "https://arxiv.org/abs/2505.15816"
+  ],
+  "linked_from": [
+    "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+    "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+    "KVキャッシュ最適化／適応圧縮",
+    "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+    "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15555ae74619",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

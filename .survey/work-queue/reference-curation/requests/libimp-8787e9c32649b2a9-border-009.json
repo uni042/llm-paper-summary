@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8787e9c32649b2a9-border-009",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.31224",
+  "reason": "全二重音声モデル向け音響からテキストへのKV圧縮。聞き取りの余裕時間に音声をテキストメモリへ変換し、キャッシュが予算を超えたら古い音響状態を排除する。KV機構ではあるが、音声モデルに特化し境界。",
+  "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+  "identity_tokens": [
+    "arXiv:2609.31224",
+    "https://arxiv.org/abs/2609.31224"
+  ],
+  "linked_from": [
+    "07-kv-cache-optimization-compression",
+    "KV Cache Compression / Long Context",
+    "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+    "KV cache memory management / streaming inference / attention sinks / length extrapolation"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

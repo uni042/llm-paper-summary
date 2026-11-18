@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8787e9c32649b2a9-border-013",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.38878",
+  "reason": "言語モデルが走る前に予測できる音声トークンの注意。音声トークンが受ける注意は符号器出力から線形に予測でき、言語モデルの前に順位付けして音声トークンを剪定できることを示す。音声言語モデルのプリフィル削減であり境界。",
+  "title": "Audio Token Attention Is Predictable Before the Language Model Runs",
+  "identity_tokens": [
+    "arXiv:2609.38878",
+    "https://arxiv.org/abs/2609.38878"
+  ],
+  "linked_from": [
+    "KV-cache compression / attention-based token selection / long-context inference"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

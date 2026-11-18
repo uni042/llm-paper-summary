@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8f5c0414b3eb9d51-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.27294",
+  "reason": "KV不変Transformer拡張KITE。追加パラメータを注意KVに影響しない領域に置き、小さいモデルから大きいモデルへ訓練しながら、プロンプト処理と自己回帰デコードの費用も下げるスケーリング範式。推論費用の削減を含むが、主体はモデルの拡張訓練であり境界。",
+  "title": "KITE: KV-Invariant Transformer Expansion for Efficient Agentic LLM Scaling",
+  "identity_tokens": [
+    "arXiv:2609.27294",
+    "https://arxiv.org/abs/2609.27294"
+  ],
+  "linked_from": [
+    "07-kv-cache-optimization-compression",
+    "KVキャッシュ・注意アーキテクチャ",
+    "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f5c0414b3eb",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

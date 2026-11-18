@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-465214ea3927094c-border-010",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.17331",
+  "reason": "高性能LLaMA訓練向け効率キャッシュECHO-LLaMA。一部層でKVキャッシュを共有するアーキテクチャに変換し、訓練速度と推論スループットを上げる。KV共有は推論機構だが、狙いは訓練効率が中心であり境界。",
+  "title": "ECHO-LLaMA: Efficient Caching for High-Performance LLaMA Training",
+  "identity_tokens": [
+    "arXiv:2505.17331",
+    "https://arxiv.org/abs/2505.17331"
+  ],
+  "linked_from": [
+    "KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-465214ea3927",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
