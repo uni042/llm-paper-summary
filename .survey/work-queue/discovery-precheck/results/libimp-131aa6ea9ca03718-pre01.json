@@ -1,0 +1,628 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-131aa6ea9ca03718-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-131aa6ea9ca0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.15909",
+    "arXiv:2507.15375",
+    "arXiv:2508.02178",
+    "arXiv:2602.12526",
+    "arXiv:2605.06350",
+    "arXiv:2606.17999",
+    "arXiv:2609.07821",
+    "arXiv:2610.07822"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:20.030261+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.15909",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.15375",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.02178",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2508.02178"
+    },
+    {
+      "requested_id": "arXiv:2602.12526",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06350",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.17999",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.07821",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07822",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:80d792af6aecdbc491398cfa12fafbaf3f03b889"
+    }
+  ],
+  "results": [
+    {
+      "title": "Is Escalation Worth It? On the Depth of LLM Cascades",
+      "source_url": "https://arxiv.org/abs/2605.06350",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM cascades, in which a cheap model defers to an expensive one on low-confidence queries, are widely used to reduce inference cost. Given a pool of models, a practitioner must decide how many models to include and where to set each deferral threshold. We derive first-order optimality conditions showing that, at an optimum, the ratio of expected accuracy gain to expected downstream cost is equal across deferral boundaries. A local search based on these conditions closely matches exhaustive search. We also derive an identity that decomposes the accuracy gain of score-based escalation over random escalation into two AUROC terms. Across five benchmarks and nine deferral scores, with model sequences and thresholds optimized from a pool of eight models, two-model cascades improve mean test-set accuracy over single-model selection by 2.1 to 8.2 percentage points. However, allowing more than two models does not improve mean test-set accuracy in 118 of 135 comparisons across scorers, datasets, and depth caps, and adds at most 0.43 percentage points. To understand the role of deferral scores in depth gains, we conduct counterfactual experiments with simulated confidence scores. When these scores have high AUROC and reflect only whether the current model answered correctly, allowing more than two models improves test-set accuracy on four of five benchmarks. However, these gains do not persist when the scores also reflect query difficulty shared across models, even at the same AUROC. These results suggest that gains from additional depth depend on how well the confidence score separates correct from incorrect answers for the current model compared with later models.",
+      "identifiers": [
+        "SemanticScholar:0cb921c87b91c00a6ce1cdc51771dfbad13445ca"
+      ],
+      "semantic_scholar_id": "0cb921c87b91c00a6ce1cdc51771dfbad13445ca",
+      "canonical_id": "arXiv:2605.06350",
+      "arxiv_id": "2605.06350",
+      "authors": [
+        "Dylan Bouchard"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination",
+      "source_url": "https://arxiv.org/abs/2606.17999",
+      "year": 2026,
+      "published": "2026-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "MDLMs generate text by denoising a preallocated masked response canvas, making response-length modeling central to instruction tuning. Existing MDLMs often inherit the autoregressive convention of using repeated \\texttt{[EOS]} tokens for padding during instruction tuning, giving \\texttt{[EOS]} a dual role as both a semantic terminator and a padding token. We show that this dual role is a root cause of \\texttt{[EOS]} overflow under large-block decoding. To decouple these roles, we propose VoidPadding, which introduces \\texttt{[VOID]} for padding and reserves \\texttt{[EOS]} for termination. During inference, the learned \\texttt{[EOS]} signal enables early stopping, while the learned \\texttt{[VOID]} signal guides adaptive response canvas expansion. On Dream-7B-Instruct, VoidPadding improves the block-size-averaged four-task mean across mathematical reasoning and code generation benchmarks by \\(+17.84\\) points over the original model and \\(+6.95\\) points over RainbowPadding, while reducing decoding NFE by 55.7\\% on average. Code is available at https://github.com/Haru-LCY/VoidPadding.",
+      "identifiers": [
+        "SemanticScholar:8ed2632f9beb8ae76461008ae2affc56c0c63f7c"
+      ],
+      "semantic_scholar_id": "8ed2632f9beb8ae76461008ae2affc56c0c63f7c",
+      "canonical_id": "arXiv:2606.17999",
+      "arxiv_id": "2606.17999",
+      "doi": "10.48550/arXiv.2606.17999",
+      "authors": [
+        "Chun-Yu Liu",
+        "Zhengyan Fan",
+        "Kai-Sen Yang",
+        "Alex Lamb"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 155,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Constraint-Rectified Training for Efficient Chain-of-Thought",
+      "source_url": "https://arxiv.org/abs/2602.12526",
+      "year": 2026,
+      "published": "2026-02-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) has significantly enhanced the reasoning capabilities of Large Language Models (LLMs), especially when combined with reinforcement learning (RL) based post-training methods. While longer reasoning traces can improve answer quality and unlock abilities such as self-correction, they also incur high inference costs and often introduce redundant steps, known as overthinking. Recent research seeks to develop efficient reasoning strategies that balance reasoning length and accuracy, either through length-aware reward design or prompt-based calibration. However, these heuristic-based approaches may suffer from severe accuracy drop and be very sensitive to hyperparameters. To address these problems, we introduce CRT (Constraint-Rectified Training), a principled post-training framework based on reference-guarded constrained optimization, yielding a more stable and interpretable formulation for efficient reasoning. CRT alternates between minimizing reasoning length and rectifying accuracy only when performance falls below the reference, enabling stable and effective pruning of redundant reasoning. We further extend CRT with a two-stage training scheme that first discovers the shortest reliable reasoning patterns and then refines accuracy under a learnt length budget, preventing the re-emergence of verbose CoT. Our comprehensive evaluation shows that this framework consistently reduces token usage while maintaining answer quality at a robust and reliable level. Further analysis reveals that CRT improves reasoning efficiency not only by shortening responses but also by reducing internal language redundancy, leading to a new evaluation metric. Moreover, CRT-based training naturally yields a sequence of intermediate checkpoints that span a spectrum of explanation lengths while preserving correctness, enabling fine-grained control over reasoning verbosity without retraining.",
+      "identifiers": [
+        "SemanticScholar:7cf35d73604735ff9c5a5fe255b275e7ed341c4c"
+      ],
+      "semantic_scholar_id": "7cf35d73604735ff9c5a5fe255b275e7ed341c4c",
+      "canonical_id": "arXiv:2602.12526",
+      "arxiv_id": "2602.12526",
+      "doi": "10.48550/arXiv.2602.12526",
+      "authors": [
+        "Qin-Hang Wu",
+        "Sen-Fon Lin",
+        "Ming Zhang",
+        "Ying-Bin Liang",
+        "N. Shroff"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A*-Thought-V2: Efficient Latent Reasoning via Geometric Dynamics of LLM",
+      "source_url": "https://arxiv.org/abs/2609.07821",
+      "year": 2026,
+      "published": "2026-09-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) improves the reasoning ability of Large Language Models (LLMs) but incurs substantial computation and context costs. Existing methods either lose intermediate information through hard pruning or lack a principled criterion for continuous compression. We present A*-Thought-V2, a geometric dynamics of LLM guided framework that models CoT as a hidden-state trajectory and replaces hard deletion with an explicit-implicit interleaved latent architecture. After projecting question, step, and solution representations into a 3D PCA space, it measures alignment between each local transition and global question-to-solution direction. Aligned steps remain explicit text, whereas deviating steps are compressed into continuous latent tokens. Directional angles capture both local semantics and reasoning dynamics: small angles indicate direct execution and answer formation, while large angles more frequently involve checking, correction, and branch exploration; their temporal variation reveals exploration, convergence, and refinement stages. To train this architecture, we introduce stepwise embedding forcing, which pools each redundant step into a single latent embedding, and label forcing, which supervises that latent token with a soft multi-modal vocabulary distribution instead of a hard one-hot label. Experiments on Qwen3.5-9B and Qwen3.6-27B across six in-domain and out-of-domain benchmarks show that A*-Thought-V2 improves average accuracy by up to 2.6% while reducing response length by up to half, increasing Accuracy per Computation Unit by 2.29$\\times$, and reducing preprocessing and training time by 94.6% and up to 80.3%, respectively. Representation analyses suggest that latent states form a compact region distinct from textual states, while higher entropy at latent-token positions reflects broader soft targets that encourage richer step-level feature learning.",
+      "identifiers": [
+        "SemanticScholar:7419e37a686f6c1ff6b06000b747a8ee70ec784a"
+      ],
+      "semantic_scholar_id": "7419e37a686f6c1ff6b06000b747a8ee70ec784a",
+      "canonical_id": "arXiv:2609.07821",
+      "arxiv_id": "2609.07821",
+      "doi": "10.48550/arXiv.2609.07821",
+      "authors": [
+        "Xiao-An Xu",
+        "Si-Yuan Liu",
+        "Shuo Wang",
+        "Jun-Lan Feng",
+        "Fan-Yu Meng",
+        "Zhu Zhang",
+        "Ji-Xun Wang",
+        "Xiao-Rong Wang",
+        "Zi-Han Zhou",
+        "Xin Li",
+        "Chao-Jun Xiao",
+        "Yimei Zhang",
+        "Hui-Jia Wu",
+        "Liu-Yu Xiang",
+        "Pei-Pei Li",
+        "Zhao-Feng He"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models",
+      "source_url": "https://arxiv.org/abs/2507.15375",
+      "year": 2025,
+      "published": "2025-07-21",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 39,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Spoken Language Models (SLMs) are designed to take speech inputs and produce spoken responses. However, current SLMs lack the ability to perform an internal, unspoken thinking process before responding. In contrast, humans typically engage in complex mental reasoning internally, enabling them to communicate ideas clearly and concisely. Thus, integrating an unspoken thought process into SLMs is highly desirable. While naively generating a complete chain-of-thought (CoT) reasoning before starting to talk can enable thinking for SLMs, this induces additional latency for the speech response, as the CoT reasoning can be arbitrarily long. To solve this issue, we propose Stitch, a novel generation method that alternates between the generation of unspoken reasoning chunks and spoken response chunks. Since the audio duration of a chunk of spoken response is much longer than the time to generate the tokens in a chunk of spoken response, we use the remaining free time to generate the unspoken reasoning tokens. When a chunk of audio is played to the user, the model continues to generate the next unspoken reasoning chunk, achieving simultaneous thinking and talking. Remarkably, Stitch matches the latency of baselines that cannot generate unspoken CoT by design while outperforming those baselines by 15% on math reasoning datasets; Stitch also performs equally well on non-reasoning datasets as those baseline models. Some animations and demonstrations are on the project page: https://d223302.github.io/STITCH.",
+      "identifiers": [
+        "SemanticScholar:c031d4be71b965ca6d9e5f6da8ef9d8eef22ddb7"
+      ],
+      "semantic_scholar_id": "c031d4be71b965ca6d9e5f6da8ef9d8eef22ddb7",
+      "canonical_id": "arXiv:2507.15375",
+      "arxiv_id": "2507.15375",
+      "doi": "10.48550/arXiv.2507.15375",
+      "authors": [
+        "Cheng-Han Chiang",
+        "Xiaofei Wang",
+        "Linjie Li",
+        "Chung-Ching Lin",
+        "K. Lin",
+        "Shujie Liu",
+        "Zhen-Dong Wang",
+        "Zheng-Yuan Yang",
+        "Hung-yi Lee",
+        "Li-Juan Wang"
+      ],
+      "priority": 49,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 39,
+        "citation_count": 39,
+        "total": 49,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 485,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Is (Selective) Round-To-Nearest Quantization All You Need?",
+      "source_url": "https://arxiv.org/abs/2505.15909",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization became a necessary tool for serving ever-increasing Large Language Models (LLMs). RTN (Round-to-Nearest) is perhaps the simplest quantization technique that has been around well before LLMs surged to the forefront of machine learning (ML) research. Yet, it has been largely dismissed by recent and more advanced quantization methods that claim superiority over RTN in nearly every aspect of performance. This work aims to dispel this established point of view, showing that RTN is not only much cheaper to apply, but also its token generation throughput can be better than and accuracy can be similar to more advanced alternatives. In particular, we discuss our implementation of RTN based on the recent Marlin kernels and demonstrate how the accuracy of RTN can be gradually improved by selectively increasing the data precision format of certain model layers and modules. Based on our results, we argue that RTN presents a viable and practical choice for quantizing LLMs.",
+      "identifiers": [
+        "SemanticScholar:06d5564ad85cf92404d0a560abd7453050c7c5cb"
+      ],
+      "semantic_scholar_id": "06d5564ad85cf92404d0a560abd7453050c7c5cb",
+      "canonical_id": "arXiv:2505.15909",
+      "arxiv_id": "2505.15909",
+      "doi": "10.48550/arXiv.2505.15909",
+      "authors": [
+        "A. Kogan"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 546,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.06350",
+      "identity_tokens": [
+        "id:SemanticScholar:0cb921c87b91c00a6ce1cdc51771dfbad13445ca",
+        "id:arXiv:2605.06350",
+        "title:is escalation worth it on the depth of llm cascades",
+        "url:https://arxiv.org/abs/2605.06350"
+      ],
+      "record": {
+        "title": "Is Escalation Worth It? On the Depth of LLM Cascades",
+        "source_url": "https://arxiv.org/abs/2605.06350",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM cascades, in which a cheap model defers to an expensive one on low-confidence queries, are widely used to reduce inference cost. Given a pool of models, a practitioner must decide how many models to include and where to set each deferral threshold. We derive first-order optimality conditions showing that, at an optimum, the ratio of expected accuracy gain to expected downstream cost is equal across deferral boundaries. A local search based on these conditions closely matches exhaustive search. We also derive an identity that decomposes the accuracy gain of score-based escalation over random escalation into two AUROC terms. Across five benchmarks and nine deferral scores, with model sequences and thresholds optimized from a pool of eight models, two-model cascades improve mean test-set accuracy over single-model selection by 2.1 to 8.2 percentage points. However, allowing more than two models does not improve mean test-set accuracy in 118 of 135 comparisons across scorers, datasets, and depth caps, and adds at most 0.43 percentage points. To understand the role of deferral scores in depth gains, we conduct counterfactual experiments with simulated confidence scores. When these scores have high AUROC and reflect only whether the current model answered correctly, allowing more than two models improves test-set accuracy on four of five benchmarks. However, these gains do not persist when the scores also reflect query difficulty shared across models, even at the same AUROC. These results suggest that gains from additional depth depend on how well the confidence score separates correct from incorrect answers for the current model compared with later models.",
+        "identifiers": [
+          "SemanticScholar:0cb921c87b91c00a6ce1cdc51771dfbad13445ca"
+        ],
+        "semantic_scholar_id": "0cb921c87b91c00a6ce1cdc51771dfbad13445ca",
+        "canonical_id": "arXiv:2605.06350",
+        "arxiv_id": "2605.06350",
+        "authors": [
+          "Dylan Bouchard"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 195,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.17999",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.17999",
+        "id:SemanticScholar:8ed2632f9beb8ae76461008ae2affc56c0c63f7c",
+        "id:arXiv:2606.17999",
+        "title:voidpadding let void handle padding in masked diffusion language models so that eos can focus on semantic termination",
+        "url:https://arxiv.org/abs/2606.17999"
+      ],
+      "record": {
+        "title": "VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination",
+        "source_url": "https://arxiv.org/abs/2606.17999",
+        "year": 2026,
+        "published": "2026-06-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "MDLMs generate text by denoising a preallocated masked response canvas, making response-length modeling central to instruction tuning. Existing MDLMs often inherit the autoregressive convention of using repeated \\texttt{[EOS]} tokens for padding during instruction tuning, giving \\texttt{[EOS]} a dual role as both a semantic terminator and a padding token. We show that this dual role is a root cause of \\texttt{[EOS]} overflow under large-block decoding. To decouple these roles, we propose VoidPadding, which introduces \\texttt{[VOID]} for padding and reserves \\texttt{[EOS]} for termination. During inference, the learned \\texttt{[EOS]} signal enables early stopping, while the learned \\texttt{[VOID]} signal guides adaptive response canvas expansion. On Dream-7B-Instruct, VoidPadding improves the block-size-averaged four-task mean across mathematical reasoning and code generation benchmarks by \\(+17.84\\) points over the original model and \\(+6.95\\) points over RainbowPadding, while reducing decoding NFE by 55.7\\% on average. Code is available at https://github.com/Haru-LCY/VoidPadding.",
+        "identifiers": [
+          "SemanticScholar:8ed2632f9beb8ae76461008ae2affc56c0c63f7c"
+        ],
+        "semantic_scholar_id": "8ed2632f9beb8ae76461008ae2affc56c0c63f7c",
+        "canonical_id": "arXiv:2606.17999",
+        "arxiv_id": "2606.17999",
+        "doi": "10.48550/arXiv.2606.17999",
+        "authors": [
+          "Chun-Yu Liu",
+          "Zhengyan Fan",
+          "Kai-Sen Yang",
+          "Alex Lamb"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 155,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.12526",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.12526",
+        "id:SemanticScholar:7cf35d73604735ff9c5a5fe255b275e7ed341c4c",
+        "id:arXiv:2602.12526",
+        "title:constraintrectified training for efficient chainofthought",
+        "url:https://arxiv.org/abs/2602.12526"
+      ],
+      "record": {
+        "title": "Constraint-Rectified Training for Efficient Chain-of-Thought",
+        "source_url": "https://arxiv.org/abs/2602.12526",
+        "year": 2026,
+        "published": "2026-02-13",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) has significantly enhanced the reasoning capabilities of Large Language Models (LLMs), especially when combined with reinforcement learning (RL) based post-training methods. While longer reasoning traces can improve answer quality and unlock abilities such as self-correction, they also incur high inference costs and often introduce redundant steps, known as overthinking. Recent research seeks to develop efficient reasoning strategies that balance reasoning length and accuracy, either through length-aware reward design or prompt-based calibration. However, these heuristic-based approaches may suffer from severe accuracy drop and be very sensitive to hyperparameters. To address these problems, we introduce CRT (Constraint-Rectified Training), a principled post-training framework based on reference-guarded constrained optimization, yielding a more stable and interpretable formulation for efficient reasoning. CRT alternates between minimizing reasoning length and rectifying accuracy only when performance falls below the reference, enabling stable and effective pruning of redundant reasoning. We further extend CRT with a two-stage training scheme that first discovers the shortest reliable reasoning patterns and then refines accuracy under a learnt length budget, preventing the re-emergence of verbose CoT. Our comprehensive evaluation shows that this framework consistently reduces token usage while maintaining answer quality at a robust and reliable level. Further analysis reveals that CRT improves reasoning efficiency not only by shortening responses but also by reducing internal language redundancy, leading to a new evaluation metric. Moreover, CRT-based training naturally yields a sequence of intermediate checkpoints that span a spectrum of explanation lengths while preserving correctness, enabling fine-grained control over reasoning verbosity without retraining.",
+        "identifiers": [
+          "SemanticScholar:7cf35d73604735ff9c5a5fe255b275e7ed341c4c"
+        ],
+        "semantic_scholar_id": "7cf35d73604735ff9c5a5fe255b275e7ed341c4c",
+        "canonical_id": "arXiv:2602.12526",
+        "arxiv_id": "2602.12526",
+        "doi": "10.48550/arXiv.2602.12526",
+        "authors": [
+          "Qin-Hang Wu",
+          "Sen-Fon Lin",
+          "Ming Zhang",
+          "Ying-Bin Liang",
+          "N. Shroff"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 278,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.07821",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.07821",
+        "id:SemanticScholar:7419e37a686f6c1ff6b06000b747a8ee70ec784a",
+        "id:arXiv:2609.07821",
+        "title:athoughtv2 efficient latent reasoning via geometric dynamics of llm",
+        "url:https://arxiv.org/abs/2609.07821"
+      ],
+      "record": {
+        "title": "A*-Thought-V2: Efficient Latent Reasoning via Geometric Dynamics of LLM",
+        "source_url": "https://arxiv.org/abs/2609.07821",
+        "year": 2026,
+        "published": "2026-09-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) improves the reasoning ability of Large Language Models (LLMs) but incurs substantial computation and context costs. Existing methods either lose intermediate information through hard pruning or lack a principled criterion for continuous compression. We present A*-Thought-V2, a geometric dynamics of LLM guided framework that models CoT as a hidden-state trajectory and replaces hard deletion with an explicit-implicit interleaved latent architecture. After projecting question, step, and solution representations into a 3D PCA space, it measures alignment between each local transition and global question-to-solution direction. Aligned steps remain explicit text, whereas deviating steps are compressed into continuous latent tokens. Directional angles capture both local semantics and reasoning dynamics: small angles indicate direct execution and answer formation, while large angles more frequently involve checking, correction, and branch exploration; their temporal variation reveals exploration, convergence, and refinement stages. To train this architecture, we introduce stepwise embedding forcing, which pools each redundant step into a single latent embedding, and label forcing, which supervises that latent token with a soft multi-modal vocabulary distribution instead of a hard one-hot label. Experiments on Qwen3.5-9B and Qwen3.6-27B across six in-domain and out-of-domain benchmarks show that A*-Thought-V2 improves average accuracy by up to 2.6% while reducing response length by up to half, increasing Accuracy per Computation Unit by 2.29$\\times$, and reducing preprocessing and training time by 94.6% and up to 80.3%, respectively. Representation analyses suggest that latent states form a compact region distinct from textual states, while higher entropy at latent-token positions reflects broader soft targets that encourage richer step-level feature learning.",
+        "identifiers": [
+          "SemanticScholar:7419e37a686f6c1ff6b06000b747a8ee70ec784a"
+        ],
+        "semantic_scholar_id": "7419e37a686f6c1ff6b06000b747a8ee70ec784a",
+        "canonical_id": "arXiv:2609.07821",
+        "arxiv_id": "2609.07821",
+        "doi": "10.48550/arXiv.2609.07821",
+        "authors": [
+          "Xiao-An Xu",
+          "Si-Yuan Liu",
+          "Shuo Wang",
+          "Jun-Lan Feng",
+          "Fan-Yu Meng",
+          "Zhu Zhang",
+          "Ji-Xun Wang",
+          "Xiao-Rong Wang",
+          "Zi-Han Zhou",
+          "Xin Li",
+          "Chao-Jun Xiao",
+          "Yimei Zhang",
+          "Hui-Jia Wu",
+          "Liu-Yu Xiang",
+          "Pei-Pei Li",
+          "Zhao-Feng He"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 72,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.15375",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.15375",
+        "id:SemanticScholar:c031d4be71b965ca6d9e5f6da8ef9d8eef22ddb7",
+        "id:arXiv:2507.15375",
+        "title:stitch simultaneous thinking and talking with chunked reasoning for spoken language models",
+        "url:https://arxiv.org/abs/2507.15375"
+      ],
+      "record": {
+        "title": "STITCH: Simultaneous Thinking and Talking with Chunked Reasoning for Spoken Language Models",
+        "source_url": "https://arxiv.org/abs/2507.15375",
+        "year": 2025,
+        "published": "2025-07-21",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 39,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Spoken Language Models (SLMs) are designed to take speech inputs and produce spoken responses. However, current SLMs lack the ability to perform an internal, unspoken thinking process before responding. In contrast, humans typically engage in complex mental reasoning internally, enabling them to communicate ideas clearly and concisely. Thus, integrating an unspoken thought process into SLMs is highly desirable. While naively generating a complete chain-of-thought (CoT) reasoning before starting to talk can enable thinking for SLMs, this induces additional latency for the speech response, as the CoT reasoning can be arbitrarily long. To solve this issue, we propose Stitch, a novel generation method that alternates between the generation of unspoken reasoning chunks and spoken response chunks. Since the audio duration of a chunk of spoken response is much longer than the time to generate the tokens in a chunk of spoken response, we use the remaining free time to generate the unspoken reasoning tokens. When a chunk of audio is played to the user, the model continues to generate the next unspoken reasoning chunk, achieving simultaneous thinking and talking. Remarkably, Stitch matches the latency of baselines that cannot generate unspoken CoT by design while outperforming those baselines by 15% on math reasoning datasets; Stitch also performs equally well on non-reasoning datasets as those baseline models. Some animations and demonstrations are on the project page: https://d223302.github.io/STITCH.",
+        "identifiers": [
+          "SemanticScholar:c031d4be71b965ca6d9e5f6da8ef9d8eef22ddb7"
+        ],
+        "semantic_scholar_id": "c031d4be71b965ca6d9e5f6da8ef9d8eef22ddb7",
+        "canonical_id": "arXiv:2507.15375",
+        "arxiv_id": "2507.15375",
+        "doi": "10.48550/arXiv.2507.15375",
+        "authors": [
+          "Cheng-Han Chiang",
+          "Xiaofei Wang",
+          "Linjie Li",
+          "Chung-Ching Lin",
+          "K. Lin",
+          "Shujie Liu",
+          "Zhen-Dong Wang",
+          "Zheng-Yuan Yang",
+          "Hung-yi Lee",
+          "Li-Juan Wang"
+        ],
+        "priority": 49,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 39,
+          "citation_count": 39,
+          "total": 49,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 485,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.15909",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.15909",
+        "id:SemanticScholar:06d5564ad85cf92404d0a560abd7453050c7c5cb",
+        "id:arXiv:2505.15909",
+        "title:is selective roundtonearest quantization all you need",
+        "url:https://arxiv.org/abs/2505.15909"
+      ],
+      "record": {
+        "title": "Is (Selective) Round-To-Nearest Quantization All You Need?",
+        "source_url": "https://arxiv.org/abs/2505.15909",
+        "year": 2025,
+        "published": "2025-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization became a necessary tool for serving ever-increasing Large Language Models (LLMs). RTN (Round-to-Nearest) is perhaps the simplest quantization technique that has been around well before LLMs surged to the forefront of machine learning (ML) research. Yet, it has been largely dismissed by recent and more advanced quantization methods that claim superiority over RTN in nearly every aspect of performance. This work aims to dispel this established point of view, showing that RTN is not only much cheaper to apply, but also its token generation throughput can be better than and accuracy can be similar to more advanced alternatives. In particular, we discuss our implementation of RTN based on the recent Marlin kernels and demonstrate how the accuracy of RTN can be gradually improved by selectively increasing the data precision format of certain model layers and modules. Based on our results, we argue that RTN presents a viable and practical choice for quantizing LLMs.",
+        "identifiers": [
+          "SemanticScholar:06d5564ad85cf92404d0a560abd7453050c7c5cb"
+        ],
+        "semantic_scholar_id": "06d5564ad85cf92404d0a560abd7453050c7c5cb",
+        "canonical_id": "arXiv:2505.15909",
+        "arxiv_id": "2505.15909",
+        "doi": "10.48550/arXiv.2505.15909",
+        "authors": [
+          "A. Kogan"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 546,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:64dae64f15c35026536eca43f0eee07dd3efaf137d9f546c82da4bcf170944a2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,615 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e216ed912dce0f82-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e216ed912dce",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.11242",
+    "arXiv:2503.14985",
+    "arXiv:2507.08877",
+    "arXiv:2603.25155",
+    "arXiv:2605.09100",
+    "arXiv:2605.19150",
+    "arXiv:2609.31224"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:24.110813+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.11242",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2412.11242"
+    },
+    {
+      "requested_id": "arXiv:2503.14985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.08877",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25155",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.09100",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19150",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31224",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.25155",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models are promising for clinical visual question answering tasks, but scaling to 3D imaging is hindered by high computational costs. Prior methods often rely on 2D slices or fixed-length token compression, disrupting volumetric continuity and obscuring subtle findings. We present Photon, a framework that represents 3D medical volumes with token sequences of variable length. Photon introduces instruction-conditioned token scheduling and surrogate gradient propagation to adaptively reduce tokens during both training and inference, which lowers computational cost while mitigating the attention dilution caused by redundant tokens. It incorporates a custom backpropagation rule with gradient restoration to enable differentiable optimization despite discrete token drop. To stabilize token compression and ensure reliable use of visual evidence, Photon further applies regularization objectives that mitigate language-only bias and improve reliability. Experiments on diverse medical visual question answering tasks show that Photon achieves state-of-the-art accuracy while reducing resource usage and accelerating both training and inference.",
+      "identifiers": [
+        "SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb"
+      ],
+      "semantic_scholar_id": "f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+      "canonical_id": "arXiv:2603.25155",
+      "arxiv_id": "2603.25155",
+      "doi": "10.48550/arXiv.2603.25155",
+      "authors": [
+        "Cheng-Yu Fang",
+        "Heng Guo",
+        "Zhengyao Jiang",
+        "Chun-Ming He",
+        "Xiu Li",
+        "Min-Feng Xu"
+      ],
+      "priority": 122,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 122,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Flash PD-SSM: Memory-Optimized Structured Sparse State-Space Models",
+      "source_url": "https://arxiv.org/abs/2605.19150",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State-space models (SSMs) face a fundamental trade-off between efficiency and expressivity that is mainly dictated by the structure of the model's transition matrix. Unstructured transition matrices enable maximal expressivity, as measured by their ability to model finite-state automaton (FSA) transitions, but come at a prohibitively high compute and memory cost. In contrast, most structured transition matrix forms are highly efficient both in runtime and memory consumption, but suffer from limited expressivity. Building on recent work on structured sparse SSMs, we propose Flash PD-SSM, a novel SSM that achieves comparable throughput to widely-used structured SSMs with significantly better expressivity guarantees. Flash PD-SSM maintains a trainable set of structured sparse matrices, a single one of which is discretely selected at each time-step, enabling FSA expressiveness at the level of unstructured matrices while maintaining the efficiency required for training models at scale. First, we validate Flash PD-SSM against a suite of alternative models on synthetic mechanistic and state-tracking tasks, finding that its theoretical expressivity is achieved in practice. Second, on multivariate time-series tasks involving sequences of length over 17,000, we find that Flash PD-SSM defines a new state-of-the-art (SoTA) accuracy among competing SSM methods. Finally, we demonstrate that Flash PD-SSM is an effective drop-in replacement for hybrid LLMs, yielding improvements both in natural language state-tracking and in common language modeling scenarios. The model exhibits increased throughput and decreased memory consumption compared to SSMs widely used in frontier language models.",
+      "identifiers": [
+        "SemanticScholar:0ba210330b05c075b6a9e38c0734003f8fb04470"
+      ],
+      "semantic_scholar_id": "0ba210330b05c075b6a9e38c0734003f8fb04470",
+      "canonical_id": "arXiv:2605.19150",
+      "arxiv_id": "2605.19150",
+      "doi": "10.48550/arXiv.2605.19150",
+      "authors": [
+        "Aleksandar Terzic",
+        "Francesco S. Carzaniga",
+        "Nicolas Menet",
+        "Yannick Biehl",
+        "M. Hersche",
+        "Thomas Hofmann",
+        "Abbas Rahimi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression",
+      "source_url": "https://arxiv.org/abs/2605.09100",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Text embedding and generative tasks are usually trained separately based on large language models (LLMs) nowadays. This causes a large amount of training cost and deployment effort. Context compression is also a challenging and pressing task, which is vital to reasoning-driven generation, and agentic tasks requiring long context and continual learning. In this paper, we explore how to unify reasoning-driven generation, reasoning-enhanced text representation and context compression tasks in one forward pass for LLMs. Through meta latent tokens and a unified generative, representative and compressive tuning approach, we propose a training framework named GRC that bridges the three tasks. The trained models can accomplish three objectives in a single forward pass while maintaining modular, LEGO-style flexibility during inference. This design greatly reduces the deployment effort for retrieval-augmented generation (RAG) and achieves efficient inference and three times data utilization during training. Furthermore, this framework design enables a new paradigm for text embedding: self-reason-latent embeds, and a new generation paradigm, latent memory-augmented generation, where compressed and internalized KV cache with O(1) length is used as the updatable memory. We also propose hybrid paged attention to speed up the inference of our models. Extensive experiments on reasoning-intensive retrieval benchmarks, generative tasks, document compression, latency evaluation, and RAG settings demonstrate the effectiveness of our method and may shed light on the truly unified model that can handle reasoning-driven generation, embedding and compression tasks seamlessly.",
+      "identifiers": [
+        "SemanticScholar:1a6541c6abe0d8b88f2f11e6ae6bcc61316b7a44"
+      ],
+      "semantic_scholar_id": "1a6541c6abe0d8b88f2f11e6ae6bcc61316b7a44",
+      "canonical_id": "arXiv:2605.09100",
+      "arxiv_id": "2605.09100",
+      "doi": "10.48550/arXiv.2605.09100",
+      "authors": [
+        "Zhong-Tao Miao",
+        "Qi-Yu Wu",
+        "Y. Tsuruoka"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+      "source_url": "https://arxiv.org/abs/2609.31224",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Full-duplex speech language models continuously accumulate acoustic key-value (KV) states, making long-running interactions memory-intensive. During listening, the model can finish processing an audio unit before the next arrives; we term the remaining interval listening-time slack. We propose acoustic-to-text KV compression, which introduces a transcription side channel to convert incoming speech into compact textual memory within this interval. When the cache exceeds a target budget during inference, older acoustic states are evicted while transcripts and recent acoustic context remain. We train the side channel with LoRA using cross-entropy on transcription segments. To preserve listening and speaking behavior, we apply knowledge distillation to the original model's token-level output distributions at native prediction positions. On ten-minute LongSpeech sessions, our MiniCPM-o 4.5 implementation reduces peak streaming KV-cache size by 64.6% compared with the same model without eviction. The proposed method also improves transcription, temporal question answering, and summarization over the baseline. Full-Duplex-Bench evaluations further show comparable pause-handling, turn-taking, and interruption performance.",
+      "identifiers": [
+        "SemanticScholar:45ccd35e79f386f97c60e8ba9e5f721e160352a7"
+      ],
+      "semantic_scholar_id": "45ccd35e79f386f97c60e8ba9e5f721e160352a7",
+      "canonical_id": "arXiv:2609.31224",
+      "arxiv_id": "2609.31224",
+      "doi": "10.48550/arXiv.2609.31224",
+      "authors": [
+        "Ye-Jin Lee",
+        "Seungbeom Kim",
+        "Yong-Ha Lee",
+        "Kyuhong Shim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ML-Triton, A Multi-Level Compilation and Language Extension to Triton GPU Programming",
+      "source_url": "https://arxiv.org/abs/2503.14985",
+      "year": 2025,
+      "published": "2025-03-19",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the era of LLMs, dense operations such as GEMM and MHA are critical components. These operations are well-suited for parallel execution using a tilebased approach. While traditional GPU programming often relies on low level interfaces like CUDA or SYCL, Triton has emerged as a DSL that offers a more user-friendly and portable alternative by programming at a higher level. The current Triton starts at the workgroup (aka threadblock) level, and directly lowers to per-thread level. And then attempt to coalesce and amend through a series of passes, promoting information from low-level representation. We believe this is pre-mature lowering based on the below observations. 1. GPU has a hierarchical structure both physically and logically. Modern GPUs often feature SIMD units capable of directly operating on tiles on a warp or warpgroup basis, such as blocked load and blocked MMA. 2. Multi-level gradual lowering can make compiler decoupled and clean by separating considerations inter and intra a logical layer. 3. Kernel developers often need fine control to get good performance on the latest hardware. FlashAttention2 advocates explicit data partition between warps to make a performance boost. In this context, we propose ML-Triton which features multi-level compilation flow and programming interface. Our approach begins at the workgroup level and progressively lowers to the warp and intrinsic level, implementing a multilevel lowering align with the hierarchical nature of GPU. Additionally, we extend triton language to support user-set compiler hint and warp level programming, enabling researchers to get good out-of-the box performance without awaiting compiler updates. Experimental results demonstrate that our approach achieves performance above 95% of expert-written kernels on Intel GPU, as measured by the geometric mean.",
+      "identifiers": [
+        "SemanticScholar:f30b41af1a9b2430e5bf088815433508c80fdcdf"
+      ],
+      "semantic_scholar_id": "f30b41af1a9b2430e5bf088815433508c80fdcdf",
+      "canonical_id": "arXiv:2503.14985",
+      "arxiv_id": "2503.14985",
+      "doi": "10.48550/arXiv.2503.14985",
+      "authors": [
+        "De-Wei Wang",
+        "Wei Zhu",
+        "Liyang Ling",
+        "Ettore Tiotto",
+        "Quintin Wang",
+        "Whitney Tsang",
+        "Julian Opperman",
+        "Jacky Deng"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 609,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ODIA: Oriented Distillation for Inline Acceleration of LLM-based Function Calling",
+      "source_url": "https://arxiv.org/abs/2507.08877",
+      "year": 2025,
+      "published": "2025-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Function Calling is a crucial technique that enables Large Language Models (LLMs) to interact with external systems through APIs. However, the high latency associated with LLM-based Function Calling significantly impacts user experience. This paper presents a novel approach called Oriented Distillation for Inline Acceleration (ODIA) that leverages online user interaction data to accelerate Function Calling. By automatically identifying\"simple queries\"from production traffic and distilling knowledge from larger models to smaller ones, our method reduces response latency by 45% (expected) and 78% (median) while maintaining accuracy. We demonstrate the effectiveness of our approach through real-world deployment in a music application, where the smaller model successfully handles 60% of traffic with negligible accuracy loss. Our method requires minimal human intervention and continuously improves through automated data collection and model updating, making it a practical solution for production environments.",
+      "identifiers": [
+        "SemanticScholar:b87221547a836a5384bc4dc7c58d6f36e2cf84e8"
+      ],
+      "semantic_scholar_id": "b87221547a836a5384bc4dc7c58d6f36e2cf84e8",
+      "canonical_id": "arXiv:2507.08877",
+      "arxiv_id": "2507.08877",
+      "doi": "10.48550/arXiv.2507.08877",
+      "authors": [
+        "Han-Long Zhang",
+        "Jingsheng Yang",
+        "Hao Li",
+        "Yu-Hao He",
+        "Franck Gong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.25155",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25155",
+        "id:SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+        "id:arXiv:2603.25155",
+        "title:photon speedup volume understanding with efficient multimodal large language models",
+        "url:https://arxiv.org/abs/2603.25155"
+      ],
+      "record": {
+        "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2603.25155",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models are promising for clinical visual question answering tasks, but scaling to 3D imaging is hindered by high computational costs. Prior methods often rely on 2D slices or fixed-length token compression, disrupting volumetric continuity and obscuring subtle findings. We present Photon, a framework that represents 3D medical volumes with token sequences of variable length. Photon introduces instruction-conditioned token scheduling and surrogate gradient propagation to adaptively reduce tokens during both training and inference, which lowers computational cost while mitigating the attention dilution caused by redundant tokens. It incorporates a custom backpropagation rule with gradient restoration to enable differentiable optimization despite discrete token drop. To stabilize token compression and ensure reliable use of visual evidence, Photon further applies regularization objectives that mitigate language-only bias and improve reliability. Experiments on diverse medical visual question answering tasks show that Photon achieves state-of-the-art accuracy while reducing resource usage and accelerating both training and inference.",
+        "identifiers": [
+          "SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb"
+        ],
+        "semantic_scholar_id": "f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+        "canonical_id": "arXiv:2603.25155",
+        "arxiv_id": "2603.25155",
+        "doi": "10.48550/arXiv.2603.25155",
+        "authors": [
+          "Cheng-Yu Fang",
+          "Heng Guo",
+          "Zhengyao Jiang",
+          "Chun-Ming He",
+          "Xiu Li",
+          "Min-Feng Xu"
+        ],
+        "priority": 122,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 122,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 237,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19150",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.19150",
+        "id:SemanticScholar:0ba210330b05c075b6a9e38c0734003f8fb04470",
+        "id:arXiv:2605.19150",
+        "title:flash pdssm memoryoptimized structured sparse statespace models",
+        "url:https://arxiv.org/abs/2605.19150"
+      ],
+      "record": {
+        "title": "Flash PD-SSM: Memory-Optimized Structured Sparse State-Space Models",
+        "source_url": "https://arxiv.org/abs/2605.19150",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State-space models (SSMs) face a fundamental trade-off between efficiency and expressivity that is mainly dictated by the structure of the model's transition matrix. Unstructured transition matrices enable maximal expressivity, as measured by their ability to model finite-state automaton (FSA) transitions, but come at a prohibitively high compute and memory cost. In contrast, most structured transition matrix forms are highly efficient both in runtime and memory consumption, but suffer from limited expressivity. Building on recent work on structured sparse SSMs, we propose Flash PD-SSM, a novel SSM that achieves comparable throughput to widely-used structured SSMs with significantly better expressivity guarantees. Flash PD-SSM maintains a trainable set of structured sparse matrices, a single one of which is discretely selected at each time-step, enabling FSA expressiveness at the level of unstructured matrices while maintaining the efficiency required for training models at scale. First, we validate Flash PD-SSM against a suite of alternative models on synthetic mechanistic and state-tracking tasks, finding that its theoretical expressivity is achieved in practice. Second, on multivariate time-series tasks involving sequences of length over 17,000, we find that Flash PD-SSM defines a new state-of-the-art (SoTA) accuracy among competing SSM methods. Finally, we demonstrate that Flash PD-SSM is an effective drop-in replacement for hybrid LLMs, yielding improvements both in natural language state-tracking and in common language modeling scenarios. The model exhibits increased throughput and decreased memory consumption compared to SSMs widely used in frontier language models.",
+        "identifiers": [
+          "SemanticScholar:0ba210330b05c075b6a9e38c0734003f8fb04470"
+        ],
+        "semantic_scholar_id": "0ba210330b05c075b6a9e38c0734003f8fb04470",
+        "canonical_id": "arXiv:2605.19150",
+        "arxiv_id": "2605.19150",
+        "doi": "10.48550/arXiv.2605.19150",
+        "authors": [
+          "Aleksandar Terzic",
+          "Francesco S. Carzaniga",
+          "Nicolas Menet",
+          "Yannick Biehl",
+          "M. Hersche",
+          "Thomas Hofmann",
+          "Abbas Rahimi"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09100",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09100",
+        "id:SemanticScholar:1a6541c6abe0d8b88f2f11e6ae6bcc61316b7a44",
+        "id:arXiv:2605.09100",
+        "title:grc unifying reasoningdriven generation retrieval and compression",
+        "url:https://arxiv.org/abs/2605.09100"
+      ],
+      "record": {
+        "title": "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression",
+        "source_url": "https://arxiv.org/abs/2605.09100",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Text embedding and generative tasks are usually trained separately based on large language models (LLMs) nowadays. This causes a large amount of training cost and deployment effort. Context compression is also a challenging and pressing task, which is vital to reasoning-driven generation, and agentic tasks requiring long context and continual learning. In this paper, we explore how to unify reasoning-driven generation, reasoning-enhanced text representation and context compression tasks in one forward pass for LLMs. Through meta latent tokens and a unified generative, representative and compressive tuning approach, we propose a training framework named GRC that bridges the three tasks. The trained models can accomplish three objectives in a single forward pass while maintaining modular, LEGO-style flexibility during inference. This design greatly reduces the deployment effort for retrieval-augmented generation (RAG) and achieves efficient inference and three times data utilization during training. Furthermore, this framework design enables a new paradigm for text embedding: self-reason-latent embeds, and a new generation paradigm, latent memory-augmented generation, where compressed and internalized KV cache with O(1) length is used as the updatable memory. We also propose hybrid paged attention to speed up the inference of our models. Extensive experiments on reasoning-intensive retrieval benchmarks, generative tasks, document compression, latency evaluation, and RAG settings demonstrate the effectiveness of our method and may shed light on the truly unified model that can handle reasoning-driven generation, embedding and compression tasks seamlessly.",
+        "identifiers": [
+          "SemanticScholar:1a6541c6abe0d8b88f2f11e6ae6bcc61316b7a44"
+        ],
+        "semantic_scholar_id": "1a6541c6abe0d8b88f2f11e6ae6bcc61316b7a44",
+        "canonical_id": "arXiv:2605.09100",
+        "arxiv_id": "2605.09100",
+        "doi": "10.48550/arXiv.2605.09100",
+        "authors": [
+          "Zhong-Tao Miao",
+          "Qi-Yu Wu",
+          "Y. Tsuruoka"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 193,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31224",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.31224",
+        "id:SemanticScholar:45ccd35e79f386f97c60e8ba9e5f721e160352a7",
+        "id:arXiv:2609.31224",
+        "title:acoustictotext kv compression for fullduplex speech models",
+        "url:https://arxiv.org/abs/2609.31224"
+      ],
+      "record": {
+        "title": "Acoustic-to-Text KV Compression for Full-Duplex Speech Models",
+        "source_url": "https://arxiv.org/abs/2609.31224",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Full-duplex speech language models continuously accumulate acoustic key-value (KV) states, making long-running interactions memory-intensive. During listening, the model can finish processing an audio unit before the next arrives; we term the remaining interval listening-time slack. We propose acoustic-to-text KV compression, which introduces a transcription side channel to convert incoming speech into compact textual memory within this interval. When the cache exceeds a target budget during inference, older acoustic states are evicted while transcripts and recent acoustic context remain. We train the side channel with LoRA using cross-entropy on transcription segments. To preserve listening and speaking behavior, we apply knowledge distillation to the original model's token-level output distributions at native prediction positions. On ten-minute LongSpeech sessions, our MiniCPM-o 4.5 implementation reduces peak streaming KV-cache size by 64.6% compared with the same model without eviction. The proposed method also improves transcription, temporal question answering, and summarization over the baseline. Full-Duplex-Bench evaluations further show comparable pause-handling, turn-taking, and interruption performance.",
+        "identifiers": [
+          "SemanticScholar:45ccd35e79f386f97c60e8ba9e5f721e160352a7"
+        ],
+        "semantic_scholar_id": "45ccd35e79f386f97c60e8ba9e5f721e160352a7",
+        "canonical_id": "arXiv:2609.31224",
+        "arxiv_id": "2609.31224",
+        "doi": "10.48550/arXiv.2609.31224",
+        "authors": [
+          "Ye-Jin Lee",
+          "Seungbeom Kim",
+          "Yong-Ha Lee",
+          "Kyuhong Shim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.14985",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.14985",
+        "id:SemanticScholar:f30b41af1a9b2430e5bf088815433508c80fdcdf",
+        "id:arXiv:2503.14985",
+        "title:mltriton a multilevel compilation and language extension to triton gpu programming",
+        "url:https://arxiv.org/abs/2503.14985"
+      ],
+      "record": {
+        "title": "ML-Triton, A Multi-Level Compilation and Language Extension to Triton GPU Programming",
+        "source_url": "https://arxiv.org/abs/2503.14985",
+        "year": 2025,
+        "published": "2025-03-19",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In the era of LLMs, dense operations such as GEMM and MHA are critical components. These operations are well-suited for parallel execution using a tilebased approach. While traditional GPU programming often relies on low level interfaces like CUDA or SYCL, Triton has emerged as a DSL that offers a more user-friendly and portable alternative by programming at a higher level. The current Triton starts at the workgroup (aka threadblock) level, and directly lowers to per-thread level. And then attempt to coalesce and amend through a series of passes, promoting information from low-level representation. We believe this is pre-mature lowering based on the below observations. 1. GPU has a hierarchical structure both physically and logically. Modern GPUs often feature SIMD units capable of directly operating on tiles on a warp or warpgroup basis, such as blocked load and blocked MMA. 2. Multi-level gradual lowering can make compiler decoupled and clean by separating considerations inter and intra a logical layer. 3. Kernel developers often need fine control to get good performance on the latest hardware. FlashAttention2 advocates explicit data partition between warps to make a performance boost. In this context, we propose ML-Triton which features multi-level compilation flow and programming interface. Our approach begins at the workgroup level and progressively lowers to the warp and intrinsic level, implementing a multilevel lowering align with the hierarchical nature of GPU. Additionally, we extend triton language to support user-set compiler hint and warp level programming, enabling researchers to get good out-of-the box performance without awaiting compiler updates. Experimental results demonstrate that our approach achieves performance above 95% of expert-written kernels on Intel GPU, as measured by the geometric mean.",
+        "identifiers": [
+          "SemanticScholar:f30b41af1a9b2430e5bf088815433508c80fdcdf"
+        ],
+        "semantic_scholar_id": "f30b41af1a9b2430e5bf088815433508c80fdcdf",
+        "canonical_id": "arXiv:2503.14985",
+        "arxiv_id": "2503.14985",
+        "doi": "10.48550/arXiv.2503.14985",
+        "authors": [
+          "De-Wei Wang",
+          "Wei Zhu",
+          "Liyang Ling",
+          "Ettore Tiotto",
+          "Quintin Wang",
+          "Whitney Tsang",
+          "Julian Opperman",
+          "Jacky Deng"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 609,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.08877",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.08877",
+        "id:SemanticScholar:b87221547a836a5384bc4dc7c58d6f36e2cf84e8",
+        "id:arXiv:2507.08877",
+        "title:odia oriented distillation for inline acceleration of llmbased function calling",
+        "url:https://arxiv.org/abs/2507.08877"
+      ],
+      "record": {
+        "title": "ODIA: Oriented Distillation for Inline Acceleration of LLM-based Function Calling",
+        "source_url": "https://arxiv.org/abs/2507.08877",
+        "year": 2025,
+        "published": "2025-07-10",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Function Calling is a crucial technique that enables Large Language Models (LLMs) to interact with external systems through APIs. However, the high latency associated with LLM-based Function Calling significantly impacts user experience. This paper presents a novel approach called Oriented Distillation for Inline Acceleration (ODIA) that leverages online user interaction data to accelerate Function Calling. By automatically identifying\"simple queries\"from production traffic and distilling knowledge from larger models to smaller ones, our method reduces response latency by 45% (expected) and 78% (median) while maintaining accuracy. We demonstrate the effectiveness of our approach through real-world deployment in a music application, where the smaller model successfully handles 60% of traffic with negligible accuracy loss. Our method requires minimal human intervention and continuously improves through automated data collection and model updating, making it a practical solution for production environments.",
+        "identifiers": [
+          "SemanticScholar:b87221547a836a5384bc4dc7c58d6f36e2cf84e8"
+        ],
+        "semantic_scholar_id": "b87221547a836a5384bc4dc7c58d6f36e2cf84e8",
+        "canonical_id": "arXiv:2507.08877",
+        "arxiv_id": "2507.08877",
+        "doi": "10.48550/arXiv.2507.08877",
+        "authors": [
+          "Han-Long Zhang",
+          "Jingsheng Yang",
+          "Hao Li",
+          "Yu-Hao He",
+          "Franck Gong"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 496,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c065e5ea4863f84c31d34deaf5c6445e85fe1216940993c5cf78fa8ab0107149",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

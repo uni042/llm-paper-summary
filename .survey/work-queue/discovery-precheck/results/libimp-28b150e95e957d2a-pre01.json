@@ -1,0 +1,160 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-28b150e95e957d2a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-28b150e95e95",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iscas56072.2025.11043916",
+    "DOI:10.1145/3789240.3822607"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:19.866300+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iscas56072.2025.11043916",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/iscas56072.2025.11043916"
+    },
+    {
+      "requested_id": "DOI:10.1145/3789240.3822607",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "xSwitch: An Adaptive O-E-integrated Interconnect for Scale-up Networks",
+      "source_url": "https://doi.org/10.1145/3789240.3822607",
+      "year": 2026,
+      "published": "2026-08-17",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To adapt to the intensive, bursty, and latency-constrained traffic from large language model (LLM) training and inference, scale-up networks are now facing tremendous challenges. Existing electrical packet switching (EPS) fabrics provide packet-level flexibility at the cost of high power consumption and long latency. Introducing optical circuit switching (OCS) in scale-up networks offers direct optical connections that can effectively reduce power consumption and latency, but OCS lacks the packet-level flexibility required by LLM inference (especially for mixture-of-experts (MoE) inference). To address these dilemmas, this work presents xSwitch, an optical-electrical-integrated (O-E-integrated) interconnect for scale-up networks, and demonstrates its effectiveness experimentally. Unlike the traditional hybrid-optical-electrical interconnects that usually place EPS and OCS in parallel, xSwitch integrates one port-count-reduced (defined by the O/E port ratio) EPS layer (ESL) on top of an OCS layer (OSL). Then, OSL can establish optical connections for xPU pairs with stable and intensive traffic demands, while bypassing the ESL for energy and latency reduction, and the dynamic and unpredictable traffic between xPUs can be provisioned by letting OSL forward it to the ESL. We prototype xSwitch with off-the-shelf components, validate its effectiveness with real-world MoE inference tasks, and also confirm its scalability with large-scale simulations. Our results indicate that for MoE inference workloads, xSwitch with a 2:1 O/E port ratio limits the average gaps to the full-EPS baseline to 1.96% in TTFT and 0.59% in TPOT.",
+      "identifiers": [
+        "SemanticScholar:72793bbef1981965995e0db01b6bf5eceddb44f3"
+      ],
+      "semantic_scholar_id": "72793bbef1981965995e0db01b6bf5eceddb44f3",
+      "doi": "10.1145/3789240.3822607",
+      "canonical_id": "DOI:10.1145/3789240.3822607",
+      "authors": [
+        "Wei-Chi Wu",
+        "Xuanmiao Mu",
+        "Xiao-Liang Chen",
+        "Bin-Jun Tang",
+        "Xingming Cui",
+        "Yuxuan Dou",
+        "Zu-Qing Zhu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3789240.3822607",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3822607",
+        "id:SemanticScholar:72793bbef1981965995e0db01b6bf5eceddb44f3",
+        "title:xswitch an adaptive oeintegrated interconnect for scaleup networks",
+        "url:https://doi.org/10.1145/3789240.3822607"
+      ],
+      "record": {
+        "title": "xSwitch: An Adaptive O-E-integrated Interconnect for Scale-up Networks",
+        "source_url": "https://doi.org/10.1145/3789240.3822607",
+        "year": 2026,
+        "published": "2026-08-17",
+        "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To adapt to the intensive, bursty, and latency-constrained traffic from large language model (LLM) training and inference, scale-up networks are now facing tremendous challenges. Existing electrical packet switching (EPS) fabrics provide packet-level flexibility at the cost of high power consumption and long latency. Introducing optical circuit switching (OCS) in scale-up networks offers direct optical connections that can effectively reduce power consumption and latency, but OCS lacks the packet-level flexibility required by LLM inference (especially for mixture-of-experts (MoE) inference). To address these dilemmas, this work presents xSwitch, an optical-electrical-integrated (O-E-integrated) interconnect for scale-up networks, and demonstrates its effectiveness experimentally. Unlike the traditional hybrid-optical-electrical interconnects that usually place EPS and OCS in parallel, xSwitch integrates one port-count-reduced (defined by the O/E port ratio) EPS layer (ESL) on top of an OCS layer (OSL). Then, OSL can establish optical connections for xPU pairs with stable and intensive traffic demands, while bypassing the ESL for energy and latency reduction, and the dynamic and unpredictable traffic between xPUs can be provisioned by letting OSL forward it to the ESL. We prototype xSwitch with off-the-shelf components, validate its effectiveness with real-world MoE inference tasks, and also confirm its scalability with large-scale simulations. Our results indicate that for MoE inference workloads, xSwitch with a 2:1 O/E port ratio limits the average gaps to the full-EPS baseline to 1.96% in TTFT and 0.59% in TPOT.",
+        "identifiers": [
+          "SemanticScholar:72793bbef1981965995e0db01b6bf5eceddb44f3"
+        ],
+        "semantic_scholar_id": "72793bbef1981965995e0db01b6bf5eceddb44f3",
+        "doi": "10.1145/3789240.3822607",
+        "canonical_id": "DOI:10.1145/3789240.3822607",
+        "authors": [
+          "Wei-Chi Wu",
+          "Xuanmiao Mu",
+          "Xiao-Liang Chen",
+          "Bin-Jun Tang",
+          "Xingming Cui",
+          "Yuxuan Dou",
+          "Zu-Qing Zhu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 93,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d780e8c7a76b82083bef9d817cab1d617dca4efaded7374c30f39918cc870310",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

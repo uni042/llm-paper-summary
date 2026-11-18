@@ -1,0 +1,231 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-abcbdd589b85d600-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-abcbdd589b85",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/bigcom61073.2023.00044",
+    "DOI:10.1109/infocom59046.2026.11571558"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:34.629880+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/bigcom61073.2023.00044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/infocom59046.2026.11571558",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Task Profiling and Draft Model Selection for Accelerating Distributed Speculative Decoding",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571558",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) has emerged as an effective strategy to accelerate Large Language Model (LLM) inference by leveraging lightweight draft models to speculate candidate tokens. The heterogeneity of devices in edge-cloud systems provides a unique opportunity to deploy task-specialized draft models, leveraging each device’s distinctive computational profile to maximize speculative efficiency. However, existing draft model selection strategies often neglect the impact of task profiles. To address this gap, we propose D-PROMISE (Distributed task PROfiling based draft Model Selection Engine), a framework that minimizes end-to-end inference latency through request-level optimization. Specifically, D-PROMISE categorizes the task into four types based on its task entropy and reasoning intensity. The engine maintains statistical records of draft model proficiencies across these categories to predict task-specific acceptance rates. Simultaneously, D-PROMISE monitors real-time edge device dynamics, including computational loads and wireless channel conditions. Taking task profiling and dynamic device states into consideration, the scheduler identifies the optimal device and speculative length for each request. Trace-driven simulations, parameterized with empirical hardware and network profiles, show that D-PROMISE achieves up to a 45% increase in inference speed compared to task-agnostic speculative decoding, demonstrating the necessity of integrating task profiling and device dynamics for speculative inference.",
+      "identifiers": [
+        "SemanticScholar:5deee40c8c3c6564a5adf9696d728427b0659fb2"
+      ],
+      "semantic_scholar_id": "5deee40c8c3c6564a5adf9696d728427b0659fb2",
+      "doi": "10.1109/INFOCOM59046.2026.11571558",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571558",
+      "authors": [
+        "Jia-Lin Dong",
+        "Yao-Dan Xu",
+        "Tan Chen",
+        "Sheng Zhou",
+        "Zhi-Sheng Niu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LMIE-BERT: A Learnable Method for Inter-Layer Ensembles to Accelerate Inference of BERT-Style Pre-trained Models",
+      "source_url": "https://doi.org/10.1109/BIGCOM61073.2023.00044",
+      "year": 2023,
+      "published": "2023-08-04",
+      "venue": "International Conference on Big Data Computing and Communications",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained models have brought tremendous accuracy improvements to Natural Language Processing(NLP) and Computer Vision tasks, but they suffer from slow inference speed due to the heavy model, which hinders their deployment in production. The early exit methods have been proposed to accelerate the inference speed of large pre-trained models. However, these methods will lose control of accuracy at higher speed ratios. In order to balance the trade-off between model speed and accuracy better, we propose a novel early-exit mechanism called LMIE-BERT. To achieve this, we introduce a learnable method for inter-layer ensemble strategy in the internal classifier, it trains the model to fit the information from both the previous and current layers, which enables the early exit method to get more robust results. The experimental results demonstrate that LMIE-BERT can maintain over 90% of the accuracy of the original model while achieving a 4× inference speed up in multiple tasks. Our method is ahead of other early exit methods in terms of model accuracy for the same speed ratio.",
+      "identifiers": [
+        "SemanticScholar:b5895d435fe4db0febf69399a9bc199d6e6cf17f"
+      ],
+      "semantic_scholar_id": "b5895d435fe4db0febf69399a9bc199d6e6cf17f",
+      "doi": "10.1109/BIGCOM61073.2023.00044",
+      "canonical_id": "DOI:10.1109/BIGCOM61073.2023.00044",
+      "authors": [
+        "Weikai Qi",
+        "Xing Guo",
+        "Haohua Du"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1202,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571558",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571558",
+        "id:SemanticScholar:5deee40c8c3c6564a5adf9696d728427b0659fb2",
+        "title:task profiling and draft model selection for accelerating distributed speculative decoding",
+        "url:https://doi.org/10.1109/INFOCOM59046.2026.11571558"
+      ],
+      "record": {
+        "title": "Task Profiling and Draft Model Selection for Accelerating Distributed Speculative Decoding",
+        "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571558",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "IEEE Conference on Computer Communications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) has emerged as an effective strategy to accelerate Large Language Model (LLM) inference by leveraging lightweight draft models to speculate candidate tokens. The heterogeneity of devices in edge-cloud systems provides a unique opportunity to deploy task-specialized draft models, leveraging each device’s distinctive computational profile to maximize speculative efficiency. However, existing draft model selection strategies often neglect the impact of task profiles. To address this gap, we propose D-PROMISE (Distributed task PROfiling based draft Model Selection Engine), a framework that minimizes end-to-end inference latency through request-level optimization. Specifically, D-PROMISE categorizes the task into four types based on its task entropy and reasoning intensity. The engine maintains statistical records of draft model proficiencies across these categories to predict task-specific acceptance rates. Simultaneously, D-PROMISE monitors real-time edge device dynamics, including computational loads and wireless channel conditions. Taking task profiling and dynamic device states into consideration, the scheduler identifies the optimal device and speculative length for each request. Trace-driven simulations, parameterized with empirical hardware and network profiles, show that D-PROMISE achieves up to a 45% increase in inference speed compared to task-agnostic speculative decoding, demonstrating the necessity of integrating task profiling and device dynamics for speculative inference.",
+        "identifiers": [
+          "SemanticScholar:5deee40c8c3c6564a5adf9696d728427b0659fb2"
+        ],
+        "semantic_scholar_id": "5deee40c8c3c6564a5adf9696d728427b0659fb2",
+        "doi": "10.1109/INFOCOM59046.2026.11571558",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571558",
+        "authors": [
+          "Jia-Lin Dong",
+          "Yao-Dan Xu",
+          "Tan Chen",
+          "Sheng Zhou",
+          "Zhi-Sheng Niu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/bigcom61073.2023.00044",
+      "identity_tokens": [
+        "id:DOI:10.1109/bigcom61073.2023.00044",
+        "id:SemanticScholar:b5895d435fe4db0febf69399a9bc199d6e6cf17f",
+        "title:lmiebert a learnable method for interlayer ensembles to accelerate inference of bertstyle pretrained models",
+        "url:https://doi.org/10.1109/BIGCOM61073.2023.00044"
+      ],
+      "record": {
+        "title": "LMIE-BERT: A Learnable Method for Inter-Layer Ensembles to Accelerate Inference of BERT-Style Pre-trained Models",
+        "source_url": "https://doi.org/10.1109/BIGCOM61073.2023.00044",
+        "year": 2023,
+        "published": "2023-08-04",
+        "venue": "International Conference on Big Data Computing and Communications",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained models have brought tremendous accuracy improvements to Natural Language Processing(NLP) and Computer Vision tasks, but they suffer from slow inference speed due to the heavy model, which hinders their deployment in production. The early exit methods have been proposed to accelerate the inference speed of large pre-trained models. However, these methods will lose control of accuracy at higher speed ratios. In order to balance the trade-off between model speed and accuracy better, we propose a novel early-exit mechanism called LMIE-BERT. To achieve this, we introduce a learnable method for inter-layer ensemble strategy in the internal classifier, it trains the model to fit the information from both the previous and current layers, which enables the early exit method to get more robust results. The experimental results demonstrate that LMIE-BERT can maintain over 90% of the accuracy of the original model while achieving a 4× inference speed up in multiple tasks. Our method is ahead of other early exit methods in terms of model accuracy for the same speed ratio.",
+        "identifiers": [
+          "SemanticScholar:b5895d435fe4db0febf69399a9bc199d6e6cf17f"
+        ],
+        "semantic_scholar_id": "b5895d435fe4db0febf69399a9bc199d6e6cf17f",
+        "doi": "10.1109/BIGCOM61073.2023.00044",
+        "canonical_id": "DOI:10.1109/BIGCOM61073.2023.00044",
+        "authors": [
+          "Weikai Qi",
+          "Xing Guo",
+          "Haohua Du"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1202,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:65c70b8a289471dd9d217cb6e03bba96e03d1c2a0b93111946e7606a15eec08c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

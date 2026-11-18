@@ -1,0 +1,609 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6ca45f29798afd3c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6ca45f29798a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.32610",
+    "arXiv:2610.06479",
+    "arXiv:2610.35509",
+    "arXiv:2610.36383",
+    "arXiv:2610.39999",
+    "arXiv:2610.40000"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:21.673880+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.32610",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06479",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.35509",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36383",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39999",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40000",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Behavior-Preserving KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2610.06479",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV caches are a major bottleneck in long-context inference and long-form generation with large language models. Existing training-free eviction policies largely rely on proxy importance signals, such as attention mass, to decide which past tokens to retain. We argue that cache compression should instead preserve the predictive behavior of the full-cache model, retaining entries whose removal would substantially change the model's output distribution. We propose Behavior-Preserving KV Cache Compression, a training-free framework that scores candidate evictions by estimating the compressed-cache logits induced by their removal and evaluating the resulting KL to the full-cache next-token distribution. Using pre-eviction forward statistics, the method avoids running separate masked forward passes for each candidate. Across diverse architectures and both prefill-time and generation-time compression, our method delivers substantial gains in downstream task quality over lightweight attention-based heuristics at matched retained-KV budgets, with the largest gains under aggressive compression. It achieves these gains with additional compression-time computation while retaining an end-to-end speedup over full-cache inference in our evaluated settings.",
+      "identifiers": [
+        "SemanticScholar:a367385422a194661b20791bd46c8a749102247c"
+      ],
+      "semantic_scholar_id": "a367385422a194661b20791bd46c8a749102247c",
+      "canonical_id": "arXiv:2610.06479",
+      "arxiv_id": "2610.06479",
+      "doi": "10.18653/2026.emnlp-main.2010",
+      "authors": [
+        "Doo Hwan Hwang",
+        "Junyoung Jang",
+        "Jun-Ho Na",
+        "Hojung Lim",
+        "Kee-Eung Kim"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "KV-Lingo: Learning KV-Cache Translators with Distillation",
+      "source_url": "https://arxiv.org/abs/2609.32610",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models represent context with a key-value (KV) cache. Caches are model-specific: for the same text, models with different architectures or weights produce incompatible representations. This makes it costly to switch models over a shared context: although the context has already been processed by one model, the incoming model must process it again to build its own cache. We introduce KV-Lingo, a method for translating the KV cache of a source model into one that can be read by a target model. KV-Lingo consists of a collection of linear maps, typically one per layer of the target model, that are applied independently on all tokens'key and value representations. We train these maps using distillation, minimising the divergence between the target model's predictions from its native cache and those from the translated cache. We consider several model pairs spanning multiple sizes and architectures, training one translator per pair on a generic text corpus. The resulting translators preserve strong downstream performance in both small-to-large and large-to-small transfers. Since a switch then costs a linear map and a single decoding step instead of a prefill, replacing re-prefill with cache translation reduces the time to first token after a model switch by 9.6x already on a 64-token prompt for Qwen models on an Apple M3 Ultra, and by up to 29x at 32k context length on an H100. These gains make KV-Lingo particularly useful for dynamic model routing: a context can be processed by one model and handed off to another only when needed, without re-prefilling the shared prefix. We finally show that KV-Lingo can be used for seamless model switching, staying close to re-prefill across repeated switches in our multi-turn evaluations.",
+      "identifiers": [
+        "SemanticScholar:3479923a304be061633520ca3d15c780dcb2a394"
+      ],
+      "semantic_scholar_id": "3479923a304be061633520ca3d15c780dcb2a394",
+      "canonical_id": "arXiv:2609.32610",
+      "arxiv_id": "2609.32610",
+      "doi": "10.48550/arXiv.2609.32610",
+      "authors": [
+        "Valérie Castin",
+        "Keitaro Sakamoto",
+        "Anastasiia Filippova",
+        "João Monteiro",
+        "Marco Cuturi",
+        "Pierre Ablin"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Governing Enterprise AI Traffic at Scale: Design and Operation of a Policy-Driven, Multi-Vendor LLM Gateway on Envoy",
+      "source_url": "https://arxiv.org/abs/2610.35509",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large organizations consume large language models (LLMs) from several vendors at once, each with its own API dialect, credential model, streaming protocol and pricing. Integrated directly, this heterogeneity yields credential sprawl, format lock-in, unbounded spend and inconsistent governance. We present the design and production operation of the Cosmos LLM Gateway, the governed entry point for enterprise LLM traffic at PayPal. Built on Envoy, it splits work by latency profile: I/O-bound control decisions (authentication, credential brokering, policy and budget evaluation) run in an out-of-process external-processing service, while wire-format translation, token metering and prompt-cache shaping run in-proxy as a Rust WebAssembly filter, so that, by default, streamed response body chunks never wait on an out-of-process call. Models, providers and prices are largely validated data rather than code. Governance is declarative policy evaluated by Open Policy Agent and managed through a control plane with role-scoped authoring, approvals, pilots, shadow-mode rollout, usage notifications and versioned policy bundles. For use cases that require it, a data-loss-prevention layer can block, redact or pseudonymize detected sensitive content before it reaches a provider. Spend scopes are views over per-model usage counters, so a new budget applies to spend already recorded in its window without migration. As of September 2026, the gateway serves more than 12,000 developers and hundreds of business use cases, handling roughly 200 billion tokens per day across more than 100 models at 99.999% availability to business. In a benchmark of the core request path against a synthetic upstream, it adds a median of 4 ms and a p99 of 11 ms of overhead at more than 2,200 requests per second on two 4-vCPU instances. We report the architecture, policy model, evaluation and lessons learned.",
+      "identifiers": [
+        "SemanticScholar:92907789577fbc994b1afbf6fc4f86cdc9ece290"
+      ],
+      "semantic_scholar_id": "92907789577fbc994b1afbf6fc4f86cdc9ece290",
+      "canonical_id": "arXiv:2610.35509",
+      "arxiv_id": "2610.35509",
+      "authors": [
+        "Mithun Sasidharan",
+        "Srinivasan Manoharan",
+        "Rupesh Thakur",
+        "TK Abhinav",
+        "Ashwin Hegde",
+        "Anand Gautam"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Generation to Scoring: Scaling LLM-Based Semantic Labeling at LinkedIn",
+      "source_url": "https://arxiv.org/abs/2610.36383",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For efficiency, industrial large language model (LLM) labelers often pack many candidate labels into one prompt and generate a YES/NO answer for each, even when each decision depends only on the entity and one candidate. Generating these independent decisions as one answer list couples them, spends decoding on the list, and relies on the list being well-formed. In this paper, we present an end-to-end recipe that reformulates the labeler as semantic scoring, fine-tuning it on single-candidate prompts to return each decision as one answer-token score from a prefill-only pass. We also adapt Multiple-Item Scoring (MIS) to score hundreds of candidates in one sequence with attention masked between them. Deployed for profile qualification labeling at LinkedIn, semantic scoring changes at most 0.01% of decisions when candidates are reordered and matches the agreement with reference labels that packed generation reaches only with about 4.7x as many training pairs. The MIS-based stack raises throughput over the deployed stack by 1.24x offline and 1.9x in model serving under a one-second p99 latency target. For offline batch inference, we implement MIS-based scoring as a reusable, model-agnostic Ray Data API proposed for upstream adoption. Model serving uses MIS support contributed to SGLang.",
+      "identifiers": [
+        "SemanticScholar:281ce8e86300d154e4ad1ddca6bb66d61c7d73a6"
+      ],
+      "semantic_scholar_id": "281ce8e86300d154e4ad1ddca6bb66d61c7d73a6",
+      "canonical_id": "arXiv:2610.36383",
+      "arxiv_id": "2610.36383",
+      "authors": [
+        "Jian Sheng",
+        "Sriram Vasudevan",
+        "Sundara Raman Ramachandran",
+        "Ya-Sen Hu",
+        "Jun-Yu Zhou",
+        "Xiao-Jing Ma",
+        "Hao-Lan Qin",
+        "Tiffany Zhou",
+        "Vedant Jhaveri",
+        "Ashwini Bhingare",
+        "Chinmay Kini",
+        "Qing Lan",
+        "Xiao-Qing Wang",
+        "Suleyman Cetintas",
+        "Fedor Borisyuk"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication",
+      "source_url": "https://arxiv.org/abs/2610.39999",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoscaling is a key mechanism in model-as-a-service systems, where fast scale-up is essential because the scale-up time directly determines how long a model service remains overloaded, which in turn governs serving quality. The state-of-the-art approach, model sleeping, adopted by mainstream serving engines including vLLM and SGLang, achieves near-zero-cost scale-up by pausing pre-spawned engines on the GPU. However, sleeping is not a free lunch: each sleeping model must keep its GPU context resident, and this cost grows linearly with the number of models, degrading serving performance. Because providers must support many models, they face a dilemma between fast scale-up for all models and high service performance. In this paper, we show that a single server can keep many models asleep without paying this GPU context tax. The key observation is that the contexts of sleeping models are largely duplicated: the driver (CUDA) context can be shared across models, and their GPU kernel binaries overlap heavily due to common operators and libraries. PhOSv1 deduplicates this context by transparently delegating each engine's GPU context allocation to a central daemon through API remoting; therefore, a single server can keep far more models asleep than current engines allow. Our evaluation shows that PhOSv1 matches the scale-up time of vanilla vLLM sleep mode while substantially reducing the GPU memory footprint, improving end-to-end multi-model serving performance.",
+      "identifiers": [
+        "SemanticScholar:02669033e9abf12285fd8abf7c074762c64ea66c"
+      ],
+      "semantic_scholar_id": "02669033e9abf12285fd8abf7c074762c64ea66c",
+      "canonical_id": "arXiv:2610.39999",
+      "arxiv_id": "2610.39999",
+      "authors": [
+        "Tian-Le Sun",
+        "Xing-Da Wei",
+        "Rong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "NORmal: Architecting 3D Ferroelectric NOR Flash as Main Memory -- From Co-Fabricated BEOL Arrays to 200B-Class Multi-Agent LLMs in a Smartphone",
+      "source_url": "https://arxiv.org/abs/2610.40000",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Smartphone agents increasingly work as teams, in which a large planner directs parallel workers across long sessions. Running such a team on the device requires 200B-class models and contexts that exceed phone DRAM many times over, yet existing tiers treat flash as storage: UFS starves per-token weight streaming, and mobile High-Bandwidth Flash (HBF) needs a redesigned SoC and cannot absorb continuous KV writes. We show that a non-volatile memory can join an unmodified LPDDR6 bus as a plain rank only if its access latency fits the DRAM timing window, a condition no NAND tier meets. We present NORmal, to our knowledge the first main-memory architecture for 3D ferroelectric NOR flash. We have fabricated and experimentally characterized back-end-of-line (BEOL) 3D FeNOR arrays that co-integrate dense 3-bit MLC and fast, high-endurance in-place-writable SLC with sub-7.5 ns sensing. NORmal turns these co-fabricated arrays into a byte-addressable, deterministic-timing load/store rank on an unmodified LPDDR6 interface through an under-array DRAM-emulation bridge, staggered bank reads with zero-cycle weight swizzling, and posted SLC writes. Across this rank and DRAM, NORmal places agent state by mutability and lifetime rather than by hotness, serving 200B-class models and persistent planner contexts in place while dynamically partitioning subchannels across agent phases. In serving-level simulation on production agent traces, NORmal is 8.9$\\times$--28.0$\\times$ faster than UFS offloading, within 0.4% of an unlimited-DRAM ideal, and 2.8$\\times$--6.3$\\times$ faster than HBF on sessions beyond 256K tokens, with 8.1$\\times$--17.8$\\times$ less memory energy per token.",
+      "identifiers": [
+        "SemanticScholar:8e2adf138c695ce975d4e97f6a0a3a7a7563d34a"
+      ],
+      "semantic_scholar_id": "8e2adf138c695ce975d4e97f6a0a3a7a7563d34a",
+      "canonical_id": "arXiv:2610.40000",
+      "arxiv_id": "2610.40000",
+      "authors": [
+        "Zhuo-Ran Li",
+        "Zhuo-Hang Bian",
+        "Yi-Bo Zhao",
+        "Xu-Xiao Yang",
+        "You-Wei Zhuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.06479",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.2010",
+        "id:SemanticScholar:a367385422a194661b20791bd46c8a749102247c",
+        "id:arXiv:2610.06479",
+        "title:behaviorpreserving kv cache compression",
+        "url:https://arxiv.org/abs/2610.06479"
+      ],
+      "record": {
+        "title": "Behavior-Preserving KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2610.06479",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV caches are a major bottleneck in long-context inference and long-form generation with large language models. Existing training-free eviction policies largely rely on proxy importance signals, such as attention mass, to decide which past tokens to retain. We argue that cache compression should instead preserve the predictive behavior of the full-cache model, retaining entries whose removal would substantially change the model's output distribution. We propose Behavior-Preserving KV Cache Compression, a training-free framework that scores candidate evictions by estimating the compressed-cache logits induced by their removal and evaluating the resulting KL to the full-cache next-token distribution. Using pre-eviction forward statistics, the method avoids running separate masked forward passes for each candidate. Across diverse architectures and both prefill-time and generation-time compression, our method delivers substantial gains in downstream task quality over lightweight attention-based heuristics at matched retained-KV budgets, with the largest gains under aggressive compression. It achieves these gains with additional compression-time computation while retaining an end-to-end speedup over full-cache inference in our evaluated settings.",
+        "identifiers": [
+          "SemanticScholar:a367385422a194661b20791bd46c8a749102247c"
+        ],
+        "semantic_scholar_id": "a367385422a194661b20791bd46c8a749102247c",
+        "canonical_id": "arXiv:2610.06479",
+        "arxiv_id": "2610.06479",
+        "doi": "10.18653/2026.emnlp-main.2010",
+        "authors": [
+          "Doo Hwan Hwang",
+          "Junyoung Jang",
+          "Jun-Ho Na",
+          "Hojung Lim",
+          "Kee-Eung Kim"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32610",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.32610",
+        "id:SemanticScholar:3479923a304be061633520ca3d15c780dcb2a394",
+        "id:arXiv:2609.32610",
+        "title:kvlingo learning kvcache translators with distillation",
+        "url:https://arxiv.org/abs/2609.32610"
+      ],
+      "record": {
+        "title": "KV-Lingo: Learning KV-Cache Translators with Distillation",
+        "source_url": "https://arxiv.org/abs/2609.32610",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models represent context with a key-value (KV) cache. Caches are model-specific: for the same text, models with different architectures or weights produce incompatible representations. This makes it costly to switch models over a shared context: although the context has already been processed by one model, the incoming model must process it again to build its own cache. We introduce KV-Lingo, a method for translating the KV cache of a source model into one that can be read by a target model. KV-Lingo consists of a collection of linear maps, typically one per layer of the target model, that are applied independently on all tokens'key and value representations. We train these maps using distillation, minimising the divergence between the target model's predictions from its native cache and those from the translated cache. We consider several model pairs spanning multiple sizes and architectures, training one translator per pair on a generic text corpus. The resulting translators preserve strong downstream performance in both small-to-large and large-to-small transfers. Since a switch then costs a linear map and a single decoding step instead of a prefill, replacing re-prefill with cache translation reduces the time to first token after a model switch by 9.6x already on a 64-token prompt for Qwen models on an Apple M3 Ultra, and by up to 29x at 32k context length on an H100. These gains make KV-Lingo particularly useful for dynamic model routing: a context can be processed by one model and handed off to another only when needed, without re-prefilling the shared prefix. We finally show that KV-Lingo can be used for seamless model switching, staying close to re-prefill across repeated switches in our multi-turn evaluations.",
+        "identifiers": [
+          "SemanticScholar:3479923a304be061633520ca3d15c780dcb2a394"
+        ],
+        "semantic_scholar_id": "3479923a304be061633520ca3d15c780dcb2a394",
+        "canonical_id": "arXiv:2609.32610",
+        "arxiv_id": "2609.32610",
+        "doi": "10.48550/arXiv.2609.32610",
+        "authors": [
+          "Valérie Castin",
+          "Keitaro Sakamoto",
+          "Anastasiia Filippova",
+          "João Monteiro",
+          "Marco Cuturi",
+          "Pierre Ablin"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.35509",
+      "identity_tokens": [
+        "id:SemanticScholar:92907789577fbc994b1afbf6fc4f86cdc9ece290",
+        "id:arXiv:2610.35509",
+        "title:governing enterprise ai traffic at scale design and operation of a policydriven multivendor llm gateway on envoy",
+        "url:https://arxiv.org/abs/2610.35509"
+      ],
+      "record": {
+        "title": "Governing Enterprise AI Traffic at Scale: Design and Operation of a Policy-Driven, Multi-Vendor LLM Gateway on Envoy",
+        "source_url": "https://arxiv.org/abs/2610.35509",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large organizations consume large language models (LLMs) from several vendors at once, each with its own API dialect, credential model, streaming protocol and pricing. Integrated directly, this heterogeneity yields credential sprawl, format lock-in, unbounded spend and inconsistent governance. We present the design and production operation of the Cosmos LLM Gateway, the governed entry point for enterprise LLM traffic at PayPal. Built on Envoy, it splits work by latency profile: I/O-bound control decisions (authentication, credential brokering, policy and budget evaluation) run in an out-of-process external-processing service, while wire-format translation, token metering and prompt-cache shaping run in-proxy as a Rust WebAssembly filter, so that, by default, streamed response body chunks never wait on an out-of-process call. Models, providers and prices are largely validated data rather than code. Governance is declarative policy evaluated by Open Policy Agent and managed through a control plane with role-scoped authoring, approvals, pilots, shadow-mode rollout, usage notifications and versioned policy bundles. For use cases that require it, a data-loss-prevention layer can block, redact or pseudonymize detected sensitive content before it reaches a provider. Spend scopes are views over per-model usage counters, so a new budget applies to spend already recorded in its window without migration. As of September 2026, the gateway serves more than 12,000 developers and hundreds of business use cases, handling roughly 200 billion tokens per day across more than 100 models at 99.999% availability to business. In a benchmark of the core request path against a synthetic upstream, it adds a median of 4 ms and a p99 of 11 ms of overhead at more than 2,200 requests per second on two 4-vCPU instances. We report the architecture, policy model, evaluation and lessons learned.",
+        "identifiers": [
+          "SemanticScholar:92907789577fbc994b1afbf6fc4f86cdc9ece290"
+        ],
+        "semantic_scholar_id": "92907789577fbc994b1afbf6fc4f86cdc9ece290",
+        "canonical_id": "arXiv:2610.35509",
+        "arxiv_id": "2610.35509",
+        "authors": [
+          "Mithun Sasidharan",
+          "Srinivasan Manoharan",
+          "Rupesh Thakur",
+          "TK Abhinav",
+          "Ashwin Hegde",
+          "Anand Gautam"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36383",
+      "identity_tokens": [
+        "id:SemanticScholar:281ce8e86300d154e4ad1ddca6bb66d61c7d73a6",
+        "id:arXiv:2610.36383",
+        "title:from generation to scoring scaling llmbased semantic labeling at linkedin",
+        "url:https://arxiv.org/abs/2610.36383"
+      ],
+      "record": {
+        "title": "From Generation to Scoring: Scaling LLM-Based Semantic Labeling at LinkedIn",
+        "source_url": "https://arxiv.org/abs/2610.36383",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For efficiency, industrial large language model (LLM) labelers often pack many candidate labels into one prompt and generate a YES/NO answer for each, even when each decision depends only on the entity and one candidate. Generating these independent decisions as one answer list couples them, spends decoding on the list, and relies on the list being well-formed. In this paper, we present an end-to-end recipe that reformulates the labeler as semantic scoring, fine-tuning it on single-candidate prompts to return each decision as one answer-token score from a prefill-only pass. We also adapt Multiple-Item Scoring (MIS) to score hundreds of candidates in one sequence with attention masked between them. Deployed for profile qualification labeling at LinkedIn, semantic scoring changes at most 0.01% of decisions when candidates are reordered and matches the agreement with reference labels that packed generation reaches only with about 4.7x as many training pairs. The MIS-based stack raises throughput over the deployed stack by 1.24x offline and 1.9x in model serving under a one-second p99 latency target. For offline batch inference, we implement MIS-based scoring as a reusable, model-agnostic Ray Data API proposed for upstream adoption. Model serving uses MIS support contributed to SGLang.",
+        "identifiers": [
+          "SemanticScholar:281ce8e86300d154e4ad1ddca6bb66d61c7d73a6"
+        ],
+        "semantic_scholar_id": "281ce8e86300d154e4ad1ddca6bb66d61c7d73a6",
+        "canonical_id": "arXiv:2610.36383",
+        "arxiv_id": "2610.36383",
+        "authors": [
+          "Jian Sheng",
+          "Sriram Vasudevan",
+          "Sundara Raman Ramachandran",
+          "Ya-Sen Hu",
+          "Jun-Yu Zhou",
+          "Xiao-Jing Ma",
+          "Hao-Lan Qin",
+          "Tiffany Zhou",
+          "Vedant Jhaveri",
+          "Ashwini Bhingare",
+          "Chinmay Kini",
+          "Qing Lan",
+          "Xiao-Qing Wang",
+          "Suleyman Cetintas",
+          "Fedor Borisyuk"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39999",
+      "identity_tokens": [
+        "id:SemanticScholar:02669033e9abf12285fd8abf7c074762c64ea66c",
+        "id:arXiv:2610.39999",
+        "title:phosv1 efficient scaling of model sleeping on a single server for autoscaling with gpucontext deduplication",
+        "url:https://arxiv.org/abs/2610.39999"
+      ],
+      "record": {
+        "title": "PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication",
+        "source_url": "https://arxiv.org/abs/2610.39999",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoscaling is a key mechanism in model-as-a-service systems, where fast scale-up is essential because the scale-up time directly determines how long a model service remains overloaded, which in turn governs serving quality. The state-of-the-art approach, model sleeping, adopted by mainstream serving engines including vLLM and SGLang, achieves near-zero-cost scale-up by pausing pre-spawned engines on the GPU. However, sleeping is not a free lunch: each sleeping model must keep its GPU context resident, and this cost grows linearly with the number of models, degrading serving performance. Because providers must support many models, they face a dilemma between fast scale-up for all models and high service performance. In this paper, we show that a single server can keep many models asleep without paying this GPU context tax. The key observation is that the contexts of sleeping models are largely duplicated: the driver (CUDA) context can be shared across models, and their GPU kernel binaries overlap heavily due to common operators and libraries. PhOSv1 deduplicates this context by transparently delegating each engine's GPU context allocation to a central daemon through API remoting; therefore, a single server can keep far more models asleep than current engines allow. Our evaluation shows that PhOSv1 matches the scale-up time of vanilla vLLM sleep mode while substantially reducing the GPU memory footprint, improving end-to-end multi-model serving performance.",
+        "identifiers": [
+          "SemanticScholar:02669033e9abf12285fd8abf7c074762c64ea66c"
+        ],
+        "semantic_scholar_id": "02669033e9abf12285fd8abf7c074762c64ea66c",
+        "canonical_id": "arXiv:2610.39999",
+        "arxiv_id": "2610.39999",
+        "authors": [
+          "Tian-Le Sun",
+          "Xing-Da Wei",
+          "Rong Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.40000",
+      "identity_tokens": [
+        "id:SemanticScholar:8e2adf138c695ce975d4e97f6a0a3a7a7563d34a",
+        "id:arXiv:2610.40000",
+        "title:normal architecting 3d ferroelectric nor flash as main memory from cofabricated beol arrays to 200bclass multiagent llms in a smartphone",
+        "url:https://arxiv.org/abs/2610.40000"
+      ],
+      "record": {
+        "title": "NORmal: Architecting 3D Ferroelectric NOR Flash as Main Memory -- From Co-Fabricated BEOL Arrays to 200B-Class Multi-Agent LLMs in a Smartphone",
+        "source_url": "https://arxiv.org/abs/2610.40000",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Smartphone agents increasingly work as teams, in which a large planner directs parallel workers across long sessions. Running such a team on the device requires 200B-class models and contexts that exceed phone DRAM many times over, yet existing tiers treat flash as storage: UFS starves per-token weight streaming, and mobile High-Bandwidth Flash (HBF) needs a redesigned SoC and cannot absorb continuous KV writes. We show that a non-volatile memory can join an unmodified LPDDR6 bus as a plain rank only if its access latency fits the DRAM timing window, a condition no NAND tier meets. We present NORmal, to our knowledge the first main-memory architecture for 3D ferroelectric NOR flash. We have fabricated and experimentally characterized back-end-of-line (BEOL) 3D FeNOR arrays that co-integrate dense 3-bit MLC and fast, high-endurance in-place-writable SLC with sub-7.5 ns sensing. NORmal turns these co-fabricated arrays into a byte-addressable, deterministic-timing load/store rank on an unmodified LPDDR6 interface through an under-array DRAM-emulation bridge, staggered bank reads with zero-cycle weight swizzling, and posted SLC writes. Across this rank and DRAM, NORmal places agent state by mutability and lifetime rather than by hotness, serving 200B-class models and persistent planner contexts in place while dynamically partitioning subchannels across agent phases. In serving-level simulation on production agent traces, NORmal is 8.9$\\times$--28.0$\\times$ faster than UFS offloading, within 0.4% of an unlimited-DRAM ideal, and 2.8$\\times$--6.3$\\times$ faster than HBF on sessions beyond 256K tokens, with 8.1$\\times$--17.8$\\times$ less memory energy per token.",
+        "identifiers": [
+          "SemanticScholar:8e2adf138c695ce975d4e97f6a0a3a7a7563d34a"
+        ],
+        "semantic_scholar_id": "8e2adf138c695ce975d4e97f6a0a3a7a7563d34a",
+        "canonical_id": "arXiv:2610.40000",
+        "arxiv_id": "2610.40000",
+        "authors": [
+          "Zhuo-Ran Li",
+          "Zhuo-Hang Bian",
+          "Yi-Bo Zhao",
+          "Xu-Xiao Yang",
+          "You-Wei Zhuo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f37601a3ba923d6985fa7c3654da18ed69a5bf54d38bc1a715b42ac965d6dd43",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

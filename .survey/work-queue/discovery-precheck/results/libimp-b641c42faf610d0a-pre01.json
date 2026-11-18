@@ -1,0 +1,217 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b641c42faf610d0a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b641c42faf61",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.11221",
+    "arXiv:2603.25155",
+    "arXiv:2604.02816",
+    "arXiv:2604.22281",
+    "arXiv:2606.06034",
+    "arXiv:2606.21869",
+    "arXiv:2607.20507",
+    "arXiv:2608.27963",
+    "arXiv:2609.10297"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 8,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 8,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:21.650982+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.11221",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.11221"
+    },
+    {
+      "requested_id": "arXiv:2603.25155",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02816",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.02816"
+    },
+    {
+      "requested_id": "arXiv:2604.22281",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.22281"
+    },
+    {
+      "requested_id": "arXiv:2606.06034",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.06034"
+    },
+    {
+      "requested_id": "arXiv:2606.21869",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.21869"
+    },
+    {
+      "requested_id": "arXiv:2607.20507",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/2026.emnlp-main.1223"
+    },
+    {
+      "requested_id": "arXiv:2608.27963",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.27963"
+    },
+    {
+      "requested_id": "arXiv:2609.10297",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.10297"
+    }
+  ],
+  "results": [
+    {
+      "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.25155",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models are promising for clinical visual question answering tasks, but scaling to 3D imaging is hindered by high computational costs. Prior methods often rely on 2D slices or fixed-length token compression, disrupting volumetric continuity and obscuring subtle findings. We present Photon, a framework that represents 3D medical volumes with token sequences of variable length. Photon introduces instruction-conditioned token scheduling and surrogate gradient propagation to adaptively reduce tokens during both training and inference, which lowers computational cost while mitigating the attention dilution caused by redundant tokens. It incorporates a custom backpropagation rule with gradient restoration to enable differentiable optimization despite discrete token drop. To stabilize token compression and ensure reliable use of visual evidence, Photon further applies regularization objectives that mitigate language-only bias and improve reliability. Experiments on diverse medical visual question answering tasks show that Photon achieves state-of-the-art accuracy while reducing resource usage and accelerating both training and inference.",
+      "identifiers": [
+        "SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb"
+      ],
+      "semantic_scholar_id": "f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+      "canonical_id": "arXiv:2603.25155",
+      "arxiv_id": "2603.25155",
+      "doi": "10.48550/arXiv.2603.25155",
+      "authors": [
+        "Cheng-Yu Fang",
+        "Heng Guo",
+        "Zhengyao Jiang",
+        "Chun-Ming He",
+        "Xiu Li",
+        "Min-Feng Xu"
+      ],
+      "priority": 122,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 122,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.25155",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25155",
+        "id:SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+        "id:arXiv:2603.25155",
+        "title:photon speedup volume understanding with efficient multimodal large language models",
+        "url:https://arxiv.org/abs/2603.25155"
+      ],
+      "record": {
+        "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2603.25155",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models are promising for clinical visual question answering tasks, but scaling to 3D imaging is hindered by high computational costs. Prior methods often rely on 2D slices or fixed-length token compression, disrupting volumetric continuity and obscuring subtle findings. We present Photon, a framework that represents 3D medical volumes with token sequences of variable length. Photon introduces instruction-conditioned token scheduling and surrogate gradient propagation to adaptively reduce tokens during both training and inference, which lowers computational cost while mitigating the attention dilution caused by redundant tokens. It incorporates a custom backpropagation rule with gradient restoration to enable differentiable optimization despite discrete token drop. To stabilize token compression and ensure reliable use of visual evidence, Photon further applies regularization objectives that mitigate language-only bias and improve reliability. Experiments on diverse medical visual question answering tasks show that Photon achieves state-of-the-art accuracy while reducing resource usage and accelerating both training and inference.",
+        "identifiers": [
+          "SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb"
+        ],
+        "semantic_scholar_id": "f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+        "canonical_id": "arXiv:2603.25155",
+        "arxiv_id": "2603.25155",
+        "doi": "10.48550/arXiv.2603.25155",
+        "authors": [
+          "Cheng-Yu Fang",
+          "Heng Guo",
+          "Zhengyao Jiang",
+          "Chun-Ming He",
+          "Xiu Li",
+          "Min-Feng Xu"
+        ],
+        "priority": 122,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 122,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 237,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:34a8e06e5a1aee1bad15fbd66c0fd1f3987d24402be09fbed3fe8cf5310fe948",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

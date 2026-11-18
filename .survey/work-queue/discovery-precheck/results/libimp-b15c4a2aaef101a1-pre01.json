@@ -1,0 +1,291 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b15c4a2aaef101a1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b15c4a2aaef1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2508.15371",
+    "arXiv:2606.10944",
+    "arXiv:2606.13862",
+    "arXiv:2606.23961",
+    "arXiv:2607.27692",
+    "arXiv:2608.02947",
+    "arXiv:2608.08506",
+    "arXiv:2609.33477"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "77b0d8d1f125681ff6f1ea5734693b7db34d5f97",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:23:21.663828+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2508.15371",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/indiscon66021.2025.11254640"
+    },
+    {
+      "requested_id": "arXiv:2606.10944",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.13862",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.23961",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.23961"
+    },
+    {
+      "requested_id": "arXiv:2607.27692",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.27692"
+    },
+    {
+      "requested_id": "arXiv:2608.02947",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.02947"
+    },
+    {
+      "requested_id": "arXiv:2608.08506",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.08506"
+    },
+    {
+      "requested_id": "arXiv:2609.33477",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.33477"
+    }
+  ],
+  "results": [
+    {
+      "title": "Express Language Modeling",
+      "source_url": "https://arxiv.org/abs/2606.10944",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering $\\log^{3/2}(n)/s$ approximation error with only $O(s)$ memory and $O(s^2 \\log^2(n))$ compression overhead for a sequence of length $n$. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome four resource bottlenecks in the language modeling pipeline: long-context prefill, KV cache compression, long-form memory-constrained decoding, and long-form compute-constrained decoding.",
+      "identifiers": [
+        "SemanticScholar:6a4b42c1a75cef0f73536278dc064889848ae892"
+      ],
+      "semantic_scholar_id": "6a4b42c1a75cef0f73536278dc064889848ae892",
+      "canonical_id": "arXiv:2606.10944",
+      "arxiv_id": "2606.10944",
+      "doi": "10.48550/arXiv.2606.10944",
+      "authors": [
+        "Albert Gong",
+        "A. Carrell",
+        "Raaz Dwivedi",
+        "Lester W. Mackey"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SuperThoughts: Reasoning Tokens in Superposition",
+      "source_url": "https://arxiv.org/abs/2606.13862",
+      "year": 2026,
+      "published": "2026-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long Chain-of-Thought (CoT) reasoning improves LLM problem-solving but is computationally expensive due to sequential token generation. While recent works explore reasoning in continuous latent spaces to bypass discrete token generation, they often struggle with training stability and fail to scale to complex, long-horizon tasks due to lack of supervision signal. We propose SuperThoughts, which compresses pairs of consecutive CoT tokens into single latent representations and decodes two tokens per step via a lightweight Multi-Token Prediction (MTP) module. This preserves discrete token supervision at training time while doubling throughput at inference time. We finetune Qwen2.5-Math-1.5B-Instruct, Qwen2.5-Math-7B-Instruct, Qwen2.5-Math-14B-Instruct, and evaluate on MATH500, AMC, OlympiadBench, and GPQA-Diamond. With a confidence-based adaptive mechanism that falls back to standard decoding when uncertain, SuperThoughts achieves $\\sim$20--30\\% CoT length reduction while maintaining accuracy with minimal degradation (1-2 points accuracy drop on most tasks).",
+      "identifiers": [
+        "SemanticScholar:782fe6d205948516c43573419e0cc9aa43f5c7eb"
+      ],
+      "semantic_scholar_id": "782fe6d205948516c43573419e0cc9aa43f5c7eb",
+      "canonical_id": "arXiv:2606.13862",
+      "arxiv_id": "2606.13862",
+      "doi": "10.48550/arXiv.2606.13862",
+      "authors": [
+        "Zheyang Xiong",
+        "Shivam Garg",
+        "Max Yu",
+        "Vaishnavi Shrivastava",
+        "Hao-Yu Zhao",
+        "Anastasios Kyrillidis",
+        "Dimitris Papailiopoulos"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.10944",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.10944",
+        "id:SemanticScholar:6a4b42c1a75cef0f73536278dc064889848ae892",
+        "id:arXiv:2606.10944",
+        "title:express language modeling",
+        "url:https://arxiv.org/abs/2606.10944"
+      ],
+      "record": {
+        "title": "Express Language Modeling",
+        "source_url": "https://arxiv.org/abs/2606.10944",
+        "year": 2026,
+        "published": "2026-06-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering $\\log^{3/2}(n)/s$ approximation error with only $O(s)$ memory and $O(s^2 \\log^2(n))$ compression overhead for a sequence of length $n$. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome four resource bottlenecks in the language modeling pipeline: long-context prefill, KV cache compression, long-form memory-constrained decoding, and long-form compute-constrained decoding.",
+        "identifiers": [
+          "SemanticScholar:6a4b42c1a75cef0f73536278dc064889848ae892"
+        ],
+        "semantic_scholar_id": "6a4b42c1a75cef0f73536278dc064889848ae892",
+        "canonical_id": "arXiv:2606.10944",
+        "arxiv_id": "2606.10944",
+        "doi": "10.48550/arXiv.2606.10944",
+        "authors": [
+          "Albert Gong",
+          "A. Carrell",
+          "Raaz Dwivedi",
+          "Lester W. Mackey"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.13862",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.13862",
+        "id:SemanticScholar:782fe6d205948516c43573419e0cc9aa43f5c7eb",
+        "id:arXiv:2606.13862",
+        "title:superthoughts reasoning tokens in superposition",
+        "url:https://arxiv.org/abs/2606.13862"
+      ],
+      "record": {
+        "title": "SuperThoughts: Reasoning Tokens in Superposition",
+        "source_url": "https://arxiv.org/abs/2606.13862",
+        "year": 2026,
+        "published": "2026-06-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long Chain-of-Thought (CoT) reasoning improves LLM problem-solving but is computationally expensive due to sequential token generation. While recent works explore reasoning in continuous latent spaces to bypass discrete token generation, they often struggle with training stability and fail to scale to complex, long-horizon tasks due to lack of supervision signal. We propose SuperThoughts, which compresses pairs of consecutive CoT tokens into single latent representations and decodes two tokens per step via a lightweight Multi-Token Prediction (MTP) module. This preserves discrete token supervision at training time while doubling throughput at inference time. We finetune Qwen2.5-Math-1.5B-Instruct, Qwen2.5-Math-7B-Instruct, Qwen2.5-Math-14B-Instruct, and evaluate on MATH500, AMC, OlympiadBench, and GPQA-Diamond. With a confidence-based adaptive mechanism that falls back to standard decoding when uncertain, SuperThoughts achieves $\\sim$20--30\\% CoT length reduction while maintaining accuracy with minimal degradation (1-2 points accuracy drop on most tasks).",
+        "identifiers": [
+          "SemanticScholar:782fe6d205948516c43573419e0cc9aa43f5c7eb"
+        ],
+        "semantic_scholar_id": "782fe6d205948516c43573419e0cc9aa43f5c7eb",
+        "canonical_id": "arXiv:2606.13862",
+        "arxiv_id": "2606.13862",
+        "doi": "10.48550/arXiv.2606.13862",
+        "authors": [
+          "Zheyang Xiong",
+          "Shivam Garg",
+          "Max Yu",
+          "Vaishnavi Shrivastava",
+          "Hao-Yu Zhao",
+          "Anastasios Kyrillidis",
+          "Dimitris Papailiopoulos"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:54c503bad72e678a86a76953faa01af39c3d62c45795050f0572911129b33b24",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
