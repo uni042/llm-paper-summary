@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e96d56a279b5f841-border-009",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2510.18087",
+  "reason": "計画つき拡散Planned Diffusion。デノイズ順序をヒューリスティクスで決める問題に対し、まず自己回帰で意味的に独立なチャンクへの分割計画を生成し、その順序で拡散生成する単一モデルを訓練する。デコード方式の工夫だが、訓練を要する生成パラダイムであり境界。",
+  "title": "Planned Diffusion",
+  "identity_tokens": [
+    "arXiv:2510.18087",
+    "https://arxiv.org/abs/2510.18087"
+  ],
+  "linked_from": [
+    "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+    "diffusion language model inference / KV cache / training-free acceleration",
+    "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+    "inference-systems",
+    "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+    "投機的デコード / 分布保存型デコード高速化",
+    "投機的復号 / 無損失復号高速化",
+    "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

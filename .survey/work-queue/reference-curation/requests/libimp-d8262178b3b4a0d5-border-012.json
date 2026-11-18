@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d8262178b3b4a0d5-border-012",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2511.13223",
+  "reason": "推論LLM向けトークン圧縮TokenSqueeze。長いCoTのトークン費用に対し、性能を保ちながら推論長を下げる長から短への圧縮。推論効率が目的だが、圧縮の実体はモデルの適応であり境界。",
+  "title": "TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs",
+  "identity_tokens": [
+    "arXiv:2511.13223",
+    "https://arxiv.org/abs/2511.13223"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+    "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+    "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+    "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
