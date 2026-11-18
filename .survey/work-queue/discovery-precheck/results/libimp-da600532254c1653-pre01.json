@@ -1,0 +1,835 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-da600532254c1653-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-da600532254c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/coins65080.2025.11125768",
+    "DOI:10.1109/ijcnn69854.2026.11729267",
+    "DOI:10.1109/iscas66217.2026.11562248",
+    "DOI:10.1109/iwqos70441.2026.11661114",
+    "DOI:10.1109/taslpro.2025.3613948",
+    "DOI:10.1109/tpds.2026.3741399",
+    "DOI:10.1145/3788089",
+    "DOI:10.1145/3801489.3806878",
+    "DOI:10.1145/3820171.3806875",
+    "DOI:10.52202/085713-4538",
+    "SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df",
+    "arXiv:2410.03960",
+    "arXiv:2505.16162",
+    "arXiv:2505.20776",
+    "arXiv:2609.14144",
+    "arXiv:2610.27123"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 16,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8655cecbbdc5cd632ddfb0c8e8b399fcd5dd48b4",
+  "raw_search_result_count": 15,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 16,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T22:59:44.964424+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/coins65080.2025.11125768",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ijcnn69854.2026.11729267",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas66217.2026.11562248",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iwqos70441.2026.11661114",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/taslpro.2025.3613948",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tpds.2026.3741399",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3788089",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:characterizing performanceenergy tradeoffs of large language models in multirequest workflows"
+    },
+    {
+      "requested_id": "DOI:10.1145/3801489.3806878",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:optimal scheduling algorithms for llm inference theory and practice"
+    },
+    {
+      "requested_id": "DOI:10.1145/3820171.3806875",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:sageserve optimizing llm serving on cloud data centers with forecast aware autoscaling"
+    },
+    {
+      "requested_id": "DOI:10.52202/085713-4538",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single",
+      "error": "provider identifier mismatch: returned a different paper"
+    },
+    {
+      "requested_id": "arXiv:2410.03960",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:swiftkv fast prefilloptimized inference with knowledgepreserving model transformation"
+    },
+    {
+      "requested_id": "arXiv:2505.16162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization"
+    },
+    {
+      "requested_id": "arXiv:2505.20776",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:specextend a dropin enhancement for speculative decoding of long sequences"
+    },
+    {
+      "requested_id": "arXiv:2609.14144",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "rejection_ledger",
+      "matched_token": "id:arXiv:2609.14144"
+    },
+    {
+      "requested_id": "arXiv:2610.27123",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2610.27123",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models reduce computation through sparse expert activation, but deployment still requires storing a large number of expert parameters. We study post-training expert pruning using task-domain calibration data as a subset-selection problem: given a pretrained MoE layer, select a fixed number of experts that best reconstruct its original output. Exact subset search is combinatorial and becomes intractable for modern MoE models with many experts per layer. We develop OptEP, a scalable continuous relaxation that directly optimizes differentiable expert-selection variables, followed by a lightweight reconstruction-based update of the retained expert weights. Across multiple MoE architectures and tasks spanning mathematical reasoning and code generation, our approach improves over the strongest existing expert-pruning baselines, with absolute accuracy gains of up to 15.05% on Qwen3-30B-A3B, 14.55% on Qwen3-235B-A22B, 11.06% on GLM-4.5-Air, and 16.20% on Mixtral-8x7B. The improvements are particularly pronounced under aggressive pruning, demonstrating that reconstruction-driven expert selection and weight adaptation can preserve substantially more of the original model's performance while reducing the number of retained experts.",
+      "identifiers": [
+        "SemanticScholar:cc2ae4f5808905bdb1b72519c651a07e88d1de79"
+      ],
+      "semantic_scholar_id": "cc2ae4f5808905bdb1b72519c651a07e88d1de79",
+      "canonical_id": "arXiv:2610.27123",
+      "arxiv_id": "2610.27123",
+      "authors": [
+        "Jelena Markovic-Voronov",
+        "P. Prastakos",
+        "Kayhan Behdin",
+        "Jincheng Cao",
+        "Zhi-Peng Wang",
+        "Shayan Mohajer Hamidi",
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "Wen-Hui Zhu",
+        "R. Mazumder"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective",
+      "source_url": "https://doi.org/10.52202/085713-4538",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ". Abstract Mixture-of-Experts (MoE) architectures enable efficient scaling of large language models but face prohibitive memory demands due to massive parameterization. Existing pruning methods rely on heuristic metrics or impractical enumeration of expert subsets, leading to suboptimal performance or scalability. In this paper, we propose Shapley-MoE, an efficient pruning method for MoE models inspired by cooperative game theory. By quantifying each expert’s contribution via Shapley value, our method identifies important experts without exhaustive combination evaluations. To overcome the NP-hard complexity of exact Shapley computation, we introduce a Monte Carlo sampling strategy for efficient approximation that reduces complexity to quadratic time. However, vanilla Monte Carlo sampling still faces issues of insufficient estimation accuracy and low sampling efficiency. To address these issues, we further propose two novel methods to improve sampling accuracy and efficiency: (1) Early Truncation, which early terminates unstable sampling steps caused by overly small expert subsets, and (2) Router-Guided Importance Sampling, which prioritize sampling important expert subsets using gating activation probabilities. Both theoretical and experimental analyses show that both methods can accelerate Shapley value estimation and improve accuracy. Extensive empirical evaluations demonstrate that our pruned MoE models outperform existing expert pruning methods. Notably, when applied to the Qwen2-57B-A14B model, our method reduces the number of experts by 25 % with only a 0.92 increase in perplexity and over 96.4 % of the average zero-shot accuracy is maintained.",
+      "identifiers": [
+        "SemanticScholar:81c8ef664f6fb914963403aa370f321f2010f8f1"
+      ],
+      "semantic_scholar_id": "81c8ef664f6fb914963403aa370f321f2010f8f1",
+      "doi": "10.52202/085713-4538",
+      "canonical_id": "DOI:10.52202/085713-4538",
+      "authors": [
+        "Wei-Zhong Huang",
+        "Yuxin Zhang",
+        "Xia-Wu Zheng",
+        "Fei Chao",
+        "Rongrong Ji",
+        "Liu-Juan Cao"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "UniMAC: Multi-Precision MAC with a Unified Computing Architecture for Efficient Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562248",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization techniques vary considerably in their requirements for computational precision. Although prior works have introduced various multi-precision multiply-accumulate (MAC) units, most offer limited precision coverage. Moreover, most designs focus on standard arithmetic and lack optimizations for inference in large language models (LLMs). To overcome these limitations, this paper proposes UniMAC, a multi-precision MAC architecture that unifies integer, floating-point, and FP-INT operations within a single computing datapath by employing a new General-Purpose Data Partitioning (GPDP) method and an Iterative Neighbor Grouping Scheduling (INGS) strategy. In addition, we implement two acceleration modes for FP16 guided by an on-the-fly activation-to-activation (act-to-act) search (OAS) algorithm to improve throughput and efficiency in act-to-act computations, a dominant contributor to inference latency in LLMs with long contexts. Compared with prior works, the proposed design supports a wider range of precision formats while delivering up to 3.9× higher energy efficiency in FP8 and 2× for act-to-act computations in FP16.",
+      "identifiers": [
+        "SemanticScholar:c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc"
+      ],
+      "semantic_scholar_id": "c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc",
+      "doi": "10.1109/ISCAS66217.2026.11562248",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562248",
+      "authors": [
+        "Xiao Cong",
+        "Xingyuan Hu",
+        "Jun-Tao Liu",
+        "Xulong Zhang",
+        "Hao-Ran Geng",
+        "Qi Wu",
+        "Yuan Du",
+        "Li Du"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PrismKV: Harmonizing Heterogeneous Compression Strategies through Layer-adaptive Partition Scoring",
+      "source_url": "https://doi.org/10.1109/IJCNN69854.2026.11729267",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) encounter significant scalability bottlenecks in long-context scenarios due to the prohibitive memory overhead of the Key-Value (KV) cache. Current optimization paradigms often overlook the hierarchical heterogeneity of Transformer layers, leading to suboptimal resource allocation. To address this, we propose PrismKV, a novel KV cache compression framework that leverages adaptive partition scoring to orchestrate heterogeneous compression strategies. PrismKV employs an unsupervised, layer-adaptive scoring function that jointly evaluates compositional redundancy and attention sensitivity to dynamically bifurcate Transformer layers into distinct operational zones. For shallow regions characterized by high directional alignment, we implement a reconstructible codebook-based replacement strategy to achieve high-ratio structured compression by clustering redundant vectors. Conversely, for deep regions exhibiting sparse, task-specific attention, we transition to an importance-aware dynamic eviction policy that quantifies spatiotemporal saliency for precise information retention. Experimental results across three prevailing LLMs demonstrate that PrismKV reduces the KV cache to 10.8% of its original size with a marginal performance degradation of only 1.9%. Our approach consistently outperforms existing baselines in long-context benchmarks and achieves 65.8% decoding acceleration in 32K context scenarios. By precisely aligning heterogeneous compression primitives with the intrinsic evolution of layer-wise representations, PrismKV achieves a superior balance between hardware-level inference efficiency and high-fidelity generation.",
+      "identifiers": [
+        "SemanticScholar:5f7be856871ea02b9410cee13aa7795c1296390e"
+      ],
+      "semantic_scholar_id": "5f7be856871ea02b9410cee13aa7795c1296390e",
+      "doi": "10.1109/IJCNN69854.2026.11729267",
+      "canonical_id": "DOI:10.1109/IJCNN69854.2026.11729267",
+      "authors": [
+        "Dong-Cheng Shi",
+        "Yong-Xiang Cao",
+        "Hong-Xu Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UPServe: Backend Agnostic Proxy for Black-box Heterogeneous LLM Scheduling",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661114",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference is increasingly deployed in heterogeneous environments, demanding efficient serving across diverse hardware platforms and backend engines. While existing load balancers and specialized serving systems facilitate request routing, they still suffer from various limitations, manifested in metric misalignment and observability gaps of black-box backends, non-linear performance degradation under heterogeneity, and conflicting multi-objective optimization goals. To solve these problems, we propose UPServe, a backendagnostic proxy designed for stateless LLM serving, which features three key designs: (1) a phase-aware cost modeling to estimate inference costs without relying on engine internals, (2) a unified score-based scheduling mechanism that integrates phase-aware concurrency and hardware speed normalization to handle heterogeneous non-linear degradation, and (3) an online scheduling algorithm named Phase-Aware Weighted Least Connections (PA-WLC) that drives adaptive dispatching to balance tail latency and aggregate throughput. Finally, we implement UPServe as a transparent proxy and conduct experiments for evaluations in heterogeneous environments. Comparison results demonstrate that UPServe significantly outperforms existing baselines, which reduces tail latency by up to 2.6$\\times$ (P99 TTFT) and 2.1$\\times$ (P99 TPOT), and improves aggregate throughput by up to 16%. Besides, UPServe operates without modifying inference engine internals, and incurs a negligible scheduling overhead of less than 0.3 ms per request.",
+      "identifiers": [
+        "SemanticScholar:a1b6038c1758644d7ace1e028d73270bf3c1490e"
+      ],
+      "semantic_scholar_id": "a1b6038c1758644d7ace1e028d73270bf3c1490e",
+      "doi": "10.1109/IWQoS70441.2026.11661114",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661114",
+      "authors": [
+        "Hao-Rui Wan",
+        "Chen-Yang Hei",
+        "Fu-Liang Li",
+        "Cheng-Xi Gao",
+        "Yuwen Jia",
+        "Tong-Rui Liu",
+        "Xing-Wei Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MixPQ: Joint Pruning and Quantization for Speech and Language Foundation Models Compression",
+      "source_url": "https://doi.org/10.1109/TASLPRO.2025.3613948",
+      "year": 2025,
+      "published": null,
+      "venue": "IEEE Transactions on Audio, Speech, and Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large speech and language foundation models are heavily parameterized. This paper introduces MixPQ, a unified framework for the efficient and robust compression of these models. First, we propose a Hessian-aware, layer-wise mixed-sparsity pruning algorithm designed for both language and speech models, yielding promising results even at high sparsity levels. This approach introduces improved saliency criteria for more accurate selection of pruning elements and dynamically assigns different sparsity ratios to weight matrices based on Hessian sensitivity. Second, we present an outlier-aware, column-level mixed-precision quantization framework. This framework introduces a novel quantization sensitivity metric based on the outlier ratio to assess parameter importance and incorporates a mixed outlier reservation strategy to adaptively preserve full-precision outliers across columns in weight matrices, achieving significant performance gains with minimal memory overhead. Experimental results show that our pruning algorithm achieves 2x compression while maintaining performance. And the quantization framework delivers 4-bit lossless compression. In lower-bit scenarios, MixPQ provides an equivalent 2.12-bit model, yielding approximately 16x compression but only with $< $1% WER performance loss in speech recognition. Compared to previous methods, MixPQ demonstrates state-of-the-art performance in various models, particularly at high compression ratios. Moreover, the combination of pruning and quantization can achieve better performance with a higher compression ratio. Finally, the inference analysis highlight MixPQ’s practical benefits in speed and memory efficiency.",
+      "identifiers": [
+        "SemanticScholar:bfd991a03c86fdf6e9f412a68cdf4231f0580e77"
+      ],
+      "semantic_scholar_id": "bfd991a03c86fdf6e9f412a68cdf4231f0580e77",
+      "doi": "10.1109/TASLPRO.2025.3613948",
+      "canonical_id": "DOI:10.1109/TASLPRO.2025.3613948",
+      "authors": [
+        "Bei Liu",
+        "Tianteng Gu",
+        "Hao-Yu Wang",
+        "Yan-Min Qian"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiM Pruner: Efficient Pruning for Large Language-in-Memory Models",
+      "source_url": "https://doi.org/10.1109/COINS65080.2025.11125768",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "Coins",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized the fields of language understanding and generation, positioning themselves as transformative tools across a wide array of applications as general-purpose task solvers. However, the immense size of LLMs introduces significant challenges for deployment on traditional computing systems, largely due to the inherent von Neumann bottleneck. Recently, Computein-Memory (CiM) architectures have emerged as a groundbreaking solution to accelerate Deep Learning (DL) models, seamlessly integrating computation within the memory fabric to overcome the memory wall bottleneck. While there has been recent progress in mapping generative AIs and LLMs to CiM architectures, the deployment of these models with hundreds of billions of parameters remains very challenging, particularly for edge computing environments. To address the specific challenges of deploying LLMs in memory-centric architectures, we coin the term Language-in-Memory (LiM) to describe a new class of models specifically optimized for such systems. In this context, we present, for the first time, LiM Pruner, a suite of LiM compression techniques specifically designed to induce sparsity in pretrained LLMs. Additionally, we investigate data-path architectures to enhance support for pruned LiM models by addressing potential dislocation challenges. Our comprehensive evaluation of the LiM Pruner on the LLaMA-2 model demonstrates its superior performance compared to traditional pruning techniques.",
+      "identifiers": [
+        "SemanticScholar:78020bbbe4a3635955c744c2cae30fc5c64cf400"
+      ],
+      "semantic_scholar_id": "78020bbbe4a3635955c744c2cae30fc5c64cf400",
+      "doi": "10.1109/COINS65080.2025.11125768",
+      "canonical_id": "DOI:10.1109/COINS65080.2025.11125768",
+      "authors": [
+        "Sri Sai Rakesh Nakkilla",
+        "Aniruddha Datta",
+        "Ashish Reddy Bommana",
+        "Jeff Zhang",
+        "Farshad Firouzi",
+        "K. Chakrabarty"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 471,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ALPS: An Application-Aware, Length-Predictive Scheduler for Efficient LLM Inference at Edge",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3741399",
+      "year": 2026,
+      "published": "2026-12-01",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) on resource-constrained edge server clusters introduces a critical systems challenge: achieving high throughput and low latency under strict GPU memory and bandwidth limits. Current schedulers are ill-suited for this environment, as they treat requests independently, incurring two major inefficiencies. They waste compute and memory on redundant prefill computations for identical, lengthy system prompts across applications, and their phase-agnostic policies create suboptimal batches that poorly overlap compute-intensive prefills with memory-bound decodes, leading to GPU under-utilization. This paper presents ALPS, an application-aware, length-predictive scheduler for request serving for edge LLM inference. ALPS transforms the queueing layer into an intelligent orchestrator with two core techniques: (i) semantic-aware request grouping, which hashes requests by system prompt to co-locate them, reducing redundant prefill computations; and (ii) phase-aware scheduling, which uses a lightweight output token bucket predictor to estimate decode/prefill ratios and strategically reorders requests to maximize prefill-decode overlap in continuous hybrid batching. Augmented with SLO-aware preemption, ALPS is implemented as a practical scheduling layer atop vLLM. Extensive evaluations on an edge GPU testbed with diverse models and production workloads demonstrate that ALPS improves token throughput by up to 1.6× and reduces end-to-end latency by up to 2.4× compared to state-of-the-art schedulers.",
+      "identifiers": [
+        "SemanticScholar:50755d379e830609cd5ccf810b5e1ccba2582507"
+      ],
+      "semantic_scholar_id": "50755d379e830609cd5ccf810b5e1ccba2582507",
+      "doi": "10.1109/TPDS.2026.3741399",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3741399",
+      "authors": [
+        "Chen Chen",
+        "Lei Jiao",
+        "R. Mortier"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": -13,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.27123",
+      "identity_tokens": [
+        "id:SemanticScholar:cc2ae4f5808905bdb1b72519c651a07e88d1de79",
+        "id:arXiv:2610.27123",
+        "title:reconstructionoptimized expert pruning for mixtureofexperts language models",
+        "url:https://arxiv.org/abs/2610.27123"
+      ],
+      "record": {
+        "title": "Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models",
+        "source_url": "https://arxiv.org/abs/2610.27123",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models reduce computation through sparse expert activation, but deployment still requires storing a large number of expert parameters. We study post-training expert pruning using task-domain calibration data as a subset-selection problem: given a pretrained MoE layer, select a fixed number of experts that best reconstruct its original output. Exact subset search is combinatorial and becomes intractable for modern MoE models with many experts per layer. We develop OptEP, a scalable continuous relaxation that directly optimizes differentiable expert-selection variables, followed by a lightweight reconstruction-based update of the retained expert weights. Across multiple MoE architectures and tasks spanning mathematical reasoning and code generation, our approach improves over the strongest existing expert-pruning baselines, with absolute accuracy gains of up to 15.05% on Qwen3-30B-A3B, 14.55% on Qwen3-235B-A22B, 11.06% on GLM-4.5-Air, and 16.20% on Mixtral-8x7B. The improvements are particularly pronounced under aggressive pruning, demonstrating that reconstruction-driven expert selection and weight adaptation can preserve substantially more of the original model's performance while reducing the number of retained experts.",
+        "identifiers": [
+          "SemanticScholar:cc2ae4f5808905bdb1b72519c651a07e88d1de79"
+        ],
+        "semantic_scholar_id": "cc2ae4f5808905bdb1b72519c651a07e88d1de79",
+        "canonical_id": "arXiv:2610.27123",
+        "arxiv_id": "2610.27123",
+        "authors": [
+          "Jelena Markovic-Voronov",
+          "P. Prastakos",
+          "Kayhan Behdin",
+          "Jincheng Cao",
+          "Zhi-Peng Wang",
+          "Shayan Mohajer Hamidi",
+          "Yuanda Xu",
+          "Zheng-Ze Zhou",
+          "Wen-Hui Zhu",
+          "R. Mazumder"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/085713-4538",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-4538",
+        "id:SemanticScholar:81c8ef664f6fb914963403aa370f321f2010f8f1",
+        "title:discovering important experts for mixtureofexperts models pruning through a theoretical perspective",
+        "url:https://doi.org/10.52202/085713-4538"
+      ],
+      "record": {
+        "title": "Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective",
+        "source_url": "https://doi.org/10.52202/085713-4538",
+        "year": 2025,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ". Abstract Mixture-of-Experts (MoE) architectures enable efficient scaling of large language models but face prohibitive memory demands due to massive parameterization. Existing pruning methods rely on heuristic metrics or impractical enumeration of expert subsets, leading to suboptimal performance or scalability. In this paper, we propose Shapley-MoE, an efficient pruning method for MoE models inspired by cooperative game theory. By quantifying each expert’s contribution via Shapley value, our method identifies important experts without exhaustive combination evaluations. To overcome the NP-hard complexity of exact Shapley computation, we introduce a Monte Carlo sampling strategy for efficient approximation that reduces complexity to quadratic time. However, vanilla Monte Carlo sampling still faces issues of insufficient estimation accuracy and low sampling efficiency. To address these issues, we further propose two novel methods to improve sampling accuracy and efficiency: (1) Early Truncation, which early terminates unstable sampling steps caused by overly small expert subsets, and (2) Router-Guided Importance Sampling, which prioritize sampling important expert subsets using gating activation probabilities. Both theoretical and experimental analyses show that both methods can accelerate Shapley value estimation and improve accuracy. Extensive empirical evaluations demonstrate that our pruned MoE models outperform existing expert pruning methods. Notably, when applied to the Qwen2-57B-A14B model, our method reduces the number of experts by 25 % with only a 0.92 increase in perplexity and over 96.4 % of the average zero-shot accuracy is maintained.",
+        "identifiers": [
+          "SemanticScholar:81c8ef664f6fb914963403aa370f321f2010f8f1"
+        ],
+        "semantic_scholar_id": "81c8ef664f6fb914963403aa370f321f2010f8f1",
+        "doi": "10.52202/085713-4538",
+        "canonical_id": "DOI:10.52202/085713-4538",
+        "authors": [
+          "Wei-Zhong Huang",
+          "Yuxin Zhang",
+          "Xia-Wu Zheng",
+          "Fei Chao",
+          "Rongrong Ji",
+          "Liu-Juan Cao"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas66217.2026.11562248",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas66217.2026.11562248",
+        "id:SemanticScholar:c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc",
+        "title:unimac multiprecision mac with a unified computing architecture for efficient large language model inference",
+        "url:https://doi.org/10.1109/ISCAS66217.2026.11562248"
+      ],
+      "record": {
+        "title": "UniMAC: Multi-Precision MAC with a Unified Computing Architecture for Efficient Large Language Model Inference",
+        "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562248",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization techniques vary considerably in their requirements for computational precision. Although prior works have introduced various multi-precision multiply-accumulate (MAC) units, most offer limited precision coverage. Moreover, most designs focus on standard arithmetic and lack optimizations for inference in large language models (LLMs). To overcome these limitations, this paper proposes UniMAC, a multi-precision MAC architecture that unifies integer, floating-point, and FP-INT operations within a single computing datapath by employing a new General-Purpose Data Partitioning (GPDP) method and an Iterative Neighbor Grouping Scheduling (INGS) strategy. In addition, we implement two acceleration modes for FP16 guided by an on-the-fly activation-to-activation (act-to-act) search (OAS) algorithm to improve throughput and efficiency in act-to-act computations, a dominant contributor to inference latency in LLMs with long contexts. Compared with prior works, the proposed design supports a wider range of precision formats while delivering up to 3.9× higher energy efficiency in FP8 and 2× for act-to-act computations in FP16.",
+        "identifiers": [
+          "SemanticScholar:c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc"
+        ],
+        "semantic_scholar_id": "c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc",
+        "doi": "10.1109/ISCAS66217.2026.11562248",
+        "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562248",
+        "authors": [
+          "Xiao Cong",
+          "Xingyuan Hu",
+          "Jun-Tao Liu",
+          "Xulong Zhang",
+          "Hao-Ran Geng",
+          "Qi Wu",
+          "Yuan Du",
+          "Li Du"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ijcnn69854.2026.11729267",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn69854.2026.11729267",
+        "id:SemanticScholar:5f7be856871ea02b9410cee13aa7795c1296390e",
+        "title:prismkv harmonizing heterogeneous compression strategies through layeradaptive partition scoring",
+        "url:https://doi.org/10.1109/IJCNN69854.2026.11729267"
+      ],
+      "record": {
+        "title": "PrismKV: Harmonizing Heterogeneous Compression Strategies through Layer-adaptive Partition Scoring",
+        "source_url": "https://doi.org/10.1109/IJCNN69854.2026.11729267",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) encounter significant scalability bottlenecks in long-context scenarios due to the prohibitive memory overhead of the Key-Value (KV) cache. Current optimization paradigms often overlook the hierarchical heterogeneity of Transformer layers, leading to suboptimal resource allocation. To address this, we propose PrismKV, a novel KV cache compression framework that leverages adaptive partition scoring to orchestrate heterogeneous compression strategies. PrismKV employs an unsupervised, layer-adaptive scoring function that jointly evaluates compositional redundancy and attention sensitivity to dynamically bifurcate Transformer layers into distinct operational zones. For shallow regions characterized by high directional alignment, we implement a reconstructible codebook-based replacement strategy to achieve high-ratio structured compression by clustering redundant vectors. Conversely, for deep regions exhibiting sparse, task-specific attention, we transition to an importance-aware dynamic eviction policy that quantifies spatiotemporal saliency for precise information retention. Experimental results across three prevailing LLMs demonstrate that PrismKV reduces the KV cache to 10.8% of its original size with a marginal performance degradation of only 1.9%. Our approach consistently outperforms existing baselines in long-context benchmarks and achieves 65.8% decoding acceleration in 32K context scenarios. By precisely aligning heterogeneous compression primitives with the intrinsic evolution of layer-wise representations, PrismKV achieves a superior balance between hardware-level inference efficiency and high-fidelity generation.",
+        "identifiers": [
+          "SemanticScholar:5f7be856871ea02b9410cee13aa7795c1296390e"
+        ],
+        "semantic_scholar_id": "5f7be856871ea02b9410cee13aa7795c1296390e",
+        "doi": "10.1109/IJCNN69854.2026.11729267",
+        "canonical_id": "DOI:10.1109/IJCNN69854.2026.11729267",
+        "authors": [
+          "Dong-Cheng Shi",
+          "Yong-Xiang Cao",
+          "Hong-Xu Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iwqos70441.2026.11661114",
+      "identity_tokens": [
+        "id:DOI:10.1109/iwqos70441.2026.11661114",
+        "id:SemanticScholar:a1b6038c1758644d7ace1e028d73270bf3c1490e",
+        "title:upserve backend agnostic proxy for blackbox heterogeneous llm scheduling",
+        "url:https://doi.org/10.1109/IWQoS70441.2026.11661114"
+      ],
+      "record": {
+        "title": "UPServe: Backend Agnostic Proxy for Black-box Heterogeneous LLM Scheduling",
+        "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661114",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Workshop on Quality of Service",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference is increasingly deployed in heterogeneous environments, demanding efficient serving across diverse hardware platforms and backend engines. While existing load balancers and specialized serving systems facilitate request routing, they still suffer from various limitations, manifested in metric misalignment and observability gaps of black-box backends, non-linear performance degradation under heterogeneity, and conflicting multi-objective optimization goals. To solve these problems, we propose UPServe, a backendagnostic proxy designed for stateless LLM serving, which features three key designs: (1) a phase-aware cost modeling to estimate inference costs without relying on engine internals, (2) a unified score-based scheduling mechanism that integrates phase-aware concurrency and hardware speed normalization to handle heterogeneous non-linear degradation, and (3) an online scheduling algorithm named Phase-Aware Weighted Least Connections (PA-WLC) that drives adaptive dispatching to balance tail latency and aggregate throughput. Finally, we implement UPServe as a transparent proxy and conduct experiments for evaluations in heterogeneous environments. Comparison results demonstrate that UPServe significantly outperforms existing baselines, which reduces tail latency by up to 2.6$\\times$ (P99 TTFT) and 2.1$\\times$ (P99 TPOT), and improves aggregate throughput by up to 16%. Besides, UPServe operates without modifying inference engine internals, and incurs a negligible scheduling overhead of less than 0.3 ms per request.",
+        "identifiers": [
+          "SemanticScholar:a1b6038c1758644d7ace1e028d73270bf3c1490e"
+        ],
+        "semantic_scholar_id": "a1b6038c1758644d7ace1e028d73270bf3c1490e",
+        "doi": "10.1109/IWQoS70441.2026.11661114",
+        "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661114",
+        "authors": [
+          "Hao-Rui Wan",
+          "Chen-Yang Hei",
+          "Fu-Liang Li",
+          "Cheng-Xi Gao",
+          "Yuwen Jia",
+          "Tong-Rui Liu",
+          "Xing-Wei Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/taslpro.2025.3613948",
+      "identity_tokens": [
+        "id:DOI:10.1109/taslpro.2025.3613948",
+        "id:SemanticScholar:bfd991a03c86fdf6e9f412a68cdf4231f0580e77",
+        "title:mixpq joint pruning and quantization for speech and language foundation models compression",
+        "url:https://doi.org/10.1109/TASLPRO.2025.3613948"
+      ],
+      "record": {
+        "title": "MixPQ: Joint Pruning and Quantization for Speech and Language Foundation Models Compression",
+        "source_url": "https://doi.org/10.1109/TASLPRO.2025.3613948",
+        "year": 2025,
+        "published": null,
+        "venue": "IEEE Transactions on Audio, Speech, and Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large speech and language foundation models are heavily parameterized. This paper introduces MixPQ, a unified framework for the efficient and robust compression of these models. First, we propose a Hessian-aware, layer-wise mixed-sparsity pruning algorithm designed for both language and speech models, yielding promising results even at high sparsity levels. This approach introduces improved saliency criteria for more accurate selection of pruning elements and dynamically assigns different sparsity ratios to weight matrices based on Hessian sensitivity. Second, we present an outlier-aware, column-level mixed-precision quantization framework. This framework introduces a novel quantization sensitivity metric based on the outlier ratio to assess parameter importance and incorporates a mixed outlier reservation strategy to adaptively preserve full-precision outliers across columns in weight matrices, achieving significant performance gains with minimal memory overhead. Experimental results show that our pruning algorithm achieves 2x compression while maintaining performance. And the quantization framework delivers 4-bit lossless compression. In lower-bit scenarios, MixPQ provides an equivalent 2.12-bit model, yielding approximately 16x compression but only with $< $1% WER performance loss in speech recognition. Compared to previous methods, MixPQ demonstrates state-of-the-art performance in various models, particularly at high compression ratios. Moreover, the combination of pruning and quantization can achieve better performance with a higher compression ratio. Finally, the inference analysis highlight MixPQ’s practical benefits in speed and memory efficiency.",
+        "identifiers": [
+          "SemanticScholar:bfd991a03c86fdf6e9f412a68cdf4231f0580e77"
+        ],
+        "semantic_scholar_id": "bfd991a03c86fdf6e9f412a68cdf4231f0580e77",
+        "doi": "10.1109/TASLPRO.2025.3613948",
+        "canonical_id": "DOI:10.1109/TASLPRO.2025.3613948",
+        "authors": [
+          "Bei Liu",
+          "Tianteng Gu",
+          "Hao-Yu Wang",
+          "Yan-Min Qian"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/coins65080.2025.11125768",
+      "identity_tokens": [
+        "id:DOI:10.1109/coins65080.2025.11125768",
+        "id:SemanticScholar:78020bbbe4a3635955c744c2cae30fc5c64cf400",
+        "title:lim pruner efficient pruning for large languageinmemory models",
+        "url:https://doi.org/10.1109/COINS65080.2025.11125768"
+      ],
+      "record": {
+        "title": "LiM Pruner: Efficient Pruning for Large Language-in-Memory Models",
+        "source_url": "https://doi.org/10.1109/COINS65080.2025.11125768",
+        "year": 2025,
+        "published": "2025-08-04",
+        "venue": "Coins",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have revolutionized the fields of language understanding and generation, positioning themselves as transformative tools across a wide array of applications as general-purpose task solvers. However, the immense size of LLMs introduces significant challenges for deployment on traditional computing systems, largely due to the inherent von Neumann bottleneck. Recently, Computein-Memory (CiM) architectures have emerged as a groundbreaking solution to accelerate Deep Learning (DL) models, seamlessly integrating computation within the memory fabric to overcome the memory wall bottleneck. While there has been recent progress in mapping generative AIs and LLMs to CiM architectures, the deployment of these models with hundreds of billions of parameters remains very challenging, particularly for edge computing environments. To address the specific challenges of deploying LLMs in memory-centric architectures, we coin the term Language-in-Memory (LiM) to describe a new class of models specifically optimized for such systems. In this context, we present, for the first time, LiM Pruner, a suite of LiM compression techniques specifically designed to induce sparsity in pretrained LLMs. Additionally, we investigate data-path architectures to enhance support for pruned LiM models by addressing potential dislocation challenges. Our comprehensive evaluation of the LiM Pruner on the LLaMA-2 model demonstrates its superior performance compared to traditional pruning techniques.",
+        "identifiers": [
+          "SemanticScholar:78020bbbe4a3635955c744c2cae30fc5c64cf400"
+        ],
+        "semantic_scholar_id": "78020bbbe4a3635955c744c2cae30fc5c64cf400",
+        "doi": "10.1109/COINS65080.2025.11125768",
+        "canonical_id": "DOI:10.1109/COINS65080.2025.11125768",
+        "authors": [
+          "Sri Sai Rakesh Nakkilla",
+          "Aniruddha Datta",
+          "Ashish Reddy Bommana",
+          "Jeff Zhang",
+          "Farshad Firouzi",
+          "K. Chakrabarty"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 471,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2026.3741399",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2026.3741399",
+        "id:SemanticScholar:50755d379e830609cd5ccf810b5e1ccba2582507",
+        "title:alps an applicationaware lengthpredictive scheduler for efficient llm inference at edge",
+        "url:https://doi.org/10.1109/TPDS.2026.3741399"
+      ],
+      "record": {
+        "title": "ALPS: An Application-Aware, Length-Predictive Scheduler for Efficient LLM Inference at Edge",
+        "source_url": "https://doi.org/10.1109/TPDS.2026.3741399",
+        "year": 2026,
+        "published": "2026-12-01",
+        "venue": "IEEE Transactions on Parallel and Distributed Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Large Language Models (LLMs) on resource-constrained edge server clusters introduces a critical systems challenge: achieving high throughput and low latency under strict GPU memory and bandwidth limits. Current schedulers are ill-suited for this environment, as they treat requests independently, incurring two major inefficiencies. They waste compute and memory on redundant prefill computations for identical, lengthy system prompts across applications, and their phase-agnostic policies create suboptimal batches that poorly overlap compute-intensive prefills with memory-bound decodes, leading to GPU under-utilization. This paper presents ALPS, an application-aware, length-predictive scheduler for request serving for edge LLM inference. ALPS transforms the queueing layer into an intelligent orchestrator with two core techniques: (i) semantic-aware request grouping, which hashes requests by system prompt to co-locate them, reducing redundant prefill computations; and (ii) phase-aware scheduling, which uses a lightweight output token bucket predictor to estimate decode/prefill ratios and strategically reorders requests to maximize prefill-decode overlap in continuous hybrid batching. Augmented with SLO-aware preemption, ALPS is implemented as a practical scheduling layer atop vLLM. Extensive evaluations on an edge GPU testbed with diverse models and production workloads demonstrate that ALPS improves token throughput by up to 1.6× and reduces end-to-end latency by up to 2.4× compared to state-of-the-art schedulers.",
+        "identifiers": [
+          "SemanticScholar:50755d379e830609cd5ccf810b5e1ccba2582507"
+        ],
+        "semantic_scholar_id": "50755d379e830609cd5ccf810b5e1ccba2582507",
+        "doi": "10.1109/TPDS.2026.3741399",
+        "canonical_id": "DOI:10.1109/TPDS.2026.3741399",
+        "authors": [
+          "Chen Chen",
+          "Lei Jiao",
+          "R. Mortier"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": -13,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:55560f26f817b0c7eaac7459fd02ca29d9788747f2be0f0f8b362bf9579d400f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
