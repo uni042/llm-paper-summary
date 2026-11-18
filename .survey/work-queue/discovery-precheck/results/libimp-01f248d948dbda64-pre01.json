@@ -1,0 +1,703 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-01f248d948dbda64-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-01f248d948db",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.02598",
+    "arXiv:2610.03394",
+    "arXiv:2610.17917",
+    "arXiv:2610.26693",
+    "arXiv:2610.28500",
+    "arXiv:2610.28559",
+    "arXiv:2610.37642"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4e627bc2adce5242eb85db190d835587a757813f",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:33:34.726985+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.02598",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.03394",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17917",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.26693",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28500",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28559",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37642",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights",
+      "source_url": "https://arxiv.org/abs/2610.02598",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying LLMs on consumer-grade GPUs with insufficient memory to hold their weights can result in prohibitively slow inference, because decoding repeatedly transfers offloaded weights from system RAM or flash storage into GPU at much lower bandwidth than local GPU-memory access. Activation sparsity reduces these transfers by skipping weights associated with zero or near-zero activations. However, as more activation contributions are omitted, model quality eventually degrades rapidly, indicating that weights associated with small-magnitude activations collectively influence model quality sharply. In this work, we improve the trade-off between model quality and decoding performance when exploiting activation sparsity. Our key idea is to replace the binary choice of whether or not to read a weight with three options: fully retain it, approximate it using a compressed weight representation, or omit it entirely. SpAx skips weights associated with activations closest to zero, reads approximate weights for smaller-magnitude activations, and reads original weights for the largest-magnitude activations. Smaller-magnitude activations attenuate the errors introduced by approximate weights, while compressed weight representations require fewer bytes to be transferred. With weights offloaded to CPU memory, SpAx speeds up decoding by 3.86X on average (up to 5.57X) with 16-bit weights and 2.06X (up to 2.74X) with 4-bit weights, at a WikiText-2 perplexity increase of at most 10%. With weights offloaded to flash storage, the speedups are 3.31X on average (up to 4.81X) and 1.54X (up to 2.03X).",
+      "identifiers": [
+        "SemanticScholar:b1943655ab02832bfe9bca6d44ffc9f0dd8ea0c5"
+      ],
+      "semantic_scholar_id": "b1943655ab02832bfe9bca6d44ffc9f0dd8ea0c5",
+      "canonical_id": "arXiv:2610.02598",
+      "arxiv_id": "2610.02598",
+      "authors": [
+        "Junehyung Kim",
+        "Sankeerth Durvasula",
+        "N. Vijaykumar"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 48,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures",
+      "source_url": "https://arxiv.org/abs/2610.03394",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Emerging multi-agent LLMs demand privacy-preserving edge deployment, yet current inference systems struggle with these collaborative workflows. Specifically, the memory-bound decode phase causes severe bus contention on unified memory architectures (UMA), paralyzing naive CPU-GPU co-execution. Furthermore, speculative decoding in multi-agent workloads faces extreme variance in drafting difficulty, alternating between complex reasoning and predictable structured generation. Compounded by frequent tool-induced stalls, this highly fragmented execution severely underutilizes hardware and defeats traditional static batching. We present EdgeAgent, a cross-layer inference system explicitly co-designed for edge UMA and multi-agent workloads. At the micro-architectural level, it bypasses rigid graph-compiler constraints to enable zero-copy UMA-aware tensor parallelism, utilizing asymmetric memory layouts to fully saturate both CPU and GPU compute units. At the scheduling level, it dynamically allocates draft budgets based on real-time sequence predictability to bound bandwidth waste. Concurrently, an asynchronous suspend-and-yield mechanism actively evicts stalled agents, ensuring continuous hardware saturation during unpredictable tool invocations. Extensive evaluations on an Apple M4 SoC demonstrate that the UMA-aware execution alone contributes a 1.29× speedup over batched speculative decoding. Adding the agent-aware scheduling lifts the full EdgeAgent system to a 1.77× speedup under extreme tool-use latencies.",
+      "identifiers": [
+        "SemanticScholar:31f47f57a5ad4c1ce43d427a1695ca535656c074"
+      ],
+      "semantic_scholar_id": "31f47f57a5ad4c1ce43d427a1695ca535656c074",
+      "canonical_id": "arXiv:2610.03394",
+      "arxiv_id": "2610.03394",
+      "doi": "10.1145/3845814.3850072",
+      "authors": [
+        "Yu-Hai Long",
+        "Yuan-Xin Wei",
+        "Kai Wu",
+        "Jin-Hui Wei",
+        "Dan Huang",
+        "Jiang-Su Du"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parallel Language Models via Variational Decoding",
+      "source_url": "https://arxiv.org/abs/2610.26693",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive language models emit one token per forward pass. This causes high inference latency, in particular as models are scaled up for quality. In this paper, we introduce Parallel Language Models (PLMs), which generate mutually consistent tokens in one forward pass by routing dependencies through latent auxiliary variables. PLMs are trained using a variational bound that reduces to an autoregressive loss plus a parallel decoding loss. Empirically, PLMs are on a faster and better Pareto frontier than autoregressive and discrete diffusion baselines. Pretrained PLMs achieve near-autoregressive pretraining loss on model scales of 80M to 3B parameters, and speedup follows a power law in model size. When post-trained, our 1.3B model matches or exceeds an identically trained autoregressive model on math, coding, and instruction-following benchmarks, speeding up inference $2.3\\text{-}5.7\\times$. Together, we show that parallel generation can be trained from a single training objective at autoregressive quality. We will make our code available at https://github.com/mandt-lab/plm.",
+      "identifiers": [
+        "SemanticScholar:28ca0cf486be6c52332da3e9a5fef1828aaa58f1"
+      ],
+      "semantic_scholar_id": "28ca0cf486be6c52332da3e9a5fef1828aaa58f1",
+      "canonical_id": "arXiv:2610.26693",
+      "arxiv_id": "2610.26693",
+      "authors": [
+        "Felix Draxler",
+        "Robin C. Geyer",
+        "Daniel Geyfman",
+        "Farrin Marouf Sofian",
+        "Justus C. Will",
+        "Philipp Hildebrandt",
+        "Giosue Migliorini",
+        "Prakhar Srivastava",
+        "Gagan Sai Trinadh Duggaraju Peddiraju",
+        "Kushagra Pandey",
+        "Jorge da Silva Goncalves",
+        "Elijah Tavares",
+        "Jan Niklas Groeneveld",
+        "Meng-Ke Yang",
+        "J. Vogt",
+        "S. Mandt"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Large Flow Language Models",
+      "source_url": "https://arxiv.org/abs/2610.28559",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Continuous flow language models offer a path to parallel generation with tools for control and acceleration unavailable to discrete diffusion, yet effective techniques for building them at the billion-parameter scale remain less established. We present Lafa (Large flow language model), a fast, high-performing flow language model scaled to 8B parameters in a data-efficient manner. Lafa is a blockwise flow model with causal attention on the prefix and bidirectional, asynchronous flow within each block. This design enables efficient training by adapting pretrained autoregressive (AR) models and fast inference via prefix caching and blockwise parallel decoding. We train Lafa at 0.5B, 7B, and 8B scales with fewer than 30B tokens, more efficient than previous diffusion models, and evaluate it on instruction following, reasoning, and coding, where the learned flow matches or surpasses the quality of AR and can be distilled into flow maps for one- and few-step generation. Notably, flow training preserves or even improves pretrained AR capabilities via a multi-token prediction effect, which we leverage in a self-speculative decoding scheme that verifies flow-based drafts autoregressively within a single model. This yields 2.54x the throughput of an AR model at comparable quality, outperforming multi-token prediction and discrete diffusion methods. Our findings show that continuous flows can serve as a scalable foundation for language modeling.",
+      "identifiers": [
+        "SemanticScholar:4dafcbad48d6eb6d3d69f1965180dfe67e06c537"
+      ],
+      "semantic_scholar_id": "4dafcbad48d6eb6d3d69f1965180dfe67e06c537",
+      "canonical_id": "arXiv:2610.28559",
+      "arxiv_id": "2610.28559",
+      "authors": [
+        "Arnav Chavan",
+        "Chanhyuk Lee",
+        "Udbhav Bamba",
+        "Jaehoon Yoo",
+        "Seunghoon Hong",
+        "Aditi Raghunathan",
+        "Jinwoo Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Batch-Paced: Fixed-Budget Batch Decoding in Discrete Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.17917",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As generative language models become more capable and widely used, inference demand grows, making efficient serving increasingly important. Discrete diffusion language models (dLLMs) offer a promising path to more efficient inference through parallel token generation. Prior dLLM decoding methods, however, focus on improving inference efficiency for individual sequences. We formulate fixed-budget dLLM batch decoding and introduce Batch-Paced, a training-free method that jointly optimizes the allocation of decoding compute across requests to improve overall batch quality. Across two dLLM backbones, five benchmarks and their representative mixtures, Batch-Paced improves batch performance under matched budgets; gains generally grow with batch size and largely persist across decoding configurations. Analysis of requests'decoding trajectories suggests that these gains arise largely by raising the committed-token confidence of lower-confidence requests. We further show that Batch-Paced's batch decode time remains competitive and that adding a decoding-depth allowance during Batch-Paced decoding can shorten it further at a modest performance cost.",
+      "identifiers": [
+        "SemanticScholar:1a4cc811fb4f7896e7255d7839a9daf657c28464"
+      ],
+      "semantic_scholar_id": "1a4cc811fb4f7896e7255d7839a9daf657c28464",
+      "canonical_id": "arXiv:2610.17917",
+      "arxiv_id": "2610.17917",
+      "authors": [
+        "Shuai Zhang",
+        "Zhan-Chao Zhou",
+        "Hua-Chuan Qiu",
+        "An-Qi Li",
+        "Zhen-Zhong Lan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BitMTP: When Multi-Token Prediction Meets Low-Bit Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.28500",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For efficient deployment of large language models (LLMs), methods of ultra-low-bit backbones reduce weight storage, memory traffic, and linear-layer execution cost, while multi-token prediction (MTP) methods reduce sequential decoding steps by predicting multiple future tokens in parallel. Although complementary, the direct combination of these methods cannot accelerate decoding at comparable quality: masked drafting lacks intermediate token input supplied in next-token training, while wider computation and causal key-value (KV) updates can offset the savings from fewer steps. To address these challenges, we propose BitMTP, an algorithm-system co-design framework for efficient MTP on ultra-low-bit LLM backbones. A joint next-token prediction and MTP objective equips a single model with both autoregressive (AR) generation and block-causal drafting. Confidence-only decoding, speculative-only decoding, and hybrid decoding provide different quality-throughput operating points without using separate draft and verifier models. Accepted-prefix alignment keeps the committed prefix, materialized causal KV boundary, and CUDA Graph replay state consistent for continued generation. BitMTP uses this contract to select width-specialized low-bit execution and reuse captured graphs over shared KV storage. On NVIDIA H20, BitMTP with hybrid decoding achieves five-task mean speedups of 2.2x on BitNet b1.58-2B and 2.1-2.4x on 1.7B-4B Bonsai models at comparable task quality. On RTX 3090 and Jetson Orin, it further achieves up to 2.0x in five-task mean throughput and 3.3x on MBPP+, respectively. These results demonstrate that BitMTP accelerates ultra-low-bit LLM generation across backbones, model sizes, and GPU types. The source code is released at https://github.com/PolyU-VCLab/BitMTP",
+      "identifiers": [
+        "SemanticScholar:6e50b6275c12ceb1c856c468193325ea682104bc"
+      ],
+      "semantic_scholar_id": "6e50b6275c12ceb1c856c468193325ea682104bc",
+      "canonical_id": "arXiv:2610.28500",
+      "arxiv_id": "2610.28500",
+      "authors": [
+        "Ning Zhang",
+        "Shi-Hao Wang",
+        "Jin-Rui Zhang",
+        "Chao-Dong Xiao",
+        "Lei Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+      "source_url": "https://arxiv.org/abs/2610.37642",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models offer a promising path to efficient agents through parallel token generation. However, efficient interaction requires adapting both where computation is spent and how much text is generated. We introduce a metacognitive controller that guides diffusion generation according to the needs of the current response and the agent's interaction with the environment. It learns when to finalize tokens and how far generation should extend, reducing overall computation within responses. Our controller, a lightweight plug-in for the diffusion backbone, is trained on agent trajectories to balance correctness and generation cost. This approach connects the agent's generation process to the interaction the agent serves. Experiments across five benchmarks demonstrate that our approach reduces inference FLOPs by 20.6% on average compared with the most efficient baseline, while maintaining competitive task accuracy. Ablation studies further validate the effectiveness of our approach.",
+      "identifiers": [
+        "SemanticScholar:79ab713d0602aee98075fe5c7d73c6098754609d"
+      ],
+      "semantic_scholar_id": "79ab713d0602aee98075fe5c7d73c6098754609d",
+      "canonical_id": "arXiv:2610.37642",
+      "arxiv_id": "2610.37642",
+      "authors": [
+        "Ming-Yu Zhao",
+        "Shu-Hang Lin",
+        "Li-Gong Han",
+        "Xiao-Jing Yu",
+        "Zhen-Ting Wang",
+        "Yi-Fei Pang",
+        "Yang Zhou",
+        "Dimitris N. Metaxas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.02598",
+      "identity_tokens": [
+        "id:SemanticScholar:b1943655ab02832bfe9bca6d44ffc9f0dd8ea0c5",
+        "id:arXiv:2610.02598",
+        "title:activation sparsity with weight approximation for faster llm decoding on offloaded weights",
+        "url:https://arxiv.org/abs/2610.02598"
+      ],
+      "record": {
+        "title": "Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights",
+        "source_url": "https://arxiv.org/abs/2610.02598",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying LLMs on consumer-grade GPUs with insufficient memory to hold their weights can result in prohibitively slow inference, because decoding repeatedly transfers offloaded weights from system RAM or flash storage into GPU at much lower bandwidth than local GPU-memory access. Activation sparsity reduces these transfers by skipping weights associated with zero or near-zero activations. However, as more activation contributions are omitted, model quality eventually degrades rapidly, indicating that weights associated with small-magnitude activations collectively influence model quality sharply. In this work, we improve the trade-off between model quality and decoding performance when exploiting activation sparsity. Our key idea is to replace the binary choice of whether or not to read a weight with three options: fully retain it, approximate it using a compressed weight representation, or omit it entirely. SpAx skips weights associated with activations closest to zero, reads approximate weights for smaller-magnitude activations, and reads original weights for the largest-magnitude activations. Smaller-magnitude activations attenuate the errors introduced by approximate weights, while compressed weight representations require fewer bytes to be transferred. With weights offloaded to CPU memory, SpAx speeds up decoding by 3.86X on average (up to 5.57X) with 16-bit weights and 2.06X (up to 2.74X) with 4-bit weights, at a WikiText-2 perplexity increase of at most 10%. With weights offloaded to flash storage, the speedups are 3.31X on average (up to 4.81X) and 1.54X (up to 2.03X).",
+        "identifiers": [
+          "SemanticScholar:b1943655ab02832bfe9bca6d44ffc9f0dd8ea0c5"
+        ],
+        "semantic_scholar_id": "b1943655ab02832bfe9bca6d44ffc9f0dd8ea0c5",
+        "canonical_id": "arXiv:2610.02598",
+        "arxiv_id": "2610.02598",
+        "authors": [
+          "Junehyung Kim",
+          "Sankeerth Durvasula",
+          "N. Vijaykumar"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 48,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.03394",
+      "identity_tokens": [
+        "id:DOI:10.1145/3845814.3850072",
+        "id:SemanticScholar:31f47f57a5ad4c1ce43d427a1695ca535656c074",
+        "id:arXiv:2610.03394",
+        "title:edgeagent orchestrating ondevice llm inference for enduser multiagent systems on cpugpu unified memory architectures",
+        "url:https://arxiv.org/abs/2610.03394"
+      ],
+      "record": {
+        "title": "EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures",
+        "source_url": "https://arxiv.org/abs/2610.03394",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Emerging multi-agent LLMs demand privacy-preserving edge deployment, yet current inference systems struggle with these collaborative workflows. Specifically, the memory-bound decode phase causes severe bus contention on unified memory architectures (UMA), paralyzing naive CPU-GPU co-execution. Furthermore, speculative decoding in multi-agent workloads faces extreme variance in drafting difficulty, alternating between complex reasoning and predictable structured generation. Compounded by frequent tool-induced stalls, this highly fragmented execution severely underutilizes hardware and defeats traditional static batching. We present EdgeAgent, a cross-layer inference system explicitly co-designed for edge UMA and multi-agent workloads. At the micro-architectural level, it bypasses rigid graph-compiler constraints to enable zero-copy UMA-aware tensor parallelism, utilizing asymmetric memory layouts to fully saturate both CPU and GPU compute units. At the scheduling level, it dynamically allocates draft budgets based on real-time sequence predictability to bound bandwidth waste. Concurrently, an asynchronous suspend-and-yield mechanism actively evicts stalled agents, ensuring continuous hardware saturation during unpredictable tool invocations. Extensive evaluations on an Apple M4 SoC demonstrate that the UMA-aware execution alone contributes a 1.29× speedup over batched speculative decoding. Adding the agent-aware scheduling lifts the full EdgeAgent system to a 1.77× speedup under extreme tool-use latencies.",
+        "identifiers": [
+          "SemanticScholar:31f47f57a5ad4c1ce43d427a1695ca535656c074"
+        ],
+        "semantic_scholar_id": "31f47f57a5ad4c1ce43d427a1695ca535656c074",
+        "canonical_id": "arXiv:2610.03394",
+        "arxiv_id": "2610.03394",
+        "doi": "10.1145/3845814.3850072",
+        "authors": [
+          "Yu-Hai Long",
+          "Yuan-Xin Wei",
+          "Kai Wu",
+          "Jin-Hui Wei",
+          "Dan Huang",
+          "Jiang-Su Du"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.26693",
+      "identity_tokens": [
+        "id:SemanticScholar:28ca0cf486be6c52332da3e9a5fef1828aaa58f1",
+        "id:arXiv:2610.26693",
+        "title:parallel language models via variational decoding",
+        "url:https://arxiv.org/abs/2610.26693"
+      ],
+      "record": {
+        "title": "Parallel Language Models via Variational Decoding",
+        "source_url": "https://arxiv.org/abs/2610.26693",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive language models emit one token per forward pass. This causes high inference latency, in particular as models are scaled up for quality. In this paper, we introduce Parallel Language Models (PLMs), which generate mutually consistent tokens in one forward pass by routing dependencies through latent auxiliary variables. PLMs are trained using a variational bound that reduces to an autoregressive loss plus a parallel decoding loss. Empirically, PLMs are on a faster and better Pareto frontier than autoregressive and discrete diffusion baselines. Pretrained PLMs achieve near-autoregressive pretraining loss on model scales of 80M to 3B parameters, and speedup follows a power law in model size. When post-trained, our 1.3B model matches or exceeds an identically trained autoregressive model on math, coding, and instruction-following benchmarks, speeding up inference $2.3\\text{-}5.7\\times$. Together, we show that parallel generation can be trained from a single training objective at autoregressive quality. We will make our code available at https://github.com/mandt-lab/plm.",
+        "identifiers": [
+          "SemanticScholar:28ca0cf486be6c52332da3e9a5fef1828aaa58f1"
+        ],
+        "semantic_scholar_id": "28ca0cf486be6c52332da3e9a5fef1828aaa58f1",
+        "canonical_id": "arXiv:2610.26693",
+        "arxiv_id": "2610.26693",
+        "authors": [
+          "Felix Draxler",
+          "Robin C. Geyer",
+          "Daniel Geyfman",
+          "Farrin Marouf Sofian",
+          "Justus C. Will",
+          "Philipp Hildebrandt",
+          "Giosue Migliorini",
+          "Prakhar Srivastava",
+          "Gagan Sai Trinadh Duggaraju Peddiraju",
+          "Kushagra Pandey",
+          "Jorge da Silva Goncalves",
+          "Elijah Tavares",
+          "Jan Niklas Groeneveld",
+          "Meng-Ke Yang",
+          "J. Vogt",
+          "S. Mandt"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28559",
+      "identity_tokens": [
+        "id:SemanticScholar:4dafcbad48d6eb6d3d69f1965180dfe67e06c537",
+        "id:arXiv:2610.28559",
+        "title:large flow language models",
+        "url:https://arxiv.org/abs/2610.28559"
+      ],
+      "record": {
+        "title": "Large Flow Language Models",
+        "source_url": "https://arxiv.org/abs/2610.28559",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Continuous flow language models offer a path to parallel generation with tools for control and acceleration unavailable to discrete diffusion, yet effective techniques for building them at the billion-parameter scale remain less established. We present Lafa (Large flow language model), a fast, high-performing flow language model scaled to 8B parameters in a data-efficient manner. Lafa is a blockwise flow model with causal attention on the prefix and bidirectional, asynchronous flow within each block. This design enables efficient training by adapting pretrained autoregressive (AR) models and fast inference via prefix caching and blockwise parallel decoding. We train Lafa at 0.5B, 7B, and 8B scales with fewer than 30B tokens, more efficient than previous diffusion models, and evaluate it on instruction following, reasoning, and coding, where the learned flow matches or surpasses the quality of AR and can be distilled into flow maps for one- and few-step generation. Notably, flow training preserves or even improves pretrained AR capabilities via a multi-token prediction effect, which we leverage in a self-speculative decoding scheme that verifies flow-based drafts autoregressively within a single model. This yields 2.54x the throughput of an AR model at comparable quality, outperforming multi-token prediction and discrete diffusion methods. Our findings show that continuous flows can serve as a scalable foundation for language modeling.",
+        "identifiers": [
+          "SemanticScholar:4dafcbad48d6eb6d3d69f1965180dfe67e06c537"
+        ],
+        "semantic_scholar_id": "4dafcbad48d6eb6d3d69f1965180dfe67e06c537",
+        "canonical_id": "arXiv:2610.28559",
+        "arxiv_id": "2610.28559",
+        "authors": [
+          "Arnav Chavan",
+          "Chanhyuk Lee",
+          "Udbhav Bamba",
+          "Jaehoon Yoo",
+          "Seunghoon Hong",
+          "Aditi Raghunathan",
+          "Jinwoo Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17917",
+      "identity_tokens": [
+        "id:SemanticScholar:1a4cc811fb4f7896e7255d7839a9daf657c28464",
+        "id:arXiv:2610.17917",
+        "title:batchpaced fixedbudget batch decoding in discrete diffusion language models",
+        "url:https://arxiv.org/abs/2610.17917"
+      ],
+      "record": {
+        "title": "Batch-Paced: Fixed-Budget Batch Decoding in Discrete Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.17917",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As generative language models become more capable and widely used, inference demand grows, making efficient serving increasingly important. Discrete diffusion language models (dLLMs) offer a promising path to more efficient inference through parallel token generation. Prior dLLM decoding methods, however, focus on improving inference efficiency for individual sequences. We formulate fixed-budget dLLM batch decoding and introduce Batch-Paced, a training-free method that jointly optimizes the allocation of decoding compute across requests to improve overall batch quality. Across two dLLM backbones, five benchmarks and their representative mixtures, Batch-Paced improves batch performance under matched budgets; gains generally grow with batch size and largely persist across decoding configurations. Analysis of requests'decoding trajectories suggests that these gains arise largely by raising the committed-token confidence of lower-confidence requests. We further show that Batch-Paced's batch decode time remains competitive and that adding a decoding-depth allowance during Batch-Paced decoding can shorten it further at a modest performance cost.",
+        "identifiers": [
+          "SemanticScholar:1a4cc811fb4f7896e7255d7839a9daf657c28464"
+        ],
+        "semantic_scholar_id": "1a4cc811fb4f7896e7255d7839a9daf657c28464",
+        "canonical_id": "arXiv:2610.17917",
+        "arxiv_id": "2610.17917",
+        "authors": [
+          "Shuai Zhang",
+          "Zhan-Chao Zhou",
+          "Hua-Chuan Qiu",
+          "An-Qi Li",
+          "Zhen-Zhong Lan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28500",
+      "identity_tokens": [
+        "id:SemanticScholar:6e50b6275c12ceb1c856c468193325ea682104bc",
+        "id:arXiv:2610.28500",
+        "title:bitmtp when multitoken prediction meets lowbit large language models",
+        "url:https://arxiv.org/abs/2610.28500"
+      ],
+      "record": {
+        "title": "BitMTP: When Multi-Token Prediction Meets Low-Bit Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.28500",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For efficient deployment of large language models (LLMs), methods of ultra-low-bit backbones reduce weight storage, memory traffic, and linear-layer execution cost, while multi-token prediction (MTP) methods reduce sequential decoding steps by predicting multiple future tokens in parallel. Although complementary, the direct combination of these methods cannot accelerate decoding at comparable quality: masked drafting lacks intermediate token input supplied in next-token training, while wider computation and causal key-value (KV) updates can offset the savings from fewer steps. To address these challenges, we propose BitMTP, an algorithm-system co-design framework for efficient MTP on ultra-low-bit LLM backbones. A joint next-token prediction and MTP objective equips a single model with both autoregressive (AR) generation and block-causal drafting. Confidence-only decoding, speculative-only decoding, and hybrid decoding provide different quality-throughput operating points without using separate draft and verifier models. Accepted-prefix alignment keeps the committed prefix, materialized causal KV boundary, and CUDA Graph replay state consistent for continued generation. BitMTP uses this contract to select width-specialized low-bit execution and reuse captured graphs over shared KV storage. On NVIDIA H20, BitMTP with hybrid decoding achieves five-task mean speedups of 2.2x on BitNet b1.58-2B and 2.1-2.4x on 1.7B-4B Bonsai models at comparable task quality. On RTX 3090 and Jetson Orin, it further achieves up to 2.0x in five-task mean throughput and 3.3x on MBPP+, respectively. These results demonstrate that BitMTP accelerates ultra-low-bit LLM generation across backbones, model sizes, and GPU types. The source code is released at https://github.com/PolyU-VCLab/BitMTP",
+        "identifiers": [
+          "SemanticScholar:6e50b6275c12ceb1c856c468193325ea682104bc"
+        ],
+        "semantic_scholar_id": "6e50b6275c12ceb1c856c468193325ea682104bc",
+        "canonical_id": "arXiv:2610.28500",
+        "arxiv_id": "2610.28500",
+        "authors": [
+          "Ning Zhang",
+          "Shi-Hao Wang",
+          "Jin-Rui Zhang",
+          "Chao-Dong Xiao",
+          "Lei Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37642",
+      "identity_tokens": [
+        "id:SemanticScholar:79ab713d0602aee98075fe5c7d73c6098754609d",
+        "id:arXiv:2610.37642",
+        "title:metacognitive decoding efficient inference for diffusion language agents",
+        "url:https://arxiv.org/abs/2610.37642"
+      ],
+      "record": {
+        "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+        "source_url": "https://arxiv.org/abs/2610.37642",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models offer a promising path to efficient agents through parallel token generation. However, efficient interaction requires adapting both where computation is spent and how much text is generated. We introduce a metacognitive controller that guides diffusion generation according to the needs of the current response and the agent's interaction with the environment. It learns when to finalize tokens and how far generation should extend, reducing overall computation within responses. Our controller, a lightweight plug-in for the diffusion backbone, is trained on agent trajectories to balance correctness and generation cost. This approach connects the agent's generation process to the interaction the agent serves. Experiments across five benchmarks demonstrate that our approach reduces inference FLOPs by 20.6% on average compared with the most efficient baseline, while maintaining competitive task accuracy. Ablation studies further validate the effectiveness of our approach.",
+        "identifiers": [
+          "SemanticScholar:79ab713d0602aee98075fe5c7d73c6098754609d"
+        ],
+        "semantic_scholar_id": "79ab713d0602aee98075fe5c7d73c6098754609d",
+        "canonical_id": "arXiv:2610.37642",
+        "arxiv_id": "2610.37642",
+        "authors": [
+          "Ming-Yu Zhao",
+          "Shu-Hang Lin",
+          "Li-Gong Han",
+          "Xiao-Jing Yu",
+          "Zhen-Ting Wang",
+          "Yi-Fei Pang",
+          "Yang Zhou",
+          "Dimitris N. Metaxas"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9e0b5543d19325077b18364f9ef8b813b66bd0733f58bd5f87c011382bf6550f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

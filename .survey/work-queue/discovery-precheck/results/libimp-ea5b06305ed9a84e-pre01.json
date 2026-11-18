@@ -1,0 +1,528 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ea5b06305ed9a84e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ea5b06305ed9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.14778/3819518.3819522",
+    "arXiv:2608.02341",
+    "arXiv:2608.24973",
+    "arXiv:2609.17416",
+    "arXiv:2609.23371",
+    "arXiv:2609.27276",
+    "arXiv:2609.27981",
+    "arXiv:2609.36954"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4e627bc2adce5242eb85db190d835587a757813f",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:33:29.242642+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.14778/3819518.3819522",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.02341",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.24973",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/tetci.2026.3727362"
+    },
+    {
+      "requested_id": "arXiv:2609.17416",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.23371",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.23371"
+    },
+    {
+      "requested_id": "arXiv:2609.27276",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.27981",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36954",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.36954"
+    }
+  ],
+  "results": [
+    {
+      "title": "Never Stop Thinking: Continuous-Time Language Agents",
+      "source_url": "https://arxiv.org/abs/2609.17416",
+      "year": 2026,
+      "published": "2026-07-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Voice agents built on LLMs follow a rigid listen-think-speak loop that inserts seconds of dead air before every reply. We show that continuous-time cognition (thinking while listening and thinking while speaking) emerges from an unmodified text model under a lightweight interrupt-and-resume orchestrator, cutting live-pipeline latency by 19% overall and by half in the regime the mechanism targets. To measure whether continuous-time thinking improves what agents accomplish, we introduce ReactiveBench: 120 interactive scenarios scored against pre-registered binary requirements, plus a verifiable streaming track scored by exact correctness. ReactiveBench exposes a pitfall with broad consequences: LLM judges reward visible reasoning; a large judged\"advantage\"of continuous-time thinking reverses sign under an independent judge, and judge-trained models objectively complete fewer requirements when they think. A five-stage training study then locates the right signal at three levels. Its source: verifiable objectives turn thinking from harmful to helpful. Its structure: whatever a uniform reward omits, optimization trades away; brevity everywhere erodes multi-hop tool chaining. Its optimizer: preference optimization can only trade conflicting sub-goals against each other, while on-policy RL over a type-shaped reward improves every correctness axis at once, raising streaming completion from 48% to 73+/-5% across seeds and replicating at larger scale and on a second model. Orchestration makes continuous-time interaction possible; a verifiable signal, correctly sourced, shaped, and optimized, makes it good.",
+      "identifiers": [
+        "SemanticScholar:1f770b2eed8385c81ae2fdbabdbd4d1ebc05827e"
+      ],
+      "semantic_scholar_id": "1f770b2eed8385c81ae2fdbabdbd4d1ebc05827e",
+      "canonical_id": "arXiv:2609.17416",
+      "arxiv_id": "2609.17416",
+      "doi": "10.48550/arXiv.2609.17416",
+      "authors": [
+        "Bo-Jie Li",
+        "Noah Shi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs",
+      "source_url": "https://doi.org/10.14778/3819518.3819522",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-LLM applications calling multiple LLMs per request are emerging. An important scenario is running these applications offline on a request set. This work aims to minimize the offline inference makespan of these applications to save time and cost. Specifically, we study minimum-makespan scheduling of multi-LLM applications (the MLAS problem), which requires GPU allocation, LLM parallelism selection, and LLM execution orchestration. MLAS is NP-hard, and it differs from existing multi-model frameworks and job scheduling problems due to LLMs' unique properties (e.g., high memory demand, complex inference behavior), the offline inference setting, and relaxed execution precedence constraints. There is no existing work on MLAS and simple rules cannot handle all the problem instances. We propose a framework, Mil, for MLAS with three major components: (1) processing functions estimating LLM processing rates by output length sampling, inference process simulation, and per-generation-iteration latency estimation; (2) a greedy method that finds a good schedule with a theoretical guarantee on a simplified problem instance; (3) a runtime adjustment mechanism reducing GPU idleness. Experiments on various applications (ensembling, routing, chain summary, mixed) show that Mil can achieve up to 3.4× end-to-end speedups over current practice.",
+      "identifiers": [
+        "SemanticScholar:e2758ed35f0e5b796df7179beb00a58324e679ba"
+      ],
+      "semantic_scholar_id": "e2758ed35f0e5b796df7179beb00a58324e679ba",
+      "doi": "10.14778/3819518.3819522",
+      "canonical_id": "DOI:10.14778/3819518.3819522",
+      "authors": [
+        "Jin Fang",
+        "Yan-Yan Shen",
+        "Yue Wang",
+        "Lei Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.02341",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM deployment is migrating from data centers to edge devices, where Mixture-of-Experts (MoE) models offer a promising path: sparse expert activation allows the model to be spread across multiple low-cost edge nodes. Distributed MoE inference repeatedly dispatches embeddings from one main node to many workers - a one-to-many pattern poorly served by the sequential unicasts of mainstream stacks (NCCL, TCP), yet naturally matched by UDP broadcast. We propose a UDP broadcast method for collaborative edge MoE inference, augmented with timeout-driven retransmission exploiting near deterministic latency in distributed MoE for reliability and unordered result gathering for robustness to expert mispredictions, yielding a consistent 1.4x speedup over NCCL and TCP on a wired 8-node cluster. In wireless settings, however, we uncover a deeper, long-forgotten bottleneck: IEEE 802.11 caps broadcast rates at 54 Mbps regardless of physical-layer capacity - a legacy policy built for sparse control traffic, not edge AI. NS-3 simulations at distances 1m, 2m and 5m show that the optimal rates are much higher (64x, 43x, and 32x, respectively) than the 54 Mbps cap applied in standard. Thus, we argue that broadcast is no longer a control-plane relic: it is time for Wi-Fi standards to treat it as a high-throughput data-plane citizen.",
+      "identifiers": [
+        "SemanticScholar:e2d98e3a72b39fbc39b843697feca9d1c7cd388f"
+      ],
+      "semantic_scholar_id": "e2d98e3a72b39fbc39b843697feca9d1c7cd388f",
+      "canonical_id": "arXiv:2608.02341",
+      "arxiv_id": "2608.02341",
+      "doi": "10.48550/arXiv.2608.02341",
+      "authors": [
+        "Liujianfu Wang",
+        "Yu-Yang Du",
+        "Shi-Qi Xu",
+        "S. Liew"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+      "source_url": "https://arxiv.org/abs/2609.27276",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon language-model agents accumulate reasoning traces, tool exchanges, and observations whose relevance changes with the current decision. Existing compression strategies often score historical units independently, but the safety of deleting several units is generally not determined by their singleton scores: redundant evidence, accumulated small effects, and the information that remains after deletion all matter. We introduce Direct Relational Set-Risk Pruning (DRSR), which formulates agent-history compression as risk-constrained selection over deletion sets. Offline, DRSR constructs exact counterfactual supervision by jointly deleting protocol-valid history Blocks and measuring the change in teacher-forced likelihood of the same recorded next output. A lightweight scorer then predicts set-level harm from online-visible relations between candidate history and the current pre-action state, together with deleted-retained and pairwise set structure. At deployment, DRSR evaluates a small set of structurally valid deletion candidates with the lightweight scorer and removes the largest feasible set under recency, protocol, budget, and learned-risk constraints, abstaining when no set is sufficiently safe. On WorkBuddyBench Full260, DRSR increases mean reward from 0.699 to 0.802 while reducing total model tokens by 20.820%. On the fixed Eval40 comparison, it obtains 0.794 reward at 1.211M tokens per task, using 35.850% fewer tokens than the uncompressed agent. Mechanistic analyses and ablations further show that decision-conditioned relations, retained-context information, pair interactions, and abstention each contribute to reliable pruning.",
+      "identifiers": [
+        "SemanticScholar:f13b63106225f74ab252503f44d7b84eb6d4d2eb"
+      ],
+      "semantic_scholar_id": "f13b63106225f74ab252503f44d7b84eb6d4d2eb",
+      "canonical_id": "arXiv:2609.27276",
+      "arxiv_id": "2609.27276",
+      "doi": "10.48550/arXiv.2609.27276",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Bo Wang",
+        "Fei Luo",
+        "Guo-Run Yao",
+        "Chao Ning",
+        "Ying-Long Guo",
+        "Hong-Yue Chen",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Risk-Controlled KV-Cache Eviction: From Memory Budgets to Risk Targets",
+      "source_url": "https://arxiv.org/abs/2609.27981",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache eviction is typically evaluated through average quality-memory trade-offs, yet a small average loss can hide requests whose utility degrades materially. We reformulate eviction as a deployment risk-control problem: a material degradation occurs when eviction lowers task utility by more than a deployment-specified tolerance relative to full-KV inference on the same request, and deployment risk is the population frequency of such events. Given a reliability contract specifying a target risk level and confidence requirement, we use a compressor-agnostic post-hoc certification procedure to select a retention policy from calibration data with a finite-sample guarantee, falling back to full KV when no compressed policy is certified. Across multiple eviction methods, Llama and Mistral models, and LongBench and RULER-32K, the same contract supports substantially different levels of eviction: on Llama, it certifies SnapKV at 75% retention on LongBench but no tested compressed policy on RULER-32K, triggering full-KV fallback. Policies with empirical degradation rates below the 5% target can still fail finite-sample certification; on Llama LongBench, empirical thresholding selects uncertified policies that retain 5-10 percentage points less cache across fixed-budget methods. The proposed framework converts a deployment-level reliability requirement into a KV-memory operating point.",
+      "identifiers": [
+        "SemanticScholar:ae36afcebba633adecbcc97c980e8cd1a9925142"
+      ],
+      "semantic_scholar_id": "ae36afcebba633adecbcc97c980e8cd1a9925142",
+      "canonical_id": "arXiv:2609.27981",
+      "arxiv_id": "2609.27981",
+      "doi": "10.48550/arXiv.2609.27981",
+      "authors": [
+        "Beomgu Kang",
+        "Sojin Yun",
+        "Hojoon Kim",
+        "Hyunseok Seo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.17416",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.17416",
+        "id:SemanticScholar:1f770b2eed8385c81ae2fdbabdbd4d1ebc05827e",
+        "id:arXiv:2609.17416",
+        "title:never stop thinking continuoustime language agents",
+        "url:https://arxiv.org/abs/2609.17416"
+      ],
+      "record": {
+        "title": "Never Stop Thinking: Continuous-Time Language Agents",
+        "source_url": "https://arxiv.org/abs/2609.17416",
+        "year": 2026,
+        "published": "2026-07-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Voice agents built on LLMs follow a rigid listen-think-speak loop that inserts seconds of dead air before every reply. We show that continuous-time cognition (thinking while listening and thinking while speaking) emerges from an unmodified text model under a lightweight interrupt-and-resume orchestrator, cutting live-pipeline latency by 19% overall and by half in the regime the mechanism targets. To measure whether continuous-time thinking improves what agents accomplish, we introduce ReactiveBench: 120 interactive scenarios scored against pre-registered binary requirements, plus a verifiable streaming track scored by exact correctness. ReactiveBench exposes a pitfall with broad consequences: LLM judges reward visible reasoning; a large judged\"advantage\"of continuous-time thinking reverses sign under an independent judge, and judge-trained models objectively complete fewer requirements when they think. A five-stage training study then locates the right signal at three levels. Its source: verifiable objectives turn thinking from harmful to helpful. Its structure: whatever a uniform reward omits, optimization trades away; brevity everywhere erodes multi-hop tool chaining. Its optimizer: preference optimization can only trade conflicting sub-goals against each other, while on-policy RL over a type-shaped reward improves every correctness axis at once, raising streaming completion from 48% to 73+/-5% across seeds and replicating at larger scale and on a second model. Orchestration makes continuous-time interaction possible; a verifiable signal, correctly sourced, shaped, and optimized, makes it good.",
+        "identifiers": [
+          "SemanticScholar:1f770b2eed8385c81ae2fdbabdbd4d1ebc05827e"
+        ],
+        "semantic_scholar_id": "1f770b2eed8385c81ae2fdbabdbd4d1ebc05827e",
+        "canonical_id": "arXiv:2609.17416",
+        "arxiv_id": "2609.17416",
+        "doi": "10.48550/arXiv.2609.17416",
+        "authors": [
+          "Bo-Jie Li",
+          "Noah Shi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 130,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.14778/3819518.3819522",
+      "identity_tokens": [
+        "id:DOI:10.14778/3819518.3819522",
+        "id:SemanticScholar:e2758ed35f0e5b796df7179beb00a58324e679ba",
+        "title:mil costguided minimum makespan scheduling for applications of multiple llms",
+        "url:https://doi.org/10.14778/3819518.3819522"
+      ],
+      "record": {
+        "title": "Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs",
+        "source_url": "https://doi.org/10.14778/3819518.3819522",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "Proceedings of the VLDB Endowment",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-LLM applications calling multiple LLMs per request are emerging. An important scenario is running these applications offline on a request set. This work aims to minimize the offline inference makespan of these applications to save time and cost. Specifically, we study minimum-makespan scheduling of multi-LLM applications (the MLAS problem), which requires GPU allocation, LLM parallelism selection, and LLM execution orchestration. MLAS is NP-hard, and it differs from existing multi-model frameworks and job scheduling problems due to LLMs' unique properties (e.g., high memory demand, complex inference behavior), the offline inference setting, and relaxed execution precedence constraints. There is no existing work on MLAS and simple rules cannot handle all the problem instances. We propose a framework, Mil, for MLAS with three major components: (1) processing functions estimating LLM processing rates by output length sampling, inference process simulation, and per-generation-iteration latency estimation; (2) a greedy method that finds a good schedule with a theoretical guarantee on a simplified problem instance; (3) a runtime adjustment mechanism reducing GPU idleness. Experiments on various applications (ensembling, routing, chain summary, mixed) show that Mil can achieve up to 3.4× end-to-end speedups over current practice.",
+        "identifiers": [
+          "SemanticScholar:e2758ed35f0e5b796df7179beb00a58324e679ba"
+        ],
+        "semantic_scholar_id": "e2758ed35f0e5b796df7179beb00a58324e679ba",
+        "doi": "10.14778/3819518.3819522",
+        "canonical_id": "DOI:10.14778/3819518.3819522",
+        "authors": [
+          "Jin Fang",
+          "Yan-Yan Shen",
+          "Yue Wang",
+          "Lei Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02341",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.02341",
+        "id:SemanticScholar:e2d98e3a72b39fbc39b843697feca9d1c7cd388f",
+        "id:arXiv:2608.02341",
+        "title:broadcast rate limits in wifi a forgotten bottleneck for collaborative edge llm inference",
+        "url:https://arxiv.org/abs/2608.02341"
+      ],
+      "record": {
+        "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.02341",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM deployment is migrating from data centers to edge devices, where Mixture-of-Experts (MoE) models offer a promising path: sparse expert activation allows the model to be spread across multiple low-cost edge nodes. Distributed MoE inference repeatedly dispatches embeddings from one main node to many workers - a one-to-many pattern poorly served by the sequential unicasts of mainstream stacks (NCCL, TCP), yet naturally matched by UDP broadcast. We propose a UDP broadcast method for collaborative edge MoE inference, augmented with timeout-driven retransmission exploiting near deterministic latency in distributed MoE for reliability and unordered result gathering for robustness to expert mispredictions, yielding a consistent 1.4x speedup over NCCL and TCP on a wired 8-node cluster. In wireless settings, however, we uncover a deeper, long-forgotten bottleneck: IEEE 802.11 caps broadcast rates at 54 Mbps regardless of physical-layer capacity - a legacy policy built for sparse control traffic, not edge AI. NS-3 simulations at distances 1m, 2m and 5m show that the optimal rates are much higher (64x, 43x, and 32x, respectively) than the 54 Mbps cap applied in standard. Thus, we argue that broadcast is no longer a control-plane relic: it is time for Wi-Fi standards to treat it as a high-throughput data-plane citizen.",
+        "identifiers": [
+          "SemanticScholar:e2d98e3a72b39fbc39b843697feca9d1c7cd388f"
+        ],
+        "semantic_scholar_id": "e2d98e3a72b39fbc39b843697feca9d1c7cd388f",
+        "canonical_id": "arXiv:2608.02341",
+        "arxiv_id": "2608.02341",
+        "doi": "10.48550/arXiv.2608.02341",
+        "authors": [
+          "Liujianfu Wang",
+          "Yu-Yang Du",
+          "Shi-Qi Xu",
+          "S. Liew"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 107,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27276",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.27276",
+        "id:SemanticScholar:f13b63106225f74ab252503f44d7b84eb6d4d2eb",
+        "id:arXiv:2609.27276",
+        "title:drsr learning setlevel deletion risk for efficient longhorizon agents",
+        "url:https://arxiv.org/abs/2609.27276"
+      ],
+      "record": {
+        "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+        "source_url": "https://arxiv.org/abs/2609.27276",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon language-model agents accumulate reasoning traces, tool exchanges, and observations whose relevance changes with the current decision. Existing compression strategies often score historical units independently, but the safety of deleting several units is generally not determined by their singleton scores: redundant evidence, accumulated small effects, and the information that remains after deletion all matter. We introduce Direct Relational Set-Risk Pruning (DRSR), which formulates agent-history compression as risk-constrained selection over deletion sets. Offline, DRSR constructs exact counterfactual supervision by jointly deleting protocol-valid history Blocks and measuring the change in teacher-forced likelihood of the same recorded next output. A lightweight scorer then predicts set-level harm from online-visible relations between candidate history and the current pre-action state, together with deleted-retained and pairwise set structure. At deployment, DRSR evaluates a small set of structurally valid deletion candidates with the lightweight scorer and removes the largest feasible set under recency, protocol, budget, and learned-risk constraints, abstaining when no set is sufficiently safe. On WorkBuddyBench Full260, DRSR increases mean reward from 0.699 to 0.802 while reducing total model tokens by 20.820%. On the fixed Eval40 comparison, it obtains 0.794 reward at 1.211M tokens per task, using 35.850% fewer tokens than the uncompressed agent. Mechanistic analyses and ablations further show that decision-conditioned relations, retained-context information, pair interactions, and abstention each contribute to reliable pruning.",
+        "identifiers": [
+          "SemanticScholar:f13b63106225f74ab252503f44d7b84eb6d4d2eb"
+        ],
+        "semantic_scholar_id": "f13b63106225f74ab252503f44d7b84eb6d4d2eb",
+        "canonical_id": "arXiv:2609.27276",
+        "arxiv_id": "2609.27276",
+        "doi": "10.48550/arXiv.2609.27276",
+        "authors": [
+          "Ming-Xuan Wang",
+          "Bo Wang",
+          "Fei Luo",
+          "Guo-Run Yao",
+          "Chao Ning",
+          "Ying-Long Guo",
+          "Hong-Yue Chen",
+          "Yan-Biao Ma",
+          "Jun-Gong Han"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.27981",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.27981",
+        "id:SemanticScholar:ae36afcebba633adecbcc97c980e8cd1a9925142",
+        "id:arXiv:2609.27981",
+        "title:riskcontrolled kvcache eviction from memory budgets to risk targets",
+        "url:https://arxiv.org/abs/2609.27981"
+      ],
+      "record": {
+        "title": "Risk-Controlled KV-Cache Eviction: From Memory Budgets to Risk Targets",
+        "source_url": "https://arxiv.org/abs/2609.27981",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache eviction is typically evaluated through average quality-memory trade-offs, yet a small average loss can hide requests whose utility degrades materially. We reformulate eviction as a deployment risk-control problem: a material degradation occurs when eviction lowers task utility by more than a deployment-specified tolerance relative to full-KV inference on the same request, and deployment risk is the population frequency of such events. Given a reliability contract specifying a target risk level and confidence requirement, we use a compressor-agnostic post-hoc certification procedure to select a retention policy from calibration data with a finite-sample guarantee, falling back to full KV when no compressed policy is certified. Across multiple eviction methods, Llama and Mistral models, and LongBench and RULER-32K, the same contract supports substantially different levels of eviction: on Llama, it certifies SnapKV at 75% retention on LongBench but no tested compressed policy on RULER-32K, triggering full-KV fallback. Policies with empirical degradation rates below the 5% target can still fail finite-sample certification; on Llama LongBench, empirical thresholding selects uncertified policies that retain 5-10 percentage points less cache across fixed-budget methods. The proposed framework converts a deployment-level reliability requirement into a KV-memory operating point.",
+        "identifiers": [
+          "SemanticScholar:ae36afcebba633adecbcc97c980e8cd1a9925142"
+        ],
+        "semantic_scholar_id": "ae36afcebba633adecbcc97c980e8cd1a9925142",
+        "canonical_id": "arXiv:2609.27981",
+        "arxiv_id": "2609.27981",
+        "doi": "10.48550/arXiv.2609.27981",
+        "authors": [
+          "Beomgu Kang",
+          "Sojin Yun",
+          "Hojoon Kim",
+          "Hyunseok Seo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6027cfe20e2d3138bb19e2eaf24e1e8461b1e3ccdcec552ba77c652a925bf0bd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

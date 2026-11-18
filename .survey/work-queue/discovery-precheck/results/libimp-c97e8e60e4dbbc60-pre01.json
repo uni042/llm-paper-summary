@@ -1,0 +1,664 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c97e8e60e4dbbc60-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c97e8e60e4db",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.02800",
+    "arXiv:2610.05123",
+    "arXiv:2610.07780",
+    "arXiv:2610.10845",
+    "arXiv:2610.12570",
+    "arXiv:2610.23939",
+    "arXiv:2610.29489",
+    "arXiv:2610.33404",
+    "arXiv:2610.35957"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4e627bc2adce5242eb85db190d835587a757813f",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:33:30.702919+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.02800",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:4a33096d4683c166c23c75086f16352a450be61a"
+    },
+    {
+      "requested_id": "arXiv:2610.05123",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07780",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10845",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.12570",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:f5dbe0b44a9b368f5da5590bd03ed870eb4e8815"
+    },
+    {
+      "requested_id": "arXiv:2610.23939",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.29489",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.33404",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.35957",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines",
+      "source_url": "https://arxiv.org/abs/2610.05123",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) inference is increasingly deployed in local and on-premise environments, where expert parameters often exceed GPU memory capacity. In latency-sensitive, low-concurrency settings, repeatedly staging routed-expert weights from CPU memory to the GPU can be prohibitive, leaving routed-expert feed-forward networks (FFNs) on the critical path of multi-socket CPUs. Existing CPU accelerations often rely on intrusive, hardware- or topology-specific requirements, such as AMX-specific weight layouts or manual NUMA-aware placement. These requirements reduce portability and complicate integration with standard CPU-GPU offloading pipelines. We present HiNa-MoE, a high-performance, non-intrusive operator library for MoE inference on CPUs with Intel AMX. HiNa-MoE (1) exploits AMX with an optimized micro-kernel that keeps expert weights in standard layouts and instead fuses lightweight layout transforms into token gathering and stores; (2) applies NUMA-aware task partitioning under a simple page-interleaved policy without modifying the framework allocator; and (3) converts decode-phase memory matrix-vector operations into small matrix-matrix execution to utilize AMX. Across multiple MoE models, HiNa-MoE achieves up to 3.37x speedup for FFN kernels and up to 2.09x end-to-end inference speedup over state-of-the-art baselines, while remaining plug-and-play with existing frameworks and deployment workflows.",
+      "identifiers": [
+        "SemanticScholar:0f14ea6c85e87f9b88d99e9e129a2d395c5222f0"
+      ],
+      "semantic_scholar_id": "0f14ea6c85e87f9b88d99e9e129a2d395c5222f0",
+      "canonical_id": "arXiv:2610.05123",
+      "arxiv_id": "2610.05123",
+      "authors": [
+        "Wei-Ling Yang",
+        "Jun-Wen Zhang",
+        "De-Zun Dong",
+        "Jian-Bin Fang",
+        "En-Da Yu",
+        "Zhe Bai",
+        "Xiao-Peng Deng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "APEX: Speculate smarter, not deeper",
+      "source_url": "https://arxiv.org/abs/2610.07780",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding reduces large language model inference latency by drafting multiple tokens before target-model verification, but its effectiveness depends on both the proposal mechanism and draft depth. Fixed configurations cannot respond to changes in predictability, repetition, and acceptance during generation, so deeper drafting can increase wasted computation without proportional speedup. We introduce APEX, a learned controller that balances decoding speed and draft-token waste through request-level expert selection and block-level depth adaptation. APEX-Router selects among EAGLE-3, n-gram, and draft-model speculation for each request, while APEX-Depth adjusts draft length at each verification block using causal decoding signals and recent verifier feedback. APEX models accepted draft length as censored survival feedback, learning position-wise rejection hazards, block execution costs, and an action utility that balances throughput, accepted progress, and wasted tokens. This allows the controller to adapt speculation while retaining the target model's verification procedure. We integrate APEX into vLLM and evaluate it with Qwen3-8B across six workloads, achieving up to 5.24X speedup over autoregressive decoding. Across the aggregate evaluation, APEX-S achieves 4.27X speedup, while APEX-B achieves 3.27X speedup with a 41.0% relative reduction in wasted-token percentage compared with fixed n-gram speculation at k=16, providing distinct operating points for balancing acceleration and draft-token utilization.",
+      "identifiers": [
+        "SemanticScholar:27571e8c62ea951d1e49653b29983d2182464956"
+      ],
+      "semantic_scholar_id": "27571e8c62ea951d1e49653b29983d2182464956",
+      "canonical_id": "arXiv:2610.07780",
+      "arxiv_id": "2610.07780",
+      "authors": [
+        "Manvi Jha",
+        "Zach Zhang",
+        "Zhi-Chao Xu",
+        "Lin-Bo Liu",
+        "Sai Muralidhar Jayanthi",
+        "Vinayak Arannil"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute",
+      "source_url": "https://arxiv.org/abs/2610.10845",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A large language model can only use the text that fits in its context window, and it recomputes its internal key-value (KV) state for a prompt every time the prompt is sent. We test a memory layer, the public package galahad-kv, that saves the KV state of each block of about 16,000 tokens to encrypted local NVMe disk and loads it back later, byte-exact, without recomputing it. We ran it on 50,000,000 tokens of real public text, served through vLLM on one NVIDIA H100, with Gemma 4 12B and Gemma 4 31B. Every block we probed was loaded back from the encrypted store with no recompute (100 of 100, at depths from 0 to 50M tokens) on both models. Loading a block was 2.8x to 4.3x faster than recomputing it and used 8.8x to 12.3x less GPU energy, and GPU memory stayed flat over the whole 50M-token stream. Asked about facts planted millions of tokens earlier, the 12B model gave the right answer 82 times out of 100 and the 31B model 98 times out of 100. Neither model made up an answer. The limits are as follows. This is reuse of stored state, not a wider attention window: one block is loaded at a time, and how well a question is answered depends on the model. Writing the memory is a one-time cost, and the store takes terabytes of local NVMe disk. We describe the test protocol, which is built to resist common ways of gaming long-context benchmarks, and give a single-GPU reproduction that uses public software and a free licence for the package.",
+      "identifiers": [
+        "SemanticScholar:8a20d171fc616c06a8c3ee9f64b943963e5706b0"
+      ],
+      "semantic_scholar_id": "8a20d171fc616c06a8c3ee9f64b943963e5706b0",
+      "canonical_id": "arXiv:2610.10845",
+      "arxiv_id": "2610.10845",
+      "authors": [
+        "Sietse Schelpe"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PeekKV: The First Content Token Already Knows Which Heads Matter",
+      "source_url": "https://arxiv.org/abs/2610.23939",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The size of the KV cache grows linearly with context length, making it a major memory bottleneck in LLM serving. Motivated by recent progress in identifying the functional roles of attention heads, a growing body of work compresses the KV cache non-uniformly across heads. Existing methods either fix the important heads via offline profiling or select them using attention signals from the prefill stage. In both cases, however, accuracy fluctuates substantially across workloads. While investigating the cause of this instability, we find that the active heads shift between the prefill and decode stages even within a single input. Along the decode path, by contrast, the activehead composition remains stable across content tokens once format tokens are filtered out. Based on this observation, we propose PeekKV. PeekKV observes a single content token immediately after prefill - a one-token peek - to jointly obtain head-group scores and token-importance scores. Guided by these scores, PeekKV allocates KV cache budgets to head groups in proportion to their group scores and retains only the top-scoring tokens within each budget. PeekKV requires no offline profiling or training and thus applies directly to unseen workloads and new models. Across four public benchmarks, PeekKV achieves the highest accuracy in more than half of the per-model comparisons against state-of-the-art methods, and stays closest to the full-cache accuracy on RULER and LongBench. On Llama-3.1-8B-Instruct, PeekKV retains 95.7% of the full-cache accuracy at a 10% memory budget on RULER with 16K contexts and 95.9% at a 1.5% budget on LongBench.",
+      "identifiers": [
+        "SemanticScholar:e39379f2eb3d8ba858d5be58aac44449d05121db"
+      ],
+      "semantic_scholar_id": "e39379f2eb3d8ba858d5be58aac44449d05121db",
+      "canonical_id": "arXiv:2610.23939",
+      "arxiv_id": "2610.23939",
+      "authors": [
+        "Minyoung Go",
+        "Yongjun Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors",
+      "source_url": "https://arxiv.org/abs/2610.29489",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A Transformer is built around attention, whose cost grows with the square of the sequence length and dominates the layer on long sequences. FlashAttention made that cost manageable by tiling the attention matrix and updating the softmax as it goes, but almost all work since has targeted GPUs. On long-vector processors one vector register can hold up to 512 single-precision numbers. The savings of a vector instruction are proportional to how much of the register it uses, so the choice of which loop to vectorize is a first-order decision. We port PyTorch's CPU FlashAttention kernel to a RISC-V CPU with 2KB vector registers and find that it reaches 16.2% of peak floating-point throughput. The kernel walks each tile one query row at a time: the product against V is vectorized along the 64-element head dimension, the softmax's per-row maximum and sum are reductions that collapse a full register to a scalar, and the software exponential's polynomial coefficients compete with tile data for vector registers and cause spilling. We propose two techniques. The first transposes the score tile and the running output so that queries lie along the contiguous axis. The algorithm and its values are unchanged. A single parameter, the number of queries in a tile, now sets the vector length of every part of the kernel and can be matched to the machine. Both reductions also disappear. The second moves the polynomial's coefficients into scalar registers, removing the spills and cutting the softmax's vector memory instructions by 78.7%. On silicon the two together cut whole-kernel cycles by 1.84 to 2.08x at a head dimension of 64, raising floating-point utilization from 16.2% to 29.7% of peak. An FPGA of the same design ranks the changes identically and scores them higher, at 2.71x.",
+      "identifiers": [
+        "SemanticScholar:f9b91b9999ece0685cb630bbf213d32ddd8eeed7"
+      ],
+      "semantic_scholar_id": "f9b91b9999ece0685cb630bbf213d32ddd8eeed7",
+      "canonical_id": "arXiv:2610.29489",
+      "arxiv_id": "2610.29489",
+      "authors": [
+        "Emmanuel Irabor",
+        "Marc Casas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COPE: Composable Performance Emulation for Mixture-of-Experts Offloading Policies",
+      "source_url": "https://arxiv.org/abs/2610.33404",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLMs scale, mixture-of-experts (MoE) architectures increase model capacity while keeping per-token computation manageable through sparse expert activation. This sparsity also enables memory-efficient deployment by retaining most expert weights in CPU memory and transferring or executing only the routed experts on demand. Existing MoE offloading systems typically target specific model-platform configurations, yet differences in model sparsity, CPU and GPU throughput, VRAM capacity, and host-device bandwidth can change the policy ranking. Because implementing and exhaustively evaluating all candidate policies incurs substantial engineering cost, efficiently selecting the best-performing policy for each model-platform configuration remains a key challenge for practical MoE offloading. We present COPE (Composable Offloading Policy Emulator), which selects the best-performing MoE offloading policy for a target model-platform configuration before runtime integration. COPE comprises two components. Its Policy Matrix factors the design space into two independent axes, expert residency and MoE execution strategy, enabling mechanism reuse across candidate policies and exposing four new candidates. Its Virtual Heterogeneous Machine profiles combined-operator schedules on the target platform and combines these measurements with offline routing traces to estimate candidate performance. Compared with the evaluated baselines, COPE improves fastest-policy selection accuracy by 24%-100% and reduces performance-prediction error by $1.7\\times$ to $6.8\\times$. By identifying the preferred policy before integration, COPE further reduces policy-specific implementation effort by up to 74%.",
+      "identifiers": [
+        "SemanticScholar:c3fd4f5a64a7182a84e5c5b3f7ae405a6fe853aa"
+      ],
+      "semantic_scholar_id": "c3fd4f5a64a7182a84e5c5b3f7ae405a6fe853aa",
+      "canonical_id": "arXiv:2610.33404",
+      "arxiv_id": "2610.33404",
+      "authors": [
+        "Han-Ming Zhang",
+        "Er-Hu Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Distributed LLM Inference via Communication-Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.35957",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed speculative decoding has emerged as a promising approach for device--server collaborative large language model (LLM) inference, but its decoding speedup is often limited by the vocabulary-scale communication overhead. In existing distributed speculative decoding methods, exact rejection sampling requires transmitting full token distributions over the LLM vocabulary between the device and the server, which becomes costly in bandwidth-constrained environments. To address this issue, we propose DISCO, a communication-efficient framework for distributed speculative decoding, that eliminates vocabulary-scale distribution transfer while preserving the exact target distribution. DISCO achieves this by introducing a server-side replica of the draft small language model (SLM), which enables the server to locally obtain the draft-side distribution required for rejection sampling. As a result, DISCO exchanges only drafted token indices and scalar probability values between the device and the server. Experimental results on multiple datasets show that DISCO consistently achieves higher decoding speedup than existing distributed speculative decoding methods, particularly under stringent bandwidth constraints.",
+      "identifiers": [
+        "SemanticScholar:3e2e17d57d08096f198b4222d31a38a47eb76d4c"
+      ],
+      "semantic_scholar_id": "3e2e17d57d08096f198b4222d31a38a47eb76d4c",
+      "canonical_id": "arXiv:2610.35957",
+      "arxiv_id": "2610.35957",
+      "authors": [
+        "Joohyun Shin",
+        "Byeonghyeon Park",
+        "Keumseo Ryum",
+        "Joonhyuk Kang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.05123",
+      "identity_tokens": [
+        "id:SemanticScholar:0f14ea6c85e87f9b88d99e9e129a2d395c5222f0",
+        "id:arXiv:2610.05123",
+        "title:hinamoe highperformance nonintrusive moe inference on cpus with matrix engines",
+        "url:https://arxiv.org/abs/2610.05123"
+      ],
+      "record": {
+        "title": "HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines",
+        "source_url": "https://arxiv.org/abs/2610.05123",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) inference is increasingly deployed in local and on-premise environments, where expert parameters often exceed GPU memory capacity. In latency-sensitive, low-concurrency settings, repeatedly staging routed-expert weights from CPU memory to the GPU can be prohibitive, leaving routed-expert feed-forward networks (FFNs) on the critical path of multi-socket CPUs. Existing CPU accelerations often rely on intrusive, hardware- or topology-specific requirements, such as AMX-specific weight layouts or manual NUMA-aware placement. These requirements reduce portability and complicate integration with standard CPU-GPU offloading pipelines. We present HiNa-MoE, a high-performance, non-intrusive operator library for MoE inference on CPUs with Intel AMX. HiNa-MoE (1) exploits AMX with an optimized micro-kernel that keeps expert weights in standard layouts and instead fuses lightweight layout transforms into token gathering and stores; (2) applies NUMA-aware task partitioning under a simple page-interleaved policy without modifying the framework allocator; and (3) converts decode-phase memory matrix-vector operations into small matrix-matrix execution to utilize AMX. Across multiple MoE models, HiNa-MoE achieves up to 3.37x speedup for FFN kernels and up to 2.09x end-to-end inference speedup over state-of-the-art baselines, while remaining plug-and-play with existing frameworks and deployment workflows.",
+        "identifiers": [
+          "SemanticScholar:0f14ea6c85e87f9b88d99e9e129a2d395c5222f0"
+        ],
+        "semantic_scholar_id": "0f14ea6c85e87f9b88d99e9e129a2d395c5222f0",
+        "canonical_id": "arXiv:2610.05123",
+        "arxiv_id": "2610.05123",
+        "authors": [
+          "Wei-Ling Yang",
+          "Jun-Wen Zhang",
+          "De-Zun Dong",
+          "Jian-Bin Fang",
+          "En-Da Yu",
+          "Zhe Bai",
+          "Xiao-Peng Deng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07780",
+      "identity_tokens": [
+        "id:SemanticScholar:27571e8c62ea951d1e49653b29983d2182464956",
+        "id:arXiv:2610.07780",
+        "title:apex speculate smarter not deeper",
+        "url:https://arxiv.org/abs/2610.07780"
+      ],
+      "record": {
+        "title": "APEX: Speculate smarter, not deeper",
+        "source_url": "https://arxiv.org/abs/2610.07780",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding reduces large language model inference latency by drafting multiple tokens before target-model verification, but its effectiveness depends on both the proposal mechanism and draft depth. Fixed configurations cannot respond to changes in predictability, repetition, and acceptance during generation, so deeper drafting can increase wasted computation without proportional speedup. We introduce APEX, a learned controller that balances decoding speed and draft-token waste through request-level expert selection and block-level depth adaptation. APEX-Router selects among EAGLE-3, n-gram, and draft-model speculation for each request, while APEX-Depth adjusts draft length at each verification block using causal decoding signals and recent verifier feedback. APEX models accepted draft length as censored survival feedback, learning position-wise rejection hazards, block execution costs, and an action utility that balances throughput, accepted progress, and wasted tokens. This allows the controller to adapt speculation while retaining the target model's verification procedure. We integrate APEX into vLLM and evaluate it with Qwen3-8B across six workloads, achieving up to 5.24X speedup over autoregressive decoding. Across the aggregate evaluation, APEX-S achieves 4.27X speedup, while APEX-B achieves 3.27X speedup with a 41.0% relative reduction in wasted-token percentage compared with fixed n-gram speculation at k=16, providing distinct operating points for balancing acceleration and draft-token utilization.",
+        "identifiers": [
+          "SemanticScholar:27571e8c62ea951d1e49653b29983d2182464956"
+        ],
+        "semantic_scholar_id": "27571e8c62ea951d1e49653b29983d2182464956",
+        "canonical_id": "arXiv:2610.07780",
+        "arxiv_id": "2610.07780",
+        "authors": [
+          "Manvi Jha",
+          "Zach Zhang",
+          "Zhi-Chao Xu",
+          "Lin-Bo Liu",
+          "Sai Muralidhar Jayanthi",
+          "Vinayak Arannil"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.10845",
+      "identity_tokens": [
+        "id:SemanticScholar:8a20d171fc616c06a8c3ee9f64b943963e5706b0",
+        "id:arXiv:2610.10845",
+        "title:real longterm memory for ai a 50milliontoken window that is faster and cheaper than recompute",
+        "url:https://arxiv.org/abs/2610.10845"
+      ],
+      "record": {
+        "title": "Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute",
+        "source_url": "https://arxiv.org/abs/2610.10845",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A large language model can only use the text that fits in its context window, and it recomputes its internal key-value (KV) state for a prompt every time the prompt is sent. We test a memory layer, the public package galahad-kv, that saves the KV state of each block of about 16,000 tokens to encrypted local NVMe disk and loads it back later, byte-exact, without recomputing it. We ran it on 50,000,000 tokens of real public text, served through vLLM on one NVIDIA H100, with Gemma 4 12B and Gemma 4 31B. Every block we probed was loaded back from the encrypted store with no recompute (100 of 100, at depths from 0 to 50M tokens) on both models. Loading a block was 2.8x to 4.3x faster than recomputing it and used 8.8x to 12.3x less GPU energy, and GPU memory stayed flat over the whole 50M-token stream. Asked about facts planted millions of tokens earlier, the 12B model gave the right answer 82 times out of 100 and the 31B model 98 times out of 100. Neither model made up an answer. The limits are as follows. This is reuse of stored state, not a wider attention window: one block is loaded at a time, and how well a question is answered depends on the model. Writing the memory is a one-time cost, and the store takes terabytes of local NVMe disk. We describe the test protocol, which is built to resist common ways of gaming long-context benchmarks, and give a single-GPU reproduction that uses public software and a free licence for the package.",
+        "identifiers": [
+          "SemanticScholar:8a20d171fc616c06a8c3ee9f64b943963e5706b0"
+        ],
+        "semantic_scholar_id": "8a20d171fc616c06a8c3ee9f64b943963e5706b0",
+        "canonical_id": "arXiv:2610.10845",
+        "arxiv_id": "2610.10845",
+        "authors": [
+          "Sietse Schelpe"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 42,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.23939",
+      "identity_tokens": [
+        "id:SemanticScholar:e39379f2eb3d8ba858d5be58aac44449d05121db",
+        "id:arXiv:2610.23939",
+        "title:peekkv the first content token already knows which heads matter",
+        "url:https://arxiv.org/abs/2610.23939"
+      ],
+      "record": {
+        "title": "PeekKV: The First Content Token Already Knows Which Heads Matter",
+        "source_url": "https://arxiv.org/abs/2610.23939",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The size of the KV cache grows linearly with context length, making it a major memory bottleneck in LLM serving. Motivated by recent progress in identifying the functional roles of attention heads, a growing body of work compresses the KV cache non-uniformly across heads. Existing methods either fix the important heads via offline profiling or select them using attention signals from the prefill stage. In both cases, however, accuracy fluctuates substantially across workloads. While investigating the cause of this instability, we find that the active heads shift between the prefill and decode stages even within a single input. Along the decode path, by contrast, the activehead composition remains stable across content tokens once format tokens are filtered out. Based on this observation, we propose PeekKV. PeekKV observes a single content token immediately after prefill - a one-token peek - to jointly obtain head-group scores and token-importance scores. Guided by these scores, PeekKV allocates KV cache budgets to head groups in proportion to their group scores and retains only the top-scoring tokens within each budget. PeekKV requires no offline profiling or training and thus applies directly to unseen workloads and new models. Across four public benchmarks, PeekKV achieves the highest accuracy in more than half of the per-model comparisons against state-of-the-art methods, and stays closest to the full-cache accuracy on RULER and LongBench. On Llama-3.1-8B-Instruct, PeekKV retains 95.7% of the full-cache accuracy at a 10% memory budget on RULER with 16K contexts and 95.9% at a 1.5% budget on LongBench.",
+        "identifiers": [
+          "SemanticScholar:e39379f2eb3d8ba858d5be58aac44449d05121db"
+        ],
+        "semantic_scholar_id": "e39379f2eb3d8ba858d5be58aac44449d05121db",
+        "canonical_id": "arXiv:2610.23939",
+        "arxiv_id": "2610.23939",
+        "authors": [
+          "Minyoung Go",
+          "Yongjun Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.29489",
+      "identity_tokens": [
+        "id:SemanticScholar:f9b91b9999ece0685cb630bbf213d32ddd8eeed7",
+        "id:arXiv:2610.29489",
+        "title:reorienting the vector axis restructuring flashattention for longvector processors",
+        "url:https://arxiv.org/abs/2610.29489"
+      ],
+      "record": {
+        "title": "Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors",
+        "source_url": "https://arxiv.org/abs/2610.29489",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A Transformer is built around attention, whose cost grows with the square of the sequence length and dominates the layer on long sequences. FlashAttention made that cost manageable by tiling the attention matrix and updating the softmax as it goes, but almost all work since has targeted GPUs. On long-vector processors one vector register can hold up to 512 single-precision numbers. The savings of a vector instruction are proportional to how much of the register it uses, so the choice of which loop to vectorize is a first-order decision. We port PyTorch's CPU FlashAttention kernel to a RISC-V CPU with 2KB vector registers and find that it reaches 16.2% of peak floating-point throughput. The kernel walks each tile one query row at a time: the product against V is vectorized along the 64-element head dimension, the softmax's per-row maximum and sum are reductions that collapse a full register to a scalar, and the software exponential's polynomial coefficients compete with tile data for vector registers and cause spilling. We propose two techniques. The first transposes the score tile and the running output so that queries lie along the contiguous axis. The algorithm and its values are unchanged. A single parameter, the number of queries in a tile, now sets the vector length of every part of the kernel and can be matched to the machine. Both reductions also disappear. The second moves the polynomial's coefficients into scalar registers, removing the spills and cutting the softmax's vector memory instructions by 78.7%. On silicon the two together cut whole-kernel cycles by 1.84 to 2.08x at a head dimension of 64, raising floating-point utilization from 16.2% to 29.7% of peak. An FPGA of the same design ranks the changes identically and scores them higher, at 2.71x.",
+        "identifiers": [
+          "SemanticScholar:f9b91b9999ece0685cb630bbf213d32ddd8eeed7"
+        ],
+        "semantic_scholar_id": "f9b91b9999ece0685cb630bbf213d32ddd8eeed7",
+        "canonical_id": "arXiv:2610.29489",
+        "arxiv_id": "2610.29489",
+        "authors": [
+          "Emmanuel Irabor",
+          "Marc Casas"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.33404",
+      "identity_tokens": [
+        "id:SemanticScholar:c3fd4f5a64a7182a84e5c5b3f7ae405a6fe853aa",
+        "id:arXiv:2610.33404",
+        "title:cope composable performance emulation for mixtureofexperts offloading policies",
+        "url:https://arxiv.org/abs/2610.33404"
+      ],
+      "record": {
+        "title": "COPE: Composable Performance Emulation for Mixture-of-Experts Offloading Policies",
+        "source_url": "https://arxiv.org/abs/2610.33404",
+        "year": 2026,
+        "published": "2026-10-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLMs scale, mixture-of-experts (MoE) architectures increase model capacity while keeping per-token computation manageable through sparse expert activation. This sparsity also enables memory-efficient deployment by retaining most expert weights in CPU memory and transferring or executing only the routed experts on demand. Existing MoE offloading systems typically target specific model-platform configurations, yet differences in model sparsity, CPU and GPU throughput, VRAM capacity, and host-device bandwidth can change the policy ranking. Because implementing and exhaustively evaluating all candidate policies incurs substantial engineering cost, efficiently selecting the best-performing policy for each model-platform configuration remains a key challenge for practical MoE offloading. We present COPE (Composable Offloading Policy Emulator), which selects the best-performing MoE offloading policy for a target model-platform configuration before runtime integration. COPE comprises two components. Its Policy Matrix factors the design space into two independent axes, expert residency and MoE execution strategy, enabling mechanism reuse across candidate policies and exposing four new candidates. Its Virtual Heterogeneous Machine profiles combined-operator schedules on the target platform and combines these measurements with offline routing traces to estimate candidate performance. Compared with the evaluated baselines, COPE improves fastest-policy selection accuracy by 24%-100% and reduces performance-prediction error by $1.7\\times$ to $6.8\\times$. By identifying the preferred policy before integration, COPE further reduces policy-specific implementation effort by up to 74%.",
+        "identifiers": [
+          "SemanticScholar:c3fd4f5a64a7182a84e5c5b3f7ae405a6fe853aa"
+        ],
+        "semantic_scholar_id": "c3fd4f5a64a7182a84e5c5b3f7ae405a6fe853aa",
+        "canonical_id": "arXiv:2610.33404",
+        "arxiv_id": "2610.33404",
+        "authors": [
+          "Han-Ming Zhang",
+          "Er-Hu Feng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 25,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.35957",
+      "identity_tokens": [
+        "id:SemanticScholar:3e2e17d57d08096f198b4222d31a38a47eb76d4c",
+        "id:arXiv:2610.35957",
+        "title:distributed llm inference via communicationefficient speculative decoding",
+        "url:https://arxiv.org/abs/2610.35957"
+      ],
+      "record": {
+        "title": "Distributed LLM Inference via Communication-Efficient Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.35957",
+        "year": 2026,
+        "published": "2026-10-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Distributed speculative decoding has emerged as a promising approach for device--server collaborative large language model (LLM) inference, but its decoding speedup is often limited by the vocabulary-scale communication overhead. In existing distributed speculative decoding methods, exact rejection sampling requires transmitting full token distributions over the LLM vocabulary between the device and the server, which becomes costly in bandwidth-constrained environments. To address this issue, we propose DISCO, a communication-efficient framework for distributed speculative decoding, that eliminates vocabulary-scale distribution transfer while preserving the exact target distribution. DISCO achieves this by introducing a server-side replica of the draft small language model (SLM), which enables the server to locally obtain the draft-side distribution required for rejection sampling. As a result, DISCO exchanges only drafted token indices and scalar probability values between the device and the server. Experimental results on multiple datasets show that DISCO consistently achieves higher decoding speedup than existing distributed speculative decoding methods, particularly under stringent bandwidth constraints.",
+        "identifiers": [
+          "SemanticScholar:3e2e17d57d08096f198b4222d31a38a47eb76d4c"
+        ],
+        "semantic_scholar_id": "3e2e17d57d08096f198b4222d31a38a47eb76d4c",
+        "canonical_id": "arXiv:2610.35957",
+        "arxiv_id": "2610.35957",
+        "authors": [
+          "Joohyun Shin",
+          "Byeonghyeon Park",
+          "Keumseo Ryum",
+          "Joonhyuk Kang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 24,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:22dd7081a86201b1f00dab8ddde5f6ccbfa24f0079f16a563421c113ce01a92f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
