@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r04",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.16785",
+      "identity_tokens": [
+        "arXiv:2508.16785"
+      ],
+      "title": "Interpreting the Effects of Quantization on LLMs",
+      "reason": "arXiv著者要旨は4/8ビット量子化がLLM内部表現、校正、ニューロンの活性・寄与に与える影響を解釈可能性手法で分析。量子化モデルの信頼性に関連するが、新しい圧縮アルゴリズムや推論速度・VRAMの改善が主要な貢献ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2508.16785",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34185",
+      "identity_tokens": [
+        "arXiv:2609.34185"
+      ],
+      "title": "EntroPack: Fast and Accurate Entropy-Coded Weight Compression at Arbitrary Bitrates",
+      "reason": "arXiv著者要旨はE8格子量子化と条件付き確率モデルを用い、任意ビット率で重みをエントロピー符号化し、タイル単位で復号可能なEntroPackを提案。推論時の重み格納量と復号費用に関係するが、要旨の主対象は一般の大規模ニューラルネットで、LLMサービング固有の実機効果が中心とは確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.34185",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33768",
+      "identity_tokens": [
+        "arXiv:2609.33768"
+      ],
+      "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+      "reason": "arXiv著者要旨は多エージェントLLMで専用ルータの訓練やLLM呼出しによるエージェント選択の計算費を避け、専門性を考慮した分散タスク割当で負荷を分散するDEALSを提案。複数LLMエージェントのサービス効率と協調コストに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.33768",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Agentic LLM Serving"
+      ],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01599",
+      "identity_tokens": [
+        "arXiv:2603.01599"
+      ],
+      "title": "Boosting Entropy with Bell Box Quantization",
+      "reason": "arXiv一次要旨は一般のDNNとエッジデバイス向け量子化対応事前学習(QAPT)で、情報理論上の符号効率と整数演算の両立を提案。LLMの生成推論、KV、サービング、デコード高速化を対象とする根拠が一次要旨から確認できず、今回の推論効率サーベイでは対象外。",
+      "source_url": "https://arxiv.org/abs/2603.01599",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.00066",
+      "identity_tokens": [
+        "arXiv:2609.00066"
+      ],
+      "title": "OCGQuant: Outlier-Companion Grouping for NVFP4 Quantization",
+      "reason": "arXiv著者要旨はNVFP4のブロック内活性外れ値が共有スケールを支配し、通常値の量子化誤差を増やす問題を定義。外れ値と近い値を同じブロックにまとめるチャネルグルーピングによりNVFP4低ビット推論の品質を改善するOCGQuantを提案し、LLM量子化の実装に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.00066",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "NVFP4"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.14782",
+      "identity_tokens": [
+        "arXiv:2606.14782"
+      ],
+      "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+      "reason": "arXiv著者要旨はマルチモーダル長文脈のKV圧縮で、観測窓の注意集約が重要な少数視覚トークンを見落とす問題に対し、最終クエリ注意と層間持続性で重要度を補正するBACONを提案。KV保持予算下の回答品質改善を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2606.14782",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2506.17255",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.17255",
+        "arXiv:2506.17255",
+        "DOI:10.1145/3770743.3804314"
+      ],
+      "title": "UltraSketchLLM: Saliency-Driven Sketching for Ultra-Low Bit LLM Compression",
+      "reason": "arXiv著者要旨はスケッチとハードウェア親和演算によりLLM重みを0.5ビット/重みまで圧縮するUltraSketchLLMを提案。ナイーブなスケッチ実装比14.9倍の速度を報告。現行arXiv題名「UltraSketchLLM: Sub-1-Bit LLM Compression via Sketch and Hardware-Friendly Operators」とworklist旧題は同一identity。",
+      "source_url": "https://arxiv.org/abs/2506.17255",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22967",
+      "identity_tokens": [
+        "arXiv:2605.22967"
+      ],
+      "title": "Learned Relay Representations for Forward-Thinking Discrete Diffusion Models",
+      "reason": "arXiv著者要旨はマスク拡散言語モデルの各denoising反復で捨てられる内部表現を、学習可能なrelayチャネルで次反復へ引き継ぎ、再計算を抑える方法を提案。拡散LLMの反復推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.22967",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Inference / Parallel and Non-Autoregressive Decoding",
+        "Diffusion LLM Inference"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.01744",
+      "identity_tokens": [
+        "arXiv:2602.01744"
+      ],
+      "title": "Softmax Linear Attention: Reclaiming Global Competition",
+      "reason": "arXiv著者要旨は線形注意の計算効率を保ちつつ、softmaxをトークン間からヘッド間へ移すことで長文脈の競争的選択を復元するSLAを提案。二次注意の代替として長文脈メモリ・計算効率と品質のトレードオフを扱う。",
+      "source_url": "https://arxiv.org/abs/2602.01744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 56
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.01892",
+      "identity_tokens": [
+        "arXiv:2404.01892"
+      ],
+      "title": "Minimize Quantization Output Error with Bias Compensation",
+      "reason": "arXiv一次要旨は一般のDNNの量子化出力誤差をバイアス補償で凸最適化する方法で、学習不要の低精度化を扱う。生成LLM、LLMサービング、KV管理、言語モデル推論高速化の直接評価が一次要旨から確認できず、今回の対象外。",
+      "source_url": "https://arxiv.org/abs/2404.01892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:37:42+09:00",
+      "last_checked_at": "2026-10-30T15:37:42+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 57
+    }
+  ]
+}

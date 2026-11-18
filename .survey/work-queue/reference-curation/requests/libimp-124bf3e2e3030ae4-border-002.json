@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-124bf3e2e3030ae4-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.38196",
+  "reason": "serverless ML推論DAGで依存nodeのモデル重み・library・CUDA kernelロードを上流処理のslack時間に隠し、reuseとtraffic-adaptive keep-aliveを組み合わせる。L40S上の2 workflowでSMIless比median latency 64.5%/75.9%削減、eager preload比GPU/host memory allocation最大83.9%/94.6%削減。推論serving runtimeの技術として有用だが、実験対象は一般ML DAGでLLM decode固有ではないためborderline。",
+  "title": "GearUp: DAG-aware Acceleration for Serverless Inference Serving via Slack-guided Pre-loading",
+  "identity_tokens": [
+    "arXiv:2610.38196"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.DC/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-124bf3e2e303",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
