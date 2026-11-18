@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8eba52e786ee9d93-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.04361",
+  "reason": "画像生成のVisual AutoRegressiveモデルで、attention sink、スケール間の活性類似性、局所性を利用し、次スケールの疎注意パターンを前スケールから予測する。block-wise疎カーネルにより画像生成を高速化するが、対象はVAR画像生成でありLLMテキスト推論やサービングへの直接適用は示さないため境界候補。",
+  "title": "SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration",
+  "identity_tokens": [
+    "arXiv:2602.04361"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8eba52e786ee",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

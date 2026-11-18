@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3be9787b622a1d71-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.32229",
+  "reason": "GPT-OSS-20B MoEのMXFP4学習を安定化するALTO recipeで、Hadamard変換、stochastic rounding、重みde-oscillationを組み合わせてBF16との学習loss差を縮める。評価はMLPerf Small MoE TrainingとAMD MI300X上のsimulated MXFP4 training kernelであり、著者はwall-clock高速化を未最適化と明記する。推論実行・サービングの寄与を示さない学習専用のためunrelated。",
+  "title": "Training an MoE LLM in MXFP4: How We Closed the Gap to BF16",
+  "identity_tokens": [
+    "id:arXiv:2610.32229",
+    "id:DOI:10.48550/arXiv.2610.32229"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3be9787b622a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

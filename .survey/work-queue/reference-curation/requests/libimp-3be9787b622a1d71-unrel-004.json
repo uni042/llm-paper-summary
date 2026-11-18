@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3be9787b622a1d71-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.22975",
+  "reason": "テキスト画像・動画生成のDiffusion Transformerで、校正時に抽出したsink maskを固定再利用し、pooled KV branchを加えてdenoising attentionを疎化する。Wan2.1-T2VとZ-Image-Turboで約1.54–1.57倍の生成高速化を報告するが、対象は画像・動画DiTの推論でありLLM言語生成サービングへの適用は示されないため現行スコープではunrelated。",
+  "title": "Sink-Sparse Hybrid Attention for Efficient Inference in T2I/T2V Diffusion Transformers",
+  "identity_tokens": [
+    "id:arXiv:2610.22975",
+    "id:DOI:10.48550/arXiv.2610.22975"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3be9787b622a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

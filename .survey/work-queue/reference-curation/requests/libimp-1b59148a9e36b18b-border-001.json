@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1b59148a9e36b18b-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2601.22397",
+  "reason": "arXiv一次論文の要旨・導入と関連研究節を確認。複数段ML推論パイプラインのCPU/GPU資源配分を、LLMをin-context強化学習の制御器として用い、Pareto報酬・surprisalに基づく経験検索・ユーザー空間CUDA呼出し制御で調整する。4種類のML serving pipelineでP99遅延最大50%改善・実効費用最大97%削減（GPU rate-control仮定）を報告。ただし論文はLLMをサービング対象ではなく制御器として使い、対象ワークロードは一般MLパイプラインでありLLM推論固有のKV管理・デコード・サービング最適化を示さない。汎用推論基盤への間接的関連にとどまるためborderline。",
+  "title": "SAIR: Cost-Efficient Multi-Stage ML Pipeline Autoscaling via In-Context Reinforcement Learning",
+  "identity_tokens": [
+    "arXiv:2601.22397"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b59148a9e36",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

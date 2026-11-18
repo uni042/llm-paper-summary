@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e49d7b66567a8948-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2607.00862",
+  "reason": "著者のarXiv一次要旨を確認。CATはモデル自身のself-certaintyを選好最適化に取り込み、容易な問題ではCoT生成長を短縮し、難問では長い推論を維持する。推論時の出力トークン負荷低減には接続するが、主要な新規性はオフライン選好学習であり、サービング実装・実測TTFT/throughputの直接評価は要旨から確認できないため、学習高速化凍結範囲との境界としてborderline。",
+  "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models",
+  "identity_tokens": [
+    "arXiv:2607.00862",
+    "DOI:10.48550/arXiv.2607.00862"
+  ],
+  "linked_from": [
+    ".survey/work-queue/WORKLIST-45.md#rank-499"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e49d7b66567a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

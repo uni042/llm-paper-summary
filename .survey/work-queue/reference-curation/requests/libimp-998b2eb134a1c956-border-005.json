@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-998b2eb134a1c956-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41564",
+  "reason": "ReAct型agentへgoal stackと二段階の前提検証を追加し、goal activationや実行失敗時にPush/Pop/retry/BacktrackToで計画状態を修正する。Qwen3.5-9B、GPT-4o、DeepSeek-V3.2でAppWorldなどを評価し、AppWorldでReAct比最大22.07ポイントの成功率改善。制御フローの効率に隣接するがtoken費用・GPU latency・serving throughputの改善は要旨にないためborderline。",
+  "title": "Verify--Backtrack Loop: Structured Precondition Recovery for Long-Horizon Language Agents",
+  "identity_tokens": [
+    "arXiv:2610.41564"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AI/new",
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-998b2eb134a1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
