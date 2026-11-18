@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-19 08:01:43 JST**
+> 自動生成: **2026-11-19 08:06:49 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1965** |
-| 未claim Research job | **1965** |
-| 直近24hのResearch処理完了 | **0** |
-| 最終Research処理完了 | **11-18 08:00:27 JST** |
-| 最終Discovery探索完了 | **11-19 07:32:33 JST** |
+| 収録候補論文数 | **1960** |
+| 未claim Research job | **1960** |
+| 直近24hのResearch処理完了 | **2** |
+| 最終Research処理完了 | **11-19 07:55:00 JST** |
+| 最終Discovery探索完了 | **11-19 07:56:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1965** |
+| canonical_id確認済みの一意な候補論文 | **1960** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1965** |
+| 非終端Research job合計 | **1960** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,11 +51,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **150949** |
+| 探索候補総数 | **150956** |
 | 処理済み | **23931** |
-| 未処理Discovery候補 | **127018** |
-| 収録済み | **3845** |
-| Research / Audit候補へ昇格済み | **1138** |
+| 未処理Discovery候補 | **127025** |
+| 収録済み | **3850** |
+| Research / Audit候補へ昇格済み | **1133** |
 | 無関係として除外 | **12791** |
 | 微妙として除外 | **6157** |
 
@@ -63,18 +63,18 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **127018** |
+| 未処理候補（フィルタ前） | **127025** |
 | 機械規則による暫定隔離 | **2200** |
 | 拡張機械規則による追加隔離 | **1404** |
-| 機械規則通過後 | **123414** |
-| 系統内前方引用スコアによる選抜保留 | **117243** |
-| 暫定隔離合計 | **120847** |
-| **読解可能候補（隔離後）** | **6171** |
+| 機械規則通過後 | **123421** |
+| 系統内前方引用スコアによる選抜保留 | **117249** |
+| 暫定隔離合計 | **120853** |
+| **読解可能候補（隔離後）** | **6172** |
 | 前方引用が同一系統で2本以上の候補 | **10487** |
 | 前方引用が同一系統で3本以上の候補 | **2731** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6171件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6172件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.9%**
-- 現在の生在庫: 後方references **59154件** / 前方引用 **70168件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128558件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **59165件** / 前方引用 **70168件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128560件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-18 13:56:05 JST（18時間5分前）** |
+| 最終maintenance完了 | **11-18 13:56:05 JST（18時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **3** |
-| 直近6hのDiscovery本文確認・分類 | **60** |
-| 最終Research完了 | **11-18 08:00:27 JST** |
-| 最終Discovery完了 | **11-19 07:32:33 JST** |
+| 直近6hのResearch完了 | **2** |
+| 直近6hのDiscovery run | **4** |
+| 直近6hのDiscovery本文確認・分類 | **120** |
+| 最終Research完了 | **11-19 07:55:00 JST** |
+| 最終Discovery完了 | **11-19 07:56:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-18 08:00:27 JST** / worker — / run 20261118-0735-muse-x01 / 成果 **19件**
-  - evidence: .survey/import-inbox/results/research/2024-25dc8f5e1d17-importance-weighted-multi-draft-speculative-sampling.json
-- Discovery: **11-19 07:32:33 JST** / worker muse / run muse-discovery-20261119-r01::chunk-0001-of-0003
-  - 本文確認・分類 **20件** / accept **16件** / unrelated+borderline **4件**
-  - evidence: .survey/import-inbox/waiting/discovery/discovery-20261119-0730-muse-r01--chunk-0001-of-0003.json
+- Research: **11-19 07:55:00 JST** / worker — / run muse-20261119-research-2602.11184 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-large-language-models.json
+- Discovery: **11-19 07:56:00 JST** / worker muse / run muse-discovery-20261119-r02
+  - 本文確認・分類 **60件** / accept **21件** / unrelated+borderline **39件**
+  - evidence: .survey/import-inbox/pending/discovery/discovery-20261119-0900-muse-r02.json
 
 ### Codex探索成果の反映状況
 
@@ -288,7 +288,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1965** |
+| ready | **1960** |
 
 ### 候補の重複・識別情報欠損
 
@@ -308,7 +308,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **3852** |
+| inference/training/survey配下の論文Markdown実体 | **3857** |
 
 ### immutable submissionの未照合
 
