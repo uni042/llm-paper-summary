@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-118bc4b399c264c7-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41391",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41391",
+    "identity_tokens": [
+      "arXiv:2610.41391"
+    ],
+    "reason": "LLM査読の5方式、3入力表現、3モデルを比較。直接絶対評価は比較ランキングと同等の人間評価との順位相関を示し、基準率を揃えた補正後はElo比較方式より高い一致をAPI call数24%で達成。LLM workflowのcall削減と費用効率には関連するが、LLMサービングエンジン自体のTTFT、throughput、GPUメモリは評価せず、学術査読品質が主目的のためborderline。",
+    "first_checked_at": "2026-11-18T10:58:44+00:00",
+    "last_checked_at": "2026-11-18T10:58:44+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Comparative Evaluation of LLM-Based Review Paradigms for Academic Paper Quality Assessment"
+  },
+  "processed_at": "2026-11-18T10:58:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-118bc4b399c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

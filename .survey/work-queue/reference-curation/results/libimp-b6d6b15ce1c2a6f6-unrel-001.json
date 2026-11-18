@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6d6b15ce1c2a6f6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.06916",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.06916",
+    "identity_tokens": [
+      "arXiv:2604.06916"
+    ],
+    "reason": "Sol-RLはFLUX.1、SANA、SD3.5など画像生成拡散モデルの強化学習で、FP4で大量候補を探索しBF16で選別候補を再生成して学習する方式。一次要旨の最大4.64倍は画像拡散モデルの学習収束高速化であり、生成LLMの推論エンジン・KV・デコード最適化ではないため対象外。",
+    "first_checked_at": "2026-11-18T02:48:09+00:00",
+    "last_checked_at": "2026-11-18T10:58:58+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "training-reinforcement-learning-quantization",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+    ],
+    "title": "FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling"
+  },
+  "processed_at": "2026-11-18T10:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6d6b15ce1c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

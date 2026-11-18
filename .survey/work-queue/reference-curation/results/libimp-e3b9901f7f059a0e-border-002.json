@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3b9901f7f059a0e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.36329",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.36329",
+    "identity_tokens": [
+      "arXiv:2610.36329"
+    ],
+    "reason": "大学GPU clusterの89ノード319GPUでDCGMを使い100ms粒度の利用率を観測。対象7399 jobsの70%超がGPU memory20%未満、50%がSM平均5%未満と報告しGPU multitasking/配置改善の余地を示す。LLM推論専用のserving設計・実験ではないためborderline。",
+    "first_checked_at": "2026-11-18T10:58:59+00:00",
+    "last_checked_at": "2026-11-18T10:58:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Plenty of Room in the Middle: Revealing Opportunities on a GPU Cluster via Fine-Grained Monitoring"
+  },
+  "processed_at": "2026-11-18T10:58:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3b9901f7f05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

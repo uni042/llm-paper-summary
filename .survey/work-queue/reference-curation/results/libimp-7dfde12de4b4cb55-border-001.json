@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dfde12de4b4cb55-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01485",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01485",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.01485",
+      "arXiv:2602.01485"
+    ],
+    "reason": "LLMのBest-of-N型test-time scalingに対して、報酬分布の上側tailを推定してスケーリング則を予測し、Scaling-Law Guided (SLG) Searchで中間状態へ推論時のサンプリング予算を動的配分する。arXiv原著要旨は同一計算予算でBoNより高い報酬を報告し、理論的にはより大きなBoN計算予算に相当する期待報酬を示す。ただし主眼は推論時探索・推論品質対計算予算の最適化で、GPUサービング、KVキャッシュ、実測TTFT/TPOT/throughputの直接改善を要旨からは確認できないためborderline。",
+    "first_checked_at": "2026-11-18T10:58:52+00:00",
+    "last_checked_at": "2026-11-18T10:58:52+00:00",
+    "linked_from": [
+      "WORKLIST-45.md rank 500; test-time scaling / inference compute allocation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Predicting and improving test-time scaling laws via reward tail-guided search"
+  },
+  "processed_at": "2026-11-18T10:58:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dfde12de4b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

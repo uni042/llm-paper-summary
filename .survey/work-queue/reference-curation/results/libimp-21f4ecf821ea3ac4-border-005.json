@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21f4ecf821ea3ac4-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.future.2025.108352",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.future.2025.108352",
+    "identity_tokens": [
+      "DOI:10.1016/j.future.2025.108352",
+      "id:DOI:10.1016/j.future.2025.108352"
+    ],
+    "reason": "Elsevier一次要旨はタスク別にattention headの寄与を見て精度を配分し、データ再配置とattention-weights-stationaryアクセラレータを設計する。最大2.1倍の高速化、3.4倍のエネルギー効率を報告するが、要旨の対象は一般的Transformerであり生成LLMサービングでの適用条件が不明確。推論カーネルに隣接する技術としてborderline。",
+    "first_checked_at": "2026-11-18T10:58:48+00:00",
+    "last_checked_at": "2026-11-18T10:58:48+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TPQA: Efficient attention architecture with task-aware pattern-guided quantization"
+  },
+  "processed_at": "2026-11-18T10:58:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21f4ecf821ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

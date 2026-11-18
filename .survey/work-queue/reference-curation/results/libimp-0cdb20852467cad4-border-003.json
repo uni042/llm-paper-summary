@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cdb20852467cad4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.18237",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.18237",
+    "identity_tokens": [
+      "arXiv:2506.18237"
+    ],
+    "reason": "AdapThinkはモデルの確信度と回答の特徴に応じて反省への移行語の報酬を調節し、解の正確さと多様性をエントロピー誘導で均衡させるRL後学習方式。一次要旨では数学推論の過剰な思考を抑えるが、主たる寄与は学習時の報酬・サンプリングで、推論ランタイムのスケジューリングや速度実測が主題ではないためborderline。",
+    "first_checked_at": "2026-11-18T07:16:50+00:00",
+    "last_checked_at": "2026-11-18T10:58:43+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdapThink: Adaptive Thinking Preferences for Reasoning Language Model"
+  },
+  "processed_at": "2026-11-18T10:58:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cdb20852467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

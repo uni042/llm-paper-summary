@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cdb20852467cad4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.30519",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.30519",
+    "identity_tokens": [
+      "arXiv:2605.30519"
+    ],
+    "reason": "OmniMemは長動画の自己回帰生成で、履歴KVの疎検索における局所偏重をAdaptive Window Exclusionで抑え、Query-Shared KV Selectionとヘッド別散在アクセスで選択KVの膨張を防ぐ。KV検索技術は転用可能だが、一次要旨の主評価は動画生成の動的度と一貫性で、言語モデルの生成推論は対象外のため境界的。",
+    "first_checked_at": "2026-11-18T10:58:42+00:00",
+    "last_checked_at": "2026-11-18T10:58:42+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OmniMem: Scalable and Adaptive Memory Retrieval for Long Video Generation"
+  },
+  "processed_at": "2026-11-18T10:58:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cdb20852467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

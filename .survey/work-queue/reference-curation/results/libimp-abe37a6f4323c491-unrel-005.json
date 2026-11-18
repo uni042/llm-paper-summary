@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abe37a6f4323c491-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.38228",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.38228",
+    "identity_tokens": [
+      "arXiv:2610.38228",
+      "id:DOI:10.48550/arXiv.2610.38228",
+      "id:arXiv:2610.38228"
+    ],
+    "reason": "FSDP2でのall-gather/reduce-scatterのlayout変換をゼロコピーcollectiveで解消するTIDEを提案し、Llama-3.1 70B等の分散学習step時間を64 GPUで最大27.1%削減する。対象処理はパラメータ・勾配同期を含む学習時のcollectiveであり、推論サービングやdecode・prefillの実行高速化への適用は要旨で示されない。現行の推論中心・学習単独凍結範囲によりunrelated。",
+    "first_checked_at": "2026-11-18T10:58:57+00:00",
+    "last_checked_at": "2026-11-18T10:58:57+00:00",
+    "linked_from": [],
+    "title": "The Endgame of FSDP Communication: Layout-Aware Collectives on Copy Engines, RDMA, and NVSwitch"
+  },
+  "processed_at": "2026-11-18T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abe37a6f4323",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

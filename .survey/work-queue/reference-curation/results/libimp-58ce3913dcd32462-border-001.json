@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58ce3913dcd32462-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.21770",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.21770",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.21770",
+      "arXiv:2510.21770"
+    ],
+    "reason": "低精度Transformerのattention、LayerNorm、残差伝播に起因するforward誤差増幅を層別に予測し、FP32と低精度の差や安定化指標を検討する。Tiny-ViT中心の低精度学習安定性が主題で、生成LLMの量子化推論性能を直接評価していないためborderline。2026年PMLR版は題名と実験内容が変更されているため同一arXiv系列の版差を注意する。",
+    "first_checked_at": "2026-11-18T10:58:50+00:00",
+    "last_checked_at": "2026-11-18T10:58:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Numerical Fragility in Transformers: A Layer-wise Theory for Explaining, Forecasting, and Mitigating Instability"
+  },
+  "processed_at": "2026-11-18T10:58:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58ce3913dcd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T10:29:05+00:00",
-  "record_count": 12875,
+  "updated_at": "2026-11-18T10:58:59+00:00",
+  "record_count": 12884,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182594,30 +182594,15 @@
       ],
       "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction"
     },
-    "arXiv:2606.03002": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2606.03002",
-      "identity_tokens": [
-        "arXiv:2606.03002"
-      ],
-      "reason": "量子化によるSAE特徴損傷の計測研究。パープレキシティが保たれても解釈用スパース自己符号化器の特徴は劣化しうることを、固定したSAEを測定基盤として示す。量子化配置の評価には関わるが、提示はモデル内部表現の分析であり、推論技術や機構の提案ではない。対象外。",
-      "first_checked_at": "2026-11-15T21:43:22+00:00",
-      "last_checked_at": "2026-11-15T21:43:22+00:00",
-      "linked_from": [
-        "post-training quantization / second-order compression / weight-only LLM inference",
-        "重み専用量子化 / 推論カーネル"
-      ],
-      "title": "Perplexity Can Miss SAE Feature Damage Under Quantization"
-    },
     "arXiv:2604.06916": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2604.06916",
       "identity_tokens": [
         "arXiv:2604.06916"
       ],
-      "reason": "拡散強化学習のロールアウトへFP4を入れるSol-RL。対象はテキスト画像拡散モデルの選好整合という学習後訓練の計算負担軽減であり、量子化も訓練パイプライン内の工夫にとどまる。推論機構の提案ではない。対象外。",
+      "reason": "Sol-RLはFLUX.1、SANA、SD3.5など画像生成拡散モデルの強化学習で、FP4で大量候補を探索しBF16で選別候補を再生成して学習する方式。一次要旨の最大4.64倍は画像拡散モデルの学習収束高速化であり、生成LLMの推論エンジン・KV・デコード最適化ではないため対象外。",
       "first_checked_at": "2026-11-18T02:48:09+00:00",
-      "last_checked_at": "2026-11-18T02:48:09+00:00",
+      "last_checked_at": "2026-11-18T10:58:58+00:00",
       "linked_from": [
         "Weight Quantization / Compression",
         "inference-systems",
@@ -182707,23 +182692,6 @@
         "疎注意／長文脈学習"
       ],
       "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training"
-    },
-    "arXiv:2606.12199": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2606.12199",
-      "identity_tokens": [
-        "arXiv:2606.12199"
-      ],
-      "reason": "音声表現とテキストネイティブ推論の整合の研究。音声トークンの時間粒度の不一致が推論を弱めるという仮説の下で、フレームレートを走査する表現選択の実証研究。対象は音声対話モデルの表現設計であり、推論システム機構の提案ではない。対象外。",
-      "first_checked_at": "2026-11-18T03:45:03+00:00",
-      "last_checked_at": "2026-11-18T03:45:03+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
-        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
-        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
-      ],
-      "title": "Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation"
     },
     "arXiv:2512.22307": {
       "classification": "unrelated",
@@ -182936,9 +182904,9 @@
       "identity_tokens": [
         "arXiv:2406.01159"
       ],
-      "reason": "Transformer-Mamba拡散モデルDimba。テキスト画像生成のためのハイブリッド拡散モデルの構築と大規模化の研究。生成モデルの学習であり、推論システムの機構ではない。対象外。",
+      "reason": "arXiv一次要旨でTransformer層とMamba層を交互に積み、交差注意で条件情報を注入するテキスト画像生成用拡散モデルと確認。画像品質・画像生成スループットの評価であり、拡散言語モデルやLLM推論のデコード効率とは別領域のため対象外。",
       "first_checked_at": "2026-11-18T06:12:07+00:00",
-      "last_checked_at": "2026-11-18T06:12:07+00:00",
+      "last_checked_at": "2026-11-18T10:58:54+00:00",
       "linked_from": [
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
@@ -183927,21 +183895,6 @@
       ],
       "title": "iCATS: Fast Video Generation via Interaction-Aware Sparse Attention and Timestep-Adaptive Sparsity"
     },
-    "arXiv:2104.09393": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2104.09393",
-      "identity_tokens": [
-        "arXiv:2104.09393"
-      ],
-      "reason": "Conformerとクエリ型によるTransformer-Kernelランキングモデルの改善。文書再ランキングのモデル。対象は検索ランキングであり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:34+00:00",
-      "last_checked_at": "2026-11-18T07:47:34+00:00",
-      "linked_from": [
-        "inference-systems",
-        "sparse attention / long-context Transformer"
-      ],
-      "title": "Improving Transformer-Kernel Ranking Model Using Conformer and Query Term Independence"
-    },
     "arXiv:2303.06324": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2303.06324",
@@ -183981,11 +183934,16 @@
       "identity_tokens": [
         "arXiv:2505.16723"
       ],
-      "reason": "意味条件付き透かしによるLLMフィンガープリント。固定クエリへの記憶ではなく、意味領域に統計的透かしを拡散させる指紋手法。対象はモデルの指紋付けであり、推論システムの機構ではない。対象外。",
+      "reason": "特定の意味領域に属するプロンプトへの応答へ統計的な透かしを埋め込み、モデル所有権を検証するフィンガープリント手法。一次要旨の目的は量子化や微調整後にも残る識別信号の頑健性と秘匿性であり、推論時間・KV・メモリ・カーネル・サービング資源を最適化する技術的貢献は示されないため対象外。",
       "first_checked_at": "2026-11-18T07:47:35+00:00",
-      "last_checked_at": "2026-11-18T07:47:35+00:00",
+      "last_checked_at": "2026-11-18T10:58:44+00:00",
       "linked_from": [
         "Weight Quantization / Compression",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
         "post-training quantization / second-order compression / weight-only LLM inference",
         "重み専用量子化 / 推論カーネル"
       ],
@@ -184252,9 +184210,9 @@
       "identity_tokens": [
         "arXiv:2605.09742"
       ],
-      "reason": "選択的状態空間モデルにおける暗黙の時間認識TIDES。不規則な時系列を扱うための選択的SSMの変種。対象は時系列モデリングであり、LLM推論の機構ではない。対象外。",
+      "reason": "TIDESはMambaの選択性と物理時間刻みを両立させるため、入力依存性を離散化stepから状態行列へ移す。一次要旨の実験はUEA時系列分類とPhysiome-ODE回帰、異常なサンプリング間隔への外挿であり、生成LLM推論・サービングの実装や計算削減を評価していない。タイトルだけではMamba関連に見えるため要旨確認後にunrelatedとした。",
       "first_checked_at": "2026-11-18T07:47:57+00:00",
-      "last_checked_at": "2026-11-18T07:47:57+00:00",
+      "last_checked_at": "2026-11-18T10:58:51+00:00",
       "linked_from": [
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
@@ -184401,23 +184359,6 @@
       ],
       "title": "UltraImageGen: Efficient Ultra-High-Resolution Image Generation with Hierarchical Local Attention"
     },
-    "arXiv:2509.23625": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2509.23625",
-      "identity_tokens": [
-        "arXiv:2509.23625"
-      ],
-      "reason": "再帰内省マスク拡散視覚言語モデルRIV。生成トークンの誤りを直せないマスク拡散VLMへ自己修正能力を持たせる。対象は視覚言語モデルの生成であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:16+00:00",
-      "last_checked_at": "2026-11-18T08:08:16+00:00",
-      "linked_from": [
-        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
-        "diffusion language model inference / KV cache / training-free acceleration",
-        "inference-systems",
-        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
-      ],
-      "title": "RIV: Recursive Introspection Mask Diffusion Vision Language Model"
-    },
     "arXiv:2509.25176": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2509.25176",
@@ -184458,9 +184399,9 @@
       "identity_tokens": [
         "arXiv:2401.10580"
       ],
-      "reason": "直接選好最適化のための開源言語適応PHOENIX。モデルの他言語への転移と適応の研究。対象は言語適応であり、推論システムの機構ではない。対象外。",
+      "reason": "arXiv一次要旨でLlama-2やZephyr等のドイツ語適応にDirect Preference Optimizationを適用する研究と確認。学習・アラインメントが主題で、推論カーネル、メモリ、量子化、サービングの効率化機構は示されていないため対象外。",
       "first_checked_at": "2026-11-18T08:08:19+00:00",
-      "last_checked_at": "2026-11-18T08:08:19+00:00",
+      "last_checked_at": "2026-11-18T10:58:54+00:00",
       "linked_from": [
         "LLM Serving / Scheduling / Disaggregation",
         "Weight Quantization / Compression",
@@ -184530,20 +184471,6 @@
         "sparse attention / long-context Transformer"
       ],
       "title": "Breaking BERT: Evaluating and Optimizing Sparsified Attention"
-    },
-    "arXiv:2411.16991": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2411.16991",
-      "identity_tokens": [
-        "arXiv:2411.16991"
-      ],
-      "reason": "タイトルでsmall language modelのfine-tuningと過去mini-batchを使うself-distillation学習が中心と判明。LLM生成推論システムの最適化ではないためタイトル先行除外。",
-      "first_checked_at": "2026-11-18T08:08:24+00:00",
-      "last_checked_at": "2026-11-18T09:48:40+00:00",
-      "linked_from": [
-        "weight-quantization-compression"
-      ],
-      "title": "Dynamic Self-Distillation via Previous Mini-batches for Fine-tuning Small Language Models"
     },
     "arXiv:2502.02209": {
       "classification": "unrelated",
@@ -185341,6 +185268,190 @@
       "last_checked_at": "2026-11-18T10:28:53+00:00",
       "linked_from": [],
       "title": "Efficient-vDiT: Efficient Video Diffusion Transformers With Attention Tile"
+    },
+    "arXiv:2610.41661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41661",
+      "identity_tokens": [
+        "arXiv:2610.41661"
+      ],
+      "reason": "activation steeringが文体・根拠提示・曖昧性に生む副作用を測定し、補償vectorで意図しない言説変化の約78%を回復しつつ目的のsteering挙動を約93%保持すると報告。inference-timeという語は生成時の挙動制御を意味し、計算削減・GPUメモリ・serving latencyの評価はないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:45+00:00",
+      "last_checked_at": "2026-11-18T10:58:45+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "title": "When Steering Shifts Discourse: Identifying and Intervening on Discourse-Level Changes due to Activation Steering in LLMs"
+    },
+    "arXiv:2610.41698": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41698",
+      "identity_tokens": [
+        "arXiv:2610.41698"
+      ],
+      "reason": "文法誤り訂正でrepetition penaltyを変えることにより適合率と再現率のトレードオフを制御するdecode設定の実験。inference-levelは出力品質の制御を意味し、投機decodeやkernel最適化、token/s・TTFTの改善ではないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:45+00:00",
+      "last_checked_at": "2026-11-18T10:58:45+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "title": "Precision--Recall Trade-off on the Inference Level for LLMs in Grammatical Error Correction"
+    },
+    "arXiv:2610.42000": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.42000",
+      "identity_tokens": [
+        "arXiv:2610.42000"
+      ],
+      "reason": "instruction fine-tuning後の忘却による言語モデルloss悪化を固定vocabulary biasとtemperatureで補正。14組の1B〜7Bモデルでbias単独の回復推定は10%未満、temperature併用で最大36%と報告。生成logit補正によるモデル品質回復であり、計算・メモリ・サービング効率の改善は扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:45+00:00",
+      "last_checked_at": "2026-11-18T10:58:45+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Less Loss, Fixed Weights: Logit Corrections for Forgetting"
+    },
+    "arXiv:2610.40934": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40934",
+      "identity_tokens": [
+        "arXiv:2610.40934"
+      ],
+      "reason": "any-task inferenceをtaskと入力からlabel予測を返すzero-shot的能力として形式定義し、encoder/model/decoder分解と誤差項を導く理論研究。ここでのinferenceはタスク予測の意味であり、LLM推論ランタイム、計算量、KV cache、throughputを扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:46+00:00",
+      "last_checked_at": "2026-11-18T10:58:46+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "A Theoretical Framework for Understanding and Building \"Any-task inference\" Capable Foundation Models"
+    },
+    "arXiv:2610.41743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41743",
+      "identity_tokens": [
+        "arXiv:2610.41743"
+      ],
+      "reason": "LLM task vectorをTask Recognition、Task Learning、残差に分解し、Bayesian optimizationでsteeringの分類性能を改善。主眼は表現解釈と出力制御で、実行計算量・token/s・メモリ・推論エンジンの改善は示されないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:46+00:00",
+      "last_checked_at": "2026-11-18T10:58:46+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Task Vectors Can Be Linearly Decomposed into Interpretable and Controllable Components"
+    },
+    "DOI:10.1109/isdfs69419.2026.11458978": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isdfs69419.2026.11458978",
+      "identity_tokens": [
+        "DOI:10.1109/isdfs69419.2026.11458978"
+      ],
+      "reason": "タイトルが明示する研究対象はLLMのセキュリティ・プライバシー問題の体系的調査であり、LLM推論ランタイム、サービング、KVキャッシュ、量子化、カーネル、メモリ階層の効率化技術を研究対象としていない。タイトル段階の対象外判定であり、abstract・本文は未確認。",
+      "first_checked_at": "2026-11-18T10:58:47+00:00",
+      "last_checked_at": "2026-11-18T10:58:47+00:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 493; Security and Privacy in LLMs"
+      ],
+      "title": "A Systematic Study of Security and Privacy in Large Language Models"
+    },
+    "DOI:10.1109/icassp49660.2025.10890757": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp49660.2025.10890757",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49660.2025.10890757",
+        "id:DOI:10.1109/ICASSP49660.2025.10890757"
+      ],
+      "reason": "IEEE一次要旨は長系列の学習負荷を下げるtrim attentionを提案し、主な実験はVision Transformerによる画像分類である。LLMの自回帰推論、サービング、KV管理への実証的適用は要旨にないため対象外。タイトルだけでなく要旨を確認して判定。",
+      "first_checked_at": "2026-11-18T10:58:49+00:00",
+      "last_checked_at": "2026-11-18T10:58:49+00:00",
+      "linked_from": [],
+      "title": "Trimformer: A Novel Sequence Compression Mechanism with Local Attention"
+    },
+    "DOI:10.1109/etai68332.2026.11485199": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/etai68332.2026.11485199",
+      "identity_tokens": [
+        "DOI:10.1109/etai68332.2026.11485199",
+        "id:DOI:10.1109/ETAI68332.2026.11485199"
+      ],
+      "reason": "IEEE一次要旨は4-bit CNN向け二変数LUT活性化とチャネル再配置を提案する。評価対象はResNet-18/ImageNetとYOLOv5s/Pascal VOCで、LLMやTransformer推論の実装・評価ではない。一般的な画像認識向け量子化のため対象外。",
+      "first_checked_at": "2026-11-18T10:58:49+00:00",
+      "last_checked_at": "2026-11-18T10:58:49+00:00",
+      "linked_from": [],
+      "title": "Neural Network Quantization Based on 4-Bit Bivariate Lookup Table Activation"
+    },
+    "arXiv:2603.18331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18331",
+      "identity_tokens": [
+        "arXiv:2603.18331"
+      ],
+      "reason": "arXiv一次要旨でDNN全体・層を微分方程式として捉え、理論的理解、設計、一般的性能改善と応用を整理するサーベイと確認。LLM推論実装やサービングの計算・メモリ効率に関する具体的技術貢献がないため対象外。",
+      "first_checked_at": "2026-11-18T10:58:55+00:00",
+      "last_checked_at": "2026-11-18T10:58:55+00:00",
+      "linked_from": [],
+      "title": "Understanding the Theoretical Foundations of Deep Neural Networks through Differential Equations"
+    },
+    "arXiv:2610.38228": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.38228",
+      "identity_tokens": [
+        "arXiv:2610.38228",
+        "id:DOI:10.48550/arXiv.2610.38228",
+        "id:arXiv:2610.38228"
+      ],
+      "reason": "FSDP2でのall-gather/reduce-scatterのlayout変換をゼロコピーcollectiveで解消するTIDEを提案し、Llama-3.1 70B等の分散学習step時間を64 GPUで最大27.1%削減する。対象処理はパラメータ・勾配同期を含む学習時のcollectiveであり、推論サービングやdecode・prefillの実行高速化への適用は要旨で示されない。現行の推論中心・学習単独凍結範囲によりunrelated。",
+      "first_checked_at": "2026-11-18T10:58:57+00:00",
+      "last_checked_at": "2026-11-18T10:58:57+00:00",
+      "linked_from": [],
+      "title": "The Endgame of FSDP Communication: Layout-Aware Collectives on Copy Engines, RDMA, and NVSwitch"
+    },
+    "arXiv:2506.13183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13183",
+      "identity_tokens": [
+        "arXiv:2506.13183"
+      ],
+      "reason": "タイトルで明示された研究対象は3次元点群の位置合わせであり、LLM推論サービング、メモリ管理、KVキャッシュ最適化の研究ではない。",
+      "first_checked_at": "2026-11-18T10:58:58+00:00",
+      "last_checked_at": "2026-11-18T10:58:58+00:00",
+      "linked_from": [],
+      "title": "MT-PCR: Hybrid Mamba-Transformer Network with Spatial Serialization for Point Cloud Registration"
+    },
+    "arXiv:2509.24624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24624",
+      "identity_tokens": [
+        "arXiv:2509.24624"
+      ],
+      "reason": "タイトルで明示された研究対象はMPCを用いるLLM透かしとプライバシー保護であり、推論実行の高速化やメモリ削減を主題としない。",
+      "first_checked_at": "2026-11-18T10:58:58+00:00",
+      "last_checked_at": "2026-11-18T10:58:58+00:00",
+      "linked_from": [],
+      "title": "PrivMark: Private Large Language Models Watermarking with MPC"
+    },
+    "arXiv:2610.32695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32695",
+      "identity_tokens": [
+        "arXiv:2610.32695"
+      ],
+      "reason": "一次要旨で対象がGPUデータベースquery engine（Proteus/HeavyDB/Sirius）のcolumn decompressionと判明。HBM使用量最大4分の1、帯域最大6分の1という結果はSQL query処理向けであり、LLM/Transformer推論の評価はないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:59+00:00",
+      "last_checked_at": "2026-11-18T10:58:59+00:00",
+      "linked_from": [],
+      "title": "Tile-Based Decompression in Compiled GPU Engines"
+    },
+    "arXiv:2610.34467": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34467",
+      "identity_tokens": [
+        "arXiv:2610.34467"
+      ],
+      "reason": "multi-agent workflowを動的に生成・学習し、数学推論・科学QA・multi-hop retrievalで正答率を改善する研究。要旨の主指標は正答率（Forced modeで88.08%）で、LLM推論システムの速度・計算・メモリ最適化は検証していないためunrelated。",
+      "first_checked_at": "2026-11-18T10:58:59+00:00",
+      "last_checked_at": "2026-11-18T10:58:59+00:00",
+      "linked_from": [],
+      "title": "DynaFlow: Learning Free-Form Multi-Agent Orchestration"
     }
   }
 }

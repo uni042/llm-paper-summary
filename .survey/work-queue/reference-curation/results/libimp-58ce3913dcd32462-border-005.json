@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58ce3913dcd32462-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.30032",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.30032",
+    "identity_tokens": [
+      "arXiv:2609.30032"
+    ],
+    "reason": "TMEはTEE内でLLMを動作させ、出力漏洩を抑えるadversarial training、information-flow control、remote attestationを組み合わせ、バッチ化により検証を償却する。一次全文で効率とスケーラビリティも評価するが、主貢献は秘密保護の意味計算primitiveでありLLM推論の一般的な速度・KV最適化ではないためborderline。",
+    "first_checked_at": "2026-11-18T08:17:51+00:00",
+    "last_checked_at": "2026-11-18T10:58:51+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2607.19353-benchmarking-confidential-gpu-inference-on-nvidia-h100-under-intel-tdx.md",
+      "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md",
+      "papers/inference/99-other-inference-systems/2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Trusted Model Environment for Private Semantic Computations"
+  },
+  "processed_at": "2026-11-18T10:58:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58ce3913dcd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

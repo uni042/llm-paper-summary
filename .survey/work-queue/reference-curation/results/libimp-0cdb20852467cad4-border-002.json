@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cdb20852467cad4-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.23157",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.23157",
+    "identity_tokens": [
+      "arXiv:2601.23157"
+    ],
+    "reason": "Nested Least-Privilege Networksは推論時の到達可能な内部計算を権限として定義し、監視・割当・強制の三層でリクエスト別にrank制御する。一次要旨は能力抑制と安全な配備の権限・効用曲線を主目的とし、生成速度やサービング効率の直接的な定量改善を中心にしない。計算経路の制御技術は関連するためborderline。",
+    "first_checked_at": "2026-11-18T06:12:10+00:00",
+    "last_checked_at": "2026-11-18T10:58:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+      "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+      "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md",
+      "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md",
+      "survey-speculative-decoding"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "No More, No Less: Least-Privilege Language Models"
+  },
+  "processed_at": "2026-11-18T10:58:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cdb20852467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

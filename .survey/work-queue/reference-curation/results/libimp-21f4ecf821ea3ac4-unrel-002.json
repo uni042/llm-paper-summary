@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21f4ecf821ea3ac4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icassp49660.2025.10890757",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icassp49660.2025.10890757",
+    "identity_tokens": [
+      "DOI:10.1109/icassp49660.2025.10890757",
+      "id:DOI:10.1109/ICASSP49660.2025.10890757"
+    ],
+    "reason": "IEEE一次要旨は長系列の学習負荷を下げるtrim attentionを提案し、主な実験はVision Transformerによる画像分類である。LLMの自回帰推論、サービング、KV管理への実証的適用は要旨にないため対象外。タイトルだけでなく要旨を確認して判定。",
+    "first_checked_at": "2026-11-18T10:58:49+00:00",
+    "last_checked_at": "2026-11-18T10:58:49+00:00",
+    "linked_from": [],
+    "title": "Trimformer: A Novel Sequence Compression Mechanism with Local Attention"
+  },
+  "processed_at": "2026-11-18T10:58:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21f4ecf821ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

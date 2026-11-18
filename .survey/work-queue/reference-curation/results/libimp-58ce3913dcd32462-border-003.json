@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58ce3913dcd32462-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.18410",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.18410",
+    "identity_tokens": [
+      "arXiv:2608.18410"
+    ],
+    "reason": "RoleSubはOpenVLA-OFT-7Bの視覚・言語KV value表現を直交群へ分け、役割・言語条件routerで群単位に保持して総KVを元の9.2〜11.3%へ圧縮。LIBEROロボット制御ではトークン削減のみの比較より良いが、対象はVLA policyであり一般LLMテキスト推論への実証はないためborderline。",
+    "first_checked_at": "2026-11-18T07:47:54+00:00",
+    "last_checked_at": "2026-11-18T10:58:50+00:00",
+    "linked_from": [
+      "KV cache compression / cross-layer state merging",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "疎注意 / KVキャッシュ選択 / 長文脈推論"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies"
+  },
+  "processed_at": "2026-11-18T10:58:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58ce3913dcd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

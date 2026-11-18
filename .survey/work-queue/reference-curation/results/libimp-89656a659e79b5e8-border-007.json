@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-89656a659e79b5e8-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.03805",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.03805",
+    "identity_tokens": [
+      "arXiv:2510.03805"
+    ],
+    "reason": "arXiv一次要旨でStep Prunerを確認。推論ステップ単位の報酬と動的な学習停止により、推論時の冗長な思考ステップを削減し、AIME24で出力トークンを69.7%削減したと報告。ただし中心機構はRLポストトレーニングであり、サービング実行系の直接的な最適化ではないため境界候補。",
+    "first_checked_at": "2026-11-18T10:58:53+00:00",
+    "last_checked_at": "2026-11-18T10:58:53+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Token Length: Step Pruner for Efficient and Accurate Reasoning in Large Language Models"
+  },
+  "processed_at": "2026-11-18T10:58:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-89656a659e79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

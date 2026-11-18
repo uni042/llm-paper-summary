@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3b9901f7f059a0e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.32695",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.32695",
+    "identity_tokens": [
+      "arXiv:2610.32695"
+    ],
+    "reason": "一次要旨で対象がGPUデータベースquery engine（Proteus/HeavyDB/Sirius）のcolumn decompressionと判明。HBM使用量最大4分の1、帯域最大6分の1という結果はSQL query処理向けであり、LLM/Transformer推論の評価はないためunrelated。",
+    "first_checked_at": "2026-11-18T10:58:59+00:00",
+    "last_checked_at": "2026-11-18T10:58:59+00:00",
+    "linked_from": [],
+    "title": "Tile-Based Decompression in Compiled GPU Engines"
+  },
+  "processed_at": "2026-11-18T10:58:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3b9901f7f05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

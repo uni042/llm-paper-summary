@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cdb20852467cad4-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.16723",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.16723",
+    "identity_tokens": [
+      "arXiv:2505.16723"
+    ],
+    "reason": "特定の意味領域に属するプロンプトへの応答へ統計的な透かしを埋め込み、モデル所有権を検証するフィンガープリント手法。一次要旨の目的は量子化や微調整後にも残る識別信号の頑健性と秘匿性であり、推論時間・KV・メモリ・カーネル・サービング資源を最適化する技術的貢献は示されないため対象外。",
+    "first_checked_at": "2026-11-18T07:47:35+00:00",
+    "last_checked_at": "2026-11-18T10:58:44+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "title": "LLM Fingerprinting via Semantically Conditioned Watermarks"
+  },
+  "processed_at": "2026-11-18T10:58:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cdb20852467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

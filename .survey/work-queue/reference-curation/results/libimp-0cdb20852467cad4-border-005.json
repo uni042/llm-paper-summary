@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cdb20852467cad4-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.23625",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.23625",
+    "identity_tokens": [
+      "arXiv:2509.23625"
+    ],
+    "reason": "RIVはマスク拡散VLMの生成結果を別のIntrospection Modelで誤り検出し、誤り位置を再マスクしてunmaskと内省を反復する。一次要旨は文法・論理誤りの自己修正とベンチマーク品質を評価し、反復回数削減や生成スループットの最適化を主目的としない。拡散VLMの推論機構には関連するが効率化の直接性が弱いためborderline。",
+    "first_checked_at": "2026-11-18T10:58:43+00:00",
+    "last_checked_at": "2026-11-18T10:58:43+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RIV: Recursive Introspection Mask Diffusion Vision Language Model"
+  },
+  "processed_at": "2026-11-18T10:58:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cdb20852467",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

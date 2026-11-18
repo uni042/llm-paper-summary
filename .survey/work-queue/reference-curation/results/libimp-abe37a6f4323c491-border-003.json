@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-abe37a6f4323c491-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.39846",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.39846",
+    "identity_tokens": [
+      "arXiv:2610.39846",
+      "id:DOI:10.48550/arXiv.2610.39846",
+      "id:arXiv:2610.39846"
+    ],
+    "reason": "2023–2026年の13情報源からAI推論エネルギー推定134件を集約し、chat、推論回答、動画生成、coding agent等20タスクについて計測境界を統一するTokWattデータベースを構築する。施設込み換算では短いchat回答0.34Wh、推論回答4.7Whなどの参考値を提示する。ただし新規のLLM推論runtime、スケジューラ、量子化方式の改善ではなくエネルギー会計の資料集であるためborderline。",
+    "first_checked_at": "2026-11-18T10:58:56+00:00",
+    "last_checked_at": "2026-11-18T10:58:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TokWatt: an open, boundary-annotated database of AI inference energy, from chat answers to agents"
+  },
+  "processed_at": "2026-11-18T10:58:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-abe37a6f4323",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

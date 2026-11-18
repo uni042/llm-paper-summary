@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0584a803c5c66402-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.14350",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.14350",
+    "identity_tokens": [
+      "arXiv:2606.14350"
+    ],
+    "reason": "arXiv一次要旨。複数モデル・ツールのworkflow topologyと構成選択を二軸に整理し、分散compound AIの8設計パターンを提案。3事例で単一モデルに近い精度を維持し遅延最大60%・費用最大71%削減と報告。LLMエージェント運用の関連はあるが、主題は一般的な複合AI設計方法論で、特定LLM推論エンジンの最適化評価は要旨にないためborderline。",
+    "first_checked_at": "2026-11-18T10:58:42+00:00",
+    "last_checked_at": "2026-11-18T10:58:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems"
+  },
+  "processed_at": "2026-11-18T10:58:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0584a803c5c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

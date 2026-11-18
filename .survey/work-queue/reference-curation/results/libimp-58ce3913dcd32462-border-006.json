@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58ce3913dcd32462-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:VV0hSE8AxCw",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:VV0hSE8AxCw",
+    "identity_tokens": [
+      "OpenReview:VV0hSE8AxCw",
+      "SemanticScholar:1db25a173e48992f385cb42e2862d28f23ad7e39"
+    ],
+    "reason": "ICLR 2023の著者公式実装に掲載された要旨に基づく。STTABTは最終予測への寄与をattention back-trackingで推定し、ApproxNetとConcrete maskingでencoder Transformerのtokenを枝刈りする。NLP/CV分類モデルで疎化と精度維持を検証するが、生成LLMのKVキャッシュやデコードサービングの直接実験ではないため境界的。",
+    "first_checked_at": "2026-11-18T10:58:51+00:00",
+    "last_checked_at": "2026-11-18T10:58:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Sparse Token Transformer with Attention Back Tracking"
+  },
+  "processed_at": "2026-11-18T10:58:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58ce3913dcd3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
