@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a39c4b9dad165d8d-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.27419",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.27419",
+    "identity_tokens": [
+      "arXiv:2510.27419"
+    ],
+    "reason": "問題難易度に応じてCoT長を伸縮させる二重報酬のRL枠組みで、トークン効率の改善を示すが、機構は学習側の報酬設計であり推論機構の提案ではないため境界とする。",
+    "first_checked_at": "2026-11-18T08:17:51+00:00",
+    "last_checked_at": "2026-11-18T08:17:51+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains"
+  },
+  "processed_at": "2026-11-18T08:17:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a39c4b9dad16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a39c4b9dad165d8d-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.09535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.09535",
+    "identity_tokens": [
+      "arXiv:2510.09535"
+    ],
+    "reason": "推論セグメント単位の罰則（GRSP）をRLVRへ導入し、過剰思考によるトークン消費を抑える学習手法。目的は推論時トークン効率だが、機構は学習側の正則化でありサービング機構ではないため境界とする。",
+    "first_checked_at": "2026-11-18T08:17:50+00:00",
+    "last_checked_at": "2026-11-18T08:17:50+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mitigating Overthinking through Reasoning Shaping"
+  },
+  "processed_at": "2026-11-18T08:17:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a39c4b9dad16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

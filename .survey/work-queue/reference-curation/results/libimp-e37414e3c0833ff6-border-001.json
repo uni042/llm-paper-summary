@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e37414e3c0833ff6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.13862",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.13862",
+    "identity_tokens": [
+      "arXiv:2606.13862"
+    ],
+    "reason": "連続するCoTトークン対を潜在表現へ圧縮しMTPで2トークンずつ復号する手法で、スループット向上とCoT長2〜3割削減を示すが、機構はモデルの微調整による推論表現の変更であり、サービング機構の提案ではないため境界とする。",
+    "first_checked_at": "2026-11-18T08:17:57+00:00",
+    "last_checked_at": "2026-11-18T08:17:57+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SuperThoughts: Reasoning Tokens in Superposition"
+  },
+  "processed_at": "2026-11-18T08:17:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e37414e3c083",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

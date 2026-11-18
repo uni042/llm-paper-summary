@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16c48861f6885c57-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.11573",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.11573",
+    "identity_tokens": [
+      "arXiv:2610.11573"
+    ],
+    "reason": "LLMエージェントの長期記憶を種類別に分類するデータセットTriMEMと、種類ごとに戦略を変えるMemoTypeを提案する。記憶の扱いは文脈コストに関わるが、対象はエージェントの記憶管理という応用層であり、モデル推論のメモリ機構ではないため境界。",
+    "first_checked_at": "2026-11-18T08:17:46+00:00",
+    "last_checked_at": "2026-11-18T08:17:46+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies"
+  },
+  "processed_at": "2026-11-18T08:17:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16c48861f688",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

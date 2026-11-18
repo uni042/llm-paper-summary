@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4d849bc0d11a5d3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.10030",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.10030",
+    "identity_tokens": [
+      "arXiv:2603.10030"
+    ],
+    "reason": "AIデータ経路向けに、バッファの割当・配置・登録・完了安全性を担うカーネルモジュールdmaplaneを提案し、RDMAやGPUメモリ連携を評価する。推論基盤のデータ移動には関わるが、対象は汎用AI輸送ライブラリのバッファ編成であり、LLM推論システムへの適用は間接的で境界。",
+    "first_checked_at": "2026-11-18T08:17:54+00:00",
+    "last_checked_at": "2026-11-18T08:17:54+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths"
+  },
+  "processed_at": "2026-11-18T08:17:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4d849bc0d11",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

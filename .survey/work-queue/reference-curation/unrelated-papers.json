@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T08:08:29+00:00",
-  "record_count": 12841,
+  "updated_at": "2026-11-18T08:17:59+00:00",
+  "record_count": 12848,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -184692,9 +184692,9 @@
       "identity_tokens": [
         "arXiv:2505.18799"
       ],
-      "reason": "注意局在化と剪定による効率的整合ALPS。下流課題への整合を、重要な注意ヘッドの同定と剪定で効率化する。対象は整合（訓練）であり、推論機構ではない。対象外。",
+      "reason": "一次abstractによれば、タスク感度の高いattention headだけを微調整することで下流タスクへのalignment学習コストを減らす研究。attention parameterの10%のみをfine-tuningし性能を改善したとの評価であり、推論時のattention剪定、レイテンシ、KVキャッシュ、サービング等の改善を提案・評価していないため推論システムサーベイの対象外。",
       "first_checked_at": "2026-11-18T08:08:24+00:00",
-      "last_checked_at": "2026-11-18T08:08:24+00:00",
+      "last_checked_at": "2026-11-18T08:17:49+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
@@ -184877,6 +184877,126 @@
         "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md"
       ],
       "title": "WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild"
+    },
+    "arXiv:2510.07355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.07355",
+      "identity_tokens": [
+        "arXiv:2510.07355"
+      ],
+      "reason": "音響・視覚手がかりによる感情推論のベンチマークであり、能力評価のみで推論システムへの貢献はない。",
+      "first_checked_at": "2026-11-18T08:17:52+00:00",
+      "last_checked_at": "2026-11-18T08:17:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "AV-EMO-Reasoning: Benchmarking Emotional Reasoning Capabilities in Omni-modal LLMS with Audio-visual Cues"
+    },
+    "arXiv:2505.11153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11153",
+      "identity_tokens": [
+        "arXiv:2505.11153"
+      ],
+      "reason": "部分観測マルコフ決定過程向けに双方向再帰ユニットでフィードフォワード層を置き換えるRLエージェントのアーキテクチャ提案であり、対象は強化学習のサンプル効率であってLLM推論システムではない。",
+      "first_checked_at": "2026-11-18T08:17:53+00:00",
+      "last_checked_at": "2026-11-18T08:17:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Bi-directional Recurrence Improves Transformer in Partially Observable Markov Decision Processes"
+    },
+    "arXiv:2507.12769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.12769",
+      "identity_tokens": [
+        "arXiv:2507.12769"
+      ],
+      "reason": "バイトレベルから概念トークンを学習するトークナイザ不要アーキテクチャの能力研究であり、推論システムへの焦点はない。",
+      "first_checked_at": "2026-11-18T08:17:53+00:00",
+      "last_checked_at": "2026-11-18T08:17:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "Synergy: End-to-end Concept Model"
+    },
+    "arXiv:2502.12784": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12784",
+      "identity_tokens": [
+        "arXiv:2502.12784"
+      ],
+      "reason": "Volta GPUのテンソルコア向けに多頭注意を高速化するライブラリだが、対象はTransformerの学習時間短縮であり、推論への具体的適用は示されていない（学習のみの高速化は範囲外）。",
+      "first_checked_at": "2026-11-18T08:17:54+00:00",
+      "last_checked_at": "2026-11-18T08:17:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture"
+    },
+    "arXiv:2610.04518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.04518",
+      "identity_tokens": [
+        "arXiv:2610.04518"
+      ],
+      "reason": "学習時の正則化、特に重み減衰とドロップアウトの配置が、系列モデルの長さ汎化にどう影響するかを分析した研究。要旨で扱うのは訓練手順と汎化性能であり、推論効率化への具体的な適用や推論時機構は確認できないため対象外。",
+      "first_checked_at": "2026-11-18T08:17:56+00:00",
+      "last_checked_at": "2026-11-18T08:17:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md"
+      ],
+      "title": "Length Generalization Needs Proper Regularization"
+    },
+    "arXiv:2610.29357": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.29357",
+      "identity_tokens": [
+        "arXiv:2610.29357"
+      ],
+      "reason": "AIエージェントの外部メモリによる継続学習の枠組み・分類・評価プロトコルの提案であり、LLM推論システムへの技術的貢献はない。",
+      "first_checked_at": "2026-11-18T08:17:58+00:00",
+      "last_checked_at": "2026-11-18T08:17:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.22101-memos-an-operating-system-for-memory-augmented-generation-mag-in-large-l.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Memory-Centric Continual Learning for AI Agents"
+    },
+    "SemanticScholar:dcc238451cf07c14206004753e9da15e1e46619d": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:dcc238451cf07c14206004753e9da15e1e46619d",
+      "identity_tokens": [
+        "SemanticScholar:dcc238451cf07c14206004753e9da15e1e46619d",
+        "https://www.semanticscholar.org/paper/dcc238451cf07c14206004753e9da15e1e46619d"
+      ],
+      "reason": "睡眠に着想を得た記憶固定化による継続学習パラダイムの提案であり、LLM推論システムへの技術的貢献はない。",
+      "first_checked_at": "2026-11-18T08:17:59+00:00",
+      "last_checked_at": "2026-11-18T08:17:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories"
     }
   }
 }

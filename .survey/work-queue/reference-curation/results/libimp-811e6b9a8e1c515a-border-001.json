@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-811e6b9a8e1c515a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02110",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.02110",
+      "arXiv:2602.02110"
+    ],
+    "reason": "DINO-WMを対象に重みのみと重み・活性同時のPTQをビット幅、量子化粒度、計画ホライズン最大50反復で比較。group-wise重み量子化は低ビットrolloutの安定化に寄与する一方、encoderとpredictorの量子化感度は非対称で、過度の低ビット化は計画目的とタスク成功の対応を破壊する。世界モデルの圧縮研究だがLLM推論効率そのものの検証ではないためborderline。",
+    "first_checked_at": "2026-11-15T21:42:57+00:00",
+    "last_checked_at": "2026-11-18T08:17:48+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "inference-systems",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Empirical Study of World Model Quantization"
+  },
+  "processed_at": "2026-11-18T08:17:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-811e6b9a8e1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

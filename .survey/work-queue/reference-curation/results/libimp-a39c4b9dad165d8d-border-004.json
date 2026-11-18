@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a39c4b9dad165d8d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.06313",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.06313",
+    "identity_tokens": [
+      "arXiv:2507.06313"
+    ],
+    "reason": "入力コンテキストへのテスト時微調整で短文脈モデルを長文脈化し定数メモリ・線形計算をうたうが、機構は入力ごとのパラメータ更新であり、推論システム機構としての貢献は間接的なため境界とする。",
+    "first_checked_at": "2026-11-18T08:17:50+00:00",
+    "last_checked_at": "2026-11-18T08:17:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ETT: Expanding the Long Context Understanding Capability of LLMs at Test-Time"
+  },
+  "processed_at": "2026-11-18T08:17:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a39c4b9dad16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

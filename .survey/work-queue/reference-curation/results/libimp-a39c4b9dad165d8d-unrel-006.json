@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a39c4b9dad165d8d-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.12769",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.12769",
+    "identity_tokens": [
+      "arXiv:2507.12769"
+    ],
+    "reason": "バイトレベルから概念トークンを学習するトークナイザ不要アーキテクチャの能力研究であり、推論システムへの焦点はない。",
+    "first_checked_at": "2026-11-18T08:17:53+00:00",
+    "last_checked_at": "2026-11-18T08:17:53+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+    ],
+    "title": "Synergy: End-to-end Concept Model"
+  },
+  "processed_at": "2026-11-18T08:17:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a39c4b9dad16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

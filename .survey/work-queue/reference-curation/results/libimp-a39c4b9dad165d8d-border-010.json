@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a39c4b9dad165d8d-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.03100",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.03100",
+    "identity_tokens": [
+      "arXiv:2606.03100"
+    ],
+    "reason": "3D質問応答でビュー選択と最適輸送による代表トークン選択を行い、限られた入力予算で文脈品質を保つ。トークン削減の側面はあるが、主目的は3D理解の精度であり推論効率の評価が中心でないため境界とする。",
+    "first_checked_at": "2026-11-18T08:17:52+00:00",
+    "last_checked_at": "2026-11-18T08:17:52+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+      "papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md",
+      "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Zero-Shot 3D Question Answering via Hierarchical View-to-Token Transportation"
+  },
+  "processed_at": "2026-11-18T08:17:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a39c4b9dad16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16c48861f6885c57-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.48550/arxiv.2605.23074",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.48550/arxiv.2605.23074",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.23074",
+      "arXiv:2605.23074"
+    ],
+    "reason": "推論モデルの思考軌跡に現れる反省マーカーの種類と文脈ごとに介入効果が違うことを分析し、状態依存に較正するPathCalを提案する。テスト時の推論制御ではあるが、主眼はマーカー介入の分析と較正であり、推論システム機構としての貢献は薄く境界。前回判定を維持する。",
+    "first_checked_at": "2026-11-18T08:17:47+00:00",
+    "last_checked_at": "2026-11-18T08:17:47+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning"
+  },
+  "processed_at": "2026-11-18T08:17:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16c48861f688",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
