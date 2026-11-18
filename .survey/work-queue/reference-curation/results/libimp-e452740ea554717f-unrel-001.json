@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e452740ea554717f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+    "identity_tokens": [
+      "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+      "arXiv:2111.05897"
+    ],
+    "reason": "タイトルが明示する対象は100兆パラメータ級の推薦システムであり、LLMの生成推論・KVキャッシュ・サービングではない。対象外分野のタイトル先行除外。",
+    "first_checked_at": "2026-11-18T12:59:30+00:00",
+    "last_checked_at": "2026-11-18T13:19:36+00:00",
+    "linked_from": [],
+    "title": "Persia: A Hybrid System Scaling Deep Learning-based Recommenders up to 100 Trillion Parameters"
+  },
+  "processed_at": "2026-11-18T13:19:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e452740ea554",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

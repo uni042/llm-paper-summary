@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39c30dc62a58b159-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.02170",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.02170",
+    "identity_tokens": [
+      "arXiv:2603.02170"
+    ],
+    "reason": "SageAttention系のINT8注意を学習の逆伝播へ拡張し、QK正規化・スコア勾配の量子化誤差・K平滑化の影響を検証する。低ビット注意カーネルの知見は推論にも関連するが、論文の主要評価は事前学習・微調整の安定性であり推論時高速化は直接測定していない。",
+    "first_checked_at": "2026-11-15T21:43:09+00:00",
+    "last_checked_at": "2026-11-18T13:19:30+00:00",
+    "linked_from": [
+      "inference-systems",
+      "long-context inference / dynamic sparse attention / prefill acceleration",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SageBwd: A Trainable Low-bit Attention"
+  },
+  "processed_at": "2026-11-18T13:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39c30dc62a58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

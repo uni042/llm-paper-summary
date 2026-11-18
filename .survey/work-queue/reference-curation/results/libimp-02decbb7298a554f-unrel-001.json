@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02decbb7298a554f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.03575",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.03575",
+    "identity_tokens": [
+      "arXiv:2512.03575"
+    ],
+    "reason": "動画圧縮の情報的独自性を研究する映像符号化であり、タイトルにLLM推論・サービング・メモリ最適化の対象がない。",
+    "first_checked_at": "2026-11-18T13:19:26+00:00",
+    "last_checked_at": "2026-11-18T13:19:26+00:00",
+    "linked_from": [],
+    "title": "UniComp: Rethinking Video Compression Through Informational Uniqueness"
+  },
+  "processed_at": "2026-11-18T13:19:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02decbb7298a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

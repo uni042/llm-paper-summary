@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-131aa6ea9ca03718-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.02226",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.02226",
+    "identity_tokens": [
+      "arXiv:2603.02226"
+    ],
+    "reason": "arXiv一次要旨。音声・動画など低情報量区間が長い系列に対し、neuronごとのbinary switchで必要な時だけrecurrent stateを更新するsuRNNを提案。WikiText等で性能と状態保持効率を評価するが、生成LLMの推論サービングやtoken生成時レイテンシの直接比較は要旨で確認できないため、将来の代替系列アーキテクチャとしてborderline。",
+    "first_checked_at": "2026-11-18T13:19:28+00:00",
+    "last_checked_at": "2026-11-18T13:19:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Sparse Selective-Update RNNs for Long-Range Sequence Modeling"
+  },
+  "processed_at": "2026-11-18T13:19:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-131aa6ea9ca0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

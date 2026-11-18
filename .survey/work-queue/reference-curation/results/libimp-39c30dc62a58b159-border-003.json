@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39c30dc62a58b159-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.12422",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.12422",
+    "identity_tokens": [
+      "arXiv:2510.12422"
+    ],
+    "reason": "長時間動画の情報を階層的な記憶へ格納し、質問に応じて粗い時間範囲から細部へ遡るエージェント型検索を提案。密なフレーム説明を避ける設計は効率性と関連するが、要旨で中心に示される成果は長動画質問応答の精度で、推論時遅延や計算量の独立評価は確認できない。",
+    "first_checked_at": "2026-11-18T06:39:27+00:00",
+    "last_checked_at": "2026-11-18T13:19:30+00:00",
+    "linked_from": [
+      "Inference / Multimodal Long-Context Memory Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VideoLucy: Deep Memory Backtracking for Long Video Understanding"
+  },
+  "processed_at": "2026-11-18T13:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39c30dc62a58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

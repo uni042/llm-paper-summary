@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7a840e9ca288718-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1",
+    "identity_tokens": [
+      "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1"
+    ],
+    "reason": "タイトルが対象を動画拡散モデルの多精度アクセラレータと明示している。生成LLMのdecode、KV、MoEや言語モデル推論への適用はタイトルから読み取れないため対象外。本文・abstract未読。",
+    "first_checked_at": "2026-11-18T13:19:32+00:00",
+    "last_checked_at": "2026-11-18T13:19:32+00:00",
+    "linked_from": [],
+    "title": "Shenbi: A Multi-Precision Accelerator for Video Diffusion Models"
+  },
+  "processed_at": "2026-11-18T13:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7a840e9ca28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

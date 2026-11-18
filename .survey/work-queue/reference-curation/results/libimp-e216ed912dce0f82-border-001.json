@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e216ed912dce0f82-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.17187",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.17187",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2601.17187",
+      "arXiv:2601.17187"
+    ],
+    "reason": "LLM導入に重要な重み・活性の双方の量子化MatMulについて、校正統計なしの汎用設定で高レート量子化の歪みとINT/FP近似を情報理論的に比較する。一次書誌ではworklistの「Theory and Practice」と題名が異なり、現行正式題名は「High-Rate Quantized Matrix Multiplication I」。理論は直接関連するがLLM推論TPS/実機カーネル測定は要旨で未確認。",
+    "first_checked_at": "2026-11-18T13:19:35+00:00",
+    "last_checked_at": "2026-11-18T13:19:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "High-Rate Quantized Matrix Multiplication I"
+  },
+  "processed_at": "2026-11-18T13:19:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e216ed912dce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e216ed912dce0f82-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.08545",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.08545",
+    "identity_tokens": [
+      "arXiv:2302.08545"
+    ],
+    "reason": "分散DNN学習の勾配を双方向圧縮し、圧縮状態のまま集約するTHCを提案する。一次要旨では学習収束時間を1.28～1.47倍改善するが、生成LLM推論時の通信やモデル実行ではなく学習のパラメータサーバ通信が対象。",
+    "first_checked_at": "2026-11-18T06:12:12+00:00",
+    "last_checked_at": "2026-11-18T13:19:36+00:00",
+    "linked_from": [
+      "MoE inference systems / expert parallelism / model compression / knowledge distillation"
+    ],
+    "title": "THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression"
+  },
+  "processed_at": "2026-11-18T13:19:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e216ed912dce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

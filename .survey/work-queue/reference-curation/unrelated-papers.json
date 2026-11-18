@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T12:59:43+00:00",
-  "record_count": 12902,
+  "updated_at": "2026-11-18T13:19:36+00:00",
+  "record_count": 12907,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182612,7 +182612,7 @@
       ],
       "reason": "一次arXiv書誌・要旨ではモデル盗難・改変・情報漏洩への対策としてニューラル重みに鍵を埋め込み、アクセラレータの論理ロックで利用を制限するLLAを提案。鍵7168bitで計算オーバーヘッド0.1%未満と報告するが、主目的は知的財産保護・セキュリティであり推論高速化やメモリ管理への直接貢献はない。",
       "first_checked_at": "2026-11-18T03:45:08+00:00",
-      "last_checked_at": "2026-11-18T12:39:38+00:00",
+      "last_checked_at": "2026-11-18T13:19:35+00:00",
       "linked_from": [
         "inference-systems"
       ],
@@ -182641,9 +182641,9 @@
       "identity_tokens": [
         "arXiv:2606.00437"
       ],
-      "reason": "プロセス報酬モデルのストレステストEST-PRM。ラベル保存変換の下でPRMスコアが段階正しさの安定した代理であり続けるかを検証する評価枠組み。対象は訓練監督の品質評価であり、推論システムの機構ではない。対象外。",
+      "reason": "4,687の数学推論チェーンでPRMのステップ増加・並べ替え・確信マーカーに対する報酬頑健性を評価する。目的は学習時の報酬モデルの評価・修復であり、推論時間・KV・モデル圧縮・サービング最適化の研究ではない。",
       "first_checked_at": "2026-11-18T03:45:10+00:00",
-      "last_checked_at": "2026-11-18T03:45:10+00:00",
+      "last_checked_at": "2026-11-18T13:19:36+00:00",
       "linked_from": [
         "Speculative Decoding",
         "投機的デコード / 分布保存型デコード高速化",
@@ -182817,9 +182817,9 @@
       "identity_tokens": [
         "arXiv:2302.08545"
       ],
-      "reason": "テンソル準同型圧縮による分散深層学習の高速化THC。作業者間の勾配交換の通信オーバーヘッドを双方向圧縮で下げる学習基盤の手法。対象は訓練の通信であり、推論機構ではない。対象外。",
+      "reason": "分散DNN学習の勾配を双方向圧縮し、圧縮状態のまま集約するTHCを提案する。一次要旨では学習収束時間を1.28～1.47倍改善するが、生成LLM推論時の通信やモデル実行ではなく学習のパラメータサーバ通信が対象。",
       "first_checked_at": "2026-11-18T06:12:12+00:00",
-      "last_checked_at": "2026-11-18T06:12:12+00:00",
+      "last_checked_at": "2026-11-18T13:19:36+00:00",
       "linked_from": [
         "MoE inference systems / expert parallelism / model compression / knowledge distillation"
       ],
@@ -182855,20 +182855,6 @@
         "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
       ],
       "title": "SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs"
-    },
-    "arXiv:2603.02226": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.02226",
-      "identity_tokens": [
-        "arXiv:2603.02226"
-      ],
-      "reason": "疎な選択的更新RNN。音声や動画のような長い無音・ノイズ区間を含む信号向けに、冗長な入力では内部状態を保つ選択的更新を学ぶ系列モデルのアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:12:13+00:00",
-      "last_checked_at": "2026-11-18T06:12:13+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "Efficient Sparse Selective-Update RNNs for Long-Range Sequence Modeling"
     },
     "arXiv:2605.11111": {
       "classification": "unrelated",
@@ -183105,9 +183091,9 @@
       "identity_tokens": [
         "arXiv:2503.19604"
       ],
-      "reason": "生成的暗黙動画圧縮GIViC。暗黙神経表現による動画符号化の性能限界を、暗黙拡散過程で押し上げる枠組み。対象は動画コーデックであり、LLM推論の機構ではない。対象外。",
+      "reason": "生成的な暗黙表現を用いる動画圧縮が研究対象であり、LLM推論のシステム最適化ではない。",
       "first_checked_at": "2026-11-18T07:16:51+00:00",
-      "last_checked_at": "2026-11-18T07:16:51+00:00",
+      "last_checked_at": "2026-11-18T13:19:26+00:00",
       "linked_from": [
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
         "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
@@ -184067,16 +184053,16 @@
         "DOI:10.48550/arxiv.2212.14041",
         "arXiv:2212.14041"
       ],
-      "reason": "RNA二次構造予測をK-Rookマッチングとして定式化するバイオインフォマティクス応用であり、LLM推論システムへの貢献はない。",
+      "reason": "RNA二次構造予測という生命情報学の応用が明示され、LLM推論基盤の技術的貢献ではない。",
       "first_checked_at": "2026-11-18T08:08:26+00:00",
-      "last_checked_at": "2026-11-18T08:08:26+00:00",
+      "last_checked_at": "2026-11-18T13:19:27+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
         "papers/inference/99-other-inference-systems/2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md",
         "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md"
       ],
-      "title": "Deciphering RNA Secondary Structure Prediction: A Probabilistic K-Rook Matching Perspective"
+      "title": "RFold: Towards Simple yet Effective RNA Secondary Structure Prediction"
     },
     "arXiv:2409.19613": {
       "classification": "unrelated",
@@ -184084,9 +184070,9 @@
       "identity_tokens": [
         "arXiv:2409.19613"
       ],
-      "reason": "少数ショット分割向けにcross-Mambaで線形計算量化を図る視覚アーキテクチャであり、LLM推論システムではなく汎用モデルアーキテクチャの能力研究にあたる。",
+      "reason": "few-shot画像セグメンテーションの視覚モデルが対象であり、生成LLM推論システムの最適化ではない。",
       "first_checked_at": "2026-11-18T08:08:27+00:00",
-      "last_checked_at": "2026-11-18T08:08:27+00:00",
+      "last_checked_at": "2026-11-18T13:19:27+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
         "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
@@ -184136,9 +184122,9 @@
       "identity_tokens": [
         "arXiv:2412.08595"
       ],
-      "reason": "HiPPO-LegSの特異ODEが適切に定義されることと、リーマン可積分入力に対する離散化収束を数学的に証明する。一次要旨は状態空間モデルの数値解析であり、生成LLM推論の性能・メモリ・実行最適化の研究ではない。",
+      "reason": "arXiv一次要旨はHiPPO-LegSの特異常微分方程式の適切性とRiemann可積分入力に対する離散化の収束を証明する数値解析研究。SSMの理論的背景にはなるが、LLM推論の実装・高速化・メモリ管理への具体的貢献は要旨にない。",
       "first_checked_at": "2026-11-18T08:08:28+00:00",
-      "last_checked_at": "2026-11-18T11:49:16+00:00",
+      "last_checked_at": "2026-11-18T13:19:34+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
         "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
@@ -184170,9 +184156,9 @@
       "identity_tokens": [
         "arXiv:2510.22588"
       ],
-      "reason": "UltraVoiceは830時間超の音声対話データを作成し、感情・速度・音量・訛り等のスタイル制御を改善する。一次要旨の主な評価はMOSと指示追従率で、生成推論のメモリ・帯域・スケジューリング・速度を最適化する技術ではないためunrelated。",
+      "reason": "arXiv一次要旨は音声会話の感情・話速・音量・アクセントなど6種類のスタイル制御を学習する830時間超のデータセットと微調整を提案。目的・評価は音声表現力と指示追従であり、推論時の遅延・メモリ・演算・サービング効率の新手法はない。",
       "first_checked_at": "2026-11-18T08:08:29+00:00",
-      "last_checked_at": "2026-11-18T12:59:40+00:00",
+      "last_checked_at": "2026-11-18T13:19:33+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
         "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
@@ -184206,9 +184192,9 @@
       "identity_tokens": [
         "arXiv:2510.07355"
       ],
-      "reason": "音響・視覚手がかりによる感情推論のベンチマークであり、能力評価のみで推論システムへの貢献はない。",
+      "reason": "音声・映像を使った感情推論能力のベンチマークであり、LLM推論実行効率の技術的改善を扱う題名ではない。",
       "first_checked_at": "2026-11-18T08:17:52+00:00",
-      "last_checked_at": "2026-11-18T08:17:52+00:00",
+      "last_checked_at": "2026-11-18T13:19:26+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
         "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
@@ -184234,23 +184220,6 @@
         "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
       ],
       "title": "Bi-directional Recurrence Improves Transformer in Partially Observable Markov Decision Processes"
-    },
-    "arXiv:2502.12784": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2502.12784",
-      "identity_tokens": [
-        "arXiv:2502.12784"
-      ],
-      "reason": "Volta GPUのテンソルコア向けに多頭注意を高速化するライブラリだが、対象はTransformerの学習時間短縮であり、推論への具体的適用は示されていない（学習のみの高速化は範囲外）。",
-      "first_checked_at": "2026-11-18T08:17:54+00:00",
-      "last_checked_at": "2026-11-18T08:17:54+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
-        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
-      ],
-      "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture"
     },
     "arXiv:2610.04518": {
       "classification": "unrelated",
@@ -185527,19 +185496,6 @@
       "linked_from": [],
       "title": "Learning to Adapt: In-Context Learning Beyond Stationarity"
     },
-    "arXiv:2111.05897": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2111.05897",
-      "identity_tokens": [
-        "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
-        "arXiv:2111.05897"
-      ],
-      "reason": "タイトルに対象がdeep-learning recommenderの100兆パラメータ規模の学習システムと明示され、LLM推論・サービングではないためタイトル先行除外。abstract・本文の読解を判定根拠として扱わない。",
-      "first_checked_at": "2026-11-18T12:59:30+00:00",
-      "last_checked_at": "2026-11-18T12:59:30+00:00",
-      "linked_from": [],
-      "title": "Persia: A Hybrid System Scaling Deep Learning-based Recommenders up to 100 Trillion Parameters"
-    },
     "arXiv:2603.25463": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2603.25463",
@@ -185666,6 +185622,106 @@
       "last_checked_at": "2026-11-18T12:59:43+00:00",
       "linked_from": [],
       "title": "ZeRO from Scratch: Evaluating Memory Savings, Communication Overhead, and Bandwidth Sensitivity"
+    },
+    "arXiv:2512.03575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03575",
+      "identity_tokens": [
+        "arXiv:2512.03575"
+      ],
+      "reason": "動画圧縮の情報的独自性を研究する映像符号化であり、タイトルにLLM推論・サービング・メモリ最適化の対象がない。",
+      "first_checked_at": "2026-11-18T13:19:26+00:00",
+      "last_checked_at": "2026-11-18T13:19:26+00:00",
+      "linked_from": [],
+      "title": "UniComp: Rethinking Video Compression Through Informational Uniqueness"
+    },
+    "arXiv:2204.06328": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.06328",
+      "identity_tokens": [
+        "arXiv:2204.06328"
+      ],
+      "reason": "HuBERTの音声認識を早期終了で効率化する研究であり、生成LLM推論・サービングの対象外。",
+      "first_checked_at": "2026-11-18T13:19:27+00:00",
+      "last_checked_at": "2026-11-18T13:19:27+00:00",
+      "linked_from": [],
+      "title": "HuBERT-EE: Early Exiting HuBERT for Efficient Speech Recognition"
+    },
+    "DOI:10.1109/iccv51701.2025.02086": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51701.2025.02086",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51701.2025.02086"
+      ],
+      "reason": "リアルタイム動画インスタンスセグメンテーション向けのクエリルーティングであり、LLMサービングの要求ルーティングではない。",
+      "first_checked_at": "2026-11-18T13:19:28+00:00",
+      "last_checked_at": "2026-11-18T13:19:28+00:00",
+      "linked_from": [],
+      "title": "Temporal-Aware Query Routing for Real-Time Video Instance Segmentation"
+    },
+    "arXiv:2610.40477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40477",
+      "identity_tokens": [
+        "arXiv:2610.40477"
+      ],
+      "reason": "edge-cloud環境のサービス配置、診断、設定、修復をLMが支援する39研究を、LMの責務・権限・制約・実証証拠の5軸で整理するレビュー。対象はLMを運用意思決定の補助ツールとして使うサービスオーケストレーションであり、LLM自身の推論実行、KVメモリ、サービングエンジンの効率化を提案・評価していない。推論効率サーベイの収録範囲外としてunrelated。",
+      "first_checked_at": "2026-11-18T13:19:32+00:00",
+      "last_checked_at": "2026-11-18T13:19:32+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "title": "Can We Rely on Language Models to Orchestrate Services across the Edge-Cloud Continuum?"
+    },
+    "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1",
+      "identity_tokens": [
+        "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1"
+      ],
+      "reason": "タイトルが対象を動画拡散モデルの多精度アクセラレータと明示している。生成LLMのdecode、KV、MoEや言語モデル推論への適用はタイトルから読み取れないため対象外。本文・abstract未読。",
+      "first_checked_at": "2026-11-18T13:19:32+00:00",
+      "last_checked_at": "2026-11-18T13:19:32+00:00",
+      "linked_from": [],
+      "title": "Shenbi: A Multi-Precision Accelerator for Video Diffusion Models"
+    },
+    "arXiv:2608.03609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03609",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.03609",
+        "arXiv:2608.03609"
+      ],
+      "reason": "タイトルが動画超解像のイベント認識トークン選択を研究対象と明示している。言語モデルの推論・サービング効率化ではないため対象外。本文・abstract未読。",
+      "first_checked_at": "2026-11-18T13:19:32+00:00",
+      "last_checked_at": "2026-11-18T13:19:32+00:00",
+      "linked_from": [],
+      "title": "Event-Aware Token Selection for Efficient Video Super-Resolution"
+    },
+    "arXiv:2602.09883": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09883",
+      "identity_tokens": [
+        "arXiv:2602.09883"
+      ],
+      "reason": "arXiv一次要旨はFlux-Dev、Flux-Schnell、Z-Image、Wan2.1等の画像・動画生成DiTで時刻ごとにビット幅を選ぶ量子化方式を提案。言語拡散LLMではなく画像・動画生成を対象とするため、現行のLLM推論システム系統からは対象外。",
+      "first_checked_at": "2026-11-18T13:19:34+00:00",
+      "last_checked_at": "2026-11-18T13:19:34+00:00",
+      "linked_from": [],
+      "title": "AdaTSQ: Pushing the Pareto Frontier of Diffusion Transformers via Temporal-Sensitivity Quantization"
+    },
+    "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+      "identity_tokens": [
+        "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b",
+        "arXiv:2111.05897"
+      ],
+      "reason": "タイトルが明示する対象は100兆パラメータ級の推薦システムであり、LLMの生成推論・KVキャッシュ・サービングではない。対象外分野のタイトル先行除外。",
+      "first_checked_at": "2026-11-18T12:59:30+00:00",
+      "last_checked_at": "2026-11-18T13:19:36+00:00",
+      "linked_from": [],
+      "title": "Persia: A Hybrid System Scaling Deep Learning-based Recommenders up to 100 Trillion Parameters"
     }
   }
 }

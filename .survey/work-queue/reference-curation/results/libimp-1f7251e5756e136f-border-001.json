@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f7251e5756e136f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12784",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12784",
+    "identity_tokens": [
+      "arXiv:2502.12784"
+    ],
+    "reason": "arXiv一次要旨でVolta V100のTensor Core形状に合わせたMHAのカーネル融合・HBMアクセス削減を提案しPyTorch比平均1.80倍のエンドツーエンド高速化を報告。ただし評価と主目的はTransformerの学習高速化で、生成LLM推論の復号・サービングへの直接効果は要旨に示されないため保留。",
+    "first_checked_at": "2026-11-18T13:19:29+00:00",
+    "last_checked_at": "2026-11-18T13:19:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture"
+  },
+  "processed_at": "2026-11-18T13:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f7251e5756e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

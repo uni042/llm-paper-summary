@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-152faf9996d808a2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.03777",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.03777",
+    "identity_tokens": [
+      "arXiv:2406.03777"
+    ],
+    "reason": "arXiv一次要旨は端末上での個人向けLLMを対象に、モデルサイズ、圧縮方式、微調整時間、RAGとの選択など学習効率と下流タスク精度の相互作用を実証的に調べる。資源制約下の配備には関連するが、推論サービングのカーネル、遅延、メモリ管理の新機構を要旨では確認できず境界的。",
+    "first_checked_at": "2026-11-18T13:19:29+00:00",
+    "last_checked_at": "2026-11-18T13:19:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Empirical Guidelines for Deploying LLMs onto Resource-constrained Edge Devices"
+  },
+  "processed_at": "2026-11-18T13:19:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-152faf9996d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

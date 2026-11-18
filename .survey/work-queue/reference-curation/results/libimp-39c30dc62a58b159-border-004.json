@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-39c30dc62a58b159-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.11634",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.11634",
+    "identity_tokens": [
+      "arXiv:2606.11634"
+    ],
+    "reason": "全注意モデルを窓注意へ変換した後、窓注意に適した推論系列を強化学習で獲得するSWARR。線形計算量の窓注意を推論へ利用する意義はあるが、中心寄与はSFT後の学習適応と数学推論精度の回復であり、推論カーネル・サービス性能の実測が主題ではない。",
+    "first_checked_at": "2026-11-18T07:37:24+00:00",
+    "last_checked_at": "2026-11-18T13:19:31+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Architecture-Aware Reinforcement Learning Makes Sliding-Window Attention Competitive in Math Reasoning"
+  },
+  "processed_at": "2026-11-18T13:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-39c30dc62a58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

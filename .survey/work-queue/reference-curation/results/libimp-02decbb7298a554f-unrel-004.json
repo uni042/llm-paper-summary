@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02decbb7298a554f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.19613",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.19613",
+    "identity_tokens": [
+      "arXiv:2409.19613"
+    ],
+    "reason": "few-shot画像セグメンテーションの視覚モデルが対象であり、生成LLM推論システムの最適化ではない。",
+    "first_checked_at": "2026-11-18T08:08:27+00:00",
+    "last_checked_at": "2026-11-18T13:19:27+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Hybrid Mamba for Few-Shot Segmentation"
+  },
+  "processed_at": "2026-11-18T13:19:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02decbb7298a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

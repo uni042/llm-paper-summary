@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-152faf9996d808a2-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.18865",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.18865",
+    "identity_tokens": [
+      "arXiv:2605.18865"
+    ],
+    "reason": "arXiv一次要旨は注意の疎性が高いViT層ほど単純な逐次モジュールへ置換しても精度低下が小さいことを蒸留実験で示し、パラメータと遅延を削減する。しかし主たる評価対象は画像Vision Transformerであり、生成LLM推論への適用・測定は要旨にないため保留。",
+    "first_checked_at": "2026-11-18T07:27:48+00:00",
+    "last_checked_at": "2026-11-18T13:19:29+00:00",
+    "linked_from": [
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV-cache compression / attention-based token selection / long-context inference",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Sparsity to Simplicity: Enabling Simpler Sequential Replacements via Sparse Attention Distillation"
+  },
+  "processed_at": "2026-11-18T13:19:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-152faf9996d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
