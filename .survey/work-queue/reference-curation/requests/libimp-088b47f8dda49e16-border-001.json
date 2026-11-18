@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-088b47f8dda49e16-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.16013",
+  "reason": "固定batch容量・固定処理時間の単一serverで、将来到着を有限長だけ先読みできるonline batchingの総flow time最小化を理論解析する。敵対的到着では先読みがあってもoffline最適との一定の隔たりが残り、Poisson到着では窓長とともに差が指数的に縮むと示す。実request trace実験もあるが一次要旨ではLLM特有のKV cache、prefill/decode、continuous batchingをモデル化していない。一般推論batch理論として関連するがLLM推論固有性が弱いためborderline。",
+  "title": "Online Batching with Lookahead: Adversarial Limits and Stochastic Gains",
+  "identity_tokens": [
+    "id:arXiv:2610.16013",
+    "id:DOI:10.48550/arXiv.2610.16013"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-088b47f8dda4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

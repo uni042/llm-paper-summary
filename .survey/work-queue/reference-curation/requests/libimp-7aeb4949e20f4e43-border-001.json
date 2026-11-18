@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7aeb4949e20f4e43-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.33274",
+  "reason": "LLM agentの履歴をimmutable storeへ一度だけ記録し、各呼出しのmemory budgetに応じて短いtimelineとquery関連のraw excerptを生成的LLM callなしで組み立てるFlexA-Mem。AppWorld 4K budgetで次点比11.5%、事前固定した147 taskでA-Mem+summary比12.2%のtask成功率改善を報告。prompt budget管理には関係するが、主指標はagent task精度で、LLM servingのTTFT/throughputやGPUメモリ最適化を実測しないためborderline。",
+  "title": "FlexA-Mem: Budget-Adaptive Agentic Memory for LLM Agents",
+  "identity_tokens": [
+    "arXiv:2610.33274"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7aeb4949e20f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7aeb4949e20f4e43-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.38902",
+  "reason": "複数agentの議論をsemantic hypergraphに格納し、learned selection moduleが各memory候補をSTORE/BACKUP/OMITへ振り分けるHEDGE。7 benchmarkで最強multi-agent baseline比精度平均+5.0pt、memory使用量48%削減、議論round数34%削減と報告。agent間の外部記憶・呼出し数削減には関係するが、LLM推論エンジンの実装・token/s・GPU資源効率は直接評価されないためborderline。",
+  "title": "HEDGE: Gated Hypergraph Memory for Scalable Multi-Agent Debate",
+  "identity_tokens": [
+    "arXiv:2610.38902"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7aeb4949e20f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

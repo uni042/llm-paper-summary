@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7aeb4949e20f4e43-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.33015",
+  "reason": "LLM agentのmemory入庫・抽出・整理で繰返し生成LLMを呼ぶ費用を避け、compact salience classifierとsemantic dependency extractorでonline処理し、entry間の統合はofflineへ遅延するSLICE-Mem。Qwen3-30BのMemora Weekly/LongMemEval-Sで生成型MemOS比token消費92.4%/99.5%削減し、記憶精度はほぼ同等ないしやや低下。LLM呼出し数削減というagent workflow効率には直接関連するが、モデル推論ランタイム・KV/weight管理の研究ではないためborderline。",
+  "title": "SLICE-Mem: Salience-Gated Lightweight Information Curation for Efficient LLM Agent Memory",
+  "identity_tokens": [
+    "arXiv:2610.33015"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7aeb4949e20f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a7e1afc2e16260f1-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.39346",
+  "reason": "Reusable Latent CorrectionはオフラインのLLM指導を小型モデルの隠れ状態補正として外部bankへ保存し、オンライン推論ではLLM呼出しやパラメータ更新なしに再利用する。arXiv一次要旨では複数の推論課題でSLM品質改善を報告。ただし主眼は推論品質の改善であり速度・メモリ最適化は直接評価の中心でないため境界関連。",
+  "title": "Offline Guidance, Online Reasoning: Reusing LLM Feedback for Small Language Models",
+  "identity_tokens": [
+    "arXiv:2609.39346"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7e1afc2e162",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1962bdbddf40f354-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1016/j.patcog.2025.112182",
+  "reason": "著者らの公式実装リポジトリに掲載された原著abstractを確認。DAQuantは画像認識用Vision Transformer（DeiTなど）の低ビット量子化と、導入先ドメインへの分布変化に伴う精度低下を扱う。活性化分布に応じた平滑化、学習可能な活性化クリッピング（LAC）、ソース・ターゲット間のドメイン整合を組み合わせ、画像モデルの量子化精度とドメイン適応を改善する。LLMの自己回帰生成、KVキャッシュ、LLM推論サービング、MoEや言語モデル向け実行系を対象とした貢献・評価は一次abstractと公式実装の対象から確認できないため、本サーベイの現行スコープではunrelated。論文本文は未読。",
+  "title": "Domain aware post training quantization for vision transformers in deployment",
+  "identity_tokens": [
+    "DOI:10.1016/j.patcog.2025.112182"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1962bdbddf40",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

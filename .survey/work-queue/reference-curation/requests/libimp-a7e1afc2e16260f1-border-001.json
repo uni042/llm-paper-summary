@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a7e1afc2e16260f1-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.28760",
+  "reason": "ゼロ次最適化の反復スコアリングを学習ループでなくvLLM推論ランタイムへ載せ替える。arXiv一次要旨ではOPT-13BのLoZO 2万stepを公式実装4.15時間に対し推計0.51時間（8.13倍）と報告。ただし主目的は推論サービスの最適化ではなくLoRAのゼロ次微調整なので、推論ランタイム応用として境界関連とする。worklist旧題名と公式現行題名が異なるためarXiv IDを正本に採用。",
+  "title": "LLM Zeroth-Order Fine-Tuning is an Inference Workload",
+  "identity_tokens": [
+    "arXiv:2605.28760"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7e1afc2e162",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
