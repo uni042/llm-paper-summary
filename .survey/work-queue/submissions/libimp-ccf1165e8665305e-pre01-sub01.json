@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Trajectory-Level Speculative Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27514",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based language models (dLLMs) enable parallel token generation through iterative denoising, but existing decoding strategies collapse to single-token generation under low confidence, severely limiting throughput. Unlike autoregressive models where speculative decoding operates on token sequences in a fixed left-to-right order, dLLMs require speculating over denoising trajectories-sequences of multi-token updates with explicit positions and unmasking orders. We develop a trajectory-level speculative framework that constructs draft denoising trajectories via confidence-stratified tree exploration and verifies them through blockwise parallel evaluation with bidirectional attention masking. Our method further introduces inter-block speculation, exploiting diffusion models'bidirectional structure to perform cross-block lookahead. We formally characterize when this approach is exact and identify trajectory drift as the fundamental cost of increased parallelism. Building on Fast-dLLM's dual-cache infrastructure, our framework reduces denoising iterations by 30-40% and increases tokens-per-step from 2.6 to 4.3, achieving 7-14x speedup over vanilla dLLMs and 1.3x over Fast-dLLM with less than 1% accuracy change across reasoning and code benchmarks.",
+      "identifiers": [
+        "SemanticScholar:dd7e939d7b5719682ab870794a025072cf39e506"
+      ],
+      "semantic_scholar_id": "dd7e939d7b5719682ab870794a025072cf39e506",
+      "canonical_id": "arXiv:2608.27514",
+      "arxiv_id": "2608.27514",
+      "doi": "10.48550/arXiv.2608.27514",
+      "authors": [
+        "Tian-Xiang Pan",
+        "Baitao Gong",
+        "Mo Guang",
+        "Hong-Wei Yong",
+        "Tian-Peng Jiang",
+        "Ya-Qian Li",
+        "Zhenge Cao",
+        "Kai-Wen Long"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデル向け軌跡水準の投機的デコード。低信頼で単一トークン生成へ崩れる問題に対し、デノイズ軌跡そのものを投機対象として、信頼度で層化した木探索で下書き軌跡を作り、ブロック並列に検証する枠組みと、ブロック間投機を提案する。拡散デコード機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2605.05699",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantization is framed as a quality--latency trade-off. We show it is \\emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \\texttt{Cache} subclass, runs \\emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\\%$ through $1$K), with $3\\times$ persistent memory compression and quality preserved ($\\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\\dPPL$ Gemma). The kernel's $\\sim\\!25$\\,ns/vec overhead is below the bandwidth savings from $3\\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\\dPPL = +7975 \\to +638.6$, $12.5\\times$ reduction) at $182$\\,GFLOPS / $D{=}128$. Supporting findings: $\\SRFT$ and $\\SRHT$ are statistically indistinguishable for KV quality (we pick $\\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\\lambda$ without SRFT lowers calibration MSE $84.9\\%$ vs $50.3\\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$.",
+      "identifiers": [
+        "SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775"
+      ],
+      "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
+      "canonical_id": "arXiv:2605.05699",
+      "arxiv_id": "2605.05699",
+      "doi": "10.48550/arXiv.2605.05699",
+      "authors": [
+        "Mohamed Amine Bergach"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Apple Siliconでfp16より速いint4 KVキャッシュ。統一メモリ上では帯域節約が量子化カーネルのオーバーヘッドを上回ることを、符号ランダム化FFT等を融合した単一Metalカーネルで示し、3倍の永続メモリ圧縮と品質維持を両立させる。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Breaking the Ice: Analyzing Cold Start Latency in vLLM",
+      "source_url": "https://arxiv.org/abs/2606.07362",
+      "year": 2026,
+      "published": "2026-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As scalable inference services become popular, the cold start latency of an inference engine becomes important. Today, vLLM has evolved into the de-facto inference engine of choice for many inference workloads. Although popular, due to its complexity and rapid evolution, there has not been a systematic study on the startup latency of its engine. With major architectural innovations under it (e.g., the V1 API, introduction of torch.compile), in this paper, we present the first detailed performance characterization of vLLM startup latency. We break down the startup process into six foundational steps and demonstrate that this process is predominantly CPU-bound. Each step exhibits consistent and interpretable scaling trends with respect to model- and system-level parameters, enabling fine-grained attribution of latency sources. Building on these insights, we develop a lightweight analytical model that accurately predicts vLLM's startup latency for a given hardware configuration, providing actionable guidance for resource planning in large-scale inference environments. All our benchmarking datasets, analysis tools, and prediction scripts are open-sourced at https://github.com/upb-cn/vllm-startup-profiler",
+      "identifiers": [
+        "SemanticScholar:9ffeac68556dc75dbb740968af022fda255e16f5"
+      ],
+      "semantic_scholar_id": "9ffeac68556dc75dbb740968af022fda255e16f5",
+      "canonical_id": "arXiv:2606.07362",
+      "arxiv_id": "2606.07362",
+      "doi": "10.48550/arXiv.2606.07362",
+      "authors": [
+        "Huzaifa Shaaban Kabakibo",
+        "Animesh Trivedi",
+        "Lin Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      },
+      "reason": "vLLMのコールドスタート遅延の分析。推論エンジンの起動遅延を6つの基礎ステップへ分解し、主にCPU律速であることと、モデル・システムパラメータに対する一貫したスケーリング傾向を初めて体系的に示す。推論基盤の計測そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory",
+      "source_url": "https://doi.org/10.3389/fcomp.2026.1873627",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "Frontiers of Computer Science",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n \n Large language model (LLM) inference systems operate under strict latency service-level objectives (SLOs): a deadline on the first output token (TTFT) and a maximum inter-token interval (TBT). Real-time (RT) scheduling theory provides formal schedulability tests, worst-case response-time (WCRT) bounds, and admission control, yet existing LLM schedulers ignore these tools entirely.\n \n \n \n \n We present\n Chronos\n , the first schedulability framework for LLM inference grounded in RT theory. A two-phase task model maps each request to a sporadic prefill job with a TTFT deadline and a decode task whose iterations are bounded by the TBT SLO. From this model we derive a closed-form WCRT bound for TTFT, a TBT capacity condition, a prefill–decode interference analysis, and a sound admission control algorithm proved correct analytically. We validate Chronos with a discrete-event simulator parameterised by roofline-model estimates for a 7B-parameter model on an A100 GPU. Each experiment replays 50,000 requests sub-sampled from a one-week, 44-million-request Azure LLM Inference production trace.\n \n \n \n \n At 10× nominal load, where admission-uncontrolled schedulers reach 99.4% TTFT miss rates, Chronos maintains zero misses while admitting 53.9% of arrivals. At 5× load it admits 88.9% of requests with P99 TTFT of 161 ms—more than 2× below uncontrolled baselines. No admitted request ever misses its TTFT or TBT deadline.\n \n \n \n These results demonstrate that classical RT scheduling constructs translate directly and effectively to LLM inference, providing formal, verifiable latency guarantees that heuristic schedulers cannot offer.\n",
+      "identifiers": [
+        "SemanticScholar:16d17822c15aafe29103ed7af439768e12ea5599"
+      ],
+      "semantic_scholar_id": "16d17822c15aafe29103ed7af439768e12ea5599",
+      "doi": "10.3389/fcomp.2026.1873627",
+      "canonical_id": "DOI:10.3389/fcomp.2026.1873627",
+      "authors": [
+        "Amine Marref",
+        "Khaled Tarmissi",
+        "Hassene Chaibi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の形式的可スケジューリング分析Chronos。TTFT期限つきのプリフィルジョブとTBT上限つきのデコードタスクという2相タスクモデルから、最悪応答時間の閉形式の上限と容量条件、プリフィル・デコード干渉の分析を導く実時間スケジューリング理論の枠組み。推論基盤のスケジューリングそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+      "source_url": "https://arxiv.org/abs/2607.22465",
+      "year": 2026,
+      "published": "2026-07-24",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern enterprise agent deployments consist of a heterogeneous pool of large language models (LLMs) having diverse capabilities and cost. Existing model routing strategies optimize the quality-cost trade-off, while providing request-level static decisions. More recent solutions address agentic routing as a task-level selection with a serial verifier based router feedback loop. However, their fixed verifier suitable for homogeneous workloads may not generalize to heterogeneous batches of agentic tasks (example: coding, general conversational). Additionally, due to the verifier placement in the critical path of the loop, serving quality may be affected during multiple concurrent requests routing. To mitigate these issues, we present ORACLE. It is a concurrency-aware online routing mechanism that aligns adaptive routing with adaptive verification for feedback. ORACLE acts as a training-free drop-in'feedback loop'on top of any model-selection policy to first classify the task type and then dynamically assigns a task-appropriate verifier. Further, we develop a delayed feedback strategy for concurrent requests that largely removes verifier latency from the dispatch critical path. We then present a post-routing dispatch scheduler, namely DISC. DISC reserves each task's peak KV footprint at admission and dispatches to an alternate backend when the reward gain from reduced wait exceeds the reward loss from lower accuracy. Extensive evaluation on SWE-bench, tau2-bench, and Terminal-Bench 2.0 shows that ORACLE improves the accuracy-cost frontier by up to 7 percentage points over state-of-the-art routing baselines, while ORACLE with DISC improves program throughput by up to 1.8x. To facilitate reproducibility and support future development, we open-source the code-base of ORACLE at https://github.com/ORACLE-org/ORACLE.",
+      "identifiers": [
+        "SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641"
+      ],
+      "semantic_scholar_id": "a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+      "canonical_id": "arXiv:2607.22465",
+      "arxiv_id": "2607.22465",
+      "authors": [
+        "Ritik Raj",
+        "Souvik Kundu",
+        "Dheemanth Joshi",
+        "Tushar Krishna"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 117,
+        "matched_prestigious_venue": null
+      },
+      "reason": "検証器較正つきエージェントルーティングORACLE。異種LLMプールへの振り分けで、固定した検証器が異種のエージェントタスクへ一般化せず、クリティカルパス上の検証が提供品質を損なう問題に対し、同時実行を意識したオンラインの振り分けを行う。推論基盤のルーティング機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ccf1165e8665",
+    "round": "libimp-ccf1165e8665305e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ccf1165e8665305e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ccf1165e8665305e-pre01.json",
+    "receipt": "sha256:09b66e310dd565c4455e0d20c8755e6015990f8d5c68273eb297c225eafdcde2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ccf1165e8665",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

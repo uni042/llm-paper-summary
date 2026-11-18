@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FOCUS: FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling",
+      "source_url": "https://arxiv.org/abs/2608.01847",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve remarkable performance but are expensive to deploy due to their enormous size. FP4 quantization, with formats such as MXFP4 and NVFP4, offers an appealing solution with native hardware support on modern accelerators. However, maintaining accuracy under FP4 precision remains difficult. A key bottleneck lies in scale optimization: existing methods tightly couple the quantization and dequantization scales, forcing both to conform to the discrete low-precision format required by hardware, such as E8M0 in MXFP4. Yet the quantization scale is never stored and need not obey this constraint, suggesting a significant untapped optimization space. In this work, we propose FOCUS, a post-training quantization framework with end-to-end scale learning for FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling. Coupled-Relaxation Scaling (CRS) relaxes the tight coupling between quantization and dequantization scales with a learnable full-precision coefficient, enabling more effective optimization without breaking hardware compliance. Dual-Granularity Scaling (DGS) further refines the quantization scale at a finer sub-block granularity, allowing more precise adaptation to local weight distributions. Experiments across multiple LLM families and benchmarks show that FOCUS achieves state-of-the-art FP4 accuracy under both MXFP4 and NVFP4 formats, while introducing no additional inference overhead. Code and quantized models will be released at https://github.com/tencent/AngelSlim.",
+      "identifiers": [
+        "SemanticScholar:ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f"
+      ],
+      "semantic_scholar_id": "ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f",
+      "canonical_id": "arXiv:2608.01847",
+      "arxiv_id": "2608.01847",
+      "doi": "10.48550/arXiv.2608.01847",
+      "authors": [
+        "Xiang-Long Yan",
+        "Hong Liu",
+        "Cheng-Zhu Bao",
+        "Tian-Ao Zhang",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FP4量子化FOCUS。量子化スケールと逆量子化スケールを硬件形式へ結合させる従来法の制約を、量子化スケールは保存されない点から外し、結合緩和と二粒度スケーリングで学習後量子化の精度を上げる。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WaveZip: Wavelet-Driven Space-Time Decoupling for Video Token Condensation",
+      "source_url": "https://arxiv.org/abs/2607.23265",
+      "year": 2026,
+      "published": "2026-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing Large Vision-Language Models (LVLMs) struggle with long-form video understanding due to the quadratic computational cost of visual tokens. While recent efficient methods attempt to compress tokens via hard pruning or uniform merging, they operate strictly in the spatial feature domain, where robust structural context and discriminative semantic details are inherently entangled. In this work, we propose WaveZip, a joint signal-frequency-domain framework for efficient video inference. Driven by the insight that temporal redundancy resides in low-pass approximation scales while spatial saliency strongly correlates with high-frequency components, WaveZip leverages Discrete Wavelet Transforms (DWT) to disentangle these signals. Temporally, it employs 1D DWT to analyze query-frame relevance, and the resulting high-frequency coefficients are further gated by inter-frame differences, with both signals jointly driving the dynamic allocation of a precise frame-level token budget. Spatially, a 2D DWT decomposes features into low-frequency approximations and high-frequency detail components, where the high-frequency coefficients are modulated within query-salient regions to regulate spatial reconstruction. Importantly, WaveZip requires no task-specific training and can be seamlessly integrated into off-the-shelf LVLMs to boost inference efficiency. Extensive experiments on long video understanding benchmarks demonstrate that WaveZip retains 99.6% of the full performance under an extreme 10x compression ratio, consistently outperforming state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:42b352263cae96964443fee74e5db023f8e9eb70"
+      ],
+      "semantic_scholar_id": "42b352263cae96964443fee74e5db023f8e9eb70",
+      "canonical_id": "arXiv:2607.23265",
+      "arxiv_id": "2607.23265",
+      "doi": "10.48550/arXiv.2607.23265",
+      "authors": [
+        "Yu-Hui Zeng",
+        "Wang Chen",
+        "Jin-Fa Huang",
+        "Tian-Yu Xie",
+        "Yong-Dong Luo",
+        "Jia-Yi Ji",
+        "Xia-Wu Zheng",
+        "Jie-Bo Luo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 116,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ウェーブレット駆動の時空間分離による動画トークン凝縮WaveZip。時間冗長性が低域の近似スケールに、空間顕著性が高周波成分に宿るという洞察で、離散ウェーブレット変換により信号を分離してから凝縮する。LVLM推論のトークン削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2608.26574",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) offer a promising alternative to autoregressive generation by decoding multiple tokens in parallel through iterative denoising. However, increasing decoding parallelism often degrades generation quality, as early errors can contaminate later contexts. Revocable decoding mitigates this issue by re-evaluating decoded tokens and remasking unreliable ones, but existing methods overlook that unreliable tokens may also corrupt the verification context itself. We identify this failure mode and propose Dependency-Aware Revocable Decoding (DARD), a training-free framework that separates tokens into masked, candidate, and unmasked states. DARD verifies candidate tokens using a selective context that excludes less reliable tokens and adaptively regulates their influence on subsequent decoding. Experiments across 12 textual and multimodal benchmarks on 3 open-source dLLMs show that DARD consistently improves the speed-quality Pareto frontier over recent revocable decoding methods, achieving a 2.71$\\times$ speedup and a 4.35-point CIDEr score gain over Saber on Flickr30K.",
+      "identifiers": [
+        "SemanticScholar:28b000e800a65c81976312ae7b666b99c2afc2e5"
+      ],
+      "semantic_scholar_id": "28b000e800a65c81976312ae7b666b99c2afc2e5",
+      "canonical_id": "arXiv:2608.26574",
+      "arxiv_id": "2608.26574",
+      "doi": "10.48550/arXiv.2608.26574",
+      "authors": [
+        "Woo-Soon Park",
+        "Insu Lee",
+        "Minyoung Noh",
+        "J. Jang",
+        "Sung-min Lee",
+        "Kyuhong Shim",
+        "B. Shim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      },
+      "reason": "依存配慮型の取消可能デコードDARD。拡散言語モデルの並列デコードで、信頼できないトークンが検証文脈そのものを汚染する失敗様式に対し、トークンをマスク・候補・確定の3状態に分け、信頼性の低いトークンを除いた選択的文脈で候補を検証する学習不要の枠組み。拡散デコード機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DoSA: Dots Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.13990",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention visits few keys, yet finding them can still require scoring every key with every indexer head. We introduce DoSA (Dots Sparse Attention), a lossless method for making this computation conditional while preserving exact token selection. Its central observation is that Top-K selection requires sufficient evidence to reject a candidate, not necessarily its full score. A seed set supplies a lower bound on the winning threshold. Nonnegative head projections and joint residual bounds upper-bound positive contributions, while activation-informed aggregation bounds the magnitude subtracted by negative heads. The certificate directs full scoring toward candidates that remain eligible; exact-score filtering further reduces writeback and selection work. We establish the certificate and its exact-selection conditions, and analyze how geometry and selection margins govern its effectiveness. Our GPU implementation accelerates the complete Indexer by up to 2.74 times over SGLang and 1.69 times over LiteTopK across English, Chinese, and code workloads. End-to-end evaluation on GLM-5.2 and DeepSeek-V3.2 achieves up to 1.94 times and 1.50 times time-to-first-token speedups over the two baselines, respectively.",
+      "identifiers": [
+        "SemanticScholar:dc56c39ddbaa1ce6195f051e5c444d3e670cb74d"
+      ],
+      "semantic_scholar_id": "dc56c39ddbaa1ce6195f051e5c444d3e670cb74d",
+      "canonical_id": "arXiv:2610.13990",
+      "arxiv_id": "2610.13990",
+      "authors": [
+        "Fan-Xu Meng",
+        "Tao-Song Fang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      },
+      "reason": "無損失な疎注意DoSA。疎注意でも全キーのスコア計算が必要になる問題に対し、上位K選択には候補を棄却する十分な証拠で足りるという観察から、下限と上限の証明書で完全なスコア計算を条件付きにし、正確なトークン選択を保つ。注意機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-893a696481df",
+    "round": "libimp-893a696481df22f1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-893a696481df22f1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-893a696481df22f1-pre01.json",
+    "receipt": "sha256:f5acf16b104dc77248b22e3a5edf8fae0e0292ee5dede1df298bfeaa9d385f06"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-893a696481df",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "source_url": "https://arxiv.org/abs/2609.18005",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model optimization is an active research area, spanning quantization of model weights, early-exit methods for skipping layers, and speculative decoding. Each track uses its own quality measures, typically an idiosyncratic benchmark score. Few approach the measurement precision required by other scientific disciplines. We propose a rigorous methodology for measuring output quality, suitable for cross-system and cross-technique comparison. We score outputs with an LLM as a judge, but calibrate the judge formally: we compare its scores on two ordinary runs of a model given the same prompts, verifying that it shows no systematic preference between statistically equivalent outputs and measuring its per-sample noise. Each design also includes a'null'condition, provably identical in distribution to the unmodified model, whose measured difference must be zero. With this one instrument we measure several acceleration techniques on the same prompts, so their quality costs can be compared. Perceived quality proves highly dependent on the domain of discourse. A 4-bit model was indistinguishable from its 16-bit original down to our design's +/-0.3-point resolution, in English prose and Chinese alike. At 3-bit precision the same prompts lost 0.5 points in English prose, 0.9 in Chinese, and 1.1 on multi-step math; early exit that cost 0.7 points on prose cost 2.5 on math, cutting correctly solved problems from 19 of 27 to 6. The pattern held for models from Alibaba and from Meta, but not its magnitude: the same quantizer cost Meta's model 1.8 points where it cost Alibaba's 0.7. A model's certainty about a token predicts how likely it is to differ from the full model's choice, but not how much that difference affects judged quality, so acceptance rules relying on certainty cannot distinguish errors that matter from errors that don't.",
+      "identifiers": [
+        "SemanticScholar:0be24a69fd3f403b922823de603dbe4ff5f08281"
+      ],
+      "semantic_scholar_id": "0be24a69fd3f403b922823de603dbe4ff5f08281",
+      "canonical_id": "arXiv:2609.18005",
+      "arxiv_id": "2609.18005",
+      "doi": "10.48550/arXiv.2609.18005",
+      "authors": [
+        "Jerry Kaplan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論最適化の品質影響を測る較正済み測定法。量子化・早期終了・投機的デコードなど手法ごとにバラバラな品質指標を、LLM審査員の系統的偏りを同等出力同士の比較で較正し、帰無条件まで置く厳密な測定方法論で統一する。推論基盤の計測そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Language Models (LoopLMs) improve parameter efficiency by recursively reusing shared Transformer modules, yet their repeated computation over evolving recurrent states poses new challenges for low-bit deployment. Existing post-training quantization (PTQ) methods, largely designed for feed-forward Transformers, fail to account for cross-loop activation dynamics, heterogeneous loop sensitivity, and recursive error propagation, leading to substantial performance degradation at low precision. To address these challenges, we propose LoopQuant, a loop-aware PTQ framework for accurate and efficient low-bit quantization of LoopLMs. LoopQuant is built on three core components: 1) Cross-Loop Distribution Canonicalization (CLDC) learns a shared quantization-friendly representation across recurrent states while preserving parameter sharing; 2) Interaction-Aware Loop-wise Precision Allocation (ILPA) allocates activation precision under a fixed bit budget by modeling task-level loop sensitivity and cross-loop interactions; and 3) Loop-Conditioned Task Calibration (LCTC) further aligns quantized inference with the low-bit recursive trajectory through lightweight task-space calibration. Extensive experiments across LoopLM architectures demonstrate that LoopQuant consistently outperforms existing low-bit PTQ methods. On Ouro-2.6B, LoopQuant under W4A4 surpasses all W4A8 baselines in performance, while reducing model memory by 65.3% with only 3.4% additional storage overhead over naive INT4 and achieving a 1.7 times decoding speedup over BF16. These results demonstrate a strong balance among accuracy, compression, and inference efficiency, providing a practical and deployment-friendly solution for low-bit LoopLM inference. The code is available at [https://github.com/Kishon-zzx/LoopQuant].",
+      "identifiers": [
+        "SemanticScholar:0d3e2c75117b17ce7e634f26d88ff89cc68897e2"
+      ],
+      "semantic_scholar_id": "0d3e2c75117b17ce7e634f26d88ff89cc68897e2",
+      "canonical_id": "arXiv:2610.16368",
+      "arxiv_id": "2610.16368",
+      "authors": [
+        "Zhi-Xiong Zhao",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Li-Feng Liu",
+        "Guang-Yu Sun",
+        "Da-Wei Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ループ言語モデル向け学習後量子化LoopQuant。共有モジュールの再帰再利用で生じるループ間活性動態、ループごとの感度の異質性、再帰的な誤差伝播に、ループ配慮の3要素で対処する低ビット量子化。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AlignPred: Error-Controlled KV Cache Compression via Alignment and Predictive Coding",
+      "source_url": "https://arxiv.org/abs/2610.17970",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-running agents retain KV caches across turns and sessions for hours or days. Compressing these persistent caches requires reducing storage while controlling reconstruction error. We present AlignPred, a codec that combines local alignment with predictive coding under a configurable KV reconstruction-error budget. Local orthogonal transforms align related heads or layers into a common coordinate frame, allowing AlignPred to combine token-wise prediction with same-token prediction across heads or layers. Residuals are quantized on an error-bounded lattice and entropy-coded, without learned predictors, encoder-side mode search, or large joint transforms. Across three attention mechanisms, AlignPred requires less storage than the evaluated baselines at comparable measured reconstruction error. Against the evaluated CPU codec implementations, it decodes at least 1.6 times faster while matching or improving encode time. AlignPred achieves near-native task scores at substantially compressed operating points on LongBench-Pro at 128K context. AlignPred's SGLang HiCache integration reduces persistent target-KV storage by 42-72% relative to native HiCache, with comparable latency.",
+      "identifiers": [
+        "SemanticScholar:417da9abe725ea70fbca2ccbf7c7694a9a37e165"
+      ],
+      "semantic_scholar_id": "417da9abe725ea70fbca2ccbf7c7694a9a37e165",
+      "canonical_id": "arXiv:2610.17970",
+      "arxiv_id": "2610.17970",
+      "authors": [
+        "Xu Yang",
+        "Jia-Peng Zhang",
+        "Zhi-Wei Zuo",
+        "Yu-Xi Chen",
+        "Fei Sun",
+        "Cheng-Guang Xu",
+        "Feng Jin",
+        "Zhuo Tang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "整合と予測による誤差制御KV圧縮AlignPred。数時間から数日保たれるエージェントの永続KVキャッシュに対し、局所直交変換による整合とトークン間・ヘッド間の予測符号化を、再構成誤差予算の下で組み合わせるコーデック。学習した予測器を使わない点が固有。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2610.22130",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) cache management has become a critical bottleneck for scaling Large Language Models (LLMs) to long-context scenarios due to linear memory growth. While recent eviction methods have moved beyond simple attention-score heuristics to incorporate value representations, they typically face a fundamental trade-off: the underlying optimization for minimizing output perturbation is an NP-hard combinatorial problem, leading to mathematically suboptimal heuristics or implementations that are difficult to kernelize. In this work, we propose DropKV, a simple principled eviction framework based on Decoupled Residual-Output Perturbation. By decoupling the joint eviction decision into independent per-token scoring, DropKV circumvents combinatorial intractability and admits a provable constant-factor approximation guarantee under a cone condition that we empirically verify on three long-context LLMs. To ensure practical viability, we provide a high-performance implementation using fused Triton kernels that avoid materializing the full attention matrix, delivering a 19.8x scoring-kernel speedup that translates to up to a 9.9% matched-batch end-to-end prefill speedup. Extensive evaluations on the RULER and LongBench benchmarks demonstrate that DropKV consistently outperforms state-of-the-art baselines at equivalent cache budgets, achieving the lowest inference latency among eviction methods while also remaining faster than the dynamic cache baseline.",
+      "identifiers": [
+        "SemanticScholar:a7867dbf84bf50cac69b1d056f3e12508caaa63f"
+      ],
+      "semantic_scholar_id": "a7867dbf84bf50cac69b1d056f3e12508caaa63f",
+      "canonical_id": "arXiv:2610.22130",
+      "arxiv_id": "2610.22130",
+      "authors": [
+        "Ao-Zhong Zhang",
+        "Selcuk Gurses",
+        "Yan-Xia Deng",
+        "Nai-Gang Wang",
+        "Chi-Chun Liu",
+        "Davis Wertheimer",
+        "Derrick Liu",
+        "Xin Li",
+        "Zi Yang",
+        "Felix X.-F. Ye",
+        "Peng-Hang Yin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "残差・出力摂動の分離によるKV排除DropKV。出力摂動最小化がNP困難な組合せ問題になる問題を、共同の排除判断をトークンごとの独立したスコアへ分離することで回避し、カーネル化しやすい原理的な排除枠組みにする。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-27cd411d42fc",
+    "round": "libimp-27cd411d42fcc980-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-27cd411d42fcc980-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-27cd411d42fcc980-pre01.json",
+    "receipt": "sha256:8f3fc01fdfb0b5032476ecdfe308ed6ea9ebe1dc8df750c9b055112f1fb0a0aa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-27cd411d42fc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

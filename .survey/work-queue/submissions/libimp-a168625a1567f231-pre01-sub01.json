@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Towards Lossless Ultimate Vision Token Compression for VLMs",
+      "source_url": "https://arxiv.org/abs/2512.09010",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual language models encounter challenges in computational efficiency and latency, primarily due to the substantial redundancy in the token representations of high-resolution images and videos. Current attention/similarity-based compression algorithms suffer from either position bias or class imbalance, leading to significant accuracy degradation. They also fail to generalize to shallow LLM layers, which exhibit weaker cross-modal interactions. To address this, we extend token compression to the visual encoder through an effective iterative merging scheme that is orthogonal in spatial axes to accelerate the computation across the entire VLM. Furthermoer, we integrate a spectrum pruning unit into LLM through an attention/similarity-free low-pass filter, which gradually prunes redundant visual tokens and is fully compatible to modern FlashAttention. On this basis, we propose Lossless Ultimate Vision tokens Compression (LUVC) framework. LUVC systematically compresses visual tokens until complete elimination at the final layer of LLM, so that the high-dimensional visual features are gradually fused into the multimodal queries. The experiments show that LUVC achieves a 2 speedup inference in language model with negligible accuracy degradation, and the training-free characteristic enables immediate deployment across multiple VLMs.",
+      "identifiers": [
+        "SemanticScholar:9a4f0df352f74758fae707628e146fa9bfd1c344"
+      ],
+      "semantic_scholar_id": "9a4f0df352f74758fae707628e146fa9bfd1c344",
+      "canonical_id": "arXiv:2512.09010",
+      "arxiv_id": "2512.09010",
+      "doi": "10.48550/arXiv.2512.09010",
+      "authors": [
+        "De-Hua Zheng",
+        "Mouxiao Huang",
+        "Bo-Rui Jiang",
+        "Hailin Hu",
+        "Xing-Hao Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLM向け無損失に近い視覚トークン圧縮。注意や類似度ベースの圧縮が位置バイアスや浅い層への非一般化で精度を落とす問題に対し、視覚エンコーダ側の直交方向の反復マージと、LLM側のスペクトル剪定ユニットで全体を高速化する。推論のトークン削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery",
+      "source_url": "https://arxiv.org/abs/2606.02011",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) rely on long reasoning traces, making inference expensive. While low-bit quantization reduces per-token decoding cost, we show that aggressive 2-bit inference can fail to deliver end-to-end speedup because instability in the generation process inflates total token count. Instead of merely lowering answer accuracy, 2-bit quantization often produces much longer traces with repetitive loops, budget exhaustion, delayed commitment, and unclosed reasoning segments. We analyze full reasoning traces of Qwen3 reasoning models across mathematical and commonsense benchmarks and show that accuracy degradation is tightly linked to these process-level failures. To address them, we introduce two lightweight controls: FP16 planning, which gives the 2-bit model a short high-precision outline, and loop rescue, which detects repetitive traces and either commits to an earlier answer or falls back to FP16. On MATH-500, loop rescue improves Qwen3-8B accuracy from 17.2% to 74.2%, while planning plus loop rescue improves Qwen3-32B from 65.0% to 87.2%. Overall, our results show that extreme low-bit reasoning becomes practical when its failures are treated as controllable generation pathologies: with lightweight detection and selective FP16 support, 2-bit inference can recover accuracy while preserving real end-to-end speed. Our code is available at: https://github.com/brain-lab-research/quantized-reasoning.",
+      "identifiers": [
+        "SemanticScholar:83ea264ff248b1c8ae6af4dac34d77b15b6117ea"
+      ],
+      "semantic_scholar_id": "83ea264ff248b1c8ae6af4dac34d77b15b6117ea",
+      "canonical_id": "arXiv:2606.02011",
+      "arxiv_id": "2606.02011",
+      "doi": "10.48550/arXiv.2606.02011",
+      "authors": [
+        "Ekaterina Alimaskina",
+        "Darya Rudas",
+        "Denis Shveykin",
+        "G. Molodtsov",
+        "Pavel Vasiliev",
+        "A. Beznosikov"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論モデルの極低ビット推論の失敗様式分析。2ビット量子化がトークン単価を下げても、生成過程の不安定化で総トークン数が膨らみ端から端までの高速化が得られないことを、推論軌跡の分析で示し、FP16プランニングなどの軽量な制御で対処する。量子化推論の計測と制御そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design",
+      "source_url": "https://arxiv.org/abs/2601.14549",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "International Symposium on Low Power Electronics and Design",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Small Language Models (SLMs) on edge platforms is critical for real-time, privacy-sensitive generative AI, yet constrained by memory, latency, and energy budgets. Quantization reduces model size and cost but suffers from device noise in emerging nonvolatile memories, while conventional memory hierarchies further limit efficiency. SRAM provides fast access but has low density, DRAM must simultaneously accommodate static weights and dynamic KV caches, which creates bandwidth contention, and Flash, although dense, is primarily used for initialization and remains inactive during inference. These limitations highlight the need for hybrid memory organizations tailored to LLM inference. We propose Outlier-aware Quantization with Memory Co-design (QMC), a retraining-free quantization with a novel heterogeneous memory architecture. QMC identifies inlier and outlier weights in SLMs, storing inlier weights in compact multi-level Resistive-RAM (ReRAM) while preserving critical outliers in high-precision on-chip Magnetoresistive-RAM (MRAM), mitigating noise-induced degradation. On language modeling and reasoning benchmarks, QMC outperforms and matches state-of-the-art quantization methods using advanced algorithms and hybrid data formats, while achieving greater compression under both algorithm-only evaluation and realistic deployment settings. Specifically, compared against SoTA quantization methods on the latest edge AI platform, QMC reduces memory usage by 5.5×-7.3×, external data transfers by 7.6×, energy by 11× - 11.7×, and latency by 9.4× - 12.5× when compared to FP16, establishing QMC as a scalable, deployment-ready co-design for efficient on-device inference.",
+      "identifiers": [
+        "SemanticScholar:fb101dc730a32837e56b8b2d92d37aec2ecfec2e"
+      ],
+      "semantic_scholar_id": "fb101dc730a32837e56b8b2d92d37aec2ecfec2e",
+      "canonical_id": "arXiv:2601.14549",
+      "arxiv_id": "2601.14549",
+      "doi": "10.1145/3816440.3818524",
+      "authors": [
+        "N. Pandey",
+        "Jangseon Park",
+        "Onat Gungor",
+        "Flavio Ponzina",
+        "T. Rosing"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 301,
+        "matched_prestigious_venue": null
+      },
+      "reason": "外れ値配慮量子化とメモリ協調設計QMC。小型言語モデルのエッジ推論で、不揮発メモリのデバイスノイズと、SRAM・DRAM・Flashの階層が静的重みと動的KVキャッシュの競合を生む問題に対し、再訓練を要する量子化とハイブリッドメモリ構成を一体で設計する。推論基盤そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QuantClaw: Precision Where It Matters for OpenClaw",
+      "source_url": "https://arxiv.org/abs/2604.22577",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autonomous agent systems such as OpenClaw introduce significant efficiency challenges due to long-context inputs and multi-turn reasoning. This results in prohibitively high computational and monetary costs in real-world development. While quantization is a standard approach for reducing cost and latency, its impact on agent performance in realistic scenarios remains unclear. In this work, we analyze quantization sensitivity across diverse complex workflows over OpenClaw, and show that precision requirements are highly task-dependent. Based on this observation, we propose QuantClaw, a plug-and-play precision routing plugin that dynamically assigns precision according to task characteristics. QuantClaw routes lightweight tasks to lower-cost configurations while preserving higher precision for demanding workloads, saving cost and accelerating inference without increasing user complexity. Experiments show that our QuantClaw maintains or improves task performance while reducing both latency and computational cost. Across a range of agent tasks, it achieves up to 21.4% cost savings and 15.7% latency reduction on GLM-5 (FP8 baseline). These results highlight the benefit of treating precision as a dynamic resource in agent systems.",
+      "identifiers": [
+        "SemanticScholar:158fbdec7b0e72b5e08406f09288b180aac8fa62"
+      ],
+      "semantic_scholar_id": "158fbdec7b0e72b5e08406f09288b180aac8fa62",
+      "canonical_id": "arXiv:2604.22577",
+      "arxiv_id": "2604.22577",
+      "doi": "10.48550/arXiv.2604.22577",
+      "authors": [
+        "Manyi Zhang",
+        "Ji-Fu Li",
+        "Zhongao Sun",
+        "Xiao-Hao Liu",
+        "Zhen-Hua Dong",
+        "Xian-Zhi Yu",
+        "H. Bai",
+        "Xiao-Bo Xia"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェント向け精度ルーティングQuantClaw。長文脈と多ターン推論で費用が膨らむエージェント実行について、量子化感度がタスクに強く依存することを分析し、タスク特性に応じて精度構成を動的に割り当てるプラグイン型ルータを提案する。推論時の精度配分機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching",
+      "source_url": "https://arxiv.org/abs/2605.07443",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "IEEE International Conference on Distributed Computing Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are transforming recommendation into a generative task, yet their industrial deployment is hindered by the prohibitive latency of processing long, personalized prompts where standard prefix caching fails due to non-contiguous reuse patterns. To address this, we propose RcLLM, a distributed inference system that accelerates generative recommendation via Beyond-Prefix KV Caching. RcLLM decomposes prompts into reusable blocks and manages the massive scale of item catalogs through a stratified distributed storage architecture: compact user histories are replicated for zero-latency retrieval, while massive item caches are sharded using a similarity-aware placement algorithm. RcLLM effectively eliminates redundant quadratic computation with two strategic techniques: 1) an affinity-based global scheduler to maximize data locality, and 2) a selective attention mechanism to correct approximation errors. Evaluations on real-world datasets demonstrate that RcLLM reduces Time-To-First-Token (TTFT) by 1.31×-9.51× compared to state-of-the-art prefix caching systems, enabling real-time serving compliance with negligible impact on recommendation accuracy.",
+      "identifiers": [
+        "SemanticScholar:b2ccd3cfd917d54bae47265ab7d19ecbc1c43139"
+      ],
+      "semantic_scholar_id": "b2ccd3cfd917d54bae47265ab7d19ecbc1c43139",
+      "canonical_id": "arXiv:2605.07443",
+      "arxiv_id": "2605.07443",
+      "doi": "10.1109/2575-8411.2026.00067",
+      "authors": [
+        "Zhan-Zhan Zhao",
+        "Yu-Xin Wang",
+        "Amelie Chi Zhou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成推薦向け分散推論システムRcLLM。前方一致に限られる接頭辞キャッシュでは再利用が非連続な推薦ワークロードに効かない問題に対し、プロンプトを再利用可能なブロックへ分解し、利用者履歴とアイテムのキャッシュを階層化した分散配置で保持する、接頭辞を超えるKVキャッシュ。推論システムそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a168625a1567",
+    "round": "libimp-a168625a1567f231-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a168625a1567f231-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a168625a1567f231-pre01.json",
+    "receipt": "sha256:90c66af053dfb11c216713f6f020dadec3ebae6e8ab4410f202d4a7f17776fa5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a168625a1567",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
