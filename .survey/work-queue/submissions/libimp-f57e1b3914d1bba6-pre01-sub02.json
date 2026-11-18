@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+      "source_url": "https://arxiv.org/abs/2608.15943",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism (PP) is widely used to scale large language model (LLM) training, but its efficiency is often limited by stage imbalance and pipeline bubbles. Meanwhile, cross-layer KV sharing has primarily been studied as a mechanism for reducing KV-cache costs during inference, without examining how KV reuse reshapes pipeline workloads. We present \\textbf{KV-Pipe}, a stage-aware KV-sharing mechanism that turns KV reuse into a pipeline-balancing control knob. KV-Pipe starts from the tail stage, converts selected attention layers to cross-layer KV sharing in a tail-first order, and iteratively retargets the current bottleneck to drive the FLOPs Imbalance Ratio (FIR) toward $1$. The procedure is performed offline and requires only a pipeline partition and per-layer FLOPs estimates, introducing negligible runtime overhead and requiring no online tuning. Across multiple pipeline-parallel configurations, KV-Pipe consistently improves utilization and throughput, achieving up to \\textbf{9.2\\%} higher training MFU and up to a \\textbf{9.8\\%} reduction in iteration time, with larger gains at higher pipeline-parallel degrees where stage imbalance is amplified. Furthermore, the same KV-sharing mechanism provides an inference-side benefit by reducing KV-cache growth and redundant KV projection work, resulting in higher decoding throughput for long-context workloads. These results identify KV layout as a system--architecture degree of freedom for jointly improving pipeline-parallel training efficiency and long-context inference.",
+      "identifiers": [
+        "SemanticScholar:9ce502492feb6ba78479de2953486b8f0e0a9769"
+      ],
+      "semantic_scholar_id": "9ce502492feb6ba78479de2953486b8f0e0a9769",
+      "canonical_id": "arXiv:2608.15943",
+      "arxiv_id": "2608.15943",
+      "doi": "10.48550/arXiv.2608.15943",
+      "authors": [
+        "Maryam Dialameh",
+        "Hossein Rajabzadeh",
+        "Harish Krishnamoorthy Murali",
+        "Walid Ahmed",
+        "Weiwei Zhang",
+        "Hyock Ju Kwon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨はクロスレイヤKV共有を末尾ステージから順に導入し、パイプライン段階のFLOPs不均衡を解消するKV-Pipeを提案。主評価は学習MFU最大9.2%改善・iteration時間9.8%削減だが、長文脈推論でもKV増加と重複投影を削減しdecodeスループットを改善と報告。推論・学習の双方に関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f57e1b3914d1",
+    "round": "libimp-f57e1b3914d1bba6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f57e1b3914d1bba6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f57e1b3914d1bba6-pre01.json",
+    "receipt": "sha256:3b3c3ce0a2465b3e623a3e628a6cf52b1f20ca9b53eea2d5d85587807844b538"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f57e1b3914d1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

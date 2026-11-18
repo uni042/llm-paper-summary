@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Learning When to Think While Listening in Large Audio-Language Models",
+      "source_url": "https://arxiv.org/abs/2605.27190",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Audio-Language Models (LALMs) have made real-time, streaming spoken interaction increasingly practical. In this setting, reasoning quality and responsiveness are tightly coupled: delaying reasoning until the speech endpoint can improve answer quality but moves deliberation into user-visible response delay, while answering too early risks committing before decisive evidence arrives. We introduce a learnable wait-think-answer control formulation for LALMs. Motivated by the incremental nature of human conversation, the controller decides under partial audio evidence when to wait, when to externalize a compact reasoning update, and when to answer. Using Qwen2.5-Omni-7B as the base model, we construct aligned wait-think-answer traces from spoken reasoning data, train the controller with supervised fine-tuning (SFT), and then apply Decoupled Clip and Dynamic Sampling Policy Optimization (DAPO). The reward combines answer correctness, action validity, update timing, latency synchronization, reasoning quality, and chain consistency, optimizing the complete wait-think-answer trajectory and not the final answer alone. On a six-task synthetic spoken reasoning question answering (SRQA) benchmark, the six-reward DAPO controller improves the row-weighted accuracy from 67.6% to 70.3% while reducing post-endpoint final-think length by 14% under the same Qwen deployment harness. On a 186-item human-recorded Real Audio Bench, a transfer check beyond text-to-speech (TTS)-rendered speech, the controller family remains functional: SFT achieves the strongest accuracy, while the six-reward DAPO controller is the only learned variant whose final-think length falls below the base. These results suggest that a streaming model should learn when to make intermediate reasoning explicit during the audio stream.",
+      "identifiers": [
+        "SemanticScholar:171d0e18cbda9d1e2f06de80eaed3a2fdd0aaadb"
+      ],
+      "semantic_scholar_id": "171d0e18cbda9d1e2f06de80eaed3a2fdd0aaadb",
+      "canonical_id": "arXiv:2605.27190",
+      "arxiv_id": "2605.27190",
+      "doi": "10.48550/arXiv.2605.27190",
+      "authors": [
+        "Zhiyuan Song",
+        "Wei-Chao Zhao",
+        "Yang Xiao",
+        "Su-Hao Yu",
+        "Chen Zhu",
+        "Jia-Tao Gu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミング音声LLMで待機・途中推論・最終回答の時点を選ぶ制御器を学習する。Qwen2.5-Omni-7Bでpost-endpoint思考長14%削減、精度67.6→70.3%改善を報告し、音声LLMの可視遅延と計算予算配分に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Taylor-Calibrate: Principled Initialization for Hybrid Linear Attention Distillation",
+      "source_url": "https://arxiv.org/abs/2606.16429",
+      "year": 2026,
+      "published": "2026-06-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid linear attention models offer an appealing path to faster long-context inference: they reduce the quadratic cost and KV-cache burden of full softmax attention while retaining much of the quality of Transformer models. A practical way to obtain such models is to convert a pretrained Transformer instead of pretraining a new architecture from scratch, but this conversion is still brittle. Simply copying the teacher attention projections into a Gated DeltaNet (GDN) student does not specify the new recurrent decay, write, and output-gating dynamics. As a result, the converted model often starts in a poor dynamical regime and must spend many distillation tokens repairing initialization rather than learning the remaining teacher behavior. We propose Taylor-Calibrate, a lightweight initialization method for hybrid GDN students. The method uses Taylor-guided teacher attention statistics to set the value projection, memory timescale, write gates, and output gate, then applies a short per-layer alignment step to match each converted layer to the teacher output. Across four teacher settings and three retained-layer policies, Taylor-Calibrate gives substantially stronger zero-shot students, with up to an 88x improvement in a representative ablation, and reaches matched recovery targets with 4.9x--9.2x fewer training tokens than naive conversion.",
+      "identifiers": [
+        "SemanticScholar:6dd8a9a61dbf4b68c08a4dcfcf0ade57134dad69"
+      ],
+      "semantic_scholar_id": "6dd8a9a61dbf4b68c08a4dcfcf0ade57134dad69",
+      "canonical_id": "arXiv:2606.16429",
+      "arxiv_id": "2606.16429",
+      "doi": "10.48550/arXiv.2606.16429",
+      "authors": [
+        "Zhong-Zhu Zhou",
+        "Qing-Yang Wu",
+        "Jun-Xiong Wang",
+        "Mayank Mishra",
+        "S. Song",
+        "B. Athiwaratkun",
+        "Chen Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 156,
+        "matched_prestigious_venue": null
+      },
+      "reason": "softmax注意をGated DeltaNetへ変換する際の減衰・書込み・出力ゲートをTaylor近似統計で初期化する。長文脈のKV負荷を抑えるハイブリッド線形注意への変換で、基準と同じ回復品質に必要な蒸留トークンを4.9～9.2倍削減。これは訓練側の値であり推論TPSとは区別する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+      "source_url": "https://arxiv.org/abs/2609.21834",
+      "year": 2026,
+      "published": "2026-09-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization-aware training (QAT) updates a full-precision shadow weight $\\mathbf{x}$ but deploys the quantized endpoint $Q(\\mathbf{x})$. Existing explanations for QAT largely view its success through the lens of shadow weights: QAT can move $\\mathbf{x}$ toward flatter basins, gain robustness from quantization-induced oscillations, or balance the shadow loss $f(\\mathbf{x})$ against the quantization error $\\|\\mathbf{x}-Q(\\mathbf{x})\\|_2$. These perspectives do not directly explain the empirical observation that the deployed endpoint loss $f(Q(\\mathbf{x}))$ improves while the shadow loss $f(\\mathbf{x})$ does not, and can even increase substantially. In this paper, we offer a different explanation by treating QAT as finite-grid endpoint dynamics. Motivated by the approximate normality of rescaled pretrained weights, we propose an idealized model for the residual phase, which records where each shadow weight sits inside its quantization cell as a fraction of the cell width. This model leads to a crossing law that determines which coordinates cross quantization boundaries after a shadow update. Inspired by the idealized model and signal-imbalance phenomenon in QAT, we further propose QAR (Quantization with Amplified Routing), an algorithmic framework that directly operates on the quantization code. In contrast to QAT, QAR is both theoretically grounded and memory-efficient: it admits feasible-gradient bounds for a family of power amplifiers up to unavoidable finite-grid floors without retaining a full-precision shadow weight copy. Experiments on post-training of large language models provide evidence consistent with the endpoint view and show that QAR can be comparable to or better than QAT with smaller memory cost.",
+      "identifiers": [
+        "SemanticScholar:7c89a6b28057e5c0b6c038a3e2cee2635e19e4a1"
+      ],
+      "semantic_scholar_id": "7c89a6b28057e5c0b6c038a3e2cee2635e19e4a1",
+      "canonical_id": "arXiv:2609.21834",
+      "arxiv_id": "2609.21834",
+      "authors": [
+        "Sheng-An Xu",
+        "Hanyang Li",
+        "Jian-Hao Ma",
+        "Ying-Han Cui"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QATでFP shadow weightを保持せず量子化コード自体を更新するQARを提案し、LLM後学習で同等以上の精度を保ちながら訓練メモリを削減する。推論用低ビットendpointを直接最適化するモデル圧縮技術。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Cost-of-Pass: An Economic Framework for Evaluating Language Models",
+      "source_url": "https://arxiv.org/abs/2504.13359",
+      "year": 2025,
+      "published": "2025-04-17",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 61,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Widespread adoption of AI systems hinges on their ability to generate economic value that outweighs their inference costs. Evaluating this tradeoff requires metrics accounting for both performance and costs. Building on production theory, we develop an economically grounded framework to evaluate language models'productivity by combining accuracy and inference cost. We formalize cost-of-pass: the expected monetary cost of generating a correct solution. We then define the frontier cost-of-pass: the minimum cost-of-pass achievable across available models or the human-expert(s), using the approx. cost of hiring an expert. Our analysis reveals distinct economic insights. First, lightweight models are most cost-effective for basic quantitative tasks, large models for knowledge-intensive ones, and reasoning models for complex quantitative problems, despite higher per-token costs. Second, tracking the frontier cost-of-pass over the past year reveals significant progress, particularly for complex quant. tasks where the cost roughly halved every few months. Third, to trace key innovations driving this progress, we examine counterfactual frontiers -- estimates of cost-efficiency without specific model classes. We find that innovations in lightweight, large, and reasoning models have been essential for pushing the frontier in basic quant., knowledge-intensive, and complex quant. tasks, respectively. Finally, we assess the cost-reductions from common inference-time techniques (majority voting and self-refinement), and a budget-aware technique (TALE-EP). We find that performance-oriented methods with marginal performance gains rarely justify the costs, while TALE-EP shows some promise. Overall, our findings underscore that complementary model-level innovations are the primary drivers of cost-efficiency and our framework provides a principled tool for measuring this progress and guiding deployment.",
+      "identifiers": [
+        "SemanticScholar:d120bd154a3ec05c2e5c9f3af7ecbf7b0ae11358"
+      ],
+      "semantic_scholar_id": "d120bd154a3ec05c2e5c9f3af7ecbf7b0ae11358",
+      "canonical_id": "arXiv:2504.13359",
+      "arxiv_id": "2504.13359",
+      "doi": "10.48550/arXiv.2504.13359",
+      "authors": [
+        "Mehmet Hamza Erol",
+        "Batu El",
+        "M. Suzgun",
+        "Mert Yuksekgonul",
+        "James Y. Zou"
+      ],
+      "priority": 71,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 61,
+        "citation_count": 61,
+        "total": 71,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 580,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "正解1件を得る期待金銭費用cost-of-passを定義し、モデル選択・多数決・自己修正・予算制御の効率を比較する。小型・大型・推論モデルのタスク別費用最適性を分析する、LLM推論コストの直接評価ベンチマーク。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Speculative Safety-Aware Decoding",
+      "source_url": "https://arxiv.org/abs/2508.17739",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite extensive efforts to align Large Language Models (LLMs) with human values and safety rules, jailbreak attacks that exploit certain vulnerabilities continuously emerge, highlighting the need to strengthen existing LLMs with additional safety properties to defend against these attacks. However, tuning large models has become increasingly resource intensive and may have difficulty ensuring consistent performance. We introduce Speculative Safety-Aware Decoding (SSD), a lightweight decoding-time approach that equips LLMs with the desired safety property while accelerating inference. We assume that there exists a small language model that possesses this desired property. SSD integrates speculative sampling during decoding and leverages the match ratio between the small and composite models to quantify jailbreak risks. This enables SSD to dynamically switch between decoding schemes to prioritize utility or safety, to handle the challenge of different model capacities. The output token is then sampled from a new distribution that combines the distributions of the original and the small models. Experimental results show that SSD successfully equips the large model with the desired safety property, and also allows the model to remain helpful to benign queries. Furthermore, SSD accelerates the inference time, thanks to the speculative sampling design.",
+      "identifiers": [
+        "SemanticScholar:057e748f70e85d1b48df07da51481c69c0b53b88"
+      ],
+      "semantic_scholar_id": "057e748f70e85d1b48df07da51481c69c0b53b88",
+      "canonical_id": "arXiv:2508.17739",
+      "arxiv_id": "2508.17739",
+      "doi": "10.48550/arXiv.2508.17739",
+      "authors": [
+        "Xuekang Wang",
+        "Sheng-Yu Zhu",
+        "Xue-Qi Cheng"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 450,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "小型安全モデルの確率分布と大型LLMの分布を投機的サンプリングで統合し、match ratioに応じて安全重視と有用性重視の復号を切り替える。推論時の安全性向上と投機的復号による速度改善を同時に目指す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-974392234a82",
+    "round": "libimp-974392234a82b4a6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-974392234a82b4a6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-974392234a82b4a6-pre01.json",
+    "receipt": "sha256:f4170db9fcf74e570453f3c4e39cd6d74850452cfadb81ddb6d5689537db6fbb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-974392234a82",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Area- and Utilization-Efficient LLM Accelerator With Fused Speculative Decoding for Edge-Side Inference",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3659893",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference of large language models (LLMs) on edge devices has always been a challenge, the autoregressive inference and enormous number of parameters result in long inference latency. Although speculative decoding is proposed for inference acceleration, it poses challenges for hardware accelerator design, as the differing computational characteristics of the drafting and verification stages make it difficult to optimize both chip area and hardware utilization. This brief introduces fused speculative decoding (FSD) to optimize LLM inference on edge devices by unifying all the operations to general matrix multiplications during inference. The proposed FSD-Infer algorithm fuses the drafting and verification phases of conventional speculative decoding and enables weight sharing, reducing off-chip memory access, and inference latency without requiring retraining or fine-tuning. For hardware, we introduce FSD-Acc, an area- and utilization-efficient hardware accelerator that efficiently executes the fused operations enabled by FSD-Infer. Experimental results show that compared with autoregressive inference, FSD-Infer reduces EMA by up to 26.11%, enhances arithmetic intensity by <inline-formula> <tex-math notation=\"LaTeX\">$10.26\\times $ </tex-math></inline-formula>, and speeds up GPU inference by up to <inline-formula> <tex-math notation=\"LaTeX\">$1.38\\times $ </tex-math></inline-formula>. When deployed on Xilinx ZCU102 FPGA board at 200 MHz working frequency, FSD-Acc achieves the best area efficiency and energy efficiency, outperforming the state-of-the-art LLM accelerator for edge inference by <inline-formula> <tex-math notation=\"LaTeX\">$2.53\\times $ </tex-math></inline-formula>(TPS/kDSP), <inline-formula> <tex-math notation=\"LaTeX\">$5.90\\times $ </tex-math></inline-formula>(TPS/kLUT) and <inline-formula> <tex-math notation=\"LaTeX\">$2.02\\times $ </tex-math></inline-formula>, respectively.",
+      "identifiers": [
+        "SemanticScholar:44141cd7c5c1342b11d1b4d077b2203fec766a02"
+      ],
+      "semantic_scholar_id": "44141cd7c5c1342b11d1b4d077b2203fec766a02",
+      "doi": "10.1109/TVLSI.2026.3659893",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3659893",
+      "authors": [
+        "Kai-Qi Chen",
+        "Zi-Kang Zhou",
+        "Ya-Qi Chen",
+        "Jun Han"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE出版社要旨によると、draftとverifyで計算特性が異なる投機的復号を一般行列積に統一するFSD-InferとFPGA向けFSD-Accを提案。weight sharingと融合処理でoff-chip accessを削減し、通常自己回帰比でGPU推論最大1.38倍高速化、ZCU102実装では既存edge LLMアクセラレータ比でTPS/kDSP 2.53倍、TPS/kLUT 5.90倍を報告。投機的復号専用ハードウェアへの直接的貢献。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "TB-STC: Transposable Block-wise N:M Structured Sparse Tensor Core",
+      "source_url": "https://doi.org/10.1109/HPCA61900.2025.00075",
+      "year": 2025,
+      "published": "2025-03-01",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The computational and memory demands of Deep Learning (DL) models, from convolutional neural networks to Large Language Models (LLMs), are experiencing a notable surge. The sparsification (e.g., weight pruning and sparse attention) represents a significant approach to reducing latency and energy consumption. However, it is non-trivial to identify a good trade-off between model accuracy and hardware efficiency. Existing work has sought to mitigate the hardware complexity overhead through structured sparsity, yet the resulting accuracy loss remains considerable (e.g., more than 6% accuracy drop with 50% structured sparsity on OPT-6.7B and Llama2-7B).To address the above challenges, this paper proposes Transposable Block-wise Structured Sparsity (TBS). Our key insight is that the weight matrices of the forward and backward pass are transposed to each other during DL training. Exploiting this transposition property facilitates obtaining a structured sparsity pattern that is closer to the unstructured sparsity. In contrast, existing studies explore only one-dimensional structured sparsity. In light of these observations, we propose the transposable block-wise structured sparsity pattern with an efficient end-to-end sparse training method. This method improves accuracy by up to 2.58% over other structured sparsity studies under the same sparsity degree. At the micro-architecture level, we propose TB-STC, a Transposable Block-wise N:M Sparse Tensor Core to efficiently and flexibly facilitate the TBS pattern. TB-STC introduces an adaptive codec architecture for on-the-fly storage format conversion with a higher bandwidth utilization (1.47 ×), and implements an I/O-aware configurable architecture for sparsity-aware scheduling with a better computational utilization (1.57×). Compared with existing work, TB-STC improves the Energy-Delay Product (EDP) by an average of 3.82 × and offers an enhanced accuracy-EDP Pareto frontier across various sparse DL models.",
+      "identifiers": [
+        "SemanticScholar:92d13aab45339d3612e2aa69b4ea75512013969b"
+      ],
+      "semantic_scholar_id": "92d13aab45339d3612e2aa69b4ea75512013969b",
+      "doi": "10.1109/HPCA61900.2025.00075",
+      "canonical_id": "DOI:10.1109/HPCA61900.2025.00075",
+      "authors": [
+        "Jun Liu",
+        "Shulin Zeng",
+        "Junbo Zhao",
+        "Li Ding",
+        "Zeyu Wang",
+        "Jin-Hao Li",
+        "Zhen-Hua Zhu",
+        "Xue-Fei Ning",
+        "Chen Zhang",
+        "Yu Wang",
+        "Guo-Hao Dai"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 627,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "上海交通大学の著者原稿要旨では、転置可能なブロック単位N:M構造化疎性（TBSS）と対応するSparse Tensor Coreを提案。forward/backward間で転置可能な疎性パターンを用い、adaptive codecによる格納形式変換で帯域利用率1.47倍、I/O-aware schedulingで演算利用率1.57倍、平均EDP3.82倍改善を報告。OPT-6.7BとLlama2-7Bの精度損失を問題設定に含み、LLMを含む疎行列演算の直接的な実行基盤最適化。",
+      "library_body_check": "primary_fulltext_abstract_and_introduction_checked; full_evaluation_not_audited",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "MI-LLM: Multiplier-Free LLM Inference on Commodity Processing-in-Memory Hardware",
+      "source_url": "https://doi.org/10.1109/TC.2025.3626449",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE transactions on computers",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are prominent for their superior ability in language understanding and generation. However, a notorious problem for LLM inference is low computational utilization caused by the memory bottleneck, since it typically requires large memory capacity and high bandwidth to process neural weights. By integrating processing cores into memory, Processing-In-Memory (PIM) architecture excels at alleviating memory bottleneck; with the recent release of the first commodity near-bank PIM hardware (NBP), PIM becomes off-the-shelf and shows great potential for accelerating LLM inference practically. However, simply shoehorning LLM inference on NBP can not achieve satisfactory performance due to its inherent limitations: weak compute performance, frequent cache misses caused by the limited working memory capacity, and poor inter-PIM-core communication bandwidth. To address these limitations, we propose MI-LLM, an efficient system deploying LLM inference on NBP hardware. Its key idea is to build NBP-aware Lookup Tables (LUTs) and completely replace multiplications with lookups on LUTs, thereby mitigating the limitation of weak compute performance. 1) To reduce the model accuracy drop caused by the use of LUT, MI-LLM tailors a learning-based LUT construction method to maintain the model accuracy. 2) To cope with frequent cache misses caused by LUT sizes far exceeding PIM working memory capacity, MI-LLM introduces the design of PIM-aware linear kernel, with the optimization of intra-row and inter-row reordering enabled, to enhance LUT lookup locality. 3) MI-LLM further proposes a model partitioning scheme to minimize inter-PIM-core communication. Kernel-level benchmarks reveal that MI-LLM achieves a 9% throughput improvement and an 11% increase in energy efficiency over GPU implementations. Compared to FP8 quantization, MI-LLM incurs only a 0.24 times increase in perplexity, demonstrating minimal accuracy degradation. Moreover, in our end-to-end evaluation, MI-LLM requires 80% fewer ALU operation ticks per output token than the GPU baseline.",
+      "identifiers": [
+        "SemanticScholar:cb52c378fb8a8349a0e3cdec43da287b0c47632a"
+      ],
+      "semantic_scholar_id": "cb52c378fb8a8349a0e3cdec43da287b0c47632a",
+      "doi": "10.1109/TC.2025.3626449",
+      "canonical_id": "DOI:10.1109/TC.2025.3626449",
+      "authors": [
+        "Pu-Yun Hu",
+        "Min-Hui Xie",
+        "Linjiang Li",
+        "Kui Zhang",
+        "Erge Xiang",
+        "Jing Wang",
+        "Si-Ze Zheng",
+        "Xiao Zhang",
+        "Yun-Peng Chai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 290,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者の公式業績ページで論文同定を確認。原著要旨の二次索引転載では、commodity near-bank PIMの弱い演算性能・LUTのcache miss・PIM間通信を対象に、乗算を置換する学習済みlookup table、PIM-aware linear kernelの行列内外並べ替え、モデル分割を提案。GPU実装比でkernel throughput 9%、エネルギー効率11%改善を報告し、LLM推論実行基盤への直接貢献。ただしIEEE原文要旨の直接取得は未了。",
+      "library_body_check": "original_abstract_reproduced_by_secondary_index; coauthor_publications_identity_verified; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Adelia: A 4-nm LLM Processing Unit With Streamlined Dataflow and Dual-Mode Parallelism for Maximizing Hardware Efficiency",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3663603",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "IEEE Journal of Solid-State Circuits",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The proliferation of large language models (LLMs) as cross-domain foundation models is fueled by aggressive scaling in both parameter counts and inference-time computation. The emergence of sophisticated reasoning models further accelerates this trend, demanding longer context windows and escalating the computational and memory burdens of inference. A fundamental challenge arises from the bimodal nature of LLM inference, which consists of a compute-bound prefill phase and a memory-bound decode phase. This duality creates a significant performance bottleneck for conventional architectures such as GPUs and neural processing units (NPUs), which are typically optimized for only one phase, leading to severe underutilization of resources in the other. This article introduces Adelia, a novel LLM inference accelerator designed to resolve this challenge by co-optimizing for both memory and compute efficiency. Adelia features a streamlined dataflow that aligns sustained compute throughput with available external memory bandwidth, maximizing utilization across both inference phases. Its architecture features powerful matrix and vector execution engines (VXEs) fed by a systolic parameter path (SPP) interconnect, which efficiently multicasts model parameters and key–value (KV) caches for spatial reuse, all orchestrated by an RISC control processor (RCP) that provides dynamic instruction dispatch and enables dual-mode parallelism. By holistically addressing the bimodal bottleneck, Adelia demonstrates high performance and scalable efficiency during inference. Fabricated in Samsung’s 4-nm process, Adelia achieves a high throughput of 512.6 Tokens/s on Phi-3-mini with an end-to-end runtime of 5.993 s and 65.72 Tokens/s on LLaMA-30B with a runtime of 46.741 s.",
+      "identifiers": [
+        "SemanticScholar:9fcea338d318a93968a4153f17c7d1008fccb57a"
+      ],
+      "semantic_scholar_id": "9fcea338d318a93968a4153f17c7d1008fccb57a",
+      "doi": "10.1109/JSSC.2026.3663603",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3663603",
+      "authors": [
+        "Sukbin Lim",
+        "Jung-Hoon Kim",
+        "Seungjae Moon",
+        "Junseo Cha",
+        "Dongjin Seo",
+        "Jongho Kim",
+        "Hunjong Lee",
+        "Jinwon Lee",
+        "Joo-Young Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KAIST著者所属機関の要旨では、prefill演算律速とdecode帯域律速の両立に向け、systolic parameter pathで重みとKVキャッシュをmulticastする行列・ベクトル演算器とRISC制御によるdual-mode parallelismを統合。Samsung 4nm試作でPhi-3-mini 512.6 token/s、LLaMA-30B 65.72 token/sを報告。LLM推論専用アクセラレータの直接的実装。",
+      "library_body_check": "primary_institutional_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132534",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized language tasks but pose significant deployment challenges due to their substantial computational demands during inference. The hardware configurations of existing LLM serving systems do not optimize for the different computational and bandwidth needs of the prefill and decoding phases in LLM inference, leading to inefficient resource use and increased costs. In this paper, we systematically investigate promising hardware configurations for LLM inference serving. We develop a simulator that models the performance and cost across different hardware solutions and introduce a customized design space exploration framework to identify optimal setups efficiently. By aligning hardware capabilities with the specific demands of the prefill and decoding phases, we achieve $13 \\%$ cost savings and over $4 \\times$ throughput improvements compared to conventional serving system setups.",
+      "identifiers": [
+        "SemanticScholar:8fe325c2a627cfee96b45907e457bb98070062fb"
+      ],
+      "semantic_scholar_id": "8fe325c2a627cfee96b45907e457bb98070062fb",
+      "doi": "10.1109/DAC63849.2025.11132534",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132534",
+      "authors": [
+        "Hongduo Liu",
+        "Chen Bai",
+        "Peng Xu",
+        "Lihao Yin",
+        "Xian-Zhi Yu",
+        "Hui-Ling Zhen",
+        "Ming-Xuan Yuan",
+        "Tsung-Yi Ho",
+        "Bei Yu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      },
+      "reason": "香港中文大学の著者所属機関掲載要旨によると、prefillの演算律速とdecodeの帯域律速の差をモデル化するサービング性能・費用シミュレータとハードウェア設計空間探索を構築。両フェーズの需要に合う構成を選択し、従来のサービング構成比で費用13%削減、スループット4倍超と報告。LLM推論クラスタのハードウェア配備設計への直接貢献。",
+      "library_body_check": "primary_institutional_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f7b12283a69e",
+    "round": "libimp-f7b12283a69e8c55-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f7b12283a69e8c55-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f7b12283a69e8c55-pre01.json",
+    "receipt": "sha256:a253874d2555eff2ba32138633844022b4b225e4f7056dd088835db2a96c1125"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f7b12283a69e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

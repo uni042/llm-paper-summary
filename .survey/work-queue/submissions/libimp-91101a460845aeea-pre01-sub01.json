@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Q-Infer: Towards Efficient GPU-CPU Collaborative LLM Inference via Sparsity-Aware Dynamic Scheduling",
+      "source_url": "https://doi.org/10.1145/3764589",
+      "year": 2025,
+      "published": "2025-08-28",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have sparked a new wave of exciting AI applications, yet their large model size imposes significant computational and storage costs during inference. Offloading parameters to the CPU and conducting GPU-CPU collaborative inference is a highly cost-effective strategy to alleviate GPU memory constraints. However, current solutions struggle to balance latency and throughput, and suffer from accuracy loss and performance fluctuations under various workloads and configurations. In this article, we propose Q-Infer, an efficient GPU-CPU collaborative inference system that significantly improves the performance and quality of LLM inference through several optimizations: (1) Q-Infer designs a dynamic caching strategy for important parameters by exploiting model sparsity and locality. (2) Q-Infer proposes a multi-window-based approach for selecting important tokens, which reduces the KV cache while maintaining high accuracy. (3) Q-Infer develops a novel GPU-CPU collaborative inference and dynamic scheduling strategy to enhance performance across different environments. We evaluate Q-Infer using various models and workloads across different hardware configurations. The results demonstrate Q-Infer’s superior inference performance while retaining model accuracy compared with state-of-the-art GPU-CPU systems.",
+      "identifiers": [
+        "SemanticScholar:6d2fee68aef566c75bf4678c2f7ae176d5314a44"
+      ],
+      "semantic_scholar_id": "6d2fee68aef566c75bf4678c2f7ae176d5314a44",
+      "doi": "10.1145/3764589",
+      "canonical_id": "DOI:10.1145/3764589",
+      "authors": [
+        "Kai Lu",
+        "Qiang Wei",
+        "Yier Lin",
+        "Pengyu Liu",
+        "Hai-Peng Wang",
+        "Ji-Guang Wan",
+        "Ting Yao",
+        "Hua-Tao Wu",
+        "Dao-Hui Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 447,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者の公式コード公開は、GPU/CPU協調LLM推論とPowerInfer形式の重み・predictor、INT4モデル、推論・評価の実装を示す。ACM TACO掲載論文の公開要旨（著者掲載ミラー）では、モデル疎性と局所性に基づく重要パラメータの動的キャッシュ、複数窓によるKV選択、GPU/CPUスケジューリングの三要素を明記している。直接的なLLM推論システム研究のためaccept。ただしACM出版社本文は403で未読、数値効果は断定しない。",
+      "library_body_check": "author_official_code_and_publisher_abstract_mirror_screen_only; publisher_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-91101a460845",
+    "round": "libimp-91101a460845aeea-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-91101a460845aeea-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-91101a460845aeea-pre01.json",
+    "receipt": "sha256:0747c6cbb326e4dece5210709bd908906ff60bc4f5ad2e35b0aaa7ea6cb8a633"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-91101a460845",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

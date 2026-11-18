@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Distributed Adaptive Speculative Decoding: Accelerating Large Language Model Inference With Context-Aware Draft Selection",
+      "source_url": "https://doi.org/10.1109/ISDFS69419.2026.11459120",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "International Symposium on Digital Forensics and Security",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized natural language processing, yet their autoregressive generation process remains a critical bottleneck for real-time applications. Speculative decoding has emerged as a promising approach to accelerate inference by leveraging smaller draft models to predict future tokens, which are then verified in parallel by the target model. However, existing methods rely on fixed draft models and single-node execution, limiting their effectiveness across diverse input distributions and scalability in production environments. We propose Distributed Adaptive Speculative Decoding (DASD), a novel framework that introduces three key innovations: (1) context-aware draft model selection using a lightweight routing network that dynamically chooses optimal draft models based on input characteristics, (2) asynchronous distributed speculation that pipelines draft generation and target verification across multiple GPUs with fault-tolerant rollback mechanisms, and (3) adaptive speculation length that adjusts the number of speculative tokens based on real-time acceptance rates. Through extensive experiments on NVIDIA A4000 GPUs using Llama-3-8B and multiple draft models, we demonstrate that DASD achieves $\\mathbf{2. 6 - 2. 8} \\times$ speedup compared to standard autoregressive decoding and $\\mathbf{1 5} \\boldsymbol{-} \\mathbf{2 0} \\boldsymbol{\\%}$ improvement over fixed-strategy speculative decoding, while maintaining identical output quality. Our approach shows consistent gains across code generation (76 % acceptance), factual QA (72 % acceptance), and conversational tasks (68 % acceptance). The proposed distributed protocol reduces end-to-end latency by 42 % in multi-GPU settings and provides graceful degradation under GPU failures. We release our implementation and comprehensive benchmarks to facilitate future research in efficient LLM serving.",
+      "identifiers": [
+        "SemanticScholar:9e5562c83cf863e397d749064e8e8c57848cc0c3"
+      ],
+      "semantic_scholar_id": "9e5562c83cf863e397d749064e8e8c57848cc0c3",
+      "doi": "10.1109/ISDFS69419.2026.11459120",
+      "canonical_id": "DOI:10.1109/ISDFS69419.2026.11459120",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Vinay R Soni",
+        "Amit Kumar Padhy",
+        "S. Bayyavarapu",
+        "Milan Parikh"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DASDは入力文脈に応じたdraftモデルの軽量ルーティング、複数GPUでのdraft生成と検証の非同期パイプライン、受理率に応じた投機長調整を統合する。NVIDIA A4000とLlama-3-8Bの評価で通常自己回帰比2.6〜2.8倍、固定投機比15〜20%改善、マルチGPU遅延42%削減を報告。IEEE原著要旨では出力品質同等とする。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "AASQ-GPT: Accurate Activation Static Quantization Towards Generative Pre-Trained Transformer",
+      "source_url": "https://doi.org/10.1109/IMCEC66174.2025.11331709",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "IEEE Advanced Information Management, Communicates, Electronic and Automation Control Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional general-purpose language processing capabilities, but they require extremely high memory and computational resources. Quantization techniques are crucial for deploying LLMs by improving memory efficiency and inference speed. Existing activation quantization methods are primarily dynamic, which, while achieving low quantization error, offer relatively limited inference acceleration. In contrast, static quantization, which provides faster inference, faces the challenge of significant quantization error. To address this, we propose AASQ-GPT, a novel technique that enables accurate activation static quantization without the need for retraining. Specifically, AASQ-GPT introduces a new quantization framework for activations, where after quantizing a batch of activations, the remaining unquantized activations are adjusted to minimize quantization error. Compared to traditional min-max quantization, AASQ-GPT significantly improves quantization perfor- mance without incurring any additional overhead. Experiments on LLMs of varying scales show that AASQ-GPT achieves state-of-the- art (SOTA) results in static quantization at the same bit width.",
+      "identifiers": [
+        "SemanticScholar:296dc9e5f407772a8441c8bffa1d76d716cf42d2"
+      ],
+      "semantic_scholar_id": "296dc9e5f407772a8441c8bffa1d76d716cf42d2",
+      "doi": "10.1109/IMCEC66174.2025.11331709",
+      "canonical_id": "DOI:10.1109/IMCEC66174.2025.11331709",
+      "authors": [
+        "Zhan-Peng Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AASQ-GPTは推論高速化に有利な静的activation量子化の誤差を、活性値の一部を量子化した後に未量子化部分を調整する方式で抑制する。追加推論オーバーヘッドや再学習なしで従来min-max方式より同ビット幅の量子化品質を改善し、複数規模のLLMで静的量子化精度の優位性を報告。速度の定量倍率は原著要旨にない。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "UniCore: A Bit-Width Scalable GEMM Unit for Unified LLM Inference",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00176",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success across a broad range of applications but impose extreme computational and memory demands due to their reliance on massive General Matrix-Matrix Multiplication (GEMM) operations. Quantization has emerged as a key approach to improve efficiency by reducing data precision; however, modern LLMs exhibit diverse sensitivities to quantization, requiring multiple precision settings. Existing hardware accelerators fail to efficiently support this diversity: fixed-function accelerators are limited to a few discrete formats, while bit-composable architectures suffer from quadratic resource scaling, leading to severe performance degradation at higher precision. We propose UniCore, a unified GEMM architecture that achieves both bit-width scalability and accuracy preservation through a hardware-software co-design. UniCore introduces Scalable FPMA (S-FPMA), the first composable FPMA primitive that fuses into different precisions using uniform adder slices, maintaining linear hardware scaling. To ensure numerical fidelity, UniCore integrates a lightweight format-conversion and dual-path compensation pipeline that corrects FPMA's structured approximation error. Complementing the architecture, DynFP, a distribution-adaptive low-bit floating-point format, improves representational accuracy for diverse LLM weight and activation distributions. UniCore delivers $\\mathbf{1. 2 4} \\times-\\mathbf{3. 9 5} \\times$ higher area efficiency for W4A4/W4A8/W8A8 and up to 5.26× at W16A16 compared to prior composable-multiplier accelerators, while achieving the highest accuracy in nearly all configurations. UniCore is open-sourced at: https://github.com/CLab-HKUST-GZ/isca53-unicore",
+      "identifiers": [
+        "SemanticScholar:252485af717651c9211f72999a4b739da1421f90"
+      ],
+      "semantic_scholar_id": "252485af717651c9211f72999a4b739da1421f90",
+      "doi": "10.1109/ISCA66397.2026.00176",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00176",
+      "authors": [
+        "Yong-Hao Chen",
+        "Jia-Xiang Zou",
+        "Xing-Yu Chen",
+        "Chenxi Xu",
+        "Jingyu Guo",
+        "Xin-Yu Chen"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "UniCoreは複数ビット幅のLLM GEMMを統一するハードウェア・ソフトウェア協調設計。加算器スライスから合成するS-FPMA、誤差補償パイプライン、分布適応浮動小数点DynFPを組み合わせ、従来のbit-composable乗算器比でW4A4/W4A8/W8A8の面積効率1.24〜3.95倍、W16A16で最大5.26倍を報告。推論計算機構と量子化精度への直接寄与。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "SwiftServe: Efficient Disaggregated LLM Inference Serving via Hierarchical Max-Flow in Heterogeneous GPUs and Network",
+      "source_url": "https://doi.org/10.1109/ICICSE66971.2025.11430117",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": "2025 5th International Conference on Information Communication and Software Engineering (ICICSE)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across a variety of tasks. Disaggregated LLM inference serving (DLIS), which separates the compute-intensive prefill phase and the memory-intensive decode phase, enables more flexible and efficient resource utilization in heterogeneous GPUs. However, deploying DLIS in real-world environments presents two significant challenges. Firstly, the heterogeneity of phase-specific resource requirements complicates the alignment of GPU capabilities with workload demands, often resulting in suboptimal performance. Secondly, transferring key-value (KV) caches between the prefill and decode phases over heterogeneous links introduces substantial communication overhead, creating performance bottlenecks. To address these challenges, we propose SwiftServe, an efficient disaggregated LLM inference serving system for heterogeneous GPUs. SwiftServe models DLIS deployment as a hierarchical max-flow deploying problem formulated as a constrained mixed-integer nonlinear program accounting for hardware and phase heterogeneity. We design a hierarchical alternating max-flow optimization algorithm for effective resource deployment. Experiments show SwiftServe achieves up to 1.68× higher throughput and 2.25× lower latency than existing methods.",
+      "identifiers": [
+        "SemanticScholar:f98d08c3df7cad321de2ca085d2821ff83b1b06e"
+      ],
+      "semantic_scholar_id": "f98d08c3df7cad321de2ca085d2821ff83b1b06e",
+      "doi": "10.1109/ICICSE66971.2025.11430117",
+      "canonical_id": "DOI:10.1109/ICICSE66971.2025.11430117",
+      "authors": [
+        "Tao Zhang",
+        "Yan Hu",
+        "Shuang-Wu Chen",
+        "Zian Wang",
+        "Hui-Huang Qin",
+        "Zi-Yang Zou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 341,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SwiftServeは異種GPUとネットワークリンクを含むprefill/decode分離サービング配置を、段階的max-flowと制約付き混合整数非線形最適化として扱う。階層交互max-flow最適化で計算能力とKV転送費用を考慮した資源配置を決め、既存方式比で最大1.68倍のスループット、最大2.25倍の遅延低減を報告。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LOgIQ: Log-Domain Optimization for Hardware-Efficient Inference and Quantization of Transformers",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3658251",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization enables efficient large language model (LLM) inference by reducing memory and computation cost, but most existing methods sacrifice hardware simplicity through floating-point fallback, dequantization logic, or metadata routing. These overheads disrupt datapath regularity and limit gains in timing and area, especially in multiply-accumulate (MAC)-heavy transformer layers. We propose LogiMAC, a hardware-aligned quantization scheme that encodes weights in the log domain using shift-based arithmetic. LogiMAC embeds all decoding logic within the MAC unit, eliminates runtime scaling, and supports sublevel refinement without multipliers or look-up tables. The resulting datapath supports both shift directions with optional gating for unused paths. We evaluate LogiMAC across seven modern LLMs (ranging from 2B to 8B parameters) and compare it to strong baselines including SmoothQuant, GOBO, and SpinQuant. Our results show that while functional accuracy remains competitive, LogiMAC reduces area by $1.8\\times $ and dynamic power by $5.9\\times $ (in power-gated mode) compared to standard integer baselines. Timing analysis reveals over 50% of LogiMAC paths complete within just 12% of the normalized delay seen in other schemes. Validated over 34 million generated tokens, our findings demonstrate that accurate low-bit quantization can coexist with extreme hardware efficiency.",
+      "identifiers": [
+        "SemanticScholar:fba21375a64c003524c6aa569913ff90bf503aae"
+      ],
+      "semantic_scholar_id": "fba21375a64c003524c6aa569913ff90bf503aae",
+      "doi": "10.1109/TVLSI.2026.3658251",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3658251",
+      "authors": [
+        "T. Khan",
+        "Sanghamitra Roy",
+        "Koushik Chakraborty"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LOgIQのLogiMACは重みを対数領域で符号化し、乗算器やLUTを使わないシフト演算とMAC内デコードで量子化処理を行う。2B〜8Bの7種類のLLM、3400万超生成トークンで検証し、整数演算基準比で回路面積1.8倍削減、power-gated時の動的電力5.9倍削減を報告。ハードウェア効率化への直接寄与。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-239c6cbbb11d",
+    "round": "libimp-239c6cbbb11d87e4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-239c6cbbb11d87e4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-239c6cbbb11d87e4-pre01.json",
+    "receipt": "sha256:deb05178b45085c1da3e1137f0408149135625f369c3518ed09ba7215c15ff01"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-239c6cbbb11d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
