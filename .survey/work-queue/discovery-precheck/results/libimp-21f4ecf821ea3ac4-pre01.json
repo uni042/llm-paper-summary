@@ -1,0 +1,494 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-21f4ecf821ea3ac4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-21f4ecf821ea",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1016/j.sysarc.2026.103839",
+    "DOI:10.1109/ei268505.2025.11425606",
+    "arXiv:2610.39852",
+    "arXiv:2610.40293",
+    "arXiv:2610.40305"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "22a8aa06a3f5ebcce781cd3125230216b6a083c7",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:03:55.764360+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1016/j.sysarc.2026.103839",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ei268505.2025.11425606",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39852",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40293",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Decoupled Analysis of DVFS Effects in Prefill and Decode Stages of Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/EI268505.2025.11425606",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "2025 IEEE 9th Conference on Energy Internet and Energy System Integration (EI2)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rapid development of generative LLMs, the energy consumption of inference clusters has become increasingly prominent. This paper systematically analyzes the effectiveness of DVFS in LLM inference. Through decoupling the inference workflow into the prefill and decode stages, performance and energy metrics under varying workload conditions are measured. Case study results demonstrate that DVFS improves energy efficiency in both stages, while exhibiting different sensitivities to workload variations, motivating stage-aware DVFS policies and providing practical guidance for energy-efficient LLM serving and collaboration of power system and computing networks.",
+      "identifiers": [
+        "SemanticScholar:e51c9d58536c86db30a8d78f13535dda35852d20"
+      ],
+      "semantic_scholar_id": "e51c9d58536c86db30a8d78f13535dda35852d20",
+      "doi": "10.1109/EI268505.2025.11425606",
+      "canonical_id": "DOI:10.1109/EI268505.2025.11425606",
+      "authors": [
+        "Lei Wang",
+        "Qing-Lai Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103839",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": "Journal of systems architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a62d37d2be41123840ccba5602cd45f27c0747c9"
+      ],
+      "semantic_scholar_id": "a62d37d2be41123840ccba5602cd45f27c0747c9",
+      "doi": "10.1016/j.sysarc.2026.103839",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+      "authors": [
+        "Yun Chen",
+        "Lu Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 109,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DWISE: Denoising Workload-Informed Scheduling Engine",
+      "source_url": "https://arxiv.org/abs/2610.39852",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unlike autoregressive large language models (AR-LLMs), diffusion LLMs (dLLMs) generate text by iteratively denoising many tokens in parallel, offering a promising path to efficient inference. Existing serving frameworks, however, schedule dLLM requests with policies designed for AR models, namely first-come-first-served (FCFS) admission and prefill priority. We find that both policies are ill-suited to dLLMs, wasting much of their speed. FCFS ignores that a dLLM request's decoding cost is highly heterogeneous and unknown at arrival, causing severe head-of-line blocking. Prefill priority, widely used in AR-LLM serving to keep time-to-first-token low, sharply cuts dLLM efficiency, as rounds that run only prompts leave most of the batch idle. We present DWISE, a Denoising Workload-Informed Scheduling Engine for efficient dLLM serving. DWISE schedules requests by their remaining work, measured in a block-level unit shared by prefill and denoising, so both phases share a round. To predict the unknown denoising workload, DWISE combines a lightweight prompt-based predictor at admission with a single refinement from the first denoising round's hidden states, which capture model-specific information absent from the prompt and require no additional model execution. Implemented in SGLang and evaluated on five models from three dLLM families under bursty workloads, DWISE reduces mean end-to-end latency over SGLang by 5.4$\\times$ on average and up to 14.9$\\times$ while preserving task accuracy. The code will be released publicly.",
+      "identifiers": [
+        "SemanticScholar:8d87d1d4ba8b43820dda049bca4288c027ade51e"
+      ],
+      "semantic_scholar_id": "8d87d1d4ba8b43820dda049bca4288c027ade51e",
+      "canonical_id": "arXiv:2610.39852",
+      "arxiv_id": "2610.39852",
+      "authors": [
+        "Lie Li",
+        "Wen Li",
+        "Jun-Xiao Shen",
+        "Jin-Dong Gu",
+        "Guo-Sheng Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads",
+      "source_url": "https://arxiv.org/abs/2610.40293",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM)-based multi-agent systems (MAS) coordinate specialized agents to solve complex tasks, turning each user request into interdependent model and tool operations. Unlike independent requests, these operations become ready at different times and consume evolving context as agents coordinate and exchange results. This creates changing patterns of concurrency, computation, and memory demand that can expose different bottlenecks in LLM serving hardware. Yet benchmarking these effects requires capturing the collaboration rules that generate serving workloads, beyond the requests observed during execution. We present MAServeBench, a benchmark that treats multi-agent collaboration as a configurable dimension of serving workloads for LLM serving and hardware evaluation. Its composable stages capture how agents coordinate and exchange context in documented MAS workflows, enabling native executions to generate different workloads even when task inputs and tools remain unchanged. Hierarchical Semantic Traces preserve realized operations and dependencies for reproducible fixed-work replay and as inputs to architecture simulators. Task-linked measurements connect these workloads to serving execution and GPU/NPU hardware behavior, revealing why serving efficiency does not always translate into timely task completion. The benchmark code is available at https://github.com/ShengxuanQiu/MAServeBench.",
+      "identifiers": [
+        "SemanticScholar:0ec9d0930c94d929ce71e8dacce79cd319afbd47"
+      ],
+      "semantic_scholar_id": "0ec9d0930c94d929ce71e8dacce79cd319afbd47",
+      "canonical_id": "arXiv:2610.40293",
+      "arxiv_id": "2610.40293",
+      "authors": [
+        "Sheng-Xuan Qiu",
+        "Hao-Chen Huang",
+        "Shu-Zhang Zhong",
+        "Zi-Zhuo Fu",
+        "Ze-Bin Yang",
+        "Meng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading",
+      "source_url": "https://arxiv.org/abs/2610.40305",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLMs strain device memory through large model weights and attention states, particularly in resource-constrained scenarios. Existing systems separately provision memory for model weights and attention states, imposing fixed fixed boundaries that cannot adapt to the changing memory demands of workloads. Under heavy workloads, insufficient state capacity limits request concurrency and reduces throughput; under light workloads, idle memory in one region cannot be reallocated to another, wasting device memory. Meanwhile, modern LLM architectures introduce heterogeneous tensors with diverse layouts and lifetimes, further complicating memory management. These problems motivate unified memory management for heterogeneous tensors. However, a shared pool alone does not make memory directly reusable across tensors with different allocation granularities and execution layouts. This paper presents Rimuru, a modern LLM serving system that unifies memory management through elastic expert offloading. Rimuru establishes a shared page pool to enables elastic memory sharing across heterogeneous tensors. To accommodate different allocation granularities, Rimuru introduces memory views that allow each tensor type to interpret the shared memory space using its own page size and page table. Furthermore, Rimuru combines huge-page alignment with a multi-level page allocator that splits and merges pages, enabling cross-type capacity reuse. A page-table-aware fused MoE kernel directly accesses non-contiguous expert weights, avoiding copy overhead. Building on these mechanisms, Rimuru employs a workload-aware adjuster that dynamically reallocates pages across tensor types according to runtime demands. Implemented on top of vLLM, Rimuru remains compatible with modern LLMs. Evaluations show that Rimuru achieves up to 19.03x baseline throughput and reduces TTFT by 98.1% on average.",
+      "identifiers": [
+        "SemanticScholar:675c81ac721f4e4c7f0a973ba3eae6420780bedf"
+      ],
+      "semantic_scholar_id": "675c81ac721f4e4c7f0a973ba3eae6420780bedf",
+      "canonical_id": "arXiv:2610.40305",
+      "arxiv_id": "2610.40305",
+      "authors": [
+        "Zhi-Yuan Fang",
+        "Ding-Yang Li",
+        "Jian-Feng Zhong",
+        "Bin Wang",
+        "Wei-Xi Zhu",
+        "Cun-Shu Ni",
+        "Zi-Cong Hong",
+        "Wu-Hui Chen",
+        "Zi-Bin Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/ei268505.2025.11425606",
+      "identity_tokens": [
+        "id:DOI:10.1109/ei268505.2025.11425606",
+        "id:SemanticScholar:e51c9d58536c86db30a8d78f13535dda35852d20",
+        "title:decoupled analysis of dvfs effects in prefill and decode stages of large language model inference",
+        "url:https://doi.org/10.1109/EI268505.2025.11425606"
+      ],
+      "record": {
+        "title": "Decoupled Analysis of DVFS Effects in Prefill and Decode Stages of Large Language Model Inference",
+        "source_url": "https://doi.org/10.1109/EI268505.2025.11425606",
+        "year": 2025,
+        "published": "2025-12-05",
+        "venue": "2025 IEEE 9th Conference on Energy Internet and Energy System Integration (EI2)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rapid development of generative LLMs, the energy consumption of inference clusters has become increasingly prominent. This paper systematically analyzes the effectiveness of DVFS in LLM inference. Through decoupling the inference workflow into the prefill and decode stages, performance and energy metrics under varying workload conditions are measured. Case study results demonstrate that DVFS improves energy efficiency in both stages, while exhibiting different sensitivities to workload variations, motivating stage-aware DVFS policies and providing practical guidance for energy-efficient LLM serving and collaboration of power system and computing networks.",
+        "identifiers": [
+          "SemanticScholar:e51c9d58536c86db30a8d78f13535dda35852d20"
+        ],
+        "semantic_scholar_id": "e51c9d58536c86db30a8d78f13535dda35852d20",
+        "doi": "10.1109/EI268505.2025.11425606",
+        "canonical_id": "DOI:10.1109/EI268505.2025.11425606",
+        "authors": [
+          "Lei Wang",
+          "Qing-Lai Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1016/j.sysarc.2026.103839",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.103839",
+        "id:SemanticScholar:a62d37d2be41123840ccba5602cd45f27c0747c9",
+        "title:ascqlut a decodefused int4 gemm kernel for ascend npus",
+        "url:https://doi.org/10.1016/j.sysarc.2026.103839"
+      ],
+      "record": {
+        "title": "AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs",
+        "source_url": "https://doi.org/10.1016/j.sysarc.2026.103839",
+        "year": 2026,
+        "published": "2026-08-01",
+        "venue": "Journal of systems architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a62d37d2be41123840ccba5602cd45f27c0747c9"
+        ],
+        "semantic_scholar_id": "a62d37d2be41123840ccba5602cd45f27c0747c9",
+        "doi": "10.1016/j.sysarc.2026.103839",
+        "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+        "authors": [
+          "Yun Chen",
+          "Lu Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 109,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39852",
+      "identity_tokens": [
+        "id:SemanticScholar:8d87d1d4ba8b43820dda049bca4288c027ade51e",
+        "id:arXiv:2610.39852",
+        "title:dwise denoising workloadinformed scheduling engine",
+        "url:https://arxiv.org/abs/2610.39852"
+      ],
+      "record": {
+        "title": "DWISE: Denoising Workload-Informed Scheduling Engine",
+        "source_url": "https://arxiv.org/abs/2610.39852",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Unlike autoregressive large language models (AR-LLMs), diffusion LLMs (dLLMs) generate text by iteratively denoising many tokens in parallel, offering a promising path to efficient inference. Existing serving frameworks, however, schedule dLLM requests with policies designed for AR models, namely first-come-first-served (FCFS) admission and prefill priority. We find that both policies are ill-suited to dLLMs, wasting much of their speed. FCFS ignores that a dLLM request's decoding cost is highly heterogeneous and unknown at arrival, causing severe head-of-line blocking. Prefill priority, widely used in AR-LLM serving to keep time-to-first-token low, sharply cuts dLLM efficiency, as rounds that run only prompts leave most of the batch idle. We present DWISE, a Denoising Workload-Informed Scheduling Engine for efficient dLLM serving. DWISE schedules requests by their remaining work, measured in a block-level unit shared by prefill and denoising, so both phases share a round. To predict the unknown denoising workload, DWISE combines a lightweight prompt-based predictor at admission with a single refinement from the first denoising round's hidden states, which capture model-specific information absent from the prompt and require no additional model execution. Implemented in SGLang and evaluated on five models from three dLLM families under bursty workloads, DWISE reduces mean end-to-end latency over SGLang by 5.4$\\times$ on average and up to 14.9$\\times$ while preserving task accuracy. The code will be released publicly.",
+        "identifiers": [
+          "SemanticScholar:8d87d1d4ba8b43820dda049bca4288c027ade51e"
+        ],
+        "semantic_scholar_id": "8d87d1d4ba8b43820dda049bca4288c027ade51e",
+        "canonical_id": "arXiv:2610.39852",
+        "arxiv_id": "2610.39852",
+        "authors": [
+          "Lie Li",
+          "Wen Li",
+          "Jun-Xiao Shen",
+          "Jin-Dong Gu",
+          "Guo-Sheng Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.40293",
+      "identity_tokens": [
+        "id:SemanticScholar:0ec9d0930c94d929ce71e8dacce79cd319afbd47",
+        "id:arXiv:2610.40293",
+        "title:maservebench benchmarking multiagent llm serving systems with hierarchical collaboration workloads",
+        "url:https://arxiv.org/abs/2610.40293"
+      ],
+      "record": {
+        "title": "MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads",
+        "source_url": "https://arxiv.org/abs/2610.40293",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM)-based multi-agent systems (MAS) coordinate specialized agents to solve complex tasks, turning each user request into interdependent model and tool operations. Unlike independent requests, these operations become ready at different times and consume evolving context as agents coordinate and exchange results. This creates changing patterns of concurrency, computation, and memory demand that can expose different bottlenecks in LLM serving hardware. Yet benchmarking these effects requires capturing the collaboration rules that generate serving workloads, beyond the requests observed during execution. We present MAServeBench, a benchmark that treats multi-agent collaboration as a configurable dimension of serving workloads for LLM serving and hardware evaluation. Its composable stages capture how agents coordinate and exchange context in documented MAS workflows, enabling native executions to generate different workloads even when task inputs and tools remain unchanged. Hierarchical Semantic Traces preserve realized operations and dependencies for reproducible fixed-work replay and as inputs to architecture simulators. Task-linked measurements connect these workloads to serving execution and GPU/NPU hardware behavior, revealing why serving efficiency does not always translate into timely task completion. The benchmark code is available at https://github.com/ShengxuanQiu/MAServeBench.",
+        "identifiers": [
+          "SemanticScholar:0ec9d0930c94d929ce71e8dacce79cd319afbd47"
+        ],
+        "semantic_scholar_id": "0ec9d0930c94d929ce71e8dacce79cd319afbd47",
+        "canonical_id": "arXiv:2610.40293",
+        "arxiv_id": "2610.40293",
+        "authors": [
+          "Sheng-Xuan Qiu",
+          "Hao-Chen Huang",
+          "Shu-Zhang Zhong",
+          "Zi-Zhuo Fu",
+          "Ze-Bin Yang",
+          "Meng Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.40305",
+      "identity_tokens": [
+        "id:SemanticScholar:675c81ac721f4e4c7f0a973ba3eae6420780bedf",
+        "id:arXiv:2610.40305",
+        "title:rimuru unified memory management for modern llm serving via elastic expert offloading",
+        "url:https://arxiv.org/abs/2610.40305"
+      ],
+      "record": {
+        "title": "Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading",
+        "source_url": "https://arxiv.org/abs/2610.40305",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern LLMs strain device memory through large model weights and attention states, particularly in resource-constrained scenarios. Existing systems separately provision memory for model weights and attention states, imposing fixed fixed boundaries that cannot adapt to the changing memory demands of workloads. Under heavy workloads, insufficient state capacity limits request concurrency and reduces throughput; under light workloads, idle memory in one region cannot be reallocated to another, wasting device memory. Meanwhile, modern LLM architectures introduce heterogeneous tensors with diverse layouts and lifetimes, further complicating memory management. These problems motivate unified memory management for heterogeneous tensors. However, a shared pool alone does not make memory directly reusable across tensors with different allocation granularities and execution layouts. This paper presents Rimuru, a modern LLM serving system that unifies memory management through elastic expert offloading. Rimuru establishes a shared page pool to enables elastic memory sharing across heterogeneous tensors. To accommodate different allocation granularities, Rimuru introduces memory views that allow each tensor type to interpret the shared memory space using its own page size and page table. Furthermore, Rimuru combines huge-page alignment with a multi-level page allocator that splits and merges pages, enabling cross-type capacity reuse. A page-table-aware fused MoE kernel directly accesses non-contiguous expert weights, avoiding copy overhead. Building on these mechanisms, Rimuru employs a workload-aware adjuster that dynamically reallocates pages across tensor types according to runtime demands. Implemented on top of vLLM, Rimuru remains compatible with modern LLMs. Evaluations show that Rimuru achieves up to 19.03x baseline throughput and reduces TTFT by 98.1% on average.",
+        "identifiers": [
+          "SemanticScholar:675c81ac721f4e4c7f0a973ba3eae6420780bedf"
+        ],
+        "semantic_scholar_id": "675c81ac721f4e4c7f0a973ba3eae6420780bedf",
+        "canonical_id": "arXiv:2610.40305",
+        "arxiv_id": "2610.40305",
+        "authors": [
+          "Zhi-Yuan Fang",
+          "Ding-Yang Li",
+          "Jian-Feng Zhong",
+          "Bin Wang",
+          "Wei-Xi Zhu",
+          "Cun-Shu Ni",
+          "Zi-Cong Hong",
+          "Wu-Hui Chen",
+          "Zi-Bin Zheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e07db09bead8532694e05b832cbffc98f8ca529ff7ec1a8eae20f598029cf9bd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

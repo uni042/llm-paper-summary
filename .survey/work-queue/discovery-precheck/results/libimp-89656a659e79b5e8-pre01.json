@@ -1,0 +1,333 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-89656a659e79b5e8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-89656a659e79",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cgo68049.2026.11395227",
+    "DOI:10.1109/ipdps65963.2026.00083",
+    "arXiv:2503.22451"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "22a8aa06a3f5ebcce781cd3125230216b6a083c7",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:03:56.144341+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cgo68049.2026.11395227",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ipdps65963.2026.00083",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.22451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Throughput: Performance and Energy Insights of LLM Inference Across AI Accelerators",
+      "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00083",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models (LLMs) is highly resource-intensive and requires specialized hardware acceleration. While GPUs remain the dominant solution, dataflow accelerators are emerging as a compelling alternative. In this study, we present an extensive empirical performance analysis of six datacenter-class GPUs from Nvidia, AMD, and Intel, alongside two dataflow AI accelerators from Cerebras and SambaNova, using fourteen different open-source LLMs. Our evaluation focuses on investigating the main factors that impact LLM inference, including model size, batch size, quantization, and multi-GPU scaling under various parallelism strategies. Importantly, we analyze both performance and energy efficiency, providing an energy-aware comparison across accelerator types. Our experimental results show that dataflow AI accelerators achieve an order-of-magnitude improvement in throughput and latency for small (≤ 8) batch sizes compared to GPUs. On the other hand, GPUs offer larger HBM memories and benefit from a simpler programming model, allowing for more flexibility in terms of batch size, which is particularly beneficial in offline inference. These insights provide practical guidance for LLM inference in diverse deployment scenarios.",
+      "identifiers": [
+        "SemanticScholar:27677d62299728ddbb17a7d972dff7a4f3a43dea"
+      ],
+      "semantic_scholar_id": "27677d62299728ddbb17a7d972dff7a4f3a43dea",
+      "doi": "10.1109/IPDPS65963.2026.00083",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00083",
+      "authors": [
+        "Giacomo Brunetta",
+        "V. Sastry",
+        "Xing-Fu Wu",
+        "V. Taylor",
+        "M. Papka",
+        "Zhi-Ling Lan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Progressive Low-Precision Approximation of Tensor Operators on GPUs: Enabling Greater Trade-Offs between Performance and Accuracy",
+      "source_url": "https://doi.org/10.1109/CGO68049.2026.11395227",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent GPUs integrate specialized hardware for low-precision arithmetic (e.g., FP16, INT8), offering substantial speedups for tensor operations. However, existing methods typically rely on coarse, operator-level trial-and-error tuning, which restricts the performance–accuracy trade-off space and limits achievable gains.We present Platensor, a progressive low-precision approximation framework that expands this trade-off space through ne-grained, tile-level strategies. The key idea is to exploit the tiled computation patterns of GPUs to enable flexible precision control and richer optimization opportunities. Platensor performs a two-phase exploration: a fast rule-based pass that selects promising tile-level configurations, followed by an evolutionary search that refines them. It then automatically generates optimized kernels that combine tiles of different precisions.Experiments on GEMM operators and representative applications—including kNN, LLMs, and HPL-MxP—show that Platensor significantly broadens the attainable performance– accuracy trade-offs and more fully leverages low-precision arithmetic on modern GPUs compared to operator-level tuning.",
+      "identifiers": [
+        "SemanticScholar:624ba99473c5c40b3ef519be56808a82dc2f1c80"
+      ],
+      "semantic_scholar_id": "624ba99473c5c40b3ef519be56808a82dc2f1c80",
+      "doi": "10.1109/CGO68049.2026.11395227",
+      "canonical_id": "DOI:10.1109/CGO68049.2026.11395227",
+      "authors": [
+        "Fan Luo",
+        "Guang-Li Li",
+        "Zhao-Yang Hao",
+        "Xue-Ying Wang",
+        "Xiao-Bing Feng",
+        "Huimin Cui",
+        "Jing-Ling Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STADE: Standard Deviation as a Pruning Metric",
+      "source_url": "https://arxiv.org/abs/2503.22451",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, Large Language Models (LLMs) have become very widespread and are used to solve a wide variety of tasks. To successfully handle these tasks, LLMs require longer training times and larger model sizes. This makes LLMs ideal candidates for pruning methods that reduce computational demands while maintaining performance. Previous methods require a retraining phase after pruning to maintain the original model's performance. However, state-of-the-art pruning methods, such as Wanda, prune the model without retraining, making the pruning process faster and more efficient. Building upon Wanda's work, this study provides a theoretical explanation of why the method is effective and leverages these insights to enhance the pruning process. Specifically, a theoretical analysis of the pruning problem reveals a common scenario in Machine Learning where Wanda is the optimal pruning method. Furthermore, this analysis is extended to cases where Wanda is no longer optimal, leading to the development of a new method, STADE, based on the standard deviation of the input. From a theoretical standpoint, STADE demonstrates better generality across different scenarios. Finally, extensive experiments on Llama and Open Pre-trained Transformers (OPT) models validate these theoretical findings, showing that depending on the training conditions, Wanda's optimal performance varies as predicted by the theoretical framework. These insights contribute to a more robust understanding of pruning strategies and their practical implications. Code is available at: https://github.com/Coello-dev/STADE/",
+      "identifiers": [
+        "SemanticScholar:98c45f9f3a519d4af96dc62037308470d01ee5f9"
+      ],
+      "semantic_scholar_id": "98c45f9f3a519d4af96dc62037308470d01ee5f9",
+      "canonical_id": "arXiv:2503.22451",
+      "arxiv_id": "2503.22451",
+      "doi": "10.48550/arXiv.2503.22451",
+      "authors": [
+        "Diego Coello de Portugal Mecke",
+        "Haya Alyoussef",
+        "Maximilian Stubbemann",
+        "Ilia Koloiarov",
+        "Tom Hanika",
+        "Lars Schmidt-Thieme"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 600,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/ipdps65963.2026.00083",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps65963.2026.00083",
+        "id:SemanticScholar:27677d62299728ddbb17a7d972dff7a4f3a43dea",
+        "title:beyond throughput performance and energy insights of llm inference across ai accelerators",
+        "url:https://doi.org/10.1109/IPDPS65963.2026.00083"
+      ],
+      "record": {
+        "title": "Beyond Throughput: Performance and Energy Insights of LLM Inference Across AI Accelerators",
+        "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00083",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving large language models (LLMs) is highly resource-intensive and requires specialized hardware acceleration. While GPUs remain the dominant solution, dataflow accelerators are emerging as a compelling alternative. In this study, we present an extensive empirical performance analysis of six datacenter-class GPUs from Nvidia, AMD, and Intel, alongside two dataflow AI accelerators from Cerebras and SambaNova, using fourteen different open-source LLMs. Our evaluation focuses on investigating the main factors that impact LLM inference, including model size, batch size, quantization, and multi-GPU scaling under various parallelism strategies. Importantly, we analyze both performance and energy efficiency, providing an energy-aware comparison across accelerator types. Our experimental results show that dataflow AI accelerators achieve an order-of-magnitude improvement in throughput and latency for small (≤ 8) batch sizes compared to GPUs. On the other hand, GPUs offer larger HBM memories and benefit from a simpler programming model, allowing for more flexibility in terms of batch size, which is particularly beneficial in offline inference. These insights provide practical guidance for LLM inference in diverse deployment scenarios.",
+        "identifiers": [
+          "SemanticScholar:27677d62299728ddbb17a7d972dff7a4f3a43dea"
+        ],
+        "semantic_scholar_id": "27677d62299728ddbb17a7d972dff7a4f3a43dea",
+        "doi": "10.1109/IPDPS65963.2026.00083",
+        "canonical_id": "DOI:10.1109/IPDPS65963.2026.00083",
+        "authors": [
+          "Giacomo Brunetta",
+          "V. Sastry",
+          "Xing-Fu Wu",
+          "V. Taylor",
+          "M. Papka",
+          "Zhi-Ling Lan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/cgo68049.2026.11395227",
+      "identity_tokens": [
+        "id:DOI:10.1109/cgo68049.2026.11395227",
+        "id:SemanticScholar:624ba99473c5c40b3ef519be56808a82dc2f1c80",
+        "title:progressive lowprecision approximation of tensor operators on gpus enabling greater tradeoffs between performance and accuracy",
+        "url:https://doi.org/10.1109/CGO68049.2026.11395227"
+      ],
+      "record": {
+        "title": "Progressive Low-Precision Approximation of Tensor Operators on GPUs: Enabling Greater Trade-Offs between Performance and Accuracy",
+        "source_url": "https://doi.org/10.1109/CGO68049.2026.11395227",
+        "year": 2026,
+        "published": "2026-01-31",
+        "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent GPUs integrate specialized hardware for low-precision arithmetic (e.g., FP16, INT8), offering substantial speedups for tensor operations. However, existing methods typically rely on coarse, operator-level trial-and-error tuning, which restricts the performance–accuracy trade-off space and limits achievable gains.We present Platensor, a progressive low-precision approximation framework that expands this trade-off space through ne-grained, tile-level strategies. The key idea is to exploit the tiled computation patterns of GPUs to enable flexible precision control and richer optimization opportunities. Platensor performs a two-phase exploration: a fast rule-based pass that selects promising tile-level configurations, followed by an evolutionary search that refines them. It then automatically generates optimized kernels that combine tiles of different precisions.Experiments on GEMM operators and representative applications—including kNN, LLMs, and HPL-MxP—show that Platensor significantly broadens the attainable performance– accuracy trade-offs and more fully leverages low-precision arithmetic on modern GPUs compared to operator-level tuning.",
+        "identifiers": [
+          "SemanticScholar:624ba99473c5c40b3ef519be56808a82dc2f1c80"
+        ],
+        "semantic_scholar_id": "624ba99473c5c40b3ef519be56808a82dc2f1c80",
+        "doi": "10.1109/CGO68049.2026.11395227",
+        "canonical_id": "DOI:10.1109/CGO68049.2026.11395227",
+        "authors": [
+          "Fan Luo",
+          "Guang-Li Li",
+          "Zhao-Yang Hao",
+          "Xue-Ying Wang",
+          "Xiao-Bing Feng",
+          "Huimin Cui",
+          "Jing-Ling Xue"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.22451",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.22451",
+        "id:SemanticScholar:98c45f9f3a519d4af96dc62037308470d01ee5f9",
+        "id:arXiv:2503.22451",
+        "title:stade standard deviation as a pruning metric",
+        "url:https://arxiv.org/abs/2503.22451"
+      ],
+      "record": {
+        "title": "STADE: Standard Deviation as a Pruning Metric",
+        "source_url": "https://arxiv.org/abs/2503.22451",
+        "year": 2025,
+        "published": "2025-03-28",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, Large Language Models (LLMs) have become very widespread and are used to solve a wide variety of tasks. To successfully handle these tasks, LLMs require longer training times and larger model sizes. This makes LLMs ideal candidates for pruning methods that reduce computational demands while maintaining performance. Previous methods require a retraining phase after pruning to maintain the original model's performance. However, state-of-the-art pruning methods, such as Wanda, prune the model without retraining, making the pruning process faster and more efficient. Building upon Wanda's work, this study provides a theoretical explanation of why the method is effective and leverages these insights to enhance the pruning process. Specifically, a theoretical analysis of the pruning problem reveals a common scenario in Machine Learning where Wanda is the optimal pruning method. Furthermore, this analysis is extended to cases where Wanda is no longer optimal, leading to the development of a new method, STADE, based on the standard deviation of the input. From a theoretical standpoint, STADE demonstrates better generality across different scenarios. Finally, extensive experiments on Llama and Open Pre-trained Transformers (OPT) models validate these theoretical findings, showing that depending on the training conditions, Wanda's optimal performance varies as predicted by the theoretical framework. These insights contribute to a more robust understanding of pruning strategies and their practical implications. Code is available at: https://github.com/Coello-dev/STADE/",
+        "identifiers": [
+          "SemanticScholar:98c45f9f3a519d4af96dc62037308470d01ee5f9"
+        ],
+        "semantic_scholar_id": "98c45f9f3a519d4af96dc62037308470d01ee5f9",
+        "canonical_id": "arXiv:2503.22451",
+        "arxiv_id": "2503.22451",
+        "doi": "10.48550/arXiv.2503.22451",
+        "authors": [
+          "Diego Coello de Portugal Mecke",
+          "Haya Alyoussef",
+          "Maximilian Stubbemann",
+          "Ilia Koloiarov",
+          "Tom Hanika",
+          "Lars Schmidt-Thieme"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 600,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:317c6bc9f6f2d2f47657958d7f031efd0321c30003a66325aec4a517c7edd130",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

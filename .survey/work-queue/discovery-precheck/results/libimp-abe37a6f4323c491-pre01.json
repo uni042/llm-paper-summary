@@ -1,0 +1,427 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-abe37a6f4323c491-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-abe37a6f4323",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.14389",
+    "arXiv:2610.24355",
+    "arXiv:2610.37200",
+    "arXiv:2610.39621",
+    "arXiv:2610.40541"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "22a8aa06a3f5ebcce781cd3125230216b6a083c7",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:03:56.308594+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.14389",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24355",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37200",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:5a3f7c26584c871e2e9b896eb7b177312fe01ebc"
+    },
+    {
+      "requested_id": "arXiv:2610.39621",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40541",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Measuring the Inference Energy Efficiency of Open-Weight LLMs across Benchmarks, Reasoning Modes, and Hardware",
+      "source_url": "https://arxiv.org/abs/2610.14389",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Benchmark scores tell us what an LLM can do, but not how much energy is required to deliver that capability. We directly measure this trade-off for 86 open-weight model checkpoints, evaluated on seven benchmarks and six hardware platforms ranging from a consumer GPU to an eight-GPU server. We find large differences in energy efficiency even among models with similar capability. Most configurations lie away from the score--energy Pareto frontier: they use a median of 2.6--4.8$\\times$ more energy than another configuration that scores at least as well, with differences reaching 27$\\times$. Reasoning can improve capability, but enabling thinking increases energy by about 3.7$\\times$ on average, and the benefit depends strongly on the model family and output budget. Generated-token count is also an imperfect proxy for energy, misordering 18--24\\% of model pairs. In contrast, FP8 reduces energy by roughly a quarter with little change in score, while changing hardware largely rescales energy without changing the relative ranking of models. These results show that capability alone gives an incomplete picture of efficiency. We argue that benchmark scores should be reported together with measured energy consumption under a specified serving regime and output budget.",
+      "identifiers": [
+        "SemanticScholar:1fb268b10931b3bba7286b836976016b6f308bf6"
+      ],
+      "semantic_scholar_id": "1fb268b10931b3bba7286b836976016b6f308bf6",
+      "canonical_id": "arXiv:2610.14389",
+      "arxiv_id": "2610.14389",
+      "authors": [
+        "Ze-Yu Yang",
+        "W. Armour"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Koi: Evidence-Guided, Self-Calibrating Planning for Multi-Cloud, Heterogeneous LLM Inference Fleets",
+      "source_url": "https://arxiv.org/abs/2610.24355",
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying a large language model (LLM) requires choosing the right accelerator, parallelization strategy, engine configuration, and replica count amongst ~140 other variables across clouds, regions, and markets. These decisions are intertwined, and the best cluster-wide plan continually changes as jobs contend for shared capacity on shifting workloads. We present Koi, a self-calibrating cluster planner for heterogeneous, multi-cloud fleets. Koi uses a Recursive Language Model (RLM) hierarchy to propose hypotheses and reason over deployment while deterministic components predict serving behavior, score candidates, and control placement. It represents inference behavior as a fixed causal graph linking decisions (e.g., accelerator, parallelism), runtime mediators (e.g., KV-cache pressure, communication overhead), and outcomes (e.g., latency, throughput). Each deployment strengthens or weakens scoped causal relationships, building a comprehensive playbook for inference that the planner employs to guide future decisions. Job-wise configurations are composed into cluster-wide plans and evaluated against serving objectives, resource constraints, SLO risks, and cost. Across benchmarks, Koi achieves 1.18x greater goodput than the strongest baseline while reducing $/token by 20% in a real heterogeneous cluster. Ablations isolate the contribution of Koi's architecture: a pure language model attains a composite score of 35.3, the same model equipped with Koi's deterministic tools reaches 51.6, and the full Koi planner reaches 70.8.",
+      "identifiers": [
+        "SemanticScholar:2cb18c5f532dc1496caf26cc847e6ea7e629362f"
+      ],
+      "semantic_scholar_id": "2cb18c5f532dc1496caf26cc847e6ea7e629362f",
+      "canonical_id": "arXiv:2610.24355",
+      "arxiv_id": "2610.24355",
+      "authors": [
+        "Mankeerat Sidhu",
+        "Gang-Muk Lim",
+        "Hetarth Chopra",
+        "Maximillian Eisenberg",
+        "Quan-Hao Ng",
+        "Aryan Gosaliya",
+        "Shu Liu",
+        "Luka Govedič",
+        "Jiaxin Shan",
+        "Hong-Kuan Zhou",
+        "Vikram Sharma Mailthody",
+        "P. B. Godfrey",
+        "I. Stoica"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases",
+      "source_url": "https://arxiv.org/abs/2610.39621",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of Large Language Models (LLMs) into agentic architectures has substantially increased token consumption, raising concerns about their energy footprint. Yet, estimating the energy consumption of proprietary API-based models remains challenging, and existing approaches focus primarily on generated output tokens while overlooking the impact of the large input contexts characteristic of agentic workflows. To address this gap, we systematically profile compute time and energy consumption across a wide range of prefill (input) and decode (output) token lengths. Using generalized linear models, we show that decode compute time and energy scale linearly with output length, whereas prefill compute time and energy exhibit both linear and quadratic scaling with input length. These findings demonstrate that input context becomes a relevant factor for large-context workloads. Furthermore, we show that compute time serves as a reliable proxy for energy consumption when direct energy measurements are unavailable. Our mapping framework enables precise energy estimation and supports more sustainable deployment decisions for agentic AI.",
+      "identifiers": [
+        "SemanticScholar:b345b959ef8c42e4d3455fad4b9582cd332c98fa"
+      ],
+      "semantic_scholar_id": "b345b959ef8c42e4d3455fad4b9582cd332c98fa",
+      "canonical_id": "arXiv:2610.39621",
+      "arxiv_id": "2610.39621",
+      "authors": [
+        "Lars Krupp",
+        "Daniel Geissler",
+        "Francisco M. Calatrava-Nicolás",
+        "Stefan Gerd Fritsch",
+        "P. Lukowicz",
+        "J. Karolus"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
+      "source_url": "https://arxiv.org/abs/2610.40541",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Predicting how many tokens a large language model (LLM) will decode, using only prefill-phase hidden states, is a key primitive for inference scheduling. We show that current benchmarks conflate predictor quality with task hardness: when the target model, dataset, or sampling configuration changes, reported accuracy collapses even though the predictor is unchanged. We trace this instability to an overlooked error source---the inherent stochasticity of autoregressive decoding---and derive bounds that every prefill-side method must obey. Our analysis treats decoding as a stopped stochastic process. The per-step stopping probability of a response is not constant but ramps up over hundreds of steps, so the decode length inherits a central limit theorem from the many local decisions that determine where a response ends; this yields per-prompt normality with an explicit error term, together with an affine variance law $\\sigma=\\alpha\\mu+b$ whose slope is the coefficient of variation of the number of response segments. Empirically, the normal law reproduces the per-prompt MAE and the central mass of the decode-length distribution to within a few percent, and the residual departures from normality (mild right skew, slight excess kurtosis) are the ones predicted by the sampling-noise correction. Under fixed model, data, and sampling conditions, a broad design space of predictors (MLP, EGTP, FiLM, soft-label, and Mixture-of-Experts variants) converges to similar performance close to the bound, confirming that \\emph{system error dominates model error}. We argue for a benchmarking protocol that fixes the model, data, and sampling parameters and that reports relative-error metrics alongside absolute ones. Code and analysis tools are available at https://github.com/ShwStone/DecodingPredict.",
+      "identifiers": [
+        "SemanticScholar:1e1f337b2cf5a78ff51132612b2272b54f698dc3"
+      ],
+      "semantic_scholar_id": "1e1f337b2cf5a78ff51132612b2272b54f698dc3",
+      "canonical_id": "arXiv:2610.40541",
+      "arxiv_id": "2610.40541",
+      "authors": [
+        "Hao-Wen Shi",
+        "Xu-Zhe Yan",
+        "Fa-Hao Chen",
+        "Peng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.14389",
+      "identity_tokens": [
+        "id:SemanticScholar:1fb268b10931b3bba7286b836976016b6f308bf6",
+        "id:arXiv:2610.14389",
+        "title:measuring the inference energy efficiency of openweight llms across benchmarks reasoning modes and hardware",
+        "url:https://arxiv.org/abs/2610.14389"
+      ],
+      "record": {
+        "title": "Measuring the Inference Energy Efficiency of Open-Weight LLMs across Benchmarks, Reasoning Modes, and Hardware",
+        "source_url": "https://arxiv.org/abs/2610.14389",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Benchmark scores tell us what an LLM can do, but not how much energy is required to deliver that capability. We directly measure this trade-off for 86 open-weight model checkpoints, evaluated on seven benchmarks and six hardware platforms ranging from a consumer GPU to an eight-GPU server. We find large differences in energy efficiency even among models with similar capability. Most configurations lie away from the score--energy Pareto frontier: they use a median of 2.6--4.8$\\times$ more energy than another configuration that scores at least as well, with differences reaching 27$\\times$. Reasoning can improve capability, but enabling thinking increases energy by about 3.7$\\times$ on average, and the benefit depends strongly on the model family and output budget. Generated-token count is also an imperfect proxy for energy, misordering 18--24\\% of model pairs. In contrast, FP8 reduces energy by roughly a quarter with little change in score, while changing hardware largely rescales energy without changing the relative ranking of models. These results show that capability alone gives an incomplete picture of efficiency. We argue that benchmark scores should be reported together with measured energy consumption under a specified serving regime and output budget.",
+        "identifiers": [
+          "SemanticScholar:1fb268b10931b3bba7286b836976016b6f308bf6"
+        ],
+        "semantic_scholar_id": "1fb268b10931b3bba7286b836976016b6f308bf6",
+        "canonical_id": "arXiv:2610.14389",
+        "arxiv_id": "2610.14389",
+        "authors": [
+          "Ze-Yu Yang",
+          "W. Armour"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.24355",
+      "identity_tokens": [
+        "id:SemanticScholar:2cb18c5f532dc1496caf26cc847e6ea7e629362f",
+        "id:arXiv:2610.24355",
+        "title:koi evidenceguided selfcalibrating planning for multicloud heterogeneous llm inference fleets",
+        "url:https://arxiv.org/abs/2610.24355"
+      ],
+      "record": {
+        "title": "Koi: Evidence-Guided, Self-Calibrating Planning for Multi-Cloud, Heterogeneous LLM Inference Fleets",
+        "source_url": "https://arxiv.org/abs/2610.24355",
+        "year": 2026,
+        "published": "2026-10-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying a large language model (LLM) requires choosing the right accelerator, parallelization strategy, engine configuration, and replica count amongst ~140 other variables across clouds, regions, and markets. These decisions are intertwined, and the best cluster-wide plan continually changes as jobs contend for shared capacity on shifting workloads. We present Koi, a self-calibrating cluster planner for heterogeneous, multi-cloud fleets. Koi uses a Recursive Language Model (RLM) hierarchy to propose hypotheses and reason over deployment while deterministic components predict serving behavior, score candidates, and control placement. It represents inference behavior as a fixed causal graph linking decisions (e.g., accelerator, parallelism), runtime mediators (e.g., KV-cache pressure, communication overhead), and outcomes (e.g., latency, throughput). Each deployment strengthens or weakens scoped causal relationships, building a comprehensive playbook for inference that the planner employs to guide future decisions. Job-wise configurations are composed into cluster-wide plans and evaluated against serving objectives, resource constraints, SLO risks, and cost. Across benchmarks, Koi achieves 1.18x greater goodput than the strongest baseline while reducing $/token by 20% in a real heterogeneous cluster. Ablations isolate the contribution of Koi's architecture: a pure language model attains a composite score of 35.3, the same model equipped with Koi's deterministic tools reaches 51.6, and the full Koi planner reaches 70.8.",
+        "identifiers": [
+          "SemanticScholar:2cb18c5f532dc1496caf26cc847e6ea7e629362f"
+        ],
+        "semantic_scholar_id": "2cb18c5f532dc1496caf26cc847e6ea7e629362f",
+        "canonical_id": "arXiv:2610.24355",
+        "arxiv_id": "2610.24355",
+        "authors": [
+          "Mankeerat Sidhu",
+          "Gang-Muk Lim",
+          "Hetarth Chopra",
+          "Maximillian Eisenberg",
+          "Quan-Hao Ng",
+          "Aryan Gosaliya",
+          "Shu Liu",
+          "Luka Govedič",
+          "Jiaxin Shan",
+          "Hong-Kuan Zhou",
+          "Vikram Sharma Mailthody",
+          "P. B. Godfrey",
+          "I. Stoica"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39621",
+      "identity_tokens": [
+        "id:SemanticScholar:b345b959ef8c42e4d3455fad4b9582cd332c98fa",
+        "id:arXiv:2610.39621",
+        "title:the real cost of context predicting compute time and energy consumption in llm prefill and decode phases",
+        "url:https://arxiv.org/abs/2610.39621"
+      ],
+      "record": {
+        "title": "The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases",
+        "source_url": "https://arxiv.org/abs/2610.39621",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of Large Language Models (LLMs) into agentic architectures has substantially increased token consumption, raising concerns about their energy footprint. Yet, estimating the energy consumption of proprietary API-based models remains challenging, and existing approaches focus primarily on generated output tokens while overlooking the impact of the large input contexts characteristic of agentic workflows. To address this gap, we systematically profile compute time and energy consumption across a wide range of prefill (input) and decode (output) token lengths. Using generalized linear models, we show that decode compute time and energy scale linearly with output length, whereas prefill compute time and energy exhibit both linear and quadratic scaling with input length. These findings demonstrate that input context becomes a relevant factor for large-context workloads. Furthermore, we show that compute time serves as a reliable proxy for energy consumption when direct energy measurements are unavailable. Our mapping framework enables precise energy estimation and supports more sustainable deployment decisions for agentic AI.",
+        "identifiers": [
+          "SemanticScholar:b345b959ef8c42e4d3455fad4b9582cd332c98fa"
+        ],
+        "semantic_scholar_id": "b345b959ef8c42e4d3455fad4b9582cd332c98fa",
+        "canonical_id": "arXiv:2610.39621",
+        "arxiv_id": "2610.39621",
+        "authors": [
+          "Lars Krupp",
+          "Daniel Geissler",
+          "Francisco M. Calatrava-Nicolás",
+          "Stefan Gerd Fritsch",
+          "P. Lukowicz",
+          "J. Karolus"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.40541",
+      "identity_tokens": [
+        "id:SemanticScholar:1e1f337b2cf5a78ff51132612b2272b54f698dc3",
+        "id:arXiv:2610.40541",
+        "title:on the fundamental limits of prefillbased decoding length prediction",
+        "url:https://arxiv.org/abs/2610.40541"
+      ],
+      "record": {
+        "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
+        "source_url": "https://arxiv.org/abs/2610.40541",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Predicting how many tokens a large language model (LLM) will decode, using only prefill-phase hidden states, is a key primitive for inference scheduling. We show that current benchmarks conflate predictor quality with task hardness: when the target model, dataset, or sampling configuration changes, reported accuracy collapses even though the predictor is unchanged. We trace this instability to an overlooked error source---the inherent stochasticity of autoregressive decoding---and derive bounds that every prefill-side method must obey. Our analysis treats decoding as a stopped stochastic process. The per-step stopping probability of a response is not constant but ramps up over hundreds of steps, so the decode length inherits a central limit theorem from the many local decisions that determine where a response ends; this yields per-prompt normality with an explicit error term, together with an affine variance law $\\sigma=\\alpha\\mu+b$ whose slope is the coefficient of variation of the number of response segments. Empirically, the normal law reproduces the per-prompt MAE and the central mass of the decode-length distribution to within a few percent, and the residual departures from normality (mild right skew, slight excess kurtosis) are the ones predicted by the sampling-noise correction. Under fixed model, data, and sampling conditions, a broad design space of predictors (MLP, EGTP, FiLM, soft-label, and Mixture-of-Experts variants) converges to similar performance close to the bound, confirming that \\emph{system error dominates model error}. We argue for a benchmarking protocol that fixes the model, data, and sampling parameters and that reports relative-error metrics alongside absolute ones. Code and analysis tools are available at https://github.com/ShwStone/DecodingPredict.",
+        "identifiers": [
+          "SemanticScholar:1e1f337b2cf5a78ff51132612b2272b54f698dc3"
+        ],
+        "semantic_scholar_id": "1e1f337b2cf5a78ff51132612b2272b54f698dc3",
+        "canonical_id": "arXiv:2610.40541",
+        "arxiv_id": "2610.40541",
+        "authors": [
+          "Hao-Wen Shi",
+          "Xu-Zhe Yan",
+          "Fa-Hao Chen",
+          "Peng Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9e55f79745de53119843146a5f9d7ed915b9fc488b0b0c52ff67b5a08c27953a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

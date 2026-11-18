@@ -1,0 +1,333 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-58ce3913dcd32462-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-58ce3913dcd3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iscas66217.2026.11562780",
+    "DOI:10.1145/3772052.3772233",
+    "DOI:10.56553/popets-2026-0008",
+    "arXiv:2412.12486"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "22a8aa06a3f5ebcce781cd3125230216b6a083c7",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:03:56.078555+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iscas66217.2026.11562780",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3772052.3772233",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.56553/popets-2026-0008",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.56553/popets-2026-0008"
+    },
+    {
+      "requested_id": "arXiv:2412.12486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A Graph-Based Methodology for Dynamic KV-Cache Compression in Transformer Inference",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562780",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) face significant challenges when deployed in edge and resource-constrained environments due to the heavy memory and compute demands of the Key–Value (KV) cache during autoregressive inference. This work introduces a graph-based KV cache compression framework that models cache entries as nodes in a dynamic similarity graph and performs centroid-based merging guided by a tunable distance threshold. This enables dynamic compression while preserving contextual fidelity, effectively balancing model accuracy and efficiency. Experimental evaluation demonstrates up to 97% memory reduction while maintaining high throughput retention. Crucially, this is achieved with only a modest and stable increase in perplexity on benchmark GPT-2 and TinyLlama models, validating that the proposed methodology delivers a highly favorable trade-off between extreme memory savings and model fidelity. The results establish this approach as a practical and scalable solution for efficient LLM deployment in edge AI systems.",
+      "identifiers": [
+        "SemanticScholar:fed3a3b35b24609980327cd38259e2ced82b4c5e"
+      ],
+      "semantic_scholar_id": "fed3a3b35b24609980327cd38259e2ced82b4c5e",
+      "doi": "10.1109/ISCAS66217.2026.11562780",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562780",
+      "authors": [
+        "Neermita Bhattacharya",
+        "Shyam Sathvik",
+        "Abhishek Yadav",
+        "Ayush Dixit",
+        "Binod Kumar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Snap & Replay: A new way to analyze uarch-scale performance bottlenecks for ML accelerators",
+      "source_url": "https://doi.org/10.1145/3772052.3772233",
+      "year": 2025,
+      "published": "2025-11-19",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As models become larger, ML accelerators are a scarce resource whose performance must be continually optimized to improve efficiency. Existing performance analysis tools are coarse grained, fail to capture model performance at the machine-code level and often do not provide specific recommendations for optimizations. In addition, existing methodologies are hard to apply in Google's production environment, as they require hardware changes or recompilation. We present SnR, a fine-grained methodology for analyzing ML models at the machine-code level that provides actionable optimization suggestions. It requires no hardware changes and no recompilation. Our core insight is to use a hardware-level simulator, an artifact of the hardware design process that we can re-purpose for performance analysis. Traditionally, these simulators are confidential tools used to improve hardware designs given representative software workloads. However, as a hyperscaler practicing hardware/software co-design, we are uniquely positioned to use them in the opposite direction: to optimize software given fixed hardware architectures. SnR captures traces from production deployments running on accelerators and replays them in a modified microarchitecture simulator to gain low-level insights into the model's performance. We implement SnR for our in-house accelerator (TPU) and used it to analyze the performance of several of our production LLMs, revealing several previously-unknown microarchitecture inefficiencies. Leveraging these insights, we optimize a common communication collective by up to 15% and reduce token generation latency by up to 4.1%.",
+      "identifiers": [
+        "SemanticScholar:4db1fe8dad0a7ce46f7f50196db3464f2a123b16"
+      ],
+      "semantic_scholar_id": "4db1fe8dad0a7ce46f7f50196db3464f2a123b16",
+      "doi": "10.1145/3772052.3772233",
+      "canonical_id": "DOI:10.1145/3772052.3772233",
+      "authors": [
+        "Ioannis Zarkadas",
+        "Amanda Tomlinson",
+        "Asaf Cidon",
+        "Baris Kasikci",
+        "Ofir Weisse"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Boosting Long-Context Management via Query-Guided Activation Refilling",
+      "source_url": "https://arxiv.org/abs/2412.12486",
+      "year": 2024,
+      "published": "2024-12-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long contexts poses a significant challenge for large language models (LLMs) due to their inherent context-window limitations and the computational burden of extensive key-value (KV) activations, which severely impact efficiency. For information-seeking tasks, full context perception is often unnecessary, as a query's information needs can dynamically range from localized details to a global perspective, depending on its complexity. However, existing methods struggle to adapt effectively to these dynamic information needs. In the paper, we propose a method for processing long-context information-seeking tasks via query-guided Activation Refilling (ACRE). ACRE constructs a Bi-layer KV Cache for long contexts, where the layer-1 (L1) cache compactly captures global information, and the layer-2 (L2) cache provides detailed and localized information. ACRE establishes a proxying relationship between the two caches, allowing the input query to attend to the L1 cache and dynamically refill it with relevant entries from the L2 cache. This mechanism integrates global understanding with query-specific local details, thus improving answer decoding. Experiments on a variety of long-context information-seeking datasets demonstrate ACRE's effectiveness, achieving improvements in both performance and efficiency.",
+      "identifiers": [
+        "SemanticScholar:76fffc8536042e840dfe97f55599d2c7b087ce8e"
+      ],
+      "semantic_scholar_id": "76fffc8536042e840dfe97f55599d2c7b087ce8e",
+      "canonical_id": "arXiv:2412.12486",
+      "arxiv_id": "2412.12486",
+      "doi": "10.48550/arXiv.2412.12486",
+      "authors": [
+        "Hong-Jin Qian",
+        "Zheng Liu",
+        "Peitian Zhang",
+        "Zhi-Cheng Dou",
+        "De-Fu Lian"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 701,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/iscas66217.2026.11562780",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas66217.2026.11562780",
+        "id:SemanticScholar:fed3a3b35b24609980327cd38259e2ced82b4c5e",
+        "title:a graphbased methodology for dynamic kvcache compression in transformer inference",
+        "url:https://doi.org/10.1109/ISCAS66217.2026.11562780"
+      ],
+      "record": {
+        "title": "A Graph-Based Methodology for Dynamic KV-Cache Compression in Transformer Inference",
+        "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562780",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) face significant challenges when deployed in edge and resource-constrained environments due to the heavy memory and compute demands of the Key–Value (KV) cache during autoregressive inference. This work introduces a graph-based KV cache compression framework that models cache entries as nodes in a dynamic similarity graph and performs centroid-based merging guided by a tunable distance threshold. This enables dynamic compression while preserving contextual fidelity, effectively balancing model accuracy and efficiency. Experimental evaluation demonstrates up to 97% memory reduction while maintaining high throughput retention. Crucially, this is achieved with only a modest and stable increase in perplexity on benchmark GPT-2 and TinyLlama models, validating that the proposed methodology delivers a highly favorable trade-off between extreme memory savings and model fidelity. The results establish this approach as a practical and scalable solution for efficient LLM deployment in edge AI systems.",
+        "identifiers": [
+          "SemanticScholar:fed3a3b35b24609980327cd38259e2ced82b4c5e"
+        ],
+        "semantic_scholar_id": "fed3a3b35b24609980327cd38259e2ced82b4c5e",
+        "doi": "10.1109/ISCAS66217.2026.11562780",
+        "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562780",
+        "authors": [
+          "Neermita Bhattacharya",
+          "Shyam Sathvik",
+          "Abhishek Yadav",
+          "Ayush Dixit",
+          "Binod Kumar"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3772052.3772233",
+      "identity_tokens": [
+        "id:DOI:10.1145/3772052.3772233",
+        "id:SemanticScholar:4db1fe8dad0a7ce46f7f50196db3464f2a123b16",
+        "title:snap replay a new way to analyze uarchscale performance bottlenecks for ml accelerators",
+        "url:https://doi.org/10.1145/3772052.3772233"
+      ],
+      "record": {
+        "title": "Snap & Replay: A new way to analyze uarch-scale performance bottlenecks for ML accelerators",
+        "source_url": "https://doi.org/10.1145/3772052.3772233",
+        "year": 2025,
+        "published": "2025-11-19",
+        "venue": "ACM Symposium on Cloud Computing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As models become larger, ML accelerators are a scarce resource whose performance must be continually optimized to improve efficiency. Existing performance analysis tools are coarse grained, fail to capture model performance at the machine-code level and often do not provide specific recommendations for optimizations. In addition, existing methodologies are hard to apply in Google's production environment, as they require hardware changes or recompilation. We present SnR, a fine-grained methodology for analyzing ML models at the machine-code level that provides actionable optimization suggestions. It requires no hardware changes and no recompilation. Our core insight is to use a hardware-level simulator, an artifact of the hardware design process that we can re-purpose for performance analysis. Traditionally, these simulators are confidential tools used to improve hardware designs given representative software workloads. However, as a hyperscaler practicing hardware/software co-design, we are uniquely positioned to use them in the opposite direction: to optimize software given fixed hardware architectures. SnR captures traces from production deployments running on accelerators and replays them in a modified microarchitecture simulator to gain low-level insights into the model's performance. We implement SnR for our in-house accelerator (TPU) and used it to analyze the performance of several of our production LLMs, revealing several previously-unknown microarchitecture inefficiencies. Leveraging these insights, we optimize a common communication collective by up to 15% and reduce token generation latency by up to 4.1%.",
+        "identifiers": [
+          "SemanticScholar:4db1fe8dad0a7ce46f7f50196db3464f2a123b16"
+        ],
+        "semantic_scholar_id": "4db1fe8dad0a7ce46f7f50196db3464f2a123b16",
+        "doi": "10.1145/3772052.3772233",
+        "canonical_id": "DOI:10.1145/3772052.3772233",
+        "authors": [
+          "Ioannis Zarkadas",
+          "Amanda Tomlinson",
+          "Asaf Cidon",
+          "Baris Kasikci",
+          "Ofir Weisse"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 364,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.12486",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.12486",
+        "id:SemanticScholar:76fffc8536042e840dfe97f55599d2c7b087ce8e",
+        "id:arXiv:2412.12486",
+        "title:boosting longcontext management via queryguided activation refilling",
+        "url:https://arxiv.org/abs/2412.12486"
+      ],
+      "record": {
+        "title": "Boosting Long-Context Management via Query-Guided Activation Refilling",
+        "source_url": "https://arxiv.org/abs/2412.12486",
+        "year": 2024,
+        "published": "2024-12-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Processing long contexts poses a significant challenge for large language models (LLMs) due to their inherent context-window limitations and the computational burden of extensive key-value (KV) activations, which severely impact efficiency. For information-seeking tasks, full context perception is often unnecessary, as a query's information needs can dynamically range from localized details to a global perspective, depending on its complexity. However, existing methods struggle to adapt effectively to these dynamic information needs. In the paper, we propose a method for processing long-context information-seeking tasks via query-guided Activation Refilling (ACRE). ACRE constructs a Bi-layer KV Cache for long contexts, where the layer-1 (L1) cache compactly captures global information, and the layer-2 (L2) cache provides detailed and localized information. ACRE establishes a proxying relationship between the two caches, allowing the input query to attend to the L1 cache and dynamically refill it with relevant entries from the L2 cache. This mechanism integrates global understanding with query-specific local details, thus improving answer decoding. Experiments on a variety of long-context information-seeking datasets demonstrate ACRE's effectiveness, achieving improvements in both performance and efficiency.",
+        "identifiers": [
+          "SemanticScholar:76fffc8536042e840dfe97f55599d2c7b087ce8e"
+        ],
+        "semantic_scholar_id": "76fffc8536042e840dfe97f55599d2c7b087ce8e",
+        "canonical_id": "arXiv:2412.12486",
+        "arxiv_id": "2412.12486",
+        "doi": "10.48550/arXiv.2412.12486",
+        "authors": [
+          "Hong-Jin Qian",
+          "Zheng Liu",
+          "Peitian Zhang",
+          "Zhi-Cheng Dou",
+          "De-Fu Lian"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 701,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4506e3ac02afb47f5c16d40ccd4f2fdc85d1ce840dfe29d6081835f4680ca2c1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
