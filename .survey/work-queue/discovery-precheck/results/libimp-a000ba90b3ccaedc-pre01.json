@@ -1,0 +1,340 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a000ba90b3ccaedc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a000ba90b3cc",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/2575-8411.2026.00046",
+    "DOI:10.1109/ipdps65963.2026.00058",
+    "DOI:10.1109/isca66397.2026.00038"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:09.430366+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/2575-8411.2026.00046",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ipdps65963.2026.00058",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00038",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "QiMeng-Tensify: Scaling Up Tensor Computation Optimization via Architecture-Aware LLM-Guided MCTS",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00038",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing scale and complexity of large language models (LLMs) have intensified the need for optimizing largescale tensor computations (e.g., self-attention and mixture-ofexperts) on hardware platforms. Existing solutions rely on either manual expert optimization or exploration-based autotuning methods. However, neither approach scales effectively for LLMs with hundreds, even thousands of operators and dynamic control flows, because of prohibitive optimization overheads or suboptimal performance. To address this problem, we present QiMeng-Tensify, the first framework that combines LLMs with sequential decision optimization for large-scale graph-level tensor computation. Our key insight is that: (1) tensor computation optimization can be formulated as a generalized sequential decision problem to enlarge the optimization space, and (2) LLMs inherently encode rich optimization knowledge and can reason about architectural characteristics, which can effectively guide this decision process. Concretely, we first model tensor computation optimization as a Markov Decision Process (MDP), enabling unconstrained graph transformations over pre-defined scheduling rules. To efficiently explore the vast transformation space, we introduce an architecture-aware LLM-guided Monte Carlo Tree Search (MCTS). The LLM shapes the prior probability distribution over candidate transformations, guiding the search direction toward promising program sketches and parameter configurations. To adapt to concrete hardware and workloads, we propose an architecture-aware prior adaptation mechanism that distills natural-language heuristics from a lightweight offline stage. We conducted comprehensive experiments for representative subgraphs and LLMs on NVIDIA A100 and H100. Regarding subgraphs, QiMeng-Tensify averagely outperforms PyTorch, TensorRT, TVM, Triton, FlashAttention, Welder, Mirage, and Reasoning Compiler by $6.49 \\times, 2.86 \\times, 1.68 \\times, 2.64 \\times, 1.27 \\times, 13.49 \\times 1.29 \\times$, and $1.31 \\times$, respectively. For LLM workloads, QiMeng-Tensify achieves average speedups of 1.56×, 1.22× and 1.30× over PyTorch, TensorRT-LLM and Mirage on the A100, and $1.78 \\times, 1.29 \\times$ and $1.30 \\times$ on the H100, respectively. Results well demonstrate that QiMeng-Tensify provides a generalizable paradigm for optimizing large-scale tensor computation.",
+      "identifiers": [
+        "SemanticScholar:055a53eec349b385ca7e38698945fb748b905e9b"
+      ],
+      "semantic_scholar_id": "055a53eec349b385ca7e38698945fb748b905e9b",
+      "doi": "10.1109/ISCA66397.2026.00038",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00038",
+      "authors": [
+        "Shouyang Dong",
+        "Jun Bi",
+        "Yuanbo Wen",
+        "Xiyue Yu",
+        "Jianxing Xu",
+        "Guang-Lin Xu",
+        "Ling Li",
+        "Xue-Hai Zhou",
+        "Tian-Shi Chen",
+        "Qi Guo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Near-Zero Cost KV Cache Compression for Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00058",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) continue to scale and are increasingly applied to long-context inference tasks, the memory consumption of the key-value (KV) cache has become a critical bottleneck on GPUs. Quantization offers a promising solution, yet existing methods often suffer from high memory overhead, inefficient GPU implementations, and expensive offline preprocessing. In this paper, we introduce Vayne, a unified GPU kernel that seamlessly integrates quantization and lossless compression, enabling near-zero-cost KV cache reduction. Vayne also features a highly optimized lossless GPU encoding scheme that substantially reduces memory usage while preserving model accuracy. At the same time, our implementation incorporates both kernel-level and algorithm-level optimizations, including bit transposing, a decoupled lookback prefix-sum mechanism, pre-RoPE strategies, and other computational optimizations. Experimental results on LongBench using the LLaMA 3.1 8B Instruct model demonstrate that Vayne achieves an average 8.4× speedup over the next best baseline, a 1.4× lower bit rate, and higher accuracy under comparable bit rates. These results highlight Vayne’s effectiveness in enabling high-throughput, memory-efficient LLM inference at scale through efficient KV cache compression.",
+      "identifiers": [
+        "SemanticScholar:04e612810ef550124c752e61e81210c33a8c9cc4"
+      ],
+      "semantic_scholar_id": "04e612810ef550124c752e61e81210c33a8c9cc4",
+      "doi": "10.1109/IPDPS65963.2026.00058",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00058",
+      "authors": [
+        "Boyuan Zhang",
+        "Ding Zhou",
+        "Yafan Huang",
+        "Shi-Hui Song",
+        "Hao Feng",
+        "Jinda Jia",
+        "Cheng-Ming Zhang",
+        "Zhi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prism: Proactive Workload-Aware Optimization for Hybrid-Service in LMaaS Systems",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00046",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Conference on Distributed Computing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the widespread adoption of large language models (LLMs) in interactive and content-generation applications, Language-Model-as-a-Service (LMaaS) platforms have become essential infrastructure. However, existing resource provisioning and request scheduling strategies are fundamentally limited in handling hybrid-service workloads in LMaaS, leading to inefficient resource utilization and violations of Service Level Objectives (SLOs). To tackle these challenges, we propose Prism, a proactive workload-aware optimization framework for hybridservice in LMaaS. Motivated by insights from traces analysis, Prism introduces a novel Periodic Planning-Online Scheduling-Adaptive Tuning (POA) paradigm that integrates two key mechanisms. First, a provision-revision mechanism combines long-term forecasting with fine-grained runtime adjustments to maintain responsiveness and resource efficiency. Second, a two-level heterogeneity-aware scheduling mechanism coordinates inter-instance routing and intra-instance batching based on realtime request profiling to reduce latency and enhance goodput. Extensive evaluations show that Prism reduces tail latency by up to 63.9%, mitigates 85.7% of SLO violations, and improves goodput by 52.8%, consistently outperforming state-of-the-art baselines while sustaining high GPU utilization.",
+      "identifiers": [
+        "SemanticScholar:28c189828269c20298c3a8070158d73f67a4f789"
+      ],
+      "semantic_scholar_id": "28c189828269c20298c3a8070158d73f67a4f789",
+      "doi": "10.1109/2575-8411.2026.00046",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00046",
+      "authors": [
+        "Yuting Li",
+        "Chao Qiu",
+        "Shaoyuan Huang",
+        "Tengwen Zhang",
+        "Yun-Feng Zhao",
+        "Xiao-Fei Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00038",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00038",
+        "id:SemanticScholar:055a53eec349b385ca7e38698945fb748b905e9b",
+        "title:qimengtensify scaling up tensor computation optimization via architectureaware llmguided mcts",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00038"
+      ],
+      "record": {
+        "title": "QiMeng-Tensify: Scaling Up Tensor Computation Optimization via Architecture-Aware LLM-Guided MCTS",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00038",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing scale and complexity of large language models (LLMs) have intensified the need for optimizing largescale tensor computations (e.g., self-attention and mixture-ofexperts) on hardware platforms. Existing solutions rely on either manual expert optimization or exploration-based autotuning methods. However, neither approach scales effectively for LLMs with hundreds, even thousands of operators and dynamic control flows, because of prohibitive optimization overheads or suboptimal performance. To address this problem, we present QiMeng-Tensify, the first framework that combines LLMs with sequential decision optimization for large-scale graph-level tensor computation. Our key insight is that: (1) tensor computation optimization can be formulated as a generalized sequential decision problem to enlarge the optimization space, and (2) LLMs inherently encode rich optimization knowledge and can reason about architectural characteristics, which can effectively guide this decision process. Concretely, we first model tensor computation optimization as a Markov Decision Process (MDP), enabling unconstrained graph transformations over pre-defined scheduling rules. To efficiently explore the vast transformation space, we introduce an architecture-aware LLM-guided Monte Carlo Tree Search (MCTS). The LLM shapes the prior probability distribution over candidate transformations, guiding the search direction toward promising program sketches and parameter configurations. To adapt to concrete hardware and workloads, we propose an architecture-aware prior adaptation mechanism that distills natural-language heuristics from a lightweight offline stage. We conducted comprehensive experiments for representative subgraphs and LLMs on NVIDIA A100 and H100. Regarding subgraphs, QiMeng-Tensify averagely outperforms PyTorch, TensorRT, TVM, Triton, FlashAttention, Welder, Mirage, and Reasoning Compiler by $6.49 \\times, 2.86 \\times, 1.68 \\times, 2.64 \\times, 1.27 \\times, 13.49 \\times 1.29 \\times$, and $1.31 \\times$, respectively. For LLM workloads, QiMeng-Tensify achieves average speedups of 1.56×, 1.22× and 1.30× over PyTorch, TensorRT-LLM and Mirage on the A100, and $1.78 \\times, 1.29 \\times$ and $1.30 \\times$ on the H100, respectively. Results well demonstrate that QiMeng-Tensify provides a generalizable paradigm for optimizing large-scale tensor computation.",
+        "identifiers": [
+          "SemanticScholar:055a53eec349b385ca7e38698945fb748b905e9b"
+        ],
+        "semantic_scholar_id": "055a53eec349b385ca7e38698945fb748b905e9b",
+        "doi": "10.1109/ISCA66397.2026.00038",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00038",
+        "authors": [
+          "Shouyang Dong",
+          "Jun Bi",
+          "Yuanbo Wen",
+          "Xiyue Yu",
+          "Jianxing Xu",
+          "Guang-Lin Xu",
+          "Ling Li",
+          "Xue-Hai Zhou",
+          "Tian-Shi Chen",
+          "Qi Guo"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdps65963.2026.00058",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps65963.2026.00058",
+        "id:SemanticScholar:04e612810ef550124c752e61e81210c33a8c9cc4",
+        "title:nearzero cost kv cache compression for large language model inference",
+        "url:https://doi.org/10.1109/IPDPS65963.2026.00058"
+      ],
+      "record": {
+        "title": "Near-Zero Cost KV Cache Compression for Large Language Model Inference",
+        "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00058",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) continue to scale and are increasingly applied to long-context inference tasks, the memory consumption of the key-value (KV) cache has become a critical bottleneck on GPUs. Quantization offers a promising solution, yet existing methods often suffer from high memory overhead, inefficient GPU implementations, and expensive offline preprocessing. In this paper, we introduce Vayne, a unified GPU kernel that seamlessly integrates quantization and lossless compression, enabling near-zero-cost KV cache reduction. Vayne also features a highly optimized lossless GPU encoding scheme that substantially reduces memory usage while preserving model accuracy. At the same time, our implementation incorporates both kernel-level and algorithm-level optimizations, including bit transposing, a decoupled lookback prefix-sum mechanism, pre-RoPE strategies, and other computational optimizations. Experimental results on LongBench using the LLaMA 3.1 8B Instruct model demonstrate that Vayne achieves an average 8.4× speedup over the next best baseline, a 1.4× lower bit rate, and higher accuracy under comparable bit rates. These results highlight Vayne’s effectiveness in enabling high-throughput, memory-efficient LLM inference at scale through efficient KV cache compression.",
+        "identifiers": [
+          "SemanticScholar:04e612810ef550124c752e61e81210c33a8c9cc4"
+        ],
+        "semantic_scholar_id": "04e612810ef550124c752e61e81210c33a8c9cc4",
+        "doi": "10.1109/IPDPS65963.2026.00058",
+        "canonical_id": "DOI:10.1109/IPDPS65963.2026.00058",
+        "authors": [
+          "Boyuan Zhang",
+          "Ding Zhou",
+          "Yafan Huang",
+          "Shi-Hui Song",
+          "Hao Feng",
+          "Jinda Jia",
+          "Cheng-Ming Zhang",
+          "Zhi Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/2575-8411.2026.00046",
+      "identity_tokens": [
+        "id:DOI:10.1109/2575-8411.2026.00046",
+        "id:SemanticScholar:28c189828269c20298c3a8070158d73f67a4f789",
+        "title:prism proactive workloadaware optimization for hybridservice in lmaas systems",
+        "url:https://doi.org/10.1109/2575-8411.2026.00046"
+      ],
+      "record": {
+        "title": "Prism: Proactive Workload-Aware Optimization for Hybrid-Service in LMaaS Systems",
+        "source_url": "https://doi.org/10.1109/2575-8411.2026.00046",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "IEEE International Conference on Distributed Computing Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the widespread adoption of large language models (LLMs) in interactive and content-generation applications, Language-Model-as-a-Service (LMaaS) platforms have become essential infrastructure. However, existing resource provisioning and request scheduling strategies are fundamentally limited in handling hybrid-service workloads in LMaaS, leading to inefficient resource utilization and violations of Service Level Objectives (SLOs). To tackle these challenges, we propose Prism, a proactive workload-aware optimization framework for hybridservice in LMaaS. Motivated by insights from traces analysis, Prism introduces a novel Periodic Planning-Online Scheduling-Adaptive Tuning (POA) paradigm that integrates two key mechanisms. First, a provision-revision mechanism combines long-term forecasting with fine-grained runtime adjustments to maintain responsiveness and resource efficiency. Second, a two-level heterogeneity-aware scheduling mechanism coordinates inter-instance routing and intra-instance batching based on realtime request profiling to reduce latency and enhance goodput. Extensive evaluations show that Prism reduces tail latency by up to 63.9%, mitigates 85.7% of SLO violations, and improves goodput by 52.8%, consistently outperforming state-of-the-art baselines while sustaining high GPU utilization.",
+        "identifiers": [
+          "SemanticScholar:28c189828269c20298c3a8070158d73f67a4f789"
+        ],
+        "semantic_scholar_id": "28c189828269c20298c3a8070158d73f67a4f789",
+        "doi": "10.1109/2575-8411.2026.00046",
+        "canonical_id": "DOI:10.1109/2575-8411.2026.00046",
+        "authors": [
+          "Yuting Li",
+          "Chao Qiu",
+          "Shaoyuan Huang",
+          "Tengwen Zhang",
+          "Yun-Feng Zhao",
+          "Xiao-Fei Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c2e802d796648cbabff1e567ef7b6e2a41d6d80924a8c085fb3c6bef9161f3d5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

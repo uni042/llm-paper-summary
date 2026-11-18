@@ -1,0 +1,152 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bc9783ea37a1075c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bc9783ea37a1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iccad66269.2025.11240835"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:24.234917+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iccad66269.2025.11240835",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DANCE: Dual-Side Agile N:M Sparse Compressed Digital CiM Accelerator for Efficient Compound AI",
+      "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240835",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compound AI systems showcase impressive performance and versatility compared to single AI models by combining large language models (LLMs) with various smaller expert models. The major bottleneck of compound AI lies in frequent data movement due to the massive parameters and dynamic routing mechanisms. Compute-In-Memory (CiM) has demonstrated great potential to mitigate the memory wall. However, constrained by the rigid array structure, existing CiM accelerators struggle to meet more general and diverse model compression demands of compound AI, such as fine-grained pruning for expert models and outlier-aware quantization for LLM-based router models. The lack of support for agile model compression hinders the deployment of compound AI systems on CiM accelerators.To fully unlock the potential of CiM in accelerating compound AI, we present DANCE, a dual-side N:M sparse compressed digital CiM architecture with cross-layer co-optimizations: (i) At the circuit level, DANCE introduces a customized set-associative selection circuit to extract N:M sparse patterns for both weights and activations, maintaining high parallelism; (ii) At the architecture level, DANCE explores a novel design paradigm that integrates fine-grained pruning and outlier-aware quantization into a unified N:M sparsity compression framework. Experimental results show that DANCE achieves up to 4.36× energy efficiency improvement with <1% accuracy loss for ResNet-18 on CIFAR-100, and up to 2.59× energy efficiency improvement with <0.5 perplexity increase for Llama-7B on WikiText-2, compared to the conventional digital CiM baseline.",
+      "identifiers": [
+        "SemanticScholar:9c8be6f51aed207a09a545d9f7017928f354c2a8"
+      ],
+      "semantic_scholar_id": "9c8be6f51aed207a09a545d9f7017928f354c2a8",
+      "doi": "10.1109/ICCAD66269.2025.11240835",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240835",
+      "authors": [
+        "Zhonghao Chen",
+        "Hongtao Zhong",
+        "Jia Deng",
+        "Mulin Shi",
+        "Yong-Pan Liu",
+        "Hua-Zhong Yang",
+        "Xue-Qing Li"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 388,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/iccad66269.2025.11240835",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccad66269.2025.11240835",
+        "id:SemanticScholar:9c8be6f51aed207a09a545d9f7017928f354c2a8",
+        "title:dance dualside agile nm sparse compressed digital cim accelerator for efficient compound ai",
+        "url:https://doi.org/10.1109/ICCAD66269.2025.11240835"
+      ],
+      "record": {
+        "title": "DANCE: Dual-Side Agile N:M Sparse Compressed Digital CiM Accelerator for Efficient Compound AI",
+        "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240835",
+        "year": 2025,
+        "published": "2025-10-26",
+        "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compound AI systems showcase impressive performance and versatility compared to single AI models by combining large language models (LLMs) with various smaller expert models. The major bottleneck of compound AI lies in frequent data movement due to the massive parameters and dynamic routing mechanisms. Compute-In-Memory (CiM) has demonstrated great potential to mitigate the memory wall. However, constrained by the rigid array structure, existing CiM accelerators struggle to meet more general and diverse model compression demands of compound AI, such as fine-grained pruning for expert models and outlier-aware quantization for LLM-based router models. The lack of support for agile model compression hinders the deployment of compound AI systems on CiM accelerators.To fully unlock the potential of CiM in accelerating compound AI, we present DANCE, a dual-side N:M sparse compressed digital CiM architecture with cross-layer co-optimizations: (i) At the circuit level, DANCE introduces a customized set-associative selection circuit to extract N:M sparse patterns for both weights and activations, maintaining high parallelism; (ii) At the architecture level, DANCE explores a novel design paradigm that integrates fine-grained pruning and outlier-aware quantization into a unified N:M sparsity compression framework. Experimental results show that DANCE achieves up to 4.36× energy efficiency improvement with <1% accuracy loss for ResNet-18 on CIFAR-100, and up to 2.59× energy efficiency improvement with <0.5 perplexity increase for Llama-7B on WikiText-2, compared to the conventional digital CiM baseline.",
+        "identifiers": [
+          "SemanticScholar:9c8be6f51aed207a09a545d9f7017928f354c2a8"
+        ],
+        "semantic_scholar_id": "9c8be6f51aed207a09a545d9f7017928f354c2a8",
+        "doi": "10.1109/ICCAD66269.2025.11240835",
+        "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240835",
+        "authors": [
+          "Zhonghao Chen",
+          "Hongtao Zhong",
+          "Jia Deng",
+          "Mulin Shi",
+          "Yong-Pan Liu",
+          "Hua-Zhong Yang",
+          "Xue-Qing Li"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 388,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9fdc5d5dff6eb3d35cbcc28df7d53f37adf1493c594ba140bca0be2ef690d8ca",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

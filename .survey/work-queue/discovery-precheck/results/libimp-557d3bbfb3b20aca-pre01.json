@@ -1,0 +1,784 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-557d3bbfb3b20aca-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-557d3bbfb3b2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.04956",
+    "arXiv:2610.08268",
+    "arXiv:2610.12242",
+    "arXiv:2610.14255",
+    "arXiv:2610.17795",
+    "arXiv:2610.23532",
+    "arXiv:2610.26131",
+    "arXiv:2610.30206",
+    "arXiv:2610.35309"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:46.678671+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.04956",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.08268",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.12242",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14255",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17795",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.23532",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.26131",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2610.30206",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.35309",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Exploiting the Flexibility of LLM Inference for Frequency Regulation Service",
+      "source_url": "https://arxiv.org/abs/2610.23532",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": "IEEE Transactions on Power Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While the widespread deployment of Large Language Models (LLMs) has significantly driven up power demands in computing clusters, the unique execution characteristics of LLM inference offer a novel opportunity to utilize these clusters as controllable loads. In this paper, we investigate the potential of LLM inference cluster to provide frequency regulation services through inference request scheduling. First, we model the problem as a hierarchical Markov decision process that includes request-to-replica dispatching and token-level resource allocation. Then, we introduce a reward redistribution network to address the temporal asynchrony between millisecond-level scheduling decisions and second-level frequency regulation signals. Furthermore, we develop an optimization framework based on a mean-field approximation to enable coordination among a large number of replicas under high request concurrency. Simulations using real-world data demonstrate that the proposed approach accurately tracks frequency regulation signals without compromising service-level objectives.",
+      "identifiers": [
+        "SemanticScholar:e68f5225f2b443541565e2622eaedfdad7630db5"
+      ],
+      "semantic_scholar_id": "e68f5225f2b443541565e2622eaedfdad7630db5",
+      "canonical_id": "arXiv:2610.23532",
+      "arxiv_id": "2610.23532",
+      "doi": "10.1109/tpwrs.2026.3745666",
+      "authors": [
+        "Yi-Meng Sun",
+        "Zhao-Hao Ding"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Overloaded to Guaranteed: High-Throughput Multi-SLO Enforcement for LoRA-Assisted On-Premise LLM Deployment",
+      "source_url": "https://arxiv.org/abs/2610.04956",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) become essential in privacy-sensitive sectors like hospitals and government agencies, the on-premise LLM servers offer a cost-effective and secure alternative to public cloud services. However, these resource-constrained servers struggle to guarantee heterogeneous Service Level Objectives (SLOs) when serving multiple LoRA-adapted services simultaneously. Existing serving frameworks suffer from severe SLO violations due to the computational overhead of LoRA layers and the rigid nature of batch scheduling. To address this, we propose HALO, a scheduling method tailored for LoRA-assisted on-premise LLM deployment. HALO introduces two key innovations: a spatial multiplexing strategy that overlaps Base and LoRA computations by partitioning GPU Streaming Multiprocessors (SMs), and an SLO-aware scheduler that decouples request execution based on\"request-level slack.\"By prioritizing urgent tasks and utilizing idle budget for traffic shaping, HALO significantly mitigates resource contention. Our evaluation demonstrates that HALO minimizes SLO violations while improving throughput compared to state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:a8bd7ed5366e3c46603d11138f2434179d669979"
+      ],
+      "semantic_scholar_id": "a8bd7ed5366e3c46603d11138f2434179d669979",
+      "canonical_id": "arXiv:2610.04956",
+      "arxiv_id": "2610.04956",
+      "authors": [
+        "Ze-Shen Zhang",
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Quan Chen",
+        "Yu Liu",
+        "Yong-Jun Deng",
+        "Jing Yang",
+        "Jiu-Chen Shi",
+        "Chen Chen",
+        "You-Min Chen",
+        "Yu Feng",
+        "Min-Yi Guo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DySCo: Dynamic Sharding for Collaborative Edge-Cloud LLM Inference with Depth-Synchronized Batching",
+      "source_url": "https://arxiv.org/abs/2610.08268",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pervasive intelligent applications are increasingly deployed on mobile and Internet of Things (IoT) edge devices. Consequently, Large Language Models (LLMs) are increasingly used to support these applications. Yet, due to their high resource demands, LLMs are mostly deployed in the cloud. Layer-wise edge-cloud inference lets resource-constrained edge devices contribute computation to LLMs they cannot host in full. However, heterogeneous split points introduce two coupled inefficiencies. First, edge execution and communication create idle gaps between cloud invocations. Second, requests arriving at different model depths cannot be conventionally batched. We present DySCo, a collaborative runtime that keeps KV caches local and introduces dyForward, a model-aware layer-range executor that runs configurable contiguous layer ranges from resident model shards without reloading weights. For multi-edge serving settings, we introduce depth-synchronized batching (DSB), which advances heterogeneous requests to the deepest cut and batches their common suffix. Experiments across heterogeneous devices, two model families, and local and wide-area links show that idle gaps increase the latency of subsequent GPU forward calls even when waiting time is excluded, adding up to 25 ms of additional cloud-side suffix latency per decoding step in our measurements. At an average concurrency of eight, DSB improves throughput by 275% over FIFO, 48% over exact-match batching, and 79% over round-robin interleaving while reducing mean per-session latency. Together, these results show that requests with different edge-cloud splits can reuse resident cloud weights and share batched suffix computation. The artifact repository for this work is publicly available at: https://github.com/Large-scale-Sustainable-Computing-LSC/dysco-artifact",
+      "identifiers": [
+        "SemanticScholar:53885a50c60ced27e27a7de8b19356402dac8373"
+      ],
+      "semantic_scholar_id": "53885a50c60ced27e27a7de8b19356402dac8373",
+      "canonical_id": "arXiv:2610.08268",
+      "arxiv_id": "2610.08268",
+      "authors": [
+        "Jing-Po Xu",
+        "Paul Joe Maliakel",
+        "Ivona Brandić",
+        "Shashikant Ilager"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing",
+      "source_url": "https://arxiv.org/abs/2610.12242",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto frontier of LLM serving. While coarse-grained routing at the session or query level has been widely adopted in production systems, recent algorithmic work shows that fine-grained token-level routing can yield substantial efficiency and quality gains. However, efficiently serving token-level routed inference poses significant challenges to existing systems. Built on single-LLM assumptions, current systems suffer from severe step desynchronization and frequent batch admission delays under token-level routing, and they also impose high implementation complexity on developers. To address these challenges, we design TokenRouter, an efficient and developer-friendly serving system for token-level routed LLM inference. TokenRouter follows the principle of request-centric programming, model-centric execution: developers describe routing logic from the perspective of a single request, while the runtime launches a subserver for each LLM and dispatches requests asynchronously. Each subserver employs a delayed-batching scheduler, whose optimal hyperparameters are derived from a mathematical throughput model of the system. Across diverse routing algorithms, workloads, and model pairs, TokenRouter achieves 2.01-64.15x higher decoding throughput than existing systems, substantially advancing the serving efficiency of token-level LLM routing. Our code is available at https://github.com/thu-nics/TokenRouter.",
+      "identifiers": [
+        "SemanticScholar:5cb7652ea29dd7a4a82c940ad8b154277828e308"
+      ],
+      "semantic_scholar_id": "5cb7652ea29dd7a4a82c940ad8b154277828e308",
+      "canonical_id": "arXiv:2610.12242",
+      "arxiv_id": "2610.12242",
+      "authors": [
+        "Tianyu Fu",
+        "Teng-Xuan Liu",
+        "Ruo-Xin Wang",
+        "Yi-Xin Dong",
+        "Yi-Rou Ge",
+        "Yi-Chen You",
+        "Yu Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Simulate Before You Scale: High-Fidelity LLM Inference Planning Without GPUs",
+      "source_url": "https://arxiv.org/abs/2610.14255",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language model (LLM) inference at scale requires jointly selecting hardware layout, parallelism strategy, scheduling policy, admission control, and request routing to meet latency and throughput targets. These choices interact: a routing decision that improves cache locality can concentrate load, and an admission threshold that triggers only at saturation allows queues to grow deep enough to degrade critical-tier traffic. Evaluating candidates on GPU clusters is too expensive for iterative exploration, yet existing predictive tools either ignore batching and queueing dynamics or model only fragments of the pipeline. In this paper, we present BLIS, a deterministic, CPU-only discrete-event simulator that models the full inference serving pipeline (admission, routing, scheduling, prefill/decode execution, KV-cache management, and preemption). BLIS pairs analytical basis functions with learned scaling coefficients and overhead terms, fit once globally, to predict step latency without per-model or per-GPU profiling. Across 36 experiments spanning six models and three GPU types, BLIS achieves 6.7% median end-to-end error while running around 200 times faster than real execution. In a configuration search over 420 serving configurations for Llama-2-70B, BLIS identifies a 4-GPU deployment that meets a 300ms mean TTFT service-level objective (SLO), whereas competing tools either require double the GPUs or recommend configurations that fail under load. Two policies evolved entirely in simulation were validated on real hardware and merged into llm-d, a widely adopted open-source platform for distributed LLM serving: an admission policy that reduces critical-tier TTFT P90 by up to 82%, and a flow-control policy that reduces E2E P50 latency by 32-48% on overloaded workloads.",
+      "identifiers": [
+        "SemanticScholar:6e3ca6681d3adcef59440e208f427f6381fa4b2f"
+      ],
+      "semantic_scholar_id": "6e3ca6681d3adcef59440e208f427f6381fa4b2f",
+      "canonical_id": "arXiv:2610.14255",
+      "arxiv_id": "2610.14255",
+      "doi": "10.1145/3857382",
+      "authors": [
+        "Dipanwita Guhathakurta",
+        "M. Toslali",
+        "S. Parthasarathy",
+        "Jing Chen",
+        "Michael H. Kalantar",
+        "Nicholas A. Masluk",
+        "Vishakha Ramani",
+        "A. Tantawi",
+        "Fabio Oliveira"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.17795",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving systems use token-level continuous batching to improve resource utilization, but heterogeneous response lengths complicate request scheduling. Prediction-guided short-first scheduling reduces average latency but can severely delay long requests, while unrestricted aging may over-promote delayed long requests under congestion. We propose Quota-Based Aging (QBA), a lightweight policy that combines predicted short-first admission with quota-bounded, debt-enforced promotion of aged predicted-long requests. We also use a reduced M/G/n queueing surrogate, calibrated from simulator traces, to explain first-order mean-latency trends. QBA is evaluated using a serving-aware event-driven simulator that models decode-priority batching, chunked prefill, token-budget constraints, and KV-cache-safe admission. We compare QBA with FCFS, predicted short-first, and aggressive aging under asymmetric prediction errors on synthetic and production-derived workloads. The evaluation considers queueing delay, throughput, utilization, and class-conditional tail performance. Results show that QBA provides a controllable middle ground between aggressive short-first prioritization and unrestricted aging, substantially reducing long-request tail latency while retaining much of the mean-latency benefit of prediction-guided scheduling.",
+      "identifiers": [
+        "SemanticScholar:069b689eb365c5d81759b140c513c8259d7a69da"
+      ],
+      "semantic_scholar_id": "069b689eb365c5d81759b140c513c8259d7a69da",
+      "canonical_id": "arXiv:2610.17795",
+      "arxiv_id": "2610.17795",
+      "authors": [
+        "Han-Zhi Zhang",
+        "An-Xuan Che",
+        "Hang Qi",
+        "Qi-Yue Li",
+        "Jing-Jin Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoEZip: Routing-Aware KV Cache Compression for Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2610.30206",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models scale model capacity efficiently by activating a small subset of parameters per token. However, in long-context inference, memory remains a major bottleneck because the KV cache grows linearly with sequence length. Existing KV cache compression methods reduce this cost for dense transformers, but overlook a problem specific to MoE: KV eviction can change which experts are selected during answer generation, degrading the generation quality. We propose MoEZip, a routing-aware KV cache compression for sparse MoE language models. To estimate the sensitivity of expert routing to perturbation, we propose a novel metric based on the Fisher information matrix of routing distributions. MoEZip combines this metric with attention weights for routing-aware scoring of contexts. Finally, we compose a complementary scoring system that combines eviction methods for dense and sparse-MoE architectures. Experiments show that MoEZip achieves robust performance under aggressive cache compression on various benchmarks. At a KV retention ratio of 10\\%, MoEZip improves over the SoTA baseline by +24 and +20 points on average on LongBench and RULER, corresponding to 2.3$\\times$ and 4.9$\\times$ higher scores, respectively.",
+      "identifiers": [
+        "SemanticScholar:e4180b33abe65d5e998929399840f88a0c6dcf25"
+      ],
+      "semantic_scholar_id": "e4180b33abe65d5e998929399840f88a0c6dcf25",
+      "canonical_id": "arXiv:2610.30206",
+      "arxiv_id": "2610.30206",
+      "authors": [
+        "Minsang Kim",
+        "S. Baek"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs",
+      "source_url": "https://arxiv.org/abs/2610.35309",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge SoCs combine CPUs, GPUs, and NPUs, yet runtimes for multimodal large language models (MLLMs) keep generation on one engine and leave others idle. Streaming workloads allow ingestion and answering to overlap, but backend-local KV state binds queries to the engine that built their history. Stage performance and co-running interference vary, so no single placement wins across SoCs and workloads. \\name separates logical history from engine-specific KV state so any language engine can continue a stream. Stateful Streaming Generation overlaps ingestion and answering, while Concurrent Sequence Generation serves ready queries in parallel. Phase-level state continuation lets one engine prefill a query and another decode the answer, freeing the first to resume ingestion. State-Driven Execution Planning (SDEP) chooses paths by predicted completion time and sets each engine's share of queries using arrival rates and measured service times. Across M4 Max, RK3588, and QCS6490, \\name beats the strongest single-engine baselines, even when they reuse context. On M4 Max, SDEP cuts live-stream p95 time to first token by $76\\%$, with every first token within one second, and raises throughput under backlog by up to $35\\%$ over Metal-only execution with context reuse. On two RK3588 streams, SDEP delivers $19.6\\%$ higher request throughput than the best single engine with context reuse and $27.2\\%$ more than parallel engines without shared state. Stateful Streaming Generation reaches up to $2.48\\times$ serial throughput on the same engines. Every answer matches its serial reference.",
+      "identifiers": [
+        "SemanticScholar:c63232128e973172db15bda93a7f694a4410869f"
+      ],
+      "semantic_scholar_id": "c63232128e973172db15bda93a7f694a4410869f",
+      "canonical_id": "arXiv:2610.35309",
+      "arxiv_id": "2610.35309",
+      "authors": [
+        "Yi-Long Li",
+        "Cheng-Po Yan",
+        "Yi-Jing Zeng",
+        "Han-Lei Wu",
+        "Ming-Jun Song",
+        "Suman Banerjee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.23532",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpwrs.2026.3745666",
+        "id:SemanticScholar:e68f5225f2b443541565e2622eaedfdad7630db5",
+        "id:arXiv:2610.23532",
+        "title:exploiting the flexibility of llm inference for frequency regulation service",
+        "url:https://arxiv.org/abs/2610.23532"
+      ],
+      "record": {
+        "title": "Exploiting the Flexibility of LLM Inference for Frequency Regulation Service",
+        "source_url": "https://arxiv.org/abs/2610.23532",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": "IEEE Transactions on Power Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While the widespread deployment of Large Language Models (LLMs) has significantly driven up power demands in computing clusters, the unique execution characteristics of LLM inference offer a novel opportunity to utilize these clusters as controllable loads. In this paper, we investigate the potential of LLM inference cluster to provide frequency regulation services through inference request scheduling. First, we model the problem as a hierarchical Markov decision process that includes request-to-replica dispatching and token-level resource allocation. Then, we introduce a reward redistribution network to address the temporal asynchrony between millisecond-level scheduling decisions and second-level frequency regulation signals. Furthermore, we develop an optimization framework based on a mean-field approximation to enable coordination among a large number of replicas under high request concurrency. Simulations using real-world data demonstrate that the proposed approach accurately tracks frequency regulation signals without compromising service-level objectives.",
+        "identifiers": [
+          "SemanticScholar:e68f5225f2b443541565e2622eaedfdad7630db5"
+        ],
+        "semantic_scholar_id": "e68f5225f2b443541565e2622eaedfdad7630db5",
+        "canonical_id": "arXiv:2610.23532",
+        "arxiv_id": "2610.23532",
+        "doi": "10.1109/tpwrs.2026.3745666",
+        "authors": [
+          "Yi-Meng Sun",
+          "Zhao-Hao Ding"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04956",
+      "identity_tokens": [
+        "id:SemanticScholar:a8bd7ed5366e3c46603d11138f2434179d669979",
+        "id:arXiv:2610.04956",
+        "title:from overloaded to guaranteed highthroughput multislo enforcement for loraassisted onpremise llm deployment",
+        "url:https://arxiv.org/abs/2610.04956"
+      ],
+      "record": {
+        "title": "From Overloaded to Guaranteed: High-Throughput Multi-SLO Enforcement for LoRA-Assisted On-Premise LLM Deployment",
+        "source_url": "https://arxiv.org/abs/2610.04956",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) become essential in privacy-sensitive sectors like hospitals and government agencies, the on-premise LLM servers offer a cost-effective and secure alternative to public cloud services. However, these resource-constrained servers struggle to guarantee heterogeneous Service Level Objectives (SLOs) when serving multiple LoRA-adapted services simultaneously. Existing serving frameworks suffer from severe SLO violations due to the computational overhead of LoRA layers and the rigid nature of batch scheduling. To address this, we propose HALO, a scheduling method tailored for LoRA-assisted on-premise LLM deployment. HALO introduces two key innovations: a spatial multiplexing strategy that overlaps Base and LoRA computations by partitioning GPU Streaming Multiprocessors (SMs), and an SLO-aware scheduler that decouples request execution based on\"request-level slack.\"By prioritizing urgent tasks and utilizing idle budget for traffic shaping, HALO significantly mitigates resource contention. Our evaluation demonstrates that HALO minimizes SLO violations while improving throughput compared to state-of-the-art baselines.",
+        "identifiers": [
+          "SemanticScholar:a8bd7ed5366e3c46603d11138f2434179d669979"
+        ],
+        "semantic_scholar_id": "a8bd7ed5366e3c46603d11138f2434179d669979",
+        "canonical_id": "arXiv:2610.04956",
+        "arxiv_id": "2610.04956",
+        "authors": [
+          "Ze-Shen Zhang",
+          "Han Zhao",
+          "Wei-Hao Cui",
+          "Quan Chen",
+          "Yu Liu",
+          "Yong-Jun Deng",
+          "Jing Yang",
+          "Jiu-Chen Shi",
+          "Chen Chen",
+          "You-Min Chen",
+          "Yu Feng",
+          "Min-Yi Guo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.08268",
+      "identity_tokens": [
+        "id:SemanticScholar:53885a50c60ced27e27a7de8b19356402dac8373",
+        "id:arXiv:2610.08268",
+        "title:dysco dynamic sharding for collaborative edgecloud llm inference with depthsynchronized batching",
+        "url:https://arxiv.org/abs/2610.08268"
+      ],
+      "record": {
+        "title": "DySCo: Dynamic Sharding for Collaborative Edge-Cloud LLM Inference with Depth-Synchronized Batching",
+        "source_url": "https://arxiv.org/abs/2610.08268",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pervasive intelligent applications are increasingly deployed on mobile and Internet of Things (IoT) edge devices. Consequently, Large Language Models (LLMs) are increasingly used to support these applications. Yet, due to their high resource demands, LLMs are mostly deployed in the cloud. Layer-wise edge-cloud inference lets resource-constrained edge devices contribute computation to LLMs they cannot host in full. However, heterogeneous split points introduce two coupled inefficiencies. First, edge execution and communication create idle gaps between cloud invocations. Second, requests arriving at different model depths cannot be conventionally batched. We present DySCo, a collaborative runtime that keeps KV caches local and introduces dyForward, a model-aware layer-range executor that runs configurable contiguous layer ranges from resident model shards without reloading weights. For multi-edge serving settings, we introduce depth-synchronized batching (DSB), which advances heterogeneous requests to the deepest cut and batches their common suffix. Experiments across heterogeneous devices, two model families, and local and wide-area links show that idle gaps increase the latency of subsequent GPU forward calls even when waiting time is excluded, adding up to 25 ms of additional cloud-side suffix latency per decoding step in our measurements. At an average concurrency of eight, DSB improves throughput by 275% over FIFO, 48% over exact-match batching, and 79% over round-robin interleaving while reducing mean per-session latency. Together, these results show that requests with different edge-cloud splits can reuse resident cloud weights and share batched suffix computation. The artifact repository for this work is publicly available at: https://github.com/Large-scale-Sustainable-Computing-LSC/dysco-artifact",
+        "identifiers": [
+          "SemanticScholar:53885a50c60ced27e27a7de8b19356402dac8373"
+        ],
+        "semantic_scholar_id": "53885a50c60ced27e27a7de8b19356402dac8373",
+        "canonical_id": "arXiv:2610.08268",
+        "arxiv_id": "2610.08268",
+        "authors": [
+          "Jing-Po Xu",
+          "Paul Joe Maliakel",
+          "Ivona Brandić",
+          "Shashikant Ilager"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.12242",
+      "identity_tokens": [
+        "id:SemanticScholar:5cb7652ea29dd7a4a82c940ad8b154277828e308",
+        "id:arXiv:2610.12242",
+        "title:tokenrouter efficient serving system for tokenlevel llm routing",
+        "url:https://arxiv.org/abs/2610.12242"
+      ],
+      "record": {
+        "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing",
+        "source_url": "https://arxiv.org/abs/2610.12242",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto frontier of LLM serving. While coarse-grained routing at the session or query level has been widely adopted in production systems, recent algorithmic work shows that fine-grained token-level routing can yield substantial efficiency and quality gains. However, efficiently serving token-level routed inference poses significant challenges to existing systems. Built on single-LLM assumptions, current systems suffer from severe step desynchronization and frequent batch admission delays under token-level routing, and they also impose high implementation complexity on developers. To address these challenges, we design TokenRouter, an efficient and developer-friendly serving system for token-level routed LLM inference. TokenRouter follows the principle of request-centric programming, model-centric execution: developers describe routing logic from the perspective of a single request, while the runtime launches a subserver for each LLM and dispatches requests asynchronously. Each subserver employs a delayed-batching scheduler, whose optimal hyperparameters are derived from a mathematical throughput model of the system. Across diverse routing algorithms, workloads, and model pairs, TokenRouter achieves 2.01-64.15x higher decoding throughput than existing systems, substantially advancing the serving efficiency of token-level LLM routing. Our code is available at https://github.com/thu-nics/TokenRouter.",
+        "identifiers": [
+          "SemanticScholar:5cb7652ea29dd7a4a82c940ad8b154277828e308"
+        ],
+        "semantic_scholar_id": "5cb7652ea29dd7a4a82c940ad8b154277828e308",
+        "canonical_id": "arXiv:2610.12242",
+        "arxiv_id": "2610.12242",
+        "authors": [
+          "Tianyu Fu",
+          "Teng-Xuan Liu",
+          "Ruo-Xin Wang",
+          "Yi-Xin Dong",
+          "Yi-Rou Ge",
+          "Yi-Chen You",
+          "Yu Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14255",
+      "identity_tokens": [
+        "id:DOI:10.1145/3857382",
+        "id:SemanticScholar:6e3ca6681d3adcef59440e208f427f6381fa4b2f",
+        "id:arXiv:2610.14255",
+        "title:simulate before you scale highfidelity llm inference planning without gpus",
+        "url:https://arxiv.org/abs/2610.14255"
+      ],
+      "record": {
+        "title": "Simulate Before You Scale: High-Fidelity LLM Inference Planning Without GPUs",
+        "source_url": "https://arxiv.org/abs/2610.14255",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language model (LLM) inference at scale requires jointly selecting hardware layout, parallelism strategy, scheduling policy, admission control, and request routing to meet latency and throughput targets. These choices interact: a routing decision that improves cache locality can concentrate load, and an admission threshold that triggers only at saturation allows queues to grow deep enough to degrade critical-tier traffic. Evaluating candidates on GPU clusters is too expensive for iterative exploration, yet existing predictive tools either ignore batching and queueing dynamics or model only fragments of the pipeline. In this paper, we present BLIS, a deterministic, CPU-only discrete-event simulator that models the full inference serving pipeline (admission, routing, scheduling, prefill/decode execution, KV-cache management, and preemption). BLIS pairs analytical basis functions with learned scaling coefficients and overhead terms, fit once globally, to predict step latency without per-model or per-GPU profiling. Across 36 experiments spanning six models and three GPU types, BLIS achieves 6.7% median end-to-end error while running around 200 times faster than real execution. In a configuration search over 420 serving configurations for Llama-2-70B, BLIS identifies a 4-GPU deployment that meets a 300ms mean TTFT service-level objective (SLO), whereas competing tools either require double the GPUs or recommend configurations that fail under load. Two policies evolved entirely in simulation were validated on real hardware and merged into llm-d, a widely adopted open-source platform for distributed LLM serving: an admission policy that reduces critical-tier TTFT P90 by up to 82%, and a flow-control policy that reduces E2E P50 latency by 32-48% on overloaded workloads.",
+        "identifiers": [
+          "SemanticScholar:6e3ca6681d3adcef59440e208f427f6381fa4b2f"
+        ],
+        "semantic_scholar_id": "6e3ca6681d3adcef59440e208f427f6381fa4b2f",
+        "canonical_id": "arXiv:2610.14255",
+        "arxiv_id": "2610.14255",
+        "doi": "10.1145/3857382",
+        "authors": [
+          "Dipanwita Guhathakurta",
+          "M. Toslali",
+          "S. Parthasarathy",
+          "Jing Chen",
+          "Michael H. Kalantar",
+          "Nicholas A. Masluk",
+          "Vishakha Ramani",
+          "A. Tantawi",
+          "Fabio Oliveira"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17795",
+      "identity_tokens": [
+        "id:SemanticScholar:069b689eb365c5d81759b140c513c8259d7a69da",
+        "id:arXiv:2610.17795",
+        "title:quotabased aging for predictionguided scheduling in llm serving",
+        "url:https://arxiv.org/abs/2610.17795"
+      ],
+      "record": {
+        "title": "Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.17795",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving systems use token-level continuous batching to improve resource utilization, but heterogeneous response lengths complicate request scheduling. Prediction-guided short-first scheduling reduces average latency but can severely delay long requests, while unrestricted aging may over-promote delayed long requests under congestion. We propose Quota-Based Aging (QBA), a lightweight policy that combines predicted short-first admission with quota-bounded, debt-enforced promotion of aged predicted-long requests. We also use a reduced M/G/n queueing surrogate, calibrated from simulator traces, to explain first-order mean-latency trends. QBA is evaluated using a serving-aware event-driven simulator that models decode-priority batching, chunked prefill, token-budget constraints, and KV-cache-safe admission. We compare QBA with FCFS, predicted short-first, and aggressive aging under asymmetric prediction errors on synthetic and production-derived workloads. The evaluation considers queueing delay, throughput, utilization, and class-conditional tail performance. Results show that QBA provides a controllable middle ground between aggressive short-first prioritization and unrestricted aging, substantially reducing long-request tail latency while retaining much of the mean-latency benefit of prediction-guided scheduling.",
+        "identifiers": [
+          "SemanticScholar:069b689eb365c5d81759b140c513c8259d7a69da"
+        ],
+        "semantic_scholar_id": "069b689eb365c5d81759b140c513c8259d7a69da",
+        "canonical_id": "arXiv:2610.17795",
+        "arxiv_id": "2610.17795",
+        "authors": [
+          "Han-Zhi Zhang",
+          "An-Xuan Che",
+          "Hang Qi",
+          "Qi-Yue Li",
+          "Jing-Jin Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.30206",
+      "identity_tokens": [
+        "id:SemanticScholar:e4180b33abe65d5e998929399840f88a0c6dcf25",
+        "id:arXiv:2610.30206",
+        "title:moezip routingaware kv cache compression for sparse mixtureofexperts llms",
+        "url:https://arxiv.org/abs/2610.30206"
+      ],
+      "record": {
+        "title": "MoEZip: Routing-Aware KV Cache Compression for Sparse Mixture-of-Experts LLMs",
+        "source_url": "https://arxiv.org/abs/2610.30206",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) language models scale model capacity efficiently by activating a small subset of parameters per token. However, in long-context inference, memory remains a major bottleneck because the KV cache grows linearly with sequence length. Existing KV cache compression methods reduce this cost for dense transformers, but overlook a problem specific to MoE: KV eviction can change which experts are selected during answer generation, degrading the generation quality. We propose MoEZip, a routing-aware KV cache compression for sparse MoE language models. To estimate the sensitivity of expert routing to perturbation, we propose a novel metric based on the Fisher information matrix of routing distributions. MoEZip combines this metric with attention weights for routing-aware scoring of contexts. Finally, we compose a complementary scoring system that combines eviction methods for dense and sparse-MoE architectures. Experiments show that MoEZip achieves robust performance under aggressive cache compression on various benchmarks. At a KV retention ratio of 10\\%, MoEZip improves over the SoTA baseline by +24 and +20 points on average on LongBench and RULER, corresponding to 2.3$\\times$ and 4.9$\\times$ higher scores, respectively.",
+        "identifiers": [
+          "SemanticScholar:e4180b33abe65d5e998929399840f88a0c6dcf25"
+        ],
+        "semantic_scholar_id": "e4180b33abe65d5e998929399840f88a0c6dcf25",
+        "canonical_id": "arXiv:2610.30206",
+        "arxiv_id": "2610.30206",
+        "authors": [
+          "Minsang Kim",
+          "S. Baek"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.35309",
+      "identity_tokens": [
+        "id:SemanticScholar:c63232128e973172db15bda93a7f694a4410869f",
+        "id:arXiv:2610.35309",
+        "title:shared context separate engines stateful streaming inference for multimodal llms on edge socs",
+        "url:https://arxiv.org/abs/2610.35309"
+      ],
+      "record": {
+        "title": "Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs",
+        "source_url": "https://arxiv.org/abs/2610.35309",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Edge SoCs combine CPUs, GPUs, and NPUs, yet runtimes for multimodal large language models (MLLMs) keep generation on one engine and leave others idle. Streaming workloads allow ingestion and answering to overlap, but backend-local KV state binds queries to the engine that built their history. Stage performance and co-running interference vary, so no single placement wins across SoCs and workloads. \\name separates logical history from engine-specific KV state so any language engine can continue a stream. Stateful Streaming Generation overlaps ingestion and answering, while Concurrent Sequence Generation serves ready queries in parallel. Phase-level state continuation lets one engine prefill a query and another decode the answer, freeing the first to resume ingestion. State-Driven Execution Planning (SDEP) chooses paths by predicted completion time and sets each engine's share of queries using arrival rates and measured service times. Across M4 Max, RK3588, and QCS6490, \\name beats the strongest single-engine baselines, even when they reuse context. On M4 Max, SDEP cuts live-stream p95 time to first token by $76\\%$, with every first token within one second, and raises throughput under backlog by up to $35\\%$ over Metal-only execution with context reuse. On two RK3588 streams, SDEP delivers $19.6\\%$ higher request throughput than the best single engine with context reuse and $27.2\\%$ more than parallel engines without shared state. Stateful Streaming Generation reaches up to $2.48\\times$ serial throughput on the same engines. Every answer matches its serial reference.",
+        "identifiers": [
+          "SemanticScholar:c63232128e973172db15bda93a7f694a4410869f"
+        ],
+        "semantic_scholar_id": "c63232128e973172db15bda93a7f694a4410869f",
+        "canonical_id": "arXiv:2610.35309",
+        "arxiv_id": "2610.35309",
+        "authors": [
+          "Yi-Long Li",
+          "Cheng-Po Yan",
+          "Yi-Jing Zeng",
+          "Han-Lei Wu",
+          "Ming-Jun Song",
+          "Suman Banerjee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c1154cefe1b86efa2e96b5d8cf704e74e1805f2800a6c633b7e3d3f66af9e047",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

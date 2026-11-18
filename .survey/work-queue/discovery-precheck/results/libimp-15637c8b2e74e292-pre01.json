@@ -1,0 +1,765 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-15637c8b2e74e292-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-15637c8b2e74",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/ipdpsw71298.2026.00091",
+    "DOI:10.1109/iscas66217.2026.11562436",
+    "DOI:10.1109/jssc.2025.3571315",
+    "DOI:10.1109/tnse.2026.3727990",
+    "DOI:10.18653/v1/2025.findings-emnlp.645",
+    "DOI:10.23919/date69613.2026.11539287",
+    "DOI:10.23919/date69613.2026.11539390",
+    "DOI:10.23919/date69613.2026.11539693",
+    "arXiv:2609.39138"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:23.934133+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/ipdpsw71298.2026.00091",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas66217.2026.11562436",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/jssc.2025.3571315",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tnse.2026.3727990",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.645",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539287",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539390",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11539693",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39138",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.39138"
+    }
+  ],
+  "results": [
+    {
+      "title": "A 22-nm 109.3-to-249.5-TFLOPS/W Outlier-Aware Floating-Point SRAM Compute-in-Memory Macro for Large Language Models",
+      "source_url": "https://doi.org/10.1109/JSSC.2025.3571315",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE Journal of Solid-State Circuits",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated exceptional performance in complex artificial intelligence (AI) tasks. However, their rapidly increasing parameter sizes lead to significant communication and computational overhead, posing challenges to the energy efficiency (EEF) and memory footprint of AI processors. Compute-in-memory (CIM) architecture has emerged as a promising solution to alleviate bandwidth constraints and improve EEF. Nonetheless, both integer (INT) and floating-point (FP) CIM implementations struggle with the trade-off between accuracy and memory requirement when applied to LLMs. Outlier-aware quantization (OAQ), which employs low-precision formats for normal values and retains FP formats for high-magnitude outliers, has proven effective in matching the accuracy of full-FP baselines and has become a mainstream approach for efficient LLM deployment. Therefore, this work presents OA-CIM, an SRAM-based digital CIM macro that facilitates element-wise hybrid processing of BF16 outliers and INT4 normal values. The major contributions are: 1) an LUT-based multiply-and-accumulate (MAC) circuit design, which supports efficient FP/INT-compatible (FIC) MAC operations; 2) an xor-sharing non-maximum exponent gating scheme that reduces latency and area by bypassing unnecessary exponent comparisons in FP dataflow; and 3) a sparsity-aware readout circuit with distribution-offset weight encoding (DOWE) to mitigate the power-intensive charging/discharging process on the bitline. A 22-nm 512-kB 8T SRAM OA-CIM prototype is fabricated, which achieves an EEF of 346.6 TOPS/W in INT4 mode and 249.5 TFLOPS/W in outlier mode, representing a $2.7{\\times }$ to $3.1{\\times }$ improvement over state-of-the-art mixed-precision CIMs.",
+      "identifiers": [
+        "SemanticScholar:0603b93d478c9f8e7f05341d444c4ed3bc31a181"
+      ],
+      "semantic_scholar_id": "0603b93d478c9f8e7f05341d444c4ed3bc31a181",
+      "doi": "10.1109/JSSC.2025.3571315",
+      "canonical_id": "DOI:10.1109/JSSC.2025.3571315",
+      "authors": [
+        "Si-Qi He",
+        "Hao-Zhe Zhu",
+        "Hong-Yi Zhang",
+        "Yu-Jie Ma",
+        "Ze-Xing Chen",
+        "Meng-Jie Li",
+        "Dan-Feng Zhai",
+        "Chi-Xiao Chen",
+        "Qi Liu",
+        "Xiao-Yang Zeng",
+        "Ming Liu"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 290,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Revisiting Pruning vs Quantization for Small Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.645",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:320288a4e571e95061d86180e1a1c1cf79eb8ce6"
+      ],
+      "semantic_scholar_id": "320288a4e571e95061d86180e1a1c1cf79eb8ce6",
+      "doi": "10.18653/v1/2025.findings-emnlp.645",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.645",
+      "authors": [
+        "Zi-Han Zhou",
+        "Simon Kurz",
+        "Zhi-Xue Zhao"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539287",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference often exceeds on-chip memory capacity, causing frequent external memory access. Quantization reduces memory cost but loses accuracy due to outliers. Prior mixed-precision accelerators address this issue with encoding schemes, but often result in accuracy degradation for LLMs and pipeline stalls. We present Lupin, an algorithm-architecture co-design with Outlier-First Encoding, which stores outliers in high precision by reallocating less critical normal values. This preserves maximal outlier representation and enables stall-free execution with low-precision MAC units. Experiments show that Lupin maintains accuracy while achieving a 2.02× speedup.",
+      "identifiers": [
+        "SemanticScholar:cb23957dc986defeb9c5f9cc14717566e2131f14"
+      ],
+      "semantic_scholar_id": "cb23957dc986defeb9c5f9cc14717566e2131f14",
+      "doi": "10.23919/DATE69613.2026.11539287",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539287",
+      "authors": [
+        "Taein Kim",
+        "Sukhyun Han",
+        "Seongwook Kim",
+        "Gwangeun Byeon",
+        "Jungmin Lee",
+        "Seokin Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539390",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated strong performance in tasks such as image captioning and visual question answering. Under mixed workloads, however, the differing inference pipelines for text-only and multimodal requests create heterogeneity that existing serving systems fail to optimize—leading to high latency and poor fairness. We propose Duet-Infer, a modality-aware serving framework that enhances single-GPU serving efficiency for VLMs through three key contributions: (i) parallel computation enabled by preprocessing parallelism and decoupled vision-language execution, (ii) a shared memory manager that eliminates weight redundancy and supports efficient encoder cache sharing, and (iii) a fairness-aware scheduler that reduces delays for multimodal requests without penalizing text-only ones. Implemented within vLLM and evaluated on realistic workloads, DuetInfer reduces P99 TTFT by up to 33.7% and end-to-end latency by up to 20%.",
+      "identifiers": [
+        "SemanticScholar:c6fefa7e3a34ef4332b17840fc4db0d587b77827"
+      ],
+      "semantic_scholar_id": "c6fefa7e3a34ef4332b17840fc4db0d587b77827",
+      "doi": "10.23919/DATE69613.2026.11539390",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539390",
+      "authors": [
+        "Yijia Yang",
+        "Yu-Bo Deng",
+        "Yida Wang",
+        "Yuanchao Xu",
+        "Ke-Ni Qiu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ACES: A Chiplet Architecture with Resource Partition and Dynamic Scheduling for Agentic LLMs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539693",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic LLM is an emerging working paradigm leveraging large language models (LLMs) as assistant agents for complex, multi-step tasks. However, the operations of LLM agents also create unique workload characteristics with highly dynamic resource demands. In this work, we propose ACES, a co-designed solution leveraging scalable chiplet architecture together with dynamic workload scheduling for agentic LLMs. At hardware level, the chiplet architecture is designed to support a zoned fabric with flexible Swing Zones. Upon this, at software level, a conversation-centric dynamic scheduling approach is adopted, which includes topology-aware homing, proactive caching, and adaptive resource conversion to accommodate to data locality and resource balance. We evaluate our architecture using Llama-3 8B models on representative agentic-RAG-derived tasks. The system evaluations demonstrate that our design achieves 2.33× throughput improvement and an average 58% conversation latency reduction compared to state-of-the-art DistServe-like chiplet baselines, showcasing superior performance and scalability.",
+      "identifiers": [
+        "SemanticScholar:87195805586ee4c97e773c72a6aecd64389d13b7"
+      ],
+      "semantic_scholar_id": "87195805586ee4c97e773c72a6aecd64389d13b7",
+      "doi": "10.23919/DATE69613.2026.11539693",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539693",
+      "authors": [
+        "Hon-Gou Li",
+        "Mingxuan Li",
+        "Zhan-Tong Zhu",
+        "Tian-Yu Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ViSched: Reinforcement Learning-Based Scheduling for Vision-Language Model Inference on a Heterogeneous GPU Cluster",
+      "source_url": "https://doi.org/10.1109/IPDPSW71298.2026.00091",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving vision-language model (VLM) inference at scale demands scheduling strategies that account for extreme heterogeneity in both model resource requirements and GPU hardware capabilities. We present ViSched, a Proximal Policy Optimization (PPO) based scheduling framework with dynamic GPU allocation that serves mixed vision workloads— from lightweight detectors on a single GPU to 78B-parameter VLMs spanning up to 8 GPUs—across a heterogeneous GPU cluster. ViSched jointly selects the target node and GPU count for each inference request, adapting tensor parallelism (TP) in real time based on model requirements, service-level agreement (SLA) pressure, and cluster state. On a 100-GPU heterogeneous cluster with AMD Instinct MI300X and MI355X accelerators, ViSched improves SLA satisfaction by 7.3–14.2% and reduces energy consumption by 9.7–17.4% over the best static baseline across three workload scenarios, with the largest gains (+23.4 percentage points (pp)) on VLM workloads.",
+      "identifiers": [
+        "SemanticScholar:bda7bf5f20811c50209e3d854e6b6eb099781cd4"
+      ],
+      "semantic_scholar_id": "bda7bf5f20811c50209e3d854e6b6eb099781cd4",
+      "doi": "10.1109/IPDPSW71298.2026.00091",
+      "canonical_id": "DOI:10.1109/IPDPSW71298.2026.00091",
+      "authors": [
+        "Ravi Gupta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Hardware-Software Co-design for LLMs with Exponent-Element Quantization Towards Compute-in-Memory",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562436",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The escalating computational and memory demands of Large Language Models (LLMs) pose significant challenges for their deployment on resource-constrained edge devices. While model quantization is an effective technique to mitigate these demands, existing methods often rely on floating-point operations during quantization and dequantization (Q/DQ), leading to considerable overhead when deployed on hardware accelerators like Compute-in-Memory (CIM). This paper presents a hardware-software co-design methodology featuring a novel Exponent-Element Quantization (EEQ) algorithm. EEQ represents floating-point values using a shared exponent and low-bit integer elements, eliminating floating-point arithmetic in the Q/DQ process. We design peripheral circuits, to build an EEQ-compatible CIM (EEQ-CIM) architecture. Furthermore, a system-level simulator is developed to optimize the mapping strategy for large-scale matrix multiplication. Evaluated on the Llama-2-7B model, our EEQ-based W6A6 quantization achieves comparable accuracy to the FP16 format while reducing matrix multiplication execution time by 40.8% and data transfer volume by 41.4% compared to the FP16 baseline.",
+      "identifiers": [
+        "SemanticScholar:60fc277a37fa5e088db04177d1dd55c92d707309"
+      ],
+      "semantic_scholar_id": "60fc277a37fa5e088db04177d1dd55c92d707309",
+      "doi": "10.1109/ISCAS66217.2026.11562436",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562436",
+      "authors": [
+        "Qi-Ning Zhang",
+        "Ao-Yun Feng",
+        "Hong-Fei Ye",
+        "Jianhua Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "M-CSN: Joint Architecture and Flow Scheduling for Metro-Scale AI Fabric Based on Supernodes",
+      "source_url": "https://doi.org/10.1109/TNSE.2026.3727990",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Network Science and Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying trillion-parameter large language models across metropolitan environments is required to sustain real-time inference. Urban power constraints, however, prohibit monolithic GPU clusters, forcing the integration of distributed supernodes into a citywide compute fabric. Over 100-km distances, optical propagation delays invalidate reactive congestion control for 12.8 Tbps cross-domain pipeline parallelism (PP) traffic. The resulting high bandwidth-delay product causes in-flight data to saturate edge switch buffers before the feedback loop triggers source throttling. We address this limitation with M-CSN, an AI compute architecture featuring LOTUS, a model-driven scheduling engine for metropolitan computing power networks (CPNs). LOTUS replaces delayed reactive signaling with a proactive bi-level scheduling strategy. At the macro-layer, an inverse-SLA mechanism partitions capacity among concurrent flows to guarantee performance isolation. At the micro-layer, the scheduler decouples transmission rates from dynamic window probing: it injects calculated pacing rates and static hyper-BDP windows into source RDMA queue pairs (QPs). This source-side enforcement eliminates feedback lag. Packet-level simulations demonstrate that LOTUS sustains a 92% operational load with PFC-free execution. Eliminating pause-induced jitter and buffer saturation reduces critical-flow latency by 2.6× relative to reactive baselines. This enables fragmented urban resources to operate as a unified, deterministic, supernode-based computing power network.",
+      "identifiers": [
+        "SemanticScholar:87dc2121ad4c9730449ccb4ab0c455d82110ab60"
+      ],
+      "semantic_scholar_id": "87dc2121ad4c9730449ccb4ab0c455d82110ab60",
+      "doi": "10.1109/TNSE.2026.3727990",
+      "canonical_id": "DOI:10.1109/TNSE.2026.3727990",
+      "authors": [
+        "Liang Guo",
+        "Ji-Zhuang Zhao",
+        "Wei Quan",
+        "Shao-Peng Wang",
+        "Jie Li",
+        "Hong-Ke Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/jssc.2025.3571315",
+      "identity_tokens": [
+        "id:DOI:10.1109/jssc.2025.3571315",
+        "id:SemanticScholar:0603b93d478c9f8e7f05341d444c4ed3bc31a181",
+        "title:a 22nm 1093to2495tflopsw outlieraware floatingpoint sram computeinmemory macro for large language models",
+        "url:https://doi.org/10.1109/JSSC.2025.3571315"
+      ],
+      "record": {
+        "title": "A 22-nm 109.3-to-249.5-TFLOPS/W Outlier-Aware Floating-Point SRAM Compute-in-Memory Macro for Large Language Models",
+        "source_url": "https://doi.org/10.1109/JSSC.2025.3571315",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "IEEE Journal of Solid-State Circuits",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated exceptional performance in complex artificial intelligence (AI) tasks. However, their rapidly increasing parameter sizes lead to significant communication and computational overhead, posing challenges to the energy efficiency (EEF) and memory footprint of AI processors. Compute-in-memory (CIM) architecture has emerged as a promising solution to alleviate bandwidth constraints and improve EEF. Nonetheless, both integer (INT) and floating-point (FP) CIM implementations struggle with the trade-off between accuracy and memory requirement when applied to LLMs. Outlier-aware quantization (OAQ), which employs low-precision formats for normal values and retains FP formats for high-magnitude outliers, has proven effective in matching the accuracy of full-FP baselines and has become a mainstream approach for efficient LLM deployment. Therefore, this work presents OA-CIM, an SRAM-based digital CIM macro that facilitates element-wise hybrid processing of BF16 outliers and INT4 normal values. The major contributions are: 1) an LUT-based multiply-and-accumulate (MAC) circuit design, which supports efficient FP/INT-compatible (FIC) MAC operations; 2) an xor-sharing non-maximum exponent gating scheme that reduces latency and area by bypassing unnecessary exponent comparisons in FP dataflow; and 3) a sparsity-aware readout circuit with distribution-offset weight encoding (DOWE) to mitigate the power-intensive charging/discharging process on the bitline. A 22-nm 512-kB 8T SRAM OA-CIM prototype is fabricated, which achieves an EEF of 346.6 TOPS/W in INT4 mode and 249.5 TFLOPS/W in outlier mode, representing a $2.7{\\times }$ to $3.1{\\times }$ improvement over state-of-the-art mixed-precision CIMs.",
+        "identifiers": [
+          "SemanticScholar:0603b93d478c9f8e7f05341d444c4ed3bc31a181"
+        ],
+        "semantic_scholar_id": "0603b93d478c9f8e7f05341d444c4ed3bc31a181",
+        "doi": "10.1109/JSSC.2025.3571315",
+        "canonical_id": "DOI:10.1109/JSSC.2025.3571315",
+        "authors": [
+          "Si-Qi He",
+          "Hao-Zhe Zhu",
+          "Hong-Yi Zhang",
+          "Yu-Jie Ma",
+          "Ze-Xing Chen",
+          "Meng-Jie Li",
+          "Dan-Feng Zhai",
+          "Chi-Xiao Chen",
+          "Qi Liu",
+          "Xiao-Yang Zeng",
+          "Ming Liu"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 290,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.645",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.645",
+        "id:SemanticScholar:320288a4e571e95061d86180e1a1c1cf79eb8ce6",
+        "title:revisiting pruning vs quantization for small language models",
+        "url:https://doi.org/10.18653/v1/2025.findings-emnlp.645"
+      ],
+      "record": {
+        "title": "Revisiting Pruning vs Quantization for Small Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.645",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:320288a4e571e95061d86180e1a1c1cf79eb8ce6"
+        ],
+        "semantic_scholar_id": "320288a4e571e95061d86180e1a1c1cf79eb8ce6",
+        "doi": "10.18653/v1/2025.findings-emnlp.645",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.645",
+        "authors": [
+          "Zi-Han Zhou",
+          "Simon Kurz",
+          "Zhi-Xue Zhao"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539287",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539287",
+        "id:SemanticScholar:cb23957dc986defeb9c5f9cc14717566e2131f14",
+        "title:lupin spatial resource stealing with outlierfirst encoding for mixedprecision llm acceleration",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539287"
+      ],
+      "record": {
+        "title": "Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539287",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference often exceeds on-chip memory capacity, causing frequent external memory access. Quantization reduces memory cost but loses accuracy due to outliers. Prior mixed-precision accelerators address this issue with encoding schemes, but often result in accuracy degradation for LLMs and pipeline stalls. We present Lupin, an algorithm-architecture co-design with Outlier-First Encoding, which stores outliers in high precision by reallocating less critical normal values. This preserves maximal outlier representation and enables stall-free execution with low-precision MAC units. Experiments show that Lupin maintains accuracy while achieving a 2.02× speedup.",
+        "identifiers": [
+          "SemanticScholar:cb23957dc986defeb9c5f9cc14717566e2131f14"
+        ],
+        "semantic_scholar_id": "cb23957dc986defeb9c5f9cc14717566e2131f14",
+        "doi": "10.23919/DATE69613.2026.11539287",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539287",
+        "authors": [
+          "Taein Kim",
+          "Sukhyun Han",
+          "Seongwook Kim",
+          "Gwangeun Byeon",
+          "Jungmin Lee",
+          "Seokin Hong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539390",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539390",
+        "id:SemanticScholar:c6fefa7e3a34ef4332b17840fc4db0d587b77827",
+        "title:toward parallel serving for visionlanguage models via modal decoupling and scheduling",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539390"
+      ],
+      "record": {
+        "title": "Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539390",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have demonstrated strong performance in tasks such as image captioning and visual question answering. Under mixed workloads, however, the differing inference pipelines for text-only and multimodal requests create heterogeneity that existing serving systems fail to optimize—leading to high latency and poor fairness. We propose Duet-Infer, a modality-aware serving framework that enhances single-GPU serving efficiency for VLMs through three key contributions: (i) parallel computation enabled by preprocessing parallelism and decoupled vision-language execution, (ii) a shared memory manager that eliminates weight redundancy and supports efficient encoder cache sharing, and (iii) a fairness-aware scheduler that reduces delays for multimodal requests without penalizing text-only ones. Implemented within vLLM and evaluated on realistic workloads, DuetInfer reduces P99 TTFT by up to 33.7% and end-to-end latency by up to 20%.",
+        "identifiers": [
+          "SemanticScholar:c6fefa7e3a34ef4332b17840fc4db0d587b77827"
+        ],
+        "semantic_scholar_id": "c6fefa7e3a34ef4332b17840fc4db0d587b77827",
+        "doi": "10.23919/DATE69613.2026.11539390",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539390",
+        "authors": [
+          "Yijia Yang",
+          "Yu-Bo Deng",
+          "Yida Wang",
+          "Yuanchao Xu",
+          "Ke-Ni Qiu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11539693",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11539693",
+        "id:SemanticScholar:87195805586ee4c97e773c72a6aecd64389d13b7",
+        "title:aces a chiplet architecture with resource partition and dynamic scheduling for agentic llms",
+        "url:https://doi.org/10.23919/DATE69613.2026.11539693"
+      ],
+      "record": {
+        "title": "ACES: A Chiplet Architecture with Resource Partition and Dynamic Scheduling for Agentic LLMs",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11539693",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic LLM is an emerging working paradigm leveraging large language models (LLMs) as assistant agents for complex, multi-step tasks. However, the operations of LLM agents also create unique workload characteristics with highly dynamic resource demands. In this work, we propose ACES, a co-designed solution leveraging scalable chiplet architecture together with dynamic workload scheduling for agentic LLMs. At hardware level, the chiplet architecture is designed to support a zoned fabric with flexible Swing Zones. Upon this, at software level, a conversation-centric dynamic scheduling approach is adopted, which includes topology-aware homing, proactive caching, and adaptive resource conversion to accommodate to data locality and resource balance. We evaluate our architecture using Llama-3 8B models on representative agentic-RAG-derived tasks. The system evaluations demonstrate that our design achieves 2.33× throughput improvement and an average 58% conversation latency reduction compared to state-of-the-art DistServe-like chiplet baselines, showcasing superior performance and scalability.",
+        "identifiers": [
+          "SemanticScholar:87195805586ee4c97e773c72a6aecd64389d13b7"
+        ],
+        "semantic_scholar_id": "87195805586ee4c97e773c72a6aecd64389d13b7",
+        "doi": "10.23919/DATE69613.2026.11539693",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11539693",
+        "authors": [
+          "Hon-Gou Li",
+          "Mingxuan Li",
+          "Zhan-Tong Zhu",
+          "Tian-Yu Jia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 212,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdpsw71298.2026.00091",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdpsw71298.2026.00091",
+        "id:SemanticScholar:bda7bf5f20811c50209e3d854e6b6eb099781cd4",
+        "title:visched reinforcement learningbased scheduling for visionlanguage model inference on a heterogeneous gpu cluster",
+        "url:https://doi.org/10.1109/IPDPSW71298.2026.00091"
+      ],
+      "record": {
+        "title": "ViSched: Reinforcement Learning-Based Scheduling for Vision-Language Model Inference on a Heterogeneous GPU Cluster",
+        "source_url": "https://doi.org/10.1109/IPDPSW71298.2026.00091",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving vision-language model (VLM) inference at scale demands scheduling strategies that account for extreme heterogeneity in both model resource requirements and GPU hardware capabilities. We present ViSched, a Proximal Policy Optimization (PPO) based scheduling framework with dynamic GPU allocation that serves mixed vision workloads— from lightweight detectors on a single GPU to 78B-parameter VLMs spanning up to 8 GPUs—across a heterogeneous GPU cluster. ViSched jointly selects the target node and GPU count for each inference request, adapting tensor parallelism (TP) in real time based on model requirements, service-level agreement (SLA) pressure, and cluster state. On a 100-GPU heterogeneous cluster with AMD Instinct MI300X and MI355X accelerators, ViSched improves SLA satisfaction by 7.3–14.2% and reduces energy consumption by 9.7–17.4% over the best static baseline across three workload scenarios, with the largest gains (+23.4 percentage points (pp)) on VLM workloads.",
+        "identifiers": [
+          "SemanticScholar:bda7bf5f20811c50209e3d854e6b6eb099781cd4"
+        ],
+        "semantic_scholar_id": "bda7bf5f20811c50209e3d854e6b6eb099781cd4",
+        "doi": "10.1109/IPDPSW71298.2026.00091",
+        "canonical_id": "DOI:10.1109/IPDPSW71298.2026.00091",
+        "authors": [
+          "Ravi Gupta"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 201,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas66217.2026.11562436",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas66217.2026.11562436",
+        "id:SemanticScholar:60fc277a37fa5e088db04177d1dd55c92d707309",
+        "title:a hardwaresoftware codesign for llms with exponentelement quantization towards computeinmemory",
+        "url:https://doi.org/10.1109/ISCAS66217.2026.11562436"
+      ],
+      "record": {
+        "title": "A Hardware-Software Co-design for LLMs with Exponent-Element Quantization Towards Compute-in-Memory",
+        "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562436",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The escalating computational and memory demands of Large Language Models (LLMs) pose significant challenges for their deployment on resource-constrained edge devices. While model quantization is an effective technique to mitigate these demands, existing methods often rely on floating-point operations during quantization and dequantization (Q/DQ), leading to considerable overhead when deployed on hardware accelerators like Compute-in-Memory (CIM). This paper presents a hardware-software co-design methodology featuring a novel Exponent-Element Quantization (EEQ) algorithm. EEQ represents floating-point values using a shared exponent and low-bit integer elements, eliminating floating-point arithmetic in the Q/DQ process. We design peripheral circuits, to build an EEQ-compatible CIM (EEQ-CIM) architecture. Furthermore, a system-level simulator is developed to optimize the mapping strategy for large-scale matrix multiplication. Evaluated on the Llama-2-7B model, our EEQ-based W6A6 quantization achieves comparable accuracy to the FP16 format while reducing matrix multiplication execution time by 40.8% and data transfer volume by 41.4% compared to the FP16 baseline.",
+        "identifiers": [
+          "SemanticScholar:60fc277a37fa5e088db04177d1dd55c92d707309"
+        ],
+        "semantic_scholar_id": "60fc277a37fa5e088db04177d1dd55c92d707309",
+        "doi": "10.1109/ISCAS66217.2026.11562436",
+        "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562436",
+        "authors": [
+          "Qi-Ning Zhang",
+          "Ao-Yun Feng",
+          "Hong-Fei Ye",
+          "Jianhua Feng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tnse.2026.3727990",
+      "identity_tokens": [
+        "id:DOI:10.1109/tnse.2026.3727990",
+        "id:SemanticScholar:87dc2121ad4c9730449ccb4ab0c455d82110ab60",
+        "title:mcsn joint architecture and flow scheduling for metroscale ai fabric based on supernodes",
+        "url:https://doi.org/10.1109/TNSE.2026.3727990"
+      ],
+      "record": {
+        "title": "M-CSN: Joint Architecture and Flow Scheduling for Metro-Scale AI Fabric Based on Supernodes",
+        "source_url": "https://doi.org/10.1109/TNSE.2026.3727990",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Transactions on Network Science and Engineering",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying trillion-parameter large language models across metropolitan environments is required to sustain real-time inference. Urban power constraints, however, prohibit monolithic GPU clusters, forcing the integration of distributed supernodes into a citywide compute fabric. Over 100-km distances, optical propagation delays invalidate reactive congestion control for 12.8 Tbps cross-domain pipeline parallelism (PP) traffic. The resulting high bandwidth-delay product causes in-flight data to saturate edge switch buffers before the feedback loop triggers source throttling. We address this limitation with M-CSN, an AI compute architecture featuring LOTUS, a model-driven scheduling engine for metropolitan computing power networks (CPNs). LOTUS replaces delayed reactive signaling with a proactive bi-level scheduling strategy. At the macro-layer, an inverse-SLA mechanism partitions capacity among concurrent flows to guarantee performance isolation. At the micro-layer, the scheduler decouples transmission rates from dynamic window probing: it injects calculated pacing rates and static hyper-BDP windows into source RDMA queue pairs (QPs). This source-side enforcement eliminates feedback lag. Packet-level simulations demonstrate that LOTUS sustains a 92% operational load with PFC-free execution. Eliminating pause-induced jitter and buffer saturation reduces critical-flow latency by 2.6× relative to reactive baselines. This enables fragmented urban resources to operate as a unified, deterministic, supernode-based computing power network.",
+        "identifiers": [
+          "SemanticScholar:87dc2121ad4c9730449ccb4ab0c455d82110ab60"
+        ],
+        "semantic_scholar_id": "87dc2121ad4c9730449ccb4ab0c455d82110ab60",
+        "doi": "10.1109/TNSE.2026.3727990",
+        "canonical_id": "DOI:10.1109/TNSE.2026.3727990",
+        "authors": [
+          "Liang Guo",
+          "Ji-Zhuang Zhao",
+          "Wei Quan",
+          "Shao-Peng Wang",
+          "Jie Li",
+          "Hong-Ke Zhang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ccf8f3ad77ad628ca04b5707d6651b9e8898fc5956d452f8169bdd35a6ad557a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

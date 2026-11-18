@@ -1,0 +1,367 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-de3a57bd25883208-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-de3a57bd2588",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2603.00357",
+    "arXiv:2603.04759",
+    "arXiv:2605.09536",
+    "arXiv:2609.00791"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:24.428175+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2603.00357",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04759",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.04759"
+    },
+    {
+      "requested_id": "arXiv:2605.09536",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.00791",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "TAD: Temporal-Aware Trajectory Self-Distillation for Fast and Accurate Diffusion LLM",
+      "source_url": "https://arxiv.org/abs/2605.09536",
+      "year": 2026,
+      "published": "2026-05-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) offer a promising paradigm for parallel text generation, but in practice they face an accuracy-parallelism trade-off, where increasing tokens per forward (TPF) often degrades generation quality. Existing acceleration methods often gain speed at the cost of accuracy. To address this limitation, we propose TAD, a Temporal-Aware trajectory self-Distillation framework. During data construction, we condition a teacher model on both the prompt and the ground-truth response to generate decoding trajectories, recording the intermediate masked states throughout the process. Based on how many decoding steps remain before each masked token is revealed, we partition masked positions into near and distant subsets. For near tokens, we train the student with a hard cross-entropy loss using the teacher trajectory tokens as labels, encouraging confident predictions for tokens that are about to be decoded. For distant tokens, we apply a soft KL divergence loss between the teacher and student token distributions, providing softer supervision and preserving future planning knowledge. This temporal-aware partition naturally gives rise to two deployment configurations: a Quality model that prioritizes accuracy and a Speed model that favors more aggressive acceleration. Experiments show that TAD consistently improves the accuracy-parallelism trade-off. On LLaDA, it raises average accuracy from 46.2\\% to 51.6\\% with the Quality model and average AUP from 46.2 to 257.1 with the Speed model. Our code is available at: https://github.com/BHmingyang/TAD",
+      "identifiers": [
+        "SemanticScholar:4d9f984254812314c106505a659fb231953d736e"
+      ],
+      "semantic_scholar_id": "4d9f984254812314c106505a659fb231953d736e",
+      "canonical_id": "arXiv:2605.09536",
+      "arxiv_id": "2605.09536",
+      "doi": "10.48550/arXiv.2605.09536",
+      "authors": [
+        "Hao Zhou",
+        "Ling-Peng Kong",
+        "Shijie Ren",
+        "Xi-Ting Wang",
+        "Shuang Liang",
+        "Guo-Wei Wang",
+        "Zhenxuan Pan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 192,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs",
+      "source_url": "https://arxiv.org/abs/2603.00357",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In large-scale LLM pre-training systems with 100k+ GPUs, failures become the norm rather than the exception, and restart costs can dominate wall-clock training time. However, existing fault-tolerance mechanisms are largely unprepared for this restart-dominant regime. To address this challenge, we propose SPARe - Stacked Parallelism with Adaptive Reordering - a fault-tolerance framework that masks node failures during gradient synchronization by stacking redundant data shards across parallelism groups and adaptively reordering execution. SPARe achieves availability comparable to traditional replication while maintaining near-constant computation overhead of only 2~3x, even under high redundancy where traditional replication would require linearly inflating overhead. We derive closed-form expressions for endurable failure count and computation overhead, validate them via SimGrid-based discrete-event simulation, and jointly optimize redundancy and checkpointing to minimize time-to-train. At extreme scale with up to 600k GPUs, SPARe reduces time-to-train by 40~50% compared to traditional replication.",
+      "identifiers": [
+        "SemanticScholar:00a464c7627b2a92dfb9aff08e6af5ec17ff73d1"
+      ],
+      "semantic_scholar_id": "00a464c7627b2a92dfb9aff08e6af5ec17ff73d1",
+      "canonical_id": "arXiv:2603.00357",
+      "arxiv_id": "2603.00357",
+      "doi": "10.48550/arXiv.2603.00357",
+      "authors": [
+        "Jin Lee",
+        "Zhong-Hao Chen",
+        "Xuhang He",
+        "Robert Underwood",
+        "Bogdan Nicolae",
+        "F. Cappello",
+        "Xiao-Yi Lu",
+        "Sheng Di",
+        "Zheng Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Instella-MoE Technical Report",
+      "source_url": "https://arxiv.org/abs/2609.00791",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we introduce Instella-MoE, a fully open Mixture-of-Experts (MoE) language model with 16 billion total parameters and 2.8 billion active parameters per token, trained entirely from scratch on AMD Instinct MI300X and MI325X GPUs. Instella-MoE combines a sparsely activated MoE design with architectural and system-level innovations, including Gated Multi-head Latent Attention (Gated MLA) and FarSkip-Collective connectivity, enabling efficient large-scale training and inference. The model is developed through a multi-stage pipeline comprising pre-training, mid-training, long-context extension, supervised fine-tuning with feedback-driven data curation, direct preference optimization, and reinforcement learning with Multi-Teacher On-Policy Distillation. Instella-MoE achieves an average score of 76.7 across standard pre-training benchmarks, outperforming prior fully open models including OLMo-3-7B, SmolLM3-3B, and OLMoE-1B-7B, while remaining competitive with open-weight MoE and dense baselines at comparable active-parameter scales, including Moonlight-16B-A3B and Qwen3.5-4B. After post-training, our final Think checkpoint achieves an average score of 73.2 across instruction-following, reasoning, math, coding, and chat benchmarks, outperforming both fully open and open-weight models with comparable or larger active parameter counts in our evaluation. To support transparent and reproducible research, we release the complete Instella-MoE model flow, including model weights, training configurations, data mixtures, and training code. Together, these contributions establish Instella-MoE a strong, fully open foundation for efficient, high-performing MoE models and reproducible research.",
+      "identifiers": [
+        "SemanticScholar:6749f738a777047ffc61b14f5d541e034e397af4"
+      ],
+      "semantic_scholar_id": "6749f738a777047ffc61b14f5d541e034e397af4",
+      "canonical_id": "arXiv:2609.00791",
+      "arxiv_id": "2609.00791",
+      "doi": "10.48550/arXiv.2609.00791",
+      "authors": [
+        "Jiang Liu",
+        "Sudhanshu Ranjan",
+        "Prakamya Mishra",
+        "Yonatan Dukler",
+        "Gowtham Ramesh",
+        "Jia-Lian Wu",
+        "Xi-Meng Sun",
+        "Wen Xie",
+        "Chao-Jun Hou",
+        "Vikram Appia",
+        "Zhen-Yu Gu",
+        "Zi-Cheng Liu",
+        "Emad Barsoum"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 78,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.09536",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09536",
+        "id:SemanticScholar:4d9f984254812314c106505a659fb231953d736e",
+        "id:arXiv:2605.09536",
+        "title:tad temporalaware trajectory selfdistillation for fast and accurate diffusion llm",
+        "url:https://arxiv.org/abs/2605.09536"
+      ],
+      "record": {
+        "title": "TAD: Temporal-Aware Trajectory Self-Distillation for Fast and Accurate Diffusion LLM",
+        "source_url": "https://arxiv.org/abs/2605.09536",
+        "year": 2026,
+        "published": "2026-05-10",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) offer a promising paradigm for parallel text generation, but in practice they face an accuracy-parallelism trade-off, where increasing tokens per forward (TPF) often degrades generation quality. Existing acceleration methods often gain speed at the cost of accuracy. To address this limitation, we propose TAD, a Temporal-Aware trajectory self-Distillation framework. During data construction, we condition a teacher model on both the prompt and the ground-truth response to generate decoding trajectories, recording the intermediate masked states throughout the process. Based on how many decoding steps remain before each masked token is revealed, we partition masked positions into near and distant subsets. For near tokens, we train the student with a hard cross-entropy loss using the teacher trajectory tokens as labels, encouraging confident predictions for tokens that are about to be decoded. For distant tokens, we apply a soft KL divergence loss between the teacher and student token distributions, providing softer supervision and preserving future planning knowledge. This temporal-aware partition naturally gives rise to two deployment configurations: a Quality model that prioritizes accuracy and a Speed model that favors more aggressive acceleration. Experiments show that TAD consistently improves the accuracy-parallelism trade-off. On LLaDA, it raises average accuracy from 46.2\\% to 51.6\\% with the Quality model and average AUP from 46.2 to 257.1 with the Speed model. Our code is available at: https://github.com/BHmingyang/TAD",
+        "identifiers": [
+          "SemanticScholar:4d9f984254812314c106505a659fb231953d736e"
+        ],
+        "semantic_scholar_id": "4d9f984254812314c106505a659fb231953d736e",
+        "canonical_id": "arXiv:2605.09536",
+        "arxiv_id": "2605.09536",
+        "doi": "10.48550/arXiv.2605.09536",
+        "authors": [
+          "Hao Zhou",
+          "Ling-Peng Kong",
+          "Shijie Ren",
+          "Xi-Ting Wang",
+          "Shuang Liang",
+          "Guo-Wei Wang",
+          "Zhenxuan Pan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 192,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00357",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.00357",
+        "id:SemanticScholar:00a464c7627b2a92dfb9aff08e6af5ec17ff73d1",
+        "id:arXiv:2603.00357",
+        "title:spare stacked parallelism with adaptive reordering for faulttolerant llm pretraining systems with 100k gpus",
+        "url:https://arxiv.org/abs/2603.00357"
+      ],
+      "record": {
+        "title": "SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs",
+        "source_url": "https://arxiv.org/abs/2603.00357",
+        "year": 2026,
+        "published": "2026-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In large-scale LLM pre-training systems with 100k+ GPUs, failures become the norm rather than the exception, and restart costs can dominate wall-clock training time. However, existing fault-tolerance mechanisms are largely unprepared for this restart-dominant regime. To address this challenge, we propose SPARe - Stacked Parallelism with Adaptive Reordering - a fault-tolerance framework that masks node failures during gradient synchronization by stacking redundant data shards across parallelism groups and adaptively reordering execution. SPARe achieves availability comparable to traditional replication while maintaining near-constant computation overhead of only 2~3x, even under high redundancy where traditional replication would require linearly inflating overhead. We derive closed-form expressions for endurable failure count and computation overhead, validate them via SimGrid-based discrete-event simulation, and jointly optimize redundancy and checkpointing to minimize time-to-train. At extreme scale with up to 600k GPUs, SPARe reduces time-to-train by 40~50% compared to traditional replication.",
+        "identifiers": [
+          "SemanticScholar:00a464c7627b2a92dfb9aff08e6af5ec17ff73d1"
+        ],
+        "semantic_scholar_id": "00a464c7627b2a92dfb9aff08e6af5ec17ff73d1",
+        "canonical_id": "arXiv:2603.00357",
+        "arxiv_id": "2603.00357",
+        "doi": "10.48550/arXiv.2603.00357",
+        "authors": [
+          "Jin Lee",
+          "Zhong-Hao Chen",
+          "Xuhang He",
+          "Robert Underwood",
+          "Bogdan Nicolae",
+          "F. Cappello",
+          "Xiao-Yi Lu",
+          "Sheng Di",
+          "Zheng Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 264,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.00791",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.00791",
+        "id:SemanticScholar:6749f738a777047ffc61b14f5d541e034e397af4",
+        "id:arXiv:2609.00791",
+        "title:instellamoe technical report",
+        "url:https://arxiv.org/abs/2609.00791"
+      ],
+      "record": {
+        "title": "Instella-MoE Technical Report",
+        "source_url": "https://arxiv.org/abs/2609.00791",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this work, we introduce Instella-MoE, a fully open Mixture-of-Experts (MoE) language model with 16 billion total parameters and 2.8 billion active parameters per token, trained entirely from scratch on AMD Instinct MI300X and MI325X GPUs. Instella-MoE combines a sparsely activated MoE design with architectural and system-level innovations, including Gated Multi-head Latent Attention (Gated MLA) and FarSkip-Collective connectivity, enabling efficient large-scale training and inference. The model is developed through a multi-stage pipeline comprising pre-training, mid-training, long-context extension, supervised fine-tuning with feedback-driven data curation, direct preference optimization, and reinforcement learning with Multi-Teacher On-Policy Distillation. Instella-MoE achieves an average score of 76.7 across standard pre-training benchmarks, outperforming prior fully open models including OLMo-3-7B, SmolLM3-3B, and OLMoE-1B-7B, while remaining competitive with open-weight MoE and dense baselines at comparable active-parameter scales, including Moonlight-16B-A3B and Qwen3.5-4B. After post-training, our final Think checkpoint achieves an average score of 73.2 across instruction-following, reasoning, math, coding, and chat benchmarks, outperforming both fully open and open-weight models with comparable or larger active parameter counts in our evaluation. To support transparent and reproducible research, we release the complete Instella-MoE model flow, including model weights, training configurations, data mixtures, and training code. Together, these contributions establish Instella-MoE a strong, fully open foundation for efficient, high-performing MoE models and reproducible research.",
+        "identifiers": [
+          "SemanticScholar:6749f738a777047ffc61b14f5d541e034e397af4"
+        ],
+        "semantic_scholar_id": "6749f738a777047ffc61b14f5d541e034e397af4",
+        "canonical_id": "arXiv:2609.00791",
+        "arxiv_id": "2609.00791",
+        "doi": "10.48550/arXiv.2609.00791",
+        "authors": [
+          "Jiang Liu",
+          "Sudhanshu Ranjan",
+          "Prakamya Mishra",
+          "Yonatan Dukler",
+          "Gowtham Ramesh",
+          "Jia-Lian Wu",
+          "Xi-Meng Sun",
+          "Wen Xie",
+          "Chao-Jun Hou",
+          "Vikram Appia",
+          "Zhen-Yu Gu",
+          "Zi-Cheng Liu",
+          "Emad Barsoum"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 78,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:39a9a9ac8ce873b7ff8f65f9457ce178d7b9456cd34a55f1149ce87b4d2f77bc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

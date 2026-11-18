@@ -1,0 +1,575 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4897594a53200086-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4897594a5320",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.23085",
+    "arXiv:2609.25053",
+    "arXiv:2609.35188",
+    "arXiv:2610.03955",
+    "arXiv:2610.14688",
+    "arXiv:2610.18557"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:09.487249+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.23085",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.25053",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35188",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.03955",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14688",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18557",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+      "source_url": "https://arxiv.org/abs/2609.25053",
+      "year": 2026,
+      "published": "2026-09-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Can one language model hand its live memory to another without the receiver rereading the context? We demonstrate useful persistent hybrid-state transfer across one architecture-matched Qwen3.5 4B-to-9B sibling pair. To our knowledge, this is the first demonstrated cross-model handoff of persistent recurrent inference state between differently sized hybrid language models without target prefix replay. Translated attention KV alone leaves a large gap; adding the Gated DeltaNet (GDN) persistent-state package lowers teacher-forced negative log-likelihood (NLL), the average next-token log-loss, by 0.747 nats/token (95% paired document bootstrap CI [0.6921, 0.8047]), improving all 64 PG19 documents. Direct recurrent and convolution reuse outperforms the tested learned GDN maps, consistent with partial functional compatibility of persistent-state coordinates. A fresh component factorial selects translated KV with direct recurrent and convolution state. An additional 434,176-parameter correction improves that base on 64 fresh web documents: continuation loss is 0.076 nats/token above native 9B (excess NLL), Jensen-Shannon (JS) divergence is 0.022, and native context recovery (NCR) is 0.918. Corrected 9B significantly beats continued 4B inference while processing zero historical prefix tokens. Evidence covers one direction, one geometry-matched Base-model pair, and 4K teacher-forced continuation; the near-native gate failed, the 16K branch was not run, and free-generation equivalence and a general state interface remain unproven.",
+      "identifiers": [
+        "SemanticScholar:4232e5d59b174c4a014648da60afb80d4a70e9e5"
+      ],
+      "semantic_scholar_id": "4232e5d59b174c4a014648da60afb80d4a70e9e5",
+      "canonical_id": "arXiv:2609.25053",
+      "arxiv_id": "2609.25053",
+      "doi": "10.48550/arXiv.2609.25053",
+      "authors": [
+        "Simon P. Villani"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
+      "source_url": "https://arxiv.org/abs/2610.14688",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-augmented data workflows often involve multiple heterogeneous models operating over substantial shared context, such as schemas, tool specifications, interaction history, and intermediate results. Although prefix caching can reduce prefilling overhead, existing approaches are largely limited to reuse within the same model because KV states are tightly coupled to model-specific architectures. We present MapFlow, a system for efficient heterogeneous LLM serving via cross-model attention map reuse. Instead of reusing KV states, MapFlow reuses attention maps, which capture token dependency patterns and are more transferable across models. To enable efficient and accurate reuse, we combine partial recomputation with lightweight linear translation across layers and heads. To make attention reuse practical for long contexts, we further introduce block-level sparse compression and a fused retrieval kernel. Experiments show that MapFlow reduces prefilling latency and improves end-to-end serving efficiency while preserving generation quality across heterogeneous model pairs and multi-turn routing workloads. These results suggest that attention maps provide an effective reusable state for heterogeneous LLM serving, especially in prefix-heavy data workflows. Our code is available: https://github.com/PKU-DAIR/MapFlow.",
+      "identifiers": [
+        "SemanticScholar:5249bdd4109d35a21dd335749658ced6ceb8e34e"
+      ],
+      "semantic_scholar_id": "5249bdd4109d35a21dd335749658ced6ceb8e34e",
+      "canonical_id": "arXiv:2610.14688",
+      "arxiv_id": "2610.14688",
+      "doi": "10.1145/3856312",
+      "authors": [
+        "Zhan-Yang Jin",
+        "Yu-Ze Luo",
+        "Bin Cui",
+        "Xupeng Miao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.23085",
+      "year": 2026,
+      "published": "2026-09-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) and agentic AI systems are creating rapidly growing inference energy demands as model sizes grow and reasoning trajectories extend. While in practice, many queries do not require the capabilities of the largest available model, and routinely directing such queries to a high-capability model can introduce unnecessary, considerable computation and energy consumption. In this paper, we investigate whether adaptive routing across a heterogeneous pool of LLMs can reduce this energy burden without substantially compromising task performance. We design a language-model-based router that reads in each query and selects an answer model from a fixed candidate pool. The candidate models are first profiled through an offline tournament that records their correctness, latency, power, and GPU energy for each query. Using these measurements, the router is trained through supervised fine-tuning followed by group relative policy optimization (GRPO) with the tailored paradigms. Results demonstrate that learned routing can selectively allocate expensive model capacity based on query context and improve the accuracy-energy tradeoff in multi-LLM serving. Across seven benchmark tasks, we also observe a sharp accuracy-energy phase transition among routers, providing practical insights into improving energy efficiency while maintaining LLM performance.",
+      "identifiers": [
+        "SemanticScholar:7b3f399f69df290b68a0082d7a9bb4cf67e12772"
+      ],
+      "semantic_scholar_id": "7b3f399f69df290b68a0082d7a9bb4cf67e12772",
+      "canonical_id": "arXiv:2609.23085",
+      "arxiv_id": "2609.23085",
+      "doi": "10.48550/arXiv.2609.23085",
+      "authors": [
+        "Muhammad Abdur Rab Siddiqui",
+        "Daniela Rojas",
+        "Chen Yang",
+        "Wen-Qi Cui",
+        "Yuan-Yuan Shi",
+        "Yi-Ze Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.35188",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive large language model inference repeatedly invokes the target model to generate one token at a time, making generation sensitive to GPU memory movement and sequential execution. This study evaluates two-token multi-token prediction (MTP) against autoregressive decoding in a controlled single-request deployment on an NVIDIA A10G GPU. A 360-request benchmark covered plain-text, reasoning-intensive, and tool-calling workloads, while runtime telemetry, Nsight Systems, PyTorch Profiler, and selected Nsight Compute measurements were used to explain the observed performance. MTP increased output throughput by \\(1.91\\times\\) to \\(2.19\\times\\) across all prompts and reduced time to first output by 10.0--14.2\\%. Median mean acceptance length ranged from 2.370 to 2.595 tokens per verification iteration. Profiling showed that MTP introduced a longer and more complex execution path, including proposal, sampling, attention, gathering, and reduction operations. However, it required 56.4--78.1\\% fewer executions of the selected repeating CUDA Graph per generated token. The dominant MTP GEMM kernel was not faster than the dominant autoregressive GEMV kernel, and selected instances of both approached the A10G memory-bandwidth limit. These results show that MTP improved inference through amortization: greater token progress reduced repeated GPU execution sufficiently to outweigh the additional speculative-execution cost.",
+      "identifiers": [
+        "SemanticScholar:d7f682fc94c1a0340d45583297220df52f8b286d"
+      ],
+      "semantic_scholar_id": "d7f682fc94c1a0340d45583297220df52f8b286d",
+      "canonical_id": "arXiv:2609.35188",
+      "arxiv_id": "2609.35188",
+      "doi": "10.48550/arXiv.2609.35188",
+      "authors": [
+        "Suwesh Prasad Sah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Co-Serving LLM Watermarking on Modern Inference Engines",
+      "source_url": "https://arxiv.org/abs/2610.03955",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) watermarking is important for ownership verification and intellectual property protection. However, existing approaches focus on algorithmic design while treating LLM inference engines as separate components. This separation often introduces auxiliary models or external tools, increasing latency and memory overhead while limiting the use of modern inference optimizations. As a result, a deployment gap remains: practical watermarking must preserve utility, detectability, and robustness while minimizing serving overhead. To bridge this gap, we propose SWIFT, a framework that co-designs LLM watermarking with modern inference infrastructure. SWIFT (i) integrates text generation and watermark construction within a shared LLM backend to reduce re-computation, improve cache reuse, and simplify system complexity; (ii) uses instruction-guided candidate generation with semantic protection to preserve factual consistency and meaning; (iii) executes watermarking concurrently with generation through asynchronous co-serving and adaptive scheduling to reduce latency and improve resource utilization; and (iv) leverages vLLM optimizations to enhance serving efficiency. Extensive experiments across domains and tasks show that SWIFT achieves strong utility, detectability, robustness, and downstream performance while substantially improving serving efficiency. Specifically, it achieves the highest utility score (4.87), 99.65% detection accuracy compared with 76.65% for the low-latency baseline SynthID, and up to 97.7% detection under watermark removal attacks, with 5.9x lower latency than the highest-utility baseline, SafeSeal. These results demonstrate the benefits of co-designing watermarking with inference infrastructure for practical LLM serving.",
+      "identifiers": [
+        "SemanticScholar:74933159d75fefacfc54cb509ae11e80f724e341"
+      ],
+      "semantic_scholar_id": "74933159d75fefacfc54cb509ae11e80f724e341",
+      "canonical_id": "arXiv:2610.03955",
+      "arxiv_id": "2610.03955",
+      "authors": [
+        "Kieu Dang",
+        "Lai Phung",
+        "Ching-Yun Ko",
+        "Pin-Yu Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Revisiting Cauchy-Schwarz Norm Bounds for SDC Detection in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.18557",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) execute billions of floating-point operations per output token across many hardware accelerators. At this scale, hardware-induced faults can bypass system-level detection mechanisms and cause Silent Data Corruption (SDC). Algorithm-Based Fault Tolerance (ABFT) is the state-of-the-art technique for protecting matrix multiplication from such faults, but it incurs non-negligible computational overhead and requires thresholds to distinguish hardware-induced errors from floating-point roundoff. In this paper, we revisit Cauchy--Schwarz Norm Bounds (CSNB) as a low-overhead alternative for detecting SDC during LLM inference. We compare CSNB against ABFT through controlled fault injection and evaluate the runtime overhead of both verification and threshold determination across multiple model sizes, batch sizes, and generation lengths. Our results show that, on average, CSNB retains 99% of the fault detection capability of ABFT for the evaluated linear layers in dense LLMs, while reducing verification overhead by 87% and threshold determination overhead by 67%. For Mixture-of-Experts (MoE) router gate computations, however, CSNB retains only 55% of the fault detection capability of ABFT. These findings suggest that CSNB is a promising low-overhead alternative for protecting linear layers in dense LLMs, while checksum-based verification remains preferable for the evaluated MoE router gate.",
+      "identifiers": [
+        "SemanticScholar:2e7903641b375486622a2be9369e1d428319daa7"
+      ],
+      "semantic_scholar_id": "2e7903641b375486622a2be9369e1d428319daa7",
+      "canonical_id": "arXiv:2610.18557",
+      "arxiv_id": "2610.18557",
+      "authors": [
+        "Anton Altenbernd",
+        "Dylan Everingham",
+        "Philipp Wiesner",
+        "Odej Kao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.25053",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.25053",
+        "id:SemanticScholar:4232e5d59b174c4a014648da60afb80d4a70e9e5",
+        "id:arXiv:2609.25053",
+        "title:latentport beyond kv cache crossmodel transfer of recurrent memory in hybrid language models a 4bto9b hybridstate handoff without target prefix replay",
+        "url:https://arxiv.org/abs/2609.25053"
+      ],
+      "record": {
+        "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+        "source_url": "https://arxiv.org/abs/2609.25053",
+        "year": 2026,
+        "published": "2026-09-07",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Can one language model hand its live memory to another without the receiver rereading the context? We demonstrate useful persistent hybrid-state transfer across one architecture-matched Qwen3.5 4B-to-9B sibling pair. To our knowledge, this is the first demonstrated cross-model handoff of persistent recurrent inference state between differently sized hybrid language models without target prefix replay. Translated attention KV alone leaves a large gap; adding the Gated DeltaNet (GDN) persistent-state package lowers teacher-forced negative log-likelihood (NLL), the average next-token log-loss, by 0.747 nats/token (95% paired document bootstrap CI [0.6921, 0.8047]), improving all 64 PG19 documents. Direct recurrent and convolution reuse outperforms the tested learned GDN maps, consistent with partial functional compatibility of persistent-state coordinates. A fresh component factorial selects translated KV with direct recurrent and convolution state. An additional 434,176-parameter correction improves that base on 64 fresh web documents: continuation loss is 0.076 nats/token above native 9B (excess NLL), Jensen-Shannon (JS) divergence is 0.022, and native context recovery (NCR) is 0.918. Corrected 9B significantly beats continued 4B inference while processing zero historical prefix tokens. Evidence covers one direction, one geometry-matched Base-model pair, and 4K teacher-forced continuation; the near-native gate failed, the 16K branch was not run, and free-generation equivalence and a general state interface remain unproven.",
+        "identifiers": [
+          "SemanticScholar:4232e5d59b174c4a014648da60afb80d4a70e9e5"
+        ],
+        "semantic_scholar_id": "4232e5d59b174c4a014648da60afb80d4a70e9e5",
+        "canonical_id": "arXiv:2609.25053",
+        "arxiv_id": "2609.25053",
+        "doi": "10.48550/arXiv.2609.25053",
+        "authors": [
+          "Simon P. Villani"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 72,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14688",
+      "identity_tokens": [
+        "id:DOI:10.1145/3856312",
+        "id:SemanticScholar:5249bdd4109d35a21dd335749658ced6ceb8e34e",
+        "id:arXiv:2610.14688",
+        "title:accelerating crossmodel llm inference via attention map reuse",
+        "url:https://arxiv.org/abs/2610.14688"
+      ],
+      "record": {
+        "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
+        "source_url": "https://arxiv.org/abs/2610.14688",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM-augmented data workflows often involve multiple heterogeneous models operating over substantial shared context, such as schemas, tool specifications, interaction history, and intermediate results. Although prefix caching can reduce prefilling overhead, existing approaches are largely limited to reuse within the same model because KV states are tightly coupled to model-specific architectures. We present MapFlow, a system for efficient heterogeneous LLM serving via cross-model attention map reuse. Instead of reusing KV states, MapFlow reuses attention maps, which capture token dependency patterns and are more transferable across models. To enable efficient and accurate reuse, we combine partial recomputation with lightweight linear translation across layers and heads. To make attention reuse practical for long contexts, we further introduce block-level sparse compression and a fused retrieval kernel. Experiments show that MapFlow reduces prefilling latency and improves end-to-end serving efficiency while preserving generation quality across heterogeneous model pairs and multi-turn routing workloads. These results suggest that attention maps provide an effective reusable state for heterogeneous LLM serving, especially in prefix-heavy data workflows. Our code is available: https://github.com/PKU-DAIR/MapFlow.",
+        "identifiers": [
+          "SemanticScholar:5249bdd4109d35a21dd335749658ced6ceb8e34e"
+        ],
+        "semantic_scholar_id": "5249bdd4109d35a21dd335749658ced6ceb8e34e",
+        "canonical_id": "arXiv:2610.14688",
+        "arxiv_id": "2610.14688",
+        "doi": "10.1145/3856312",
+        "authors": [
+          "Zhan-Yang Jin",
+          "Yu-Ze Luo",
+          "Bin Cui",
+          "Xupeng Miao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23085",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.23085",
+        "id:SemanticScholar:7b3f399f69df290b68a0082d7a9bb4cf67e12772",
+        "id:arXiv:2609.23085",
+        "title:measured joules learned routes learning to route for energyefficient llm serving",
+        "url:https://arxiv.org/abs/2609.23085"
+      ],
+      "record": {
+        "title": "Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.23085",
+        "year": 2026,
+        "published": "2026-09-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) and agentic AI systems are creating rapidly growing inference energy demands as model sizes grow and reasoning trajectories extend. While in practice, many queries do not require the capabilities of the largest available model, and routinely directing such queries to a high-capability model can introduce unnecessary, considerable computation and energy consumption. In this paper, we investigate whether adaptive routing across a heterogeneous pool of LLMs can reduce this energy burden without substantially compromising task performance. We design a language-model-based router that reads in each query and selects an answer model from a fixed candidate pool. The candidate models are first profiled through an offline tournament that records their correctness, latency, power, and GPU energy for each query. Using these measurements, the router is trained through supervised fine-tuning followed by group relative policy optimization (GRPO) with the tailored paradigms. Results demonstrate that learned routing can selectively allocate expensive model capacity based on query context and improve the accuracy-energy tradeoff in multi-LLM serving. Across seven benchmark tasks, we also observe a sharp accuracy-energy phase transition among routers, providing practical insights into improving energy efficiency while maintaining LLM performance.",
+        "identifiers": [
+          "SemanticScholar:7b3f399f69df290b68a0082d7a9bb4cf67e12772"
+        ],
+        "semantic_scholar_id": "7b3f399f69df290b68a0082d7a9bb4cf67e12772",
+        "canonical_id": "arXiv:2609.23085",
+        "arxiv_id": "2609.23085",
+        "doi": "10.48550/arXiv.2609.23085",
+        "authors": [
+          "Muhammad Abdur Rab Siddiqui",
+          "Daniela Rojas",
+          "Chen Yang",
+          "Wen-Qi Cui",
+          "Yuan-Yuan Shi",
+          "Yi-Ze Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 60,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35188",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.35188",
+        "id:SemanticScholar:d7f682fc94c1a0340d45583297220df52f8b286d",
+        "id:arXiv:2609.35188",
+        "title:beneath the tokens a performance engineering study of multitoken prediction in gpuaccelerated llm inference",
+        "url:https://arxiv.org/abs/2609.35188"
+      ],
+      "record": {
+        "title": "Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.35188",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive large language model inference repeatedly invokes the target model to generate one token at a time, making generation sensitive to GPU memory movement and sequential execution. This study evaluates two-token multi-token prediction (MTP) against autoregressive decoding in a controlled single-request deployment on an NVIDIA A10G GPU. A 360-request benchmark covered plain-text, reasoning-intensive, and tool-calling workloads, while runtime telemetry, Nsight Systems, PyTorch Profiler, and selected Nsight Compute measurements were used to explain the observed performance. MTP increased output throughput by \\(1.91\\times\\) to \\(2.19\\times\\) across all prompts and reduced time to first output by 10.0--14.2\\%. Median mean acceptance length ranged from 2.370 to 2.595 tokens per verification iteration. Profiling showed that MTP introduced a longer and more complex execution path, including proposal, sampling, attention, gathering, and reduction operations. However, it required 56.4--78.1\\% fewer executions of the selected repeating CUDA Graph per generated token. The dominant MTP GEMM kernel was not faster than the dominant autoregressive GEMV kernel, and selected instances of both approached the A10G memory-bandwidth limit. These results show that MTP improved inference through amortization: greater token progress reduced repeated GPU execution sufficiently to outweigh the additional speculative-execution cost.",
+        "identifiers": [
+          "SemanticScholar:d7f682fc94c1a0340d45583297220df52f8b286d"
+        ],
+        "semantic_scholar_id": "d7f682fc94c1a0340d45583297220df52f8b286d",
+        "canonical_id": "arXiv:2609.35188",
+        "arxiv_id": "2609.35188",
+        "doi": "10.48550/arXiv.2609.35188",
+        "authors": [
+          "Suwesh Prasad Sah"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.03955",
+      "identity_tokens": [
+        "id:SemanticScholar:74933159d75fefacfc54cb509ae11e80f724e341",
+        "id:arXiv:2610.03955",
+        "title:adaptive coserving llm watermarking on modern inference engines",
+        "url:https://arxiv.org/abs/2610.03955"
+      ],
+      "record": {
+        "title": "Adaptive Co-Serving LLM Watermarking on Modern Inference Engines",
+        "source_url": "https://arxiv.org/abs/2610.03955",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) watermarking is important for ownership verification and intellectual property protection. However, existing approaches focus on algorithmic design while treating LLM inference engines as separate components. This separation often introduces auxiliary models or external tools, increasing latency and memory overhead while limiting the use of modern inference optimizations. As a result, a deployment gap remains: practical watermarking must preserve utility, detectability, and robustness while minimizing serving overhead. To bridge this gap, we propose SWIFT, a framework that co-designs LLM watermarking with modern inference infrastructure. SWIFT (i) integrates text generation and watermark construction within a shared LLM backend to reduce re-computation, improve cache reuse, and simplify system complexity; (ii) uses instruction-guided candidate generation with semantic protection to preserve factual consistency and meaning; (iii) executes watermarking concurrently with generation through asynchronous co-serving and adaptive scheduling to reduce latency and improve resource utilization; and (iv) leverages vLLM optimizations to enhance serving efficiency. Extensive experiments across domains and tasks show that SWIFT achieves strong utility, detectability, robustness, and downstream performance while substantially improving serving efficiency. Specifically, it achieves the highest utility score (4.87), 99.65% detection accuracy compared with 76.65% for the low-latency baseline SynthID, and up to 97.7% detection under watermark removal attacks, with 5.9x lower latency than the highest-utility baseline, SafeSeal. These results demonstrate the benefits of co-designing watermarking with inference infrastructure for practical LLM serving.",
+        "identifiers": [
+          "SemanticScholar:74933159d75fefacfc54cb509ae11e80f724e341"
+        ],
+        "semantic_scholar_id": "74933159d75fefacfc54cb509ae11e80f724e341",
+        "canonical_id": "arXiv:2610.03955",
+        "arxiv_id": "2610.03955",
+        "authors": [
+          "Kieu Dang",
+          "Lai Phung",
+          "Ching-Yun Ko",
+          "Pin-Yu Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18557",
+      "identity_tokens": [
+        "id:SemanticScholar:2e7903641b375486622a2be9369e1d428319daa7",
+        "id:arXiv:2610.18557",
+        "title:revisiting cauchyschwarz norm bounds for sdc detection in llm inference",
+        "url:https://arxiv.org/abs/2610.18557"
+      ],
+      "record": {
+        "title": "Revisiting Cauchy-Schwarz Norm Bounds for SDC Detection in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.18557",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) execute billions of floating-point operations per output token across many hardware accelerators. At this scale, hardware-induced faults can bypass system-level detection mechanisms and cause Silent Data Corruption (SDC). Algorithm-Based Fault Tolerance (ABFT) is the state-of-the-art technique for protecting matrix multiplication from such faults, but it incurs non-negligible computational overhead and requires thresholds to distinguish hardware-induced errors from floating-point roundoff. In this paper, we revisit Cauchy--Schwarz Norm Bounds (CSNB) as a low-overhead alternative for detecting SDC during LLM inference. We compare CSNB against ABFT through controlled fault injection and evaluate the runtime overhead of both verification and threshold determination across multiple model sizes, batch sizes, and generation lengths. Our results show that, on average, CSNB retains 99% of the fault detection capability of ABFT for the evaluated linear layers in dense LLMs, while reducing verification overhead by 87% and threshold determination overhead by 67%. For Mixture-of-Experts (MoE) router gate computations, however, CSNB retains only 55% of the fault detection capability of ABFT. These findings suggest that CSNB is a promising low-overhead alternative for protecting linear layers in dense LLMs, while checksum-based verification remains preferable for the evaluated MoE router gate.",
+        "identifiers": [
+          "SemanticScholar:2e7903641b375486622a2be9369e1d428319daa7"
+        ],
+        "semantic_scholar_id": "2e7903641b375486622a2be9369e1d428319daa7",
+        "canonical_id": "arXiv:2610.18557",
+        "arxiv_id": "2610.18557",
+        "authors": [
+          "Anton Altenbernd",
+          "Dylan Everingham",
+          "Philipp Wiesner",
+          "Odej Kao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6b0d9cf8db7113a1eb59153b989db9d1d8b34084dae9f7fb835b31dcacd8ff3f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

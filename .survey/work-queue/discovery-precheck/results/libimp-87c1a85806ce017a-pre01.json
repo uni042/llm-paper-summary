@@ -1,0 +1,599 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-87c1a85806ce017a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-87c1a85806ce",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.40943",
+    "arXiv:2610.41160",
+    "arXiv:2610.41177",
+    "arXiv:2610.41291",
+    "arXiv:2610.41487",
+    "arXiv:2610.41508",
+    "arXiv:2610.41825",
+    "arXiv:2610.41919"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30e63bd150c22bf5bca5c5101a7e016c7a14fa37",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T10:12:40.026892+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.40943",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41160",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3789240.3828750"
+    },
+    {
+      "requested_id": "arXiv:2610.41177",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41487",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41508",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:282671cce9668cae22039050040b27522d615847"
+    },
+    {
+      "requested_id": "arXiv:2610.41825",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41919",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Kernel-based Interpolatory Methods for Context Compression of Attention Mechanisms",
+      "source_url": "https://arxiv.org/abs/2610.40943",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The bottleneck of attention mechanisms, which are the fundamental building block of modern language models, is their quadratic complexity in terms of context size. There has thus been an increasing interest in the compression of the context, also called KV-cache compression. In this article, we consider the problem of compressing the context of attention mechanisms by first formulating it in the Hilbert space associated with its kernel. In this formalism, attention can be represented as the ratio of two linear maps whose interpolant is also the ratio of interpolants, this allows us to consider the interpolation of the linear maps directly. We thus introduce two novel KV-cache compression methods which we call GAIM and Q-DAIM, based on the Generalized Empirical Interpolation Method (GEIM) and the Q-Discrete Empirical Interpolation Method (Q-DEIM), respectively. As the cost of these methods is quadratic in terms of context length, we propose surrogate models based on the Taylor series, the Performer and the Random Fourier Features method which allow the compression to be done in linear time. Finally, we extend this result to the streaming attention setting, providing new methods which allow one to penalize the selection of interpolation nodes based on the previously interpolated context and to update the previous interpolation based on new information. We then provide numerical results on the convergence of the residuals and the output error in future queries and preliminary results on the LongBench-E benchmark showing performance comparable to the state-of-the-art methods. These experiments suggest that the range revealed by our Q-DAIM method could help identify where information is concentrated in the KV cache, thus enabling an efficient compression.",
+      "identifiers": [
+        "SemanticScholar:670e69c8f4f66ed97b87598f004849f0ab19e739"
+      ],
+      "semantic_scholar_id": "670e69c8f4f66ed97b87598f004849f0ab19e739",
+      "canonical_id": "arXiv:2610.40943",
+      "arxiv_id": "2610.40943",
+      "authors": [
+        "Michel Fabrice Serret",
+        "L. Grigori"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TraceSpec: Understanding and Improving Speculative Decoding for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.41177",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents execute tasks through repeated model calls over evolving histories of reasoning, actions, and tool feedback. Aggregate speculative-decoding metrics merge these distinct decisions, providing limited guidance on where draft supervision is needed. We present TraceSpec, a framework connecting trajectory evaluation with adaptive draft training. It combines dynamic execution with fixed-prefix replay and introduces TraceSpec-Traj, a corpus of 10,000 training states and 2,500 test states spanning browsing and software engineering. Analysis of five speculative baselines reveals that aggregate acceptance can rise with context length while declining within matched late browsing actions. Workload and phase further distinguish these trends, motivating supervision guided by trajectory conditions. TraceSpec trains on intermediate assistant turns and allocates a fixed prediction budget using state-conditioned estimates of prefix-aware acceptance gaps. Across three target sizes and two temperatures, it improves replay throughput by 12.5% to 22.6% over its DSpark base. Qwen3-4B ablations show that adaptive allocation increases accepted length by 3.3% to 10.0% over fixed full-turn supervision, with additional comparisons substantiating the roles of state conditioning and consecutive-token agreement. The resulting evaluation resources, trajectory findings, and training strategy connect the analysis of agent execution to practical draft improvement.",
+      "identifiers": [
+        "SemanticScholar:88db0f0317de444ee1f6bef8ab392f3fe9dac3a7"
+      ],
+      "semantic_scholar_id": "88db0f0317de444ee1f6bef8ab392f3fe9dac3a7",
+      "canonical_id": "arXiv:2610.41177",
+      "arxiv_id": "2610.41177",
+      "authors": [
+        "Jihao Zhao",
+        "Shuai-Shuai Zu",
+        "Peng-Fei Li",
+        "Biao Qin",
+        "Guang-Huan Fang",
+        "Ben Feng",
+        "Bao-Chuan Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.41291",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon LLM agents play an important role in solving complex and sustained tasks, with ever-growing interaction contexts. However, these accumulated contexts will raise substantial computational cost and obscure key decision-relevant evidence. Existing methods typically train external compressors or context-management agents to rewrite context as shorter hard-token sequences, but such external selection may not align with the LLM's evolving representation and is necessarily lossy. In this paper, we introduce Agentic Soft-Token Compression (ASTC), a training-free compression method using soft tokens within LLM agent for long-horizon tasks. Specifically, ASTC uses the model's native recurrent dynamics to determine the already absorbed information, leveraging the commonly-used hybrid Gated Delta Network (GDN)-attention. It then carries this information forward as agentic soft tokens while retaining exact values as hard tokens. The resulting compact sequence reduces later-layer computation and yields reusable KV caches, extending the savings across the agent's trajectory. Extensive experiments on long-horizon tasks show that ASTC matches or exceeds the uncompressed agent's accuracy with up to 59.84% fewer end-to-end Attention Pairs, while trained compressors require 12.3 to 194.9 times more Attention Pairs per successful task. These findings highlight agentic soft tokens as a model-native way to carry absorbed context forward as the task representation evolves.",
+      "identifiers": [
+        "SemanticScholar:7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf"
+      ],
+      "semantic_scholar_id": "7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf",
+      "canonical_id": "arXiv:2610.41291",
+      "arxiv_id": "2610.41291",
+      "authors": [
+        "Xu-Ning He",
+        "Kai-Hsiang Fan",
+        "Run-Yu Zhang",
+        "Bing Wang",
+        "Yu-Xiang Zhang",
+        "Xue Jiang",
+        "Yihong Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sparse Text Diffusion under Dual Budgets: Context Connectivity and Expert Activation",
+      "source_url": "https://arxiv.org/abs/2610.41487",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context diffusion repeatedly pays for both token interaction and feed-forward computation. We formulate these costs as two separate budgets: the edges available to an attention graph and the experts activated for each token. This view connects local, dilated, and global attention with conditional expert computation without assuming that sparsity alone preserves document-level information. We specify normalized masked attention, distinguish denoising depth from sampling iterations, and derive graph and compute bounds. A reported sparse-expert configuration, denoted DualBudget, is analyzed across scientific summarization, multi-hop question answering, dialogue, and sentence-pair prediction. All supplied table measurements are retained. The length study shows gains over the listed baselines through 16K, together with measurable degradation as length increases. Ablations reveal mixed changes across the three reported scores, while the cost record indicates a 20% reduction relative to DiffuSeq under an unspecified timing convention. The analysis separates these observations from unmeasured claims about training speed, absorbing states, global coherence, and deployment memory.",
+      "identifiers": [
+        "SemanticScholar:2d905f2e03813f937eca3a405a6ce4ec54e113f8"
+      ],
+      "semantic_scholar_id": "2d905f2e03813f937eca3a405a6ce4ec54e113f8",
+      "canonical_id": "arXiv:2610.41487",
+      "arxiv_id": "2610.41487",
+      "authors": [
+        "Alexandros Christoforos",
+        "Chadbourne Davis",
+        "P. Raj"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn",
+      "source_url": "https://arxiv.org/abs/2610.41825",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A looped language model applies one block of layers 4 times per token and keeps a key/value (KV) plane for each loop. We study where storage error changes the next-token distribution and how shared-weight error accumulates, using Ouro-1.4B (4 loops) on GSM8K and MATH and Huginn-0125 (32 loops) on GSM8K-derived chains, with dense, simulated quantization. Per unit of error, values carry 94% of the diagonal Fisher mass, but measured KL is dominated by keys with larger quantization errors. Local second-order prediction follows the measured KL of typical sequences, including 136 held-out chains, but misses a few confident rows, and a local second-order factor for shared weights at 32 loops ranges from 1.65 (INT8) to 4.09 (INT4), so it depends on the error direction. A cell-level allocator lowers one-step KL at 25-48% of BF16 bytes, while paired task-accuracy comparisons depend on budget and the 25% gap against K4V2 shrinks to near zero under a post hoc answer-extraction check. A later Ouro-2.6B test retains the key/value split but falsifies measured-cost allocation's advantage over Fisher at 31%; across all 21 ledger registrations, 60 of 176 criteria failed.",
+      "identifiers": [
+        "SemanticScholar:e6ebb9a5e1642d1b42b0f73062eff1953af03848"
+      ],
+      "semantic_scholar_id": "e6ebb9a5e1642d1b42b0f73062eff1953af03848",
+      "canonical_id": "arXiv:2610.41825",
+      "arxiv_id": "2610.41825",
+      "authors": [
+        "De-Zhen Lu",
+        "Run-Guo Li",
+        "Zi-Xiang Ni",
+        "Yu-Chen Tang",
+        "Xing-Quan Kong",
+        "Jia-Xing Yang",
+        "Jia-Rui Guo",
+        "Ling-Xiang Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads",
+      "source_url": "https://arxiv.org/abs/2610.41919",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We evaluate NVIDIA B200 and B300 (Blackwell Ultra) GPUs on two independent eight-GPU clusters, spanning computer-vision inference and training, LLM inference with Llama-3-8B and 70B~\\cite{llama3}, and six production HPC codes. The B300 is not a uniform successor to the B200: it trails by up to 5.6$\\times$ on convolutional inference, 8$\\times$ on 3D vision transformer training, 24--27\\% on 70B LLM throughput, and 16$\\times$ on double-precision Quantum ESPRESSO. We resolve the convolutional deficit using per-GPU board power rather than throughput alone: on the affected workloads the B300 draws only 36--53\\% of its 1100\\,W envelope, whereas on ViT-Large, which it wins, both parts saturate at 95--97\\% of TDP. Because our harness keeps inputs resident in device memory, a host-side data pipeline is excluded by construction, localizing the cause to per-kernel cost. Two B300 nodes of identical silicon differ by 2.1$\\times$ in time-to-first-token solely from a development vLLM build. We give per-workload procurement guidance.",
+      "identifiers": [
+        "SemanticScholar:65ca912cb87ecb963295f1e39f2abbe6a97cb77c"
+      ],
+      "semantic_scholar_id": "65ca912cb87ecb963295f1e39f2abbe6a97cb77c",
+      "canonical_id": "arXiv:2610.41919",
+      "arxiv_id": "2610.41919",
+      "authors": [
+        "Mohsen Zand",
+        "Trung Dac Nguyen",
+        "H. Runesha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.40943",
+      "identity_tokens": [
+        "id:SemanticScholar:670e69c8f4f66ed97b87598f004849f0ab19e739",
+        "id:arXiv:2610.40943",
+        "title:kernelbased interpolatory methods for context compression of attention mechanisms",
+        "url:https://arxiv.org/abs/2610.40943"
+      ],
+      "record": {
+        "title": "Kernel-based Interpolatory Methods for Context Compression of Attention Mechanisms",
+        "source_url": "https://arxiv.org/abs/2610.40943",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The bottleneck of attention mechanisms, which are the fundamental building block of modern language models, is their quadratic complexity in terms of context size. There has thus been an increasing interest in the compression of the context, also called KV-cache compression. In this article, we consider the problem of compressing the context of attention mechanisms by first formulating it in the Hilbert space associated with its kernel. In this formalism, attention can be represented as the ratio of two linear maps whose interpolant is also the ratio of interpolants, this allows us to consider the interpolation of the linear maps directly. We thus introduce two novel KV-cache compression methods which we call GAIM and Q-DAIM, based on the Generalized Empirical Interpolation Method (GEIM) and the Q-Discrete Empirical Interpolation Method (Q-DEIM), respectively. As the cost of these methods is quadratic in terms of context length, we propose surrogate models based on the Taylor series, the Performer and the Random Fourier Features method which allow the compression to be done in linear time. Finally, we extend this result to the streaming attention setting, providing new methods which allow one to penalize the selection of interpolation nodes based on the previously interpolated context and to update the previous interpolation based on new information. We then provide numerical results on the convergence of the residuals and the output error in future queries and preliminary results on the LongBench-E benchmark showing performance comparable to the state-of-the-art methods. These experiments suggest that the range revealed by our Q-DAIM method could help identify where information is concentrated in the KV cache, thus enabling an efficient compression.",
+        "identifiers": [
+          "SemanticScholar:670e69c8f4f66ed97b87598f004849f0ab19e739"
+        ],
+        "semantic_scholar_id": "670e69c8f4f66ed97b87598f004849f0ab19e739",
+        "canonical_id": "arXiv:2610.40943",
+        "arxiv_id": "2610.40943",
+        "authors": [
+          "Michel Fabrice Serret",
+          "L. Grigori"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41177",
+      "identity_tokens": [
+        "id:SemanticScholar:88db0f0317de444ee1f6bef8ab392f3fe9dac3a7",
+        "id:arXiv:2610.41177",
+        "title:tracespec understanding and improving speculative decoding for llm agents",
+        "url:https://arxiv.org/abs/2610.41177"
+      ],
+      "record": {
+        "title": "TraceSpec: Understanding and Improving Speculative Decoding for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2610.41177",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents execute tasks through repeated model calls over evolving histories of reasoning, actions, and tool feedback. Aggregate speculative-decoding metrics merge these distinct decisions, providing limited guidance on where draft supervision is needed. We present TraceSpec, a framework connecting trajectory evaluation with adaptive draft training. It combines dynamic execution with fixed-prefix replay and introduces TraceSpec-Traj, a corpus of 10,000 training states and 2,500 test states spanning browsing and software engineering. Analysis of five speculative baselines reveals that aggregate acceptance can rise with context length while declining within matched late browsing actions. Workload and phase further distinguish these trends, motivating supervision guided by trajectory conditions. TraceSpec trains on intermediate assistant turns and allocates a fixed prediction budget using state-conditioned estimates of prefix-aware acceptance gaps. Across three target sizes and two temperatures, it improves replay throughput by 12.5% to 22.6% over its DSpark base. Qwen3-4B ablations show that adaptive allocation increases accepted length by 3.3% to 10.0% over fixed full-turn supervision, with additional comparisons substantiating the roles of state conditioning and consecutive-token agreement. The resulting evaluation resources, trajectory findings, and training strategy connect the analysis of agent execution to practical draft improvement.",
+        "identifiers": [
+          "SemanticScholar:88db0f0317de444ee1f6bef8ab392f3fe9dac3a7"
+        ],
+        "semantic_scholar_id": "88db0f0317de444ee1f6bef8ab392f3fe9dac3a7",
+        "canonical_id": "arXiv:2610.41177",
+        "arxiv_id": "2610.41177",
+        "authors": [
+          "Jihao Zhao",
+          "Shuai-Shuai Zu",
+          "Peng-Fei Li",
+          "Biao Qin",
+          "Guang-Huan Fang",
+          "Ben Feng",
+          "Bao-Chuan Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41291",
+      "identity_tokens": [
+        "id:SemanticScholar:7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf",
+        "id:arXiv:2610.41291",
+        "title:inmodel context compression with agentic soft tokens for longhorizon llm agents",
+        "url:https://arxiv.org/abs/2610.41291"
+      ],
+      "record": {
+        "title": "In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents",
+        "source_url": "https://arxiv.org/abs/2610.41291",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-horizon LLM agents play an important role in solving complex and sustained tasks, with ever-growing interaction contexts. However, these accumulated contexts will raise substantial computational cost and obscure key decision-relevant evidence. Existing methods typically train external compressors or context-management agents to rewrite context as shorter hard-token sequences, but such external selection may not align with the LLM's evolving representation and is necessarily lossy. In this paper, we introduce Agentic Soft-Token Compression (ASTC), a training-free compression method using soft tokens within LLM agent for long-horizon tasks. Specifically, ASTC uses the model's native recurrent dynamics to determine the already absorbed information, leveraging the commonly-used hybrid Gated Delta Network (GDN)-attention. It then carries this information forward as agentic soft tokens while retaining exact values as hard tokens. The resulting compact sequence reduces later-layer computation and yields reusable KV caches, extending the savings across the agent's trajectory. Extensive experiments on long-horizon tasks show that ASTC matches or exceeds the uncompressed agent's accuracy with up to 59.84% fewer end-to-end Attention Pairs, while trained compressors require 12.3 to 194.9 times more Attention Pairs per successful task. These findings highlight agentic soft tokens as a model-native way to carry absorbed context forward as the task representation evolves.",
+        "identifiers": [
+          "SemanticScholar:7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf"
+        ],
+        "semantic_scholar_id": "7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf",
+        "canonical_id": "arXiv:2610.41291",
+        "arxiv_id": "2610.41291",
+        "authors": [
+          "Xu-Ning He",
+          "Kai-Hsiang Fan",
+          "Run-Yu Zhang",
+          "Bing Wang",
+          "Yu-Xiang Zhang",
+          "Xue Jiang",
+          "Yihong Dong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41487",
+      "identity_tokens": [
+        "id:SemanticScholar:2d905f2e03813f937eca3a405a6ce4ec54e113f8",
+        "id:arXiv:2610.41487",
+        "title:sparse text diffusion under dual budgets context connectivity and expert activation",
+        "url:https://arxiv.org/abs/2610.41487"
+      ],
+      "record": {
+        "title": "Sparse Text Diffusion under Dual Budgets: Context Connectivity and Expert Activation",
+        "source_url": "https://arxiv.org/abs/2610.41487",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context diffusion repeatedly pays for both token interaction and feed-forward computation. We formulate these costs as two separate budgets: the edges available to an attention graph and the experts activated for each token. This view connects local, dilated, and global attention with conditional expert computation without assuming that sparsity alone preserves document-level information. We specify normalized masked attention, distinguish denoising depth from sampling iterations, and derive graph and compute bounds. A reported sparse-expert configuration, denoted DualBudget, is analyzed across scientific summarization, multi-hop question answering, dialogue, and sentence-pair prediction. All supplied table measurements are retained. The length study shows gains over the listed baselines through 16K, together with measurable degradation as length increases. Ablations reveal mixed changes across the three reported scores, while the cost record indicates a 20% reduction relative to DiffuSeq under an unspecified timing convention. The analysis separates these observations from unmeasured claims about training speed, absorbing states, global coherence, and deployment memory.",
+        "identifiers": [
+          "SemanticScholar:2d905f2e03813f937eca3a405a6ce4ec54e113f8"
+        ],
+        "semantic_scholar_id": "2d905f2e03813f937eca3a405a6ce4ec54e113f8",
+        "canonical_id": "arXiv:2610.41487",
+        "arxiv_id": "2610.41487",
+        "authors": [
+          "Alexandros Christoforos",
+          "Chadbourne Davis",
+          "P. Raj"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41825",
+      "identity_tokens": [
+        "id:SemanticScholar:e6ebb9a5e1642d1b42b0f73062eff1953af03848",
+        "id:arXiv:2610.41825",
+        "title:where kvcache error lives in looped language models a diagnostic study of ouro and huginn",
+        "url:https://arxiv.org/abs/2610.41825"
+      ],
+      "record": {
+        "title": "Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn",
+        "source_url": "https://arxiv.org/abs/2610.41825",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A looped language model applies one block of layers 4 times per token and keeps a key/value (KV) plane for each loop. We study where storage error changes the next-token distribution and how shared-weight error accumulates, using Ouro-1.4B (4 loops) on GSM8K and MATH and Huginn-0125 (32 loops) on GSM8K-derived chains, with dense, simulated quantization. Per unit of error, values carry 94% of the diagonal Fisher mass, but measured KL is dominated by keys with larger quantization errors. Local second-order prediction follows the measured KL of typical sequences, including 136 held-out chains, but misses a few confident rows, and a local second-order factor for shared weights at 32 loops ranges from 1.65 (INT8) to 4.09 (INT4), so it depends on the error direction. A cell-level allocator lowers one-step KL at 25-48% of BF16 bytes, while paired task-accuracy comparisons depend on budget and the 25% gap against K4V2 shrinks to near zero under a post hoc answer-extraction check. A later Ouro-2.6B test retains the key/value split but falsifies measured-cost allocation's advantage over Fisher at 31%; across all 21 ledger registrations, 60 of 176 criteria failed.",
+        "identifiers": [
+          "SemanticScholar:e6ebb9a5e1642d1b42b0f73062eff1953af03848"
+        ],
+        "semantic_scholar_id": "e6ebb9a5e1642d1b42b0f73062eff1953af03848",
+        "canonical_id": "arXiv:2610.41825",
+        "arxiv_id": "2610.41825",
+        "authors": [
+          "De-Zhen Lu",
+          "Run-Guo Li",
+          "Zi-Xiang Ni",
+          "Yu-Chen Tang",
+          "Xing-Quan Kong",
+          "Jia-Xing Yang",
+          "Jia-Rui Guo",
+          "Ling-Xiang Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41919",
+      "identity_tokens": [
+        "id:SemanticScholar:65ca912cb87ecb963295f1e39f2abbe6a97cb77c",
+        "id:arXiv:2610.41919",
+        "title:matching workloads to blackwell powerresolved benchmarking of nvidia b200 and b300 across hpc and ai workloads",
+        "url:https://arxiv.org/abs/2610.41919"
+      ],
+      "record": {
+        "title": "Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads",
+        "source_url": "https://arxiv.org/abs/2610.41919",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We evaluate NVIDIA B200 and B300 (Blackwell Ultra) GPUs on two independent eight-GPU clusters, spanning computer-vision inference and training, LLM inference with Llama-3-8B and 70B~\\cite{llama3}, and six production HPC codes. The B300 is not a uniform successor to the B200: it trails by up to 5.6$\\times$ on convolutional inference, 8$\\times$ on 3D vision transformer training, 24--27\\% on 70B LLM throughput, and 16$\\times$ on double-precision Quantum ESPRESSO. We resolve the convolutional deficit using per-GPU board power rather than throughput alone: on the affected workloads the B300 draws only 36--53\\% of its 1100\\,W envelope, whereas on ViT-Large, which it wins, both parts saturate at 95--97\\% of TDP. Because our harness keeps inputs resident in device memory, a host-side data pipeline is excluded by construction, localizing the cause to per-kernel cost. Two B300 nodes of identical silicon differ by 2.1$\\times$ in time-to-first-token solely from a development vLLM build. We give per-workload procurement guidance.",
+        "identifiers": [
+          "SemanticScholar:65ca912cb87ecb963295f1e39f2abbe6a97cb77c"
+        ],
+        "semantic_scholar_id": "65ca912cb87ecb963295f1e39f2abbe6a97cb77c",
+        "canonical_id": "arXiv:2610.41919",
+        "arxiv_id": "2610.41919",
+        "authors": [
+          "Mohsen Zand",
+          "Trung Dac Nguyen",
+          "H. Runesha"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4ba20e58111113e0ff213049a3da674ad34531f96d273c2b6a83f80500acee07",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
