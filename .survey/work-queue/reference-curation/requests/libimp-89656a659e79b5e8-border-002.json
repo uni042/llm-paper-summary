@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-89656a659e79b5e8-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.27965",
+  "reason": "arXiv一次要旨で、学習時にFFNを複数expertへ展開し、重み付き融合で単一expert相当の順伝播を行い、学習後も一つへ統合して配置時の追加記憶費を避けることを確認。主たる新規性は学習効率・初期化であり、LLM推論サービング性能の直接評価がないため境界候補。",
+  "title": "ExFusion: Efficient Transformer Training via Multi-Experts Fusion",
+  "identity_tokens": [
+    "arXiv:2603.27965"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-89656a659e79",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

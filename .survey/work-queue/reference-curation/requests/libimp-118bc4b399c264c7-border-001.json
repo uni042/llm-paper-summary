@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-118bc4b399c264c7-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.42030",
+  "reason": "既存の事前学習モデルにlayer loopを追加する際のパラメータ数・メモリ不変とtoken当たりFLOPs増加を等パラメータ/等FLOPs基準で比較。Qwen3/Qwen3.5の0.8B〜9Bでは0.8Bのみ両基準を上回り、4B/9Bは非loopモデルにも劣る。推論計算量対品質の負の結果として設計判断に有用だが、serving実測のtoken/sやlatency改善を提案するものではないためborderline。",
+  "title": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+  "identity_tokens": [
+    "arXiv:2610.42030"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-118bc4b399c2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

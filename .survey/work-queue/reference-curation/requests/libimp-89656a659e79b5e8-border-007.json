@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-89656a659e79b5e8-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2510.03805",
+  "reason": "arXiv一次要旨でStep Prunerを確認。推論ステップ単位の報酬と動的な学習停止により、推論時の冗長な思考ステップを削減し、AIME24で出力トークンを69.7%削減したと報告。ただし中心機構はRLポストトレーニングであり、サービング実行系の直接的な最適化ではないため境界候補。",
+  "title": "Beyond Token Length: Step Pruner for Efficient and Accurate Reasoning in Large Language Models",
+  "identity_tokens": [
+    "arXiv:2510.03805"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-89656a659e79",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

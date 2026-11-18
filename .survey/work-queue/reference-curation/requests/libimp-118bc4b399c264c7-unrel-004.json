@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-118bc4b399c264c7-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.42000",
+  "reason": "instruction fine-tuning後の忘却による言語モデルloss悪化を固定vocabulary biasとtemperatureで補正。14組の1B〜7Bモデルでbias単独の回復推定は10%未満、temperature併用で最大36%と報告。生成logit補正によるモデル品質回復であり、計算・メモリ・サービング効率の改善は扱わないためunrelated。",
+  "title": "Less Loss, Fixed Weights: Logit Corrections for Forgetting",
+  "identity_tokens": [
+    "arXiv:2610.42000"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-118bc4b399c2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
