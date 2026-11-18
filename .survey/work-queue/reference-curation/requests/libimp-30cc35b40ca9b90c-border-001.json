@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-30cc35b40ca9b90c-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.32096",
+  "reason": "DELAはfrozen diffusion LMにInsert/Delete/Remask/Stopを選ぶ編集controllerを付加。KV cacheを再利用しやすいappend-only下書き段階と、非単調な全体修正段階に分ける。ただし主結果は数学・コード生成で最大5.5ポイントの品質改善であり、end-to-end推論速度や計算削減の定量評価が要旨にないためborderline。",
+  "title": "DELA: Learning Controllable Edits for Diffusion Language Models",
+  "identity_tokens": [
+    "arXiv:2610.32096"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30cc35b40ca9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
