@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-87311e54e75dab9f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.39876",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.39876",
+    "identity_tokens": [
+      "arXiv:2610.39876"
+    ],
+    "reason": "複数MoE専門家を統合するcalibrated on-policy distillationと、容量制約付きdispatch・routing replay・非同期rollout/学習重畳を組み合わせる。Turing-20B-A2BでPPU構成の統合step時間398.7秒→139.3秒（2.86倍）。計測対象はpost-trainingの統合処理であり、通常サービング推論の速度ではないためborderline。",
+    "first_checked_at": "2026-11-18T12:39:29+00:00",
+    "last_checked_at": "2026-11-18T12:39:29+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Turing LLM Post-Training: Calibrated Distillation and Efficient Dynamic-MoE Execution"
+  },
+  "processed_at": "2026-11-18T12:39:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87311e54e75d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

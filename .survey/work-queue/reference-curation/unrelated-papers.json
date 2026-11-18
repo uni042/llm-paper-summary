@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T12:19:44+00:00",
-  "record_count": 12900,
+  "updated_at": "2026-11-18T12:39:40+00:00",
+  "record_count": 12897,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182499,11 +182499,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2601.17836",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.17836",
         "arXiv:2601.17836"
       ],
-      "reason": "推薦システム向け疎自己注意SparseCTR。長期のユーザ行動列を、個人化と時間変化に合わせた疎注意で効率的にモデル化する。対象は推薦モデルの注意効率であり、LLM推論システムではない。異分野応用のため対象外。",
+      "reason": "SparseCTRは推薦システムのクリック率予測に特化し、長期ユーザー行動列を三分岐疎注意で処理する。LLMを背景に言及するが、評価はCTR/CPMであり生成LLM推論システムとは対象が異なる。",
       "first_checked_at": "2026-11-15T21:43:22+00:00",
-      "last_checked_at": "2026-11-15T21:43:22+00:00",
+      "last_checked_at": "2026-11-18T12:39:35+00:00",
       "linked_from": [
         "inference-systems",
         "sparse attention / long-context Transformer",
@@ -182621,9 +182622,9 @@
       "identity_tokens": [
         "arXiv:2512.22307"
       ],
-      "reason": "生成モデルの知的財産保護LLA。ニューロンへの鍵ビット埋め込みとアクセラレータ側のロック機構で、モデル窃取や改竄、情報漏洩から守るハードウェア・ソフトウェア協調の保護方式。対象はセキュリティであり、推論効率や推論システムの機構ではない。対象外。",
+      "reason": "一次arXiv書誌・要旨ではモデル盗難・改変・情報漏洩への対策としてニューラル重みに鍵を埋め込み、アクセラレータの論理ロックで利用を制限するLLAを提案。鍵7168bitで計算オーバーヘッド0.1%未満と報告するが、主目的は知的財産保護・セキュリティであり推論高速化やメモリ管理への直接貢献はない。",
       "first_checked_at": "2026-11-18T03:45:08+00:00",
-      "last_checked_at": "2026-11-18T03:45:08+00:00",
+      "last_checked_at": "2026-11-18T12:39:38+00:00",
       "linked_from": [
         "inference-systems"
       ],
@@ -182762,20 +182763,6 @@
       ],
       "title": "Neural Language Generation: Formulation, Methods, and Evaluation"
     },
-    "arXiv:2403.16899": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2403.16899",
-      "identity_tokens": [
-        "arXiv:2403.16899"
-      ],
-      "reason": "基盤モデルとしての状態空間モデルの制御理論的概観。Mamba等のSSMと制御理論の接続を解説する入門的な概説であり、推論システムの機構の提案ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:12:06+00:00",
-      "last_checked_at": "2026-11-18T06:12:06+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "State Space Models as Foundation Models: A Control Theoretic Overview"
-    },
     "arXiv:2406.01159": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2406.01159",
@@ -182796,9 +182783,9 @@
       "identity_tokens": [
         "arXiv:2406.12272"
       ],
-      "reason": "スロット状態空間モデルSlotSSM。状態をスロットの集合として保ちモジュール構造の帰納バイアスを入れる系列モデルのアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
+      "reason": "独立した複数slot状態と疎な注意結合を持つSSMを提案し、物体中心学習、3D視覚推論、長尺動画理解で評価する。一次要旨に生成言語モデルの推論・デコード・メモリ効率評価はなく、視覚系列の表現学習が中心。",
       "first_checked_at": "2026-11-18T06:12:07+00:00",
-      "last_checked_at": "2026-11-18T06:12:07+00:00",
+      "last_checked_at": "2026-11-18T12:39:39+00:00",
       "linked_from": [
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
@@ -183075,22 +183062,6 @@
       ],
       "title": "AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost"
     },
-    "arXiv:2403.20262": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2403.20262",
-      "identity_tokens": [
-        "arXiv:2403.20262"
-      ],
-      "reason": "長文脈LLM向け会議アシスタントベンチマークELITR-Bench。自動音声認識の書き起こしという実場面の長文脈を評価するベンチマーク。対象は評価であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:16:40+00:00",
-      "last_checked_at": "2026-11-18T07:16:40+00:00",
-      "linked_from": [
-        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
-        "sparse attention / long-context Transformer",
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "ELITR-Bench: A Meeting Assistant Benchmark for Long-Context Language Models"
-    },
     "arXiv:2406.04342": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2406.04342",
@@ -183221,23 +183192,6 @@
       ],
       "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To"
     },
-    "arXiv:2603.13438": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.13438",
-      "identity_tokens": [
-        "arXiv:2603.13438"
-      ],
-      "reason": "動画生成ポリシー向け下書き・目標サンプリング。ロボットポリシーとしての動画生成モデルの推論を、下書きと目標の2軌跡で高速化する拡散推論。対象は動画生成であり、LLM推論の機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:17:03+00:00",
-      "last_checked_at": "2026-11-18T07:17:03+00:00",
-      "linked_from": [
-        "Speculative Decoding",
-        "survey-speculative-decoding",
-        "投機的デコード / 分布保存型デコード高速化",
-        "投機的復号 / 無損失復号高速化"
-      ],
-      "title": "Draft-and-Target Sampling for Video Generation Policy"
-    },
     "arXiv:2606.04048": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2606.04048",
@@ -183281,22 +183235,6 @@
         "疎注意／長文脈学習"
       ],
       "title": "Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search"
-    },
-    "arXiv:2506.22175": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.22175",
-      "identity_tokens": [
-        "arXiv:2506.22175"
-      ],
-      "reason": "一次要旨はMoEの学習を複数substageへ分割するadaptive pipeline parallelismと、学習中のactivation・一時buffer再利用を中心に説明する。対象はMoE trainingのメモリ・通信効率であり、LLMの推論サービング、decode、推論時expert配置の具体的貢献は要旨から確認できない。現行サーベイの学習専用高速化凍結範囲に該当。",
-      "first_checked_at": "2026-11-18T07:17:09+00:00",
-      "last_checked_at": "2026-11-18T11:28:54+00:00",
-      "linked_from": [
-        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
-        "分散MoE学習 / ZeRO / CPUオフロード / 多次元並列",
-        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
-      ],
-      "title": "MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism"
     },
     "arXiv:2509.19191": {
       "classification": "unrelated",
@@ -183344,23 +183282,6 @@
         "inference-systems"
       ],
       "title": "HyScale: Scaling Long-Context Training for Learned Sparse Attention"
-    },
-    "arXiv:2609.26488": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2609.26488",
-      "identity_tokens": [
-        "arXiv:2609.26488"
-      ],
-      "reason": "声に出して考える音声言語モデル。思考しながら短い進捗発話を並行生成する非同期の枠組み。対象は音声対話モデルであり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:27:42+00:00",
-      "last_checked_at": "2026-11-18T07:27:42+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
-        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
-        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
-      ],
-      "title": "Spoken Language Models that Think Aloud"
     },
     "arXiv:2610.32604": {
       "classification": "unrelated",
@@ -183740,22 +183661,6 @@
       ],
       "title": "LLM Fingerprinting via Semantically Conditioned Watermarks"
     },
-    "arXiv:2009.06857": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2009.06857",
-      "identity_tokens": [
-        "arXiv:2009.06857"
-      ],
-      "reason": "言語モデルの現在の限界：必要なのは検索である。性能と計算のトレードオフを改善する諸アプローチを分類し限界を論じる論考。対象は論考であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:37+00:00",
-      "last_checked_at": "2026-11-18T07:47:37+00:00",
-      "linked_from": [
-        "inference-systems",
-        "sparse attention / long-context Transformer",
-        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
-      ],
-      "title": "Current Limitations of Language Models: What You Need is Retrieval"
-    },
     "arXiv:2312.09211": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2312.09211",
@@ -183855,20 +183760,6 @@
       ],
       "title": "System-performance and cost modeling of Large Language Model training and inference"
     },
-    "arXiv:2508.18672": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2508.18672",
-      "identity_tokens": [
-        "arXiv:2508.18672"
-      ],
-      "reason": "推論課題のためのMoE言語モデルの最適疎性。MoEの疎性が記憶と推論の能力体制にどう影響するかを訓練して調べるスケーリング研究。対象はモデルの訓練研究であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:40+00:00",
-      "last_checked_at": "2026-11-18T07:47:40+00:00",
-      "linked_from": [
-        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
-      ],
-      "title": "Optimal Sparsity of Mixture-of-Experts Language Models for Reasoning Tasks"
-    },
     "arXiv:2506.07919": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2506.07919",
@@ -183935,23 +183826,6 @@
         "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
       ],
       "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models"
-    },
-    "arXiv:2407.08330": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2407.08330",
-      "identity_tokens": [
-        "arXiv:2407.08330"
-      ],
-      "reason": "階層文書Transformer HDT。構造化された階層文書向けの疎Transformerアーキテクチャ。対象は文書モデルの設計であり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:56+00:00",
-      "last_checked_at": "2026-11-18T07:47:56+00:00",
-      "linked_from": [
-        "inference-systems",
-        "sparse attention / long-context Transformer",
-        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
-        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
-      ],
-      "title": "HDT: Hierarchical Document Transformer"
     },
     "arXiv:2605.06185": {
       "classification": "unrelated",
@@ -184183,20 +184057,6 @@
       ],
       "title": "PHOENIX: Open-Source Language Adaption for Direct Preference Optimization"
     },
-    "arXiv:2506.19761": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.19761",
-      "identity_tokens": [
-        "arXiv:2506.19761"
-      ],
-      "reason": "正確・高速・安価の3つを選ぶ：多頭注意の置き換え。長形音声認識のための線形複雑度の再帰注意の研究。対象は音声認識であり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:20+00:00",
-      "last_checked_at": "2026-11-18T08:08:20+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "Accurate, fast, cheap: Choose three. Replacing Multi-Head-Attention with Bidirectional Recurrent Attention for Long-Form ASR"
-    },
     "DOI:10.36948/ijfmr.2024.v06i06.32856": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.36948/ijfmr.2024.v06i06.32856",
@@ -184339,9 +184199,9 @@
       "identity_tokens": [
         "arXiv:2607.02214"
       ],
-      "reason": "音声言語モデルを指示チューニングなしで得るための重み結合による学習手法であり、推論への具体的適用は確認できない。",
+      "reason": "SpeechCombineは音声事前学習済みモデルへテキストLLMのinstruction tuning差分を重み合成して音声指示追従を獲得する。一次要旨の主張は学習データ・チューニング費用の削減と能力転移であり、推論のレイテンシ・KV削減やカーネル最適化は扱わない。",
       "first_checked_at": "2026-11-18T08:08:28+00:00",
-      "last_checked_at": "2026-11-18T08:08:28+00:00",
+      "last_checked_at": "2026-11-18T12:39:39+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
         "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
@@ -185658,6 +185518,83 @@
         "WORKLIST-45.md rank 500"
       ],
       "title": "Sub-network Discovery and Soft-masking for Continual Learning of Mixed Tasks"
+    },
+    "arXiv:2603.21465": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21465",
+      "identity_tokens": [
+        "arXiv:2603.21465",
+        "title:drtriton large scale synthetic data driven reinforcement learning for triton kernel generation"
+      ],
+      "reason": "一次arXiv abstractを確認。PyTorch参照実装をTriton/CUDAカーネルへ変換するLLMを、合成データと強化学習で訓練し、KernelBench上の生成カーネル性能を評価する研究。高速なカーネルを生成するAIの訓練が主題であり、既存LLMの推論サービング・推論実行カーネルを直接高速化する研究ではないためunrelated。worklistの題名は原著のDrivenが抜けているため一次資料表記に修正。",
+      "first_checked_at": "2026-11-18T12:39:25+00:00",
+      "last_checked_at": "2026-11-18T12:39:25+00:00",
+      "linked_from": [],
+      "title": "DRTriton: Large-Scale Synthetic Data Driven Reinforcement Learning for Triton Kernel Generation"
+    },
+    "arXiv:2508.02587": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02587",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.02587",
+        "arXiv:2508.02587"
+      ],
+      "reason": "MoEモデルのPEFTアダプタへルーティングを導入して常識・数学課題の微調整精度を改善する。主対象は訓練・適応効率であり、LLM生成推論のサービング・KV・トークン計算量削減は一次要旨にない。arXiv管理者が別論文との文章重複を注記しているため取り込み時は書誌確認も必要。",
+      "first_checked_at": "2026-11-18T12:39:28+00:00",
+      "last_checked_at": "2026-11-18T12:39:28+00:00",
+      "linked_from": [],
+      "title": "Parameter-Efficient Routed Fine-Tuning: Mixture-of-Experts Demands Mixture of Adaptation Modules"
+    },
+    "arXiv:2606.01016": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01016",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.01016",
+        "arXiv:2606.01016"
+      ],
+      "reason": "音声LLMの理解能力を110の言語・方言変種で評価するベンチマークを構築し、19の中国語方言・80超の低資源言語を含む音声データと22モデルの比較を提供する研究。研究の技術的貢献は音声理解の評価データ・評価方法とモデル能力分析であり、LLM推論サービング、KVキャッシュ、量子化、カーネル、メモリ管理、スケジューリングの効率化手法は提案・評価していないため、現行サーベイのシステム技術範囲外と判定。",
+      "first_checked_at": "2026-11-18T12:39:29+00:00",
+      "last_checked_at": "2026-11-18T12:39:29+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 500"
+      ],
+      "title": "PolySpeech-100: A Large-Scale Benchmark for Speech Understanding Across 100+ Languages and Dialects"
+    },
+    "arXiv:2604.21221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21221",
+      "identity_tokens": [
+        "arXiv:2604.21221"
+      ],
+      "reason": "Sparse Forcingは自己回帰の動画拡散生成で視覚ブロックの疎注意を学習し、動画品質VBenchと動画生成decode遅延を評価する。KVキャッシュ・GPUカーネルの技術的共通点はあるが、実験はテキストからの動画生成であり、LLM/MLLMの言語推論・対話サービングではないため対象外。",
+      "first_checked_at": "2026-11-18T12:39:31+00:00",
+      "last_checked_at": "2026-11-18T12:39:31+00:00",
+      "linked_from": [],
+      "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation"
+    },
+    "arXiv:2507.09616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.09616",
+      "identity_tokens": [
+        "arXiv:2507.09616"
+      ],
+      "reason": "arXiv一次要旨。低ランク近似と混合精度量子化のrank/bit配分を最適化するが、実験は画像分類・物体検出・インスタンス分割用Vision Transformerのみで、生成LLMの推論・言語品質・KV・デコード評価はない。対象のLLM推論研究から外れる。",
+      "first_checked_at": "2026-11-18T12:39:32+00:00",
+      "last_checked_at": "2026-11-18T12:39:32+00:00",
+      "linked_from": [],
+      "title": "MLoRQ: Bridging Low-Rank and Quantization for Transformer Compression"
+    },
+    "arXiv:2604.10946": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10946",
+      "identity_tokens": [
+        "arXiv:2604.10946"
+      ],
+      "reason": "非定常回帰におけるgated linear attentionのin-context learning能力を理論解析し、学習・試験誤差と最近傍重み付けを比較する。一次要旨は適応機構と学習能力の研究であり、生成LLMの推論レイテンシ、メモリ、スループットを評価しない。",
+      "first_checked_at": "2026-11-18T12:39:40+00:00",
+      "last_checked_at": "2026-11-18T12:39:40+00:00",
+      "linked_from": [],
+      "title": "Learning to Adapt: In-Context Learning Beyond Stationarity"
     }
   }
 }

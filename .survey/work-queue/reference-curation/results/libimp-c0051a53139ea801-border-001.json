@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0051a53139ea801-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.13438",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.13438",
+    "identity_tokens": [
+      "arXiv:2603.13438"
+    ],
+    "reason": "一次arXiv書誌・要旨ではロボット方策用の動画拡散モデルで高速ドラフト軌道と低速検証軌道を組み合わせ、トークンチャンクと段階的受理で冗長な計算を削減する。3ベンチマークで最大2.1倍の推論高速化を報告。投機的検証の構造はLLMと類似するが、直接の対象は動画生成ロボット方策。",
+    "first_checked_at": "2026-11-18T12:39:36+00:00",
+    "last_checked_at": "2026-11-18T12:39:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Draft-and-Target Sampling for Video Generation Policy"
+  },
+  "processed_at": "2026-11-18T12:39:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0051a53139e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

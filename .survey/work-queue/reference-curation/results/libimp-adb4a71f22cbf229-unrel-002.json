@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-adb4a71f22cbf229-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.09616",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.09616",
+    "identity_tokens": [
+      "arXiv:2507.09616"
+    ],
+    "reason": "arXiv一次要旨。低ランク近似と混合精度量子化のrank/bit配分を最適化するが、実験は画像分類・物体検出・インスタンス分割用Vision Transformerのみで、生成LLMの推論・言語品質・KV・デコード評価はない。対象のLLM推論研究から外れる。",
+    "first_checked_at": "2026-11-18T12:39:32+00:00",
+    "last_checked_at": "2026-11-18T12:39:32+00:00",
+    "linked_from": [],
+    "title": "MLoRQ: Bridging Low-Rank and Quantization for Transformer Compression"
+  },
+  "processed_at": "2026-11-18T12:39:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-adb4a71f22cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

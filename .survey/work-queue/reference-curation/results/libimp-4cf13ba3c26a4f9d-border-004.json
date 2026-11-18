@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4cf13ba3c26a4f9d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41472",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41472",
+    "identity_tokens": [
+      "arXiv:2610.41472"
+    ],
+    "reason": "LLM生成SQLの誤りを静的な性質検査と修正提案のverify-before-apply監視で修復するPost-SQLFix。3千超の例で従来の実行エラーfeedbackが修復できない誤りの77.8%を解消し、修復反復を半分未満、使用トークンを30%削減したと報告。LLM呼出し・トークン予算の節約は関連するが、Text-to-SQLタスク特化の正確性改善で推論エンジン自体の改善ではないためborderline。",
+    "first_checked_at": "2026-11-18T12:39:28+00:00",
+    "last_checked_at": "2026-11-18T12:39:28+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.SE/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Post-SQLFix: Property-Guided Repair of LLM-Generated SQL with Runtime Verification"
+  },
+  "processed_at": "2026-11-18T12:39:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4cf13ba3c26a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

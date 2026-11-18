@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae421ce6842d9dce-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.08330",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.08330",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2407.08330",
+      "arXiv:2407.08330"
+    ],
+    "reason": "階層文書のanchor tokenと疎な多層注意を組み合わせ、サンプルごとに異なる疎パターンを扱うカーネルを開発する。計算・メモリ効率に関係するが、一次要旨の対象は階層文書理解であり、自己回帰LLM生成推論の速度・KV管理への直接評価は確認できない。",
+    "first_checked_at": "2026-11-18T12:39:33+00:00",
+    "last_checked_at": "2026-11-18T12:39:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "HDT: Hierarchical Document Transformer"
+  },
+  "processed_at": "2026-11-18T12:39:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae421ce6842d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

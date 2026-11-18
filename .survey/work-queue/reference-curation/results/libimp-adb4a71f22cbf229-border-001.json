@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-adb4a71f22cbf229-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05994",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05994",
+    "identity_tokens": [
+      "arXiv:2605.05994"
+    ],
+    "reason": "arXiv一次要旨。対角行列と0/1行列の積でdense重みを近似し、乗算数をmnからm+k+nへ減らす理論的圧縮法。評価は公開重み行列40件とDistilBERTのmasked-token、音声分類の部品置換であり、生成LLMの復号・サービング性能は未検証のためborderline。",
+    "first_checked_at": "2026-11-18T12:39:32+00:00",
+    "last_checked_at": "2026-11-18T12:39:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression"
+  },
+  "processed_at": "2026-11-18T12:39:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-adb4a71f22cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

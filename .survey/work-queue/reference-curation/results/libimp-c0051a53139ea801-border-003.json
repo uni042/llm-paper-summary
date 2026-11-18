@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0051a53139ea801-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.06483",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.06483",
+    "identity_tokens": [
+      "arXiv:2407.06483"
+    ],
+    "reason": "一次arXiv書誌・要旨では知識編集・モデル圧縮・機械的忘却を同一モデルに組み合わせる枠組みを作り、310通りの介入で順序依存と圧縮が編集・忘却を阻害することを分析。圧縮品質の相互作用は推論用モデル管理に関連するが、実行時速度・メモリ・サービング効率の直接的な改善を目的としていない。",
+    "first_checked_at": "2026-11-18T06:39:32+00:00",
+    "last_checked_at": "2026-11-18T12:39:37+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Composable Interventions for Language Models"
+  },
+  "processed_at": "2026-11-18T12:39:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0051a53139e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

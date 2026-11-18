@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8205b1fde02e6c5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.21221",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.21221",
+    "identity_tokens": [
+      "arXiv:2604.21221"
+    ],
+    "reason": "Sparse Forcingは自己回帰の動画拡散生成で視覚ブロックの疎注意を学習し、動画品質VBenchと動画生成decode遅延を評価する。KVキャッシュ・GPUカーネルの技術的共通点はあるが、実験はテキストからの動画生成であり、LLM/MLLMの言語推論・対話サービングではないため対象外。",
+    "first_checked_at": "2026-11-18T12:39:31+00:00",
+    "last_checked_at": "2026-11-18T12:39:31+00:00",
+    "linked_from": [],
+    "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation"
+  },
+  "processed_at": "2026-11-18T12:39:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8205b1fde02",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

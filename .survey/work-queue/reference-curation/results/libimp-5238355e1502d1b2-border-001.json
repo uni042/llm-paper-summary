@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5238355e1502d1b2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.03317",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.03317",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2412.03317",
+      "arXiv:2412.03317"
+    ],
+    "reason": "GPUの階層的資源とIO転送を図式化し、FlashAttention型のtilingやstreamingを手順化する理論的な最適化方法論。LLM注意カーネルの設計に有用だが、一次要旨で新規実装の実測推論高速化を直接示していない。",
+    "first_checked_at": "2026-11-18T07:47:48+00:00",
+    "last_checked_at": "2026-11-18T12:39:28+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FlashAttention on a Napkin: A Diagrammatic Approach to Deep Learning IO-Awareness"
+  },
+  "processed_at": "2026-11-18T12:39:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5238355e1502",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

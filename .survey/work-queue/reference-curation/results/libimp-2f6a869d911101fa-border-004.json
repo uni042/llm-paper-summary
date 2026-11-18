@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f6a869d911101fa-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:54983a66dc8bc15af89890bc9e1a63e056594179",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:54983a66dc8bc15af89890bc9e1a63e056594179",
+    "identity_tokens": [
+      "SemanticScholar:54983a66dc8bc15af89890bc9e1a63e056594179",
+      "semanticscholar:54983a66dc8bc15af89890bc9e1a63e056594179",
+      "title:composite slice transformer an efficient transformer with composition of multi scale multi range attentions"
+    ],
+    "reason": "ICLR 2023の正式一次PDFを確認。CSTは固定長スライス内の局所注意とスライス集約後の大域注意を逐次合成し、計算量O(NL+N²/L²)を達成する。Long Range Arenaで標準Transformerより平均6.9ポイント高精度、WikiText-103自己回帰言語モデルでも評価する。ただし現代の数十億パラメータLLMサービングや実際のKVキャッシュ管理の検証は主眼ではなく、効率的Transformerアーキテクチャ研究としてborderline。",
+    "first_checked_at": "2026-11-18T12:39:25+00:00",
+    "last_checked_at": "2026-11-18T12:39:25+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Composite Slice Transformer: An Efficient Transformer with Composition of Multi-Scale Multi-Range Attentions"
+  },
+  "processed_at": "2026-11-18T12:39:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f6a869d9111",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

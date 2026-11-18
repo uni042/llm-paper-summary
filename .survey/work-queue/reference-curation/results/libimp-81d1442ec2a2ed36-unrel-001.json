@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81d1442ec2a2ed36-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.01016",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.01016",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.01016",
+      "arXiv:2606.01016"
+    ],
+    "reason": "音声LLMの理解能力を110の言語・方言変種で評価するベンチマークを構築し、19の中国語方言・80超の低資源言語を含む音声データと22モデルの比較を提供する研究。研究の技術的貢献は音声理解の評価データ・評価方法とモデル能力分析であり、LLM推論サービング、KVキャッシュ、量子化、カーネル、メモリ管理、スケジューリングの効率化手法は提案・評価していないため、現行サーベイのシステム技術範囲外と判定。",
+    "first_checked_at": "2026-11-18T12:39:29+00:00",
+    "last_checked_at": "2026-11-18T12:39:29+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 500"
+    ],
+    "title": "PolySpeech-100: A Large-Scale Benchmark for Speech Understanding Across 100+ Languages and Dialects"
+  },
+  "processed_at": "2026-11-18T12:39:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81d1442ec2a2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

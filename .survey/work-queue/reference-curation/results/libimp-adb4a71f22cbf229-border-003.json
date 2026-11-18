@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-adb4a71f22cbf229-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.26488",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.26488",
+    "identity_tokens": [
+      "arXiv:2609.26488"
+    ],
+    "reason": "arXiv一次要旨。Thinker-Talkerの推論ストリームと短い進捗発話ストリームを非同期で動かし、ユーザーに聞こえる沈黙を減らす。リアルタイム対話の体感遅延と実行制御に関連するが、LLM自体のtoken生成速度・計算量・メモリの削減は要旨で未確認のためborderline。",
+    "first_checked_at": "2026-11-18T12:39:32+00:00",
+    "last_checked_at": "2026-11-18T12:39:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Spoken Language Models that Think Aloud"
+  },
+  "processed_at": "2026-11-18T12:39:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-adb4a71f22cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

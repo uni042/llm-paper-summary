@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa8cb5506a93175f-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.02344",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.02344",
+    "identity_tokens": [
+      "arXiv:2604.02344"
+    ],
+    "reason": "WebGPUの逐次dispatch固定費をQwen2.5-0.5B/1.5Bで測定し、Vulkanで24～36μs、Metalで32～71μsのAPIオーバーヘッドを報告。ただしarXiv一次書誌は2026-10-26にwithdrawn、arXiv:2608.08730に置換されたと明記する。技術的には直接関連するが撤回済み旧版を通常acceptへ昇格せず、後継版のidentity照合を優先。",
+    "first_checked_at": "2026-11-18T12:39:39+00:00",
+    "last_checked_at": "2026-11-18T12:39:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers"
+  },
+  "processed_at": "2026-11-18T12:39:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa8cb5506a93",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

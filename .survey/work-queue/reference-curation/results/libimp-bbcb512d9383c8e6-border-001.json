@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbcb512d9383c8e6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.21189",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.21189",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.emnlp-main.1165",
+      "arXiv:2505.21189"
+    ],
+    "reason": "EMNLP 2025正式版の方式§3、実験§4、表1〜3を確認。凍結したPythia・Llamaの入力に学習済み二つの埋め込みを与え、一回の並列前向き計算で既知テキストを数百トークン再構成する。ただしテキストごとに埋め込みを最大5,000反復最適化しており、未知の任意プロンプトを低遅延生成する実用エンコーダは未構築。推論高速化への示唆はあるが実運用性能の検証不足。",
+    "first_checked_at": "2026-11-18T07:16:49+00:00",
+    "last_checked_at": "2026-11-18T12:39:35+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Hidden Capacity of LLMs for One-Step Text Generation"
+  },
+  "processed_at": "2026-11-18T12:39:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbcb512d9383",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

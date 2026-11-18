@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa8cb5506a93175f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.10769",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.10769",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.10769",
+      "arXiv:2604.10769"
+    ],
+    "reason": "AIデータセンターのbatch処理と推論要求の構成比が電力変動と短期ランプをどう変えるか、トレース校正した待ち行列・スケジューリング・GPU電力モデルで分析する。LLM推論サービングに近いが、主対象は電力系統への影響であり、LLM固有のTPS/SLO最適化を示さないため保留。",
+    "first_checked_at": "2026-11-18T03:45:04+00:00",
+    "last_checked_at": "2026-11-18T12:39:38+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM serving / energy management / cluster scheduling / dynamic reconfiguration"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Workload composition smooths aggregate power demand while sustaining short-horizon ramps in AI data centers"
+  },
+  "processed_at": "2026-11-18T12:39:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa8cb5506a93",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

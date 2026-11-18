@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8205b1fde02e6c5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.08030",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.08030",
+    "identity_tokens": [
+      "arXiv:2602.08030"
+    ],
+    "reason": "推論の途中で不要な思考文脈を削除するFree-ModuleをLoRAアダプタとして導入し、推論と整理モードを交互に使うFree()LMを提案。長い思考での精度改善を中心に報告するが、要旨では実際のKVメモリ削減量・token/s・レイテンシの定量検証が不明なため、推論システムとしての直接性は境界扱い。",
+    "first_checked_at": "2026-11-18T12:39:31+00:00",
+    "last_checked_at": "2026-11-18T12:39:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models"
+  },
+  "processed_at": "2026-11-18T12:39:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8205b1fde02",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

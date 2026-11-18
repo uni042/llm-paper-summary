@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5238355e1502d1b2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.02587",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.02587",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.02587",
+      "arXiv:2508.02587"
+    ],
+    "reason": "MoEモデルのPEFTアダプタへルーティングを導入して常識・数学課題の微調整精度を改善する。主対象は訓練・適応効率であり、LLM生成推論のサービング・KV・トークン計算量削減は一次要旨にない。arXiv管理者が別論文との文章重複を注記しているため取り込み時は書誌確認も必要。",
+    "first_checked_at": "2026-11-18T12:39:28+00:00",
+    "last_checked_at": "2026-11-18T12:39:28+00:00",
+    "linked_from": [],
+    "title": "Parameter-Efficient Routed Fine-Tuning: Mixture-of-Experts Demands Mixture of Adaptation Modules"
+  },
+  "processed_at": "2026-11-18T12:39:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5238355e1502",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

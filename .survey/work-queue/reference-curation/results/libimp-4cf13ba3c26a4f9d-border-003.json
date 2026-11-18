@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4cf13ba3c26a4f9d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41878",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41878",
+    "identity_tokens": [
+      "arXiv:2610.41878"
+    ],
+    "reason": "CBDLはLLMが生成するPython/Javaテストのimportを、制約付きbeam探索とlookupで正当な候補へ誘導し、反復importによるトークン枯渇を防ぐ。import妥当性100%とテスト正答率向上を報告する一方、1テスト当たり16〜21秒の追加オーバーヘッドがある。生成時のデコード手順に技術的寄与があるが、目的はコードテストの正しさであり汎用LLM推論高速化ではないためborderline。",
+    "first_checked_at": "2026-11-18T12:39:27+00:00",
+    "last_checked_at": "2026-11-18T12:39:27+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.SE/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "No More Import Errors: Constrained Decoding for Guaranteed Valid Imports in LLM-Generated Tests"
+  },
+  "processed_at": "2026-11-18T12:39:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4cf13ba3c26a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

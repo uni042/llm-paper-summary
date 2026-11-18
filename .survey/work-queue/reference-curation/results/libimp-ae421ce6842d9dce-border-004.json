@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae421ce6842d9dce-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.20262",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.20262",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.20262",
+      "arXiv:2403.20262"
+    ],
+    "reason": "雑音を含む会議文字起こしからの長文脈QAを271問で評価し、12のLLMの品質・頑健性を比較する。長文脈推論の品質評価には有用だが、計算資源・速度・メモリ効率を評価するベンチマークではない。",
+    "first_checked_at": "2026-11-18T12:39:34+00:00",
+    "last_checked_at": "2026-11-18T12:39:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ELITR-Bench: A Meeting Assistant Benchmark for Long-Context Language Models"
+  },
+  "processed_at": "2026-11-18T12:39:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae421ce6842d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
