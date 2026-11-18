@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2604.15732",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed LLM serving systems optimize per-request latency and throughput. However, under long-context workloads, inference accuracy becomes more variable. When incorrect responses trigger retries, accuracy directly translates into cumulative user-visible delay that is not captured by single-shot latency metrics. In this work, we argue that under long-context serving, accuracy becomes speed through retry dynamics. We introduce Time-to-Correct-Answer (TTCA), a metric that measures the wall-clock time required to obtain the first correct response. Our measurement study shows that prompt characteristics such as length and language amplify accuracy variance, which inflates TTCA. We demonstrate Lightweight Accuracy-Aware Routing (LAAR), a capability-based routing design that reduces TTCA. Our results suggest that in long-context distributed serving, accuracy should be treated as a first-class systems objective.",
+      "identifiers": [
+        "SemanticScholar:5c5daff4e07d69273ad8e16f036870bd0883af02"
+      ],
+      "semantic_scholar_id": "5c5daff4e07d69273ad8e16f036870bd0883af02",
+      "canonical_id": "arXiv:2604.15732",
+      "arxiv_id": "2604.15732",
+      "doi": "10.1145/3805621.3807652",
+      "authors": [
+        "Takeshi Yoshimura",
+        "Valentijn Dymphnus van de Beek",
+        "Tatsuhiro Chiba"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": "EuroSys"
+      },
+      "reason": "正確さは速度：長文脈配慮型ルーティングの測定研究。不正確な応答が再試行を招いて累積遅延になる効果を、最初の正解までの時間TTCAという指標で捉え、プロンプト特性が精度分散を増幅することを測定で示す。分散提供の計測そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines",
+      "source_url": "https://arxiv.org/abs/2604.16734",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have recently demonstrated strong capabilities in understanding and generating responses from diverse visual inputs, including high-resolution images and long video sequences. As these models scale to richer visual representations, inference increasingly relies on storing large numbers of vision tokens in the key-value (KV) cache, making memory consumption a central bottleneck. Existing methods address this issue by identifying redundancy in vision tokens and compressing the cache, but such compression is typically applied only after all inputs are processed, resulting in high peak memory usage during the prefill stage. In this work, we show that MLLMs exhibit inherent structural regularities and representational redundancy that can be exploited to control memory growth throughout inference. Based on this insight, we propose a sequential input-compression mechanism that enforces a fixed memory budget by performing structure-aware key-value cache compression during the prefill process. This approach substantially reduces peak memory usage while maintaining generative performance with only minimal degradation, enabling more practical and memory-efficient multimodal inference.",
+      "identifiers": [
+        "SemanticScholar:8b6e0c1553449c9d5191ab4c3cf1252a77cd4653"
+      ],
+      "semantic_scholar_id": "8b6e0c1553449c9d5191ab4c3cf1252a77cd4653",
+      "canonical_id": "arXiv:2604.16734",
+      "arxiv_id": "2604.16734",
+      "doi": "10.48550/arXiv.2604.16734",
+      "authors": [
+        "Junwan Kim",
+        "Hyunkyung Bae"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "モダルLLMのピークメモリ削減。視覚トークンのKV圧縮が全入力処理の後にしか適用されずプリフィル段階のピークメモリが高い問題に対し、処理の途中で圧縮を進めてピークを下げる。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+      "source_url": "https://arxiv.org/abs/2604.26378",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+      "identifiers": [
+        "SemanticScholar:5c42df8174888754596a90f82b371ec6fac7abc4"
+      ],
+      "semantic_scholar_id": "5c42df8174888754596a90f82b371ec6fac7abc4",
+      "canonical_id": "arXiv:2604.26378",
+      "arxiv_id": "2604.26378",
+      "doi": "10.48550/arXiv.2604.26378",
+      "authors": [
+        "Zhe Ding",
+        "Su Pan",
+        "Duowei Pan"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "重み・活性の共同部分空間射影による混合精度量子化CoQuant。重要な部分空間を活性統計だけで作る従来法が、出力摂動が重みと活性の両方の量子化雑音で決まる性質を無視する問題に対し、期待出力誤差を理論モデル化して閉形式の重みつきPCA解を与える。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MM-ShiftKV: Decode-Aware Prefill-Stage KV Selection for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.22586",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-Value (KV) caching is essential for efficient inference in multimodal large language models (MLLMs), yet its memory footprint grows linearly with context length and becomes a major bottleneck due to the large number of visual tokens. Recent prefill-stage KV selection methods estimate KV importance from prefilling statistics, implicitly assuming that prefilling-time queries are representative of those encountered during decoding. We show that this assumption breaks down in multimodal inference, where decoding-time queries exhibit substantially larger variance than prefilling-stage representations, leading to unstable KV importance estimation under tight cache budgets. As a result, small ranking errors can disproportionately discard semantically critical visual tokens and degrade grounding and reasoning performance. We propose MM-ShiftKV, a training-free, decode-aware and strictly prefill-only KV selection method. MM-ShiftKV approximates decoding-time query behavior during prefilling by constructing variance-expanded query proxies and estimates prompt KV importance based on their aggregated attention mass. Experiments on multimodal benchmarks demonstrate that MM-ShiftKV consistently outperforms existing methods under strict KV-cache budgets. Our code is available at https://github.com/zjuDBxAI/MM-ShiftKV.",
+      "identifiers": [
+        "SemanticScholar:98ea762425bcbff95ae28a66635d261779239986"
+      ],
+      "semantic_scholar_id": "98ea762425bcbff95ae28a66635d261779239986",
+      "canonical_id": "arXiv:2607.22586",
+      "arxiv_id": "2607.22586",
+      "doi": "10.18653/v1/2026.findings-acl.1447",
+      "authors": [
+        "Jin-Song Shu",
+        "Chenyang Wu",
+        "Zhong-Le Xie",
+        "Bao-Kun Wang",
+        "Li-Dan Shou"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "デコード配慮型のプリフィル段階KV選択MM-ShiftKV。プリフィル時のクエリがデコード時を代表するという前提がマルチモーダル推論で崩れ、KV重要度の推定が不安定になる問題に対し、デコード時の分散を踏まえた選択を行う。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OCGQuant: Outlier-Companion Grouping for NVFP4 Quantization",
+      "source_url": "https://arxiv.org/abs/2609.00066",
+      "year": 2026,
+      "published": "2026-08-30",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "NVFP4 is an efficient microscaling format for low-bit inference, but activation outliers can still degrade quantization accuracy within NVFP4 blocks. Within each quantization block, large activations can dominate the block scale, increasing the quantization error of the remaining values sharing the same scale. Existing post-training quantization (PTQ) methods mitigate outlier errors through strategies such as mixed precision, rotation, or residual compensation, but these approaches are either not specifically tailored to NVFP4 or introduce additional computation. In this work, we revisit NVFP4 from a channel-grouping perspective and define the reducible error incurred by remaining block values under the scale set by the block maximum as Collateral Quantization Error. Based on this insight, we propose OCGQuant, a post-training quantization method centered on Outlier-Companion Grouping (OCG), which adaptively pairs outlier channels with low-magnitude companion channels to improve NVFP4 activation block composition. Experiments on Llama3 and Qwen3 show that OCGQuant achieves the lowest WikiText-2 perplexity and highest average downstream accuracy among evaluated PTQ methods, while maintaining prefill speedup close to RTN and matching its peak decoding memory. Code is available at https://github.com/Eshamont/OCGQuant.",
+      "identifiers": [
+        "SemanticScholar:1ad7a4e9ab489b700e1f8d039fcaac943dbe4e07"
+      ],
+      "semantic_scholar_id": "1ad7a4e9ab489b700e1f8d039fcaac943dbe4e07",
+      "canonical_id": "arXiv:2609.00066",
+      "arxiv_id": "2609.00066",
+      "doi": "10.18653/2026.emnlp-main.472",
+      "authors": [
+        "Yi-Shan Yao",
+        "Bin-Jun Li",
+        "Han-Ling Yi",
+        "Peng-Yue Li",
+        "Xiao-Qing Liu",
+        "Zi-Han Yang",
+        "Xiao-Tian Yu",
+        "Zhi-Wen Yu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "NVFP4量子化向け外れ値伴侶グルーピングOCGQuant。NVFP4のブロック内で大きな活性がブロック尺度を支配して残りの値の誤差を増やす問題に対し、チャネルグルーピングの観点で削減可能な誤差を定義して対処する。混合精度や回転のような追加計算を入れない点が固有。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b076cd27b631",
+    "round": "libimp-b076cd27b6311201-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b076cd27b6311201-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b076cd27b6311201-pre01.json",
+    "receipt": "sha256:bb42d87d799d9f1b924e9933bccd9f8f6a450f81b3bf2ff75c0f88b268594dd4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b076cd27b631",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

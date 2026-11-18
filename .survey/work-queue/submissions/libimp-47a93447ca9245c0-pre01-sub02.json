@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+      "source_url": "https://arxiv.org/abs/2610.09342",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) large language models decouple capacity from compute through sparse routing, but their large parameter count creates storage and serving challenges. We analyze three MoE compression families: expert pruning, expert merging, and weight reconstruction, and derive structural error bounds showing that pruning and merging can incur non-vanishing errors tied to routing and expert heterogeneity. In contrast, weight reconstruction avoids these structural costs by preserving expert structure and routing. Motivated by the analysis, we propose Shared Low-rank Basis Factorization (SLBF), a data-free weight reconstruction method that uses rank-$k$ bases shared among experts, enabling richer cross-expert sharing, faster convergence, and lower reconstruction error. A post-hoc gauge fixing removes redundant parameters at no representational cost. Across five MoE architectures spanning 16B to 122B parameters, SLBF consistently outperforms methods from all three compression families.",
+      "identifiers": [
+        "SemanticScholar:fdf13c46fc0d82cf16820b6d2a72e4ded71212e1"
+      ],
+      "semantic_scholar_id": "fdf13c46fc0d82cf16820b6d2a72e4ded71212e1",
+      "canonical_id": "arXiv:2610.09342",
+      "arxiv_id": "2610.09342",
+      "doi": "10.18653/2026.findings-emnlp.1853",
+      "authors": [
+        "Tian-Xiao Cao",
+        "Jia-He Shao",
+        "Yu-Ning Qiu",
+        "Kyohei Atarashi",
+        "H. Kashima",
+        "Qianchuan Zhao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "データ不要のMoE圧縮SLBF。専門家剪定や統合が経路と専門家の異質性に結びついた非消失誤差を持ちうることを構造的誤差上限で示し、専門家間で共有する低ランク基底による重み再構成で、構造と経路を保ったまま圧縮する。推論の保存・提供の機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-47a93447ca92",
+    "round": "libimp-47a93447ca9245c0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-47a93447ca9245c0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-47a93447ca9245c0-pre01.json",
+    "receipt": "sha256:91167c92c2d06e3e739c5715019e64b4d91d0a102a0a2ac52216de7d7135386a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-47a93447ca92",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

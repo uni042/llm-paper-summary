@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Activation Steering for Chain-of-Thought Compression",
+      "source_url": "https://arxiv.org/abs/2507.04742",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 39,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel at complex reasoning when they include intermediate steps, known as\"chains of thought\"(CoTs). However, these rationales are often overly verbose, even for simple problems, leading to wasted context, increased latency, and higher energy consumption. We observe that verbose, English-heavy CoTs and concise, math-centric CoTs occupy distinct regions in the model's residual-stream activation space. By extracting and injecting a\"steering vector\"to transition between these modes, we can reliably shift generation toward more concise reasoning, effectively compressing CoTs without retraining. We formalize this approach as Activation-Steered Compression (ASC), an inference-time technique that shortens reasoning traces by directly modifying hidden representations. In addition, we provide a theoretical analysis of the impact of ASC on the output distribution, derived from a closed-form KL-divergence-bounded constraint to regulate steering strength. Using only 100 paired verbose and concise examples, ASC achieves up to 67.43% reduction in CoT length on MATH500 and GSM8K datasets, while maintaining accuracy across 7B, 8B, and 32B parameter models. As a training-free method, ASC introduces negligible runtime overhead and, on MATH500, delivers an average 2.73x speedup in end-to-end reasoning wall-clock time on an 8B model. This makes ASC a practical and efficient tool for streamlining the deployment of reasoning-capable LLMs in latency- or cost-sensitive settings. The code is available at: https://github.com/ArminAzizi98/ASC",
+      "identifiers": [
+        "SemanticScholar:49e2040f89d56c83a06ee9923ab8a2f6a52f50d3"
+      ],
+      "semantic_scholar_id": "49e2040f89d56c83a06ee9923ab8a2f6a52f50d3",
+      "canonical_id": "arXiv:2507.04742",
+      "arxiv_id": "2507.04742",
+      "doi": "10.48550/arXiv.2507.04742",
+      "authors": [
+        "Seyedarmin Azizi",
+        "Erfan Baghaei Potraghloo",
+        "Souvik Kundu",
+        "M. Pedram"
+      ],
+      "priority": 49,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 39,
+        "citation_count": 39,
+        "total": 49,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 499,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "CoT圧縮のための活性ステアリング。冗長なCoTと簡潔なCoTが残差ストリームの活性空間で異なる領域を占める性質を使い、ステアリングベクトルの抽出と注入で再訓練なしに推論時に推論跡を短縮する。推論時の制御機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2505.15154",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 45,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in reasoning have significantly enhanced the capabilities of Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) across diverse tasks. However, excessive reliance on chain-of-thought (CoT) reasoning can impair model performance and brings unnecessarily lengthened outputs, reducing efficiency. Our work reveals that prolonged reasoning does not universally improve accuracy and even degrade performance on simpler tasks. To address this, we propose Certainty-based Adaptive Reasoning (CAR), a novel framework that dynamically switches between short answers and long-form reasoning based on the model perplexity. CAR first generates a short answer and evaluates its perplexity, triggering reasoning only when the model exhibits low confidence (i.e., high perplexity). Experiments across diverse multimodal VQA/KIE benchmarks and text reasoning datasets show that CAR outperforms both short-answer and long-form reasoning approaches, striking an optimal balance between accuracy and efficiency.",
+      "identifiers": [
+        "SemanticScholar:2b8fababedb34cded34f47722b13cf193cdcc92f"
+      ],
+      "semantic_scholar_id": "2b8fababedb34cded34f47722b13cf193cdcc92f",
+      "canonical_id": "arXiv:2505.15154",
+      "arxiv_id": "2505.15154",
+      "doi": "10.48550/arXiv.2505.15154",
+      "authors": [
+        "Jinghui Lu",
+        "Hai-Yang Yu",
+        "Siliang Xu",
+        "Shi-Wei Ran",
+        "Guo-Zhi Tang",
+        "Si-Qi Wang",
+        "Bin Shan",
+        "Teng Fu",
+        "Hao Feng",
+        "Jing-Qun Tang",
+        "Han Wang",
+        "Can Huang"
+      ],
+      "priority": 45,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 45,
+        "citation_count": 45,
+        "total": 45,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 546,
+        "matched_prestigious_venue": null
+      },
+      "reason": "確実性に基づく適応推論CAR。長い推論が常に精度を上げるわけではなく単純な課題では劣化も招く問題に対し、短い回答を先に生成してその困惑度で長い推論へ切り替えるかを決める枠組み。推論時の計算配分機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems",
+      "source_url": "https://arxiv.org/abs/2505.11415",
+      "year": 2024,
+      "published": "2024-12-10",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The sparse Mixture-of-Experts (MoE) architecture is increasingly favored for scaling Large Language Models (LLMs) efficiently, but it depends on heterogeneous compute and memory resources. These factors jointly affect system Cost, Accuracy, and Performance (CAP), making trade-offs inevitable. Existing benchmarks often fail to capture these trade-offs accurately, complicating practical deployment decisions. To address this, we introduce MoE-CAP, a benchmark specifically designed for MoE systems. Our analysis reveals that achieving an optimal balance across CAP is difficult with current hardware; MoE systems typically optimize two of the three dimensions at the expense of the third-a dynamic we term the MoE-CAP trade-off. To visualize this, we propose the CAP Radar Diagram. We further introduce sparsity-aware performance metrics-Sparse Memory Bandwidth Utilization (S-MBU) and Sparse Model FLOPS Utilization (S-MFU)-to enable accurate performance benchmarking of MoE systems across diverse hardware platforms and deployment scenarios.",
+      "identifiers": [
+        "SemanticScholar:85df13d1b83f2572ad21f9e293aed2b54a2ab954"
+      ],
+      "semantic_scholar_id": "85df13d1b83f2572ad21f9e293aed2b54a2ab954",
+      "canonical_id": "arXiv:2505.11415",
+      "arxiv_id": "2505.11415",
+      "doi": "10.48550/arXiv.2505.11415",
+      "authors": [
+        "Yinsicheng Jiang",
+        "Yao Fu",
+        "Ye-Qi Huang",
+        "Ping Nie",
+        "Zhan Lu",
+        "Leyang Xue",
+        "Cong-Jie He",
+        "Man-Kit Sit",
+        "Ji-Long Xue",
+        "Li Dong",
+        "Zi-Ming Miao",
+        "Da-You Du",
+        "Tai-Ran Xu",
+        "Kai Zou",
+        "E. Ponti",
+        "Luo Mai"
+      ],
+      "priority": 28,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 28,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 708,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "MoEの費用・精度・性能ベンチマークMoE-CAP。異種の計算とメモリ資源に依存する疎MoEについて、費用・精度・性能の3次元を同時に捉えるベンチマークを設計し、3つのうち2つを最適化すると残り1つが犠牲になるトレードオフを明らかにする。推論基盤の計測そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2287eaee1008",
+    "round": "libimp-2287eaee10088115-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2287eaee10088115-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2287eaee10088115-pre01.json",
+    "receipt": "sha256:ed7a57f4d0bf6ef5d633f70d95988e87bdf7945bdf8fe03238de0cda8f3398eb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2287eaee1008",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
