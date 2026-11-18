@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ViSched: Reinforcement Learning-Based Scheduling for Vision-Language Model Inference on a Heterogeneous GPU Cluster",
+      "source_url": "https://doi.org/10.1109/IPDPSW71298.2026.00091",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving vision-language model (VLM) inference at scale demands scheduling strategies that account for extreme heterogeneity in both model resource requirements and GPU hardware capabilities. We present ViSched, a Proximal Policy Optimization (PPO) based scheduling framework with dynamic GPU allocation that serves mixed vision workloads— from lightweight detectors on a single GPU to 78B-parameter VLMs spanning up to 8 GPUs—across a heterogeneous GPU cluster. ViSched jointly selects the target node and GPU count for each inference request, adapting tensor parallelism (TP) in real time based on model requirements, service-level agreement (SLA) pressure, and cluster state. On a 100-GPU heterogeneous cluster with AMD Instinct MI300X and MI355X accelerators, ViSched improves SLA satisfaction by 7.3–14.2% and reduces energy consumption by 9.7–17.4% over the best static baseline across three workload scenarios, with the largest gains (+23.4 percentage points (pp)) on VLM workloads.",
+      "identifiers": [
+        "SemanticScholar:bda7bf5f20811c50209e3d854e6b6eb099781cd4"
+      ],
+      "semantic_scholar_id": "bda7bf5f20811c50209e3d854e6b6eb099781cd4",
+      "doi": "10.1109/IPDPSW71298.2026.00091",
+      "canonical_id": "DOI:10.1109/IPDPSW71298.2026.00091",
+      "authors": [
+        "Ravi Gupta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IPDPSW 2026の原著要旨転載を照合。ViSchedはPPOを用いて、異種GPUクラスタ上のVLM推論要求ごとに割当ノードとGPU数を共同決定し、TP度数をSLA圧力・クラスタ状態に合わせ動的調整する。単GPUの検出器から最大8GPUを用いる78B VLMまでを対象とする。RLは学習手段であり主貢献はオンライン推論スケジューリング。数値性能は要旨の確認範囲を超えて断定しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "A Hardware-Software Co-design for LLMs with Exponent-Element Quantization Towards Compute-in-Memory",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562436",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The escalating computational and memory demands of Large Language Models (LLMs) pose significant challenges for their deployment on resource-constrained edge devices. While model quantization is an effective technique to mitigate these demands, existing methods often rely on floating-point operations during quantization and dequantization (Q/DQ), leading to considerable overhead when deployed on hardware accelerators like Compute-in-Memory (CIM). This paper presents a hardware-software co-design methodology featuring a novel Exponent-Element Quantization (EEQ) algorithm. EEQ represents floating-point values using a shared exponent and low-bit integer elements, eliminating floating-point arithmetic in the Q/DQ process. We design peripheral circuits, to build an EEQ-compatible CIM (EEQ-CIM) architecture. Furthermore, a system-level simulator is developed to optimize the mapping strategy for large-scale matrix multiplication. Evaluated on the Llama-2-7B model, our EEQ-based W6A6 quantization achieves comparable accuracy to the FP16 format while reducing matrix multiplication execution time by 40.8% and data transfer volume by 41.4% compared to the FP16 baseline.",
+      "identifiers": [
+        "SemanticScholar:60fc277a37fa5e088db04177d1dd55c92d707309"
+      ],
+      "semantic_scholar_id": "60fc277a37fa5e088db04177d1dd55c92d707309",
+      "doi": "10.1109/ISCAS66217.2026.11562436",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562436",
+      "authors": [
+        "Qi-Ning Zhang",
+        "Ao-Yun Feng",
+        "Hong-Fei Ye",
+        "Jianhua Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ISCAS 2026の原著要旨転載を確認。EEQは共有指数と低ビット整数要素で浮動小数点値を表し、量子化・逆量子化時の浮動小数点演算を省く。EEQ対応CIM周辺回路と行列積マッピングのシミュレータを共同設計し、Llama-2-7BのW6A6でFP16比の行列積実行時間40.8%、転送量41.4%減を報告。LLM推論向けハードウェア・量子化の直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "M-CSN: Joint Architecture and Flow Scheduling for Metro-Scale AI Fabric Based on Supernodes",
+      "source_url": "https://doi.org/10.1109/TNSE.2026.3727990",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Network Science and Engineering",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying trillion-parameter large language models across metropolitan environments is required to sustain real-time inference. Urban power constraints, however, prohibit monolithic GPU clusters, forcing the integration of distributed supernodes into a citywide compute fabric. Over 100-km distances, optical propagation delays invalidate reactive congestion control for 12.8 Tbps cross-domain pipeline parallelism (PP) traffic. The resulting high bandwidth-delay product causes in-flight data to saturate edge switch buffers before the feedback loop triggers source throttling. We address this limitation with M-CSN, an AI compute architecture featuring LOTUS, a model-driven scheduling engine for metropolitan computing power networks (CPNs). LOTUS replaces delayed reactive signaling with a proactive bi-level scheduling strategy. At the macro-layer, an inverse-SLA mechanism partitions capacity among concurrent flows to guarantee performance isolation. At the micro-layer, the scheduler decouples transmission rates from dynamic window probing: it injects calculated pacing rates and static hyper-BDP windows into source RDMA queue pairs (QPs). This source-side enforcement eliminates feedback lag. Packet-level simulations demonstrate that LOTUS sustains a 92% operational load with PFC-free execution. Eliminating pause-induced jitter and buffer saturation reduces critical-flow latency by 2.6× relative to reactive baselines. This enables fragmented urban resources to operate as a unified, deterministic, supernode-based computing power network.",
+      "identifiers": [
+        "SemanticScholar:87dc2121ad4c9730449ccb4ab0c455d82110ab60"
+      ],
+      "semantic_scholar_id": "87dc2121ad4c9730449ccb4ab0c455d82110ab60",
+      "doi": "10.1109/TNSE.2026.3727990",
+      "canonical_id": "DOI:10.1109/TNSE.2026.3727990",
+      "authors": [
+        "Liang Guo",
+        "Ji-Zhuang Zhao",
+        "Wei Quan",
+        "Shao-Peng Wang",
+        "Jie Li",
+        "Hong-Ke Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE TNSE 2026原著要旨の書誌転載を確認。都市域に分散したLLM推論supernode間で、100km級光伝搬遅延と12.8Tbps級のパイプライン並列通信がスイッチバッファを圧迫する問題を扱う。M-CSNはLOTUSのモデル駆動フロー・スケジューリングを都市域AI計算ファブリックに統合し、推論時通信の輻輳制御に直接取り組む。要旨だけで性能倍率を補わない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-15637c8b2e74",
+    "round": "libimp-15637c8b2e74e292-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-15637c8b2e74e292-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-15637c8b2e74e292-pre01.json",
+    "receipt": "sha256:ccf8f3ad77ad628ca04b5707d6651b9e8898fc5956d452f8169bdd35a6ad557a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-15637c8b2e74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

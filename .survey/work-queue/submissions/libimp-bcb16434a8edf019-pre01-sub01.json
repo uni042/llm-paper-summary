@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SPOT: Span-level Pause-of-Thought for Efficient and Interpretable Latent Reasoning in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.06222",
+      "year": 2026,
+      "published": "2026-03-06",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Explicit Chain-of-Thought (CoT) improves the reasoning performance of large language models (LLMs) but often incurs high inference cost due to verbose token-level traces. While recent approaches reduce this overhead via concise prompting or step pruning, they largely truncate what the model says rather than internalize what the model thinks. Latent reasoning offers a promising alternative by performing computation in the hidden space, yet prior methods face two critical challenges. Many existing approaches rely on rigid point-to-point alignment, forcing a latent token to approximate the final representation of a reasoning step, which can be insufficient to capture the dense, variable-length semantics of an entire reasoning segment. Furthermore, these methods often suffer from a lack of interpretability: latent states are commonly produced by unconstrained optimization or embedding mixing, yielding vectors that are difficult to decode or audit under the pretrained language head. We propose SPOT (Span-level Pause Of Thought), a flexible framework that compresses explicit CoT into compact latent  tokens without enforcing a fixed response template. At the core of SPOT is Span-level Semantic Alignment, a Sinkhorn optimal-transport objective that softly matches each  token to the semantics of an entire reasoning segment, overcoming the rigidity of step-end alignment. To further improve interpretability, SPOT introduces a Frozen-Head Decoding Constraint that keeps latent states directly decodable as token distributions under the frozen pretrained LM head, enabling readable keyword interpretations of latent thoughts. Moreover, with two-stage training and without direct token-level supervision on , SPOT enables controllable implicit reasoning intensity at inference. Experiments on main reasoning benchmarks demonstrate that SPOT improves accuracy by 2.3 points on average while reducing generated tokens by 37.5% and provides faithful semantic interpretations of the latent reasoning process.",
+      "identifiers": [
+        "SemanticScholar:05c973840b79f7b4d91f436b5cb6ee32c7ce5977"
+      ],
+      "semantic_scholar_id": "05c973840b79f7b4d91f436b5cb6ee32c7ce5977",
+      "canonical_id": "arXiv:2603.06222",
+      "arxiv_id": "2603.06222",
+      "doi": "10.1145/3770855.3818055",
+      "authors": [
+        "Yun-Long Chu",
+        "Ming-Lai Shao",
+        "Yuhang Liu",
+        "Bing Hao",
+        "Yu-Meng Lin",
+        "Jia-Lu Wang",
+        "Rui-Jie Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoTの長い思考区間をSinkhorn最適輸送でlatent pause tokenへ圧縮し、凍結言語ヘッドで潜在状態の解釈可能性を維持する。推論トークンを37.5%削減し、平均精度2.3ポイント改善したと報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "From Long to Lean: Performance-aware and Adaptive Chain-of-Thought Compression via Multi-round Refinement",
+      "source_url": "https://arxiv.org/abs/2509.22144",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) reasoning improves performance on complex tasks but introduces significant inference latency due to verbosity. We propose Multiround Adaptive Chain-of-Thought Compression (MACC), a framework that leverages the token elasticity phenomenon--where overly small token budgets can paradoxically increase output length--to progressively compress CoTs via multiround refinement. This adaptive strategy allows MACC to determine the optimal compression depth for each input. Our method achieves an average accuracy improvement of 5.6 percent over state-of-the-art baselines, while also reducing CoT length by an average of 47 tokens and significantly lowering latency. Furthermore, we show that test-time performance--accuracy and token length--can be reliably predicted using interpretable features like perplexity and compression rate on the training set. Evaluated across different models, our method enables efficient model selection and forecasting without repeated fine-tuning, demonstrating that CoT compression is both effective and predictable. Our code will be released in https://github.com/Leon221220/MACC.",
+      "identifiers": [
+        "SemanticScholar:63df6cfb96c715b4e8eb28a1f3a6b4ec9e5d33bb"
+      ],
+      "semantic_scholar_id": "63df6cfb96c715b4e8eb28a1f3a6b4ec9e5d33bb",
+      "canonical_id": "arXiv:2509.22144",
+      "arxiv_id": "2509.22144",
+      "doi": "10.48550/arXiv.2509.22144",
+      "authors": [
+        "Jianzhi Yan",
+        "Le Liu",
+        "You-Cheng Pan",
+        "Shi-Wei Chen",
+        "Zi-Ke Yuan",
+        "Yang Xiang",
+        "Buzhou Tang"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 418,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "CoTを複数回の適応的な短縮で洗練し、短すぎる予算が逆に出力長を増やすtoken elasticityを考慮して停止深度を決めるMACCを提案。平均47トークン短縮と基準法比精度5.6%改善、遅延削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation",
+      "source_url": "https://arxiv.org/abs/2606.27732",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models (dLLMs) recover masked tokens in parallel, offering significant speedups over autoregressive (AR) generation. However, such promising frameworks face a fundamental architectural design dilemma: \\ding{182} Adopting bidirectional attention achieves strong generation quality by allowing each position to access the full context, but is inherently incompatible with KV caching, limiting inference throughput in batch-serving scenarios; \\ding{183} Conversely, causal attention enables efficient cached inference but loses all right-side context, substantially degrading generation quality. This paper introduces Bifocal dLLMs, a new paradigm that resolves this dilemma through \\emph{asymmetric bidirectional context}. Analogous to bifocal lenses, we instantiate the paradigm as \\textbf{R2LM} (Right-to-Left Mamba), which combines two complementary mechanisms: $a$) standard causal attention providing precise left-context with full KV cache compatibility, while $b$) a lightweight reverse Mamba SSM sidecar supplying compressed right-side context without breaking cacheability. Comprehensive experiments on continued pretraining of Qwen3-1.7B with 60B tokens demonstrate that R2LM achieves $2.4\\times$ to $12.9\\times$ higher throughput than bidirectional dLLMs and $1.9\\times$ to $2.9\\times$ speedup over AR baselines in batch serving through parallel decoding with KV caching, while exceeding the causal baseline on most benchmarks and surpassing the bidirectional dLLM on average.",
+      "identifiers": [
+        "SemanticScholar:73fa626030df6f9a9f8db3cfe23e8e7ef8ae3ecf"
+      ],
+      "semantic_scholar_id": "73fa626030df6f9a9f8db3cfe23e8e7ef8ae3ecf",
+      "canonical_id": "arXiv:2606.27732",
+      "arxiv_id": "2606.27732",
+      "doi": "10.48550/arXiv.2606.27732",
+      "authors": [
+        "Yu-Hang Chen",
+        "Xian-Feng Wu",
+        "Jinhao Duan",
+        "Ming-Fu Liang",
+        "Xiaohan Wei",
+        "Yun-Chen Pu",
+        "Fei Tian",
+        "Chongling Sun",
+        "Parish Aggarwal",
+        "Frank Shyu",
+        "Luke Simon",
+        "Sandeep Pandey",
+        "Xi Liu",
+        "Tian-Long Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "左側文脈は因果注意とKVキャッシュで扱い、右側文脈は軽量な逆方向Mambaで圧縮して付加するR2LMを提案。Qwen3-1.7Bの継続事前学習後、batch servingで双方向dLLM比2.4～12.9倍、自己回帰基準比1.9～2.9倍のスループットを報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost",
+      "source_url": "https://arxiv.org/abs/2609.39358",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A transformer language model performs a bounded amount of computation per token, and recent work by Vishal Sikka, former CEO of Infosys, argues that this bound limits which tasks a model can carry out or verify (arXiv:2507.07505). We ask how much of the budget beneath that ceiling is spent on work the model has already done. Serving is stateless across requests: a model that answers a second question about a document recomputes the document's attention state from the first token. On seven real-world datasets, 98.7% of prompt tokens were text the model had already read. We present Galahad, a memory layer for vLLM, SGLang and llama.cpp that makes this reading a one-time cost. Taliesin saves the model's key-value (KV) state for a block of text and loads it on the next request that contains the same bytes, instead of recomputing it. Blaise keeps the documents themselves and passes the model only the section a question needs. On a recall test with 100 facts hidden in a 97,000-token corpus (Gemma 4 31B), Taliesin alone let the model attend to the whole corpus and answered 98 of 100 on llama.cpp at 3.0 s and 572 J per question, against 10 of 100, 9.3 s and 2,754 J for the same model without Galahad, which could hold only the last 12,000 tokens. With Blaise added, the model read about 668 tokens per question and answered 100 of 100 on all three runtimes at 0.59-0.64 s and 200-213 J; a tuned RAGFlow pipeline answered 77. Storing the corpus is a one-time cost of about 100 s and 28 kJ, whose energy is recovered after 13 questions. Restored state is bit-identical: all 262,144 output logits matched after restart, rehydration and hot-load. Galahad worked with all 30 models we tested under vLLM, and it fails closed: any load that does not pass its checks is recomputed. Together these results move LLM serving from stateless to stateful inference.",
+      "identifiers": [
+        "SemanticScholar:d7939f156f14b883d6ae567067433c82dc9eeab5"
+      ],
+      "semantic_scholar_id": "d7939f156f14b883d6ae567067433c82dc9eeab5",
+      "canonical_id": "arXiv:2609.39358",
+      "arxiv_id": "2609.39358",
+      "doi": "10.48550/arXiv.2609.39358",
+      "authors": [
+        "Sietse Schelpe"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      },
+      "reason": "vLLM/SGLang/llama.cpp向けGalahadは文書ブロックのKV状態をバイト完全一致で保存・復元し、必要な節だけを検索する。Gemma4-31Bの97kトークン再利用試験で、3.0秒/問から検索併用時0.59～0.64秒/問へ改善と報告。比較には文脈収容条件の違いがある点を要本文確認。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bcb16434a8ed",
+    "round": "libimp-bcb16434a8edf019-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bcb16434a8edf019-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bcb16434a8edf019-pre01.json",
+    "receipt": "sha256:7d7be005956ce12fffb26365064fcba5e9f81418a8d849297932c0ff754abb72"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bcb16434a8ed",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

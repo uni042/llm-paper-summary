@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+      "source_url": "https://arxiv.org/abs/2609.25053",
+      "year": 2026,
+      "published": "2026-09-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Can one language model hand its live memory to another without the receiver rereading the context? We demonstrate useful persistent hybrid-state transfer across one architecture-matched Qwen3.5 4B-to-9B sibling pair. To our knowledge, this is the first demonstrated cross-model handoff of persistent recurrent inference state between differently sized hybrid language models without target prefix replay. Translated attention KV alone leaves a large gap; adding the Gated DeltaNet (GDN) persistent-state package lowers teacher-forced negative log-likelihood (NLL), the average next-token log-loss, by 0.747 nats/token (95% paired document bootstrap CI [0.6921, 0.8047]), improving all 64 PG19 documents. Direct recurrent and convolution reuse outperforms the tested learned GDN maps, consistent with partial functional compatibility of persistent-state coordinates. A fresh component factorial selects translated KV with direct recurrent and convolution state. An additional 434,176-parameter correction improves that base on 64 fresh web documents: continuation loss is 0.076 nats/token above native 9B (excess NLL), Jensen-Shannon (JS) divergence is 0.022, and native context recovery (NCR) is 0.918. Corrected 9B significantly beats continued 4B inference while processing zero historical prefix tokens. Evidence covers one direction, one geometry-matched Base-model pair, and 4K teacher-forced continuation; the near-native gate failed, the 16K branch was not run, and free-generation equivalence and a general state interface remain unproven.",
+      "identifiers": [
+        "SemanticScholar:4232e5d59b174c4a014648da60afb80d4a70e9e5"
+      ],
+      "semantic_scholar_id": "4232e5d59b174c4a014648da60afb80d4a70e9e5",
+      "canonical_id": "arXiv:2609.25053",
+      "arxiv_id": "2609.25053",
+      "doi": "10.48550/arXiv.2609.25053",
+      "authors": [
+        "Simon P. Villani"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Qwen3.5の4Bから9Bへ、KVだけでなくGated DeltaNetの再帰状態・畳み込み状態を移すことで、受け手の過去文脈prefillをゼロにするcross-model handoff。64 PG19文書でGDN状態追加によりteacher-forced NLLが0.747 nats/token改善。4K continuation・一方向・単一の同系統モデル組だけの検証で、自由生成の同等性は未実証。推論時の状態転送・再計算回避へ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "title": "Accelerating Cross-Model LLM Inference via Attention Map Reuse",
+      "source_url": "https://arxiv.org/abs/2610.14688",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-augmented data workflows often involve multiple heterogeneous models operating over substantial shared context, such as schemas, tool specifications, interaction history, and intermediate results. Although prefix caching can reduce prefilling overhead, existing approaches are largely limited to reuse within the same model because KV states are tightly coupled to model-specific architectures. We present MapFlow, a system for efficient heterogeneous LLM serving via cross-model attention map reuse. Instead of reusing KV states, MapFlow reuses attention maps, which capture token dependency patterns and are more transferable across models. To enable efficient and accurate reuse, we combine partial recomputation with lightweight linear translation across layers and heads. To make attention reuse practical for long contexts, we further introduce block-level sparse compression and a fused retrieval kernel. Experiments show that MapFlow reduces prefilling latency and improves end-to-end serving efficiency while preserving generation quality across heterogeneous model pairs and multi-turn routing workloads. These results suggest that attention maps provide an effective reusable state for heterogeneous LLM serving, especially in prefix-heavy data workflows. Our code is available: https://github.com/PKU-DAIR/MapFlow.",
+      "identifiers": [
+        "SemanticScholar:5249bdd4109d35a21dd335749658ced6ceb8e34e"
+      ],
+      "semantic_scholar_id": "5249bdd4109d35a21dd335749658ced6ceb8e34e",
+      "canonical_id": "arXiv:2610.14688",
+      "arxiv_id": "2610.14688",
+      "doi": "10.1145/3856312",
+      "authors": [
+        "Zhan-Yang Jin",
+        "Yu-Ze Luo",
+        "Bin Cui",
+        "Xupeng Miao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MapFlowは異なるLLM間でKVそのものではなくattention mapを共有し、layer/head間の線形変換と部分再計算で互換性を確保。長文脈向けblock sparse圧縮とfused retrieval kernelも導入し、異種モデル間でprefill latencyを減らす。要旨に正確な倍率がないため倍率は捏造しない。モデル間文脈再利用・推論servingの直接的な技術貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "title": "Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.23085",
+      "year": 2026,
+      "published": "2026-09-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) and agentic AI systems are creating rapidly growing inference energy demands as model sizes grow and reasoning trajectories extend. While in practice, many queries do not require the capabilities of the largest available model, and routinely directing such queries to a high-capability model can introduce unnecessary, considerable computation and energy consumption. In this paper, we investigate whether adaptive routing across a heterogeneous pool of LLMs can reduce this energy burden without substantially compromising task performance. We design a language-model-based router that reads in each query and selects an answer model from a fixed candidate pool. The candidate models are first profiled through an offline tournament that records their correctness, latency, power, and GPU energy for each query. Using these measurements, the router is trained through supervised fine-tuning followed by group relative policy optimization (GRPO) with the tailored paradigms. Results demonstrate that learned routing can selectively allocate expensive model capacity based on query context and improve the accuracy-energy tradeoff in multi-LLM serving. Across seven benchmark tasks, we also observe a sharp accuracy-energy phase transition among routers, providing practical insights into improving energy efficiency while maintaining LLM performance.",
+      "identifiers": [
+        "SemanticScholar:7b3f399f69df290b68a0082d7a9bb4cf67e12772"
+      ],
+      "semantic_scholar_id": "7b3f399f69df290b68a0082d7a9bb4cf67e12772",
+      "canonical_id": "arXiv:2609.23085",
+      "arxiv_id": "2609.23085",
+      "doi": "10.48550/arXiv.2609.23085",
+      "authors": [
+        "Muhammad Abdur Rab Siddiqui",
+        "Daniela Rojas",
+        "Chen Yang",
+        "Wen-Qi Cui",
+        "Yuan-Yuan Shi",
+        "Yi-Ze Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異なるLLMを抱える推論poolで、各質問の正解・遅延・電力・GPUエネルギーをoffline tournamentで測り、SFTとGRPOで質問別のモデル選択routerを学習。7 benchmarkでaccuracyとenergyのトレードオフを評価し、高性能モデルを全要求へ使う無駄を削減する。要旨には普遍的な省エネ倍率がないため定量倍率は主張しない。推論時の実行先選択・エネルギー最適化に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "title": "Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.35188",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive large language model inference repeatedly invokes the target model to generate one token at a time, making generation sensitive to GPU memory movement and sequential execution. This study evaluates two-token multi-token prediction (MTP) against autoregressive decoding in a controlled single-request deployment on an NVIDIA A10G GPU. A 360-request benchmark covered plain-text, reasoning-intensive, and tool-calling workloads, while runtime telemetry, Nsight Systems, PyTorch Profiler, and selected Nsight Compute measurements were used to explain the observed performance. MTP increased output throughput by \\(1.91\\times\\) to \\(2.19\\times\\) across all prompts and reduced time to first output by 10.0--14.2\\%. Median mean acceptance length ranged from 2.370 to 2.595 tokens per verification iteration. Profiling showed that MTP introduced a longer and more complex execution path, including proposal, sampling, attention, gathering, and reduction operations. However, it required 56.4--78.1\\% fewer executions of the selected repeating CUDA Graph per generated token. The dominant MTP GEMM kernel was not faster than the dominant autoregressive GEMV kernel, and selected instances of both approached the A10G memory-bandwidth limit. These results show that MTP improved inference through amortization: greater token progress reduced repeated GPU execution sufficiently to outweigh the additional speculative-execution cost.",
+      "identifiers": [
+        "SemanticScholar:d7f682fc94c1a0340d45583297220df52f8b286d"
+      ],
+      "semantic_scholar_id": "d7f682fc94c1a0340d45583297220df52f8b286d",
+      "canonical_id": "arXiv:2609.35188",
+      "arxiv_id": "2609.35188",
+      "doi": "10.48550/arXiv.2609.35188",
+      "authors": [
+        "Suwesh Prasad Sah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NVIDIA A10Gの単一要求360件を対象に、2-token MTPと通常autoregressive decodeをNsight等で計測。MTPの出力throughputは1.91〜2.19倍、最初の出力までの時間は10.0〜14.2%減。個々のGEMMがGEMVより速いのではなく、生成token当たりCUDA Graph繰返しが56.4〜78.1%減る償却効果を示す。推論実行のボトルネック実測であり直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    },
+    {
+      "title": "Adaptive Co-Serving LLM Watermarking on Modern Inference Engines",
+      "source_url": "https://arxiv.org/abs/2610.03955",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) watermarking is important for ownership verification and intellectual property protection. However, existing approaches focus on algorithmic design while treating LLM inference engines as separate components. This separation often introduces auxiliary models or external tools, increasing latency and memory overhead while limiting the use of modern inference optimizations. As a result, a deployment gap remains: practical watermarking must preserve utility, detectability, and robustness while minimizing serving overhead. To bridge this gap, we propose SWIFT, a framework that co-designs LLM watermarking with modern inference infrastructure. SWIFT (i) integrates text generation and watermark construction within a shared LLM backend to reduce re-computation, improve cache reuse, and simplify system complexity; (ii) uses instruction-guided candidate generation with semantic protection to preserve factual consistency and meaning; (iii) executes watermarking concurrently with generation through asynchronous co-serving and adaptive scheduling to reduce latency and improve resource utilization; and (iv) leverages vLLM optimizations to enhance serving efficiency. Extensive experiments across domains and tasks show that SWIFT achieves strong utility, detectability, robustness, and downstream performance while substantially improving serving efficiency. Specifically, it achieves the highest utility score (4.87), 99.65% detection accuracy compared with 76.65% for the low-latency baseline SynthID, and up to 97.7% detection under watermark removal attacks, with 5.9x lower latency than the highest-utility baseline, SafeSeal. These results demonstrate the benefits of co-designing watermarking with inference infrastructure for practical LLM serving.",
+      "identifiers": [
+        "SemanticScholar:74933159d75fefacfc54cb509ae11e80f724e341"
+      ],
+      "semantic_scholar_id": "74933159d75fefacfc54cb509ae11e80f724e341",
+      "canonical_id": "arXiv:2610.03955",
+      "arxiv_id": "2610.03955",
+      "authors": [
+        "Kieu Dang",
+        "Lai Phung",
+        "Ching-Yun Ko",
+        "Pin-Yu Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SWIFTは生成とwatermark構築を同一LLM backendへ統合し、再計算とキャッシュ重複を減らすとともに非同期co-serving・adaptive schedulingを実装。vLLM最適化を使い、SafeSealに対して5.9倍低いlatencyを報告。watermark用途に限定されるが、serving backend上での追加推論処理の統合・スケジューリングによる遅延削減を直接評価するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4897594a5320",
+    "round": "libimp-4897594a53200086-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4897594a53200086-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4897594a53200086-pre01.json",
+    "receipt": "sha256:6b0d9cf8db7113a1eb59153b989db9d1d8b34084dae9f7fb835b31dcacd8ff3f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4897594a5320",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Kernel-based Interpolatory Methods for Context Compression of Attention Mechanisms",
+      "source_url": "https://arxiv.org/abs/2610.40943",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The bottleneck of attention mechanisms, which are the fundamental building block of modern language models, is their quadratic complexity in terms of context size. There has thus been an increasing interest in the compression of the context, also called KV-cache compression. In this article, we consider the problem of compressing the context of attention mechanisms by first formulating it in the Hilbert space associated with its kernel. In this formalism, attention can be represented as the ratio of two linear maps whose interpolant is also the ratio of interpolants, this allows us to consider the interpolation of the linear maps directly. We thus introduce two novel KV-cache compression methods which we call GAIM and Q-DAIM, based on the Generalized Empirical Interpolation Method (GEIM) and the Q-Discrete Empirical Interpolation Method (Q-DEIM), respectively. As the cost of these methods is quadratic in terms of context length, we propose surrogate models based on the Taylor series, the Performer and the Random Fourier Features method which allow the compression to be done in linear time. Finally, we extend this result to the streaming attention setting, providing new methods which allow one to penalize the selection of interpolation nodes based on the previously interpolated context and to update the previous interpolation based on new information. We then provide numerical results on the convergence of the residuals and the output error in future queries and preliminary results on the LongBench-E benchmark showing performance comparable to the state-of-the-art methods. These experiments suggest that the range revealed by our Q-DAIM method could help identify where information is concentrated in the KV cache, thus enabling an efficient compression.",
+      "identifiers": [
+        "SemanticScholar:670e69c8f4f66ed97b87598f004849f0ab19e739"
+      ],
+      "semantic_scholar_id": "670e69c8f4f66ed97b87598f004849f0ab19e739",
+      "canonical_id": "arXiv:2610.40943",
+      "arxiv_id": "2610.40943",
+      "authors": [
+        "Michel Fabrice Serret",
+        "L. Grigori"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "attentionをカーネルHilbert空間の線形写像比として表現し、GEIM/Q-DEIM由来のGAIM・Q-DAIMでKVコンテキストを補間圧縮する。元の選点計算は系列長二乗だが、Taylor・Performer・Random Fourier Featuresによる代理で線形化し、streaming更新にも拡張。LongBench-Eの予備評価と残差・出力誤差を示し、LLM推論のKV圧縮方式へ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "TraceSpec: Understanding and Improving Speculative Decoding for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.41177",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents execute tasks through repeated model calls over evolving histories of reasoning, actions, and tool feedback. Aggregate speculative-decoding metrics merge these distinct decisions, providing limited guidance on where draft supervision is needed. We present TraceSpec, a framework connecting trajectory evaluation with adaptive draft training. It combines dynamic execution with fixed-prefix replay and introduces TraceSpec-Traj, a corpus of 10,000 training states and 2,500 test states spanning browsing and software engineering. Analysis of five speculative baselines reveals that aggregate acceptance can rise with context length while declining within matched late browsing actions. Workload and phase further distinguish these trends, motivating supervision guided by trajectory conditions. TraceSpec trains on intermediate assistant turns and allocates a fixed prediction budget using state-conditioned estimates of prefix-aware acceptance gaps. Across three target sizes and two temperatures, it improves replay throughput by 12.5% to 22.6% over its DSpark base. Qwen3-4B ablations show that adaptive allocation increases accepted length by 3.3% to 10.0% over fixed full-turn supervision, with additional comparisons substantiating the roles of state conditioning and consecutive-token agreement. The resulting evaluation resources, trajectory findings, and training strategy connect the analysis of agent execution to practical draft improvement.",
+      "identifiers": [
+        "SemanticScholar:88db0f0317de444ee1f6bef8ab392f3fe9dac3a7"
+      ],
+      "semantic_scholar_id": "88db0f0317de444ee1f6bef8ab392f3fe9dac3a7",
+      "canonical_id": "arXiv:2610.41177",
+      "arxiv_id": "2610.41177",
+      "authors": [
+        "Jihao Zhao",
+        "Shuai-Shuai Zu",
+        "Peng-Fei Li",
+        "Biao Qin",
+        "Guang-Huan Fang",
+        "Ben Feng",
+        "Bao-Chuan Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMエージェントのツール実行段階ごとに投機復号の受理率が変わることを動的実行と固定prefix replayで分析。10,000訓練状態/2,500試験状態のTraceSpec-Trajを構築し、状態条件付き受理率ギャップ推定でdraft学習予算を配分する。DSpark基準でreplay throughputを12.5〜22.6%改善し、Qwen3-4Bでは固定全ターン教師信号比で受理長3.3〜10.0%改善。推論加速への直接貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "In-Model Context Compression with Agentic Soft Tokens for Long-Horizon LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.41291",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-horizon LLM agents play an important role in solving complex and sustained tasks, with ever-growing interaction contexts. However, these accumulated contexts will raise substantial computational cost and obscure key decision-relevant evidence. Existing methods typically train external compressors or context-management agents to rewrite context as shorter hard-token sequences, but such external selection may not align with the LLM's evolving representation and is necessarily lossy. In this paper, we introduce Agentic Soft-Token Compression (ASTC), a training-free compression method using soft tokens within LLM agent for long-horizon tasks. Specifically, ASTC uses the model's native recurrent dynamics to determine the already absorbed information, leveraging the commonly-used hybrid Gated Delta Network (GDN)-attention. It then carries this information forward as agentic soft tokens while retaining exact values as hard tokens. The resulting compact sequence reduces later-layer computation and yields reusable KV caches, extending the savings across the agent's trajectory. Extensive experiments on long-horizon tasks show that ASTC matches or exceeds the uncompressed agent's accuracy with up to 59.84% fewer end-to-end Attention Pairs, while trained compressors require 12.3 to 194.9 times more Attention Pairs per successful task. These findings highlight agentic soft tokens as a model-native way to carry absorbed context forward as the task representation evolves.",
+      "identifiers": [
+        "SemanticScholar:7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf"
+      ],
+      "semantic_scholar_id": "7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf",
+      "canonical_id": "arXiv:2610.41291",
+      "arxiv_id": "2610.41291",
+      "authors": [
+        "Xu-Ning He",
+        "Kai-Hsiang Fan",
+        "Run-Yu Zhang",
+        "Bing Wang",
+        "Yu-Xiang Zhang",
+        "Xue Jiang",
+        "Yihong Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長期エージェントの肥大化する文脈に対しASTCはGated Delta Networkとattentionのハイブリッドモデルの再帰状態から既吸収情報を抽出し、soft tokenとして引き継ぎつつ必要な値をhard tokenで保持する。後段計算を減らし再利用可能なKVを作り、精度を保ったままend-to-end attention pairを最大50.68%削減。推論時文脈圧縮の直接的技術貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Sparse Text Diffusion under Dual Budgets: Context Connectivity and Expert Activation",
+      "source_url": "https://arxiv.org/abs/2610.41487",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context diffusion repeatedly pays for both token interaction and feed-forward computation. We formulate these costs as two separate budgets: the edges available to an attention graph and the experts activated for each token. This view connects local, dilated, and global attention with conditional expert computation without assuming that sparsity alone preserves document-level information. We specify normalized masked attention, distinguish denoising depth from sampling iterations, and derive graph and compute bounds. A reported sparse-expert configuration, denoted DualBudget, is analyzed across scientific summarization, multi-hop question answering, dialogue, and sentence-pair prediction. All supplied table measurements are retained. The length study shows gains over the listed baselines through 16K, together with measurable degradation as length increases. Ablations reveal mixed changes across the three reported scores, while the cost record indicates a 20% reduction relative to DiffuSeq under an unspecified timing convention. The analysis separates these observations from unmeasured claims about training speed, absorbing states, global coherence, and deployment memory.",
+      "identifiers": [
+        "SemanticScholar:2d905f2e03813f937eca3a405a6ce4ec54e113f8"
+      ],
+      "semantic_scholar_id": "2d905f2e03813f937eca3a405a6ce4ec54e113f8",
+      "canonical_id": "arXiv:2610.41487",
+      "arxiv_id": "2610.41487",
+      "authors": [
+        "Alexandros Christoforos",
+        "Chadbourne Davis",
+        "P. Raj"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈の拡散型言語モデルでattention graphの接続辺数とtoken当たり活性expert数を別々の計算予算として扱うDualBudgetを解析。local/dilated/global注意と条件付きexpert計算のコスト境界を導出し、16Kまでの長さ評価と劣化条件を報告。DiffuSeq比20%のコスト減は時間計測条件が未指定であり実機推論高速化の証明とは区別するが、推論計算量の削減設計を直接扱うためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Where KV-Cache Error Lives in Looped Language Models: A Diagnostic Study of Ouro and Huginn",
+      "source_url": "https://arxiv.org/abs/2610.41825",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A looped language model applies one block of layers 4 times per token and keeps a key/value (KV) plane for each loop. We study where storage error changes the next-token distribution and how shared-weight error accumulates, using Ouro-1.4B (4 loops) on GSM8K and MATH and Huginn-0125 (32 loops) on GSM8K-derived chains, with dense, simulated quantization. Per unit of error, values carry 94% of the diagonal Fisher mass, but measured KL is dominated by keys with larger quantization errors. Local second-order prediction follows the measured KL of typical sequences, including 136 held-out chains, but misses a few confident rows, and a local second-order factor for shared weights at 32 loops ranges from 1.65 (INT8) to 4.09 (INT4), so it depends on the error direction. A cell-level allocator lowers one-step KL at 25-48% of BF16 bytes, while paired task-accuracy comparisons depend on budget and the 25% gap against K4V2 shrinks to near zero under a post hoc answer-extraction check. A later Ouro-2.6B test retains the key/value split but falsifies measured-cost allocation's advantage over Fisher at 31%; across all 21 ledger registrations, 60 of 176 criteria failed.",
+      "identifiers": [
+        "SemanticScholar:e6ebb9a5e1642d1b42b0f73062eff1953af03848"
+      ],
+      "semantic_scholar_id": "e6ebb9a5e1642d1b42b0f73062eff1953af03848",
+      "canonical_id": "arXiv:2610.41825",
+      "arxiv_id": "2610.41825",
+      "authors": [
+        "De-Zhen Lu",
+        "Run-Guo Li",
+        "Zi-Xiang Ni",
+        "Yu-Chen Tang",
+        "Xing-Quan Kong",
+        "Jia-Xing Yang",
+        "Jia-Rui Guo",
+        "Ling-Xiang Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重み共有のlooped言語モデルでKV量子化誤差がどこに効くかをOuro-1.4B（4ループ）とHuginn（32ループ）で分析。値は単位誤差当たりFisher対角質量94%を担う一方、実際のKLは量子化誤差が大きいkeyに支配され、cell単位配分はBF16容量の25〜48%で1-step KLを低減。Ouro-2.6Bでは一部優位性が再現されない負結果も報告。推論時KV圧縮設計へ直接寄与する診断研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-87c1a85806ce",
+    "round": "libimp-87c1a85806ce017a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-87c1a85806ce017a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-87c1a85806ce017a-pre01.json",
+    "receipt": "sha256:4ba20e58111113e0ff213049a3da674ad34531f96d273c2b6a83f80500acee07"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-87c1a85806ce",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

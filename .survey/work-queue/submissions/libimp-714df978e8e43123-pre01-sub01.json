@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation",
+      "source_url": "https://arxiv.org/abs/2603.10899",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) rely on key-value (KV) caching to avoid redundant computation during autoregressive inference. While this mechanism greatly improves efficiency, the cache size grows linearly with the input sequence length, quickly becoming a bottleneck for long-context tasks. Existing solutions mitigate this problem by evicting prompt KV that are deemed unimportant, guided by estimated importance scores. Notably, a recent line of work proposes to improve eviction quality by\"glimpsing into the future\", in which a draft generator produces a surrogate future response approximating the target model's true response, and this surrogate is subsequently used to estimate the importance of cached KV more accurately. However, these approaches rely on computationally expensive draft generation, which introduces substantial prefilling overhead and limits their practicality in real-world deployment. To address this challenge, we propose LookaheadKV, a lightweight eviction framework that leverages the strength of surrogate future response without requiring explicit draft generation. LookaheadKV augments transformer layers with parameter-efficient modules trained to predict true importance scores with high accuracy. Our design ensures negligible runtime overhead comparable to existing inexpensive heuristics, while achieving accuracy superior to more costly approximation methods. Extensive experiments on long-context understanding benchmarks, across a wide range of models, demonstrate that our method not only outperforms recent competitive baselines in various long-context understanding tasks, but also reduces the eviction cost by up to 14.5x, leading to significantly faster time-to-first-token. Our code is available at https://github.com/SamsungLabs/LookaheadKV.",
+      "identifiers": [
+        "SemanticScholar:0d429fc6a266818cafa4539bb86ea9817c157d78"
+      ],
+      "semantic_scholar_id": "0d429fc6a266818cafa4539bb86ea9817c157d78",
+      "canonical_id": "arXiv:2603.10899",
+      "arxiv_id": "2603.10899",
+      "doi": "10.48550/arXiv.2603.10899",
+      "authors": [
+        "Jinwoo Ahn",
+        "Ingyu Seong",
+        "Akhil Kedia",
+        "Junhan Kim",
+        "Hyemi Jang",
+        "Kangwook Lee",
+        "Yongkweon Jeon"
+      ],
+      "priority": 123,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 123,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "将来応答のdraft生成でKV重要度を推定する従来方式は追加生成費用が高い。LookaheadKVは学習可能な特殊トークンと選択的LoRAを用いて将来の注意重要度を予測し、draft応答を実際には生成せずprefill時に保持KVを決定する。長文脈ベンチマークで品質を維持しつつ、著者らはeviction処理費用を最大14.5倍削減と報告。これは削除判定の費用であり、end-to-end推論全体の14.5倍高速化ではない。推論時KV圧縮とTTFTの直接最適化のためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Learning to Evict from Key-Value Cache",
+      "source_url": "https://arxiv.org/abs/2602.10238",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing size of Large Language Models (LLMs) makes efficient inference challenging, primarily due to the memory demands of the autoregressive Key-Value (KV) cache. Existing eviction or compression methods reduce cost but rely on heuristics, such as recency or past attention scores, which serve only as indirect proxies for a token's future utility and introduce computational overhead. We reframe KV cache eviction as a reinforcement learning (RL) problem: learning to rank tokens by their predicted usefulness for future decoding. To this end, we introduce KV Policy (KVP), a framework of lightweight per-head RL agents trained on pre-computed generation traces using only key and value vectors. Each agent learns a specialized eviction policy guided by a holistic reward, derived from future utility, that evaluates the quality of the ranking across all cache budgets, requiring no modifications to the underlying LLM or additional inference. Evaluated across two model families on the long-context benchmark RULER (up to 128K tokens) and the multi-turn dialogue benchmark OASST2-4k, KVP significantly outperforms strong baselines. Zero-shot tests on standard downstream tasks (BoolQ, LongBench passage retrieval, GovReport) further show that KVP generalizes beyond its training distribution and to considerably longer sequence lengths. These results demonstrate that learning to predict future token utility is a powerful and scalable paradigm for adaptive KV cache management.",
+      "identifiers": [
+        "SemanticScholar:85d2768efec4831346827a3e106eaf67567d3035"
+      ],
+      "semantic_scholar_id": "85d2768efec4831346827a3e106eaf67567d3035",
+      "canonical_id": "arXiv:2602.10238",
+      "arxiv_id": "2602.10238",
+      "doi": "10.48550/arXiv.2602.10238",
+      "authors": [
+        "Luca Moschella",
+        "Laura Manduchi",
+        "Ozan Sener"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 281,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュ削除を過去attentionスコアのヒューリスティックではなく、将来復号での有用性を順位付けする強化学習問題として定式化する。KV Policy（KVP）はヘッドごとの軽量エージェントを事前生成トレースから学習し、キー・値ベクトルだけで任意の保持予算に対する削除順位を決める。RULERとOASST2-4kで既存方式を上回り、LongBench等へのzero-shot転移も報告する。既存LLMの再学習・追加推論を必要としないKV削除方式としてaccept。要旨には確定した速度倍率がないため記載しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "title": "ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2602.08005",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": null,
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient long-context inference faces two coupled bottlenecks: KV-cache memory grows linearly with context length, while attention computation grows quadratically. Existing approaches typically address one at the expense of irreversible token eviction, full-cache retention, or full-history reconstruction, limiting their effectiveness for multi-turn interaction and long-form reasoning. Motivated by two empirical properties, Long-Range Inter-Token Similarity and Smooth Residual Distribution, we propose ResidualKV, which factorizes the KV cache into a sparse set of globally retrieved references and compact, quantized residual codes for the remaining tokens. This representation preserves token-specific information without permanent eviction and, when combined with sparse attention, reconstructs only the selected states on demand. Dynamic-stride scheduling further reduces reference growth from linear to approximately logarithmic at ultra-long contexts. Across Llama, Qwen, LLaVA-OV, and Qwen3-VL backbones, ResidualKV maintains near-full-cache performance using only 13%-16% KV storage and 30% attention computation on LongBench, and 8%-10% storage and 10% computation in matched-budget multimodal evaluation. It also accelerates decoding by up to $1.5\\times$ with KV-cache quantization and $3.4\\times$ without it. These results show that global cross-token redundancy supports accurate, memory-efficient, and computation-efficient long-context inference. The source code is available at https://github.com/CURRENTF/ResidualKV.",
+      "identifiers": [
+        "SemanticScholar:97f566521a12dc788e64fa104dbec0e99935248e"
+      ],
+      "semantic_scholar_id": "97f566521a12dc788e64fa104dbec0e99935248e",
+      "canonical_id": "arXiv:2602.08005",
+      "arxiv_id": "2602.08005",
+      "authors": [
+        "Jitai Hao",
+        "Qiang Huang",
+        "Yao-Wei Wang",
+        "Min Zhang",
+        "Jun Yu"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長距離のKV表現間に類似性があることを利用し、過去トークンの参照表現と差分残差に分解してKVを圧縮する。本文ではResidualKVの名称も用い、Sparse-vLLMに疎・不規則KV配置を扱うメモリ管理とカーネルを実装する。著者らはLongBench・SCBench・AIMEで品質をほぼ維持しながらKV容量を元の29%に減らし、長文脈でvLLM比最大2倍のthroughputを報告。容量と実行速度を同時に改善するLLM推論システムとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "title": "MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2606.01563",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding in Transformer-based language models relies on the KV cache, whose memory footprint grows linearly with sequence length and becomes the primary bottleneck for long-context inference. KV cache eviction addresses this by retaining a fixed-size subset of key-value pairs and discarding the rest. We identify that a primary source of output degradation is not the residual attention mass on evicted tokens, which existing methods already minimize, but a directional mismatch between the retained and evicted token sets. Specifically, the evicted tokens in practice are often near-orthogonal to the retained ones. Thus, even a small evicted mass could have an oversized impact on the resulting direction distribution and amplify into substantial output error. This reveals a fundamental limit in existing strategies. To address this, we propose MomentKV, which maintains compact, small-size moment statistics over the evicted token set, including a count, key mean, value mean, and value-key covariance. During eviction, the moment statistics is leveraged to identify tokens already well aligned with and captured by the accumulated summary, keeping the evicted set geometrically regular. During inference, they yield a closed-form first-order approximation of the evicted attention output, forming a mutually reinforcing loop between selective eviction and accurate correction. On LongBench and RULER with LLaMA-3.1-8B-Instruct and Qwen3-4B-Instruct, MomentKV outperforms all baselines at every cache budget, with the largest gains under aggressive compression.",
+      "identifiers": [
+        "SemanticScholar:5a8a52bbf06d90106669a5e0c7dd0da9361ec4db"
+      ],
+      "semantic_scholar_id": "5a8a52bbf06d90106669a5e0c7dd0da9361ec4db",
+      "canonical_id": "arXiv:2606.01563",
+      "arxiv_id": "2606.01563",
+      "doi": "10.48550/arXiv.2606.01563",
+      "authors": [
+        "Yu Li",
+        "Bin-Xu Li",
+        "Tian Lan"
+      ],
+      "priority": 109,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 109,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV削除時に残存トークンと削除トークンの注意出力方向がほぼ直交し、削除注意質量が小さくても出力誤差が増幅する問題を解析する。MomentKVは削除済みキー・値の個数、平均、値とキーの共分散を固定容量で保持し、削除判断と復号時の一次近似補正に利用する。LongBench・RULERでLLaMA-3.1-8B-InstructとQwen3-4B-Instructを評価し、著者らは複数キャッシュ予算で比較方式を上回ると報告。KVメモリ削減と推論品質維持に直接寄与するためaccept。要旨にはend-to-end速度改善倍率の記載はなく推測しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "title": "FAST-Prefill: FPGA Accelerated Sparse Attention for Long Context LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2602.20515",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "IEEE Symposium on Field-Programmable Custom Computing Machines",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill latency dominates long-context LLM inference due to quadratic attention. Dynamic context-aware sparse attention reduces compute but creates irregular, memory-bound workloads that GPUs handle inefficiently. We propose FAST-Prefill, an FPGA accelerator that mitigates large intermediate tensors, irregular KV access, and limited compute resources via a fused streaming pipeline, a liveness-driven dual-tier cache, and a hybrid DSP–LUT MPU. On a Xilinx U280, FAST-Prefill delivers up to 2.2× speedup and 4.5× lower EDP compared to GPU baselines on the LLaMA-3.2-3B model.",
+      "identifiers": [
+        "SemanticScholar:301e74a4649983c500fb783a67b670ffc063dea2"
+      ],
+      "semantic_scholar_id": "301e74a4649983c500fb783a67b670ffc063dea2",
+      "canonical_id": "arXiv:2602.20515",
+      "arxiv_id": "2602.20515",
+      "doi": "10.1109/FCCM68464.2026.00067",
+      "authors": [
+        "Rakshith Jayanth",
+        "V. Prasanna"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 267,
+        "matched_prestigious_venue": null
+      },
+      "reason": "動的疎注意のprefillでは疎インデックス生成と不規則なKV参照がメモリ律速になる。FAST-PrefillはFPGA上で中間テンソルを作らないストリーム型インデックス生成、KVブロック生存期間を考慮した二層キャッシュ、DSPとLUTビットプレーン演算を併用する行列演算器を設計する。Alveo U280、Llama/Qwen、4K〜128K文脈、batch 1でNVIDIA A5000実装比TTFT最大2.5倍、エネルギー効率4.5倍と著者らは報告。異なるハードウェア比較である点を保持し、長文脈LLM prefillアクセラレータとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-714df978e8e4",
+    "round": "libimp-714df978e8e43123-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-714df978e8e43123-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-714df978e8e43123-pre01.json",
+    "receipt": "sha256:f63fc08e2752c1642b68ebbe6254f41c01f7165fd39f7a10e03daa47465eee88"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-714df978e8e4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

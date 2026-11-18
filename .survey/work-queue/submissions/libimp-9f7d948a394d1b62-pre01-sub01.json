@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KV Cache Quantization for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.39853",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache quantization is well studied for autoregressive language models, where cached prefix states are exact under causal attention and quantization is mainly a cache reconstruction problem. Diffusion language models (dLLMs) break this assumption. Fast dLLM inference reuses KV states across denoising steps, but bidirectional token representations can change as masked tokens are revealed, so the reused cache may already differ from full recomputation before quantization is applied. We study KV cache quantization under this cache-reuse error. We adapt KIVI and KVQuant to Fast-dLLM-style prefix and dual cache reuse, and introduce TRACE and dLLM-KVQ. TRACE reconstructs feasible dLLM reveal trajectories from prompt-answer pairs, providing calibration states that match iterative masked decoding. dLLM-KVQ uses these trajectories to choose per-layer K-cache entries that remain in high precision according to output- and attention-level behavior metrics, while applying standard low-bit value quantization. Across LLaDA and Dream evaluations on GSM8K, HumanEval, MATH, and MBPP, dLLM-KVQ achieves the highest average score among quantized methods across the reported 4-bit and 2-bit prefix/dual cache settings.",
+      "identifiers": [
+        "SemanticScholar:5415811b556582133635c461d3d59b7376dad74a"
+      ],
+      "semantic_scholar_id": "5415811b556582133635c461d3d59b7376dad74a",
+      "canonical_id": "arXiv:2610.39853",
+      "arxiv_id": "2610.39853",
+      "doi": "10.18653/2026.findings-emnlp.799",
+      "authors": [
+        "Yan Tai",
+        "Yu-Nan Ding",
+        "Guang-Zhao Li",
+        "Si-Qi Luo",
+        "Chao-Yang Zhang",
+        "Guang-Tao Zhai",
+        "Guo-Dong Guo",
+        "Xiao-Hong Liu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "拡散LLMではmask解除に伴い双方向表現が変化するため、再利用KVは量子化前から完全再計算と異なる。TRACEがprompt-answer対から実際のmask解除軌跡に近い校正状態を作り、dLLM-KVQが層別のK重要成分を高精度保持しVは低bit量子化する。LLaDA・DreamでGSM8K/HumanEval/MATH/MBPPを評価し、報告された2/4bitのprefix/dual cache設定で量子化手法中の平均最高点を得る。推論KVの直接最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy",
+      "source_url": "https://arxiv.org/abs/2610.13708",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context serving runs out of KV memory before the hardware reaches its useful throughput. HiSparse stores history in host memory and fetches only the selected entries, but it uses one cache budget at every load and does not handle draft-model speculative decoding such as DSpark and DFlash2. We present Adaptive DHiSparse, which supports speculative decoding over hierarchical sparse KV and adapts residency to load. It protects the required working set, retains additional history while GPU memory is spare, and recovers the rest through exact fused retrieval. DSpark and DFlash2 keep their proposal and acceptance rules: queries share missing-row retrieval, draft KV uses a window-bounded ring, and verification staging is reused across layer groups. At 100K context and concurrency 128, GLM-5.3 with DFlash2 delivers 793 output tokens/s per decode GPU, 1.45$\\times$ HiSparse and 1.27$\\times$ non-speculative adaptive serving. Held to the same latency bounds as HiSparse, it sustains up to 4$\\times$ the concurrency and 2.3 to 3.7$\\times$ the output, depending on the per-token bound. On DeepSeek-V4.1-Flash at 500K context and concurrency 512, Adaptive DHiSparse with DSpark delivers 1.85$\\times$ the output of resident serving with DSpark. In a load step, optional residency reduces host fetches from 14.2% to 1.4% of selected rows at low load and releases memory under pressure.",
+      "identifiers": [
+        "SemanticScholar:c42ca13bd06315beac78601e639ab15ab143e45c"
+      ],
+      "semantic_scholar_id": "c42ca13bd06315beac78601e639ab15ab143e45c",
+      "canonical_id": "arXiv:2610.13708",
+      "arxiv_id": "2610.13708",
+      "authors": [
+        "Naji Alazhar",
+        "Wassel Alazhar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Adaptive DHiSparseはHiSparseのCPU側KV履歴と疎な取得を投機デコードへ拡張し、負荷に応じてGPUに残す追加履歴を増減する。DSpark/DFlash2の受理規則を維持し、draft KVのwindow-bounded ring、共有missing-row retrieval、層群間verification staging再利用を組み合わせる。GLM-5.3の100K文脈・同時128でDFlash2使用時793 output tokens/s/GPU、HiSparse比1.45倍を報告。KV階層管理と投機サービングに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Trajectory-Level Speculation with Semantic Verification for Tool-Using Agents",
+      "source_url": "https://arxiv.org/abs/2610.21463",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model agents solve tasks through long sequences of tool calls, and the prevailing design has a single strong model generate every step, although many steps are routine enough for a much smaller model. Existing ways of sharing this work keep the strong model as the generator: routers and collaborative agents decide which model handles each query or step, and speculative methods check a small model's drafts one step at a time, usually against the strong model's own action. We introduce SpecAgent, a collaboration protocol that turns the strong model from the author of each step into a reviewer of steps drafted by a weak model. The weak model executes read-only tool calls as it drafts, so that every step is grounded in real observations, and holds the first action that would modify the environment. The strong model then verifies the drafted segment in a single prefill pass, commits the longest prefix it judges semantically valid, and repairs the first rejected step. Because verification replaces autoregressive decoding with parallel prefill, the strong model decodes only short verdicts and occasional repairs rather than every step. On $\\tau^2$-Bench, SpecAgent comes within one point of the strong model's success rate while roughly halving memory traffic and wall time, and on AutomationBench and VitaBench it recovers 44-75% of the quality gap while lowering both. In an edge-cloud deployment on MCP-Atlas with three cloud models, it closes 53-75% of the weak-strong quality gap while the strong model generates at most half as many tokens. These results suggest that a strong model need not author every step of an agent: reviewing grounded drafts retains most of its quality while cutting both latency and memory traffic.",
+      "identifiers": [
+        "SemanticScholar:0c9a91fbbffd9aa16504f9de09e065a86f4e7e8d"
+      ],
+      "semantic_scholar_id": "0c9a91fbbffd9aa16504f9de09e065a86f4e7e8d",
+      "canonical_id": "arXiv:2610.21463",
+      "arxiv_id": "2610.21463",
+      "authors": [
+        "Zi-Lin Wang",
+        "Yinhong Liu",
+        "Chao Chen",
+        "Qun Liu",
+        "Zhijiang Guo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpecAgentは弱いモデルが読み取り専用ツールを実行しながら複数stepを先行生成し、環境変更を伴う最初の操作は保留する。強いモデルはその軌跡を1回のprefillで意味検証し、妥当な最長prefixを確定して最初の拒否stepを修復する。τ²-Benchで強モデルの成功率から1ポイント以内に迫り、メモリトラフィックと所要時間を概ね半減。エージェント推論の実行プロトコル・高速化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Accelerating CPU Speculative Decoding via Unified Graph Execution and Transactional KV Isolation",
+      "source_url": "https://arxiv.org/abs/2610.28671",
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference, but deploying it on CPUs introduces severe systems bottlenecks: context-swapping latency between draft and target graphs, and memory allocation overhead during KV cache rollbacks. We introduce SubTernary, an execution framework that eliminates these costs through Unified Graph Caching and Transactional KV-Cache Isolation. By compiling both models into a single memory arena with a persistent thread pool and routing speculative tokens to a static scratchpad for zero-copy pointer resets, SubTernary avoids dynamic reallocation and thread synchronization entirely. We integrate a 256-bit AVX2 ternary SIMD kernel as a low-bit case study. Ablations reveal our systems runtime drives 35.0% of the throughput gains, while the ternary kernel adds 6.0%. SubTernary achieves a $1.35\\times$ speedup over llama.cpp speculative decoding and $3.99\\times$ over autoregressive decoding, maintaining $O(1)$ rollback latency.",
+      "identifiers": [
+        "SemanticScholar:f4316cd90874fd6f191c8aa65c3f5f5fb7c353ba"
+      ],
+      "semantic_scholar_id": "f4316cd90874fd6f191c8aa65c3f5f5fb7c353ba",
+      "canonical_id": "arXiv:2610.28671",
+      "arxiv_id": "2610.28671",
+      "authors": [
+        "Moy Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SubTernaryはCPU投機デコードのdraft/target切替とKV rollbackのコストに対し、両グラフを同一メモリアリーナ・常駐スレッドプールで実行し、投機KVを固定scratchpadへ隔離してポインタをゼロコピーで戻す。AVX2 256bitの三値SIMDカーネルも評価し、ランタイム部分がスループット改善の35.0%、カーネル部分が6.0%を担うと分析。llama.cppの投機デコード比1.35倍、自己回帰比3.99倍を報告しaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "ZipFusion: Fusing Lossless KV Decompression with Attention for Efficient LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2610.33719",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache places growing demands on GPU memory capacity and bandwidth as large language models serve longer contexts and more concurrent requests. Its footprint limits concurrency, while repeated KV reads during attention can make decoding memory-bandwidth bound. Prior lossless KV cache compression methods reduce transfers between devices but restore the uncompressed KV cache in GPU memory before attention. They therefore leave these repeated KV reads unchanged and require additional work and memory for decompression. We present ZipFusion, which enables attention to consume the losslessly compressed KV cache directly. ZipFusion co-designs the compression format and attention kernel to reduce the bytes read from GPU memory during attention. The kernel reconstructs the original values directly in registers using simple bit operations, avoiding a separate decompression pass and easing the memory-bandwidth bound. ZipFusion also reassigns memory freed by compression across layers to store additional KV cache. Its memory manager reserves space for ongoing generation and makes the remaining capacity available to new requests. We implement ZipFusion on top of FlashInfer and integrate it with SGLang. On an NVIDIA H100, ZipFusion achieves about 1.25x speedup over FlashInfer in decode attention. With 8K context, it improves model decode throughput by up to 26.3% over uncompressed SGLang under the same GPU memory budget. At each method's largest supported batch, it also delivers up to 2.76x the throughput of the best-performing lossless KV cache compression baseline.",
+      "identifiers": [
+        "SemanticScholar:0766a4512a2fbc1be5d2e851194b47adc47ca2ef"
+      ],
+      "semantic_scholar_id": "0766a4512a2fbc1be5d2e851194b47adc47ca2ef",
+      "canonical_id": "arXiv:2610.33719",
+      "arxiv_id": "2610.33719",
+      "authors": [
+        "Yue-Tao Chen",
+        "Peng Wang",
+        "Hong Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ZipFusionは可逆圧縮KVをGPUメモリで全展開せず、attentionカーネルのレジスタ内でbit演算により復元しながら消費する。圧縮で空いた容量を層間に再配分し、生成中の要求に必要なKV領域を先に確保する。FlashInfer実装をSGLangに統合し、H100でdecode attention約1.25倍、8K文脈のmodel decode throughput最大26.3%改善、最大batch時に他の可逆KV圧縮方式比最大2.76倍を報告。推論帯域・容量のシステム最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9f7d948a394d",
+    "round": "libimp-9f7d948a394d1b62-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9f7d948a394d1b62-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9f7d948a394d1b62-pre01.json",
+    "receipt": "sha256:036d5d19546a94875fab1d28e757ac0c427ad70cccd0142a64bc8f098248bb58"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9f7d948a394d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

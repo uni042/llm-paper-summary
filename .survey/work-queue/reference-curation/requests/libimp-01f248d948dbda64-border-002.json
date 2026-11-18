@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-01f248d948dbda64-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.02404",
+  "reason": "自己呼出しと入力contextのtoken範囲読出しだけを持つ簡単なharnessでQwen3.6-35B-A3Bをfinetuneし、8K contextでも40K超のOOLONG-synthでGPT-5.4の1M contextと同程度の性能を報告する。長文脈運用のtoken効率には関連するが、GPU KV管理や推論ランタイムの最適化そのものではないためborderline。",
+  "title": "Trained Agentic Context Management",
+  "identity_tokens": [
+    "id:arXiv:2610.02404",
+    "id:DOI:10.48550/arXiv.2610.02404"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-01f248d948db",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

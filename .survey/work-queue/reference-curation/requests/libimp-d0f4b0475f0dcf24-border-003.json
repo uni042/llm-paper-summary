@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d0f4b0475f0dcf24-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.40974",
+  "reason": "GPT-2-XLの冗長attention headを推論前に729個無効化し、記憶済み文字列の逐語再生数を91.5%減らす一方でWikiText-103 PPLが0.92改善する結果を報告。head pruningは実行量削減へ応用可能だが、この論文の主目的と評価はプライバシー・暗記抑制であり実測推論速度やメモリ削減を示していないためborderline。",
+  "title": "Fewer Heads, Fewer Memories: Pruning Redundant Attention Heads Suppresses Verbatim Memorisation",
+  "identity_tokens": [
+    "arXiv:2610.40974"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d0f4b0475f0d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.486",
+      "doi": "10.18653/v1/2025.acl-long.486",
+      "identifiers": [
+        "DOI:10.18653/v1/2025.acl-long.486"
+      ],
+      "title": "Faster Speculative Decoding via Effective Draft Decoder with Pruned Candidate Tree",
+      "source_url": "https://aclanthology.org/2025.acl-long.486/",
+      "authors": [
+        "Huanran Zheng",
+        "Xiaoling Wang"
+      ],
+      "published": "2025/7",
+      "year": 2025,
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACL公式要旨で、EDDは対象LLMの符号化結果をsoft promptとしてドラフトへ渡しKL損失で分布を合わせ、PCTはドラフト信頼度から木ノードの期待時間利得を見積もり不要枝を除くと確認。投機的復号の受理効率と推論遅延を直接改善する方式。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1386",
+      "doi": "10.18653/v1/2025.findings-acl.1386",
+      "identifiers": [
+        "DOI:10.18653/v1/2025.findings-acl.1386"
+      ],
+      "title": "Automated Fine-Grained Mixture-of-Experts Quantization",
+      "source_url": "https://aclanthology.org/2025.findings-acl.1386/",
+      "authors": [
+        "Zhanhao Xie",
+        "Yuexiao Ma",
+        "Xiawu Zheng",
+        "Fei Chao",
+        "Wanchen Sui",
+        "Yong Li",
+        "Shen Li",
+        "Rongrong Ji"
+      ],
+      "published": "2025/7",
+      "year": 2025,
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACL Findings公式要旨で、MoE expertのチャネル別外れ値とFisher情報・条件数を用い、down-projectionの精度感度が高いことに応じてビット幅を自動配分する量子化方式と確認。Mixtral-8x7Bの圧縮・言語理解評価があり、MoE推論の重み容量削減に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-efd80db4ec68",
+    "round": "libimp-efd80db4ec689768-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-efd80db4ec689768-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-efd80db4ec689768-pre01.json",
+    "receipt": "sha256:045af1f333b9a609710717435eed007e5c50a45236bedfe75db9f8b8c00e4d6f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-efd80db4ec68",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

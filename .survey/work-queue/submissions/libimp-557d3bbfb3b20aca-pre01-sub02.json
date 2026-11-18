@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.17795",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving systems use token-level continuous batching to improve resource utilization, but heterogeneous response lengths complicate request scheduling. Prediction-guided short-first scheduling reduces average latency but can severely delay long requests, while unrestricted aging may over-promote delayed long requests under congestion. We propose Quota-Based Aging (QBA), a lightweight policy that combines predicted short-first admission with quota-bounded, debt-enforced promotion of aged predicted-long requests. We also use a reduced M/G/n queueing surrogate, calibrated from simulator traces, to explain first-order mean-latency trends. QBA is evaluated using a serving-aware event-driven simulator that models decode-priority batching, chunked prefill, token-budget constraints, and KV-cache-safe admission. We compare QBA with FCFS, predicted short-first, and aggressive aging under asymmetric prediction errors on synthetic and production-derived workloads. The evaluation considers queueing delay, throughput, utilization, and class-conditional tail performance. Results show that QBA provides a controllable middle ground between aggressive short-first prioritization and unrestricted aging, substantially reducing long-request tail latency while retaining much of the mean-latency benefit of prediction-guided scheduling.",
+      "identifiers": [
+        "SemanticScholar:069b689eb365c5d81759b140c513c8259d7a69da"
+      ],
+      "semantic_scholar_id": "069b689eb365c5d81759b140c513c8259d7a69da",
+      "canonical_id": "arXiv:2610.17795",
+      "arxiv_id": "2610.17795",
+      "authors": [
+        "Han-Zhi Zhang",
+        "An-Xuan Che",
+        "Hang Qi",
+        "Qi-Yue Li",
+        "Jing-Jin Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成長予測に基づくshort-first schedulingは長要求を飢餓させるため、quota制約とdebtに基づくaging昇格を組み合わせるQBAを提案する。chunked prefill、decode優先batch、token budget、KV-safe admissionを模擬したevent-driven simulatorでFCFS等と比較し、長要求のtail latencyを抑えつつ平均遅延改善を保つと著者要旨が報告。具体的倍率は要旨にない。LLM serving schedulerの公平性と遅延tradeoffに直接関係するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "MoEZip: Routing-Aware KV Cache Compression for Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2610.30206",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models scale model capacity efficiently by activating a small subset of parameters per token. However, in long-context inference, memory remains a major bottleneck because the KV cache grows linearly with sequence length. Existing KV cache compression methods reduce this cost for dense transformers, but overlook a problem specific to MoE: KV eviction can change which experts are selected during answer generation, degrading the generation quality. We propose MoEZip, a routing-aware KV cache compression for sparse MoE language models. To estimate the sensitivity of expert routing to perturbation, we propose a novel metric based on the Fisher information matrix of routing distributions. MoEZip combines this metric with attention weights for routing-aware scoring of contexts. Finally, we compose a complementary scoring system that combines eviction methods for dense and sparse-MoE architectures. Experiments show that MoEZip achieves robust performance under aggressive cache compression on various benchmarks. At a KV retention ratio of 10\\%, MoEZip improves over the SoTA baseline by +24 and +20 points on average on LongBench and RULER, corresponding to 2.3$\\times$ and 4.9$\\times$ higher scores, respectively.",
+      "identifiers": [
+        "SemanticScholar:e4180b33abe65d5e998929399840f88a0c6dcf25"
+      ],
+      "semantic_scholar_id": "e4180b33abe65d5e998929399840f88a0c6dcf25",
+      "canonical_id": "arXiv:2610.30206",
+      "arxiv_id": "2610.30206",
+      "authors": [
+        "Minsang Kim",
+        "S. Baek"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEではKV追い出しがattentionだけでなく次tokenのexpert routingも変化させ得る点に着目し、routing分布のFisher情報から摂動感度を評価してattention重要度と統合するMoEZipを提案する。著者要旨はKV保持率10%でLongBench/RULERの従来最高方式比平均+24/+20点、score比2.3/4.9倍と報告。MoEの品質を保つKV圧縮としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs",
+      "source_url": "https://arxiv.org/abs/2610.35309",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge SoCs combine CPUs, GPUs, and NPUs, yet runtimes for multimodal large language models (MLLMs) keep generation on one engine and leave others idle. Streaming workloads allow ingestion and answering to overlap, but backend-local KV state binds queries to the engine that built their history. Stage performance and co-running interference vary, so no single placement wins across SoCs and workloads. \\name separates logical history from engine-specific KV state so any language engine can continue a stream. Stateful Streaming Generation overlaps ingestion and answering, while Concurrent Sequence Generation serves ready queries in parallel. Phase-level state continuation lets one engine prefill a query and another decode the answer, freeing the first to resume ingestion. State-Driven Execution Planning (SDEP) chooses paths by predicted completion time and sets each engine's share of queries using arrival rates and measured service times. Across M4 Max, RK3588, and QCS6490, \\name beats the strongest single-engine baselines, even when they reuse context. On M4 Max, SDEP cuts live-stream p95 time to first token by $76\\%$, with every first token within one second, and raises throughput under backlog by up to $35\\%$ over Metal-only execution with context reuse. On two RK3588 streams, SDEP delivers $19.6\\%$ higher request throughput than the best single engine with context reuse and $27.2\\%$ more than parallel engines without shared state. Stateful Streaming Generation reaches up to $2.48\\times$ serial throughput on the same engines. Every answer matches its serial reference.",
+      "identifiers": [
+        "SemanticScholar:c63232128e973172db15bda93a7f694a4410869f"
+      ],
+      "semantic_scholar_id": "c63232128e973172db15bda93a7f694a4410869f",
+      "canonical_id": "arXiv:2610.35309",
+      "arxiv_id": "2610.35309",
+      "authors": [
+        "Yi-Long Li",
+        "Cheng-Po Yan",
+        "Yi-Jing Zeng",
+        "Han-Lei Wu",
+        "Ming-Jun Song",
+        "Suman Banerjee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CPU/GPU/NPUを持つedge SoCでMLLMのstreaming ingestionと回答を重ねる際、backend固有KVに履歴が束縛される問題に対し論理historyをengine別KVから分離する。stateful streamingと並列query生成を組み合わせ、予測完了時刻で実行engineを選ぶSDEPを提案。著者要旨はM4 Maxでlive-stream p95 TTFT76%削減、backlog throughput最大35%増、RK3588でも改善を報告。端末内マルチモーダル推論runtimeとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-557d3bbfb3b2",
+    "round": "libimp-557d3bbfb3b20aca-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-557d3bbfb3b20aca-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-557d3bbfb3b20aca-pre01.json",
+    "receipt": "sha256:c1154cefe1b86efa2e96b5d8cf704e74e1805f2800a6c633b7e3d3f66af9e047"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-557d3bbfb3b2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

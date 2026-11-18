@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A 22-nm 109.3-to-249.5-TFLOPS/W Outlier-Aware Floating-Point SRAM Compute-in-Memory Macro for Large Language Models",
+      "source_url": "https://doi.org/10.1109/JSSC.2025.3571315",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE Journal of Solid-State Circuits",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated exceptional performance in complex artificial intelligence (AI) tasks. However, their rapidly increasing parameter sizes lead to significant communication and computational overhead, posing challenges to the energy efficiency (EEF) and memory footprint of AI processors. Compute-in-memory (CIM) architecture has emerged as a promising solution to alleviate bandwidth constraints and improve EEF. Nonetheless, both integer (INT) and floating-point (FP) CIM implementations struggle with the trade-off between accuracy and memory requirement when applied to LLMs. Outlier-aware quantization (OAQ), which employs low-precision formats for normal values and retains FP formats for high-magnitude outliers, has proven effective in matching the accuracy of full-FP baselines and has become a mainstream approach for efficient LLM deployment. Therefore, this work presents OA-CIM, an SRAM-based digital CIM macro that facilitates element-wise hybrid processing of BF16 outliers and INT4 normal values. The major contributions are: 1) an LUT-based multiply-and-accumulate (MAC) circuit design, which supports efficient FP/INT-compatible (FIC) MAC operations; 2) an xor-sharing non-maximum exponent gating scheme that reduces latency and area by bypassing unnecessary exponent comparisons in FP dataflow; and 3) a sparsity-aware readout circuit with distribution-offset weight encoding (DOWE) to mitigate the power-intensive charging/discharging process on the bitline. A 22-nm 512-kB 8T SRAM OA-CIM prototype is fabricated, which achieves an EEF of 346.6 TOPS/W in INT4 mode and 249.5 TFLOPS/W in outlier mode, representing a $2.7{\\times }$ to $3.1{\\times }$ improvement over state-of-the-art mixed-precision CIMs.",
+      "identifiers": [
+        "SemanticScholar:0603b93d478c9f8e7f05341d444c4ed3bc31a181"
+      ],
+      "semantic_scholar_id": "0603b93d478c9f8e7f05341d444c4ed3bc31a181",
+      "doi": "10.1109/JSSC.2025.3571315",
+      "canonical_id": "DOI:10.1109/JSSC.2025.3571315",
+      "authors": [
+        "Si-Qi He",
+        "Hao-Zhe Zhu",
+        "Hong-Yi Zhang",
+        "Yu-Jie Ma",
+        "Ze-Xing Chen",
+        "Meng-Jie Li",
+        "Dan-Feng Zhai",
+        "Chi-Xiao Chen",
+        "Qi Liu",
+        "Xiao-Yang Zeng",
+        "Ming Liu"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 290,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE JSSC 2026の原著要旨転載を確認。22nmの512kB 8T SRAM OA-CIM試作で、BF16外れ値とINT4通常値を要素単位で混合処理する。LUT型MAC、指数比較を省くゲート、スパース読出し・重み符号化を設計し、INT4モード346.6TOPS/W、外れ値モード249.5TFLOPS/Wを報告。チップマクロのエネルギー効率でありLLM全体の生成速度と混同しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Revisiting Pruning vs Quantization for Small Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.645",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:320288a4e571e95061d86180e1a1c1cf79eb8ce6"
+      ],
+      "semantic_scholar_id": "320288a4e571e95061d86180e1a1c1cf79eb8ce6",
+      "doi": "10.18653/v1/2025.findings-emnlp.645",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.645",
+      "authors": [
+        "Zi-Han Zhou",
+        "Simon Kurz",
+        "Zhi-Xue Zhao"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ACL Anthologyの正式要旨を確認。0.5〜3.8Bの小型言語モデル6種、7言語・7下流タスクでSparseGPT/Wandaによる事後枝刈りとGPTQ/AWQによる量子化を比較。量子化は概してモデル忠実度・多言語perplexity・推論正答率の保持で有利だが、OpenBookQA等では優位性が縮小する。新カーネルの速度測定ではなく、端末配備向け圧縮方式選択に直接関わる実証研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539287",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference often exceeds on-chip memory capacity, causing frequent external memory access. Quantization reduces memory cost but loses accuracy due to outliers. Prior mixed-precision accelerators address this issue with encoding schemes, but often result in accuracy degradation for LLMs and pipeline stalls. We present Lupin, an algorithm-architecture co-design with Outlier-First Encoding, which stores outliers in high precision by reallocating less critical normal values. This preserves maximal outlier representation and enables stall-free execution with low-precision MAC units. Experiments show that Lupin maintains accuracy while achieving a 2.02× speedup.",
+      "identifiers": [
+        "SemanticScholar:cb23957dc986defeb9c5f9cc14717566e2131f14"
+      ],
+      "semantic_scholar_id": "cb23957dc986defeb9c5f9cc14717566e2131f14",
+      "doi": "10.23919/DATE69613.2026.11539287",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539287",
+      "authors": [
+        "Taein Kim",
+        "Sukhyun Han",
+        "Seongwook Kim",
+        "Gwangeun Byeon",
+        "Jungmin Lee",
+        "Seokin Hong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DATE 2026公式プログラムの原著要旨を確認。LupinはLLM重みの外れ値を高精度で保持するため、通常値に割当てた記憶資源を再配分するOutlier-First Encodingを提案し、低精度MAC演算器のパイプライン停止を回避する。精度を維持しつつ2.02倍の高速化を報告。LLM推論向け量子化とアクセラレータの協調設計に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539390",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated strong performance in tasks such as image captioning and visual question answering. Under mixed workloads, however, the differing inference pipelines for text-only and multimodal requests create heterogeneity that existing serving systems fail to optimize—leading to high latency and poor fairness. We propose Duet-Infer, a modality-aware serving framework that enhances single-GPU serving efficiency for VLMs through three key contributions: (i) parallel computation enabled by preprocessing parallelism and decoupled vision-language execution, (ii) a shared memory manager that eliminates weight redundancy and supports efficient encoder cache sharing, and (iii) a fairness-aware scheduler that reduces delays for multimodal requests without penalizing text-only ones. Implemented within vLLM and evaluated on realistic workloads, DuetInfer reduces P99 TTFT by up to 33.7% and end-to-end latency by up to 20%.",
+      "identifiers": [
+        "SemanticScholar:c6fefa7e3a34ef4332b17840fc4db0d587b77827"
+      ],
+      "semantic_scholar_id": "c6fefa7e3a34ef4332b17840fc4db0d587b77827",
+      "doi": "10.23919/DATE69613.2026.11539390",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539390",
+      "authors": [
+        "Yijia Yang",
+        "Yu-Bo Deng",
+        "Yida Wang",
+        "Yuanchao Xu",
+        "Ke-Ni Qiu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DATE 2026原著PDFの要旨と導入を確認。DuetInferはVLMのテキスト専用・画像付き要求の前処理と視覚エンコードを分離して並行化し、重み重複をなくす共有メモリ管理と公平性を考慮したスケジューラをvLLMに組み込む。混合負荷でP99 TTFT最大33.7%、E2E遅延最大20%減と報告。VLM推論の実行系最適化そのもの。",
+      "library_body_check": "publisher_fulltext_abstract_and_introduction_checked; evaluation_tables_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ACES: A Chiplet Architecture with Resource Partition and Dynamic Scheduling for Agentic LLMs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539693",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic LLM is an emerging working paradigm leveraging large language models (LLMs) as assistant agents for complex, multi-step tasks. However, the operations of LLM agents also create unique workload characteristics with highly dynamic resource demands. In this work, we propose ACES, a co-designed solution leveraging scalable chiplet architecture together with dynamic workload scheduling for agentic LLMs. At hardware level, the chiplet architecture is designed to support a zoned fabric with flexible Swing Zones. Upon this, at software level, a conversation-centric dynamic scheduling approach is adopted, which includes topology-aware homing, proactive caching, and adaptive resource conversion to accommodate to data locality and resource balance. We evaluate our architecture using Llama-3 8B models on representative agentic-RAG-derived tasks. The system evaluations demonstrate that our design achieves 2.33× throughput improvement and an average 58% conversation latency reduction compared to state-of-the-art DistServe-like chiplet baselines, showcasing superior performance and scalability.",
+      "identifiers": [
+        "SemanticScholar:87195805586ee4c97e773c72a6aecd64389d13b7"
+      ],
+      "semantic_scholar_id": "87195805586ee4c97e773c72a6aecd64389d13b7",
+      "doi": "10.23919/DATE69613.2026.11539693",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539693",
+      "authors": [
+        "Hon-Gou Li",
+        "Mingxuan Li",
+        "Zhan-Tong Zhu",
+        "Tian-Yu Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE DATE 2026の原著要旨を確認。エージェント型LLMの対話単位で変動する演算・メモリ要求に対し、Swing Zonesを備えるチップレット接続構成と、トポロジーを考慮した配置、先行キャッシュ、資源再割当を組み合わせる。Llama-3 8Bのagentic-RAG由来負荷でDistServe系チップレット基準比2.33倍のスループット、平均対話遅延58%減を報告。推論サービングのハードウェア・スケジューリング協調最適化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-15637c8b2e74",
+    "round": "libimp-15637c8b2e74e292-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-15637c8b2e74e292-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-15637c8b2e74e292-pre01.json",
+    "receipt": "sha256:ccf8f3ad77ad628ca04b5707d6651b9e8898fc5956d452f8169bdd35a6ad557a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-15637c8b2e74",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

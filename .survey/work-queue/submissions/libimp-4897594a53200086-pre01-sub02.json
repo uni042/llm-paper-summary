@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Revisiting Cauchy-Schwarz Norm Bounds for SDC Detection in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.18557",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) execute billions of floating-point operations per output token across many hardware accelerators. At this scale, hardware-induced faults can bypass system-level detection mechanisms and cause Silent Data Corruption (SDC). Algorithm-Based Fault Tolerance (ABFT) is the state-of-the-art technique for protecting matrix multiplication from such faults, but it incurs non-negligible computational overhead and requires thresholds to distinguish hardware-induced errors from floating-point roundoff. In this paper, we revisit Cauchy--Schwarz Norm Bounds (CSNB) as a low-overhead alternative for detecting SDC during LLM inference. We compare CSNB against ABFT through controlled fault injection and evaluate the runtime overhead of both verification and threshold determination across multiple model sizes, batch sizes, and generation lengths. Our results show that, on average, CSNB retains 99% of the fault detection capability of ABFT for the evaluated linear layers in dense LLMs, while reducing verification overhead by 87% and threshold determination overhead by 67%. For Mixture-of-Experts (MoE) router gate computations, however, CSNB retains only 55% of the fault detection capability of ABFT. These findings suggest that CSNB is a promising low-overhead alternative for protecting linear layers in dense LLMs, while checksum-based verification remains preferable for the evaluated MoE router gate.",
+      "identifiers": [
+        "SemanticScholar:2e7903641b375486622a2be9369e1d428319daa7"
+      ],
+      "semantic_scholar_id": "2e7903641b375486622a2be9369e1d428319daa7",
+      "canonical_id": "arXiv:2610.18557",
+      "arxiv_id": "2610.18557",
+      "authors": [
+        "Anton Altenbernd",
+        "Dylan Everingham",
+        "Philipp Wiesner",
+        "Odej Kao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の行列積でsilent data corruptionを検出するCauchy-Schwarz norm boundをABFTと比較。dense LLMの評価対象線形層ではABFT比で検出能力99%を維持し、verification overheadを87%、threshold設定overheadを67%削減。一方MoE router gateでは検出能力55%に落ちる。推論runtimeの信頼性検査とその計算オーバーヘッドの直接改善としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4897594a5320",
+    "round": "libimp-4897594a53200086-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4897594a53200086-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4897594a53200086-pre01.json",
+    "receipt": "sha256:6b0d9cf8db7113a1eb59153b989db9d1d8b34084dae9f7fb835b31dcacd8ff3f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4897594a5320",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

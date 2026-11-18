@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d0f4b0475f0dcf24-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41480",
+  "reason": "LoRA微調整モデルと基盤モデルのKVを相互移植し、ドイツ語応答やmisalignment等の振る舞いが一部転移・抑制されること、system prompt/chat templateの位置が重要なことを分析。KVを扱うが目的は解釈可能性・微調整効果の所在の解明であり、キャッシュ容量・推論速度・実行時メモリ管理を最適化する技術ではないためborderline。",
+  "title": "KV-Cache Patching: Tracing How and Where Fine-Tuned Behaviors Arise",
+  "identity_tokens": [
+    "arXiv:2610.41480"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d0f4b0475f0d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

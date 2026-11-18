@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads",
+      "source_url": "https://arxiv.org/abs/2610.41919",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We evaluate NVIDIA B200 and B300 (Blackwell Ultra) GPUs on two independent eight-GPU clusters, spanning computer-vision inference and training, LLM inference with Llama-3-8B and 70B~\\cite{llama3}, and six production HPC codes. The B300 is not a uniform successor to the B200: it trails by up to 5.6$\\times$ on convolutional inference, 8$\\times$ on 3D vision transformer training, 24--27\\% on 70B LLM throughput, and 16$\\times$ on double-precision Quantum ESPRESSO. We resolve the convolutional deficit using per-GPU board power rather than throughput alone: on the affected workloads the B300 draws only 36--53\\% of its 1100\\,W envelope, whereas on ViT-Large, which it wins, both parts saturate at 95--97\\% of TDP. Because our harness keeps inputs resident in device memory, a host-side data pipeline is excluded by construction, localizing the cause to per-kernel cost. Two B300 nodes of identical silicon differ by 2.1$\\times$ in time-to-first-token solely from a development vLLM build. We give per-workload procurement guidance.",
+      "identifiers": [
+        "SemanticScholar:65ca912cb87ecb963295f1e39f2abbe6a97cb77c"
+      ],
+      "semantic_scholar_id": "65ca912cb87ecb963295f1e39f2abbe6a97cb77c",
+      "canonical_id": "arXiv:2610.41919",
+      "arxiv_id": "2610.41919",
+      "authors": [
+        "Mohsen Zand",
+        "Trung Dac Nguyen",
+        "H. Runesha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "B200/B300の8 GPUクラスタ2系統でLlama-3-8B/70B推論等を測り、B300が70B推論スループットでB200より24〜27%低い条件を示す。B300の一部畳み込み負荷では1100W上限の36〜53%しか使わず、同一B300でも開発版vLLMの違いでTTFTが2.1倍変動。GPU推論インフラの性能・電力測定とruntime選択に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-87c1a85806ce",
+    "round": "libimp-87c1a85806ce017a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-87c1a85806ce017a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-87c1a85806ce017a-pre01.json",
+    "receipt": "sha256:4ba20e58111113e0ff213049a3da674ad34531f96d273c2b6a83f80500acee07"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-87c1a85806ce",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

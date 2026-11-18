@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d0f4b0475f0dcf24-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41574",
+  "reason": "Gemma 2/Llama 3.1/Qwen2.5/Ministralの既存ARモデルをLoRAのみで拡散型言語モデルへ変換するレシピを提示し、各25,000 iterationを単一GPUで3.1〜4.0時間で実施。並列生成可能なモデル形態に接点はあるが、主貢献は学習・変換効率と生成品質であり、実際のLLMサービング性能改善は未確認。推論系統との境界候補としてborderline。",
+  "title": "BYOD: Build Your Own DLM - Efficient Autoregressive-to-Diffusion Language Model Conversion",
+  "identity_tokens": [
+    "arXiv:2610.41574"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d0f4b0475f0d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
