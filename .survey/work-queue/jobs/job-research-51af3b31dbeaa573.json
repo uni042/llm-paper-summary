@@ -35,10 +35,15 @@
   "selection_reason": "将来応答のdraft生成でKV重要度を推定する従来方式は追加生成費用が高い。LookaheadKVは学習可能な特殊トークンと選択的LoRAを用いて将来の注意重要度を予測し、draft応答を実際には生成せずprefill時に保持KVを決定する。長文脈ベンチマークで品質を維持しつつ、著者らはeviction処理費用を最大14.5倍削減と報告。これは削除判定の費用であり、end-to-end推論全体の14.5倍高速化ではない。推論時KV圧縮とTTFTの直接最適化のためaccept。",
   "semantic_scholar_id": "0d429fc6a266818cafa4539bb86ea9817c157d78",
   "source_url": "https://arxiv.org/abs/2603.10899",
-  "status": "ready",
+  "status": "superseded",
   "title": "LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:43:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-fu.md",
+  "represented_canonical_id": "arXiv:2603.10899",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

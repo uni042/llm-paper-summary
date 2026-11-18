@@ -35,10 +35,15 @@
   "selection_reason": "GQAからMLAへの変換パイプラインCARE。固定したKV幅のまま、重みだけでなく入力活性の共分散に合わせた活性保存分解、重要度に基づくランク配分、ランク強化で注意の忠実度を保ち、KVキャッシュのコストを増やさず表現力を上げる。推論メモリ効率に直結する変換機構。",
   "semantic_scholar_id": "2298dfb993fcbea7f252aafd6a5fd6ba6845f66d",
   "source_url": "https://arxiv.org/abs/2603.17946",
-  "status": "ready",
+  "status": "superseded",
   "title": "CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:43:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.17946-care-covariance-aware-and-rank-enhanced-decomposition-for-enabling-multi.md",
+  "represented_canonical_id": "arXiv:2603.17946",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

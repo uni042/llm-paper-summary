@@ -35,10 +35,15 @@
   "selection_reason": "VLM実行向け重み付き低ランク近似WSVD。SVD系手法が実測の遅延削減に結びつきにくい問題に対し、より細かい粒度で適用する新しい計算パターンと、重み要素の相対重要度に応じた適応配分、量子化への拡張で、実行遅延の実測改善を得る。推論圧縮機構そのもの。",
   "semantic_scholar_id": "1db738763082d49f0d8ca654742fe889281da227",
   "source_url": "https://arxiv.org/abs/2604.02570",
-  "status": "ready",
+  "status": "superseded",
   "title": "WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:43:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.02570-wsvd-weighted-low-rank-approximation-for-fast-and-efficient-execution-of.md",
+  "represented_canonical_id": "arXiv:2604.02570",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
