@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+      "source_url": "https://arxiv.org/abs/2609.34683",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+      "identifiers": [
+        "SemanticScholar:f5f84ddf2ae4639c221aec8839a91f4c2dfab05c"
+      ],
+      "semantic_scholar_id": "f5f84ddf2ae4639c221aec8839a91f4c2dfab05c",
+      "canonical_id": "arXiv:2609.34683",
+      "arxiv_id": "2609.34683",
+      "doi": "10.48550/arXiv.2609.34683",
+      "authors": [
+        "Cheuk H. Lau",
+        "Ze-Yu Cao",
+        "K. Yin",
+        "Yao Lai",
+        "Hao-Ran Wu",
+        "N. Lane",
+        "Robert Mullins",
+        "Ilia Shumailov",
+        "Yi-Ren Zhao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はSWE-BenchやTerminalBenchの実際のエージェント軌跡から入出力長・ターン数・文脈増大を再現し、vLLM/SGLang等のサービング性能を測るベンチマークを提案。GPU飽和を考慮しない従来の単発チャット負荷の誤差を示し、推論ハードウェアの帯域・容量ボトルネックを計測する直接的なシステム評価基盤。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models",
+      "source_url": "https://arxiv.org/abs/2506.23025",
+      "year": 2025,
+      "published": "2025-06-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly used across research and industry applications, yet their inference efficiency remains a significant challenge. As the computational power of modern GPU architectures continuously improves, their memory bandwidth and capacity have not scaled proportionally, creating a critical bottleneck during inference. To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements. We first analyze the scalability of TriLMs by conducting a scaling law analysis, revealing that TriLMs benefit more from increasing training data than from scaling model parameters. Based on this observation, we introduce Spectra-1.1, an open suite of TriLMs trained on up to 1.2 trillion tokens, demonstrating sustained performance gains at scale. Furthermore, to improve inference efficiency, we propose novel 2-bit and 1.6-bit packing schemes for ternary weights, which demonstrate accelerated inference across various CPU architectures. Also, building on the 2-bit packing, we develop a GPU kernel called TriRun that accelerates end-to-end model inference by up to 5 times compared to floating-point baselines. To encourage further exploration and development of TriLMs, we will release the Spectra-1.1 suite and TriRun inference kernels. Overall, our work lays the foundation for building and deploying efficient LLMs, providing a valuable resource for the research community.",
+      "identifiers": [
+        "SemanticScholar:acf4a853ef88832915dfff01142782c3cc07ff23"
+      ],
+      "semantic_scholar_id": "acf4a853ef88832915dfff01142782c3cc07ff23",
+      "canonical_id": "arXiv:2506.23025",
+      "arxiv_id": "2506.23025",
+      "doi": "10.48550/arXiv.2506.23025",
+      "authors": [
+        "Tejas Vaidhya",
+        "Ayush Kaushal",
+        "Vineet Jain",
+        "Francis Couture Harpin",
+        "Prashant Shishodia",
+        "M. Behbahani",
+        "Y. Nevmyvaka",
+        "I. Rish"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は三値言語モデルの学習スケーリングを調べるとともに、三値重みの2ビット・1.6ビット格納方式とGPU向けTriRunカーネルを提案。CPU実行の低ビット化と浮動小数点基準比最大5倍のGPUエンドツーエンド推論高速化を報告し、推論カーネルと重み圧縮へ直接寄与する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a32f93f03cf1",
+    "round": "libimp-a32f93f03cf19474-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a32f93f03cf19474-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a32f93f03cf19474-pre01.json",
+    "receipt": "sha256:3f685012c018e92f77e946d82d17c2315e9575a4998c80b906d4ed94cab87d63"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a32f93f03cf1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Knocking-Heads Attention",
+      "source_url": "https://arxiv.org/abs/2510.23052",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-head attention (MHA) has become the cornerstone of modern large language models, enhancing representational capacity through parallel attention heads. However, increasing the number of heads inherently weakens individual head capacity, and existing attention mechanisms - whether standard MHA or its variants like grouped-query attention (GQA) and grouped-tied attention (GTA) - simply concatenate outputs from isolated heads without strong interaction. To address this limitation, we propose knocking-heads attention (KHA), which enables attention heads to\"knock\"on each other - facilitating cross-head feature-level interactions before the scaled dot-product attention. This is achieved by applying a shared, diagonally-initialized projection matrix across all heads. The diagonal initialization preserves head-specific specialization at the start of training while allowing the model to progressively learn integrated cross-head representations. KHA adds only minimal parameters and FLOPs and can be seamlessly integrated into MHA, GQA, GTA, and other attention variants. We validate KHA by training a 6.1B parameter MoE model (1.01B activated) on 1T high-quality tokens. Compared to baseline attention mechanisms, KHA brings superior and more stable training dynamics, achieving better performance across downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:1858ddc5e69839162fa570383cdaa3c44420a4cc"
+      ],
+      "semantic_scholar_id": "1858ddc5e69839162fa570383cdaa3c44420a4cc",
+      "canonical_id": "arXiv:2510.23052",
+      "arxiv_id": "2510.23052",
+      "doi": "10.48550/arXiv.2510.23052",
+      "authors": [
+        "Zhan-Chao Zhou",
+        "Xiaodong Chen",
+        "Hao-Xin Chen",
+        "Zhen-Zhong Lan",
+        "Jianguo Li"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 387,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MHA/GQA等のhead間相互作用をshared projectionで追加し、対角初期化と線形吸収によって推論時の追加計算を抑えるKHA。6.1B総量・1.01B活性MoEを1T token学習し、GQAのKVキャッシュ量を保ちながらlossを改善。ただしAGIEvalやMMLU-Pro等では負の結果があり、すべての下流タスクが改善するわけではない。",
+      "library_body_check": "primary_fulltext_verified: arXiv HTML v1 sections 3-4, Tables 1-4, GQA/KV-cache and negative task results",
+      "library_source_run_file": null,
+      "origin": "discovery_primary_fulltext"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-47b1ad73e57f",
+    "round": "libimp-47b1ad73e57f0bd3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-47b1ad73e57f0bd3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-47b1ad73e57f0bd3-pre01.json",
+    "receipt": "sha256:1cb8164a04601ac90d731d9c3717f70934abe8723349a3163ee657421742a58f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-47b1ad73e57f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

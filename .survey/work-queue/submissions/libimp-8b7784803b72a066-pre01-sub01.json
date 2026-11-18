@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fair and Carbon-Aware LLM Routing for Web Services",
+      "source_url": "https://doi.org/10.1145/3774904.3793001",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "The Web Conference",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d"
+      ],
+      "semantic_scholar_id": "a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d",
+      "doi": "10.1145/3774904.3793001",
+      "canonical_id": "DOI:10.1145/3774904.3793001",
+      "authors": [
+        "Ting-Ting Li",
+        "Zi-Ming Zhao",
+        "Zhao-Xuan Li",
+        "Xiao-Fei Yue",
+        "Jiongchi Yu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者Jiongchi Yuが公開するWWW 2026採録論文PDF全9ページの一次本文を確認。LLM Webサービスのリクエストを、要求品質・安全性を推定する軽量な複雑度/リスク予測器と、モデル（3B/13B/70B）、GPU（A10/A100/H100）、データセンター地域の組合せを選ぶ制約付き最適化器で振り分ける。地域の電力炭素強度と、地域・言語などの集団間で小型モデルが偏って割り当てられる不公平を同時に考慮する。24時間・120万クエリのトレース駆動シミュレーションで、Static-Large比のエネルギー消費54%（46%削減）、CO2 41%（59%削減）、品質0.94対1.00、公平性格差Δ=0.05対0.02を報告。比較は著者のシミュレーションであり実運用の測定値ではない。品質指標は人間評価と整合させた合成評価器、エネルギーはTDPと推論遅延から推定している。論文自体が予測器の未知クエリ一般化、炭素強度データの精度、粗い集団公平性、実環境未検証を限界として明記。なおTable 3はモデル容量インデックスを1=Small,2=Medium,3=Largeと説明する一方、Carbon-Only/Africaが0.89で最小値を下回るため、後続Researchで表の尺度・正規化の有無を再確認する必要がある。主題がLLMサービングのモデル・GPU・地域ルーティングそのものであるためaccept。",
+      "library_body_check": "author_hosted_acm_www2026_pdf_9_pages_abstract_sections_1_8_tables_1_4_checked; table3_capacity_index_below_minimum_flagged_for_research",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8b7784803b72",
+    "round": "libimp-8b7784803b72a066-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8b7784803b72a066-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8b7784803b72a066-pre01.json",
+    "receipt": "sha256:4315bd07381743d4ccb00307f02f502c8205915a9cc6dce2ad76ba8575f368a8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8b7784803b72",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

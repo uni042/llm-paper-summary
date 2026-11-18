@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CUDAHercules: Benchmarking Hardware-Aware Expert-level CUDA Optimization for LLMs",
+      "source_url": "https://arxiv.org/abs/2605.08467",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models show promise for automated CUDA programming, however even the strongest coding models (e.g., Claude-Opus-4.6) may still fall short of expert-level, architecture-aware optimization. We introduce CUDAHercules, a benchmark that evaluates generated CUDA against end-to-end human-expert SOTA systems. It spans single kernels, module-level operators, full applications, and unsolved challenge tasks across Ampere, Hopper, and Blackwell GPUs, with end-to-end tasks gated by domain-specific semantic validators. Evaluating models such as Claude-Opus-4.6 and GPT-5.4 shows a large gap between runnable CUDA and expert CUDA engineering: models often compile and pass tests, but rarely recover the optimization strategies needed to match expert performance. Application semantics further reduce success, and iterative or tool-augmented feedback can improve correctness while drifting toward slow fallback implementations. These results show that automated CUDA programming remains far from fully solved and requires stronger hardware reasoning, better tool use, and training objectives that connect code understanding to hardware architecture-grounded intelligence.",
+      "identifiers": [
+        "SemanticScholar:ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2"
+      ],
+      "semantic_scholar_id": "ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2",
+      "canonical_id": "arXiv:2605.08467",
+      "arxiv_id": "2605.08467",
+      "doi": "10.48550/arXiv.2605.08467",
+      "authors": [
+        "Shi-Yang Li",
+        "Zijian Zhang",
+        "Guan Sun",
+        "Yue-Bo Luo",
+        "Winson Chen",
+        "Yan-Zhi Wang",
+        "Ming-Yi Hong",
+        "Cai-Wen Ding"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次arXiv書誌・要旨ではAmpere・Hopper・Blackwell上の単一カーネルからアプリケーションまでを専門家実装と比較するCUDAHerculesを提案。生成CUDAが動作・正解しても専門家のアーキテクチャ依存最適化に届かない点を示し、GPUカーネル最適化能力を評価する。直接の高速化方式ではないが、LLM推論カーネル開発・計測の基盤として対象範囲に入る。",
+      "library_body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Planned Diffusion",
+      "source_url": "https://arxiv.org/abs/2510.18087",
+      "year": 2025,
+      "published": "2025-10-20",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most large language models are autoregressive: they generate tokens one at a time. Discrete diffusion language models can generate multiple tokens in parallel, but sampling from them requires a denoising order: a strategy for deciding which tokens to decode at each step. Determining a good denoising order is difficult, and existing approaches use heuristics that create a steep trade-off between quality and latency. We propose planned diffusion, a system that trains the model to determine its own denoising order. Planned diffusion uses a single model that transitions between autoregressive and diffusion-based generation: first, the model autoregressively generates a plan that partitions the response into semantically independent chunks; second, the model denoises all chunks in parallel. The autoregressive plan enables the model to define the denoising order itself. On AlpacaEval, planned diffusion achieves 1.27x to 1.81x speedup over autoregressive generation with only 0.87% to 5.4% drop in win rate, establishing a new Pareto frontier for parallel generation with discrete diffusion. Additionally, planned diffusion's instruction following quality continues to improve with more finetuning compute, while the autoregressive baseline plateaus. Our implementation provides simple runtime knobs that offer tunable control over the quality-latency trade-off.",
+      "identifiers": [
+        "SemanticScholar:35c144451602a79cefac400a8835afaab30500d6"
+      ],
+      "semantic_scholar_id": "35c144451602a79cefac400a8835afaab30500d6",
+      "canonical_id": "arXiv:2510.18087",
+      "arxiv_id": "2510.18087",
+      "doi": "10.48550/arXiv.2510.18087",
+      "authors": [
+        "Daniel Mingyi Israel",
+        "Tian Jin",
+        "Ellie Y. Cheng",
+        "Guy Van den Broeck",
+        "Aditya Grover",
+        "Suvinay Subramanian",
+        "Michael Carbin"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 394,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "一次arXiv書誌・要旨では離散拡散言語モデルが自己回帰で意味的に独立したチャンク計画を作り、チャンク群を並列ノイズ除去するPlanned Diffusionを提案。AlpacaEvalで自己回帰生成比1.27～1.81倍高速、勝率低下0.87～5.4%と報告し、実行時の品質・遅延トレードオフ調整も提供する。LLMの並列復号高速化に直接該当。",
+      "library_body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c0051a53139e",
+    "round": "libimp-c0051a53139ea801-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c0051a53139ea801-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c0051a53139ea801-pre01.json",
+    "receipt": "sha256:6c94d2c0c04e6188a22425d8ec47e56163aedd8d3c1e550fdcfd65c16926df53"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c0051a53139e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

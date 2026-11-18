@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GPU-Resident Speculative Decoding for In-Browser LLM Inference with WebGPU",
+      "source_url": "https://arxiv.org/abs/2610.39761",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "WebGPU enables private, offline LLM inference inside web pages, but browser dispatch, inter-process communication, synchronous readback and single-token kernels slow decoding and make conventional speculative decoding inefficient. We present a WebGPU runtime that addresses these browser-specific costs. Deterministic small-batch integer kernels accelerate multi-token verification while preserving exact agreement with greedy decoding in the same quantized runtime. A GPU-resident loop performs drafting, verification, acceptance and KV-cache maintenance without a per-token CPU decision. A draft-free context-mixing drafter reuses page content, conversation history and session memory, while a device-aware controller adapts the speculation width and the submission window to measured costs. Across seven models from 0.5B to 8B parameters, 11 tasks and three client GPUs, our runtime decodes 3.5 to 5.4$\\times$ faster than WebLLM on a laptop GPU, 4.8 to 6.2$\\times$ faster on an integrated GPU and 4.8 to 8.6$\\times$ faster on a workstation GPU. The GPU-resident loop and speculation contribute a further 1.8 to 3.2$\\times$ over the optimized kernels on the workstation. Outputs match the quantized greedy decoding of the runtime exactly, and the mean GSM8K accuracy matches that of WebLLM. Optional draft heads raise the peak speedup to 10.2$\\times$, while session memory provides additional gains without downloading extra weights.",
+      "identifiers": [
+        "SemanticScholar:be31299f60b6c0109ccbb2f54b95f0eb4cd0f300"
+      ],
+      "semantic_scholar_id": "be31299f60b6c0109ccbb2f54b95f0eb4cd0f300",
+      "canonical_id": "arXiv:2610.39761",
+      "arxiv_id": "2610.39761",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Zi-Qi Ding",
+        "Xiao-Hun Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ブラウザのGPUプロセス境界、dispatch、CPU readbackが投機復号を遅くする問題に対し、draft・検証・受理・KV更新をGPU内ループへ統合する。追加重みを要しない文脈混合drafterとデバイス別投機幅制御を使い、同一量子化runtimeのgreedy出力一致を維持する。著者要旨では0.5B～8Bの7モデル、3種類のクライアントGPUでWebLLM比3.5～8.6倍のdecode速度を報告。端末内推論runtimeの具体的実装貢献としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-47045426656c",
+    "round": "libimp-47045426656c3491-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-47045426656c3491-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-47045426656c3491-pre01.json",
+    "receipt": "sha256:d5ac1a0f08ecfe0be8f26bbafae39eb2b4321c97cfccf018fa99088a1da3dd77"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-47045426656c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

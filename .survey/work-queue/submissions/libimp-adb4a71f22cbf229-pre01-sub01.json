@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ImgCoT: Compressing Long Chain of Thought into Compact Visual Tokens for Efficient Reasoning of Large Language Model",
+      "source_url": "https://arxiv.org/abs/2601.22730",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressing long chains of thought (CoT) into compact latent tokens is crucial for efficient reasoning with large language models (LLMs). Recent studies employ autoencoders to achieve this by reconstructing textual CoT from latent tokens, thus encoding CoT semantics. However, treating textual CoT as the reconstruction target forces latent tokens to preserve surface-level linguistic features (e.g., word choice and syntax), introducing a strong linguistic inductive bias that prioritizes linguistic form over reasoning structure and limits logical abstraction. Thus, we propose ImgCoT that replaces the reconstruction target from textual CoT to the visual CoT obtained by rendering CoT into images. This substitutes linguistic bias with spatial inductive bias, i.e., a tendency to model spatial layouts of the reasoning steps in visual CoT, enabling latent tokens to better capture global reasoning structure. Moreover, although visual latent tokens encode abstract reasoning structure, they may blur reasoning details. We thus propose a loose ImgCoT, a hybrid reasoning that augments visual latent tokens with a few key textual reasoning steps, selected based on low token log-likelihood. This design allows LLMs to retain both global reasoning structure and fine-grained reasoning details with fewer tokens than the complete CoT. Extensive experiments across multiple datasets and LLMs demonstrate the effectiveness of the two versions of ImgCoT.",
+      "identifiers": [
+        "SemanticScholar:6a52584328e1884be79202bab53bb493852e258d"
+      ],
+      "semantic_scholar_id": "6a52584328e1884be79202bab53bb493852e258d",
+      "canonical_id": "arXiv:2601.22730",
+      "arxiv_id": "2601.22730",
+      "doi": "10.48550/arXiv.2601.22730",
+      "authors": [
+        "Xiao-Shu Chen",
+        "Si-Hang Zhou",
+        "K. Liang",
+        "Tai-Chun Zhou",
+        "Xin-Wang Liu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。長いCoTを画像化した視覚的推論軌跡から潜在tokenへ圧縮し、必要な細部は低token尤度の文章ステップで補うハイブリッドImgCoTを提案。複数LLMとデータセットで、完全なCoTより少ないtokenで推論構造と精度を維持する。推論時のreasoning token圧縮に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue",
+      "source_url": "https://arxiv.org/abs/2609.37818",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Empathetic spoken dialogue requires models to use both what is said and how it is said to decide how to respond. Explicit CoT can improve paralinguistic perception and make acoustic cues more explicit in replies, yet does not ensure their effective use in response planning. We call this mismatch the perception-reasoning gap. In addition, CoT may not fully capture acoustic cues in words, and generating it adds inference latency. To address these limitations, we introduce LoopSLM, which builds on looped Transformers for latent reasoning, reusing a decoder block to refine hidden states with acoustic grounding at every pass. Its two-stage training further narrows the perception-reasoning gap by separating learning to reason from learning to respond, enabling direct inference without CoT. On EchoMind, LoopSLM improves paralinguistic understanding, reasoning, and reply quality over Qwen2.5-Omni-7B. Against the CoT-SFT baseline, LoopSLM gains over 20 points in reasoning accuracy while generating 64.5% fewer tokens at half the latency. It also outperforms Qwen3-Omni-Thinking on most empathetic reply metrics with 34x lower latency. Despite training only on dialogue data, LoopSLM improves accuracy on general audio benchmarks.",
+      "identifiers": [
+        "SemanticScholar:1cd4d20a7a79566de94e765dfd46f9d85ada6f1e"
+      ],
+      "semantic_scholar_id": "1cd4d20a7a79566de94e765dfd46f9d85ada6f1e",
+      "canonical_id": "arXiv:2609.37818",
+      "arxiv_id": "2609.37818",
+      "doi": "10.48550/arXiv.2609.37818",
+      "authors": [
+        "Sheng-Bo Cai",
+        "Yu-Xiang Wang",
+        "Jing-Ran Xie",
+        "Zhi-Sheng Zhang",
+        "Shun-Wei Lei",
+        "Di Cao",
+        "T.-K. Sun",
+        "Zhi-Yong Wu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。音声情報を用いた潜在推論をループTransformerで実行し、明示的なCoTを生成せず直接発話するLoopSLM。EchoMindでCoT-SFT比64.5%少ない生成token・約半分の遅延、Qwen3-Omni-Thinking比で34倍低遅延を報告し、音声LLMの推論効率に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs",
+      "source_url": "https://arxiv.org/abs/2601.03484",
+      "year": 2026,
+      "published": "2026-01-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying models, especially large language models (LLMs), is becoming increasingly attractive to a broader user base, including those without specialized expertise. However, due to the resource constraints of certain hardware, maintaining high accuracy with larger model while meeting the hardware requirements remains a significant challenge. Model quantization technique helps mitigate memory and compute bottlenecks, yet the added complexities of tuning and deploying quantized models further exacerbates these challenges, making the process unfriendly to most of the users. We introduce the Hardware-Aware Quantization Agent (HAQA), an automated framework that leverages LLMs to streamline the entire quantization and deployment process by enabling efficient hyperparameter tuning and hardware configuration, thereby simultaneously improving deployment quality and ease of use for a broad range of users. Our results demonstrate up to a 2.3x speedup in inference, along with increased throughput and improved accuracy compared to unoptimized models on Llama. Additionally, HAQA is designed to implement adaptive quantization strategies across diverse hardware platforms, as it automatically finds optimal settings even when they appear counterintuitive, thereby reducing extensive manual effort and demonstrating superior adaptability. Code will be released.",
+      "identifiers": [
+        "SemanticScholar:95e16d9aee7cba9f2cfd4003dc4cf58c64955c36"
+      ],
+      "semantic_scholar_id": "95e16d9aee7cba9f2cfd4003dc4cf58c64955c36",
+      "canonical_id": "arXiv:2601.03484",
+      "arxiv_id": "2601.03484",
+      "doi": "10.48550/arXiv.2601.03484",
+      "authors": [
+        "Kai-Yuan Deng",
+        "Hang-Yu Zheng",
+        "Minghai Qing",
+        "Kun-Xiong Zhu",
+        "Gen Li",
+        "Yang Xiao",
+        "Lan Zhang",
+        "Linke Guo",
+        "Bo Hui",
+        "Yan-Zhi Wang",
+        "G. Yuan",
+        "G. Agrawal",
+        "Wei Niu",
+        "Xiao-Long Ma"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 315,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。ハードウェア制約を考慮してLLM量子化のハイパーパラメータと配備構成を自動探索するHAQA。Llama上の未最適化モデルに比べ推論最大2.3倍高速化とスループット・精度改善を報告。LLMを使った最適化エージェントが主な新規性だが、評価対象は量子化LLMの実配備性能であり直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "VoxZip: Semantic-Anchored Temporal KV Cache Compression for Long-Context Audio Inference",
+      "source_url": "https://arxiv.org/abs/2608.08569",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in Speech Large Language Models have demonstrated remarkable capabilities in understanding complex audio tasks. Despite this progress, their long-context inference remains severely bottlenecked by prohibitive KV cache memory demands. Existing text-centric compression methods struggle here, often disrupting speech continuity or discarding crucial semantic cues. To address this, we propose VoxZip, a train-free, two-stage semantic-anchored KV cache compression framework. The first stage uses automatic speech recognition (ASR) transcriptions as explicit semantic anchors to temporally align, compress, and fuse audio tokens, significantly reducing the initial KV cache while elevating token information density. To further improve the compression ratio, the second stage employs a dynamic filtering strategy based on temporally decayed accumulated attention to evict non-essential tokens while mitigating early-token bias. Comprehensive evaluations on Qwen3-Omni across six diverse audio benchmarks demonstrate the superiority of our approach. VoxZip excels in long-audio reasoning and consistently maintains high-fidelity perception on short-form tasks. Notably, it sustains over 90% of the uncompressed baseline performance even under an aggressive 20x KV cache compression in long-context scenarios. Furthermore, at a 4x compression ratio, VoxZip yields a 1.9x increase in inference throughput alongside a 3.3x reduction in peak memory overhead. Code and models will be available at https://github.com/MM-Speech/VoxZip.",
+      "identifiers": [
+        "SemanticScholar:f5a26c3d2b6fcb72fb84031928e2b9126ac96aa2"
+      ],
+      "semantic_scholar_id": "f5a26c3d2b6fcb72fb84031928e2b9126ac96aa2",
+      "canonical_id": "arXiv:2608.08569",
+      "arxiv_id": "2608.08569",
+      "doi": "10.1145/3767308.3835719",
+      "authors": [
+        "Wen-Xu Jia",
+        "Dong-Jie Fu",
+        "Xi-Ze Cheng",
+        "Fang-Ming Feng",
+        "Lin-Jun Li",
+        "Wen-Shi Chen",
+        "Ying-Ming Li",
+        "Zhou Zhao",
+        "Tao Jin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。ASR転写を意味アンカーにして音声tokenを時間方向に整列・圧縮し、蓄積attentionの時間減衰で追加退避する学習不要の二段階KV圧縮。Qwen3-Omniの6音声ベンチマークで20倍圧縮時に元性能90%超を維持、4倍圧縮で推論スループット1.9倍・ピークメモリ3.3倍削減と報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-adb4a71f22cb",
+    "round": "libimp-adb4a71f22cbf229-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-adb4a71f22cbf229-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-adb4a71f22cbf229-pre01.json",
+    "receipt": "sha256:87e9ea92990837aa35e053d911017a8573056032f3c9be6a674f7c735b392b5c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-adb4a71f22cb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

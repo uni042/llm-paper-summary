@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2602.20913",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper addresses the critical and underexplored challenge of long video understanding with low computational budgets. We propose LongVideo-R1, an active, reasoning-equipped multimodal large language model (MLLM) agent designed for efficient video context navigation, avoiding the redundancy of exhaustive search. At the core of LongVideo-R1 lies a reasoning module that leverages high-level visual cues to infer the most informative video clip for subsequent processing. During inference, the agent initiates traversal from top-level visual summaries and iteratively refines its focus, immediately halting the exploration process upon acquiring sufficient knowledge to answer the query. To facilitate training, we first extract hierarchical video captions from CGBench, a video corpus with grounding annotations, and guide GPT-5 to generate 33K high-quality chain-of-thought-with-tool trajectories. The LongVideo-R1 agent is fine-tuned upon the Qwen-3-8B model through a two-stage paradigm: supervised fine-tuning (SFT) followed by reinforcement learning (RL), where RL employs a specifically designed reward function to maximize selective and efficient clip navigation. Experiments on multiple long video benchmarks validate the effectiveness of name, which enjoys superior tradeoff between QA accuracy and efficiency. All curated data and source code are provided in the supplementary material and will be made publicly available. Code and data are available at: https://github.com/qiujihao19/LongVideo-R1",
+      "identifiers": [
+        "SemanticScholar:7f9b85329fa3743968ac02255ff96d194274e34f"
+      ],
+      "semantic_scholar_id": "7f9b85329fa3743968ac02255ff96d194274e34f",
+      "canonical_id": "arXiv:2602.20913",
+      "arxiv_id": "2602.20913",
+      "doi": "10.48550/arXiv.2602.20913",
+      "authors": [
+        "Jihao Qiu",
+        "Ling-Xi Xie",
+        "Xinyue Huo",
+        "Qi Tian",
+        "Qi-Xiang Ye"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 267,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨では、長時間動画を全探索せず階層的な視覚要約から有益なクリップへ移動し、質問回答に十分な証拠が得られた時点で探索を停止する推論時ナビゲーションを提案。Qwen-3-8BをSFTとRLで適応し、動画QAの精度と計算費用のトレードオフを評価。汎用サービングではなく動画MLLM固有だが、実行時に処理クリップ数を抑える具体的な推論効率化機構があるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Transformer Inference with Statically Structured Sparse Attention",
+      "source_url": "https://doi.org/10.1109/DAC56929.2023.10247993",
+      "year": 2023,
+      "published": "2023-07-09",
+      "venue": "Design Automation Conference",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention matrices of Transformers are often highly sparse because the relevant context of each token is typically limited to just a few other tokens in the sequence. To reduce the computational burden of self-attention on Transformer inference, we propose static, structured, sparse attention masks that split attention matrices into dense regions, skipping computations outside these regions while reducing computations inside these regions. To support the proposed mask structure, we design an entropy-aware finetuning algorithm to naturally encourage attention sparsity while maximizing task accuracy. Furthermore, we extend a typical dense deep learning accelerator to efficiently exploit our structured sparsity pattern. Compared to a dense baseline, we achieve 56.6% reduction in energy consumption, 58.9% performance improvement with <1% accuracy loss and 2.6% area overhead.",
+      "identifiers": [
+        "SemanticScholar:e28f4687b9ddf562807d12d9799add07aa191d51"
+      ],
+      "semantic_scholar_id": "e28f4687b9ddf562807d12d9799add07aa191d51",
+      "doi": "10.1109/DAC56929.2023.10247993",
+      "canonical_id": "DOI:10.1109/DAC56929.2023.10247993",
+      "authors": [
+        "Steve Dai",
+        "H. Genc",
+        "Rangharajan Venkatesan",
+        "Brucek Khailany"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1228,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NVIDIA Researchの著者公開一次要旨によると、注意行列を密な領域に分割する静的・構造化疎マスクで不要な注意演算を省き、エントロピーを意識した微調整と専用アクセラレータ拡張を組み合わせる。密な基準比でエネルギー56.6%減、性能58.9%向上、精度低下1%未満、面積増2.6%を報告。Transformer推論の演算・ハードウェア効率へ直接寄与するためaccept。生成LLM単体での評価は要旨から断定しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fa3f59a27f58",
+    "round": "libimp-fa3f59a27f5855ed-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fa3f59a27f5855ed-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fa3f59a27f5855ed-pre01.json",
+    "receipt": "sha256:64f9f61dfa95ebd6c6ccee67e0f1a1c6d19931a1cdcef6a403c1f44c7dde43ff"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fa3f59a27f58",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

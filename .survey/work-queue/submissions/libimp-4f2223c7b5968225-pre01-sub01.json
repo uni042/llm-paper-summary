@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1356",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:685d5c1d94d1908d9bf45058bfc5088250e1d30e"
+      ],
+      "semantic_scholar_id": "685d5c1d94d1908d9bf45058bfc5088250e1d30e",
+      "doi": "10.18653/v1/2025.findings-acl.1356",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1356",
+      "authors": [
+        "Jia-Bei Chen",
+        "Guang Liu",
+        "Shi-Zhu He",
+        "Kun Luo",
+        "Yao Xu",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL Findings 2025本文§4〜5・表2を確認。モンテカルロ木探索と過程報酬モデルを組み合わせ、各探索段階で4Kトークン相当の関連KVを検索する。32K全文注意との比較で推論文脈を縮小しながら多段QAのF1を改善。ただし木探索の追加試行費用を含めた総遅延優位は別途検証が必要。",
+      "library_body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "title": "SharVeT: Similarity-aware Parameter Sharing with Vector-based Tuning for Efficient LLM Compression",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.2213",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How can we share parameters within large language models to significantly reduce memory costs while preserving accuracy? While parameter sharing is a promising solution to the memory overhead of large language models, existing methods rely on naive grouping and fail to correct sharing-induced discrepancies. We propose an accurate and efficient parameter sharing framework, SharVeT (Similarity-aware sharing with Vector-based Tuning), which performs similarity-based grouping to ensure accurate sharing, allocates parameters adaptively to preserve diversity within each group, and applies lightweight refinement with knowledge distillation to correct sharing-induced discrepancies. Experiments show that SharVeT outperforms existing sharing methods, achieving up to 32.1% lower perplexity and 21.2% higher few-shot reasoning accuracy.",
+      "identifiers": [
+        "SemanticScholar:b3813855a20d773bbc2fe61cde6a7f24386e9e55"
+      ],
+      "semantic_scholar_id": "b3813855a20d773bbc2fe61cde6a7f24386e9e55",
+      "doi": "10.18653/v1/2026.acl-long.2213",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.2213",
+      "authors": [
+        "Jeongin Yun",
+        "Jaeri Lee",
+        "Jongjin Kim",
+        "Minjun Kim",
+        "Jinho Song",
+        "U. Kang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL 2026本文§3〜4と表2・3を確認。層間類似度で共有群を作り、群ごとにパラメータ割当を変え、蒸留と軽量ベクトル補正で共有誤差を低減。LLaMA3-8B・TinyLlama・Mistralで圧縮率別の困惑度・少数例精度を測定。重み共有による推論メモリ削減に直結する。",
+      "library_body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "title": "Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.25",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:de809f0ed8625182413f6f33260f03cbfb4a1351"
+      ],
+      "semantic_scholar_id": "de809f0ed8625182413f6f33260f03cbfb4a1351",
+      "doi": "10.18653/v1/2026.acl-long.25",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.25",
+      "authors": [
+        "Zi-Ao Ma",
+        "Xian-Ling Mao",
+        "Tian Lan",
+        "Chen Xu",
+        "Zhi-Jing Wu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL 2026本文§3〜4・表1と遅延分析を確認。モデル自身の尤度で冗長な推論段落を特定し、選好学習により思考トークンを削減する。AIME・GPQA・MATH・GSM8Kで正答率を維持しつつ推論長を概ね15〜50%短縮、実測遅延も報告。推論効率に明確に関係するが学習を要する。",
+      "library_body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "title": "Lua-LLM: Learning Unstructured-Sparsity Allocation for Large Language Models",
+      "source_url": "https://doi.org/10.52202/085713-4115",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their extensive parameter scales pose significant challenges for practical deployment. Unstructured pruning has emerged as an effective model compression strategy with minimal performance loss, which introduces fine-grained sparsity for weight parameters. While existing methods employ a layer-wise pruning strategy to avoid the complexity of global pruning for billion-scale LLMs, they require appropriate sparsity allocation for the layer-wise pruning objectives and often lead to suboptimal solutions for the overall model. In this paper, we propose Lua-LLM ( L earning u nstructured-sparsity a llocation in LLMs), a learning-based global pruning framework that explores the optimal unstructured sparsity allocation. Unlike existing pruning methods, which primarily focus on allocating per-layer sparsity, Lua-LLM achieves flexible allocation for both layer-wise and intra-layer sparsity. Furthermore, Lua-LLM leverages a soft Top-K operator to approximate the importance-based mask selection mechanism, enabling efficient binary mask learning. Experimental results on LLaMA and OPT families demonstrate significant performance improvements over existing methods.",
+      "identifiers": [
+        "SemanticScholar:7d215ffdae6154ad3d364932c0c6ba44fdab3114"
+      ],
+      "semantic_scholar_id": "7d215ffdae6154ad3d364932c0c6ba44fdab3114",
+      "doi": "10.52202/085713-4115",
+      "canonical_id": "DOI:10.52202/085713-4115",
+      "authors": [
+        "Ming Lu",
+        "Jing-Wei Sun",
+        "Jun-Qing Lin",
+        "Ze-Chun Zhou",
+        "Guang-Zhong Sun"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "NeurIPS 2025本文§4〜5と表1を確認。行ごとの剪定閾値を微分可能な近似Top-Kで学習し、層間・層内の疎性配分を全体損失に沿って最適化。LLaMA/OPTの50〜80%剪定で困惑度を比較し、SpInfer連携時のA100推論速度1.18〜1.73倍も評価。",
+      "library_body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "title": "ACBQ: Adaptive Cross-Block Quantization of Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1971",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has emerged as a promising approach for reducing the memory footprint and computational cost of large language models (LLMs), enabling efficient deployment without full model retraining. However, existing PTQ methods struggle to simultaneously support weight–activation joint quantization and extreme low-bit weight quantization. This limitation primarily arises from the depth of LLMs and their strong cross-layer dependencies, which cause quantization errors to propagate and accumulate across layers, ultimately leading to significant performance degradation. In this paper, we present ACBQ, a simple yet effective framework that simultaneously addresses weight–activation joint quantization and extreme weight quantization. We first pro-pose a granular quantization strategy that treats self-attention and FFN as separate quantization units with module-specific optimization objectives. To mitigate the propagation and accumulation of quantization errors across layers, we introduce an adaptive cross-block quantization strategy that explicitly accounts for cross-layer dependencies by encouraging consistency across blocks. Extensive experiments across diverse LLMs, including OPT and the LLaMA family, demonstrate that ACBQ achieves superior performance under both W4A4 and highly aggressive W2 settings, while incurring negligible additional computational overhead.",
+      "identifiers": [
+        "SemanticScholar:dc5db32a5ad304a5636163d03272e911f1ff728f"
+      ],
+      "semantic_scholar_id": "dc5db32a5ad304a5636163d03272e911f1ff728f",
+      "doi": "10.18653/v1/2026.acl-long.1971",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1971",
+      "authors": [
+        "Hai-Ling Wang",
+        "Jiang-Lin Lu",
+        "Yi-Tian Zhang",
+        "Hui-Min Zeng",
+        "Yun Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL 2026本文の方式と表1・表5を確認。注意機構とFFNを別の量子化単位として扱い、ブロック間の誤差伝播を抑制する適応的事後量子化。LLaMA系列のW4A4とW2の精度を評価し、従来CBQとの処理時間・メモリ比較も提示。重み・活性化圧縮の実装上の寄与が明確。",
+      "library_body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_body"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4f2223c7b596",
+    "round": "libimp-4f2223c7b5968225-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4f2223c7b5968225-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4f2223c7b5968225-pre01.json",
+    "receipt": "sha256:2c52de4cd9976b9909669938875b60e3bdf49f8c570ecabc2505e9c89129d1d3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4f2223c7b596",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

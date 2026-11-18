@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Hyper-Bagel: A Unified Acceleration Framework for Multimodal Understanding and Generation",
+      "source_url": "https://arxiv.org/abs/2509.18824",
+      "year": 2025,
+      "published": "2025-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Unified multimodal models have recently attracted considerable attention for their remarkable abilities in jointly understanding and generating diverse content. However, as contexts integrate increasingly numerous interleaved multimodal tokens, the iterative processes of diffusion denoising and autoregressive decoding impose significant computational overhead. To address this, we propose Hyper-Bagel, a unified acceleration framework designed to simultaneously speed up both multimodal understanding and generation tasks. Our approach uses a divide-and-conquer strategy, employing speculative decoding for next-token prediction and a multi-stage distillation process for diffusion denoising. The framework delivers substantial performance gains, achieving over a 2x speedup in multimodal understanding. For generative tasks, our resulting lossless 6-NFE model yields a 16.67x speedup in text-to-image generation and a 22x speedup in image editing, all while preserving the high-quality output of the original model. We further develop a highly efficient 1-NFE model that enables near real-time interactive editing and generation. By combining advanced adversarial distillation with human feedback learning, this model achieves ultimate cost-effectiveness and responsiveness, making complex multimodal interactions seamless and instantaneous.",
+      "identifiers": [
+        "SemanticScholar:b31781f66c3b9fd05a5a79a62792dbd7d252a554"
+      ],
+      "semantic_scholar_id": "b31781f66c3b9fd05a5a79a62792dbd7d252a554",
+      "canonical_id": "arXiv:2509.18824",
+      "arxiv_id": "2509.18824",
+      "doi": "10.48550/arXiv.2509.18824",
+      "authors": [
+        "Yanzuo Lu",
+        "X. Xia",
+        "Man-Lin Zhang",
+        "Hua-Feng Kuang",
+        "Jianbin Zheng",
+        "Yu-Xi Ren",
+        "Xue-Feng Xiao"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 421,
+        "matched_prestigious_venue": null
+      },
+      "reason": "統合マルチモーダルモデルで自己回帰の投機的復号と画像拡散の多段蒸留を組み合わせ、理解タスクで2倍超、画像生成で6-NFEにより16.67倍、画像編集で22倍の高速化を報告。異なる生成経路をまとめた推論高速化だが、画像生成の倍率とテキスト復号を混同しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fa8cb5506a93",
+    "round": "libimp-fa8cb5506a93175f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fa8cb5506a93175f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fa8cb5506a93175f-pre01.json",
+    "receipt": "sha256:15cc0ff6ce84ebf9f6b99ecd85c7885dcdb9864a94f860fcc098093be7221958"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fa8cb5506a93",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

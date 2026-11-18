@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TSAcc: An Efficient Tempo-Spatial Similarity Aware Accelerator for Attention Acceleration",
+      "source_url": "https://doi.org/10.1145/3649329.3655982",
+      "year": 2024,
+      "published": "2024-06-23",
+      "venue": "Design Automation Conference",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention-based models provide significant accuracy improvement to Natural Language Processing (NLP) and computer vision (CV) fields at the cost of heavy computational and memory demands. Previous works seek to alleviate the performance bottleneck by removing useless relations for each position. However, their attempts only focus on intra-sentence optimization and overlook the opportunity in the temporal domain. In this paper, we accelerate attention by leveraging the tempo-spatial similarity across successive sentences, given the observation that successive sentences tend to bear high similarity. This is rational owing to many semantic similar words (namely tokens) in the attention-based models. We first propose an online-offline prediction algorithm to identify similar tokens/heads. We then design a recovery algorithm so that we can skip the computation on similar tokens/heads in succeeding sentences and recover their results by copying other tokens/heads features in preceding sentences to reserve accuracy. From the hardware aspect, we propose a specialized architecture TSAcc that includes a prediction engine and recovery engine to translate the computational saving in the algorithm to real speedup. Experiments show that TSAcc can achieve 8.5×, 2.7×, 14.1×, and 64.9× speedup compared to SpAtten, Sanger, 1080TI GPU, and Xeon CPU, with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:e451a738f004f617cf0081d6258f5b22ccd5b236"
+      ],
+      "semantic_scholar_id": "e451a738f004f617cf0081d6258f5b22ccd5b236",
+      "doi": "10.1145/3649329.3655982",
+      "canonical_id": "DOI:10.1145/3649329.3655982",
+      "authors": [
+        "Zhuo-Ran Song",
+        "Chun-Yu Qi",
+        "Yuanzheng Yao",
+        "Peng Zhou",
+        "Yanyi Zi",
+        "Nan Wang",
+        "Xiao-Yao Liang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 878,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DAC 2024の出版社一次要旨を確認。連続する文・入力間のtoken/head類似性をonline-offline予測し、後続入力で類似token/headのAttention計算を省略、先行入力の特徴をコピーして復元する。予測・復元専用ハードウェアを設計し、SpAtten比8.5倍、Sanger比2.7倍、GTX 1080Ti比14.1倍、Xeon CPU比64.9倍の高速化を報告。NLPのAttention推論高速化と専用アクセラレータの双方に直接該当するためaccept。ただし汎用LLMの自己回帰デコード全体の高速化とは同一視しない。",
+      "library_body_check": "publisher_primary_abstract_read; fulltext_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3611938611a4",
+    "round": "libimp-3611938611a4e893-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3611938611a4e893-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3611938611a4e893-pre01.json",
+    "receipt": "sha256:0b358c2ef6c7e2ad2e3bbcbcc8263a176d66075c45abfd6e2e975057e1b43068"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3611938611a4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

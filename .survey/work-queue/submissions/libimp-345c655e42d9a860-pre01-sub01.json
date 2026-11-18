@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CAI-DLLM: Convergence Aware Inference for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.22646",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models can generate many tokens in parallel, but they still require repeated denoising steps during inference. This makes generation costly, especially when the model continues to recompute tokens that are already stable. To address these limitations, we propose CAI-DLLM, a training-free inference method that uses first-step confidence to guide denoising and reduce inference time. Specifically, CAI-DLLM commits easy tokens earlier, allocates more denoising steps to harder tokens, and adjusts decoding schedules across output blocks. As it relies only on first-step confidence signals, it does not require retraining, extra predictors, or weight updates. We evaluate CAI-DLLM on LLaDA-8B-Instruct and Dream-7B-Instruct across math, code, reasoning, commonsense, and long-context tasks. CAI-DLLM achieves up to 18.2x wall clock inference speedup on LLaDA GSM8K while improving accuracy from 76.27% to 77.41%, and up to 13.1x speedup on Dream HumanEval while achieving higher pass@1 than no-cache inference, 48.17% compared with 46.95%. On harder reasoning tasks, speedups reach 44.8x, with a largest accuracy drop of 4.4 points, while energy consumption is reduced by up to 95.3%.",
+      "identifiers": [
+        "SemanticScholar:dfb709ac2b0c1879c15ae2ba1e894dc1e52189be"
+      ],
+      "semantic_scholar_id": "dfb709ac2b0c1879c15ae2ba1e894dc1e52189be",
+      "canonical_id": "arXiv:2608.22646",
+      "arxiv_id": "2608.22646",
+      "doi": "10.48550/arXiv.2608.22646",
+      "authors": [
+        "Farhana Amin",
+        "Sabiha Afroz",
+        "D. Nikolopoulos"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は最初のノイズ除去段階の信頼度から容易なトークンを先に確定し、難しい位置に追加反復を割当てる訓練不要の拡散LLM復号を提案。LLaDAとDreamで最大18.2倍・13.1倍の実時間高速化例と、難しい推論課題で精度低下最大4.4ポイントを報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-345c655e42d9",
+    "round": "libimp-345c655e42d9a860-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-345c655e42d9a860-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-345c655e42d9a860-pre01.json",
+    "receipt": "sha256:e40e03ffc193bd0af64d13061852bc7a9002fd967619c612ad971d27d58370bf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-345c655e42d9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
