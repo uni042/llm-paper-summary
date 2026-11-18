@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-487e79209eb03b77-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.11748",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.11748",
+    "identity_tokens": [
+      "arXiv:2602.11748"
+    ],
+    "reason": "arXiv一次要旨。長い推論軌跡を生み出す長さ報酬と冗長性penaltyによって、Qwen3/Llamaのin-context explorationと正答率を改善する。目的は推論token削減ではなく、より長いCoTを奨励して能力を向上させることにあり、推論効率化の直接寄与は要旨に示されない。",
+    "first_checked_at": "2026-11-18T14:00:12+00:00",
+    "last_checked_at": "2026-11-18T14:00:12+00:00",
+    "linked_from": [],
+    "title": "Think Longer to Explore Deeper: Learn to Explore In-Context via Length-Incentivized Reinforcement Learning"
+  },
+  "processed_at": "2026-11-18T14:00:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-487e79209eb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

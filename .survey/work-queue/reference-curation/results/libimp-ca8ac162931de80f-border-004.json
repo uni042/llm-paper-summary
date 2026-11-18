@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca8ac162931de80f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.10886",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.10886",
+    "identity_tokens": [
+      "arXiv:2605.10886"
+    ],
+    "reason": "一次arXiv書誌・要旨では推薦モデルにFP8を適用する際、オンライン統計による層別安全性の計測、数値安定性を保つモデル変更、条件を満たす高速FP8カーネル選択ランタイムを統合するLoKAを提案。カーネル選択と低精度化の手法は転用可能だが、直接の対象は推薦モデルの学習・実行でありLLM推論での評価はない。",
+    "first_checked_at": "2026-11-15T21:43:23+00:00",
+    "last_checked_at": "2026-11-18T14:00:18+00:00",
+    "linked_from": [
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "Weight Quantization / Compression",
+      "inference-systems",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LoKA: Low-precision Kernel Applications for Recommendation Models At Scale"
+  },
+  "processed_at": "2026-11-18T14:00:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca8ac162931d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e596bb0cff71fc95-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.24267",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.24267",
+    "identity_tokens": [
+      "arXiv:2609.24267"
+    ],
+    "reason": "音声対話システムでLLM出力をTTS向けに正規化するQwen3-0.6Bベースの専用モデルを提案。入力と出力を二系統でストリーミングしてTNの遅延を下げるが、対象は中国語TTS前処理の応用パイプラインで、一般的なLLMデコード・KV・GPU実行系の最適化ではない。",
+    "first_checked_at": "2026-11-18T14:00:21+00:00",
+    "last_checked_at": "2026-11-18T14:00:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "StreamTN: A Low-Latency Streaming Chinese Text Normalization Model for Streaming TTS in Dialogue Systems"
+  },
+  "processed_at": "2026-11-18T14:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e596bb0cff71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

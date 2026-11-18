@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69465213fd5867cc-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12202",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12202",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2502.12202",
+      "arXiv:2502.12202"
+    ],
+    "reason": "特殊区切りトークンでLRMの思考を迂回するUnthinking脆弱性を分析し、Monitoring of Thoughtで冗長・危険な思考を動的終了する。推論トークン削減に関係するが、主貢献は安全性攻撃・防御であり、定量的な速度評価は要本文確認。worklistの旧題名BoTとは同一arXiv。",
+    "first_checked_at": "2026-11-18T08:08:25+00:00",
+    "last_checked_at": "2026-11-18T14:00:14+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+      "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "To Think or Not to Think: Exploring the Unthinking Vulnerability in Large Reasoning Models"
+  },
+  "processed_at": "2026-11-18T14:00:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69465213fd58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

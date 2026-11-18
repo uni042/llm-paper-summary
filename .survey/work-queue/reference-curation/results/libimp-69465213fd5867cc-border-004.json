@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69465213fd5867cc-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.22267",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.22267",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.22267",
+      "arXiv:2603.22267"
+    ],
+    "reason": "発話時間を指定する音声モデルでSpoken Time MarkerとRLにより目標時間への追従を改善する。発話長制御は推論予算と関連するが、主指標は音声持続時間の誤差であり、推論計算量やTTFAの削減ではない。worklistの旧題名と現行題名は同一arXiv。",
+    "first_checked_at": "2026-11-18T11:08:39+00:00",
+    "last_checked_at": "2026-11-18T14:00:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+      "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TiCo: Time-Controllable Spoken Dialogue Model"
+  },
+  "processed_at": "2026-11-18T14:00:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69465213fd58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69465213fd5867cc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.20193",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.20193",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.20193",
+      "arXiv:2605.20193"
+    ],
+    "reason": "LLaMA-3.1-8Bの8/4/3/2bit量子化で質的分析の誤りを比較し、複数回プロンプト検証で幻覚を減らす。圧縮後品質の参考になるが、追加検証で推論計算量を減らす研究ではなく、定量的な速度改善も示されていない。",
+    "first_checked_at": "2026-11-18T14:00:13+00:00",
+    "last_checked_at": "2026-11-18T14:00:13+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification"
+  },
+  "processed_at": "2026-11-18T14:00:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69465213fd58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

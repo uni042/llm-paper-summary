@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-487e79209eb03b77-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.20783",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.20783",
+    "identity_tokens": [
+      "arXiv:2507.20783"
+    ],
+    "reason": "arXiv一次要旨。一般目的text embeddingのアーキテクチャ、contrastive training、multilingual/multimodal拡張、検索・分類・clusteringの用途を整理したサーベイ。生成LLMの推論高速化、KV cache、サービング、低ビット化等を主題としないため対象外。",
+    "first_checked_at": "2026-11-18T14:00:12+00:00",
+    "last_checked_at": "2026-11-18T14:00:12+00:00",
+    "linked_from": [],
+    "title": "On The Role of Pretrained Language Models in General-Purpose Text Embeddings: A Survey"
+  },
+  "processed_at": "2026-11-18T14:00:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-487e79209eb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca8ac162931de80f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.01168",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.01168",
+    "identity_tokens": [
+      "arXiv:2606.01168"
+    ],
+    "reason": "arXiv由来一次書誌・要旨では、HABが問題間の思考深度と推論ステップ内のトークン予算を粗密二段で学習し、PPL比較・Pareto最適化・Fisher情報による枝刈りで短い推論を学習する。GSM8K・MATH500で標準CoTより高精度かつ少トークンと報告するが、主貢献は訓練時の思考効率学習で、推論時のサービング制御は示されていない。",
+    "first_checked_at": "2026-11-18T14:00:18+00:00",
+    "last_checked_at": "2026-11-18T14:00:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Thinking Economically: A Hierarchical Framework for Adaptive-Complexity Reasoning in LLMs"
+  },
+  "processed_at": "2026-11-18T14:00:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca8ac162931d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

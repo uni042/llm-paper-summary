@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-46ef638807bdd41e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.24416",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.24416",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2509.24416",
+      "arXiv:2509.24416"
+    ],
+    "reason": "arXiv一次要旨によればCLQは画像・動画生成用Diffusion Transformer（DiT）の事後量子化で、cross-block calibration、block Hadamard行列によるoutlier smoothing、cross-layer parameter searchを組み合わせ、画像・動画生成モデルのW4A4圧縮を評価する。LLM推論・言語生成・LLMサービングへの適用は一次要旨に記載されず、視覚生成DiTが最終対象であるため現行サーベイの直接対象外としてunrelated。本文未読。",
+    "first_checked_at": "2026-11-18T08:08:12+00:00",
+    "last_checked_at": "2026-11-18T14:00:11+00:00",
+    "linked_from": [
+      "arXiv:2405.16406のICLR 2025採録版。",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "title": "CLQ: Cross-Layer Guided Orthogonal-based Quantization for Diffusion Transformers"
+  },
+  "processed_at": "2026-11-18T14:00:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46ef638807bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

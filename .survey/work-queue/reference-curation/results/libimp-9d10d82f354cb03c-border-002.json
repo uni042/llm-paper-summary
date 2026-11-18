@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9d10d82f354cb03c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.03002",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.03002",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.03002",
+      "arXiv:2606.03002"
+    ],
+    "reason": "arXiv一次要旨は量子化後のPPLが良好でもSparse Autoencoderの内部特徴が損なわれる現象をPythia/Gemmaで検証し、INT7でGemma活性特徴の18.7%が劣化した例を示す。量子化品質監査として有用だが、推論速度・メモリ削減の新手法ではないため保留。",
+    "first_checked_at": "2026-11-18T10:58:43+00:00",
+    "last_checked_at": "2026-11-18T14:00:15+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Perplexity Can Miss SAE Feature Damage Under Quantization"
+  },
+  "processed_at": "2026-11-18T14:00:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9d10d82f354c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

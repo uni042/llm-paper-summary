@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69465213fd5867cc-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.18061",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.18061",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.18061",
+      "arXiv:2507.18061"
+    ],
+    "reason": "中国語音声LLMの対話適切性・音響変動下の意味精度を評価するベンチマーク。品質と音声理解が中心であり、推論時遅延・メモリ・計算効率の評価ではない。",
+    "first_checked_at": "2026-11-18T07:47:43+00:00",
+    "last_checked_at": "2026-11-18T14:00:14+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+      "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+    ],
+    "title": "TELEVAL: A Benchmark Designed for Spoken Language Models in Chinese Interactive Scenarios"
+  },
+  "processed_at": "2026-11-18T14:00:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69465213fd58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

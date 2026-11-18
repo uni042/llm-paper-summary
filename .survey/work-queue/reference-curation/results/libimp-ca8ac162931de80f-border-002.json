@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca8ac162931de80f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.24351",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.24351",
+    "identity_tokens": [
+      "arXiv:2604.24351"
+    ],
+    "reason": "一次arXiv書誌・要旨では、画像拡散モデルの制御能力をTemplate model・cache・pipelineの3部品に分離し、KV-CacheやLoRAなど異種能力を同一の実行時インターフェースで組み込む。推論ランタイムのモジュール化技術として隣接するが、主対象は画像編集・超解像等の制御可能生成で、LLM推論性能やメモリ最適化の直接評価は示されない。",
+    "first_checked_at": "2026-11-18T14:00:18+00:00",
+    "last_checked_at": "2026-11-18T14:00:18+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion"
+  },
+  "processed_at": "2026-11-18T14:00:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca8ac162931d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

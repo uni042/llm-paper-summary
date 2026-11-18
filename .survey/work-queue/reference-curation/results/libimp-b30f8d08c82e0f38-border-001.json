@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b30f8d08c82e0f38-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:6e2c864ee9d1359c320e88592a0f608bce21030e",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:6e2c864ee9d1359c320e88592a0f608bce21030e",
+    "identity_tokens": [
+      "HAL:hal-04652584",
+      "SemanticScholar:6e2c864ee9d1359c320e88592a0f608bce21030e"
+    ],
+    "reason": "研究プロジェクトMaTOSの著者公開書誌・概要で、長文書の機械翻訳における文間依存、エンコーダ・デコーダ方式、LLM利用、Transformerの効率的実装を整理する50ページのサーベイと確認。長文脈LLM推論に隣接するが、新しいKV管理・デコード・サービング最適化手法を提案する研究ではないため境界候補。",
+    "first_checked_at": "2026-11-18T14:00:17+00:00",
+    "last_checked_at": "2026-11-18T14:00:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Handling Very Long Contexts in Neural Machine Translation: a Survey"
+  },
+  "processed_at": "2026-11-18T14:00:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b30f8d08c82e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

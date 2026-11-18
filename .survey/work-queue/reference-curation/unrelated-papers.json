@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T13:40:06+00:00",
-  "record_count": 12918,
+  "updated_at": "2026-11-18T14:00:21+00:00",
+  "record_count": 12920,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180894,7 +180894,7 @@
       ],
       "reason": "arXiv一次要旨は一般のDNNとエッジデバイス向け量子化対応事前学習(QAPT)で、情報理論上の符号効率と整数演算の両立を提案。LLMの生成推論、KV、サービング、デコード高速化を対象とする根拠が一次要旨から確認できず、今回の推論効率サーベイでは対象外。",
       "first_checked_at": "2026-10-30T07:20:41+00:00",
-      "last_checked_at": "2026-10-30T07:20:41+00:00",
+      "last_checked_at": "2026-11-18T14:00:10+00:00",
       "linked_from": [
         "Weight Quantization / Compression"
       ],
@@ -180908,7 +180908,7 @@
       ],
       "reason": "arXiv一次要旨は一般のDNNの量子化出力誤差をバイアス補償で凸最適化する方法で、学習不要の低精度化を扱う。生成LLM、LLMサービング、KV管理、言語モデル推論高速化の直接評価が一次要旨から確認できず、今回の対象外。",
       "first_checked_at": "2026-10-30T07:20:41+00:00",
-      "last_checked_at": "2026-10-30T07:20:41+00:00",
+      "last_checked_at": "2026-11-18T14:00:10+00:00",
       "linked_from": [
         "Weight Quantization / Compression"
       ],
@@ -182340,23 +182340,6 @@
       ],
       "title": "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration"
     },
-    "arXiv:2604.24351": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2604.24351",
-      "identity_tokens": [
-        "arXiv:2604.24351"
-      ],
-      "reason": "制御可能拡散の統合プラグイン基盤Diffusion Templates。バックボーンごとに分断された制御手法を、能力表現への写像・キャッシュ・注入パイプラインで統一する枠組み。対象は画像生成の制御基盤であり、LLM推論システムの効率機構ではない。対象外。",
-      "first_checked_at": "2026-11-15T21:43:00+00:00",
-      "last_checked_at": "2026-11-15T21:43:00+00:00",
-      "linked_from": [
-        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
-        "LLM Serving / Scheduling / Disaggregation",
-        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
-        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
-      ],
-      "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion"
-    },
     "arXiv:2605.04956": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.04956",
@@ -182458,11 +182441,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2607.27756",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.27756",
         "arXiv:2607.27756"
       ],
-      "reason": "騒がしい多話者環境向け音声対話モデルCocktail-Talker。応答・傾聴・無視の行動トークンで、複数話者の中での発話要否判断をモデル化する。音声対話モデルの設計と訓練が中核で、推論システム機構の提案はない。対象外。",
+      "reason": "タイトルが多人数・雑音環境での音声対話モデルのターン行動学習を研究対象として明示している。LLM推論サービング、計算・メモリ削減、推論実行基盤の最適化を主題としないためタイトル先行走査で対象外とした。",
       "first_checked_at": "2026-11-15T21:43:17+00:00",
-      "last_checked_at": "2026-11-15T21:43:17+00:00",
+      "last_checked_at": "2026-11-18T14:00:13+00:00",
       "linked_from": [
         "LLM Serving / Scheduling / Disaggregation"
       ],
@@ -182996,13 +182980,13 @@
       "identity_tokens": [
         "arXiv:2301.06813"
       ],
-      "reason": "自動分散深層学習AutoDDL。データ・演算子・パイプライン並列の組み合わせを自動探索する分散訓練の枠組み。対象は訓練であり、推論ではない。対象外。",
+      "reason": "一次arXiv書誌・要旨ではOneFlowのSBP抽象と座標降下による自動並列化でVGG・Transformerの分散学習時間を削減するAutoDDLを提案。主目的・評価は訓練の通信・並列化であり、推論サービング、KVキャッシュ、デコード等への直接的貢献は示されない。",
       "first_checked_at": "2026-11-18T07:16:40+00:00",
-      "last_checked_at": "2026-11-18T07:16:40+00:00",
+      "last_checked_at": "2026-11-18T14:00:19+00:00",
       "linked_from": [
         "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
       ],
-      "title": "AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost"
+      "title": "AutoDDL: Automatic Distributed Deep Learning with Near-Optimal Bandwidth Cost"
     },
     "arXiv:2406.04342": {
       "classification": "unrelated",
@@ -183590,11 +183574,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2312.09211",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.09211",
         "arXiv:2312.09211"
       ],
-      "reason": "低精度微調整における外れ値活性の緩和。低精度の整数微調整で活性の外れ値がスケール因子を歪める問題への対処。対象は微調整であり、推論機構ではない。対象外。",
+      "reason": "arXiv一次要旨で扱うのは、言語モデルの低精度fine-tuningにおける活性値外れ値をINT8で表現し、整数演算とoperator tilingを用いてfine-tuningの頑健性と性能を改善する手法である。推論時の量子化・サービング・KVキャッシュ・推論スケジューラを対象とする評価や最終適用先は要旨に示されていない。低精度化技術は隣接するが、主要貢献は学習段階の最適化であり、凍結された学習専用範囲としてunrelated。本文未読。",
       "first_checked_at": "2026-11-18T07:47:38+00:00",
-      "last_checked_at": "2026-11-18T07:47:38+00:00",
+      "last_checked_at": "2026-11-18T14:00:11+00:00",
       "linked_from": [
         "post-training quantization / second-order compression / weight-only LLM inference",
         "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
@@ -183685,29 +183670,16 @@
       ],
       "title": "System-performance and cost modeling of Large Language Model training and inference"
     },
-    "arXiv:2506.07919": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.07919",
-      "identity_tokens": [
-        "arXiv:2506.07919"
-      ],
-      "reason": "系列モデリングにおける非線形性の計算的役割の解明。再帰網の非線形性がいつ計算的に必要かを体系的に解剖する理論研究。対象は理論であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:42+00:00",
-      "last_checked_at": "2026-11-18T07:47:42+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "Uncovering the Computational Roles of Nonlinearity in Sequence Modeling Using Almost-Linear RNNs"
-    },
     "arXiv:2507.18061": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2507.18061",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.18061",
         "arXiv:2507.18061"
       ],
-      "reason": "中国語音声対話で意味内容の充足と相互行為の適切さを測るTELEVALベンチマークを提案し、音響変動による応答の誤りやCaption Trapを分析する。一次要旨は対話品質評価が目的で、推論速度・メモリ・並列化・サービング技術の改善を示さないためunrelated。",
+      "reason": "中国語音声LLMの対話適切性・音響変動下の意味精度を評価するベンチマーク。品質と音声理解が中心であり、推論時遅延・メモリ・計算効率の評価ではない。",
       "first_checked_at": "2026-11-18T07:47:43+00:00",
-      "last_checked_at": "2026-11-18T11:08:40+00:00",
+      "last_checked_at": "2026-11-18T14:00:14+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
         "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
@@ -183859,27 +183831,6 @@
       ],
       "title": "LazyFlash: Forward-Dense, Backward-Sparse Attention for Accelerated Long-Context Fine-Tuning"
     },
-    "arXiv:2605.20193": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.20193",
-      "identity_tokens": [
-        "arXiv:2605.20193"
-      ],
-      "reason": "LLaMA-3.1-8Bの2～8ビット量子化を82件のインタビュー記録の質的分析で評価し、複数回のプロンプト検証で幻覚や主題抽出の誤りを減らす応用研究。一次要旨の主目的は分析結果の妥当性で、量子化方式・GPU実行・サービングの新規高速化は示さないためunrelated。",
-      "first_checked_at": "2026-11-18T07:48:02+00:00",
-      "last_checked_at": "2026-11-18T11:08:40+00:00",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
-        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
-        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md",
-        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
-        "post-training quantization / second-order compression / weight-only LLM inference",
-        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
-        "重み専用量子化 / 推論カーネル"
-      ],
-      "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification"
-    },
     "arXiv:2512.12279": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2512.12279",
@@ -183901,11 +183852,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2509.24416",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.24416",
         "arXiv:2509.24416"
       ],
-      "reason": "拡散Transformer向け層跨ぎ誘導直交量子化CLQ。視覚生成モデルの配備のための学習後量子化。対象は画像生成モデルであり、LLM推論の機構ではない。対象外。",
+      "reason": "arXiv一次要旨によればCLQは画像・動画生成用Diffusion Transformer（DiT）の事後量子化で、cross-block calibration、block Hadamard行列によるoutlier smoothing、cross-layer parameter searchを組み合わせ、画像・動画生成モデルのW4A4圧縮を評価する。LLM推論・言語生成・LLMサービングへの適用は一次要旨に記載されず、視覚生成DiTが最終対象であるため現行サーベイの直接対象外としてunrelated。本文未読。",
       "first_checked_at": "2026-11-18T08:08:12+00:00",
-      "last_checked_at": "2026-11-18T08:08:12+00:00",
+      "last_checked_at": "2026-11-18T14:00:11+00:00",
       "linked_from": [
         "arXiv:2405.16406のICLR 2025採録版。",
         "inference-systems",
@@ -185627,20 +185579,6 @@
       "linked_from": [],
       "title": "Temporal-Aware Query Routing for Real-Time Video Instance Segmentation"
     },
-    "arXiv:2610.40477": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2610.40477",
-      "identity_tokens": [
-        "arXiv:2610.40477"
-      ],
-      "reason": "edge-cloud環境のサービス配置、診断、設定、修復をLMが支援する39研究を、LMの責務・権限・制約・実証証拠の5軸で整理するレビュー。対象はLMを運用意思決定の補助ツールとして使うサービスオーケストレーションであり、LLM自身の推論実行、KVメモリ、サービングエンジンの効率化を提案・評価していない。推論効率サーベイの収録範囲外としてunrelated。",
-      "first_checked_at": "2026-11-18T13:19:32+00:00",
-      "last_checked_at": "2026-11-18T13:19:32+00:00",
-      "linked_from": [
-        "https://arxiv.org/list/cs.DC/recent"
-      ],
-      "title": "Can We Rely on Language Models to Orchestrate Services across the Edge-Cloud Continuum?"
-    },
     "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1": {
       "classification": "unrelated",
       "canonical_id": "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1",
@@ -185870,6 +185808,80 @@
         "https://arxiv.org/list/cs.LG/new"
       ],
       "title": "ORION: An Outcome-Driven LLM Advisor for RL-Based Multi-Domain 6G Slice Placement"
+    },
+    "DOI:10.1109/iceaai68945.2026.11442452": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iceaai68945.2026.11442452",
+      "identity_tokens": [
+        "DOI:10.1109/iceaai68945.2026.11442452"
+      ],
+      "reason": "タイトルに明示される対象は物体検出器DETRの全ネットワーク量子化であり、LLM推論・サービングやLLMの圧縮を対象とした研究ではない。一次要旨・本文は未読のため、DETR以外の適用性能については判断していない。",
+      "first_checked_at": "2026-11-18T14:00:07+00:00",
+      "last_checked_at": "2026-11-18T14:00:07+00:00",
+      "linked_from": [],
+      "title": "Full-Network Post-Training Quantization for DETR with Integerized Nonlinear Operators and Scale Optimization"
+    },
+    "arXiv:2602.11748": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11748",
+      "identity_tokens": [
+        "arXiv:2602.11748"
+      ],
+      "reason": "arXiv一次要旨。長い推論軌跡を生み出す長さ報酬と冗長性penaltyによって、Qwen3/Llamaのin-context explorationと正答率を改善する。目的は推論token削減ではなく、より長いCoTを奨励して能力を向上させることにあり、推論効率化の直接寄与は要旨に示されない。",
+      "first_checked_at": "2026-11-18T14:00:12+00:00",
+      "last_checked_at": "2026-11-18T14:00:12+00:00",
+      "linked_from": [],
+      "title": "Think Longer to Explore Deeper: Learn to Explore In-Context via Length-Incentivized Reinforcement Learning"
+    },
+    "arXiv:2507.20783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.20783",
+      "identity_tokens": [
+        "arXiv:2507.20783"
+      ],
+      "reason": "arXiv一次要旨。一般目的text embeddingのアーキテクチャ、contrastive training、multilingual/multimodal拡張、検索・分類・clusteringの用途を整理したサーベイ。生成LLMの推論高速化、KV cache、サービング、低ビット化等を主題としないため対象外。",
+      "first_checked_at": "2026-11-18T14:00:12+00:00",
+      "last_checked_at": "2026-11-18T14:00:12+00:00",
+      "linked_from": [],
+      "title": "On The Role of Pretrained Language Models in General-Purpose Text Embeddings: A Survey"
+    },
+    "arXiv:2605.20193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20193",
+      "identity_tokens": [
+        "arXiv:2605.20193"
+      ],
+      "reason": "arXiv一次要旨は82件のインタビュー文字起こしに対する低ビットLLaMAの質的分析を、多段プロンプト検証で安定化する応用研究。量子化精度の比較はあるが、目的はインタビュー分析の正確性であり、推論カーネル・メモリ・スケジューリング等のシステム効率の新手法はない。",
+      "first_checked_at": "2026-11-18T14:00:15+00:00",
+      "last_checked_at": "2026-11-18T14:00:15+00:00",
+      "linked_from": [],
+      "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification"
+    },
+    "DOI:10.1109/icme57554.2024.10688073": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icme57554.2024.10688073",
+      "identity_tokens": [
+        "DOI:10.1109/icme57554.2024.10688073"
+      ],
+      "reason": "IEEE公式abstractに基づく。音声翻訳向け事前学習済み音声エンコーダの系列長を、注意スコアに基づく重要度と固定・段階的剪定率で層ごとに削減する。出力トークン55%減、性能低下0.7%、エンコーディング最大1.76倍高速化を報告。ただし対象は音声翻訳の音声エンコーダであり、LLM生成推論・サービング・KVキャッシュ等への直接的な適用や評価は示されないため、現行LLM推論システム範囲ではunrelated。",
+      "first_checked_at": "2026-11-18T14:00:16+00:00",
+      "last_checked_at": "2026-11-18T14:00:16+00:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 385"
+      ],
+      "title": "Efficient Speech-to-Text Translation: Progressive Pruning for Accelerated Speech Pre-trained Model"
+    },
+    "arXiv:2410.06431": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06431",
+      "identity_tokens": [
+        "arXiv:2410.06431"
+      ],
+      "reason": "UQ4CTはLoRA expert混合による機能空間の信頼度較正損失をfine-tuning時に学習し、QAのECEと予測信頼性を改善する。中心課題は学習時の確率較正であり、推論時の演算量・KVメモリ・デコード速度・サービング資源を削減するシステム機構は扱わない。",
+      "first_checked_at": "2026-11-18T14:00:21+00:00",
+      "last_checked_at": "2026-11-18T14:00:21+00:00",
+      "linked_from": [],
+      "title": "Functional-level Uncertainty Quantification for Calibrated Fine-tuning on LLMs"
     }
   }
 }

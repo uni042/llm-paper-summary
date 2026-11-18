@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e596bb0cff71fc95-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.16952",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.16952",
+    "identity_tokens": [
+      "arXiv:2603.16952"
+    ],
+    "reason": "身体性AIをエッジへ配備する際の電力・重量・メモリ帯域・制御遅延を8障壁で整理し、VLAの帯域律速と拡散制御器の計算律速を区別するサーベイ。メモリ階層とスケジューリングの論点は有用だが、主対象はロボット制御でLLM推論サービング固有の実装・評価ではない。",
+    "first_checked_at": "2026-11-18T14:00:20+00:00",
+    "last_checked_at": "2026-11-18T14:00:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Embodied Foundation Models at the Edge: A Survey of Deployment Constraints and Mitigation Strategies"
+  },
+  "processed_at": "2026-11-18T14:00:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e596bb0cff71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56222a679483c92e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.13223",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.13223",
+    "identity_tokens": [
+      "arXiv:2511.13223"
+    ],
+    "reason": "長いCoTによる推論トークン費用を抑えるため、問題難度に応じた自己生成サンプル選択と論理構造を保つ言語的精緻化で短い思考経路を学習するTokenSqueeze。生成長と推論費用の削減に関係するが、主な手法は学習データ・推論過程の言語圧縮で、GPUサービングやKVカーネルの実装を直接改善するものではないため境界扱い。",
+    "first_checked_at": "2026-11-18T06:39:35+00:00",
+    "last_checked_at": "2026-11-18T14:00:12+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs"
+  },
+  "processed_at": "2026-11-18T14:00:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56222a679483",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
