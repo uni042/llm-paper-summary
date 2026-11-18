@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Hybrid Latent Attention for Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.07940",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models apply the same stack of layers T times to each token, which deepens the model without adding parameters but multiplies its key-value (KV) cache by T. The larger cache limits how many sequences a GPU can decode at once and slows each decoding step, which reads the whole cache. We propose Hybrid Latent Attention (HLA), which keeps exact keys and values within a sliding window of W recent tokens and stores each older token as a compact latent that the query of each loop reads directly, without reconstructing keys and values. We uptrain HLA on Ouro looped models (T=4) with 1.4B and 2.6B parameters, keeping the pretrained weights frozen and training only the added parameters to reproduce the original attention. The cache shrinks by 10.7x per token, fitting 4.0-8.8x as many concurrent sequences per GPU, and decoding throughput improves by 2.5x at 1K-token contexts and by up to 7.4x at 16K. HLA retains over 97% of the original accuracy on math, knowledge and reasoning benchmarks, and 96-100% on long-context retrieval up to 16K tokens. After supervised fine-tuning, it performs on par with the fine-tuned original model on competition-level math.",
+      "identifiers": [
+        "SemanticScholar:7f7015123417412c0c9d5e98f34e560da19282d4"
+      ],
+      "semantic_scholar_id": "7f7015123417412c0c9d5e98f34e560da19282d4",
+      "canonical_id": "arXiv:2610.07940",
+      "arxiv_id": "2610.07940",
+      "authors": [
+        "Yu-Han Chen",
+        "Si-Yuan Zhang",
+        "Nan Wang",
+        "Fei-Yang Kang",
+        "Ruo-Xi Jia"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Hybrid Latent Attentionは層をT回再利用するlooped LLMのKVがT倍になる問題に対し、直近W tokenは正確なKV、古いtokenは各loopから直接参照できる共有latentとして保持する。Ouro 1.4B/2.6B・T=4でcache/token10.7倍削減、同時sequence数4.0～8.8倍、16K文脈のdecode throughput最大7.4倍、元の精度97%以上を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "KV-Repurpose: A Testbed for Evaluating Non-Prefix KV-Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2610.13060",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache reuse in large language model serving is commonly limited to exact prompt prefixes, preventing reuse when the same retrieved document appears after different system prompts, conversation histories, or dynamic metadata. We present KV-Repurpose, an open-source, vLLM-based system for developing and evaluating segment-wise KV-cache reuse beyond exact prefixes. The system combines cache-aware segment scheduling, prompt construction, capacity management, workload generation, and runtime monitoring. Experiments on long-context benchmarks show that naive segment reuse largely preserves output quality for single-document question answering and summarization, while exposing clear limitations in cross-document reasoning. Under a Zipfian RAG-style workload in which 20% of requests share a fixed prefix, KV-Repurpose achieves a substantially higher token-level cache hit rate than prefix caching at the same 30 GB cache capacity, 63.9% versus 3.3%, resulting in lower TTFT. Even with 1 TB of cache capacity, prefix caching reaches only a 17.9% hit rate in this workload. Source code is available under the Apache-2.0 license at https://github.com/taiga333/eval-kv-repurpose.",
+      "identifiers": [
+        "SemanticScholar:15d31a2a46c1bd465fbb479269e3ddb8c939cfcf"
+      ],
+      "semantic_scholar_id": "15d31a2a46c1bd465fbb479269e3ddb8c939cfcf",
+      "canonical_id": "arXiv:2610.13060",
+      "arxiv_id": "2610.13060",
+      "authors": [
+        "Taiga Ikeda",
+        "D. Miyashita",
+        "J. Deguchi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV-RepurposeはvLLM上でprefix以外の文書segment KV再利用を試験するため、segment-aware scheduling、prompt構成、容量制御、監視を一体化する。Zipf型RAG負荷で20%の要求が固定prefixを共有する条件、30GB cacheではsegment再利用hit率63.9%に対しprefix cache3.3%、1TBのprefix cacheでも17.9%と報告。cross-document推論での品質限界も示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "LatentRemedy: Efficient Remedy For Non-Prefix KV Cache Reuse in Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2610.18014",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Non-prefix KV cache reuse is a promising approach for improving inference efficiency in multi-agent systems as agents share the same context blocks. However, when agents have conflicting tasks, directly reusing non-prefix KV caches across agents can severely degrade model performance, causing up to a 90% drop. Existing remedies, including selective recomputation and offset-based calibration, recover a limited fraction of this loss. We argue that the problem lies not only in contaminated KV representations but also in the agent's difficulty interpreting reused context under its own instructions. To this end, we introduce LatentRemedy, which uses a few task-conditioned latent tokens to help the target agent leverage reused context without recomputing the shared block. Specifically, we use an MLP to map the last hidden state of the target prefix into a small number of latent tokens, which are placed after the reused KV block to interact with the shared context. To guide subsequent predictions toward the target task, we train the MLP through full-prefill distillation. Experiments show that LatentRemedy consistently outperforms existing reuse baselines on conflicting tasks while maintaining TTFT close to direct reuse as cache size grows. Code and data are available at https://github.com/chenzhwsysu57/kvreuse.",
+      "identifiers": [
+        "SemanticScholar:69379625a6922262ba920206480400d596390ca0"
+      ],
+      "semantic_scholar_id": "69379625a6922262ba920206480400d596390ca0",
+      "canonical_id": "arXiv:2610.18014",
+      "arxiv_id": "2610.18014",
+      "authors": [
+        "Zhi-Wei Chen",
+        "Zhong-Tao Rao",
+        "Wai-Kit Xiu",
+        "Yu-Xiang Zhang",
+        "Shu-Ting Cui",
+        "Jian Chen",
+        "Tian-Xiang Zhao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LatentRemedyは異なるタスクのagent間でnon-prefix KVを直接再利用すると品質が最大90%低下する問題に対し、targetのprefix最終hidden stateから少数のtask条件付きlatent tokenを生成し、再利用KVの後ろへ挿入する。full-prefill蒸留で小型MLPを学習し、共有blockを再計算せずに従来補正法より品質を回復し、TTFTは直接再利用に近いと報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop",
+      "source_url": "https://arxiv.org/abs/2610.36564",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "DeepInfer-Mac runs the 750B-class DeepSeek-V4.1-Flash model on a MacBook Air with 24 GB of unified memory. A mixed low-bit conversion occupies 338 GiB on the internal SSD. About 7.6 GiB of weights remain resident; routed experts and Engram rows are loaded when needed. This separation makes the model executable, but it leaves each generated token waiting for a succession of storage reads. We organize expert weights so that reads fill reusable GPU buffers directly, and couple cache allocation with the lifetime of those buffers. In end-to-end runs, the system generates English, Chinese and code at 0.21-0.72 tokens per second, with a largest sampled process footprint of 16.73 GiB across the tested requests. Matched decode comparisons show a 21.0% throughput gain from next-layer prefetching over resident-expert overlap alone, at the cost of additional reads. Longer prompts remain costly. We describe the design, provide the implementation and measurement scripts, and identify the limits of this operating point: a model far larger than memory can run locally, while storage and prefill still govern the user's wait.",
+      "identifiers": [
+        "SemanticScholar:abaedbc1ffd707273def0d39f55bed12700b20b8"
+      ],
+      "semantic_scholar_id": "abaedbc1ffd707273def0d39f55bed12700b20b8",
+      "canonical_id": "arXiv:2610.36564",
+      "arxiv_id": "2610.36564",
+      "authors": [
+        "Hao-Rui Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DeepInfer-Macは750B級DeepSeek-V4.1-Flashを24GB統合メモリMacBook Airで動かすため、338GiBの低bit重みをSSDへ置き、7.6GiBの常駐重みと必要時のexpert/Engram行ロードを組み合わせる。GPU buffer直読みと次層prefetchでdecode 0.21～0.72tok/sを実測し、prefetchで21.0%のthroughput改善を報告。低速ながらCPU/GPU/SSD階層推論の直接的な実装評価としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs on Unified Memory",
+      "source_url": "https://arxiv.org/abs/2610.04537",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device assistants run GPU-based LLM inference alongside CPU retrieval on unified-memory systems. Under a saturated local-retrieval workload, four concurrent retrieval workers raise 95th-percentile (p95) decode latency by 60-61% on two M4 systems, whereas prefill latency rises by only 5.7-6.9%. We study LLM phase as an admission signal for independent CPU retrieval under controlled LLM workloads. PHASEGATE calibrates separate concurrency limits for prefill and decode, selecting four and one on our base-M4 configuration. Under a backlogged queue, it achieves 2.0 times the aggregate retrieval throughput of the best tested feasible fixed policy, with both p95 LLM latency metrics within 1.25 times their no-retrieval baselines in all seven held-out runs. A phase-blind control, TimeGate, uses the same two limits on a calibration-derived schedule without observing LLM phase. It achieves similar retrieval throughput but violates the output-token latency limit in every run. M2 and M2 Pro Mac minis reproduce the policy ordering, while output-length sweeps show that the advantage narrows as decode occupies more of each request.",
+      "identifiers": [
+        "SemanticScholar:aa3ca07aa7d471259c85b506ec4de3dd15b457dd"
+      ],
+      "semantic_scholar_id": "aa3ca07aa7d471259c85b506ec4de3dd15b457dd",
+      "canonical_id": "arXiv:2610.04537",
+      "arxiv_id": "2610.04537",
+      "authors": [
+        "Seoyoon Yum",
+        "Sehoon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PhaseGateはApple M4等の統合メモリ端末でCPU検索とGPU LLM推論が競合する際、prefillとdecodeで別々の検索同時実行上限を設定する。検索4 workerではdecode P95遅延が60～61%悪化する一方prefillは約6%の悪化であることを計測。phase-awareな4/1 worker制御により、LLMのP95を無検索基準1.25倍以内に抑えつつ、固定制御比検索throughput2倍を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c9cafae0706b",
+    "round": "libimp-c9cafae0706b7db0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c9cafae0706b7db0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c9cafae0706b7db0-pre01.json",
+    "receipt": "sha256:c12a337fe2e77d9bdc913a839d1b02aa5db364427a6f88bfaab01451a9459864"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c9cafae0706b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

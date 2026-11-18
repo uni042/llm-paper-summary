@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting",
+      "source_url": "https://doi.org/10.1109/ASAP65064.2025.00031",
+      "year": 2025,
+      "published": "2025-07-28",
+      "venue": "IEEE International Conference on Application-Specific Systems, Architectures, and Processors",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) are increasingly deployed for on-device applications, optimizing inference on edge platforms becomes critical. In real-world scenarios, LLM inference must satisfy diverse constraints and user requirements, such as low latency, high energy efficiency, or low Energy-Delay Product (EDP). Most state-of-the-art edge platforms, such as AI PCs and mobile SoCs, integrate heterogeneous processing units, including CPUs, GPUs, and Neural Processing Units (NPUs), each with distinct performance and power characteristics. However, existing approaches often adopt static mapping to a single processing unit (e.g., CPU, GPU, or NPU) and perform optimizations for either latency or energy consumption. This limits their effectiveness in meeting the requirements of diverse application scenarios. Moreover, LLM inference consists of two distinct phases: a highly parallel, compute-intensive Prefill phase, and a sequential, memory-intensive Decode phase. These phases have different computational characteristics, and splitting them across suitable processing units can potentially yield better energy efficiency and EDP than static mapping. However, such improvements may not be realized in all cases, as the actual benefit depends on many factors, including prompt characteristics, the models used, and features of the target hardware. To address these challenges, we propose ellie, a lightweight inference framework for edge heterogeneous platforms that dynamically selects the optimal execution plan based on the usage scenario, LLM, hardware feature, and input prompt. ELLIE builds performance models by regressing latency and power from offline profiling data, and integrates it with a lightweight output token length predictor. At runtime, it estimates the latency and energy of candidate execution plans using the predicted output length and selects an optimized device mapping accordingly. We implement ellie on an Intel AI PC platform with integrated CPU, GPU, and NPU. On average, when optimizing for EDP, ELLIE reduces energy consumption by $1.8 \\times$, improves EDP by $1.5 \\times$, and achieves latency comparable to GPU-only inference, across diverse LLMs and prompt types.",
+      "identifiers": [
+        "SemanticScholar:0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b"
+      ],
+      "semantic_scholar_id": "0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b",
+      "doi": "10.1109/ASAP65064.2025.00031",
+      "canonical_id": "DOI:10.1109/ASAP65064.2025.00031",
+      "authors": [
+        "Haoyang Fan",
+        "Yi-Chien Lin",
+        "V. Prasanna"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 478,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CPU/GPU/NPU混載のIntel AI PC上で、prefillとdecodeの計算特性に合わせて実行先を選ぶエッジLLM推論フレームワーク。オフラインprofilingからレイテンシ・消費電力を回帰し、軽量な出力長予測と組み合わせて候補配置を比較。IEEE正式要旨ではEDP最適化時、GPU単独推論と同程度のレイテンシで平均エネルギー1.8倍削減、EDP1.5倍改善を報告。データセンタでのPD分離速度改善を示すものではない。",
+      "library_body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Low-Rank SVD Compression for Memory-Efficient Transformer Attention",
+      "source_url": "https://doi.org/10.1109/ICIC68258.2025.11413215",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "International Conference on Intelligent Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large language models (LLMs) such as as GPT-2 and GPT-3 have very powerful generative capabilities, they use a large amount of memory because of the Key-Value (KV) cache utilized during inference. Since the KV cache grows in linear proportion to the sequence lengths, it creates a limit on the usage of such models by low-resource devices. In order to achieve a reduction in attention memory without retraining or trade-off, the paper presents a KV compression architecture that is built upon Singular Value Decomposition (SVD). In contrast to the fixed-rank methods, our method has the ability to dynamically choose the best rank of each attention head due to its ability to preserve about 90 percent of the spectral energy of the input, guaranteeing that the most significant contextual information is represented. This dynamic approach generates a memory drop of up to 95% on a variety of model dimensions (GPT-2, GPT-2-medium, GPT-2-large, and DistilGPT-2) and scores on quality at above 85% in majority of the setups. The results prove that adaptive SVD offers a consistent, hardware-agnostic, and model-agnostic approach to perform effective LLM inference by utilizing best low-rank structures in transformer attention at a variety of architecture sizes.",
+      "identifiers": [
+        "SemanticScholar:4e28e63b09515876b1b4cef246af9faf5751b5b6"
+      ],
+      "semantic_scholar_id": "4e28e63b09515876b1b4cef246af9faf5751b5b6",
+      "doi": "10.1109/ICIC68258.2025.11413215",
+      "canonical_id": "DOI:10.1109/ICIC68258.2025.11413215",
+      "authors": [
+        "Muhammad Anas Shah",
+        "Reema Qaiser Khan",
+        "Memoona Masood"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 343,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュ増大に対し、注意ヘッドごとに特異値分解(SVD)のランクを動的選択し、入力のスペクトルエネルギー約90%を保持するKV圧縮を提案。IEEE正式要旨はGPT-2各サイズとDistilGPT-2でメモリ最大95%減、評価設定の大半で品質スコア85%超と報告。ただし評価指標の厳密な定義は本文未確認であり、一般的なLLMでの品質保証・無損失性を意味しない。",
+      "library_body_check": "IEEE出版社正式要旨を確認。原著本文・詳細な表は未取得。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PQC-LLM: Post-Quantization Delta Compression for LLMs",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11322900",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The massive parameter scale and substantial storage requirements of large language models (LLMs) hinder their deployment on edge devices and in real-world applications, even after quantization. To address this challenge, we propose PQC-LLM, a Post-Quantization delta Compression scheme for LLMs. PQC-LLM is motivated by two key observations: (1) quantized LLMs still exhibit redundancy on the least significant bits (LSBs); (2) State-of-the-art (SOTA) quantization techniques could only converge to a local optimum. To exploit the potential, PQC-LLM performs a tile-wise deterministic bit replacement by uniformly substituting the least significant $N$ bits of all weights within the same tile with the constant bit value. We employ a network architecture search (NAS) mechanism to determine the optimal bit length and value of the uniform replacement. Subsequently, we perform delta compression on each tile using the first weight as the base value. Extensive experiments show that, PQC-LLM effectively reduces the storage requirements of quantized LLMs with negligible lossy or improved task accuracy.",
+      "identifiers": [
+        "SemanticScholar:f98999457bbd67ac7fb3a5ab19e94995c043fdb5"
+      ],
+      "semantic_scholar_id": "f98999457bbd67ac7fb3a5ab19e94995c043fdb5",
+      "doi": "10.1109/ICPADS67057.2025.11322900",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11322900",
+      "authors": [
+        "Yu-Jin Zhong",
+        "Chao Wu",
+        "Cheng Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 339,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化後のLLM重みに残るLSB冗長性に着目。tileごとに下位N bitを一様な値へ置換し、NASで置換bit数と値を決定した後、tile先頭重みとの差分を符号化して保存量を削減する。IEEE正式要旨は追加のストレージ削減とタスク精度への影響が小さいことを報告するが、要旨には普遍的な圧縮率や実行レイテンシ値は示されていない。",
+      "library_body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LISLLM: Long Context Inference of Large Language Models with Short KV Cache",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323105",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across various language tasks. However, in the process of generating long texts, the linearly increasing keyvalue (KV) cache imposes a large volume of memory footprint on HBM, resulting in significant time and energy consumption during inference. By retaining only the initial and recent tokens, existing methods ignore the intermediate tokens and the effect of the distance between current tokens and those in the KV cache, which causes significant accuracy degradation and limits the potential for KV cache compression. To overcome the above problems, we propose LISLLM, a KV cache compression mechanism that takes both the difference in importance and the distance between tokens into consideration for efficient inference of LLMs in long-context settings. Compared to the state-of-theart method, our method achieves compression ratios of up to $1.91 \\times$ and speedup of $1.20 \\times$ with better accuracy.",
+      "identifiers": [
+        "SemanticScholar:ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912"
+      ],
+      "semantic_scholar_id": "ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912",
+      "doi": "10.1109/ICPADS67057.2025.11323105",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323105",
+      "authors": [
+        "Tie-Long Liu",
+        "Gang Li",
+        "Ze-Yu Zhu",
+        "Zi-Tao Mo",
+        "Xing-Ting Yao",
+        "Jian Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 339,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈LLM推論で初頭・直近tokenだけを保持する手法の情報欠落に対し、中間tokenの重要度と現在tokenとの距離を考慮するKV cache圧縮を提案。IEEE正式要旨では比較した従来最良手法比最大1.91倍の圧縮率と1.20倍の高速化を精度改善とともに報告。比較対象・負荷条件は原著本文で再確認が必要。",
+      "library_body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ASDT: Adaptive Speculative Decoding Tree Based on Token Acceptance Feedback",
+      "source_url": "https://doi.org/10.1109/AIBDF67964.2025.11440682",
+      "year": 2025,
+      "published": "2025-12-26",
+      "venue": "2025 5th International Symposium on Artificial Intelligence and Big Data (AIBDF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by drafting multiple tokens in parallel and verifying them using the base model. However, existing tree-structured approaches rely on fixed draft configurations, which are suboptimal for heterogeneous inputs: deep trees can lead to excessive computation on difficult inputs, while shallow trees underexploit potential speedups on simpler ones. We propose ASDT (Adaptive Speculative Decoding Tree), a lightweight runtime controller that dynamically adjusts the speculative token tree based on token-level acceptance feedback. By modifying tree depth and width in response to input difficulty, ASDT keeps the per-step speculative cost approximately constant without altering the base model or requiring retraining. Experiments on dialogue, mathematical reasoning, and code generation tasks show that ASDT achieves consistent speedup improvements of 2.0-4.3% over Static Tree baselines, with up to 4.3% relative gain on the 3B model. By committing more tokens per step and reducing token-level latency, ASDT accelerates decoding while preserving the exact output distribution of standard autoregressive sampling. Our method is plug-and-play, training-free, and compatible with production deployment, making it a practical and effective solution for efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:5f74b71d000e646daf965c736c0c7d8a7d63496d"
+      ],
+      "semantic_scholar_id": "5f74b71d000e646daf965c736c0c7d8a7d63496d",
+      "doi": "10.1109/AIBDF67964.2025.11440682",
+      "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440682",
+      "authors": [
+        "Yizi Song",
+        "Han Xia",
+        "Fei Duan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 327,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的デコードの受理率フィードバックからdraft treeの深さ・幅を動的調整し、入力難易度が変わってもstepごとの投機コストをおおむね一定に保つ。再学習不要で、IEEE正式要旨では会話・数学・コード課題で固定tree比2.0〜4.3%の相対高速化改善、最大4.3%は3Bモデル。検証によって標準自己回帰サンプリングの出力分布を保持すると記載。2〜4倍の速度改善ではない。",
+      "library_body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-528c8b923f29",
+    "round": "libimp-528c8b923f294407-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-528c8b923f294407-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-528c8b923f294407-pre01.json",
+    "receipt": "sha256:b2f5417590c9da4287ebfe9b583c5db512d412db49a1370727d2faaf15ee0a4b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-528c8b923f29",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

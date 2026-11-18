@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BitNet: 1-bit Pre-training for Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/5c6a17f31619e42a37676d1780104e1da4ae12fa",
+      "year": 2025,
+      "published": null,
+      "venue": "Journal of machine learning research",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:5c6a17f31619e42a37676d1780104e1da4ae12fa"
+      ],
+      "semantic_scholar_id": "5c6a17f31619e42a37676d1780104e1da4ae12fa",
+      "canonical_id": "SemanticScholar:5c6a17f31619e42a37676d1780104e1da4ae12fa",
+      "authors": [
+        "Hongyu Wang",
+        "Shu-Ming Ma",
+        "Ling-Xiao Ma",
+        "Lei Wang",
+        "Wen-Hui Wang",
+        "Li Dong",
+        "Shao-Han Huang",
+        "Huai-Jie Wang",
+        "Ji-Long Xue",
+        "Rui-Ping Wang",
+        "Yi Wu",
+        "F. Wei"
+      ],
+      "priority": 27,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 27,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "JMLR 26(125), 2025の出版社一次要旨と原著PDFを確認。BitNet b1/b1.58はTransformerの線形層をBitLinearへ置換し、二値または三値の重みと低精度活性化で言語モデルをゼロから学習する設計である。学習法だけでなく推論時の低ビット演算・メモリ帯域削減を目的とし、同一モデル規模・学習トークン数のFP16 Transformerとの比較でb1.58のperplexity・下流精度を概ね維持しながら、推論レイテンシ、メモリ、スループット、エネルギーの効率改善を評価している。実際の推論計算とモデル圧縮に直接関係するためaccept。ただし通常の学習済みFP16モデルに後付けで適用するPTQではなく、事前学習から変更が必要なアーキテクチャである点をResearchで明記する。",
+      "library_body_check": "primary_publisher_abstract_and_fulltext_checked; JMLR 2025 29-page PDF; model architecture and inference comparison checked; research-level exhaustive evaluation not performed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_publisher_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-52437929783f",
+    "round": "libimp-52437929783f6ac5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-52437929783f6ac5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-52437929783f6ac5-pre01.json",
+    "receipt": "sha256:858319731244e8bc6d4d69f3c964e1e18ad430a5c4a0808db9fb7c33b79aaee4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-52437929783f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

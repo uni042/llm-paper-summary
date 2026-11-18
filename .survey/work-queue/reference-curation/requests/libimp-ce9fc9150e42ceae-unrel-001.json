@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ce9fc9150e42ceae-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2604.17104",
+  "reason": "arXiv一次資料のabstract・導入・システム設計によれば、TStore（初期版名TensorHub）はモデルハブ内の多数のfine-tuned LLM等の重みテンソルを対象に、TensorSketchで重複・類似を検出し、TensorPredとFlexSplitで差分圧縮の基底を選択して、モデル保管容量とモデル配布時の圧縮・復元効率を改善するストレージシステムである。2,890モデルの保管量と圧縮・復元帯域を評価するが、推論時のKVキャッシュ、prefill/decode、LLMサービングの実行性能や推論ワークロードの最適化を主題としない。モデルの保管・配布という隣接領域であり、現行推論システムサーベイの直接対象外としてunrelated。本文全体の精読ではなく一次abstractと導入・設計節を確認。",
+  "title": "TStore: Rethinking AI Model Hub with Tensor-Centric Compression",
+  "identity_tokens": [
+    "arXiv:2604.17104",
+    "SemanticScholar:aae8a1669cc38b76eb9cd911ac82859a7eebf181"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce9fc9150e42",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

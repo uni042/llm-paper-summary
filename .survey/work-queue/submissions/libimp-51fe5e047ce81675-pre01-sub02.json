@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2610.36339",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In expert-parallel mixture-of-experts (MoE) serving, dispatch moves tokens to the accelerators hosting their selected experts, and combine returns expert outputs to each token's owner. Both operations lie on the critical path and can dominate MoE layer latency in multi-node deployments. We present INC-MoE, an expert-parallel MoE layer that offloads dispatch and combine to the network switch and overlaps both collectives with each other and with expert computation. Dispatch uses in-network AllGather through switch-side multicast, while combine uses in-network ReduceScatter through switch-side reduction. Both collectives use message semantics between the end hosts and the switch. Because the in-network collectives load opposite directions of each link, executing them concurrently reduces bandwidth-bound communication time by $(N-2)/(2(N-1))$ relative to concurrent ring-based collectives: 33% for four ranks and 43% for eight. INC-MoE partitions tokens into bands and processes them through a three-stage AllGather-feed-forward network (FFN)-ReduceScatter pipeline inside a single persistent kernel. At steady state, role-specialized thread blocks gather the next band, compute the current band, and reduce the previous band concurrently, overlapping both collectives with each other and with computation using device-side synchronization. INC-MoE integrates as a drop-in replacement for the MoE layer of vLLM. We evaluate it in an emulated four-node scale-out deployment with a dedicated accelerator emulating an in-network computing (INC) switch. On OLMoE prefill with four-way expert parallelism, INC-MoE reduces time to first token (TTFT) by up to 33% and increases throughput by up to 50% relative to vLLM's default collective path, while matching its outputs.",
+      "identifiers": [
+        "SemanticScholar:2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e"
+      ],
+      "semantic_scholar_id": "2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e",
+      "canonical_id": "arXiv:2610.36339",
+      "arxiv_id": "2610.36339",
+      "authors": [
+        "John Stephan",
+        "Razvan-Stefan Puscasu",
+        "Yong Xu",
+        "Jiu-Tao Ding",
+        "Zi-Xuan Guan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "multi-node MoE expert parallelismのdispatch/combineをswitch側AllGather/ReduceScatterへ移し、token band単位の3段pipelineで通信とexpert FFNを重ねる。vLLMのMoE layer差替えとして実装し、著者要旨は4nodeを模擬したin-network switch環境でOLMoE prefillのTTFT最大33%短縮、throughput最大50%増と報告。実switchでの本番運用ではなく専用acceleratorによるemulationである点を留保しつつaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-51fe5e047ce8",
+    "round": "libimp-51fe5e047ce81675-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-51fe5e047ce81675-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-51fe5e047ce81675-pre01.json",
+    "receipt": "sha256:08dde67b92d677609e8d28ad8c00401a3d72661174112724493e79661cf2cf48"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-51fe5e047ce8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

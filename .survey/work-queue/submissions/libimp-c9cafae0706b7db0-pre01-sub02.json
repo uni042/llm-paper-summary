@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "More Value per Key: Asymmetric Sparse Attention for Faster LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2610.04753",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive generation in Large Language Models (LLMs) is constrained by the memory and computational demands of attention mechanisms. Sparse attention methods mitigate this cost by selecting only high-probability entries of the attention matrix. We observe that in many such methods, this renders the probability-value multiplication negligible, shifting the bottleneck to the query-key step. Key heads can therefore be reduced to accelerate inference, while retaining more value heads preserves capacity with limited additional decoding cost. We introduce Sparse Asymmetric Group-Query Attention (SAGA), which decouples key and value head counts to exploit this principle, and pair it with approximate top-N (Atop-N) attention, a simple sparse attention method designed to study the interaction between sparsity and head-count asymmetry. We formalize the benefits of this asymmetry theoretically and validate them empirically through latency measurements and quality evaluations on models up to 1.5B parameters. Together, SAGA and Atop-N achieve end-to-end decoding speedups exceeding $2\\times$ over our full-attention GQA baseline at long contexts. Models trained from scratch with SAGA nearly match the quality of comparable GQA variants on the evaluated benchmarks. To facilitate adoption, we introduce an efficient fine-tuning method that converts pretrained models to the SAGA architecture, enabling practitioners to benefit from our approach without costly retraining.",
+      "identifiers": [
+        "SemanticScholar:1df85775b30e3716a21224be9dbd377269e34197"
+      ],
+      "semantic_scholar_id": "1df85775b30e3716a21224be9dbd377269e34197",
+      "canonical_id": "arXiv:2610.04753",
+      "arxiv_id": "2610.04753",
+      "authors": [
+        "Noam Elata",
+        "Itay Lamprecht",
+        "Mikey Shechter",
+        "Daniel Ohayon",
+        "Itay Hubara",
+        "Daniel Soudry"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SAGAはsparse attentionでvalue乗算が軽くなる一方query-key計算が支配的になる点に着目し、Key headを減らしValue headを多く保つ非対称GQAを提案する。近似top-N注意と組み合わせ、最大1.5Bモデルで長文脈decodeがfull attention GQA比2倍超のend-to-end高速化を報告。事前学習済みモデルからのfine-tune変換法も示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Compositional Performance Modeling of LLM Inference Clusters with Hierarchical KV Caching",
+      "source_url": "https://arxiv.org/abs/2610.15366",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Design-space exploration of LLM inference clusters requires predicting how hardware and serving policies interact with hierarchical key-value (KV) caching. Isolated operation profiles alone do not determine cluster latency: reuse changes computational demand, while KV location, capacity, and contention govern execution order. We present a compositional discrete-event simulator based on separating local service costs from shared resource and KV availability. Compute and transfer models calibrated on one-prefill/one-decode (1P-1D) deployments are reused across compatible workers, enabling policy and topology comparisons without per-configuration latency fitting. Validation against SGLang covers Qwen3-8B and Qwen3-32B on 1P-1D and 3P-1D clusters. Mean request end-to-end latency error is 1.34% for question answering and 6.36% for captured coding sessions, measured as mean absolute percentage error. CPU simulation reduces replay turnaround by 15.33 times on average; real replay includes prescribed arrival gaps. Measured session-affinity and simulated retention studies demonstrate how the framework guides policy selection by predicting the joint effects on computation, latency, and KV occupancy.",
+      "identifiers": [
+        "SemanticScholar:519d76c91348308fb28193be0f1cca2b183d56a5"
+      ],
+      "semantic_scholar_id": "519d76c91348308fb28193be0f1cca2b183d56a5",
+      "canonical_id": "arXiv:2610.15366",
+      "arxiv_id": "2610.15366",
+      "authors": [
+        "Rui-Yang Ma",
+        "Sheng Qi",
+        "Dai-Kang Kuang",
+        "Teng Ma",
+        "Guo-Jie Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefill/decodeの局所サービス時間と共有資源・階層KV利用可能性を分離する離散イベントシミュレータを提案し、1P-1Dで校正した計算・転送モデルを3P-1Dへ再利用する。SGLang/Qwen3-8B・32BでQA平均要求遅延誤差1.34%、coding session6.36%、CPU simulationは実replayより平均15.33倍高速と報告。推論クラスタ設計評価の直接的な基盤としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token",
+      "source_url": "https://arxiv.org/abs/2610.28576",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Energy-efficient deployment of large language models requires understanding how model architecture, hardware, and serving settings shape energy per generated token. We introduce the Token-Energy Law, a compact, interpretable model of GPU-board energy per output token for dense, full-history decoding. It relates token energy to two core dimensions: active bytes and realized decode time. Active bytes describe logical byte demand per output, separating dense weights shared within a decode iteration from private key--value (KV) histories read and updated for each request. Realized decode time is the elapsed decode duration divided by the number of output tokens produced. We combine the two byte coordinates and time in a common affine form, with coefficients calibrated for each model and hardware/runtime configuration. This formulation explains how batching amortizes shared-weight work, longer attended histories increase private KV demand, and throughput determines the time-associated cost per output. Our experiments cover three models under BF16 decoding on NVIDIA Hopper and Blackwell GPUs, including two-GPU tensor parallelism on Hopper. Using fixed coefficients and observed decode time, held-out condition-mean energy estimates differ from measurements by at most 3.73%.",
+      "identifiers": [
+        "SemanticScholar:a0d91566c27c6f1c6b615693d74f133ea5f2dc95"
+      ],
+      "semantic_scholar_id": "a0d91566c27c6f1c6b615693d74f133ea5f2dc95",
+      "canonical_id": "arXiv:2610.28576",
+      "arxiv_id": "2610.28576",
+      "authors": [
+        "Chenxu Niu",
+        "Batuhan Sencer",
+        "Wei Zhang",
+        "Yong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Token-Energy Lawはdecode出力当たりのGPU-board energyを、batchで共有される重みbyte、要求ごとに増えるKV byte、実測decode時間の線形式で説明する。Hopper/Blackwellの3モデルとHopper 2GPU tensor parallelで検証し、固定係数・観測時間を使った未使用条件の平均エネルギー予測誤差が最大3.73%と報告。推論性能・電力の定量モデルとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs",
+      "source_url": "https://arxiv.org/abs/2610.40039",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diverse optimizations spanning model architecture, inference runtime, and hardware acceleration have been proposed for on-device vision-language model (VLM) deployment on edge NPUs. Still, cross-layer coordination of VLM execution on edge NPUs remains largely underexplored. This paper presents an empirical measurement study across six representative VLMs, three real-world edge platforms, and ten multimodal benchmarks. Our evaluation drills down from end-to-end application-level latency and thermal traces down to low-level kernel-scale execution behaviors, challenging several widely held community assumptions. First, softmax dominates attention costs; even lookup-table-based softmax optimizations cannot eliminate pipeline bubbles that severely underutilize NPU matrix units. Second, theoretical speedups from linear attention vanish under real-NPU execution due to prohibitive tensor-rearrangement overhead. Third, no hardware backend universally dominates autoregressive decoding: attention-tensor-shaped parallelism dictates NPU efficiency and shifts the CPU-NPU performance balance. We further find task-specific Sweet Resolutions for VLMs, which deliver meaningful accuracy gains at only modest latency overhead. Complementing these findings, we provide actionable cross-layer recommendations for hardware architects, runtime developers, and model designers.",
+      "identifiers": [
+        "SemanticScholar:87cad274113e4c0fa0b0d2937ed42c860ceac50d"
+      ],
+      "semantic_scholar_id": "87cad274113e4c0fa0b0d2937ed42c860ceac50d",
+      "canonical_id": "arXiv:2610.40039",
+      "arxiv_id": "2610.40039",
+      "authors": [
+        "Huan Yang",
+        "Shi-Qi Jiang",
+        "Yuning Mao",
+        "Chuan-Yue Xiong",
+        "De-Yu Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "6 VLM、3種類の実edge NPU、10 multimodalベンチマークでアプリ遅延・熱挙動からkernelまで計測し、softmax支配やtensor再配置コストでlinear attentionの理論速度改善が消える条件、CPU/NPUの優劣がattention形状に依存する点を示す。新規最適化kernelではないが端末推論ランタイム・ハードウェアの定量比較としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c9cafae0706b",
+    "round": "libimp-c9cafae0706b7db0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c9cafae0706b7db0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c9cafae0706b7db0-pre01.json",
+    "receipt": "sha256:c12a337fe2e77d9bdc913a839d1b02aa5db364427a6f88bfaab01451a9459864"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c9cafae0706b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

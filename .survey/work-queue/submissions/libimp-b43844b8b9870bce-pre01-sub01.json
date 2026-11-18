@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training",
+      "source_url": "https://arxiv.org/abs/2509.20072",
+      "year": 2025,
+      "published": "2025-09-24",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in large language models (LLMs) have attracted significant interest in extending their capabilities to multimodal scenarios, particularly for speech-to-speech conversational systems. However, existing multimodal models handling interleaved audio and text rely on autoregressive (AR) methods, overlooking that text depends on target-target relations whereas audio depends mainly on source-target relations. In this work, we propose Text-to-Talk (TtT), a unified audio-text framework that integrates AR text generation with non-autoregressive (NAR) audio diffusion in a single Transformer. By leveraging the any-order AR property of absorbing discrete diffusion, our approach provides a unified training objective for text and audio. To support this hybrid generation paradigm, we design a modality-aware attention mechanism that enforces causal decoding for text while allowing bidirectional modeling within audio spans, and further introduce three training strategies that reduce train-test discrepancies. During inference, TtT employs block-wise diffusion to synthesize audio in parallel while flexibly handling variable-length outputs. Comprehensive experiments on Audio-QA, ASR, AAC and speech-to-speech benchmarks show that TtT consistently surpasses strong AR and NAR baselines, with additional ablation and training-strategy analyses confirming the contribution of each component. We will open-source our models, data and code to facilitate future research in this direction.",
+      "identifiers": [
+        "SemanticScholar:1416afa3b83d5447cadf25a731879ece1b3378ab"
+      ],
+      "semantic_scholar_id": "1416afa3b83d5447cadf25a731879ece1b3378ab",
+      "canonical_id": "arXiv:2509.20072",
+      "arxiv_id": "2509.20072",
+      "doi": "10.48550/arXiv.2509.20072",
+      "authors": [
+        "Tianqiao Liu",
+        "Xue-Yi Li",
+        "Hao Wang",
+        "Hao-Xuan Li",
+        "Zhi-Chao Chen",
+        "Wei-Qi Luo",
+        "Zitao Liu"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 420,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "arXiv一次要旨でText-to-Talkがテキストの自己回帰生成と音声の非自己回帰拡散を一つのTransformerへ統合し、音声区間の双方向注意とテキストの因果注意を使い分けることを確認。推論時はブロック単位の並列音声合成を実行するため、音声MLLMの生成レイテンシ改善へ直接つながる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FlexLLM: Flexible and Cost-Efficient LLM Serving with Heterogeneous GPUs",
+      "source_url": "https://doi.org/10.1109/MASCOTS67699.2025.11283352",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "IEEE/ACM International Symposium on Modeling, Analysis, and Simulation On Computer and Telecommunication Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive nature of LLMs causes memory bottlenecks, requiring multi-GPU parallelization. Prior work has mainly optimized strategies for homogeneous setups, overlooking heterogeneous configurations and service-level objectives (SLOs) despite growing GPU cost-performance gaps. This paper introduces FlexLLM, a framework that predicts execution times and selects cost-efficient strategies in heterogeneous GPU environments while satisfying latency-per-token (LPT) SLO constraints. The proposed system (i) bridges theoretical predictions and actual performance through a Linear Correction Function (LCF) and (ii) performs SLO-aware cost-efficiency optimization based on human reading speeds ($\\leq 150 \\mathrm{~ms}$ per token). Our evaluation demonstrates that FlexLLM identifies costefficient configurations meeting SLO requirements, achieving significant cost reductions compared to performance-oriented approaches. Heterogeneous GPU analysis reveals that SLO-aware parallelization strategy selection yields up to $2.28 \\times$ cost-efficiency differences, demonstrating that architecture selection under SLO constraints is as critical as hardware investment.",
+      "identifiers": [
+        "SemanticScholar:8494580aa94ea4309d3df73770031307d7d68825"
+      ],
+      "semantic_scholar_id": "8494580aa94ea4309d3df73770031307d7d68825",
+      "doi": "10.1109/MASCOTS67699.2025.11283352",
+      "canonical_id": "DOI:10.1109/MASCOTS67699.2025.11283352",
+      "authors": [
+        "Kihyun Kim",
+        "Jinwoo Kim",
+        "James J. Kim",
+        "Dong Li",
+        "Youngjae Kim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 393,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者所属機関公開の原著PDF要旨で、異種GPU間の実行時間をLinear Correction Functionで補正予測し、token当たり遅延SLOを満たす並列化・配置方式を費用最小で選ぶFlexLLMを確認。SLO制約下の構成選択で最大2.28倍の費用効率差を示す、LLMサービング配置最適化の直接研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b43844b8b987",
+    "round": "libimp-b43844b8b9870bce-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b43844b8b9870bce-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b43844b8b9870bce-pre01.json",
+    "receipt": "sha256:bc21ebb1c4fc7b14db20612ce324b4cd288b970bea2a6e7641d0143793becf61"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b43844b8b987",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
