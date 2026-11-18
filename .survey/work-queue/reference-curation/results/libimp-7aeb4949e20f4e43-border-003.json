@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7aeb4949e20f4e43-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.38902",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.38902",
+    "identity_tokens": [
+      "arXiv:2610.38902"
+    ],
+    "reason": "複数agentの議論をsemantic hypergraphに格納し、learned selection moduleが各memory候補をSTORE/BACKUP/OMITへ振り分けるHEDGE。7 benchmarkで最強multi-agent baseline比精度平均+5.0pt、memory使用量48%削減、議論round数34%削減と報告。agent間の外部記憶・呼出し数削減には関係するが、LLM推論エンジンの実装・token/s・GPU資源効率は直接評価されないためborderline。",
+    "first_checked_at": "2026-11-18T12:59:34+00:00",
+    "last_checked_at": "2026-11-18T12:59:34+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CL/recent"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HEDGE: Gated Hypergraph Memory for Scalable Multi-Agent Debate"
+  },
+  "processed_at": "2026-11-18T12:59:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7aeb4949e20f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

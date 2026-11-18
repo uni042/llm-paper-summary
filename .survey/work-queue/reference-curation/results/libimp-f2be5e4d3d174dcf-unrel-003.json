@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1631/fitee.2300684",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1631/fitee.2300684",
+    "identity_tokens": [
+      "DOI:10.1631/fitee.2300684"
+    ],
+    "reason": "Springer出版元の一次abstractを確認。演算子ごとの冗長メモリ費用モデルと整数線形計画により分散深層学習の並列学習戦略を自動生成し、Megatron-LMの学習戦略比で最大67%のメモリ削減を報告。実装と指標はmulti-dimensional parallel trainingに限定され、LLM推論・サービングへの直接適用を示さないため凍結中の学習専用領域としてunrelated。",
+    "first_checked_at": "2026-11-18T12:59:42+00:00",
+    "last_checked_at": "2026-11-18T12:59:42+00:00",
+    "linked_from": [],
+    "title": "Automatic parallelism strategy generation with minimal memory redundancy"
+  },
+  "processed_at": "2026-11-18T12:59:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-001ff866b74c374c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.16325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.16325",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.16325",
+      "arXiv:2510.16325"
+    ],
+    "reason": "タイトルで研究対象が超高解像度の画像生成であることが明示され、LLM/MLLMの推論・サービングではなく画像生成モデルの階層的局所注意高速化を主題とするため、現在のLLM推論システムサーベイの範囲外。要旨と本文は未確認。",
+    "first_checked_at": "2026-11-18T08:08:12+00:00",
+    "last_checked_at": "2026-11-18T12:59:29+00:00",
+    "linked_from": [
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "UltraImageGen: Efficient Ultra-High-Resolution Image Generation with Hierarchical Local Attention"
+  },
+  "processed_at": "2026-11-18T12:59:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-001ff866b74c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

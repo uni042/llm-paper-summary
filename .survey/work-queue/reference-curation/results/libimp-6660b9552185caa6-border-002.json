@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6660b9552185caa6-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.10444",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.10444",
+    "identity_tokens": [
+      "arXiv:2603.10444"
+    ],
+    "reason": "arXiv一次要旨はFP4学習で活性外れ値が平均方向のランク1バイアスに由来することを示し、平均成分を分離してからNVFP4量子化するAverisを提案。低ビット量子化実装に関連するが、主目的・評価は学習時の損失と学習オーバーヘッドであり推論復号の改善は未検証のため保留。",
+    "first_checked_at": "2026-11-18T12:59:33+00:00",
+    "last_checked_at": "2026-11-18T12:59:33+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The Curse and Blessing of Mean Bias in FP4-Quantized LLM Training"
+  },
+  "processed_at": "2026-11-18T12:59:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6660b9552185",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

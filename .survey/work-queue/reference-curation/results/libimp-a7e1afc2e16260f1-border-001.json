@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7e1afc2e16260f1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.28760",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.28760",
+    "identity_tokens": [
+      "arXiv:2605.28760"
+    ],
+    "reason": "ゼロ次最適化の反復スコアリングを学習ループでなくvLLM推論ランタイムへ載せ替える。arXiv一次要旨ではOPT-13BのLoZO 2万stepを公式実装4.15時間に対し推計0.51時間（8.13倍）と報告。ただし主目的は推論サービスの最適化ではなくLoRAのゼロ次微調整なので、推論ランタイム応用として境界関連とする。worklist旧題名と公式現行題名が異なるためarXiv IDを正本に採用。",
+    "first_checked_at": "2026-11-18T07:37:30+00:00",
+    "last_checked_at": "2026-11-18T12:59:37+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "llm-serving-scheduling-disaggregation",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LLM Zeroth-Order Fine-Tuning is an Inference Workload"
+  },
+  "processed_at": "2026-11-18T12:59:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7e1afc2e162",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92e98bce0489837c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3830418.3843904",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3830418.3843904",
+    "identity_tokens": [
+      "DOI:10.1145/3830418.3843904"
+    ],
+    "reason": "MorphXは実行中カーネルが追加起動なしでGPU資源を譲渡・再獲得できるmorphable kernel抽象と、実行時プロファイリングに基づくGPU同居スケジューリングを提案。原著要旨では前景遅延一定で背景スループット2.24倍を報告するが、LLM固有のprefill/decode/KVキャッシュ評価が要旨から確認できず汎用GPUシステム研究としてborderline。",
+    "first_checked_at": "2026-11-18T11:08:48+00:00",
+    "last_checked_at": "2026-11-18T12:59:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient GPU Multitasking with Morphable Kernels"
+  },
+  "processed_at": "2026-11-18T12:59:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92e98bce0489",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

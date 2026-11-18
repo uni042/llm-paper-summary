@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2e4b5e2a05b850bb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.14307",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.14307",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2409.14307",
+      "arXiv:2409.14307"
+    ],
+    "reason": "arXiv一次要旨は画像生成用拡散モデルの低ビット量子化学習（Weight Dilation、Temporal Parallel Quantizer、Block-wise Knowledge Distillation）を対象とする。LLMの生成推論・サービング・学習システムを対象にした研究ではない。拡散モデル一般の圧縮技術が転用できる可能性はあるが、本文要旨は言語モデルへの適用を報告しないため本サーベイの直接対象外。",
+    "first_checked_at": "2026-11-18T12:59:31+00:00",
+    "last_checked_at": "2026-11-18T12:59:31+00:00",
+    "linked_from": [
+      "/",
+      "み",
+      "カ",
+      "ネ",
+      "ル",
+      "ー",
+      "化",
+      "子",
+      "専",
+      "推",
+      "用",
+      "論",
+      "重",
+      "量"
+    ],
+    "title": "DilateQuant: Accurate and Efficient Diffusion Quantization via Weight Dilation"
+  },
+  "processed_at": "2026-11-18T12:59:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2e4b5e2a05b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7e1afc2e16260f1-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.22013",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.22013",
+    "identity_tokens": [
+      "arXiv:2606.22013"
+    ],
+    "reason": "MLモデルサービングの最大持続可能スループットをSLO制約下で適応的に探索する産業向け負荷試験基盤。arXiv一次要旨では14事例を分析し、録画トラフィックでの較正により容量推定誤差を約30%から2〜6%へ改善。ただし対象は推薦・ランキング・画像・NLPを含む汎用MLで、LLM特化の推論機構ではないため境界関連。",
+    "first_checked_at": "2026-11-18T07:37:39+00:00",
+    "last_checked_at": "2026-11-18T12:59:37+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Load Testing for Machine Learning Model Serving Systems at Scale"
+  },
+  "processed_at": "2026-11-18T12:59:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7e1afc2e162",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

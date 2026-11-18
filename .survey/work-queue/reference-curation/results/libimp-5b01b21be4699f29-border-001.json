@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b01b21be4699f29-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.06532",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.06532",
+    "identity_tokens": [
+      "arXiv:2606.06532"
+    ],
+    "reason": "動画のGOPと動きベクトルを使ってエージェントの検索対象時間区間を絞り、テキスト・動き証拠を階層メモリとして保存するGOPAgen。長時間動画QAの精度改善と不要な処理の回避を狙うが、要旨ではLLM推論エンジンのtoken/s・KV容量・サービングレイテンシの定量効果は不明で、主題は動画理解エージェントの検索品質であるため境界扱い。",
+    "first_checked_at": "2026-11-18T03:45:06+00:00",
+    "last_checked_at": "2026-11-18T12:59:33+00:00",
+    "linked_from": [
+      "Inference / Multimodal Long-Context Memory Compression",
+      "worker-worklist-00 discovery rank 87"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory"
+  },
+  "processed_at": "2026-11-18T12:59:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b01b21be469",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

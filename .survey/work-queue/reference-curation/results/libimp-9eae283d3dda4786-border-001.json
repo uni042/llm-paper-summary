@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9eae283d3dda4786-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.14917",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.14917",
+    "identity_tokens": [
+      "arXiv:2602.14917"
+    ],
+    "reason": "最大エントロピーの分岐点へ戻る最良優先探索を強化学習中に用い、短い正答を学習させる方式。生成長短縮という推論効率上の効果はあるが、主たる技術的寄与はGRPO/DAPO系の学習探索・方策最適化であり、凍結中の学習手法との境界に位置する。",
+    "first_checked_at": "2026-11-18T12:59:36+00:00",
+    "last_checked_at": "2026-11-18T12:59:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BFS-PO: Best-First Search for Large Reasoning Models"
+  },
+  "processed_at": "2026-11-18T12:59:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9eae283d3dda",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

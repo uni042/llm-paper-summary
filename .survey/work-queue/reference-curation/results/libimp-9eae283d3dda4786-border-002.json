@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9eae283d3dda4786-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.21860",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.21860",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2608.21860",
+      "arXiv:2608.21860"
+    ],
+    "reason": "長い思考系列を木へ統合して優越経路を選び、好みデータを構築した上でDPOと教師あり損失で学習する。推論時の冗長トークン削減を狙うが、要旨上の中心機構は訓練データ合成と選好学習であり、推論ランタイムの独立した最適化ではない。",
+    "first_checked_at": "2026-10-31T03:44:21+00:00",
+    "last_checked_at": "2026-11-18T12:59:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ChainPrune: Evaluating and Reducing Redundancy in Long Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-11-18T12:59:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9eae283d3dda",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

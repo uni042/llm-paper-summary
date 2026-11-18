@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3cb6ec53438bc25d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.14909",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.14909",
+    "identity_tokens": [
+      "arXiv:2408.14909"
+    ],
+    "reason": "スパイキングニューロンと状態空間モデルを組み合わせ、疎なシナプス演算と並列学習を可能にするSpikingSSMs。WikiText-103の言語モデリングと長系列ベンチマークで評価するが、主な貢献はモデル学習・表現と学習高速化であり、現代LLMサービングの実測token/sやGPU推論効率は要旨で不明なため境界扱い。",
+    "first_checked_at": "2026-11-18T12:59:31+00:00",
+    "last_checked_at": "2026-11-18T12:59:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "SpikingSSMs: Learning Long Sequences with Sparse and Parallel Spiking State Space Models"
+  },
+  "processed_at": "2026-11-18T12:59:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3cb6ec53438b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

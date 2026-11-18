@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.52202/085713-1356",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.52202/085713-1356",
+    "identity_tokens": [
+      "DOI:10.52202/085713-1356"
+    ],
+    "reason": "NeurIPS 2025の出版元一次要旨を確認。未知の複数ソースドメイン混合に対して入力を専門モデルへ振り分けるmultiple-source domain adaptationアルゴリズムを提案し、ドメイン別regret境界と精度保証を示す。ただし対象は一般MLモデルの精度最適化で、LLM推論の遅延・GPU資源・モデルロード・SLO等のサービング効率評価はないためborderline。",
+    "first_checked_at": "2026-11-18T09:48:31+00:00",
+    "last_checked_at": "2026-11-18T12:59:40+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Principled Model Routing for Unknown Mixtures of Source Domains"
+  },
+  "processed_at": "2026-11-18T12:59:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

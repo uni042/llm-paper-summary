@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d0c4ae466319972f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.01407",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.01407",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2504.01407",
+      "arXiv:2504.01407",
+      "title:timesearch hierarchical video search with spotlight and reflection for human like long video understanding"
+    ],
+    "reason": "タイトルが長尺動画の検索・理解タスクの手法を明示しており、LLM推論サービング、KVキャッシュ、実行時カーネル、ハードウェア効率を対象とする研究ではない。タイトルのみの先行除外であり通常Discovery 10件ノルマには算入しない。",
+    "first_checked_at": "2026-11-18T12:59:38+00:00",
+    "last_checked_at": "2026-11-18T12:59:38+00:00",
+    "linked_from": [],
+    "title": "TimeSearch: Hierarchical Video Search with Spotlight and Reflection for Human-like Long Video Understanding"
+  },
+  "processed_at": "2026-11-18T12:59:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d0c4ae466319",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

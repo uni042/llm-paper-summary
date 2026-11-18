@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.11165",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.11165",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.11165",
+      "arXiv:2505.11165"
+    ],
+    "reason": "arXiv一次要旨を確認。イベントカメラの非同期入力をevent-by-event特徴へ変換するEVAを提案し、DVS128-Gesture・N-Carsの認識とGen1の物体検出を評価する。言語モデルの線形注意を着想として使うが最終適用先はイベント視覚認識であり、LLM推論やサービング効率への直接寄与はないためunrelated。",
+    "first_checked_at": "2026-11-18T09:48:33+00:00",
+    "last_checked_at": "2026-11-18T12:59:43+00:00",
+    "linked_from": [],
+    "title": "Maximizing Asynchronicity in Event-based Neural Networks"
+  },
+  "processed_at": "2026-11-18T12:59:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

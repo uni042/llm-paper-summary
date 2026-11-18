@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.22577",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.22577",
+    "identity_tokens": [
+      "SemanticScholar:03502452ecfb49e419a9847236db0812b24a07a5",
+      "arXiv:2608.22577"
+    ],
+    "reason": "arXiv一次要旨を確認。GUIエージェントの過去イベントをテキスト要約で保持し、限られたB枚の履歴スクリーンショット枠を条件付き効用で再配分する。履歴画像トークンのみを変更するHGKV adapterと予算対応selectorを用い、モバイルの記憶依存タスクで成功率改善を報告。固定視覚コンテキスト予算の効率的利用に関連するが、処理時間・token数・GPUメモリ削減の実測は主要成果ではなく、性能改善の中心はタスク成功率のためborderline。",
+    "first_checked_at": "2026-10-05T08:13:17+00:00",
+    "last_checked_at": "2026-11-18T12:59:41+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CausalCache: Conditional High-Fidelity Restoration for Long-Horizon GUI Agents"
+  },
+  "processed_at": "2026-11-18T12:59:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

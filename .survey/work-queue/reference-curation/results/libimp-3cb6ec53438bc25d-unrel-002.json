@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3cb6ec53438bc25d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.05832",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.05832",
+    "identity_tokens": [
+      "arXiv:2511.05832"
+    ],
+    "reason": "Hilbert曲線で画像トークンを並べ替えて2D局所注意のブロック疎性を高め、画像Transformerのウィンドウ注意を高速化する研究。一次要旨の評価対象は高解像度画像と視覚局所注意であり、生成LLMの言語推論やMLLMサービングの実証はないため対象外。",
+    "first_checked_at": "2026-11-18T07:16:46+00:00",
+    "last_checked_at": "2026-11-18T12:59:32+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "Hilbert-Guided Sparse Local Attention"
+  },
+  "processed_at": "2026-11-18T12:59:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3cb6ec53438b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

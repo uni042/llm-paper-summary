@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f2223c7b5968225-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.07172",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.07172",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.emnlp-main.319",
+      "arXiv:2410.07172"
+    ],
+    "reason": "EMNLP 2025正式版本文§3〜5・表1を確認。LLM生成のタスク説明とトークン単位ルータを組み合わせ、T5系LoRA専門家の既知・未知タスクでの品質を改善する。推論時に専門家選択は行うが、主評価はタスク精度・一般化であり、実行時間・メモリ・専門家演算削減の直接的検証が乏しいため境界領域。",
+    "first_checked_at": "2026-11-14T17:03:44+00:00",
+    "last_checked_at": "2026-11-18T12:59:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Glider: Global and Local Instruction-Driven Expert Router"
+  },
+  "processed_at": "2026-11-18T12:59:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f2223c7b596",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

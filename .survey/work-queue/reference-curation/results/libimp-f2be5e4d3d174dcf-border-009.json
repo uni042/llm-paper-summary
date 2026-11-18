@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.29545",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.29545",
+    "identity_tokens": [
+      "arXiv:2609.29545"
+    ],
+    "reason": "arXiv一次要旨を確認。環境変化で古くなるエージェントの知識項目を、限られたtool-use action予算の下で価値対費用に応じて再検証するERRANDを提案。2種類の変動環境で同じ行動予算下のタスク成功を比較し、無制限再検証より少ない行動で高い成功を報告。エージェントの外部行動コスト管理に関連するが、LLM推論token・KV・GPU実行最適化の直接計測はないためborderline。",
+    "first_checked_at": "2026-11-18T09:48:32+00:00",
+    "last_checked_at": "2026-11-18T12:59:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ERRAND: Budgeted Maintenance of Agent Memory"
+  },
+  "processed_at": "2026-11-18T12:59:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96f64157f883fe2c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:eff6df09519baed05ca9050f21c87a9526aa3913",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:eff6df09519baed05ca9050f21c87a9526aa3913",
+    "identity_tokens": [
+      "SemanticScholar:eff6df09519baed05ca9050f21c87a9526aa3913"
+    ],
+    "reason": "ICLR 2026公式要旨。過去出力を使って補助ヘッドを反復微調整し、生成の多様性を改善するOverRIDEを提案。vLLM上の72B並列復号でスループット6.4%低下と明示。LLM復号実装に関係するが主目的は生成多様性で高速化ではないためborderline。",
+    "first_checked_at": "2026-11-18T12:59:36+00:00",
+    "last_checked_at": "2026-11-18T12:59:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Diverse Text Decoding via Iterative Reweighting"
+  },
+  "processed_at": "2026-11-18T12:59:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96f64157f883",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

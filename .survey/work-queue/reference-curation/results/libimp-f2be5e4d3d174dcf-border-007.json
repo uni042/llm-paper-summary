@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.19543",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.19543",
+    "identity_tokens": [
+      "arXiv:2404.19543"
+    ],
+    "reason": "arXiv一次要旨を確認。RAGとRAUの構成要素、分類、NLP応用、頑健性・正確性・関連性の評価法を整理するサーベイ。計算効率の限界には言及するが、検索・生成サービングのキャッシュ・スケジューリング・計算最適化を一次実験で提案検証した研究ではないためborderline。",
+    "first_checked_at": "2026-11-18T12:59:41+00:00",
+    "last_checked_at": "2026-11-18T12:59:41+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "RAG and RAU: A Survey on Retrieval-Augmented Language Model in Natural Language Processing"
+  },
+  "processed_at": "2026-11-18T12:59:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

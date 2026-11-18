@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2be5e4d3d174dcf-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.19847",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.19847",
+    "identity_tokens": [
+      "arXiv:2506.19847"
+    ],
+    "reason": "arXiv一次要旨を確認。OFTv2はorthogonal finetuningを重み中心の行列積から入力中心のmatrix-free計算へ変え、Cayley–Neumann近似と併せて学習を最大10倍高速化、GPUメモリを3分の1へ削減する。量子化済み基盤モデルのfinetuningにも対応するが、主指標は学習時の速度・メモリ・安定性で推論サービングの実測はないためborderline。",
+    "first_checked_at": "2026-11-18T12:59:41+00:00",
+    "last_checked_at": "2026-11-18T12:59:41+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Orthogonal Finetuning Made Scalable"
+  },
+  "processed_at": "2026-11-18T12:59:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2be5e4d3d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
