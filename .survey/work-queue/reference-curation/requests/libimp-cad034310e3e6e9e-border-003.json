@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cad034310e3e6e9e-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2608.27817",
+  "reason": "arXiv一次要旨で、音声分類の既知タスクに対し文字起こし、CLAP/AST/WavLMエンコーダ、Qwen2-Audio等の生成モデル呼出しを選ぶ方策を比較する研究と確認。VocalSoundでは生成モデル呼出し12.5%の方策が正解率0.925、生成呼出しなしが0.921で差は小さい。呼出し削減の判断には関連するが、主目的は評価上の増分価値検証であり一般LLMサービング最適化とは距離があるため境界候補。",
+  "title": "Auditing generative audio calls for known-task audio-llm evaluation",
+  "identity_tokens": [
+    "arXiv:2608.27817"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cad034310e3e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

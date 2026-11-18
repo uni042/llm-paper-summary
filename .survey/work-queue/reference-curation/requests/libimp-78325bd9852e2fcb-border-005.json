@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-78325bd9852e2fcb-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41104",
+  "reason": "自己蒸留のEMA教師と生徒の重み差を再利用し、Muonのmomentum bufferを削る学習用optimizer Muon-RT。Qwen2.5-7Bの蒸留でAdamW比持続メモリ42%削減、momentum Muon比27%削減と平均精度改善を報告。LLMのメモリ効率に技術的接点はあるが、節約対象は学習optimizer状態であり凍結範囲の学習最適化、推論時重み・KV・実行速度の改善ではないためborderline。",
+  "title": "MUON-RT Reusing the Teacher's Trajectory for Momentum-Free Muon for LLM Self-Distillation",
+  "identity_tokens": [
+    "arXiv:2610.41104"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78325bd9852e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

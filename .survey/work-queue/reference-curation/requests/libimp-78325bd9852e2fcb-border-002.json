@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-78325bd9852e2fcb-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41124",
+  "reason": "400問の既知情報と学習後ニュースの区別を使い、LLMエージェントが検索ツールを呼ぶ判断を5製品で評価。GPT-5 miniとGrok 4 Fastは新情報で90%以上検索し既知問題では約1%しか検索しない一方、別モデルは新情報でも20%程度。不要検索の遅延・費用を避ける運用上の接点はあるが、検索呼出し判断の行動評価が主でGPU実行・キャッシュ・推論サービング技術の提案ではないためborderline。",
+  "title": "Confident Fools or Careful Searchers? A Behavioural Study of When LLMs Search Beyond Their Static Internal Memory",
+  "identity_tokens": [
+    "arXiv:2610.41124"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AI/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78325bd9852e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
