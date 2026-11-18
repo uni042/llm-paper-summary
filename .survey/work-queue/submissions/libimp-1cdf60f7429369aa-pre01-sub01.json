@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Temporal Self-Distillation: Faster Inference in Discrete Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.15177",
+      "year": 2026,
+      "published": "2026-09-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (dLLMs) promise fast inference by generating multiple tokens in parallel, but suffer severe performance degradation when parallel decoding is pushed too aggressively. We introduce Temporal Self-Distillation (TSD), a simple on-policy method that trains dLLMs for fast inference by distilling predictions across time. Specifically, TSD distills the model's denoising distribution at earlier timesteps toward its distribution at the final timestep at which a token is committed. This encourages earlier predictions to better anticipate the model's eventual output, enabling much more aggressive parallel decoding. Because its teacher signal comes from the model itself, TSD requires no offline teacher generation and applies seamlessly to both base and post-trained policies. Across seven benchmarks in mathematics, planning, and code, TSD substantially shifts the speed--quality frontier toward the low-compute regime. TSD thus provides a simple, single-stage approach to accelerating dLLMs, achieving speedups competitive with offline distillation while avoiding a complex two-stage pipeline.",
+      "identifiers": [
+        "SemanticScholar:8163b95a8dad51d4ff4c0a3dd75003fbea3b5b0a"
+      ],
+      "semantic_scholar_id": "8163b95a8dad51d4ff4c0a3dd75003fbea3b5b0a",
+      "canonical_id": "arXiv:2609.15177",
+      "arxiv_id": "2609.15177",
+      "doi": "10.48550/arXiv.2609.15177",
+      "authors": [
+        "Shi-Jia Xu",
+        "Andrea Miele",
+        "Metod Jazbec",
+        "Volker Roth",
+        "Eric T. Nalisnick",
+        "Ilija Bogunovic"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 65,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は拡散LLMの初期ノイズ除去分布を、各トークンが最終確定される時点の同一モデル予測へ蒸留するTSDを提案。別教師のオフライン生成を必要とせず、数学・計画・コード7ベンチマークで低計算予算下の速度品質曲線を改善する推論時並列復号高速化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs",
+      "source_url": "https://arxiv.org/abs/2511.13147",
+      "year": 2025,
+      "published": "2025-11-17",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) fine-tuning techniques not only improve the adaptability to diverse downstream tasks, but also mitigate adverse effects of model quantization. \nDespite this, conventional quantization suffers from its structural limitation that hinders flexibility during the fine-tuning and deployment stages. \nPractical on-device tasks demand different quantization precisions (i.e. different bit-widths), e.g., understanding tasks tend to exhibit higher tolerance to reduced precision compared to generation tasks. \nConventional quantization, typically relying on scaling factors that are incompatible across bit-widths, fails to support the on-device switching of precisions when confronted with complex real‑world scenarios.\nTo overcome the dilemma, we propose OTARo, a novel method that enables on-device LLMs to flexibly switch quantization precisions while maintaining performance robustness through once fine-tuning. \nOTARo introduces Shared Exponent Floating Point (SEFP), a distinct quantization mechanism, to produce different bit-widths through simple mantissa truncations of a single model.\nMoreover, to achieve bit-width robustness in downstream applications, OTARo performs a learning process toward losses induced by different bit-widths.\nThe method involves two critical strategies: (1) Exploitation-Exploration Bit-Width Path Search (BPS), which iteratively updates the search path via a designed scoring mechanism; (2) Low-Precision Asynchronous Accumulation (LAA), which performs asynchronous gradient accumulations and delayed updates under low bit-widths. \nExperiments on popular LLMs, e.g., LLaMA3.2-1B, LLaMA3-8B, demonstrate that OTARo achieves consistently strong and robust performance for all precisions.",
+      "identifiers": [
+        "SemanticScholar:2c6531de930169e7530f2e7894ea260a957002f9"
+      ],
+      "semantic_scholar_id": "2c6531de930169e7530f2e7894ea260a957002f9",
+      "canonical_id": "arXiv:2511.13147",
+      "arxiv_id": "2511.13147",
+      "doi": "10.48550/arXiv.2511.13147",
+      "authors": [
+        "Shao-Yuan Chen",
+        "Zhi-Xuan Chen",
+        "Da-Wei Yang",
+        "Zhihang Yuan",
+        "Qiang Wu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 366,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はShared Exponent Floating Pointで同一モデルの仮数を切り詰めて複数ビット幅へ切替えられる量子化方式と、精度横断の学習経路探索・低精度勾配蓄積を提案。端末上のタスクに応じたLLM推論精度とメモリ使用量の動的切替えを直接可能にする。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1cdf60f74293",
+    "round": "libimp-1cdf60f7429369aa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1cdf60f7429369aa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1cdf60f7429369aa-pre01.json",
+    "receipt": "sha256:6d9be05cb4ac110f1a66c9b42d826888c4e45e964ee38b63b4f97ada5d9a7a0d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1cdf60f74293",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language Modeling",
+      "source_url": "https://arxiv.org/abs/2504.08719",
+      "year": 2025,
+      "published": "2025-04-11",
+      "venue": "arXiv.org",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a decoder-only Transformer architecture that robustly generalizes to sequence lengths substantially longer than those seen during training. Our model, SWAN-GPT, interleaves layers without positional encodings (NoPE) and sliding-window attention layers equipped with rotary positional encodings (SWA-RoPE). Experiments demonstrate strong performance on sequence lengths significantly longer than the training length without the need for additional long-context training. This robust length extrapolation is achieved through our novel architecture, enhanced by a straightforward dynamic scaling of attention scores during inference. In addition, SWAN-GPT is more computationally efficient than standard GPT architectures, resulting in cheaper training and higher throughput. Further, we demonstrate that existing pre-trained decoder-only models can be efficiently converted to the SWAN architecture with minimal continued training, enabling longer contexts. Overall, our work presents an effective approach for scaling language models to longer contexts in a robust and efficient manner.",
+      "identifiers": [
+        "SemanticScholar:628ae4d9274dc1848cb32dd14267abeeee5ef1ae"
+      ],
+      "semantic_scholar_id": "628ae4d9274dc1848cb32dd14267abeeee5ef1ae",
+      "canonical_id": "arXiv:2504.08719",
+      "arxiv_id": "2504.08719",
+      "doi": "10.48550/arXiv.2504.08719",
+      "authors": [
+        "Krishna C. Puvvada",
+        "Faisal Ladhak",
+        "Santiago Akle Serrano",
+        "Cheng-Ping Hsieh",
+        "Shantanu Acharya",
+        "Somshubra Majumdar",
+        "Fei Jia",
+        "Samuel Kriman",
+        "Simeng Sun",
+        "Dima Rekesh",
+        "Boris Ginsburg"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 586,
+        "matched_prestigious_venue": null
+      },
+      "reason": "位置符号化なしのNoPE層とRoPE付きsliding-window attention層を交互に置き、推論時の注意スコア動的スケーリングで学習時より長い文脈へ外挿する。標準GPTより安価な学習と高スループットを報告し、長文脈推論アーキテクチャとして直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0f1dd087f781",
+    "round": "libimp-0f1dd087f78142d5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0f1dd087f78142d5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0f1dd087f78142d5-pre01.json",
+    "receipt": "sha256:3016c5dec6af29cdfc62a0589d7e472a0dda7893950094b379423c9b63969769"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0f1dd087f781",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

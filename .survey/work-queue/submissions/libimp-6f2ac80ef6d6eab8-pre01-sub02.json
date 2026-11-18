@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CopyLoop: Fast Looped Transformer Decoding via Context Copying and Shallow Screening",
+      "source_url": "https://arxiv.org/abs/2610.38822",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers increase computational capacity through the repeated application of shared blocks, but their recurrent depth makes conventional full-depth decoding expensive. While existing speculative pipelines accelerate generation by processing consecutive token positions at varying depths, they are typically limited by sequential decoding overheads. We introduce CopyLoop, a training-free decoding algorithm that combines low-cost context-copy proposals with shallow screening and continuous recurrent scheduling. Rather than step-by-step generation, CopyLoop proposes multi-token suffixes from repeated context. It then evaluates them early at a shallow recurrent depth to efficiently filter out incorrect branches, processing newer blocks concurrently while earlier blocks are still progressing toward full-depth verification. We evaluate CopyLoop across six model checkpoints from the Ouro, Raven, and Huginn families, covering code generation and multi-step mathematical reasoning. CopyLoop achieves decoding speedups of 2.98x--10.70x over full-depth autoregressive decoding on Base models and 2.74x--3.52x on Thinking models, consistently outperforming or closely matching all competing baselines across evaluation tasks. Furthermore, ablation studies confirm a strong synergy between shallow screening and continuous scheduling, while our analyses show that CopyLoop requires only lightweight model calibration and yields greater speedups on longer generations with reusable contexts.",
+      "identifiers": [
+        "SemanticScholar:d3e21b0745bddb236a3cd305bffbc6d0206e8504"
+      ],
+      "semantic_scholar_id": "d3e21b0745bddb236a3cd305bffbc6d0206e8504",
+      "canonical_id": "arXiv:2610.38822",
+      "arxiv_id": "2610.38822",
+      "authors": [
+        "Wen-Yu Du",
+        "Stephen Chung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "共有blockを反復するLooped Transformerで、繰り返しcontextからmulti-token suffixをcopy proposalし、浅いrecurrent depthで誤った枝をscreenした後、先行blockのfull-depth検証と後続blockの処理を重ねるtraining-free CopyLoop。Ouro/Raven/Huginnの6 checkpointでfull-depth autoregressive decode比Base 2.98〜10.70倍、Thinking 2.74〜3.52倍のdecode高速化を報告。recurrent-depth LLM推論を直接加速するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6f2ac80ef6d6",
+    "round": "libimp-6f2ac80ef6d6eab8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6f2ac80ef6d6eab8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6f2ac80ef6d6eab8-pre01.json",
+    "receipt": "sha256:49a79beb67754529c80d03aadad81ef08e956e21cbab6ca97bd9991fc05d211b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6f2ac80ef6d6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

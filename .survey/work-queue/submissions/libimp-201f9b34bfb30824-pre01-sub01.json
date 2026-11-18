@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Comprehensive Survey on Large Language Model Compression for Artificial Intelligence Applications in Edge Systems",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3675866",
+      "year": 2026,
+      "published": "2026-05-15",
+      "venue": "IEEE Internet of Things Journal",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across various artificial intelligence (AI) applications. However, current LLMs cannot be deployed directly on edge nodes due to their large number of parameters. Fortunately, model compression technology has been proposed to reduce the computational workload and memory usage of LLMs, enabling further edge-based LLM services. However, existing research typically concentrates on isolated compression algorithms and lacks a comprehensive perspective on how to leverage these techniques for practical, end-to-end LLM deployment in edge environments. In this survey, we review edge-oriented LLM compression techniques and software–hardware codesign strategies to enable efficient LLM deployment on resource-constrained edge systems and guide future research in this area. First, we analyze techniques for LLM compression from the perspective of cloud–edge collaborative intelligence, including model quantization, parameter pruning, and knowledge distillation (KD). Second, we present several hybrid model frameworks tailored to dynamic, heterogeneous edge environments, based on model architecture, application scenarios, and combination selection. Third, we further refine a four-layer software–hardware codesign and an overhead-aware LLM deployment optimization. Finally, we discuss the challenges of current model compression approaches and offer insights into future research directions, with a focus on edge-based LLM services.",
+      "identifiers": [
+        "SemanticScholar:d0b4e42fd00cff582a77f12485a33d48e851fd98"
+      ],
+      "semantic_scholar_id": "d0b4e42fd00cff582a77f12485a33d48e851fd98",
+      "doi": "10.1109/JIOT.2026.3675866",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3675866",
+      "authors": [
+        "Yu-Zhu Liang",
+        "Chang-Fu Xu",
+        "Ya-Xin Mei",
+        "Hao-Dong Zou",
+        "Jian-Xiong Guo",
+        "Xing-Gang Fan",
+        "Tian Wang",
+        "Hai-Yang Huang"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者論文の公開原著要旨を確認。edge端末でのLLM推論を実現する量子化・剪定・知識蒸留を、cloud-edge協調と異種端末のハイブリッド構成から整理し、4層のソフトウェア・ハードウェア協調設計とoverhead-awareな配置最適化を検討するサーベイ。個別の高速化アルゴリズムの新規実装ではないが、edge LLM推論の圧縮・配置・システム設計を直接対象とするためaccept。",
+      "library_body_check": "author_public_original_abstract_read; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-201f9b34bfb3",
+    "round": "libimp-201f9b34bfb30824-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-201f9b34bfb30824-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-201f9b34bfb30824-pre01.json",
+    "receipt": "sha256:aea88a1889f417bac4f6fbb99fc62478dce930eeaca3009bab27c2e79967974b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-201f9b34bfb3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

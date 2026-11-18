@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Litespark Inference For CPUs: Ultra-Fast SIMD Framework for Ternary (1.58-bit) Language Models",
+      "source_url": "https://arxiv.org/abs/2605.06485",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have transformed artificial intelligence, but their computational requirements remain prohibitive for most users. Standard inference demands expensive datacenter GPUs or cloud API access, leaving over one billion personal computers underutilized for AI workloads. Ternary models offer a path forward: their weights are constrained to {-1, 0, +1}, theoretically eliminating the need for floating-point multiplication. However, existing frameworks fail to exploit this structure, treating ternary models as dense floating-point networks. We address this gap with custom SIMD kernels that replace matrix multiplication with simple addition and subtraction operations, targeting the integer dot product instructions available on modern CPUs. Our implementation, Litespark-Inference, is pip-installable and integrates directly with Hugging-Face, achieving 18.15x higher throughput, 7.15x faster time-to-first-token and 6.03x memory reduction compared to standard PyTorch inference on Apple Silicon, with comparable or higher throughput speedups up to 95.81x on Intel and AMD processors.",
+      "identifiers": [
+        "SemanticScholar:e124f4e35248b90ba1be9517053c3bc0c5fd2c87"
+      ],
+      "semantic_scholar_id": "e124f4e35248b90ba1be9517053c3bc0c5fd2c87",
+      "canonical_id": "arXiv:2605.06485",
+      "arxiv_id": "2605.06485",
+      "authors": [
+        "Nii Osae Osae Dade",
+        "Tony Morri",
+        "M. H. Rahat",
+        "Sayandip Pal",
+        "Rickston Pinto"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨と公開本文を確認。Litespark-Inferenceは三値重みをCPUのNEON SDOT/AVX-VNNI等の整数SIMD演算に写像し、標準PyTorchの密行列演算を避けるLLM推論カーネルを提供する。BitNet b1.58でTTFT・トークン毎秒・メモリを測定しており、推論実装に直接寄与するためaccept。arXiv表示の冒頭要旨と本文内の最新性能値に差があるため、Research段階で版・ベンチマーク条件を再確認する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "UDP: Up-or-Down Precision Quantization for Large Language Models via Evolutionary Search",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3680045",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown outstanding capabilities across complex language tasks, but come with massive computational cost and memory footprint. LLM post-training quantizers such as AWQ, SmoothQuant, and QoQ have demonstrated excellent performance under specific configurations, for example, W4A16 (four-bit weight and sixteen-bit activation) and W8A8 (eight-bit weight and eight-bit activation). However, leveraging these quantizers in a mixed-precision problem is a nontrivial task due to the colossal design space and prolonged inference time in LLMs. To address this problem, this work presents UDP (Up-or-Down Precision), a quantizer-agnostic mixed-precision framework that restricts each layer to a low/high precision pair and selects which layers to promote under deployment-driven memory/latency budgets. UDP uses KLD-guided profiling to seed high-quality candidates and a budget-aware genetic search to optimize the layer promotion set. Across Llama and Mistral models and three PTQ backends (AWQ, SmoothQuant, QoQ), UDP improves WikiText-2 perplexity by up to 0.69 over uniform low-bit baselines at the same low-precision setting and outperforms strong mixed-precision heuristics (FlattenQuant, QFeM, AsymKV) by up to 0.11 under identical budgets. In OmniServe on Llama-2-7B (1024/512 tokens), UDP preserves throughput (<inline-formula> <tex-math notation=\"LaTeX\">$\\leq 0.5$ </tex-math></inline-formula>% vs. W4A8) while reducing p95 time-to-first-token by <inline-formula> <tex-math notation=\"LaTeX\">$\\approx 60$ </tex-math></inline-formula> ms and using <inline-formula> <tex-math notation=\"LaTeX\">$\\approx 10$ </tex-math></inline-formula>% less GPU memory than W8A8. These results show UDP produces practical mixed-precision policies aligned with real serving constraints.",
+      "identifiers": [
+        "SemanticScholar:e8a1a908e3ebc1dd7e05127f4210c429dd888efa"
+      ],
+      "semantic_scholar_id": "e8a1a908e3ebc1dd7e05127f4210c429dd888efa",
+      "doi": "10.1109/ACCESS.2026.3680045",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3680045",
+      "authors": [
+        "Anh-Tuan Mai",
+        "Tien-Son Pham",
+        "Xuan Truong Nguyen",
+        "Thanh-Tuan Dao"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開のIEEE Access採録原稿の要旨を確認。UDPはAWQ/SmoothQuant/QoQ等のPTQを前提に、各層の低/高精度をメモリ容量・レイテンシ制約内で選ぶmixed-precision配置をKLD感度と遺伝的探索で決定する。Llama/Mistralの評価に加えOmniServe上のLLMサービングでp95 TTFT・GPUメモリを測定しており、量子化精度と推論実行費用の直接的最適化なのでaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-34466bdad8c5",
+    "round": "libimp-34466bdad8c57cab-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-34466bdad8c57cab-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-34466bdad8c57cab-pre01.json",
+    "receipt": "sha256:faadebd8d1ae568168d2414d53ba835a9e9fa0b651ebccddbcbf6cb29f743d1f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-34466bdad8c5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

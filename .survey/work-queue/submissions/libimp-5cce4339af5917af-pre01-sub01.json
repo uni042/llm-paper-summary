@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CoMem: Context Management with A Decoupled Long-Context Model",
+      "source_url": "https://arxiv.org/abs/2605.30842",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context management enables agentic models to solve long-horizon tasks through iterative summarization of previous interaction histories. However, this process typically incurs substantial decoding overhead for the extra summarization tokens, which significantly affect the end-to-end response latency at deployment. In this paper, we introduce CoMem, a novel framework that decouples memory management from the primary agent workflow, enabling these processes to execute in parallel. We propose a $k$-step-off asynchronous pipeline that overlaps the memory model's summarization with the agent's inference, effectively masking the latency of context processing. To ensure robustness under this asynchronous setting, we introduce a reward-driven training strategy that aligns the memory model to capture sufficient statistics for the agent's decision-making. Theoretical analysis confirms that CoMem offers a superior efficiency-effectiveness trade-off compared to coupled architectures. Our extensive experimental results on SWE-Bench-Verified show that CoMem provides 1.4x latency improvements upon vanilla long-context solutions while preserving most of the performance. Furthermore, we demonstrate that these latency gains scale favorably with increased system throughput, offering a modular path forward for the independent optimization of agent reasoning and memory compression.",
+      "identifiers": [
+        "SemanticScholar:e52381f8429203107fac01d2b5a8dcb0493a9c41"
+      ],
+      "semantic_scholar_id": "e52381f8429203107fac01d2b5a8dcb0493a9c41",
+      "canonical_id": "arXiv:2605.30842",
+      "arxiv_id": "2605.30842",
+      "doi": "10.48550/arXiv.2605.30842",
+      "authors": [
+        "Yu-Wei Zhang",
+        "Chengyu Dong",
+        "Shuo-Wei Jin",
+        "Chang-Long Yu",
+        "He-Jie Cui",
+        "Hong-Ye Jin",
+        "Xinyang Zhang",
+        "Hamed Bonab",
+        "Colin Lockard",
+        "Jianshu Chen",
+        "Zhen-Yu Shi",
+        "Jingbo Shang",
+        "Xian Li",
+        "Bing Yin"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。エージェントの履歴要約を主推論から切り離し、k-step-off非同期パイプラインでメモリモデルの要約処理とエージェント推論を重ねる。SWE-Bench Verifiedで従来の長文脈方式より約1.4倍の遅延改善と性能維持を報告し、エージェントサービングの文脈圧縮・非同期実行に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+      "source_url": "https://arxiv.org/abs/2606.15682",
+      "year": 2026,
+      "published": "2026-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve strong problem-solving through long chain-of-thought, but their deployment is constrained by the high cost of full-precision inference and growing KV cache footprints. Microscaled FP4 formats enable efficient FP4 deployment; however, fully quantizing weights, activations, and KV caches (W4A4KV4) causes severe reasoning degradation that existing PTQ and QAT fail to recover. We identify that FP4 failures concentrate on low-entropy tokens--precise symbolic commitments such as digits and operators--where quantization noise inflates sampling errors that cascade through reasoning traces. Based on this insight, we propose ReQAT, a reasoning-centric FP4 training framework with three components: (i) Trace-Aligned QAT (TAQ), which revisits identical reasoning traces to focus updates on critical low-entropy decisions; (ii) Selective Entropy Minimization (SEM), which reinforces confidence at low-entropy positions; and (iii) Q-FIT, a quantization-friendly initialization that jointly calibrates RoPE-consistent KV cache transformations to stabilize QAT. Under the same training budget, ReQAT not only recovers but surpasses BF16 fine-tuning accuracy, while delivering up to 3.9x throughput speedup on NVIDIA DGX Spark and 3.1x on B200.",
+      "identifiers": [
+        "SemanticScholar:9eff71af6c3553cc9c03bd817b43d59e4e65ba2b"
+      ],
+      "semantic_scholar_id": "9eff71af6c3553cc9c03bd817b43d59e4e65ba2b",
+      "canonical_id": "arXiv:2606.15682",
+      "arxiv_id": "2606.15682",
+      "doi": "10.48550/arXiv.2606.15682",
+      "authors": [
+        "Janghwan Lee",
+        "Sih-Wa Lee",
+        "Jinseok Kim",
+        "Yongjik Kim",
+        "Jieun Lim",
+        "Jinwook Oh",
+        "Jungwook Choi"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。W4A4KV4で低エントロピーの数字・演算子トークンに量子化誤差が集中する問題に対し、Trace-Aligned QAT、選択的エントロピー最小化、RoPE整合のQ-FIT初期化を組み合わせる。DGX Spark最大3.9倍、B200最大3.1倍の推論スループットを報告し、推論用FP4量子化に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5cce4339af59",
+    "round": "libimp-5cce4339af5917af-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5cce4339af5917af-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5cce4339af5917af-pre01.json",
+    "receipt": "sha256:986e0d2cf5b14a94d4b3b1da57125b1fe8dc0c9e386cc52f560d575c81099d79"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5cce4339af59",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
