@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action",
+      "source_url": "https://arxiv.org/abs/2605.20755",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": null,
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in spoken dialogue language models have shifted from turn-based to full-duplex designs, where the model continuously listens to the user while generating responses. However, existing duplex backbones still lack a native channel for in-conversation planning and tool calling, leaving real-time agentic behaviour either tied to turn boundaries or relegated to an external cascade. We propose DuplexSLA, a native full-duplex Speech-Language-Action foundation model that decodes assistant audio together with a structured action stream on a shared 160 ms chunk timeline. DuplexSLA is built on a dual-stream three-channel formulation: a continuous user audio channel, a discrete assistant audio channel, and a rate-limited textual action channel, all decoded jointly by a single backbone, so that listening, speaking, planning, and tool calling unfold on one shared clock. Two capabilities define the model: (1) semantic-driven turn-taking control, where interruption, pause, and backchannel are handled inside the same backbone instead of by an external semantic VAD; and (2) in-conversation planning and tool calling, where planning text and structured tool calls are emitted on the action channel without halting assistant audio, so that multi-action and backchannel-triggered tool use are interleaved with ongoing speech. To evaluate these capabilities together, we further construct DuplexSLA-Bench, a duplex benchmark covering pause, interrupt, and backchannel turn-taking together with three styles of in-conversation tool calling. Our project page, interactive demos, and the DuplexSLA-Bench evaluation suite are publicly available at https://github.com/hyzhang24/DuplexSLA.",
+      "identifiers": [
+        "SemanticScholar:424940089d4ff24b5f4d3cbd165cc281bf30d598"
+      ],
+      "semantic_scholar_id": "424940089d4ff24b5f4d3cbd165cc281bf30d598",
+      "canonical_id": "arXiv:2605.20755",
+      "arxiv_id": "2605.20755",
+      "authors": [
+        "Haoyang Zhang",
+        "Jun Chen",
+        "Donghang Wu",
+        "Yuxin Li",
+        "Yu-Xin Zhang",
+        "Xiangyu Zhang",
+        "Che Liu",
+        "Qing-Jian Lin",
+        "Yizhou Peng",
+        "He-Xin Liu",
+        "E. Chng",
+        "Chao Yan",
+        "Boyong Wu",
+        "Ye-Chang Huang",
+        "Xue-Ting Yang",
+        "Fei Tian"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": null
+      },
+      "reason": "音声入力・音声出力・action/tool callを160ms chunkの同一時間軸で並列生成し、発話中の計画・ツール実行を外部cascadeなしで統合する。実測速度比は要旨にないが、全二重音声LLMの低遅延推論アーキテクチャとして直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2605.08813",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model-based Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex tasks. However, manually designing optimal communication topologies is labor-intensive, while automated expansion methods often result in bloated structures with redundant agents, leading to excessive token consumption. To address this problem, we introduce \\textbf{AgentSlimming}, a plug-and-play compression framework for graph-structured multi-agent workflows. Motivated by pruning and quantization in neural networks, AgentSlimming compresses workflows by first estimating the importance score of each agent with a hybrid mechanism, and then removes redundant agents or replaces them with low-cost ones, where each operation is validated using a baseline-anchored acceptance rule to prevent performance collapse. Experiments show that AgentSlimming reduces average token cost by up to 78.9\\% with negligible performance degradation, and sometimes even improves accuracy, achieving a strong Pareto-optimal trade-off between cost and quality. \\textit{Our code is publicly available at https://github.com/CitrusYL/AgentSlimming",
+      "identifiers": [
+        "SemanticScholar:1d6916eb235e0a3e4b797a4a8bdac4fe74c54962"
+      ],
+      "semantic_scholar_id": "1d6916eb235e0a3e4b797a4a8bdac4fe74c54962",
+      "canonical_id": "arXiv:2605.08813",
+      "arxiv_id": "2605.08813",
+      "doi": "10.18653/v1/2026.acl-long.1387",
+      "authors": [
+        "Yulan Chen",
+        "Hao Peng",
+        "Jin-Yang Liu",
+        "Zichen Wen",
+        "Dong-Rui Liu",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "複数エージェントのグラフから重要度の低いagentを除き、安価なモデルへ置換する。品質維持の受理則を使い、平均トークン費用を最大78.9%削減するLLM推論オーケストレーション圧縮。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+      "source_url": "https://arxiv.org/abs/2608.22516",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A long-video answer is evidence-supported only when the frames decoded from the video cover every event the answer depends on. Existing evaluations score final-answer correctness or predicted evidence intervals, but the frames a method decodes before answering are rarely audited, so correct answers can still rest on incomplete observation. We introduce VES-Bench, a 600-question benchmark of Temporal Ordering and Event Counting items over 348 public long videos. Each item carries a jointly necessary set of evidence intervals, letting us audit at three strictness levels whether a method's decoded frames cover every one of them. We also propose TRACE, a training-free agent that grounds answers in raw visual clips, builds an evidence bundle round by round, and stops only when the answer stabilises as the bundle grows and a final pass over the same clips returns the same answer. Under a same-backbone audit, TRACE answers 50.7% of questions correctly with at least two decoded frames inside every evidence interval, at 98.7 frames per question: over 10 points above uniform decoding at 128 frames (40.2%), and within 2.6 points of uniform decoding at 256 frames at 0.39x its frame cost, while reaching the highest answer accuracy in the audit (63.5%). TRACE also stays competitive on Video-MME (86.1), LVBench (75.6), and LongVideoBench (75.1).",
+      "identifiers": [
+        "SemanticScholar:a9b0c1bea96f3b97838a22fbe43888566903350b"
+      ],
+      "semantic_scholar_id": "a9b0c1bea96f3b97838a22fbe43888566903350b",
+      "canonical_id": "arXiv:2608.22516",
+      "arxiv_id": "2608.22516",
+      "authors": [
+        "Peng Liu",
+        "Jun-Bo Niu",
+        "Xiaoyan Hu",
+        "Zhong-Yu Shi",
+        "Zi-Tian Wang",
+        "Lin-Jiang Huang",
+        "Si Liu"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長動画QAで必要な証拠区間を満たすまでフレームを適応的に復号し、回答安定性で停止するTRACEを提案。98.7フレーム/問で256フレーム均一復号に近い精度を0.39倍のフレーム費用で達成する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought (Long CoT) reasoning improves performance on multi-step problems, but it also induces overthinking. This inefficiency is especially problematic in low-data fine-tuning regimes, where real applications adapt reasoning models with limited supervision and cannot rely on large-scale teacher distillation or heavy test-time control. To address this, we propose STOP (Structured On-policy Pruning), an on-policy algorithm for analyzing and pruning long-form reasoning traces. STOP constructs self-distilled traces from the model. Then it maps each trace into a structured reasoning interface through node segmentation, taxonomy annotation, and reasoning-tree construction. On top of this interface, we introduce ECN (Earliest Correct Node), which retains the shortest prefix ending at the earliest node. Experiments on DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-LLaMA-3-8B across GSM8K, Math 500, and AIME 2024 show that STOP reduces generated tokens by 19.4% to 42.4% while largely preserving accuracy in low-data fine-tuning. Beyond efficiency, our analyses show that STOP induces much smaller distributional shift than teacher-guided pruning, improves the structural efficiency of generated reasoning, and reallocates reasoning effort away from redundant verification and backtracking toward more productive exploration.",
+      "identifiers": [
+        "SemanticScholar:d81cae5e71303f0d510480e3721e2fc417935d04"
+      ],
+      "semantic_scholar_id": "d81cae5e71303f0d510480e3721e2fc417935d04",
+      "canonical_id": "arXiv:2605.13165",
+      "arxiv_id": "2605.13165",
+      "doi": "10.48550/arXiv.2605.13165",
+      "authors": [
+        "Chenjun Xu",
+        "Zhen-Nan Zhou",
+        "Zhan Su",
+        "Bill Howe",
+        "Lucy Lu Wang",
+        "Bing-Bing Wen"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "自分の推論軌跡をノード分割し、最初に正答へ至るEarliest Correct Nodeまでの接頭辞だけを残すSTOPを提案。DeepSeek-R1-Distill系で推論生成トークン19.4～42.4%削減し精度を概ね保持する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-69465213fd58",
+    "round": "libimp-69465213fd5867cc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-69465213fd5867cc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-69465213fd5867cc-pre01.json",
+    "receipt": "sha256:10aa2618f26c6057c7b1f0b37d54810f71529ce977b15c68680a502e62747fd5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-69465213fd58",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

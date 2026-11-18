@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Watermarkable Multi-Draft Speculative Sampling via Poisson Processes",
+      "source_url": "https://arxiv.org/abs/2609.21858",
+      "year": 2026,
+      "published": "2026-09-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved state-of-the-art performance across a wide range of tasks, motivating two important aspects of deployment: inference efficiency and output provenance, which can be tackled by speculative sampling and watermarking, respectively. However, recent works have shown that combining these two goals is highly nontrivial and can be potentially impossible. In this work, we develop a novel multi-draft speculative sampling algorithm based on Poisson processes that improves the frontier of this fundamental trade-off. The proposed algorithm has strong sampling efficiency on its own and, more interestingly, is naturally watermarkable: we can embed an unbiased watermark without degrading speculative acceptance. Moreover, our algorithm is based on an exact list-coupling-without-communication scheme, which yields a drafter invariance property that benefits both sampling and watermarking. It is the first multi-draft, drafter-invariant speculative sampling scheme that maintains both watermark strength and sampling efficiency, and we experimentally verify its strong performance in both aspects.",
+      "identifiers": [
+        "SemanticScholar:3ccd9a7d26e9732827514ddebf7604265ba8c7fe"
+      ],
+      "semantic_scholar_id": "3ccd9a7d26e9732827514ddebf7604265ba8c7fe",
+      "canonical_id": "arXiv:2609.21858",
+      "arxiv_id": "2609.21858",
+      "doi": "10.48550/arXiv.2609.21858",
+      "authors": [
+        "Yan-Xiao Liu",
+        "Si-Cheng Wan",
+        "Zhan Gao",
+        "Deniz Gündüz"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ポアソン過程を使った複数ドラフトの厳密な投機的サンプリングを設計し、ドラフト不変性と受理効率を保ったまま不偏ウォーターマークを埋め込めるようにする。生成分布の整合性と投機的復号の受理率に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-20ad0339971c",
+    "round": "libimp-20ad0339971c3f52-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-20ad0339971c3f52-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-20ad0339971c3f52-pre01.json",
+    "receipt": "sha256:327499bac181b4fdf42bb71711ce339d1dcc8e00d432264aca25975beb562680"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-20ad0339971c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

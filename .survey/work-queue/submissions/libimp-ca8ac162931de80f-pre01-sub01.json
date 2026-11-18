@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FESC: Remodeling Long-Context Private Inference with Encrypted State-Space Models",
+      "source_url": "https://arxiv.org/abs/2608.17442",
+      "year": 2026,
+      "published": "2026-08-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long, sensitive documents with machine-learning models requires efficient, privacy-preserving long-context inference. Prior private inference systems optimize or distribute encrypted Transformer attention, but its quadratic token-pair work remains the bottleneck as sequence length grows. Selective state-space models (SSMs) offer linear-time recurrence, yet direct encrypted implementation incurs linear multiplicative depth, sequence-wide state residency, or dense FHE-MPC conversion. We present Factorized Encrypted Scan-Contract (FESC), a hybrid FHE-MPC system for private long-context selective SSM inference. Its factorized scan-contract keeps input-dependent transitions compact across conversion boundaries, composes them without dense expansion, streams state chunks on demand, and contracts outputs before conversion. We demonstrate interface compatibility of the scan-contract implementation across invariant and selective SSM architectures. For our Mamba-2 instantiation, we design GPU-optimized CKKS kernels for linear computations, MPC protocols for SiLU, softplus, exponential, and RMSNorm, with approximation-aware fine-tuning. To our knowledge, FESC is the first private long-document inference system to complete native end-to-end execution at $L \\geq 1{,}024$ on a single GPU. At $L = 2{,}048$, a 12-layer Mamba-base model completes inference in 77.3 minutes on one A100 GPU with a peak memory footprint of 32.7 GB, while maintaining near-plaintext accuracy on the evaluated long-document tasks.",
+      "identifiers": [
+        "SemanticScholar:3f96922b7a85a5e8ac37b876433ea5c19f3bd9cd"
+      ],
+      "semantic_scholar_id": "3f96922b7a85a5e8ac37b876433ea5c19f3bd9cd",
+      "canonical_id": "arXiv:2608.17442",
+      "arxiv_id": "2608.17442",
+      "doi": "10.48550/arXiv.2608.17442",
+      "authors": [
+        "Yu-Fan Zhu",
+        "Chao Jin",
+        "Khin Mi Mi Aung",
+        "Xiao-Kui Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次arXiv書誌・要旨では、暗号化された長文書のMamba-2系SSM推論向けにFHE/MPC間の変換を圧縮するfactorized scan-contractとGPU向けCKKSカーネルを提案。A100単体で2048トークン・12層Mamba-baseの推論を77.3分、最大32.7GBで実行と報告する。高速な通常推論ではなく秘匿推論の実行可能性とメモリ制御を対象とする直接的な推論システム研究。",
+      "library_body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ca8ac162931d",
+    "round": "libimp-ca8ac162931de80f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ca8ac162931de80f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ca8ac162931de80f-pre01.json",
+    "receipt": "sha256:695b2aa821a580f985f4d4756cd1694f0bdc4620e89c033267ba60e0613042a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ca8ac162931d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

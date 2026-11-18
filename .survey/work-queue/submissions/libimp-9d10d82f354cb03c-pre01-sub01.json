@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought (Long CoT) reasoning improves performance on multi-step problems, but it also induces overthinking. This inefficiency is especially problematic in low-data fine-tuning regimes, where real applications adapt reasoning models with limited supervision and cannot rely on large-scale teacher distillation or heavy test-time control. To address this, we propose STOP (Structured On-policy Pruning), an on-policy algorithm for analyzing and pruning long-form reasoning traces. STOP constructs self-distilled traces from the model. Then it maps each trace into a structured reasoning interface through node segmentation, taxonomy annotation, and reasoning-tree construction. On top of this interface, we introduce ECN (Earliest Correct Node), which retains the shortest prefix ending at the earliest node. Experiments on DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-LLaMA-3-8B across GSM8K, Math 500, and AIME 2024 show that STOP reduces generated tokens by 19.4% to 42.4% while largely preserving accuracy in low-data fine-tuning. Beyond efficiency, our analyses show that STOP induces much smaller distributional shift than teacher-guided pruning, improves the structural efficiency of generated reasoning, and reallocates reasoning effort away from redundant verification and backtracking toward more productive exploration.",
+      "identifiers": [
+        "SemanticScholar:d81cae5e71303f0d510480e3721e2fc417935d04"
+      ],
+      "semantic_scholar_id": "d81cae5e71303f0d510480e3721e2fc417935d04",
+      "canonical_id": "arXiv:2605.13165",
+      "arxiv_id": "2605.13165",
+      "doi": "10.48550/arXiv.2605.13165",
+      "authors": [
+        "Chenjun Xu",
+        "Zhen-Nan Zhou",
+        "Zhan Su",
+        "Bill Howe",
+        "Lucy Lu Wang",
+        "Bing-Bing Wen"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "arXiv一次要旨はCoTをノード・分類・推論木に構造化し、最初の正しい結論ノードまでの最短接頭辞を残すECN方式で自己蒸留データを剪定するSTOPを提案。DeepSeek-R1蒸留モデルで正答率を概ね維持し生成トークン19.4〜42.4%削減と報告する推論計算効率化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "AdapThink: Adaptive Thinking Preferences for Reasoning Language Model",
+      "source_url": "https://arxiv.org/abs/2506.18237",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement Learning (RL)-based post-training has significantly advanced the complex reasoning capabilities of language models, fostering sophisticated self-reflection processes. However, this ``slow thinking''paradigm presents a critical challenge to reasoning efficiency: models may expend excessive computation on simple questions and shift reasoning prematurely for complex ones. Previous mechanisms typically rely on static length budgets or predefined rules, lacking the adaptability for varying question complexities and models'evolving capabilities. To this end, we propose AdapThink, an adaptive post-training framework designed to induce more efficient thinking while maintaining the performance of reasoning language models. Specifically, AdapThink incorporates two key mechanisms: 1) A group-relative reward function that leverages model confidence and response's characteristic to dynamically adjust the preference of reflection-related transition words without resorting to a fixed length preference. 2) A diversity-aware sampling mechanism that balances the training group's solution accuracy with reasoning diversity via an entropy-guided score. Experiments on several mathematical reasoning datasets with DeepSeek-distilled models demonstrate AdapThink's advantages in enabling adaptive reasoning patterns and mitigating the inefficiencies.",
+      "identifiers": [
+        "SemanticScholar:7bfe35f029856f7593481e65a1101e5373b0f2ef"
+      ],
+      "semantic_scholar_id": "7bfe35f029856f7593481e65a1101e5373b0f2ef",
+      "canonical_id": "arXiv:2506.18237",
+      "arxiv_id": "2506.18237",
+      "doi": "10.48550/arXiv.2506.18237",
+      "authors": [
+        "Xu Wan",
+        "Wei Wang",
+        "Wen-Yue Xu",
+        "Wotao Yin",
+        "Jie Song",
+        "Ming-Yang Sun"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論モデルの過剰な反省と早すぎる思考切替えを、モデル確信度と応答特性から反省関連語への報酬を動的調整するRL方式AdapThinkで抑制。問題難易度に応じた生成計算量の配分を直接対象とする。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Spoken Language Models that Think Aloud",
+      "source_url": "https://arxiv.org/abs/2609.26488",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Chain-of-Thought (CoT) reasoning has improved the capability of language models, directly applying it to Spoken Language Models (SLMs) may introduce long silent intervals under the serial\"think-then-speak\"paradigm, disrupting real-time spoken interaction. To address this issue, we propose an asynchronous think-aloud framework for reasoning-based SLMs within the Thinker-Talker architecture. The framework maintains a primary reasoning stream for logical deduction and a lightweight think-aloud stream that generates short, task-grounded progress utterances conditioned on the user input and the evolving reasoning state. A dynamic balance strategy coordinates the two streams at runtime, triggering additional think-aloud speech to avoid silent gaps and canceling pending utterances when the final response becomes ready. Experiments on spoken reasoning and question-answering benchmarks show that our approach substantially reduces user-audible silence during reasoning while maintaining answer accuracy comparable to that of a serial\"think-then-speak\"baseline, demonstrating the potential of asynchronous think-aloud for responsive interaction in SLMs.",
+      "identifiers": [
+        "SemanticScholar:322665fa46702d859d76a37cc6a54bb47f7fefe7"
+      ],
+      "semantic_scholar_id": "322665fa46702d859d76a37cc6a54bb47f7fefe7",
+      "canonical_id": "arXiv:2609.26488",
+      "arxiv_id": "2609.26488",
+      "doi": "10.48550/arXiv.2609.26488",
+      "authors": [
+        "Junyi Ao",
+        "Kainan Peng",
+        "Mingbo Ma",
+        "Shun Zhang",
+        "Zhen-Yu Tang",
+        "Xu-Tai Ma",
+        "Xiang Li",
+        "Ying-Hao Li",
+        "Yuan-Cheng Wang",
+        "Zhi-Zheng Wu",
+        "Hai-Zhou Li",
+        "Qing He",
+        "Xu-Bo Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 57,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は音声言語モデルの思考処理と軽量な進捗発話を非同期ストリームに分け、推論中の無音待ちを減らすThinker-Talker方式を提案。最終回答が用意できた時点で進捗発話をキャンセルする実行時制御を備え、音声LLMの応答体感遅延を直接最適化する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9d10d82f354c",
+    "round": "libimp-9d10d82f354cb03c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9d10d82f354cb03c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9d10d82f354cb03c-pre01.json",
+    "receipt": "sha256:0c4bb5583e250c361346a234fb4b8ac712f14a43cbbc94d99dda467192694bd7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9d10d82f354c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

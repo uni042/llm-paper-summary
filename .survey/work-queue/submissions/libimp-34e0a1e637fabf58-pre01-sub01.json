@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Understanding and Optimizing KV-cache Management for Long-Context LLM Inference A",
+      "source_url": "https://www.semanticscholar.org/paper/fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a"
+      ],
+      "semantic_scholar_id": "fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "canonical_id": "SemanticScholar:fe7df672dd110fdae6d3b49e3e63db59075fba7a",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Stony Brook UniversityのTechnical Report FSL-26-02（Amir Hossein Najafi Zadeh、2026年8月）は、長文脈LLMのKVキャッシュをGPU HBMからCPU DRAM・SSD等へ退避した後の復元と、GPUでのKV再計算の選択をI/O性能モデルで分析する。復元を要求のクリティカルパスと特定し、ストレージ経路とGPU再計算へ要求を比例分割して両経路の完了時刻を揃える方針を提示。1,764ハードウェア構成のモデル評価と6 GPUのキャッシュヒット率掃引において、常時復元・常時再計算よりSLO達成構成比が2～10倍になると要旨で報告。長文脈推論のKVキャッシュ管理・階層メモリ・SSDオフロードに直接関係するためaccept。ただし分割ポリシーはシミュレーション評価で、production-grade servingへの実装は将来課題。",
+      "library_body_check": "primary_technical_report_abstract_and_introduction_review; complete_39_page_body_not_read; source=FSL-26-02, abstract pages 1-2 and introduction",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-34e0a1e637fa",
+    "round": "libimp-34e0a1e637fabf58-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-34e0a1e637fabf58-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-34e0a1e637fabf58-pre01.json",
+    "receipt": "sha256:f1982f7592b5d0026f9690beb948fe747b744b111a6559b06c3469b4eee6c6f8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-34e0a1e637fa",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

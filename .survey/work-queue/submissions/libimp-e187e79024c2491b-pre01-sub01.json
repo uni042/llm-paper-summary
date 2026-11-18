@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Breaking the Layer Barrier: Remodeling Private Transformer Inference with Hybrid CKKS and MPC",
+      "source_url": "https://arxiv.org/abs/2508.19525",
+      "year": 2025,
+      "published": "2025-08-27",
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 42,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents an efficient framework for private Transformer inference that combines Homomorphic Encryption (HE) and Secure Multi-party Computation (MPC) to protect data privacy. Existing methods often leverage HE for linear layers (e.g., matrix multiplications) and MPC for non-linear layers (e.g., Softmax activation functions), but the conversion between HE and MPC introduces significant communication costs. The proposed framework, dubbed BLB, overcomes this by breaking down layers into fine-grained operators and further fusing adjacent linear operators, reducing the need for HE/MPC conversions. To manage the increased ciphertext bit width from the fused linear operators, BLB proposes the first secure conversion protocol between CKKS and MPC and enables CKKS-based computation of the fused operators. Additionally, BLB proposes an efficient matrix multiplication protocol for fused computation in Transformers. Extensive evaluations on BERT-base, BERT-large, and GPT2-base show that BLB achieves a $21\\times$ reduction in communication overhead compared to BOLT (S\\&P'24) and a $2\\times$ reduction compared to Bumblebee (NDSS'25), along with latency reductions of $13\\times$ and $1.8\\times$, respectively, when leveraging GPU acceleration.",
+      "identifiers": [
+        "SemanticScholar:b0f3f2b1a59c9f78d2150ad2ea81ab32838a38e1"
+      ],
+      "semantic_scholar_id": "b0f3f2b1a59c9f78d2150ad2ea81ab32838a38e1",
+      "canonical_id": "arXiv:2508.19525",
+      "arxiv_id": "2508.19525",
+      "doi": "10.48550/arXiv.2508.19525",
+      "authors": [
+        "Tian-Shi Xu",
+        "Wen-jie Lu",
+        "Jiang-Rui Yu",
+        "Yi Chen",
+        "Chen-Qi Lin",
+        "Run-Sheng Wang",
+        "Meng Li"
+      ],
+      "priority": 42,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 42,
+        "citation_count": 42,
+        "total": 42,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 448,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BLBは暗号化Transformer推論で線形層をHE、非線形層をMPCへ切り替える際の通信負荷を減らすため、層を細粒度演算へ分解し隣接線形演算を融合する。CKKSとMPC間の安全な変換、融合行列積プロトコルを導入し、BERT/GPT2のGPU評価でBOLT比通信21倍削減・遅延13倍短縮を報告する推論実行系の直接最適化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "MLWQ: Efficient Small Language Model Deployment via Multi-Level Weight Quantization",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.408",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:5c5e5cc24d90701cba3cfa6b2496e5ed09a6c047"
+      ],
+      "semantic_scholar_id": "5c5e5cc24d90701cba3cfa6b2496e5ed09a6c047",
+      "doi": "10.18653/v1/2025.emnlp-main.408",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.408",
+      "authors": [
+        "Chun Hu",
+        "Junhui He",
+        "Shang-Yu Wu",
+        "Yuxin He",
+        "C. Xue",
+        "Qing'an Li"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "MLWQは小規模言語モデルの事後量子化で、層間の損失と層内の重要度を同時に使ってビット幅を割り当て、層内重要度を細粒度に分割して量子化パラメータを調整する。資源制約端末への推論配備で容量・計算負荷を下げながら精度を維持する直接的な重み量子化方式。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e187e79024c2",
+    "round": "libimp-e187e79024c2491b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e187e79024c2491b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e187e79024c2491b-pre01.json",
+    "receipt": "sha256:7cf5fcd38524bd91a565f95e91ce6b66bded21b6ae71cba432fce46edb8dcb9a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e187e79024c2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

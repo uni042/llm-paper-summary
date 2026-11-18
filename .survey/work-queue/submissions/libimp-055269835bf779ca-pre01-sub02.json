@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill",
+      "source_url": "https://arxiv.org/abs/2610.38809",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic AI drives significant productivity gains across diverse domains, but concurrent long-context prefills from multiple agents can saturate GPU compute resources. Although CPUs offer a viable alternative, existing CPU attention kernels fall short in adapting to multi-tier cache hierarchies and lack effective thread scheduling. To address this, we introduce CACPU, a high-performance attention kernel featuring tiered cache blocking and an in-kernel task dispatching mechanism designed for causal full-sequence prefilling. CACPU achieves up to a 2.01x speedup over PyTorch SDPA, FlexAttention, and SGLang attention kernels. Integrated into SGLang, it reduces Time to First Token (TTFT) of Llama-3.1-8B by up to 1.74x while preserving model accuracy.",
+      "identifiers": [
+        "SemanticScholar:9111174c6ecae9090da398d33227de077daa33ba"
+      ],
+      "semantic_scholar_id": "9111174c6ecae9090da398d33227de077daa33ba",
+      "canonical_id": "arXiv:2610.38809",
+      "arxiv_id": "2610.38809",
+      "authors": [
+        "Kwun Fung Lau",
+        "Frost Mitchell",
+        "Kanya Mo",
+        "E. Ashok"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数エージェントの長文脈prefillをCPUへ逃がす場合、既存CPU attentionは階層キャッシュの活用とスレッド分配が不十分である。CACPUは複数階層のcache blockingとカーネル内部のtask dispatchを組み合わせた因果注意計算を実装する。PyTorch SDPA、FlexAttention、SGLang attentionに対し最大2.01倍のカーネル高速化、SGLang統合時にLlama-3.1-8BのTTFT最大1.74倍短縮を報告するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.38968",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding speeds up large language model (LLM) serving only while the GPU has spare compute, so the best draft length, the number of tokens a small drafter guesses per step, shrinks as the batch grows. vLLM lets operators set the draft length for each batch size with a hand-written table, but nothing measures or corrects that table. We present TableTune. Its tuner times the decoding step for every batch size and draft length on vLLM's own serving path and computes, in minutes, the table that maximizes throughput. Its controller, a vLLM plugin, tracks how many guesses are accepted in live traffic and rebuilds the table while serving. We measure TableTune only against other ways to speculate. On an H100, the tuned table delivers at least 94% of the throughput of the best fixed draft length at every load in four of five drafter settings (88% in the fifth) without the operator having to know which length that is. Against reimplementations of TurboSpec- and Nightjar-style control on the same engine, its worst-case loss is never higher than theirs, and with the EAGLE-3 drafter it is 3% against 9% and 12%. On a mixture-of-experts model, vLLM's documented table loses up to 18% and the tuned table at most 3%. Starting from mistuned tables, the controller raises throughput by up to 58% (up to 45% on vLLM's default runner), and after a workload switch with the DFlash drafter it recovers 96% of a stale table's loss. In llm-d's optimized-baseline deployment as shipped, two Qwen3-32B replicas on four GPUs, the tuned table is up to 32% faster than a fixed draft length of 3 and up to 25% faster than vLLM's documented table at high load, and the controller raises the documented table's throughput by up to 29%.",
+      "identifiers": [
+        "SemanticScholar:1255dd03a9af0d92de45f1d7e7b59f3e00a9824f"
+      ],
+      "semantic_scholar_id": "1255dd03a9af0d92de45f1d7e7b59f3e00a9824f",
+      "canonical_id": "arXiv:2610.38968",
+      "arxiv_id": "2610.38968",
+      "authors": [
+        "Abhishek Malvankar",
+        "Paul C. Castro",
+        "N. Mitchell"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "vLLMの投機デコードはbatch sizeごとのdraft長を手書き表で与えるが、実トラフィックの受理率や負荷変化で最適値が変わる。TableTuneはvLLMの実際の実行経路でbatch sizeとdraft長を測定してthroughput最大化表を構築し、受理率を監視するpluginが稼働中に表を再学習する。H100の5 draft設定中4設定で最良固定長の94%以上のthroughputを達成し、誤設定から最大58%改善したと報告するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-055269835bf7",
+    "round": "libimp-055269835bf779ca-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-055269835bf779ca-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-055269835bf779ca-pre01.json",
+    "receipt": "sha256:5d519e941b70a71af50495550ad1ea3d319706329d35596b3fdc00ebb43e27b7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-055269835bf7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

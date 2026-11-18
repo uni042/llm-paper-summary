@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Demystifying and Enhancing the Efficiency of Large Language Model Based Search Agents",
+      "source_url": "https://arxiv.org/abs/2505.12065",
+      "year": 2025,
+      "published": "2025-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM)-based search agents have shown remarkable capabilities in solving complex tasks by dynamically decomposing problems and addressing them through interleaved reasoning and retrieval. However, this interleaved paradigm introduces substantial efficiency bottlenecks. First, we observe that both highly accurate and overly approximate retrieval methods degrade system efficiency: exact search incurs significant retrieval overhead, while coarse retrieval requires additional reasoning steps during generation. Second, we identify inefficiencies in system design, including improper scheduling and frequent retrieval stalls, which lead to cascading latency -- where even minor delays in retrieval amplify end-to-end inference time. To address these challenges, we introduce SearchAgent-X, a high-efficiency inference framework for LLM-based search agents. SearchAgent-X leverages high-recall approximate retrieval and incorporates two key techniques: priority-aware scheduling and non-stall retrieval. Extensive experiments demonstrate that SearchAgent-X consistently outperforms state-of-the-art systems such as vLLM and HNSW-based retrieval across diverse tasks, achieving up to 3.4$\\times$ higher throughput and 5$\\times$ lower latency, without compromising generation quality. SearchAgent-X is available at https://github.com/tiannuo-yang/SearchAgent-X.",
+      "identifiers": [
+        "SemanticScholar:1c785c94d325575b32cf50beb7f57975bea4388b"
+      ],
+      "semantic_scholar_id": "1c785c94d325575b32cf50beb7f57975bea4388b",
+      "canonical_id": "arXiv:2505.12065",
+      "arxiv_id": "2505.12065",
+      "doi": "10.48550/arXiv.2505.12065",
+      "authors": [
+        "Tian-Nuo Yang",
+        "Ze-Bin Yao",
+        "Bo-Wen Jin",
+        "Li-Xiao Cui",
+        "Yu-Sen Li",
+        "Gang Wang",
+        "Xiao-Guang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SearchAgent-Xは検索と生成の交互実行で生じる検索停止と遅延の連鎖を分析し、高再現率の近似検索、優先度スケジューリング、non-stall retrievalを組み合わせる。vLLM/HNSW系の比較で最大3.4倍のスループット、最大5倍の遅延改善を報告する推論システム研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Precon: A Precision-Convertible Architecture for Accelerating Quantized Deep Learning Models across Various Domains Including LLMs",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11133184",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The sensitivity of LLMs to quantization has driven the development of hardware accelerators tailored for specific low-precision configurations such as weight-only quantization and mixed-precision, which can introduce inefficiencies in dedicated hardware architecture. In this work, we propose Precon, a precision-convertible architecture designed to accelerate various quantized deep learning models, particularly LLMs, through a unified processing unit. By enabling on-the-fly switching between half-float (FP16) decoding and integer (INT) decomposition, the design effectively supports INT4-FP16, INT4-INT4, and INT4INT8 arithmetic within shared logic. Precon achieves up to $4.1 \\times$ speedup and 81.4% reduction in energy consumption compared to the baseline across various domains, including the support of both accurate and efficient acceleration of quantized LLMs.",
+      "identifiers": [
+        "SemanticScholar:0e7e0e9daca21599e2be9944f9538472c5088221"
+      ],
+      "semantic_scholar_id": "0e7e0e9daca21599e2be9944f9538472c5088221",
+      "doi": "10.1109/DAC63849.2025.11133184",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11133184",
+      "authors": [
+        "Jongwook Park",
+        "Hyeonseong Kim",
+        "Ji-Yun Han",
+        "Seungkyu Choi"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者所属大学の一次研究概要によると、FP16デコードと整数分解を切り替える共有演算器によりINT4-FP16、INT4-INT4、INT4-INT8を単一アーキテクチャで支援する。LLMを含む量子化推論を対象に最大4.1倍高速化と81.4%省エネルギーを報告。ただし最大値は複数ドメイン全体の値でありLLM単独の保証ではない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-35e7d1781419",
+    "round": "libimp-35e7d1781419afd3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-35e7d1781419afd3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-35e7d1781419afd3-pre01.json",
+    "receipt": "sha256:6256a91f935d4df0eddbe14ab8edaab6cd6054ef8db7de9081f0b2790be76e8a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-35e7d1781419",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

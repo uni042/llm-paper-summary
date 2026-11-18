@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing",
+      "source_url": "https://doi.org/10.1145/3603269.3610856",
+      "year": 2023,
+      "published": "2023-09-01",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 23,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) has fostered the creation of innovative requirements. Locally deployed LLMs for micro-enterprise mitigates potential issues such as privacy infringements and sluggish response. However, they are hampered by the limitations in computing capability and memory space of possessed devices. We introduce PipeLLM, which allocates the model across devices commensurate with their computing capabilities. It enables the parallel execution of layers with slicing input sequence along the token dimension. PipeLLM demonstrates the potential to accelerate LLM inference with heterogeneity devices, offering a solution for LLM deployment in micro-enterprise hardware environment.",
+      "identifiers": [
+        "SemanticScholar:191bcafadd65ac6eddd7806170068105b43a0f75"
+      ],
+      "semantic_scholar_id": "191bcafadd65ac6eddd7806170068105b43a0f75",
+      "doi": "10.1145/3603269.3610856",
+      "canonical_id": "DOI:10.1145/3603269.3610856",
+      "authors": [
+        "Ruilong Ma",
+        "Jing-Yu Wang",
+        "Q. Qi",
+        "Xiang Yang",
+        "Hai-Feng Sun",
+        "Zirui Zhuang",
+        "Jian-Xin Liao"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 23,
+        "citation_count": 23,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1174,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACM Digital Libraryの著者abstractに基づく。PipeLLMは計算能力が異なる複数デバイスへLLM層を分配し、入力系列をトークン次元で分割して層処理を並列化する、ローカル小規模設備向けの異種デバイスパイプライン推論方式。要旨はLLM推論高速化の可能性を示すが、定量的な速度・通信オーバーヘッドは記載していない。LLM分散推論の実行方式に直接貢献するためaccept。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "title": "Green Speculative Decoding for Energy-Efficient Small Langauge Models",
+      "source_url": "https://doi.org/10.1109/IBAAIDS66771.2026.11567438",
+      "year": 2026,
+      "published": "2026-01-27",
+      "venue": "2026 International Biennial Conference on Advances in Artificial Intelligence and Data Science (IBAAIDS)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid expansion of large language models has intensified computational and energy demands, making efficiency a key requirement for sustainable AI deployment. While most prior work targets optimization of very large models, the efficiency of widely deployed small-scale LLMs remains underexplored. This paper introduces a Green Speculative Decoding framework aimed at reducing the energy footprint of compact language models. The proposed approach employs a synchronized speculative pipeline in which a lightweight draft model generates candidate tokens that are selectively verified by a larger, more accurate target model. Experimental results from a simulation-based evaluation demonstrate notable improvements in inference efficiency, achieving higher throughput and significant energy savings without degrading output quality. These findings highlight the potential of speculative decoding as a practical and eco-friendly solution for energy-efficient LLM inference in real-world deployments.",
+      "identifiers": [
+        "SemanticScholar:88af6f36dd578d00102d6d07c73b4f7dd06e9046"
+      ],
+      "semantic_scholar_id": "88af6f36dd578d00102d6d07c73b4f7dd06e9046",
+      "doi": "10.1109/IBAAIDS66771.2026.11567438",
+      "canonical_id": "DOI:10.1109/IBAAIDS66771.2026.11567438",
+      "authors": [
+        "Nima Razmjoei",
+        "Rezvan MohammadiBaghmolaei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 295,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE公式abstractに基づく。小型言語モデルのエネルギー効率を狙い、軽量draftモデルが生成した候補トークンをより高精度なtargetモデルで選択的に検証する同期型投機的デコードパイプラインを提案。シミュレーション評価で出力品質を保ちながらスループット改善と省エネルギーを報告するが、要旨には具体的な倍率や実機測定条件はない。生成推論の直接的なデコード最適化なのでaccept。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "title": "Intra-Matrix Flexible Optical-Electronic Configuration Algorithms for Energy-Efficient Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/JSTQE.2026.3715241",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Journal of Selected Topics in Quantum Electronics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-energy, low-precision inference is an important enabler for scalable deployment of large language models (LLMs). Optical-electronic computing offers high bandwidth, low latency, and potentially high energy efficiency, making it a promising approach for future LLM deployment. However, existing optical and hybrid optical-electronic inference systems typically use uniform hardware configurations, such as fixed optical power or a fixed electronic-photonic partition across layers. Fine-grained allocation of optical power and optical-electronic computation remains underexplored for photonic LLM inference. Here, we propose three flexible configuration algorithms: Flexible Optical Power Allocation (FOPA), Flexible Weak-Column Allocation (FWCA), and Joint Optical Power and Weak-Column Allocation (JOWA). Using a diagonal Hessian estimator without constructing the full Hessian matrix, these methods jointly optimize optical-electronic resources under predefined energy budgets. Evaluations on Llama 2-7B and DeepSeek-LLM-7B-Base show estimated energy savings of 40.11%–60.85% relative to FP16 inference on the NVIDIA H100 and 5.34%–38.12% relative to uniform optical-power and weak-column baselines, while maintaining an acceptable perplexity increase. Evaluations using a Tianshu-hardware-calibrated simulator show corresponding estimated energy savings of 39.91%–53.67% and 5.02%–26.76%, respectively. These results indicate that fine-grained resource allocation can improve the energy-accuracy trade-off of hybrid optical-electronic systems for LLM inference.",
+      "identifiers": [
+        "SemanticScholar:ec9594046fc645a52590083209f931620c5b324f"
+      ],
+      "semantic_scholar_id": "ec9594046fc645a52590083209f931620c5b324f",
+      "doi": "10.1109/JSTQE.2026.3715241",
+      "canonical_id": "DOI:10.1109/JSTQE.2026.3715241",
+      "authors": [
+        "Songcheng Zhou",
+        "Ziqian He",
+        "Fang-Chen Hu",
+        "Lei Du",
+        "Yi-Heng Zhao",
+        "Yi-Sheng Fang",
+        "Peng Zou",
+        "Hai-Wen Cai",
+        "Wei Chu"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE公式abstractに基づく。FOPA、FWCA、JOWAの3種類の柔軟な光電混載資源配分方式で、対角ヘッセ近似を用い光パワーと弱列への計算割当をエネルギー制約下で最適化する。Llama2-7BとDeepSeek-LLM-7B-BaseでH100 FP16推論比40.11～60.85%の推定エネルギー削減、均一光電構成比5.34～38.12%削減を報告。ただし数値はシミュレーション推定で実機GPUサービングの実測ではない。LLM推論ハードウェアの直接的な省エネ技術なのでaccept。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "title": "Accelerate Large Language Model Inference on Edge TPU with OpenVX framework",
+      "source_url": "https://doi.org/10.1109/AICAS59952.2024.10595950",
+      "year": 2024,
+      "published": "2024-04-22",
+      "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes a novel method to accelerate inference of Large Language Models (LLMs) on Edge Tensor Processing Units (TPUs) by leveraging the OpenVX framework. The approach harnesses the synergistic integration of OpenVX with Edge TPUs to enable parallel processing capabilities and address precision challenges in performing convolutions exclusively through integer arithmetic. Since LLMs, unlike Convolutional Neural Networks (CNNs), cannot automatically construct network architectures via Open Neural Network Exchange (ONNX) parsing, manual network construction using the OpenVX API is necessitated. This demands precise understanding of each constituent component of the original model, as any inaccuracies propagate to entirely erroneous results. Through quantization, the proposed technique preserves accuracy during convolution operations while reusing the integer arithmetic convolution capabilities of Edge TPUs for efficient inference. The method showcases the collaborative synergy achieved between OpenVX and Edge TPUs, enhancing efficiency of LLM inference on resource-constrained edge devices.",
+      "identifiers": [
+        "SemanticScholar:78eca6754dfb94f5431921545e4ed1f09a02b1ac"
+      ],
+      "semantic_scholar_id": "78eca6754dfb94f5431921545e4ed1f09a02b1ac",
+      "doi": "10.1109/AICAS59952.2024.10595950",
+      "canonical_id": "DOI:10.1109/AICAS59952.2024.10595950",
+      "authors": [
+        "You Wu",
+        "Hsin-I Wu",
+        "Kuo-Cheng Chin",
+        "Yi-Chun Yang",
+        "R. Tsay"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 940,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE公式abstractに基づく。Edge TPUの整数演算をOpenVX APIで再利用し、LLMの各構成要素を手動でネットワーク化して量子化精度を確保しつつエッジ推論を加速する方法を提案。ONNXの自動パースだけではLLMのネットワーク構築を扱えない制約と実装上の精度課題を論じる。要旨に具体的な速度倍率はないが、LLM推論を専用エッジ演算器へ実装する直接的な実行技術なのでaccept。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "title": "Hybrid ReRAM-NMC & SRAM-CiM Matrix Multiplication for Large Language Model",
+      "source_url": "https://doi.org/10.1109/COOLCHIPS65488.2025.11018598",
+      "year": 2025,
+      "published": "2025-04-16",
+      "venue": "International Symposium on Low-Power and High-Speed Chips",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper proposes a novel design called hybrid ReRAM-Near-Memory Computing (NMC) & SRAM-Computation-in-Memory (CiM) Matrix Multiplication (MM) for Large Language Model (LLM). Non-volatile memory ReRAM introduces device error (i.e. conductance shift) due to its nonidealities. To enable the deployment of LLM on ReRAM-based CiM, the proposed design enhances model's robustness by separating a small percentage of activations to SRAM-CiM and placing the remaining activations on ReRAM-NMC. Furthermore, a corresponding hardware architecture design is proposed to demonstrate the possible MAC circuit and hybrid-core pipeline. This paper demonstrates that the perplexity increases of Llama27B utilizing 6-bit precision quantization for both activations and weights are smaller than 2 for both gaussian error and shift error with the capacity percentage of SRAM less than 1%.",
+      "identifiers": [
+        "SemanticScholar:f52110676ae42a6e0976dba87d8c4efc0f60a3d7"
+      ],
+      "semantic_scholar_id": "f52110676ae42a6e0976dba87d8c4efc0f60a3d7",
+      "doi": "10.1109/COOLCHIPS65488.2025.11018598",
+      "canonical_id": "DOI:10.1109/COOLCHIPS65488.2025.11018598",
+      "authors": [
+        "Tao Wang",
+        "Daqi Lin",
+        "Kenshin Yamauchi",
+        "Naoko Misawa",
+        "C. Matsui",
+        "K. Takeuchi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 581,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE公式abstractに基づく。ReRAMのコンダクタンス変動による演算誤差に対処するため、少数の活性化をSRAM-CiM、残りをReRAM近傍メモリ演算へ割り当てるハイブリッド行列積アーキテクチャを提案。MAC回路と混載コアのパイプライン構成を示し、Llama2-7Bの重み・活性化6bit量子化でSRAM容量比1%未満でもガウス誤差・シフト誤差下のperplexity増加を2未満に抑えたと報告。LLM推論のCiM演算・量子化耐性を直接扱うためaccept。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1f49b63b732e",
+    "round": "libimp-1f49b63b732ef605-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1f49b63b732ef605-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1f49b63b732ef605-pre01.json",
+    "receipt": "sha256:1a3381dec894a76051f6750b07c943526bbc6f7e8edd4ac81e8698337d77780a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1f49b63b732e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

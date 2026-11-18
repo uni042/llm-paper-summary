@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-45",
-  "run_key": "20261101-0443-scheduled-chat-45/r01",
+  "run_key": "20261101-0443-scheduled-chat-45/r01::provider-gap",
   "reference_main_sha": "62939ca2418e5cd94bb9d90a09f850dde21a88dc",
-  "record_count": 10,
+  "record_count": 8,
   "records": [
     {
       "classification": "accept",
@@ -58,24 +58,6 @@
         "WORKLIST-45.md rank 78"
       ],
       "worklist_rank": 78,
-      "origin": "discovery_worklist_primary_publisher_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440879",
-      "identity_tokens": [
-        "DOI:10.1109/AIBDF67964.2025.11440879"
-      ],
-      "title": "Double Phase Decaying Reasoning: Phase-Aware RL for Accuracy–Token Efficiency",
-      "reason": "IEEE公式abstractに基づく。DPDRは推論過程をthinkingとsolutionの2段階に分け、正答ゲート付き減衰報酬と柔らかな長さペナルティでChain-of-Thoughtの冗長トークンを抑える強化学習手法。精度を保ちながら生成トークンを減らすが、主眼は学習・推論方策の最適化で、GPU実行・KVキャッシュ・実測サービング遅延・スループットの改善を要旨から直接確認できない。推論時計算量への接点はあるためborderline。",
-      "source_url": "https://ieeexplore.ieee.org/document/11440879/",
-      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-01T04:52:27+09:00",
-      "last_checked_at": "2026-11-01T04:52:27+09:00",
-      "linked_from": [
-        "WORKLIST-45.md rank 149"
-      ],
-      "worklist_rank": 149,
       "origin": "discovery_worklist_primary_publisher_abstract_screen"
     },
     {
@@ -151,24 +133,6 @@
       "origin": "discovery_worklist_primary_publisher_abstract_screen"
     },
     {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1109/ICME57554.2024.10688073",
-      "identity_tokens": [
-        "DOI:10.1109/ICME57554.2024.10688073"
-      ],
-      "title": "Efficient Speech-to-Text Translation: Progressive Pruning for Accelerated Speech Pre-trained Model",
-      "reason": "IEEE公式abstractに基づく。音声翻訳向け事前学習済み音声エンコーダの系列長を、注意スコアに基づく重要度と固定・段階的剪定率で層ごとに削減する。出力トークン55%減、性能低下0.7%、エンコーディング最大1.76倍高速化を報告。ただし対象は音声翻訳の音声エンコーダであり、LLM生成推論・サービング・KVキャッシュ等への直接的な適用や評価は示されないため、現行LLM推論システム範囲ではunrelated。",
-      "source_url": "https://ieeexplore.ieee.org/document/10688073/",
-      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-11-01T04:52:27+09:00",
-      "last_checked_at": "2026-11-01T04:52:27+09:00",
-      "linked_from": [
-        "WORKLIST-45.md rank 385"
-      ],
-      "worklist_rank": 385,
-      "origin": "discovery_worklist_primary_publisher_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "DOI:10.1145/3689031.3717489",
       "identity_tokens": [
@@ -186,5 +150,17 @@
       "worklist_rank": 470,
       "origin": "discovery_worklist_primary_publisher_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261101-0443-scheduled-chat-45/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_e92412666ca4819198aafb554874c156--discovery-20261101-0443-scheduled-chat-45-r01.json",
+  "provider_gap_ids": [
+    "DOI:10.1016/j.sysarc.2026.103912",
+    "DOI:10.1109/ciml69155.2026.11692797",
+    "DOI:10.1109/icassp55912.2026.11460785",
+    "DOI:10.1109/icvrv67992.2025.00022",
+    "DOI:10.1109/iscas66217.2026.11562248",
+    "DOI:10.1109/iwqos70441.2026.11661114",
+    "DOI:10.1109/taslpro.2025.3613948",
+    "DOI:10.1145/3689031.3717489"
   ]
 }
