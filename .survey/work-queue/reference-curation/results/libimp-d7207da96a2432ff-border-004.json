@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.04759",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.04759",
+    "identity_tokens": [
+      "arXiv:2603.04759"
+    ],
+    "reason": "文脈窓拡張のための多規模自己注入SharedLLM。下位モデルが圧縮器、上位モデルが復号器として働く2つの短文脈LLMの積み重ねで、文脈圧縮とクエリ配慮の情報取得を行う。長文脈推論の枠組みではあるが、モデルの積み重ね設計であり境界。",
+    "first_checked_at": "2026-11-18T07:37:37+00:00",
+    "last_checked_at": "2026-11-18T07:37:37+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ最適化／適応圧縮",
+      "LLM Serving / Scheduling / Disaggregation",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stacked from One: Multi-Scale Self-Injection for Context Window Extension"
+  },
+  "processed_at": "2026-11-18T07:37:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

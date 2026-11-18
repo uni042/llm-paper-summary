@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.36314",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.36314",
+    "identity_tokens": [
+      "arXiv:2609.36314"
+    ],
+    "reason": "長系列モデリングのための分数状態空間遷移FRAC。指数的忘却を冪乗則の長記憶に置き換える選択的SSMのアーキテクチャ。対象は系列モデルの設計であり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:37:50+00:00",
+    "last_checked_at": "2026-11-18T07:37:50+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "title": "Fractional State Space Transition for Long Sequence Modeling"
+  },
+  "processed_at": "2026-11-18T07:37:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

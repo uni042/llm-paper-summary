@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.09100",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.09100",
+    "identity_tokens": [
+      "arXiv:2605.09100"
+    ],
+    "reason": "推論駆動生成・検索・圧縮の統一GRC。生成、テキスト表現、文脈圧縮を1回の前方計算で統一する。文脈圧縮を含むが、課題の統一が主題であり境界。",
+    "first_checked_at": "2026-11-18T07:37:29+00:00",
+    "last_checked_at": "2026-11-18T07:37:29+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression"
+  },
+  "processed_at": "2026-11-18T07:37:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

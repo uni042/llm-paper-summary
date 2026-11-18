@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62c91f67a287d431-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.35394",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.35394",
+    "identity_tokens": [
+      "arXiv:2609.35394"
+    ],
+    "reason": "動画LLMの視覚トークン圧縮の再考。複雑化する選択・剪定・統合の戦略に対し、視覚表現に符号化された構造を保つだけの単純で訓練不要な基線SimpleClusterで、圧縮性能のどこまでが得られるかを問う研究。動画トークン圧縮の研究であり境界。",
+    "first_checked_at": "2026-11-18T07:37:34+00:00",
+    "last_checked_at": "2026-11-18T07:37:34+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2603.01400-token-reduction-via-local-and-global-contexts-optimization-for-efficient.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.30010-earlytom-early-token-compression-completes-fast-video-understanding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline"
+  },
+  "processed_at": "2026-11-18T07:37:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62c91f67a287",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

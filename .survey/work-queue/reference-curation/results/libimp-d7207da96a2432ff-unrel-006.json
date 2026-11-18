@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.00785",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.00785",
+    "identity_tokens": [
+      "arXiv:2604.00785"
+    ],
+    "reason": "Auroraスーパーコンピュータでの大規模MoE事前学習。数千GPUタイルでの事前学習の実演と訓練ライブラリの報告。対象は事前学習であり、推論ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:37:42+00:00",
+    "last_checked_at": "2026-11-18T07:37:42+00:00",
+    "linked_from": [
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+    ],
+    "title": "Scalable Pretraining of Large Mixture of Experts Language Models on Aurora Super Computer"
+  },
+  "processed_at": "2026-11-18T07:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

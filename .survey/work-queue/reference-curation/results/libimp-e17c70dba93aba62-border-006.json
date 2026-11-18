@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.24650",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.24650",
+    "identity_tokens": [
+      "arXiv:2606.24650"
+    ],
+    "reason": "効率的長文脈言語モデリングのための階層状態空間モデルHarmonic。3つの再帰レベルを積み重ね、下位レベルの予測誤差を入力とする階層SSMのアーキテクチャ。長文脈の効率が狙いだが、モデルアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T07:37:47+00:00",
+    "last_checked_at": "2026-11-18T07:37:47+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Harmonic: Hierarchical State Space Models for Efficient Long-Context Language Modeling"
+  },
+  "processed_at": "2026-11-18T07:37:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

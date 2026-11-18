@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.26660",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.26660",
+    "identity_tokens": [
+      "arXiv:2605.26660"
+    ],
+    "reason": "重み情報つき神経意思決定による大域混合精度量子化WINDQuant。超低ビットで精度劣化が大きい問題に対し、強化学習の配分制御器で混合精度を決める。量子化機構ではあるが、配分の学習が中心であり境界。",
+    "first_checked_at": "2026-11-18T07:37:23+00:00",
+    "last_checked_at": "2026-11-18T07:37:23+00:00",
+    "linked_from": [
+      "arXiv:2405.16406のICLR 2025採録版。",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WINDQuant: Weight-Informed Neural Decision-Making for Global Mixed-Precision LLM Quantization"
+  },
+  "processed_at": "2026-11-18T07:37:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

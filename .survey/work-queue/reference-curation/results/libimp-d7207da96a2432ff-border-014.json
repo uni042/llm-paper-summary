@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.22854",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.22854",
+    "identity_tokens": [
+      "arXiv:2607.22854"
+    ],
+    "reason": "オンデバイスエージェント増強リアルタイム通信のための協調ネットワーキング。クラウドエージェントのプライバシーと費用の問題に対し、装置上のエージェントのためのネットワーク協調。推論基盤に隣接するが、主題は通信の協調であり境界。",
+    "first_checked_at": "2026-11-18T07:37:40+00:00",
+    "last_checked_at": "2026-11-18T07:37:40+00:00",
+    "linked_from": [
+      "14-agentic-inference-serving-runtime",
+      "CPUオフロード / 活性化疎性 / 階層メモリ",
+      "KVキャッシュ再利用／圧縮／ネットワーク転送",
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems",
+      "kv-cache-offload-recomputation",
+      "llm-serving-scheduling-disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Coordinated Networking for On-Device Agent-Augmented Real-Time Communication"
+  },
+  "processed_at": "2026-11-18T07:37:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.27276",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.27276",
+    "identity_tokens": [
+      "arXiv:2609.27276"
+    ],
+    "reason": "集合レベル削除リスクの学習DRSR。長期エージェントの履歴圧縮で、複数単位を消す安全性が個別スコアでは決まらない問題を、削除集合に対するリスク制約つき選択として定式化する。履歴圧縮の枠組みであり境界。",
+    "first_checked_at": "2026-11-18T07:37:31+00:00",
+    "last_checked_at": "2026-11-18T07:37:31+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents"
+  },
+  "processed_at": "2026-11-18T07:37:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

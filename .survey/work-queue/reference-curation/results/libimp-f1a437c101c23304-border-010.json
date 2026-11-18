@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1a437c101c23304-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.14475",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.14475",
+    "identity_tokens": [
+      "arXiv:2610.14475"
+    ],
+    "reason": "エッジでのKVキャッシュ圧縮の測定研究EdgeLLM-Nano。現在のKV圧縮法がエッジ装置で徹底的に調べられていない問題に対し、ナノ規模のテストベッドで測定し、評価法自体の不備も示す。計測研究であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:37:56+00:00",
+    "last_checked_at": "2026-11-18T07:37:56+00:00",
+    "linked_from": [
+      "05-kv-cache-compression-management",
+      "99-other-inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EdgeLLM-Nano: Auditing Polar-Guided Key-Cache Compression and Consistency-Anchored Pruning on a 33.6 MB On-Device Language Model"
+  },
+  "processed_at": "2026-11-18T07:37:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1a437c101c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

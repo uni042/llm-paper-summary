@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.03263",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.03263",
+    "identity_tokens": [
+      "arXiv:2604.03263"
+    ],
+    "reason": "長文脈言語モデリング向け局所予測符号化と疎メモリLPC-SM。局所注意、永続メモリ、予測補正、実行時制御を分離したハイブリッド自己回帰アーキテクチャ。長文脈の効率が狙いだが、モデルアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T07:37:23+00:00",
+    "last_checked_at": "2026-11-18T07:37:23+00:00",
+    "linked_from": [
+      "sparse attention / long-context Transformer",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LPC-SM: Local Predictive Coding and Sparse Memory for Long-Context Language Modeling"
+  },
+  "processed_at": "2026-11-18T07:37:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1a437c101c23304-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.36259",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.36259",
+    "identity_tokens": [
+      "arXiv:2609.36259"
+    ],
+    "reason": "相対時間分割メモリによる線形系列モデリングCyFA。固定サイズの再帰状態が過去の連想を全て抱える問題に対し、学習した時計でキーと値の状態へ循環輸送を適用する線形RNNのアーキテクチャ。線形時間デコードのための設計ではあるが、モデルアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T07:37:55+00:00",
+    "last_checked_at": "2026-11-18T07:37:55+00:00",
+    "linked_from": [
+      "linear attention / delta-rule associative memory / state-space models / Bayesian filtering",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CyFA: Linear Sequence Modeling with Relative-Time-Partitioned Memory"
+  },
+  "processed_at": "2026-11-18T07:37:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1a437c101c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

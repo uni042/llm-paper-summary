@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62c91f67a287d431-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.15246",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.15246",
+    "identity_tokens": [
+      "arXiv:2610.15246"
+    ],
+    "reason": "観測投機によるエージェント強化学習の高速化ObsSpec。ツール実行の待ちで逐次になるエージェントRLのロールアウトを、小さな世界モデルでツール出力を予測して投機的に進める。投機の応用だが、主題はRL訓練であり境界。",
+    "first_checked_at": "2026-11-18T07:37:35+00:00",
+    "last_checked_at": "2026-11-18T07:37:35+00:00",
+    "linked_from": [
+      "llm-serving-scheduling-disaggregation",
+      "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ObsSpec: Accelerating Agentic Reinforcement Learning with Observation Speculation"
+  },
+  "processed_at": "2026-11-18T07:37:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62c91f67a287",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

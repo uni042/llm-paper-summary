@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de1fc4e8328f4db5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.27815",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.27815",
+    "identity_tokens": [
+      "arXiv:2610.27815"
+    ],
+    "reason": "提案者・検証者デコードProVe。投機的デコードの役割を逆転させ、大型モデルを1回の前方計算でブロックを提案する提案者へ微調整し、小型モデルや自身で検証する。デコード機構ではあるが、大型モデルの微調整を前提とし境界。",
+    "first_checked_at": "2026-11-18T07:37:44+00:00",
+    "last_checked_at": "2026-11-18T07:37:44+00:00",
+    "linked_from": [
+      "inference-systems",
+      "speculative-decoding",
+      "投機的復号 / EAGLE"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ProVe: Proposer-Verifier Decoding"
+  },
+  "processed_at": "2026-11-18T07:37:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de1fc4e8328f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

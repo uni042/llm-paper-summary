@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1a437c101c23304-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.02367",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.02367",
+    "identity_tokens": [
+      "arXiv:2604.02367"
+    ],
+    "reason": "玄関ルーティングのための小型言語モデルの評価。推論時に適切なモデルを選ぶルーティングを、高価なLLM分類器ではなく自前開催の小型モデルで担えるかを、調和した評価で検討する。推論基盤のルーティングの評価であり境界。",
+    "first_checked_at": "2026-11-18T07:37:52+00:00",
+    "last_checked_at": "2026-11-18T07:37:52+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM routing、hybrid inference、quality-aware model selection",
+      "edge-on-device-llm-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment"
+  },
+  "processed_at": "2026-11-18T07:37:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1a437c101c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

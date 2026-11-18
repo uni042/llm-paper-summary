@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.19645",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.19645",
+    "identity_tokens": [
+      "arXiv:2605.19645"
+    ],
+    "reason": "K量子化と出力性能への影響。8つのLLMを2〜6ビットの量子化水準で評価し、知識処理などの課題での性能への影響を調べる研究。量子化の評価研究であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:37:47+00:00",
+    "last_checked_at": "2026-11-18T07:37:47+00:00",
+    "linked_from": [
+      "Training / Optimizer State Quantization and Memory Reduction",
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "K-Quantization and its Impact on Output Performance"
+  },
+  "processed_at": "2026-11-18T07:37:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

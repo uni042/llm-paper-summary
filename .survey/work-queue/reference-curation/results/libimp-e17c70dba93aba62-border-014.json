@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.34336",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.34336",
+    "identity_tokens": [
+      "arXiv:2610.34336"
+    ],
+    "reason": "剪定した推論モデルのCoT圧縮可能性の改善。重み剪定とCoT圧縮が互いに干渉し、剪定が冗長な推論を足したり圧縮可能性を下げたりする盲点を追う研究。提供費用に関わるが、干渉の分析であり境界。",
+    "first_checked_at": "2026-11-18T07:37:49+00:00",
+    "last_checked_at": "2026-11-18T07:37:49+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.19121-unlocking-structured-pruning-for-reasoning-language-models-via-attention.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Improving the Chain-of-Thought Compressibility of Pruned Reasoning Models via Long--Short Contrastive Pruning"
+  },
+  "processed_at": "2026-11-18T07:37:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

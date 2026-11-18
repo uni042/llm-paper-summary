@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.18502",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.18502",
+    "identity_tokens": [
+      "arXiv:2606.18502"
+    ],
+    "reason": "実世界向けマルチエージェントシステムのカスタマイズと配備の枠組み。領域適応のための継続事前学習・微調整・選好最適化と、エージェントワークフローの高遅延・高費用への対処を統一する。配備の枠組みではあるが、主題はエージェントの適応であり境界。",
+    "first_checked_at": "2026-11-18T07:37:39+00:00",
+    "last_checked_at": "2026-11-18T07:37:39+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / EAGLE",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications"
+  },
+  "processed_at": "2026-11-18T07:37:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

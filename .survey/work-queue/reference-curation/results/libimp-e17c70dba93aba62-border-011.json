@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.14481",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.14481",
+    "identity_tokens": [
+      "arXiv:2610.14481"
+    ],
+    "reason": "遅延配慮型マルチエージェントワークフロー学習。エージェント呼び出しの推論時間と混雑を無視して下流性能だけを最適化する自動ワークフロー学習に対し、実行時間も目的に入れる。推論基盤に隣接するが、主題はワークフローの学習であり境界。",
+    "first_checked_at": "2026-11-18T07:37:48+00:00",
+    "last_checked_at": "2026-11-18T07:37:48+00:00",
+    "linked_from": [
+      "14-agentic-inference-serving-runtime",
+      "agentic serving / workflow-aware scheduling / memory-aware dispatch",
+      "inference-systems",
+      "llm-serving-scheduling-disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimize Once, Execute Fast: Latency-Aware Multi-Agent Workflow Learning for Recurrent Queries"
+  },
+  "processed_at": "2026-11-18T07:37:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

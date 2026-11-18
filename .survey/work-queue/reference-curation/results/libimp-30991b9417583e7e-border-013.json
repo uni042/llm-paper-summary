@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.00465",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.00465",
+    "identity_tokens": [
+      "arXiv:2610.00465"
+    ],
+    "reason": "メモリ不要エッジLLM推論のための無線による重み放送AIR-LLM。エッジ装置が重みを保存も読み込みもせず、無線で受けてその場で消費する推論アーキテクチャ。推論基盤ではあるが、無線放送の提案であり境界。",
+    "first_checked_at": "2026-11-18T07:37:27+00:00",
+    "last_checked_at": "2026-11-18T07:37:27+00:00",
+    "linked_from": [
+      "CPUオフロード / 活性化疎性 / 階層メモリ",
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems",
+      "on-device LLM / heterogeneous inference / NPU offloading",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "オフロード／階層メモリ",
+      "端末内LLM推論／フラッシュ計算／チップレット／重み退避",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing"
+  },
+  "processed_at": "2026-11-18T07:37:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

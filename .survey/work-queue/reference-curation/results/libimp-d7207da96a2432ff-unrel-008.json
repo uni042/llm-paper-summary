@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.08885",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.08885",
+    "identity_tokens": [
+      "arXiv:2605.08885"
+    ],
+    "reason": "構造的剪定によるコンパクトなSO(3)同変原子基盤モデル。原子モデルの高次テンソル演算の費用への構造的剪定。対象は科学計算の基盤モデルであり、LLM推論の機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:37:43+00:00",
+    "last_checked_at": "2026-11-18T07:37:43+00:00",
+    "linked_from": [
+      "inference-systems"
+    ],
+    "title": "Compact SO(3) Equivariant Atomistic Foundation Models via Structural Pruning"
+  },
+  "processed_at": "2026-11-18T07:37:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.03829",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.03829",
+    "identity_tokens": [
+      "arXiv:2604.03829"
+    ],
+    "reason": "状態空間モデル向け融合最適化Mambalaya。Mambaの演算子カスケード全体の融合が難しい問題に対し、Einsumのカスケード抽象で特徴づけて融合する再構成可能アクセラレータ。SSM向けの加速であり境界。",
+    "first_checked_at": "2026-11-18T07:37:38+00:00",
+    "last_checked_at": "2026-11-18T07:37:38+00:00",
+    "linked_from": [
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models"
+  },
+  "processed_at": "2026-11-18T07:37:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

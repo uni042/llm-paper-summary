@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1a437c101c23304-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.24973",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.24973",
+    "identity_tokens": [
+      "arXiv:2608.24973"
+    ],
+    "reason": "低ランク重要度推定による資源効率的剪定REP-LIE。勾配ベースの重要度推定と事前微調整に依る剪定が高くつく問題に対し、微調整の過程で資源効率的に剪定する。剪定機構ではあるが、微調整と一体であり境界。",
+    "first_checked_at": "2026-11-18T07:37:54+00:00",
+    "last_checked_at": "2026-11-18T07:37:54+00:00",
+    "linked_from": [
+      "Inference / Structured Model Compression and Pruning",
+      "inference-systems",
+      "survey-transformer-compression-inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation"
+  },
+  "processed_at": "2026-11-18T07:37:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1a437c101c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

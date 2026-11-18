@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de1fc4e8328f4db5-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.40287",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.40287",
+    "identity_tokens": [
+      "arXiv:2610.40287"
+    ],
+    "reason": "受理されたトークンだけが数える：投機的デコードのエネルギー会計。下書きトークンは受理されなくても検証されるため、施設電力で律速される提供ではエネルギー毎トークンが本質であることを論じる研究。投機的デコードの会計の研究であり境界。",
+    "first_checked_at": "2026-11-18T07:37:45+00:00",
+    "last_checked_at": "2026-11-18T07:37:45+00:00",
+    "linked_from": [
+      "inference-systems",
+      "speculative-decoding",
+      "投機的デコード・ドラフトモデル事前学習・分布外一般化・ターゲット横断再利用",
+      "投機的復号 / EAGLE",
+      "投機的復号 / LLMサービング・ベンチマーク"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets"
+  },
+  "processed_at": "2026-11-18T07:37:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de1fc4e8328f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

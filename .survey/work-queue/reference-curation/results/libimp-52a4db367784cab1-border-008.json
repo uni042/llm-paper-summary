@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.02134",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.02134",
+    "identity_tokens": [
+      "arXiv:2608.02134"
+    ],
+    "reason": "トークンではなくメッセージ：忠実なVLM圧縮のための基底コセット。視覚トークンを個別の重要度で上位K個残す方式が、テキストクエリが消費する集合的で符号つきの注意メッセージを捉えない問題に対処する。VLMの視覚圧縮であり境界。",
+    "first_checked_at": "2026-11-18T07:37:30+00:00",
+    "last_checked_at": "2026-11-18T07:37:30+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/04-conditional-computation/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md",
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Messages, Not Tokens: Grounded Coresets for Faithful VLM Compression"
+  },
+  "processed_at": "2026-11-18T07:37:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

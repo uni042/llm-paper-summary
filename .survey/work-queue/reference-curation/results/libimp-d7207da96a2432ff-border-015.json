@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.22646",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.22646",
+    "identity_tokens": [
+      "arXiv:2608.22646"
+    ],
+    "reason": "拡散言語モデル向け収束配慮推論CAI-DLLM。既に安定したトークンを再計算し続ける無駄に対し、初ステップの信頼度で易しいトークンを早く確定し難しいトークンへステップを配る、訓練不要の推論法。デコード法ではあるが、拡散型言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:37:40+00:00",
+    "last_checked_at": "2026-11-18T07:37:40+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "LLM Serving / Scheduling / Disaggregation",
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "投機的復号 / 無損失復号高速化",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+      "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CAI-DLLM: Convergence Aware Inference for Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:37:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

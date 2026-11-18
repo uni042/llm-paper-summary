@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.28760",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.28760",
+    "identity_tokens": [
+      "arXiv:2605.28760"
+    ],
+    "reason": "推論原生の零次最適化Infer-ZO。前方計算だけでLLMを訓練する零次手法の実行経路に、アルゴリズムが要しない余分な作業が混ざる問題を、推論エンジンの最適化を再利用して取り除く。推論エンジンの再利用だが、対象は訓練であり境界。",
+    "first_checked_at": "2026-11-18T07:37:30+00:00",
+    "last_checked_at": "2026-11-18T07:37:30+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "llm-serving-scheduling-disaggregation",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Inference-Native Zeroth-Order Optimization for LLMs"
+  },
+  "processed_at": "2026-11-18T07:37:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

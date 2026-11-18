@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.15943",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.15943",
+    "identity_tokens": [
+      "arXiv:2608.15943"
+    ],
+    "reason": "KV共有とパイプライン並列効率の関係KV-Pipe。層跨ぎKV共有を推論のKV費用削減としてだけでなく、訓練のパイプラインの段不均衡を直す制御つまみとして使う。KV機構ではあるが、対象は訓練のパイプラインであり境界。",
+    "first_checked_at": "2026-11-18T07:37:25+00:00",
+    "last_checked_at": "2026-11-18T07:37:25+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs"
+  },
+  "processed_at": "2026-11-18T07:37:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

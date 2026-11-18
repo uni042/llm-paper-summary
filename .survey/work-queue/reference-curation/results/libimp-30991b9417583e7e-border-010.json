@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.23167",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.23167",
+    "identity_tokens": [
+      "arXiv:2608.23167"
+    ],
+    "reason": "構造化サフィックスモデリングによる拡散言語モデルの高速化。各ステップで全サフィックスと相互作用する費用に対し、サフィックス領域の構造的異種性を使う。デコード法ではあるが、拡散言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:37:26+00:00",
+    "last_checked_at": "2026-11-18T07:37:26+00:00",
+    "linked_from": [
+      "Sparse Attention",
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+      "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Diffusion Language Models via Structured Suffix Modeling"
+  },
+  "processed_at": "2026-11-18T07:37:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.25306",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.25306",
+    "identity_tokens": [
+      "arXiv:2604.25306"
+    ],
+    "reason": "視覚Transformer向け量子化とメモリ効率の橋渡しQFlash。FlashAttentionのオンラインソフトマックスを整数領域で完結させる整数専用設計。注意カーネルの量子化ではあるが、視覚Transformer向けであり境界。",
+    "first_checked_at": "2026-11-18T07:37:29+00:00",
+    "last_checked_at": "2026-11-18T07:37:29+00:00",
+    "linked_from": [
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QFlash: Bridging Quantization and Memory Efficiency in Vision Transformer Attention"
+  },
+  "processed_at": "2026-11-18T07:37:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

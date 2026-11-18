@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.18654",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.18654",
+    "identity_tokens": [
+      "arXiv:2610.18654"
+    ],
+    "reason": "Kwai Summary Attention V2技術報告。要約トークンで遠方文脈を圧縮するハイブリッドアーキテクチャで、層ごとに異なるKV圧縮率を可能にする。KV圧縮を含むが、モデルアーキテクチャの報告であり境界。",
+    "first_checked_at": "2026-11-18T07:37:49+00:00",
+    "last_checked_at": "2026-11-18T07:37:49+00:00",
+    "linked_from": [
+      "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+      "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+      "sparse attention / learned context ranking / long-context LLM inference",
+      "疎注意／長文脈学習"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Kwai Summary Attention V2 Technical Report"
+  },
+  "processed_at": "2026-11-18T07:37:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

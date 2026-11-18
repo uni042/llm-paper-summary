@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f8a5cd5e139a42e5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.28500",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.28500",
+    "identity_tokens": [
+      "arXiv:2610.28500"
+    ],
+    "reason": "低ビットLLMと複数トークン予測が出会うBitMTP。超低ビット骨格と複数トークン予測の単純な組み合わせが、因果KV更新などで相殺される問題に対処する。推論高速化の組み合わせではあるが、下書きの設計が中心であり境界。",
+    "first_checked_at": "2026-11-18T07:37:58+00:00",
+    "last_checked_at": "2026-11-18T07:37:58+00:00",
+    "linked_from": [
+      "02-hardware-accelerators",
+      "KVキャッシュ動的メモリ管理／PagedAttention代替",
+      "inference-systems",
+      "投機的復号 / EAGLE"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BitMTP: When Multi-Token Prediction Meets Low-Bit Large Language Models"
+  },
+  "processed_at": "2026-11-18T07:37:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8a5cd5e139a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

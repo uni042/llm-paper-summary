@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de1fc4e8328f4db5-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.01371",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.01371",
+    "identity_tokens": [
+      "arXiv:2611.01371"
+    ],
+    "reason": "トークンをユーティリティとして。生のトークン数が推論資源の使用を一貫して測らない問題に対し、推論の計量、サービス水準配慮型の調達、事業者間の精算を統合するモデル非依存アーキテクチャ。推論基盤の計量・精算であり、推論機構そのものではないため境界。",
+    "first_checked_at": "2026-11-18T07:37:45+00:00",
+    "last_checked_at": "2026-11-18T07:37:45+00:00",
+    "linked_from": [
+      "LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing",
+      "inference-systems",
+      "llm-serving-scheduling-disaggregation",
+      "multi-tenant LLM serving / latency attribution / fractional GPU sharing",
+      "serving-scheduling",
+      "マルチモデルLLMサービング / GPUプーリング / 自動スケーリング"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Token-as-a-Utility: A Model-Agnostic Architecture for Metering and Provisioning AI Inference Services"
+  },
+  "processed_at": "2026-11-18T07:37:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de1fc4e8328f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.16944",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.16944",
+    "identity_tokens": [
+      "arXiv:2608.16944"
+    ],
+    "reason": "完全オンラインKVキャッシュバッチングの競合比。増え続けるKVメモリ制約の下での要請バッチングについて、決定性アルゴリズムの競合比のギャップを閉じる理論結果。推論スケジューリングの理論であり境界。",
+    "first_checked_at": "2026-11-18T07:37:25+00:00",
+    "last_checked_at": "2026-11-18T07:37:25+00:00",
+    "linked_from": [
+      "KV-cache scheduling / non-clairvoyant scheduling / LLM serving scheduling",
+      "KV-cache scheduling / non-clairvoyant scheduling / memory-constrained batching",
+      "KVキャッシュ制約下のLLMサービング・スケジューリング",
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM Serving / Scheduling / KV-Constrained Scheduling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Tight Linear Deterministic Competitive Ratio for Fully Online KV-Cache Scheduling"
+  },
+  "processed_at": "2026-11-18T07:37:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

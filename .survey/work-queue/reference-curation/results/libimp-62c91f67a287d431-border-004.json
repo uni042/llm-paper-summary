@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62c91f67a287d431-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.01296",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.01296",
+    "identity_tokens": [
+      "arXiv:2610.01296"
+    ],
+    "reason": "MoE拡散言語モデル向け重要度誘導トークン配慮圧縮ITC-MoE。静的な因数分解と固定ランク配分が、モードごとの冗長性の非一様さを見落とす問題に対処する低ランク圧縮。圧縮機構ではあるが、拡散言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:37:35+00:00",
+    "last_checked_at": "2026-11-18T07:37:35+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "MoE compression / expert matrix decomposition / shared basis reparameterization",
+      "MoE inference / expert offloading / lookup-table reparameterization / storage hierarchy",
+      "MoE routing / expert choice / heterogeneous conditional computation",
+      "Quantization × MoE × Offload",
+      "inference-systems",
+      "オフロード／階層メモリ"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:37:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62c91f67a287",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

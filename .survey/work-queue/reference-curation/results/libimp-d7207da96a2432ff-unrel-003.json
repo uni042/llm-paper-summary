@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.11543",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.11543",
+    "identity_tokens": [
+      "arXiv:2602.11543"
+    ],
+    "reason": "分散GPUによるLLM事前学習SPES。各ノードで専門家の部分集合だけを訓練してメモリを下げる分散事前学習の枠組み。対象は事前学習であり、推論ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:37:41+00:00",
+    "last_checked_at": "2026-11-18T07:37:41+00:00",
+    "linked_from": [
+      "Adaptive computation／cache-aware MoE",
+      "Training / Optimizer State Quantization and Memory Reduction",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm"
+  },
+  "processed_at": "2026-11-18T07:37:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

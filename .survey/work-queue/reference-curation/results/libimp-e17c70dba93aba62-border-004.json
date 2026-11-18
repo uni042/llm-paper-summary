@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.14877",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.14877",
+    "identity_tokens": [
+      "arXiv:2605.14877"
+    ],
+    "reason": "視覚自己回帰モデル向けヘッド調整KVキャッシュ圧縮HeatKV。画像生成の視覚自己回帰モデルで、各ヘッドの過去スケールへの注意に応じてキャッシュ配分を調整する。KV圧縮ではあるが、画像生成モデル向けであり境界。",
+    "first_checked_at": "2026-11-18T07:37:46+00:00",
+    "last_checked_at": "2026-11-18T07:37:46+00:00",
+    "linked_from": [
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "HeatKV: Head-tuned KV-cache Compression for Visual Autoregressive Modeling"
+  },
+  "processed_at": "2026-11-18T07:37:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e17c70dba93a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

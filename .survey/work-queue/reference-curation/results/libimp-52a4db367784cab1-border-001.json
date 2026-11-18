@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.02689",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.02689",
+    "identity_tokens": [
+      "arXiv:2604.02689"
+    ],
+    "reason": "3D MLLM向け適応的で偏りのないトークン削減Efficient3D。3D視覚トークンの重要度を偏りなく測り、資源制約プラットフォームでの配備を可能にする統一枠組み。3Dモデルのトークン削減であり境界。",
+    "first_checked_at": "2026-11-18T07:37:28+00:00",
+    "last_checked_at": "2026-11-18T07:37:28+00:00",
+    "linked_from": [
+      "12-multimodal-inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs"
+  },
+  "processed_at": "2026-11-18T07:37:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

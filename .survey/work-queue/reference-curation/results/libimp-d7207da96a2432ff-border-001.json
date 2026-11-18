@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.23145",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.23145",
+    "identity_tokens": [
+      "arXiv:2512.23145"
+    ],
+    "reason": "貯留計算に着想を得た行列積不要言語モデル。選択した層の重みを部分的に固定・共有し貯留層を挿すことで、訓練費用を下げながら動的表現を得るアーキテクチャ。計算効率が狙いだが、モデルアーキテクチャの研究であり境界。",
+    "first_checked_at": "2026-11-18T07:37:36+00:00",
+    "last_checked_at": "2026-11-18T07:37:36+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reservoir Computing inspired Matrix Multiplication-free Language Model"
+  },
+  "processed_at": "2026-11-18T07:37:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

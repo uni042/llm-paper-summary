@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10932",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10932",
+    "identity_tokens": [
+      "arXiv:2606.10932"
+    ],
+    "reason": "密度場状態空間モデルDF-SSM。状態空間モデルを1ビットの足場と低ランク補正へ蒸留圧縮する。対象はSSMモデルの蒸留であり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:37:32+00:00",
+    "last_checked_at": "2026-11-18T07:37:32+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+    ],
+    "title": "Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2"
+  },
+  "processed_at": "2026-11-18T07:37:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

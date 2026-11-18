@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1a437c101c23304-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.21134",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.21134",
+    "identity_tokens": [
+      "arXiv:2608.21134"
+    ],
+    "reason": "VLMの効率的2.7ビット量子化Llama-Mobile。モデル自身で訓練データを生成する量子化パイプラインと、Arm CPUで効率的に実行できる2.7ビット形式でモバイル配備する。VLMの量子化であり境界。",
+    "first_checked_at": "2026-11-18T07:37:54+00:00",
+    "last_checked_at": "2026-11-18T07:37:54+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs"
+  },
+  "processed_at": "2026-11-18T07:37:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1a437c101c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

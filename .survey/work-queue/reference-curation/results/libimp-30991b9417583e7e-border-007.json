@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30991b9417583e7e-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.07740",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.07740",
+    "identity_tokens": [
+      "arXiv:2607.07740"
+    ],
+    "reason": "動的双焦点による効率的長文脈拡張Jet-Long。ゼロショット文脈拡張で単一の再スケーリング係数を固定すると短文脈の忠実度か長文脈での破綻かのどちらかになる問題に対し、長さ配慮の適応を行う。推論時の文脈拡張ではあるが、位置符号の適応であり境界。",
+    "first_checked_at": "2026-11-18T07:37:24+00:00",
+    "last_checked_at": "2026-11-18T07:37:24+00:00",
+    "linked_from": [
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE"
+  },
+  "processed_at": "2026-11-18T07:37:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30991b941758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

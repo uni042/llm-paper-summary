@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-62c91f67a287d431-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.15177",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.15177",
+    "identity_tokens": [
+      "arXiv:2609.15177"
+    ],
+    "reason": "離散拡散言語モデルの高速推論のための時間的自己蒸留。並列デコードを攻めると性能が劣化する問題に対し、早い時刻の分布を確定時刻の分布へ蒸留して早い予測を良くする。推論高速化が目的だが、機構の実体は蒸留であり境界。",
+    "first_checked_at": "2026-11-18T07:37:33+00:00",
+    "last_checked_at": "2026-11-18T07:37:33+00:00",
+    "linked_from": [
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Temporal Self-Distillation: Faster Inference in Discrete Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:37:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-62c91f67a287",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

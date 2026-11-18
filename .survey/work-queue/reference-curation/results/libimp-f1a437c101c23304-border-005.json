@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f1a437c101c23304-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.24667",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.24667",
+    "identity_tokens": [
+      "arXiv:2607.24667"
+    ],
+    "reason": "推定としての排除：テスト時メモリの固定ラグ平滑化の視点。有界の作業メモリで保持判断を、再利用されるかという隠れ信号の推定問題として捉え直し、既存法をコミットラグの軸に位置づける理論的論考。排除の理論であり境界。",
+    "first_checked_at": "2026-11-18T07:37:54+00:00",
+    "last_checked_at": "2026-11-18T07:37:54+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV-cache compression / attention-based token selection / long-context inference",
+      "KVキャッシュ最適化／適応圧縮",
+      "Long-context serving / KV cache benchmark"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Eviction as Estimation: A Fixed-Lag Smoothing View of Test-Time Memory, and When Measuring Beats Accumulating"
+  },
+  "processed_at": "2026-11-18T07:37:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f1a437c101c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

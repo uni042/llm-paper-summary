@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52a4db367784cab1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.03113",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.03113",
+    "identity_tokens": [
+      "arXiv:2606.03113"
+    ],
+    "reason": "自己投機的デコード向け経験駆動動的出口LEDE。固定した出口層と投機長が静的である問題をマルコフ決定過程として捉え、オフライン強化学習で文脈ごとに動的に選ぶ方針を学ぶ。投機的デコードの制御ではあるが、方針学習であり境界。",
+    "first_checked_at": "2026-11-18T07:37:30+00:00",
+    "last_checked_at": "2026-11-18T07:37:30+00:00",
+    "linked_from": [
+      "06-speculative-decoding",
+      "Conditional Computation",
+      "Speculative Decoding",
+      "survey-speculative-decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning"
+  },
+  "processed_at": "2026-11-18T07:37:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52a4db367784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

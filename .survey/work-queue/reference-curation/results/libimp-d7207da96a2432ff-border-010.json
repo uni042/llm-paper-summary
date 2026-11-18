@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7207da96a2432ff-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.01666",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.01666",
+    "identity_tokens": [
+      "arXiv:2606.01666"
+    ],
+    "reason": "最適輸送による微分可能なMoE化DOT-MoE。訓練済み稠密モデルを疎なMoEへ変換する際、FFNの専門家への分割がヒューリスティクスに依る問題に対処する。推論効率のための変換だが、機構の実体は変換の学習であり境界。",
+    "first_checked_at": "2026-11-18T07:37:38+00:00",
+    "last_checked_at": "2026-11-18T07:37:38+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "dense-to-MoE conversion / conditional FFN computation / expert routing",
+      "inference-systems",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DOT-MoE: Differentiable Optimal Transport for MoEfication"
+  },
+  "processed_at": "2026-11-18T07:37:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7207da96a24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

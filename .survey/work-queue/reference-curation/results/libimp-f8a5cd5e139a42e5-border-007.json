@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f8a5cd5e139a42e5-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.07605",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.07605",
+    "identity_tokens": [
+      "arXiv:2611.07605"
+    ],
+    "reason": "KVキャッシュ排除のゲーティング機構。学習可能なゲートで排除を推定する自然な方法を、モデル自身の目的で訓練して検討する分析。ゲートがほぼ定数に留まるなど、排除機構の理解が主題であり境界。",
+    "first_checked_at": "2026-11-18T07:37:59+00:00",
+    "last_checked_at": "2026-11-18T07:37:59+00:00",
+    "linked_from": [
+      "KV Cache Optimization / Compression",
+      "inference-systems",
+      "sparse attention / learned context ranking / long-context LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Gating Mechanism of KV Cache Eviction"
+  },
+  "processed_at": "2026-11-18T07:37:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f8a5cd5e139a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
