@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2c6e3dfef53ddada-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1007/978-3-031-35995-8_39",
+  "reason": "ICCS2023公式会議サイトで公開された著者原稿を確認。CsdBERTは浅い分類器へのcontrastive/self-distillation学習と、推論時のcentered kernel alignmentによる早期終了判定を組み合わせる。GLUE/ELUEで95%の性能を維持し4倍の高速化を報告。推論計算量削減は明確だが、BERT系分類タスクが対象であり、自己回帰LLMのトークン生成・サービングに直接対応しないためborderline。",
+  "title": "A Contrastive Self-distillation BERT with Kernel Alignment-Based Inference",
+  "identity_tokens": [
+    "DOI:10.1007/978-3-031-35995-8_39"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c6e3dfef53d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

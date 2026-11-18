@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-033d7d1d7218c107-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.41485",
+  "reason": "ImageNet-1K画像分類用の階層的特徴抽出器BDNetを提案し、4段の参照bufferと低rank残差演算で画像分類の頑健性を評価。推論時の演算量がtoken数に線形と説明するが、対象は専用画像分類backboneの設計・精度でありLLM/MLLM推論、KV、GPU serving、量子化・MoEの直接技術を示さないためunrelated。",
+  "title": "BDNet: Fast-slow thinking is all you need",
+  "identity_tokens": [
+    "arXiv:2610.41485"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CV/new",
+    "https://arxiv.org/list/cs.PF/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-033d7d1d7218",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

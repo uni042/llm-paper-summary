@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-48ed6a80d3658ef1-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2411.08212",
+  "reason": "著者のarXiv一次要旨を確認。PERFTはOLMoE-1B-7BとMixtral-8×7BのMoEに、独立ルータを持つLoRA等のパラメータ効率的適応モジュールを組み込み、常識・算術推論タスクへのfine-tuning性能を比較する研究。主たる貢献と評価は学習・適応時のルーティングと性能であり、LLM推論ランタイムの高速化、サービング、KV管理の技術的改善を示さないため、現在凍結されている学習中心範囲としてunrelated。",
+  "title": "PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model",
+  "identity_tokens": [
+    "arXiv:2411.08212",
+    "SemanticScholar:9928a2eb9e7d861e71cab7f36c01ac80f8572dcc",
+    "DOI:10.48550/arXiv.2411.08212"
+  ],
+  "linked_from": [
+    "WORKLIST-30.md rank 282; MoE / training"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48ed6a80d365",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

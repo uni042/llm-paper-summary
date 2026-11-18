@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-033d7d1d7218c107-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41426",
+  "reason": "scene text recognitionでsub-string perceptionと複数文字の並列decode blockを組み合わせ、信頼度に応じてstrideを変えるAdaptive Prefix Decodingを提案。長い文字列や湾曲文字を含むbenchmarkでautoregressive decoding比最大6倍のdecode高速化を報告。可変step復号の仕組みは一般的な並列推論に関連するが対象が専用OCRモデルでLLM生成ではないためborderline。",
+  "title": "FlexReader: Towards Adaptive Decoding Paths for Efficient Arbitrary-Length Scene Text Recognition",
+  "identity_tokens": [
+    "arXiv:2610.41426"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CV/new",
+    "https://arxiv.org/list/cs.PF/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-033d7d1d7218",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

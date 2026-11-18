@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a0f07122c0e10a7a-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.3390/jlpea15010008",
+  "reason": "BF16のRISC-VマルチコアMCU向けattention kernel、tiling、pruningを実機評価。tinyLLAMAで1219 tokens/sと平均57mWを報告。ただし小規模TinyML/SLM中心で7B級LLMやGPUの評価ではなく、220倍はnaive CのMHSA kernel比である。一般LLMサービングへ直接外挿できないためborderline。",
+  "title": "Optimizing BFloat16 Deployment of Tiny Transformers on Ultra-Low Power Extreme Edge SoCs",
+  "identity_tokens": [
+    "DOI:10.3390/jlpea15010008"
+  ],
+  "linked_from": [
+    "WORKLIST-30.md rank 159; Edge / On-device Inference"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0f07122c0e1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

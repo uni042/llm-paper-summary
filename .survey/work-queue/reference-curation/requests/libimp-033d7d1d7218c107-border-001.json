@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-033d7d1d7218c107-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41992",
+  "reason": "視覚tokenizerのqueryをContent/Detail役割に分け、token表現に応じてsparse expertへルーティングする1D visual tokenizerを提案。dense tokenizerとactive computationを揃えた比較で再構成・意味表現・自己回帰画像生成の品質を改善し、ImageNetやDPG-Benchなどで評価。MoE routingの実装は関連するが、主眼は視覚生成品質であり推論GPU時間やexpert常駐メモリの削減は一次要旨で実証されていないためborderline。",
+  "title": "MoETok: Sparse Expert Routing for 1D Visual Tokenizers",
+  "identity_tokens": [
+    "arXiv:2610.41992"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CV/new",
+    "https://arxiv.org/list/cs.PF/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-033d7d1d7218",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

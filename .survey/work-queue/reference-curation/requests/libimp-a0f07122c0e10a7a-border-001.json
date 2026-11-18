@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a0f07122c0e10a7a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2411.09111",
+  "reason": "推論時CoTの計算削減を目的としたsparse attentionとGiantRabbitの実験であり技術的には近い。一方、arXiv一次要旨の比較対象は外部のo1 Previewで、同一モデル・同一実行基盤の制御比較、実測GPUメモリ/throughput、再現可能な推論性能は要旨から確認できない。一般的な推論エンジン高速化としての証拠が限定的なためborderline。",
+  "title": "Reducing Reasoning Costs: The Path of Optimization for Chain of Thought via Sparse Attention Mechanism",
+  "identity_tokens": [
+    "arXiv:2411.09111",
+    "SemanticScholar:0f8416693b3fc1bc42166a574328a10decdcaf6b"
+  ],
+  "linked_from": [
+    "WORKLIST-30.md rank 306; inference-early-exit, inference-systems"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0f07122c0e1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

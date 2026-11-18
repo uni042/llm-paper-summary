@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dd581ca908e7b4be-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.23640",
+  "reason": "Qwen2.5-1.5Bの4bit版をRaspberry Pi/Hailo-10H、Galaxy S24 Ultra、iPhone 16 Pro、RTX4050搭載ノートで258-token固定prompt・20回反復により比較。スマートフォンのthermal throttling、NPUの帯域制約、RTX4050の電力制約を分離し、RTX4050 131.7 tok/s・34.1W、Hailo 6.9 tok/s・2W未満を報告。新規推論最適化方式ではなく単一モデル・単一prompt条件の計測研究であるためborderline。",
+  "title": "LLM Inference at the Edge: Mobile, NPU, and GPU Performance Efficiency Trade-offs Under Sustained Load",
+  "identity_tokens": [
+    "arXiv:2603.23640",
+    "https://arxiv.org/abs/2603.23640"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd581ca908e7",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

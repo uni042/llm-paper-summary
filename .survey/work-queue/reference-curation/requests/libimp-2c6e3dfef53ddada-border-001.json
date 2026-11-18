@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2c6e3dfef53ddada-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2205.12476",
+  "reason": "arXiv一次要旨を確認。長文要約における二乗メモリの自己注意を避けるため、局所性で分割した入力ページごとにencoder/decoderを適用し、効率的attentionの強いベースラインと性能を比較する。推論時のメモリ効率化には直接関係するが、検証は旧来の抽象型要約seq2seqモデルに限定され、現代の生成LLMのKVキャッシュ・サービング・長文脈推論への直接評価がないためborderline。",
+  "title": "Leveraging Locality in Abstractive Text Summarization",
+  "identity_tokens": [
+    "arXiv:2205.12476"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c6e3dfef53d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

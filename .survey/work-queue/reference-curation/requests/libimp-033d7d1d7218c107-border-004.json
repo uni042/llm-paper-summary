@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-033d7d1d7218c107-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.00845",
+  "reason": "核融合制御のmicrosecond応答を対象にCPU最適化実装とOpenVINO/XLA/TVM等の推論engine、GPUを比較。DIII-Dの小型modelでCPU単一coreは99%の制御cycleで3.6マイクロ秒以内、A100は28マイクロ秒と報告し、複数model同時実行も検討。推論engine選択のシステム評価ではあるがLLMや生成系モデルのservingではなく専用リアルタイム制御モデルなのでborderline。",
+  "title": "Is Your AI Fast Enough to Run a Fusion Reactor?",
+  "identity_tokens": [
+    "arXiv:2610.00845"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CV/new",
+    "https://arxiv.org/list/cs.PF/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-033d7d1d7218",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
