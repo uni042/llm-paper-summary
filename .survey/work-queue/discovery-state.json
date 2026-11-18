@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-11-18T14:35:06+00:00",
-  "last_run_key": "library-import-e0ff3b0f78d6",
-  "last_round": "libimp-e0ff3b0f78d6e4e0-pre01",
+  "updated_at": "2026-11-18T14:39:05+00:00",
+  "last_run_key": "library-import-c343323c9d93",
+  "last_round": "libimp-c343323c9d93bc78-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,78 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "round_identity": "precheck:libimp-5f1189f54f423610-pre01",
-      "precheck_request_id": "libimp-5f1189f54f423610-pre01",
-      "run_key": "library-import-5f1189f54f42",
-      "round": "libimp-5f1189f54f423610-pre01",
-      "axis": "library-candidate-intake",
-      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
-      "provider": "candidate_id_lookup",
-      "source_url": "identifier://approved-public-apis",
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 7,
-      "duplicate_filtered_count": 5,
-      "final_duplicate_filtered_count": 0,
-      "accepted_count": 2,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/libimp-5f1189f54f423610-pre01-sub01.json",
-      "source_submissions": [
-        "work-queue/submissions/libimp-5f1189f54f423610-pre01-sub01.json",
-        "work-queue/submissions/libimp-5f1189f54f423610-pre01-sub02.json"
-      ],
-      "round_submission_indices": [
-        1,
-        2
-      ],
-      "round_submission_count": 2,
-      "round_accounted": true,
-      "novel_candidate_count": 2,
-      "post_final_dedupe_count": 2,
-      "duplicate_ratio": 0.7142857142857143,
-      "final_duplicate_ratio": 0.0,
-      "round_complete": true
-    },
-    {
-      "round_identity": "precheck:libimp-603f140dadfe052d-pre01",
-      "precheck_request_id": "libimp-603f140dadfe052d-pre01",
-      "run_key": "library-import-603f140dadfe",
-      "round": "libimp-603f140dadfe052d-pre01",
-      "axis": "library-candidate-intake",
-      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
-      "provider": "candidate_id_lookup",
-      "source_url": "identifier://approved-public-apis",
-      "citation_direction": null,
-      "seed_canonical_id": null,
-      "preload_id": null,
-      "candidate_count": 10,
-      "duplicate_filtered_count": 5,
-      "final_duplicate_filtered_count": 1,
-      "accepted_count": 4,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": null,
-      "source_submission": "work-queue/submissions/libimp-603f140dadfe052d-pre01-sub01.json",
-      "source_submissions": [
-        "work-queue/submissions/libimp-603f140dadfe052d-pre01-sub01.json",
-        "work-queue/submissions/libimp-603f140dadfe052d-pre01-sub02.json"
-      ],
-      "round_submission_indices": [
-        1,
-        2
-      ],
-      "round_submission_count": 2,
-      "round_accounted": true,
-      "novel_candidate_count": 5,
-      "post_final_dedupe_count": 4,
-      "duplicate_ratio": 0.5,
-      "final_duplicate_ratio": 0.2,
-      "round_complete": true
-    },
     {
       "round_identity": "precheck:libimp-608ca969d07e8496-pre01",
       "precheck_request_id": "libimp-608ca969d07e8496-pre01",
@@ -13217,6 +13145,74 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-a67963b448a58df3-pre01",
+      "precheck_request_id": "libimp-a67963b448a58df3-pre01",
+      "run_key": "library-import-a67963b448a5",
+      "round": "libimp-a67963b448a58df3-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-a67963b448a58df3-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-a67963b448a58df3-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-c343323c9d93bc78-pre01",
+      "precheck_request_id": "libimp-c343323c9d93bc78-pre01",
+      "run_key": "library-import-c343323c9d93",
+      "round": "libimp-c343323c9d93bc78-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 2,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 2,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-c343323c9d93bc78-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-c343323c9d93bc78-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 2,
+      "post_final_dedupe_count": 2,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -21588,16 +21584,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-e0ff3b0f78d6",
-      "rounds": 893,
-      "candidate_count": 4072,
+      "last_run_key": "library-import-c343323c9d93",
+      "rounds": 895,
+      "candidate_count": 4075,
       "duplicate_filtered_count": 1980,
-      "novel_candidate_count": 2092,
+      "novel_candidate_count": 2095,
       "final_duplicate_filtered_count": 117,
-      "post_final_dedupe_count": 1975,
-      "accepted_count": 1975,
-      "duplicate_ratio": 0.4862475442043222,
-      "final_duplicate_ratio": 0.05592734225621415,
+      "post_final_dedupe_count": 1978,
+      "accepted_count": 1978,
+      "duplicate_ratio": 0.48588957055214727,
+      "final_duplicate_ratio": 0.0558472553699284,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
