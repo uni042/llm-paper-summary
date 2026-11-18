@@ -1,0 +1,470 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261119-r02::chunk-0003-of-0003",
+  "reference_main_sha": "122b540085dca6b52ed3131fd1f20a846ea16e6f",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35748",
+      "identity_tokens": [
+        "arXiv:2609.35748",
+        "https://arxiv.org/abs/2609.35748",
+        "https://arxiv.org/abs/2609.35748"
+      ],
+      "title": "Improving Test-Time Scaling with Adaptive Looped Transformers",
+      "reason": "ループ型Transformerのテスト時スケーリングを事後学習で高め、反復が効くトークンへだけ計算を配るTaH2は、推論時計算配分に関わるものの、主題はモデルアーキテクチャと事後学習の方法である。",
+      "source_url": "https://arxiv.org/abs/2609.35748",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.21420-conceptmoe-token-concept-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md"
+      ],
+      "worklist_rank": 63,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.10606",
+      "identity_tokens": [
+        "arXiv:2411.10606",
+        "https://arxiv.org/abs/2411.10606",
+        "https://arxiv.org/abs/2411.10606"
+      ],
+      "title": "AmoebaLLM: Constructing Any-Shape Large Language Models for Efficient and Instant Deployment",
+      "reason": "一度の微調整で任意の深さ・幅のサブネットを即時抽出できるAmoebaLLMにより、プラットフォームごとの精度・効率フロンティアに沿ったLLM配備を可能にしており、モデル圧縮と配備最適化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2411.10606",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ],
+      "worklist_rank": 63,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07068",
+      "identity_tokens": [
+        "arXiv:2605.07068",
+        "https://arxiv.org/abs/2605.07068",
+        "https://arxiv.org/abs/2605.07068"
+      ],
+      "title": "WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems",
+      "reason": "文書をWikiへ編纂してKVキャッシュ推論で提供するLLM Wiki方式の編纂ギャップを反例誘導型の反復精緻化で埋めるWiCERは、KV再利用に触れるが主題は知識編纂品質であり推論機構の貢献は限定的である。",
+      "source_url": "https://arxiv.org/abs/2605.07068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ],
+      "worklist_rank": 64,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1002/cpe.70407",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.70407",
+        "https://doi.org/10.1002/cpe.70407"
+      ],
+      "title": "Enabling Interactive Education With Low‐Latency Large Language Models",
+      "reason": "教育用LLMの推論加速として重要ニューロンをGPUへ事前配置し残りをCPUで計算するAccEduLLMにより、単一RTX 3090で精度を保ち8.32倍の生成速度を得ており、ニューロン配置による推論高速化機構への直接貢献である。",
+      "source_url": "https://doi.org/10.1002/cpe.70407",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "worklist_rank": 64,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18631",
+      "identity_tokens": [
+        "arXiv:2607.18631",
+        "https://arxiv.org/abs/2607.18631",
+        "https://arxiv.org/abs/2607.18631"
+      ],
+      "title": "Searching for Plans You Can Actually Build: A Realizability-Aware Full-Space Optimizer for MoE Training and Serving",
+      "reason": "MoEの並列化・スケジュール・カーネルの計画空間を実ツールチェーンで構築可能な範囲に限定して全空間探索するmoefsは、Megatron学習とSGLangサービングの双方を出すが、主眼は計画最適化でありサービング機構自体の新規性は薄い。",
+      "source_url": "https://arxiv.org/abs/2607.18631",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "worklist_rank": 65,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26754",
+      "identity_tokens": [
+        "arXiv:2610.26754",
+        "https://arxiv.org/abs/2610.26754",
+        "https://arxiv.org/abs/2610.26754"
+      ],
+      "title": "TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning",
+      "reason": "長文脈入力のトークン重要度をMoE式のゲート付き注意で学習しエンドツーエンドに剪定するTokenGateにより、プリフィルを1.4〜11.3倍高速化しピークメモリを下げるため、プリフィル最適化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2610.26754",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "worklist_rank": 65,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.08678",
+      "identity_tokens": [
+        "arXiv:2110.08678",
+        "https://arxiv.org/abs/2110.08678",
+        "https://arxiv.org/abs/2110.08678"
+      ],
+      "title": "Improving Transformers with Probabilistic Attention Keys",
+      "reason": "冗長な注意ヘッドをガウス混合キーへ置き換えるTransformer-MGKは学習・推論の高速化とFLOP削減を主張するが、旧来のアーキテクチャ改変が主題であり現代のLLM推論システムへの適用根拠は弱い。",
+      "source_url": "https://arxiv.org/abs/2110.08678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "worklist_rank": 65,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.09041",
+      "identity_tokens": [
+        "arXiv:2406.09041",
+        "https://arxiv.org/abs/2406.09041",
+        "https://arxiv.org/abs/2406.09041"
+      ],
+      "title": "ME-Switch: A Memory-Efficient Expert Switching Framework for Large Language Models",
+      "reason": "基礎モデルの重みと差分重みの低ビット量子化に加え、リクエストに適した専門家をメモリ効率よく切り替えるME-Switchは、専門家サービングのメモリとI/Oコストを下げる機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2406.09041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "worklist_rank": 66,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.02173",
+      "identity_tokens": [
+        "arXiv:2501.02173",
+        "https://arxiv.org/abs/2501.02173",
+        "https://arxiv.org/abs/2501.02173"
+      ],
+      "title": "The Efficiency vs. Accuracy Trade-off: Optimizing RAG-Enhanced LLM Recommender Systems Using Multi-Head Early Exit",
+      "reason": "クリック率予測向けRAG推薦にGCN検索と多ヘッド早期終了を組み合わせ推論を動的に打ち切る枠組みだが、評価対象は推薦応用パイプラインであり汎用LLM推論機構としての根拠は弱い。",
+      "source_url": "https://arxiv.org/abs/2501.02173",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md"
+      ],
+      "worklist_rank": 66,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00671",
+      "identity_tokens": [
+        "arXiv:2610.00671",
+        "https://arxiv.org/abs/2610.00671",
+        "https://arxiv.org/abs/2610.00671"
+      ],
+      "title": "MegaFlux: Skew-Resilient MoE Megakernels via Pipelined Expert Replication",
+      "reason": "MoEメガカーネルで熱い専門家の複製を実時間判断とし、重み到着と計算をパイプライン化するMegaFluxは、ルーティング偏りによるGPUストラグラーを消す専門家並列実行機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2610.00671",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2603.28768-craft-cost-aware-expert-replication.md",
+        "papers/inference/01-offload-hierarchical-memory/2026-2607.23099-distribution-aware-moe-kernel-dispatch.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md"
+      ],
+      "worklist_rank": 66,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3720106",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3720106",
+        "https://doi.org/10.1109/ACCESS.2026.3720106"
+      ],
+      "title": "A Survey of Dynamic Token Computation in Transformers: Taxonomy, Stability, and Budget-Aware Evaluation",
+      "reason": "トークン剪定・マージ・条件付きルーティング・適応深度を横断する動的トークン計算の調査は推論効率に直結する主題だが、分類法と評価枠組みの整理が成果であり新規の推論機構ではない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3720106",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "worklist_rank": 67,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.04075",
+      "identity_tokens": [
+        "arXiv:2505.04075",
+        "https://arxiv.org/abs/2505.04075",
+        "https://arxiv.org/abs/2505.04075"
+      ],
+      "title": "Rethinking LLM Advancement: Compute-Dependent and Independent Paths to Progress",
+      "reason": "LLM発展を計算依存・非依存の革新へ分け計算資源規制の有効性を論じる政策・規制分析の研究であり、推論システム技術への貢献はない。",
+      "source_url": "https://arxiv.org/abs/2505.04075",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "worklist_rank": 67,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23033",
+      "identity_tokens": [
+        "arXiv:2609.23033",
+        "https://arxiv.org/abs/2609.23033",
+        "https://arxiv.org/abs/2609.23033"
+      ],
+      "title": "WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models",
+      "reason": "重み共有ブロックの途中出力の下書きと異なる深さの状態の一括処理を波面状に組むWaveFront Decodingは、ループ型言語モデル専用の自己投機的デコードであり、デコード高速化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2609.23033",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md"
+      ],
+      "worklist_rank": 67,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.06709",
+      "identity_tokens": [
+        "arXiv:2404.06709",
+        "https://arxiv.org/abs/2404.06709",
+        "https://arxiv.org/abs/2404.06709"
+      ],
+      "title": "CQIL: Inference Latency Optimization with Concurrent Computation of Quasi-Independent Layers",
+      "reason": "隣接層入力の類似性から準独立な層を見分けて同時計算し情報損失をバイパスで抑えるCQILは、層方向の直列遅延そのものを減らす推論遅延最適化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2404.06709",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "worklist_rank": 68,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CLUSTER59342.2025.11186488",
+      "identity_tokens": [
+        "DOI:10.1109/CLUSTER59342.2025.11186488",
+        "https://doi.org/10.1109/CLUSTER59342.2025.11186488"
+      ],
+      "title": "Capricorn: Efficient In-Memory Checkpointing for MoE Model Training with Dynamicity Awareness",
+      "reason": "MoE学習のチェックポイントを層・反復ごとの計算時間の動態に合わせてメモリ内へ効率化するCapricornは、分散学習の信頼性機構であり推論は対象外である。",
+      "source_url": "https://doi.org/10.1109/CLUSTER59342.2025.11186488",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "worklist_rank": 68,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15416",
+      "identity_tokens": [
+        "arXiv:2604.15416",
+        "https://arxiv.org/abs/2604.15416",
+        "https://arxiv.org/abs/2604.15416"
+      ],
+      "title": "StoSignSGD: Unbiased Structural Stochasticity Fixes SignSGD for Training Large Language Models",
+      "reason": "符号型最適化器SignSGDの非滑らか目的での発散を構造的確率性で解消するStoSignSGDは、大規模モデルの学習最適化の理論研究であり推論とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2604.15416",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md"
+      ],
+      "worklist_rank": 69,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/068431-2026",
+      "identity_tokens": [
+        "DOI:10.52202/068431-2026",
+        "https://doi.org/10.52202/068431-2026"
+      ],
+      "title": "Improving Transformer with an Admixture of Attention Heads",
+      "reason": "注意行列を有限個の共有ヘッドから混合して生成するFiSHformerは計算・メモリ複雑度の削減を狙うアーキテクチャ提案だが、推論システム上での実装・評価根拠は弱く境界的である。",
+      "source_url": "https://doi.org/10.52202/068431-2026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2022-2208.00579-momentum-transformer-closing-the-performance-gap-between-self-attention-.md"
+      ],
+      "worklist_rank": 69,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.08798",
+      "identity_tokens": [
+        "arXiv:2510.08798",
+        "https://arxiv.org/abs/2510.08798",
+        "https://arxiv.org/abs/2510.08798"
+      ],
+      "title": "Learning What to Remember: Adaptive Probabilistic Memory Retention for Memory-Efficient Language Models",
+      "reason": "学習可能な確率ゲートで保持トークンを全体予算Mの下で選ぶAdaptive Retentionは、ピークメモリ削減とスループット改善を示すが、対象はエンコーダ型モデルの分類・QAでありLLMサービングへの適用は未確認である。",
+      "source_url": "https://arxiv.org/abs/2510.08798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "worklist_rank": 69,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.18747",
+      "identity_tokens": [
+        "arXiv:2409.18747",
+        "https://arxiv.org/abs/2409.18747",
+        "https://arxiv.org/abs/2409.18747"
+      ],
+      "title": "Cottention: Linear Transformers With Cosine Attention",
+      "reason": "ソフトマックスをコサイン類似度へ置き換え線形メモリと定数メモリ推論を両立させるCottentionは注意機構の改変として推論効率に関わるが、BERT・GPTでの基礎評価にとどまるアーキテクチャ研究である。",
+      "source_url": "https://arxiv.org/abs/2409.18747",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "worklist_rank": 70,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21484",
+      "identity_tokens": [
+        "arXiv:2601.21484",
+        "https://arxiv.org/abs/2601.21484",
+        "https://arxiv.org/abs/2601.21484"
+      ],
+      "title": "ETS: Energy-Guided Test-Time Scaling for Training-Free RL Alignment",
+      "reason": "最適RL方策から学習なしにサンプリングするETSはエネルギー項のオンライン推定と高速化基盤の利用で推論遅延を下げるが、主目的はRL整合の代替であり推論システム機構の貢献は副次的である。",
+      "source_url": "https://arxiv.org/abs/2601.21484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T07:50:00+09:00",
+      "last_checked_at": "2026-11-19T07:56:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "worklist_rank": 71,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261119-r02",
+  "chunk_index": 3,
+  "chunk_count": 3,
+  "source_record_count": 60
+}
