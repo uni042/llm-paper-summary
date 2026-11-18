@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-15T21:43:24+00:00",
-  "record_count": 5668,
+  "updated_at": "2026-11-18T02:48:10+00:00",
+  "record_count": 5675,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -87602,6 +87602,129 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks"
+    },
+    "arXiv:2601.23027": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23027",
+      "identity_tokens": [
+        "arXiv:2601.23027"
+      ],
+      "reason": "並列推論で遅延を下げる分割統治CoT（DC-CoT）。モデルがサブタスクを切り出してワーカーを並列に走らせる形式をSFTと強化学習で訓練し、最長路長で測る理論遅延を下げる。狙いは生成遅延だが、機構の実体は訓練枠組みであり境界。",
+      "first_checked_at": "2026-11-18T02:48:07+00:00",
+      "last_checked_at": "2026-11-18T02:48:07+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Speculative Decoding",
+        "inference-systems",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning"
+    },
+    "arXiv:2602.04915": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04915",
+      "identity_tokens": [
+        "arXiv:2602.04915"
+      ],
+      "reason": "球面線形注意SLAY。Yatカーネルに基づく幾何配慮型の線形時間注意で、クエリとキーを単位球面へ制約し、正のランダム特徴で線形時間の近似を与える。推論効率に資するが、貢献は訓練を要する新しい注意機構の定式化であり境界。",
+      "first_checked_at": "2026-11-18T02:48:08+00:00",
+      "last_checked_at": "2026-11-18T02:48:08+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SLAY: Geometry-Aware Spherical Linearized Attention with Yat-Kernel"
+    },
+    "arXiv:2602.22543": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22543",
+      "identity_tokens": [
+        "arXiv:2602.22543"
+      ],
+      "reason": "適応型モデル系列Ruyi2の技術報告。可変深さ計算と早期終了を持つモデル族を、パラメータ共有の安定化と3D並列学習で構築する。推論時の適応計算が核ではあるが、報告の中心は学習済みモデル族とその訓練であり境界。",
+      "first_checked_at": "2026-11-18T02:48:08+00:00",
+      "last_checked_at": "2026-11-18T02:48:08+00:00",
+      "linked_from": [
+        "Conditional Computation",
+        "投機的デコード / 分布保存型デコード高速化"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ruyi2 Technical Report"
+    },
+    "arXiv:2603.18383": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18383",
+      "identity_tokens": [
+        "arXiv:2603.18383"
+      ],
+      "reason": "LLM推論の構成的電力トレース生成。プリフィル・デコード・アイドルの状態遷移と構成ごとの電力分布の2要素で推論電力を表し、施設規模の負荷プロファイルを合成する。推論負荷のモデリングではあるが、用途は設備計画であり推論機構ではない。境界。",
+      "first_checked_at": "2026-11-18T02:48:08+00:00",
+      "last_checked_at": "2026-11-18T02:48:08+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving / energy management / cluster scheduling / dynamic reconfiguration",
+        "inference-systems"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Servers to Sites: Compositional Power Trace Generation of LLM Inference for Infrastructure Planning"
+    },
+    "arXiv:2606.18851": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18851",
+      "identity_tokens": [
+        "arXiv:2606.18851"
+      ],
+      "reason": "量子化を柔軟性資源とするデマンドレスポンス。LLM推論の増大するデータセンター負荷に対し、量子化による品質と消費電力のトレードオフを需給調整の操作量として使うエネルギ管理枠組み。提供基盤の運用ではあるが、中心は系統側のエネルギ管理であり境界。",
+      "first_checked_at": "2026-11-18T02:48:09+00:00",
+      "last_checked_at": "2026-11-18T02:48:09+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "llm-serving-scheduling-disaggregation",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads"
+    },
+    "arXiv:2607.02391": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.02391",
+      "identity_tokens": [
+        "arXiv:2607.02391"
+      ],
+      "reason": "未見GPUとLLMに対する推論電力・遅延予測WattGPU。公開メタデータとGPU仕様だけで平均電力とトークン間遅延を予測し、実機プロファイルなしに配置の組み合わせを評価する。推論基盤の計画支援ではあるが、機構ではなく予測モデルの提案であり境界。",
+      "first_checked_at": "2026-11-18T02:48:09+00:00",
+      "last_checked_at": "2026-11-18T02:48:09+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs"
+    },
+    "arXiv:2609.11998": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11998",
+      "identity_tokens": [
+        "arXiv:2609.11998"
+      ],
+      "reason": "ブロック拡散における定数サイズキャッシュの研究。双方向デノイザで通常のKVキャッシュが使えない問題に対し、確定ブロックを再利用可能な状態へ要約する混合器と、キャッシュを厳密にするブロック因果な学習目的で、3Bモデルを大規模事前学習して検証する。キャッシュが主題だが、アーキテクチャと事前学習の研究であり境界。",
+      "first_checked_at": "2026-11-18T02:48:10+00:00",
+      "last_checked_at": "2026-11-18T02:48:10+00:00",
+      "linked_from": [
+        "14-long-context-inference",
+        "Diffusion LLM Inference",
+        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale"
     }
   }
 }

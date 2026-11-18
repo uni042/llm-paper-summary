@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4387cf3ee07f9a27-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.18851",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.18851",
+    "identity_tokens": [
+      "arXiv:2606.18851"
+    ],
+    "reason": "量子化を柔軟性資源とするデマンドレスポンス。LLM推論の増大するデータセンター負荷に対し、量子化による品質と消費電力のトレードオフを需給調整の操作量として使うエネルギ管理枠組み。提供基盤の運用ではあるが、中心は系統側のエネルギ管理であり境界。",
+    "first_checked_at": "2026-11-18T02:48:09+00:00",
+    "last_checked_at": "2026-11-18T02:48:09+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "Weight Quantization / Compression",
+      "inference-systems",
+      "llm-serving-scheduling-disaggregation",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads"
+  },
+  "processed_at": "2026-11-18T02:48:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4387cf3ee07f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

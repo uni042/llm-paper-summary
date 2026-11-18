@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4387cf3ee07f9a27-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.18383",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.18383",
+    "identity_tokens": [
+      "arXiv:2603.18383"
+    ],
+    "reason": "LLM推論の構成的電力トレース生成。プリフィル・デコード・アイドルの状態遷移と構成ごとの電力分布の2要素で推論電力を表し、施設規模の負荷プロファイルを合成する。推論負荷のモデリングではあるが、用途は設備計画であり推論機構ではない。境界。",
+    "first_checked_at": "2026-11-18T02:48:08+00:00",
+    "last_checked_at": "2026-11-18T02:48:08+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM serving / energy management / cluster scheduling / dynamic reconfiguration",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Servers to Sites: Compositional Power Trace Generation of LLM Inference for Infrastructure Planning"
+  },
+  "processed_at": "2026-11-18T02:48:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4387cf3ee07f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

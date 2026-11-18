@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82dbf5ae6b3b47ac-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37818",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37818",
+    "identity_tokens": [
+      "arXiv:2609.37818"
+    ],
+    "reason": "共感的音声対話向けループ潜在推論LoopSLM。音響手がかりの知覚と応答計画のずれを、ループTransformerの潜在推論と2段階訓練で埋める音声対話モデルの提案。対象は対話モデルの設計と訓練であり、推論システム機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T02:48:10+00:00",
+    "last_checked_at": "2026-11-18T02:48:10+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+      "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+    ],
+    "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue"
+  },
+  "processed_at": "2026-11-18T02:48:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82dbf5ae6b3b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

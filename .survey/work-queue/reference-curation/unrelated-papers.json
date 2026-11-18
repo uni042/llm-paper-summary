@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-15T21:43:22+00:00",
-  "record_count": 12699,
+  "updated_at": "2026-11-18T02:48:10+00:00",
+  "record_count": 12702,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182624,6 +182624,55 @@
         "重み専用量子化 / 推論カーネル"
       ],
       "title": "Perplexity Can Miss SAE Feature Damage Under Quantization"
+    },
+    "arXiv:2604.06916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06916",
+      "identity_tokens": [
+        "arXiv:2604.06916"
+      ],
+      "reason": "拡散強化学習のロールアウトへFP4を入れるSol-RL。対象はテキスト画像拡散モデルの選好整合という学習後訓練の計算負担軽減であり、量子化も訓練パイプライン内の工夫にとどまる。推論機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T02:48:09+00:00",
+      "last_checked_at": "2026-11-18T02:48:09+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "training-reinforcement-learning-quantization",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+      ],
+      "title": "FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling"
+    },
+    "arXiv:2608.26432": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26432",
+      "identity_tokens": [
+        "arXiv:2608.26432"
+      ],
+      "reason": "音声エージェントの強化学習環境SpeechGym。音声のまま対話とツール呼出を行うエージェントを、テキストのベンチマーク課題を変えずに音声環境で訓練する基盤。対象はエージェントの訓練環境であり、推論システム機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T02:48:10+00:00",
+      "last_checked_at": "2026-11-18T02:48:10+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "title": "SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning"
+    },
+    "arXiv:2609.37818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37818",
+      "identity_tokens": [
+        "arXiv:2609.37818"
+      ],
+      "reason": "共感的音声対話向けループ潜在推論LoopSLM。音響手がかりの知覚と応答計画のずれを、ループTransformerの潜在推論と2段階訓練で埋める音声対話モデルの提案。対象は対話モデルの設計と訓練であり、推論システム機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T02:48:10+00:00",
+      "last_checked_at": "2026-11-18T02:48:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
+      ],
+      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue"
     }
   }
 }

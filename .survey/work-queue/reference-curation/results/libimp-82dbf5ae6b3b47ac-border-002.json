@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82dbf5ae6b3b47ac-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.11998",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.11998",
+    "identity_tokens": [
+      "arXiv:2609.11998"
+    ],
+    "reason": "ブロック拡散における定数サイズキャッシュの研究。双方向デノイザで通常のKVキャッシュが使えない問題に対し、確定ブロックを再利用可能な状態へ要約する混合器と、キャッシュを厳密にするブロック因果な学習目的で、3Bモデルを大規模事前学習して検証する。キャッシュが主題だが、アーキテクチャと事前学習の研究であり境界。",
+    "first_checked_at": "2026-11-18T02:48:10+00:00",
+    "last_checked_at": "2026-11-18T02:48:10+00:00",
+    "linked_from": [
+      "14-long-context-inference",
+      "Diffusion LLM Inference",
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale"
+  },
+  "processed_at": "2026-11-18T02:48:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82dbf5ae6b3b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
