@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c42fee403ce4a23a-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41089",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41089",
+    "identity_tokens": [
+      "arXiv:2610.41089"
+    ],
+    "reason": "安価なLLMで課題を制約中間表現へ変換し、制約graphをGNNで符号化してLLM回答正解可能性を事前推定する。SAT・論理・数学を含む7つの推論benchmarkと4モデルで、既存最良比較に対しNLLを0.465から0.423へ、AUROCを0.691から0.727へ改善。モデルroutingやtest-time compute配分への応用を動機づけるが、実際のserving latency/費用改善の実証は要旨にないためborderline。",
+    "first_checked_at": "2026-11-18T10:08:55+00:00",
+    "last_checked_at": "2026-11-18T10:08:55+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CIRCE Divines LLM Task Complexity from Constraint Structure"
+  },
+  "processed_at": "2026-11-18T10:08:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42fee403ce4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

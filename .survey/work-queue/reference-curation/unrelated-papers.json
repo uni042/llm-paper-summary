@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T09:48:43+00:00",
-  "record_count": 12864,
+  "updated_at": "2026-11-18T10:09:04+00:00",
+  "record_count": 12870,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181236,7 +181236,7 @@
       ],
       "reason": "FlashAttentionのdropout乱数生成を前段GEMMと重ね、GH100上のLlama3学習ブロックで1.22倍改善を示す研究。dropoutを有効化する学習時の演算重畳が対象で、通常dropoutを無効化するLLM推論サービングの直接最適化ではない。",
       "first_checked_at": "2026-10-30T11:54:52+00:00",
-      "last_checked_at": "2026-10-30T11:54:52+00:00",
+      "last_checked_at": "2026-11-18T10:08:41+00:00",
       "linked_from": [],
       "title": "Reducing the Cost of Dropout in Flash-Attention by Hiding RNG with GEMM"
     },
@@ -181299,7 +181299,7 @@
       ],
       "reason": "IEEE出版社一次要旨によると、グラフの入次数に応じたGNNバッチ構成・サブグラフ分割・CPU-GPU通信最適化で遅延89%減・スループット71%増を報告する。対象はグラフニューラルネットのオンライン推論で、生成LLMのKVやデコードではない。",
       "first_checked_at": "2026-10-30T12:54:39+00:00",
-      "last_checked_at": "2026-10-30T12:54:39+00:00",
+      "last_checked_at": "2026-11-18T10:08:56+00:00",
       "linked_from": [],
       "title": "Degree-Based Scheduling and Memory Management for Large-Scale Exact Online GNN Inference"
     },
@@ -181311,7 +181311,7 @@
       ],
       "reason": "著者公開のIEEE論文ではRTX4090でLoRA、checkpoint、operator fusion、power capを組み合わせ、微調整メモリ40%以上削減・電力33%減を報告する。対象はfine-tuning実行であり、生成LLM推論時の速度・メモリ削減ではない。",
       "first_checked_at": "2026-10-30T12:54:40+00:00",
-      "last_checked_at": "2026-10-30T12:54:40+00:00",
+      "last_checked_at": "2026-11-18T10:08:56+00:00",
       "linked_from": [],
       "title": "LLMs on a Budget: System-Level Approaches to Power-Efficient and Scalable Fine-Tuning"
     },
@@ -182755,22 +182755,6 @@
       ],
       "title": "LLA: Enhancing Security and Privacy for Generative Models with Logic-Locked Accelerators"
     },
-    "arXiv:2601.01296": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2601.01296",
-      "identity_tokens": [
-        "arXiv:2601.01296"
-      ],
-      "reason": "積極的圧縮が重み窃取を可能にするという分析。流出攻撃のために解凍制約を緩めた圧縮で16〜100倍の圧縮が得られ、データセンターからの重み持ち出し時間が短くなることを示すセキュリティ研究。推論システムの技術提案ではない。対象外。",
-      "first_checked_at": "2026-11-18T03:45:08+00:00",
-      "last_checked_at": "2026-11-18T03:45:08+00:00",
-      "linked_from": [
-        "Weight Quantization / Compression",
-        "arXiv:2405.16406のICLR 2025採録版。",
-        "post-training quantization / second-order compression / weight-only LLM inference"
-      ],
-      "title": "Aggressive Compression Enables LLM Weight Theft"
-    },
     "arXiv:2602.22718": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.22718",
@@ -183249,11 +183233,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2502.07244",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.07244",
         "arXiv:2502.07244"
       ],
-      "reason": "線形TransformerのVARモデルとしての解釈。時系列予測における線形注意と自己回帰構造の整合を論じる理論研究。LLM推論システムの機構ではない。対象外。",
+      "reason": "arXiv原著要旨で、線形注意層を動的ベクトル自己回帰（VAR）として解釈し、多層構成を時系列予測の自己回帰目的へ整合させるSAMoVARを提案していることを確認。最終評価対象は多変量時系列予測の精度・解釈可能性・計算効率であり、LLMの生成推論・サービング・KVキャッシュ・GPU実行基盤を直接改善する研究ではないためunrelated。",
       "first_checked_at": "2026-11-18T06:39:40+00:00",
-      "last_checked_at": "2026-11-18T06:39:40+00:00",
+      "last_checked_at": "2026-11-18T10:08:52+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
         "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
@@ -184534,25 +184519,6 @@
       ],
       "title": "Reorganizing attention-space geometry with expressive attention"
     },
-    "arXiv:2506.12035": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2506.12035",
-      "identity_tokens": [
-        "arXiv:2506.12035"
-      ],
-      "reason": "キャッシュ配慮型マスク自己回帰画像生成MARché。マスク自己回帰の画像生成で全トークンを再計算する無駄への対処。対象は画像生成であり、LLM推論の機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:20+00:00",
-      "last_checked_at": "2026-11-18T08:08:20+00:00",
-      "linked_from": [
-        "KV cache eviction / heavy hitters / sparse attention / efficient inference",
-        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
-        "KVキャッシュ最適化／適応圧縮",
-        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
-        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
-        "疎注意 / KVキャッシュ選択 / 長文脈推論"
-      ],
-      "title": "MARché: Fast Masked Autoregressive Image Generation with Cache-Aware Attention"
-    },
     "arXiv:2506.19761": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2506.19761",
@@ -184566,23 +184532,6 @@
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
       "title": "Accurate, fast, cheap: Choose three. Replacing Multi-Head-Attention with Bidirectional Recurrent Attention for Long-Form ASR"
-    },
-    "DOI:10.1088/2632-2153/addc33": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1088/2632-2153/addc33",
-      "identity_tokens": [
-        "DOI:10.1088/2632-2153/addc33"
-      ],
-      "reason": "LLMのためのWasserstein効率サンプリング戦略WEISS。創薬で新規分子を効率的にサンプリングするための手法。対象は創薬のサンプリングであり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:23+00:00",
-      "last_checked_at": "2026-11-18T08:08:23+00:00",
-      "linked_from": [
-        "Inference / Parallel and Non-Autoregressive Decoding",
-        "Speculative Decoding",
-        "inference-systems",
-        "投機的復号 / 無損失復号高速化"
-      ],
-      "title": "WEISS: Wasserstein efficient sampling strategy for LLMs in drug design"
     },
     "DOI:10.36948/ijfmr.2024.v06i06.32856": {
       "classification": "unrelated",
@@ -185125,11 +185074,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2505.11165",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.11165",
         "arXiv:2505.11165"
       ],
-      "reason": "arXiv一次要旨はイベントカメラの非同期イベント列を学習表現へ変換するEVA（Event Asynchronous representation learning）を提案し、DVS128-Gesture/N-Carsの認識とGen1の物体検出で評価する。言語モデルのlinear attentionと自己教師あり学習から着想を得るが、最終用途はイベントベース視覚認識・検出であり、LLMの生成推論・サービングは対象外なのでunrelated。",
+      "reason": "タイトルで研究対象がイベントベース神経ネットワークの非同期性最大化であり、LLM生成推論の実行・サービング最適化ではないと明白。一次書誌で題名・識別子を照合したが、タイトル先行除外なので通常10件ノルマに算入しない。",
       "first_checked_at": "2026-11-18T09:48:33+00:00",
-      "last_checked_at": "2026-11-18T09:48:33+00:00",
+      "last_checked_at": "2026-11-18T10:09:03+00:00",
       "linked_from": [],
       "title": "Maximizing Asynchronicity in Event-based Neural Networks"
     },
@@ -185209,6 +185159,126 @@
       "last_checked_at": "2026-11-18T09:48:43+00:00",
       "linked_from": [],
       "title": "NiNformer: a network in network transformer with token mixing generated gating function"
+    },
+    "DOI:10.1109/ijcnn55064.2022.9891918": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn55064.2022.9891918",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn55064.2022.9891918"
+      ],
+      "reason": "題名が長文書分類のためのHybrid Attention Transformerという応用課題を明示しており、LLMの推論実行・サービング・メモリ管理・量子化・計算カーネル最適化を研究対象としていない。一次abstractおよび本文は未読のタイトル段階での対象外判定である。",
+      "first_checked_at": "2026-11-18T10:08:43+00:00",
+      "last_checked_at": "2026-11-18T10:08:43+00:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 154; DOI:10.1109/IJCNN55064.2022.9891918"
+      ],
+      "title": "Hybrid Attention-based Transformer for Long-range Document Classification"
+    },
+    "arXiv:2512.16136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16136",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.16136",
+        "arXiv:2512.16136"
+      ],
+      "reason": "分離メモリ上のOLTP分散トランザクションを対象に、データとロックの分離、計算ノード上のロック配置、lock-firstトランザクションプロトコルでRDMA atomic操作を削減する。一次要旨の性能評価は分散データベースのトランザクションthroughputとlatencyであり、LLM推論・KVキャッシュ・モデル配置への直接的な技術的貢献を評価していない。文中でLLM用分離メモリを関連事例として挙げても対象研究ではないためunrelated。",
+      "first_checked_at": "2026-11-18T10:08:45+00:00",
+      "last_checked_at": "2026-11-18T10:08:45+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 500; OLTP distributed transactions / disaggregated memory"
+      ],
+      "title": "Lotus: Optimizing Disaggregated Transactions with Disaggregated Locks"
+    },
+    "DOI:10.1109/hpsc69479.2026.00019": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpsc69479.2026.00019",
+      "identity_tokens": [
+        "DOI:10.1109/hpsc69479.2026.00019"
+      ],
+      "reason": "タイトルが明示する対象はRLHFポストトレーニングの生成段階の効率化であり、配備済みLLMのオンライン推論サービング・KVキャッシュ・デコードカーネルの最適化ではない。二次書誌要約でもVerl学習パイプラインの生成長制御と学習スループット改善が主目的とされる。一次論文本文未取得につきタイトル除外扱い。",
+      "first_checked_at": "2026-11-18T10:08:49+00:00",
+      "last_checked_at": "2026-11-18T10:08:49+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "title": "Optimization of the Generation Phase in Post-Training of Large Language Models Based on RLHF"
+    },
+    "arXiv:2610.40983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40983",
+      "identity_tokens": [
+        "arXiv:2610.40983"
+      ],
+      "reason": "IBMの30,920件のfine-tuning実験を分析し、1〜32 GPUでbatch規模に伴う失敗率やRoCEによる学習効率差を調査する研究。LLMという対象は合うが、技術貢献の最終適用先がfine-tuning専用のserverless実行・学習スケーリングであり、凍結範囲の学習単独システムに該当するため通常の推論サーベイから除外。",
+      "first_checked_at": "2026-11-18T10:08:50+00:00",
+      "last_checked_at": "2026-11-18T10:08:50+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/new"
+      ],
+      "title": "LLM Fine-Tuning Workloads: Characterization, Challenges, and Opportunities for Serverless AI"
+    },
+    "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01",
+      "identity_tokens": [
+        "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01"
+      ],
+      "reason": "著者所属ETRIの正式公開要旨とECCV 2024 Green Foundation Modelsワークショップの原著PDFで、PixArt-Σを用いたテキスト画像生成専用Diffusion Transformerの層を、人間の画像選好スコアに基づいて剪定し画像生成品質を比較する研究と確認。LLM剪定を先行例として引用するが提案・実験の対象は画像生成DiTであり、言語モデルの推論システム最適化ではないためunrelated。",
+      "first_checked_at": "2026-11-18T10:08:52+00:00",
+      "last_checked_at": "2026-11-18T10:08:52+00:00",
+      "linked_from": [],
+      "title": "DiT-Pruner: Pruning Diffusion Transformer Models for Text-to-Image Synthesis Using Human Preference Scores"
+    },
+    "arXiv:2509.25998": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25998",
+      "identity_tokens": [
+        "arXiv:2509.25998"
+      ],
+      "reason": "arXiv v4一次要旨を確認。動画編集用拡散モデルの時空間集約にRWKV型の双方向再帰を導入し、動画編集速度最大3.7倍・メモリ60%削減を報告する。対象は動画生成・編集であり、生成LLM、VLMの理解・推論、LLMサービング、KVキャッシュ管理を扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T10:08:59+00:00",
+      "last_checked_at": "2026-11-18T10:08:59+00:00",
+      "linked_from": [],
+      "title": "VRWKV-Editor: Reducing quadratic complexity in transformer-based video editing"
+    },
+    "arXiv:2610.40939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40939",
+      "identity_tokens": [
+        "arXiv:2610.40939"
+      ],
+      "reason": "推論冒頭のCoT tokenにおけるentropy collapseを調べ、最初の1 tokenをprefillする方法と頻出開始tokenを禁止する方法でCoTの内容制御率を34〜41ポイント改善。推論時のtoken介入を扱うが、狙いはCoT監視可能性・生成制御であり、デコード高速化、計算削減、メモリ管理、servingの新規技術を示すものではないためunrelated。",
+      "first_checked_at": "2026-11-18T10:09:01+00:00",
+      "last_checked_at": "2026-11-18T10:09:01+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "title": "The First Few Tokens Matter: Understanding Chain-of-Thought Controllability"
+    },
+    "arXiv:2602.02110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02110",
+      "identity_tokens": [
+        "arXiv:2602.02110"
+      ],
+      "reason": "arXiv一次要旨の対象はDINO-WM世界モデルの視覚的計画と行動予測であり、重み・活性量子化の低ビット時の計画成功率を分析する。LLMの生成推論、サービング、KVメモリ、MoE推論等への適用・測定は示されず、今回のLLM推論システム系統からは対象外。",
+      "first_checked_at": "2026-11-18T10:09:02+00:00",
+      "last_checked_at": "2026-11-18T10:09:02+00:00",
+      "linked_from": [],
+      "title": "An Empirical Study of World Model Quantization"
+    },
+    "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5",
+      "identity_tokens": [
+        "ETSI:GR ENI 051 V4.1.1",
+        "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5"
+      ],
+      "reason": "タイトルから対象は6GコアネットワークのAIエージェントによるネットワークスライシングの標準化調査であり、LLM生成推論の高速化・省メモリ化・サービング基盤の性能評価ではない。ETSIの公式刊行情報で資料種別がGROUP REPORTと確認できた。タイトル先行除外なので通常10件ノルマに算入しない。",
+      "first_checked_at": "2026-11-18T10:09:04+00:00",
+      "last_checked_at": "2026-11-18T10:09:04+00:00",
+      "linked_from": [],
+      "title": "Experiential Networked Intelligence (ENI); Study on AI Agents based Next-generation Network Slicing"
     }
   }
 }

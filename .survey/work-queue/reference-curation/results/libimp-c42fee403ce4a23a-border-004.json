@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c42fee403ce4a23a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41720",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41720",
+    "identity_tokens": [
+      "arXiv:2610.41720"
+    ],
+    "reason": "重み共有loopを持つTransformerを、浅いモデルから層コピーで成長させ、初期に節約した学習FLOPsを後段の反復実行へ再配分するupcycling学習スケジュール。1.3Bで22下流課題の平均scoreを22.99から27.52へ改善するが、比較の主軸は等学習FLOPsであり推論token当たりの反復計算費用削減は示していない。学習専用最適化が中心なのでborderline。",
+    "first_checked_at": "2026-11-18T10:08:54+00:00",
+    "last_checked_at": "2026-11-18T10:08:54+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UpLoop: Training Looped Transformers via Upcycling at No Extra Pretraining Compute"
+  },
+  "processed_at": "2026-11-18T10:08:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42fee403ce4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

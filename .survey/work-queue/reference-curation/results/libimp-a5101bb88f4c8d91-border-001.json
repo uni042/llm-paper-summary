@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5101bb88f4c8d91-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/africon66545.2025.11533795",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/africon66545.2025.11533795",
+    "identity_tokens": [
+      "DOI:10.1109/africon66545.2025.11533795"
+    ],
+    "reason": "量子化ツールキット（bitsandbytes、AutoGPTQ）とAbsMax、Zero-Point、GPTQ、NF4を組み合わせるモジュール式LLM圧縮パイプライン。出版社要旨の索引転載は4/8bitモデルを汎用GPU/CPUで許容できる品質損失の範囲で実行可能と述べるが、推論カーネル・速度・独自手法の明確な改善は示さず、実装比較・実証の深さが限定的なためborderline。",
+    "first_checked_at": "2026-11-18T10:08:51+00:00",
+    "last_checked_at": "2026-11-18T10:08:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Pipeline for Efficient Quantization of Large Language Models for Resource-Constrained Deployment"
+  },
+  "processed_at": "2026-11-18T10:08:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5101bb88f4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

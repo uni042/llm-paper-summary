@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e27615202f2623e2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.40939",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.40939",
+    "identity_tokens": [
+      "arXiv:2610.40939"
+    ],
+    "reason": "推論冒頭のCoT tokenにおけるentropy collapseを調べ、最初の1 tokenをprefillする方法と頻出開始tokenを禁止する方法でCoTの内容制御率を34〜41ポイント改善。推論時のtoken介入を扱うが、狙いはCoT監視可能性・生成制御であり、デコード高速化、計算削減、メモリ管理、servingの新規技術を示すものではないためunrelated。",
+    "first_checked_at": "2026-11-18T10:09:01+00:00",
+    "last_checked_at": "2026-11-18T10:09:01+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new"
+    ],
+    "title": "The First Few Tokens Matter: Understanding Chain-of-Thought Controllability"
+  },
+  "processed_at": "2026-11-18T10:09:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e27615202f26",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

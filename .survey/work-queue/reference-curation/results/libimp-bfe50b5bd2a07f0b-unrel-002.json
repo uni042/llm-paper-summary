@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfe50b5bd2a07f0b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01",
+    "identity_tokens": [
+      "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01"
+    ],
+    "reason": "著者所属ETRIの正式公開要旨とECCV 2024 Green Foundation Modelsワークショップの原著PDFで、PixArt-Σを用いたテキスト画像生成専用Diffusion Transformerの層を、人間の画像選好スコアに基づいて剪定し画像生成品質を比較する研究と確認。LLM剪定を先行例として引用するが提案・実験の対象は画像生成DiTであり、言語モデルの推論システム最適化ではないためunrelated。",
+    "first_checked_at": "2026-11-18T10:08:52+00:00",
+    "last_checked_at": "2026-11-18T10:08:52+00:00",
+    "linked_from": [],
+    "title": "DiT-Pruner: Pruning Diffusion Transformer Models for Text-to-Image Synthesis Using Human Preference Scores"
+  },
+  "processed_at": "2026-11-18T10:08:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfe50b5bd2a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

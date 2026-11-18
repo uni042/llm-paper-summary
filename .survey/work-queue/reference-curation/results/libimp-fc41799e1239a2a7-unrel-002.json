@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc41799e1239a2a7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5",
+    "identity_tokens": [
+      "ETSI:GR ENI 051 V4.1.1",
+      "SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5"
+    ],
+    "reason": "タイトルから対象は6GコアネットワークのAIエージェントによるネットワークスライシングの標準化調査であり、LLM生成推論の高速化・省メモリ化・サービング基盤の性能評価ではない。ETSIの公式刊行情報で資料種別がGROUP REPORTと確認できた。タイトル先行除外なので通常10件ノルマに算入しない。",
+    "first_checked_at": "2026-11-18T10:09:04+00:00",
+    "last_checked_at": "2026-11-18T10:09:04+00:00",
+    "linked_from": [],
+    "title": "Experiential Networked Intelligence (ENI); Study on AI Agents based Next-generation Network Slicing"
+  },
+  "processed_at": "2026-11-18T10:09:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc41799e1239",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

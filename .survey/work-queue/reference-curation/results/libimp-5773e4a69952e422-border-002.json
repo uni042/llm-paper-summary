@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5773e4a69952e422-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.15077",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.15077",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2502.15077",
+      "arXiv:2502.15077"
+    ],
+    "reason": "OpenSoraの動画拡散Transformerを対象に、時間ステップ別の校正データ、重みのチャネル単位量子化、活性のテンソル単位量子化、smooth quantizationで静的PTQを行う。一次要旨はFP16や動的量子化ViDiT-Qに近い動画品質をCLIP/VQA指標で確認したと述べる。低資源AIプロセッサ向けの実行効率化技術だが、LLM重み・KVキャッシュ・トークン生成の直接評価がなく、推論システム系統への関連は間接的。",
+    "first_checked_at": "2026-11-10T10:47:02+00:00",
+    "last_checked_at": "2026-11-18T10:08:44+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 214; quantization / diffusion transformer"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hardware-Friendly Static Quantization Method for Video Diffusion Transformers"
+  },
+  "processed_at": "2026-11-18T10:08:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5773e4a69952",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

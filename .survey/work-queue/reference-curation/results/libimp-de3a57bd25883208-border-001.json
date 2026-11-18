@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-de3a57bd25883208-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.01296",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.01296",
+    "identity_tokens": [
+      "arXiv:2601.01296"
+    ],
+    "reason": "LLM重みのネットワーク流出を容易にする、復号コスト制約を緩めた16〜100倍の高圧縮と盗難リスクを分析するセキュリティ研究。圧縮技術自体はモデル圧縮に隣接するが、目的は推論の高速化・実用モデル品質維持ではなくexfiltrationリスクと対策の検証。サーベイの直接対象ではなくborderline。",
+    "first_checked_at": "2026-11-18T10:09:00+00:00",
+    "last_checked_at": "2026-11-18T10:09:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Aggressive Compression Enables LLM Weight Theft"
+  },
+  "processed_at": "2026-11-18T10:09:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-de3a57bd2588",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

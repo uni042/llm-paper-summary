@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-55b0763137448023-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ijcnn55064.2022.9891918",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ijcnn55064.2022.9891918",
+    "identity_tokens": [
+      "DOI:10.1109/ijcnn55064.2022.9891918"
+    ],
+    "reason": "題名が長文書分類のためのHybrid Attention Transformerという応用課題を明示しており、LLMの推論実行・サービング・メモリ管理・量子化・計算カーネル最適化を研究対象としていない。一次abstractおよび本文は未読のタイトル段階での対象外判定である。",
+    "first_checked_at": "2026-11-18T10:08:43+00:00",
+    "last_checked_at": "2026-11-18T10:08:43+00:00",
+    "linked_from": [
+      "WORKLIST-45.md rank 154; DOI:10.1109/IJCNN55064.2022.9891918"
+    ],
+    "title": "Hybrid Attention-based Transformer for Long-range Document Classification"
+  },
+  "processed_at": "2026-11-18T10:08:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-55b076313744",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

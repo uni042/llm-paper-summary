@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c42fee403ce4a23a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41751",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41751",
+    "identity_tokens": [
+      "arXiv:2610.41751"
+    ],
+    "reason": "独立に事前学習したVLMと小型言語モデルの間でテキストではなく潜在状態を受け渡すcodecを提案。VLM状態をSLM埋込へ写すencoderと視覚prefixに注意を向けるLoRA decoderを約160万パラメータで学習し、CLEVR/GQAの正解率を同LoRA予算のテキスト通信より改善。情報損失の改善が中心で、推論レイテンシやメモリ削減を一次要旨で確認できないためborderline。",
+    "first_checked_at": "2026-11-18T10:08:53+00:00",
+    "last_checked_at": "2026-11-18T10:08:53+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latent-Lens: Visual Perception in Small Language Models Through Latent Communication"
+  },
+  "processed_at": "2026-11-18T10:08:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42fee403ce4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

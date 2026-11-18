@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-efd80db4ec689768-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.21627",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.21627",
+    "identity_tokens": [
+      "arXiv:2512.21627"
+    ],
+    "reason": "arXiv一次要旨で、Qwen2.5-VLを用いた生涯ナビゲーション向けにDINOv3特徴とPixelUnshuffle/Convで画像履歴を圧縮し、16倍設定では画像約30トークンへ縮小すると確認。視覚文脈圧縮は関連するが、主評価はGOAT-Bench/HM3D-OVONの移動性能であり、汎用VLMサービングの速度・メモリ最適化を直接検証していないため境界的。",
+    "first_checked_at": "2026-11-15T21:43:08+00:00",
+    "last_checked_at": "2026-11-18T10:09:02+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AstraNav-Memory: Contexts Compression for Long Memory"
+  },
+  "processed_at": "2026-11-18T10:09:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efd80db4ec68",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

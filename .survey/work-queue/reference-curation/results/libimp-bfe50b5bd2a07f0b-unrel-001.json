@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfe50b5bd2a07f0b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.07244",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.07244",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2502.07244",
+      "arXiv:2502.07244"
+    ],
+    "reason": "arXiv原著要旨で、線形注意層を動的ベクトル自己回帰（VAR）として解釈し、多層構成を時系列予測の自己回帰目的へ整合させるSAMoVARを提案していることを確認。最終評価対象は多変量時系列予測の精度・解釈可能性・計算効率であり、LLMの生成推論・サービング・KVキャッシュ・GPU実行基盤を直接改善する研究ではないためunrelated。",
+    "first_checked_at": "2026-11-18T06:39:40+00:00",
+    "last_checked_at": "2026-11-18T10:08:52+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting"
+  },
+  "processed_at": "2026-11-18T10:08:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfe50b5bd2a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

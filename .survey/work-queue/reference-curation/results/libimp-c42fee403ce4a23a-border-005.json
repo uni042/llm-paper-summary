@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c42fee403ce4a23a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41994",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41994",
+    "identity_tokens": [
+      "arXiv:2610.41994"
+    ],
+    "reason": "Gated DeltaNet系の状態保持時間を決めるA_logとdt_biasが学習後も初期値と強く相関する観測に基づき、head間の幾何級数的時間尺度と層間の入力感度profileを初期化する。GDN/KDA/GDN2/Mamba-2/RWKV-7のRULER型長文検索精度を乱数初期化比5.29〜16.71ポイント改善。recurrent memory設計に関連するが、主貢献は学習時初期化と精度であり実行速度・状態容量の削減を示さないためborderline。",
+    "first_checked_at": "2026-11-18T10:08:54+00:00",
+    "last_checked_at": "2026-11-18T10:08:54+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DAMI: Dual-Axis Memory Initialization for Enhanced Long-Context Retrieval in Gated Linear Attention"
+  },
+  "processed_at": "2026-11-18T10:08:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42fee403ce4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
