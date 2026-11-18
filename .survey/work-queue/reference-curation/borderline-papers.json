@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T14:10:36+00:00",
+  "updated_at": "2026-11-18T14:27:10+00:00",
   "record_count": 6359,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -84118,7 +84118,7 @@
       ],
       "reason": "arXiv一次要旨はPDFからMarkdownへ直接変換するデコーダモデルで、PDFと生成文のn-gram重複を利用するCopy Lookup Decodingによりドラフトを作り、逐次トークン生成を削減する。推論高速化に関係するが、用途はPDF変換専用で汎用LLMサービングの性能評価ではないためborderline。",
       "first_checked_at": "2026-10-30T07:20:20+00:00",
-      "last_checked_at": "2026-10-30T07:20:20+00:00",
+      "last_checked_at": "2026-11-18T14:27:10+00:00",
       "linked_from": [
         "Document Processing",
         "Speculative Decoding"
@@ -84134,7 +84134,7 @@
       ],
       "reason": "arXiv一次要旨はLLMの微調整、学習時間削減、計算・メモリコスト低減を横断的に扱うシステマティックレビュー。LLM効率の背景資料にはなるが、生成推論の高速化・KV管理・サービングの独立した方法論が中心ではないためborderline。",
       "first_checked_at": "2026-10-30T07:20:20+00:00",
-      "last_checked_at": "2026-10-30T07:20:20+00:00",
+      "last_checked_at": "2026-11-18T14:27:10+00:00",
       "linked_from": [
         "Training Efficiency",
         "Weight Quantization / Compression"
@@ -84415,7 +84415,7 @@
       ],
       "reason": "arXiv一次要旨は自己回帰型音声言語モデルの逐次復号制約を背景に、拡散型バックボーンへ置換した実用音声理解モデルDIFFA-2を提案。並列復号の可能性に関連するが、主な貢献は音声理解能力・学習方式であり、一般的LLM推論サービングの高速化を主眼とする論文ではないためborderline。",
       "first_checked_at": "2026-10-30T07:20:42+00:00",
-      "last_checked_at": "2026-10-30T07:20:42+00:00",
+      "last_checked_at": "2026-11-18T14:27:09+00:00",
       "linked_from": [
         "Diffusion LLM Inference",
         "Multimodal LLM Inference"
@@ -84431,7 +84431,7 @@
       ],
       "reason": "arXiv一次要旨は端末内の逐次推薦へLLMを配備するため、タスク適応型のモデル圧縮OD-LLMを提案。メモリ・計算制約下の端末LLM推論に関連する一方、評価は推薦タスクに特化しており、汎用LLMサービング効率への外挿は限定的なためborderline。",
       "first_checked_at": "2026-10-30T07:20:42+00:00",
-      "last_checked_at": "2026-10-30T07:20:42+00:00",
+      "last_checked_at": "2026-11-18T14:27:10+00:00",
       "linked_from": [
         "Edge LLM Inference",
         "Weight Quantization / Compression"
@@ -84447,7 +84447,7 @@
       ],
       "reason": "arXiv一次要旨はSSMが安定に近似できる長期記憶の理論的制約を示し、再パラメータ化によって記憶能力を改善するStableSSMを提案。長文脈モデルの設計には関係するが、推論カーネル・サービング速度・KV削減の実測が主題ではないためborderline。",
       "first_checked_at": "2026-10-30T07:20:43+00:00",
-      "last_checked_at": "2026-10-30T07:20:43+00:00",
+      "last_checked_at": "2026-11-18T14:27:10+00:00",
       "linked_from": [
         "Alternative Language Model Architectures"
       ],
