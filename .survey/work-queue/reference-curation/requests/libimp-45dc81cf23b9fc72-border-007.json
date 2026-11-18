@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-45dc81cf23b9fc72-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2611.01320",
+  "reason": "拡散LLM向け適応ステップ配慮型疎注意Step-dLLM。双方向注意でKVキャッシュが使えず全注意マップを毎ステップ再計算する拡散LLMに対し、ステップに応じた疎注意を行う。注意機構ではあるが、拡散型言語モデルに特化し境界。",
+  "title": "Step-dLLM: Adaptive Step-aware Sparse Attention for Efficient Diffusion LLM Inference",
+  "identity_tokens": [
+    "arXiv:2611.01320",
+    "https://arxiv.org/abs/2611.01320"
+  ],
+  "linked_from": [
+    "02-hardware-accelerators",
+    "Diffusion LLM Inference",
+    "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+    "inference-systems",
+    "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45dc81cf23b9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

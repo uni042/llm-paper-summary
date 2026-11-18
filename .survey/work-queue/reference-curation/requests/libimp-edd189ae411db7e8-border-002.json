@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-edd189ae411db7e8-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.21848",
+  "reason": "キーレス注意。キー射影を値空間ルーティング射影に置き換え、キー表現を注意計算から排除して値のみのキャッシュでKVメモリを半減する注意機構。推論メモリの削減が狙いだが、モデルアーキテクチャの変更であり境界。",
+  "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+  "identity_tokens": [
+    "arXiv:2606.21848",
+    "https://arxiv.org/abs/2606.21848"
+  ],
+  "linked_from": [
+    "07-kv-cache-optimization-compression",
+    "KV Cache Optimization / Compression",
+    "KVキャッシュ動的メモリ管理／PagedAttention代替",
+    "LLM Serving / Scheduling / Disaggregation",
+    "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+    "sparse attention / long-context Transformer"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edd189ae411d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
