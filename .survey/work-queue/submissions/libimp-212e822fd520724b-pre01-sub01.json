@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads",
+      "source_url": "https://arxiv.org/abs/2606.18851",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of large language model (LLM) inference is creating significant data-center loads that face increasing energy-management challenges under tightening grid conditions and demand response (DR) requirements. Conventional data-center energy management mainly relies on temporal and spatial workload shifting and campus-level energy asset scheduling, but it usually treats LLM inference demand as an aggregate load. As a result, these approaches fail to exploit the internal characteristics of LLM serving and therefore overlook the flexibility offered by LLM-specific techniques such as model quantization. To unlock this flexibility, this paper proposes a quantization-enabled energy management framework for grid-responsive LLM inference data centers. First, a quantization-to-power model is established to map each model--quantization configuration to a compact set of dispatchable parameters. Second, a two-stage quantization-enabled DR model is developed to account for model instance switching, request routing, and precision selection. Third, a multi-campus co-optimization method is introduced for DR participation by integrating grid-side electricity and carbon signals with the quantization-enabled DR model. Case studies show that the proposed framework reduces total data-center operating cost by 34.3\\% without curtailing served token volume, validating model quantization as an effective flexibility lever for grid-responsive LLM data-center energy management.",
+      "identifiers": [
+        "SemanticScholar:c2caf7546ed07612003016158296822be9772e8d"
+      ],
+      "semantic_scholar_id": "c2caf7546ed07612003016158296822be9772e8d",
+      "canonical_id": "arXiv:2606.18851",
+      "arxiv_id": "2606.18851",
+      "doi": "10.48550/arXiv.2606.18851",
+      "authors": [
+        "Bo-Jun Du",
+        "Xiao-Yi Fan",
+        "Er-Shun Du",
+        "Long Chen",
+        "Jianpei Han",
+        "Qing-Chun Hou",
+        "Ning Zhang",
+        "C. Kang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLMサービングの量子化レベルをデータセンターの需要応答資源として扱い、電力・炭素信号とインスタンス切替・ルーティングを共同最適化。提供トークン数を削減せず運用コスト34.3%削減を報告。推論精度選択とエネルギー運用に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Meeting SLOs, Slashing Hours: Automated Enterprise LLM Optimization with OptiKIT",
+      "source_url": "https://arxiv.org/abs/2601.20408",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Enterprise LLM deployment faces a critical scalability challenge: organizations must optimize models systematically to scale AI initiatives within constrained compute budgets, yet the specialized expertise required for manual optimization remains a niche and scarce skillset. This challenge is particularly evident in managing GPU utilization across heterogeneous infrastructure while enabling teams with diverse workloads and limited LLM optimization experience to deploy models efficiently. We present OPTIKIT, a distributed LLM optimization framework that democratizes model compression and tuning by automating complex optimization workflows for non-expert teams. OPTIKIT provides dynamic resource allocation, staged pipeline execution with automatic cleanup, and seamless enterprise integration. In production, it delivers more than 2x GPU throughput improvement while empowering application teams to achieve consistent performance improvements without deep LLM optimization expertise. We share both the platform design and key engineering insights into resource management, pipeline orchestration, and integration patterns that enable large-scale, production-grade democratization of model optimization. Finally, we open-source the system to enable external contributions and broader reproducibility.",
+      "identifiers": [
+        "SemanticScholar:19399404d63b33925b67e582c5378db57511be9b"
+      ],
+      "semantic_scholar_id": "19399404d63b33925b67e582c5378db57511be9b",
+      "canonical_id": "arXiv:2601.20408",
+      "arxiv_id": "2601.20408",
+      "doi": "10.48550/arXiv.2601.20408",
+      "authors": [
+        "Nicholas Santavas",
+        "Kareem Eissa",
+        "Patrycja Cieplicka",
+        "P. Florek",
+        "Matteo Nulli",
+        "С. А. Васильев",
+        "Seyyed Hadi Hashemi",
+        "A. Gasteratos",
+        "Shahram Khadivi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は企業向けLLMの圧縮・調整を自動化し、動的GPU資源割当とパイプライン実行・清掃を統合するOptiKITを提案。実運用でGPUスループット2倍超改善を報告。LLM配備時の資源効率と実行基盤に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On-Policy Attention Linearization",
+      "source_url": "https://arxiv.org/abs/2609.31947",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid transformer architectures that replace most softmax attention layers with linear attention offer transformer-level quality at a fraction of the memory cost. Rather than pretraining such models, a growing body of work distills them from already trained full-attention transformers. However, these distilled models often collapse on long-context retrieval and reasoning tasks, particularly when operating in thinking mode, where the efficiency gains of hybrid architectures matter most. Since linear attention layers must compress context into a fixed-size state, their errors compound over long sequences. As off-policy distillation never teaches the student model to recover from this drift, tasks that necessitate longer sequence lengths become especially challenging. We introduce On-Policy Attention Linearization (OPAL) in which the hybrid attention student samples its own long-context trajectories and receives dense supervision from the frozen full-attention teacher. Applying OPAL to Qwen3-4B and MiMo-7B-RL-0530, we recover $87$--$94\\%$ of full-attention performance on commonsense reasoning, $100\\%$ on needle-in-a-haystack (NIAH) retrieval, and $83$--$93\\%$ on mathematical reasoning with only 3B training tokens. We achieve these results without supervised fine-tuning (SFT) or reinforcement learning with verifiable rewards (RLVR). Compared with the strongest prior linearization method, which recovers $68\\%$ of its teacher's retrieval performance and $21.6\\%$ absolute average mathematical reasoning accuracy, OPAL fully recovers retrieval and achieves $67.6$--$72.2\\%$ on math reasoning.",
+      "identifiers": [
+        "SemanticScholar:a4f421cfd489500a42850bf50ad71fbc040e1a4e"
+      ],
+      "semantic_scholar_id": "a4f421cfd489500a42850bf50ad71fbc040e1a4e",
+      "canonical_id": "arXiv:2609.31947",
+      "arxiv_id": "2609.31947",
+      "doi": "10.48550/arXiv.2609.31947",
+      "authors": [
+        "Arian Raje",
+        "Anupam Nayak",
+        "Anthony Fei",
+        "Akaash R. Parthasarathy",
+        "Mohamed S. Abdelfattah",
+        "Gauri Joshi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はsoftmax注意から線形注意への蒸留で長文脈推論時の状態誤差が累積する問題に対し、学生モデル自身の長文脈軌跡に教師から密な監督を与えるOPALを提案。Qwen3-4BとMiMo-7BでNIAH品質100%回復等を報告し、固定状態の線形注意による推論メモリ削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-212e822fd520",
+    "round": "libimp-212e822fd520724b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-212e822fd520724b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-212e822fd520724b-pre01.json",
+    "receipt": "sha256:6739aff81485b95525ad075dbdea0beae01feaeef12e48654cfd6e2e69bfbb29"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-212e822fd520",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

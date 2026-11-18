@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States",
+      "source_url": "https://arxiv.org/abs/2610.20637",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We expand the exponential kernel of attention into a truncated Taylor series of $n$ terms and factorize each term into a tensor-power inner product, which collapses the causal history into exactly $n$ recurrent states, each updated by one rank-one outer product per token and independent of context length $N$. The recursion is lossless with respect to the truncated kernel ($2.2 \\times 10^{-16}$ in float64), and the states are additive across chunks ($5.7 \\times 10^{-14}$), so prefill admits a parallel scan. Measured exponents are $t \\propto N^{2.28}$ for softmax against $N^{0.91}$ for states, with a crossover at $N \\approx 728$ and $20.8\\times$ at $N = 8192$; per-token decoding latency is constant at $7.3\\,\\mu$s against $N^{1.04}$ for softmax, giving $76.0\\times$ at $N = 65536$. Accuracy improves exponentially in $n$ while cost grows combinatorially, since the $m$-th state is $\\binom{d+m-1}{m}$ wide---a bound confirmed by SVD---so the optimum is second order, $n = 3$, at $6.5 \\times 10^{-4}$ error and $9{,}945$ elements per head. Query and key normalization is a prerequisite: without it the argument exceeds the convergence radius and adding terms stops helping.",
+      "identifiers": [
+        "SemanticScholar:ecd7d3f965bde6839247afda372140cf66ad982d"
+      ],
+      "semantic_scholar_id": "ecd7d3f965bde6839247afda372140cf66ad982d",
+      "canonical_id": "arXiv:2610.20637",
+      "arxiv_id": "2610.20637",
+      "authors": [
+        "Zi-Cong Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "softmax注意の指数核をTaylor展開し、有限個のテンソル冪内積へ分解して履歴を固定個数のrecurrent stateへ畳み込む。各tokenでrank-one更新、chunk間加算が可能なためprefill並列scanと文脈長に依存しないdecodeを狙う。要旨ではN=8192で20.8倍、N=65536のdecodeで76倍を報告する一方、高次展開は状態幅が組合せ的に増加する。推論attention計算量の直接削減としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking",
+      "source_url": "https://arxiv.org/abs/2610.13474",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern attention workloads require diverse masking patterns whose boundaries depend on runtime metadata, yet efficient attention kernels natively support only a small set of patterns. Existing methods for supporting custom masks in these kernels face an expressiveness-efficiency trade-off. Predicate-based methods are expressive but incur substantial preprocessing and execution overhead, whereas interval-based methods execute efficiently but restrict expressiveness through a predefined interval count. We present CompileMask, which addresses this trade-off by connecting expressive mask specifications with efficient attention execution. We design a compiler that analyzes visibility rules during the offline stage and generates a mask-specific preprocess kernel. We further propose MaskSpec, a region-based DSL that lets users express these rules. During the online stage, the generated kernel reads batch metadata and produces a compact Execution Descriptor that lets the attention kernel efficiently check visibility by comparing element indices against precomputed endpoints. Experiments show that CompileMask achieves up to $3.8\\times$ speedup over state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac"
+      ],
+      "semantic_scholar_id": "c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac",
+      "canonical_id": "arXiv:2610.13474",
+      "arxiv_id": "2610.13474",
+      "authors": [
+        "Hong-Zheng Li",
+        "Jia-Cheng Wan",
+        "Z. Xing",
+        "Zhi-Da Jiang",
+        "Yuan-Hang Yang",
+        "J. Shu",
+        "Jia-Xing Wang",
+        "Xu-Peng Miao",
+        "Ying-Xia Shao",
+        "Zhen Chen",
+        "Ke Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "実行時メタデータで決まる複雑なattention maskを、MaskSpec DSLで記述し、オフライン解析でmask専用preprocess kernelを生成するCompileMaskを提案。オンラインではbatch metadataから小さなExecution Descriptorを作り、attention kernelが境界値比較だけで可視性を判定する。従来のpredicate方式の前処理負荷と固定区間方式の表現力制約を両立し、最大3.8倍高速化を報告するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
+      "source_url": "https://arxiv.org/abs/2610.32279",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale Transformers have achieved remarkable success across NLP, computer vision, and robotics, but their growing computational and memory demands challenge efficient inference. Spatial accelerators offer advantages in on-chip bandwidth and energy efficiency, yet designing them for large models remains costly and time-consuming. Existing accelerator generators typically focus on single-operation support, overlooking the benefits of multi-operation pipelining, which limits throughput and energy efficiency. We propose TranSAGE, a compiler-based framework that jointly optimizes scheduling for large-scale transformers under multi-operation pipelining and generates corresponding accelerator implementations. Our approach integrates a DSE engine with multi-operation dataflow optimization and a dynamic programming-based graph partitioning algorithm to efficiently identify pipeline-friendly operation clusters and their optimal dataflow parameters. We further design spatial architecture primitives and lowering passes to automatically generate efficient RTL implementations. Evaluations on four representative LLMs demonstrate that TranSAGE achieves up to 2.41× higher throughput and 13.04× higher energy efficiency over commercial GPU/NPU baselines. Compared with state-of-the-art accelerator generators, TranSAGE achieves up to 11.33× higher throughput and 6.07× higher energy efficiency. Our code is available at https://github.com/sjtu-zhao-lab/TranSAGE.git.",
+      "identifiers": [
+        "SemanticScholar:677e510cd193857260c81ef53692c2bc662ec4f3"
+      ],
+      "semantic_scholar_id": "677e510cd193857260c81ef53692c2bc662ec4f3",
+      "canonical_id": "arXiv:2610.32279",
+      "arxiv_id": "2610.32279",
+      "doi": "10.1145/3845814.3850039",
+      "authors": [
+        "Chi Zhang",
+        "Yi Sun",
+        "Wei-Chuang Zhang",
+        "Quan Chen",
+        "Jie-Ru Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大規模Transformer向け空間アクセラレータを、複数演算のpipelineとdataflowを共同最適化してRTL生成するTranSAGEを提案。動的計画法で演算グラフを分割し、パイプラインに適した演算群・データフローを設計空間探索する。4種類のLLMで商用GPU/NPU比最大2.41倍throughput、13.04倍energy efficiencyを報告しており、LLM推論専用ハードウェアの直接的研究としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3be9787b622a",
+    "round": "libimp-3be9787b622a1d71-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3be9787b622a1d71-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3be9787b622a1d71-pre01.json",
+    "receipt": "sha256:85c7d1d1c3dbfe8feee31e37fd5fa4e27ca334406b4ddeada892ad68843f0c95"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3be9787b622a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

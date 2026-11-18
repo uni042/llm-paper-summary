@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GDE: Grid-based Diversity Enhancement for Efficient Vision Token Selection in VLMs",
+      "source_url": "https://doi.org/10.1109/ICEIC69189.2026.11386008",
+      "year": 2026,
+      "published": "2026-01-18",
+      "venue": "International Conference on Electronics, Information and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent vision-language models (VLMs) have achieved impressive performance across various tasks but suffer from high computational cost due to the large number of visual tokens. While diversity-based token selection methods effectively reduce redundancy, they often lose spatial coverage under tight token budgets. To address this issue, we propose grid-based diversity enhancement (GDE), a lightweight module that enforces balanced spatial coverage by ensuring that each grid region contributes at least one representative token. $GDE$ can be seamlessly integrated into existing diversity-based frameworks with minimal overhead. Experiments on image understanding benchmarks using LLaVA-1.5-7B demonstrate that $GDE$ consistently improves performance, achieving $97.4 \\%$ of the vanilla model’s accuracy with only 128 tokens. These results show that $GDE$ effectively preserves global visual context and achieves a better trade-off between efficiency and accuracy under extreme compression.",
+      "identifiers": [
+        "SemanticScholar:ada400846629a9638dbc951ee1b1c98c36f42c32"
+      ],
+      "semantic_scholar_id": "ada400846629a9638dbc951ee1b1c98c36f42c32",
+      "doi": "10.1109/ICEIC69189.2026.11386008",
+      "canonical_id": "DOI:10.1109/ICEIC69189.2026.11386008",
+      "authors": [
+        "Seungil Lee",
+        "H. Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 304,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者所属機関Seoul National University of Science and Technologyの一次書誌・要旨を確認。VLMの視覚トークンをdiversity-based手法で削減すると、極小トークン予算で画像の空間的カバレッジが失われる問題に対し、画像を格子分割して各領域から最低1代表トークンを残すGrid-based Diversity Enhancementを提案。LLaVA-1.5-7Bの画像理解評価では128視覚トークンで元モデルの精度の97.4%を保持したと報告。VLM推論時の視覚トークン圧縮に直接適用するためaccept。速度やGPUメモリ削減の実測値は一次要旨にないため推定しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_chat_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1b59148a9e36",
+    "round": "libimp-1b59148a9e36b18b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1b59148a9e36b18b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1b59148a9e36b18b-pre01.json",
+    "receipt": "sha256:d8140c1852b3ef66c84737c4d52176a584ddf97bdd4ad85be547eb6404043856"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1b59148a9e36",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Context as Infrastructure: Knowledge Compilation for Retrieval in Agentic Systems with Harnesses",
+      "source_url": "https://arxiv.org/abs/2610.41172",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation is becoming agentic. A search harness writes queries, reads results, reformulates, and decides when to stop. This largely solves accuracy: a harness with only BM25/grep and MiniMax M3 answers 85% of BrowseComp-Plus and 91% on multi-hop FRAMES in our runs, without compiled or vector indexes. It exposes a context problem: an undisciplined loop repeats queries, rereads documents, and fills the window with unused passages. The missing layer is knowledge compilation: a configurable ingestion pipeline where LLMs enrich documents with context no chunk contains alone--navigation hierarchies with claim-evidence leaves, entity graphs, timelines, mind maps, ontologies, wikis, and memory. Compilation is not a better retriever: under a competent harness, structural artifacts gave no detectable accuracy gain on FRAMES, and a PageIndex-style outline degraded at scale. It is a supply layer. A navigation tree whose leaves are claim-evidence pairs--the mechanism we measure--cuts query tokens by 91% when evidence suffices and adds 1.9% when it does not, a 38% average reduction; this implies a 2% break-even sufficiency rate and a measured rate near 43%. A decision gate cuts latency from 140 s to 30 s, though substitution's token saving is bought with retrieval rounds and carries its own latency cost. Other artifacts--ontology, graph, wiki, timeline, mind map, memory--pay off in deployment (governance, integration, onboarding, temporal orientation, continuity) where accuracy benchmarks cannot see them. We describe RAGFlow's pipeline and harness (open source at https://github.com/infiniflow/ragflow), which turns the loop into five disciplined stations and keeps the context entering the model the smallest sufficient set; together they form an agent-native database: a store that hands the agent compiled, governed context instead of a ranked list of passages.",
+      "identifiers": [
+        "SemanticScholar:254e117da638793f7410eed7f40ed0f29467db2e"
+      ],
+      "semantic_scholar_id": "254e117da638793f7410eed7f40ed0f29467db2e",
+      "canonical_id": "arXiv:2610.41172",
+      "arxiv_id": "2610.41172",
+      "authors": [
+        "Zhi-Chang Yu",
+        "Bai-Ning Cao",
+        "Sbaaoui Idriss",
+        "Qian-Li Wang",
+        "Gan Xu",
+        "Ling Qin",
+        "Xiao-Ling Jin",
+        "Andrea Liu",
+        "Shao-Hao Cai",
+        "Xiao-Yang Bao",
+        "Sheng-Lee Chen",
+        "Chang-Chang Ding",
+        "Peng-Fei Zhu",
+        "Jing-Xiang Xu",
+        "Yi-Feng Mao",
+        "Lu-Xin Liu",
+        "Hai-Di Jin",
+        "Ying-Feng Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RAG agentが繰り返す検索・再読込でcontext tokenを浪費する問題に対し、文書をclaim-evidence leaf付きnavigation treeへ事前コンパイルし、十分な根拠がある場合にcontextへ注入する。必要な場合のquery tokenを91%削減し、十分でない場合は1.9%増、平均38%削減と報告。decision gateでlatencyを140秒から30秒へ短縮したが追加retrieval roundの費用もある。LLM agent推論時のtoken・latency最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents",
+      "source_url": "https://arxiv.org/abs/2610.41432",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Computer-use agents increasingly tackle tasks ranging from everyday desktop activities to long-horizon professional workflows. Yet interfaces centered on screenshots and mouse-and-keyboard actions can impose a human-interaction prior, requiring repeated screen interpretation while leaving the computer's semantic and programmatic capabilities underexposed. We argue for exposing these capabilities and letting models choose and combine them. We introduce Hybrid Computer Use (HCU), a unified interface for general agents that combines three complementary channels: programmatic interaction through code and command-line tools, semantic interaction through accessibility (AX), and visual interaction through graphical user interfaces (GUI). Our HCU supports efficient AX interaction and guards against stale-state actions during channel switching. A supplementary HCU skill guides agents in selecting and coordinating channels to use the unified interface effectively. Our designed AX tools return compact observations, execute actions in batches, and report their effects as AX diffs, so the model needs fewer round trips. On OSWorld 2.0, HCU achieves the highest Partial and Binary scores among the compared systems. Analyzing agent trajectories, we find that all evaluated models improve with HCU yet allocate work across the channels differently and consistently outperform compared baselines in terms of both efficiency and task success, highlighting the value of unified computer-use interfaces that allow flexible channel selection and combination.",
+      "identifiers": [
+        "SemanticScholar:2462291800b4f6f5751074379c6480f8bb980657"
+      ],
+      "semantic_scholar_id": "2462291800b4f6f5751074379c6480f8bb980657",
+      "canonical_id": "arXiv:2610.41432",
+      "arxiv_id": "2610.41432",
+      "authors": [
+        "Hao-Qing Wang",
+        "Xiao-Yi Zhang",
+        "Si-Cheng Fan",
+        "Zhe-Xin Zhang",
+        "Xin-Jie Zhang",
+        "Jia-Hao Li",
+        "Bin Li",
+        "Yan Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "コンピュータ操作agentへprogrammatic・アクセシビリティ(AX)・GUIの3チャネルを統合し、AX観測を小型化、操作をbatch化、差分のみ返すことでモデルへの往復を減らす。チャネル切替時のstale stateも保護し、OSWorld 2.0で比較対象よりtask successと効率が高いと報告。推論モデルを変えずagent実行のtool roundtrip・観測context費用を減らす実行基盤の直接改善としてaccept。ただし要旨に定量token削減率はない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-998b2eb134a1",
+    "round": "libimp-998b2eb134a1c956-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-998b2eb134a1c956-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-998b2eb134a1c956-pre01.json",
+    "receipt": "sha256:09d8a0c7a7a5459ac9ff74d81c6ce1054e346b449233e7c85d052694212d7111"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-998b2eb134a1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication",
+      "source_url": "https://arxiv.org/abs/2610.39999",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoscaling is a key mechanism in model-as-a-service systems, where fast scale-up is essential because the scale-up time directly determines how long a model service remains overloaded, which in turn governs serving quality. The state-of-the-art approach, model sleeping, adopted by mainstream serving engines including vLLM and SGLang, achieves near-zero-cost scale-up by pausing pre-spawned engines on the GPU. However, sleeping is not a free lunch: each sleeping model must keep its GPU context resident, and this cost grows linearly with the number of models, degrading serving performance. Because providers must support many models, they face a dilemma between fast scale-up for all models and high service performance. In this paper, we show that a single server can keep many models asleep without paying this GPU context tax. The key observation is that the contexts of sleeping models are largely duplicated: the driver (CUDA) context can be shared across models, and their GPU kernel binaries overlap heavily due to common operators and libraries. PhOSv1 deduplicates this context by transparently delegating each engine's GPU context allocation to a central daemon through API remoting; therefore, a single server can keep far more models asleep than current engines allow. Our evaluation shows that PhOSv1 matches the scale-up time of vanilla vLLM sleep mode while substantially reducing the GPU memory footprint, improving end-to-end multi-model serving performance.",
+      "identifiers": [
+        "SemanticScholar:02669033e9abf12285fd8abf7c074762c64ea66c"
+      ],
+      "semantic_scholar_id": "02669033e9abf12285fd8abf7c074762c64ea66c",
+      "canonical_id": "arXiv:2610.39999",
+      "arxiv_id": "2610.39999",
+      "authors": [
+        "Tian-Le Sun",
+        "Xing-Da Wei",
+        "Rong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "vLLM/SGLangのmodel sleepingではモデルごとにGPU contextが残るため複数モデル常駐時にメモリ費用が線形増加する。PhOSv1は中央daemonへのAPI remotingでCUDA contextと共通kernel binaryをdedupし、従来sleep modeと同程度のscale-up時間を維持しつつGPU memoryを削減、複数モデルserving性能を改善。直接的なserving memory/scale-up最適化なのでaccept。abstractに定量倍率がないため実測値は捏造しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-124bf3e2e303",
+    "round": "libimp-124bf3e2e3030ae4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-124bf3e2e3030ae4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-124bf3e2e3030ae4-pre01.json",
+    "receipt": "sha256:a467f90622090801c1427137e29d772f7a176c849516fbcb96763d8af8867c49"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-124bf3e2e303",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

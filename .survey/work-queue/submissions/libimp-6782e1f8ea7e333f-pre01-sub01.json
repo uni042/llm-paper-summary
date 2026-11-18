@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads",
+      "source_url": "https://arxiv.org/abs/2606.18851",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of large language model (LLM) inference is creating significant data-center loads that face increasing energy-management challenges under tightening grid conditions and demand response (DR) requirements. Conventional data-center energy management mainly relies on temporal and spatial workload shifting and campus-level energy asset scheduling, but it usually treats LLM inference demand as an aggregate load. As a result, these approaches fail to exploit the internal characteristics of LLM serving and therefore overlook the flexibility offered by LLM-specific techniques such as model quantization. To unlock this flexibility, this paper proposes a quantization-enabled energy management framework for grid-responsive LLM inference data centers. First, a quantization-to-power model is established to map each model--quantization configuration to a compact set of dispatchable parameters. Second, a two-stage quantization-enabled DR model is developed to account for model instance switching, request routing, and precision selection. Third, a multi-campus co-optimization method is introduced for DR participation by integrating grid-side electricity and carbon signals with the quantization-enabled DR model. Case studies show that the proposed framework reduces total data-center operating cost by 34.3\\% without curtailing served token volume, validating model quantization as an effective flexibility lever for grid-responsive LLM data-center energy management.",
+      "identifiers": [
+        "SemanticScholar:c2caf7546ed07612003016158296822be9772e8d"
+      ],
+      "semantic_scholar_id": "c2caf7546ed07612003016158296822be9772e8d",
+      "canonical_id": "arXiv:2606.18851",
+      "arxiv_id": "2606.18851",
+      "doi": "10.48550/arXiv.2606.18851",
+      "authors": [
+        "Bo-Jun Du",
+        "Xiao-Yi Fan",
+        "Er-Shun Du",
+        "Long Chen",
+        "Jianpei Han",
+        "Qing-Chun Hou",
+        "Ning Zhang",
+        "C. Kang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の量子化精度・モデルインスタンス切替・要求ルーティングを電力網の需要応答に組み込み、電力価格・炭素指標と同時に最適化する。token提供量を減らさずデータセンター運営費を34.3%削減したケーススタディを報告。GPUカーネルではないが推論サービング運用・電力最適化の直接的な研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "A Replicate-and-Quantize Strategy for Plug-and-Play Load Balancing of Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2602.19938",
+      "year": 2026,
+      "published": "2026-02-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Mixture-of-Experts (SMoE) architectures are increasingly used to scale large language models efficiently, delivering strong accuracy under fixed compute budgets. However, SMoE models often suffer from severe load imbalance across experts, where a small subset of experts receives most tokens while others are underutilized. Prior work has focused mainly on training-time solutions such as routing regularization or auxiliary losses, leaving inference-time behavior, which is critical for deployment, less explored. We present a systematic analysis of expert routing during inference and identify three findings: (i) load imbalance persists and worsens with larger batch sizes, (ii) selection frequency does not reliably reflect expert importance, and (iii) overall expert workload and importance can be estimated using a small calibration set. These insights motivate inference-time mechanisms that rebalance workloads without retraining or router modification. We propose Replicate-and-Quantize (R&Q), a training-free and near-lossless framework for dynamic workload rebalancing. In each layer, heavy-hitter experts are replicated to increase parallel capacity, while less critical experts and replicas are quantized to remain within the original memory budget. We also introduce a Load-Imbalance Score (LIS) to measure routing skew by comparing heavy-hitter load to an equal allocation baseline. Experiments across representative SMoE models and benchmarks show up to 1.4x reduction in imbalance with accuracy maintained within +/-0.6%, enabling more predictable and efficient inference.",
+      "identifiers": [
+        "SemanticScholar:a7d82a2840d76c9f886ec58801665dc2181ab474"
+      ],
+      "semantic_scholar_id": "a7d82a2840d76c9f886ec58801665dc2181ab474",
+      "canonical_id": "arXiv:2602.19938",
+      "arxiv_id": "2602.19938",
+      "doi": "10.48550/arXiv.2602.19938",
+      "authors": [
+        "Zi-Jie Liu",
+        "Jie Peng",
+        "Jinhao Duan",
+        "Zi-Rui Liu",
+        "Kaixiong Zhou",
+        "Ming-Fu Liang",
+        "Luke Simon",
+        "Xi Liu",
+        "Zhao-Zhuo Xu",
+        "Tian-Long Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 268,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoEの推論時に人気expertへトークンが偏る問題に対し、頻繁に使われるexpertを複製し、低重要度expertと複製を量子化して元のメモリ予算内へ収めるReplicate-and-Quantizeを提案。ルータ再学習なしで負荷不均衡を最大1.4倍改善し、精度変化±0.6%以内と報告。MoE expert配置・推論スケジューリングに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "On-Policy Attention Linearization",
+      "source_url": "https://arxiv.org/abs/2609.31947",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid transformer architectures that replace most softmax attention layers with linear attention offer transformer-level quality at a fraction of the memory cost. Rather than pretraining such models, a growing body of work distills them from already trained full-attention transformers. However, these distilled models often collapse on long-context retrieval and reasoning tasks, particularly when operating in thinking mode, where the efficiency gains of hybrid architectures matter most. Since linear attention layers must compress context into a fixed-size state, their errors compound over long sequences. As off-policy distillation never teaches the student model to recover from this drift, tasks that necessitate longer sequence lengths become especially challenging. We introduce On-Policy Attention Linearization (OPAL) in which the hybrid attention student samples its own long-context trajectories and receives dense supervision from the frozen full-attention teacher. Applying OPAL to Qwen3-4B and MiMo-7B-RL-0530, we recover $87$--$94\\%$ of full-attention performance on commonsense reasoning, $100\\%$ on needle-in-a-haystack (NIAH) retrieval, and $83$--$93\\%$ on mathematical reasoning with only 3B training tokens. We achieve these results without supervised fine-tuning (SFT) or reinforcement learning with verifiable rewards (RLVR). Compared with the strongest prior linearization method, which recovers $68\\%$ of its teacher's retrieval performance and $21.6\\%$ absolute average mathematical reasoning accuracy, OPAL fully recovers retrieval and achieves $67.6$--$72.2\\%$ on math reasoning.",
+      "identifiers": [
+        "SemanticScholar:a4f421cfd489500a42850bf50ad71fbc040e1a4e"
+      ],
+      "semantic_scholar_id": "a4f421cfd489500a42850bf50ad71fbc040e1a4e",
+      "canonical_id": "arXiv:2609.31947",
+      "arxiv_id": "2609.31947",
+      "doi": "10.48550/arXiv.2609.31947",
+      "authors": [
+        "Arian Raje",
+        "Anupam Nayak",
+        "Anthony Fei",
+        "Akaash R. Parthasarathy",
+        "Mohamed S. Abdelfattah",
+        "Gauri Joshi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      },
+      "reason": "softmax注意を線形注意へ置き換えたstudentが長文脈で状態誤差を累積する問題に対し、student自身の長い軌道を教師の密な出力で監督するOPALを提案。Qwen3-4B等で長文脈検索・推論品質を回復しつつ線形注意の固定状態メモリ効率を活かす。学習時蒸留が手段だが推論時の低メモリ注意アーキテクチャの実用性に直結。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+      "source_url": "https://arxiv.org/abs/2609.34054",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-LoRA agent systems enable efficient role specialization by sharing a common backbone model. However, each agent repeatedly processes the growing shared trajectory and constructs its own KV cache, introducing substantial memory and computation redundancy in long-horizon tasks. Existing KV cache sharing methods reduce this repeated prefill, but they either require additional training or architectural constraints or retain substantial model computation. Moreover, direct cache reuse causes the current agent to rely on cache states generated by the previous agent's adapter, weakening the role-specific behavior encoded by its own LoRA. We present PReCache, a training-free KV cache sharing framework with two designs, namely PreLRShared and ReBaseShared, that share the base cache computed using the pretrained weights and precompute a compact agent-specific low-rank (LR) cache. To remove repeated prefill, PreLRShared precomputes each agent's LR cache when the shared context is first processed, allowing the current agent to use its own LR cache without reprocessing context processed by previous agents. To improve sharing accuracy, ReBaseShared reconstructs the shared base cache from adapter-free hidden states, reducing the remaining error caused by the previous agent's adapted representation. To minimize its reconstruction cost, we propose two inference schemes tailored to single-stream inference and concurrent serving, performing the same reconstruction after each agent's turn or alongside its execution, respectively. Across multiple models and agent benchmarks, PreLRShared achieves up to a 3.1x TTFT speedup and a 2.3x improvement in per-request throughput over inference without KV cache sharing. ReBaseShared best preserves accuracy overall among the evaluated cache-sharing methods, with an average drop of only 1.1 points relative to inference without cache sharing.",
+      "identifiers": [
+        "SemanticScholar:debe4032a54022021bd82bb73f7dbd673da5e4a8"
+      ],
+      "semantic_scholar_id": "debe4032a54022021bd82bb73f7dbd673da5e4a8",
+      "canonical_id": "arXiv:2609.34054",
+      "arxiv_id": "2609.34054",
+      "doi": "10.48550/arXiv.2609.34054",
+      "authors": [
+        "Hyesung Jeon",
+        "Hyeongju Ha",
+        "Jae-Joon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同一基盤モデルを共有する複数LoRAエージェントが共有履歴を各々prefillし直す冗長性を、基盤KVとエージェント固有低ランクKVの分離・事前計算で解消するPReCache。前エージェントのアダプタ由来の状態を中立な隠れ状態から再構築する方式も提案し、逐次・並行サービングでのKV再利用を扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers",
+      "source_url": "https://arxiv.org/abs/2507.03117",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The energy consumption of large-scale ML models is dominated by data movement, shuffling billions of parameters across memory hierarchies and data centers. Sparsification offers a principled way to mitigate these costs by pruning redundant weights and activations, thereby reducing data movement. Effective sparsification to prune redundant parameters is still challenging: existing methods incur significant accuracy degradation, performance overhead, or both. We introduce (Bl)ock (a)nd (S)parse (T)ransformers (BLaST), a general, robust, and reliable method for sparsification, applicable to linear layers in all settings. Our method iteratively sparsifies weight matrices into a block sparsity pattern suitable for efficient sparse matrix-matrix (SpMM) multiplication. BLaST achieves up to 95% sparsity in MLP weights with negligible accuracy loss (majority<2.25%). We show a 2.2x inference speedup for Llama 3.2 with 16 GPUs, and up to 4.45x reduction in inference memory footprint resulting in a 2.9x reduction in GPU setup and operating costs.",
+      "identifiers": [
+        "SemanticScholar:14a3d174d4c5ecccdeef218764bf07bafe08dc2a"
+      ],
+      "semantic_scholar_id": "14a3d174d4c5ecccdeef218764bf07bafe08dc2a",
+      "canonical_id": "arXiv:2507.03117",
+      "arxiv_id": "2507.03117",
+      "doi": "10.48550/arXiv.2507.03117",
+      "authors": [
+        "Patrik Okanovic",
+        "Sameer Deshmukh",
+        "Grzegorz Kwasniewski",
+        "Yi Zhu",
+        "Haruto Fujii",
+        "Sakina Fatima",
+        "Maciej Besta",
+        "Kentaro Katayama",
+        "Takumi Honda",
+        "Yusuke Nagasaka",
+        "T. Hoefler"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM重みをGPU SpMMに適したブロック疎パターンへ反復的に剪定するBLaST。高い疎率でも精度劣化を抑え、Llama 3.2を16GPUで実行した条件で推論2.2倍高速化、推論メモリ最大4.45倍削減を報告。学習も扱うがGPU推論の実性能とメモリ削減が直接的な成果。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6782e1f8ea7e",
+    "round": "libimp-6782e1f8ea7e333f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6782e1f8ea7e333f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6782e1f8ea7e333f-pre01.json",
+    "receipt": "sha256:5d2986369d706430cc871e0e45fbcbe1913c5965aa2db6982e25d0ceb400a819"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6782e1f8ea7e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
