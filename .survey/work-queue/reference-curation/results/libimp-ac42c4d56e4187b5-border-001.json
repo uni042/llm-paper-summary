@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac42c4d56e4187b5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1834",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1834",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.findings-acl.1834"
+    ],
+    "reason": "ACL Anthologyの原著要旨によれば、State-Aware RAGは複数ホップの検索拡張生成で中間推論状態を明示的な作業メモリに保持し、学習可能な抽出器がPath-Outcome Dual Rewardを用いて情報を選別・統合・更新する。生成器と検索器は凍結し、8つのQAベンチマークで回答品質を評価する。一方、GPUメモリ/KVキャッシュ/サービング遅延/推論スループットの削減を直接測定するシステム論文ではない。実行時メモリ管理と接点はあるが主貢献はRAG推論品質の改善なのでborderline。",
+    "first_checked_at": "2026-11-18T11:49:03+00:00",
+    "last_checked_at": "2026-11-18T11:49:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Reasoning with Memory: Adaptive Information Management for Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-11-18T11:49:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac42c4d56e41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

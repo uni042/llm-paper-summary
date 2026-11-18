@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3920c58aac01d80-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2007.15780",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2007.15780",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2007.15780",
+      "arXiv:2007.15780"
+    ],
+    "reason": "2020年の自然言語生成一般の課題・評価方法を整理するサーベイ。LLM推論高速化・圧縮・サービングの手法や性能を直接扱わないため対象外。",
+    "first_checked_at": "2026-11-18T06:12:06+00:00",
+    "last_checked_at": "2026-11-18T11:49:10+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "sparse attention / long-context Transformer"
+    ],
+    "title": "Neural Language Generation: Formulation, Methods, and Evaluation"
+  },
+  "processed_at": "2026-11-18T11:49:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3920c58aac0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

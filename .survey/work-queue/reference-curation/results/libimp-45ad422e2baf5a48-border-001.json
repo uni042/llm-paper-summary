@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-45ad422e2baf5a48-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.06564",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.06564",
+    "identity_tokens": [
+      "arXiv:2608.06564"
+    ],
+    "reason": "16言語モデル・8系列の2/3/4ビット量子化で、tool callや選択肢のfirst-token決定marginがm′≈cm+bで縮小し、特定の決定が反転する傾向を測定。BFCL・GSM系で量子化方式ごとの差も評価する。低ビットLLM配備の品質限界を理解する上で有用だが、圧縮カーネルやメモリ・遅延を改善する新方式そのものではないため、関連性は境界的。",
+    "first_checked_at": "2026-11-18T11:49:02+00:00",
+    "last_checked_at": "2026-11-18T11:49:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Which Decisions Low-Bit Quantization Breaks, and How to Predict Them"
+  },
+  "processed_at": "2026-11-18T11:49:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-45ad422e2baf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

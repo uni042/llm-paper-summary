@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3920c58aac01d80-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.02209",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.02209",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2502.02209",
+      "arXiv:2502.02209"
+    ],
+    "reason": "選択的SSM層の多変量多項式表現を解析し、線形Transformerより高い表現力を理論的に示す。効率的な系列モデルの背景研究として重要だが、生成LLMの実測速度・メモリ削減手法は主貢献ではない。",
+    "first_checked_at": "2026-11-18T11:49:09+00:00",
+    "last_checked_at": "2026-11-18T11:49:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "On the Expressivity of Selective State-Space Layers: A Multivariate Polynomial Approach"
+  },
+  "processed_at": "2026-11-18T11:49:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3920c58aac0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

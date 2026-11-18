@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43844b8b9870bce-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.07832",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.07832",
+    "identity_tokens": [
+      "arXiv:2602.07832"
+    ],
+    "reason": "arXiv一次要旨で、専門家方策の報酬関数を仮定せず逆強化学習でプロセス報酬モデルを学習し、方策とPRMを交互更新するrePIRLを確認。テスト時スケーリングにも応用するが、主要貢献は報酬学習と推論品質であり、計算量・遅延を削減する実行時手法が中心ではないため境界候補。",
+    "first_checked_at": "2026-11-18T11:49:05+00:00",
+    "last_checked_at": "2026-11-18T11:49:05+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "rePIRL: Learn PRM with Inverse RL for LLM Reasoning"
+  },
+  "processed_at": "2026-11-18T11:49:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43844b8b987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

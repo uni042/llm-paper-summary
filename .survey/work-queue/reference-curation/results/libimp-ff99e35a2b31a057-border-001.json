@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff99e35a2b31a057-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.26628",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.26628",
+    "identity_tokens": [
+      "arXiv:2605.26628"
+    ],
+    "reason": "Wan2.2動画拡散TransformerのW4A4 HiFloat4学習後量子化を対象に、線形層を偽量子化し、感度の高い境界モジュールを高精度で残し、活性末尾のパーセンタイル較正で外れ値の影響を抑える。低ビット実装技術は関連するが、主対象は動画生成拡散モデルで生成LLM推論への適用は要旨に示されない。",
+    "first_checked_at": "2026-11-18T11:49:13+00:00",
+    "last_checked_at": "2026-11-18T11:49:13+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2"
+  },
+  "processed_at": "2026-11-18T11:49:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff99e35a2b31",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

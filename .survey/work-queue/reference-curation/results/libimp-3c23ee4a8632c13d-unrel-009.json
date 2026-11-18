@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3c23ee4a8632c13d-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.40956",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.40956",
+    "identity_tokens": [
+      "arXiv:2610.40956"
+    ],
+    "reason": "グラフ間random walk kernelをMonte Carloで近似し、固定期待歩長の下で1組あたりO(m)のサンプル計算へ置き換えるグラフカーネル手法。実験対象は合成・実グラフのGram行列で、Transformer推論カーネルやLLMサービングの高速化ではないためunrelated。",
+    "first_checked_at": "2026-11-18T11:49:01+00:00",
+    "last_checked_at": "2026-11-18T11:49:01+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "title": "Monte Carlo Random Walk Kernel"
+  },
+  "processed_at": "2026-11-18T11:49:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c23ee4a8632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

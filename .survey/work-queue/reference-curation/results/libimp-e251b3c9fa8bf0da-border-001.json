@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e251b3c9fa8bf0da-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.13274",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.13274",
+    "identity_tokens": [
+      "arXiv:2511.13274"
+    ],
+    "reason": "arXiv一次要旨。LLM agentによるGPUカーネル生成とプロファイリングに基づく修正を、NVIDIA CUDAとApple Metalで実証する。GPU実行性能を改善するカーネル合成の技術として接点はあるが、LLM推論固有のattention、MoE、decode等のカーネルやエンドツーエンドサービングの効果は要旨で確認できないためborderline。",
+    "first_checked_at": "2026-11-18T07:47:42+00:00",
+    "last_checked_at": "2026-11-18T11:49:07+00:00",
+    "linked_from": [
+      "02-hardware-accelerators",
+      "LLM Serving / Scheduling / Disaggregation",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "KForge: Program Synthesis for Diverse AI Hardware Accelerators"
+  },
+  "processed_at": "2026-11-18T11:49:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e251b3c9fa8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

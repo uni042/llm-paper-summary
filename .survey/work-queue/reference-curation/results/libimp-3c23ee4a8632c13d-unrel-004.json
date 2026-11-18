@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3c23ee4a8632c13d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.40992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.40992",
+    "identity_tokens": [
+      "arXiv:2610.40992"
+    ],
+    "reason": "食事・疾患・服薬制約を守るLLM計画エージェントNouraで、実行可能な仕様を用いた監督学習と多日間食事計画を評価。Qwen3-14Bの計画合格率を24.0%から72.5%に上げると報告するが、貢献は個人向け健康計画のタスク品質と学習であり、LLM推論実行の効率化ではないためunrelated。",
+    "first_checked_at": "2026-11-18T11:48:58+00:00",
+    "last_checked_at": "2026-11-18T11:48:58+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new"
+    ],
+    "title": "Can Personal Requirements Become Supervision for Planning?"
+  },
+  "processed_at": "2026-11-18T11:48:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c23ee4a8632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

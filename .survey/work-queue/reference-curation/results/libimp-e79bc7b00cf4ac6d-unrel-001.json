@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e79bc7b00cf4ac6d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.13170",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.13170",
+    "identity_tokens": [
+      "arXiv:2510.13170"
+    ],
+    "reason": "タイトルは人間の推論機構の観点からChain-of-Thoughtのfine-tuning手法を調査するサーベイであると明示しており、LLM推論サービング、KVキャッシュ、オフロード、GPUカーネル、実行時スケジューリングなどのシステム最適化を研究対象とするものではない。タイトルだけの先行除外として通常Discoveryノルマには算入しない。",
+    "first_checked_at": "2026-11-18T11:49:12+00:00",
+    "last_checked_at": "2026-11-18T11:49:12+00:00",
+    "linked_from": [],
+    "title": "Putting on the Thinking Hats: A Survey on Chain of Thought Fine-tuning from the Perspective of Human Reasoning Mechanism"
+  },
+  "processed_at": "2026-11-18T11:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e79bc7b00cf4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

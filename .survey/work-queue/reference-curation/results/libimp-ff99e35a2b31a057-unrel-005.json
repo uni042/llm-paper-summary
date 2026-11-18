@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff99e35a2b31a057-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.05007",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.05007",
+    "identity_tokens": [
+      "arXiv:2506.05007"
+    ],
+    "reason": "QiMengはチップ設計用のLarge Processor Chip Model、ハードウェア設計エージェント、ソフトウェア設計エージェントを構築する自動設計システム。一次要旨はLLMをチップ設計に利用することが主目的で、LLM推論を高速化するチップや推論ランタイムの実証ではない。",
+    "first_checked_at": "2026-11-18T11:49:15+00:00",
+    "last_checked_at": "2026-11-18T11:49:15+00:00",
+    "linked_from": [],
+    "title": "QiMeng: Fully Automated Hardware and Software Design for Processor Chip"
+  },
+  "processed_at": "2026-11-18T11:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff99e35a2b31",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43844b8b9870bce-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2025.acl-long.97",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2025.acl-long.97",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.acl-long.97"
+    ],
+    "reason": "ACL Anthology一次要旨で、過去トークンの危険性をLLM自身に判定させ、危険な応答を拒絶する代わりにデコード途中で修正する段階的防御を確認。投機的復号を併用し安全なデコード速度を維持するが、主目的は安全性であり純粋な推論高速化の評価が中心ではないため境界候補。",
+    "first_checked_at": "2026-11-18T11:49:04+00:00",
+    "last_checked_at": "2026-11-18T11:49:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Root Defense Strategies: Ensuring Safety of LLM at the Decoding Level"
+  },
+  "processed_at": "2026-11-18T11:49:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43844b8b987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

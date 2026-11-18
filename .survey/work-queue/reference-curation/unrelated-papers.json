@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T11:28:59+00:00",
-  "record_count": 12883,
+  "updated_at": "2026-11-18T11:49:16+00:00",
+  "record_count": 12890,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182709,20 +182709,6 @@
       ],
       "title": "Compass: Dissecting Communication and Computation Operators for Efficient LLM Training"
     },
-    "arXiv:2602.07832": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.07832",
-      "identity_tokens": [
-        "arXiv:2602.07832"
-      ],
-      "reason": "逆強化学習でプロセス報酬モデルを学ぶrePIRL。専門方策への強い仮定を置かずにPRMを学ぶ二重学習の枠組み。対象は推論過程への報酬付けという訓練側の仕組みであり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:12:00+00:00",
-      "last_checked_at": "2026-11-18T06:12:00+00:00",
-      "linked_from": [
-        "LLM Serving / Scheduling / Disaggregation"
-      ],
-      "title": "rePIRL: Learn PRM with Inverse RL for LLM Reasoning"
-    },
     "arXiv:2602.08607": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.08607",
@@ -182797,11 +182783,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2007.15780",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2007.15780",
         "arXiv:2007.15780"
       ],
-      "reason": "ニューラル言語生成の定式化・手法・評価の総説。対話や要約など生成タスク全般の進展を整理する初期の概説であり、推論システムの機構や計測の提案ではない。対象外。",
+      "reason": "2020年の自然言語生成一般の課題・評価方法を整理するサーベイ。LLM推論高速化・圧縮・サービングの手法や性能を直接扱わないため対象外。",
       "first_checked_at": "2026-11-18T06:12:06+00:00",
-      "last_checked_at": "2026-11-18T06:12:06+00:00",
+      "last_checked_at": "2026-11-18T11:49:10+00:00",
       "linked_from": [
         "Inference / Parallel and Non-Autoregressive Decoding",
         "sparse attention / long-context Transformer"
@@ -182935,9 +182922,9 @@
       "identity_tokens": [
         "arXiv:2512.20345"
       ],
-      "reason": "現代の分散深層学習システムのバグの包括的研究。DeepSpeed等の専用フレームワークの849件の課題を分析し症状の分類を作る実証研究。対象は学習フレームワークの品質であり、推論システムの機構ではない。対象外。",
+      "reason": "arXiv一次要旨でDeepSpeed、Megatron-LM、Colossal-AIの849件のissueを分析し、分散学習のバグ症状・原因・修正法を分類するソフトウェア工学調査と確認。対象は主に学習時の通信設定・障害であり、LLM推論サービングの最適化機構を提案していないため対象外。",
       "first_checked_at": "2026-11-18T06:12:12+00:00",
-      "last_checked_at": "2026-11-18T06:12:12+00:00",
+      "last_checked_at": "2026-11-18T11:49:06+00:00",
       "linked_from": [
         "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
       ],
@@ -183091,21 +183078,6 @@
       ],
       "title": "From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training"
     },
-    "arXiv:2207.01844": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2207.01844",
-      "identity_tokens": [
-        "arXiv:2207.01844"
-      ],
-      "reason": "適応文脈プーリングによる表現学習ContextPool。注意の粒度をトークンごとに適応させる表現学習のアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:39:40+00:00",
-      "last_checked_at": "2026-11-18T06:39:40+00:00",
-      "linked_from": [
-        "inference-systems",
-        "sparse attention / long-context Transformer"
-      ],
-      "title": "Efficient Representation Learning via Adaptive Context Pooling"
-    },
     "arXiv:2502.07244": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2502.07244",
@@ -183222,11 +183194,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2108.09190",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2108.09190",
         "arXiv:2108.09190"
       ],
-      "reason": "長文文書マッチングのための教師あり対照学習。法的文書や特許のような長文の意味的マッチングのモデル。対象は文書マッチングであり、LLM推論システムの機構ではない。対象外。",
+      "reason": "長文書ペアの類似度をchunkwise attentionと対照学習で求めるCoLDEを提案。対象は文書照合・検索品質であり、LLM生成推論の効率化ではない。",
       "first_checked_at": "2026-11-18T07:16:51+00:00",
-      "last_checked_at": "2026-11-18T07:16:51+00:00",
+      "last_checked_at": "2026-11-18T11:49:11+00:00",
       "linked_from": [
         "sparse attention / long-context Transformer"
       ],
@@ -183421,36 +183394,6 @@
       ],
       "title": "HyScale: Scaling Long-Context Training for Learned Sparse Attention"
     },
-    "arXiv:2605.16255": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.16255",
-      "identity_tokens": [
-        "arXiv:2605.16255"
-      ],
-      "reason": "AI時代のデータセンタ電力供給階層の設計。ラック電力密度の増大に対し、電力の取り残しを避ける供給階層の設計論。対象は施設の電力設計であり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:27:42+00:00",
-      "last_checked_at": "2026-11-18T07:27:42+00:00",
-      "linked_from": [
-        "LLM Serving / Scheduling / Disaggregation",
-        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
-        "inference-systems"
-      ],
-      "title": "Designing Datacenter Power Delivery Hierarchies for the AI Era"
-    },
-    "arXiv:2605.26628": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.26628",
-      "identity_tokens": [
-        "arXiv:2605.26628"
-      ],
-      "reason": "Wan2.2向け裾配慮HiFloat4のW4A4学習後量子化。テキストから動画生成の低ビット量子化チャレンジへの提出報告。対象は動画生成モデルであり、LLM推論の機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:27:42+00:00",
-      "last_checked_at": "2026-11-18T07:27:42+00:00",
-      "linked_from": [
-        "post-training quantization / second-order compression / weight-only LLM inference"
-      ],
-      "title": "Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2"
-    },
     "arXiv:2609.26488": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2609.26488",
@@ -183635,11 +183578,13 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.11543",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.11543",
+        "SemanticScholar:1312194cd2479a0a6df0080ff82eb7ff8a776a7f",
         "arXiv:2602.11543"
       ],
-      "reason": "分散GPUによるLLM事前学習SPES。各ノードで専門家の部分集合だけを訓練してメモリを下げる分散事前学習の枠組み。対象は事前学習であり、推論ではない。対象外。",
+      "reason": "arXiv v3の一次要旨では、SPESはMoE事前学習時に各ノードが一部のexpertだけを更新して周期的に同期し、expert-merging warm-upで学習データ利用の偏りを緩和する。16台の48GB GPUで2Bモデルを事前学習し、7B/9Bへ拡張した評価も学習のメモリ効率と分散学習性能である。LLM生成推論・サービング時の実行効率、KVキャッシュ、デコード最適化の手法・評価は一次要旨にない。現行サーベイの学習単独最適化凍結範囲としてunrelated。",
       "first_checked_at": "2026-11-18T07:37:41+00:00",
-      "last_checked_at": "2026-11-18T07:37:41+00:00",
+      "last_checked_at": "2026-11-18T11:49:06+00:00",
       "linked_from": [
         "Adaptive computation／cache-aware MoE",
         "Training / Optimizer State Quantization and Memory Reduction",
@@ -183806,23 +183751,6 @@
         "inference-systems"
       ],
       "title": "iCATS: Fast Video Generation via Interaction-Aware Sparse Attention and Timestep-Adaptive Sparsity"
-    },
-    "arXiv:2303.06324": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2303.06324",
-      "identity_tokens": [
-        "arXiv:2303.06324"
-      ],
-      "reason": "GPU集合通信の包括的デッドロック防止。分散深層学習訓練の集合通信のデッドロックへの対処。対象は訓練であり、推論ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:34+00:00",
-      "last_checked_at": "2026-11-18T07:47:34+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md",
-        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
-        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
-        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
-      ],
-      "title": "Comprehensive Deadlock Prevention for GPU Collective Communication"
     },
     "arXiv:2404.11284": {
       "classification": "unrelated",
@@ -184154,9 +184082,9 @@
       "identity_tokens": [
         "arXiv:2604.07242"
       ],
-      "reason": "深層学習アーキテクチャの代数を形式化する圏論的枠組み。放送や合成を精密に表す数学的枠組み。対象は理論であり、推論システムの機構ではない。対象外。",
+      "reason": "軸ストライドと配列broadcastの圏論的形式化により深層学習モデルの数学的合成表現を提供し、Python/TypeScript実装で図式化やPyTorchコンパイルを行う研究。一次要旨は形式的アーキテクチャ記述が主題で、LLM推論の高速化・メモリ管理・実行スケジューリングを対象にしていない。",
       "first_checked_at": "2026-11-18T07:48:01+00:00",
-      "last_checked_at": "2026-11-18T07:48:01+00:00",
+      "last_checked_at": "2026-11-18T11:49:14+00:00",
       "linked_from": [
         "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
         "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
@@ -184362,20 +184290,6 @@
       ],
       "title": "Breaking BERT: Evaluating and Optimizing Sparsified Attention"
     },
-    "arXiv:2502.02209": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2502.02209",
-      "identity_tokens": [
-        "arXiv:2502.02209"
-      ],
-      "reason": "選択的状態空間層の表現力。多変量多項式でMambaの表現力を理論的に調べる研究。対象は理論であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:24+00:00",
-      "last_checked_at": "2026-11-18T08:08:24+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "On the Expressivity of Selective State-Space Layers: A Multivariate Polynomial Approach"
-    },
     "arXiv:2505.18799": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2505.18799",
@@ -184453,9 +184367,9 @@
       "identity_tokens": [
         "arXiv:2406.02923"
       ],
-      "reason": "確率的スパイキングSSMによる長距離依存タスク向けSNNアーキテクチャであり、LLM推論システムの対象外。",
+      "reason": "確率的SpikeSampler、SpikeMixer、ClampFuseによるスパイキング状態空間モデルを構成し、Long Range Arena、順列MNIST、Speech Commandなどで評価する。一次要旨に生成LLMの推論、LLMサービング、LLM向けメモリ階層への適用はなく、長距離依存学習向けSNNモデルの研究。",
       "first_checked_at": "2026-11-18T08:08:27+00:00",
-      "last_checked_at": "2026-11-18T08:08:27+00:00",
+      "last_checked_at": "2026-11-18T11:49:15+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
@@ -184470,9 +184384,9 @@
       "identity_tokens": [
         "arXiv:2412.08595"
       ],
-      "reason": "HiPPO-LegS ODEの数値解析というSSMの数学的基礎研究であり、推論システムへの具体的適用は示されていない。",
+      "reason": "HiPPO-LegSの特異ODEが適切に定義されることと、リーマン可積分入力に対する離散化収束を数学的に証明する。一次要旨は状態空間モデルの数値解析であり、生成LLM推論の性能・メモリ・実行最適化の研究ではない。",
       "first_checked_at": "2026-11-18T08:08:28+00:00",
-      "last_checked_at": "2026-11-18T08:08:28+00:00",
+      "last_checked_at": "2026-11-18T11:49:16+00:00",
       "linked_from": [
         "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
         "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
@@ -185448,6 +185362,179 @@
       "last_checked_at": "2026-11-18T11:28:56+00:00",
       "linked_from": [],
       "title": "SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems"
+    },
+    "arXiv:2610.34140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.34140",
+      "identity_tokens": [
+        "arXiv:2610.34140"
+      ],
+      "reason": "一次要旨を読むと対象は大規模グラフ上のGNN node pruningとreconstructionであり、LLM/Transformerの推論効率化ではない。GraphSAGEとのall-node serving比較はあるが、LLMサーベイの直接対象外としてunrelated。タイトルのみで先行除外せず本文要旨の対象モデルを確認して判定。",
+      "first_checked_at": "2026-11-18T11:48:56+00:00",
+      "last_checked_at": "2026-11-18T11:48:56+00:00",
+      "linked_from": [],
+      "title": "Decoupled Prune-and-Reconstruct: Training on a Compact Core with Double-Layer Sparsification"
+    },
+    "arXiv:2610.40959": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40959",
+      "identity_tokens": [
+        "arXiv:2610.40959"
+      ],
+      "reason": "100人の合成ペルソナ、10,088の隠れた事実、4,810の検証例から、LLMの個人文脈理解・時系列状態追跡・制約遵守を評価するベンチマーク。モデル能力と安全性の評価が中心で、推論時メモリ管理、検索高速化、配信インフラの具体的改善を提示しないためunrelated。",
+      "first_checked_at": "2026-11-18T11:48:58+00:00",
+      "last_checked_at": "2026-11-18T11:48:58+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "title": "P-ContextBench: From Personal Fact Recall to Personalized Agent Behavior"
+    },
+    "arXiv:2610.40992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40992",
+      "identity_tokens": [
+        "arXiv:2610.40992"
+      ],
+      "reason": "食事・疾患・服薬制約を守るLLM計画エージェントNouraで、実行可能な仕様を用いた監督学習と多日間食事計画を評価。Qwen3-14Bの計画合格率を24.0%から72.5%に上げると報告するが、貢献は個人向け健康計画のタスク品質と学習であり、LLM推論実行の効率化ではないためunrelated。",
+      "first_checked_at": "2026-11-18T11:48:58+00:00",
+      "last_checked_at": "2026-11-18T11:48:58+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "title": "Can Personal Requirements Become Supervision for Planning?"
+    },
+    "arXiv:2610.41688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41688",
+      "identity_tokens": [
+        "arXiv:2610.41688"
+      ],
+      "reason": "ロボット・身体性AIの長期行動における記憶を6要件と8アーキテクチャで分類するサーベイ。空間記憶、視覚記憶、経験記憶の意思決定上の役割を扱うが、LLM推論のGPUメモリ階層・KV・サービングの具体的システム技術は扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T11:48:59+00:00",
+      "last_checked_at": "2026-11-18T11:48:59+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "When the Past Shapes Action: Understanding Embodied Memory"
+    },
+    "arXiv:2610.41909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41909",
+      "identity_tokens": [
+        "arXiv:2610.41909"
+      ],
+      "reason": "自然言語の数理最適化問題を解くLLMエージェントArchORで、構造署名とJaccard重なりを使った技能検索・再順位付け・選択規則を提案し、5ベンチマークの解答精度を改善。対象は最適化問題の技能再利用と回答正確性で、LLM推論エンジンの高速化・メモリ節約・分散配信ではないためunrelated。",
+      "first_checked_at": "2026-11-18T11:48:59+00:00",
+      "last_checked_at": "2026-11-18T11:48:59+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "title": "Structure-Aware Skill Retrieval and Arbitration for Optimization Modeling"
+    },
+    "arXiv:2610.40914": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40914",
+      "identity_tokens": [
+        "arXiv:2610.40914"
+      ],
+      "reason": "画像拡散Transformerの学習加速でAdaLN-Zeroの残差ゲートの参加率が変わる現象を解析し、教師不要の正則化でImageNet 256x256のFIDを改善。ここでのaccelerationは画像生成モデルの学習収束を指し、LLMの生成推論速度やサービング最適化を扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T11:49:00+00:00",
+      "last_checked_at": "2026-11-18T11:49:00+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "No Channels Left Behind: Understanding Diffusion Acceleration through Residual Gates"
+    },
+    "arXiv:2610.41387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41387",
+      "identity_tokens": [
+        "arXiv:2610.41387"
+      ],
+      "reason": "表形式データの近傍異常検知を単一隠れ層のCauchyネットワークで近似し、CPUで1万queryを数ミリ秒で採点する高速化を提案。速度改善はあるが対象はKNN系異常検知で、LLMのトークン生成・KV・推論サービングとは別分野のためunrelated。",
+      "first_checked_at": "2026-11-18T11:49:00+00:00",
+      "last_checked_at": "2026-11-18T11:49:00+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Anomalies as Residuals: Cauchy Displacement Networks"
+    },
+    "arXiv:2610.40956": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40956",
+      "identity_tokens": [
+        "arXiv:2610.40956"
+      ],
+      "reason": "グラフ間random walk kernelをMonte Carloで近似し、固定期待歩長の下で1組あたりO(m)のサンプル計算へ置き換えるグラフカーネル手法。実験対象は合成・実グラフのGram行列で、Transformer推論カーネルやLLMサービングの高速化ではないためunrelated。",
+      "first_checked_at": "2026-11-18T11:49:01+00:00",
+      "last_checked_at": "2026-11-18T11:49:01+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "Monte Carlo Random Walk Kernel"
+    },
+    "arXiv:2610.41244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41244",
+      "identity_tokens": [
+        "arXiv:2610.41244"
+      ],
+      "reason": "標本依存事象の確率推定を一般化し、Good–Turing推定量、安定性、VC次元・相互情報量による誤差界を導出する統計学理論。モデル推論時の実行効率・メモリ・GPU・分散処理には技術的寄与がないためunrelated。",
+      "first_checked_at": "2026-11-18T11:49:01+00:00",
+      "last_checked_at": "2026-11-18T11:49:01+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "title": "A Unified Framework for Probability Estimation of Data-Dependent Events"
+    },
+    "arXiv:2605.14877": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14877",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.14877",
+        "arXiv:2605.14877"
+      ],
+      "reason": "Infinity-2Bの画像生成VARモデルでヘッド別にスケール過去のKVを圧縮する。KVを既存法比2倍圧縮するが、対象は画像生成でありテキストLLMのKVサービング評価はない。",
+      "first_checked_at": "2026-11-18T11:49:11+00:00",
+      "last_checked_at": "2026-11-18T11:49:11+00:00",
+      "linked_from": [],
+      "title": "HeatKV: Head-tuned KV-cache Compression for Visual Autoregressive Modeling"
+    },
+    "arXiv:2510.13170": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13170",
+      "identity_tokens": [
+        "arXiv:2510.13170"
+      ],
+      "reason": "タイトルは人間の推論機構の観点からChain-of-Thoughtのfine-tuning手法を調査するサーベイであると明示しており、LLM推論サービング、KVキャッシュ、オフロード、GPUカーネル、実行時スケジューリングなどのシステム最適化を研究対象とするものではない。タイトルだけの先行除外として通常Discoveryノルマには算入しない。",
+      "first_checked_at": "2026-11-18T11:49:12+00:00",
+      "last_checked_at": "2026-11-18T11:49:12+00:00",
+      "linked_from": [],
+      "title": "Putting on the Thinking Hats: A Survey on Chain of Thought Fine-tuning from the Perspective of Human Reasoning Mechanism"
+    },
+    "DOI:10.1109/access.2025.3566307": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2025.3566307",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3566307"
+      ],
+      "reason": "IEEE出版社一次要旨。重み活性積のchannel-wise scalingを使う低bit PTQで、CNN、ViT、物体検出モデルを評価し2/4bit量子化で計算オーバーヘッド1.5%未満を報告。LLM/生成VLM推論の実験がなく画像系モデル中心なので対象外。",
+      "first_checked_at": "2026-11-18T11:49:12+00:00",
+      "last_checked_at": "2026-11-18T11:49:12+00:00",
+      "linked_from": [],
+      "title": "WAPS-Quant: Low-Bit Post-Training Quantization Using Weight-Activation Product Scaling"
+    },
+    "arXiv:2506.05007": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05007",
+      "identity_tokens": [
+        "arXiv:2506.05007"
+      ],
+      "reason": "QiMengはチップ設計用のLarge Processor Chip Model、ハードウェア設計エージェント、ソフトウェア設計エージェントを構築する自動設計システム。一次要旨はLLMをチップ設計に利用することが主目的で、LLM推論を高速化するチップや推論ランタイムの実証ではない。",
+      "first_checked_at": "2026-11-18T11:49:15+00:00",
+      "last_checked_at": "2026-11-18T11:49:15+00:00",
+      "linked_from": [],
+      "title": "QiMeng: Fully Automated Hardware and Software Design for Processor Chip"
     }
   }
 }

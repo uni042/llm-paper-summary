@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30cc35b40ca9b90c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.34140",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.34140",
+    "identity_tokens": [
+      "arXiv:2610.34140"
+    ],
+    "reason": "一次要旨を読むと対象は大規模グラフ上のGNN node pruningとreconstructionであり、LLM/Transformerの推論効率化ではない。GraphSAGEとのall-node serving比較はあるが、LLMサーベイの直接対象外としてunrelated。タイトルのみで先行除外せず本文要旨の対象モデルを確認して判定。",
+    "first_checked_at": "2026-11-18T11:48:56+00:00",
+    "last_checked_at": "2026-11-18T11:48:56+00:00",
+    "linked_from": [],
+    "title": "Decoupled Prune-and-Reconstruct: Training on a Compact Core with Double-Layer Sparsification"
+  },
+  "processed_at": "2026-11-18T11:48:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30cc35b40ca9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

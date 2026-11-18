@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff99e35a2b31a057-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.06324",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.06324",
+    "identity_tokens": [
+      "arXiv:2303.06324"
+    ],
+    "reason": "DFCCLはGPU collective通信の循環待ちをライブラリ層でプリエンプションして回避し、NCCL同等以上の性能を目指す。一次要旨は分散深層学習の訓練を主要対象とし、LLM推論サービングや推論時の集合通信での直接実験は記載されない。推論分散通信へ転用可能な基盤技術として境界扱い。",
+    "first_checked_at": "2026-11-18T11:49:14+00:00",
+    "last_checked_at": "2026-11-18T11:49:14+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Comprehensive Deadlock Prevention for GPU Collective Communication"
+  },
+  "processed_at": "2026-11-18T11:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff99e35a2b31",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

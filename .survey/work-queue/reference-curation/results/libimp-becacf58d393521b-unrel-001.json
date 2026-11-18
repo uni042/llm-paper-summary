@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-becacf58d393521b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.11543",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.11543",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.11543",
+      "SemanticScholar:1312194cd2479a0a6df0080ff82eb7ff8a776a7f",
+      "arXiv:2602.11543"
+    ],
+    "reason": "arXiv v3の一次要旨では、SPESはMoE事前学習時に各ノードが一部のexpertだけを更新して周期的に同期し、expert-merging warm-upで学習データ利用の偏りを緩和する。16台の48GB GPUで2Bモデルを事前学習し、7B/9Bへ拡張した評価も学習のメモリ効率と分散学習性能である。LLM生成推論・サービング時の実行効率、KVキャッシュ、デコード最適化の手法・評価は一次要旨にない。現行サーベイの学習単独最適化凍結範囲としてunrelated。",
+    "first_checked_at": "2026-11-18T07:37:41+00:00",
+    "last_checked_at": "2026-11-18T11:49:06+00:00",
+    "linked_from": [
+      "Adaptive computation／cache-aware MoE",
+      "Training / Optimizer State Quantization and Memory Reduction",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm"
+  },
+  "processed_at": "2026-11-18T11:49:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-becacf58d393",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

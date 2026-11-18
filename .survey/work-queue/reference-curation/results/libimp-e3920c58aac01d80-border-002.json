@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e3920c58aac01d80-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2207.01844",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2207.01844",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2207.01844",
+      "arXiv:2207.01844"
+    ],
+    "reason": "ContextPoolはトークンごとに近傍を適応poolingし、少ない層数で表現学習の性能を改善する。言語・画像のTransformer効率には関連するが、評価の中心は表現学習であり生成LLMのdecode/KV実測はない。",
+    "first_checked_at": "2026-11-18T11:49:08+00:00",
+    "last_checked_at": "2026-11-18T11:49:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Representation Learning via Adaptive Context Pooling"
+  },
+  "processed_at": "2026-11-18T11:49:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e3920c58aac0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
