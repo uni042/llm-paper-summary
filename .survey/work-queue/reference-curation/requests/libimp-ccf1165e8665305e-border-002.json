@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ccf1165e8665305e-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.20219",
+  "reason": "潜在先読み訓練。次トークン予測が各ステップでの確定を強いる問題に対し、選んだ位置で潜在空間で複数ステップの先読みをしてから生成する訓練戦略。計算配分の不均一化が狙いだが、機構の実体はモデルの訓練であり境界。",
+  "title": "Thinking into the Future: Latent Lookahead Training for Transformers",
+  "identity_tokens": [
+    "arXiv:2603.20219",
+    "https://arxiv.org/abs/2603.20219"
+  ],
+  "linked_from": [
+    "Speculative Decoding"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccf1165e8665",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

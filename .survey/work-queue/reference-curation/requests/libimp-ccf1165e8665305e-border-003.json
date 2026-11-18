@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ccf1165e8665305e-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2603.22276",
+  "reason": "DoRAの高ランク適応の拡張。因数分解したノルム計算で稠密な積の実体化を避け、融合Tritonカーネルで高ランクDoRAの一時メモリを大幅に減らすシステム貢献。カーネル工学ではあるが、対象は適応訓練の前向き計算であり境界。",
+  "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+  "identity_tokens": [
+    "arXiv:2603.22276",
+    "https://arxiv.org/abs/2603.22276"
+  ],
+  "linked_from": [
+    "LLM Serving / Scheduling / Disaggregation",
+    "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+    "inference-systems",
+    "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+    "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+    "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccf1165e8665",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
