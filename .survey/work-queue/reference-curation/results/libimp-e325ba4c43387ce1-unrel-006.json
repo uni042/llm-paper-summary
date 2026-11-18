@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e325ba4c43387ce1-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.03815",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.03815",
+    "identity_tokens": [
+      "arXiv:2604.03815"
+    ],
+    "reason": "グラフTransformer向けk最大内積注意。大きなグラフへの全対全注意の二次費用に対し、上位kの鍵ノードだけを選ぶ疎な注意パターンの提案。対象はグラフ学習モデルであり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:12:15+00:00",
+    "last_checked_at": "2026-11-18T06:12:15+00:00",
+    "linked_from": [
+      "CPU長文推論・近似注意",
+      "inference-systems"
+    ],
+    "title": "k-Maximum Inner Product Attention for Graph Transformers and the Expressive Power of GraphGPS"
+  },
+  "processed_at": "2026-11-18T06:12:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e325ba4c4338",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

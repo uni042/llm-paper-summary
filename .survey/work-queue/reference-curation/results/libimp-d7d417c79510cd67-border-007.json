@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7d417c79510cd67-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21797",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21797",
+    "identity_tokens": [
+      "arXiv:2601.21797"
+    ],
+    "reason": "タスク志向の敵対的メモリ増強による会話エージェント強化。オフラインのメモリ構築と更新をタスクに合わせて行うメモリシステム。エージェントの文脈管理ではあるが、推論システム機構とは距離があり境界。",
+    "first_checked_at": "2026-11-18T06:12:10+00:00",
+    "last_checked_at": "2026-11-18T06:12:10+00:00",
+    "linked_from": [
+      "Inference / Multimodal Long-Context Memory Compression",
+      "agentic inference / persistent memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing Conversational Agents via Task-Oriented Adversarial Memory Adaptation"
+  },
+  "processed_at": "2026-11-18T06:12:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7d417c79510",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

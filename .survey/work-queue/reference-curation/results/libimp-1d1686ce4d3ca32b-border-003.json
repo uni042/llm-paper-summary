@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d1686ce4d3ca32b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.13628",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.13628",
+    "identity_tokens": [
+      "arXiv:2602.13628"
+    ],
+    "reason": "モバイルエッジでの小型LLM配置とワールドモデル支援オフロード。構造化剪定・低ビット量子化・蒸留を組み合わせたエッジ配置枠組みと、長期平均遅延を最小化するオフロード最適化の定式化。推論配置の研究ではあるが、中心は移動エッジネットワークの最適化であり境界。",
+    "first_checked_at": "2026-11-18T06:11:58+00:00",
+    "last_checked_at": "2026-11-18T06:11:58+00:00",
+    "linked_from": [
+      "inference-systems",
+      "survey-edge-llm"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compact LLM Deployment and World Model Assisted Offloading in Mobile Edge Computing"
+  },
+  "processed_at": "2026-11-18T06:11:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d1686ce4d3c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

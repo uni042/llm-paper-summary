@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e88f2910644491a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.22138",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.22138",
+    "identity_tokens": [
+      "arXiv:2605.22138"
+    ],
+    "reason": "自己調整型シミュレーション計画によるエージェント推論。世界モデルによる模擬推論、計画の要否と深さを決める学習済み調整器、反応的実行の3系へ意思決定を分解する。トークン効率が動機だが、貢献はエージェントの計画アーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T06:12:03+00:00",
+    "last_checked_at": "2026-11-18T06:12:03+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning"
+  },
+  "processed_at": "2026-11-18T06:12:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e88f2910644",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

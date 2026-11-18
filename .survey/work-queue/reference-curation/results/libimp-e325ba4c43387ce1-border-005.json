@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e325ba4c43387ce1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.27301",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.27301",
+    "identity_tokens": [
+      "arXiv:2610.27301"
+    ],
+    "reason": "後の質問に対する文脈圧縮の評価。エージェントが目の前の質問向けに圧縮した文脈が後の質問にも役立つかを、複数質問の証拠を注釈したコーパスで評価し、現在の質問向けの選択が後の質問ではランダム削除と変わらないことを示す。エージェント文脈管理の評価研究であり境界。",
+    "first_checked_at": "2026-11-18T06:12:15+00:00",
+    "last_checked_at": "2026-11-18T06:12:15+00:00",
+    "linked_from": [
+      "Long-context serving / KV cache benchmark"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evaluating Context Compaction on the Questions That Come Later"
+  },
+  "processed_at": "2026-11-18T06:12:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e325ba4c4338",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

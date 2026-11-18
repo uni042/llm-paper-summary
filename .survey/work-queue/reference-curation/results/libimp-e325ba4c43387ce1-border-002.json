@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e325ba4c43387ce1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.05760",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.05760",
+    "identity_tokens": [
+      "arXiv:2609.05760"
+    ],
+    "reason": "RAGベンチマーク基盤RAGMark。小規模マルチGPU環境で、検索器・ベクトルDB・プロンプト処理・生成モデルの各段階の遅延やGPU利用率、電力などを測るモジュール型のベンチマーク枠組み。推論基盤の計測道具ではあるが、機構の提案ではなく境界。",
+    "first_checked_at": "2026-11-18T06:12:14+00:00",
+    "last_checked_at": "2026-11-18T06:12:14+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLMサービング、ワークフロー実行、分散スケジューリング、RAG/エージェント基盤。",
+      "kv-cache-offload-recomputation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems"
+  },
+  "processed_at": "2026-11-18T06:12:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e325ba4c4338",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-947449351f303611-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.06672",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.06672",
+    "identity_tokens": [
+      "arXiv:2410.06672"
+    ],
+    "reason": "言語モデル間の機構的類似性の研究。TransformerとMambaの解釈可能な特徴や誘導回路の類似を疎自己符号化器で調べる解釈可能性の研究。推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:12:09+00:00",
+    "last_checked_at": "2026-11-18T06:12:09+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures"
+  },
+  "processed_at": "2026-11-18T06:12:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-947449351f30",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

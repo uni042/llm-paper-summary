@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d1686ce4d3ca32b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.08607",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.08607",
+    "identity_tokens": [
+      "arXiv:2602.08607"
+    ],
+    "reason": "自己蒸留マスク拡散による音声LLMの高速化VocalNet-MDM。ストリーミング音声対話へマスク拡散を適応させるための階層ブロックマスクと反復自己蒸留の提案。対象は音声モデルの設計と訓練であり、推論システム機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:12:00+00:00",
+    "last_checked_at": "2026-11-18T06:12:00+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "title": "VocalNet-MDM: Accelerating Streaming Speech LLM via Self-Distilled Masked Diffusion Modeling"
+  },
+  "processed_at": "2026-11-18T06:12:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d1686ce4d3c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

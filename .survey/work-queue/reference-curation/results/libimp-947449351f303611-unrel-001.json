@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-947449351f303611-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2007.15780",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2007.15780",
+    "identity_tokens": [
+      "arXiv:2007.15780"
+    ],
+    "reason": "ニューラル言語生成の定式化・手法・評価の総説。対話や要約など生成タスク全般の進展を整理する初期の概説であり、推論システムの機構や計測の提案ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:12:06+00:00",
+    "last_checked_at": "2026-11-18T06:12:06+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "sparse attention / long-context Transformer"
+    ],
+    "title": "Neural Language Generation: Formulation, Methods, and Evaluation"
+  },
+  "processed_at": "2026-11-18T06:12:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-947449351f30",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-458261a060752055-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34247",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34247",
+    "identity_tokens": [
+      "arXiv:2609.34247"
+    ],
+    "reason": "全二重音声エージェントの二重システム協調SALMONN-duo。常時稼働の速い全二重音声LLMと非同期の遅い熟考エージェントを分け、前者が直接回答と委譲の判断まで学ぶ。遅延と熟考の両立が主題だが、貢献は音声エージェントのアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T06:12:01+00:00",
+    "last_checked_at": "2026-11-18T06:12:01+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents"
+  },
+  "processed_at": "2026-11-18T06:12:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-458261a06075",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

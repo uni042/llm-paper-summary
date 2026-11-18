@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d1686ce4d3ca32b-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.11215",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.11215",
+    "identity_tokens": [
+      "arXiv:2605.11215"
+    ],
+    "reason": "耐障害な事前学習システムReCoVer。巨大GPUクラスタでの学習を、障害があっても失敗なし実行と確率的に等価な勾配を保ちながら継続させるための集合通信と回復プロトコル。対象は学習基盤であり、推論システムではない。対象外。",
+    "first_checked_at": "2026-11-18T06:12:00+00:00",
+    "last_checked_at": "2026-11-18T06:12:00+00:00",
+    "linked_from": [
+      "llm-serving-scheduling-disaggregation",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+    ],
+    "title": "ReCoVer: Resilient LLM Pre-Training System via Fault-Tolerant Collective and Versatile Workload"
+  },
+  "processed_at": "2026-11-18T06:12:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d1686ce4d3c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e325ba4c43387ce1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.28048",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.28048",
+    "identity_tokens": [
+      "arXiv:2608.28048"
+    ],
+    "reason": "LLM向けAIハードウェアアクセラレータの総覧。GPU、ASIC、FPGA、メモリ内処理、神経模倣・光学的手法まで、訓練と提供の両方を対象にルーフライン分析で整理するレビュー。推論ハードウェアを含むが、総説であり境界。",
+    "first_checked_at": "2026-11-18T06:12:13+00:00",
+    "last_checked_at": "2026-11-18T06:12:13+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM inference surveys、roofline performance analysis",
+      "Weight Quantization / Compression",
+      "arXiv:2405.16406のICLR 2025採録版。",
+      "inference-systems",
+      "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "投機的復号 / 無損失復号高速化",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall"
+  },
+  "processed_at": "2026-11-18T06:12:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e325ba4c4338",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

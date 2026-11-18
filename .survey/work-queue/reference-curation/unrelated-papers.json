@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T03:45:10+00:00",
-  "record_count": 12712,
+  "updated_at": "2026-11-18T06:12:17+00:00",
+  "record_count": 12734,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181665,7 +181665,7 @@
       ],
       "reason": "状態空間モデルのデータ依存汎化境界を解析し、初期化スケーリングと学習正則化によって時系列入力の出力安定性・汎化を改善する研究。主目的はSSMの学習アルゴリズムと理論であり、LLMの推論速度・KV/状態圧縮・実行時資源最適化は評価していない。",
       "first_checked_at": "2026-10-30T19:08:18+00:00",
-      "last_checked_at": "2026-10-30T19:08:18+00:00",
+      "last_checked_at": "2026-11-18T06:12:16+00:00",
       "linked_from": [],
       "title": "From Generalization Analysis to Optimization Designs for State Space Models"
     },
@@ -181677,7 +181677,7 @@
       ],
       "reason": "音声対話のIQ/EQ評価に向けたrewardモデルとChatReward-30Kの構築、音声対話品質の評価改善が主題。要旨はQwen2.5-Omniに対する評価精度の向上を示すが、音声LLM推論の計算削減やサービング効率化の研究ではない。",
       "first_checked_at": "2026-10-30T19:08:18+00:00",
-      "last_checked_at": "2026-10-30T19:08:18+00:00",
+      "last_checked_at": "2026-11-18T06:12:16+00:00",
       "linked_from": [],
       "title": "WavReward: Spoken Dialogue Models With Generalist Reward Evaluators"
     },
@@ -181689,7 +181689,7 @@
       ],
       "reason": "Mambaを用いて画像のfew-shot class-incremental learningにおける旧クラス保持と新クラス適応を両立する二重SSM projectorと選択的scanを提案。miniImageNet/CIFAR-100/CUB-200の分類精度が中心で、LLM推論・サービング最適化ではない。",
       "first_checked_at": "2026-10-30T19:08:19+00:00",
-      "last_checked_at": "2026-10-30T19:08:19+00:00",
+      "last_checked_at": "2026-11-18T06:12:16+00:00",
       "linked_from": [],
       "title": "Mamba-FSCIL: Dynamic Adaptation with Selective State Space Model for Few-Shot Class-Incremental Learning"
     },
@@ -181701,7 +181701,7 @@
       ],
       "reason": "画像モデルの複数データセット学習で、MoE expertへのドメイン割当を線形計画と階層丸めで決め、希少ドメインの表現を改善するGEM-DINO。評価は画像ドメイン汎化とfew-shot適応で、LLM推論時のMoE routing高速化・負荷分散は主題ではない。",
       "first_checked_at": "2026-10-30T19:08:19+00:00",
-      "last_checked_at": "2026-10-30T19:08:19+00:00",
+      "last_checked_at": "2026-11-18T06:12:17+00:00",
       "linked_from": [],
       "title": "Multi-Domain Learning with Global Expert Mapping"
     },
@@ -182820,6 +182820,344 @@
         "投機的復号 / 無損失復号高速化"
       ],
       "title": "EST-PRM: Stress-Testing Process Reward Models Before They Become Load-Bearing"
+    },
+    "arXiv:2609.10549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10549",
+      "identity_tokens": [
+        "arXiv:2609.10549"
+      ],
+      "reason": "通信と計算の演算子分解による学習高速化Compass。演算子内融合と演算子間分解の2方式で通信を隠す、GPUクラスタでのLLM学習の最適化。対象は訓練であり、推論機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:11:57+00:00",
+      "last_checked_at": "2026-11-18T06:11:57+00:00",
+      "linked_from": [
+        "その他システム研究"
+      ],
+      "title": "Compass: Dissecting Communication and Computation Operators for Efficient LLM Training"
+    },
+    "arXiv:2608.11593": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11593",
+      "identity_tokens": [
+        "arXiv:2608.11593"
+      ],
+      "reason": "拡散言語モデル型TTSの技術報告Luna-TTS。自己回帰コーデック言語モデルの逐次デコードの遅延や誤り蓄積に対し、完全に非自己回帰な音声合成モデル族を事前学習する。対象は音声合成モデルの構築であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:11:57+00:00",
+      "last_checked_at": "2026-11-18T06:11:57+00:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "llm-serving-scheduling-disaggregation"
+      ],
+      "title": "Luna-TTS Family Technical Report"
+    },
+    "arXiv:2602.07832": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07832",
+      "identity_tokens": [
+        "arXiv:2602.07832"
+      ],
+      "reason": "逆強化学習でプロセス報酬モデルを学ぶrePIRL。専門方策への強い仮定を置かずにPRMを学ぶ二重学習の枠組み。対象は推論過程への報酬付けという訓練側の仕組みであり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:00+00:00",
+      "last_checked_at": "2026-11-18T06:12:00+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "title": "rePIRL: Learn PRM with Inverse RL for LLM Reasoning"
+    },
+    "arXiv:2602.08607": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08607",
+      "identity_tokens": [
+        "arXiv:2602.08607"
+      ],
+      "reason": "自己蒸留マスク拡散による音声LLMの高速化VocalNet-MDM。ストリーミング音声対話へマスク拡散を適応させるための階層ブロックマスクと反復自己蒸留の提案。対象は音声モデルの設計と訓練であり、推論システム機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:00+00:00",
+      "last_checked_at": "2026-11-18T06:12:00+00:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "title": "VocalNet-MDM: Accelerating Streaming Speech LLM via Self-Distilled Masked Diffusion Modeling"
+    },
+    "arXiv:2605.11215": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11215",
+      "identity_tokens": [
+        "arXiv:2605.11215"
+      ],
+      "reason": "耐障害な事前学習システムReCoVer。巨大GPUクラスタでの学習を、障害があっても失敗なし実行と確率的に等価な勾配を保ちながら継続させるための集合通信と回復プロトコル。対象は学習基盤であり、推論システムではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:00+00:00",
+      "last_checked_at": "2026-11-18T06:12:00+00:00",
+      "linked_from": [
+        "llm-serving-scheduling-disaggregation",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "title": "ReCoVer: Resilient LLM Pre-Training System via Fault-Tolerant Collective and Versatile Workload"
+    },
+    "arXiv:2606.30944": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30944",
+      "identity_tokens": [
+        "arXiv:2606.30944"
+      ],
+      "reason": "音声対音声生成の能力保存PRIME-Speech。凍結した音声テキストLLMの骨格に、音声生成モジュールだけを訓練して音声出力を付ける変換枠組み。対象は音声生成モデルの構築であり、推論システム機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:01+00:00",
+      "last_checked_at": "2026-11-18T06:12:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation"
+    },
+    "arXiv:2607.02805": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02805",
+      "identity_tokens": [
+        "arXiv:2607.02805"
+      ],
+      "reason": "ハイブリッドブロック拡散言語モデルの訓練。部分双方向性など、拡散と線形混合器を組み合わせたモデルの訓練上の技術的課題への対処。対象はモデルの訓練であり、推論機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:04+00:00",
+      "last_checked_at": "2026-11-18T06:12:04+00:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+        "diffusion language model inference / KV cache / training-free acceleration",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Training Hybrid Block Diffusion Language Models with Partial Bidirectionality"
+    },
+    "arXiv:2007.15780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.15780",
+      "identity_tokens": [
+        "arXiv:2007.15780"
+      ],
+      "reason": "ニューラル言語生成の定式化・手法・評価の総説。対話や要約など生成タスク全般の進展を整理する初期の概説であり、推論システムの機構や計測の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:06+00:00",
+      "last_checked_at": "2026-11-18T06:12:06+00:00",
+      "linked_from": [
+        "Inference / Parallel and Non-Autoregressive Decoding",
+        "sparse attention / long-context Transformer"
+      ],
+      "title": "Neural Language Generation: Formulation, Methods, and Evaluation"
+    },
+    "arXiv:2205.12476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.12476",
+      "identity_tokens": [
+        "arXiv:2205.12476"
+      ],
+      "reason": "抽象型テキスト要約における局所性の活用。自己注意の二次メモリを避けるため、局所性で分けたページ単位にモデルを適用する初期の要約モデルの研究。LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:06+00:00",
+      "last_checked_at": "2026-11-18T06:12:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Leveraging Locality in Abstractive Text Summarization"
+    },
+    "arXiv:2403.16899": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.16899",
+      "identity_tokens": [
+        "arXiv:2403.16899"
+      ],
+      "reason": "基盤モデルとしての状態空間モデルの制御理論的概観。Mamba等のSSMと制御理論の接続を解説する入門的な概説であり、推論システムの機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:06+00:00",
+      "last_checked_at": "2026-11-18T06:12:06+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "State Space Models as Foundation Models: A Control Theoretic Overview"
+    },
+    "arXiv:2406.01159": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01159",
+      "identity_tokens": [
+        "arXiv:2406.01159"
+      ],
+      "reason": "Transformer-Mamba拡散モデルDimba。テキスト画像生成のためのハイブリッド拡散モデルの構築と大規模化の研究。生成モデルの学習であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:07+00:00",
+      "last_checked_at": "2026-11-18T06:12:07+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Dimba: Transformer-Mamba Diffusion Models"
+    },
+    "arXiv:2406.12272": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12272",
+      "identity_tokens": [
+        "arXiv:2406.12272"
+      ],
+      "reason": "スロット状態空間モデルSlotSSM。状態をスロットの集合として保ちモジュール構造の帰納バイアスを入れる系列モデルのアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:07+00:00",
+      "last_checked_at": "2026-11-18T06:12:07+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Slot State Space Models"
+    },
+    "arXiv:2408.14909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.14909",
+      "identity_tokens": [
+        "arXiv:2408.14909"
+      ],
+      "reason": "スパイキング状態空間モデルSpikingSSM。長い系列学習へスパイキングニューラルネットとSSMを組み合わせるアーキテクチャ研究。対象は系列学習モデルであり、LLM推論システムではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:08+00:00",
+      "last_checked_at": "2026-11-18T06:12:08+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "SpikingSSMs: Learning Long Sequences with Sparse and Parallel Spiking State Space Models"
+    },
+    "arXiv:2409.03231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.03231",
+      "identity_tokens": [
+        "arXiv:2409.03231"
+      ],
+      "reason": "力学系のニューラル演算子としての状態空間モデル。物理情報機械学習でMambaを用いて力学系を予測する研究。LLM推論とは無関係。対象外。",
+      "first_checked_at": "2026-11-18T06:12:08+00:00",
+      "last_checked_at": "2026-11-18T06:12:08+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "State-space models are accurate and efficient neural operators for dynamical systems"
+    },
+    "arXiv:2410.06672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06672",
+      "identity_tokens": [
+        "arXiv:2410.06672"
+      ],
+      "reason": "言語モデル間の機構的類似性の研究。TransformerとMambaの解釈可能な特徴や誘導回路の類似を疎自己符号化器で調べる解釈可能性の研究。推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:09+00:00",
+      "last_checked_at": "2026-11-18T06:12:09+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures"
+    },
+    "arXiv:2106.10207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.10207",
+      "identity_tokens": [
+        "arXiv:2106.10207"
+      ],
+      "reason": "開放的協働での分散深層学習。計算資源を出し合うボランティア計算で大規模モデルを訓練する枠組みの研究。対象は学習の実行形態であり、推論システムではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:11+00:00",
+      "last_checked_at": "2026-11-18T06:12:11+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "title": "Distributed Deep Learning in Open Collaborations"
+    },
+    "arXiv:2302.08545": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.08545",
+      "identity_tokens": [
+        "arXiv:2302.08545"
+      ],
+      "reason": "テンソル準同型圧縮による分散深層学習の高速化THC。作業者間の勾配交換の通信オーバーヘッドを双方向圧縮で下げる学習基盤の手法。対象は訓練の通信であり、推論機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:12+00:00",
+      "last_checked_at": "2026-11-18T06:12:12+00:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation"
+      ],
+      "title": "THC: Accelerating Distributed Deep Learning Using Tensor Homomorphic Compression"
+    },
+    "arXiv:2512.20345": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20345",
+      "identity_tokens": [
+        "arXiv:2512.20345"
+      ],
+      "reason": "現代の分散深層学習システムのバグの包括的研究。DeepSpeed等の専用フレームワークの849件の課題を分析し症状の分類を作る実証研究。対象は学習フレームワークの品質であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:12+00:00",
+      "last_checked_at": "2026-11-18T06:12:12+00:00",
+      "linked_from": [
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "title": "A Comprehensive Study of Bugs in Modern Distributed Deep Learning Systems"
+    },
+    "arXiv:2603.00357": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00357",
+      "identity_tokens": [
+        "arXiv:2603.00357"
+      ],
+      "reason": "大規模事前学習向け耐障害フレームワークSPARe。10万GPU級の学習で再起動費用が支配的になる問題に対し、冗長なデータシャードの積み重ねと適応的再順序付けでノード障害を隠す。対象は学習基盤であり、推論システムではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:12+00:00",
+      "last_checked_at": "2026-11-18T06:12:12+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/15-inference-simulation-emulation/2023-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md"
+      ],
+      "title": "SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs"
+    },
+    "arXiv:2603.02226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02226",
+      "identity_tokens": [
+        "arXiv:2603.02226"
+      ],
+      "reason": "疎な選択的更新RNN。音声や動画のような長い無音・ノイズ区間を含む信号向けに、冗長な入力では内部状態を保つ選択的更新を学ぶ系列モデルのアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:13+00:00",
+      "last_checked_at": "2026-11-18T06:12:13+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Efficient Sparse Selective-Update RNNs for Long-Range Sequence Modeling"
+    },
+    "arXiv:2605.11111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11111",
+      "identity_tokens": [
+        "arXiv:2605.11111"
+      ],
+      "reason": "科学機械学習向けドメイン並列ShardTensor。バッチサイズ1未満への入力データ分割を一般化する並列化パラダイム。対象は科学計算の学習・推論基盤であり、LLM推論システムではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:13+00:00",
+      "last_checked_at": "2026-11-18T06:12:13+00:00",
+      "linked_from": [
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "ShardTensor: Domain Parallelism for Scientific Machine Learning"
+    },
+    "arXiv:2604.03815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03815",
+      "identity_tokens": [
+        "arXiv:2604.03815"
+      ],
+      "reason": "グラフTransformer向けk最大内積注意。大きなグラフへの全対全注意の二次費用に対し、上位kの鍵ノードだけを選ぶ疎な注意パターンの提案。対象はグラフ学習モデルであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:12:15+00:00",
+      "last_checked_at": "2026-11-18T06:12:15+00:00",
+      "linked_from": [
+        "CPU長文推論・近似注意",
+        "inference-systems"
+      ],
+      "title": "k-Maximum Inner Product Attention for Graph Transformers and the Expressive Power of GraphGPS"
     }
   }
 }

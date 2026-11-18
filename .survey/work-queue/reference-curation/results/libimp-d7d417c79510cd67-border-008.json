@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7d417c79510cd67-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.23157",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.23157",
+    "identity_tokens": [
+      "arXiv:2601.23157"
+    ],
+    "reason": "最小権限言語モデル。配備されたモデルへのアクセスを、リクエストに必要な最小限の内部計算への到達可能性として定義し、再訓練なしに強制する枠組み。推論時の制御ではあるが、主題はセキュリティであり境界。",
+    "first_checked_at": "2026-11-18T06:12:10+00:00",
+    "last_checked_at": "2026-11-18T06:12:10+00:00",
+    "linked_from": [
+      "survey-speculative-decoding"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "No More, No Less: Least-Privilege Language Models"
+  },
+  "processed_at": "2026-11-18T06:12:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7d417c79510",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

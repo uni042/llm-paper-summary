@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-057cae0d88b491a6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.28559",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.28559",
+    "identity_tokens": [
+      "arXiv:2610.28559"
+    ],
+    "reason": "大規模フローモデルLafa。接頭辞への因果注意とブロック内の双方向フローで、接頭辞キャッシュとブロック並列デコードによる高速推論を可能にする流れ型言語モデルの構築と学習。推論効率の設計を含むが、貢献の中心はモデルの学習であり境界。",
+    "first_checked_at": "2026-11-18T06:11:57+00:00",
+    "last_checked_at": "2026-11-18T06:11:57+00:00",
+    "linked_from": [
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Large Flow Language Models"
+  },
+  "processed_at": "2026-11-18T06:11:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-057cae0d88b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

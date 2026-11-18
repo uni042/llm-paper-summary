@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d7d417c79510cd67-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.02530",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.02530",
+    "identity_tokens": [
+      "arXiv:2411.02530"
+    ],
+    "reason": "LLM量子化技術の包括的研究。量子化手法の分類と動向を整理する総説的な研究。推論効率化の基盤知識ではあるが、新しい機構の提案ではなく境界。",
+    "first_checked_at": "2026-11-18T06:12:09+00:00",
+    "last_checked_at": "2026-11-18T06:12:09+00:00",
+    "linked_from": [
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Comprehensive Study on Quantization Techniques for Large Language Models"
+  },
+  "processed_at": "2026-11-18T06:12:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d7d417c79510",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-057cae0d88b491a6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.17416",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.17416",
+    "identity_tokens": [
+      "arXiv:2609.17416"
+    ],
+    "reason": "連続時間言語エージェント。聞きながら考え、話しながら考える連続時間認知が、未改変のテキストモデルと軽量な中断・再開オーケストレータで現れることを示す。音声エージェントの遅延削減が主題だが、貢献は編成の工夫と評価であり境界。",
+    "first_checked_at": "2026-11-18T06:11:56+00:00",
+    "last_checked_at": "2026-11-18T06:11:56+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Never Stop Thinking: Continuous-Time Language Agents"
+  },
+  "processed_at": "2026-11-18T06:11:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-057cae0d88b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

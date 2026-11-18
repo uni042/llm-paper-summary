@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d1686ce4d3ca32b-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.03092",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.03092",
+    "identity_tokens": [
+      "arXiv:2606.03092"
+    ],
+    "reason": "推論予算配分の経済学的定式化CLEAR。クエリごとの推論効用をモデル化し、全域の影の価格で限界効用を均す最適配分方策を導き、解けないクエリの合理的放棄と再配分を行う。推論時の資源配分ではあるが、理論と方策の提案が中心であり境界。",
+    "first_checked_at": "2026-11-18T06:11:59+00:00",
+    "last_checked_at": "2026-11-18T06:11:59+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "Offload / Hierarchical Memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Shadow Price of Reasoning: Economic Perspective on Optimal Budget Allocation for LLMs"
+  },
+  "processed_at": "2026-11-18T06:11:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d1686ce4d3c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

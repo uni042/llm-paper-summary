@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e88f2910644491a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.17302",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.17302",
+    "identity_tokens": [
+      "arXiv:2603.17302"
+    ],
+    "reason": "開放エージェントウェブ向け誘因・効率ルーティングIEMAS。自己利益的なエージェント間の多対多マッチングと、KVキャッシュ等の長期的資源再利用を、分散した誘因機構で両立させる枠組み。推論基盤のルーティングではあるが、中心はマルチエージェントの機構設計であり境界。",
+    "first_checked_at": "2026-11-18T06:12:02+00:00",
+    "last_checked_at": "2026-11-18T06:12:02+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling",
+      "agentic serving / workflow-aware scheduling / memory-aware dispatch",
+      "kv-cache-offload-recomputation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems"
+  },
+  "processed_at": "2026-11-18T06:12:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e88f2910644",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

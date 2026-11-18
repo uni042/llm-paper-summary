@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d1686ce4d3ca32b-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.18599",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.18599",
+    "identity_tokens": [
+      "arXiv:2603.18599"
+    ],
+    "reason": "投機的ヤコビデコードの高速化SJD-PAC。テキスト画像合成向けの下書きなし投機的デコードで、高エントロピー領域の受理率の低さへ、先行下書きと拒否後の継続検証で対処する。投機機構ではあるが対象は画像生成のデコードであり境界。",
+    "first_checked_at": "2026-11-18T06:11:58+00:00",
+    "last_checked_at": "2026-11-18T06:11:58+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation"
+  },
+  "processed_at": "2026-11-18T06:11:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d1686ce4d3c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

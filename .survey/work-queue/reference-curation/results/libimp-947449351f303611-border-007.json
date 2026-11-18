@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-947449351f303611-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.02547",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.02547",
+    "identity_tokens": [
+      "arXiv:2406.02547"
+    ],
+    "reason": "視覚トークンで文脈内テキスト長を伸ばすVisInContext。長い文脈内テキストを視覚トークンとして処理し、学習と推論の両方でGPUメモリとFLOPsを減らす探索的研究。文脈処理の効率化ではあるが、初期段階の手法提案であり境界。",
+    "first_checked_at": "2026-11-18T06:12:05+00:00",
+    "last_checked_at": "2026-11-18T06:12:05+00:00",
+    "linked_from": [
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "inference-systems",
+      "sparse attention / long-context Transformer",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Leveraging Visual Tokens for Extended Text Contexts in Multi-Modal Learning"
+  },
+  "processed_at": "2026-11-18T06:12:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-947449351f30",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
