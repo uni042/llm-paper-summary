@@ -1,0 +1,308 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-48ed6a80d3658ef1-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-48ed6a80d365",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+    "arXiv:2607.01308",
+    "arXiv:2608.06291"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "be3b71da904a5d7980c63a25664bd7e8f12ae40e",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:23:07.234846+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.01308",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.01308",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent latent reasoning composes the KV-cache contributions of several agents into one context for a final agent. Prior work (Agent Primitives) does this by concatenating per-agent caches with RoPE re-encoding, a construction we name BagMerge. BagMerge is non-commutative, and the best input ordering is not predictable a priori: it shifts with deployment regime, latent-step budget, model scale, and model family. We make this cache exchange a convergent replicated state. CanonicalMerge fixes the layout by a content-determined ordering (mean K-norm at a middle layer), making the merged cache byte-identical under any input permutation, verified on synthetic tensors (N<= 5) and bit-for-bit on real Qwen3-1.7B and Qwen3-4B KV state. We then separate state from layout: the durable object is a set of content-addressed latent fragments merged by set union, a state-based CvRDT, and CanonicalMerge is its deterministic render, so every accuracy number is inherited and re-delivered duplicates are absorbed. On a partitioned-reasoning benchmark CanonicalMerge matches the best BagMerge ordering without knowing which it is (within 4 points in all 12 cells at 1.7B; same picture at 4B), and on Llama-3.1-8B, where the ordering gap grows to 19 points, it again tracks the best ordering. On HotpotQA (n = 200) and MuSiQue it is the best cache-level method, at a 7-point F1 cost against shipping the text on HotpotQA and at parity on MuSiQue, while the output-fusion baseline PackLLM trails by 45 points. At k>2 we delimit the approach: cache merge transports latent traces but does not by itself compose them.",
+      "identifiers": [
+        "SemanticScholar:0af67064afccf99a3180167e230c858d9291f1df"
+      ],
+      "semantic_scholar_id": "0af67064afccf99a3180167e230c858d9291f1df",
+      "canonical_id": "arXiv:2607.01308",
+      "arxiv_id": "2607.01308",
+      "doi": "10.48550/arXiv.2607.01308",
+      "authors": [
+        "Carlos Baquero",
+        "Luís Brito"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastKron: Efficient Quantization with Kronecker-Factored Hessians",
+      "source_url": "https://arxiv.org/abs/2608.06291",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We accelerate a family of algorithms for neural network quantization which utilize a two-sided version of the GPTQ/LDLQ algorithm. Standard GPTQ-style adaptive rounding uses one-sided correlation information derived from input activations. A natural two-sided extension can additionally capture correlations across output channels. It utilizes a general Kronecker-factored approximation of the weight matrix curvature. This approach has been used in BoA and YAQA. But making a concrete algorithmic implementation of this two-sided GPTQ variant is nontrivial. BoA uses a large number of sequential steps, while YAQA improves over the sequential depth but still has quartic total cost. We introduce FastKron, an efficient algorithmic implementation that combines anti-diagonal parallelism with a recursive divide-and-conquer construction. For an $m\\times n$ weight matrix, FastKron uses $O(m+n)$ sequential steps while reducing the total work from $O(m^2n^2)$ to $O(mn(m+n))$. Thus, it matches the cubic scaling of GPTQ while exploiting richer curvature information. Moreover, FastKron is modular with respect to both the base quantizer and the Hessian estimator. We also provide practical benchmarks, consider a range of Hessian approximations that FastKron can be used with, and provide an efficient technique to compute these Hessians.",
+      "identifiers": [
+        "SemanticScholar:e114ed8a54b7187c1c1042515dffa141a7e56f2c"
+      ],
+      "semantic_scholar_id": "e114ed8a54b7187c1c1042515dffa141a7e56f2c",
+      "canonical_id": "arXiv:2608.06291",
+      "arxiv_id": "2608.06291",
+      "authors": [
+        "Johann Birnick",
+        "R. Saab"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SubQ-1.1-Small Technical Report",
+      "source_url": "https://www.semanticscholar.org/paper/832ea2a654c22f11f3c64aed4e9340fc99abf803",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803"
+      ],
+      "semantic_scholar_id": "832ea2a654c22f11f3c64aed4e9340fc99abf803",
+      "canonical_id": "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+      "authors": [
+        "S. Ramírez",
+        "Alexander Whedon",
+        "AI Subquadratic",
+        "P. Võ"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.01308",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.01308",
+        "id:SemanticScholar:0af67064afccf99a3180167e230c858d9291f1df",
+        "id:arXiv:2607.01308",
+        "title:cache merging as a convergent replicated state for multiagent latent reasoning",
+        "url:https://arxiv.org/abs/2607.01308"
+      ],
+      "record": {
+        "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
+        "source_url": "https://arxiv.org/abs/2607.01308",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent latent reasoning composes the KV-cache contributions of several agents into one context for a final agent. Prior work (Agent Primitives) does this by concatenating per-agent caches with RoPE re-encoding, a construction we name BagMerge. BagMerge is non-commutative, and the best input ordering is not predictable a priori: it shifts with deployment regime, latent-step budget, model scale, and model family. We make this cache exchange a convergent replicated state. CanonicalMerge fixes the layout by a content-determined ordering (mean K-norm at a middle layer), making the merged cache byte-identical under any input permutation, verified on synthetic tensors (N<= 5) and bit-for-bit on real Qwen3-1.7B and Qwen3-4B KV state. We then separate state from layout: the durable object is a set of content-addressed latent fragments merged by set union, a state-based CvRDT, and CanonicalMerge is its deterministic render, so every accuracy number is inherited and re-delivered duplicates are absorbed. On a partitioned-reasoning benchmark CanonicalMerge matches the best BagMerge ordering without knowing which it is (within 4 points in all 12 cells at 1.7B; same picture at 4B), and on Llama-3.1-8B, where the ordering gap grows to 19 points, it again tracks the best ordering. On HotpotQA (n = 200) and MuSiQue it is the best cache-level method, at a 7-point F1 cost against shipping the text on HotpotQA and at parity on MuSiQue, while the output-fusion baseline PackLLM trails by 45 points. At k>2 we delimit the approach: cache merge transports latent traces but does not by itself compose them.",
+        "identifiers": [
+          "SemanticScholar:0af67064afccf99a3180167e230c858d9291f1df"
+        ],
+        "semantic_scholar_id": "0af67064afccf99a3180167e230c858d9291f1df",
+        "canonical_id": "arXiv:2607.01308",
+        "arxiv_id": "2607.01308",
+        "doi": "10.48550/arXiv.2607.01308",
+        "authors": [
+          "Carlos Baquero",
+          "Luís Brito"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06291",
+      "identity_tokens": [
+        "id:SemanticScholar:e114ed8a54b7187c1c1042515dffa141a7e56f2c",
+        "id:arXiv:2608.06291",
+        "title:fastkron efficient quantization with kroneckerfactored hessians",
+        "url:https://arxiv.org/abs/2608.06291"
+      ],
+      "record": {
+        "title": "FastKron: Efficient Quantization with Kronecker-Factored Hessians",
+        "source_url": "https://arxiv.org/abs/2608.06291",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We accelerate a family of algorithms for neural network quantization which utilize a two-sided version of the GPTQ/LDLQ algorithm. Standard GPTQ-style adaptive rounding uses one-sided correlation information derived from input activations. A natural two-sided extension can additionally capture correlations across output channels. It utilizes a general Kronecker-factored approximation of the weight matrix curvature. This approach has been used in BoA and YAQA. But making a concrete algorithmic implementation of this two-sided GPTQ variant is nontrivial. BoA uses a large number of sequential steps, while YAQA improves over the sequential depth but still has quartic total cost. We introduce FastKron, an efficient algorithmic implementation that combines anti-diagonal parallelism with a recursive divide-and-conquer construction. For an $m\\times n$ weight matrix, FastKron uses $O(m+n)$ sequential steps while reducing the total work from $O(m^2n^2)$ to $O(mn(m+n))$. Thus, it matches the cubic scaling of GPTQ while exploiting richer curvature information. Moreover, FastKron is modular with respect to both the base quantizer and the Hessian estimator. We also provide practical benchmarks, consider a range of Hessian approximations that FastKron can be used with, and provide an efficient technique to compute these Hessians.",
+        "identifiers": [
+          "SemanticScholar:e114ed8a54b7187c1c1042515dffa141a7e56f2c"
+        ],
+        "semantic_scholar_id": "e114ed8a54b7187c1c1042515dffa141a7e56f2c",
+        "canonical_id": "arXiv:2608.06291",
+        "arxiv_id": "2608.06291",
+        "authors": [
+          "Johann Birnick",
+          "R. Saab"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 104,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+      "identity_tokens": [
+        "id:SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+        "title:subq11small technical report",
+        "url:https://www.semanticscholar.org/paper/832ea2a654c22f11f3c64aed4e9340fc99abf803"
+      ],
+      "record": {
+        "title": "SubQ-1.1-Small Technical Report",
+        "source_url": "https://www.semanticscholar.org/paper/832ea2a654c22f11f3c64aed4e9340fc99abf803",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803"
+        ],
+        "semantic_scholar_id": "832ea2a654c22f11f3c64aed4e9340fc99abf803",
+        "canonical_id": "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+        "authors": [
+          "S. Ramírez",
+          "Alexander Whedon",
+          "AI Subquadratic",
+          "P. Võ"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:51fc41907a360f81a3a96d30d6b6343caca6110b7e241fa44b56203d7ee774c4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,508 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-033d7d1d7218c107-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-033d7d1d7218",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.26439",
+    "arXiv:2610.32417",
+    "arXiv:2610.40752",
+    "arXiv:2610.41389",
+    "arXiv:2610.41618"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "be3b71da904a5d7980c63a25664bd7e8f12ae40e",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:23:07.245705+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.26439",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32417",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40752",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41389",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41618",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents",
+      "source_url": "https://arxiv.org/abs/2610.32417",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization reduces the memory and energy needed to serve large language models (LLMs) and AI agents for coding and data analysis can now run on locally hosted LLMs. In practice, this benefit is commonly benchmarked per output token. Yet an agent calls its model repeatedly, runs tools, and revises its work, and quantization can change both how much the agent generates and whether it succeeds. Existing energy studies either compare quantized models on single requests or measure agents at one fixed precision, overlooking how a change in precision plays out across a complete agent task. To address this gap, this paper presents the first characterization of the task-level energy trade-offs of model quantization in locally hosted agents. We develop 29 agent tasks with automatic pass/fail checks in six families, ranging from single-answer SQL analytics to multi-step repository bug fixing, and measure CPU and GPU energy per output token and per completed task for 4-bit and 8-bit versions of two open-weight models on bare-metal NVIDIA A100 nodes with llama$.$cpp. Our findings reveal that 4-bit precision generally saves energy per token, though whether it saves energy per completed task is task dependent and changes with the model and the execution budget (i.e., limits on turns, tokens, and time). We trace this discrepancy to the extra tokens needed to complete a task in full, which translates into using up to 3.5 times as much energy per completed task. These findings offer actionable guidance for developers and operators choosing model precision for agents, showing how tokens per completed task, set against the per-token saving, reveal whether lower precision completes the work with less energy.",
+      "identifiers": [
+        "SemanticScholar:24adc4b709bae44d24a41ede53516140eecba855"
+      ],
+      "semantic_scholar_id": "24adc4b709bae44d24a41ede53516140eecba855",
+      "canonical_id": "arXiv:2610.32417",
+      "arxiv_id": "2610.32417",
+      "authors": [
+        "Stephen Abkin",
+        "Aldric Yang",
+        "Alex Flesher",
+        "Nitheesh Kodarapu",
+        "Deepak Panigrahy",
+        "Aakash Tyagi",
+        "D. Houngninou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring",
+      "source_url": "https://arxiv.org/abs/2606.26439",
+      "year": 2026,
+      "published": "2026-06-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "MaxSim scoring dominates the cost of multi-vector retrieval. Several groups built fused GPU kernels for it independently during 2026, and all report one measure of success: the fraction of peak memory bandwidth reached. That measure assumes the operator is limited by the bytes it moves. We show the assumption fails in two ways, and that two other quantities decide performance: which side of the roofline ridge a shape falls on, and how many dependent gathers the scoring path performs. We first locate the boundary. Fused arithmetic intensity is Nq*Nd /(Nq + Nd) FLOP per byte, against an H100 dense-FP16 ridge of 295.4. The operator is therefore memory-bound at ColBERT shapes and compute-bound at ColPali-scale query lengths. Published analyses report one side each and do not reconcile them. We measure the crossover at three document lengths, and a closed form predicts it inside the measured bracket each time. Past the crossover, percent of peak bandwidth falls to 4% while percent of peak FLOPs rises above 40%. The reported measure is therefore defined on only one side of a boundary that real workloads cross. We also validate the underlying traffic model against DRAM counters, to 0.003%. We then show that moving fewer bytes does not make the kernel faster. Fusing product-quantized asymmetric distance computation into the kernel moves 15.9x fewer bytes than exact FP16 on tensor cores and runs 3.0x slower. Counters rule out the usual causes: it reaches 1.23% of peak DRAM throughput at 98.2% occupancy. The limit is 6.5*10^9 dependent gathers, a count that does not fall when the codes get smaller. A hand-written CUDA version with a staged table recovers 4.7x and remains slower than exact scoring. Finally, we give the first head-to-head comparison of three fused MaxSim kernels, over 28 shapes, with every result checked against an exhaustive FP32 reference.",
+      "identifiers": [
+        "SemanticScholar:360c5f0919fb09bee4dab8772ab09a04740971a2"
+      ],
+      "semantic_scholar_id": "360c5f0919fb09bee4dab8772ab09a04740971a2",
+      "canonical_id": "arXiv:2606.26439",
+      "arxiv_id": "2606.26439",
+      "authors": [
+        "Ashutosh Sharma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PathoJev: Efficient Pathology Decisions from Shared Visual Context",
+      "source_url": "https://arxiv.org/abs/2610.40752",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pathology workflows require multiple visual judgments about the same slide, from identifying tumor type to assessing grade and invasion. Generating and parsing a separate textual response for each structured question adds latency between visual evidence and usable decisions. Building on the System One paradigm, we introduce PathoJev, a pathology model that directly predicts answer probabilities for whole-slide and region-level assessment. PathoJev encodes each slide once and evaluates independent question suffixes in batches over the shared visual context. Reusing the hybrid backbone's recurrent states further limits the computation that grows with slide-context length for each additional question. Across three whole-slide benchmarks, the 9B and 27B models achieve mean accuracies of 77.2% and 78.1%, exceeding SlideChat by 5.4 and 6.3 percentage points. Both scales also maintain competitive accuracy on five ROI benchmarks. On WSI-Bench, the 9B model runs 9.1x faster than SlideChat. Shared context accelerates eight-question workloads by 6.9x and 5.9x over separate prefix encoding, rising to 11.2x and 8.9x for 64 questions. These results provide a reusable probabilistic interface for combining multiple visual judgments in whole-slide and local tissue assessment. Code: https://github.com/ChyaZhang/PathoJev.",
+      "identifiers": [
+        "SemanticScholar:3b20b4d6e584792a574d5c035edc8c3f2972b529"
+      ],
+      "semantic_scholar_id": "3b20b4d6e584792a574d5c035edc8c3f2972b529",
+      "canonical_id": "arXiv:2610.40752",
+      "arxiv_id": "2610.40752",
+      "authors": [
+        "Cheng-Yang Zhang",
+        "Wen-Chuan Zhang",
+        "Bo Li",
+        "Xin-Yu Liu",
+        "Jia-Ming Yang",
+        "Meng-Ran Li",
+        "Jie Chen",
+        "Wei Ju",
+        "Yu-Hao Yi",
+        "H. Bu",
+        "Jian-Cheng Lv"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives",
+      "source_url": "https://arxiv.org/abs/2610.41389",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Spatial reasoning in Vision-Language Models (VLMs) has increasingly benefited from tool-integrated pipelines that ground computation in explicit geometry. However, existing systems often compile queries into relatively open-ended artifacts, such as code, task constraints, tool plans, or gathered evidence, leaving what must be resolved before execution under-specified. This can lead to unnecessary tool acquisition and iterative refinement, while still producing plausible reasoning traces from incomplete spatial commitments. We identify this failure mode as under-committed query compilation. To address it, we propose PEPS, a training-free agentic paradigm Parsing Executable Primitives for Spatial reasoning under a typed FESM schema over Frame, Entity, State, and Metric. PEPS follows a parse-before-execute principle: the Parser commits each query to a compact set of executable requirements; the Executor selectively grounds the required primitives through fixed geometric APIs and deterministic computation; and the Verifier checks execution sufficiency, enabling early termination or targeted repair. Extensive experiments across challenging spatial reasoning benchmarks show that PEPS consistently improves reasoning accuracy while substantially reducing refinement rounds, API cost, and end-to-end latency over strong tool-integrated baselines. These results demonstrate that explicit requirement commitment can make tool-integrated spatial reasoning not only more reliable, but also more execution-efficient.",
+      "identifiers": [
+        "SemanticScholar:4a5545e501cb333f91ab973019a9a522e2b52a74"
+      ],
+      "semantic_scholar_id": "4a5545e501cb333f91ab973019a9a522e2b52a74",
+      "canonical_id": "arXiv:2610.41389",
+      "arxiv_id": "2610.41389",
+      "authors": [
+        "Xi-Wei Liu",
+        "Yu-Long Li",
+        "Xin-Lin Zhuang",
+        "Xu-Hui Li",
+        "Yi-Chen Li",
+        "Hao-Lin Yang",
+        "Zhi-Xiang Lu",
+        "Yu-Tong Xie"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Attention Maps Know When to Think: Training-Free Difficulty-Aware Chain-of-Thought for Reasoning Segmentation",
+      "source_url": "https://arxiv.org/abs/2610.41618",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) prompting has become a standard reasoning strategy in Multi-modal Large Language Models (MLLMs), showing strong performance in complex vision-language tasks such as reasoning segmentation. However, our analysis reveals that indiscriminate CoT usage can lead to degraded performance by inducing unnecessary reasoning, a phenomenon we term overthinking. In reasoning segmentation, overthinking often leads to misalignment between the query's intent and visual grounding. To address this, we propose Difficulty-Aware Chain-of-Thought (DA-CoT), a training-free adaptive framework that selectively triggers CoT based on the input's intrinsic difficulty. We find that the entropy of the model's attention maps reliably reflects task difficulty: low entropy indicates confident, localized grounding, while high entropy suggests uncertainty and potential benefit from CoT. DA-CoT uses this entropy signal to determine whether to apply CoT prompting. Additionally, we introduce a Bidirectional Rethinking mechanism that enables the model to automatically flip its reasoning decision when the initial output fails, enhancing robustness by recovering from failures induced by overthinking and underthinking. DA-CoT demonstrates its effectiveness by achieving state-of-the-art performance on the Reasoning Segmentation benchmarks while significantly improving inference efficiency.",
+      "identifiers": [
+        "SemanticScholar:157e9aaaf450afd53f8c96cab0cda8ba0af14d42"
+      ],
+      "semantic_scholar_id": "157e9aaaf450afd53f8c96cab0cda8ba0af14d42",
+      "canonical_id": "arXiv:2610.41618",
+      "arxiv_id": "2610.41618",
+      "authors": [
+        "Chanseul Cho",
+        "Jaesung Jun",
+        "Dongheon Lee",
+        "Youngmin Ro"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.32417",
+      "identity_tokens": [
+        "id:SemanticScholar:24adc4b709bae44d24a41ede53516140eecba855",
+        "id:arXiv:2610.32417",
+        "title:measuring the energy cost of completing tasks with quantized languagemodel agents",
+        "url:https://arxiv.org/abs/2610.32417"
+      ],
+      "record": {
+        "title": "Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents",
+        "source_url": "https://arxiv.org/abs/2610.32417",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization reduces the memory and energy needed to serve large language models (LLMs) and AI agents for coding and data analysis can now run on locally hosted LLMs. In practice, this benefit is commonly benchmarked per output token. Yet an agent calls its model repeatedly, runs tools, and revises its work, and quantization can change both how much the agent generates and whether it succeeds. Existing energy studies either compare quantized models on single requests or measure agents at one fixed precision, overlooking how a change in precision plays out across a complete agent task. To address this gap, this paper presents the first characterization of the task-level energy trade-offs of model quantization in locally hosted agents. We develop 29 agent tasks with automatic pass/fail checks in six families, ranging from single-answer SQL analytics to multi-step repository bug fixing, and measure CPU and GPU energy per output token and per completed task for 4-bit and 8-bit versions of two open-weight models on bare-metal NVIDIA A100 nodes with llama$.$cpp. Our findings reveal that 4-bit precision generally saves energy per token, though whether it saves energy per completed task is task dependent and changes with the model and the execution budget (i.e., limits on turns, tokens, and time). We trace this discrepancy to the extra tokens needed to complete a task in full, which translates into using up to 3.5 times as much energy per completed task. These findings offer actionable guidance for developers and operators choosing model precision for agents, showing how tokens per completed task, set against the per-token saving, reveal whether lower precision completes the work with less energy.",
+        "identifiers": [
+          "SemanticScholar:24adc4b709bae44d24a41ede53516140eecba855"
+        ],
+        "semantic_scholar_id": "24adc4b709bae44d24a41ede53516140eecba855",
+        "canonical_id": "arXiv:2610.32417",
+        "arxiv_id": "2610.32417",
+        "authors": [
+          "Stephen Abkin",
+          "Aldric Yang",
+          "Alex Flesher",
+          "Nitheesh Kodarapu",
+          "Deepak Panigrahy",
+          "Aakash Tyagi",
+          "D. Houngninou"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.26439",
+      "identity_tokens": [
+        "id:SemanticScholar:360c5f0919fb09bee4dab8772ab09a04740971a2",
+        "id:arXiv:2606.26439",
+        "title:tilemaxsim roofline regimes and compression limits for fused gpu maxsim scoring",
+        "url:https://arxiv.org/abs/2606.26439"
+      ],
+      "record": {
+        "title": "TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring",
+        "source_url": "https://arxiv.org/abs/2606.26439",
+        "year": 2026,
+        "published": "2026-06-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "MaxSim scoring dominates the cost of multi-vector retrieval. Several groups built fused GPU kernels for it independently during 2026, and all report one measure of success: the fraction of peak memory bandwidth reached. That measure assumes the operator is limited by the bytes it moves. We show the assumption fails in two ways, and that two other quantities decide performance: which side of the roofline ridge a shape falls on, and how many dependent gathers the scoring path performs. We first locate the boundary. Fused arithmetic intensity is Nq*Nd /(Nq + Nd) FLOP per byte, against an H100 dense-FP16 ridge of 295.4. The operator is therefore memory-bound at ColBERT shapes and compute-bound at ColPali-scale query lengths. Published analyses report one side each and do not reconcile them. We measure the crossover at three document lengths, and a closed form predicts it inside the measured bracket each time. Past the crossover, percent of peak bandwidth falls to 4% while percent of peak FLOPs rises above 40%. The reported measure is therefore defined on only one side of a boundary that real workloads cross. We also validate the underlying traffic model against DRAM counters, to 0.003%. We then show that moving fewer bytes does not make the kernel faster. Fusing product-quantized asymmetric distance computation into the kernel moves 15.9x fewer bytes than exact FP16 on tensor cores and runs 3.0x slower. Counters rule out the usual causes: it reaches 1.23% of peak DRAM throughput at 98.2% occupancy. The limit is 6.5*10^9 dependent gathers, a count that does not fall when the codes get smaller. A hand-written CUDA version with a staged table recovers 4.7x and remains slower than exact scoring. Finally, we give the first head-to-head comparison of three fused MaxSim kernels, over 28 shapes, with every result checked against an exhaustive FP32 reference.",
+        "identifiers": [
+          "SemanticScholar:360c5f0919fb09bee4dab8772ab09a04740971a2"
+        ],
+        "semantic_scholar_id": "360c5f0919fb09bee4dab8772ab09a04740971a2",
+        "canonical_id": "arXiv:2606.26439",
+        "arxiv_id": "2606.26439",
+        "authors": [
+          "Ashutosh Sharma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 147,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.40752",
+      "identity_tokens": [
+        "id:SemanticScholar:3b20b4d6e584792a574d5c035edc8c3f2972b529",
+        "id:arXiv:2610.40752",
+        "title:pathojev efficient pathology decisions from shared visual context",
+        "url:https://arxiv.org/abs/2610.40752"
+      ],
+      "record": {
+        "title": "PathoJev: Efficient Pathology Decisions from Shared Visual Context",
+        "source_url": "https://arxiv.org/abs/2610.40752",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pathology workflows require multiple visual judgments about the same slide, from identifying tumor type to assessing grade and invasion. Generating and parsing a separate textual response for each structured question adds latency between visual evidence and usable decisions. Building on the System One paradigm, we introduce PathoJev, a pathology model that directly predicts answer probabilities for whole-slide and region-level assessment. PathoJev encodes each slide once and evaluates independent question suffixes in batches over the shared visual context. Reusing the hybrid backbone's recurrent states further limits the computation that grows with slide-context length for each additional question. Across three whole-slide benchmarks, the 9B and 27B models achieve mean accuracies of 77.2% and 78.1%, exceeding SlideChat by 5.4 and 6.3 percentage points. Both scales also maintain competitive accuracy on five ROI benchmarks. On WSI-Bench, the 9B model runs 9.1x faster than SlideChat. Shared context accelerates eight-question workloads by 6.9x and 5.9x over separate prefix encoding, rising to 11.2x and 8.9x for 64 questions. These results provide a reusable probabilistic interface for combining multiple visual judgments in whole-slide and local tissue assessment. Code: https://github.com/ChyaZhang/PathoJev.",
+        "identifiers": [
+          "SemanticScholar:3b20b4d6e584792a574d5c035edc8c3f2972b529"
+        ],
+        "semantic_scholar_id": "3b20b4d6e584792a574d5c035edc8c3f2972b529",
+        "canonical_id": "arXiv:2610.40752",
+        "arxiv_id": "2610.40752",
+        "authors": [
+          "Cheng-Yang Zhang",
+          "Wen-Chuan Zhang",
+          "Bo Li",
+          "Xin-Yu Liu",
+          "Jia-Ming Yang",
+          "Meng-Ran Li",
+          "Jie Chen",
+          "Wei Ju",
+          "Yu-Hao Yi",
+          "H. Bu",
+          "Jian-Cheng Lv"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41389",
+      "identity_tokens": [
+        "id:SemanticScholar:4a5545e501cb333f91ab973019a9a522e2b52a74",
+        "id:arXiv:2610.41389",
+        "title:parse before you execute efficient spatial reasoning with executable primitives",
+        "url:https://arxiv.org/abs/2610.41389"
+      ],
+      "record": {
+        "title": "Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives",
+        "source_url": "https://arxiv.org/abs/2610.41389",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Spatial reasoning in Vision-Language Models (VLMs) has increasingly benefited from tool-integrated pipelines that ground computation in explicit geometry. However, existing systems often compile queries into relatively open-ended artifacts, such as code, task constraints, tool plans, or gathered evidence, leaving what must be resolved before execution under-specified. This can lead to unnecessary tool acquisition and iterative refinement, while still producing plausible reasoning traces from incomplete spatial commitments. We identify this failure mode as under-committed query compilation. To address it, we propose PEPS, a training-free agentic paradigm Parsing Executable Primitives for Spatial reasoning under a typed FESM schema over Frame, Entity, State, and Metric. PEPS follows a parse-before-execute principle: the Parser commits each query to a compact set of executable requirements; the Executor selectively grounds the required primitives through fixed geometric APIs and deterministic computation; and the Verifier checks execution sufficiency, enabling early termination or targeted repair. Extensive experiments across challenging spatial reasoning benchmarks show that PEPS consistently improves reasoning accuracy while substantially reducing refinement rounds, API cost, and end-to-end latency over strong tool-integrated baselines. These results demonstrate that explicit requirement commitment can make tool-integrated spatial reasoning not only more reliable, but also more execution-efficient.",
+        "identifiers": [
+          "SemanticScholar:4a5545e501cb333f91ab973019a9a522e2b52a74"
+        ],
+        "semantic_scholar_id": "4a5545e501cb333f91ab973019a9a522e2b52a74",
+        "canonical_id": "arXiv:2610.41389",
+        "arxiv_id": "2610.41389",
+        "authors": [
+          "Xi-Wei Liu",
+          "Yu-Long Li",
+          "Xin-Lin Zhuang",
+          "Xu-Hui Li",
+          "Yi-Chen Li",
+          "Hao-Lin Yang",
+          "Zhi-Xiang Lu",
+          "Yu-Tong Xie"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41618",
+      "identity_tokens": [
+        "id:SemanticScholar:157e9aaaf450afd53f8c96cab0cda8ba0af14d42",
+        "id:arXiv:2610.41618",
+        "title:attention maps know when to think trainingfree difficultyaware chainofthought for reasoning segmentation",
+        "url:https://arxiv.org/abs/2610.41618"
+      ],
+      "record": {
+        "title": "Attention Maps Know When to Think: Training-Free Difficulty-Aware Chain-of-Thought for Reasoning Segmentation",
+        "source_url": "https://arxiv.org/abs/2610.41618",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) prompting has become a standard reasoning strategy in Multi-modal Large Language Models (MLLMs), showing strong performance in complex vision-language tasks such as reasoning segmentation. However, our analysis reveals that indiscriminate CoT usage can lead to degraded performance by inducing unnecessary reasoning, a phenomenon we term overthinking. In reasoning segmentation, overthinking often leads to misalignment between the query's intent and visual grounding. To address this, we propose Difficulty-Aware Chain-of-Thought (DA-CoT), a training-free adaptive framework that selectively triggers CoT based on the input's intrinsic difficulty. We find that the entropy of the model's attention maps reliably reflects task difficulty: low entropy indicates confident, localized grounding, while high entropy suggests uncertainty and potential benefit from CoT. DA-CoT uses this entropy signal to determine whether to apply CoT prompting. Additionally, we introduce a Bidirectional Rethinking mechanism that enables the model to automatically flip its reasoning decision when the initial output fails, enhancing robustness by recovering from failures induced by overthinking and underthinking. DA-CoT demonstrates its effectiveness by achieving state-of-the-art performance on the Reasoning Segmentation benchmarks while significantly improving inference efficiency.",
+        "identifiers": [
+          "SemanticScholar:157e9aaaf450afd53f8c96cab0cda8ba0af14d42"
+        ],
+        "semantic_scholar_id": "157e9aaaf450afd53f8c96cab0cda8ba0af14d42",
+        "canonical_id": "arXiv:2610.41618",
+        "arxiv_id": "2610.41618",
+        "authors": [
+          "Chanseul Cho",
+          "Jaesung Jun",
+          "Dongheon Lee",
+          "Youngmin Ro"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:66acd8cffc5a5417d5436ed975c14ce1b9ff1bacefa5a43b6aae9c63dfa23482",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

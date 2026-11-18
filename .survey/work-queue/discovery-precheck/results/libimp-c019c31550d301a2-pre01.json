@@ -1,0 +1,333 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c019c31550d301a2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c019c31550d3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00104",
+    "DOI:10.1145/3775043.3775047",
+    "arXiv:2503.20362"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "be3b71da904a5d7980c63a25664bd7e8f12ae40e",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:23:22.127459+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00104",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3775043.3775047",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.20362",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Bringing Near Data Processing Into the Low-Bit Floating-Point Era",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00104",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Near data processing (NDP) based on DRAM has emerged to be a promising solution to the “memory wall” problem of machine learning models. From the algorithmic perspective, group-wise low-bit floating-point (FP) quantization has become an important trend for both efficient training and inference. Integrating low-bit FP quantization into NDP also notably shrinks the memory footprint of large models, alleviating the memory-capacity constraints of NDP architectures. However, existing NDP compilers struggle to support efficient low-bit FP computation on NDP. First, different quantization configurations exhibit different preferences for NDP compilation strategies. Second, the fine-grained grouping leads to frequent switching between quantized value access and group scale access during computation, increasing the DRAM row-buffer miss rate. Third, fine-grained grouping triggers frequent high-precision dequantization operations, causing significant latency overhead. To address these challenges, this paper proposes FlexQ-NDP, an NDP compiler tailored for general low-bit FP computation. Firstly, we develop an open-source simulation framework 11 Available at https://github.com/ISCA26-FlexQ-NDP-ae/flexqndp to model the low-bit FP computation overhead on NDP. Secondly, we design a scale-value interleaved FP layout, effectively reducing DRAM row-changing overhead. Thirdly, we propose a dequantization-hiding technique based on instruction reordering to reduce the DRAM idle time induced by frequent dequantization operations. Finally, we develop a lightweight compilationspace pruning and search strategy to enable efficient low-bit FP computation on NDP. Extensive experiments show that FlexQ-NDP achieves up to $3.29 \\times$ speedup over existing compilation strategies on various low-bit FP quantization configurations.",
+      "identifiers": [
+        "SemanticScholar:36740b7336e3756333e88ac30a7798e3a998b2cf"
+      ],
+      "semantic_scholar_id": "36740b7336e3756333e88ac30a7798e3a998b2cf",
+      "doi": "10.1109/ISCA66397.2026.00104",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00104",
+      "authors": [
+        "Tongxin Xie",
+        "Mingyu Gao",
+        "Ze-Hao Wang",
+        "Zhi-Hao Jia",
+        "Yuechen Xi",
+        "Bing Li",
+        "Mo Guang",
+        "Jia-Le Yan",
+        "Kai-Wen Long",
+        "Xing-Cheng Zhang",
+        "Hua-Zhong Yang",
+        "Yuan Xie",
+        "Zhen-Hua Zhu",
+        "Yu Wang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2503.20362",
+      "year": 2025,
+      "published": "2025-03-26",
+      "venue": "IEEE International Conference on Multimedia and Expo",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) demonstrate remarkable performance in short-video tasks such as video question answering, but struggle in long-video understanding. The linear frame sampling strategy, conventionally used by LVLMs, fails to account for the non-linear distribution of key events in video data, often introducing redundant or irrelevant information in longer contexts while risking the omission of critical events in shorter ones. To address this, we propose Self-ReS, a non-linear spatiotemporal self-reflective sampling method that dynamically selects key video fragments based on user prompts. Unlike prior approaches, Self-ReS leverages the inherently sparse attention maps of LVLMs to define reflection tokens, enabling relevance-aware token selection without requiring additional training or external modules. Experiments demonstrate that Self-ReS can be seamlessly integrated into strong base LVLMs, improving long-video task accuracy and achieving up to 46% faster inference speed within the same GPU memory budget. The code can be found here: https://github.com/jaca-pereira/Self-ReS.",
+      "identifiers": [
+        "SemanticScholar:907d7c6bf6363e212da980aebbc39ad196ac65fd"
+      ],
+      "semantic_scholar_id": "907d7c6bf6363e212da980aebbc39ad196ac65fd",
+      "canonical_id": "arXiv:2503.20362",
+      "arxiv_id": "2503.20362",
+      "doi": "10.1109/ICME59968.2025.11209055",
+      "authors": [
+        "Jo�ão Pereira",
+        "Vasco Lopes",
+        "David Semedo",
+        "Jo�ão Neves"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 602,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Idle Consumer GPUs as a Complement to Enterprise Hardware for LLM Inference: Performance, Cost and Carbon Analysis",
+      "source_url": "https://doi.org/10.1145/3775043.3775047",
+      "year": 2025,
+      "published": "2025-09-17",
+      "venue": "AIBC",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We examine the cost-performance landscape of Large Language Model (LLM) inference across two GPU tiers: Nvidia's enterprise-class H100 and the widely available consumer-grade RTX 4090. We benchmark latency, tokens per second, and cost per million tokens for models spanning 1.5 billion to 70 billion parameters, then zoom in on a 14 billion parameter model for a detailed comparison. H100s deliver up to 1.5× throughput and sub-55 ms tail latencies, yet 4090 clusters provide up to 75% lower token cost for batched or latency-tolerant workloads. We describe how quantization (GPTQ/AWQ), modern serving stacks (vLLM, SGLang), and Petals-style distributed execution enable consumer GPUs to push beyond on-board memory limits, with moderate latency tradeoffs. From a sustainability perspective, we show that H100s can be roughly 3.1× more energy-efficient per token, and how this edge narrows on low-carbon grids or when tapping otherwise-idle consumer hardware. We conclude that hybrid routing traffic to enterprise GPUs and to consumer pools can offer a pragmatic blend of performance, cost, and sustainability, based on Service Level Objectives (SLOs). The open benchmarks and cost models aim to guide practitioners in building heterogeneous GPU stacks for scalable, economical, and greener LLM services.",
+      "identifiers": [
+        "SemanticScholar:be64acfe945e3dca4d4144500b7b4cba7b88c440"
+      ],
+      "semantic_scholar_id": "be64acfe945e3dca4d4144500b7b4cba7b88c440",
+      "doi": "10.1145/3775043.3775047",
+      "canonical_id": "DOI:10.1145/3775043.3775047",
+      "authors": [
+        "Aline Ribeiro de Almeida"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 427,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00104",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00104",
+        "id:SemanticScholar:36740b7336e3756333e88ac30a7798e3a998b2cf",
+        "title:bringing near data processing into the lowbit floatingpoint era",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00104"
+      ],
+      "record": {
+        "title": "Bringing Near Data Processing Into the Low-Bit Floating-Point Era",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00104",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Near data processing (NDP) based on DRAM has emerged to be a promising solution to the “memory wall” problem of machine learning models. From the algorithmic perspective, group-wise low-bit floating-point (FP) quantization has become an important trend for both efficient training and inference. Integrating low-bit FP quantization into NDP also notably shrinks the memory footprint of large models, alleviating the memory-capacity constraints of NDP architectures. However, existing NDP compilers struggle to support efficient low-bit FP computation on NDP. First, different quantization configurations exhibit different preferences for NDP compilation strategies. Second, the fine-grained grouping leads to frequent switching between quantized value access and group scale access during computation, increasing the DRAM row-buffer miss rate. Third, fine-grained grouping triggers frequent high-precision dequantization operations, causing significant latency overhead. To address these challenges, this paper proposes FlexQ-NDP, an NDP compiler tailored for general low-bit FP computation. Firstly, we develop an open-source simulation framework 11 Available at https://github.com/ISCA26-FlexQ-NDP-ae/flexqndp to model the low-bit FP computation overhead on NDP. Secondly, we design a scale-value interleaved FP layout, effectively reducing DRAM row-changing overhead. Thirdly, we propose a dequantization-hiding technique based on instruction reordering to reduce the DRAM idle time induced by frequent dequantization operations. Finally, we develop a lightweight compilationspace pruning and search strategy to enable efficient low-bit FP computation on NDP. Extensive experiments show that FlexQ-NDP achieves up to $3.29 \\times$ speedup over existing compilation strategies on various low-bit FP quantization configurations.",
+        "identifiers": [
+          "SemanticScholar:36740b7336e3756333e88ac30a7798e3a998b2cf"
+        ],
+        "semantic_scholar_id": "36740b7336e3756333e88ac30a7798e3a998b2cf",
+        "doi": "10.1109/ISCA66397.2026.00104",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00104",
+        "authors": [
+          "Tongxin Xie",
+          "Mingyu Gao",
+          "Ze-Hao Wang",
+          "Zhi-Hao Jia",
+          "Yuechen Xi",
+          "Bing Li",
+          "Mo Guang",
+          "Jia-Le Yan",
+          "Kai-Wen Long",
+          "Xing-Cheng Zhang",
+          "Hua-Zhong Yang",
+          "Yuan Xie",
+          "Zhen-Hua Zhu",
+          "Yu Wang"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.20362",
+      "identity_tokens": [
+        "id:DOI:10.1109/icme59968.2025.11209055",
+        "id:SemanticScholar:907d7c6bf6363e212da980aebbc39ad196ac65fd",
+        "id:arXiv:2503.20362",
+        "title:selfres selfreflection in large visionlanguage models for long video understanding",
+        "url:https://arxiv.org/abs/2503.20362"
+      ],
+      "record": {
+        "title": "Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding",
+        "source_url": "https://arxiv.org/abs/2503.20362",
+        "year": 2025,
+        "published": "2025-03-26",
+        "venue": "IEEE International Conference on Multimedia and Expo",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) demonstrate remarkable performance in short-video tasks such as video question answering, but struggle in long-video understanding. The linear frame sampling strategy, conventionally used by LVLMs, fails to account for the non-linear distribution of key events in video data, often introducing redundant or irrelevant information in longer contexts while risking the omission of critical events in shorter ones. To address this, we propose Self-ReS, a non-linear spatiotemporal self-reflective sampling method that dynamically selects key video fragments based on user prompts. Unlike prior approaches, Self-ReS leverages the inherently sparse attention maps of LVLMs to define reflection tokens, enabling relevance-aware token selection without requiring additional training or external modules. Experiments demonstrate that Self-ReS can be seamlessly integrated into strong base LVLMs, improving long-video task accuracy and achieving up to 46% faster inference speed within the same GPU memory budget. The code can be found here: https://github.com/jaca-pereira/Self-ReS.",
+        "identifiers": [
+          "SemanticScholar:907d7c6bf6363e212da980aebbc39ad196ac65fd"
+        ],
+        "semantic_scholar_id": "907d7c6bf6363e212da980aebbc39ad196ac65fd",
+        "canonical_id": "arXiv:2503.20362",
+        "arxiv_id": "2503.20362",
+        "doi": "10.1109/ICME59968.2025.11209055",
+        "authors": [
+          "Jo�ão Pereira",
+          "Vasco Lopes",
+          "David Semedo",
+          "Jo�ão Neves"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 602,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3775043.3775047",
+      "identity_tokens": [
+        "id:DOI:10.1145/3775043.3775047",
+        "id:SemanticScholar:be64acfe945e3dca4d4144500b7b4cba7b88c440",
+        "title:idle consumer gpus as a complement to enterprise hardware for llm inference performance cost and carbon analysis",
+        "url:https://doi.org/10.1145/3775043.3775047"
+      ],
+      "record": {
+        "title": "Idle Consumer GPUs as a Complement to Enterprise Hardware for LLM Inference: Performance, Cost and Carbon Analysis",
+        "source_url": "https://doi.org/10.1145/3775043.3775047",
+        "year": 2025,
+        "published": "2025-09-17",
+        "venue": "AIBC",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We examine the cost-performance landscape of Large Language Model (LLM) inference across two GPU tiers: Nvidia's enterprise-class H100 and the widely available consumer-grade RTX 4090. We benchmark latency, tokens per second, and cost per million tokens for models spanning 1.5 billion to 70 billion parameters, then zoom in on a 14 billion parameter model for a detailed comparison. H100s deliver up to 1.5× throughput and sub-55 ms tail latencies, yet 4090 clusters provide up to 75% lower token cost for batched or latency-tolerant workloads. We describe how quantization (GPTQ/AWQ), modern serving stacks (vLLM, SGLang), and Petals-style distributed execution enable consumer GPUs to push beyond on-board memory limits, with moderate latency tradeoffs. From a sustainability perspective, we show that H100s can be roughly 3.1× more energy-efficient per token, and how this edge narrows on low-carbon grids or when tapping otherwise-idle consumer hardware. We conclude that hybrid routing traffic to enterprise GPUs and to consumer pools can offer a pragmatic blend of performance, cost, and sustainability, based on Service Level Objectives (SLOs). The open benchmarks and cost models aim to guide practitioners in building heterogeneous GPU stacks for scalable, economical, and greener LLM services.",
+        "identifiers": [
+          "SemanticScholar:be64acfe945e3dca4d4144500b7b4cba7b88c440"
+        ],
+        "semantic_scholar_id": "be64acfe945e3dca4d4144500b7b4cba7b88c440",
+        "doi": "10.1145/3775043.3775047",
+        "canonical_id": "DOI:10.1145/3775043.3775047",
+        "authors": [
+          "Aline Ribeiro de Almeida"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 427,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:eeeb43d1de91ffc7dc07b64f7590b713887e103d98de7f5711d7c73a3b348892",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

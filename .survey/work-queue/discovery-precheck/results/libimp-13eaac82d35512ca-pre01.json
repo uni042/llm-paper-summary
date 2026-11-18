@@ -1,0 +1,618 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-13eaac82d35512ca-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-13eaac82d355",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.04875",
+    "arXiv:2610.11358",
+    "arXiv:2610.14686",
+    "arXiv:2610.17959",
+    "arXiv:2610.24179",
+    "arXiv:2610.24722",
+    "arXiv:2610.34824",
+    "arXiv:2610.35023"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "be3b71da904a5d7980c63a25664bd7e8f12ae40e",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:23:07.261479+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.04875",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.11358",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14686",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:813bb84aa254e8f8c44475faef8fce2f28ead93a"
+    },
+    {
+      "requested_id": "arXiv:2610.17959",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24179",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24722",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34824",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.35023",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:19b48dfa7e11d2b770b291c1c53384bfcae427a5"
+    }
+  ],
+  "results": [
+    {
+      "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+      "source_url": "https://arxiv.org/abs/2610.11358",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-model KV-cache reuse remains a key challenge in modern LLM serving. Coding agents and multi-model systems increasingly route a shared context across models: a user may switch models mid-session, or a cascade may escalate a difficult query. Because KV caches contain model-specific representations, each switch typically forces the receiving model to prefill the entire context from scratch. Recent work shows that closed-form linear maps can translate KV caches between models in the same family, but transfer accuracy degrades as the model-size gap widens. In this paper, we establish that these transfer failures are concentrated in a small subset of information-dense tokens. To bridge this gap, we introduce RaReCache, a framework that enables a large target model to decode accurately from a cache prefilled by a much smaller source via selective recomputation. RaReCache identifies these critical positions using a novel rank disagreement metric, scoring each token by the energy of its mapped KV in output directions weakly supported by the calibration data. Across two model families and five benchmarks, on a 23x parameter gap (Qwen3-0.6B to 14B) recomputing just 30% of positions retains 95-99% of the target accuracy, whereas on a 8.8x gap (Llama3-8B to 70B), recomputing 40% retains 96.5% of the target accuracy. RaReCache largely removes sensitivity to source-model size, and achieves up to a 3.04x prefill speedup. For online serving, it handles 1.8x the request throughput of target prefill on a single GPU, and at the target's saturation load, reduces median and 99th-percentile time-to-first-token (TTFT) by 5.0x and 6.4x respectively, with a 30% recompute budget. RaReCache establishes an efficient serving paradigm where small models prefill on behalf of massive targets, enabling large models to recompute only critical tokens, drastically reducing prefill latency.",
+      "identifiers": [
+        "SemanticScholar:08454848b25f6c04f6cb6bf60b498f928d121774"
+      ],
+      "semantic_scholar_id": "08454848b25f6c04f6cb6bf60b498f928d121774",
+      "canonical_id": "arXiv:2610.11358",
+      "arxiv_id": "2610.11358",
+      "authors": [
+        "Sreetama Sarkar",
+        "Saptarshi Mitra",
+        "Si-Tao Huang",
+        "Souvik Kundu",
+        "P. Beerel"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PV-Decoding: Progressive Verification Decoding with Decode Gating for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.24722",
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Discrete diffusion language models (dLLMs) offer an attractive alternative to autoregressive generation by updating multiple tokens in parallel, but their inference efficiency is still limited by the cost of safely committing tentative predictions. In particular, speculative decoding for dLLMs is challenging because speculative tokens within the same diffusion block may depend on one another, making aggressive acceptance prone to error propagation and strict verification computationally expensive. We present PV-Decoding, a confidence-driven speculative decoding framework with progressive verification for block diffusion inference. PV-Decoding partitions masked positions into directly decoded tokens, speculative tokens, and unresolved tokens using two confidence thresholds, and then verifies speculative tokens with progressively stronger policies, including single-batch, dual-batch, and multi-batch verification. This design exposes a practical accuracy--efficiency trade-off: weaker verification minimizes overhead, whereas stronger verification improves acceptance precision and robustness. Experiments on three diffusion language models across GSM8K, MBPP, and HumanEval show that PV-Decoding reduces sequential model forward passes (MFPs) by 8%--37% relative to confidence-based decoding, while keeping the largest observed accuracy drop to 1.3%. On Dream-7B-Instruct/GSM8K, PV-Decoding (1-batch) and PV-Decoding (2-batch) improve throughput by 7.0%--13.6% under the same hardware budget, whereas PV-Decoding (multi-batch) is slower under the current runtime. These results suggest that confidence-guided speculation with structured verification is a practical path toward efficient and reliable dLLM inference.",
+      "identifiers": [
+        "SemanticScholar:232fe735570919d97d7b8b9df46c9544ca4f869f"
+      ],
+      "semantic_scholar_id": "232fe735570919d97d7b8b9df46c9544ca4f869f",
+      "canonical_id": "arXiv:2610.24722",
+      "arxiv_id": "2610.24722",
+      "doi": "10.18653/2026.findings-emnlp.2228",
+      "authors": [
+        "Ren-Xi Liu",
+        "Yi-Ming Li",
+        "Sheng-Yin Sun",
+        "Chen Chen",
+        "Xian Wang",
+        "Shuai Yang",
+        "Hui-Ling Zhen",
+        "Xian-Zhi Yu",
+        "Yao-Yuan Wang",
+        "Wei-Zhe Lin",
+        "Xiao-Song Li"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "SpecFold: Folding Multi-Branch Redundancy for Faster Speculative Decoding in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.04875",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (DLLMs) generate text through iterative block denoising, and multi-branch speculative decoding accelerates this process by verifying a main branch together with multiple draft branches in a single forward pass. While prior DLLM acceleration methods primarily exploit temporal redundancy across denoising steps, we identify a complementary redundancy axis within each speculative verification step: multi-branch computational redundancy. During speculative verification, draft branches inherit most tokens from their parents while unmasking a small set of additional positions, causing large portions of hidden states to remain highly similar across branches. We propose SpecFold, an algorithm-system co-design that exploits this multi-branch redundancy to reduce the cost of multi-branch speculative verification. Algorithmically, SpecFold performs token-level residual gating and selectively reuses parent computation through folded attention and FFN while preserving residual hidden states. Systemically, a Triton kernel implementation translates this fine-grained reuse into end-to-end throughput gains through efficient sparse multi-branch execution. SpecFold is orthogonal to temporal caching and compatible with existing DLLM speculation strategies. Across two DLLM families, five models, and five standard benchmarks, SpecFold achieves up to 1.64x throughput over Spiffy and up to 1.99x over vanilla decoding, while maintaining comparable task performance.",
+      "identifiers": [
+        "SemanticScholar:ed544359dd7c697fdb1b1c3f3a2b13b2da04b53d"
+      ],
+      "semantic_scholar_id": "ed544359dd7c697fdb1b1c3f3a2b13b2da04b53d",
+      "canonical_id": "arXiv:2610.04875",
+      "arxiv_id": "2610.04875",
+      "authors": [
+        "Chung-En Ho",
+        "Wei-Yu Sun",
+        "Cheng-Jhih Shih",
+        "He-Nan Li",
+        "Yong Liu",
+        "Y. Lin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Virtual Head Attention",
+      "source_url": "https://arxiv.org/abs/2610.17959",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The design of attention mechanisms in long-context large language models faces an ``impossible triangle''among KV cache size, training and prefill FLOPs, and model quality. GQA achieves strong quality but incurs high KV cache overhead; alternative approaches such as MLA and MFA can compress the cache, but MLA suffers from quality loss while MFA substantially increases training and prefill compute. We propose Virtual Head Attention (VHA), which simultaneously improves all three vertices through two lightweight linear operations: Q Premix applies a near-identity transformation to queries within each KV group to recover virtual head diversity from halved physical query heads, and Linear Postmix fuses inter-head features via a low-rank $I + AB^\\top$ residual structure. Since VHA introduces no nonlinear operations, Premix can be folded into the query projection and Postmix into the output projection at inference time, reducing the model to a standard GQA-2 architecture that directly reuses all existing GQA inference optimizations. With only two KV heads, the group size in large models readily reaches 64, fully exploiting Tensor Core parallelism during decoding. Across four scales with 4K-context 50B-token pretraining, VHA consistently surpasses the standard GQA baseline at every scale ($+$0.05\\% to $+$0.81\\%), while reducing KV cache by $4\\times$ vs.\\ GQA-8 at dense scales and $2\\times$ vs.\\ GQA-4 at the MoE scale, and lowering training and prefill FLOPs by 7.9\\% (1.7B, $S{=}4096$). On an industrial 30B-A3B MoE model trained on 500B tokens at 8K context, VHA outperforms both MLA and GQA-4 by $+$0.70\\,/\\,$+$2.60\\,\\% on a 12-benchmark base-model evaluation suite; in a separate matched 10B-A1B MoE comparison after long-context mid-training, VHA attains an average RULER score of 84.4 over 8K--128K versus 73.0 for GQA, while using two rather than four KV heads in the full-attention layers.",
+      "identifiers": [
+        "SemanticScholar:7d456a23127c75219ffa94538e54f5667ae190ce"
+      ],
+      "semantic_scholar_id": "7d456a23127c75219ffa94538e54f5667ae190ce",
+      "canonical_id": "arXiv:2610.17959",
+      "arxiv_id": "2610.17959",
+      "authors": [
+        "Xi-Bo Ding",
+        "Guo-Xia Wang",
+        "Jin-Le Zeng",
+        "Jia-Bin Yang",
+        "Si-Rui Tao",
+        "Chao-Fei Yang",
+        "Dian-Hai Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KVCompass: A Discovery Plane for Internet-Scale Prefix Cache Sharing in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.24179",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache reuse is one of the most effective ways to reduce LLM inference cost, but today its benefits are largely confined to a single cluster. When a provider serves the same model across geographically distributed regions, each region may repeatedly prefill the same popular prefixes, wasting GPU time and increasing time-to-first-token (TTFT). Exploiting reuse across regions involves discovering which worker currently holds a reusable KV cache for each request's prefix. We show that this KV cache discovery problem is structurally harder than conventional object lookup. Unlike hash-placement mechanisms such as DHTs, where an object's location is a deterministic function of its key, KV caches are created on the workers that serve requests, and their holder sets change with subsequent requests and KV cache evictions. KV cache discovery therefore calls for decoupling KV cache identity from placement. We present KVCompass, a discovery plane for Internet-scale KV cache sharing. The discovery index supports variable-length prefix lookup with constant-time local table reads at the edge, allowing each request to be forwarded to the worker that best balances KV cache reuse against load and network distance. Evaluation includes a 64-worker geo-distributed simulation and a 14-worker three-continent real-machine testbed. Evaluation shows that KVCompass achieves $1.3-14\\times$ lower P99 TTFT than the baselines, up to $3.7\\times$ lower P99 end-to-end latency, up to $4.7\\times$ the throughput, and a peak load factor within 2% of the Oracle floor.",
+      "identifiers": [
+        "SemanticScholar:f74ec522091eb8d3fcd79b13f97328434ef63ecb"
+      ],
+      "semantic_scholar_id": "f74ec522091eb8d3fcd79b13f97328434ef63ecb",
+      "canonical_id": "arXiv:2610.24179",
+      "arxiv_id": "2610.24179",
+      "authors": [
+        "Shi-Yi Ling",
+        "Fei Fang",
+        "Chen Qian"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference",
+      "source_url": "https://arxiv.org/abs/2610.34824",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs on edge devices are constrained by limited memory and bandwidth. Although 1.58-bit ternary weights greatly reduce model storage, long-context inference is increasingly bottlenecked by KV-cache traffic and attention. Existing accelerators also use separate datapaths for ternary linear layers and attention, incurring hardware and execution overhead. We present SPARTA, a sparse ternary LLM accelerator for efficient long-context edge inference. SPARTA integrates: (1) a phase-aware sparse dataflow exploiting heterogeneous sparsity across compute-bound prefill and memory-bound decode; (2) a unified compute fabric mapping ternary SpMM/SpMV and bit-serial attention onto shared processing elements to exploit zero-weight and zero-bit sparsity; and (3) an adaptive two-stage attention engine combining page-level Top-k selection to reduce K-cache accesses with token-level Top-p pruning to reduce V-cache traffic. SPARTA reduces KV traffic by 4.1-4.8x over full attention and 1.3-1.5x over a state-of-the-art sparse-attention scheme, with task-dependent quality loss. Compared with NVIDIA Jetson AGX Orin, SPARTA achieves 3.9x higher generation throughput and 8.3x higher end-to-end energy efficiency on average; versus AMD Ryzen 7 9700X, the gains are 5.0x and 81.7x. It also delivers 1.6-12.0x higher throughput, 2.0-4.2x higher energy efficiency, and 1.3-51.4x higher area efficiency than FIGLUT, TeLLMe, and MCBP.",
+      "identifiers": [
+        "SemanticScholar:536a82d6dec8f18e78f56fb9bc6dc4fd554835d7"
+      ],
+      "semantic_scholar_id": "536a82d6dec8f18e78f56fb9bc6dc4fd554835d7",
+      "canonical_id": "arXiv:2610.34824",
+      "arxiv_id": "2610.34824",
+      "authors": [
+        "Yan-Zhen Zhou",
+        "Zheng-Yu Han",
+        "Qun-You Liu",
+        "Zhe-Yu Yan",
+        "Wei-Hong Xu",
+        "Cheng Zhuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.11358",
+      "identity_tokens": [
+        "id:SemanticScholar:08454848b25f6c04f6cb6bf60b498f928d121774",
+        "id:arXiv:2610.11358",
+        "title:rarecache bridging the gap in crossmodel kv cache reuse via rank disagreementbased selective recomputation",
+        "url:https://arxiv.org/abs/2610.11358"
+      ],
+      "record": {
+        "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+        "source_url": "https://arxiv.org/abs/2610.11358",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cross-model KV-cache reuse remains a key challenge in modern LLM serving. Coding agents and multi-model systems increasingly route a shared context across models: a user may switch models mid-session, or a cascade may escalate a difficult query. Because KV caches contain model-specific representations, each switch typically forces the receiving model to prefill the entire context from scratch. Recent work shows that closed-form linear maps can translate KV caches between models in the same family, but transfer accuracy degrades as the model-size gap widens. In this paper, we establish that these transfer failures are concentrated in a small subset of information-dense tokens. To bridge this gap, we introduce RaReCache, a framework that enables a large target model to decode accurately from a cache prefilled by a much smaller source via selective recomputation. RaReCache identifies these critical positions using a novel rank disagreement metric, scoring each token by the energy of its mapped KV in output directions weakly supported by the calibration data. Across two model families and five benchmarks, on a 23x parameter gap (Qwen3-0.6B to 14B) recomputing just 30% of positions retains 95-99% of the target accuracy, whereas on a 8.8x gap (Llama3-8B to 70B), recomputing 40% retains 96.5% of the target accuracy. RaReCache largely removes sensitivity to source-model size, and achieves up to a 3.04x prefill speedup. For online serving, it handles 1.8x the request throughput of target prefill on a single GPU, and at the target's saturation load, reduces median and 99th-percentile time-to-first-token (TTFT) by 5.0x and 6.4x respectively, with a 30% recompute budget. RaReCache establishes an efficient serving paradigm where small models prefill on behalf of massive targets, enabling large models to recompute only critical tokens, drastically reducing prefill latency.",
+        "identifiers": [
+          "SemanticScholar:08454848b25f6c04f6cb6bf60b498f928d121774"
+        ],
+        "semantic_scholar_id": "08454848b25f6c04f6cb6bf60b498f928d121774",
+        "canonical_id": "arXiv:2610.11358",
+        "arxiv_id": "2610.11358",
+        "authors": [
+          "Sreetama Sarkar",
+          "Saptarshi Mitra",
+          "Si-Tao Huang",
+          "Souvik Kundu",
+          "P. Beerel"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.24722",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.findings-emnlp.2228",
+        "id:SemanticScholar:232fe735570919d97d7b8b9df46c9544ca4f869f",
+        "id:arXiv:2610.24722",
+        "title:pvdecoding progressive verification decoding with decode gating for diffusion language models",
+        "url:https://arxiv.org/abs/2610.24722"
+      ],
+      "record": {
+        "title": "PV-Decoding: Progressive Verification Decoding with Decode Gating for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.24722",
+        "year": 2026,
+        "published": "2026-10-17",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Discrete diffusion language models (dLLMs) offer an attractive alternative to autoregressive generation by updating multiple tokens in parallel, but their inference efficiency is still limited by the cost of safely committing tentative predictions. In particular, speculative decoding for dLLMs is challenging because speculative tokens within the same diffusion block may depend on one another, making aggressive acceptance prone to error propagation and strict verification computationally expensive. We present PV-Decoding, a confidence-driven speculative decoding framework with progressive verification for block diffusion inference. PV-Decoding partitions masked positions into directly decoded tokens, speculative tokens, and unresolved tokens using two confidence thresholds, and then verifies speculative tokens with progressively stronger policies, including single-batch, dual-batch, and multi-batch verification. This design exposes a practical accuracy--efficiency trade-off: weaker verification minimizes overhead, whereas stronger verification improves acceptance precision and robustness. Experiments on three diffusion language models across GSM8K, MBPP, and HumanEval show that PV-Decoding reduces sequential model forward passes (MFPs) by 8%--37% relative to confidence-based decoding, while keeping the largest observed accuracy drop to 1.3%. On Dream-7B-Instruct/GSM8K, PV-Decoding (1-batch) and PV-Decoding (2-batch) improve throughput by 7.0%--13.6% under the same hardware budget, whereas PV-Decoding (multi-batch) is slower under the current runtime. These results suggest that confidence-guided speculation with structured verification is a practical path toward efficient and reliable dLLM inference.",
+        "identifiers": [
+          "SemanticScholar:232fe735570919d97d7b8b9df46c9544ca4f869f"
+        ],
+        "semantic_scholar_id": "232fe735570919d97d7b8b9df46c9544ca4f869f",
+        "canonical_id": "arXiv:2610.24722",
+        "arxiv_id": "2610.24722",
+        "doi": "10.18653/2026.findings-emnlp.2228",
+        "authors": [
+          "Ren-Xi Liu",
+          "Yi-Ming Li",
+          "Sheng-Yin Sun",
+          "Chen Chen",
+          "Xian Wang",
+          "Shuai Yang",
+          "Hui-Ling Zhen",
+          "Xian-Zhi Yu",
+          "Yao-Yuan Wang",
+          "Wei-Zhe Lin",
+          "Xiao-Song Li"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04875",
+      "identity_tokens": [
+        "id:SemanticScholar:ed544359dd7c697fdb1b1c3f3a2b13b2da04b53d",
+        "id:arXiv:2610.04875",
+        "title:specfold folding multibranch redundancy for faster speculative decoding in diffusion language models",
+        "url:https://arxiv.org/abs/2610.04875"
+      ],
+      "record": {
+        "title": "SpecFold: Folding Multi-Branch Redundancy for Faster Speculative Decoding in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.04875",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (DLLMs) generate text through iterative block denoising, and multi-branch speculative decoding accelerates this process by verifying a main branch together with multiple draft branches in a single forward pass. While prior DLLM acceleration methods primarily exploit temporal redundancy across denoising steps, we identify a complementary redundancy axis within each speculative verification step: multi-branch computational redundancy. During speculative verification, draft branches inherit most tokens from their parents while unmasking a small set of additional positions, causing large portions of hidden states to remain highly similar across branches. We propose SpecFold, an algorithm-system co-design that exploits this multi-branch redundancy to reduce the cost of multi-branch speculative verification. Algorithmically, SpecFold performs token-level residual gating and selectively reuses parent computation through folded attention and FFN while preserving residual hidden states. Systemically, a Triton kernel implementation translates this fine-grained reuse into end-to-end throughput gains through efficient sparse multi-branch execution. SpecFold is orthogonal to temporal caching and compatible with existing DLLM speculation strategies. Across two DLLM families, five models, and five standard benchmarks, SpecFold achieves up to 1.64x throughput over Spiffy and up to 1.99x over vanilla decoding, while maintaining comparable task performance.",
+        "identifiers": [
+          "SemanticScholar:ed544359dd7c697fdb1b1c3f3a2b13b2da04b53d"
+        ],
+        "semantic_scholar_id": "ed544359dd7c697fdb1b1c3f3a2b13b2da04b53d",
+        "canonical_id": "arXiv:2610.04875",
+        "arxiv_id": "2610.04875",
+        "authors": [
+          "Chung-En Ho",
+          "Wei-Yu Sun",
+          "Cheng-Jhih Shih",
+          "He-Nan Li",
+          "Yong Liu",
+          "Y. Lin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17959",
+      "identity_tokens": [
+        "id:SemanticScholar:7d456a23127c75219ffa94538e54f5667ae190ce",
+        "id:arXiv:2610.17959",
+        "title:virtual head attention",
+        "url:https://arxiv.org/abs/2610.17959"
+      ],
+      "record": {
+        "title": "Virtual Head Attention",
+        "source_url": "https://arxiv.org/abs/2610.17959",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The design of attention mechanisms in long-context large language models faces an ``impossible triangle''among KV cache size, training and prefill FLOPs, and model quality. GQA achieves strong quality but incurs high KV cache overhead; alternative approaches such as MLA and MFA can compress the cache, but MLA suffers from quality loss while MFA substantially increases training and prefill compute. We propose Virtual Head Attention (VHA), which simultaneously improves all three vertices through two lightweight linear operations: Q Premix applies a near-identity transformation to queries within each KV group to recover virtual head diversity from halved physical query heads, and Linear Postmix fuses inter-head features via a low-rank $I + AB^\\top$ residual structure. Since VHA introduces no nonlinear operations, Premix can be folded into the query projection and Postmix into the output projection at inference time, reducing the model to a standard GQA-2 architecture that directly reuses all existing GQA inference optimizations. With only two KV heads, the group size in large models readily reaches 64, fully exploiting Tensor Core parallelism during decoding. Across four scales with 4K-context 50B-token pretraining, VHA consistently surpasses the standard GQA baseline at every scale ($+$0.05\\% to $+$0.81\\%), while reducing KV cache by $4\\times$ vs.\\ GQA-8 at dense scales and $2\\times$ vs.\\ GQA-4 at the MoE scale, and lowering training and prefill FLOPs by 7.9\\% (1.7B, $S{=}4096$). On an industrial 30B-A3B MoE model trained on 500B tokens at 8K context, VHA outperforms both MLA and GQA-4 by $+$0.70\\,/\\,$+$2.60\\,\\% on a 12-benchmark base-model evaluation suite; in a separate matched 10B-A1B MoE comparison after long-context mid-training, VHA attains an average RULER score of 84.4 over 8K--128K versus 73.0 for GQA, while using two rather than four KV heads in the full-attention layers.",
+        "identifiers": [
+          "SemanticScholar:7d456a23127c75219ffa94538e54f5667ae190ce"
+        ],
+        "semantic_scholar_id": "7d456a23127c75219ffa94538e54f5667ae190ce",
+        "canonical_id": "arXiv:2610.17959",
+        "arxiv_id": "2610.17959",
+        "authors": [
+          "Xi-Bo Ding",
+          "Guo-Xia Wang",
+          "Jin-Le Zeng",
+          "Jia-Bin Yang",
+          "Si-Rui Tao",
+          "Chao-Fei Yang",
+          "Dian-Hai Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.24179",
+      "identity_tokens": [
+        "id:SemanticScholar:f74ec522091eb8d3fcd79b13f97328434ef63ecb",
+        "id:arXiv:2610.24179",
+        "title:kvcompass a discovery plane for internetscale prefix cache sharing in llm serving",
+        "url:https://arxiv.org/abs/2610.24179"
+      ],
+      "record": {
+        "title": "KVCompass: A Discovery Plane for Internet-Scale Prefix Cache Sharing in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.24179",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache reuse is one of the most effective ways to reduce LLM inference cost, but today its benefits are largely confined to a single cluster. When a provider serves the same model across geographically distributed regions, each region may repeatedly prefill the same popular prefixes, wasting GPU time and increasing time-to-first-token (TTFT). Exploiting reuse across regions involves discovering which worker currently holds a reusable KV cache for each request's prefix. We show that this KV cache discovery problem is structurally harder than conventional object lookup. Unlike hash-placement mechanisms such as DHTs, where an object's location is a deterministic function of its key, KV caches are created on the workers that serve requests, and their holder sets change with subsequent requests and KV cache evictions. KV cache discovery therefore calls for decoupling KV cache identity from placement. We present KVCompass, a discovery plane for Internet-scale KV cache sharing. The discovery index supports variable-length prefix lookup with constant-time local table reads at the edge, allowing each request to be forwarded to the worker that best balances KV cache reuse against load and network distance. Evaluation includes a 64-worker geo-distributed simulation and a 14-worker three-continent real-machine testbed. Evaluation shows that KVCompass achieves $1.3-14\\times$ lower P99 TTFT than the baselines, up to $3.7\\times$ lower P99 end-to-end latency, up to $4.7\\times$ the throughput, and a peak load factor within 2% of the Oracle floor.",
+        "identifiers": [
+          "SemanticScholar:f74ec522091eb8d3fcd79b13f97328434ef63ecb"
+        ],
+        "semantic_scholar_id": "f74ec522091eb8d3fcd79b13f97328434ef63ecb",
+        "canonical_id": "arXiv:2610.24179",
+        "arxiv_id": "2610.24179",
+        "authors": [
+          "Shi-Yi Ling",
+          "Fei Fang",
+          "Chen Qian"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34824",
+      "identity_tokens": [
+        "id:SemanticScholar:536a82d6dec8f18e78f56fb9bc6dc4fd554835d7",
+        "id:arXiv:2610.34824",
+        "title:sparta a sparse ternary llm accelerator with adaptive attention and unified datapath for longcontext edge inference",
+        "url:https://arxiv.org/abs/2610.34824"
+      ],
+      "record": {
+        "title": "SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference",
+        "source_url": "https://arxiv.org/abs/2610.34824",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLMs on edge devices are constrained by limited memory and bandwidth. Although 1.58-bit ternary weights greatly reduce model storage, long-context inference is increasingly bottlenecked by KV-cache traffic and attention. Existing accelerators also use separate datapaths for ternary linear layers and attention, incurring hardware and execution overhead. We present SPARTA, a sparse ternary LLM accelerator for efficient long-context edge inference. SPARTA integrates: (1) a phase-aware sparse dataflow exploiting heterogeneous sparsity across compute-bound prefill and memory-bound decode; (2) a unified compute fabric mapping ternary SpMM/SpMV and bit-serial attention onto shared processing elements to exploit zero-weight and zero-bit sparsity; and (3) an adaptive two-stage attention engine combining page-level Top-k selection to reduce K-cache accesses with token-level Top-p pruning to reduce V-cache traffic. SPARTA reduces KV traffic by 4.1-4.8x over full attention and 1.3-1.5x over a state-of-the-art sparse-attention scheme, with task-dependent quality loss. Compared with NVIDIA Jetson AGX Orin, SPARTA achieves 3.9x higher generation throughput and 8.3x higher end-to-end energy efficiency on average; versus AMD Ryzen 7 9700X, the gains are 5.0x and 81.7x. It also delivers 1.6-12.0x higher throughput, 2.0-4.2x higher energy efficiency, and 1.3-51.4x higher area efficiency than FIGLUT, TeLLMe, and MCBP.",
+        "identifiers": [
+          "SemanticScholar:536a82d6dec8f18e78f56fb9bc6dc4fd554835d7"
+        ],
+        "semantic_scholar_id": "536a82d6dec8f18e78f56fb9bc6dc4fd554835d7",
+        "canonical_id": "arXiv:2610.34824",
+        "arxiv_id": "2610.34824",
+        "authors": [
+          "Yan-Zhen Zhou",
+          "Zheng-Yu Han",
+          "Qun-You Liu",
+          "Zhe-Yu Yan",
+          "Wei-Hong Xu",
+          "Cheng Zhuo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:05f305c57819e5a1a83103b4fcfbb0302582f54dd4d55fdf7e022755e2e68573",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
