@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-34466bdad8c57cab-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2402.12102",
+  "reason": "arXiv一次要旨では、量子化時に問題となる重み・活性のoutlierを事前学習中に抑制する既存softmax変更がfull-precision性能を悪化させると指摘し、系列長に不変な正規化へ修正してcausal language modelの事前学習へ適用する。低ビット推論の品質維持と技術的に関連するが、主たる提案・検証は事前学習手法であり、推論時の量子化カーネル・メモリ・レイテンシ改善は要旨で確証できないためborderline。",
+  "title": "Is It a Free Lunch for Removing Outliers during Pretraining?",
+  "identity_tokens": [
+    "arXiv:2402.12102"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34466bdad8c5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

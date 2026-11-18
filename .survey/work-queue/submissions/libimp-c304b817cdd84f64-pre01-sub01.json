@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SeGPruner: Semantic-Geometric Visual Token Pruner for 3D Question Answering",
+      "source_url": "https://arxiv.org/abs/2603.29437",
+      "year": 2026,
+      "published": "2026-03-31",
+      "venue": "IEEE transactions on multimedia",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) have been widely adopted for 3D question answering (3D QA). In typical pipelines, visual tokens extracted from multiple viewpoints are concatenated with language tokens and jointly processed by a large language model (LLM) for inference. However, aggregating multi-view observations inevitably introduces severe token redundancy, leading to an overly large visual token set that significantly hinders inference efficiency under constrained token budgets. Visual token pruning has emerged as a prevalent strategy to address this issue. Nevertheless, most existing pruners are primarily tailored to 2D inputs or rely on indirect geometric cues, which limits their ability to explicitly retain semantically critical objects and maintain sufficient spatial coverage for robust 3D reasoning. In this paper, we propose SeGPruner, a semantic-aware and geometry-guided token reduction framework for efficient 3D QA with multi-view images. Specifically, SeGPruner first preserves semantically salient tokens through an attention-based importance module (Saliency-aware Token Selector), ensuring that object-critical evidence is retained. It then complements these tokens with spatially diverse ones via a geometry-guided selector (Geometry-aware Token Diversifier), which jointly considers semantic relevance and 3D geometric distance. This cooperation between saliency preservation and geometry-guided diversification balances object-level evidence and global scene coverage under aggressive token reduction. Extensive experiments on ScanQA and OpenEQA demonstrate that SeGPruner substantially improves inference efficiency, reducing the visual token budget by 91% and inference latency by 86%, while maintaining competitive performance in 3D reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:d2e142812095e451be2aa6add94d9beffbd6723b"
+      ],
+      "semantic_scholar_id": "d2e142812095e451be2aa6add94d9beffbd6723b",
+      "canonical_id": "arXiv:2603.29437",
+      "arxiv_id": "2603.29437",
+      "doi": "10.48550/arXiv.2603.29437",
+      "authors": [
+        "Wen-Li Li",
+        "Kai Zhao",
+        "Hao-Ran Jiang",
+        "En-Quan Yang",
+        "Yi-Tong Su",
+        "Dan Zeng"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 232,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多視点画像から3D QAを行うVLMで、Saliency-aware Token Selectorが質問に関係する物体の重要視覚トークンを保持し、Geometry-aware Token Diversifierが3D幾何距離を使って空間的に分散したトークンを補完する。ScanQA/OpenEQAの一次要旨は視覚トークン予算91%減、推論遅延86%減と報告。入力トークン圧縮がLLM推論時の計算・遅延を直接削減するためaccept。3D QAの多視点設定に限定した報告であり一般的なLLM推論全体への倍率ではない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "The Model in the Middle: Toward AI-Native Real-Time Communication",
+      "source_url": "https://arxiv.org/abs/2607.25792",
+      "year": 2026,
+      "published": "2026-07-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Full-duplex omni models are transforming human--AI interaction from turn-based exchanges into continuous multimodal conversations in which speaking, listening, and reasoning unfold concurrently. Rather than viewing the model as a replacement for a human endpoint, we argue for a new perspective: the model is a stateful computational middlebox inside a human-centered feedback loop, with network transport, model serving, and user playback jointly shaping how the interaction evolves. This perspective breaks the traditional boundaries among stages designed around local objectives. Rather than optimizing them in isolation, an AI-native real-time stack should allow the state of each stage to shape the actions of the others. We explore three cross-stage coordination opportunities: network-aware inference scheduling, execution-aware transport prioritization, and playback control that accounts for both network and model variability. We are building Conflux to explore these ideas, and preliminary results show substantial improvements in response latency and playback deadline adherence under network degradation. More broadly, we call for an AI-native real-time communication stack that resolve the joint control problem spanning communication, computation, and playback.",
+      "identifiers": [
+        "SemanticScholar:35b2d8b46c466a8e209b63cfd0c4c8bf4cd6d890"
+      ],
+      "semantic_scholar_id": "35b2d8b46c466a8e209b63cfd0c4c8bf4cd6d890",
+      "canonical_id": "arXiv:2607.25792",
+      "arxiv_id": "2607.25792",
+      "doi": "10.48550/arXiv.2607.25792",
+      "authors": [
+        "Zi-Qian Liu",
+        "Ming-Hao Li",
+        "Yi-Ming Qiu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 113,
+        "matched_prestigious_venue": null
+      },
+      "reason": "全二重の音声・映像対話において、モデルを状態を持つ通信処理中継点と捉え、Confluxでネットワーク状態に応じた推論スケジューリング、実行状況に応じた転送優先度、再生バッファ制御を段階横断で協調させる。一次要旨は通信品質劣化時の応答遅延と再生期限順守の初期改善を報告。推論サービングの実行時スケジューラに直接関係するためaccept。ただし著者は構築途上と明記しており、成熟した実運用性能や定量的倍率は要旨から確定できない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "PRESAGE: Uncertainty-Aware Predictive Elastic Scheduling for Cloud Analytics and GenAI Inference",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3734498",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cloud data platforms increasingly co-locate hybrid analytical workloads (data-lake/warehouse queries, batch and stream engines) with generative-AI (GenAI) inference services, producing load traces that are strongly bursty, heavy-tailed, and multi-phase. Reactive threshold autoscalers and simple ARIMA/LSTM predictors react poorly to such dynamics, causing service-level-objective (SLO) violations or resource waste. Time-series foundation models (TSFMs) offer strong zero-shot forecasting, but they are not adapted to multivariate, non-stationary cloud load, and, critically, forecasting is usually decoupled from scheduling, so predictive uncertainty never reaches the decision. We present Presage, an end-to-end framework that closes this loop. Presage 1) domain-adapts a pretrained TSFM to multivariate cloud traces through parameter-efficient fine-tuning and continual pretraining with a lightweight cross-channel adapter, enabling few-shot cross-cluster transfer; 2) introduces retrieval-augmented time-series forecasting, conditioning the predictor on the most similar historical windows drawn from a pattern library to capture periodic events and recurring spikes; 3) propagates calibrated probabilistic forecasts (conformalized quantiles) into an uncertainty-aware reinforcement-learning scheduler that chooses a per-service risk level under an explicit cost–SLO constraint, with dedicated prefill/decode provisioning for GenAI; and 4) jointly performs load forecasting and anomaly-precursor detection for robustness. We instantiate Presage on a publicly available TimesFM-1.0-200M backbone and evaluate it on six public traces from Alibaba (a GenAI Stable-Diffusion serving trace), Microsoft Azure (two LLM-inference traces, serverless functions, and VMs), and Google Borg, using a trace-driven simulator, a real vLLM serving harness, and a small 8-GPU Kubernetes testbed. In this evaluation Presage reduces forecast CRPS by up to 28% over the best zero-shot TSFM while attaining near-nominal coverage at every quantile the scheduler consumes, and cuts SLO violations by 3– $5\\times $ at $\\sim \\!18\\%$ lower resource cost than strong predictive and RL baselines, with KV-cache out-of-memory events reduced from 27 to 1 for GenAI serving; an adaptive online conformal variant further improves worst-window coverage under drift. Because the coverage guarantees we inherit are marginal and hold only under approximate exchangeability, and because the testbed is small-scale, we state the resulting scope limits explicitly. The code will be released publicly upon acceptance.",
+      "identifiers": [
+        "SemanticScholar:e35619e147e81d6068e3a2ec237b9b4701dc40eb"
+      ],
+      "semantic_scholar_id": "e35619e147e81d6068e3a2ec237b9b4701dc40eb",
+      "doi": "10.1109/ACCESS.2026.3734498",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3734498",
+      "authors": [
+        "Yi-Nuo Wang",
+        "Xuan-Ping Zou",
+        "Zhou Lu",
+        "Kai-Lang Wei",
+        "Minjae Rhee"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE出版社一次要旨で、時系列基盤モデルを多変量クラウド負荷へ適応させ、過去の類似時系列検索とconformalized quantilesを組み合わせた確率予測を、費用・SLO制約付きの不確実性考慮RLスケジューラに渡す。GenAIのprefill/decode資源を分けて割当て、Azure LLM推論トレース、vLLM実行環境、8-GPU Kubernetes試験環境を評価に含む。予測だけでなく実行時サービングの資源制御に直接貢献するためaccept。要旨の「最大28% CRPS改善」は予測精度であり推論レイテンシ改善と混同しない。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c304b817cdd8",
+    "round": "libimp-c304b817cdd84f64-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c304b817cdd84f64-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c304b817cdd84f64-pre01.json",
+    "receipt": "sha256:03cf4b69fa31b6f28d7eb4e183280ca956a187f3884c5114f0007c3438ddf33c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c304b817cdd8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2601.21919",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference overhead induced by redundant reasoning undermines the interactive experience and severely bottlenecks the deployment of Large Reasoning Models. Existing reinforcement learning (RL)-based solutions tackle this problem by coupling a length penalty with outcome-based rewards. This simplistic reward weighting struggles to reconcile brevity with accuracy, as enforcing brevity may compromise critical reasoning logic. In this work, we address this limitation by proposing a multi-agent RL framework that selectively penalizes redundant chunks, while preserving essential reasoning logic. Our framework, Self-Compression via MARL (SCMA), instantiates redundancy detection and evaluation through two specialized agents: \\textbf{a Segmentation Agent} for decomposing the reasoning process into logical chunks, and \\textbf{a Scoring Agent} for quantifying the significance of each chunk. The Segmentation and Scoring agents collaboratively define an importance-weighted length penalty during training, incentivizing \\textbf{a Reasoning Agent} to prioritize essential logic without introducing inference overhead during deployment. Empirical evaluations across model scales demonstrate that SCMA reduces response length by 11.1\\% to 39.0\\% while boosting accuracy by 4.33\\% to 10.02\\%. Furthermore, ablation studies and qualitative analysis validate that the synergistic optimization within the MARL framework fosters emergent behaviors, yielding more powerful LRMs compared to vanilla RL paradigms.",
+      "identifiers": [
+        "SemanticScholar:ac5067710f7cb7641dbb05f7c242cba74ac4337b"
+      ],
+      "semantic_scholar_id": "ac5067710f7cb7641dbb05f7c242cba74ac4337b",
+      "canonical_id": "arXiv:2601.21919",
+      "arxiv_id": "2601.21919",
+      "doi": "10.48550/arXiv.2601.21919",
+      "authors": [
+        "Yi-Qun Chen",
+        "Jin-Yuan Feng",
+        "Wei Yang",
+        "Meizhi Zhong",
+        "Zheng-Liang Shi",
+        "Rui Li",
+        "Xiaochi Wei",
+        "Yan Gao",
+        "Yi Wu",
+        "Yao Hu",
+        "Zhi-Qiang Pu",
+        "Jia-Xin Mao"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 293,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SCMAは推論時の冗長な思考を減らすため、学習時にSegmentation AgentとScoring Agentで思考片の重要度を評価し、Reasoning Agentへ重要度付き長さ罰則を与える。推論時に追加エージェントを要せず、生成長を11.1～39.0%減らしつつ精度を4.33～10.02%改善したと報告する。学習法だが最終的な推論トークン予算削減が直接の目的。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.02689",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have expanded reasoning capabilities into 3D domains, enabling fine-grained spatial understanding. However, the substantial size of 3D MLLMs and the high dimensionality of input features introduce considerable inference overhead, which limits practical deployment on resource constrained platforms. To overcome this limitation, this paper presents Efficient3D, a unified framework for visual token pruning that accelerates 3D MLLMs while maintaining competitive accuracy. The proposed framework introduces a Debiased Visual Token Importance Estimator (DVTIE) module, which considers the influence of shallow initial layers during attention aggregation, thereby producing more reliable importance predictions for visual tokens. In addition, an Adaptive Token Rebalancing (ATR) strategy is developed to dynamically adjust pruning strength based on scene complexity, preserving semantic completeness and maintaining balanced attention across layers. Together, they enable context-aware token reduction that maintains essential semantics with lower computation. Comprehensive experiments conducted on five representative 3D vision and language benchmarks, including ScanRefer, Multi3DRefer, Scan2Cap, ScanQA, and SQA3D, demonstrate that Efficient3D achieves superior performance compared with unpruned baselines, with a +2.57% CIDEr improvement on the Scan2Cap dataset. Therefore, Efficient3D provides a scalable and effective solution for efficient inference in 3D MLLMs. The code is released at: https://github.com/sol924/Efficient3D",
+      "identifiers": [
+        "SemanticScholar:4a4587acd7c72bc8b56f1476031e01b553957dcb"
+      ],
+      "semantic_scholar_id": "4a4587acd7c72bc8b56f1476031e01b553957dcb",
+      "canonical_id": "arXiv:2604.02689",
+      "arxiv_id": "2604.02689",
+      "doi": "10.1109/CVPRF71909.2026.00858",
+      "authors": [
+        "Yu-Hui Lin",
+        "Si-Yue Yu",
+        "Yu-Xing Yang",
+        "Guang-Liang Cheng",
+        "Ji-Min Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": null
+      },
+      "reason": "3DマルチモーダルLLMの入力視覚トークンを、浅い層の偏りを補正するDVTIE重要度推定と場面複雑度で削減率を調整するATRで間引く。ScanRefer等5ベンチマークを評価し、Scan2CapではCIDErが2.57%改善したと報告する。推論時トークン数・計算負荷を直接削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+      "source_url": "https://arxiv.org/abs/2508.18177",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "Expert systems with applications",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visually impaired individuals face significant challenges in environmental perception. Traditional assistive technologies often lack adaptive intelligence, focusing on individual components rather than integrated systems. While Vision-Language Models (VLMs) offer a promising path to richer, integrated understanding, their deployment is severely limited by substantial computational requirements, demanding dozens of gigabytes of memory. To address these gaps in computational efficiency and integrated design, this study proposes a dual technological innovation framework: a cross-modal differentiated quantization framework for VLMs and a scene-aware vectorized memory multi-agent system. The quantization framework implements differentiated strategies, reducing memory from 38GB to 11.3GB. The multi-agent system uses vectorized memory and perception-memory-reasoning workflows to provide environmental information beyond the current view, achieving 2.83-3.52s latency to initial speech output. Experiments show the quantized 19B-parameter model only experiences a 2.05% performance drop on MMBench and maintains 63.7 accuracy on OCR-VQA (original: 64.9), outperforming smaller models with equivalent memory. This research advances computational efficiency and assistive technology, offering comprehensive assistance in scene perception, text recognition, and navigation.",
+      "identifiers": [
+        "SemanticScholar:0e7ae6b42102a13ded7d080c71c319af7a1eca22"
+      ],
+      "semantic_scholar_id": "0e7ae6b42102a13ded7d080c71c319af7a1eca22",
+      "canonical_id": "arXiv:2508.18177",
+      "arxiv_id": "2508.18177",
+      "doi": "10.48550/arXiv.2508.18177",
+      "authors": [
+        "Xiang-Xiang Wang",
+        "Xuan-Yu Wang",
+        "YiJia Luo",
+        "Yong-Bin Yu",
+        "Man-Ping Fan",
+        "Jing-Tao Zhang",
+        "Li-Yong Ren"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 450,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚障害者支援を主用途とするが、19B級VLMのクロスモーダル差別化量子化を提案し、モデル占有メモリを38GBから11.3GBへ削減する。MMBenchの低下2.05%とOCR-VQA 64.9→63.7も報告しており、推論向け圧縮機構が独立した技術的貢献として確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6d4aa4180be0",
+    "round": "libimp-6d4aa4180be027a4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6d4aa4180be027a4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6d4aa4180be027a4-pre01.json",
+    "receipt": "sha256:fdb5a4e9afc0dab535d4b33e3ad2cc76a423c5c2da5186932bf76b1bc2389e04"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6d4aa4180be0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

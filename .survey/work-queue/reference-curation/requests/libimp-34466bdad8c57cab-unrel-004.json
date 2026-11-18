@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-34466bdad8c57cab-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.19847",
+  "reason": "arXivとEMNLP 2025一次要旨を確認。OFTv2は重み中心の行列積を入力中心の行列ベクトル演算へ変更し、Cayley–Neumannパラメータ化で直交fine-tuningを最大10倍高速化し学習時GPUメモリを3分の1程度にする。評価対象はfinetuning計算と学習安定性であり、LLMの生成推論サービングやデコード高速化を直接評価していないため凍結中の学習単独最適化としてunrelated。",
+  "title": "Orthogonal Finetuning Made Scalable",
+  "identity_tokens": [
+    "arXiv:2506.19847"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34466bdad8c5",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
