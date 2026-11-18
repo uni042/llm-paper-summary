@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-853055cb45d17113-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41147",
+  "reason": "LoRA等でfine-tuneした言語モデルの一般能力低下を、activation fingerprintからhypernetworkが生成するRepairing Side Netとprompt条件付きgateで推論時に補正。2モデル系列・12適応データセットで基盤モデルの一般スコア93.4%、適応領域スコア99.5%を保持と報告。追加学習不要の推論時補正ではあるが、推論速度・メモリ削減の技術ではなく能力回復が主目的で、side netの追加実行コストも要旨では未定量化のためborderline。",
+  "title": "HyperRepair: Recovering Forgotten General Capabilities of Fine-Tuned Language Models",
+  "identity_tokens": [
+    "arXiv:2610.41147"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853055cb45d1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

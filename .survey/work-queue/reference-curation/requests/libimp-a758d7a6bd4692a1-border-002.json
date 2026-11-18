@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a758d7a6bd4692a1-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/PRAI67447.2025.11412576",
+  "reason": "画像処理用Swin TransformerへGrouped Query Attentionを導入し、KV head共有でメモリと推論時間の削減を狙うSwinGQA。IEEE出版社要旨ではMHAとMQAの間の速度・品質選択を示すが、生成LLMやautoregressive KV cacheでの性能は直接評価しないためborderline。",
+  "title": "An Efficient Swin Transformer Architecture Based on Grouped Query Attention",
+  "identity_tokens": [
+    "DOI:10.1109/PRAI67447.2025.11412576"
+  ],
+  "linked_from": [
+    "WORKLIST-00.md rank 265; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a758d7a6bd46",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-90f6d544e4d18fed-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.36804",
+  "reason": "小さな構造化出力を返すdecisionモデルのGPU launch・全語彙projection・batching overheadを、CUDA graph replay、候補token projection、長さ認識batchで削減する実測研究。著者要旨はPPLX-Deciderの短Boolean応答でnative比2.47倍、Clefで1.45倍のresident speedupと報告するが、arrival workloadでは効果が逆転する条件も示す。LLM系推論kernelには関係するものの対象は汎用自回帰LLMより小型decisionモデルなのでborderline。",
+  "title": "DFIP: Decision-Focused Inference Path for System One Models",
+  "identity_tokens": [
+    "id:arXiv:2610.36804",
+    "id:DOI:10.48550/arXiv.2610.36804"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90f6d544e4d1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

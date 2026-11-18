@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-80a31def11425011-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41700",
+  "reason": "最大4096 GPUのtrainingおよびinference workloadのNCCL scheduleと依存関係をtraceから分解し、LogGPモデル下の線形計画でnetwork latency・bandwidth・jitterへの感度境界を推定する。LogGOPSimや実機と照合し、bandwidth増強が効く領域と効果が薄い領域を示す。大規模推論通信の配置設計には関連するが、LLM専用のserving改善や実際のend-to-end速度の定量比較は要旨にないためborderline。",
+  "title": "Provisioning Networks for AI Supercomputers: A Trace-Driven Study of Performance Sensitivity at Unprecedented Scale",
+  "identity_tokens": [
+    "arXiv:2610.41700"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AR/new",
+    "https://arxiv.org/list/cs.NI/new",
+    "https://arxiv.org/list/cs.PL/new",
+    "https://arxiv.org/list/cs.CR/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

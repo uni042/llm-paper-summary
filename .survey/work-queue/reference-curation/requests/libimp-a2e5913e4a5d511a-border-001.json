@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a2e5913e4a5d511a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.39372",
+  "reason": "masked diffusion LLMのtoken reveal順を、confidence基準に幾何学的残差（生成方向、既公開contextとの距離、双方向infilling）を加える低次元policyで適応化する。3 dLLM・5 benchmarkで成功率32.0%から48.2%へ改善し、0.53M trainable parameter、追加backbone forwardなしだが推論latencyは5.39%増加。推論時のdecode方策ではあるものの主貢献は品質改善で速度・メモリ効率は悪化するためborderline。",
+  "title": "Cord: Confidence-Anchored Order Residual Decoding for Masked Diffusion Language Models",
+  "identity_tokens": [
+    "arXiv:2610.39372"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-80a31def11425011-unrel-006",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.41669",
+  "reason": "knowledge graph similarity queryのcardinalityを推定するSCE-KGを提案し、LLMは学習用query生成器として利用。star/chain queryの95パーセンタイル予測誤差を37〜40倍改善、online overheadはquery実行時間の0.05%未満と報告するが、対象はDB query optimizerでありLLMモデル自体の推論・サービング高速化ではないためunrelated。",
+  "title": "Supervised and LLM-Augmented Cardinality Estimation for Similarity Queries on Knowledge Graphs",
+  "identity_tokens": [
+    "arXiv:2610.41669"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AR/new",
+    "https://arxiv.org/list/cs.NI/new",
+    "https://arxiv.org/list/cs.PL/new",
+    "https://arxiv.org/list/cs.CR/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

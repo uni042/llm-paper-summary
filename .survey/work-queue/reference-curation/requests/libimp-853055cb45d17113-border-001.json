@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-853055cb45d17113-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.33375",
+  "reason": "LLMを各ステップで再呼出しする方式と、実行前に全workflowを生成して後続のLLM呼出しを減らすGlobal orchestrationを、650件の企業SOP・3220実行変種で比較。増分workflow構築はGlobalの正解率を平均9.98ポイント改善し、実行フィードバックを使った修正も有効。推論呼出し削減という実行効率に関連するが、主成果はエージェント計画精度のベンチマークで、GPU/serving実装の改善や定量的速度比較は一次要旨にないためborderline。",
+  "title": "AgentOrch: How Close Can Global Orchestration Come to Step-by-Step Interaction?",
+  "identity_tokens": [
+    "arXiv:2610.33375"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AI/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853055cb45d1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

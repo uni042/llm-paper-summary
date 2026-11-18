@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-80a31def11425011-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.36991",
+  "reason": "RAGのchunkをsemantic・文書隣接・entity・引用等で結ぶweighted graphにして、hybrid seed検索、graph拡張、spectral relevance伝播、固定token予算内のcontext選択を行う。MultiHopRAGなどでevidence回収と回答品質を改善するが、graph計算の追加費用と初期precision低下のtrade-offも記載。token budgetの管理には関連するが、実際の推論latencyや総token削減の優位性を一次要旨で確認できないためborderline。",
+  "title": "SpectRAG: Weighted Chunk Graphs for Token-Budgeted Context Selection in Multi-Hop Retrieval-Augmented Generation",
+  "identity_tokens": [
+    "arXiv:2610.36991"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AR/new",
+    "https://arxiv.org/list/cs.NI/new",
+    "https://arxiv.org/list/cs.PL/new",
+    "https://arxiv.org/list/cs.CR/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

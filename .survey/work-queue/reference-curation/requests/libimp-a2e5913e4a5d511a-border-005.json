@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a2e5913e4a5d511a-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.34146",
+  "reason": "全文書類から一度semantic hierarchyを作り、queryごとに構造・意味scoreと語彙対応から必要なsource spanと祖先contextを選ぶtraining-free context構成。4 frontier answer model・LongBench 3 taskで全文投入比QA-F1平均+1.72、answer-context長58.55%削減と報告。LLMへ渡すpromptを短縮する間接的な推論負荷削減に関係するが、prefill TTFTやGPU throughputの実測が一次要旨になく、retrieval品質中心のためborderline。",
+  "title": "Rethinking Retrieval in the Long-Context Era: Training-Free Semantic Trees for Adaptive Context Construction",
+  "identity_tokens": [
+    "arXiv:2610.34146"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

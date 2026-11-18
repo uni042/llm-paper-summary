@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a2e5913e4a5d511a-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.39854",
+  "reason": "Dynamic Waveの指数減衰・位相変調を用いたrecurrent mixerを、10.94M parameterのTinyStories modelでTransformer/Hybridと比較。4096 token時にunfused attention比Pure WaveのVRAMは78.7%小さいが、fused SDPA比ではほぼ同じ（1404.3対1403.6MB）で、loop外への演算移動はlayer latencyを2.53倍改善。比較backendが効率結論を左右する有用な測定だが、規模は小型モデルで大規模LLM serving評価はなくborderline。",
+  "title": "Attention, Dynamic Wave and Hybrid Sequence Mixers in Language Models",
+  "identity_tokens": [
+    "arXiv:2610.39854"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

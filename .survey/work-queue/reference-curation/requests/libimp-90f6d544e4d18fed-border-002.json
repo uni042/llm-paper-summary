@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-90f6d544e4d18fed-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.04951",
+  "reason": "LLM推論前処理のBPE tokenizerをGPUで高速化するため、mergeを配列linked listの定数時間pointer更新にし、rank lookup・minimum選択・mergeを1kernelへ融合する。著者要旨は既存GPU方式比最大5.2倍、最適化CPU比24.6倍のtokenizer throughputを報告。ただしtoken列に少数の差異が生じる点と、対象が生成本体の推論runtimeではなく入力前処理である点からborderline。",
+  "title": "LLBPE: Linked-List Based GPU-Parallel BPE Tokenizer",
+  "identity_tokens": [
+    "id:arXiv:2610.04951",
+    "id:DOI:10.48550/arXiv.2610.04951"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90f6d544e4d1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
