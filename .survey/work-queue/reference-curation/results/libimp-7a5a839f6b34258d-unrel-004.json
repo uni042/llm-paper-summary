@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a5a839f6b34258d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.25958",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.25958",
+    "identity_tokens": [
+      "arXiv:2509.25958"
+    ],
+    "reason": "ロールアウト応答再構成による推論効率の強化RoRecomp。検証可能報酬つき強化学習の訓練で冗長な過程を導く手法。対象は訓練であり、推論機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T08:08:17+00:00",
+    "last_checked_at": "2026-11-18T08:08:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+      "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "title": "RoRecomp: Enhancing Reasoning Efficiency via Rollout Response Recomposition in Reinforcement Learning"
+  },
+  "processed_at": "2026-11-18T08:08:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a5a839f6b34",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

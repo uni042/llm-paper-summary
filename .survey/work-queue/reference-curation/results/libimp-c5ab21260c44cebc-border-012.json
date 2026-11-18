@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ab21260c44cebc-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.13890",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.13890",
+    "identity_tokens": [
+      "arXiv:2609.13890"
+    ],
+    "reason": "マルチエージェントコード生成で難易度に応じて通信トポロジーを選びトークンコストと成功率の釣り合いを取る選択器。コスト意識は推論費用に直結するが、対象はエージェントワークフロー層でありサービング機構ではないため境界とする。",
+    "first_checked_at": "2026-11-18T08:08:26+00:00",
+    "last_checked_at": "2026-11-18T08:08:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md",
+      "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation"
+  },
+  "processed_at": "2026-11-18T08:08:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ab21260c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

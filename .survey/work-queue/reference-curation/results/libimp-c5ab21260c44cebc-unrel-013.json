@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ab21260c44cebc-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.22588",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.22588",
+    "identity_tokens": [
+      "arXiv:2510.22588"
+    ],
+    "reason": "音声対話のスタイル制御用データセットの構築と微調整評価であり、推論システムへの貢献はない。",
+    "first_checked_at": "2026-11-18T08:08:29+00:00",
+    "last_checked_at": "2026-11-18T08:08:29+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+      "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+    ],
+    "title": "UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models"
+  },
+  "processed_at": "2026-11-18T08:08:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ab21260c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

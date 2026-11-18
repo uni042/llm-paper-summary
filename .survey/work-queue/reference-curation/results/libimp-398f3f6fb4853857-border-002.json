@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-398f3f6fb4853857-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.08343",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.08343",
+    "identity_tokens": [
+      "arXiv:2508.08343"
+    ],
+    "reason": "LLMアダプタ提供の性能最大化のためのデータ駆動MLアプローチ。何百ものアダプタを単一GPUで提供する際、飢餓を起こさずスループットを最大化する同時・並列アダプタの共同構成を、解釈可能なモデルで決める。推論基盤の運用研究であり境界。",
+    "first_checked_at": "2026-11-18T08:08:10+00:00",
+    "last_checked_at": "2026-11-18T08:08:10+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "llm-serving-scheduling-disaggregation",
+      "many-adapter LLM serving / LoRA serving / inference scheduling",
+      "multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Data-driven ML Approach for Maximizing Performance in LLM-Adapter Serving"
+  },
+  "processed_at": "2026-11-18T08:08:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398f3f6fb485",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

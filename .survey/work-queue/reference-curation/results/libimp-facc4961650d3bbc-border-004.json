@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-facc4961650d3bbc-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.04686",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.04686",
+    "identity_tokens": [
+      "arXiv:2511.04686"
+    ],
+    "reason": "状態つきKVキャッシュ管理の経験的分析。多ターンで蓄積するKVキャッシュがモデルの訓練文脈に近づくと生成品質が急激に劣化することなどを、状態つきベンチマークで示す分析。KV管理の分析であり境界。",
+    "first_checked_at": "2026-11-18T08:08:30+00:00",
+    "last_checked_at": "2026-11-18T08:08:30+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "LLM Serving / Scheduling / Disaggregation",
+      "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+      "sparse attention / long-context Transformer"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Stateful KV Cache Management for LLMs: Balancing Space, Time, Accuracy, and Positional Fidelity"
+  },
+  "processed_at": "2026-11-18T08:08:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-facc4961650d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

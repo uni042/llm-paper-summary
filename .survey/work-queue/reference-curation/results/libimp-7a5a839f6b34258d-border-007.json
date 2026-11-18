@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a5a839f6b34258d-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.08128",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.08128",
+    "identity_tokens": [
+      "arXiv:2511.08128"
+    ],
+    "reason": "文単位アンカー型要点圧縮。学習した圧縮トークンで文脈を2〜8倍に圧縮するよう微調整する長文脈LLMの文脈圧縮。推論メモリの削減が目的だが、機構の実体は微調整であり境界。",
+    "first_checked_at": "2026-11-18T08:08:16+00:00",
+    "last_checked_at": "2026-11-18T08:08:16+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ最適化／適応圧縮",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sentence-Anchored Gist Compression for Long-Context LLMs"
+  },
+  "processed_at": "2026-11-18T08:08:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a5a839f6b34",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

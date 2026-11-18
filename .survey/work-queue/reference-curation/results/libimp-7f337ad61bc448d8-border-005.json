@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2012.02030",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2012.02030",
+    "identity_tokens": [
+      "arXiv:2012.02030"
+    ],
+    "reason": "深層学習の注意機構におけるデータ情報つき大域疎性。固定したデータセットで注意パターンを観察し、大域的な疎性マスクを生成する注意剪定。注意の疎化ではあるが、符号器時代の手法であり境界。",
+    "first_checked_at": "2026-11-18T08:08:18+00:00",
+    "last_checked_at": "2026-11-18T08:08:18+00:00",
+    "linked_from": [
+      "inference-systems",
+      "sparse attention / long-context Transformer"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Data-Informed Global Sparseness in Attention Mechanisms for Deep Neural Networks"
+  },
+  "processed_at": "2026-11-18T08:08:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f337ad61bc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

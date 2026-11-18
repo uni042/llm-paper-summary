@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36713aeacfc53d2a-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.30842",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.30842",
+    "identity_tokens": [
+      "arXiv:2605.30842"
+    ],
+    "reason": "エージェントの文脈管理を専用モデルへ分離し、要約をkステップ先行で非同期実行するCoMem。要約デコードの遅延隠蔽という serving 的要素はあるが、対象はエージェント文脈管理の応用枠組みであり境界。",
+    "first_checked_at": "2026-11-18T08:08:10+00:00",
+    "last_checked_at": "2026-11-18T08:08:10+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoMem: Context Management with A Decoupled Long-Context Model"
+  },
+  "processed_at": "2026-11-18T08:08:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36713aeacfc5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

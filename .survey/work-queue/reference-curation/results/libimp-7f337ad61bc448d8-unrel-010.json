@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.19761",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.19761",
+    "identity_tokens": [
+      "arXiv:2506.19761"
+    ],
+    "reason": "正確・高速・安価の3つを選ぶ：多頭注意の置き換え。長形音声認識のための線形複雑度の再帰注意の研究。対象は音声認識であり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T08:08:20+00:00",
+    "last_checked_at": "2026-11-18T08:08:20+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "title": "Accurate, fast, cheap: Choose three. Replacing Multi-Head-Attention with Bidirectional Recurrent Attention for Long-Form ASR"
+  },
+  "processed_at": "2026-11-18T08:08:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f337ad61bc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-facc4961650d3bbc-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.13147",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.13147",
+    "identity_tokens": [
+      "arXiv:2511.13147"
+    ],
+    "reason": "全精度のための一度のチューニングOTARo。量子化の構造的制約が微調整と配備の柔軟さを妨げる問題に対し、精度ごとに異なる要求へ一度の調整で対応する。装置上配備の量子化ではあるが、微調整と一体であり境界。",
+    "first_checked_at": "2026-11-18T08:08:31+00:00",
+    "last_checked_at": "2026-11-18T08:08:31+00:00",
+    "linked_from": [
+      "arXiv:2405.16406のICLR 2025採録版。",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs"
+  },
+  "processed_at": "2026-11-18T08:08:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-facc4961650d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

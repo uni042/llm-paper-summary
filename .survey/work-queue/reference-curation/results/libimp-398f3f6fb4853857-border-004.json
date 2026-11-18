@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-398f3f6fb4853857-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.06174",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.06174",
+    "identity_tokens": [
+      "arXiv:2509.06174"
+    ],
+    "reason": "長から短へ：自身の推論鎖のトリミングに長けるLLM。過剰思考の傾向に対し、推論効率を系統的に調査する研究。推論時の振る舞いの研究であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T08:08:11+00:00",
+    "last_checked_at": "2026-11-18T08:08:11+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Long to Short: LLMs Excel at Trimming Own Reasoning Chains"
+  },
+  "processed_at": "2026-11-18T08:08:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398f3f6fb485",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

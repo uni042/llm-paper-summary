@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-853e20481104a59c-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.23431",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.23431",
+    "identity_tokens": [
+      "arXiv:2506.23431"
+    ],
+    "reason": "効率的文脈配慮テキスト生成のためのパイプラインデコーダ。複数の部分系列の生成を同時に始め、各時刻に各部分系列へ1トークンずつ生成する新しいデコーダアーキテクチャ。生成の並列化ではあるが、モデルアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T08:08:22+00:00",
+    "last_checked_at": "2026-11-18T08:08:22+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "Speculative Decoding",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pipelined Decoder for Efficient Context-Aware Text Generation"
+  },
+  "processed_at": "2026-11-18T08:08:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853e20481104",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

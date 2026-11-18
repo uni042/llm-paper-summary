@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-facc4961650d3bbc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.06750",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.06750",
+    "identity_tokens": [
+      "arXiv:2510.06750"
+    ],
+    "reason": "遅い思考と速い思考の重ね合わせGold-Switch。過剰思考する推論モデルを別モデルと併せて振り分ける代わりに、推論時に選択的に忘却させて1つのモデルを切り替える訓練不要の調整。推論時の制御ではあるが、忘却による調整であり境界。",
+    "first_checked_at": "2026-11-18T08:08:30+00:00",
+    "last_checked_at": "2026-11-18T08:08:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Gold-Switch: Training-Free Superposition of Slow- and Fast- Thinking LLMs"
+  },
+  "processed_at": "2026-11-18T08:08:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-facc4961650d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

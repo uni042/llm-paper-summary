@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-facc4961650d3bbc-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.22889",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.22889",
+    "identity_tokens": [
+      "arXiv:2511.22889"
+    ],
+    "reason": "不変テンソルアーキテクチャ。重みをデータではなく物理回路のトポロジとして符号化し、DRAMからの読み出しの帯域とエネルギーの壁を回避する範式転換の提案。推論ハードウェアの提案ではあるが、概念的な範式であり境界。",
+    "first_checked_at": "2026-11-18T08:08:31+00:00",
+    "last_checked_at": "2026-11-18T08:08:31+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "sparse attention / long-context Transformer"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Immutable Tensor Architecture: A Pure Dataflow Approach for Secure, Energy-Efficient AI Inference"
+  },
+  "processed_at": "2026-11-18T08:08:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-facc4961650d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

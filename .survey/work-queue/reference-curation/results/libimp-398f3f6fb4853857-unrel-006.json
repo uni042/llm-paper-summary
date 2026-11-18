@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-398f3f6fb4853857-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.16325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.16325",
+    "identity_tokens": [
+      "arXiv:2510.16325"
+    ],
+    "reason": "階層注意による超高解像度画像生成UltraImageGen。テキストから画像の拡散モデルの解像度を上げる枠組み。対象は画像生成であり、LLM推論の機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T08:08:12+00:00",
+    "last_checked_at": "2026-11-18T08:08:12+00:00",
+    "linked_from": [
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "UltraImageGen: Efficient Ultra-High-Resolution Image Generation with Hierarchical Local Attention"
+  },
+  "processed_at": "2026-11-18T08:08:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398f3f6fb485",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

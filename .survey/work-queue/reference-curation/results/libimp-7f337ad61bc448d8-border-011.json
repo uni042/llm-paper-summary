@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.08877",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.08877",
+    "identity_tokens": [
+      "arXiv:2507.08877"
+    ],
+    "reason": "LLMベース関数呼び出しのインライン高速化のための指向蒸留ODIA。本番トラフィックから単純なクエリを同定し、大型モデルから小型モデルへ蒸留して関数呼び出しの遅延を下げる。推論の高速化ではあるが、蒸留の運用であり境界。",
+    "first_checked_at": "2026-11-18T08:08:18+00:00",
+    "last_checked_at": "2026-11-18T08:08:18+00:00",
+    "linked_from": [
+      "Speculative Decoding / Parallel Inference Systems",
+      "inference-systems",
+      "speculative-decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ODIA: Oriented Distillation for Inline Acceleration of LLM-based Function Calling"
+  },
+  "processed_at": "2026-11-18T08:08:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f337ad61bc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

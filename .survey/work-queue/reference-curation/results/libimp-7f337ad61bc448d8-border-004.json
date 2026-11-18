@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:fc980a84b196f514bfdb96d882306b2139177c20",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:fc980a84b196f514bfdb96d882306b2139177c20",
+    "identity_tokens": [
+      "SemanticScholar:fc980a84b196f514bfdb96d882306b2139177c20",
+      "https://www.semanticscholar.org/paper/fc980a84b196f514bfdb96d882306b2139177c20"
+    ],
+    "reason": "SVDベース量子化誤差管理によるデルタ圧縮の強化PrinMix。微調整で生じる稠密な差分パラメータの保存と配布の課題に対し、量子化を最適化問題として定式化する。差分の圧縮であり境界。",
+    "first_checked_at": "2026-11-18T08:08:18+00:00",
+    "last_checked_at": "2026-11-18T08:08:18+00:00",
+    "linked_from": [
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing Delta Compression in LLMs via SVD-based Quantization Error Minimization"
+  },
+  "processed_at": "2026-11-18T08:08:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f337ad61bc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

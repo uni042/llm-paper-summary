@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5287a164e4a6a183-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.17999",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.17999",
+    "identity_tokens": [
+      "arXiv:2606.17999"
+    ],
+    "reason": "マスク拡散言語モデルのパディング慣行がEOS溢れを招く問題に、VOIDトークンで役割を分離するVoidPadding。デコード時の不具合を扱うが、修正は指示チューニング側の慣行変更であり、推論機構としては境界。",
+    "first_checked_at": "2026-11-18T08:08:14+00:00",
+    "last_checked_at": "2026-11-18T08:08:14+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination"
+  },
+  "processed_at": "2026-11-18T08:08:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5287a164e4a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

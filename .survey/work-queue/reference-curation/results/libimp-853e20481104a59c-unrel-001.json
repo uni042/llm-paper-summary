@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-853e20481104a59c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1088/2632-2153/addc33",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1088/2632-2153/addc33",
+    "identity_tokens": [
+      "DOI:10.1088/2632-2153/addc33"
+    ],
+    "reason": "LLMのためのWasserstein効率サンプリング戦略WEISS。創薬で新規分子を効率的にサンプリングするための手法。対象は創薬のサンプリングであり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T08:08:23+00:00",
+    "last_checked_at": "2026-11-18T08:08:23+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "Speculative Decoding",
+      "inference-systems",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "title": "WEISS: Wasserstein efficient sampling strategy for LLMs in drug design"
+  },
+  "processed_at": "2026-11-18T08:08:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853e20481104",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

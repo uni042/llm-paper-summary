@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-853e20481104a59c-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.12826",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.12826",
+    "identity_tokens": [
+      "arXiv:2506.12826"
+    ],
+    "reason": "オンデマンドMLLMスケーリングのための最適剪定の学習LOP。反復探索で剪定戦略を決める費用に対し、目標の剪定制約から最適戦略を学習する神経剪定の枠組み。MLLMの剪定であり境界。",
+    "first_checked_at": "2026-11-18T08:08:22+00:00",
+    "last_checked_at": "2026-11-18T08:08:22+00:00",
+    "linked_from": [
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LOP: Learning Optimal Pruning for Efficient On-Demand MLLMs Scaling"
+  },
+  "processed_at": "2026-11-18T08:08:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853e20481104",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

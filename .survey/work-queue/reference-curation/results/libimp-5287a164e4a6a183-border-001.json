@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5287a164e4a6a183-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.09883",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.09883",
+    "identity_tokens": [
+      "arXiv:2602.09883"
+    ],
+    "reason": "拡散Transformer（画像・動画生成）向けに時間感度を考慮した事後量子化AdaTSQを提案。量子化手法自体は推論技術だが、対象がLLMではなくDiT生成モデルであり、LLM推論への適用は要旨で確認できず境界。",
+    "first_checked_at": "2026-11-18T08:08:13+00:00",
+    "last_checked_at": "2026-11-18T08:08:13+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+      "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdaTSQ: Pushing the Pareto Frontier of Diffusion Transformers via Temporal-Sensitivity Quantization"
+  },
+  "processed_at": "2026-11-18T08:08:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5287a164e4a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

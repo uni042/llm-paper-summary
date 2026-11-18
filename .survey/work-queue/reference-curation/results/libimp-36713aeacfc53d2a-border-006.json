@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36713aeacfc53d2a-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.24574",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.24574",
+    "identity_tokens": [
+      "arXiv:2512.24574"
+    ],
+    "reason": "推論軌跡中の検証・後戻り等の認知行動と相関する注意ヘッドを特定し、軽い介入で操縦する研究。テスト時の介入はあるが主眼は推論行動の分析であり、推論システム機構としての貢献は薄く境界。",
+    "first_checked_at": "2026-11-18T08:08:08+00:00",
+    "last_checked_at": "2026-11-18T08:08:08+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Understanding and Steering the Cognitive Behaviors of Reasoning Models at Test-Time"
+  },
+  "processed_at": "2026-11-18T08:08:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36713aeacfc5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

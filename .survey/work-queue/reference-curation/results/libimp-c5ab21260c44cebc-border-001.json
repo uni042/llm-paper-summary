@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ab21260c44cebc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.25583",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.25583",
+    "identity_tokens": [
+      "arXiv:2608.25583"
+    ],
+    "reason": "推論モデルと指示モデルのモジュール別パラメータ補間により、長い推論を短縮して推論コストとレイテンシの改善を狙う。ただし機構は重み補間（比率学習）であり、サービング機構への直接貢献は薄いため境界とする。",
+    "first_checked_at": "2026-11-18T08:08:25+00:00",
+    "last_checked_at": "2026-11-18T08:08:25+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GRIP: Granular Reward-Guided Parameter Interpolation for Efficient Reasoning"
+  },
+  "processed_at": "2026-11-18T08:08:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ab21260c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

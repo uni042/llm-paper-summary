@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-398f3f6fb4853857-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.04226",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.04226",
+    "identity_tokens": [
+      "arXiv:2509.04226"
+    ],
+    "reason": "入力潜在状態による長距離統合状態空間モデルLISM。状態空間モデルの記憶の呪いへの対処。対象はSSMのアーキテクチャであり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T08:08:12+00:00",
+    "last_checked_at": "2026-11-18T08:08:12+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "title": "LISM: Long-range Integrative State space Models via Input-Latent State Interactions"
+  },
+  "processed_at": "2026-11-18T08:08:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398f3f6fb485",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

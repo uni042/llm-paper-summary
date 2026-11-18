@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:1bb46f5aa6b1dbfbad8af0c34a5c22221b9a3bd0",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:1bb46f5aa6b1dbfbad8af0c34a5c22221b9a3bd0",
+    "identity_tokens": [
+      "SemanticScholar:1bb46f5aa6b1dbfbad8af0c34a5c22221b9a3bd0",
+      "https://www.semanticscholar.org/paper/1bb46f5aa6b1dbfbad8af0c34a5c22221b9a3bd0"
+    ],
+    "reason": "包括的研究から低ランク補償へ：学習後量子化の探求。量子化方式、モデル族、ビット精度を系統的に調べ、低ランク補償を提案する。量子化の研究と手法の複合であり境界。",
+    "first_checked_at": "2026-11-18T08:08:17+00:00",
+    "last_checked_at": "2026-11-18T08:08:17+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From comprehensive study to low rank compensation: Exploring post-training quantization in LLMs"
+  },
+  "processed_at": "2026-11-18T08:08:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f337ad61bc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

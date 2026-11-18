@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.00935",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.00935",
+    "identity_tokens": [
+      "arXiv:2509.00935"
+    ],
+    "reason": "区間圧縮による準二次注意SCOUT。線形モデルや滑走窓注意が遠方トークンの詳細を保てない問題に対し、区間圧縮のハイブリッドアーキテクチャ。注意の効率化ではあるが、モデルアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T08:08:19+00:00",
+    "last_checked_at": "2026-11-18T08:08:19+00:00",
+    "linked_from": [
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers"
+  },
+  "processed_at": "2026-11-18T08:08:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f337ad61bc4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

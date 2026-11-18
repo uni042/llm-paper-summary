@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-398f3f6fb4853857-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.03333",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.03333",
+    "identity_tokens": [
+      "arXiv:2508.03333"
+    ],
+    "reason": "集合的テスト時スケーリングCTTS。単一エージェントと単一報酬モデルの枠組みが性能の天井に制約される問題に対し、集合的な方法でテスト時スケーリングを行う。推論時の枠組みではあるが、複数モデルの協調であり境界。",
+    "first_checked_at": "2026-11-18T08:08:10+00:00",
+    "last_checked_at": "2026-11-18T08:08:10+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CTTS: Collective Test-Time Scaling"
+  },
+  "processed_at": "2026-11-18T08:08:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398f3f6fb485",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

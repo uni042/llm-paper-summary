@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ab21260c44cebc-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2412.08595",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2412.08595",
+    "identity_tokens": [
+      "arXiv:2412.08595"
+    ],
+    "reason": "HiPPO-LegS ODEの数値解析というSSMの数学的基礎研究であり、推論システムへの具体的適用は示されていない。",
+    "first_checked_at": "2026-11-18T08:08:28+00:00",
+    "last_checked_at": "2026-11-18T08:08:28+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "Numerical Analysis of HiPPO-LegS ODE for Deep State Space Models"
+  },
+  "processed_at": "2026-11-18T08:08:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ab21260c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
