@@ -1,0 +1,283 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c343323c9d93bc78-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c343323c9d93",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.07911",
+    "arXiv:2505.22107",
+    "arXiv:2506.23225",
+    "arXiv:2604.02367",
+    "arXiv:2606.02011",
+    "arXiv:2607.05475",
+    "arXiv:2607.22586",
+    "arXiv:2609.38166"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c59847beae8e1523c09427b9242f72975a3deda1",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:32:14.886349+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.07911",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.07911"
+    },
+    {
+      "requested_id": "arXiv:2505.22107",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.22107"
+    },
+    {
+      "requested_id": "arXiv:2506.23225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02367",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02011",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.02011"
+    },
+    {
+      "requested_id": "arXiv:2607.05475",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.05475"
+    },
+    {
+      "requested_id": "arXiv:2607.22586",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2026.findings-acl.1447"
+    },
+    {
+      "requested_id": "arXiv:2609.38166",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.38166"
+    }
+  ],
+  "results": [
+    {
+      "title": "Masked Gated Linear Unit",
+      "source_url": "https://arxiv.org/abs/2506.23225",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Gated Linear Units (GLUs) have become essential components in the feed-forward networks of state-of-the-art Large Language Models (LLMs). However, they require twice as many memory reads compared to feed-forward layers without gating, due to the use of separate weight matrices for the gate and value streams. To address this bottleneck, we introduce Masked Gated Linear Units (MGLUs), a novel family of GLUs with an efficient kernel implementation. The core contribution of MGLUs include: (1) the Mixture of Element-wise Gating (MoEG) architecture that learns multiple binary masks, each determining gate or value assignments at the element level on a single shared weight matrix resulting in reduced memory transfer, and (2) FlashMGLU, a hardware-friendly kernel that yields up to a 19.7 $\\times$ inference-time speed-up over a naive PyTorch MGLU and is 47% more memory-efficient and 34% faster than standard GLUs despite added architectural complexity on an RTX5090 GPU. In LLM experiments, the Swish-activated variant SwiMGLU preserves its memory advantages while matching - or even surpassing - the downstream accuracy of the SwiGLU baseline.",
+      "identifiers": [
+        "SemanticScholar:c93517473d72ea3b3b6205a41c53f09a4e83b487"
+      ],
+      "semantic_scholar_id": "c93517473d72ea3b3b6205a41c53f09a4e83b487",
+      "canonical_id": "arXiv:2506.23225",
+      "arxiv_id": "2506.23225",
+      "doi": "10.48550/arXiv.2506.23225",
+      "authors": [
+        "Yukito Tajima",
+        "Nakamasa Inoue",
+        "Yusuke Sekikawa",
+        "Ikuro Sato",
+        "Rio Yokota"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 507,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+      "source_url": "https://arxiv.org/abs/2604.02367",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Selecting the appropriate model at inference time -- the routing problem -- requires jointly optimizing output quality, cost, latency, and governance constraints. Existing approaches delegate this decision to LLM-based classifiers or preference-trained routers that are themselves costly and high-latency, reducing a multi-objective optimization to single-dimensional quality prediction. We argue that small language models (SLMs, 1-4B parameters) have now achieved sufficient reasoning capability for sub-second, zero-marginal-cost, self-hosted task classification, potentially making the routing decision negligible in the inference budget. We test this thesis on a six-label taxonomy through two studies. Study 1 is a harmonized offline benchmark of Phi-3.5-mini, Qwen2.5-1.5B, and Qwen-2.5-3B on identical Azure T4 hardware, serving stack, quantization, and a fixed 60-case corpus. Qwen-2.5-3B achieves the best exact-match accuracy (0.783), the strongest latency-accuracy tradeoff, and the only nonzero accuracy on all six task families. Study 2 is a pre-registered four-arm randomized experiment under synthetic traffic with an effective sample size of 60 unique cases per arm, comparing Phi-4-mini, Qwen-2.5-3B, and DeepSeek-V3 against a no-routing control. DeepSeek-V3 attains the highest accuracy (0.830) but fails the pre-registered P95 latency gate (2,295 ms); Qwen-2.5-3B is Pareto-dominant among self-hosted models (0.793 accuracy, 988 ms median, $0 marginal cost). No model meets the standalone viability criterion (>=0.85 accuracy,<=2,000 ms P95). The cost and latency prerequisites for SLM-based routing are met; the accuracy gap of 6-8 percentage points and the untested question of whether correct classification translates to downstream output quality bound the remaining distance to production viability.",
+      "identifiers": [
+        "SemanticScholar:955dbe8538998f44691f9407ef96a46d1088703e"
+      ],
+      "semantic_scholar_id": "955dbe8538998f44691f9407ef96a46d1088703e",
+      "canonical_id": "arXiv:2604.02367",
+      "arxiv_id": "2604.02367",
+      "doi": "10.48550/arXiv.2604.02367",
+      "authors": [
+        "Warren Johnson",
+        "Charles Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2506.23225",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.23225",
+        "id:SemanticScholar:c93517473d72ea3b3b6205a41c53f09a4e83b487",
+        "id:arXiv:2506.23225",
+        "title:masked gated linear unit",
+        "url:https://arxiv.org/abs/2506.23225"
+      ],
+      "record": {
+        "title": "Masked Gated Linear Unit",
+        "source_url": "https://arxiv.org/abs/2506.23225",
+        "year": 2025,
+        "published": "2025-06-29",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Gated Linear Units (GLUs) have become essential components in the feed-forward networks of state-of-the-art Large Language Models (LLMs). However, they require twice as many memory reads compared to feed-forward layers without gating, due to the use of separate weight matrices for the gate and value streams. To address this bottleneck, we introduce Masked Gated Linear Units (MGLUs), a novel family of GLUs with an efficient kernel implementation. The core contribution of MGLUs include: (1) the Mixture of Element-wise Gating (MoEG) architecture that learns multiple binary masks, each determining gate or value assignments at the element level on a single shared weight matrix resulting in reduced memory transfer, and (2) FlashMGLU, a hardware-friendly kernel that yields up to a 19.7 $\\times$ inference-time speed-up over a naive PyTorch MGLU and is 47% more memory-efficient and 34% faster than standard GLUs despite added architectural complexity on an RTX5090 GPU. In LLM experiments, the Swish-activated variant SwiMGLU preserves its memory advantages while matching - or even surpassing - the downstream accuracy of the SwiGLU baseline.",
+        "identifiers": [
+          "SemanticScholar:c93517473d72ea3b3b6205a41c53f09a4e83b487"
+        ],
+        "semantic_scholar_id": "c93517473d72ea3b3b6205a41c53f09a4e83b487",
+        "canonical_id": "arXiv:2506.23225",
+        "arxiv_id": "2506.23225",
+        "doi": "10.48550/arXiv.2506.23225",
+        "authors": [
+          "Yukito Tajima",
+          "Nakamasa Inoue",
+          "Yusuke Sekikawa",
+          "Ikuro Sato",
+          "Rio Yokota"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 507,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02367",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.02367",
+        "id:SemanticScholar:955dbe8538998f44691f9407ef96a46d1088703e",
+        "id:arXiv:2604.02367",
+        "title:evaluating small language models for frontdoor routing a harmonized benchmark and synthetictraffic experiment",
+        "url:https://arxiv.org/abs/2604.02367"
+      ],
+      "record": {
+        "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+        "source_url": "https://arxiv.org/abs/2604.02367",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Selecting the appropriate model at inference time -- the routing problem -- requires jointly optimizing output quality, cost, latency, and governance constraints. Existing approaches delegate this decision to LLM-based classifiers or preference-trained routers that are themselves costly and high-latency, reducing a multi-objective optimization to single-dimensional quality prediction. We argue that small language models (SLMs, 1-4B parameters) have now achieved sufficient reasoning capability for sub-second, zero-marginal-cost, self-hosted task classification, potentially making the routing decision negligible in the inference budget. We test this thesis on a six-label taxonomy through two studies. Study 1 is a harmonized offline benchmark of Phi-3.5-mini, Qwen2.5-1.5B, and Qwen-2.5-3B on identical Azure T4 hardware, serving stack, quantization, and a fixed 60-case corpus. Qwen-2.5-3B achieves the best exact-match accuracy (0.783), the strongest latency-accuracy tradeoff, and the only nonzero accuracy on all six task families. Study 2 is a pre-registered four-arm randomized experiment under synthetic traffic with an effective sample size of 60 unique cases per arm, comparing Phi-4-mini, Qwen-2.5-3B, and DeepSeek-V3 against a no-routing control. DeepSeek-V3 attains the highest accuracy (0.830) but fails the pre-registered P95 latency gate (2,295 ms); Qwen-2.5-3B is Pareto-dominant among self-hosted models (0.793 accuracy, 988 ms median, $0 marginal cost). No model meets the standalone viability criterion (>=0.85 accuracy,<=2,000 ms P95). The cost and latency prerequisites for SLM-based routing are met; the accuracy gap of 6-8 percentage points and the untested question of whether correct classification translates to downstream output quality bound the remaining distance to production viability.",
+        "identifiers": [
+          "SemanticScholar:955dbe8538998f44691f9407ef96a46d1088703e"
+        ],
+        "semantic_scholar_id": "955dbe8538998f44691f9407ef96a46d1088703e",
+        "canonical_id": "arXiv:2604.02367",
+        "arxiv_id": "2604.02367",
+        "doi": "10.48550/arXiv.2604.02367",
+        "authors": [
+          "Warren Johnson",
+          "Charles Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 237,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ee0fbd48b5a8c0a2f0f2a8373d759d3d4033495bf739611504f136ac090e8514",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
