@@ -1,0 +1,512 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-90f6d544e4d18fed-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-90f6d544e4d1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.05748",
+    "arXiv:2610.25136",
+    "arXiv:2610.25717",
+    "arXiv:2610.26083",
+    "arXiv:2610.31309",
+    "arXiv:2610.32009"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "57044205ac60854d5105d8732a532ea7a061ff86",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T09:32:18.831167+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.05748",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25136",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.26083",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.31309",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32009",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:b5c59d89735f561d2b435d00727624597cd73a95"
+    }
+  ],
+  "results": [
+    {
+      "title": "MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2610.05748",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving scales its replica count with the request load, yet GPU memory still stands idle inside the replicas. Adding a replica takes minutes, while the memory that a replica needs changes within seconds. Even instant autoscaling could not return this idle memory, because the smallest unit that it can remove is a whole replica. Colocating parameter-efficient fine-tuning (PEFT) with inference can use this memory, but inference must be able to reclaim it within seconds, before requests that wait for memory exceed their latency service-level objective (SLO). Existing colocation systems either keep the tuning memory resident or let inference reclaim it at the coarse granularity of a whole training sample. Each such reclamation also discards the running tuning step. To address these limitations, we present MOLT, a fine-grained memory sharing system that lets inference reclaim the memory of individual activations that a running tuning step has saved for its backward pass. The step continues, and its backward pass recomputes those activations. Inference reclaims only memory that no in-flight GPU work can still access, even under CPU--GPU asynchrony and tensor parallelism. On four model deployments (24B--70B) across H100 SXM and B200 GPUs under trace-driven workloads, MOLT keeps inference SLO attainment at or above 99.7% and completes 1.9--3.3x the tuning work of discard-based memory sharing.",
+      "identifiers": [
+        "SemanticScholar:e5753be7ed1372290d5014d2c099ab6faf50c1be"
+      ],
+      "semantic_scholar_id": "e5753be7ed1372290d5014d2c099ab6faf50c1be",
+      "canonical_id": "arXiv:2610.05748",
+      "arxiv_id": "2610.05748",
+      "authors": [
+        "Jae-hun Yang",
+        "Yongbeom Kim",
+        "Hojoon Kim",
+        "Seung Yul Lee",
+        "J. Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Visual Cache Reuse for Efficient Multimodal Inference",
+      "source_url": "https://arxiv.org/abs/2610.25136",
+      "year": 2026,
+      "published": "2026-10-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language model (VLM) inference incurs substantial prefill latency and memory overhead due to the long visual token sequences of large visual inputs. Existing serving systems typically exploit exact cache reuse through prefix caching or position-independent caching, overlooking the potential of approximate caching in real-world workloads. However, directly reusing an approximate cache entry may introduce spurious visual information, which naive approaches that select a subset of important visual tokens for recomputation fail to adequately mitigate this risk. We present VisMemo, an efficient serving system that enables approximate KV cache reuse for modern VLMs. Its core is a system-algorithm co-design that combines an entropy-aware KV cache reuse algorithm with differentiated cache management. Specifically, VisMemo uses patch entropy to identify reuse candidates and warmup attention to prioritize recomputation based on the current query. To support the large cache capacity across GPU memory, CPU memory, and SSD storage, VisMemo applies distinct I/O and cache policies to exact and approximate hits: sparse patch-level I/O for approximate hits, prioritized retention for exact hits, and a reserved CPU victim cache for preset entries selected using offline workload priors and online reuse observations. VisMemo further optimizes the memory access path between the inference engine and the storage backend, eliminating redundant caching and unnecessary data movement. Experiments on multiple public datasets show that VisMemo preserves output quality under approximate reuse. On a real-world production trace, VisMemo increases the overall cache hit rate from 27.78% to 61.45% and reduces prefill latency by up to 48.3% at 8K input tokens.",
+      "identifiers": [
+        "SemanticScholar:f3b2ca6df36d0750271619f17690df1e4237c57b"
+      ],
+      "semantic_scholar_id": "f3b2ca6df36d0750271619f17690df1e4237c57b",
+      "canonical_id": "arXiv:2610.25136",
+      "arxiv_id": "2610.25136",
+      "authors": [
+        "Shu-Heng Gao",
+        "Yuan-Kai Fan",
+        "Jia-Qiang Ma",
+        "Jia-Wei Shao",
+        "Yong-Kun Li",
+        "Xue-Long Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fine-Grained Units, Flat Decisions: Hierarchical Micro-Expert Pruning for Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2610.25717",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Micro-expert pruning reduces the capacity of mixture-of-experts (MoE) models by removing coupled channels within routed experts. However, finer pruning granularity alone does not guarantee the preservation of downstream capabilities, as similar language-modeling perplexity can accompany substantially different task performance. We revisit micro-expert mask construction as two distinct decisions: allocating retained capacity across experts and selecting channels within that capacity. We propose UC-RAMP, a two-stage post-training pruning framework that explicitly separates these decisions. CAPE uses cross-domain calibration evidence to redistribute expert widths under an exact layer-wise budget, while RAMP refines channel composition at fixed widths through one-out, one-in exchanges guided by a channel-interaction surrogate. Across three MoE models at 25% and 50% routed-expert channel pruning, UC-RAMP achieves the highest ten-task mean accuracy among evaluated pruning methods in five of six settings. At 50% pruning, it outperforms the strongest evaluated baseline by 8.19, 3.96, and 6.14 percentage points across the three models, respectively. In a single-A100 deployment at 25% pruning, UC-RAMP reduces measured time to first token by 19.7--23.9% and time per output token by 20.2--22.3% relative to the unpruned model. The code is available at https://github.com/xzktx003/UC_RAMP.",
+      "identifiers": [
+        "SemanticScholar:b3b07878f1a26f81f7a0d52f427afd7aeb009a9e"
+      ],
+      "semantic_scholar_id": "b3b07878f1a26f81f7a0d52f427afd7aeb009a9e",
+      "canonical_id": "arXiv:2610.25717",
+      "arxiv_id": "2610.25717",
+      "authors": [
+        "Zu-Kang Xu",
+        "Xin-Pei Gao",
+        "Xing Hu",
+        "Zhe Jiang",
+        "Da-Wei Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
+      "source_url": "https://arxiv.org/abs/2610.26083",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-scaled quantization formats such as OCP Microscaling (MX) and NVFP4 have been widely adopted as efficient data formats for LLM inference. However, the design space of these formats spanned by shared scale, weight, and activation format combinations has not been systematically explored, and the joint accuracy-silicon tradeoff across this space remains uncharacterized, leaving the true Pareto-optimal configurations for NPU-based edge LLM deployment an open question. To bridge this gap, we conduct a joint hardware-software (HW-SW) co-design exploration of the above underexplored MX-like design space with three innovations. 1) We define and systematically characterize the full 8-bit scale format family within the MX-like design space, jointly with asymmetric weight-activation precision, identifying configurations that outperform the MX and NVFP4-like (without per-tensor scaling, PTS) baselines. 2) We build a per-format specialized MAC datapath template that enables fair hardware cost evaluation across the space. 3) We develop an automated co-design flow, integrated into the open-source SNAX NPU platform, that enables joint HW-SW analysis across the design space. Overall, our co-design exploration reveals that scale format matters only under aggressive FP4 quantization, yielding a case-oriented design guideline for both scale format and asymmetric weight-activation precision. We further identify UE5M3 as a favorable accuracy-hardware tradeoff for the FP4 regime, reducing perplexity degradation by up to 25.3% relative to the NVFP4-like baseline, at a cost of only +0.06% area and +0.49% power overhead.",
+      "identifiers": [
+        "SemanticScholar:a1e97e5f41f1deed6d8e7dfa9580577ed6d022a0"
+      ],
+      "semantic_scholar_id": "a1e97e5f41f1deed6d8e7dfa9580577ed6d022a0",
+      "canonical_id": "arXiv:2610.26083",
+      "arxiv_id": "2610.26083",
+      "authors": [
+        "Zi-Jun Zhao",
+        "Rui-Chu Ao",
+        "Stef Cuyckens",
+        "M. Verhelst",
+        "Chao Fang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Extreme Compression of Per-Layer Embeddings via Cross-Layer Latent Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2610.31309",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling embedding capacity alongside Transformer computation is an emerging trend in language models. This trend makes high compression rates increasingly useful. Hence, we study extreme compression of Per-Layer Embeddings (PLE), which follow this trend and account for 35.2% of the parameters of Gemma 4 E4B. At such rates, conventional quantizers give each token-layer vector its own code of only a few bytes. We instead develop OPTIC (Output-Path-fitted, Token-shared Indexed Codes), which stores one quantized code tuple per token and decodes it at every layer with a layer-specific affine decoder. Codes and decoders are fitted to the PLE output path rather than to the stored vectors. At about $100\\times$ PLE compression of bfloat16 (BF16) E4B, OPTIC retains an aggregate 97.8% of the uncompressed model's performance across seven benchmarks, whereas product quantization, the strongest of six conventional baselines, retains 66.3%. At $594\\times$ and $1,002\\times$ PLE compression of BF16 E4B, OPTIC retains 90.5% and 84.1%. On the official E4B release with 4-bit linear weights and 16-bit activations (W4A16), OPTIC retains 96.9% at about $100\\times$ PLE compression. During inference at about $100\\times$ PLE compression, BF16 E4B uses 29.7% less GPU memory than with uncompressed PLE at the same key-value cache size, while running at most 0.40% slower.",
+      "identifiers": [
+        "SemanticScholar:20f4835e1b142e964bebb99d36c38dc478e05fab"
+      ],
+      "semantic_scholar_id": "20f4835e1b142e964bebb99d36c38dc478e05fab",
+      "canonical_id": "arXiv:2610.31309",
+      "arxiv_id": "2610.31309",
+      "authors": [
+        "Jia-Cheng Liu",
+        "Ya-Xin Luo",
+        "Xiao-Han Zhao",
+        "Peng Sun",
+        "Xin-Yi Shang",
+        "Jiacheng Cui",
+        "Yonina C. Eldar",
+        "Zhi-Qiang Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.05748",
+      "identity_tokens": [
+        "id:SemanticScholar:e5753be7ed1372290d5014d2c099ab6faf50c1be",
+        "id:arXiv:2610.05748",
+        "title:molt a finegrained gpu memory sharing system for llm serving with opportunistic finetuning",
+        "url:https://arxiv.org/abs/2610.05748"
+      ],
+      "record": {
+        "title": "MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning",
+        "source_url": "https://arxiv.org/abs/2610.05748",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving scales its replica count with the request load, yet GPU memory still stands idle inside the replicas. Adding a replica takes minutes, while the memory that a replica needs changes within seconds. Even instant autoscaling could not return this idle memory, because the smallest unit that it can remove is a whole replica. Colocating parameter-efficient fine-tuning (PEFT) with inference can use this memory, but inference must be able to reclaim it within seconds, before requests that wait for memory exceed their latency service-level objective (SLO). Existing colocation systems either keep the tuning memory resident or let inference reclaim it at the coarse granularity of a whole training sample. Each such reclamation also discards the running tuning step. To address these limitations, we present MOLT, a fine-grained memory sharing system that lets inference reclaim the memory of individual activations that a running tuning step has saved for its backward pass. The step continues, and its backward pass recomputes those activations. Inference reclaims only memory that no in-flight GPU work can still access, even under CPU--GPU asynchrony and tensor parallelism. On four model deployments (24B--70B) across H100 SXM and B200 GPUs under trace-driven workloads, MOLT keeps inference SLO attainment at or above 99.7% and completes 1.9--3.3x the tuning work of discard-based memory sharing.",
+        "identifiers": [
+          "SemanticScholar:e5753be7ed1372290d5014d2c099ab6faf50c1be"
+        ],
+        "semantic_scholar_id": "e5753be7ed1372290d5014d2c099ab6faf50c1be",
+        "canonical_id": "arXiv:2610.05748",
+        "arxiv_id": "2610.05748",
+        "authors": [
+          "Jae-hun Yang",
+          "Yongbeom Kim",
+          "Hojoon Kim",
+          "Seung Yul Lee",
+          "J. Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.25136",
+      "identity_tokens": [
+        "id:SemanticScholar:f3b2ca6df36d0750271619f17690df1e4237c57b",
+        "id:arXiv:2610.25136",
+        "title:visual cache reuse for efficient multimodal inference",
+        "url:https://arxiv.org/abs/2610.25136"
+      ],
+      "record": {
+        "title": "Visual Cache Reuse for Efficient Multimodal Inference",
+        "source_url": "https://arxiv.org/abs/2610.25136",
+        "year": 2026,
+        "published": "2026-10-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language model (VLM) inference incurs substantial prefill latency and memory overhead due to the long visual token sequences of large visual inputs. Existing serving systems typically exploit exact cache reuse through prefix caching or position-independent caching, overlooking the potential of approximate caching in real-world workloads. However, directly reusing an approximate cache entry may introduce spurious visual information, which naive approaches that select a subset of important visual tokens for recomputation fail to adequately mitigate this risk. We present VisMemo, an efficient serving system that enables approximate KV cache reuse for modern VLMs. Its core is a system-algorithm co-design that combines an entropy-aware KV cache reuse algorithm with differentiated cache management. Specifically, VisMemo uses patch entropy to identify reuse candidates and warmup attention to prioritize recomputation based on the current query. To support the large cache capacity across GPU memory, CPU memory, and SSD storage, VisMemo applies distinct I/O and cache policies to exact and approximate hits: sparse patch-level I/O for approximate hits, prioritized retention for exact hits, and a reserved CPU victim cache for preset entries selected using offline workload priors and online reuse observations. VisMemo further optimizes the memory access path between the inference engine and the storage backend, eliminating redundant caching and unnecessary data movement. Experiments on multiple public datasets show that VisMemo preserves output quality under approximate reuse. On a real-world production trace, VisMemo increases the overall cache hit rate from 27.78% to 61.45% and reduces prefill latency by up to 48.3% at 8K input tokens.",
+        "identifiers": [
+          "SemanticScholar:f3b2ca6df36d0750271619f17690df1e4237c57b"
+        ],
+        "semantic_scholar_id": "f3b2ca6df36d0750271619f17690df1e4237c57b",
+        "canonical_id": "arXiv:2610.25136",
+        "arxiv_id": "2610.25136",
+        "authors": [
+          "Shu-Heng Gao",
+          "Yuan-Kai Fan",
+          "Jia-Qiang Ma",
+          "Jia-Wei Shao",
+          "Yong-Kun Li",
+          "Xue-Long Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.25717",
+      "identity_tokens": [
+        "id:SemanticScholar:b3b07878f1a26f81f7a0d52f427afd7aeb009a9e",
+        "id:arXiv:2610.25717",
+        "title:finegrained units flat decisions hierarchical microexpert pruning for mixtureofexperts models",
+        "url:https://arxiv.org/abs/2610.25717"
+      ],
+      "record": {
+        "title": "Fine-Grained Units, Flat Decisions: Hierarchical Micro-Expert Pruning for Mixture-of-Experts Models",
+        "source_url": "https://arxiv.org/abs/2610.25717",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Micro-expert pruning reduces the capacity of mixture-of-experts (MoE) models by removing coupled channels within routed experts. However, finer pruning granularity alone does not guarantee the preservation of downstream capabilities, as similar language-modeling perplexity can accompany substantially different task performance. We revisit micro-expert mask construction as two distinct decisions: allocating retained capacity across experts and selecting channels within that capacity. We propose UC-RAMP, a two-stage post-training pruning framework that explicitly separates these decisions. CAPE uses cross-domain calibration evidence to redistribute expert widths under an exact layer-wise budget, while RAMP refines channel composition at fixed widths through one-out, one-in exchanges guided by a channel-interaction surrogate. Across three MoE models at 25% and 50% routed-expert channel pruning, UC-RAMP achieves the highest ten-task mean accuracy among evaluated pruning methods in five of six settings. At 50% pruning, it outperforms the strongest evaluated baseline by 8.19, 3.96, and 6.14 percentage points across the three models, respectively. In a single-A100 deployment at 25% pruning, UC-RAMP reduces measured time to first token by 19.7--23.9% and time per output token by 20.2--22.3% relative to the unpruned model. The code is available at https://github.com/xzktx003/UC_RAMP.",
+        "identifiers": [
+          "SemanticScholar:b3b07878f1a26f81f7a0d52f427afd7aeb009a9e"
+        ],
+        "semantic_scholar_id": "b3b07878f1a26f81f7a0d52f427afd7aeb009a9e",
+        "canonical_id": "arXiv:2610.25717",
+        "arxiv_id": "2610.25717",
+        "authors": [
+          "Zu-Kang Xu",
+          "Xin-Pei Gao",
+          "Xing Hu",
+          "Zhe Jiang",
+          "Da-Wei Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.26083",
+      "identity_tokens": [
+        "id:SemanticScholar:a1e97e5f41f1deed6d8e7dfa9580577ed6d022a0",
+        "id:arXiv:2610.26083",
+        "title:mxlike tensor core for llm inference with npu integration via hardwaresoftware codesign exploration",
+        "url:https://arxiv.org/abs/2610.26083"
+      ],
+      "record": {
+        "title": "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
+        "source_url": "https://arxiv.org/abs/2610.26083",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-scaled quantization formats such as OCP Microscaling (MX) and NVFP4 have been widely adopted as efficient data formats for LLM inference. However, the design space of these formats spanned by shared scale, weight, and activation format combinations has not been systematically explored, and the joint accuracy-silicon tradeoff across this space remains uncharacterized, leaving the true Pareto-optimal configurations for NPU-based edge LLM deployment an open question. To bridge this gap, we conduct a joint hardware-software (HW-SW) co-design exploration of the above underexplored MX-like design space with three innovations. 1) We define and systematically characterize the full 8-bit scale format family within the MX-like design space, jointly with asymmetric weight-activation precision, identifying configurations that outperform the MX and NVFP4-like (without per-tensor scaling, PTS) baselines. 2) We build a per-format specialized MAC datapath template that enables fair hardware cost evaluation across the space. 3) We develop an automated co-design flow, integrated into the open-source SNAX NPU platform, that enables joint HW-SW analysis across the design space. Overall, our co-design exploration reveals that scale format matters only under aggressive FP4 quantization, yielding a case-oriented design guideline for both scale format and asymmetric weight-activation precision. We further identify UE5M3 as a favorable accuracy-hardware tradeoff for the FP4 regime, reducing perplexity degradation by up to 25.3% relative to the NVFP4-like baseline, at a cost of only +0.06% area and +0.49% power overhead.",
+        "identifiers": [
+          "SemanticScholar:a1e97e5f41f1deed6d8e7dfa9580577ed6d022a0"
+        ],
+        "semantic_scholar_id": "a1e97e5f41f1deed6d8e7dfa9580577ed6d022a0",
+        "canonical_id": "arXiv:2610.26083",
+        "arxiv_id": "2610.26083",
+        "authors": [
+          "Zi-Jun Zhao",
+          "Rui-Chu Ao",
+          "Stef Cuyckens",
+          "M. Verhelst",
+          "Chao Fang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.31309",
+      "identity_tokens": [
+        "id:SemanticScholar:20f4835e1b142e964bebb99d36c38dc478e05fab",
+        "id:arXiv:2610.31309",
+        "title:extreme compression of perlayer embeddings via crosslayer latent vector quantization",
+        "url:https://arxiv.org/abs/2610.31309"
+      ],
+      "record": {
+        "title": "Extreme Compression of Per-Layer Embeddings via Cross-Layer Latent Vector Quantization",
+        "source_url": "https://arxiv.org/abs/2610.31309",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling embedding capacity alongside Transformer computation is an emerging trend in language models. This trend makes high compression rates increasingly useful. Hence, we study extreme compression of Per-Layer Embeddings (PLE), which follow this trend and account for 35.2% of the parameters of Gemma 4 E4B. At such rates, conventional quantizers give each token-layer vector its own code of only a few bytes. We instead develop OPTIC (Output-Path-fitted, Token-shared Indexed Codes), which stores one quantized code tuple per token and decodes it at every layer with a layer-specific affine decoder. Codes and decoders are fitted to the PLE output path rather than to the stored vectors. At about $100\\times$ PLE compression of bfloat16 (BF16) E4B, OPTIC retains an aggregate 97.8% of the uncompressed model's performance across seven benchmarks, whereas product quantization, the strongest of six conventional baselines, retains 66.3%. At $594\\times$ and $1,002\\times$ PLE compression of BF16 E4B, OPTIC retains 90.5% and 84.1%. On the official E4B release with 4-bit linear weights and 16-bit activations (W4A16), OPTIC retains 96.9% at about $100\\times$ PLE compression. During inference at about $100\\times$ PLE compression, BF16 E4B uses 29.7% less GPU memory than with uncompressed PLE at the same key-value cache size, while running at most 0.40% slower.",
+        "identifiers": [
+          "SemanticScholar:20f4835e1b142e964bebb99d36c38dc478e05fab"
+        ],
+        "semantic_scholar_id": "20f4835e1b142e964bebb99d36c38dc478e05fab",
+        "canonical_id": "arXiv:2610.31309",
+        "arxiv_id": "2610.31309",
+        "authors": [
+          "Jia-Cheng Liu",
+          "Ya-Xin Luo",
+          "Xiao-Han Zhao",
+          "Peng Sun",
+          "Xin-Yi Shang",
+          "Jiacheng Cui",
+          "Yonina C. Eldar",
+          "Zhi-Qiang Shen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:365139f451ea4fd7999e10ae53474d7b23b9776025893e7d737e521a3d2018fa",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

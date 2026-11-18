@@ -1,0 +1,419 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a2e5913e4a5d511a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a2e5913e4a5d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.32492",
+    "arXiv:2610.37645",
+    "arXiv:2610.39380",
+    "arXiv:2610.39562"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "57044205ac60854d5105d8732a532ea7a061ff86",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T09:32:18.770195+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.32492",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37645",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39380",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39562",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping",
+      "source_url": "https://arxiv.org/abs/2610.32492",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models serve applications with diverse inference budgets, but training and maintaining separate models for each budget incurs substantial costs. Recent Looped Transformers enable flexible inference computation through parameter reuse, but maintaining strong performance across different inference budgets remains an open challenge. We introduce Accordion, a mixture-of-experts-based model that supports five inference budgets through fixed-prefix layer looping. Each budget follows a pre-defined execution path, while the minimum budget retains the unlooped model. Joint pretraining samples one budget per micro-batch and optimizes its next-token prediction loss without additional cross-budget consistency objectives. We further preserve these inference budgets through supervised fine-tuning and reinforcement learning, where parameter-group merging and budget-matched multi-teacher on-policy distillation integrate three domain experts into one model. After 3.6T tokens of pretraining, increasing inference depth improves Accordion-6B-A0.5B's five-category macro-average across 37 tasks by 3.01 percentage points, with the middle budget capturing 89% of this gain using half as many additional layer executions. The final model surpasses each domain expert on its corresponding task-and-budget average, while achieving strong instruction-following performance across all budgets and retaining depth-dependent gains in mathematical reasoning and code generation.",
+      "identifiers": [
+        "SemanticScholar:f1494c2b2a6e28c26d22f31251f8c171e76c741e"
+      ],
+      "semantic_scholar_id": "f1494c2b2a6e28c26d22f31251f8c171e76c741e",
+      "canonical_id": "arXiv:2610.32492",
+      "arxiv_id": "2610.32492",
+      "authors": [
+        "Yudong Zhang",
+        "Wei Ding",
+        "Kai-Li Zheng",
+        "Yu-Chen Ding",
+        "Zhen-Yu Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-State Linear Attention with Generalized Second-Order Routing",
+      "source_url": "https://arxiv.org/abs/2610.37645",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention plays a key role in long-sequence modeling, but its quadratic time complexity fundamentally limits the scaling of Large Language Models. Recently, Multi-State Linear Attention (MSLA) mechanisms have been proposed to make sequence modeling more efficient by splitting the context into segments and compressing each in its own memory state. MSLA aggregates the information extracted from each memory state using only the mean alignment between a query and each segment's keys, ignoring how the alignment is distributed within the segment. In order to model the relevance of a segment to a query more comprehensively and incorporate the variance of the alignment in the aggregation, we propose MERLIN (MomEnt Routing for multi-state LINear attention), a method that tracks the first and second moments of each segment's keys. Using the moments of keys, a query can recover both the mean and the variance of its alignment with each segment to perform a more content-aware aggregation of per-state readouts. Experiments on multi-state variants of Gated DeltaNet-1.3B and Mamba-2-780M show that MERLIN consistently outperforms existing aggregation methods on various long-context tasks. In particular, MERLIN outperforms baselines on RULER needle-in-a-haystack and long-context QA (+8.3% for Gated DeltaNet-1.3B and +7.0% for Mamba-2-780M) and diverse subtasks in LongBench (+13.5% and +12.0%). It even outperforms baselines that consume 4x more memory. MERLIN provides a simple and general routing mechanism for improving long-context capabilities of MSLA models.",
+      "identifiers": [
+        "SemanticScholar:905cdc9fddcfd7a29f8b64e40261cd97a12c1d2d"
+      ],
+      "semantic_scholar_id": "905cdc9fddcfd7a29f8b64e40261cd97a12c1d2d",
+      "canonical_id": "arXiv:2610.37645",
+      "arxiv_id": "2610.37645",
+      "authors": [
+        "H. Hwang",
+        "Sanghyuk Chun",
+        "Xin-Di Wu",
+        "O. Russakovsky",
+        "Zhi-Wei Deng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Learning to Formulate: Agentic Hardware-Software Co-Design of AI Infrastructure through Progressive Optimization and Verification",
+      "source_url": "https://arxiv.org/abs/2610.39380",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI infrastructure, the chips and software that train and serve AI models, is designed in layers. Layers make the system manageable, but they also fix which choices an optimizer can consider. Gains that need the chip and its software to change together are excluded before optimization begins: the formulation leaves them out. Language-model agents make it possible to revisit these boundaries, but an agent's proposal cannot show by itself that a design is correct or optimal. We present Formulaic, a flow that divides the work. The agent writes the formulation, a mathematical solver optimizes within it, and verification and measurement check its assumptions and results. The agent refines the problem step by step, from the computation graph toward the chip. Each step is a template: a family of programs with the conditions under which they are correct. Wall relaxation searches the chip by pricing the hardware limits that bind the software. This paper takes a first step, through separate studies rather than one end-to-end run. On NVIDIA GB10, templates the agent wrote run complete Qwen3-8B layers $1.075\\times$ faster than SGLang. In a simulated Ventus GPU study, joint design cuts the worst-scenario cycles of Qwen2.5-0.5B to 0.428 of the reference, against 0.934 for software alone. On a five-step GEMM refinement chain, reusing proofs makes checking $2.51\\times$ faster.",
+      "identifiers": [
+        "SemanticScholar:b19b0b08c501e09f00f772fb5dbf204b340f79c9"
+      ],
+      "semantic_scholar_id": "b19b0b08c501e09f00f772fb5dbf204b340f79c9",
+      "canonical_id": "arXiv:2610.39380",
+      "arxiv_id": "2610.39380",
+      "authors": [
+        "Yi Ding",
+        "Li Shang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.39562",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-turn conversations with multimodal large language models (MLLMs) reuse input context, but long multimodal inputs increase time to first token (TTFT). Query-aware hard pruning reduces prefill tokens but permanently excludes information that later questions may require. We propose Raincheck, a framework for deferred multimodal prefill that decouples initial token selection from later information availability. An existing pruning method selects tokens for initial prefill; Raincheck preserves and progressively prefills unselected tokens in source order using unused compute capacity during decode. Unfinished prefill continues after answer return during available scheduling gaps. Attention visibility control and affine state mapping enable context updates after generation begins in full-attention and hybrid recurrent models. Prefill-decode fusion reduces repeated weight reads. We evaluate Qwen3-VL-8B and Qwen3.5-9B with 30% initial multimodal-token retention. Across both models and four pruning methods, Raincheck recovers on average 77.7% and 60.4% of the quality lost to matched hard pruning on MultiVerse and ConvBench, respectively. On MultiVerse, the SGLang implementation reduces mean first-turn TTFT by up to 24.1% relative to full prefill, with less than 0.5% increase in mean time per output token (TPOT).",
+      "identifiers": [
+        "SemanticScholar:dd47522b63781ddc9d8ea2d1f6c1698dbe77a676"
+      ],
+      "semantic_scholar_id": "dd47522b63781ddc9d8ea2d1f6c1698dbe77a676",
+      "canonical_id": "arXiv:2610.39562",
+      "arxiv_id": "2610.39562",
+      "authors": [
+        "Wen-Jie Huang",
+        "Jun Zhang",
+        "Hongyaoxing Gu",
+        "Hao-Yang Huang",
+        "Tian-Qi Xu",
+        "Xin-Yue Hao",
+        "Xin-Yi Hu",
+        "Xin-Le Du",
+        "Jun Dai",
+        "Shuang Ge",
+        "Chen-Ran Lei",
+        "Yue Li",
+        "Ming-Cheng Wan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.32492",
+      "identity_tokens": [
+        "id:SemanticScholar:f1494c2b2a6e28c26d22f31251f8c171e76c741e",
+        "id:arXiv:2610.32492",
+        "title:accordion elasticdepth inference via fixedprefix layer looping",
+        "url:https://arxiv.org/abs/2610.32492"
+      ],
+      "record": {
+        "title": "Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping",
+        "source_url": "https://arxiv.org/abs/2610.32492",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models serve applications with diverse inference budgets, but training and maintaining separate models for each budget incurs substantial costs. Recent Looped Transformers enable flexible inference computation through parameter reuse, but maintaining strong performance across different inference budgets remains an open challenge. We introduce Accordion, a mixture-of-experts-based model that supports five inference budgets through fixed-prefix layer looping. Each budget follows a pre-defined execution path, while the minimum budget retains the unlooped model. Joint pretraining samples one budget per micro-batch and optimizes its next-token prediction loss without additional cross-budget consistency objectives. We further preserve these inference budgets through supervised fine-tuning and reinforcement learning, where parameter-group merging and budget-matched multi-teacher on-policy distillation integrate three domain experts into one model. After 3.6T tokens of pretraining, increasing inference depth improves Accordion-6B-A0.5B's five-category macro-average across 37 tasks by 3.01 percentage points, with the middle budget capturing 89% of this gain using half as many additional layer executions. The final model surpasses each domain expert on its corresponding task-and-budget average, while achieving strong instruction-following performance across all budgets and retaining depth-dependent gains in mathematical reasoning and code generation.",
+        "identifiers": [
+          "SemanticScholar:f1494c2b2a6e28c26d22f31251f8c171e76c741e"
+        ],
+        "semantic_scholar_id": "f1494c2b2a6e28c26d22f31251f8c171e76c741e",
+        "canonical_id": "arXiv:2610.32492",
+        "arxiv_id": "2610.32492",
+        "authors": [
+          "Yudong Zhang",
+          "Wei Ding",
+          "Kai-Li Zheng",
+          "Yu-Chen Ding",
+          "Zhen-Yu Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37645",
+      "identity_tokens": [
+        "id:SemanticScholar:905cdc9fddcfd7a29f8b64e40261cd97a12c1d2d",
+        "id:arXiv:2610.37645",
+        "title:multistate linear attention with generalized secondorder routing",
+        "url:https://arxiv.org/abs/2610.37645"
+      ],
+      "record": {
+        "title": "Multi-State Linear Attention with Generalized Second-Order Routing",
+        "source_url": "https://arxiv.org/abs/2610.37645",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-attention plays a key role in long-sequence modeling, but its quadratic time complexity fundamentally limits the scaling of Large Language Models. Recently, Multi-State Linear Attention (MSLA) mechanisms have been proposed to make sequence modeling more efficient by splitting the context into segments and compressing each in its own memory state. MSLA aggregates the information extracted from each memory state using only the mean alignment between a query and each segment's keys, ignoring how the alignment is distributed within the segment. In order to model the relevance of a segment to a query more comprehensively and incorporate the variance of the alignment in the aggregation, we propose MERLIN (MomEnt Routing for multi-state LINear attention), a method that tracks the first and second moments of each segment's keys. Using the moments of keys, a query can recover both the mean and the variance of its alignment with each segment to perform a more content-aware aggregation of per-state readouts. Experiments on multi-state variants of Gated DeltaNet-1.3B and Mamba-2-780M show that MERLIN consistently outperforms existing aggregation methods on various long-context tasks. In particular, MERLIN outperforms baselines on RULER needle-in-a-haystack and long-context QA (+8.3% for Gated DeltaNet-1.3B and +7.0% for Mamba-2-780M) and diverse subtasks in LongBench (+13.5% and +12.0%). It even outperforms baselines that consume 4x more memory. MERLIN provides a simple and general routing mechanism for improving long-context capabilities of MSLA models.",
+        "identifiers": [
+          "SemanticScholar:905cdc9fddcfd7a29f8b64e40261cd97a12c1d2d"
+        ],
+        "semantic_scholar_id": "905cdc9fddcfd7a29f8b64e40261cd97a12c1d2d",
+        "canonical_id": "arXiv:2610.37645",
+        "arxiv_id": "2610.37645",
+        "authors": [
+          "H. Hwang",
+          "Sanghyuk Chun",
+          "Xin-Di Wu",
+          "O. Russakovsky",
+          "Zhi-Wei Deng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39380",
+      "identity_tokens": [
+        "id:SemanticScholar:b19b0b08c501e09f00f772fb5dbf204b340f79c9",
+        "id:arXiv:2610.39380",
+        "title:learning to formulate agentic hardwaresoftware codesign of ai infrastructure through progressive optimization and verification",
+        "url:https://arxiv.org/abs/2610.39380"
+      ],
+      "record": {
+        "title": "Learning to Formulate: Agentic Hardware-Software Co-Design of AI Infrastructure through Progressive Optimization and Verification",
+        "source_url": "https://arxiv.org/abs/2610.39380",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI infrastructure, the chips and software that train and serve AI models, is designed in layers. Layers make the system manageable, but they also fix which choices an optimizer can consider. Gains that need the chip and its software to change together are excluded before optimization begins: the formulation leaves them out. Language-model agents make it possible to revisit these boundaries, but an agent's proposal cannot show by itself that a design is correct or optimal. We present Formulaic, a flow that divides the work. The agent writes the formulation, a mathematical solver optimizes within it, and verification and measurement check its assumptions and results. The agent refines the problem step by step, from the computation graph toward the chip. Each step is a template: a family of programs with the conditions under which they are correct. Wall relaxation searches the chip by pricing the hardware limits that bind the software. This paper takes a first step, through separate studies rather than one end-to-end run. On NVIDIA GB10, templates the agent wrote run complete Qwen3-8B layers $1.075\\times$ faster than SGLang. In a simulated Ventus GPU study, joint design cuts the worst-scenario cycles of Qwen2.5-0.5B to 0.428 of the reference, against 0.934 for software alone. On a five-step GEMM refinement chain, reusing proofs makes checking $2.51\\times$ faster.",
+        "identifiers": [
+          "SemanticScholar:b19b0b08c501e09f00f772fb5dbf204b340f79c9"
+        ],
+        "semantic_scholar_id": "b19b0b08c501e09f00f772fb5dbf204b340f79c9",
+        "canonical_id": "arXiv:2610.39380",
+        "arxiv_id": "2610.39380",
+        "authors": [
+          "Yi Ding",
+          "Li Shang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39562",
+      "identity_tokens": [
+        "id:SemanticScholar:dd47522b63781ddc9d8ea2d1f6c1698dbe77a676",
+        "id:arXiv:2610.39562",
+        "title:raincheck deferred multimodal prefill for efficient multiturn mllm inference",
+        "url:https://arxiv.org/abs/2610.39562"
+      ],
+      "record": {
+        "title": "Raincheck: Deferred Multimodal Prefill for Efficient Multi-Turn MLLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.39562",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-turn conversations with multimodal large language models (MLLMs) reuse input context, but long multimodal inputs increase time to first token (TTFT). Query-aware hard pruning reduces prefill tokens but permanently excludes information that later questions may require. We propose Raincheck, a framework for deferred multimodal prefill that decouples initial token selection from later information availability. An existing pruning method selects tokens for initial prefill; Raincheck preserves and progressively prefills unselected tokens in source order using unused compute capacity during decode. Unfinished prefill continues after answer return during available scheduling gaps. Attention visibility control and affine state mapping enable context updates after generation begins in full-attention and hybrid recurrent models. Prefill-decode fusion reduces repeated weight reads. We evaluate Qwen3-VL-8B and Qwen3.5-9B with 30% initial multimodal-token retention. Across both models and four pruning methods, Raincheck recovers on average 77.7% and 60.4% of the quality lost to matched hard pruning on MultiVerse and ConvBench, respectively. On MultiVerse, the SGLang implementation reduces mean first-turn TTFT by up to 24.1% relative to full prefill, with less than 0.5% increase in mean time per output token (TPOT).",
+        "identifiers": [
+          "SemanticScholar:dd47522b63781ddc9d8ea2d1f6c1698dbe77a676"
+        ],
+        "semantic_scholar_id": "dd47522b63781ddc9d8ea2d1f6c1698dbe77a676",
+        "canonical_id": "arXiv:2610.39562",
+        "arxiv_id": "2610.39562",
+        "authors": [
+          "Wen-Jie Huang",
+          "Jun Zhang",
+          "Hongyaoxing Gu",
+          "Hao-Yang Huang",
+          "Tian-Qi Xu",
+          "Xin-Yue Hao",
+          "Xin-Yi Hu",
+          "Xin-Le Du",
+          "Jun Dai",
+          "Shuang Ge",
+          "Chen-Ran Lei",
+          "Yue Li",
+          "Ming-Cheng Wan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4ccf176f3a7d9e5750442b9d866c7dee71cfad732d929424960d7218adfd5a16",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
