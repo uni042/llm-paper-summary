@@ -1,0 +1,917 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ccf1165e8665305e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ccf1165e8665",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.3389/fcomp.2026.1873627",
+    "arXiv:2602.02071",
+    "arXiv:2605.05699",
+    "arXiv:2606.07362",
+    "arXiv:2606.31580",
+    "arXiv:2607.11368",
+    "arXiv:2607.14630",
+    "arXiv:2607.22465",
+    "arXiv:2607.29575",
+    "arXiv:2608.00914",
+    "arXiv:2608.02947",
+    "arXiv:2608.21142",
+    "arXiv:2608.27514",
+    "arXiv:2609.05916"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 14,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "dea3d46e833c1d64d8ffee579717c23c5e10e21b",
+  "raw_search_result_count": 14,
+  "retrieval_duplicate_filtered_count": 5,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 14,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 5,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T03:53:23.448336+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.3389/fcomp.2026.1873627",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02071",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2602.02071"
+    },
+    {
+      "requested_id": "arXiv:2605.05699",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.07362",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.31580",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.31580"
+    },
+    {
+      "requested_id": "arXiv:2607.11368",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.11368"
+    },
+    {
+      "requested_id": "arXiv:2607.14630",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.14630"
+    },
+    {
+      "requested_id": "arXiv:2607.22465",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.29575",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.00914",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:10c26dc693527bdd77d9539b835121c8b21c7bd8"
+    },
+    {
+      "requested_id": "arXiv:2608.02947",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.21142",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.27514",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.05916",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Trajectory-Level Speculative Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2608.27514",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based language models (dLLMs) enable parallel token generation through iterative denoising, but existing decoding strategies collapse to single-token generation under low confidence, severely limiting throughput. Unlike autoregressive models where speculative decoding operates on token sequences in a fixed left-to-right order, dLLMs require speculating over denoising trajectories-sequences of multi-token updates with explicit positions and unmasking orders. We develop a trajectory-level speculative framework that constructs draft denoising trajectories via confidence-stratified tree exploration and verifies them through blockwise parallel evaluation with bidirectional attention masking. Our method further introduces inter-block speculation, exploiting diffusion models'bidirectional structure to perform cross-block lookahead. We formally characterize when this approach is exact and identify trajectory drift as the fundamental cost of increased parallelism. Building on Fast-dLLM's dual-cache infrastructure, our framework reduces denoising iterations by 30-40% and increases tokens-per-step from 2.6 to 4.3, achieving 7-14x speedup over vanilla dLLMs and 1.3x over Fast-dLLM with less than 1% accuracy change across reasoning and code benchmarks.",
+      "identifiers": [
+        "SemanticScholar:dd7e939d7b5719682ab870794a025072cf39e506"
+      ],
+      "semantic_scholar_id": "dd7e939d7b5719682ab870794a025072cf39e506",
+      "canonical_id": "arXiv:2608.27514",
+      "arxiv_id": "2608.27514",
+      "doi": "10.48550/arXiv.2608.27514",
+      "authors": [
+        "Tian-Xiang Pan",
+        "Baitao Gong",
+        "Mo Guang",
+        "Hong-Wei Yong",
+        "Tian-Peng Jiang",
+        "Ya-Qian Li",
+        "Zhenge Cao",
+        "Kai-Wen Long"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2605.05699",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache quantization is framed as a quality--latency trade-off. We show it is \\emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \\texttt{Cache} subclass, runs \\emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\\%$ through $1$K), with $3\\times$ persistent memory compression and quality preserved ($\\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\\dPPL$ Gemma). The kernel's $\\sim\\!25$\\,ns/vec overhead is below the bandwidth savings from $3\\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\\dPPL = +7975 \\to +638.6$, $12.5\\times$ reduction) at $182$\\,GFLOPS / $D{=}128$. Supporting findings: $\\SRFT$ and $\\SRHT$ are statistically indistinguishable for KV quality (we pick $\\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\\lambda$ without SRFT lowers calibration MSE $84.9\\%$ vs $50.3\\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$.",
+      "identifiers": [
+        "SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775"
+      ],
+      "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
+      "canonical_id": "arXiv:2605.05699",
+      "arxiv_id": "2605.05699",
+      "doi": "10.48550/arXiv.2605.05699",
+      "authors": [
+        "Mohamed Amine Bergach"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Breaking the Ice: Analyzing Cold Start Latency in vLLM",
+      "source_url": "https://arxiv.org/abs/2606.07362",
+      "year": 2026,
+      "published": "2026-06-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As scalable inference services become popular, the cold start latency of an inference engine becomes important. Today, vLLM has evolved into the de-facto inference engine of choice for many inference workloads. Although popular, due to its complexity and rapid evolution, there has not been a systematic study on the startup latency of its engine. With major architectural innovations under it (e.g., the V1 API, introduction of torch.compile), in this paper, we present the first detailed performance characterization of vLLM startup latency. We break down the startup process into six foundational steps and demonstrate that this process is predominantly CPU-bound. Each step exhibits consistent and interpretable scaling trends with respect to model- and system-level parameters, enabling fine-grained attribution of latency sources. Building on these insights, we develop a lightweight analytical model that accurately predicts vLLM's startup latency for a given hardware configuration, providing actionable guidance for resource planning in large-scale inference environments. All our benchmarking datasets, analysis tools, and prediction scripts are open-sourced at https://github.com/upb-cn/vllm-startup-profiler",
+      "identifiers": [
+        "SemanticScholar:9ffeac68556dc75dbb740968af022fda255e16f5"
+      ],
+      "semantic_scholar_id": "9ffeac68556dc75dbb740968af022fda255e16f5",
+      "canonical_id": "arXiv:2606.07362",
+      "arxiv_id": "2606.07362",
+      "doi": "10.48550/arXiv.2606.07362",
+      "authors": [
+        "Huzaifa Shaaban Kabakibo",
+        "Animesh Trivedi",
+        "Lin Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 166,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory",
+      "source_url": "https://doi.org/10.3389/fcomp.2026.1873627",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "Frontiers of Computer Science",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n \n Large language model (LLM) inference systems operate under strict latency service-level objectives (SLOs): a deadline on the first output token (TTFT) and a maximum inter-token interval (TBT). Real-time (RT) scheduling theory provides formal schedulability tests, worst-case response-time (WCRT) bounds, and admission control, yet existing LLM schedulers ignore these tools entirely.\n \n \n \n \n We present\n Chronos\n , the first schedulability framework for LLM inference grounded in RT theory. A two-phase task model maps each request to a sporadic prefill job with a TTFT deadline and a decode task whose iterations are bounded by the TBT SLO. From this model we derive a closed-form WCRT bound for TTFT, a TBT capacity condition, a prefill–decode interference analysis, and a sound admission control algorithm proved correct analytically. We validate Chronos with a discrete-event simulator parameterised by roofline-model estimates for a 7B-parameter model on an A100 GPU. Each experiment replays 50,000 requests sub-sampled from a one-week, 44-million-request Azure LLM Inference production trace.\n \n \n \n \n At 10× nominal load, where admission-uncontrolled schedulers reach 99.4% TTFT miss rates, Chronos maintains zero misses while admitting 53.9% of arrivals. At 5× load it admits 88.9% of requests with P99 TTFT of 161 ms—more than 2× below uncontrolled baselines. No admitted request ever misses its TTFT or TBT deadline.\n \n \n \n These results demonstrate that classical RT scheduling constructs translate directly and effectively to LLM inference, providing formal, verifiable latency guarantees that heuristic schedulers cannot offer.\n",
+      "identifiers": [
+        "SemanticScholar:16d17822c15aafe29103ed7af439768e12ea5599"
+      ],
+      "semantic_scholar_id": "16d17822c15aafe29103ed7af439768e12ea5599",
+      "doi": "10.3389/fcomp.2026.1873627",
+      "canonical_id": "DOI:10.3389/fcomp.2026.1873627",
+      "authors": [
+        "Amine Marref",
+        "Khaled Tarmissi",
+        "Hassene Chaibi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+      "source_url": "https://arxiv.org/abs/2607.22465",
+      "year": 2026,
+      "published": "2026-07-24",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern enterprise agent deployments consist of a heterogeneous pool of large language models (LLMs) having diverse capabilities and cost. Existing model routing strategies optimize the quality-cost trade-off, while providing request-level static decisions. More recent solutions address agentic routing as a task-level selection with a serial verifier based router feedback loop. However, their fixed verifier suitable for homogeneous workloads may not generalize to heterogeneous batches of agentic tasks (example: coding, general conversational). Additionally, due to the verifier placement in the critical path of the loop, serving quality may be affected during multiple concurrent requests routing. To mitigate these issues, we present ORACLE. It is a concurrency-aware online routing mechanism that aligns adaptive routing with adaptive verification for feedback. ORACLE acts as a training-free drop-in'feedback loop'on top of any model-selection policy to first classify the task type and then dynamically assigns a task-appropriate verifier. Further, we develop a delayed feedback strategy for concurrent requests that largely removes verifier latency from the dispatch critical path. We then present a post-routing dispatch scheduler, namely DISC. DISC reserves each task's peak KV footprint at admission and dispatches to an alternate backend when the reward gain from reduced wait exceeds the reward loss from lower accuracy. Extensive evaluation on SWE-bench, tau2-bench, and Terminal-Bench 2.0 shows that ORACLE improves the accuracy-cost frontier by up to 7 percentage points over state-of-the-art routing baselines, while ORACLE with DISC improves program throughput by up to 1.8x. To facilitate reproducibility and support future development, we open-source the code-base of ORACLE at https://github.com/ORACLE-org/ORACLE.",
+      "identifiers": [
+        "SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641"
+      ],
+      "semantic_scholar_id": "a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+      "canonical_id": "arXiv:2607.22465",
+      "arxiv_id": "2607.22465",
+      "authors": [
+        "Ritik Raj",
+        "Souvik Kundu",
+        "Dheemanth Joshi",
+        "Tushar Krishna"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 117,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.29575",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving commonly increases batch size to improve throughput, but performance eventually reaches a deployment-dependent plateau beyond which larger batches provide marginal gains while increasing latency and GPU memory consumption. Previous studies have attributed this behavior to HBM/DRAM bandwidth limitations, but the underlying causes have primarily been supported by conceptual arguments or high-level performance observations. As our first contribution, we present a detailed GPU characterization using hardware profiling techniques, demonstrating that throughput saturation originates in the attention kernels during the decode phase. Specifically, we show that their nearly constant arithmetic intensity as active-context lengths increases -not merely larger batch sizes- drives DRAM-bandwidth saturation, while the achieved compute throughput remains far below the hardware limit. Building on this analysis, we present the Batching Configuration Advisor (BCA), which selects the highest-throughput batching configuration satisfying a target latency constraint and identifies up to 55 GB of GPU memory allocation that can be avoided for the evaluated OPT models with minimal throughput loss. To enable these recommendations, we introduce SLIM (Saturation-Aware Lightweight Performance Model), a semi-analytical model that predicts LLM inference throughput and latency from analytical formulations of Transformer computation and memory traffic. Across the evaluated scenarios, SLIM outperforms representative performance-modeling baselines while successfully generalizing to previously unseen operating conditions.",
+      "identifiers": [
+        "SemanticScholar:8f1a03fc8beeacb89815615b2e1ec1513c61ec76"
+      ],
+      "semantic_scholar_id": "8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
+      "canonical_id": "arXiv:2607.29575",
+      "arxiv_id": "2607.29575",
+      "doi": "10.48550/arXiv.2607.29575",
+      "authors": [
+        "Pol G. Recasens",
+        "F. Agulló",
+        "Yue Zhu",
+        "Chen Wang",
+        "Jordi Torres",
+        "J. L. Berral"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ATFlash: Per-RoPE-Wavelength Attention Windows for Compute/Memory-Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2608.02947",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The attention score with rotary position embeddings (RoPE) decomposes exactly into a sum over its 2D-rotation frequency pairs, and each pair's wavelength limits how far it can discriminate position. Aligned with this structure, we propose the per-RoPE-wavelength distance window: it prunes the query--key inner-product terms beyond a wavelength-proportional distance. Unlike a sliding window, every key remains reachable, at least through the low-frequency pairs. The reduction rate is input-independent, with a closed form logarithmic in the sequence length $N$, in contrast to dynamic-sparse methods like MInference. Such token-level selection is orthogonal to our frequency-level pruning. The window can therefore be applied on top of those methods. On Qwen2.5-0.5B and Llama-3.2-3B, the window prunes 37--48\\% of the query--key inner-product terms within each model's native context length. Relative to full attention, the top-1 match rate stays at 96--98\\% and the mean output-distribution KL at the $10^{-3}$-nat level on LongBench-v2 contexts. We examine absolute scores on long-context benchmarks such as RULER, OpenAI-MRCR, LongCodeQA, and $\\infty$Bench: they are broadly preserved. We implement the window as a slice of the query--key contraction axis, leaving the online-softmax recurrences untouched, and port it with minimal diffs into the released FlashAttention-4 prefill and FlashInfer decode. On RTX PRO 6000 with Llama, both ports outpace stock with gains growing with context length, up to $1.29\\times$ at 128K. End to end on Qwen2.5-7B-1M, with 57\\% of the inner-product terms pruned, the speedup reaches $1.31\\times$ at a 1M-token context.",
+      "identifiers": [
+        "SemanticScholar:a6bd02cb07408050edab6a2c5b81e9e4853e5ba7"
+      ],
+      "semantic_scholar_id": "a6bd02cb07408050edab6a2c5b81e9e4853e5ba7",
+      "canonical_id": "arXiv:2608.02947",
+      "arxiv_id": "2608.02947",
+      "doi": "10.48550/arXiv.2608.02947",
+      "authors": [
+        "Shun-ichiro Hayashi",
+        "Daichi Mukunoki",
+        "Tetsuya Hoshino",
+        "Takahiro Katagiri"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.21142",
+      "year": 2026,
+      "published": "2026-08-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning reduces the size and inference cost of large language models (LLMs) by removing weight columns, but the resulting output error can degrade accuracy. Existing training-free compensation methods use an additive bias or a single orthogonal rotation on the output side of the retained weight. These corrections leave its input singular frame unchanged and therefore limit how the retained weight can adapt after column removal. We propose COEC (Calibrated Orthogonal-Equivalence Compensation), a training-free compensation framework that applies alternating left and right orthogonal rotations to the retained weight. The right rotation is optimized on a reduced Stiefel manifold, while singular values are rescaled using generalized cross-validation to select the regularization strength for each layer. COEC further tempers the calibration Gram matrix to reduce the dominance of high-energy activation directions and introduces an alignment penalty that preserves the geometric relation between adjacent attention projections.All components use second-order statistics from a small calibration set and require neither backpropagation through the LLM nor retraining of the model parameters. COEC is independent of the column pruning criterion and can be applied to multiple structured pruning methods. Experiments on the Llama-3, Llama-3.1, and Qwen2.5 model families across multiple structured sparsity levels show that COEC improves perplexity on every model and zero-shot accuracy in most settings over existing compensation methods, with larger gains at higher sparsity. These results show that post-pruning compensation can recover part of the performance lost to column removal.",
+      "identifiers": [
+        "SemanticScholar:8022ebe2ac0fe0f8687513c475d251914383a454"
+      ],
+      "semantic_scholar_id": "8022ebe2ac0fe0f8687513c475d251914383a454",
+      "canonical_id": "arXiv:2608.21142",
+      "arxiv_id": "2608.21142",
+      "doi": "10.48550/arXiv.2608.21142",
+      "authors": [
+        "Peiqi Yu",
+        "Nam Ling",
+        "Wei Wang",
+        "Wei Jiang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 89,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STAR-Pro: Stage-Wise Token Adaptive Reduction with Progressive Refinement for Efficient Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.05916",
+      "year": 2026,
+      "published": "2026-09-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) achieve strong multimodal understanding, but the hundreds to thousands of visual tokens they process impose substantial computational overhead, motivating training-free visual token pruning. In this work, we conduct two complementary analyses of visual token pruning. First, we measure the feature-space coverage of tokens retained before cross-modal fusion and find that aggressive pruning discards substantial visual information. Second, we track text-to-visual attention across decoder layers and find that the visual tokens considered important change substantially with depth, making one-shot pruning decisions unreliable. Together, these findings show that effective pruning should preserve broad visual coverage before fusion and progressively refine the retained tokens as cross-modal evidence evolves during fusion. We therefore propose STAR-Pro (STage-Wise Adaptive Token Reduction with Progressive Refinement), a training-free two-stage framework. Its Adaptive Stage applies pivoted QR to construct an over-budget feature-coverage candidate pool, while its Progressive Stage uses evolving text-to-visual attention at selected decoder layers to prune a nested survivor set under a target layer-average token budget. Extensive experiments across seven LVLMs spanning multiple architectures and 18 image and video benchmarks demonstrate the effectiveness of STAR-Pro under aggressive pruning. On LLaVA-Video-7B, STAR-Pro reduces visual tokens by 90.5%, retains 92.7% of baseline performance, and achieves a $2.24\\times$ measured inference speedup. Code is available at https://github.com/EasonAI-5589/starpro.",
+      "identifiers": [
+        "SemanticScholar:9da551017279fdf7843c278fd979e803cc9cf90f"
+      ],
+      "semantic_scholar_id": "9da551017279fdf7843c278fd979e803cc9cf90f",
+      "canonical_id": "arXiv:2609.05916",
+      "arxiv_id": "2609.05916",
+      "doi": "10.48550/arXiv.2609.05916",
+      "authors": [
+        "Yi-Chen Guo",
+        "Ting-Hao Wang",
+        "Qi-Zhe Zhang",
+        "Ling-Bei Meng",
+        "Yuan Zhang",
+        "Jia-Jun Cao",
+        "Hao Jiang",
+        "Chen-Wei Wu",
+        "Ji-Xin Wu",
+        "Si-Xiang Chen",
+        "Tao Luo",
+        "Hong-Yang Cheng",
+        "Kai Tang",
+        "Chen-Xia Li",
+        "Ren-Yuan Li",
+        "Xian-De Huang",
+        "Wen-Ya Wang",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 74,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.27514",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.27514",
+        "id:SemanticScholar:dd7e939d7b5719682ab870794a025072cf39e506",
+        "id:arXiv:2608.27514",
+        "title:trajectorylevel speculative decoding for diffusion language models",
+        "url:https://arxiv.org/abs/2608.27514"
+      ],
+      "record": {
+        "title": "Trajectory-Level Speculative Decoding for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2608.27514",
+        "year": 2026,
+        "published": "2026-08-27",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based language models (dLLMs) enable parallel token generation through iterative denoising, but existing decoding strategies collapse to single-token generation under low confidence, severely limiting throughput. Unlike autoregressive models where speculative decoding operates on token sequences in a fixed left-to-right order, dLLMs require speculating over denoising trajectories-sequences of multi-token updates with explicit positions and unmasking orders. We develop a trajectory-level speculative framework that constructs draft denoising trajectories via confidence-stratified tree exploration and verifies them through blockwise parallel evaluation with bidirectional attention masking. Our method further introduces inter-block speculation, exploiting diffusion models'bidirectional structure to perform cross-block lookahead. We formally characterize when this approach is exact and identify trajectory drift as the fundamental cost of increased parallelism. Building on Fast-dLLM's dual-cache infrastructure, our framework reduces denoising iterations by 30-40% and increases tokens-per-step from 2.6 to 4.3, achieving 7-14x speedup over vanilla dLLMs and 1.3x over Fast-dLLM with less than 1% accuracy change across reasoning and code benchmarks.",
+        "identifiers": [
+          "SemanticScholar:dd7e939d7b5719682ab870794a025072cf39e506"
+        ],
+        "semantic_scholar_id": "dd7e939d7b5719682ab870794a025072cf39e506",
+        "canonical_id": "arXiv:2608.27514",
+        "arxiv_id": "2608.27514",
+        "doi": "10.48550/arXiv.2608.27514",
+        "authors": [
+          "Tian-Xiang Pan",
+          "Baitao Gong",
+          "Mo Guang",
+          "Hong-Wei Yong",
+          "Tian-Peng Jiang",
+          "Ya-Qian Li",
+          "Zhenge Cao",
+          "Kai-Wen Long"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05699",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.05699",
+        "id:SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775",
+        "id:arXiv:2605.05699",
+        "title:when quantization is free an int4 kv cache that outruns fp16 on apple silicon",
+        "url:https://arxiv.org/abs/2605.05699"
+      ],
+      "record": {
+        "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+        "source_url": "https://arxiv.org/abs/2605.05699",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache quantization is framed as a quality--latency trade-off. We show it is \\emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \\texttt{Cache} subclass, runs \\emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\\%$ through $1$K), with $3\\times$ persistent memory compression and quality preserved ($\\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\\dPPL$ Gemma). The kernel's $\\sim\\!25$\\,ns/vec overhead is below the bandwidth savings from $3\\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\\dPPL = +7975 \\to +638.6$, $12.5\\times$ reduction) at $182$\\,GFLOPS / $D{=}128$. Supporting findings: $\\SRFT$ and $\\SRHT$ are statistically indistinguishable for KV quality (we pick $\\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\\lambda$ without SRFT lowers calibration MSE $84.9\\%$ vs $50.3\\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$.",
+        "identifiers": [
+          "SemanticScholar:06ac06a648b9f5accd03247abf69de808ee28775"
+        ],
+        "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
+        "canonical_id": "arXiv:2605.05699",
+        "arxiv_id": "2605.05699",
+        "doi": "10.48550/arXiv.2605.05699",
+        "authors": [
+          "Mohamed Amine Bergach"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 195,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.07362",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.07362",
+        "id:SemanticScholar:9ffeac68556dc75dbb740968af022fda255e16f5",
+        "id:arXiv:2606.07362",
+        "title:breaking the ice analyzing cold start latency in vllm",
+        "url:https://arxiv.org/abs/2606.07362"
+      ],
+      "record": {
+        "title": "Breaking the Ice: Analyzing Cold Start Latency in vLLM",
+        "source_url": "https://arxiv.org/abs/2606.07362",
+        "year": 2026,
+        "published": "2026-06-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As scalable inference services become popular, the cold start latency of an inference engine becomes important. Today, vLLM has evolved into the de-facto inference engine of choice for many inference workloads. Although popular, due to its complexity and rapid evolution, there has not been a systematic study on the startup latency of its engine. With major architectural innovations under it (e.g., the V1 API, introduction of torch.compile), in this paper, we present the first detailed performance characterization of vLLM startup latency. We break down the startup process into six foundational steps and demonstrate that this process is predominantly CPU-bound. Each step exhibits consistent and interpretable scaling trends with respect to model- and system-level parameters, enabling fine-grained attribution of latency sources. Building on these insights, we develop a lightweight analytical model that accurately predicts vLLM's startup latency for a given hardware configuration, providing actionable guidance for resource planning in large-scale inference environments. All our benchmarking datasets, analysis tools, and prediction scripts are open-sourced at https://github.com/upb-cn/vllm-startup-profiler",
+        "identifiers": [
+          "SemanticScholar:9ffeac68556dc75dbb740968af022fda255e16f5"
+        ],
+        "semantic_scholar_id": "9ffeac68556dc75dbb740968af022fda255e16f5",
+        "canonical_id": "arXiv:2606.07362",
+        "arxiv_id": "2606.07362",
+        "doi": "10.48550/arXiv.2606.07362",
+        "authors": [
+          "Huzaifa Shaaban Kabakibo",
+          "Animesh Trivedi",
+          "Lin Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 166,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3389/fcomp.2026.1873627",
+      "identity_tokens": [
+        "id:DOI:10.3389/fcomp.2026.1873627",
+        "id:SemanticScholar:16d17822c15aafe29103ed7af439768e12ea5599",
+        "title:formal schedulability analysis for llm inference ttft and tbt deadline guarantees via responsetime theory",
+        "url:https://doi.org/10.3389/fcomp.2026.1873627"
+      ],
+      "record": {
+        "title": "Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory",
+        "source_url": "https://doi.org/10.3389/fcomp.2026.1873627",
+        "year": 2026,
+        "published": "2026-06-29",
+        "venue": "Frontiers of Computer Science",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "\n \n Large language model (LLM) inference systems operate under strict latency service-level objectives (SLOs): a deadline on the first output token (TTFT) and a maximum inter-token interval (TBT). Real-time (RT) scheduling theory provides formal schedulability tests, worst-case response-time (WCRT) bounds, and admission control, yet existing LLM schedulers ignore these tools entirely.\n \n \n \n \n We present\n Chronos\n , the first schedulability framework for LLM inference grounded in RT theory. A two-phase task model maps each request to a sporadic prefill job with a TTFT deadline and a decode task whose iterations are bounded by the TBT SLO. From this model we derive a closed-form WCRT bound for TTFT, a TBT capacity condition, a prefill–decode interference analysis, and a sound admission control algorithm proved correct analytically. We validate Chronos with a discrete-event simulator parameterised by roofline-model estimates for a 7B-parameter model on an A100 GPU. Each experiment replays 50,000 requests sub-sampled from a one-week, 44-million-request Azure LLM Inference production trace.\n \n \n \n \n At 10× nominal load, where admission-uncontrolled schedulers reach 99.4% TTFT miss rates, Chronos maintains zero misses while admitting 53.9% of arrivals. At 5× load it admits 88.9% of requests with P99 TTFT of 161 ms—more than 2× below uncontrolled baselines. No admitted request ever misses its TTFT or TBT deadline.\n \n \n \n These results demonstrate that classical RT scheduling constructs translate directly and effectively to LLM inference, providing formal, verifiable latency guarantees that heuristic schedulers cannot offer.\n",
+        "identifiers": [
+          "SemanticScholar:16d17822c15aafe29103ed7af439768e12ea5599"
+        ],
+        "semantic_scholar_id": "16d17822c15aafe29103ed7af439768e12ea5599",
+        "doi": "10.3389/fcomp.2026.1873627",
+        "canonical_id": "DOI:10.3389/fcomp.2026.1873627",
+        "authors": [
+          "Amine Marref",
+          "Khaled Tarmissi",
+          "Hassene Chaibi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 142,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22465",
+      "identity_tokens": [
+        "id:SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+        "id:arXiv:2607.22465",
+        "title:oracle agentic ai orchestrator routing via adaptive verifier calibration feedback",
+        "url:https://arxiv.org/abs/2607.22465"
+      ],
+      "record": {
+        "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+        "source_url": "https://arxiv.org/abs/2607.22465",
+        "year": 2026,
+        "published": "2026-07-24",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern enterprise agent deployments consist of a heterogeneous pool of large language models (LLMs) having diverse capabilities and cost. Existing model routing strategies optimize the quality-cost trade-off, while providing request-level static decisions. More recent solutions address agentic routing as a task-level selection with a serial verifier based router feedback loop. However, their fixed verifier suitable for homogeneous workloads may not generalize to heterogeneous batches of agentic tasks (example: coding, general conversational). Additionally, due to the verifier placement in the critical path of the loop, serving quality may be affected during multiple concurrent requests routing. To mitigate these issues, we present ORACLE. It is a concurrency-aware online routing mechanism that aligns adaptive routing with adaptive verification for feedback. ORACLE acts as a training-free drop-in'feedback loop'on top of any model-selection policy to first classify the task type and then dynamically assigns a task-appropriate verifier. Further, we develop a delayed feedback strategy for concurrent requests that largely removes verifier latency from the dispatch critical path. We then present a post-routing dispatch scheduler, namely DISC. DISC reserves each task's peak KV footprint at admission and dispatches to an alternate backend when the reward gain from reduced wait exceeds the reward loss from lower accuracy. Extensive evaluation on SWE-bench, tau2-bench, and Terminal-Bench 2.0 shows that ORACLE improves the accuracy-cost frontier by up to 7 percentage points over state-of-the-art routing baselines, while ORACLE with DISC improves program throughput by up to 1.8x. To facilitate reproducibility and support future development, we open-source the code-base of ORACLE at https://github.com/ORACLE-org/ORACLE.",
+        "identifiers": [
+          "SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641"
+        ],
+        "semantic_scholar_id": "a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+        "canonical_id": "arXiv:2607.22465",
+        "arxiv_id": "2607.22465",
+        "authors": [
+          "Ritik Raj",
+          "Souvik Kundu",
+          "Dheemanth Joshi",
+          "Tushar Krishna"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 117,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.29575",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.29575",
+        "id:SemanticScholar:8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
+        "id:arXiv:2607.29575",
+        "title:slim saturationaware lightweight performance modeling for llm serving",
+        "url:https://arxiv.org/abs/2607.29575"
+      ],
+      "record": {
+        "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.29575",
+        "year": 2026,
+        "published": "2026-07-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving commonly increases batch size to improve throughput, but performance eventually reaches a deployment-dependent plateau beyond which larger batches provide marginal gains while increasing latency and GPU memory consumption. Previous studies have attributed this behavior to HBM/DRAM bandwidth limitations, but the underlying causes have primarily been supported by conceptual arguments or high-level performance observations. As our first contribution, we present a detailed GPU characterization using hardware profiling techniques, demonstrating that throughput saturation originates in the attention kernels during the decode phase. Specifically, we show that their nearly constant arithmetic intensity as active-context lengths increases -not merely larger batch sizes- drives DRAM-bandwidth saturation, while the achieved compute throughput remains far below the hardware limit. Building on this analysis, we present the Batching Configuration Advisor (BCA), which selects the highest-throughput batching configuration satisfying a target latency constraint and identifies up to 55 GB of GPU memory allocation that can be avoided for the evaluated OPT models with minimal throughput loss. To enable these recommendations, we introduce SLIM (Saturation-Aware Lightweight Performance Model), a semi-analytical model that predicts LLM inference throughput and latency from analytical formulations of Transformer computation and memory traffic. Across the evaluated scenarios, SLIM outperforms representative performance-modeling baselines while successfully generalizing to previously unseen operating conditions.",
+        "identifiers": [
+          "SemanticScholar:8f1a03fc8beeacb89815615b2e1ec1513c61ec76"
+        ],
+        "semantic_scholar_id": "8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
+        "canonical_id": "arXiv:2607.29575",
+        "arxiv_id": "2607.29575",
+        "doi": "10.48550/arXiv.2607.29575",
+        "authors": [
+          "Pol G. Recasens",
+          "F. Agulló",
+          "Yue Zhu",
+          "Chen Wang",
+          "Jordi Torres",
+          "J. L. Berral"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 110,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02947",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.02947",
+        "id:SemanticScholar:a6bd02cb07408050edab6a2c5b81e9e4853e5ba7",
+        "id:arXiv:2608.02947",
+        "title:atflash perropewavelength attention windows for computememoryefficient llm inference",
+        "url:https://arxiv.org/abs/2608.02947"
+      ],
+      "record": {
+        "title": "ATFlash: Per-RoPE-Wavelength Attention Windows for Compute/Memory-Efficient LLM Inference",
+        "source_url": "https://arxiv.org/abs/2608.02947",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The attention score with rotary position embeddings (RoPE) decomposes exactly into a sum over its 2D-rotation frequency pairs, and each pair's wavelength limits how far it can discriminate position. Aligned with this structure, we propose the per-RoPE-wavelength distance window: it prunes the query--key inner-product terms beyond a wavelength-proportional distance. Unlike a sliding window, every key remains reachable, at least through the low-frequency pairs. The reduction rate is input-independent, with a closed form logarithmic in the sequence length $N$, in contrast to dynamic-sparse methods like MInference. Such token-level selection is orthogonal to our frequency-level pruning. The window can therefore be applied on top of those methods. On Qwen2.5-0.5B and Llama-3.2-3B, the window prunes 37--48\\% of the query--key inner-product terms within each model's native context length. Relative to full attention, the top-1 match rate stays at 96--98\\% and the mean output-distribution KL at the $10^{-3}$-nat level on LongBench-v2 contexts. We examine absolute scores on long-context benchmarks such as RULER, OpenAI-MRCR, LongCodeQA, and $\\infty$Bench: they are broadly preserved. We implement the window as a slice of the query--key contraction axis, leaving the online-softmax recurrences untouched, and port it with minimal diffs into the released FlashAttention-4 prefill and FlashInfer decode. On RTX PRO 6000 with Llama, both ports outpace stock with gains growing with context length, up to $1.29\\times$ at 128K. End to end on Qwen2.5-7B-1M, with 57\\% of the inner-product terms pruned, the speedup reaches $1.31\\times$ at a 1M-token context.",
+        "identifiers": [
+          "SemanticScholar:a6bd02cb07408050edab6a2c5b81e9e4853e5ba7"
+        ],
+        "semantic_scholar_id": "a6bd02cb07408050edab6a2c5b81e9e4853e5ba7",
+        "canonical_id": "arXiv:2608.02947",
+        "arxiv_id": "2608.02947",
+        "doi": "10.48550/arXiv.2608.02947",
+        "authors": [
+          "Shun-ichiro Hayashi",
+          "Daichi Mukunoki",
+          "Tetsuya Hoshino",
+          "Takahiro Katagiri"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 107,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21142",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.21142",
+        "id:SemanticScholar:8022ebe2ac0fe0f8687513c475d251914383a454",
+        "id:arXiv:2608.21142",
+        "title:coec calibrated orthogonalequivalence compensation for structured pruning of large language models",
+        "url:https://arxiv.org/abs/2608.21142"
+      ],
+      "record": {
+        "title": "COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2608.21142",
+        "year": 2026,
+        "published": "2026-08-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning reduces the size and inference cost of large language models (LLMs) by removing weight columns, but the resulting output error can degrade accuracy. Existing training-free compensation methods use an additive bias or a single orthogonal rotation on the output side of the retained weight. These corrections leave its input singular frame unchanged and therefore limit how the retained weight can adapt after column removal. We propose COEC (Calibrated Orthogonal-Equivalence Compensation), a training-free compensation framework that applies alternating left and right orthogonal rotations to the retained weight. The right rotation is optimized on a reduced Stiefel manifold, while singular values are rescaled using generalized cross-validation to select the regularization strength for each layer. COEC further tempers the calibration Gram matrix to reduce the dominance of high-energy activation directions and introduces an alignment penalty that preserves the geometric relation between adjacent attention projections.All components use second-order statistics from a small calibration set and require neither backpropagation through the LLM nor retraining of the model parameters. COEC is independent of the column pruning criterion and can be applied to multiple structured pruning methods. Experiments on the Llama-3, Llama-3.1, and Qwen2.5 model families across multiple structured sparsity levels show that COEC improves perplexity on every model and zero-shot accuracy in most settings over existing compensation methods, with larger gains at higher sparsity. These results show that post-pruning compensation can recover part of the performance lost to column removal.",
+        "identifiers": [
+          "SemanticScholar:8022ebe2ac0fe0f8687513c475d251914383a454"
+        ],
+        "semantic_scholar_id": "8022ebe2ac0fe0f8687513c475d251914383a454",
+        "canonical_id": "arXiv:2608.21142",
+        "arxiv_id": "2608.21142",
+        "doi": "10.48550/arXiv.2608.21142",
+        "authors": [
+          "Peiqi Yu",
+          "Nam Ling",
+          "Wei Wang",
+          "Wei Jiang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 89,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.05916",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.05916",
+        "id:SemanticScholar:9da551017279fdf7843c278fd979e803cc9cf90f",
+        "id:arXiv:2609.05916",
+        "title:starpro stagewise token adaptive reduction with progressive refinement for efficient large visionlanguage models",
+        "url:https://arxiv.org/abs/2609.05916"
+      ],
+      "record": {
+        "title": "STAR-Pro: Stage-Wise Token Adaptive Reduction with Progressive Refinement for Efficient Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.05916",
+        "year": 2026,
+        "published": "2026-09-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models (LVLMs) achieve strong multimodal understanding, but the hundreds to thousands of visual tokens they process impose substantial computational overhead, motivating training-free visual token pruning. In this work, we conduct two complementary analyses of visual token pruning. First, we measure the feature-space coverage of tokens retained before cross-modal fusion and find that aggressive pruning discards substantial visual information. Second, we track text-to-visual attention across decoder layers and find that the visual tokens considered important change substantially with depth, making one-shot pruning decisions unreliable. Together, these findings show that effective pruning should preserve broad visual coverage before fusion and progressively refine the retained tokens as cross-modal evidence evolves during fusion. We therefore propose STAR-Pro (STage-Wise Adaptive Token Reduction with Progressive Refinement), a training-free two-stage framework. Its Adaptive Stage applies pivoted QR to construct an over-budget feature-coverage candidate pool, while its Progressive Stage uses evolving text-to-visual attention at selected decoder layers to prune a nested survivor set under a target layer-average token budget. Extensive experiments across seven LVLMs spanning multiple architectures and 18 image and video benchmarks demonstrate the effectiveness of STAR-Pro under aggressive pruning. On LLaVA-Video-7B, STAR-Pro reduces visual tokens by 90.5%, retains 92.7% of baseline performance, and achieves a $2.24\\times$ measured inference speedup. Code is available at https://github.com/EasonAI-5589/starpro.",
+        "identifiers": [
+          "SemanticScholar:9da551017279fdf7843c278fd979e803cc9cf90f"
+        ],
+        "semantic_scholar_id": "9da551017279fdf7843c278fd979e803cc9cf90f",
+        "canonical_id": "arXiv:2609.05916",
+        "arxiv_id": "2609.05916",
+        "doi": "10.48550/arXiv.2609.05916",
+        "authors": [
+          "Yi-Chen Guo",
+          "Ting-Hao Wang",
+          "Qi-Zhe Zhang",
+          "Ling-Bei Meng",
+          "Yuan Zhang",
+          "Jia-Jun Cao",
+          "Hao Jiang",
+          "Chen-Wei Wu",
+          "Ji-Xin Wu",
+          "Si-Xiang Chen",
+          "Tao Luo",
+          "Hong-Yang Cheng",
+          "Kai Tang",
+          "Chen-Xia Li",
+          "Ren-Yuan Li",
+          "Xian-De Huang",
+          "Wen-Ya Wang",
+          "Shang-Hang Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 74,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:09b66e310dd565c4455e0d20c8755e6015990f8d5c68273eb297c225eafdcde2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

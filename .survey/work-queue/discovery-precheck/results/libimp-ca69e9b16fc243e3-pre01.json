@@ -1,0 +1,967 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ca69e9b16fc243e3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ca69e9b16fc2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.11553",
+    "arXiv:2603.04460",
+    "arXiv:2603.12208",
+    "arXiv:2604.02340",
+    "arXiv:2604.06970",
+    "arXiv:2605.19260",
+    "arXiv:2605.19506",
+    "arXiv:2605.24019",
+    "arXiv:2607.12266",
+    "arXiv:2608.02560",
+    "arXiv:2608.26926",
+    "arXiv:2608.30310"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "dea3d46e833c1d64d8ffee579717c23c5e10e21b",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T03:53:23.437017+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.11553",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.11553"
+    },
+    {
+      "requested_id": "arXiv:2603.04460",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.12208",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02340",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.02340"
+    },
+    {
+      "requested_id": "arXiv:2604.06970",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19260",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19506",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.24019",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.12266",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.02560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.26926",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.30310",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "source_url": "https://arxiv.org/abs/2608.02560",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+      "identifiers": [
+        "SemanticScholar:bade37db80da222397e32494ba983509eb2179d5"
+      ],
+      "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
+      "canonical_id": "arXiv:2608.02560",
+      "arxiv_id": "2608.02560",
+      "doi": "10.48550/arXiv.2608.02560",
+      "authors": [
+        "Anusha Madan Gopal",
+        "Aras Pirbadian",
+        "Kristofor D. Carlson",
+        "M. A. Lewis",
+        "Jonathan Tapson"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VSPrefill: Vertical-Slash Sparse Attention with Lightweight Indexing for Long-Context Prefilling",
+      "source_url": "https://arxiv.org/abs/2603.04460",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of self-attention during the prefill phase impedes long-context inference in large language models. Existing sparse attention methods face a trade-off among context adaptivity, sampling overhead, and fine-tuning costs. We propose VSPrefill, a mechanism requiring lightweight training that uses the vertical-slash structural pattern in attention distributions. Our compact VSIndexer module predicts context-aware importance scores for vertical columns and slash diagonals from key-value representations augmented with RoPE. This approach constructs sparse masks with linear complexity without modifying the backbone parameters. During inference, an adaptive cumulative-threshold strategy allocates sparsity budgets per layer, while a fused kernel executes attention with on-the-fly index merging. Evaluated on Qwen3-4B-Instruct and LLaMA-3.1-8B-Instruct across the LongBench and RULER benchmarks, VSPrefill preserves 98.35% of the full attention accuracy while delivering a 4.95x average speedup at a context length of 128k. These results establish a new Pareto frontier in the trade-off between accuracy and efficiency.",
+      "identifiers": [
+        "SemanticScholar:9ec50e3ccb89283ab553710e2f767cab154ab93d"
+      ],
+      "semantic_scholar_id": "9ec50e3ccb89283ab553710e2f767cab154ab93d",
+      "canonical_id": "arXiv:2603.04460",
+      "arxiv_id": "2603.04460",
+      "doi": "10.48550/arXiv.2603.04460",
+      "authors": [
+        "Guanzhong Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ForensicZip: More Tokens are Better but Not Necessary in Forensic Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2603.12208",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) enable interpretable multimedia forensics by generating textual rationales for forgery detection. However, processing dense visual sequences incurs high computational costs, particularly for high-resolution images and videos. Visual token pruning is a practical acceleration strategy, yet existing methods are largely semantic-driven, retaining salient objects while discarding background regions where manipulation traces such as high-frequency anomalies and temporal jitters often reside. To address this issue, we introduce ForensicZip, a training-free framework that reformulates token compression from a forgery-driven perspective. ForensicZip models temporal token evolution as a Birth-Death Optimal Transport problem with a slack dummy node, quantifying physical discontinuities indicating transient generative artifacts. The forensic scoring further integrates transport-based novelty with high-frequency priors to separate forensic evidence from semantic content under large-ratio compression. Experiments on deepfake and AIGC benchmarks show that at 10\\% token retention, ForensicZip achieves $2.97\\times$ speedup and over 90\\% FLOPs reduction while maintaining state-of-the-art detection performance.",
+      "identifiers": [
+        "SemanticScholar:7671c66f8f764b2b5c7b66aafb0d71d8f2a175c9"
+      ],
+      "semantic_scholar_id": "7671c66f8f764b2b5c7b66aafb0d71d8f2a175c9",
+      "canonical_id": "arXiv:2603.12208",
+      "arxiv_id": "2603.12208",
+      "doi": "10.48550/arXiv.2603.12208",
+      "authors": [
+        "Ying-Xin Lai",
+        "Zitong Yu",
+        "Jun Wang",
+        "Lin-Lin Shen",
+        "Yong Xu",
+        "Xiao-Chun Cao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale",
+      "source_url": "https://arxiv.org/abs/2604.06970",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When output token counts can be predicted at submission time (Gan et al., 2026), client-side scheduling against a black-box LLM API becomes semi-clairvoyant: decisions condition on coarse token priors even though the provider's internals remain hidden. We decompose this boundary problem into three separable concerns: allocation (inter-class share via adaptive DRR), ordering (intra-class sequencing with feasible-set scoring), and overload control (explicit admit/defer/reject on a cost ladder). An information ladder experiment shows that coarse magnitude priors -- not class labels alone -- are the practical threshold for useful client control; removing magnitude inflates short-request P95 by up to $5.8\\times$ and degrades deadline satisfaction. Under balanced / high congestion the full stack achieves 100% completion, 100% deadline satisfaction, and useful goodput of $4.2 \\pm 1.6$ SLO-meeting requests/s with short P95 within tens of milliseconds of quota-tiered isolation. A predictor-noise sweep confirms graceful degradation under up to 60% multiplicative error. Heavy-dominated regimes separate policies on completion, tail, and interpretable shedding. We further compare short-priority allocation (biased toward interactive traffic) with Fair Queuing (round-robin across classes): Fair Queuing achieves +32% short-request P90 improvement over FIFO with only +17% long-request overhead, versus Short-Priority's +27% / +116% trade-off -- demonstrating that the allocation layer accommodates different fairness objectives without changing the remaining stack. We contribute the three-layer client-side decomposition, controlled evaluation of joint metrics across regimes, allocation-policy alternatives, and overload-policy evidence linking cost-ladder shedding to the stated service objective.",
+      "identifiers": [
+        "SemanticScholar:ee5bb226b122467071bdfc854a81f5061470c26a"
+      ],
+      "semantic_scholar_id": "ee5bb226b122467071bdfc854a81f5061470c26a",
+      "canonical_id": "arXiv:2604.06970",
+      "arxiv_id": "2604.06970",
+      "doi": "10.48550/arXiv.2604.06970",
+      "authors": [
+        "Ren-Zhong Yuan",
+        "Yijun Zeng",
+        "Xiao-Song Gao",
+        "Lin-Xi Yu",
+        "H. Liao",
+        "Han Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees",
+      "source_url": "https://arxiv.org/abs/2605.19260",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Multimodal Models (LMMs) have recently emerged as promising backbones for GUI-agent models, where high-resolution GUI screenshots are introduced to the prompts at each iteration step. However, these screenshots exhibit highly non-uniform spatial information density: large regions may carry little information and are visually homogeneous, while key text and icons may require high visual fidelity. Existing approaches to this problem either require additional training or rely on attention-based token compression, ignoring the structured layout and spatial redundancy of GUI screenshots. To fill the gap, this paper proposes AquaUI, a training-free inference-time token reduction method for GUI agent models that utilizes the non-uniform information density in screenshots. AQuaUI constructs an adaptive quadtree on each screenshot input and keeps one representative merged token per leaf of the quadtree. AQuaUI preserves the spatial positions of retained tokens throughout the pipeline to ensure that all position-encoding stages remain consistent. To further improve temporal consistency across multi-step GUI interactions, we propose a conditional quadtree algorithm that leverages the continuity between consecutive screenshots within a single request. Specifically, it refines the current quadtree using previous quadtrees as references, helping preserve fine-grained regions across static or mildly shifted GUI states. We implement AQuaUI on state-of-the-art GUI agent models and conduct experiments on standard grounding and navigational benchmarks. AQuaUI consistently shows improved accuracy-efficiency trade-offs over prior baselines. Notably, on GUI-Owl-1.5-32B-Instruct, AQuaUI achieves up to 13.22% speedup and 29.52% fewer visual tokens while retaining 99.06% of full-token performance, suggesting that the spatial redundancy of GUI screenshots can be exploited at inference without retraining.",
+      "identifiers": [
+        "SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992"
+      ],
+      "semantic_scholar_id": "4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+      "canonical_id": "arXiv:2605.19260",
+      "arxiv_id": "2605.19260",
+      "doi": "10.48550/arXiv.2605.19260",
+      "authors": [
+        "Yuankai Li",
+        "Ting-Hui Zhu",
+        "Ha-Min Son",
+        "Zhe Zhao",
+        "Xin Liu",
+        "Mu-Hao Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.19506",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "First-person dynamic spatial reasoning requires models to track continuous motion and precise geometric structure, but the quadratic attention cost of Transformer-based Video-LLMs makes dense visual tokens computationally expensive. Existing token pruning paradigms predominantly rely on discrete static snapshots, failing to preserve the motion and geometric cues essential for reasoning. We propose Event Cascade Pruning (ECP), to our knowledge the first training-free framework that leverages the high-frequency motion cues from event cameras as a continuous event-guided motion prior to guide token selection. ECP combines three stages: Event-Triggered Causal Sampling to anchor motion-informative keyframes, Event-guided Motion Saliency Filtering to suppress event-inactive visual tokens, and Event-Attention Ranking Fusion to calibrate spatial attention with motion-salient dynamics. With 80% visual token reduction, ECP outperforms the full-token baseline (37.62% vs. 36.31%) while achieving 1.89x inference speedup and 52% GFLOPs reduction. We further introduce ESR-Real, the first real-world RGB-event benchmark for first-person spatial reasoning, where ECP improves accuracy by 2.68 percentage points over full-token baselines.",
+      "identifiers": [
+        "SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4"
+      ],
+      "semantic_scholar_id": "cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+      "canonical_id": "arXiv:2605.19506",
+      "arxiv_id": "2605.19506",
+      "doi": "10.48550/arXiv.2605.19506",
+      "authors": [
+        "Peng-Tao Ma",
+        "Ziliang Zhou",
+        "Ci-Yu Ruan",
+        "Hao-Yang Wang",
+        "Kai-Yuan Li",
+        "Zi-Hang Gong",
+        "Wen-Hua Ding",
+        "Chen Gao",
+        "Jin-Gao Xu",
+        "Xinlei Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization",
+      "source_url": "https://arxiv.org/abs/2605.24019",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) achieve outstanding performance, yet their huge model size severely hinders deployment on edge devices with limited resources. As an efficient model compression technique, vector quantization (VQ) excels in ultra-low-bit representation, which maps model weights to discrete codewords in a compact codebook to cut memory consumption and transmission overhead while preserving model capability. Direct VQ application to VLMs still has two core limitations. First, cross-modality weight distribution differences brought by visual and textual inputs cannot be well fitted by a single unified codebook. Second, current second-order error compensation ignores first-order gradient information, causing weight deviation from pre-trained optimal states, gradient drift and biased compensation results. This work proposes MGVQ, a novel vector quantization framework integrating multi-dimensional sensitivity perception and gradient-Hessian fusion. It consists of two core modules: sensitivity-guided structured mixed-precision quantization dynamically assigns different bit-widths according to channel sensitivity via combined global and local sensitivity analysis for refined resource allocation; gradient-aware second-order error compensation embeds first-order gradients into error correction, and adopts Kronecker and Block-LDL decomposition to ensure low computational cost. Extensive experiments on mainstream VLMs including LLaVA-onevision, InternVL2 and Qwen2-VL verify the effectiveness of MGVQ. In 2-bit quantization settings, MGVQ surpasses existing advanced post-training quantization methods significantly, achieving a maximum accuracy improvement of 4.9 points (71.4% vs 67.0% on InternVL2-26B). The proposed method realizes stable and efficient ultra-low-bit VLM quantization, greatly promoting the practical deployment of multimodal large models in resource-limited environments.",
+      "identifiers": [
+        "SemanticScholar:8a520a6a62800e46694c37fadd57a63f595f333c"
+      ],
+      "semantic_scholar_id": "8a520a6a62800e46694c37fadd57a63f595f333c",
+      "canonical_id": "arXiv:2605.24019",
+      "arxiv_id": "2605.24019",
+      "doi": "10.48550/arXiv.2605.24019",
+      "authors": [
+        "Zhong Wang",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Da-Wei Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 182,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Saturation Makes Quantization Error Additive: A Coverage Model with a Certificate",
+      "source_url": "https://arxiv.org/abs/2607.12266",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixed-precision quantization must decide which parts of a model to keep at higher precision. A common premise, shared by sensitivity-based methods such as HAWQ and CoopQ, is that the loss from quantizing a set of layers can be reconstructed from per-layer or pairwise sensitivities measured in isolation. We test this premise at the 4-bit weight-and-activation precisions now being deployed, treating the change in loss $f(S)$ from quantizing a layer set $S$ as a set function on the Boolean cube and analyzing it through two classical changes of basis. This analysis yields two findings. First, across configurations drawn from the deployment distribution, 85--93\\% of the variance of $f$ is explained by per-layer effects alone. Second, a monotone transform of a sum of per-layer terms reproduces $f$'s ranking of configurations, misordering at most 2\\% of pairs. We propose the coverage model $f(S)=c\\bigl(1-\\prod_{i\\in S}(1-a_i)\\bigr)$, which reproduces the measured variance profile of $f$ to within a few percent from its $L$ fitted break-rates. This structure supports two predictors of a configuration's loss, each with $L+1$ parameters. The additive model is the optimal first-order predictor. By Parseval's identity its mean-squared error equals the variance of $f$ left unexplained by per-layer effects, which we measure on full lattices, estimate out of sample at full-network scale, and report with every result as a certificate of how well any additive model can do. The coverage model itself is the second predictor. As allocators at matched memory, they attain the lowest KL divergence among the compared allocators on models from 30B to 355B parameters. Below four bits, the resulting allocations continue to solve code and reasoning tasks at budgets where allocations from gradient sensitivities no longer produce terminating generations.",
+      "identifiers": [
+        "SemanticScholar:e4811ff7d6d06cc551a173159f18988b36e8d5d9"
+      ],
+      "semantic_scholar_id": "e4811ff7d6d06cc551a173159f18988b36e8d5d9",
+      "canonical_id": "arXiv:2607.12266",
+      "arxiv_id": "2607.12266",
+      "doi": "10.48550/arXiv.2607.12266",
+      "authors": [
+        "J. Hill"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 127,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models",
+      "source_url": "https://arxiv.org/abs/2608.26926",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (sLLMs) are nowadays hosted on devices with limited memory and computational budget. In an autoregressive setup, inference is memory-bandwidth bound: uniform quantization is often detrimental to such models, since their architecture has limited redundancies and only a few layers are not very sensitive to lower precision. We propose a composite metric that combines two orthogonal criteria: information retention (measured in terms of a normalized SQNR-based coefficient) and throughput gains (modeled using a roofline-based latency analysis). By profiling Gemma 3 1B, we find that Feed-Forward Network blocks and the embedding matrix are the most promising targets for acceleration. For each candidate, we estimate a normalized quality score based on simulated quantization and a normalized speed score based on roofline modeling with no actual execution needed. We combine the two scores in a composite priority coefficient, allowing us to tune the trade-off between speed and quality as needed. Our metric is general and can be used to prioritize individual blocks, their projection sublayers, or transformer layers as a whole. We evaluate our approach on several model architectures, showing that our estimates have at around 4% prediction error for the accelerated speedup. We find that our method generally allocates more resources to the most expressive layers compared to evolutionary search, specialized accelerators, or Shapley-value-based approaches that require expensive approximate inference. Our analytical approach makes sLLM quantization a predictable engineering task.",
+      "identifiers": [
+        "SemanticScholar:57886b53d0c59059dfd0680f096ecf24a283d64a"
+      ],
+      "semantic_scholar_id": "57886b53d0c59059dfd0680f096ecf24a283d64a",
+      "canonical_id": "arXiv:2608.26926",
+      "arxiv_id": "2608.26926",
+      "doi": "10.48550/arXiv.2608.26926",
+      "authors": [
+        "Artem Safronov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2608.30310",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid large language models interleave full-attention layers with linear-attention layers to reduce the cost of long-context inference. This structure complicates prefix caching: full-attention key-value caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing hybrid prefix caching methods address this mismatch by storing recurrent-state checkpoints. As a result, token-level matches are directly usable only at positions aligned with stored checkpoints, constraining prefix reuse to a discrete set of boundaries. We present Tail-Replay, a prefix caching mechanism that enables unconstrained token-level prefix reuse in hybrid large language models. The key insight is that linear-attention mechanisms such as Gated DeltaNet can be viewed as a structured, lossy compression of the input prefix: gated recurrent updates progressively attenuate the contributions of earlier inputs. Consequently, the recurrent state of a matched prefix can be well approximated by replaying only a short, recent suffix of that prefix. Tail-Replay exploits this property by caching the exact full-attention key-value cache while omitting recurrent-state checkpoints. On a cache hit, it reconstructs the linear-attention states by replaying a short, recent suffix of the matched prefix. As a result, the reuse boundary is determined by the shared tokens rather than by recurrent-state checkpoints. We evaluate Tail-Replay on three Gated DeltaNet-based hybrid models using the LongBench and RULER benchmarks. With only a 5--10\\% replay budget, it retains 92.8--99.9\\% of full-prefill quality on LongBench and RULER. For serving efficiency, we evaluate time-to-first-token speedups across multiple matched-prefix lengths---8K, 16K, and 32K. The speedup grows with prefix length, reaching $9.1$--$14.3\\times$ over full prefill at 32K.",
+      "identifiers": [
+        "SemanticScholar:e07dc96badfcab6876ec4e4d4a467e7fcb3ea771"
+      ],
+      "semantic_scholar_id": "e07dc96badfcab6876ec4e4d4a467e7fcb3ea771",
+      "canonical_id": "arXiv:2608.30310",
+      "arxiv_id": "2608.30310",
+      "doi": "10.48550/arXiv.2608.30310",
+      "authors": [
+        "Yi-Rui Liu",
+        "Ruo-Ling Qi",
+        "Xuan'er Wu",
+        "Peng-Hang Liu",
+        "Jian Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 79,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.02560",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.02560",
+        "id:SemanticScholar:bade37db80da222397e32494ba983509eb2179d5",
+        "id:arXiv:2608.02560",
+        "title:structured memory for edge language models persistent context and corpus retrieval via o1 ssm state injection",
+        "url:https://arxiv.org/abs/2608.02560"
+      ],
+      "record": {
+        "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+        "source_url": "https://arxiv.org/abs/2608.02560",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+        "identifiers": [
+          "SemanticScholar:bade37db80da222397e32494ba983509eb2179d5"
+        ],
+        "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
+        "canonical_id": "arXiv:2608.02560",
+        "arxiv_id": "2608.02560",
+        "doi": "10.48550/arXiv.2608.02560",
+        "authors": [
+          "Anusha Madan Gopal",
+          "Aras Pirbadian",
+          "Kristofor D. Carlson",
+          "M. A. Lewis",
+          "Jonathan Tapson"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 107,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04460",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04460",
+        "id:SemanticScholar:9ec50e3ccb89283ab553710e2f767cab154ab93d",
+        "id:arXiv:2603.04460",
+        "title:vsprefill verticalslash sparse attention with lightweight indexing for longcontext prefilling",
+        "url:https://arxiv.org/abs/2603.04460"
+      ],
+      "record": {
+        "title": "VSPrefill: Vertical-Slash Sparse Attention with Lightweight Indexing for Long-Context Prefilling",
+        "source_url": "https://arxiv.org/abs/2603.04460",
+        "year": 2026,
+        "published": "2026-03-03",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic complexity of self-attention during the prefill phase impedes long-context inference in large language models. Existing sparse attention methods face a trade-off among context adaptivity, sampling overhead, and fine-tuning costs. We propose VSPrefill, a mechanism requiring lightweight training that uses the vertical-slash structural pattern in attention distributions. Our compact VSIndexer module predicts context-aware importance scores for vertical columns and slash diagonals from key-value representations augmented with RoPE. This approach constructs sparse masks with linear complexity without modifying the backbone parameters. During inference, an adaptive cumulative-threshold strategy allocates sparsity budgets per layer, while a fused kernel executes attention with on-the-fly index merging. Evaluated on Qwen3-4B-Instruct and LLaMA-3.1-8B-Instruct across the LongBench and RULER benchmarks, VSPrefill preserves 98.35% of the full attention accuracy while delivering a 4.95x average speedup at a context length of 128k. These results establish a new Pareto frontier in the trade-off between accuracy and efficiency.",
+        "identifiers": [
+          "SemanticScholar:9ec50e3ccb89283ab553710e2f767cab154ab93d"
+        ],
+        "semantic_scholar_id": "9ec50e3ccb89283ab553710e2f767cab154ab93d",
+        "canonical_id": "arXiv:2603.04460",
+        "arxiv_id": "2603.04460",
+        "doi": "10.48550/arXiv.2603.04460",
+        "authors": [
+          "Guanzhong Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 260,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.12208",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.12208",
+        "id:SemanticScholar:7671c66f8f764b2b5c7b66aafb0d71d8f2a175c9",
+        "id:arXiv:2603.12208",
+        "title:forensiczip more tokens are better but not necessary in forensic visionlanguage models",
+        "url:https://arxiv.org/abs/2603.12208"
+      ],
+      "record": {
+        "title": "ForensicZip: More Tokens are Better but Not Necessary in Forensic Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2603.12208",
+        "year": 2026,
+        "published": "2026-03-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) enable interpretable multimedia forensics by generating textual rationales for forgery detection. However, processing dense visual sequences incurs high computational costs, particularly for high-resolution images and videos. Visual token pruning is a practical acceleration strategy, yet existing methods are largely semantic-driven, retaining salient objects while discarding background regions where manipulation traces such as high-frequency anomalies and temporal jitters often reside. To address this issue, we introduce ForensicZip, a training-free framework that reformulates token compression from a forgery-driven perspective. ForensicZip models temporal token evolution as a Birth-Death Optimal Transport problem with a slack dummy node, quantifying physical discontinuities indicating transient generative artifacts. The forensic scoring further integrates transport-based novelty with high-frequency priors to separate forensic evidence from semantic content under large-ratio compression. Experiments on deepfake and AIGC benchmarks show that at 10\\% token retention, ForensicZip achieves $2.97\\times$ speedup and over 90\\% FLOPs reduction while maintaining state-of-the-art detection performance.",
+        "identifiers": [
+          "SemanticScholar:7671c66f8f764b2b5c7b66aafb0d71d8f2a175c9"
+        ],
+        "semantic_scholar_id": "7671c66f8f764b2b5c7b66aafb0d71d8f2a175c9",
+        "canonical_id": "arXiv:2603.12208",
+        "arxiv_id": "2603.12208",
+        "doi": "10.48550/arXiv.2603.12208",
+        "authors": [
+          "Ying-Xin Lai",
+          "Zitong Yu",
+          "Jun Wang",
+          "Lin-Lin Shen",
+          "Yong Xu",
+          "Xiao-Chun Cao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 251,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.06970",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.06970",
+        "id:SemanticScholar:ee5bb226b122467071bdfc854a81f5061470c26a",
+        "id:arXiv:2604.06970",
+        "title:scheduling the unschedulable taming blackbox llm inference at scale",
+        "url:https://arxiv.org/abs/2604.06970"
+      ],
+      "record": {
+        "title": "Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale",
+        "source_url": "https://arxiv.org/abs/2604.06970",
+        "year": 2026,
+        "published": "2026-04-08",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "When output token counts can be predicted at submission time (Gan et al., 2026), client-side scheduling against a black-box LLM API becomes semi-clairvoyant: decisions condition on coarse token priors even though the provider's internals remain hidden. We decompose this boundary problem into three separable concerns: allocation (inter-class share via adaptive DRR), ordering (intra-class sequencing with feasible-set scoring), and overload control (explicit admit/defer/reject on a cost ladder). An information ladder experiment shows that coarse magnitude priors -- not class labels alone -- are the practical threshold for useful client control; removing magnitude inflates short-request P95 by up to $5.8\\times$ and degrades deadline satisfaction. Under balanced / high congestion the full stack achieves 100% completion, 100% deadline satisfaction, and useful goodput of $4.2 \\pm 1.6$ SLO-meeting requests/s with short P95 within tens of milliseconds of quota-tiered isolation. A predictor-noise sweep confirms graceful degradation under up to 60% multiplicative error. Heavy-dominated regimes separate policies on completion, tail, and interpretable shedding. We further compare short-priority allocation (biased toward interactive traffic) with Fair Queuing (round-robin across classes): Fair Queuing achieves +32% short-request P90 improvement over FIFO with only +17% long-request overhead, versus Short-Priority's +27% / +116% trade-off -- demonstrating that the allocation layer accommodates different fairness objectives without changing the remaining stack. We contribute the three-layer client-side decomposition, controlled evaluation of joint metrics across regimes, allocation-policy alternatives, and overload-policy evidence linking cost-ladder shedding to the stated service objective.",
+        "identifiers": [
+          "SemanticScholar:ee5bb226b122467071bdfc854a81f5061470c26a"
+        ],
+        "semantic_scholar_id": "ee5bb226b122467071bdfc854a81f5061470c26a",
+        "canonical_id": "arXiv:2604.06970",
+        "arxiv_id": "2604.06970",
+        "doi": "10.48550/arXiv.2604.06970",
+        "authors": [
+          "Ren-Zhong Yuan",
+          "Yijun Zeng",
+          "Xiao-Song Gao",
+          "Lin-Xi Yu",
+          "H. Liao",
+          "Han Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19260",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.19260",
+        "id:SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+        "id:arXiv:2605.19260",
+        "title:aquaui visual token reduction for gui agents with adaptive quadtrees",
+        "url:https://arxiv.org/abs/2605.19260"
+      ],
+      "record": {
+        "title": "AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees",
+        "source_url": "https://arxiv.org/abs/2605.19260",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Multimodal Models (LMMs) have recently emerged as promising backbones for GUI-agent models, where high-resolution GUI screenshots are introduced to the prompts at each iteration step. However, these screenshots exhibit highly non-uniform spatial information density: large regions may carry little information and are visually homogeneous, while key text and icons may require high visual fidelity. Existing approaches to this problem either require additional training or rely on attention-based token compression, ignoring the structured layout and spatial redundancy of GUI screenshots. To fill the gap, this paper proposes AquaUI, a training-free inference-time token reduction method for GUI agent models that utilizes the non-uniform information density in screenshots. AQuaUI constructs an adaptive quadtree on each screenshot input and keeps one representative merged token per leaf of the quadtree. AQuaUI preserves the spatial positions of retained tokens throughout the pipeline to ensure that all position-encoding stages remain consistent. To further improve temporal consistency across multi-step GUI interactions, we propose a conditional quadtree algorithm that leverages the continuity between consecutive screenshots within a single request. Specifically, it refines the current quadtree using previous quadtrees as references, helping preserve fine-grained regions across static or mildly shifted GUI states. We implement AQuaUI on state-of-the-art GUI agent models and conduct experiments on standard grounding and navigational benchmarks. AQuaUI consistently shows improved accuracy-efficiency trade-offs over prior baselines. Notably, on GUI-Owl-1.5-32B-Instruct, AQuaUI achieves up to 13.22% speedup and 29.52% fewer visual tokens while retaining 99.06% of full-token performance, suggesting that the spatial redundancy of GUI screenshots can be exploited at inference without retraining.",
+        "identifiers": [
+          "SemanticScholar:4103399a4c055be18ed26cefce6b4bfbbb7c6992"
+        ],
+        "semantic_scholar_id": "4103399a4c055be18ed26cefce6b4bfbbb7c6992",
+        "canonical_id": "arXiv:2605.19260",
+        "arxiv_id": "2605.19260",
+        "doi": "10.48550/arXiv.2605.19260",
+        "authors": [
+          "Yuankai Li",
+          "Ting-Hui Zhu",
+          "Ha-Min Son",
+          "Zhe Zhao",
+          "Xin Liu",
+          "Mu-Hao Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 183,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19506",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.19506",
+        "id:SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+        "id:arXiv:2605.19506",
+        "title:eventprune cascaded eventassisted token pruning for efficient firstperson dynamic spatial reasoning",
+        "url:https://arxiv.org/abs/2605.19506"
+      ],
+      "record": {
+        "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.19506",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "First-person dynamic spatial reasoning requires models to track continuous motion and precise geometric structure, but the quadratic attention cost of Transformer-based Video-LLMs makes dense visual tokens computationally expensive. Existing token pruning paradigms predominantly rely on discrete static snapshots, failing to preserve the motion and geometric cues essential for reasoning. We propose Event Cascade Pruning (ECP), to our knowledge the first training-free framework that leverages the high-frequency motion cues from event cameras as a continuous event-guided motion prior to guide token selection. ECP combines three stages: Event-Triggered Causal Sampling to anchor motion-informative keyframes, Event-guided Motion Saliency Filtering to suppress event-inactive visual tokens, and Event-Attention Ranking Fusion to calibrate spatial attention with motion-salient dynamics. With 80% visual token reduction, ECP outperforms the full-token baseline (37.62% vs. 36.31%) while achieving 1.89x inference speedup and 52% GFLOPs reduction. We further introduce ESR-Real, the first real-world RGB-event benchmark for first-person spatial reasoning, where ECP improves accuracy by 2.68 percentage points over full-token baselines.",
+        "identifiers": [
+          "SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4"
+        ],
+        "semantic_scholar_id": "cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+        "canonical_id": "arXiv:2605.19506",
+        "arxiv_id": "2605.19506",
+        "doi": "10.48550/arXiv.2605.19506",
+        "authors": [
+          "Peng-Tao Ma",
+          "Ziliang Zhou",
+          "Ci-Yu Ruan",
+          "Hao-Yang Wang",
+          "Kai-Yuan Li",
+          "Zi-Hang Gong",
+          "Wen-Hua Ding",
+          "Chen Gao",
+          "Jin-Gao Xu",
+          "Xinlei Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 183,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.24019",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.24019",
+        "id:SemanticScholar:8a520a6a62800e46694c37fadd57a63f595f333c",
+        "id:arXiv:2605.24019",
+        "title:mgvq synergizing multidimensional sensitivityaware and gradienthessian fusion for vector quantization",
+        "url:https://arxiv.org/abs/2605.24019"
+      ],
+      "record": {
+        "title": "MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization",
+        "source_url": "https://arxiv.org/abs/2605.24019",
+        "year": 2026,
+        "published": "2026-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) achieve outstanding performance, yet their huge model size severely hinders deployment on edge devices with limited resources. As an efficient model compression technique, vector quantization (VQ) excels in ultra-low-bit representation, which maps model weights to discrete codewords in a compact codebook to cut memory consumption and transmission overhead while preserving model capability. Direct VQ application to VLMs still has two core limitations. First, cross-modality weight distribution differences brought by visual and textual inputs cannot be well fitted by a single unified codebook. Second, current second-order error compensation ignores first-order gradient information, causing weight deviation from pre-trained optimal states, gradient drift and biased compensation results. This work proposes MGVQ, a novel vector quantization framework integrating multi-dimensional sensitivity perception and gradient-Hessian fusion. It consists of two core modules: sensitivity-guided structured mixed-precision quantization dynamically assigns different bit-widths according to channel sensitivity via combined global and local sensitivity analysis for refined resource allocation; gradient-aware second-order error compensation embeds first-order gradients into error correction, and adopts Kronecker and Block-LDL decomposition to ensure low computational cost. Extensive experiments on mainstream VLMs including LLaVA-onevision, InternVL2 and Qwen2-VL verify the effectiveness of MGVQ. In 2-bit quantization settings, MGVQ surpasses existing advanced post-training quantization methods significantly, achieving a maximum accuracy improvement of 4.9 points (71.4% vs 67.0% on InternVL2-26B). The proposed method realizes stable and efficient ultra-low-bit VLM quantization, greatly promoting the practical deployment of multimodal large models in resource-limited environments.",
+        "identifiers": [
+          "SemanticScholar:8a520a6a62800e46694c37fadd57a63f595f333c"
+        ],
+        "semantic_scholar_id": "8a520a6a62800e46694c37fadd57a63f595f333c",
+        "canonical_id": "arXiv:2605.24019",
+        "arxiv_id": "2605.24019",
+        "doi": "10.48550/arXiv.2605.24019",
+        "authors": [
+          "Zhong Wang",
+          "Zu-Kang Xu",
+          "Xing Hu",
+          "Da-Wei Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 182,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.12266",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.12266",
+        "id:SemanticScholar:e4811ff7d6d06cc551a173159f18988b36e8d5d9",
+        "id:arXiv:2607.12266",
+        "title:saturation makes quantization error additive a coverage model with a certificate",
+        "url:https://arxiv.org/abs/2607.12266"
+      ],
+      "record": {
+        "title": "Saturation Makes Quantization Error Additive: A Coverage Model with a Certificate",
+        "source_url": "https://arxiv.org/abs/2607.12266",
+        "year": 2026,
+        "published": "2026-07-14",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixed-precision quantization must decide which parts of a model to keep at higher precision. A common premise, shared by sensitivity-based methods such as HAWQ and CoopQ, is that the loss from quantizing a set of layers can be reconstructed from per-layer or pairwise sensitivities measured in isolation. We test this premise at the 4-bit weight-and-activation precisions now being deployed, treating the change in loss $f(S)$ from quantizing a layer set $S$ as a set function on the Boolean cube and analyzing it through two classical changes of basis. This analysis yields two findings. First, across configurations drawn from the deployment distribution, 85--93\\% of the variance of $f$ is explained by per-layer effects alone. Second, a monotone transform of a sum of per-layer terms reproduces $f$'s ranking of configurations, misordering at most 2\\% of pairs. We propose the coverage model $f(S)=c\\bigl(1-\\prod_{i\\in S}(1-a_i)\\bigr)$, which reproduces the measured variance profile of $f$ to within a few percent from its $L$ fitted break-rates. This structure supports two predictors of a configuration's loss, each with $L+1$ parameters. The additive model is the optimal first-order predictor. By Parseval's identity its mean-squared error equals the variance of $f$ left unexplained by per-layer effects, which we measure on full lattices, estimate out of sample at full-network scale, and report with every result as a certificate of how well any additive model can do. The coverage model itself is the second predictor. As allocators at matched memory, they attain the lowest KL divergence among the compared allocators on models from 30B to 355B parameters. Below four bits, the resulting allocations continue to solve code and reasoning tasks at budgets where allocations from gradient sensitivities no longer produce terminating generations.",
+        "identifiers": [
+          "SemanticScholar:e4811ff7d6d06cc551a173159f18988b36e8d5d9"
+        ],
+        "semantic_scholar_id": "e4811ff7d6d06cc551a173159f18988b36e8d5d9",
+        "canonical_id": "arXiv:2607.12266",
+        "arxiv_id": "2607.12266",
+        "doi": "10.48550/arXiv.2607.12266",
+        "authors": [
+          "J. Hill"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 127,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.26926",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.26926",
+        "id:SemanticScholar:57886b53d0c59059dfd0680f096ecf24a283d64a",
+        "id:arXiv:2608.26926",
+        "title:a layer importance metric for quantization accounting for the speedquality tradeoff in autoregressive models",
+        "url:https://arxiv.org/abs/2608.26926"
+      ],
+      "record": {
+        "title": "A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models",
+        "source_url": "https://arxiv.org/abs/2608.26926",
+        "year": 2026,
+        "published": "2026-08-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small language models (sLLMs) are nowadays hosted on devices with limited memory and computational budget. In an autoregressive setup, inference is memory-bandwidth bound: uniform quantization is often detrimental to such models, since their architecture has limited redundancies and only a few layers are not very sensitive to lower precision. We propose a composite metric that combines two orthogonal criteria: information retention (measured in terms of a normalized SQNR-based coefficient) and throughput gains (modeled using a roofline-based latency analysis). By profiling Gemma 3 1B, we find that Feed-Forward Network blocks and the embedding matrix are the most promising targets for acceleration. For each candidate, we estimate a normalized quality score based on simulated quantization and a normalized speed score based on roofline modeling with no actual execution needed. We combine the two scores in a composite priority coefficient, allowing us to tune the trade-off between speed and quality as needed. Our metric is general and can be used to prioritize individual blocks, their projection sublayers, or transformer layers as a whole. We evaluate our approach on several model architectures, showing that our estimates have at around 4% prediction error for the accelerated speedup. We find that our method generally allocates more resources to the most expressive layers compared to evolutionary search, specialized accelerators, or Shapley-value-based approaches that require expensive approximate inference. Our analytical approach makes sLLM quantization a predictable engineering task.",
+        "identifiers": [
+          "SemanticScholar:57886b53d0c59059dfd0680f096ecf24a283d64a"
+        ],
+        "semantic_scholar_id": "57886b53d0c59059dfd0680f096ecf24a283d64a",
+        "canonical_id": "arXiv:2608.26926",
+        "arxiv_id": "2608.26926",
+        "doi": "10.48550/arXiv.2608.26926",
+        "authors": [
+          "Artem Safronov"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.30310",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.30310",
+        "id:SemanticScholar:e07dc96badfcab6876ec4e4d4a467e7fcb3ea771",
+        "id:arXiv:2608.30310",
+        "title:tailreplay escaping the curse of linear attention in prefix caching for hybrid llms",
+        "url:https://arxiv.org/abs/2608.30310"
+      ],
+      "record": {
+        "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
+        "source_url": "https://arxiv.org/abs/2608.30310",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid large language models interleave full-attention layers with linear-attention layers to reduce the cost of long-context inference. This structure complicates prefix caching: full-attention key-value caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing hybrid prefix caching methods address this mismatch by storing recurrent-state checkpoints. As a result, token-level matches are directly usable only at positions aligned with stored checkpoints, constraining prefix reuse to a discrete set of boundaries. We present Tail-Replay, a prefix caching mechanism that enables unconstrained token-level prefix reuse in hybrid large language models. The key insight is that linear-attention mechanisms such as Gated DeltaNet can be viewed as a structured, lossy compression of the input prefix: gated recurrent updates progressively attenuate the contributions of earlier inputs. Consequently, the recurrent state of a matched prefix can be well approximated by replaying only a short, recent suffix of that prefix. Tail-Replay exploits this property by caching the exact full-attention key-value cache while omitting recurrent-state checkpoints. On a cache hit, it reconstructs the linear-attention states by replaying a short, recent suffix of the matched prefix. As a result, the reuse boundary is determined by the shared tokens rather than by recurrent-state checkpoints. We evaluate Tail-Replay on three Gated DeltaNet-based hybrid models using the LongBench and RULER benchmarks. With only a 5--10\\% replay budget, it retains 92.8--99.9\\% of full-prefill quality on LongBench and RULER. For serving efficiency, we evaluate time-to-first-token speedups across multiple matched-prefix lengths---8K, 16K, and 32K. The speedup grows with prefix length, reaching $9.1$--$14.3\\times$ over full prefill at 32K.",
+        "identifiers": [
+          "SemanticScholar:e07dc96badfcab6876ec4e4d4a467e7fcb3ea771"
+        ],
+        "semantic_scholar_id": "e07dc96badfcab6876ec4e4d4a467e7fcb3ea771",
+        "canonical_id": "arXiv:2608.30310",
+        "arxiv_id": "2608.30310",
+        "doi": "10.48550/arXiv.2608.30310",
+        "authors": [
+          "Yi-Rui Liu",
+          "Ruo-Ling Qi",
+          "Xuan'er Wu",
+          "Peng-Hang Liu",
+          "Jian Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 79,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:022b29aeab7820245fc2431226d029f4362ff5da87bb38a65657a4a18320f8eb",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
