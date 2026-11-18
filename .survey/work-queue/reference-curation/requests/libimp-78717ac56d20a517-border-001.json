@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-78717ac56d20a517-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.23328",
+  "reason": "PyTorch Inductorが生成した推論プログラムのstatement順をそのまま入れ替え、peak activation memoryの予測を実コードで実現する手法と最適性下界を示す。CPUの54構成中22構成で従来の再コンパイルは予測peakを外す一方、提案のstatement並べ替えは条件成立時にbyte単位で一致する。対象は小型推論グラフやDeepLabV3などが中心で、LLM長文脈・KV cacheへの適用は要旨にないためborderline。",
+  "title": "Peak-Memory Schedules You Can Trust: Exact Realization, Certified Optimality, and the Limits of Recomputation for Inference",
+  "identity_tokens": [
+    "id:arXiv:2610.23328",
+    "id:DOI:10.48550/arXiv.2610.23328"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78717ac56d20",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

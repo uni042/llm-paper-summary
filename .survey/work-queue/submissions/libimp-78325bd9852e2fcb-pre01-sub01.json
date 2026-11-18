@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity",
+      "source_url": "https://arxiv.org/abs/2610.41968",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight pruning can reduce the storage and inference cost of large language models (LLMs), but preserving quality at high sparsity levels remains challenging. Existing methods face a quality-cost trade-off in this regime. One-shot pruning is cheap but degrades sharply as sparsity increases, even when followed by post-pruning recovery. A growing line of work instead optimizes the mask directly from the dense model under the end-to-end objective; among these methods, [Lee et al.,2026], the recent state of the art at extreme sparsity, reaches high quality but at the cost of model-sized optimizer state and auxiliary variables. To address this gap, we propose ETAPS, which prunes gradually and adapts sparsely: it tightens a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget. Our key observation is that gradual weight removal keeps each pruning step small enough for sparse adaptation to compensate, allowing the adapted model to provide end-to-end gradients that guide the next pruning decision without model-sized optimizer state. Across six models from 125M to 13B parameters, ETAPS achieves lower perplexity than ELSA at every evaluated sparsity from 50% to 90%, with perplexity reductions of up to 42%. ETAPS is also far cheaper: at 90% sparsity, it prunes LLaMA2-7B on a single H200, where ELSA uses four, with $5.0\\times$ smaller total persistent state and 49% fewer GPU-hours. Together, our findings point to a promising direction for achieving high quality in demanding regimes such as extreme sparsity at substantially lower cost.",
+      "identifiers": [
+        "SemanticScholar:a11ae38f88b99418fe0a3a6876fae94071d09353"
+      ],
+      "semantic_scholar_id": "a11ae38f88b99418fe0a3a6876fae94071d09353",
+      "canonical_id": "arXiv:2610.41968",
+      "arxiv_id": "2610.41968",
+      "authors": [
+        "Jean Lucien Randrianantenaina",
+        "Hung Nguyen",
+        "Nasib Ullah",
+        "Jin-Bin Zhang",
+        "Nilesh Gupta",
+        "I. Dhillon",
+        "Rohit Babbar"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ETAPSはLLMの重みを段階的に削りながら小規模な疎な差分パラメータを学習し、50〜90%の高スパース化でも精度を保つ圧縮手法。125M〜13Bの6モデルでELSAよりperplexityが低く、最大42%改善と報告。LLaMA2-7Bの90%剪定では持続状態5分の1、GPU時間49%削減。最終重みの保存量・推論時演算削減を目的とするためaccept。ただしabstractに実測の推論速度向上はない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-78325bd9852e",
+    "round": "libimp-78325bd9852e2fcb-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-78325bd9852e2fcb-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-78325bd9852e2fcb-pre01.json",
+    "receipt": "sha256:52a48e61e75ba590ee5655bde0336c8215c2fcdd50386762a9e81d7d57540662"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-78325bd9852e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

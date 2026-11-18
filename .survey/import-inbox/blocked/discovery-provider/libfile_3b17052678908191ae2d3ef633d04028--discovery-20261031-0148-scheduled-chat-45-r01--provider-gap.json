@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-45",
-  "run_key": "20261031-0148-scheduled-chat-45/r01",
+  "run_key": "20261031-0148-scheduled-chat-45/r01::provider-gap",
   "reference_main_sha": "f7f76531a3902cd38f69bf92c35172314f65c165",
-  "record_count": 10,
+  "record_count": 5,
   "records": [
     {
       "classification": "accept",
@@ -24,22 +24,6 @@
     },
     {
       "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2025.acl-long.486",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2025.acl-long.486"
-      ],
-      "title": "Faster Speculative Decoding via Effective Draft Decoder with Pruned Candidate Tree",
-      "reason": "ACL公式要旨で、EDDは対象LLMの符号化結果をsoft promptとしてドラフトへ渡しKL損失で分布を合わせ、PCTはドラフト信頼度から木ノードの期待時間利得を見積もり不要枝を除くと確認。投機的復号の受理効率と推論遅延を直接改善する方式。",
-      "source_url": "https://aclanthology.org/2025.acl-long.486/",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:56:36+09:00",
-      "last_checked_at": "2026-10-31T01:56:36+09:00",
-      "linked_from": [],
-      "worklist_rank": 27,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "accept",
       "canonical_id": "DOI:10.32604/cmc.2026.079522",
       "identity_tokens": [
         "DOI:10.32604/cmc.2026.079522"
@@ -52,22 +36,6 @@
       "last_checked_at": "2026-10-31T01:56:36+09:00",
       "linked_from": [],
       "worklist_rank": 35,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "accept",
-      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1386",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2025.findings-acl.1386"
-      ],
-      "title": "Automated Fine-Grained Mixture-of-Experts Quantization",
-      "reason": "ACL Findings公式要旨で、MoE expertのチャネル別外れ値とFisher情報・条件数を用い、down-projectionの精度感度が高いことに応じてビット幅を自動配分する量子化方式と確認。Mixtral-8x7Bの圧縮・言語理解評価があり、MoE推論の重み容量削減に直接関連する。",
-      "source_url": "https://aclanthology.org/2025.findings-acl.1386/",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:56:36+09:00",
-      "last_checked_at": "2026-10-31T01:56:36+09:00",
-      "linked_from": [],
-      "worklist_rank": 129,
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
@@ -117,54 +85,15 @@
       "linked_from": [],
       "worklist_rank": 136,
       "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2509.04226",
-      "identity_tokens": [
-        "arXiv:2509.04226"
-      ],
-      "title": "LISM: Long-range Integrative State space Models via Input-Latent State Interactions",
-      "reason": "arXiv一次要旨で、LISMは安定再帰で記憶が指数減衰するSSMの問題に対し、一時的な不安定更新と入力・潜在状態の相互作用で長期記憶を改善すると確認。言語モデリング等の品質・安定性を評価するが、LLMサービングの実測遅延・メモリ削減や推論ランタイム最適化を直接示さず、推論システム収録には境界的。",
-      "source_url": "https://arxiv.org/abs/2509.04226",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:56:36+09:00",
-      "last_checked_at": "2026-10-31T01:56:36+09:00",
-      "linked_from": [],
-      "worklist_rank": 212,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.02110",
-      "identity_tokens": [
-        "arXiv:2602.02110"
-      ],
-      "title": "An Empirical Study of World Model Quantization",
-      "reason": "arXiv一次要旨の対象はDINO-WM世界モデルの視覚的計画と行動予測であり、重み・活性量子化の低ビット時の計画成功率を分析する。LLMの生成推論、サービング、KVメモリ、MoE推論等への適用・測定は示されず、今回のLLM推論システム系統からは対象外。",
-      "source_url": "https://arxiv.org/abs/2602.02110",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:56:36+09:00",
-      "last_checked_at": "2026-10-31T01:56:36+09:00",
-      "linked_from": [],
-      "worklist_rank": 215,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.21627",
-      "identity_tokens": [
-        "arXiv:2512.21627"
-      ],
-      "title": "AstraNav-Memory: Contexts Compression for Long Memory",
-      "reason": "arXiv一次要旨で、Qwen2.5-VLを用いた生涯ナビゲーション向けにDINOv3特徴とPixelUnshuffle/Convで画像履歴を圧縮し、16倍設定では画像約30トークンへ縮小すると確認。視覚文脈圧縮は関連するが、主評価はGOAT-Bench/HM3D-OVONの移動性能であり、汎用VLMサービングの速度・メモリ最適化を直接検証していないため境界的。",
-      "source_url": "https://arxiv.org/abs/2512.21627",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:56:36+09:00",
-      "last_checked_at": "2026-10-31T01:56:36+09:00",
-      "linked_from": [],
-      "worklist_rank": 250,
-      "origin": "discovery_worklist_primary_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261031-0148-scheduled-chat-45/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_3b17052678908191ae2d3ef633d04028--discovery-20261031-0148-scheduled-chat-45-r01.json",
+  "provider_gap_ids": [
+    "DOI:10.1016/j.patcog.2026.113599",
+    "DOI:10.32604/cmc.2026.079522",
+    "arXiv:2505.20112",
+    "arXiv:2602.24174",
+    "arXiv:2606.15805"
   ]
 }

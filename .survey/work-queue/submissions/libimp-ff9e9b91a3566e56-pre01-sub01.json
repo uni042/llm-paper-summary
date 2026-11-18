@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Eviction as Estimation: A Fixed-Lag Smoothing View of Test-Time Memory, and When Measuring Beats Accumulating",
+      "source_url": "https://arxiv.org/abs/2607.24667",
+      "year": 2026,
+      "published": "2026-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A language model with a bounded working memory must repeatedly decide which stored items to keep. Every deployed method decides the moment an item arrives, from the past (StreamingLLM, H2O) or from a guess about the future (SnapKV). We recast the choice as an estimation problem on a hidden signal, whether an item will be reused, placing existing methods on one axis, the commit lag $H$: online filters and learned predictors commit at $H=0$, while Belady's offline optimum sits where the whole future is known. The missing regime in between, fixed-lag smoothing, waits a bounded number of steps, observes which items a correct near-future prediction attended to, and only then commits. This measurement, demonstrated utility, turns Belady's unobservable future request into something we read off the model itself. We instantiate it as a training-free policy, RMM, a strict generalization of H2O that reduces to it exactly when the measurement is uniform. In controlled settings where reuse is endogenous and separated in time, demonstrated utility identifies used memory far better than accumulated attention, and a small bounded memory behaves like a much larger one. But on independent third-party benchmarks, run inside NVIDIA's KVPress harness against its own SnapKV, H2O, and StreamingLLM implementations, the advantage mostly disappears: RMM is on par with H2O for single-turn question answering and loses to both H2O and SnapKV in a streaming multi-turn setting. The cause is simple: on natural text the model is correct about most tokens, so weighting attention by correctness barely changes it, and demonstrated utility collapses onto accumulated attention unless reuse is sharp and endogenous, which standard benchmarks do not exercise. Our contribution is the framework and an honest map of when measuring beats accumulating, not a new state of the art.",
+      "identifiers": [
+        "SemanticScholar:0c8a7473e1453472f28f5b63dab6e896ea984337"
+      ],
+      "semantic_scholar_id": "0c8a7473e1453472f28f5b63dab6e896ea984337",
+      "canonical_id": "arXiv:2607.24667",
+      "arxiv_id": "2607.24667",
+      "doi": "10.48550/arXiv.2607.24667",
+      "authors": [
+        "Maruthi Vemula",
+        "Neeraj Praneeth Gajula"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      },
+      "reason": "有限容量のLLM作業記憶/KVキャッシュから何を退避するかを、将来再利用される潜在信号の推定問題として定式化する。固定遅延平滑化を使う学習不要のRMM方策は、正しい近未来予測で実際に参照された記憶を測定してから保持対象を決定し、測定重みが一様な場合にはH2Oに一致する。制御された再利用環境では利得がある一方、NVIDIA KVPressの独立した自然言語ベンチマークでは単発QAでH2Oと同等、ストリーミング複数ターンではH2OとSnapKVに劣ると著者要旨が明記する。KV evictionという推論時メモリ最適化手法の直接的な提案なのでacceptとし、負の結果を保存する。",
+      "library_body_check": "primary_arxiv_abstract_checked; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_after_duplicate_gate"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ff9e9b91a356",
+    "round": "libimp-ff9e9b91a3566e56-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ff9e9b91a3566e56-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ff9e9b91a3566e56-pre01.json",
+    "receipt": "sha256:d72bb46a0c8d8950214ffd353eef3ef1655edee60c2fb00ed8ba6c1fd0c8ca8e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ff9e9b91a356",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

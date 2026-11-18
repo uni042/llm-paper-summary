@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KV Cache Group Quantization Based on vLLM Inference Engine",
+      "source_url": "https://doi.org/10.1109/CAIBDA65784.2025.11183354",
+      "year": 2025,
+      "published": "2025-06-20",
+      "venue": "2025 5th International Conference on Artificial Intelligence, Big Data and Algorithms (CAIBDA)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference with Large Language Models (LLMs) is a hot topic in the field of Artificial Intelligence. vLLM is an efficient inference engine for LLMs, which solves the memory fragmentation of KV Cache by chunking it and is widely used in large language model service systems by virtue of its efficient memory management mechanism and excellent inference performance. Quantization greatly reduces the memory occupation of parameters by approximating the representation of parameters from high bit-width data to low bit-width data. Quantization is a key technique to accelerate model inference. However, the vLLM inference engine only supports quantization of models, and in addition to the models, the KV Cache in the inference process also occupies a large amount of memory. To address the above problems, we propose a KV Cache group quantization method based on the vLLM inference engine, which reduces the memory consumption in the model inference process by quantizing the KV Cache and optimizes the computation introduced by quantization and dequantization at the same time. We evaluate our method on LLaMA2-7B, LLaMA3-8B, and DeepSeek-R1-Distill-LLaMA3-8B models. Experimental results demonstrate that under concurrent multi-request scenarios, our approach improves inference throughput by up to 18% while maintaining low accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:e95c1a906e3275afca24dd43cf094e959b063e0a"
+      ],
+      "semantic_scholar_id": "e95c1a906e3275afca24dd43cf094e959b063e0a",
+      "doi": "10.1109/CAIBDA65784.2025.11183354",
+      "canonical_id": "DOI:10.1109/CAIBDA65784.2025.11183354",
+      "authors": [
+        "Wei Gao",
+        "Chaowei Kong",
+        "Zhenqi Gao",
+        "Jia-Nan Li",
+        "Lin Han",
+        "Jingming Xie"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 516,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Computer Society公式掲載の原著要旨を確認。vLLMのKVキャッシュをグループ量子化して推論時メモリ消費を削減し、量子化・逆量子化の演算も最適化する手法。LLaMA2-7B、LLaMA3-8B、DeepSeek-R1-Distill-LLaMA3-8Bを評価し、複数リクエスト同時実行時に低い精度損失を保ちつつ最大18%の推論スループット改善を報告。LLMサービングのKVキャッシュ量子化と推論効率化を直接扱うためaccept。倍率は出版社abstractの条件に限定し、論文全文の評価表は未確認。",
+      "library_body_check": "primary_ieee_computer_society_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "legacy_discovery_primary_abstract_revalidated_for_import"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-496d153c243c",
+    "round": "libimp-496d153c243ce44e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-496d153c243ce44e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-496d153c243ce44e-pre01.json",
+    "receipt": "sha256:ce82b19e15f6d52d5bcdbdb9bc74af26b0314cbd5e94b5fecf4b5712b5d5a87c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-496d153c243c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

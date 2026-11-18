@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "JAXBench: Benchmarking Autonomous TPU Kernel Optimization",
+      "source_url": "https://arxiv.org/abs/2607.20466",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rigorous benchmarks have driven progress in autonomous GPU kernel performance optimization by establishing a shared target to hillclimb on, but no equivalent exists for TPUs. We present JAXBench, a TPU-native benchmark suite for AI-generated kernel optimization on Google Cloud TPUs. JAXBench comprises 50 JAX workloads that are both relevant and provide headroom for optimization. We extract 17 production ML operators from architectures in the public MaxText library such as Llama-3.1, DeepSeek-V3, Mixtral, Mamba-2, and AlphaFold2, and translate 33 operators from KernelBench that are validated for correctness and set with new problem sizes that achieve high TPU v6e MXU utilization. Eight of the 17 production operators ship with hand-optimized Pallas kernels from the public Tokamax library and block-size tuned to establish an expert upper-bound baseline. We evaluate four feedback-driven methods on generating candidate Pallas kernels for JAXBench. Across the full suite with Gemini 3 Flash, we find that target-specific context matters more than model scale on a sparsely-documented DSL like Pallas. Conditioning on curated TPU documentation raises per-sample correctness from 5.8% to 37.3% and solves 48 of 50 benchmarks at a 1.28x geomean speedup. Search structure yields significant gains once correctness is achieved, with Autocomp's beam-search pipeline reaching a 1.36x geomean speedup over XLA. On the 8 hand-tuned kernels, Autocomp reaches 1.60x geomean over XLA, recovering most of the 2.08x Tokamax upper bound but trailing on the specialized paged and ragged attention operators. High-quality TPU kernel optimization remains a challenging task, and we release the JAXBench benchmark, evaluation harness, and baseline results to support open source contributions.",
+      "identifiers": [
+        "SemanticScholar:6435e398c2b70ca9e06a445699ff3c735b32485c"
+      ],
+      "semantic_scholar_id": "6435e398c2b70ca9e06a445699ff3c735b32485c",
+      "canonical_id": "arXiv:2607.20466",
+      "arxiv_id": "2607.20466",
+      "doi": "10.48550/arXiv.2607.20466",
+      "authors": [
+        "Arya Tschand",
+        "Charles Hong",
+        "Julian Walker",
+        "Nina Cai",
+        "Shang-Kun Wang",
+        "Suvinay Subramanian",
+        "Sundar Dev",
+        "V. J. Reddi",
+        "Amir Yazdanbakhsh",
+        "Sethu Sankaran"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。TPU v6e向けにLlama-3.1、DeepSeek-V3、Mixtral、Mamba-2等の実運用演算17種とKernelBench由来33種を集めた50件のJAXカーネル最適化ベンチマークを提案。paged/ragged attention等のLLM推論演算を含み、Pallas自動生成・正確性・XLA比geomean速度を測定する。推論カーネル実装評価に直接資する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.23027",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought reasoning (Long CoT) is now fundamental to state-of-the-art LLMs, especially in mathematical reasoning. However, LLM generation is highly sequential, and long CoTs lead to a high latency. We propose to train Divide-and-Conquer CoT (DC-CoT) to reduce the latency. With DC-CoT, the model can act as a director that identifies distinct subtasks that can be performed in parallel in its reasoning process, and then spawns workers to execute the subtasks. Our goal is to achieve high accuracy, with a low longest path length, which is a theoretical measure of the latency needed for the response. We start with a long CoT base model (DeepScaleR-1.5B-Preview), and first use SFT with a small curated demonstration set to initialize its ability to spawn workers in a certain format. Because SFT degrades the accuracy significantly, we design a multi-stage RL algorithm, with various data filtering strategies, to recover the accuracy while decreasing the longest path length. Across several benchmarks including AIME 2024 and HMMT 2025, DC-CoT achieves similar accuracy as DeepScaleR-1.5B-Preview while decreasing longest path length by 35-40%. Our code, SFT dataset and models are publicly available at https://github.com/amahankali10/DC_CoT_RL_for_Low_Latency_CoT_with_Parallel_Reasoning.",
+      "identifiers": [
+        "SemanticScholar:48b7bca2ce318080487d6496bd558d1c68faf155"
+      ],
+      "semantic_scholar_id": "48b7bca2ce318080487d6496bd558d1c68faf155",
+      "canonical_id": "arXiv:2601.23027",
+      "arxiv_id": "2601.23027",
+      "doi": "10.48550/arXiv.2601.23027",
+      "authors": [
+        "Arvind V. Mahankali",
+        "Kai-Yue Wen",
+        "Teng-Yu Ma"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。LLMが推論を独立部分問題に分解して並列workerへ委譲する構造をSFTと多段RLで学習させ、推論時の最長依存経路長を短縮する。DeepScaleR-1.5B-Previewを基にAIME 2024等で正解率を概ね維持しつつcritical-path長35〜40%減を報告する。学習を手段としているが最終寄与は並列推論のレイテンシ短縮である。壁時計時間と理論経路長は区別が必要。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "AE-LLM: Adaptive Efficiency Optimization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.20492",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success across diverse applications, yet their deployment remains challenging due to substantial computational costs, memory requirements, and energy consumption. Recent empirical studies have demonstrated that no single efficiency technique is universally optimal; instead, the effectiveness of methods such as efficient attention mechanisms, mixture-of-experts (MoE), parameter-efficient fine-tuning, and quantization varies significantly depending on task characteristics, resource constraints, and model scales. Building upon these insights, we propose AE-LLM, a unified framework that automatically selects and combines optimal efficiency techniques tailored to specific deployment scenarios. Our approach introduces a multi-objective optimization framework that jointly considers accuracy, latency, memory footprint, and energy consumption, while accounting for hardware constraints and task requirements. We develop an efficient search algorithm that explores the combinatorial space of efficiency techniques across architecture, fine-tuning, and inference stages, identifying Pareto-optimal configurations. Extensive experiments across 15 models (0.5B-70B parameters) and 10 diverse tasks demonstrate that AE-LLM achieves an average of $2.8\\times$ improvement in efficiency metrics while maintaining competitive accuracy (within 1.2\\% of baseline), compared to static efficiency configurations. Furthermore, our framework generalizes effectively to vision-language models, achieving similar efficiency gains. Our contributions provide practitioners with an automated tool for navigating the complex trade-off landscape of LLM efficiency optimization.",
+      "identifiers": [
+        "SemanticScholar:239737aca9d67011c9043b9bd33ba546a6e8080b"
+      ],
+      "semantic_scholar_id": "239737aca9d67011c9043b9bd33ba546a6e8080b",
+      "canonical_id": "arXiv:2603.20492",
+      "arxiv_id": "2603.20492",
+      "doi": "10.48550/arXiv.2603.20492",
+      "authors": [
+        "Kaito Tanaka",
+        "Masato Ito",
+        "Yuji Nishimura",
+        "Keisuke Matsuda",
+        "Aya Nakayama"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。15モデル（0.5B〜70B）と10タスクで、注意機構、MoE、量子化等の効率化技術をハードウェア・精度・遅延・メモリ・電力制約に合わせて自動選択・組合せする多目的探索を提案。推論配置における効率化構成選択が直接の対象であり、静的構成に対して平均2.8倍の効率指標改善を報告する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs",
+      "source_url": "https://arxiv.org/abs/2504.16214",
+      "year": 2025,
+      "published": "2025-04-22",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient GPU programming is crucial for achieving high performance in deep learning (DL) applications. The performance of GPU programs depends on how data is parallelized across threads and arranged within memory subsystems. The mapping functions describing tensors on GPUs are known as tensor layouts. Low-level programming frameworks, such as CUTLASS and Hidet, provide expressive layout abstractions but often require considerable programming effort to manually specify optimal layouts. High-level GPU programming languages, such as Triton, rely on compiler heuristics to generate dataflow, layouts, and pipelining strategies in GPU programs. However, the heuristics for dataflow and pipelining strategies are not generalizable to complex operators. To balance expressiveness and programmability, we propose Hexcute, a compiler framework that automates layout synthesis while providing explicit control over dataflow and pipelining. Hexcute formalizes layout synthesis as a constraint programming problem and solves it with a type-inference-based algorithm. This approach enables systematic exploration of optimal layouts and instructions.Our evaluation shows that Hexcute matches the performance of libraries like cuBLAS and FlashAttention on GEMM, Attention, and their variants, while reducing the amount of code by 1.27×-7.94× compared to CUTLASS. For mixed-type mixture-of-experts (MoE) operators, Hexcute achieves an average speedup of 6.46× over Triton. In the end-to-end evaluations of vLLM, Hexcute delivers up to 2.60× speedup on DeepSeek-R1-AWQ and 2.04× on a Mamba-based model.",
+      "identifiers": [
+        "SemanticScholar:9fe9c846e4885550097118ca77d5a5df2c28e96f"
+      ],
+      "semantic_scholar_id": "9fe9c846e4885550097118ca77d5a5df2c28e96f",
+      "canonical_id": "arXiv:2504.16214",
+      "arxiv_id": "2504.16214",
+      "doi": "10.1109/CGO68049.2026.11395194",
+      "authors": [
+        "Xiao Zhang",
+        "Yao-Yao Ding",
+        "Bolin Sun",
+        "Yang Hu",
+        "Tatiana Shpeisman",
+        "Gennady Pekhimenko"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 575,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。GPU tensor layoutを制約充足と型推論で自動合成し、GEMM・Attention・混合型MoE演算でTriton/CUTLASS等と比較。混合型MoE演算はTriton比平均6.46倍、vLLMのDeepSeek-R1-AWQ推論では最大2.60倍のエンドツーエンド改善を報告しており、LLM推論カーネル・コンパイラの直接的な高速化研究。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models",
+      "source_url": "https://arxiv.org/abs/2506.11120",
+      "year": 2025,
+      "published": "2025-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In spite of strong performance achieved by LLMs, the costs of their deployment are unaffordable. For the compression of LLMs, gradient-based pruning methods present promising effectiveness. However, in these methods, the gradient computation with one-hot labels ignore the potential predictions on other words, thus missing key information for generative capability of the original model. To address this issue, we introduce a self-distillation loss during the pruning phase (rather than post-training) to fully exploit the predictions of the original model, thereby obtaining more accurate gradient information for pruning. Moreover, we find that, compared to attention modules, the predictions of LLM are less sensitive to multilayer perceptron (MLP) modules, which take up more than $5 \\times$ parameters (LLaMA3.2-1.2B). To this end, we focus on the pruning of MLP modules, to significantly compress LLM without obvious performance degradation. Experimental results on extensive zero-shot benchmarks demonstrate that our method significantly outperforms existing pruning methods. Furthermore, our method achieves very competitive performance among 1B-scale open source LLMs. The source code and trained weights are available at https://github.com/visresearch/SDMPrune.",
+      "identifiers": [
+        "SemanticScholar:03b2a63b6365a4920e8652ac8f8522fe3745de81"
+      ],
+      "semantic_scholar_id": "03b2a63b6365a4920e8652ac8f8522fe3745de81",
+      "canonical_id": "arXiv:2506.11120",
+      "arxiv_id": "2506.11120",
+      "doi": "10.48550/arXiv.2506.11120",
+      "authors": [
+        "Hou-Run Zhu",
+        "Cheng-Chao Shen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 526,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。one-hot教師ラベルによる勾配情報不足を補うため、枝刈り段階で元モデルの出力分布を用いる自己蒸留損失を導入し、注意層より低感度とするMLP部分を重点的に枝刈りする。生成LLMのパラメータ圧縮と推論配置コスト削減を直接狙い、zero-shot品質を比較するため、推論向け構造化圧縮の収録対象とする。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e0bb387b05f2",
+    "round": "libimp-e0bb387b05f2f864-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e0bb387b05f2f864-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e0bb387b05f2f864-pre01.json",
+    "receipt": "sha256:4aba01921cd43ac522160de0948166241a47fb195b404ba2c3ea052bb2464c83"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e0bb387b05f2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

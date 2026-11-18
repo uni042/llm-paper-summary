@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
+      "source_url": "https://arxiv.org/abs/2610.42128",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decision models target structured tasks by directly predicting choices or scores, avoiding autoregressive decoding latency. However, transferring a generative LLM's ranking knowledge to a decision model remains challenging: the teacher expresses preferences through a ranked list of document ID sequences, while the student determines the ranking using scores from the first-token position. To bridge this gap, we introduce DecisionRank, a decision model trained through item-space on-policy distillation (OPD). Item-space OPD constructs the student's rollout by sorting its document scores into a ranked sequence. A generative teacher takes the resulting ranking list as inputs and provides conditional feedback to directly supervise those scores. Combined with offline ranking supervision, DecisionRank achieves state-of-the-art performance on both general and reasoning-intensive retrieval benchmarks such as TREC DL, BEIR, and BRIGHT. Across four benchmarks, item-space OPD consistently outperforms alternative training objectives. Even at 1.7B parameters, DecisionRank surpasses its 27B generative teacher on TREC DL19--23. At 8B, it outperforms its generative listwise counterpart while running $24.5\\times$ faster on TREC DL and $16.7\\times$ faster on BRIGHT.",
+      "identifiers": [
+        "SemanticScholar:5957aa1214ec95f3f8865e604c9c7d6fc4ce01de"
+      ],
+      "semantic_scholar_id": "5957aa1214ec95f3f8865e604c9c7d6fc4ce01de",
+      "canonical_id": "arXiv:2610.42128",
+      "arxiv_id": "2610.42128",
+      "authors": [
+        "Yan-Ran Wu",
+        "Dian Yu",
+        "Chong-Yang Bai",
+        "Jie Zhang",
+        "Rui Liu",
+        "Tian-Yi Chen",
+        "Shi-Ke Mei",
+        "Hang Cui",
+        "Frank Shyu",
+        "Sandeep Pandey",
+        "Luke Simon",
+        "Chun-Wei Liu",
+        "Xi Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成LLMがdocument ID列を出力するrerankingを、first-tokenの選択スコアを直接予測するdecision modelへ置換し、item-space on-policy distillationで教師の順位情報を移す。8B版は生成型listwise方式に対しTREC DLで24.5倍、BRIGHTで16.7倍高速と報告。学習方法も含むが推論時autoregressive decodingを省略する実測高速化が中心でありaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.42084",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Continuous diffusion language models show promising potential in text generation tasks, but are prone to problems such as text repetition, semantic drift, and generation quality degradation when the generation length exceeds the training length. To address these challenges, we propose RangeSWA, a training-free length extrapolation method. The method combines local sliding-window attention, remote block summaries, and dynamic content retrieval to preserve local details and support long-range context access. In addition, generation degradation caused by length extrapolation is mitigated through positional remapping, conditioning attention correction, and denoising-stage-adaptive window scheduling. We conducted experiments on multiple continuous diffusion language models, and the results show that RangeSWA can effectively reduce generative perplexity and text repetition rates in long-text generation.",
+      "identifiers": [
+        "SemanticScholar:f93608ddba919f1ac4897e4cb31fa837c6876774"
+      ],
+      "semantic_scholar_id": "f93608ddba919f1ac4897e4cb31fa837c6876774",
+      "canonical_id": "arXiv:2610.42084",
+      "arxiv_id": "2610.42084",
+      "authors": [
+        "Guang-Fu Guo",
+        "Xiao-Qian Lu",
+        "Linsey Pang",
+        "Wei-Ran Yao",
+        "Hao-Lin Chen",
+        "Long Cheng",
+        "Kun-Peng Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "連続拡散型言語モデルの学習時より長い生成で生じる反復・意味ドリフトを、local sliding-window attention、遠隔block要約、動的内容検索と位置再マップで抑制する。denoising段階に応じたwindow制御を行い、複数CDLMで生成PPLと反復率改善を報告。長文生成時のattention文脈アクセスを直接変更する推論時手法でありaccept。ただしabstractには実測速度改善値はない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d0f4b0475f0d",
+    "round": "libimp-d0f4b0475f0dcf24-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d0f4b0475f0dcf24-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d0f4b0475f0dcf24-pre01.json",
+    "receipt": "sha256:de8369b694d5728d24441efc78b2f1f1fee80007813d0f3888266800b9fdad5f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d0f4b0475f0d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

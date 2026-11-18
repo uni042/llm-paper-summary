@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Rethinking Calibration for High-Sparsity LLM Pruning: From Single Sources to Capability Coverage",
+      "source_url": "https://arxiv.org/abs/2606.03328",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training LLM pruning relies on a small calibration set, usually chosen heuristically and judged by WikiText perplexity or by mean accuracy on general-domain commonsense benchmarks. This single-axis view hides capability-specific effects: at 60\\% sparsity, strategies separated by $2.85$ points in averaged commonsense accuracy diverge by $51.9$ points in code retention, and across 15 sources no single one preserves all capabilities. We treat calibration as a capability-coverage problem. Balanced, a uniform four-way mixture under a fixed budget, tests the principle on real corpora: it outperforms every evaluated single source, and its margin over C4 grows from $+4.6$ points at 30\\% sparsity to $+18.8$ at 60\\%. The advantage holds across model scale and a second model family, and transfers to held-out benchmarks disjoint from calibration construction. When aligned corpora are unavailable, IGSP approximates that mixture from the base model and the evaluation taxonomy alone, outperforming prior self-generation methods by $7.23$--$12.79$ points on the LLaMA main suite. On Qwen2.5-7B, IGSP exceeds Balanced on both the main suite and held-out benchmarks. Capability coverage is a first-order design variable for high-sparsity pruning.",
+      "identifiers": [
+        "SemanticScholar:83dfa9aca128d0d1abfd9250c8a5056358213c1b"
+      ],
+      "semantic_scholar_id": "83dfa9aca128d0d1abfd9250c8a5056358213c1b",
+      "canonical_id": "arXiv:2606.03328",
+      "arxiv_id": "2606.03328",
+      "authors": [
+        "Hu Xu",
+        "Z. Xing",
+        "Congcong Liu",
+        "Jia-Xing Wang",
+        "Zhi-Da Jiang",
+        "Jun-Shi Huang",
+        "Zhen Chen",
+        "Jian-Feng Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。SparseGPTの高疎率剪定で校正データの違いがコード・数学能力に大きく作用することを示し、複数能力を均衡させた校正混合とIGSP自己校正を提案。60%疎率では平均精度差2.85点でもコード保持に51.9点の差があり、LLaMA-3.1-8BでC4より18.8点改善と報告。推論用重み剪定の品質維持に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution",
+      "source_url": "https://arxiv.org/abs/2609.36651",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context reasoning in large language models incurs substantial computation and memory costs. Visual text compression (VTC) reduces input length by rendering text as images, but fixed-resolution rendering creates a compression-performance trade-off: low DPI saves tokens at the expense of legibility, whereas high DPI spends tokens on irrelevant content. We introduce FocusVTC, which breaks this trade-off through adaptive resolution while preserving general multimodal capabilities. It combines compressed low-DPI global views with selective region enhancement, integrating enhanced views into ongoing reasoning. We construct 29.4K high-quality Reasoning-Evidence Localization (REL) chain-of-thought examples (REL-CoT) that link reasoning traces to page indices and bounding boxes. Multi-resolution REL supervised fine-tuning (REL-SFT) teaches the model to localize relevant regions, and Group Relative Policy Optimization learns when to enhance resolution and how to use the resulting observations, without a separate continual-pretraining stage. At 72 DPI on RULER v1, FocusVTC scores 87.4 at $2.9\\times$ input compression, including tool observations, versus 57.5 for Glyph at $3.0\\times$ input compression. It surpasses its text-input backbone on LongBench (56.40 versus 55.86), improves the MRCR macro-average by 13.91 points, and achieves a 51.19 macro-average on VTCBench. The MRCR latency evaluation also shows a $2.79\\times$ online end-to-end speedup over Text. General multimodal capabilities are preserved, with MMMU increasing from 65.12 to 66.73 and MME from 2424.02 to 2457.62.",
+      "identifiers": [
+        "SemanticScholar:93163bf69d13ead2c803058f2aad5ce64f7a20d4"
+      ],
+      "semantic_scholar_id": "93163bf69d13ead2c803058f2aad5ce64f7a20d4",
+      "canonical_id": "arXiv:2609.36651",
+      "arxiv_id": "2609.36651",
+      "doi": "10.48550/arXiv.2609.36651",
+      "authors": [
+        "Fang-Zhi Zhong",
+        "Xue-Rui Qiu",
+        "Yu-Qi Pan",
+        "Ya Liu",
+        "Shao-Wei Gu",
+        "Bo-Xing Xu",
+        "Guo-Qi Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。長文テキストを画像へ変換して視覚的に圧縮するVTCに、低DPI全体像と必要領域の高解像度再観測を組み合わせる。RULER v1で入力2.9倍圧縮時87.4点、MRCRのonline end-to-end遅延最大2.79倍改善を報告し、長文脈MLLMの入力token・推論負荷に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Skim and Skip: Hierarchical Adaptive Inference for Efficient Multimodal Retrieval",
+      "source_url": "https://arxiv.org/abs/2609.01613",
+      "year": 2026,
+      "published": "2026-06-24",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Universal multimodal retrieval (UMR) increasingly adopts multimodal large language models (MLLMs) as unified embedding backbones, but their strong retrieval performance comes at substantial inference cost. Existing methods typically rely on uniformly dense inference, where all input tokens are processed through the entire model and matched using the final-layer [EOS] representation. However, this paradigm overlooks two key forms of heterogeneity in multimodal retrieval: token contributions to the final retrieval embedding are highly uneven, and different queries require markedly different amounts of inference depth. To address this, we propose Skim and Skip (SAS), a hierarchical adaptive inference framework for efficient multimodal retrieval. SAS first performs token-level evidence selection to preserve only the input information most relevant to the final retrieval embedding, and then performs depth-adaptive inference to determine whether the current representation is already sufficient for reliable matching. Experiments on 12 MMEB retrieval tasks show that SAS retains about 99% of the dense baseline's average retrieval performance while achieving up to 1.64 times end-to-end speedup and up to 66.3% FLOPs reduction.",
+      "identifiers": [
+        "SemanticScholar:3575339540d853afe7732c5f9598d2b467b62e7d"
+      ],
+      "semantic_scholar_id": "3575339540d853afe7732c5f9598d2b467b62e7d",
+      "canonical_id": "arXiv:2609.01613",
+      "arxiv_id": "2609.01613",
+      "doi": "10.18653/2026.emnlp-main.1927",
+      "authors": [
+        "Meng-Yuan Gao",
+        "Yi-Zhen Zhang",
+        "Yang Ding",
+        "Ziqi Dai",
+        "Shuoshuo Zhang",
+        "Jun-Jie Wang",
+        "Taiqiang Wu",
+        "Chuan Shi",
+        "Lei Ji",
+        "Jian Jiao",
+        "Lin-Feng Zhang",
+        "Yeyun Gong",
+        "Yujun Yang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 147,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "arXiv一次要旨。MLLMを埋め込みbackboneに使うマルチモーダル検索で、寄与の大きい入力トークンを選択し、十分な表現が得られた時点で深さ方向の計算も打ち切る二段階の適応推論。MMEBの12検索課題でdense比約99%の平均検索性能を保ち、最大1.64倍高速化・FLOPs最大66.3%削減を報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0584a803c5c6",
+    "round": "libimp-0584a803c5c66402-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0584a803c5c66402-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0584a803c5c66402-pre01.json",
+    "receipt": "sha256:aa2b318665384c0aab2371156674b6809dddabc4d4695b77541b764e853c6589"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0584a803c5c6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r01::provider-gap",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25012",
+      "identity_tokens": [
+        "id:arXiv:2610.25012",
+        "id:DOI:10.48550/arXiv.2610.25012"
+      ],
+      "title": "Conjugate Compilation: Self-Improving Agentic Co-Compilation for Speculative Decoding",
+      "reason": "投機デコードのdraftとtargetを個別コンパイルするのではなく、両モデルを同じタイルに混在させるオペランド配置とGEMM・非GEMMの共置を探索する。LLMが共同コンパイル案を修正し、実測結果とコンパイラ診断をモンテカルロ木探索へ戻す。B300/RTX 5090の6構成で通常実行比の幾何平均1.37倍、interleaved kernelでは1.45倍のround高速化を報告。推論カーネル・投機デコードの直接的な実装最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25012",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "parent_run_key": "20261102-0958-scheduled-chat-00/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_350a01c264648191aa13b398ae85077a--discovery-20261102-0958-scheduled-chat-00-r01.json",
+  "provider_gap_ids": [
+    "arXiv:2610.25012"
+  ]
+}
