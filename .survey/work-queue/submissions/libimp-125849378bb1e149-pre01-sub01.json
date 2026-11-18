@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SLAY: Geometry-Aware Spherical Linearized Attention with Yat-Kernel",
+      "source_url": "https://arxiv.org/abs/2602.04915",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a new class of linear-time attention mechanisms based on a relaxed and computationally efficient formulation of the recently introduced E-Product, often referred to as the Yat-kernel (Bouhsine, 2025). The resulting interactions are geometry-aware and inspired by inverse-square interactions in physics. Our method, Spherical Linearized Attention with Yat Kernels (SLAY), constrains queries and keys to the unit sphere so that attention depends only on angular alignment. Using Bernstein's theorem, we express the spherical Yat-kernel as a nonnegative mixture of polynomial-exponential product kernels and derive a strictly positive random-feature approximation enabling linear-time O(L) attention. We establish positive definiteness and boundedness on the sphere and show that the estimator yields well-defined, nonnegative attention scores. Empirically, SLAY achieves performance that is nearly indistinguishable from standard softmax attention while retaining linear time and memory scaling, and consistently outperforms prior linear-time attention mechanisms such as Performers and Cosformers. To the best of our knowledge, SLAY represents the closest linear-time approximation to softmax attention reported to date, enabling scalable Transformers without the typical performance trade-offs of attention linearization.",
+      "identifiers": [
+        "SemanticScholar:d36871014cd27e6c4b33e79091e19cb545f224b3"
+      ],
+      "semantic_scholar_id": "d36871014cd27e6c4b33e79091e19cb545f224b3",
+      "canonical_id": "arXiv:2602.04915",
+      "arxiv_id": "2602.04915",
+      "doi": "10.48550/arXiv.2602.04915",
+      "authors": [
+        "J. Luna",
+        "Taha Bouhsine",
+        "Krzysztof Choromanski"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 287,
+        "matched_prestigious_venue": null
+      },
+      "reason": "query/keyを単位球面へ制限し、正値のrandom feature近似でYat-kernel注意をO(L)時間・メモリへ線形化するSLAYを提案。softmax注意に近い品質を保ち、既存線形注意より良い性能を示す長文脈注意アーキテクチャ。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation",
+      "source_url": "https://arxiv.org/abs/2606.30944",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Strong speech-to-text (S2T) LLMs already provide robust speech perception and text reasoning, but adding speech-to-speech (S2S) output is challenging: fine-tuning the backbone can degrade the original S2T performance, while attaching a downstream talker reintroduces a serial text-to-speech bottleneck. We present PRIME-Speech, a frozen-backbone S2S conversion framework that trains only speech-generation modules. PRIME-Speech synchronizes a causal audio post-decoder with intermediate hidden states of the frozen backbone, so codec tokens are generated from the model's evolving reasoning trajectory rather than from completed text chunks. The post-decoder uses mixed hidden-state, text, and audio-history conditioning, and a training-time packing strategy with turn-level audio KV-cache and position reset stabilizes multi-turn spoken interaction without additional multi-turn S2S training data. Multi-token prediction further reduces the effective codec prediction rate and improves first-audio latency without modifying the reasoning path. Across speech translation, spoken QA, speech understanding, and multi-turn dialogue, PRIME-Speech preserves the S2T behavior of the frozen backbone while producing accurate, low-WER spoken responses.",
+      "identifiers": [
+        "SemanticScholar:799d848da2803f87a29446be2ee1b8e82235effa"
+      ],
+      "semantic_scholar_id": "799d848da2803f87a29446be2ee1b8e82235effa",
+      "canonical_id": "arXiv:2606.30944",
+      "arxiv_id": "2606.30944",
+      "doi": "10.48550/arXiv.2606.30944",
+      "authors": [
+        "Yuxuan Hu",
+        "Heng Lu",
+        "Ru-Chao Fan",
+        "Yao Qian",
+        "Xiaofei Wang",
+        "Jian Xue",
+        "Heming Wang",
+        "Shuo-Hang Wang",
+        "Young-Jin Kim",
+        "Ye-Long Shen",
+        "Jin-Yu Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "凍結S2T LLMの途中隠れ状態から音声codec tokenを因果的に生成するpost-decoderを並列実行し、逐次TTSボトルネックを解消するPRIME-Speechを提案。MTPで初回音声遅延も削減するリアルタイム音声LLM推論構成。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "FORGE: Form-Optimal Routing of Grounded Evidence for Frozen LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.34358",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In agentic AI systems, frozen foundation models are increasingly deployed as closed-weight API endpoints, making downstream adaptation possible only through the inputs and inference procedures surrounding the model. As a result, for each input query, two coupled decisions largely determine both answer quality and token cost: what evidence to provide and how much reasoning budget to allocate. Fixed defaults along these axes are often suboptimal, misallocating support form or reasoning depth on roughly 80% of queries in our analysis. To address this challenge, we propose FORGE, a unified framework for adapting frozen models through per-query routing over a joint action space that spans both support form and thinking depth. Under an entropy-regularized, cost-aware utility objective, we derive a closed-form Boltzmann routing target and instantiate the policy as a lightweight 269K-parameter factorized router. The routing policy is trained around the frozen host, without any weight access, through a three-stage pipeline: offline arm enumeration, supervised Kullback-Leibler (KL) distillation from the Boltzmann target, and Group Relative Policy Optimization (GRPO) refinement with host feedback. Across 5 knowledge-intensive benchmarks and 8 frozen backbones ranging from 7B to 671B parameters, FORGE improves accuracy at 42-45% lower token cost on both main hosts, transfers zero-shot across hosts at lower token cost, and composes with intrinsic thinking budgets where available.",
+      "identifiers": [
+        "SemanticScholar:c82e9d28d34bcede73852ef33bfd65fb45a11945"
+      ],
+      "semantic_scholar_id": "c82e9d28d34bcede73852ef33bfd65fb45a11945",
+      "canonical_id": "arXiv:2609.34358",
+      "arxiv_id": "2609.34358",
+      "doi": "10.48550/arXiv.2609.34358",
+      "authors": [
+        "Xi Xiao",
+        "Yun-Bei Zhang",
+        "Chen Liu",
+        "Lin Zhao",
+        "Jia-Lin Chen",
+        "Tian-Chen Zhao",
+        "Xiang Xu",
+        "Youngeun Kim",
+        "Tian-Yang Wang",
+        "Min Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "入力ごとに根拠提示形式と思考深度を同時に選ぶ269Kパラメータのルータを学習し、凍結LLMのtoken costと回答品質を両立するFORGEを提案。5知識ベンチマーク・8モデルで42～45%のトークン費用削減と精度改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Event-Priori-Based Vision-Language Model for Efficient Visual Understanding",
+      "source_url": "https://arxiv.org/abs/2506.07627",
+      "year": 2025,
+      "published": "2025-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM)-based Vision-Language Models (VLMs) have substantially extended the boundaries of visual understanding capabilities. However, their high computational demands hinder deployment on resource-constrained edge devices. A key source of inefficiency stems from the VLM's need to process dense and redundant visual information. Visual inputs contain significant regions irrelevant to text semantics, rendering the associated computations ineffective for inference. This paper introduces a novel Event-Priori-Based Vision-Language Model, termed EP-VLM. Its core contribution is a novel mechanism leveraging motion priors derived from dynamic event vision to enhance VLM efficiency. Inspired by human visual cognition, EP-VLM first employs event data to guide the patch-wise sparsification of RGB visual inputs, progressively concentrating VLM computation on salient regions of the visual input. Subsequently, we construct a position-preserving tokenization strategy for the visual encoder within the VLM architecture. This strategy processes the event-guided, unstructured, sparse visual input while accurately preserving positional understanding within the visual input. Experimental results demonstrate that EP-VLM achieves significant efficiency improvements while maintaining nearly lossless accuracy compared to baseline models from the Qwen2-VL series. For instance, against the original Qwen2-VL-2B, EP-VLM achieves 50% FLOPs savings while retaining 98% of the original accuracy on the RealWorldQA dataset. This work demonstrates the potential of event-based vision priors for improving VLM inference efficiency, paving the way for creating more efficient and deployable VLMs for sustainable visual understanding at the edge.",
+      "identifiers": [
+        "SemanticScholar:d670ac8d5fbef903c826643690c6a5d4392fde7f"
+      ],
+      "semantic_scholar_id": "d670ac8d5fbef903c826643690c6a5d4392fde7f",
+      "canonical_id": "arXiv:2506.07627",
+      "arxiv_id": "2506.07627",
+      "doi": "10.48550/arXiv.2506.07627",
+      "authors": [
+        "Hao-Tong Qin",
+        "Cheng Hu",
+        "M. Magno"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": null
+      },
+      "reason": "event visionの動き事前情報でRGBパッチを疎化し、位置情報を保持したtokenizationでVLMの無駄な視覚計算を減らすEP-VLMを提案。Qwen2-VL-2B比FLOPs50%削減、RealWorldQA元精度98%保持を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-125849378bb1",
+    "round": "libimp-125849378bb1e149-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-125849378bb1e149-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-125849378bb1e149-pre01.json",
+    "receipt": "sha256:6a6e1c7f684f8bc29312de3cec205fbf9bd9967dea6e802dda16c8a4d5ba2742"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-125849378bb1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

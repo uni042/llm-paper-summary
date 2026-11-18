@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HybridKV: Hybrid KV Cache Compression for Efficient Multimodal Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2604.05887",
+      "year": 2026,
+      "published": "2026-04-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have advanced unified reasoning over text, images, and videos, but their inference is hindered by the rapid growth of key-value (KV) caches. Each visual input expands into thousands of tokens, causing caches to scale linearly with context length and remain resident in GPU memory throughout decoding, which leads to prohibitive memory overhead and latency even on high-end GPUs. A common solution is to compress caches under a fixed allocated budget at different granularities: token-level uniformly discards less important tokens, layer-level varies retention across layers, and head-level redistributes budgets across heads. Yet these approaches stop at allocation and overlook the heterogeneous behaviors of attention heads that require distinct compression strategies. We propose HybridKV, a hybrid KV cache compression framework that integrates complementary strategies in three stages: heads are first classified into static or dynamic types using text-centric attention; then a top-down budget allocation scheme hierarchically assigns KV budgets; finally, static heads are compressed by text-prior pruning and dynamic heads by chunk-wise retrieval. Experiments on 11 multimodal benchmarks with Qwen2.5-VL-7B show that HybridKV reduces KV cache memory by up to $7.9\\times$ and achieves $1.52\\times$ faster decoding, with almost no performance drop or even higher relative to the full-cache MLLM.",
+      "identifiers": [
+        "SemanticScholar:8b20dbc0457afc6685fa592cff89fbde6e66aac9"
+      ],
+      "semantic_scholar_id": "8b20dbc0457afc6685fa592cff89fbde6e66aac9",
+      "canonical_id": "arXiv:2604.05887",
+      "arxiv_id": "2604.05887",
+      "doi": "10.48550/arXiv.2604.05887",
+      "authors": [
+        "Bowen Zeng",
+        "Fei Ren",
+        "Jun Zhang",
+        "Xiao Gu",
+        "Ke Chen",
+        "Li-Dan Shou",
+        "Huan Li"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 225,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "著者原著はMLLMのheadをprefillのtext-centric attention sparsityからstatic/dynamicに分類し、階層的KV予算配分の後、static headにはtext-prior pruning、dynamic headにはCPUオフロードしたchunk-wise retrievalを適用する。Qwen2.5-VL-7B等の画像・動画評価で最大7.9倍のKV圧縮と1.52倍のdecode高速化を報告する。直接的な推論メモリ最適化としてaccept。",
+      "library_body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "library_source_run_file": null,
+      "origin": "discovery_recent_primary_source"
+    },
+    {
+      "title": "Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.17531",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While it is known that quantization of large language models (LLMs) reduces memory usage via lower-bit weights, studies quantifying the resulting impact on energy usage and carbon intensity are scarce. We present the first unified evaluation of weight-only quantization strategies for LLM inference across varying input/output lengths and GPUs, highlighting differences in energy efficiency in addition to accuracy degradation and runtime. We study quantized inference on Llama 2 7B, Phi 3.5 Mini Instruct, OLMo 1B, Qwen 2.5 7B, and Qwen 2.5 14B across GLUE MNLI, MMLU, HumanEval, and GSM8K datasets, evaluating 10 post-training quantization (PTQ) strategies on NVIDIA H100, A6000, A100, and L4 GPUs. We identify a novel trend showing that quantization techniques tend to exhibit peak energy efficiency relative to full-precision baselines when inputs are sufficiently long and outputs are short. Furthermore, we show that quantization strategies become marginally more energy-efficient relative to full-precision models as batch sizes increase, though gains are modest. Notably, fused-kernel implementations such as EETQ int8 and Bitsandbytes int8 offer the highest energy savings, up to 4x compared to FP32 on short text generation, with negligible accuracy loss. Finally, we observe that energy usage closely tracks runtime on our evaluated benchmarks, indicating that, in practice, latency optimization can serve as a reliable proxy for reducing the environmental footprint of LLM services. We conclude with suggested directions for strategically selecting low-carbon quantization strategies based on specific inference requirements.",
+      "identifiers": [
+        "SemanticScholar:4937008bc2bd12c7795ff9481b9889cb7e16dd3b"
+      ],
+      "semantic_scholar_id": "4937008bc2bd12c7795ff9481b9889cb7e16dd3b",
+      "canonical_id": "arXiv:2610.17531",
+      "arxiv_id": "2610.17531",
+      "authors": [
+        "Petar Basta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "University of Waterlooの修士論文原著はLlama2、Phi3.5、OLMo、Qwen2.5の複数モデルで、H100/A6000/A100/L4上の10種類のPTQ方式を比較し、入力・出力長、batch、精度、推論エネルギーを評価する。EETQやbitsandbytesの融合INT8 kernelは短文生成でFP32比最大4倍の省エネを報告する。LLM推論の実機性能・電力特性の直接計測としてaccept。",
+      "library_body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "library_source_run_file": null,
+      "origin": "discovery_recent_primary_source"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c9519641756a",
+    "round": "libimp-c9519641756a9748-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c9519641756a9748-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c9519641756a9748-pre01.json",
+    "receipt": "sha256:8ca4383c00a8a5ef8858b5914ca9166bdc7c66402f45136961d555461f8b18a8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c9519641756a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

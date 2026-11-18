@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs",
+      "source_url": "https://arxiv.org/abs/2610.17551",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The dominant barrier to running large clinical language models at the point of care is not arithmetic throughput but graphics memory: consumer GPUs cap at 4-16 GB, while the working set of a 27-billion-parameter model in 4-bit precision is 17-25 GB. We argue that the edge node should be treated as capacity-enabled (system RAM) rather than compute-limited (GPU VRAM), and we test this on commodity hardware. Using an INT4 build of a 27B open model as an architecture-faithful stand-in for a 27B medical model, we measure the memory footprint, inference latency, energy, and federated communication cost of a fully CPU-based pipeline driven by synthetic Fast Healthcare Interoperability Resources (FHIR) prompts. On two independent consumer machines (a desktop-class machine with 67 GB of RAM and a 6 GB GPU, and a mobile workstation with 34 GB of RAM and a 4 GB GPU) the model loads entirely into system RAM (37% and 60% utilization, respectively) while both GPUs are out-of-memory before the first step. Inference runs at overnight-batch speed (0.6-2.4 tokens/s for the 27B model), and federated fine-tuning would transmit only a 22.6 MB low-rank adapter, a 99.96% reduction over full weights. The capacity result is independent of CPU microarchitecture, RAM size, operating system, and GPU. We further identify an open, CPU- and NPU-optimized inference runtime as the natural production path for this approach, indicating a privacy-preserving and broadly deployable route for on-premises clinical AI. All data is synthetic; this is a research artifact and not a medical device.",
+      "identifiers": [
+        "SemanticScholar:33e8470eb2044f63313c8ef6a1804306795c2753"
+      ],
+      "semantic_scholar_id": "33e8470eb2044f63313c8ef6a1804306795c2753",
+      "canonical_id": "arXiv:2610.17551",
+      "arxiv_id": "2610.17551",
+      "authors": [
+        "Eli Yune",
+        "Umer Majeed",
+        "Mahesh Balan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "27B級モデルのINT4重みをconsumer GPU 4～6GBでは収容できない条件で、RAM 34/67GBのCPU推論に切り替える容量中心の配備評価。synthetic FHIR promptで27Bモデルが0.6～2.4tok/s、RAM利用率60/37%で動作し、GPUは推論前にOOMとなることを報告。新規高速化kernelではないが低VRAM端末の実装・性能・電力評価としてaccept。医療性能の実証ではなく合成データによる配備評価である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a1169779e95b",
+    "round": "libimp-a1169779e95b4104-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a1169779e95b4104-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a1169779e95b4104-pre01.json",
+    "receipt": "sha256:c753ded6820f76b85d433e79bbb55a4e82799f8bb794a75786f6a027590e7e33"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a1169779e95b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

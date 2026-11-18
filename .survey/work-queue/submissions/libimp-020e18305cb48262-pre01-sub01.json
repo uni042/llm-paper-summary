@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Quantization as Survival Analysis: Discrete-Time Proportional Hazards Models for Bit-Width Collapse Prediction",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3736829",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization of large language models (LLMs) requires careful allocation of bit-widths across heterogeneous architectural components. Existing sensitivity metrics rely on gradient norms, Hessian traces, or activation ranges, all of which are computed at a fixed bit-width and do not account for the sequential, multi-stage nature of progressive compression. We propose to reframe quantization fragility as a survival problem: each transformer block is treated as a unit subject to a failure event—a critical performance collapse—as bit-width decreases from 16 to 2 bits through an ordered schedule <inline-formula> <tex-math notation=\"LaTeX\">$\\mathcal {B} = \\langle 16,12,8,6,5,4,3,2 \\rangle $ </tex-math></inline-formula>. We build a discrete-time interval-censored survival dataset from one-at-a-time block quantization experiments and fit a discrete-time proportional hazards model via complementary log-log (cloglog) regression. The resulting hazard ratios provide statistically grounded, architecture- aware predictors of collapse timing. We demonstrate that depth-normalised position (HR = 8.54, <inline-formula> <tex-math notation=\"LaTeX\">$p \\lt 10^{-4}$ </tex-math></inline-formula>) and weight variance-to-mean ratio (HR = 3.98, <inline-formula> <tex-math notation=\"LaTeX\">$p \\lt 10^{-3}$ </tex-math></inline-formula>) are the dominant structural predictors of quantization vulnerability, while attention head density provides a protective effect (HR = 0.40, <inline-formula> <tex-math notation=\"LaTeX\">$p \\lt 0.002$ </tex-math></inline-formula>). A survival-driven mixed-precision allocation (SurvAlloc) derived from these hazard ratios outperforms uniform INT4 quantization by + 1.2–+ 2.7 MMLU points at a comparable memory footprint across TinyLlama-1.1B, Llama-2-7B, OPT-6.7B, and Mistral-7B. The concordance index reaches <inline-formula> <tex-math notation=\"LaTeX\">$0.81~[{0.76, 0.86}]$ </tex-math></inline-formula>, confirmed non-random by a Monte Carlo permutation test (<inline-formula> <tex-math notation=\"LaTeX\">$p \\lt 10^{-4}$ </tex-math></inline-formula>).",
+      "identifiers": [
+        "SemanticScholar:b5575491f2cb1e9a0ef3786eb8729e5634a7fafa"
+      ],
+      "semantic_scholar_id": "b5575491f2cb1e9a0ef3786eb8729e5634a7fafa",
+      "doi": "10.1109/ACCESS.2026.3736829",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3736829",
+      "authors": [
+        "Miavaka Voninahitra Ambinintsoa Rakotovao Valisoa",
+        "Hobihery Matio Robinson"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Access論文のDOAJ収録・出版社提供書誌abstractを確認。Transformerの各blockを16→12→8→6→5→4→3→2 bitの順に圧縮した際、性能が大きく崩れる時点を「故障イベント」とみなし、区間打切り離散時間生存データに対する相補対数対数回帰で脆弱性を予測する。推定ハザード比を使うSurvAllocは、TinyLlama-1.1B、Llama-2-7B、OPT-6.7B、Mistral-7Bで、同程度のメモリ使用量の一律INT4に対しMMLUを1.2〜2.7ポイント改善と要旨で報告。LLM推論用の混合精度量子化配分・メモリ圧縮へ直接寄与するためaccept。推論速度の改善は要旨で確認しておらず、本文・詳細条件は未読。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-020e18305cb4",
+    "round": "libimp-020e18305cb48262-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-020e18305cb48262-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-020e18305cb48262-pre01.json",
+    "receipt": "sha256:b46c3b65909c950f1bd956b6ad94fc01cdd7a4f8c29abe5fb42b39878fcaecba"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-020e18305cb4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

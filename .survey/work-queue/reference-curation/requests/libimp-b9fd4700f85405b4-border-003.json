@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b9fd4700f85405b4-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2410.14578",
+  "reason": "arXiv一次要旨。LLMを埋め込み用テキストエンコーダへ変換する際、末尾層を削除し短い教師あり対照学習を行うL3 Pruneで、embeddingタスクの推論時間・メモリを削減する。主評価はテキスト埋め込み専用で、生成LLMのtoken復号やサービング性能ではないため、推論向け圧縮との接点はあるが本サーベイの中心対象としては境界的。",
+  "title": "Large Language Models Are Overparameterized Text Encoders",
+  "identity_tokens": [
+    "arXiv:2410.14578"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9fd4700f854",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Understanding Dynamic Compute Allocation in Recurrent Transformers",
+      "source_url": "https://arxiv.org/abs/2602.08864",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token-level adaptive computation seeks to reduce inference cost by allocating more computation to harder tokens and less to easier ones. However, prior work is primarily evaluated on natural-language benchmarks using task-level metrics, where token-level difficulty is unobservable and confounded with architectural factors, making it unclear whether compute allocation truly aligns with underlying complexity. We address this gap through three contributions. First, we introduce a complexity-controlled evaluation paradigm using algorithmic and synthetic language tasks with parameterized difficulty, enabling direct testing of token-level compute allocation. Second, we propose ANIRA, a unified recurrent Transformer framework that supports per-token variable-depth computation while isolating compute allocation decisions from other model factors. Third, we use this framework to conduct a systematic analysis of token-level adaptive computation across alignment with complexity, generalization, and decision timing. Our results show that compute allocation aligned with task complexity can emerge without explicit difficulty supervision, but such alignment does not imply algorithmic generalization: models fail to extrapolate to unseen input sizes despite allocating additional computation. We further find that early compute decisions rely on static structural cues, whereas online halting more closely tracks algorithmic execution state.",
+      "identifiers": [
+        "SemanticScholar:ad81ecea14b3034c1910dd51a35e87e9cc9648b6"
+      ],
+      "semantic_scholar_id": "ad81ecea14b3034c1910dd51a35e87e9cc9648b6",
+      "canonical_id": "arXiv:2602.08864",
+      "arxiv_id": "2602.08864",
+      "doi": "10.48550/arXiv.2602.08864",
+      "authors": [
+        "Ibraheem Muhammad Moosa",
+        "Suhas Lohit",
+        "Ye Wang",
+        "Moitreya Chatterjee",
+        "Wenpeng Yin"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はトークン難度と可変深さ計算を分離評価するANIRA再帰Transformerと合成課題の評価法を提案。トークンごとに必要な演算量を割り当てるadaptive computationの有効性を検証し、条件付き推論計算削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models",
+      "source_url": "https://arxiv.org/abs/2505.22757",
+      "year": 2025,
+      "published": "2025-05-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) is a recently proposed pre-training objective for language models. Rather than predicting only the next token (NTP), MTP predicts the next $k$ tokens at each prediction step, using multiple prediction heads. MTP has shown promise in improving downstream performance, inference speed, and training efficiency, particularly for large models. However, prior work has shown that smaller language models (SLMs) struggle with the MTP objective. To address this, we propose a curriculum learning strategy for MTP training, exploring two variants: a forward curriculum, which gradually increases the complexity of the pre-training objective from NTP to MTP, and a reverse curriculum, which does the opposite. Our experiments show that the forward curriculum enables SLMs to better leverage the MTP objective during pre-training, improving downstream NTP performance and generative output quality, while retaining the benefits of self-speculative decoding. The reverse curriculum achieves stronger NTP performance and output quality, but fails to provide any self-speculative decoding benefits.",
+      "identifiers": [
+        "SemanticScholar:9f2ac1776f9154540917b1cff8f960fe8de9b9a4"
+      ],
+      "semantic_scholar_id": "9f2ac1776f9154540917b1cff8f960fe8de9b9a4",
+      "canonical_id": "arXiv:2505.22757",
+      "arxiv_id": "2505.22757",
+      "doi": "10.48550/arXiv.2505.22757",
+      "authors": [
+        "Ansar Aynetdinov",
+        "Alan Akbik"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 539,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨は小型LMがmulti-token predictionを学びにくい問題に対し、NTPからMTPへ段階的に学習するcurriculumを提案。自己投機的復号の速度利点を維持しながら小型モデルの生成品質を改善。MTPの推論高速化を可能にする学習設計として関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Predicting LLM Compression Degradation from Spectral Statistics",
+      "source_url": "https://arxiv.org/abs/2604.18085",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Matrix-level low-rank compression is a promising way to reduce the cost of large language models, but running compression and evaluating the resulting models on language tasks can be prohibitively expensive. Can compression-induced degradation be predicted before committing to this compute? We systematically analyze the Qwen3 and Gemma3 model families across four representative low-rank compression methods: vanilla SVD, two ASVD variants, and SVD-LLM. We find that stable rank and information density, measured in bits per parameter, dominate performance degradation. The interaction term $\\gamma \\cdot \\bar{\\rho}_s$, defined as compression ratio times stable rank, is a robust predictor of accuracy degradation, achieving leave-one-out cross-validation Pearson correlations of $0.890$ for attention layers and $0.839$ for MLP layers. We provide theoretical intuition for why this predictor succeeds by connecting it to standard SVD truncation bounds and error composition mechanisms in transformer layers. These findings enable a predict-then-compress workflow: compute $\\gamma \\cdot \\bar{\\rho}_s$ from weights, estimate degradation, and invest compute only in desirable configurations.",
+      "identifiers": [
+        "SemanticScholar:d4073c0578f284232f19c91d659cfb8a27a70e65"
+      ],
+      "semantic_scholar_id": "d4073c0578f284232f19c91d659cfb8a27a70e65",
+      "canonical_id": "arXiv:2604.18085",
+      "arxiv_id": "2604.18085",
+      "doi": "10.48550/arXiv.2604.18085",
+      "authors": [
+        "Mingxue Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はQwen3/Gemma3の低ランク圧縮でstable rankと情報密度から精度悪化を予測する方法を提案。attention層の交差検証Pearson相関0.890、MLP層0.839を報告。圧縮後の高価な評価を減らす事前選択に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-aaf24d46af5f",
+    "round": "libimp-aaf24d46af5fd77a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-aaf24d46af5fd77a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-aaf24d46af5fd77a-pre01.json",
+    "receipt": "sha256:8aa240163733de6a10f0ff68812a5b83840fa01a38f411824ef2ac9730ef2f21"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-aaf24d46af5f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

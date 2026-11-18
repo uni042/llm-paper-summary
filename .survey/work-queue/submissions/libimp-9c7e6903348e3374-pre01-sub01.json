@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OmniFocus: Query-Guided Modality-Balanced Token Compression for Omni-Modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.03050",
+      "year": 2026,
+      "published": "2026-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni modal large language models (OmniLLMs) have attracted wide attention for their ability to jointly process audio and video, but they generate large token sequences under audio-visual inputs, leading to substantial inference cost. Existing audio-visual token compression methods often rely on unimodal guidance, overlooking the temporal locality of query-relevant evidence in audio-visual inputs and implicitly assuming that the two modalities share a temporally aligned information density distribution. We propose \\textbf{OmniFocus}, a training-free query-guided token compression method for OmniLLMs that performs independent importance estimation for video and audio, enabling a modality-symmetric compression design that preserves modality-specific salient evidence while maintaining audio-visual alignment, thereby mitigating the modality bias issue that can arise from unimodal-guided compression. Experiments on the Qwen2.5-Omni model family across four audio-visual benchmarks show that OmniFocus maintains strong compressed performance at low token retention ratios and outperforms existing baselines on several major benchmark scores at 25\\% token retention. On DailyOmni with Qwen2.5-Omni-7B at 25\\% token retention, OmniFocus maintains 59.40 accuracy while delivering up to 1.38$\\times$ prefill speedup relative to the full-token baseline, highlighting a favorable practical accuracy-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:67f7e36c119d082eeb17ac3ca4003ab644ddc9ab"
+      ],
+      "semantic_scholar_id": "67f7e36c119d082eeb17ac3ca4003ab644ddc9ab",
+      "canonical_id": "arXiv:2607.03050",
+      "arxiv_id": "2607.03050",
+      "doi": "10.48550/arXiv.2607.03050",
+      "authors": [
+        "Shi-Jie Cao",
+        "Qingyu Zhang",
+        "Bo-Xi Yu",
+        "Yu-Zhong Zhang",
+        "Boxi Cao",
+        "Yaojie Lu",
+        "Hong-Yu Lin",
+        "Xian-Pei Han",
+        "Le Sun"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 138,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は音声・動画を処理するOmniLLMで、クエリ関連性を各モダリティ独立に見積もり、音声と動画の情報密度の違いを尊重する学習不要トークン圧縮OmniFocusを提案。Qwen2.5-Omniの4ベンチマークで保持率25%でも高い性能を維持。多モーダル推論時の入力トークン削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PaDoc: Layout-Grounded Parallel Decoding for Document Parsing",
+      "source_url": "https://arxiv.org/abs/2608.06146",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "End-to-end document parsers provide a unified interface, but serialize page layouts and regional contents into one autoregressive sequence. This formulation forces independent regions onto a decoding path whose length grows with the total content, whereas crop-based two-stage parsers expose region-level parallelism at the cost of repeated visual prefills and fragmented page context. To retain full-page context while removing dependencies, we propose PaDoc, a layout-grounded parser that treats the predicted layout as a branching structure over a shared page representation. Under a region-sufficiency assumption, we derive a prefix-conditioned factorization in which the layout stream and regional content branches advance concurrently, reducing the decoding depth to the longest layout-content path. We realize this factorization within a single MLLM: packed variable-length ancestor attention preserves the visibility under standard next-token training, while masked parallel decoding creates branches that the evaluated vLLM backend serves as concurrent requests with cache-resident shared-prefix reuse. On OmniDocBench Full, PaDoc attains an Overall layout F1 of 91.1 and, among end-to-end parsers, a top-tier Overall score of 94.24 together with the best Text Edit (0.038) and Formula CDM (95.59). On a 384-page subset and one A800 GPU, it is the fastest end-to-end parser at five concurrency levels, improving valid-page throughput by 67.4-118% and reducing P95 latency by 39.2-54.9% relative to a same-backbone Sequential SFT baseline. Code is available at https://github.com/Longin-Yu/Padoc",
+      "identifiers": [
+        "SemanticScholar:385ad89b1980dfdc85ab494120bca1635d4131cb"
+      ],
+      "semantic_scholar_id": "385ad89b1980dfdc85ab494120bca1635d4131cb",
+      "canonical_id": "arXiv:2608.06146",
+      "arxiv_id": "2608.06146",
+      "doi": "10.48550/arXiv.2608.06146",
+      "authors": [
+        "Hao Yu",
+        "Jia-Bo Zhan",
+        "Kang Liu",
+        "Lin-Nan Zhao",
+        "Dong-Xu Yue",
+        "Rui Chen",
+        "Jing-Lin Wang",
+        "Chong Sun",
+        "Chen Li",
+        "Jing Lyu",
+        "Chun Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMLLM文書解析をページレイアウトと領域別内容の分岐として並列生成するPaDocを提案。vLLMで共通prefixのKVを再利用し、A800の384ページ評価で逐次SFT比valid-pageスループット67.4〜118%改善、P95遅延39.2〜54.9%削減。MLLM推論の並列デコードへ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Q-Delta: Beyond Key-Value Associative State Evolution",
+      "source_url": "https://arxiv.org/abs/2606.08804",
+      "year": 2026,
+      "published": "2026-06-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention reformulates sequence modeling as recurrent state evolution, enabling efficient linear-time inference. Under the key-value associative paradigm, existing approaches restrict the role of the query to the readout operation, decoupling it from state evolution. We show that query-conditioned state readout induces a structured value prediction over accumulated memory that complements key-based retrieval. Based on this insight, we propose Q-Delta, a query-aware delta rule that integrates mixed key-query prediction errors into state evolution, enabling jointly corrective dynamics while preserving delta-rule efficiency. We establish stability guarantees for the resulting dynamics and derive a hardware-efficient chunkwise-parallel formulation with a custom Triton implementation. Empirical results demonstrate stable optimization, competitive throughput, and consistent improvements over strong baselines on language modeling and long-context retrieval tasks.",
+      "identifiers": [
+        "SemanticScholar:87cf40b41429ad4e2982e8a36042971ad77eae54"
+      ],
+      "semantic_scholar_id": "87cf40b41429ad4e2982e8a36042971ad77eae54",
+      "canonical_id": "arXiv:2606.08804",
+      "arxiv_id": "2606.08804",
+      "doi": "10.48550/arXiv.2606.08804",
+      "authors": [
+        "Sumin Park",
+        "Seojin Kim",
+        "Noseong Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は線形注意の行列状態更新へQuery側の予測誤差も組み込むQ-Deltaを提案。従来のKey-Value関連付けのみのdelta更新を拡張し、安定性の保証、チャンク並列化、Tritonカーネルを示す。長文脈検索精度と推論スループットを両立する再帰状態モデルに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State",
+      "source_url": "https://arxiv.org/abs/2608.15810",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Runtime compression of serving state trades quality for capacity with no priced guarantee: systems adapt precision on load signals with no soundness statement, and certified approaches budget request-level risk by a union bound over a pre-declared event count. We show the union budget exhausts on every long request in a production serving stack (100% of requests), and replace it with an anytime-valid, physically accounted ledger whose bound holds at every one of 352,333 admission calls on live traffic and which, in a pre-registered held-out confirmatory round, halves the exact-fallback rate at matched risk (0.30 ->0.14) -- coverage is bought at a price the account states. We then price the remaining distance from the certified witness to what a user experiences: a machine-checked design law (TV<= tanh(a_q w_thr)) turns the served-TV target into a threshold knob, and a three-layer audit of its instantiation -- an operator-norm query envelope measured 1.5x from tight, a measured-ellipsoid replacement for the Cauchy-Schwarz ball that buys nothing (0.89x, held-out sound), and the gate's operating point (~700x) -- localizes the entire 1064x gap to the operating point, a price the law now states rather than an unknown. A priced bound is worth nothing on a request one has not seen, so the third link is the quantifier: exchangeable extrapolation across 80 serving histories replaces binary conformal prediction's vacuous certificates with order-statistic bounds that discriminate (0.41 against 0.51 calibration risk). All probabilistic kernels are Lean 4-checked (228 exported theorems, no sorry); which object deserves this machinery at all is settled empirically in a companion paper that adjudicates -- and rejects -- the natural alternative of certifying routing. What ships is an account: risk you can spend, a gap you can read off a law, and a bound that survives the request you have not seen.",
+      "identifiers": [
+        "SemanticScholar:210c7668deacf519aefb7e6afa88371c2b28a7d9"
+      ],
+      "semantic_scholar_id": "210c7668deacf519aefb7e6afa88371c2b28a7d9",
+      "canonical_id": "arXiv:2608.15810",
+      "arxiv_id": "2608.15810",
+      "doi": "10.48550/arXiv.2608.15810",
+      "authors": [
+        "Fan-Zhe Wei",
+        "Li Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論中のserving state圧縮に伴う品質リスクを逐次保証するanytime-valid ledgerとserved-output TV距離の上界を設計。35万超のadmission呼び出しで検証し、同一リスクの厳密fallback率を0.30から0.14へ削減。KV等の圧縮時のリスク保証と運用制御に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9c7e6903348e",
+    "round": "libimp-9c7e6903348e3374-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9c7e6903348e3374-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9c7e6903348e3374-pre01.json",
+    "receipt": "sha256:aeaf089c4ee7e99dd71bb640e94bb518dae00f7a45626281b6c18b1456d8c79d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9c7e6903348e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

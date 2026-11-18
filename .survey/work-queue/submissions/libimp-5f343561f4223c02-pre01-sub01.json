@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Parametric Memory Decoding for Zero-Shot Routing in LoRA-Based External Parametric Memory",
+      "source_url": "https://arxiv.org/abs/2607.04118",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of parametric memory, LoRA-based External Parametric Memory (EPM) has emerged as a modular solution, but existing routing methods often introduce additional training, deployment, and maintenance overhead. This raises a natural question: can a LoRA-based EPM bank be routed without maintaining an additional routing component? However, existing zero-shot LoRA routing methods still face two problems under the EPM setting: (1) their evaluations are scattered across different task settings rather than organized around EPM access, and (2) their routing signals lack a unified perspective to guide systematic improvement. To address these problems, we organize PMD-Bench, covering document-level, domain-level knowledge, and task-skill, and propose Parametric Memory Decoding (PMD), the first framework designed to systematically improve zero-shot LoRA routing by reframing it as decoding activations over external parametric memory. Based on PMD, we further instantiate PMDRouter, which scores each LoRA by its response magnitude from a single base-model prefill. Experiments on PMD-Bench show that PMDRouter achieves the strongest internal-signal performance across multiple zero-shot routing settings. These results demonstrate the feasibility of zero-shot LoRA routing and suggest that PMD can serve as a general framework for improving zero-shot routing methods. Sources: Github (https://anonymous.4open.science/r/Parametric-Memory-Decoding-872A/)",
+      "identifiers": [
+        "SemanticScholar:a0d794415ca05d14c8e704e1fe2ea4d5383b75e0"
+      ],
+      "semantic_scholar_id": "a0d794415ca05d14c8e704e1fe2ea4d5383b75e0",
+      "canonical_id": "arXiv:2607.04118",
+      "arxiv_id": "2607.04118",
+      "doi": "10.48550/arXiv.2607.04118",
+      "authors": [
+        "Feng-Xian Ji",
+        "Zhuo-Han Xie",
+        "Jing-Pu Yang",
+        "Fan Zhang",
+        "Zirui Song",
+        "Xiu-Ying Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PMDRouterはLoRA外部パラメトリック記憶を検索する際、別の学習済みルータを持たずに単一の基盤モデルprefillで得た活性応答の大きさから各LoRAを採点する。一次要旨では追加ルータの学習・配備・保守費用を避け、文書・分野・スキルのzero-shotルーティングを評価。推論時アダプタ選択と実行経路の直接的な効率化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Speculative Safety-Aware Decoding",
+      "source_url": "https://arxiv.org/abs/2508.17739",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite extensive efforts to align Large Language Models (LLMs) with human values and safety rules, jailbreak attacks that exploit certain vulnerabilities continuously emerge, highlighting the need to strengthen existing LLMs with additional safety properties to defend against these attacks. However, tuning large models has become increasingly resource intensive and may have difficulty ensuring consistent performance. We introduce Speculative Safety-Aware Decoding (SSD), a lightweight decoding-time approach that equips LLMs with the desired safety property while accelerating inference. We assume that there exists a small language model that possesses this desired property. SSD integrates speculative sampling during decoding and leverages the match ratio between the small and composite models to quantify jailbreak risks. This enables SSD to dynamically switch between decoding schemes to prioritize utility or safety, to handle the challenge of different model capacities. The output token is then sampled from a new distribution that combines the distributions of the original and the small models. Experimental results show that SSD successfully equips the large model with the desired safety property, and also allows the model to remain helpful to benign queries. Furthermore, SSD accelerates the inference time, thanks to the speculative sampling design.",
+      "identifiers": [
+        "SemanticScholar:057e748f70e85d1b48df07da51481c69c0b53b88"
+      ],
+      "semantic_scholar_id": "057e748f70e85d1b48df07da51481c69c0b53b88",
+      "canonical_id": "arXiv:2508.17739",
+      "arxiv_id": "2508.17739",
+      "doi": "10.48550/arXiv.2508.17739",
+      "authors": [
+        "Xuekang Wang",
+        "Sheng-Yu Zhu",
+        "Xue-Qi Cheng"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 450,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "SSDは安全性を備えた小型モデルと元LLMの分布を組み合わせ、投機サンプリング中の両者の一致率で脱獄リスクを推定して安全優先と効用優先の復号方式を動的に切り替える。一次要旨は安全性と無害要求への有用性を維持しつつ投機復号で推論時間を短縮すると明示するため、推論デコード方式の直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Beyond Selection: Token Parameterization for Extreme Visual Token Compression",
+      "source_url": "https://arxiv.org/abs/2609.35232",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual-token compression is effective for improving the efficiency of vision-language models, but under extreme compression budgets, token pruning can break visual grounding while learned resamplers increase parameter count, attention cost, and training complexity. We revisit compression through a token parameterization lens, separating (i) basis transformation and structured truncation (retained subspace/compressibility) from (ii) coordinate organization (optimization and cross-modal alignment). This view yields two coupled objectives, compressibility and learnability, which we formalize as unified functionals. Guided by these objectives, we design Braco, a lightweight four-step coder that combines transform-basis truncation, input-independent basis-coordinate embeddings, budget-dependent orthogonal re-parameterization, and learned spatial residual tokens from lightweight pooling. Experiments show that Braco forms the favorable empirical accuracy-efficiency frontier under $23\\times$--$64\\times$ compression and remains competitive at $144\\times$, reaching 95.2% accuracy while reducing prefill FLOPs by 84.2%--86.7% relative to the uncompressed upper bound. Against prior methods, Braco matches or improves accuracy while achieving up to approximately 36% end-to-end speedup and using $16.6\\times$/$78.8\\times$ lower compressor latency/FLOPs.",
+      "identifiers": [
+        "SemanticScholar:4cde88f069e01e7a6e8d074e8fae9464a24f5f46"
+      ],
+      "semantic_scholar_id": "4cde88f069e01e7a6e8d074e8fae9464a24f5f46",
+      "canonical_id": "arXiv:2609.35232",
+      "arxiv_id": "2609.35232",
+      "doi": "10.48550/arXiv.2609.35232",
+      "authors": [
+        "Rui-Lian Zhong",
+        "Yu Li",
+        "Zhe-Yu Yan",
+        "Cheng-Xiang Zhuo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BracoはVLM視覚トークンの極端な圧縮に対し、変換基底の切捨て、座標埋込み、予算依存の直交再パラメータ化、空間残差トークンを組み合わせる。一次要旨では23～64倍の圧縮下で視覚接地を維持し、prefill FLOPs84.2～86.7%削減、E2E最大約36%高速化を報告。視覚トークンの推論圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5f343561f422",
+    "round": "libimp-5f343561f4223c02-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5f343561f4223c02-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5f343561f4223c02-pre01.json",
+    "receipt": "sha256:72d91c7dc3a4339d6fb1ce06d94bcaf955c827f0a3679433e2d7126d6e78dee5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5f343561f422",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

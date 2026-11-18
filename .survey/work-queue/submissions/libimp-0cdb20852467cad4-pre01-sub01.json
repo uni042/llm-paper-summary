@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Skill Weaving: Efficient LLM Improvement via Modular Skillpacks",
+      "source_url": "https://arxiv.org/abs/2605.22205",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models increasingly require specialization across diverse domains, yet existing approaches struggle to balance multi-domain capacities with strict memory and inference constraints. In this work, we introduce SkillWeave, a modular improvement framework that enables LLMs to specialize under fixed memory budgets. SkillWeave partitions full capabilities of a general-purpose model into skillpacks -- lightweight, domain-specific delta modules -- that reorganize and refine the model's internal knowledge. For efficient deployment, SkillWeave integrates SkillZip to compress skillpacks into compact and inference-ready format, enabling strong multi-domain performance with low-latency execution. On multi-task and agentic benchmarks, a 9B SkillWeave model outperforms several baselines and even surpasses a 32B monolithic LLM, while achieving up to 4x speedup.",
+      "identifiers": [
+        "SemanticScholar:b8919a0eadffb4ec60cac9a8a88305736d9d1bca"
+      ],
+      "semantic_scholar_id": "b8919a0eadffb4ec60cac9a8a88305736d9d1bca",
+      "canonical_id": "arXiv:2605.22205",
+      "arxiv_id": "2605.22205",
+      "doi": "10.18653/v1/2026.findings-acl.1989",
+      "authors": [
+        "Zhuo Li",
+        "Guo-Dong Du",
+        "Ze-Sheng Shi",
+        "Wei-Yang Guo",
+        "Weijun Yao",
+        "Yuanling Zhou",
+        "Jiabo Zhang",
+        "Jing Li"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 181,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "SkillWeaveは固定メモリ予算下で分野別の軽量deltaモジュールskillpackを構成し、SkillZipで推論用の圧縮形式へ変換する。一次要旨では9B構成が32B単体モデルを複数課題で上回り、最大4倍の実行高速化を報告。主眼は分野特化能力だが、推論時メモリと低遅延のためのモジュール圧縮を明示するため収録対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Lightweight Large-Model Inference with Privacy Protection for Edge IoT Systems",
+      "source_url": "https://doi.org/10.1109/AETCSE69203.2026.11504013",
+      "year": 2026,
+      "published": "2026-03-20",
+      "venue": "2026 9th International Conference on Advanced Electronic Technology, Computers and Software Engineering (AETCSE)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge IoT systems increasingly require real-time intelligent services, yet direct deployment of large language models (LLMs) or multimodal foundation models on constrained edge devices faces severe memory, latency, and privacy risks. Cloud-only inference pipelines can simplify deployment but often violate data minimization requirements in sensitive scenarios such as healthcare monitoring and smart homes. This paper proposes a privacy-preserving lightweight large-model inference framework for edge IoT systems that jointly optimizes model compression, collaborative inference, and secure execution. The framework combines mixed-precision quantization, structured pruning, and knowledge distillation to derive compact edge students, while a federated inference coordinator exchanges only protected intermediate statistics rather than raw data. Differential privacy is introduced for controllable leakage mitigation, and trusted execution environments (TEEs) are used to isolate security-critical operators and keys. A latency-aware policy engine dynamically selects local-only, edge-only, or edge-cloud fallback paths according to device load and privacy budget. Experiments on a heterogeneous edge cluster show that the proposed method reduces model storage by over 80% and cuts end-to-end inference latency by up to 75% compared with an FP16 baseline while maintaining competitive accuracy under strict privacy constraints. The results demonstrate practical feasibility for privacy-sensitive edge intelligence upgrades.",
+      "identifiers": [
+        "SemanticScholar:4d2d6209ed7d6964bec3c4bde40a771a644d7691"
+      ],
+      "semantic_scholar_id": "4d2d6209ed7d6964bec3c4bde40a771a644d7691",
+      "doi": "10.1109/AETCSE69203.2026.11504013",
+      "canonical_id": "DOI:10.1109/AETCSE69203.2026.11504013",
+      "authors": [
+        "Xi-Wang Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジIoTのLLM/基盤モデル推論向けに混合精度量子化・構造化枝刈り・知識蒸留で小型studentを作り、プライバシー予算と端末負荷に応じてローカル・エッジ・クラウド経路を切り替える。一次要旨ではモデル保存容量80%以上削減、FP16基準のE2E推論遅延最大75%削減を報告。推論圧縮と分散配置の直接的システム貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0cdb20852467",
+    "round": "libimp-0cdb20852467cad4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0cdb20852467cad4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0cdb20852467cad4-pre01.json",
+    "receipt": "sha256:6a30b6c4069e8f21f2a27089ad6d464e766a50f6bf9a867f9d32957277abe9d8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0cdb20852467",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
