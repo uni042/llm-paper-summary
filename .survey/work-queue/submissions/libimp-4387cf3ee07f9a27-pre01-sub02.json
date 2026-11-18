@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.14310",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding with large vision-language models (VLMs) requires a compact memory that can support future reasoning over an ever-growing visual history. A common solution is to compress the key-value (KV) cache, but existing streaming methods typically rely on local token-wise heuristics, such as recency, temporal redundancy, or saliency, which do not explicitly optimize whether the retained cache is representative of the accumulated history. We propose to view KV-cache compression as a coreset selection problem: rather than scoring tokens independently for retention, we select a small subset that covers the geometry of the accumulated visual cache. Our method operates in a joint KV representation and introduces a bicriteria objective that balances coverage in key and value spaces, preserving both retrieval structure and output-relevant information. To encourage a more diverse retained subset, we further introduce an orthogonality-driven diversity criterion that favors candidates contributing new directions beyond the current selection, and connect this criterion to log-determinant subset selection. Across four open-source VLMs and five long-video and streaming-video benchmarks, our method improves over heuristic streaming compression baselines under a fixed cache budget. These results highlight that representative coreset selection offers a more effective principle, than token-wise pruning, for memory-constrained streaming video understanding.",
+      "identifiers": [
+        "SemanticScholar:a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5"
+      ],
+      "semantic_scholar_id": "a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5",
+      "canonical_id": "arXiv:2605.14310",
+      "arxiv_id": "2605.14310",
+      "doi": "10.48550/arXiv.2605.14310",
+      "authors": [
+        "Ailar Mahdizadeh",
+        "Puria Azadi",
+        "Mu-Chen Li",
+        "Xiangteng He",
+        "L. Sigal"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミングVLM向けコアセット型KV圧縮CoRDS。KVキャッシュ圧縮を、トークンを個別に採点する問題でなく蓄積した視覚キャッシュの幾何を覆う代表部分集合の選択問題として定式化し、鍵と値の共同表現で二基準目的を解く。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DynaTok: Temporally Adaptive and Positional Bias-Aware Token Compression for Video-LLMs",
+      "source_url": "https://arxiv.org/abs/2605.19322",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Video Large Language Models (Video-LLMs) have greatly expanded multimodal reasoning capabilities. However, the massive number of visual tokens extracted from long video sequences incurs prohibitive computational costs, limiting their deployment in real-world scenarios. Existing training-free token compression methods select tokens based on attention magnitude as a proxy for semantic importance, but often overlook positional bias and rely only on short-term temporal locality, leading to redundant spatio-temporal coverage and inefficient token usage. We present DynaTok, a training-free, temporally adaptive and bias-aware token compression framework that allocates token budgets across both temporal and spatial dimensions. Through a lightweight exponential moving average (EMA) memory, the Temporal Budget Allocation (TBA) module dynamically assigns fewer tokens to redundant frames and more to novel frames, capturing long-term temporal variation. The Spatial Budget Allocation (SBA) module complements this by selecting spatially diverse and semantically important features using activation-based attention maps, while leveraging a spatial memory to reduce redundancy from previously selected regions and mitigate positional bias. DynaTok integrates seamlessly with existing Video-LLMs such as LLaVA-OneVision and LLaVA-Video without retraining, and effectively preserves semantic coverage under aggressive compression. Experiments on four representative VideoQA benchmarks-MVBench, LongVideoBench, MLVU, and VideoMME-show that DynaTok retains over 95% of baseline accuracy even with a 90% token reduction, surpassing recent training-free approaches. These results demonstrate that DynaTok provides a principled foundation for efficient and robust video reasoning, paving the way toward real-time streaming video understanding with future Video-LLMs.",
+      "identifiers": [
+        "SemanticScholar:bff4fbcb4a10f4a08ddcca5074b0122a6708d8f2"
+      ],
+      "semantic_scholar_id": "bff4fbcb4a10f4a08ddcca5074b0122a6708d8f2",
+      "canonical_id": "arXiv:2605.19322",
+      "arxiv_id": "2605.19322",
+      "doi": "10.48550/arXiv.2605.19322",
+      "authors": [
+        "Minyoung Park",
+        "Taehun Kong",
+        "S. Ahn"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "時間適応・位置バイアス配慮型トークン圧縮DynaTok。注意の大きさだけに頼る選択が位置バイアスと短期の時間局所性に偏る問題に対し、軽量な指数移動平均などで時間と空間の両方向へトークン予算を配る学習不要の圧縮。Video-LLM推論の削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language-model-based graphical user interface (GUI) agents have shown broad automation capabilities, yet deployment is bottlenecked by a key-value (KV) cache that grows linearly with interaction steps. For instance, UI-TARS-1.5-7B consumes 76 GB of GPU memory on merely five screenshots, approaching the capacity of mainstream 80 GB accelerators. Existing KV compression methods share two structural assumptions: aggregating visual-token importance into a single shared saliency map, and applying a fixed top-B cutoff to the fused score distribution. Pilot measurements refute both: spatial specialization lives at the attention-subspace level and migrates across layers, while the score distribution drifts in shape along a trajectory. We propose STaR-KV (Spatio-Temporal Adaptive Re-weighting), a training-free KV cache compression framework that calibrates token importance along three axes: (i) subspace-aware scoring driven by online spatial mutual information; (ii) a temporal stability discount that suppresses redundant cache entries from persistently attended subspaces; and (iii) an entropy-derived temperature that adaptively reshapes the score distribution. Across four GUI benchmarks, STaR-KV achieves the strongest average accuracy among state-of-the-art KV compression methods (e.g., GUIKV, SnapKV) at matched budgets, with no compression-stage FLOPs overhead (-0.07%) and cutting peak GPU memory by nearly 40% at a 20% KV-cache budget. Code is available at https://github.com/kawhiiiileo/STaR-KV.",
+      "identifiers": [
+        "SemanticScholar:6a86296b7ef87e79d87f5f591864ac8b75b75d66"
+      ],
+      "semantic_scholar_id": "6a86296b7ef87e79d87f5f591864ac8b75b75d66",
+      "canonical_id": "arXiv:2606.01790",
+      "arxiv_id": "2606.01790",
+      "doi": "10.48550/arXiv.2606.01790",
+      "authors": [
+        "Yu-Hang Han",
+        "Wenzheng Yang",
+        "Yu-Jie Chen",
+        "Xiangqi Jin",
+        "Yao-Jie Zhang",
+        "Siteng Huang",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GUIエージェント向け時空間適応KV圧縮STaR-KV。視覚トークン重要度を単一の顕著性マップへ集約する前提と固定した上限で切る前提の両方を実測で否定し、注意部分空間ごとの空間特化と軌跡に沿う分布変化に適応する再重み付けを行う。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gradient Enhancement Task Aware Post-training Quantization",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/176",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "IJCAI/ECAI",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The huge parameters and extensive training corpora of Large Language Models (LLMs) empower them to tackle complex tasks. Yet, their massive size incurs substantial inference costs, hindering deployment on resource‑constrained edge devices. Low‑bit quantization provides a way to compress models and improve their practicality for edge-side deployment. Nonetheless, many edge applications do not require the full generalization abilities of LLMs and instead only depend on their knowledge in specific domains. This paper introduces Gradient Enhancement Task Aware Post-training Quantization, i.e., GTAQ, to address the generalization issue. Concretely, GTAQ locates task‑critical weights via gradient‑based validation and retrieval, and then amplifies these salient weights. For that purpose, GTAQ preserves and strengthens weights related to the target tasks, enabling task‑aware uniform‑bit quantization. We extensively evaluate the LLaMA family of language models on WikiText, C4, and MMLU. Our experiments show that GTAQ consistently delivers notable performance improvements across tasks, surpassing both general‑purpose and task‑aware quantization baselines. At the same time, GTAQ yields more than 3.5× speedup in model inference and substantially cuts storage requirements. https://github.com/YihuaJerry/GTAQ.git.",
+      "identifiers": [
+        "SemanticScholar:63faed7424744aaafb24c17d9fc70e739c5e90a7"
+      ],
+      "semantic_scholar_id": "63faed7424744aaafb24c17d9fc70e739c5e90a7",
+      "doi": "10.24963/ijcai.2026/176",
+      "canonical_id": "DOI:10.24963/ijcai.2026/176",
+      "authors": [
+        "Yi-Hua Shao",
+        "Yang-Yang Gu",
+        "Min-Xi Yan",
+        "Si-Yu Chen",
+        "Hai-Yang Liu",
+        "Zi-Yang Yan",
+        "Yong-Jian Li",
+        "Yan Wang",
+        "Qun Song",
+        "Hao-Lin Tang",
+        "Hao-Tong Qin",
+        "Jing-Cai Guo",
+        "Nicu Sebe"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 78,
+        "matched_prestigious_venue": null
+      },
+      "reason": "タスク特化型の学習後量子化GTAQ。エッジ応用が全般能力を要しない前提で、勾配ベースの検証と検索でタスクに重要な重みを特定して増幅し、低ビット量子化の汎化問題を緩和する。推論配置のための量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4387cf3ee07f",
+    "round": "libimp-4387cf3ee07f9a27-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4387cf3ee07f9a27-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4387cf3ee07f9a27-pre01.json",
+    "receipt": "sha256:dabf58e2250f01e20cfd979db09afabe1b4505d08b3cfcb7105aea778f8dd740"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4387cf3ee07f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

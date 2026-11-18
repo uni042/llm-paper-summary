@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Decouple and Cache: KV Cache Construction for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.01858",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding requires processing unbounded video streams with limited memory and computation, posing two key challenges. First, continuously constructing new and evicting old key-value(KV) caches is required for unbounded streams. Secondly, due to the high cost of collecting and training on unbounded streams, models must learn from short sequences while generalizing to long streams. Existing streaming VideoVLLMs fail to scale to unbounded video streams or focus on cache reuse strategies, leaving the impact of cache construction underexplored. In this paper, we propose Decoupled Streaming Cache(DSCache), a training-free cache construction mechanism that adapts pretrained offline models to streaming settings. DSCache maintains a cumulative past KV cache while constructing a separate instant cache on-demand, decoupled from past caches to preserve the informativeness of recent inputs. To enable position extrapolation beyond the training length, DSCache further incorporates a position-agnostic encoding strategy, ensuring KV caches to support unseen positions and preventing position overflow. Experiments on Streaming Video QA benchmarks demonstrate DSCache's state-of-the-art performance, with an average 2.5% accuracy gains over prior methods.",
+      "identifiers": [
+        "SemanticScholar:7e69d8f02a6de4732c4f42fb8f2edb1bdccd2fe1"
+      ],
+      "semantic_scholar_id": "7e69d8f02a6de4732c4f42fb8f2edb1bdccd2fe1",
+      "canonical_id": "arXiv:2605.01858",
+      "arxiv_id": "2605.01858",
+      "doi": "10.48550/arXiv.2605.01858",
+      "authors": [
+        "Zhanzhong Pang",
+        "Dibyadip Chatterjee",
+        "Fadime Sener",
+        "Angela Yao"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 199,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ストリーミング動画理解向け分離型KVキャッシュ構築DSCache。無限に続く動画流に対し、蓄積する過去KVキャッシュを保ちながら新しいキャッシュを構築する学習不要の仕組みで、オフライン学習済みモデルをストリーミング設定へ適応させる。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass",
+      "source_url": "https://arxiv.org/abs/2602.03134",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning is a promising approach for reducing the computational cost of vision-language models (VLMs), and existing methods often rely on early pruning decisions to improve efficiency. While effective on coarse-grained reasoning tasks, they suffer from significant performance degradation on tasks requiring fine-grained visual details. Through layer-wise analysis, we reveal substantial discrepancies in visual token importance across layers, showing that tokens deemed unimportant at shallow layers can later become highly relevant for text-conditioned reasoning. To avoid irreversible critical information loss caused by premature pruning, we introduce a new pruning paradigm, termed bypass, which preserves unselected visual tokens and forwards them to subsequent pruning stages for re-evaluation. Building on this paradigm, we propose SwiftVLM, a simple and training-free method that performs pruning at model-specific layers with strong visual token selection capability, while enabling independent pruning decisions across layers. Experiments across multiple VLMs and benchmarks demonstrate that SwiftVLM consistently outperforms existing pruning strategies, achieving superior accuracy-efficiency trade-offs and more faithful visual token selection behavior.",
+      "identifiers": [
+        "SemanticScholar:265ae9e70cf6f22be4974aa37a846d47db9cb71b"
+      ],
+      "semantic_scholar_id": "265ae9e70cf6f22be4974aa37a846d47db9cb71b",
+      "canonical_id": "arXiv:2602.03134",
+      "arxiv_id": "2602.03134",
+      "doi": "10.48550/arXiv.2602.03134",
+      "authors": [
+        "Chen Qian",
+        "Xinran Yu",
+        "Danyang Li",
+        "Guoxuan Chi",
+        "Zheng Yang",
+        "Qiang Ma",
+        "Xin Miao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 288,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層間トークン剪定SwiftVLM。浅い層で不要とされた視覚トークンが深い層で再び重要になる問題に対し、選ばれなかったトークンを捨てず後段の剪定段階へ送るバイパス型の新しい剪定パラダイムで、不可逆な情報損失を避ける。VLM推論のトークン削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPRINT: Scalable Secure & Differentially Private Inference for Transformers",
+      "source_url": "https://doi.org/10.56553/popets-2026-0008",
+      "year": 2026,
+      "published": "2026-01-01",
+      "venue": "Proceedings on Privacy Enhancing Technologies",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Machine learning as a service (MLaaS) enables scalable model deployment and inference on cloud servers. However, MLaaS exposes user queries and model parameters to servers. To guarantee confidentiality of queries and model parameters, multi-party computation (MPC) enables secure inference by distributing data and computations across multiple service providers. MPC eliminates single points of failure, mitigates provider breaches and ensures confidentiality beyond legal agreements. Beyond confidentiality of queries and parameters, the model itself can memorize and leak training data during inference. To mitigate privacy concerns, differential privacy (DP) provides a formal privacy guarantee for training data, which can be satisfied by injecting carefully calibrated noise into gradients during training. However, naive combinations of DP and MPC amplify accuracy loss due to DP noise and MPC approximations, and incur high computational and communication overhead due to cryptographic operations. We present SPRINT, the first scalable solution for efficient MPC inference on DP fine-tuned models with high accuracy. SPRINT fine-tunes public pre-trained models on private data using DP. It integrates DP-specific optimizations, e.g., parameter-efficient fine-tuning and noise-aware optimizers, with MPC optimizations, e.g., cleartext public parameters and efficient approximations of non-linear functions. We evaluate SPRINT on GLUE benchmark with RoBERTa, achieving up to 1.6x faster MPC inference than the state-of-the-art non-DP solution SHAFT, reducing communication by 1.6x. Notably, SPRINT maintains high accuracy during MPC inference, with <1 percentage point gap compared to cleartext accuracy.",
+      "identifiers": [
+        "SemanticScholar:f0a5ebf539720fdfed278095b7d65420802dc7bf"
+      ],
+      "semantic_scholar_id": "f0a5ebf539720fdfed278095b7d65420802dc7bf",
+      "doi": "10.56553/popets-2026-0008",
+      "canonical_id": "DOI:10.56553/popets-2026-0008",
+      "authors": [
+        "Francesco Capano",
+        "Jonas Böhler",
+        "Benjamin Weggenmann"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 321,
+        "matched_prestigious_venue": null
+      },
+      "reason": "安全で差分プライベートなTransformer推論SPRINT。マルチパーティ計算でクエリとモデルパラメータの機密を守りつつ、推論時の学習データ漏洩にも差分プライバシで対処する、クラウド推論の実行プロトコル。推論システム機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+      ],
+      "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+      "doi": "10.1609/aaai.v40i27.39425",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "authors": [
+        "T. Koike-Akino",
+        "Xiang-Yu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "Wang Pu",
+        "M. Brand"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMを低次元潜在構造へ変換するLatentLLM。局所の活性配慮型テンソル分解を、注意まで含めた大域の共同分解へ拡張し、潜在次元を下げて計算とメモリを効率化しながら既存圧縮手法より精度を保つ。推論効率化のためのモデル変換機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HieraVid: Hierarchical Token Pruning for Fast Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.01881",
+      "year": 2026,
+      "published": "2026-04-02",
+      "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video Large Language Models (VideoLLMs) have demonstrated impressive capabilities in video understanding, yet the massive number of input video tokens incurs a significant computational burden for deployment. Existing methods mainly prune video tokens at input level while neglecting the inherent information structure embedded in videos and large language models (LLMs). To address this, we propose HieraVid, a hierarchical pruning framework that progressively and dynamically reduces visual redundancy. Based on two observations that videos possess the segment-frame structure and LLMs internally propagate multi-modal information unidirectionally, we decompose pruning into three levels: 1) segment-level, where video tokens are first temporally segmented and spatially merged; 2) frame-level, where similar frames within the same segment are jointly pruned to preserve diversity; 3) layer-level, redundancy gradually shrinks as LLM layer increases w/o compromising performance. We conduct extensive experiments on four widely used video understanding benchmarks to comprehensively evaluate the effectiveness of HieraVid. Remarkably, with only 30% of tokens retained, HieraVid achieves new state-of-the-art performance, while maintaining over 98% and 99% of the performance of LLaVA-Video-7B and LLaVA-OneVision-7B, respectively.",
+      "identifiers": [
+        "SemanticScholar:32f6799dd5ecf56d2e2ea37ca8f4baeee04ceeec"
+      ],
+      "semantic_scholar_id": "32f6799dd5ecf56d2e2ea37ca8f4baeee04ceeec",
+      "canonical_id": "arXiv:2604.01881",
+      "arxiv_id": "2604.01881",
+      "doi": "10.1145/3767308.3836057",
+      "authors": [
+        "Yan-Lun Guo",
+        "Chao-Yang Zhu",
+        "Jia-Yi Ji",
+        "Jiang-Hang Lin",
+        "Liu-Juan Cao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 230,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VideoLLM向け階層トークン剪定HieraVid。動画の区間・フレーム構造とLLM内の単方向な情報伝播を利用し、区間水準・フレーム水準など3階層で視覚冗長性を段階的・動的に減らす。動画推論のトークン削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-4387cf3ee07f",
+    "round": "libimp-4387cf3ee07f9a27-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-4387cf3ee07f9a27-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-4387cf3ee07f9a27-pre01.json",
+    "receipt": "sha256:dabf58e2250f01e20cfd979db09afabe1b4505d08b3cfcb7105aea778f8dd740"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-4387cf3ee07f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
