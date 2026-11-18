@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6f2ac80ef6d6eab8-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.40577",
+  "reason": "複数routerのsigmoid scoreを集約してexpertを選び、同じscoreからlatent viewを混ぜてexpert入力を変えるMulti-View MoE。選択expertは各1 forwardでactive expert数・FLOPs・all-to-all通信量を維持し、10B-A1B modelを708B token学習後9 task平均+1.18ptの品質改善。固定推論計算予算下のMoE品質改善だが、推論システムの速度・メモリ・負荷分散の改善は一次要旨で示されないためborderline。",
+  "title": "Multi-View MoE: Letting Every Router Shape Expert Computation",
+  "identity_tokens": [
+    "arXiv:2610.40577"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f2ac80ef6d6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

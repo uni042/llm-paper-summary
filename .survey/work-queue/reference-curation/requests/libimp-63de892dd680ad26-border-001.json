@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-63de892dd680ad26-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.39711",
+  "reason": "Amazonのagentic RL訓練・評価に必要なツール実行環境を、共有Kubernetes上のsandbox podとして大量生成・回収するサービス。一次要旨では11,858個の同時sandbox、2026年10月の4件のSWE-bench Verified訓練で310万個のsandbox生成を報告。agent実行インフラとしてシステム面の接点はあるが、主用途は学習用環境の運用であり、LLMの生成推論サービング・KVキャッシュ・GPU実行高速化の直接的な手法ではないためborderline。",
+  "title": "Sandman: Building and Operating Sandboxes for Agentic Reinforcement Learning on Shared Kubernetes",
+  "identity_tokens": [
+    "arXiv:2610.39711"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.DC/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63de892dd680",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

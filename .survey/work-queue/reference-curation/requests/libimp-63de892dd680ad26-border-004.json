@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-63de892dd680ad26-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.38778",
+  "reason": "マイクロサービスのルーティングを意図的に不均衡化し、hot/cold podの負荷信号を明瞭化して既存VPAのスケール制御を改善するSlantを提案。一次要旨では3種のmicroservice benchmarkでCPU割当最大26%減、P99遅延最大18%減と報告。リクエスト分配・自動スケールはLLMサービングにも隣接するが、LLM特有のprefill/decodeやGPU/KVメモリの実証がないためborderline。",
+  "title": "Slant: Shaping Traffic for Resource-Efficient Microservices",
+  "identity_tokens": [
+    "arXiv:2610.38778"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.DC/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63de892dd680",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

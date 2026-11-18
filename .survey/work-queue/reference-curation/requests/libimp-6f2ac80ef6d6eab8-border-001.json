@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6f2ac80ef6d6eab8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.31305",
+  "reason": "semantic spanを動的分割してcontinuous latentへ圧縮し、block-causal masked diffusion decoderが再構成と生成を組み合わせる階層言語モデル。約210B token学習と下流taskで表現・品質を評価し、推論時に生成文を再encodeしてlatent履歴整合性を維持する。生成効率を目指す構造ではあるが、一次要旨にtoken/s、latency、メモリ削減の直接評価はなくモデル品質・学習構成が中心のためborderline。",
+  "title": "Cola2: Co-Adaptive Hierarchical Language Modeling with Continuous Semantic Compression and Balanced Discrete Generation",
+  "identity_tokens": [
+    "arXiv:2610.31305"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6f2ac80ef6d6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
