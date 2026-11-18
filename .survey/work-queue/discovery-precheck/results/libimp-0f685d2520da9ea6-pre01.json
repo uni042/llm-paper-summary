@@ -1,0 +1,1031 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0f685d2520da9ea6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0f685d2520da",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00017",
+    "DOI:10.1109/tpds.2025.3587445",
+    "arXiv:2410.13060",
+    "arXiv:2504.21174",
+    "arXiv:2510.02675",
+    "arXiv:2603.23198",
+    "arXiv:2607.22720",
+    "arXiv:2608.11235",
+    "arXiv:2609.05707",
+    "arXiv:2609.36202",
+    "arXiv:2610.17355"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 11,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6bc06576fc4d080451d83706f982f73d782a635b",
+  "raw_search_result_count": 11,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 11,
+  "provider_progress": {
+    "requested_count": 11,
+    "status_counts": {
+      "allowed": 11,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T23:25:48.140786+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00017",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tpds.2025.3587445",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.13060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.21174",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.02675",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.23198",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22720",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.11235",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.05707",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36202",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17355",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+      "source_url": "https://arxiv.org/abs/2609.05707",
+      "year": 2026,
+      "published": "2026-09-04",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In common-context question answering (CCQA) tasks, multiple input questions share a common context to base their answers from. However, Large Language Models typically generate each answer using an independent prompt. While existing batching and caching techniques help improve parallelism and reduce repeated computations, the separation of questions across prompts limits the achievable speedup, as modern GPUs are underutilized due to a memory bottleneck during attention. We present Intra-Prompt Parallel Decoding (IPPD), a novel inference method that answers multiple common-context questions in parallel within a single prompt. IPPD directly addresses the bottleneck by efficiently sharing both memory and computation during the attention process, as the next token for every question is decoded in a single inference step. IPPD uses virtual position IDs and attention mask manipulation to generate the same output as standard prompting without requiring fine-tuning or any changes to the LLM architecture. Since all parallelism occurs within a prompt, IPPD is fully compatible with batched inference, even when each prompt features a different context. Our experiments show that IPPD delivers up to 7X the effective throughput as standard decoding without quality degradation, and outperforms prefix caching with PagedAttention in most settings.",
+      "identifiers": [
+        "SemanticScholar:7873a8d24622217a17fa04948e04c4fd5dd3d688"
+      ],
+      "semantic_scholar_id": "7873a8d24622217a17fa04948e04c4fd5dd3d688",
+      "canonical_id": "arXiv:2609.05707",
+      "arxiv_id": "2609.05707",
+      "doi": "10.18653/2026.emnlp-main.2592",
+      "authors": [
+        "Theodore Glavas",
+        "Nikhita Vedula",
+        "Dushyanta Dhyani",
+        "Antonios Valkanas",
+        "Yilun Zhu",
+        "S. Malmasi"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Sparser, Faster, Lighter Transformer Language Models",
+      "source_url": "https://arxiv.org/abs/2603.23198",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling autoregressive large language models (LLMs) has driven unprecedented progress but comes with vast computational costs. In this work, we tackle these costs by leveraging unstructured sparsity within an LLM's feedforward layers, the components accounting for most of the model parameters and execution FLOPs. To achieve this, we introduce a new sparse packing format and a set of CUDA kernels designed to seamlessly integrate with the optimized execution pipelines of modern GPUs, enabling efficient sparse computation during LLM inference and training. To substantiate our gains, we provide a quantitative study of LLM sparsity, demonstrating that simple L1 regularization can induce over 99% sparsity with negligible impact on downstream performance. When paired with our kernels, we show that these sparsity levels translate into substantial throughput, energy efficiency, and memory usage benefits that increase with model scale. We will release all code and kernels under an open-source license to promote adoption and accelerate research toward establishing sparsity as a practical axis for improving the efficiency and scalability of modern foundation models.",
+      "identifiers": [
+        "SemanticScholar:1663af41280c87591e3588272ebe1106bd9a543d"
+      ],
+      "semantic_scholar_id": "1663af41280c87591e3588272ebe1106bd9a543d",
+      "canonical_id": "arXiv:2603.23198",
+      "arxiv_id": "2603.23198",
+      "doi": "10.48550/arXiv.2603.23198",
+      "authors": [
+        "Edoardo Cetin",
+        "Stefano Peluchetti",
+        "Emilio Castillo",
+        "Akira Naruse",
+        "Mana Murakami",
+        "Llion Jones"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CORA-Diff: Confidence-Oriented Residual Acceptance for Efficient Diffusion Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2608.11235",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) update many tokens in parallel, yet practical decoders often use a fixed denoising horizon. Many predictions stabilize early, but blockwise decoding continues until all positions are resolved, causing repeated dense forward passes. Existing accelerators often rely on learned filters, modified scores, dependency models, or cache-specific mechanisms. We ask whether native trajectory signals can identify residual positions likely to match the deterministic dense endpoint. We propose CORA-Diff, a training-free method that preserves the original transfer rule and applies confidence-and-persistence gating only to positions that rule leaves unresolved. Accepted tokens remain visible as context, and the block terminates once all positions are resolved. This requires no backbone change, learned acceptance model, or logit modification. Our theory explains why high-confidence, persistent predictions are more likely to match the fixed-horizon dense endpoint, and paired post-intervention trajectories provide direct empirical support. We select one operating point on a separate GSM8K calibration subset and freeze it for all evaluations. Under a matched Learn2PD-style LLaDA protocol, CORA-Diff has the lowest measured runtime in all eight task-length settings. Task scores match or exceed dense decoding in five settings, and the largest observed drop is 1.22 points. Its incremental speedups over EOS-aware dense decoding are 2.70x and 3.32x on GSM8K and HumanEval. It also reaches 13.14x under the fixed-horizon 1024/1024 mechanism-isolation protocol and transfers to Dream without retuning at 3.18x-3.53x. These results show that native confidence and persistence enable reliable residual acceptance, reducing repeated denoising computation while preserving task quality.",
+      "identifiers": [
+        "SemanticScholar:74389593979febd3454f901276fb1c76d4b51c1c"
+      ],
+      "semantic_scholar_id": "74389593979febd3454f901276fb1c76d4b51c1c",
+      "canonical_id": "arXiv:2608.11235",
+      "arxiv_id": "2608.11235",
+      "doi": "10.48550/arXiv.2608.11235",
+      "authors": [
+        "Yi-Fan Wu",
+        "Yu-Feng Zhang",
+        "Ken-Li Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MLX: Multi-Layer Execution for Structured LLM Workload Acceleration on Spatial Architectures",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00017",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured sparsity is a promising approach to scaling large-language-model (LLM) inference, but existing forms such as butterfly-structured sparse projections and transformations often map inefficiently to GPUs due to deep stage dependencies and limited bulk parallelism. This paper presents MLX, an algorithm–architecture co-design for structured LLM inference. MLX couples semantic-aware FFT compression and hierarchical sparse projections with spatial dataflow execution, enabling staged structured operators to run efficiently on compact arrays. MLX defines Closed Dependency Components (CDCs) to capture deterministic forward-only dataflow regions that can be folded across layers and pipelined on compact arrays. It then realizes CDCs through a multi-layer execution architecture with bounded-hop skip-hop routing, tag-based scheduling, and decoupled compute/transfer pipelines to overlap communication and computation across deep operators. We prototype MLX in 12 nm and show that it achieves $3.2 \\times$ hardware speedup and $3.1 \\times$ energy savings over Jetson Xavier. A transformer-specialized reduced design further delivers up to 5.7× speedup over prior sparse accelerators. MLX also scales nearly linearly to $8 \\times 8$ meshes and remains effective for long sequences from $\\mathbf{1 K}$ to 4 K, demonstrating that structured operator semantics can be translated into efficient spatial execution for sparse LLMs.",
+      "identifiers": [
+        "SemanticScholar:1612f4dc2230af2b47073f84fdab2dd0121f5976"
+      ],
+      "semantic_scholar_id": "1612f4dc2230af2b47073f84fdab2dd0121f5976",
+      "doi": "10.1109/ISCA66397.2026.00017",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00017",
+      "authors": [
+        "Hai-Bin Wu",
+        "Wen-Ming Li",
+        "Zhi-Hua Fan",
+        "Zi-Rui Ma",
+        "Yu-Qun Liu",
+        "Tengfei Xia",
+        "Yan-Huan Liu",
+        "Kunming Zhang",
+        "Xiao-Chun Ye",
+        "Dong-Rui Fan",
+        "Jian Weng"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "CausalGate: Causal Importance Distillation for Transformer Module Pruning",
+      "source_url": "https://arxiv.org/abs/2607.22720",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing adaptive inference methods for Large Language Models rely on observational heuristics, such as hidden-state similarity or activation magnitudes, to drop redundant modules. However, these correlation-based metrics often fail to capture subtle, non-linear structural computations vital for semantic accuracy. We introduce CausalGate, an intervention-guided framework for compute-efficient transformer inference. During a calibration phase, CausalGate isolates individual Attention and MLP sub-layers, zeros out their respective outputs, and measures the exact semantic damage via the Kullback-Leibler divergence of the final logit distribution. To eliminate runtime routing overhead, this structural importance hierarchy is distilled into a global set of static, lightweight scalar gates using an Exponential Moving Average smoothing objective paired with a differentiable pairwise ranking loss. Evaluated on TinyLlama-1.1B, Qwen2.5-3B, and Llama-3.1-8B across language modeling and commonsense reasoning benchmarks, CausalGate consistently outperforms prominent dynamic routing and layer-skipping baselines, translating theoretical compute savings into concrete hardware latency reductions with zero operational overhead.",
+      "identifiers": [
+        "SemanticScholar:8e26f6510b261ade1153cd362f01466ec2febd08"
+      ],
+      "semantic_scholar_id": "8e26f6510b261ade1153cd362f01466ec2febd08",
+      "canonical_id": "arXiv:2607.22720",
+      "arxiv_id": "2607.22720",
+      "doi": "10.48550/arXiv.2607.22720",
+      "authors": [
+        "Kiran Nair",
+        "Smriti Regmi",
+        "Rodrigue Rizk"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastGuide: Accelerating Reward Guidance for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.36202",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Gradient-based reward guidance provides a flexible way to use downstream reward models to control masked diffusion language models at inference time. However, its computational cost remains high as each decoding iteration incurs expensive diffusion model forward passes and reward model backpropagation steps. To address this, we introduce FastGuide, an adaptive hybrid of parallel and autoregressive decoding to accelerate reward guidance for diffusion language models. In analogy to parallel decoding, FastGuide amortizes the cost of reward model backpropagation by computing guidance once per decoding step and reusing it to generate multiple tokens. Within each decoding step, FastGuide makes diffusion forward passes autoregressive by unmasking tokens one at a time while efficiently recomputing token distributions after each unmasking by utilizing KV caching techniques and sparse recomputation of attention. Lastly, to adapt hybrid decoding to the model's confidence, FastGuide defers any token that the model is unconfident about under its recomputed distribution. Experiments on three reward benchmarks demonstrate that FastGuide is up to $4.4\\times$ faster than sequential reward-guided decoding while retaining similar generation quality.",
+      "identifiers": [
+        "SemanticScholar:cddd3431d11e35d28f42c33e0e31002699da8b55"
+      ],
+      "semantic_scholar_id": "cddd3431d11e35d28f42c33e0e31002699da8b55",
+      "canonical_id": "arXiv:2609.36202",
+      "arxiv_id": "2609.36202",
+      "doi": "10.48550/arXiv.2609.36202",
+      "authors": [
+        "Darshan Thaker",
+        "L. MacDonald",
+        "R. Vidal"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs",
+      "source_url": "https://arxiv.org/abs/2610.17355",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video language models represent a video as a long sequence of visual embeddings in a decoder's input. Every visual embedding is processed by every decoder layer during prefill, stored in the key value cache, and attended by every generated token, so a long video raises prefill, memory, and generation cost at once. We present WIRE (Weight Space Implicit Representation Encoding), which reduces this recurring cost by moving part of the video conditioned computation of a frozen video language model from its input activations into a temporary low rank update of its weights. WIRE keeps a short explicit visual context, so the update acts as a correction rather than a replacement of the video. WIRE first compresses the full resolution embeddings of each frame into a small set of carrier tokens using a question conditioned bidirectional selective scan, and physically contracts the decoder input so every decoder layer, cache entry, and decoding step operates on the shorter sequence. Hypernetworks at selected decoder layers read the compressed forward pass together with a readout of the full resolution features removed by contraction and generate LoRA updates to the attention and feedforward projections. The updates are merged after prefill, so autoregressive decoding runs the unmodified frozen backbone. On Qwen3-VL-8B, WIRE with 16 carrier tokens per frame contracts the visual stream by $3.5\\times$, reduces decoder prefill time by $3.35\\times$ at 256 frames and $4.14\\times$ at 1024 frames, shrinks the key value cache proportionally, and keeps per token decoding latency approximately constant. Across nine benchmark settings at 256 frames, it obtains the highest average accuracy among efficient video language models we evaluate under a common 256 frame budget.",
+      "identifiers": [
+        "SemanticScholar:4dcee4965b77d9b37972a096a9da2a2df1b8464a"
+      ],
+      "semantic_scholar_id": "4dcee4965b77d9b37972a096a9da2a2df1b8464a",
+      "canonical_id": "arXiv:2610.17355",
+      "arxiv_id": "2610.17355",
+      "authors": [
+        "Ameen Ali",
+        "Tamim Zoabi",
+        "Lior Wolf",
+        "Chaim Baskin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient LLMs with AMP: Attention Heads and MLP Pruning",
+      "source_url": "https://arxiv.org/abs/2504.21174",
+      "year": 2025,
+      "published": "2025-04-29",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep learning drives a new wave in computing systems and triggers the automation of increasingly complex problems. In particular, Large Language Models (LLMs) have significantly advanced cognitive tasks, often matching or even surpassing human-level performance. However, their extensive parameters result in high computational costs and slow inference, posing challenges for deployment in resource-limited settings. Among the strategies to overcome the aforementioned challenges, pruning emerges as a successful mechanism since it reduces model size while maintaining predictive ability. In this paper, we introduce AMP: Attention Heads and MLP Pruning, a novel structured pruning method that efficiently compresses LLMs by removing less critical structures within Multi-Head Attention (MHA) and Multilayer Perceptron (MLP). By projecting the input data onto weights, AMP assesses structural importance and overcomes the limitations of existing techniques, which often fall short in flexibility or efficiency. In particular, AMP surpasses the current state-of-the-art on commonsense reasoning tasks by up to 1.49 percentage points, achieving a 30% pruning ratio with minimal impact on zero-shot task performance. Moreover, AMP also improves inference speeds, making it well-suited for deployment in resource-constrained environments. We confirm the flexibility of AMP on different families of LLMs, including LLaMA and Phi.",
+      "identifiers": [
+        "SemanticScholar:5afa9963f2f49587805b1ff44fc9594fc5c84851"
+      ],
+      "semantic_scholar_id": "5afa9963f2f49587805b1ff44fc9594fc5c84851",
+      "canonical_id": "arXiv:2504.21174",
+      "arxiv_id": "2504.21174",
+      "doi": "10.1109/IJCNN64981.2025.11227985",
+      "authors": [
+        "Leandro Giusti Mugnaini",
+        "Bruno Lopes Yamamoto",
+        "Lucas Lauton de Alcantara",
+        "V. Zacarias",
+        "Edson R. Bollis",
+        "L. Pellicer",
+        "Anna Helena Reali Costa",
+        "Artur Jordão"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 568,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AERO: Entropy-Guided Framework for Private LLM Inference",
+      "source_url": "https://arxiv.org/abs/2410.13060",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": null,
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Privacy-preserving computation enables language model inference directly on encrypted data yet suffers from prohibitive latency and communication overheads, primarily due to nonlinear functions. Removing nonlinearities, however, can trigger one of two failure modes restricting the potential for nonlinearity removal: entropy collapse in deeper layers, which destabilizes training, and entropic overload in early layers, causing under-utilization of attention heads. To address these challenges, we introduce AERO, an entropy-guided framework to strategically eliminates costly nonlinear operations from transformer architectures, which employs an adaptive recalibration through a head-wise entropy regularizer with learnable per-head strengths, enabling each head to adjust its entropy level while penalizing extreme entropies and fostering functional diversity through a tolerance margin. Experiments show AERO can save 3.4$\\times$ communication and 1.4$\\times$ latency, without any performance penalty.",
+      "identifiers": [
+        "SemanticScholar:80d86aea613a91272a27c81c2d6a43763da0bece"
+      ],
+      "semantic_scholar_id": "80d86aea613a91272a27c81c2d6a43763da0bece",
+      "canonical_id": "arXiv:2410.13060",
+      "arxiv_id": "2410.13060",
+      "authors": [
+        "Nandan Kumar Jha",
+        "Brandon Reagen"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 763,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "<italic>m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq1-3587445.gif\"/></alternatives></inline-formula>LLM:</italic> A <underline>M</underline>ulti-Dimensional Optimiz",
+      "source_url": "https://doi.org/10.1109/TPDS.2025.3587445",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are reshaping mobile AI. Directly deploying LLMs on mobile devices is an emerging paradigm that can widely support different mobile applications while preserving data privacy. However, intensive memory footprint, long inference latency and high energy consumption severely bottlenecks on-device inference of LLM in real-world scenarios. In response to these challenges, this work introduces m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq3-3587445.gif\"/></alternatives></inline-formula>LLM, an innovative framework that performs joint optimization from multiple dimensions for on-device LLM inference in order to strike a balance among performance, realtimeliness and energy efficiency. Specifically, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq4-3587445.gif\"/></alternatives></inline-formula>LLM features the following four core components including : 1) Hardware-aware Model Customization, 2) Elastic Chunk-wise Pipeline, 3) Latency-guided Prompt Compression and 4) Layer-wise Resource Scheduling. These four components interact with each other in order to guide the inference process from the following three dimensions. At the model level, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq5-3587445.gif\"/></alternatives></inline-formula>LLM designs an elastic chunk-wise pipeline to expand device memory and customize the model according to the hardware configuration, maximizing performance within the memory budget. At the prompt level, facing the stochastic input, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq6-3587445.gif\"/></alternatives></inline-formula>LLM judiciously compresses the prompts in order to guarantee the first token can be generated in time while maintaining the semantic information. Additionally, at the system level, the layer-wise resource scheduler is employed in order to complete the token generation process with minimized energy consumption while guaranteeing the realtimeness in the highly dynamic mobile environment. m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq7-3587445.gif\"/></alternatives></inline-formula>LLM is evaluated on off-the-shelf smartphone with represented models and datasets. Compared to baseline methods, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq8-3587445.gif\"/></alternatives></inline-formula>LLM delivers 2.99–13.5× TTFT acceleration and 2.28–24.3× energy savings, with only a minimal model performance loss of 2% –7% .",
+      "identifiers": [
+        "SemanticScholar:d759d10f44e1a3cef2eb46ae49c83f6e0248c0c1"
+      ],
+      "semantic_scholar_id": "d759d10f44e1a3cef2eb46ae49c83f6e0248c0c1",
+      "doi": "10.1109/TPDS.2025.3587445",
+      "canonical_id": "DOI:10.1109/TPDS.2025.3587445",
+      "authors": [
+        "Kaiyuan Liu",
+        "Xiao-Bo Zhou",
+        "Li Li"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 413,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference",
+      "source_url": "https://arxiv.org/abs/2510.02675",
+      "year": 2025,
+      "published": "2025-10-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Large Language Models (LLMs) has driven a growing demand for efficient inference, particularly in latency-sensitive applications such as chatbots and personalized assistants. Unlike traditional deep neural networks, LLM inference proceeds in two distinct phases: the prefill phase, which processes the full input sequence in parallel, and the decode phase, which generates tokens sequentially. These phases exhibit highly diverse compute and memory requirements, which makes accelerator design particularly challenging. Prior works have primarily been optimized for high-batch inference or evaluated only short input context lengths, leaving the low-batch and long context regime, which is critical for interactive applications, largely underexplored. We propose HALO, a heterogeneous memory centric accelerator designed for these unique challenges of prefill and decode phases in low-batch LLM inference. HALO integrates HBM based Compute-in-DRAM (CiD) with an on-chip analog Compute-in-Memory (CiM), co-packaged using 2.5D integration. To further improve the hardware utilization, we introduce a phase-aware mapping strategy that adapts to the distinct demands of the prefill and decode phases. Compute bound operations in the prefill phase are mapped to CiM to exploit its high throughput matrix multiplication capability, while memory-bound operations in the decode phase are executed on CiD to benefit from reduced data movement within DRAM. Additionally, we present an analysis of the performance tradeoffs of LLMs under two architectural extremes: a fully CiD and a fully on-chip analog CiM design to highlight the need for a heterogeneous design. We evaluate HALO on LLaMA-2 7B and Qwen3 8B models. Our experimental results show that LLMs mapped to HALO achieve up to 18x geometric mean speedup over AttAcc, an attention-optimized mapping and 2.5x over CENT, a fully CiD based mapping.",
+      "identifiers": [
+        "SemanticScholar:f1c3c7082fac30a993a299da306717373d34eb60"
+      ],
+      "semantic_scholar_id": "f1c3c7082fac30a993a299da306717373d34eb60",
+      "canonical_id": "arXiv:2510.02675",
+      "arxiv_id": "2510.02675",
+      "doi": "10.48550/arXiv.2510.02675",
+      "authors": [
+        "Shubham Negi",
+        "Kaushik Roy"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 411,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.05707",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.2592",
+        "id:SemanticScholar:7873a8d24622217a17fa04948e04c4fd5dd3d688",
+        "id:arXiv:2609.05707",
+        "title:intraprompt parallel decoding for commoncontext question answering",
+        "url:https://arxiv.org/abs/2609.05707"
+      ],
+      "record": {
+        "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+        "source_url": "https://arxiv.org/abs/2609.05707",
+        "year": 2026,
+        "published": "2026-09-04",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In common-context question answering (CCQA) tasks, multiple input questions share a common context to base their answers from. However, Large Language Models typically generate each answer using an independent prompt. While existing batching and caching techniques help improve parallelism and reduce repeated computations, the separation of questions across prompts limits the achievable speedup, as modern GPUs are underutilized due to a memory bottleneck during attention. We present Intra-Prompt Parallel Decoding (IPPD), a novel inference method that answers multiple common-context questions in parallel within a single prompt. IPPD directly addresses the bottleneck by efficiently sharing both memory and computation during the attention process, as the next token for every question is decoded in a single inference step. IPPD uses virtual position IDs and attention mask manipulation to generate the same output as standard prompting without requiring fine-tuning or any changes to the LLM architecture. Since all parallelism occurs within a prompt, IPPD is fully compatible with batched inference, even when each prompt features a different context. Our experiments show that IPPD delivers up to 7X the effective throughput as standard decoding without quality degradation, and outperforms prefix caching with PagedAttention in most settings.",
+        "identifiers": [
+          "SemanticScholar:7873a8d24622217a17fa04948e04c4fd5dd3d688"
+        ],
+        "semantic_scholar_id": "7873a8d24622217a17fa04948e04c4fd5dd3d688",
+        "canonical_id": "arXiv:2609.05707",
+        "arxiv_id": "2609.05707",
+        "doi": "10.18653/2026.emnlp-main.2592",
+        "authors": [
+          "Theodore Glavas",
+          "Nikhita Vedula",
+          "Dushyanta Dhyani",
+          "Antonios Valkanas",
+          "Yilun Zhu",
+          "S. Malmasi"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 75,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.23198",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.23198",
+        "id:SemanticScholar:1663af41280c87591e3588272ebe1106bd9a543d",
+        "id:arXiv:2603.23198",
+        "title:sparser faster lighter transformer language models",
+        "url:https://arxiv.org/abs/2603.23198"
+      ],
+      "record": {
+        "title": "Sparser, Faster, Lighter Transformer Language Models",
+        "source_url": "https://arxiv.org/abs/2603.23198",
+        "year": 2026,
+        "published": "2026-03-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling autoregressive large language models (LLMs) has driven unprecedented progress but comes with vast computational costs. In this work, we tackle these costs by leveraging unstructured sparsity within an LLM's feedforward layers, the components accounting for most of the model parameters and execution FLOPs. To achieve this, we introduce a new sparse packing format and a set of CUDA kernels designed to seamlessly integrate with the optimized execution pipelines of modern GPUs, enabling efficient sparse computation during LLM inference and training. To substantiate our gains, we provide a quantitative study of LLM sparsity, demonstrating that simple L1 regularization can induce over 99% sparsity with negligible impact on downstream performance. When paired with our kernels, we show that these sparsity levels translate into substantial throughput, energy efficiency, and memory usage benefits that increase with model scale. We will release all code and kernels under an open-source license to promote adoption and accelerate research toward establishing sparsity as a practical axis for improving the efficiency and scalability of modern foundation models.",
+        "identifiers": [
+          "SemanticScholar:1663af41280c87591e3588272ebe1106bd9a543d"
+        ],
+        "semantic_scholar_id": "1663af41280c87591e3588272ebe1106bd9a543d",
+        "canonical_id": "arXiv:2603.23198",
+        "arxiv_id": "2603.23198",
+        "doi": "10.48550/arXiv.2603.23198",
+        "authors": [
+          "Edoardo Cetin",
+          "Stefano Peluchetti",
+          "Emilio Castillo",
+          "Akira Naruse",
+          "Mana Murakami",
+          "Llion Jones"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 239,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.11235",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.11235",
+        "id:SemanticScholar:74389593979febd3454f901276fb1c76d4b51c1c",
+        "id:arXiv:2608.11235",
+        "title:coradiff confidenceoriented residual acceptance for efficient diffusion language model inference",
+        "url:https://arxiv.org/abs/2608.11235"
+      ],
+      "record": {
+        "title": "CORA-Diff: Confidence-Oriented Residual Acceptance for Efficient Diffusion Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2608.11235",
+        "year": 2026,
+        "published": "2026-07-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) update many tokens in parallel, yet practical decoders often use a fixed denoising horizon. Many predictions stabilize early, but blockwise decoding continues until all positions are resolved, causing repeated dense forward passes. Existing accelerators often rely on learned filters, modified scores, dependency models, or cache-specific mechanisms. We ask whether native trajectory signals can identify residual positions likely to match the deterministic dense endpoint. We propose CORA-Diff, a training-free method that preserves the original transfer rule and applies confidence-and-persistence gating only to positions that rule leaves unresolved. Accepted tokens remain visible as context, and the block terminates once all positions are resolved. This requires no backbone change, learned acceptance model, or logit modification. Our theory explains why high-confidence, persistent predictions are more likely to match the fixed-horizon dense endpoint, and paired post-intervention trajectories provide direct empirical support. We select one operating point on a separate GSM8K calibration subset and freeze it for all evaluations. Under a matched Learn2PD-style LLaDA protocol, CORA-Diff has the lowest measured runtime in all eight task-length settings. Task scores match or exceed dense decoding in five settings, and the largest observed drop is 1.22 points. Its incremental speedups over EOS-aware dense decoding are 2.70x and 3.32x on GSM8K and HumanEval. It also reaches 13.14x under the fixed-horizon 1024/1024 mechanism-isolation protocol and transfers to Dream without retuning at 3.18x-3.53x. These results show that native confidence and persistence enable reliable residual acceptance, reducing repeated denoising computation while preserving task quality.",
+        "identifiers": [
+          "SemanticScholar:74389593979febd3454f901276fb1c76d4b51c1c"
+        ],
+        "semantic_scholar_id": "74389593979febd3454f901276fb1c76d4b51c1c",
+        "canonical_id": "arXiv:2608.11235",
+        "arxiv_id": "2608.11235",
+        "doi": "10.48550/arXiv.2608.11235",
+        "authors": [
+          "Yi-Fan Wu",
+          "Yu-Feng Zhang",
+          "Ken-Li Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 110,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00017",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00017",
+        "id:SemanticScholar:1612f4dc2230af2b47073f84fdab2dd0121f5976",
+        "title:mlx multilayer execution for structured llm workload acceleration on spatial architectures",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00017"
+      ],
+      "record": {
+        "title": "MLX: Multi-Layer Execution for Structured LLM Workload Acceleration on Spatial Architectures",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00017",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured sparsity is a promising approach to scaling large-language-model (LLM) inference, but existing forms such as butterfly-structured sparse projections and transformations often map inefficiently to GPUs due to deep stage dependencies and limited bulk parallelism. This paper presents MLX, an algorithm–architecture co-design for structured LLM inference. MLX couples semantic-aware FFT compression and hierarchical sparse projections with spatial dataflow execution, enabling staged structured operators to run efficiently on compact arrays. MLX defines Closed Dependency Components (CDCs) to capture deterministic forward-only dataflow regions that can be folded across layers and pipelined on compact arrays. It then realizes CDCs through a multi-layer execution architecture with bounded-hop skip-hop routing, tag-based scheduling, and decoupled compute/transfer pipelines to overlap communication and computation across deep operators. We prototype MLX in 12 nm and show that it achieves $3.2 \\times$ hardware speedup and $3.1 \\times$ energy savings over Jetson Xavier. A transformer-specialized reduced design further delivers up to 5.7× speedup over prior sparse accelerators. MLX also scales nearly linearly to $8 \\times 8$ meshes and remains effective for long sequences from $\\mathbf{1 K}$ to 4 K, demonstrating that structured operator semantics can be translated into efficient spatial execution for sparse LLMs.",
+        "identifiers": [
+          "SemanticScholar:1612f4dc2230af2b47073f84fdab2dd0121f5976"
+        ],
+        "semantic_scholar_id": "1612f4dc2230af2b47073f84fdab2dd0121f5976",
+        "doi": "10.1109/ISCA66397.2026.00017",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00017",
+        "authors": [
+          "Hai-Bin Wu",
+          "Wen-Ming Li",
+          "Zhi-Hua Fan",
+          "Zi-Rui Ma",
+          "Yu-Qun Liu",
+          "Tengfei Xia",
+          "Yan-Huan Liu",
+          "Kunming Zhang",
+          "Xiao-Chun Ye",
+          "Dong-Rui Fan",
+          "Jian Weng"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22720",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.22720",
+        "id:SemanticScholar:8e26f6510b261ade1153cd362f01466ec2febd08",
+        "id:arXiv:2607.22720",
+        "title:causalgate causal importance distillation for transformer module pruning",
+        "url:https://arxiv.org/abs/2607.22720"
+      ],
+      "record": {
+        "title": "CausalGate: Causal Importance Distillation for Transformer Module Pruning",
+        "source_url": "https://arxiv.org/abs/2607.22720",
+        "year": 2026,
+        "published": "2026-07-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing adaptive inference methods for Large Language Models rely on observational heuristics, such as hidden-state similarity or activation magnitudes, to drop redundant modules. However, these correlation-based metrics often fail to capture subtle, non-linear structural computations vital for semantic accuracy. We introduce CausalGate, an intervention-guided framework for compute-efficient transformer inference. During a calibration phase, CausalGate isolates individual Attention and MLP sub-layers, zeros out their respective outputs, and measures the exact semantic damage via the Kullback-Leibler divergence of the final logit distribution. To eliminate runtime routing overhead, this structural importance hierarchy is distilled into a global set of static, lightweight scalar gates using an Exponential Moving Average smoothing objective paired with a differentiable pairwise ranking loss. Evaluated on TinyLlama-1.1B, Qwen2.5-3B, and Llama-3.1-8B across language modeling and commonsense reasoning benchmarks, CausalGate consistently outperforms prominent dynamic routing and layer-skipping baselines, translating theoretical compute savings into concrete hardware latency reductions with zero operational overhead.",
+        "identifiers": [
+          "SemanticScholar:8e26f6510b261ade1153cd362f01466ec2febd08"
+        ],
+        "semantic_scholar_id": "8e26f6510b261ade1153cd362f01466ec2febd08",
+        "canonical_id": "arXiv:2607.22720",
+        "arxiv_id": "2607.22720",
+        "doi": "10.48550/arXiv.2607.22720",
+        "authors": [
+          "Kiran Nair",
+          "Smriti Regmi",
+          "Rodrigue Rizk"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36202",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.36202",
+        "id:SemanticScholar:cddd3431d11e35d28f42c33e0e31002699da8b55",
+        "id:arXiv:2609.36202",
+        "title:fastguide accelerating reward guidance for diffusion large language models",
+        "url:https://arxiv.org/abs/2609.36202"
+      ],
+      "record": {
+        "title": "FastGuide: Accelerating Reward Guidance for Diffusion Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.36202",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Gradient-based reward guidance provides a flexible way to use downstream reward models to control masked diffusion language models at inference time. However, its computational cost remains high as each decoding iteration incurs expensive diffusion model forward passes and reward model backpropagation steps. To address this, we introduce FastGuide, an adaptive hybrid of parallel and autoregressive decoding to accelerate reward guidance for diffusion language models. In analogy to parallel decoding, FastGuide amortizes the cost of reward model backpropagation by computing guidance once per decoding step and reusing it to generate multiple tokens. Within each decoding step, FastGuide makes diffusion forward passes autoregressive by unmasking tokens one at a time while efficiently recomputing token distributions after each unmasking by utilizing KV caching techniques and sparse recomputation of attention. Lastly, to adapt hybrid decoding to the model's confidence, FastGuide defers any token that the model is unconfident about under its recomputed distribution. Experiments on three reward benchmarks demonstrate that FastGuide is up to $4.4\\times$ faster than sequential reward-guided decoding while retaining similar generation quality.",
+        "identifiers": [
+          "SemanticScholar:cddd3431d11e35d28f42c33e0e31002699da8b55"
+        ],
+        "semantic_scholar_id": "cddd3431d11e35d28f42c33e0e31002699da8b55",
+        "canonical_id": "arXiv:2609.36202",
+        "arxiv_id": "2609.36202",
+        "doi": "10.48550/arXiv.2609.36202",
+        "authors": [
+          "Darshan Thaker",
+          "L. MacDonald",
+          "R. Vidal"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17355",
+      "identity_tokens": [
+        "id:SemanticScholar:4dcee4965b77d9b37972a096a9da2a2df1b8464a",
+        "id:arXiv:2610.17355",
+        "title:wire weight space implicit representation encoding of frozen video llms",
+        "url:https://arxiv.org/abs/2610.17355"
+      ],
+      "record": {
+        "title": "WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs",
+        "source_url": "https://arxiv.org/abs/2610.17355",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video language models represent a video as a long sequence of visual embeddings in a decoder's input. Every visual embedding is processed by every decoder layer during prefill, stored in the key value cache, and attended by every generated token, so a long video raises prefill, memory, and generation cost at once. We present WIRE (Weight Space Implicit Representation Encoding), which reduces this recurring cost by moving part of the video conditioned computation of a frozen video language model from its input activations into a temporary low rank update of its weights. WIRE keeps a short explicit visual context, so the update acts as a correction rather than a replacement of the video. WIRE first compresses the full resolution embeddings of each frame into a small set of carrier tokens using a question conditioned bidirectional selective scan, and physically contracts the decoder input so every decoder layer, cache entry, and decoding step operates on the shorter sequence. Hypernetworks at selected decoder layers read the compressed forward pass together with a readout of the full resolution features removed by contraction and generate LoRA updates to the attention and feedforward projections. The updates are merged after prefill, so autoregressive decoding runs the unmodified frozen backbone. On Qwen3-VL-8B, WIRE with 16 carrier tokens per frame contracts the visual stream by $3.5\\times$, reduces decoder prefill time by $3.35\\times$ at 256 frames and $4.14\\times$ at 1024 frames, shrinks the key value cache proportionally, and keeps per token decoding latency approximately constant. Across nine benchmark settings at 256 frames, it obtains the highest average accuracy among efficient video language models we evaluate under a common 256 frame budget.",
+        "identifiers": [
+          "SemanticScholar:4dcee4965b77d9b37972a096a9da2a2df1b8464a"
+        ],
+        "semantic_scholar_id": "4dcee4965b77d9b37972a096a9da2a2df1b8464a",
+        "canonical_id": "arXiv:2610.17355",
+        "arxiv_id": "2610.17355",
+        "authors": [
+          "Ameen Ali",
+          "Tamim Zoabi",
+          "Lior Wolf",
+          "Chaim Baskin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.21174",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn64981.2025.11227985",
+        "id:SemanticScholar:5afa9963f2f49587805b1ff44fc9594fc5c84851",
+        "id:arXiv:2504.21174",
+        "title:efficient llms with amp attention heads and mlp pruning",
+        "url:https://arxiv.org/abs/2504.21174"
+      ],
+      "record": {
+        "title": "Efficient LLMs with AMP: Attention Heads and MLP Pruning",
+        "source_url": "https://arxiv.org/abs/2504.21174",
+        "year": 2025,
+        "published": "2025-04-29",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep learning drives a new wave in computing systems and triggers the automation of increasingly complex problems. In particular, Large Language Models (LLMs) have significantly advanced cognitive tasks, often matching or even surpassing human-level performance. However, their extensive parameters result in high computational costs and slow inference, posing challenges for deployment in resource-limited settings. Among the strategies to overcome the aforementioned challenges, pruning emerges as a successful mechanism since it reduces model size while maintaining predictive ability. In this paper, we introduce AMP: Attention Heads and MLP Pruning, a novel structured pruning method that efficiently compresses LLMs by removing less critical structures within Multi-Head Attention (MHA) and Multilayer Perceptron (MLP). By projecting the input data onto weights, AMP assesses structural importance and overcomes the limitations of existing techniques, which often fall short in flexibility or efficiency. In particular, AMP surpasses the current state-of-the-art on commonsense reasoning tasks by up to 1.49 percentage points, achieving a 30% pruning ratio with minimal impact on zero-shot task performance. Moreover, AMP also improves inference speeds, making it well-suited for deployment in resource-constrained environments. We confirm the flexibility of AMP on different families of LLMs, including LLaMA and Phi.",
+        "identifiers": [
+          "SemanticScholar:5afa9963f2f49587805b1ff44fc9594fc5c84851"
+        ],
+        "semantic_scholar_id": "5afa9963f2f49587805b1ff44fc9594fc5c84851",
+        "canonical_id": "arXiv:2504.21174",
+        "arxiv_id": "2504.21174",
+        "doi": "10.1109/IJCNN64981.2025.11227985",
+        "authors": [
+          "Leandro Giusti Mugnaini",
+          "Bruno Lopes Yamamoto",
+          "Lucas Lauton de Alcantara",
+          "V. Zacarias",
+          "Edson R. Bollis",
+          "L. Pellicer",
+          "Anna Helena Reali Costa",
+          "Artur Jordão"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 568,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.13060",
+      "identity_tokens": [
+        "id:SemanticScholar:80d86aea613a91272a27c81c2d6a43763da0bece",
+        "id:arXiv:2410.13060",
+        "title:aero entropyguided framework for private llm inference",
+        "url:https://arxiv.org/abs/2410.13060"
+      ],
+      "record": {
+        "title": "AERO: Entropy-Guided Framework for Private LLM Inference",
+        "source_url": "https://arxiv.org/abs/2410.13060",
+        "year": 2024,
+        "published": "2024-10-16",
+        "venue": null,
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Privacy-preserving computation enables language model inference directly on encrypted data yet suffers from prohibitive latency and communication overheads, primarily due to nonlinear functions. Removing nonlinearities, however, can trigger one of two failure modes restricting the potential for nonlinearity removal: entropy collapse in deeper layers, which destabilizes training, and entropic overload in early layers, causing under-utilization of attention heads. To address these challenges, we introduce AERO, an entropy-guided framework to strategically eliminates costly nonlinear operations from transformer architectures, which employs an adaptive recalibration through a head-wise entropy regularizer with learnable per-head strengths, enabling each head to adjust its entropy level while penalizing extreme entropies and fostering functional diversity through a tolerance margin. Experiments show AERO can save 3.4$\\times$ communication and 1.4$\\times$ latency, without any performance penalty.",
+        "identifiers": [
+          "SemanticScholar:80d86aea613a91272a27c81c2d6a43763da0bece"
+        ],
+        "semantic_scholar_id": "80d86aea613a91272a27c81c2d6a43763da0bece",
+        "canonical_id": "arXiv:2410.13060",
+        "arxiv_id": "2410.13060",
+        "authors": [
+          "Nandan Kumar Jha",
+          "Brandon Reagen"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 763,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2025.3587445",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2025.3587445",
+        "id:SemanticScholar:d759d10f44e1a3cef2eb46ae49c83f6e0248c0c1",
+        "title:italicminlineformulatexmath notationlatex2texmathalternativesmmlmathmmlmsupmmlmrowmmlmn2mmlmnmmlmsupmmlmathinlinegraphic xlinkhrefliieq13587445gifalternativesinlineformulallmitalic a underlinemunderlineultidimensional optimiz",
+        "url:https://doi.org/10.1109/TPDS.2025.3587445"
+      ],
+      "record": {
+        "title": "<italic>m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq1-3587445.gif\"/></alternatives></inline-formula>LLM:</italic> A <underline>M</underline>ulti-Dimensional Optimiz",
+        "source_url": "https://doi.org/10.1109/TPDS.2025.3587445",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "IEEE Transactions on Parallel and Distributed Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are reshaping mobile AI. Directly deploying LLMs on mobile devices is an emerging paradigm that can widely support different mobile applications while preserving data privacy. However, intensive memory footprint, long inference latency and high energy consumption severely bottlenecks on-device inference of LLM in real-world scenarios. In response to these challenges, this work introduces m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq3-3587445.gif\"/></alternatives></inline-formula>LLM, an innovative framework that performs joint optimization from multiple dimensions for on-device LLM inference in order to strike a balance among performance, realtimeliness and energy efficiency. Specifically, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq4-3587445.gif\"/></alternatives></inline-formula>LLM features the following four core components including : 1) Hardware-aware Model Customization, 2) Elastic Chunk-wise Pipeline, 3) Latency-guided Prompt Compression and 4) Layer-wise Resource Scheduling. These four components interact with each other in order to guide the inference process from the following three dimensions. At the model level, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq5-3587445.gif\"/></alternatives></inline-formula>LLM designs an elastic chunk-wise pipeline to expand device memory and customize the model according to the hardware configuration, maximizing performance within the memory budget. At the prompt level, facing the stochastic input, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq6-3587445.gif\"/></alternatives></inline-formula>LLM judiciously compresses the prompts in order to guarantee the first token can be generated in time while maintaining the semantic information. Additionally, at the system level, the layer-wise resource scheduler is employed in order to complete the token generation process with minimized energy consumption while guaranteeing the realtimeness in the highly dynamic mobile environment. m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq7-3587445.gif\"/></alternatives></inline-formula>LLM is evaluated on off-the-shelf smartphone with represented models and datasets. Compared to baseline methods, m<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"li-ieq8-3587445.gif\"/></alternatives></inline-formula>LLM delivers 2.99–13.5× TTFT acceleration and 2.28–24.3× energy savings, with only a minimal model performance loss of 2% –7% .",
+        "identifiers": [
+          "SemanticScholar:d759d10f44e1a3cef2eb46ae49c83f6e0248c0c1"
+        ],
+        "semantic_scholar_id": "d759d10f44e1a3cef2eb46ae49c83f6e0248c0c1",
+        "doi": "10.1109/TPDS.2025.3587445",
+        "canonical_id": "DOI:10.1109/TPDS.2025.3587445",
+        "authors": [
+          "Kaiyuan Liu",
+          "Xiao-Bo Zhou",
+          "Li Li"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 413,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02675",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02675",
+        "id:SemanticScholar:f1c3c7082fac30a993a299da306717373d34eb60",
+        "id:arXiv:2510.02675",
+        "title:halo memorycentric heterogeneous accelerator with 25d integration for lowbatch llm inference",
+        "url:https://arxiv.org/abs/2510.02675"
+      ],
+      "record": {
+        "title": "HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference",
+        "source_url": "https://arxiv.org/abs/2510.02675",
+        "year": 2025,
+        "published": "2025-10-03",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid adoption of Large Language Models (LLMs) has driven a growing demand for efficient inference, particularly in latency-sensitive applications such as chatbots and personalized assistants. Unlike traditional deep neural networks, LLM inference proceeds in two distinct phases: the prefill phase, which processes the full input sequence in parallel, and the decode phase, which generates tokens sequentially. These phases exhibit highly diverse compute and memory requirements, which makes accelerator design particularly challenging. Prior works have primarily been optimized for high-batch inference or evaluated only short input context lengths, leaving the low-batch and long context regime, which is critical for interactive applications, largely underexplored. We propose HALO, a heterogeneous memory centric accelerator designed for these unique challenges of prefill and decode phases in low-batch LLM inference. HALO integrates HBM based Compute-in-DRAM (CiD) with an on-chip analog Compute-in-Memory (CiM), co-packaged using 2.5D integration. To further improve the hardware utilization, we introduce a phase-aware mapping strategy that adapts to the distinct demands of the prefill and decode phases. Compute bound operations in the prefill phase are mapped to CiM to exploit its high throughput matrix multiplication capability, while memory-bound operations in the decode phase are executed on CiD to benefit from reduced data movement within DRAM. Additionally, we present an analysis of the performance tradeoffs of LLMs under two architectural extremes: a fully CiD and a fully on-chip analog CiM design to highlight the need for a heterogeneous design. We evaluate HALO on LLaMA-2 7B and Qwen3 8B models. Our experimental results show that LLMs mapped to HALO achieve up to 18x geometric mean speedup over AttAcc, an attention-optimized mapping and 2.5x over CENT, a fully CiD based mapping.",
+        "identifiers": [
+          "SemanticScholar:f1c3c7082fac30a993a299da306717373d34eb60"
+        ],
+        "semantic_scholar_id": "f1c3c7082fac30a993a299da306717373d34eb60",
+        "canonical_id": "arXiv:2510.02675",
+        "arxiv_id": "2510.02675",
+        "doi": "10.48550/arXiv.2510.02675",
+        "authors": [
+          "Shubham Negi",
+          "Kaushik Roy"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 411,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:96c57d33845b78fa61bcca85aef75973ed470e67d4487e0b2bed46f9d9c2af69",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

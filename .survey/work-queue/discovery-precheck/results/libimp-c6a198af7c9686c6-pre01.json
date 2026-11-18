@@ -1,0 +1,894 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c6a198af7c9686c6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c6a198af7c96",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/isca66397.2026.00078",
+    "DOI:10.1109/rtss66672.2025.00021",
+    "arXiv:2405.16283",
+    "arXiv:2602.13665",
+    "arXiv:2603.08065",
+    "arXiv:2604.22050",
+    "arXiv:2605.17842",
+    "arXiv:2605.27435",
+    "arXiv:2611.04032"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6bc06576fc4d080451d83706f982f73d782a635b",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T23:25:48.046145+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00078",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/rtss66672.2025.00021",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.16283",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13665",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.08065",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.22050",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.17842",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27435",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.04032",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DIAMoND: Dynamic Inference for Adaptive Edge MOE with Heterogeneous In-NAND and Near-DRAM Compute Architecture",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00078",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Among modern large language models (LLMs), the Mixture-of-Experts (MoE) model stands out as a promising approach. Although MoE models activate only small portions of experts during inference, the full model size can reach 50~100GB, posing challenges for the memory capacity of edge devices. Additionally, single-batch decoding in edge applications places significant memory bandwidth demands for parameter loading, and the dynamic expert selection in MoE models further complicates loading patterns. Previous studies have explored using NAND-Flash-based SSD to provide the large storage capacity needed for holding LLM parameters. However, the performance of near-NAND computing remains limited by the memory data transfer rate, and these studies lack designs to accommodate the complex execution flow of MoE models. To fully release the computational capacity on the memory side while considering memory characteristics, we introduce DIAMoND, a heterogeneous accelerator that integrates in-NAND and near-DRAM computing via a 2.5D package to support all operations in MoE inference efficiently. To address mismatches between varying matrix sizes and the fixed NAND array size, we propose a mask-based mapping method under in-NAND computing. Finally, a dynamic online expert selection scheme based on in-NAND computing is proposed to enhance MoE inference efficiency. Overall, our proposed architecture enables the edge inference of Mixtral-8×7B at a speed of 197.3 tokens/s and a peak energy efficiency of 5.8 tokens/J, with the speed being $9.7 \\times$ and ${2. 6} \\sim {1 1. 7} \\times$ better than GPU and ASIC LLM edge accelerators.",
+      "identifiers": [
+        "SemanticScholar:d63ea5f13d28293c764b9d505afcbe5c59fb44b6"
+      ],
+      "semantic_scholar_id": "d63ea5f13d28293c764b9d505afcbe5c59fb44b6",
+      "doi": "10.1109/ISCA66397.2026.00078",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00078",
+      "authors": [
+        "Ling Liang",
+        "Tian-Yang Luo",
+        "Shu-Zhang Zhong",
+        "Dong-Xue Zhao",
+        "Qi-Chao Ma",
+        "Ren-Jie Wei",
+        "Jingyu Wang",
+        "Meng Li",
+        "Guang-Yu Sun",
+        "Zong-Wei Wang",
+        "Yi-Mao Cai"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "HCInfer: Hierarchical Coordination for Real-Time Collaborative Inference of LLM on the Edge",
+      "source_url": "https://doi.org/10.1109/RTSS66672.2025.00021",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "IEEE Real-Time Systems Symposium",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on edge devices enables real-time responses while preserving user privacy. However, constrained memory and compute resources pose significant challenges for high-quality, single-device inference. To address this, we propose HCInfer, a hierarchical coordination framework for collaborative LLM inference across edge devices. By leveraging idle neighboring devices, HCInfer alleviates performance bottlenecks typical in isolated deployments. HCInfer employs a two-level coordination strategy. At the inter-device level, it leverages idle neighboring devices to collaboratively process attention computations, significantly reducing synchronization overhead. At the intra-device level, it applies finegrained memory and compute optimizations to fully exploit local hardware capabilities. Building on this architecture, HCInfer integrates three key components: (1) Asymmetric Transformer decomposition decouples attention and FFN computation, enabling selective and parallel execution across devices. (2) Layer-wise subdeadline scheduling dynamically profiles execution latency and adapts precision or structure to meet real-time constraints (3) An Overhead Mitigation Module efficiently manages on-device resource usage to support scalability without overwhelming hardware. We evaluate HCInfer on PC, smart home, and mobile platforms using OPT-13B, Qwen2.5-14B, and Llama2-13B models. Experiments show HCInfer achieves 1.67× to 4.3× speedup in TTFT and 1.16× to 17.15× speedup in TPOT compared to existing baselines, maintaining a sub-deadline miss rate (SubDMR) of 15.3% under worst-case conditions while keeping model accuracy degradation within 8% for typical cases and up to 11% in extreme scenarios. These results demonstrate HCInfer's potential to enable efficient and responsive LLM inference in real-world edge environments.",
+      "identifiers": [
+        "SemanticScholar:bc61e82a025b209b70eaa408ce67f6598015add8"
+      ],
+      "semantic_scholar_id": "bc61e82a025b209b70eaa408ce67f6598015add8",
+      "doi": "10.1109/RTSS66672.2025.00021",
+      "canonical_id": "DOI:10.1109/RTSS66672.2025.00021",
+      "authors": [
+        "Kaiyuan Liu",
+        "Lizi Zhang",
+        "Cheng-Zhong Xu",
+        "Li Li"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating",
+      "source_url": "https://arxiv.org/abs/2602.13665",
+      "year": 2026,
+      "published": "2026-02-14",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While agentic AI systems rely on LLMs to translate user intent into structured function calls, this process is fraught with computational redundancy, leading to high inference latency that hinders real-time applications. This paper identifies and addresses three key redundancies: (1) the redundant processing of a large library of function descriptions for every request; (2) the redundant use of a large, slow model to generate an entire, often predictable, token sequence; and (3) the redundant generation of fixed, boilerplate parameter syntax. We introduce HyFunc, a novel framework that systematically eliminates these inefficiencies. HyFunc employs a hybrid-model cascade where a large model distills user intent into a single ''soft token.'' This token guides a lightweight retriever to select relevant functions and directs a smaller, prefix-tuned model to generate the final call, thus avoiding redundant context processing and full-sequence generation by the large model. To eliminate syntactic redundancy, our ''dynamic templating'' technique injects boilerplate parameter syntax on-the-fly within an extended vLLM engine. To avoid potential limitations in generalization, we evaluate HyFunc on an unseen benchmark dataset, BFCL. Experimental results demonstrate that HyFunc achieves an excellent balance between efficiency and performance. It achieves an inference latency of 0.828 seconds, outperforming all baseline models, and reaches a performance of 80.1%, surpassing all models with a comparable parameter scale. These results suggest that HyFunc offers a more efficient paradigm for agentic AI. Our code is publicly available at https://github.com/MrBlankness/HyFunc.",
+      "identifiers": [
+        "SemanticScholar:89cbd97c351c414acccd29237376faa902b796d6"
+      ],
+      "semantic_scholar_id": "89cbd97c351c414acccd29237376faa902b796d6",
+      "canonical_id": "arXiv:2602.13665",
+      "arxiv_id": "2602.13665",
+      "doi": "10.1145/3770854.3780283",
+      "authors": [
+        "Wei-Bin Liao",
+        "Jian-Guang Lou",
+        "Hao Xiong"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 277,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Deterministic Differentiable Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.08065",
+      "year": 2026,
+      "published": "2026-03-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning reduces LLM inference cost by removing low-importance architectural components. This can be viewed as learning a multiplicative gate for each component under an l0 sparsity constraint. Due to the discreteness of the l0 norm, prior work typically adopts stochastic hard-concrete relaxations to enable differentiable optimization; however, this stochasticity can introduce a train--test mismatch when sampled masks are discretized for deployment and restricts masks to a bounded, near-binary range. To address this, we propose Deterministic Differentiable Pruning (DDP), a mask-only optimization method that eliminates stochasticity by directly optimizing a deterministic soft surrogate of the discrete l0 objective. Compared with prior approaches, DDP offers greater expressiveness, reduced train--test mismatch, and faster convergence. We apply our method to several dense and MoE models, including Qwen3-32B and Qwen3-30B-A3B, achieving a performance loss as small as 1% on downstream tasks while outperforming previous methods at 20% sparsity. We further demonstrate end-to-end inference speedups in realistic deployment settings with vLLM.",
+      "identifiers": [
+        "SemanticScholar:c302150751e13ef36419bbcbbe1f91fcb1c56008"
+      ],
+      "semantic_scholar_id": "c302150751e13ef36419bbcbbe1f91fcb1c56008",
+      "canonical_id": "arXiv:2603.08065",
+      "arxiv_id": "2603.08065",
+      "doi": "10.48550/arXiv.2603.08065",
+      "authors": [
+        "Wei-Yu Huang",
+        "Peng-Le Zhang",
+        "Xiaolu Zhang",
+        "Jun Zhou",
+        "Jun Zhu",
+        "Jian-Fei Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SNLP: Layer-Parallel Inference via Structured Newton Corrections",
+      "source_url": "https://arxiv.org/abs/2605.17842",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive language models execute Transformer layers sequentially, creating a latency bottleneck that is not removed by conventional tensor or pipeline parallelism. We study whether this layerwise dependency can be relaxed by treating the hidden-state trace across layers as the solution of a nonlinear residual equation and solving it with parallel Newton-style updates. While this view is principled, exact Newton corrections require expensive Jacobian-vector products and naive fixed-point iterations are unstable on trained Transformers. We introduce Structured Newton Layer Parallelism (SNLP), a training and inference framework that replaces exact layer Jacobians with cheap architecture-induced surrogate dynamics. In residual Transformers, this yields Identity Newton (IDN), where the correction reduces to a prefix-sum-like update; in mHC-style architectures, HC Newton (HCN) uses the model's residual mixing matrix. We also study SNLP-aware training, including pretraining regularization and direct SNLP-forward SFT. Experiments on Nanochat-scale Transformers show that SNLP exposes a practical speed-quality frontier: on 0.5B models, it reaches up to 2.58x wall-clock speedup, and a less aggressive configuration reaches 1.40x speedup without increasing PPL. The useful tradeoff comes from the biased finite-iteration computation induced by IDN/HCN rather than exact recovery of the sequential trace. We further show that SNLP-forward SFT can preserve downstream task accuracy, and that SNLP can serve as a drafter for self-speculative decoding while a sequential verifier preserves output correctness.",
+      "identifiers": [
+        "SemanticScholar:767351320e68f4eb61957e767daad9ca4175ef0d"
+      ],
+      "semantic_scholar_id": "767351320e68f4eb61957e767daad9ca4175ef0d",
+      "canonical_id": "arXiv:2605.17842",
+      "arxiv_id": "2605.17842",
+      "doi": "10.48550/arXiv.2605.17842",
+      "authors": [
+        "Li-Gong Han",
+        "Kai Xu",
+        "Hao Wang",
+        "Akash Srivastava"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.27435",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on mobile devices increasingly relies on heterogeneous execution, yet no prior study has systematically characterized NPU effectiveness at the operator and pipeline level. We present the first stage-aware, multi-level benchmarking study of mobile LLM inference on a CPU–NPU heterogeneous SoC. We introduce OPMASK-based controlled pipeline decomposition methodology that isolates communication, quantization, and computation overheads within the NPU execution path. Our results reveal a counter-intuitive stage-level performance reversal: CPUs outperform NPUs in the compute-intensive Prefill stage (up to 1.6x), while NPUs provide only limited acceleration in the memory-bound Decode stage (1.05–1.2x). We further show that scheduling overhead and cross-backend fallback reduce the practical benefits of NPU offloading. For the energy trend, increasing NPU offloading leads to higher energy consumption (up to 51%). Based on these findings, we derive design guidelines for NPU architects targeting on-device LLM inference.",
+      "identifiers": [
+        "SemanticScholar:46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee"
+      ],
+      "semantic_scholar_id": "46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee",
+      "canonical_id": "arXiv:2605.27435",
+      "arxiv_id": "2605.27435",
+      "doi": "10.1109/AICAS69579.2026.11762122",
+      "authors": [
+        "Pu-Hao Li",
+        "Jia-Wen Qi",
+        "Qin-Yu Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LayerBoost: Layer-Aware Attention Reduction for Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2604.22050",
+      "year": 2026,
+      "published": "2026-04-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are mostly relying on softmax attention, which introduces quadratic complexity with respect to sequence length and remains a major bottleneck for efficient inference. Prior work on linear or hybrid attention typically replaces softmax attention uniformly across all layers, often leading to significant performance degradation or requiring extensive retraining to recover model quality. This work proposes LayerBoost, a layer-aware attention reduction method that selectively modifies the attention mechanism based on the sensitivity of individual transformer layers. It first performs a systematic sensitivity analysis on a pretrained model to identify layers that are critical for maintaining performance. Guided by this analysis, three distinct strategies can be applied: retaining standard softmax attention in highly sensitive layers, replacing it with linear sliding window attention in moderately sensitive layers, and removing attention entirely in layers that exhibit low sensitivity. To recover performance after these architectural modifications, we introduce a lightweight distillation-based healing phase requiring only 10M additional training tokens. LayerBoost reduces inference latency and improves throughput by up to 68% at high concurrency, while maintaining competitive model quality. It matches base model performance on several benchmarks, exhibits only minor degradations on others, and significantly outperforms state-of-the-art attention linearization methods. These efficiency gains make our method particularly well-suited for high-concurrency serving and hardware-constrained deployment scenarios, where inference cost and memory footprint are critical bottlenecks.",
+      "identifiers": [
+        "SemanticScholar:63646da8eeff97738608636aecde27498b61bb39"
+      ],
+      "semantic_scholar_id": "63646da8eeff97738608636aecde27498b61bb39",
+      "canonical_id": "arXiv:2604.22050",
+      "arxiv_id": "2604.22050",
+      "doi": "10.48550/arXiv.2604.22050",
+      "authors": [
+        "Mohamed Ali Souibgui",
+        "Jan Fostier",
+        "R. Abadía-Heredia",
+        "Bohdan Denysenko",
+        "Christian Marschke",
+        "Igor Peric"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration",
+      "source_url": "https://arxiv.org/abs/2611.04032",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving an LLM efficiently depends on the engine, how the model is split across GPUs, precision, scheduler settings, speculative decoding, KV-cache management, and prefill-decode disaggregation. The best configuration depends on the model, hardware, workload, and objective. Operators usually find it by trial and error. Exhaustively measuring the candidates in our study would take about 25,000 GPU-hours. ROCm InferaSim predicts serving performance from a few short measurements. Choices such as batch size, prompt length, and GPU count change the amount of work per GPU without changing the kernels. ROCm InferaSim benchmarks each distinct set of kernels once, on at most one node. We call this measurement an anchor. Analytical laws carry that anchor to other deployments that run the same kernels. For multi-node deployments, ROCm InferaSim reduces the configuration to a single-node equivalent, measures it, and scales the result analytically. A simulator replays multi-turn traffic, and a tuning agent searches configurations using the predictions. On AMD Instinct MI355X GPUs with vLLM, SGLang, and ATOM, 11 anchors took 9.1 GPU-hours, against 204 GPU-hours to measure the 226 fixed-length configurations they cover. On 172 configurations, time per output token has 8.1% median error. On a multi-turn coding workload, throughput is within 8%. For 159 disaggregated deployments, none used as an anchor, throughput is within 5.5%. A five-candidate short list contains a deployment within 12% of the best feasible pairing of model and latency target.",
+      "identifiers": [
+        "SemanticScholar:9805caff04c195a5540b7550e40855304226e4f2"
+      ],
+      "semantic_scholar_id": "9805caff04c195a5540b7550e40855304226e4f2",
+      "canonical_id": "arXiv:2611.04032",
+      "arxiv_id": "2611.04032",
+      "authors": [
+        "Anshu Raina",
+        "Yao Fu",
+        "Jie-Jing Zhang",
+        "Peyman Razaghi",
+        "Shiksha Patel",
+        "Ravi Gupta",
+        "Deval Shah",
+        "Adeem Jassani",
+        "Subhajit Dutta Chowdhury",
+        "Lorri Rao",
+        "Kailash Gogineni",
+        "Zhen-Yu Gu",
+        "Onil Gunawardana",
+        "Emad Barsoum"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TURNIP: A \"Nondeterministic\" GPU Runtime with CPU RAM Offload",
+      "source_url": "https://arxiv.org/abs/2405.16283",
+      "year": 2024,
+      "published": "2024-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "An obvious way to alleviate memory difficulties in GPU-based AI computing is via CPU offload, where data are moved between GPU and CPU RAM, so inexpensive CPU RAM is used to increase the amount of storage available. While CPU offload is an obvious idea, it can greatly slow down a computation, due to the relatively slow transfer rate between CPU RAM and GPU RAM. Thus, any system for CPU offload needs to ensure that when such a transfer needs to happen, no computation is blocked waiting for the transfer to finish. One of the key challenges when using CPU offload is that memory transfers introduce nondeterminacy into the system: it is not possible to know before runtime when the transfers will finish, and hence what is the best order of operations to run to ensure there is no blocking. In this paper, we describe TURNIP, which is a system for running AI computations using CPU offload. The key innovation in TURNIP is the compilation of the AI computation into a dependency graph that gives the TURNIP runtime freedom to run operations such as GPU kernel calls in many different orders; at runtime, TURNIP chooses the best order in response to real-time events.",
+      "identifiers": [
+        "SemanticScholar:62051926adbdb23011931c13f0c5e5f6dd1c8ce6"
+      ],
+      "semantic_scholar_id": "62051926adbdb23011931c13f0c5e5f6dd1c8ce6",
+      "canonical_id": "arXiv:2405.16283",
+      "arxiv_id": "2405.16283",
+      "doi": "10.48550/arXiv.2405.16283",
+      "authors": [
+        "Zhi-Min Ding",
+        "Jiawen Yao",
+        "Brianna Barrow",
+        "Tania Lorido Botran",
+        "C. Jermaine",
+        "Yu-Xin Tang",
+        "Jie-Hui Li",
+        "Xinyu Yao",
+        "S. Abdelghafar",
+        "Daniel Bourgeois"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 907,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00078",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00078",
+        "id:SemanticScholar:d63ea5f13d28293c764b9d505afcbe5c59fb44b6",
+        "title:diamond dynamic inference for adaptive edge moe with heterogeneous innand and neardram compute architecture",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00078"
+      ],
+      "record": {
+        "title": "DIAMoND: Dynamic Inference for Adaptive Edge MOE with Heterogeneous In-NAND and Near-DRAM Compute Architecture",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00078",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Among modern large language models (LLMs), the Mixture-of-Experts (MoE) model stands out as a promising approach. Although MoE models activate only small portions of experts during inference, the full model size can reach 50~100GB, posing challenges for the memory capacity of edge devices. Additionally, single-batch decoding in edge applications places significant memory bandwidth demands for parameter loading, and the dynamic expert selection in MoE models further complicates loading patterns. Previous studies have explored using NAND-Flash-based SSD to provide the large storage capacity needed for holding LLM parameters. However, the performance of near-NAND computing remains limited by the memory data transfer rate, and these studies lack designs to accommodate the complex execution flow of MoE models. To fully release the computational capacity on the memory side while considering memory characteristics, we introduce DIAMoND, a heterogeneous accelerator that integrates in-NAND and near-DRAM computing via a 2.5D package to support all operations in MoE inference efficiently. To address mismatches between varying matrix sizes and the fixed NAND array size, we propose a mask-based mapping method under in-NAND computing. Finally, a dynamic online expert selection scheme based on in-NAND computing is proposed to enhance MoE inference efficiency. Overall, our proposed architecture enables the edge inference of Mixtral-8×7B at a speed of 197.3 tokens/s and a peak energy efficiency of 5.8 tokens/J, with the speed being $9.7 \\times$ and ${2. 6} \\sim {1 1. 7} \\times$ better than GPU and ASIC LLM edge accelerators.",
+        "identifiers": [
+          "SemanticScholar:d63ea5f13d28293c764b9d505afcbe5c59fb44b6"
+        ],
+        "semantic_scholar_id": "d63ea5f13d28293c764b9d505afcbe5c59fb44b6",
+        "doi": "10.1109/ISCA66397.2026.00078",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00078",
+        "authors": [
+          "Ling Liang",
+          "Tian-Yang Luo",
+          "Shu-Zhang Zhong",
+          "Dong-Xue Zhao",
+          "Qi-Chao Ma",
+          "Ren-Jie Wei",
+          "Jingyu Wang",
+          "Meng Li",
+          "Guang-Yu Sun",
+          "Zong-Wei Wang",
+          "Yi-Mao Cai"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/rtss66672.2025.00021",
+      "identity_tokens": [
+        "id:DOI:10.1109/rtss66672.2025.00021",
+        "id:SemanticScholar:bc61e82a025b209b70eaa408ce67f6598015add8",
+        "title:hcinfer hierarchical coordination for realtime collaborative inference of llm on the edge",
+        "url:https://doi.org/10.1109/RTSS66672.2025.00021"
+      ],
+      "record": {
+        "title": "HCInfer: Hierarchical Coordination for Real-Time Collaborative Inference of LLM on the Edge",
+        "source_url": "https://doi.org/10.1109/RTSS66672.2025.00021",
+        "year": 2025,
+        "published": "2025-12-02",
+        "venue": "IEEE Real-Time Systems Symposium",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) on edge devices enables real-time responses while preserving user privacy. However, constrained memory and compute resources pose significant challenges for high-quality, single-device inference. To address this, we propose HCInfer, a hierarchical coordination framework for collaborative LLM inference across edge devices. By leveraging idle neighboring devices, HCInfer alleviates performance bottlenecks typical in isolated deployments. HCInfer employs a two-level coordination strategy. At the inter-device level, it leverages idle neighboring devices to collaboratively process attention computations, significantly reducing synchronization overhead. At the intra-device level, it applies finegrained memory and compute optimizations to fully exploit local hardware capabilities. Building on this architecture, HCInfer integrates three key components: (1) Asymmetric Transformer decomposition decouples attention and FFN computation, enabling selective and parallel execution across devices. (2) Layer-wise subdeadline scheduling dynamically profiles execution latency and adapts precision or structure to meet real-time constraints (3) An Overhead Mitigation Module efficiently manages on-device resource usage to support scalability without overwhelming hardware. We evaluate HCInfer on PC, smart home, and mobile platforms using OPT-13B, Qwen2.5-14B, and Llama2-13B models. Experiments show HCInfer achieves 1.67× to 4.3× speedup in TTFT and 1.16× to 17.15× speedup in TPOT compared to existing baselines, maintaining a sub-deadline miss rate (SubDMR) of 15.3% under worst-case conditions while keeping model accuracy degradation within 8% for typical cases and up to 11% in extreme scenarios. These results demonstrate HCInfer's potential to enable efficient and responsive LLM inference in real-world edge environments.",
+        "identifiers": [
+          "SemanticScholar:bc61e82a025b209b70eaa408ce67f6598015add8"
+        ],
+        "semantic_scholar_id": "bc61e82a025b209b70eaa408ce67f6598015add8",
+        "doi": "10.1109/RTSS66672.2025.00021",
+        "canonical_id": "DOI:10.1109/RTSS66672.2025.00021",
+        "authors": [
+          "Kaiyuan Liu",
+          "Lizi Zhang",
+          "Cheng-Zhong Xu",
+          "Li Li"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 351,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.13665",
+      "identity_tokens": [
+        "id:DOI:10.1145/3770854.3780283",
+        "id:SemanticScholar:89cbd97c351c414acccd29237376faa902b796d6",
+        "id:arXiv:2602.13665",
+        "title:hyfunc accelerating llmbased function calls for agentic ai through hybridmodel cascade and dynamic templating",
+        "url:https://arxiv.org/abs/2602.13665"
+      ],
+      "record": {
+        "title": "HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating",
+        "source_url": "https://arxiv.org/abs/2602.13665",
+        "year": 2026,
+        "published": "2026-02-14",
+        "venue": "Knowledge Discovery and Data Mining",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While agentic AI systems rely on LLMs to translate user intent into structured function calls, this process is fraught with computational redundancy, leading to high inference latency that hinders real-time applications. This paper identifies and addresses three key redundancies: (1) the redundant processing of a large library of function descriptions for every request; (2) the redundant use of a large, slow model to generate an entire, often predictable, token sequence; and (3) the redundant generation of fixed, boilerplate parameter syntax. We introduce HyFunc, a novel framework that systematically eliminates these inefficiencies. HyFunc employs a hybrid-model cascade where a large model distills user intent into a single ''soft token.'' This token guides a lightweight retriever to select relevant functions and directs a smaller, prefix-tuned model to generate the final call, thus avoiding redundant context processing and full-sequence generation by the large model. To eliminate syntactic redundancy, our ''dynamic templating'' technique injects boilerplate parameter syntax on-the-fly within an extended vLLM engine. To avoid potential limitations in generalization, we evaluate HyFunc on an unseen benchmark dataset, BFCL. Experimental results demonstrate that HyFunc achieves an excellent balance between efficiency and performance. It achieves an inference latency of 0.828 seconds, outperforming all baseline models, and reaches a performance of 80.1%, surpassing all models with a comparable parameter scale. These results suggest that HyFunc offers a more efficient paradigm for agentic AI. Our code is publicly available at https://github.com/MrBlankness/HyFunc.",
+        "identifiers": [
+          "SemanticScholar:89cbd97c351c414acccd29237376faa902b796d6"
+        ],
+        "semantic_scholar_id": "89cbd97c351c414acccd29237376faa902b796d6",
+        "canonical_id": "arXiv:2602.13665",
+        "arxiv_id": "2602.13665",
+        "doi": "10.1145/3770854.3780283",
+        "authors": [
+          "Wei-Bin Liao",
+          "Jian-Guang Lou",
+          "Hao Xiong"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 277,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.08065",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.08065",
+        "id:SemanticScholar:c302150751e13ef36419bbcbbe1f91fcb1c56008",
+        "id:arXiv:2603.08065",
+        "title:deterministic differentiable structured pruning for large language models",
+        "url:https://arxiv.org/abs/2603.08065"
+      ],
+      "record": {
+        "title": "Deterministic Differentiable Structured Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2603.08065",
+        "year": 2026,
+        "published": "2026-03-09",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Structured pruning reduces LLM inference cost by removing low-importance architectural components. This can be viewed as learning a multiplicative gate for each component under an l0 sparsity constraint. Due to the discreteness of the l0 norm, prior work typically adopts stochastic hard-concrete relaxations to enable differentiable optimization; however, this stochasticity can introduce a train--test mismatch when sampled masks are discretized for deployment and restricts masks to a bounded, near-binary range. To address this, we propose Deterministic Differentiable Pruning (DDP), a mask-only optimization method that eliminates stochasticity by directly optimizing a deterministic soft surrogate of the discrete l0 objective. Compared with prior approaches, DDP offers greater expressiveness, reduced train--test mismatch, and faster convergence. We apply our method to several dense and MoE models, including Qwen3-32B and Qwen3-30B-A3B, achieving a performance loss as small as 1% on downstream tasks while outperforming previous methods at 20% sparsity. We further demonstrate end-to-end inference speedups in realistic deployment settings with vLLM.",
+        "identifiers": [
+          "SemanticScholar:c302150751e13ef36419bbcbbe1f91fcb1c56008"
+        ],
+        "semantic_scholar_id": "c302150751e13ef36419bbcbbe1f91fcb1c56008",
+        "canonical_id": "arXiv:2603.08065",
+        "arxiv_id": "2603.08065",
+        "doi": "10.48550/arXiv.2603.08065",
+        "authors": [
+          "Wei-Yu Huang",
+          "Peng-Le Zhang",
+          "Xiaolu Zhang",
+          "Jun Zhou",
+          "Jun Zhu",
+          "Jian-Fei Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 254,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.17842",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.17842",
+        "id:SemanticScholar:767351320e68f4eb61957e767daad9ca4175ef0d",
+        "id:arXiv:2605.17842",
+        "title:snlp layerparallel inference via structured newton corrections",
+        "url:https://arxiv.org/abs/2605.17842"
+      ],
+      "record": {
+        "title": "SNLP: Layer-Parallel Inference via Structured Newton Corrections",
+        "source_url": "https://arxiv.org/abs/2605.17842",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive language models execute Transformer layers sequentially, creating a latency bottleneck that is not removed by conventional tensor or pipeline parallelism. We study whether this layerwise dependency can be relaxed by treating the hidden-state trace across layers as the solution of a nonlinear residual equation and solving it with parallel Newton-style updates. While this view is principled, exact Newton corrections require expensive Jacobian-vector products and naive fixed-point iterations are unstable on trained Transformers. We introduce Structured Newton Layer Parallelism (SNLP), a training and inference framework that replaces exact layer Jacobians with cheap architecture-induced surrogate dynamics. In residual Transformers, this yields Identity Newton (IDN), where the correction reduces to a prefix-sum-like update; in mHC-style architectures, HC Newton (HCN) uses the model's residual mixing matrix. We also study SNLP-aware training, including pretraining regularization and direct SNLP-forward SFT. Experiments on Nanochat-scale Transformers show that SNLP exposes a practical speed-quality frontier: on 0.5B models, it reaches up to 2.58x wall-clock speedup, and a less aggressive configuration reaches 1.40x speedup without increasing PPL. The useful tradeoff comes from the biased finite-iteration computation induced by IDN/HCN rather than exact recovery of the sequential trace. We further show that SNLP-forward SFT can preserve downstream task accuracy, and that SNLP can serve as a drafter for self-speculative decoding while a sequential verifier preserves output correctness.",
+        "identifiers": [
+          "SemanticScholar:767351320e68f4eb61957e767daad9ca4175ef0d"
+        ],
+        "semantic_scholar_id": "767351320e68f4eb61957e767daad9ca4175ef0d",
+        "canonical_id": "arXiv:2605.17842",
+        "arxiv_id": "2605.17842",
+        "doi": "10.48550/arXiv.2605.17842",
+        "authors": [
+          "Li-Gong Han",
+          "Kai Xu",
+          "Hao Wang",
+          "Akash Srivastava"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27435",
+      "identity_tokens": [
+        "id:DOI:10.1109/aicas69579.2026.11762122",
+        "id:SemanticScholar:46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee",
+        "id:arXiv:2605.27435",
+        "title:when npus are not always faster a stagelevel analysis of mobile llm inference",
+        "url:https://arxiv.org/abs/2605.27435"
+      ],
+      "record": {
+        "title": "When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference",
+        "source_url": "https://arxiv.org/abs/2605.27435",
+        "year": 2026,
+        "published": "2026-05-22",
+        "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) on mobile devices increasingly relies on heterogeneous execution, yet no prior study has systematically characterized NPU effectiveness at the operator and pipeline level. We present the first stage-aware, multi-level benchmarking study of mobile LLM inference on a CPU–NPU heterogeneous SoC. We introduce OPMASK-based controlled pipeline decomposition methodology that isolates communication, quantization, and computation overheads within the NPU execution path. Our results reveal a counter-intuitive stage-level performance reversal: CPUs outperform NPUs in the compute-intensive Prefill stage (up to 1.6x), while NPUs provide only limited acceleration in the memory-bound Decode stage (1.05–1.2x). We further show that scheduling overhead and cross-backend fallback reduce the practical benefits of NPU offloading. For the energy trend, increasing NPU offloading leads to higher energy consumption (up to 51%). Based on these findings, we derive design guidelines for NPU architects targeting on-device LLM inference.",
+        "identifiers": [
+          "SemanticScholar:46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee"
+        ],
+        "semantic_scholar_id": "46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee",
+        "canonical_id": "arXiv:2605.27435",
+        "arxiv_id": "2605.27435",
+        "doi": "10.1109/AICAS69579.2026.11762122",
+        "authors": [
+          "Pu-Hao Li",
+          "Jia-Wen Qi",
+          "Qin-Yu Chen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 180,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.22050",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.22050",
+        "id:SemanticScholar:63646da8eeff97738608636aecde27498b61bb39",
+        "id:arXiv:2604.22050",
+        "title:layerboost layeraware attention reduction for efficient llms",
+        "url:https://arxiv.org/abs/2604.22050"
+      ],
+      "record": {
+        "title": "LayerBoost: Layer-Aware Attention Reduction for Efficient LLMs",
+        "source_url": "https://arxiv.org/abs/2604.22050",
+        "year": 2026,
+        "published": "2026-04-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers are mostly relying on softmax attention, which introduces quadratic complexity with respect to sequence length and remains a major bottleneck for efficient inference. Prior work on linear or hybrid attention typically replaces softmax attention uniformly across all layers, often leading to significant performance degradation or requiring extensive retraining to recover model quality. This work proposes LayerBoost, a layer-aware attention reduction method that selectively modifies the attention mechanism based on the sensitivity of individual transformer layers. It first performs a systematic sensitivity analysis on a pretrained model to identify layers that are critical for maintaining performance. Guided by this analysis, three distinct strategies can be applied: retaining standard softmax attention in highly sensitive layers, replacing it with linear sliding window attention in moderately sensitive layers, and removing attention entirely in layers that exhibit low sensitivity. To recover performance after these architectural modifications, we introduce a lightweight distillation-based healing phase requiring only 10M additional training tokens. LayerBoost reduces inference latency and improves throughput by up to 68% at high concurrency, while maintaining competitive model quality. It matches base model performance on several benchmarks, exhibits only minor degradations on others, and significantly outperforms state-of-the-art attention linearization methods. These efficiency gains make our method particularly well-suited for high-concurrency serving and hardware-constrained deployment scenarios, where inference cost and memory footprint are critical bottlenecks.",
+        "identifiers": [
+          "SemanticScholar:63646da8eeff97738608636aecde27498b61bb39"
+        ],
+        "semantic_scholar_id": "63646da8eeff97738608636aecde27498b61bb39",
+        "canonical_id": "arXiv:2604.22050",
+        "arxiv_id": "2604.22050",
+        "doi": "10.48550/arXiv.2604.22050",
+        "authors": [
+          "Mohamed Ali Souibgui",
+          "Jan Fostier",
+          "R. Abadía-Heredia",
+          "Bohdan Denysenko",
+          "Christian Marschke",
+          "Igor Peric"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 209,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.04032",
+      "identity_tokens": [
+        "id:SemanticScholar:9805caff04c195a5540b7550e40855304226e4f2",
+        "id:arXiv:2611.04032",
+        "title:rocm inferasim cut llm serving trial costs and deploy the best configuration",
+        "url:https://arxiv.org/abs/2611.04032"
+      ],
+      "record": {
+        "title": "ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration",
+        "source_url": "https://arxiv.org/abs/2611.04032",
+        "year": 2026,
+        "published": "2026-11-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving an LLM efficiently depends on the engine, how the model is split across GPUs, precision, scheduler settings, speculative decoding, KV-cache management, and prefill-decode disaggregation. The best configuration depends on the model, hardware, workload, and objective. Operators usually find it by trial and error. Exhaustively measuring the candidates in our study would take about 25,000 GPU-hours. ROCm InferaSim predicts serving performance from a few short measurements. Choices such as batch size, prompt length, and GPU count change the amount of work per GPU without changing the kernels. ROCm InferaSim benchmarks each distinct set of kernels once, on at most one node. We call this measurement an anchor. Analytical laws carry that anchor to other deployments that run the same kernels. For multi-node deployments, ROCm InferaSim reduces the configuration to a single-node equivalent, measures it, and scales the result analytically. A simulator replays multi-turn traffic, and a tuning agent searches configurations using the predictions. On AMD Instinct MI355X GPUs with vLLM, SGLang, and ATOM, 11 anchors took 9.1 GPU-hours, against 204 GPU-hours to measure the 226 fixed-length configurations they cover. On 172 configurations, time per output token has 8.1% median error. On a multi-turn coding workload, throughput is within 8%. For 159 disaggregated deployments, none used as an anchor, throughput is within 5.5%. A five-candidate short list contains a deployment within 12% of the best feasible pairing of model and latency target.",
+        "identifiers": [
+          "SemanticScholar:9805caff04c195a5540b7550e40855304226e4f2"
+        ],
+        "semantic_scholar_id": "9805caff04c195a5540b7550e40855304226e4f2",
+        "canonical_id": "arXiv:2611.04032",
+        "arxiv_id": "2611.04032",
+        "authors": [
+          "Anshu Raina",
+          "Yao Fu",
+          "Jie-Jing Zhang",
+          "Peyman Razaghi",
+          "Shiksha Patel",
+          "Ravi Gupta",
+          "Deval Shah",
+          "Adeem Jassani",
+          "Subhajit Dutta Chowdhury",
+          "Lorri Rao",
+          "Kailash Gogineni",
+          "Zhen-Yu Gu",
+          "Onil Gunawardana",
+          "Emad Barsoum"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.16283",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.16283",
+        "id:SemanticScholar:62051926adbdb23011931c13f0c5e5f6dd1c8ce6",
+        "id:arXiv:2405.16283",
+        "title:turnip a nondeterministic gpu runtime with cpu ram offload",
+        "url:https://arxiv.org/abs/2405.16283"
+      ],
+      "record": {
+        "title": "TURNIP: A \"Nondeterministic\" GPU Runtime with CPU RAM Offload",
+        "source_url": "https://arxiv.org/abs/2405.16283",
+        "year": 2024,
+        "published": "2024-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "An obvious way to alleviate memory difficulties in GPU-based AI computing is via CPU offload, where data are moved between GPU and CPU RAM, so inexpensive CPU RAM is used to increase the amount of storage available. While CPU offload is an obvious idea, it can greatly slow down a computation, due to the relatively slow transfer rate between CPU RAM and GPU RAM. Thus, any system for CPU offload needs to ensure that when such a transfer needs to happen, no computation is blocked waiting for the transfer to finish. One of the key challenges when using CPU offload is that memory transfers introduce nondeterminacy into the system: it is not possible to know before runtime when the transfers will finish, and hence what is the best order of operations to run to ensure there is no blocking. In this paper, we describe TURNIP, which is a system for running AI computations using CPU offload. The key innovation in TURNIP is the compilation of the AI computation into a dependency graph that gives the TURNIP runtime freedom to run operations such as GPU kernel calls in many different orders; at runtime, TURNIP chooses the best order in response to real-time events.",
+        "identifiers": [
+          "SemanticScholar:62051926adbdb23011931c13f0c5e5f6dd1c8ce6"
+        ],
+        "semantic_scholar_id": "62051926adbdb23011931c13f0c5e5f6dd1c8ce6",
+        "canonical_id": "arXiv:2405.16283",
+        "arxiv_id": "2405.16283",
+        "doi": "10.48550/arXiv.2405.16283",
+        "authors": [
+          "Zhi-Min Ding",
+          "Jiawen Yao",
+          "Brianna Barrow",
+          "Tania Lorido Botran",
+          "C. Jermaine",
+          "Yu-Xin Tang",
+          "Jie-Hui Li",
+          "Xinyu Yao",
+          "S. Abdelghafar",
+          "Daniel Bourgeois"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 907,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d69ff00837fb0adf7d5c1dd1e89a1d2c95064756f29c03d5fc30277edd05c8f5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
