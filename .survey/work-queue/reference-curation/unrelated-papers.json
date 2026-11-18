@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T08:27:46+00:00",
+  "updated_at": "2026-11-18T08:47:47+00:00",
   "record_count": 12847,
   "records": {
     "arXiv:2303.08774": {
@@ -182474,9 +182474,9 @@
       "identity_tokens": [
         "arXiv:2405.18137"
       ],
-      "reason": "LLM量子化の悪用に関するセキュリティ研究。良性に見える全精度モデルが量子化後に有害化する3段階の攻撃枠組みを示すもので、量子化は攻撃の媒体として扱われており、推論効率化の技術や機構の提案ではない。対象外。",
+      "reason": "量子化されたモデルにのみ悪意ある挙動を残すセキュリティ攻撃を扱う。悪性モデルのfine-tuning、同一量子化結果へ写る重み制約の算出、射影勾配降下によるfull-precision版の挙動除去という三段階であり、量子化の推論性能・メモリ・カーネル改善手法を提案していないため本サーベイの推論システム技術対象外。",
       "first_checked_at": "2026-11-15T21:43:10+00:00",
-      "last_checked_at": "2026-11-15T21:43:10+00:00",
+      "last_checked_at": "2026-11-18T08:47:46+00:00",
       "linked_from": [
         "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
         "Weight Quantization / Compression",
@@ -183036,20 +183036,6 @@
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
       "title": "State-space models are accurate and efficient neural operators for dynamical systems"
-    },
-    "arXiv:2410.06672": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2410.06672",
-      "identity_tokens": [
-        "arXiv:2410.06672"
-      ],
-      "reason": "言語モデル間の機構的類似性の研究。TransformerとMambaの解釈可能な特徴や誘導回路の類似を疎自己符号化器で調べる解釈可能性の研究。推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:12:09+00:00",
-      "last_checked_at": "2026-11-18T06:12:09+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures"
     },
     "arXiv:2106.10207": {
       "classification": "unrelated",
@@ -184430,20 +184416,6 @@
       ],
       "title": "WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip"
     },
-    "arXiv:2509.04226": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2509.04226",
-      "identity_tokens": [
-        "arXiv:2509.04226"
-      ],
-      "reason": "入力潜在状態による長距離統合状態空間モデルLISM。状態空間モデルの記憶の呪いへの対処。対象はSSMのアーキテクチャであり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:12+00:00",
-      "last_checked_at": "2026-11-18T08:08:12+00:00",
-      "linked_from": [
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "LISM: Long-range Integrative State space Models via Input-Latent State Interactions"
-    },
     "arXiv:2509.24416": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2509.24416",
@@ -184981,6 +184953,32 @@
         "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
       ],
       "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories"
+    },
+    "arXiv:2610.05815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05815",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2610.05815",
+        "arXiv:2610.05815"
+      ],
+      "reason": "一次abstractは連続言語フローの固定長推論領域・パディング監督・分離したdenoising clockによる推論正答率改善を扱う。Deep ProsQAで正答率73.0%から87.0%を報告するが、LLMサービング、推論メモリ、スループット、レイテンシ、カーネル等のシステム性能への直接的貢献は示されず、本サーベイの推論システム対象外。",
+      "first_checked_at": "2026-11-18T08:47:43+00:00",
+      "last_checked_at": "2026-11-18T08:47:43+00:00",
+      "linked_from": [],
+      "title": "Plan Canvas: Fixed Reasoning Regions for Continuous Language Flows"
+    },
+    "arXiv:2611.03157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2611.03157",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2611.03157",
+        "arXiv:2611.03157"
+      ],
+      "reason": "一次abstractはエージェント世代を跨ぐ知識層の発見・内在化・利用という研究構想を提唱し、知識基盤モデルや推論による知識統合を議論する。サービング実装、KV/メモリ管理、推論高速化、分散処理等の具体的なシステム手法・測定結果がなく、推論システムサーベイの対象外。",
+      "first_checked_at": "2026-11-18T08:47:44+00:00",
+      "last_checked_at": "2026-11-18T08:47:44+00:00",
+      "linked_from": [],
+      "title": "Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations"
     }
   }
 }

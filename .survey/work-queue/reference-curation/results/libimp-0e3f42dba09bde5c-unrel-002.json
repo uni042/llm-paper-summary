@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e3f42dba09bde5c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2611.03157",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2611.03157",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2611.03157",
+      "arXiv:2611.03157"
+    ],
+    "reason": "一次abstractはエージェント世代を跨ぐ知識層の発見・内在化・利用という研究構想を提唱し、知識基盤モデルや推論による知識統合を議論する。サービング実装、KV/メモリ管理、推論高速化、分散処理等の具体的なシステム手法・測定結果がなく、推論システムサーベイの対象外。",
+    "first_checked_at": "2026-11-18T08:47:44+00:00",
+    "last_checked_at": "2026-11-18T08:47:44+00:00",
+    "linked_from": [],
+    "title": "Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations"
+  },
+  "processed_at": "2026-11-18T08:47:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e3f42dba09b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e3f42dba09bde5c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.05815",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.05815",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2610.05815",
+      "arXiv:2610.05815"
+    ],
+    "reason": "一次abstractは連続言語フローの固定長推論領域・パディング監督・分離したdenoising clockによる推論正答率改善を扱う。Deep ProsQAで正答率73.0%から87.0%を報告するが、LLMサービング、推論メモリ、スループット、レイテンシ、カーネル等のシステム性能への直接的貢献は示されず、本サーベイの推論システム対象外。",
+    "first_checked_at": "2026-11-18T08:47:43+00:00",
+    "last_checked_at": "2026-11-18T08:47:43+00:00",
+    "linked_from": [],
+    "title": "Plan Canvas: Fixed Reasoning Regions for Continuous Language Flows"
+  },
+  "processed_at": "2026-11-18T08:47:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e3f42dba09b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

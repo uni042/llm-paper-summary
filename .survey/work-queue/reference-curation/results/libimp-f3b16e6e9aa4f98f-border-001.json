@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f3b16e6e9aa4f98f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.23052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.23052",
+    "identity_tokens": [
+      "arXiv:2510.23052"
+    ],
+    "reason": "head間で共有射影を通じて相互作用させる注意構造。6.1B MoEで1T token学習評価。直接の推論高速化ではないがattention設計の効率・性能トレードオフの参考としてborderline。",
+    "first_checked_at": "2026-11-18T08:08:15+00:00",
+    "last_checked_at": "2026-11-18T08:47:48+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Knocking-Heads Attention"
+  },
+  "processed_at": "2026-11-18T08:47:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f3b16e6e9aa4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

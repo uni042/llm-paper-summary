@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T08:27:45+00:00",
-  "record_count": 6081,
+  "updated_at": "2026-11-18T08:47:48+00:00",
+  "record_count": 6083,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86294,7 +86294,7 @@
       ],
       "reason": "CPU/GPU initiated RDMAを通信library非依存でoperation単位に追跡するSigmaTraceを提案。一次要旨はNCCL 128GPUで1.3% overhead、RCCL 1024GPUで2%未満、MoE inferenceでnode間traffic 2.13倍の偏りを検出したと報告。MoE推論通信の分析に有用だが主要成果は汎用RDMA profilingでLLM固有のschedulerやthroughput改善を提示していないためborderline。",
       "first_checked_at": "2026-11-02T05:57:35+00:00",
-      "last_checked_at": "2026-11-02T05:57:35+00:00",
+      "last_checked_at": "2026-11-18T08:47:45+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SigmaTrace: Library-Agnostic Observability for CPU/GPU-Initiated RDMA Communication"
@@ -86309,7 +86309,7 @@
       ],
       "reason": "database queryのpredicateとmetadataから推論前にTransformer FFN sliceを選ぶQCATSを提案し、offline expert構築、query単位routing、CPU/GPU非同期pipelineとbatchingを組み合わせる。一次要旨はBERT-base/Qwen-0.6Bの4予測query workloadでlatency最大4.42倍削減と報告。推論runtimeに関係するが対象はDB内predictive queryで自回帰LLM servingではないためborderline。",
       "first_checked_at": "2026-11-02T05:57:35+00:00",
-      "last_checked_at": "2026-11-02T05:57:35+00:00",
+      "last_checked_at": "2026-11-18T08:47:45+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing"
@@ -86324,7 +86324,7 @@
       ],
       "reason": "Android音声agentでASRの部分仮説からtool callを先読みして音声入力中に実行し、結果をcacheしてLLM promptへ挿入する。自己訂正時はrule-based検証で誤結果を除外する。一次要旨は実機のfirst-audio中央値を5.79秒から4.60秒へ短縮と報告。agent全体の応答遅延には寄与するがLLM自体の推論・KV/weight計算は変更しないためborderline。",
       "first_checked_at": "2026-11-02T05:57:36+00:00",
-      "last_checked_at": "2026-11-02T05:57:36+00:00",
+      "last_checked_at": "2026-11-18T08:47:46+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Hiding Tool Latency in On-Device Cascaded Voice Agent through Speculative Execution"
@@ -86419,7 +86419,7 @@
       ],
       "reason": "構造化行列ミキサと双方向SSMの理論・非因果タスクを主対象とする。準分離行列のサブ二次計算は関連するが、要旨での実証はGLUE・ImageNetであり、自己回帰LLM推論サービングへの直接改善は未確認。",
       "first_checked_at": "2026-11-07T21:03:43+00:00",
-      "last_checked_at": "2026-11-07T21:03:43+00:00",
+      "last_checked_at": "2026-11-18T08:47:46+00:00",
       "linked_from": [
         "worker-worklist-00 discovery rank 38"
       ],
@@ -86541,11 +86541,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2604.10946",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.10946",
         "arXiv:2604.10946"
       ],
-      "reason": "非定常回帰のin-context learningにおけるgated linear attentionの理論解析。GLAが過去入力の寄与を適応的に減衰させるrecency biasを実装し、通常のlinear attentionより学習・テスト誤差が低いことを理論と実験で検証。効率的attention機構に関連するが、主眼は推論システムの速度・メモリ効率ではなく学習理論であるためborderline。",
+      "reason": "非定常回帰でGated Linear Attentionの学習可能な近時バイアスと適応性を理論解析。LLMの推論効率・速度を直接評価する研究ではないためborderline。",
       "first_checked_at": "2026-11-13T21:56:57+00:00",
-      "last_checked_at": "2026-11-13T21:56:57+00:00",
+      "last_checked_at": "2026-11-18T08:47:44+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Learning to Adapt: In-Context Learning Beyond Stationarity"
@@ -87110,11 +87111,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2602.08864",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.08864",
         "arXiv:2602.08864"
       ],
-      "reason": "循環Transformerの動的計算配分の分析研究。トークン難易度を制御できる合成課題の評価パラダイムと、計算配分判断だけを分離できる統一枠組みANIRAで、トークン単位の適応計算が本当に複雑さへ対応しているかを検証する。適応計算への知見はあるが、提示は診断・分析の枠組みでありシステム機構としては薄い。境界。",
+      "reason": "一次abstractでtoken単位の可変深度計算をANIRA recurrent Transformerで評価し、計算割当が難易度に沿う場合と未見入力長への外挿失敗を検証。推論計算配分と直接関連するが主貢献は制御された解析であり、実サービングの速度/費用削減が確認できないためborderline。",
       "first_checked_at": "2026-11-15T21:43:05+00:00",
-      "last_checked_at": "2026-11-15T21:43:05+00:00",
+      "last_checked_at": "2026-11-18T08:47:47+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
         "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
@@ -87988,14 +87990,15 @@
       "identity_tokens": [
         "arXiv:2606.06532"
       ],
-      "reason": "コーデック配慮型のエージェント長動画理解GOPAgen。コーデック由来のGOPと動きベクトルを検索パイプラインへ組み込み、型つきメモリページとGOP木で証拠を段階的に取り出す。推論処理の無駄を減らす工夫はあるが、貢献の中心は動画質問応答のパイプライン設計であり境界。",
+      "reason": "動画codecのGOP単位motion agent、構造化ページメモリと粗密検索を使う長動画QA手法。メモリ構造は関連するがLLM推論カーネルやKVキャッシュ効率への直接的な実証が要旨にない。",
       "first_checked_at": "2026-11-18T03:45:06+00:00",
-      "last_checked_at": "2026-11-18T03:45:06+00:00",
+      "last_checked_at": "2026-11-18T08:47:47+00:00",
       "linked_from": [
-        "Inference / Multimodal Long-Context Memory Compression"
+        "Inference / Multimodal Long-Context Memory Compression",
+        "worker-worklist-00 discovery rank 87"
       ],
       "borderline_recheck_count": 0,
-      "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory"
+      "title": "GOPAgen: Motion-Aware and Efficient Agentic Long-Video Understanding with Structural Memory and Hierarchical Reasoning"
     },
     "arXiv:2606.18042": {
       "classification": "borderline",
@@ -88244,9 +88247,9 @@
       "identity_tokens": [
         "arXiv:2603.18599"
       ],
-      "reason": "投機的ヤコビデコードの高速化SJD-PAC。テキスト画像合成向けの下書きなし投機的デコードで、高エントロピー領域の受理率の低さへ、先行下書きと拒否後の継続検証で対処する。投機機構ではあるが対象は画像生成のデコードであり境界。",
+      "reason": "自己回帰のテキスト画像生成を対象とする、別のドラフトモデルを不要とする投機的Jacobi復号の高速化。高エントロピー領域での先行ドラフト生成と、棄却後も検証を継続する適応機構により平均受理長を改善し、著者は画像品質を維持した3.8倍の高速化を報告。言語モデルの投機的復号と機構が近いが画像生成対象であるため境界的関連として分類。",
       "first_checked_at": "2026-11-18T06:11:58+00:00",
-      "last_checked_at": "2026-11-18T06:11:58+00:00",
+      "last_checked_at": "2026-11-18T08:47:48+00:00",
       "linked_from": [
         "Speculative Decoding",
         "投機的復号 / 無損失復号高速化"
@@ -93942,9 +93945,9 @@
       "identity_tokens": [
         "arXiv:2510.23052"
       ],
-      "reason": "ノッキングヘッズ注意。注意ヘッド同士が互いにノックして相互作用する注意機構。推論の表現力に関わるが、モデルアーキテクチャの提案であり境界。",
+      "reason": "head間で共有射影を通じて相互作用させる注意構造。6.1B MoEで1T token学習評価。直接の推論高速化ではないがattention設計の効率・性能トレードオフの参考としてborderline。",
       "first_checked_at": "2026-11-18T08:08:15+00:00",
-      "last_checked_at": "2026-11-18T08:08:15+00:00",
+      "last_checked_at": "2026-11-18T08:47:48+00:00",
       "linked_from": [
         "07-kv-cache-optimization-compression",
         "KV cache memory management / streaming inference / attention sinks / length extrapolation",
@@ -94363,24 +94366,6 @@
       "borderline_recheck_count": 0,
       "title": "Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation"
     },
-    "arXiv:2610.05815": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.05815",
-      "identity_tokens": [
-        "arXiv:2610.05815"
-      ],
-      "reason": "拡散型言語モデル（continuous language flows）で推論トレース領域を固定容量に分けるPlan Canvasの提案。推論パラダイム上の工夫ではあるが、評価は小規模グラフベンチマークの精度のみで、効率・システム面の検証がないため境界とする。",
-      "first_checked_at": "2026-11-18T08:08:26+00:00",
-      "last_checked_at": "2026-11-18T08:08:26+00:00",
-      "linked_from": [
-        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
-        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
-        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
-        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Plan Canvas: Fixed Reasoning Regions for Continuous Language Flows"
-    },
     "arXiv:2510.06750": {
       "classification": "borderline",
       "canonical_id": "arXiv:2510.06750",
@@ -94421,11 +94406,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2511.02681",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.02681",
         "arXiv:2511.02681"
       ],
-      "reason": "最適特異ダメージ：低保存領域での効率的LLM推論。微調整が一部のパラメータにしか影響しない性質を使い、微調整済みモデルの保存を効率化する。配備の保存効率ではあるが、差分保存の研究であり境界。",
+      "reason": "一次abstractでは微調整後の低ランクかつ疎なパラメータ更新を選択的に圧縮し、同一ストレージ予算で精度を改善する。主評価は複数タスクのfine-tuned modelの保存効率と精度で、推論レイテンシ、KV、servingの直接評価は確認できないため境界的。",
       "first_checked_at": "2026-11-18T08:08:30+00:00",
-      "last_checked_at": "2026-11-18T08:08:30+00:00",
+      "last_checked_at": "2026-11-18T08:47:47+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
         "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
@@ -94899,6 +94885,46 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models"
+    },
+    "arXiv:2604.18348": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18348",
+      "identity_tokens": [
+        "arXiv:2604.18348"
+      ],
+      "reason": "queryの角度類似度とkeyのユークリッド類似度に基づくクラスタリングで動画拡散Transformerの注意を疎化する。推論カーネル効率には関連するが、実験対象が動画生成DiTでありLLM推論への適用は一次要旨に示されない。",
+      "first_checked_at": "2026-11-18T08:47:44+00:00",
+      "last_checked_at": "2026-11-18T08:47:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation"
+    },
+    "arXiv:2509.04226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.04226",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.04226",
+        "arXiv:2509.04226"
+      ],
+      "reason": "状態空間モデルの安定更新に伴う長期記憶減衰を、時折不安定な再帰更新と入力・潜在状態の動的相互作用で緩和する。WikiText-103やLRA Retrievalで評価し、言語タスクの性能変動係数を平均33.3%低減と報告。線形時間系列モデルの設計に関連するが、LLM推論の速度・メモリ改善の直接測定が要旨にないためborderline。",
+      "first_checked_at": "2026-11-18T08:47:45+00:00",
+      "last_checked_at": "2026-11-18T08:47:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LISM: Long-range Integrative State space Models via Input-Latent State Interactions"
+    },
+    "arXiv:2410.06672": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.06672",
+      "identity_tokens": [
+        "arXiv:2410.06672"
+      ],
+      "reason": "TransformerとMambaの特徴・induction circuitの機構的類似性をSAEで分析する。SSMの動作理解には関係するが、推論時間・メモリ・ハードウェア効率の改善手法やシステム評価が主目的ではないためborderline。",
+      "first_checked_at": "2026-11-18T08:47:47+00:00",
+      "last_checked_at": "2026-11-18T08:47:47+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures"
     }
   }
 }

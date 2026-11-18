@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d68afe42587455b5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.18137",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.18137",
+    "identity_tokens": [
+      "arXiv:2405.18137"
+    ],
+    "reason": "量子化されたモデルにのみ悪意ある挙動を残すセキュリティ攻撃を扱う。悪性モデルのfine-tuning、同一量子化結果へ写る重み制約の算出、射影勾配降下によるfull-precision版の挙動除去という三段階であり、量子化の推論性能・メモリ・カーネル改善手法を提案していないため本サーベイの推論システム技術対象外。",
+    "first_checked_at": "2026-11-15T21:43:10+00:00",
+    "last_checked_at": "2026-11-18T08:47:46+00:00",
+    "linked_from": [
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+    ],
+    "title": "Exploiting LLM Quantization"
+  },
+  "processed_at": "2026-11-18T08:47:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d68afe425874",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

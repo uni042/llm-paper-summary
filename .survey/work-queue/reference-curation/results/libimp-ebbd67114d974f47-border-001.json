@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebbd67114d974f47-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.02681",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.02681",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.02681",
+      "arXiv:2511.02681"
+    ],
+    "reason": "一次abstractでは微調整後の低ランクかつ疎なパラメータ更新を選択的に圧縮し、同一ストレージ予算で精度を改善する。主評価は複数タスクのfine-tuned modelの保存効率と精度で、推論レイテンシ、KV、servingの直接評価は確認できないため境界的。",
+    "first_checked_at": "2026-11-18T08:08:30+00:00",
+    "last_checked_at": "2026-11-18T08:47:47+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/99-other-inference-systems/2021-2102.08124-accelerated-sparse-neural-training-a-provable-and-efficient-method-to-fi.md",
+      "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes"
+  },
+  "processed_at": "2026-11-18T08:47:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebbd67114d97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
