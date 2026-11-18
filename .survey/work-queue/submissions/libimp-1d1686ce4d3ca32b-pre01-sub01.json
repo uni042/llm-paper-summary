@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models",
+      "source_url": "https://arxiv.org/abs/2604.13440",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on edge devices faces severe computational and memory constraints, limiting real-time processing and on-device intelligence. Hybrid architectures combining Structured State Space Models (SSMs) with transformer-based LLMs offer a balance of efficiency and performance. Aggressive quantization can drastically cut model size and speed up inference, but its uneven effects on different components require careful management. In this work, we propose a lightweight, backpropagation-free, surrogate-based sensitivity analysis framework to identify hybrid SSM-Transformer components most susceptible to quantization-induced degradation. Relying solely on forward-pass metrics, our method avoids expensive gradient computations and retraining, making it suitable for situations where access to in-domain data is limited due to proprietary restrictions or privacy constraints. We also provide a formal analysis showing that the Kullback-Leibler (KL) divergence metric better captures quantization sensitivity for Language modeling tasks than widely adopted alternatives such as mean squared error (MSE) and signal-to-quantization-noise ratio (SQNR). Through extensive experiments on SSM and hybrid architectures, our ablation studies confirm that KL-based rankings align with observed performance drops and outperform alternative metrics. This framework enables the practical deployment of advanced hybrid models on resource-constrained edge devices with minimal accuracy loss. We further validate our approach with real-world on-device profiling on Intel Lunar Lake hardware, demonstrating that KL-guided mixed-precision achieves near-FP16 perplexity with model sizes and throughput competitive with Uniform INT4 on both CPU and GPU execution modes. Code is available at https://github.com/jasonkongie/kl-ssm-quant.",
+      "identifiers": [
+        "SemanticScholar:3fe9e59ba9e36578180dad4cf2a5819df1c59aa9"
+      ],
+      "semantic_scholar_id": "3fe9e59ba9e36578180dad4cf2a5819df1c59aa9",
+      "canonical_id": "arXiv:2604.13440",
+      "arxiv_id": "2604.13440",
+      "doi": "10.48550/arXiv.2604.13440",
+      "authors": [
+        "Jason Kong",
+        "N. Pandey",
+        "Flavio Ponzina",
+        "T. Šimunić"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化のKLレンズ。前方パスのみ・逆伝播不要の代理感度分析で、SSMとTransformerのハイブリッド構成要素のうち量子化劣化に弱い部分を特定し、混合精度の判断を軽量に行う。推論量子化の計測・分析そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs",
+      "source_url": "https://arxiv.org/abs/2512.05542",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Best-of-$n$ is a widely used test-time scaling approach for LLM inference. Yet despite evidence that LLMs exhibit complementary strengths across tasks, traditionally best-of-$n$ relies on a single model to generate responses. We propose RoBoN (Routed Online Best-of-$n$), a sequential multi-LLM alternative to the prevailing single-model best-of-$n$. Given a suite of models $\\{m_i\\}_{i=1}^M$, RoBoN sequentially routes generations one-by-one across models, based on scores computed using a reward model and an agreement signal on the predicted responses. This online routing requires no additional training, keeps compute parity, and works with any plug-in reward model. Across reasoning benchmarks (MATH500, OlympiadBench, MinervaMath, GSM8K, MMLU), RoBoN consistently outperforms standard best-of-$n$ applied to each individual model for larger $n$, with gains of up to 3.4\\% in absolute accuracy, and also improves over a uniform multi-model portfolio baseline. Our results indicate that diversity across models can be exploited at inference to improve best-of-$n$ performance over any constituent model alone, providing a simple, training-free path to test-time scaling with multiple LLMs.",
+      "identifiers": [
+        "SemanticScholar:56043ee4021297f26c09427e9fe2eaa248fb6e30"
+      ],
+      "semantic_scholar_id": "56043ee4021297f26c09427e9fe2eaa248fb6e30",
+      "canonical_id": "arXiv:2512.05542",
+      "arxiv_id": "2512.05542",
+      "doi": "10.48550/arXiv.2512.05542",
+      "authors": [
+        "Jonathan Geuter",
+        "Gregor Kornhardt"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数LLMへの逐次ルーティングつき最良n選択RoBoN。単一モデルに依存する従来のbest-of-nに対し、報酬モデルと応答間一致の信号で生成をモデル間に逐次振り分け、追加訓練なし・計算量同等で補完的な強みを使う。テスト時スケーリングの推論機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.12618",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) incur significant computational cost from processing numerous vision tokens through all LLM layers. Prior pruning methods operate either before the LLM, limiting generality due to diverse encoder-projector designs or within the LLM using heuristics that are incompatible with FlashAttention. We take a different approach: rather than identifying unimportant tokens, we treat the LLM itself as the optimal guide for compression. Observing that deeper layers naturally transmit vision-to-text information, we introduce attention-driven self-compression, a simple, architecture-agnostic method that progressively reduces vision tokens using only the LLM's attention mechanism. Our method applies uniform token downsampling at selected layers, forming bottlenecks that encourage the model to reorganize and compress information into the remaining tokens. It requires no score computation, auxiliary modules, or attention modification, and remains fully compatible with FlashAttention. Applied to LLaVA-1.5, it reduces FLOPs by $\\sim 56.5 \\%$ while pruning $\\sim 66.7 \\%$ of vision tokens, retaining $\\sim 98.2 \\%$ of the original performance. Across multiple benchmarks, it outperforms prior pruning approaches in both efficiency and accuracy. Crucially, under high compression ratios, our method remains robust while heuristicbased techniques degrade sharply.",
+      "identifiers": [
+        "SemanticScholar:d9c75a3516464a30d87691f77bdb83523927423b"
+      ],
+      "semantic_scholar_id": "d9c75a3516464a30d87691f77bdb83523927423b",
+      "canonical_id": "arXiv:2602.12618",
+      "arxiv_id": "2602.12618",
+      "doi": "10.1109/BigData66926.2025.11402394",
+      "authors": [
+        "Omer Faruk Deniz",
+        "Rui Mao",
+        "Ruochen Li",
+        "Yapeng Tian",
+        "Latifur Khan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 345,
+        "matched_prestigious_venue": null
+      },
+      "reason": "注意駆動の自己圧縮ADSC。視覚トークンをLLMの全層で処理する費用に対し、重要でないトークンを探すのでなくLLM自体を圧縮の案内役とし、深い層が視覚からテキストへ情報を移す性質を使って注意機構だけで段階的に視覚トークンを減らす。FlashAttentionと両立する点も固有。推論のトークン削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+      "source_url": "https://arxiv.org/abs/2605.27494",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+      "identifiers": [
+        "SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91"
+      ],
+      "semantic_scholar_id": "919628398eba1f2a91772d69253fa4db73342c91",
+      "canonical_id": "arXiv:2605.27494",
+      "arxiv_id": "2605.27494",
+      "doi": "10.48550/arXiv.2605.27494",
+      "authors": [
+        "Syed Huma Shah"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "根拠つきキャッシュルーティングGroundedCache。意味的回答キャッシュが、似たプロンプトへの異なる正解や証拠の陳腐化、衝突攻撃に弱い問題に対し、再利用の速さでなく再利用が安全な条件を証拠検証で判断する枠組みを提案する。RAG提供のキャッシュ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction",
+      "source_url": "https://arxiv.org/abs/2602.06527",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling test-time compute with multi-path chain-of-thought improves reasoning accuracy, but its effectiveness depends critically on the exploration-exploitation trade-off. Existing approaches address this trade-off in rigid ways: tree-structured search hard-codes exploration through brittle expansion rules that interfere with post-trained reasoning, while parallel reasoning over-explores redundant hypothesis paths and relies on weak answer selection. Motivated by the observation that the optimal balance is phase-dependent and that correct and incorrect reasoning paths often diverge only at late stages, we reformulate test-time scaling as a dynamic expand-reduce control problem over a pool of hypotheses. We propose HyPER, a training-free online control policy for multi-path decoding in mixture-of-experts models that reallocates computation under a fixed budget using lightweight path statistics. HyPER consists of an online controller that transitions from exploration to exploitation as the hypothesis pool evolves, a token-level refinement mechanism that enables efficient generation-time exploitation without full-path resampling, and a length- and confidence-aware aggregation strategy for reliable answer-time exploitation. Experiments on four mixture-of-experts language models across diverse reasoning benchmarks show that HyPER consistently achieves a superior accuracy-compute trade-off, improving accuracy by 8 to 10 percent while reducing token usage by 25 to 40 percent.",
+      "identifiers": [
+        "SemanticScholar:954dfc684df2753b0d60e3fbab6a1aaa0299e1b6"
+      ],
+      "semantic_scholar_id": "954dfc684df2753b0d60e3fbab6a1aaa0299e1b6",
+      "canonical_id": "arXiv:2602.06527",
+      "arxiv_id": "2602.06527",
+      "doi": "10.48550/arXiv.2602.06527",
+      "authors": [
+        "Sheng-Xuan Qiu",
+        "Hao-Chen Huang",
+        "Shu-Zhang Zhong",
+        "Peng-Fei Zuo",
+        "Meng Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      },
+      "reason": "テスト時多経路推論の探索・活用制御HyPER。木探索の硬い展開規則や並列推論の過剰探索に対し、仮説プールに対する動的な拡大・縮小の制御問題として定式化し、学習不要のオンライン制御で相依存の最適バランスを取る。推論時の計算配分機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1d1686ce4d3c",
+    "round": "libimp-1d1686ce4d3ca32b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1d1686ce4d3ca32b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1d1686ce4d3ca32b-pre01.json",
+    "receipt": "sha256:04ce87012fea044c536f9f1e115bcc6efa1945da63cc12c85ec1972bae34911a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1d1686ce4d3c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

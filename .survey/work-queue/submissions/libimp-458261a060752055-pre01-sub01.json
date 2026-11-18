@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Which Decisions Low-Bit Quantization Breaks, and How to Predict Them",
+      "source_url": "https://arxiv.org/abs/2608.06564",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization saves memory by storing model weights with fewer bits. It can also change model decisions, such as whether to call a tool or which option to choose from a finite set. We study these decision changes in 16 language models from 8 families at 4, 3 and 2 bits, across several post-training quantization settings. Our evaluation covers tool use, safety, general knowledge and social bias, using BFCL, XSTest, MMLU, BoolQ, BBQ and synthetic tasks. The decision margin is the score difference between two possible first tokens, measured before and after quantization. Writing the margin before quantization as $m$ and the margin after quantization as $m'$, we find an approximately linear relationship across decisions: $m'\\approx c m + b$. The slope $c$ is usually below one and becomes smaller as precision falls, so quantization progressively shrinks decision margins. The offset $b$ is the same for every decision of one kind. Quantization therefore does not simply add random noise, and even a strong preference at full precision can flip. Quantization also affects different kinds of decisions to different degrees. Within tool use, whether to call a tool is often more sensitive than which tool to call: on 400 BFCL tasks, three of five models lose more completed calls than correct tool selections at 3-bit round-to-nearest. Under GPTQ and GGUF far fewer whether-to-call decisions flip than under plain rounding, so there is no single 3-bit failure point. The same relationship predicts how often decisions flip. Across 1,082 combinations of models, quantization settings, bit-widths and decision types, we fit the slope, the offset and the spread around the fitted line on half of the decisions and predict the flip rate on the other half. The predicted flip rate differs from the observed flip rate by a median of 1.0 percentage point, while reusing the flip rate of the first half misses by 1.3.",
+      "identifiers": [
+        "SemanticScholar:a2d8520bade7cdca205f2786b3ba61a6c63c1460"
+      ],
+      "semantic_scholar_id": "a2d8520bade7cdca205f2786b3ba61a6c63c1460",
+      "canonical_id": "arXiv:2608.06564",
+      "arxiv_id": "2608.06564",
+      "doi": "10.48550/arXiv.2608.06564",
+      "authors": [
+        "Ze-Kun Wu",
+        "Swati Dhiman",
+        "A. Koshiyama"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低ビット量子化が壊す判断とその予測の研究。ツール呼出や有限選択肢の判断が量子化でどう変わるかを、16モデル・8系列・4/3/2ビットで評価し、判断マージンの量子化前後の近似線形関係から変化を予測できることを示す。量子化推論の計測・分析そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+      "source_url": "https://arxiv.org/abs/2609.10297",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GUI agents accumulate high-resolution screenshots as the trajectory unfolds, increasing inference latency and memory usage. Training-free visual token pruning can reduce this cost, but cache reuse introduces a fundamental constraint. Once tokens are discarded, the corresponding visual evidence cannot be recovered without re-encoding. Pruning therefore becomes an \\textit{irreversible admission decision} that must remain useful for unknown future targets while preserving coverage of operable regions under tight budgets. To address these challenges, we propose \\textbf{\\method{}}, a training-free framework for \\emph{\\textbf{T}rajectory-\\textbf{r}obust \\textbf{A}dmission and \\textbf{C}overage-aware \\textbf{E}vidence ordering}. Specifically, we combine a query-independent layout-derived interaction prior with instruction relevance and feature novelty to rank visual evidence according to both potential future utility and diversity. Then, we reserve part of the budget for native visual tokens distributed across the screen, repairing missing spatial coverage without breaking the ordering. Together, these mechanisms produce a nested token order, allowing retained visual evidence to shrink monotonically across budgets while remaining reusable throughout the trajectory. Finally, our monotone KV contraction incrementally contracts retired frames into compact session state, avoiding repeated visual encoding or pruning. Extensive experiments across six GUI benchmarks and diverse models verify the effectiveness of our proposed \\method{} under tight budgets. The source code will be released.",
+      "identifiers": [
+        "SemanticScholar:2a8d0326c065034809de115743ce83492ec4daae"
+      ],
+      "semantic_scholar_id": "2a8d0326c065034809de115743ce83492ec4daae",
+      "canonical_id": "arXiv:2609.10297",
+      "arxiv_id": "2609.10297",
+      "doi": "10.48550/arXiv.2609.10297",
+      "authors": [
+        "Yu-Hao Wang",
+        "Mu Qiao",
+        "Xin-Dong Zhang",
+        "Yun-Zhi Zhuge",
+        "Lei Zhang",
+        "Hu-Chuan Lu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 70,
+        "matched_prestigious_venue": null
+      },
+      "reason": "軌跡頑健なアドミッションTRACE。GUIエージェントの軌跡で溜まる高解像度スクリーンショットに対し、キャッシュ再利用の下では剪定が不可逆なアドミッション判断になる制約を踏まえ、未知の将来目標にも有用で操作可能領域の被覆を保つ証拠順序付けを行う学習不要の枠組み。推論のトークン削減機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SketchSSM: Write to the Full State, Read from a Compact Sketch",
+      "source_url": "https://arxiv.org/abs/2609.33051",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid-attention models replace most softmax attention layers with linear attention, reducing KV-cache growth and enabling larger decode batches where recurrent-state access becomes a major bottleneck. ReplaySSM amortizes state updates by buffering keys and values, but each new query still requires a full-state read even though the state remains unchanged between state updates. We observe that low-rank state-weighted query approximation accurately preserves state-read outputs. Although future queries are unknown, the basis vectors used to approximate them can be fixed offline. Based on this observation, we introduce SketchSSM, which preserves full-state updates while approximating reads. At each state update, SketchSSM reads the full state once to precompute outputs for these basis vectors, storing them in a compact sketch. Each subsequent decode step combines the sketch vectors with query-dependent coefficients to reconstruct the output without a full-state read. Across four Mamba-2-, GDN-, and KDA-based models, SketchSSM at a mean sketch rank of 8 reduces state-access traffic by approximately 10$\\times$ while matching the average accuracy of the FP32 full-state baseline across four decode benchmarks, and preserves recall on four RULER retrieval tasks. At this rank on one NVIDIA B300, linear-attention kernel speedups over the Standard vLLM baseline reach 7.30$\\times$, 5.02$\\times$, and 5.24$\\times$ for Mamba-2, GDN, and KDA, respectively, with up to 2.77$\\times$ higher decode throughput on Nemotron 3 Super.",
+      "identifiers": [
+        "SemanticScholar:07b3d0c344271483e89ec6f7832636d7a8432162"
+      ],
+      "semantic_scholar_id": "07b3d0c344271483e89ec6f7832636d7a8432162",
+      "canonical_id": "arXiv:2609.33051",
+      "arxiv_id": "2609.33051",
+      "doi": "10.48550/arXiv.2609.33051",
+      "authors": [
+        "Omin Kwon",
+        "JoongWon Shin",
+        "Minseo Kim",
+        "K. Keutzer",
+        "Sehoon Kim",
+        "J. Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "完全な状態へ書き込み、コンパクトなスケッチから読むSketchSSM。ハイブリッド注意で循環状態の読みがボトルネックになる問題に対し、状態更新は完全なまま、読み出しだけを低ランクの状態重みつきクエリ近似で置き換え、近似の基底をオフラインで固定する。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
+      "source_url": "https://arxiv.org/abs/2609.38121",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache memory and bandwidth costs grow with context length and batch size, which limits efficient long-context inference. To address this bottleneck, we introduce WUSH-KV for low-bit KV-cache quantization. It adapts WUSH, which constructs a data-aware transform from the second-order statistics of both factors in a matrix product to reduce quantization error. WUSH-KV uses calibration data to construct separate key and value transforms, with the value transform folded into the model weights and the key transform applied after RoPE. The transforms can be paired with clipped quantizers. For one such quantizer, QuEST INT, we show that, under mild assumptions, the WUSH transform is near-optimal. With this quantizer, WUSH-KV reduces layerwise reconstruction error and achieves the lowest end-to-end perplexity among other tested transforms. For end-to-end evaluation, we integrate WUSH-KV into SGLang using OSCAR-style percentile-clipped affine quantization. At 2-bit, WUSH-KV performs comparably to or outperforms the OSCAR transform across all evaluated models and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:fe7c087a88fc59c5147e04981f6336ae1e315095"
+      ],
+      "semantic_scholar_id": "fe7c087a88fc59c5147e04981f6336ae1e315095",
+      "canonical_id": "arXiv:2609.38121",
+      "arxiv_id": "2609.38121",
+      "doi": "10.48550/arXiv.2609.38121",
+      "authors": [
+        "Jiale Chen",
+        "Vage Egiazarian",
+        "Eldar Kurtic",
+        "T. Hoefler",
+        "Martin Jaggi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "データ適応変換つきKVキャッシュ量子化WUSH-KV。行列積の両因子の二階統計からデータ配慮の変換を作るWUSHをKVキャッシュへ適応し、鍵と値で別々の変換を較正データから構築して値変換は重みへ畳み込み、鍵変換はRoPE後に適用する。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash",
+      "source_url": "https://arxiv.org/abs/2610.08378",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving is increasingly dominated by agentic workloads, in which agents and their sub-agents accumulate context as KV cache across many requests, consuming substantial memory. High-bandwidth flash (HBF) is a promising solution, providing an order of magnitude greater capacity at HBM-class read bandwidth, but its finite write endurance is the key limiting factor. Our key insight is that KV cache should be placed across HBM and HBF by its lifetime. Placing shorter-lived data in HBM lets HBM absorb more of an agent run's writes and sends less of them to HBF. As the lifetime of KV cache in agentic serving is dictated by the harness, the program that orchestrates the agents, we analyze its behavior and identify three axes along which lifetime diverges, temporal, structural, and inter-worker. Guided by these observations, we present Lachesis, a lifetime-aware KV cache placement layer between the agent harness and the serving engine. At write time, it places each segment in HBM or HBF according to its lifetime, and frees its blocks once the segment is no longer read. In trace-driven simulation, Lachesis extends HBF lifetime by 1.19-3.13x over HBM-first placement, reaching 3.3-12.2 device-years. Even under continuous 24x7 operation at the full load a tight SLO admits, HBF outlasts its five-year warranty on the multi-agent trace.",
+      "identifiers": [
+        "SemanticScholar:62dc863f1ee3ed5315715d2dc23c0d6232423c95"
+      ],
+      "semantic_scholar_id": "62dc863f1ee3ed5315715d2dc23c0d6232423c95",
+      "canonical_id": "arXiv:2610.08378",
+      "arxiv_id": "2610.08378",
+      "authors": [
+        "Jae-hun Yang",
+        "Jeongmin Lee",
+        "Haneul Park",
+        "Seung Yul Lee",
+        "Nam Sung Kim",
+        "J. Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      },
+      "reason": "寿命配慮型KVキャッシュ配置Lachesis。エージェント提供で溜まるKVキャッシュを、容量が大きく読み帯域も高いが高書込み耐久に限りのある高帯域フラッシュとHBMの間で、キャッシュの寿命に応じて配置し、短命データでHBMに書込みを吸収させる。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-458261a06075",
+    "round": "libimp-458261a060752055-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-458261a060752055-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-458261a060752055-pre01.json",
+    "receipt": "sha256:8f6fe0dfd2cdf6794c496b50dbec5f4c91d13af9aca22275e360453d1ae40b21"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-458261a06075",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge",
+      "source_url": "https://arxiv.org/abs/2506.02847",
+      "year": 2025,
+      "published": "2025-06-03",
+      "venue": "USENIX Annual Technical Conference",
+      "citation_count": 49,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on edge devices is crucial for delivering fast responses and ensuring data privacy. However, the limited storage, weight, and power of edge devices make it difficult to deploy LLM-powered applications. These devices must balance latency requirements with energy consumption and model accuracy. In this paper, we first quantify the challenges of deploying LLMs on off-the-shelf edge devices and then we present CLONE, an in-depth algorithm-hardware co-design at both the model- and system-level that intelligently integrates real-time, energy optimization while maintaining robust generality. In order to maximize the synergistic benefits of these algorithms in always-on and intermediate edge computing settings, we specialize in a 28nm scalable hardware accelerator system. We implement and extensively evaluate CLONE on two off-the-shelf edge platforms. Experiments show that CLONE effectively accelerates the inference process up to 11.92x, and saves energy up to 7.36x, while maintaining high-generation.",
+      "identifiers": [
+        "SemanticScholar:cb45eecc83d97c3a8bf9adaefaa9fdc94d132e89"
+      ],
+      "semantic_scholar_id": "cb45eecc83d97c3a8bf9adaefaa9fdc94d132e89",
+      "canonical_id": "arXiv:2506.02847",
+      "arxiv_id": "2506.02847",
+      "doi": "10.48550/arXiv.2506.02847",
+      "authors": [
+        "Chun-Lin Tian",
+        "Xinpeng Qin",
+        "Ka-Hou Tam",
+        "Li Li",
+        "Zijian Wang",
+        "Yuan-Zhe Zhao",
+        "Ming-Lei Zhang",
+        "Chengzhong Xu"
+      ],
+      "priority": 59,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 49,
+        "citation_count": 49,
+        "total": 59,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 533,
+        "matched_prestigious_venue": "USENIX Annual Technical Conference"
+      },
+      "reason": "エッジ向け遅延配慮推論のアルゴリズム・ハードウェア協調設計CLONE。市販エッジ機器でのLLM配置の課題を定量化した上で、モデル水準とシステム水準の両方で実時間のエネルギ最適化と精度維持を統合する。推論基盤そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d7d417c79510",
+    "round": "libimp-d7d417c79510cd67-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d7d417c79510cd67-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d7d417c79510cd67-pre01.json",
+    "receipt": "sha256:677e3e1bdc5fb973245420fc776eee30d3405ddf8eaa1084ee357afffbf115b3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d7d417c79510",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

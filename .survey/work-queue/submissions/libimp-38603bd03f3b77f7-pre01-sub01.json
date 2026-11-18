@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.19506",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "First-person dynamic spatial reasoning requires models to track continuous motion and precise geometric structure, but the quadratic attention cost of Transformer-based Video-LLMs makes dense visual tokens computationally expensive. Existing token pruning paradigms predominantly rely on discrete static snapshots, failing to preserve the motion and geometric cues essential for reasoning. We propose Event Cascade Pruning (ECP), to our knowledge the first training-free framework that leverages the high-frequency motion cues from event cameras as a continuous event-guided motion prior to guide token selection. ECP combines three stages: Event-Triggered Causal Sampling to anchor motion-informative keyframes, Event-guided Motion Saliency Filtering to suppress event-inactive visual tokens, and Event-Attention Ranking Fusion to calibrate spatial attention with motion-salient dynamics. With 80% visual token reduction, ECP outperforms the full-token baseline (37.62% vs. 36.31%) while achieving 1.89x inference speedup and 52% GFLOPs reduction. We further introduce ESR-Real, the first real-world RGB-event benchmark for first-person spatial reasoning, where ECP improves accuracy by 2.68 percentage points over full-token baselines.",
+      "identifiers": [
+        "SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4"
+      ],
+      "semantic_scholar_id": "cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+      "canonical_id": "arXiv:2605.19506",
+      "arxiv_id": "2605.19506",
+      "doi": "10.48550/arXiv.2605.19506",
+      "authors": [
+        "Peng-Tao Ma",
+        "Ziliang Zhou",
+        "Ci-Yu Ruan",
+        "Hao-Yang Wang",
+        "Kai-Yuan Li",
+        "Zi-Hang Gong",
+        "Wen-Hua Ding",
+        "Chen Gao",
+        "Jin-Gao Xu",
+        "Xinlei Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Event Cascade Pruningはevent cameraの高頻度運動信号を用いてVideo-LLMのkeyframe選択、動きに乏しいtokenの除外、attention順位との融合を行う学習不要の3段階方式。視覚token80%削減時に精度37.62%対全token36.31%、推論1.89倍高速化、GFLOPs52%削減を報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Boosting Embodied AI Agents through Perception-Generation Disaggregation and Asynchronous Pipeline Execution",
+      "source_url": "https://arxiv.org/abs/2509.09560",
+      "year": 2025,
+      "published": "2025-09-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Embodied AI systems operate in dynamic environments, requiring seamless integration of perception and generation modules to process high-frequency input and output demands. Traditional sequential computation patterns, while effective in ensuring accuracy, face significant limitations in achieving the necessary\"thinking\"frequency for real-world applications. In this work, we present Auras, an algorithm-system co-designed inference framework to optimize the inference frequency of embodied AI agents. Auras disaggregates the perception and generation and provides controlled pipeline parallelism for them to achieve high and stable throughput. Faced with the data staleness problem that appears when the parallelism is increased, Auras establishes a public context for perception and generation to share, thereby promising the accuracy of embodied agents. Experimental results show that Auras improves throughput by 2.54x on average while achieving 102.7% of the original accuracy, demonstrating its efficacy in overcoming the constraints of sequential computation and providing high throughput.",
+      "identifiers": [
+        "SemanticScholar:615f1a22cd632792cdbbb410897a77dddf6f52a6"
+      ],
+      "semantic_scholar_id": "615f1a22cd632792cdbbb410897a77dddf6f52a6",
+      "canonical_id": "arXiv:2509.09560",
+      "arxiv_id": "2509.09560",
+      "doi": "10.48550/arXiv.2509.09560",
+      "authors": [
+        "Shulai Zhang",
+        "Ao Xu",
+        "Quan Chen",
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Ning-Xin Zheng",
+        "Hai-Bin Lin",
+        "Xin Liu",
+        "Min-Yi Guo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 433,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Aurasは身体化AIエージェントのperceptionとgenerationを分離し、非同期パイプラインで実行頻度を上げる。並列化による情報の陳腐化を共通contextで緩和し、逐次基準比で平均2.54倍のthroughput、基準の102.7%の精度を報告。エージェント推論パイプラインの直接的なシステム最適化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-38603bd03f3b",
+    "round": "libimp-38603bd03f3b77f7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-38603bd03f3b77f7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-38603bd03f3b77f7-pre01.json",
+    "receipt": "sha256:f91d8fa3ed619200db3fcb28258c409e1b16dddc23a91e4473448cba1233b557"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-38603bd03f3b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

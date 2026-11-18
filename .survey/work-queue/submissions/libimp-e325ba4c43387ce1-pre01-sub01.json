@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians",
+      "source_url": "https://arxiv.org/abs/2609.14706",
+      "year": 2026,
+      "published": "2026-09-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How should a Kronecker-factored Hessian approximation be chosen for post-training quantization? We address this question through WaterKron, which combines two-sided GPTQ with row- and column-dependent waterfilling scales and entropy coding. We derive its high-rate distortion with respect to the full Hessian using an explicit Kronecker-Hessian mismatch factor $\\Phi$. This factor quantifies the asymptotic distortion penalty due to the Kronecker Hessian approximation and provides a criterion for selecting the factors optimally. Minimizing $\\Phi$ leads to a Gaussian covariance-fitting problem with classical ``flip-flop''updates. We thus give a rate-distortion justification for using the resulting FlipFlop Hessian in quantization. We evaluate it empirically, finding that the FlipFlop Hessian consistently improves KL divergence and perplexity over input-only, marginal, and Frobenius-based Hessian choices.",
+      "identifiers": [
+        "SemanticScholar:52b086b9c9b99d5753c0024e9e2b792148a28be2"
+      ],
+      "semantic_scholar_id": "52b086b9c9b99d5753c0024e9e2b792148a28be2",
+      "canonical_id": "arXiv:2609.14706",
+      "arxiv_id": "2609.14706",
+      "doi": "10.48550/arXiv.2609.14706",
+      "authors": [
+        "Johann Birnick",
+        "R. Saab"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WaterKronとFlipFlopヘッセ行列。学習後量子化のクロネッカー型ヘッセ近似の選び方を、高レート歪みの理論から両側GPTQとウォーターフィリング型スケール、エントロピー符号化で原理づけ、近似の不一致因子を最小化する因子選択基準を与える。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+      "source_url": "https://arxiv.org/abs/2609.33477",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid LLMs interleave full-attention layers with linear-attention layers to reduce long-context inference cost, but this structure complicates prefix caching. Full-attention KV caches are token-addressable, whereas linear-attention layers maintain recurrent states that cannot be rolled back to arbitrary prefix boundaries. Existing systems materialize recurrent-state checkpoints, restricting prefix reuse to checkpoint-aligned positions. We present SuffixReplay, the first prefix caching system that lets hybrid LLMs reuse cached prefixes at every cache-supported page boundary without materializing recurrent-state checkpoints. Our key insight is to just let linear states forget the distant past. Modern linear-attention mechanisms use recurrent decay and gating to attenuate the influence of old inputs. Therefore, instead of checkpointing every prefix boundary, SuffixReplay approximates the state at a matched boundary by replaying only a recent suffix of the layer's input hidden states, which we retain as anchors. At the algorithmic level, SuffixReplay combines layer-wise and token-wise anchor sparsity with a bounded replay budget to control storage, computation, and quality. At the system level, it uses an independently managed anchor sidecar and a pipelined replay path to overlap anchor movement and state reconstruction with the native serving pipeline. We evaluate SuffixReplay on three hybrid LLMs: OLMo-Hybrid-7B, Qwen3.5-4B, and Qwen3.6-27B-FP8. Across these models, SuffixReplay retains 91.4-100% of full-prefill quality on average across LongBench and RULER, while using only 0.36-0.51x the amortized per-token storage of SGLang's default 8192-token checkpoint cache. Integrated into SGLang, SuffixReplay reduces median TTFT by 15-70% on branching workloads, sustains 2.3-4.3x SGLang's throughput when the working set exceeds HBM, and matches SGLang on high-hit continuation traffic.",
+      "identifiers": [
+        "SemanticScholar:f6fbfd531227293a9febf58313526d8d1f6380b7"
+      ],
+      "semantic_scholar_id": "f6fbfd531227293a9febf58313526d8d1f6380b7",
+      "canonical_id": "arXiv:2609.33477",
+      "arxiv_id": "2609.33477",
+      "doi": "10.48550/arXiv.2609.33477",
+      "authors": [
+        "Yi-Rui Liu",
+        "Ruo-Ling Qi",
+        "Xuan'er Wu",
+        "Yu-Xin Jin",
+        "Jian Chen",
+        "Peng-Hang Liu",
+        "Ya-Fei Huang",
+        "Jia-Wei Shao",
+        "Xue-Long Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "接頭辞キャッシュSuffixReplay。ハイブリッドLLMで線形注意層の循環状態が任意の接頭辞境界へ戻せない問題に対し、線形状態に遠い過去を忘れさせることで、チェックポイントを実体化せずに全てのページ境界で接頭辞再利用を可能にする初の方式。推論のキャッシュ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "When Cache Pressure Becomes a Trap: Metastability in Agent Serving",
+      "source_url": "https://arxiv.org/abs/2611.02543",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents repeatedly send a growing conversation to a model, making prefix reuse central to efficient serving. We show that a brief surge can disrupt this reuse and trigger metastable failure in prefill--decode (PD) disaggregated engines: service remains degraded after arrivals return to a load the engine previously sustained. On SGLang, a ten-minute surge reduced goodput by about 88% over the following hour. Removing the residual burst sessions restored service within minutes. The sustaining mechanism is population-cache feedback. Slower calls prolong sessions and enlarge their aggregate context, or working set; the resulting cache misses increase recomputation and further delay departures. A fluid model identifies the resource conditions for this feedback and explains how cache capacity, tool time and base load affect vulnerability. Across 36 simulated deployments, it flags all 17 cache-first cases. Controlled simulations hold the post-surge state fixed and show that changing subsequent arrivals alone reverses the recovery outcome. Once the cache collapses, low-reuse departure capacity sets the scale of the load reduction needed for recovery. Guided by these dynamics, we build Basin, which gives each session a fixed priority, reserves their predicted peak contexts against an adaptive admission budget, extends the cache with idle decode memory, and sheds excess demand. On real H200 1P3D deployments under surges, including long-context SWE-bench Pro sessions, an arrival-time prototype achieves 1.20--1.70x the goodput of Continuum and 2.35--3.59x that of HiCache alone. In simulation, the predictor-driven policy delivers 1.20--2.05x the strongest baseline's goodput across six surge scenarios.",
+      "identifiers": [
+        "SemanticScholar:ec377d898f4acfa504ddd907cbd9e25a1bd7155d"
+      ],
+      "semantic_scholar_id": "ec377d898f4acfa504ddd907cbd9e25a1bd7155d",
+      "canonical_id": "arXiv:2611.02543",
+      "arxiv_id": "2611.02543",
+      "authors": [
+        "Cheng-Zhi Lu",
+        "Bo-Xi Zhou",
+        "Yan-Ying Lin",
+        "Dmitrii Ustiugov"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェント提供の準安定性（キャッシュ圧力の罠）。短い過負荷が接頭辞再利用を壊し、到着が元に戻っても性能劣化が続く準安定故障を、プリフィル・デコード分離エンジンで実測し、人口とキャッシュのフィードバックとして流体モデルで同定する。推論基盤の計測・分析そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e325ba4c4338",
+    "round": "libimp-e325ba4c43387ce1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e325ba4c43387ce1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e325ba4c43387ce1-pre01.json",
+    "receipt": "sha256:7a6aa1a34f0fed115b75d6ad0d66f22f72c7ebe1300c68397c6b5561f7950b6f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e325ba4c4338",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
