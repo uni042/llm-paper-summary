@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0de9e9ed40f36844-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2209.05948",
+  "reason": "大規模コード補完モデルへの低価値リクエストを事前に軽量推定器で拒否するFrugalCoder系研究。arXiv一次要旨では、補完要求の20%をprecision 97.4%で事前拒否できたと報告。不要なLLM呼び出しを削減するサービス効率には関連するが、モデル内部の推論演算・トークン復号の高速化ではなく、コード補完という限定タスクの品質・省エネ最適化であるためborderline。worklist旧題と現在のarXiv題名が異なる。",
+  "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems",
+  "identity_tokens": [
+    "arXiv:2209.05948",
+    "DOI:10.48550/arXiv.2209.05948"
+  ],
+  "linked_from": [
+    "WORKLIST-00.md rank 226; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0de9e9ed40f3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

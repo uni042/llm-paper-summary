@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f6f9a36e86c69bb1-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41079",
+  "reason": "教育の選択肢判定を生成型LLMの逐次デコードではなく、選択肢マーカーをpointer headで採点する単一forwardのdecision modelに置き換える。0.8B/2B/4Bを構築し、2BモデルはH100 1基で約150 decisions/sと報告。生成・パースを省く推論効率の設計に関連するが、教育用途に特化したモデル学習と評価が主題で、汎用LLM serving engineやKV/カーネルの最適化ではないためborderline。",
+  "title": "EDU-Jev Training System-One Decision Models for Education",
+  "identity_tokens": [
+    "arXiv:2610.41079"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6f9a36e86c6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

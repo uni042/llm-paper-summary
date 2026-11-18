@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0de9e9ed40f36844-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.21437/Interspeech.2024-2022",
+  "reason": "音声翻訳のencoder-decoderモデルを符号行列と2つの学習ベクトルで1-bit量子化し知識蒸留で品質を補う。推論時モデル縮小に関連するが、主対象はspeech translationで、一般的な生成LLMのサービング・デコード高速化を直接検証していない。Interspeech公式原著ではデコーダ注意の量子化が特に性能に敏感と述べる。",
+  "title": "Sign Value Constraint Decomposition for Efficient 1-Bit Quantization of Speech Translation Tasks",
+  "identity_tokens": [
+    "DOI:10.21437/Interspeech.2024-2022"
+  ],
+  "linked_from": [
+    "WORKLIST-00.md rank 107; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0de9e9ed40f3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

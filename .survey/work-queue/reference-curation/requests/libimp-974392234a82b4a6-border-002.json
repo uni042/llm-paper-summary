@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-974392234a82b4a6-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2602.04096",
+  "reason": "拡散LLMの確信度が高くても文脈に脆いトークンを検出するため、部分mask摂動への感度から再mask候補を選ぶ。LLaDA-8BでMBPP精度最大9.2ポイント改善するが、計算予算を揃えた品質比較が主であり実測推論高速化は示されていない。",
+  "title": "CORE: Context-Robust Remasking for Diffusion Language Models",
+  "identity_tokens": [
+    "arXiv:2602.04096",
+    "DOI:10.48550/arXiv.2602.04096"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-974392234a82",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

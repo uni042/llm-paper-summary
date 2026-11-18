@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f6f9a36e86c69bb1-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41905",
+  "reason": "LLM agentが複数ツールを必要とする際の検索構造6種を比較し、LLM呼出回数・token・遅延を計測。AppWorld 345件、MCP-Bench 103件を評価し、学習型set-level retrieverは追加LLM呼出なしでcomplete@16=0.33/0.58、LLM階層探索は0.30/0.40だが中央値31〜38回のLLM呼出と約5分を要すると報告。エージェント推論のtool retrieval costを直接測るが、LLM本体の推論実行・serving/メモリ最適化ではなく周辺検索器の比較研究なのでborderline。",
+  "title": "Completeness and Cost of Retrieval Structures for Multi-Tool Requests in LLM Agents",
+  "identity_tokens": [
+    "arXiv:2610.41905"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CL/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6f9a36e86c6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
