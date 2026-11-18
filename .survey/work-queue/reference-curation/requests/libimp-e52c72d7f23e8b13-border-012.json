@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e52c72d7f23e8b13-border-012",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2608.18486",
+  "reason": "層跨ぎ全対全接続WhiteMatter。各層が同じ深さの過去表現しか使えない制限に対し、学習した混合器で任意の深さの表現を共有KVチャネルへ混ぜ、キャッシュを減らす。KV機構ではあるが、モデルアーキテクチャの変更であり境界。",
+  "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+  "identity_tokens": [
+    "arXiv:2608.18486",
+    "https://arxiv.org/abs/2608.18486"
+  ],
+  "linked_from": [
+    "07-kv-cache-optimization-compression",
+    "KVキャッシュ・注意アーキテクチャ",
+    "agentic serving workload characterization / KV-cache / inference benchmarking",
+    "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
