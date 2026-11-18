@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（880本）
+## 自動生成の論文一覧（881本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1197,6 +1197,10 @@
 - **2026-05 · [Focus-then-Context: Subject-Centric Progressive Visual Token Reduction for Vision-Language Models](2026-2605.20950-focus-then-context-subject-centric-progressive-visual-token-reduction-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SPprunerは視覚言語モデルの推論時に、質問と一致する画像領域だけでなく目立つ被写体とその周囲の構造情報を残す二段階の視覚トークン間引き方式である。
+
+- **2026-05 · [FaaScale: Unlocking Fast LLM Scaling for Serverless Inference](2026-c8280071b7d9-faascale-unlocking-fast-llm-scaling-for-serverless-inference.md)**  
+  実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：0  
+  モデルの重みをブロック単位で複数ノードへ同時に送り、届いたブロック同士で部分的なモデルを組み立てて転送途中から推論を始めることで、サーバーレスの急な増設を速くした配布方式。
 
 - **2026-05 · [Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding](2026-2605.22078-enhancing-visual-token-representations-for-video-large-language-models-v.md)**  
   実装：[✓](https://github.com/bingjunluo/ST-GridPool) ・ リポジトリ内被引用：0  

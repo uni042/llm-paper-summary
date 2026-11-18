@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（436本）
+## 自動生成の論文一覧（438本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -451,6 +451,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [OPSERVE: Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems](2026-de7f1d0908f4-opserve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-.md)**  
+  実装：[✓](https://github.com/sc26-submission/aionhpc-26-adsubmission) ・ リポジトリ内被引用：0  
+  HPCで一時的に遊ぶGPU断片の上に過渡ワーカーを起動し、プリフィルとデコードの遅延比率に応じてワーカーの役割を動的に配り直し、完了済みプリフィルのKV状態を共有層で回収後も生かすことで、固定配分比で95パーセンタイル遅延を最大15.4倍短くした機会的推論基盤。
+
 - **2026-10 · [Look Back, Think Ahead: Visual Memory on Demand for Efficient Multimodal Reasoning](2026-2610.12060-look-back-think-ahead-visual-memory-on-demand-for-efficient-multimodal-r.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   画像の内容を一度だけ要約して視覚トークンを削減すると、生成する文章の最初の段階では十分でも、後の推論段階で必要な細部が削除済みという問題が起こる。固定的な重要度で一回だけ残す方式は、この変化を事前にすべて予測する必要がある。
@@ -874,6 +878,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Scratchpad Patching: Decoupling Compute from Patch Size in Byte-Level Language Models](2026-2605.09630-scratchpad-patching-decoupling-compute-from-patch-size-in-byte-level-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この「パッチ遅延（patch lag）」が、大きなパッチの精度劣化を招く。したがって、パッチ長が決めるKVキャッシュ圧縮率と、内部で追加実行する計算回数を別々に調整できる。約20億パラメータの実験で、固定16バイト/パッチの自然言語理解平均精度はSPなし48.0からSPあり54.2へ改善し、バイト単位基準の主幹系列短縮16倍を維持する。
+
+- **2026-05 · [SATORU: Proactive Length-Aware Scheduling for High-Throughput Batch LLM Serving](2026-77c905c22830-satoru-proactive-length-aware-scheduling-for-high-throughput-batch-llm-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  出力長予測で将来のKV増加と残り作業量を見積もり、インスタンス内では先読み受付でプリエンプションの再計算を防ぎ、クラスタでは接頭辞の共有と作業量均等化で振り分ける、一括処理向けの先回り型スケジューリング枠組み。
 
 - **2026-05 · [Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference](2026-2605.19218-rotation-aligned-key-channel-pruning-for-efficient-vision-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1754,7 +1762,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：659  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：660  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  

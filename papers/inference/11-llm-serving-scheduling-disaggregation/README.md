@@ -1216,6 +1216,10 @@
   実装：✓ ・ リポジトリ内被引用：19  
   画像処理・画像符号化とテキスト生成を独立プールへ分離し、モダリティ別ルーティングと自動拡縮でLMMの末尾遅延とGPU費用を削減する。
 
+- **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
+  実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：19  
+  一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
+
 - **2025-02 · [Demystifying Cost-Efficiency in LLM Serving over Heterogeneous GPUs](2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
   次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
@@ -1223,10 +1227,6 @@
 - **2025-01 · [DeepServe: Serverless Large Language Model Serving at Scale](2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
   要求・ジョブ・タスク抽象、NPU中心FlowServe、KV局所性とPD構成を統合した分散スケジューラ、NPU-fork等の高速スケールを組み合わせたHuawei Cloud本番サーバーレスLLM基盤。
-
-- **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
-  実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：18  
-  一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
 
 - **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
   実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：17  
@@ -1280,6 +1280,10 @@
   実装：[✓](https://github.com/ASISys/Adrenaline) ・ リポジトリ内被引用：13  
   デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。
 
+- **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
+  実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：13  
+  モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
+
 - **2025-01 · [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   対話型リクエストの遅延目標を守りながら余ったGPU容量をバッチリクエストへ使うため、各GPUで同時処理するリクエスト数を素早く増減する制御と、クラスタ全体のGPUインスタンス数を遅い周期で増減する制御を分けたLLM自動スケーラ。
@@ -1295,10 +1299,6 @@
 - **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
   実装：[✓](https://github.com/ykcombat/sglang/tree/slo_config) ・ リポジトリ内被引用：12  
   前者は大きな行列積を実行しやすい一方、後者は各反復で重みとキャッシュを読み出すためメモリ帯域の制約を受けやすい。両段階を別々のGPUへ割り当てる分離配信は干渉を避けられるが、要求が片方に偏ると計算資源が遊休し、キャッシュの保存先も分かれる。
-
-- **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
-  実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：12  
-  モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
 
 - **2025-06 · [Beyond the Buzz: A Pragmatic Take on Inference Disaggregation](2025-2506.05508-beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
@@ -1436,6 +1436,10 @@
   実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：5  
   負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
 
+- **2025-10 · [BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure](2025-2510.13223-banaserve-dynamic-module-migration.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  分離サービングの固定GPU配分と接頭辞キャッシュ偏在を、層単位の重み移動・注意ヘッド単位のKV移動・CPU/SSD共有KVストアで切り離し、負荷だけを見た再配置とルーティングを可能にする。
+
 - **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
   実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：5  
   マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
@@ -1448,6 +1452,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   系列長バケットを負荷に応じて分割・統合し、KV容量から安全なバッチ数を動的計算して、パディング・OOM・SLO違反を抑えるLLMサービング方式。
 
+- **2025-05 · [Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture](2025-2505.11916-arrow-adaptive-scheduling-mechanisms-for-disaggregated-llm-inference-arc.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  LLMサービングでは、入力全体を処理する入力処理と、次トークンを逐次生成する逐次生成とで、計算密度、メモリ帯域要求、許容遅延が異なる。これらを別のGPU群へ分離する構成は相互干渉を減らすが、固定のGPU配分比では、長い入力が集中した時間帯には入力処理が詰まり、長い出力が増えた時間帯には逐次生成が詰まる。
+
 - **2025-03 · [Optimizing LLM Inference Throughput via Memory-aware and SLA-constrained Dynamic Batching](2025-2503.05248-optimizing-llm-inference-throughput-via-memory-aware-and-sla-constrained.md)**  
   実装：[✓](https://github.com/KevinLee1110/dynamic-batching) ・ リポジトリ内被引用：5  
   ただし各要求の入力長・生成長に応じてKVキャッシュが増えるため、バッチを大きくし過ぎるとメモリ不足（OOM）、KV退避、再計算が発生する。飽和要求負荷での実験では、静的バッチ上限に比べて生成処理量が6.5〜28.2%改善した。
@@ -1459,10 +1467,6 @@
 - **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
   実装：[✓](https://github.com/EfficientContext/ContextPilot) ・ リポジトリ内被引用：4  
   ContextPilotは、検索拡張生成（Retrieval-Augmented Generation; RAG）、会話記憶、複数エージェントが同じ資料を繰り返し参照する状況で、長文脈の前処理（プリフィル）を減らす推論前段システムである。主要なRAG条件では既存方式比でプリフィル処理率が最大約3倍に改善する。
-
-- **2025-10 · [BanaServe: Unified KV Cache and Dynamic Module Migration for Balancing Disaggregated LLM Serving in AI Infrastructure](2025-2510.13223-banaserve-dynamic-module-migration.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  分離サービングの固定GPU配分と接頭辞キャッシュ偏在を、層単位の重み移動・注意ヘッド単位のKV移動・CPU/SSD共有KVストアで切り離し、負荷だけを見た再配置とルーティングを可能にする。
 
 - **2025-08 · [Taming the Chaos: Coordinated Autoscaling for Heterogeneous and Disaggregated LLM Inference](2025-2508.19559-heteroscale-coordinated-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1483,10 +1487,6 @@
 - **2025-06 · [PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference](2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   長入力事前計算を短入力事前計算で選択的に横取りし、事前計算・復号の分離同居と高速系列並列を組み合わせて、短入力の待ち時間と長入力の飢餓を両立して抑える。
-
-- **2025-05 · [Arrow: Adaptive Scheduling Mechanisms for Disaggregated LLM Inference Architecture](2025-2505.11916-arrow-adaptive-scheduling-mechanisms-for-disaggregated-llm-inference-arc.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  LLMサービングでは、入力全体を処理する入力処理と、次トークンを逐次生成する逐次生成とで、計算密度、メモリ帯域要求、許容遅延が異なる。これらを別のGPU群へ分離する構成は相互干渉を減らすが、固定のGPU配分比では、長い入力が集中した時間帯には入力処理が詰まり、長い出力が増えた時間帯には逐次生成が詰まる。
 
 - **2025-04 · [HELIOS: Adaptive Model And Early-Exit Selection for Efficient LLM Inference Serving](2025-2504.10724-helios-adaptive-model-and-early-exit-selection-for-efficient-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -1779,11 +1779,11 @@
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
-  実装：[✓](https://github.com/AlibabaPAI/llumnix) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/AlibabaPAI/llumnix) ・ リポジトリ内被引用：186  
   Llumnixは、複数のGPU実行単位で大規模言語モデルを提供するとき、要求を最初に振り分けて終わりにせず、生成途中でも別の実行単位へ移動するスケジューラである。
 
 - **2024-03 · [Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention](2024-2403.19708-cachedattention-multi-turn-conversation-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：172  
+  実装：✓ ・ リポジトリ内被引用：173  
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
@@ -1794,13 +1794,13 @@
   実装：[✓](https://github.com/ServerlessLLM/ServerlessLLM) ・ リポジトリ内被引用：115  
   要求到着時にモデルをGPUへ読み込むサーバーレス環境で、チェックポイントをGPU近くのSSD / DRAMへキャッシュし、高速読み込み器とモデル所在地を考慮した要求配置、生成途中要求の移動を組み合わせてモデル起動待ちを短縮するシステム。
 
+- **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
+  実装：✓ ・ リポジトリ内被引用：106  
+  要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
+
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：106  
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
-
-- **2024-08 · [DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency](2024-2408.00741-dynamollm.md)**  
-  実装：✓ ・ リポジトリ内被引用：105  
-  要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
   実装：[✓](https://github.com/microsoft/ParrotServe) ・ リポジトリ内被引用：94  
@@ -1818,13 +1818,13 @@
   実装：✓ ・ リポジトリ内被引用：80  
   プリフィルとデコードを別実行単位へ分ける推論提供で、GPU / CPU上のKVキャッシュを実行単位横断で検索・共有・転送できる共通メモリプールを作り、過去接頭部の再利用と処理段階間KV移動を同じ仕組みで扱うシステム。
 
+- **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：77  
+  同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
+
 - **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
   実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：77  
   従来の固定テンソル並列は事前充填に必要な多数のGPUを復号中にも占有し、逆に固定の事前充填・復号分離は各GPU群の遊休容量を相互利用できない。著者のSOSP 2024論文では、8基のNVIDIA A800を用いた長文脈モデルの評価で、最大処理率がチャンク化事前充填方式比で最大3.85倍、事前充填・復号分離方式比で最大5.81倍となった。
-
-- **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：76  
-  同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-08 · [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)**  
   実装：[✓](https://github.com/hao-ai-lab/vllm-ltr) ・ リポジトリ内被引用：75  
@@ -1882,16 +1882,16 @@
   実装：✓ ・ リポジトリ内被引用：33  
   本研究が最適化するのは、同じGPUでモデルを何倍速く動かせるかではなく、所定の要求量と遅延目標を満たすために、どのGPUを何台借りるかである。大規模言語モデル（LLM）のオンライン配信では、安価なGPUを多数用意する構成と高性能GPUを少数用意する構成のどちらが得かは一意に決まらない。さらに要求到着率が小さいと高性能GPUを借りても空き時間が多い。
 
+- **2024-10 · [Don't Stop Me Now: Embedding Based Scheduling for LLMs](2024-2410.01035-embedding-based-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：29  
+  TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。
+
 - **2024-08 · [P/D-Serve: Serving Disaggregated Large Language Model at Scale](2024-2408.08147-pd-serve-disaggregated-llm-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：29  
   P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
 
-- **2024-10 · [Don't Stop Me Now: Embedding Based Scheduling for LLMs](2024-2410.01035-embedding-based-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：28  
-  TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。
-
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
-  実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：28  
   BatchLLMは、検索結果の説明文生成、広告文書の変換、推薦候補の採点など、数千件以上のプロンプトをまとめて処理する大規模言語モデル（LLM）の一括推論を対象とするシステムである。原著のMLSys 2026産業部門版は、NVIDIA A100とAMD MI200上で、vLLMやSGLangに対して1.3～10.8倍の端点処理率改善を報告する。
 
 - **2024-09 · [No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha](2024-2409.17264-no-request-left-behind-tackling-heterogeneity-in-long-context-llm-infere.md)**  
@@ -1911,7 +1911,7 @@
   本論文は、大規模言語モデル（Large Language モデル、LLM）の推論サービスを効率化するシステム研究を整理した総説である。
 
 - **2024-03 · [DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
-  実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：22  
   また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
 
 - **2024-10 · [ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving](2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md)**  
@@ -1958,6 +1958,10 @@
   実装：[✓](https://github.com/tonyzhao-jt/LLM-PQ) ・ リポジトリ内被引用：11  
   LLM-PQは、性能とメモリ容量が異なるGPUを組み合わせたクラスタで、大規模言語モデル（LLM）の一括推論を高速化するシステムである。異種構成でPipeEdgeを基準にした生成処理量の改善は平均2.26倍、最大2.88倍である。
 
+- **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  SCLS（スライス単位スケジューリング）は、LLMの応答長が要求到着時に分からないことから生じる二つの資源浪費を解消するサービング手法である。著者らはAnt GroupのCodeFuse実運用要求記録を用い、8台のNVIDIA A100 80GBでLLaMA2-13Bを動かした。
+
 - **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   Aladdinは、複数GPUで大規模言語モデルの推論要求を処理するとき、各要求をどのワーカーへ配置するかと、ワーカーを何台・何GPU構成で用意するかを共同で決めるクラスタスケジューラである。
@@ -1965,10 +1969,6 @@
 - **2024-03 · [Optimizing LLM Queries in Relational Data Analytics Workloads](2024-2403.05821-optimizing-llm-queries-in-relational-data-analytics-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   理論上の最適解を探す最適接頭辞ヒット再帰（Optimal Prefix Hit Recursion、OPHR）は組合せ爆発を起こすため、実用方式として貪欲群再帰（Greedy Group Recursion、GGR）を設計する。
-
-- **2024-06 · [Slice-Level Scheduling for High-Throughput and Load-Balanced LLM Serving](2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  SCLS（スライス単位スケジューリング）は、LLMの応答長が要求到着時に分からないことから生じる二つの資源浪費を解消するサービング手法である。著者らはAnt GroupのCodeFuse実運用要求記録を用い、8台のNVIDIA A100 80GBでLLaMA2-13Bを動かした。
 
 - **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
   実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：9  
@@ -2045,7 +2045,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1524  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1525  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2053,7 +2053,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：183  
+  実装：✓ ・ リポジトリ内被引用：184  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -2073,7 +2073,7 @@
   異なるLoRAアダプタの要求をSGMVカーネルで同一バッチ処理し、基盤LLMを共有したまま多テナント推論を集約するサービング基盤。固定GPU資源で最大12倍のスループットを報告。
 
 - **2023-05 · [Response Length Perception and Sequence Scheduling: An LLM-Empowered LLM Inference Pipeline](2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   Vicuna自身を軽量な応答長予測器として使い、生成前に要求を長さ別へ並べ替える。予測外れを失敗回収・再計算で隔離し、短い要求には大きなバッチを使うことで、可変長生成に特有のバッチ内遊休を減らす。
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
