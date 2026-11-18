@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PISA: Efficient Precision-Slice Framework for LLMs with Adaptive Numerical Type",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132980",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have transformed numerous AI applications, with on-device deployment becoming increasingly important for reducing cloud computing costs and protecting user privacy. However, the astronomical model size and limited hardware resources pose significant deployment challenges. Model quantization is a promising approach to mitigate this gap, but the presence of outliers in LLMs reduces its effectiveness. Previous efforts addressed this issue by employing compression-based encoding for mixed-precision quantization. These approaches struggle to balance model accuracy with hardware efficiency due to their value-wise outlier granularity and complex encoding/decoding hardware logic. To address this, we propose PISA (Precision-Slice Framework), an acceleration framework that exploits massive sparsity in the higher-order part of LLMs by splitting 16-bit values into a 4-bit/12-bit format. Crucially, PISA introduces an early bird mechanism that leverages the high-order 4-bit computation to predict the importance of the full calculation result. This mechanism enables efficient computational skips by continuing execution only for important computations and using preset values for less significant ones. This scheme can be efficiently integrated with existing hardware accelerators like systolic arrays without complex encoding/decoding. As a result, PISA outperforms state-of-the-art precision-aware accelerators, achieving a $1.3-4.3 \\times$ performance boost and $14.3-66.7 \\%$ greater energy efficiency, with minimal model accuracy loss. This approach enables more efficient ondevice LLM deployment, effectively balancing computational efficiency and model accuracy.",
+      "identifiers": [
+        "SemanticScholar:43e7eace4caa796107e1cd9c37c81489028b0440"
+      ],
+      "semantic_scholar_id": "43e7eace4caa796107e1cd9c37c81489028b0440",
+      "doi": "10.1109/DAC63849.2025.11132980",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132980",
+      "authors": [
+        "Ning Yang",
+        "Zong-Wu Wang",
+        "Qingxiao Sun",
+        "Li-Qiang Lu",
+        "Fang-Xin Liu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      },
+      "reason": "16ビット値を上位の疎な部分と下位部分へ精度スライスとして分割し、適応的な数値型で外れ値に起因する量子化の精度・効率トレードオフを解くPISAを提案する。オンデバイスLLM推論向け量子化のハードウェア効率を上げる機構で、直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CPP: Clustered NPU-PIM Heterogeneous Computing Topology for LLM Inference",
+      "source_url": "https://doi.org/10.1109/ITC-CSCC66376.2025.11137596",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "2025 International Technical Conference on Circuits/Systems, Computers, and Communications (ITC-CSCC)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer inference system can take advantage of heterogeneous computing architectures using Neural Processing Unit (NPU) and Processing-in-Memory (PIM) devices to accelerate GEneral Matrix Multiplication (GEMM) and GEneral Matrix-Vector Multiplication (GEMV) operations each (hereafter NPU-PIM). Several studies on NPU-PIM system showed significant improvement in terms of GEMM and GEMV computation acceleration, but didn't focus on improving communication latency overhead. From our observation based on simulation, NPU-PIM topology is important for communication overhead because it affects the communication dataflow. Dataflow in communication process is related with GEMM/GEMV computation sequence and aggregation of partial results that are distributed for parallel processing. Alternating GEMM/GEMV layers in transformer inference incurs costly data movement between NPUs and PIMs. We found that improvements to the NPU-PIM topology could mitigate the overhead caused by this dataflow. Based on this observation, we propose CPP, an NPU-PIM heterogeneous computing topology for efficient inference of transformer-based models. CPP reduces communication latency overhead by clustering NPUs and PIMs. Clustering leads to separation of dataflow by intra-cluster communication and inter-layer communication. Thereby minimizing resource contention caused by distributed data aggregation and remote memory access. Simulation results show that replacing from the baseline NVIDIA DGX-like crossbar switch topology to CPP reduces communication latency overhead by 35.5%. Also, reduced communication latency leads to the throughput of communication process by 54.9%.",
+      "identifiers": [
+        "SemanticScholar:b3e22804b72fc78928754fbf7dd593a3767520fa"
+      ],
+      "semantic_scholar_id": "b3e22804b72fc78928754fbf7dd593a3767520fa",
+      "doi": "10.1109/ITC-CSCC66376.2025.11137596",
+      "canonical_id": "DOI:10.1109/ITC-CSCC66376.2025.11137596",
+      "authors": [
+        "Dongwook Kim",
+        "Dohyun Kim",
+        "E. Chung"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 499,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NPUとメモリ内処理デバイスの異種構成でTransformer推論を行う際、GEMMとGEMVの交互実行が生む通信遅延に着目し、クラスタ化したトポロジでデータ移動を抑えるCPPを提案する。LLM推論アクセラレータの通信オーバーヘッド削減が対象で、直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d4d849bc0d11",
+    "round": "libimp-d4d849bc0d11a5d3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d4d849bc0d11a5d3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d4d849bc0d11a5d3-pre01.json",
+    "receipt": "sha256:f497f1929f45a38d377f29130671f21b20489ea05ebfbc7dfb44ee646b79c928"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d4d849bc0d11",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

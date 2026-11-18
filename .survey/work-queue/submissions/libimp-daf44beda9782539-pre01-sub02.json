@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Less is more: learning what to profile for GPU kernel optimization",
+      "source_url": "https://arxiv.org/abs/2610.36576",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have recently shown strong potential for automatically optimizing GPU kernels, yet their effectiveness depends critically on the hardware information available to the kernel optimization model. Existing systems typically rely on predefined profiling strategies, leaving what to profile largely outside the optimization process. We show that effective profiling is not simply about collecting more information: increasing the number of profiling metrics does not monotonically improve kernel optimization, while the most useful profiling information varies across kernels. Our theoretical analysis further shows that, under such heterogeneous profiling utility, kernel-conditioned selection can outperform any single fixed profiling configuration. Motivated by this observation, we propose AutoProfiler, a feedback-driven framework for learning a deterministic profiling tree from optimization feedback. The tree is iteratively refined through REWRITE and SPLIT operations, with an LLM generating candidate modifications and empirical evaluation determining their acceptance. Once constructed, the tree quickly gathers the required profiling information for any kernel, allowing the LLM rewriter to be invoked only once. Experiments on KernelBench show that our approach improves kernel optimization over fixed profiling configurations under constrained profiling budgets. These results suggest that hardware profiling should evolve from static metric collection toward profiling reasoning, making profiling itself a new dimension for improving kernel optimization. The codes are available at https://github.com/Satissss/AutoProfiler.",
+      "identifiers": [
+        "SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6"
+      ],
+      "semantic_scholar_id": "1b68c0c28d7cdea39255d6c3a493da21474123d6",
+      "canonical_id": "arXiv:2610.36576",
+      "arxiv_id": "2610.36576",
+      "authors": [
+        "Yi-Han Wang",
+        "Pei-Yu Liu",
+        "Run-Yu Chen",
+        "Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMによるGPU kernel書換えに必要な性能カウンタを固定せず、kernel別にREWRITE/SPLITで決定木を学習してprofiling項目を選択するAutoProfilerを提案。構築後はkernelごとの最小限のprofile情報を取得してLLM rewriterを一度呼ぶ設計。一次要旨はKernelBenchで固定profiling構成より制約予算下のkernel最適化が改善したと報告。推論kernelを含むGPU実装最適化の直接的基盤としてaccept（LLMサービングでのend-to-end評価は要確認）。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-daf44beda978",
+    "round": "libimp-daf44beda9782539-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-daf44beda9782539-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-daf44beda9782539-pre01.json",
+    "receipt": "sha256:24c2356458c3e2b160488137fffef37233d776ab39526b3c3f67bd4f0d572572"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-daf44beda978",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261108-0700-scheduled-chat-00/r01",
+  "reference_main_sha": "0d34a41d0615f658a299752eb833056d5097b90e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08730",
+      "identity_tokens": [
+        "arxiv:2608.08730"
+      ],
+      "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+      "reason": "WebGPUでバッチ1の逐次LLM推論を対象に、個別カーネル測定に同期コストが混入する問題を分離する逐次dispatch測定法を提案。融合実験から演算品質よりdispatch回数の削減が律速改善に効くと検証。ブラウザ推論ランタイム設計に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2608.08730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 65"
+      ],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15160",
+      "identity_tokens": [
+        "arxiv:2609.15160"
+      ],
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+      "reason": "トークンの隠れ状態でループ回数を動的に決めるtoken-choice routingと、再帰段ごとに独立したKVキャッシュを保持するrecursion-wise KV cacheを導入。自動回帰デコード遅延を削減する設計と評価を示すため推論アーキテクチャ対象。",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 66"
+      ],
+      "worklist_rank": 66
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.19499",
+      "identity_tokens": [
+        "arxiv:2609.19499"
+      ],
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "reason": "GSM8Kで候補数N=8を固定して1×8から8×1まで生成呼出分割を比較。A100では8回逐次実行が1回バッチに対しGPUエネルギー4.64〜4.86倍、P95遅延5.77〜6.12倍と報告し、推論時スケジューリング・エネルギー評価に直接関係。",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 67"
+      ],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22269",
+      "identity_tokens": [
+        "arxiv:2605.22269"
+      ],
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "reason": "長時間動画QAの過去映像KVをパッチ・フレーム・区間の三粒度で圧縮し、自己注意と頻度の二信号で選択。質問時に半階層的検索で必要なKVを回収する。マルチモーダル長文脈推論のKVメモリ削減と品質の両立を対象とする。",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 68"
+      ],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08030",
+      "identity_tokens": [
+        "arxiv:2602.08030"
+      ],
+      "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+      "reason": "推論時の冗長な思考チャンクをLoRA型Free-Moduleで識別し、reasoning/cleaningモードを切り替えてコンテキストを削除する。8B〜685Bで検証し、推論文脈長・KV保持を能動制御するモデル方式として関連する。ただし直接的なGPU実測高速化の主張とは区別。",
+      "source_url": "https://arxiv.org/abs/2602.08030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 69"
+      ],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.06202",
+      "identity_tokens": [
+        "arxiv:2607.06202"
+      ],
+      "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+      "reason": "NVL72/576やCloudMatrix384等の大規模MoE実行で、BSP直列化・同期・不規則トークン配送の負荷不均衡を対象にAll-to-All通信ライブラリUBEPを提案。通信遅延最大52.4%削減、推論TPOT最大11.1%削減を報告。",
+      "source_url": "https://arxiv.org/abs/2607.06202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 71"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06597",
+      "identity_tokens": [
+        "arxiv:2610.06597"
+      ],
+      "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+      "reason": "エージェント実行側の依存関係・コンテキスト寿命と推論エンジン側のキュー・KV状態を双方向交換するHEARプロトコルを提案。キャッシュ認識協調と役割別実行モード選択でエージェント推論サービングを高速化する。",
+      "source_url": "https://arxiv.org/abs/2610.06597",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 72"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31291",
+      "identity_tokens": [
+        "arxiv:2609.31291"
+      ],
+      "title": "Softmax Reparameterization for Output-Head Quantization",
+      "reason": "語彙出力headの各行から平均ベクトルのスカラー倍を引く、softmax予測を保持する再パラメータ化を量子化前に適用。検証KLで係数を選びW4量子化誤差を削減。Phiのbatch1生成遅延10.8%削減はW4圧縮による値で、再パラメータ化の追加速度利得ではない。",
+      "source_url": "https://arxiv.org/abs/2609.31291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 74"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15179",
+      "identity_tokens": [
+        "arxiv:2606.15179"
+      ],
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG under Document Isolation",
+      "reason": "端末内の非公開文書とクラウドの公開文書を交換せずに統合するdevice-cloud RAGで、待機負債制御と証明書に基づく最小追加証拠取得を提案。クラウド参加ステップのgreedy出力一致を保持しつつ通信量を大幅削減し、推論スループットを改善。",
+      "source_url": "https://arxiv.org/abs/2606.15179",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 75"
+      ],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09342",
+      "identity_tokens": [
+        "arxiv:2610.09342"
+      ],
+      "title": "Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression",
+      "reason": "専門家枝刈り・統合の構造誤差を解析し、ルーティングと専門家構造を保つ共有rank-k基底の重み再構成SLBFを提案。データ不要で16B〜122Bの5種MoEを圧縮し、推論配備時の重みメモリ制約に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2610.09342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-08T07:03:52+09:00",
+      "last_checked_at": "2026-11-08T07:03:52+09:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 76"
+      ],
+      "worklist_rank": 76
+    }
+  ]
+}

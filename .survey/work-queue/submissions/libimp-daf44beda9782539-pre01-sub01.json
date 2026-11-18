@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.19819",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Retrieval-Augmented Generation (RAG) and long-context LLMs has shifted the computational burden toward the prefill phase---the initial stage where the model processes all input tokens in parallel before generating a response---yet its energy impact remains poorly characterised. We investigate the contradiction between massive hardware-level power spikes and the sub-linear marginal cost of input tokens reported in system-level studies. Through high-resolution telemetry of Llama-3.1 and Qwen-2 models on NVIDIA A100 hardware, we identify the efficiency threshold where $O(n^2)$ attention complexity overcomes GPU parallelisation. Our results quantify how optimised memory orchestration (PagedAttention) delays this scaling bottleneck across three orders of context scaling, yielding up to an 8.9$\\times$ energy efficiency advantage at 112,000 tokens compared to standard baselines. Furthermore, we characterise the energy disparity between input and output tokens, demonstrating that optimised serving (vLLM) causes this ratio to narrow (from $\\approx$850$\\times$ to 750$\\times$) as context scales due to high decode efficiency, whereas unoptimised baselines show a much smaller, roughly constant gap ($\\approx$150--230$\\times$) because their prefill is itself expensive. This work establishes context-scaling laws that differentiate engine-level optimisations from inherent model constraints, providing an empirical framework for sustainable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878"
+      ],
+      "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
+      "canonical_id": "arXiv:2610.19819",
+      "arxiv_id": "2610.19819",
+      "authors": [
+        "Boris Ruf",
+        "Marcin Detyniecki"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RAGや長文脈で増えるprefill入力tokenのエネルギーを、Llama-3.1/Qwen-2とNVIDIA A100の高分解能電力計測で特徴付ける。PagedAttentionを用いた最適化サービングは112K tokenで標準方式比最大8.9倍のエネルギー効率を示し、入力と出力tokenのエネルギー比もengineで変化すると報告。推論時のprefill・decodeエネルギーと実装差を直接計測しているためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+      "source_url": "https://arxiv.org/abs/2610.39418",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. We implement these transformations in INT8 and INT4 kernels and evaluate them on the recurrences of Nemotron-H, Qwen3.5, and Kimi Linear, recovering most of the accuracy lost to quantization while accelerating recurrent prefill. We also augment SSDi8, an existing low-precision prefill pipeline for Mamba-2, improving perplexity at matched prefill latency on pretrained Mamba-2 and Nemotron-H models. Altogether, these results demonstrate the practical utility of invariance-based quantization for recurrent models.",
+      "identifiers": [
+        "SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77"
+      ],
+      "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
+      "canonical_id": "arXiv:2610.39418",
+      "arxiv_id": "2610.39418",
+      "authors": [
+        "Neehal Tumma",
+        "Philipp Nazari",
+        "Rohan Cherukuri",
+        "D. Rus",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形・gated・delta-ruleの再帰演算で、計算結果を保存する回転・対角scale・decay/write配置変更など7種の不変変換を導出し、低精度prefillの数値誤差を低減する。既存SSDi8のMamba-2 prefillへ適用し、一次要旨はMamba-2 1.3B/2.7B/8BとNemotron-H 8Bで同等latency時のperplexity改善を報告。ハイブリッドLLMの推論量子化・prefill kernelに直接関係するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+      "source_url": "https://arxiv.org/abs/2610.04277",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "New AI accelerators arrive before the kernels that make them fast, because peak kernel performance requires architecture-specific expertise in operand pipelines and data-movement techniques. Coding agents can now write, compile, and tune kernels on their own, so they could greatly accelerate kernel development and optimization. What agents produce depends on the interfaces they are given. These interfaces may expose a machine's raw capabilities or encode the known-good methods for exploiting its hardware features efficiently. We test the performance impact of these two interfaces on Intel GPUs through controlled experiments with five coding models on three kernels. With raw SYCL and execution feedback, Opus 4.8, the strongest of the three models tested with Claude Code, writes a single-GPU GEMM kernel reaching only 57.5% of Intel's tuned oneDNN library. We present SyclKittens, a hardware-aware tile programming model for Intel GPUs that encodes these known-good methods, so its operations place operands in matrix-engine layouts, prefetch through the L1 cache, and communicate over the fabric that links GPU stacks into a node. With SyclKittens under the same agent, task, and feedback budget, the agent reaches 82.1%, showing that encoded methods turn hardware capabilities into performance. Workload-specific policies stay programmable, and engineers and agents jointly refine these schedules in SyclKittens to build a kernel suite that reaches approximately 96% of oneDNN in geometric mean across GEMM shapes. The suite runs Llama-3.1-8B inference 1.59 times faster than torch.compile on one GPU and up to 2.91 times faster than a matched multi-GPU decode path on Intel's oneCCL. SyclKittens is open source and available at https://github.com/intel/SyclKittens.",
+      "identifiers": [
+        "SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad"
+      ],
+      "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+      "canonical_id": "arXiv:2610.04277",
+      "arxiv_id": "2610.04277",
+      "authors": [
+        "Ye-Hong Jiang",
+        "Sheng Chen",
+        "Fang-Wen Fu",
+        "Yen-Kuang Chen",
+        "Xin-Min Tian",
+        "Stuart H. Sul",
+        "Simran Arora"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Intel GPUのmatrix-engineレイアウト、L1 prefetch、GPU stack間通信をtile APIへ埋め込んだSyclKittensを提案し、kernel実装の探索空間を構造化する。一次要旨はGEMMでoneDNN比57.5%から82.1%へ、手動調整を含むkernel suiteで96%へ到達し、Llama-3.1-8B推論がtorch.compile比単一GPUで1.59倍、複数GPU decodeでoneCCL比最大2.91倍高速と報告。LLM推論kernelの具体的runtime/実装としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+      "source_url": "https://arxiv.org/abs/2610.04473",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving an LLM means setting dozens of inference-time knobs, from per-layer KV retention to per-layer expert counts. Practice sets them with mechanism-specific heuristics that return a single operating point and do not scale to layer-wise search spaces. We recast inference configuration as constrained multi-objective black-box optimization and build InferOpt, a reusable search framework that requires only variable bounds, a deterministic resource cost, and an evaluation hook. InferOpt searches on a frozen sampled proxy set, rejects over-budget candidates before any model call, tightens the budget adaptively, and re-validates Pareto representatives on full-scale dataset. One pipeline covers a 28-dimensional continuous KV space (Qwen2.5-7B) and a 26-dimensional discrete MoE space (DeepSeek-V2-Lite). On KV, post-prefill pruning cuts the 16K cache by 64.4% and TPOT by 22.9--48.5%, and the searched layer-wise budget by InferOpt beats a matched uniform budget by 7.3% and 14.0% of the Full KV reference points. On MoE, a searched top-k schedule by InferOpt removes 43.0% of routed token--expert pairs while staying within 0.59 points of the default, closer than the matched-budget baselines. Against Random Search, NSGA-II, and MOTPE, InferOpt leads on both spaces, taking the best proxy hypervolume and the lowest retention on KV and staying closest to the uncompressed reference at the lowest experts on MoE.",
+      "identifiers": [
+        "SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9"
+      ],
+      "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+      "canonical_id": "arXiv:2610.04473",
+      "arxiv_id": "2610.04473",
+      "authors": [
+        "Qi Chen",
+        "Ying-Ying Cheng",
+        "Zhao Sun",
+        "Li Zhou",
+        "Fan Zhang",
+        "Jie Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV保持率の層別連続値とMoE expert数の層別離散値を共通の制約付き多目的black-box最適化で探索する。予算超過構成をモデル実行前に除外し、proxy集合で探索したPareto解を本評価で再検証する。一次要旨はQwen2.5-7Bの16K KVを64.4%削減しTPOTを22.9～48.5%短縮、DeepSeek-V2-Liteでtoken-expert対を43.0%削減したと報告。KV圧縮・MoE推論の具体的設定最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.08373",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Energy-efficient LLM serving requires minimizing serving GPU energy while meeting latency and throughput service-level objectives (SLOs). Attention--FFN disaggregation (AFD) enables separate resource allocation and operating controls for attention and expert computation, but their energy effects remain coupled through the execution pipeline. Realizing its energy-saving potential therefore requires navigating a hierarchical configuration space in which deployment structures constrain admissible controls and shape their end-to-end effects. Finding low-energy configurations that meet SLOs is challenging because physical evaluations are costly and only a small fraction of candidates can be measured. We present Energy-Oriented Configuration Optimization (ECO), which jointly searches deployment structures and their admissible operating controls under a limited measurement budget. ECO constructs a structure-aware energy prior from calibrated stage behavior and pipeline dependencies, then learns residual prediction errors with a Gaussian process. Its cost-aware constrained Bayesian optimization prioritizes measurements according to expected energy improvement while accounting for SLO feasibility, execution success, and evaluation cost, and returns the lowest-energy measured feasible configuration. Across all 16 scenarios on A6000 and A100 with Qwen and DeepSeek, ECO's frozen configurations, evaluated on disjoint requests, reduce serving energy by 40.5\\% and increase output token rate by 20.7\\% on average relative to baselines while meeting target SLOs. Across the 8 A6000 scenarios, its selected feasible energy averages 33.1\\% below generic constrained Bayesian optimization and 25.8\\% below genetic search.",
+      "identifiers": [
+        "SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012"
+      ],
+      "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
+      "canonical_id": "arXiv:2610.08373",
+      "arxiv_id": "2610.08373",
+      "authors": [
+        "Qing-Yun Zou",
+        "Bin Gao",
+        "Zhuo-Bin Huang",
+        "Weng-Fai Wong",
+        "Tulika Mitra",
+        "Bing-Sheng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AttentionとFFNを別GPU群に置くAFDサービングの配置・GPU動作周波数・電力制限を、パイプライン段階のエネルギー事前モデルとGaussian process残差補正を組み合わせて共同探索する。著者の一次要旨はA6000/A100、Qwen/DeepSeekの16条件で、固定した構成を別リクエストで評価し、既定構成比平均40.5%のエネルギー削減と20.7%の出力token率増加を報告。SLOを制約とする実推論サービング構成探索でありaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-daf44beda978",
+    "round": "libimp-daf44beda9782539-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-daf44beda9782539-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-daf44beda9782539-pre01.json",
+    "receipt": "sha256:24c2356458c3e2b160488137fffef37233d776ab39526b3c3f67bd4f0d572572"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-daf44beda978",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
