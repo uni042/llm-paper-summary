@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd581ca908e7b4be-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.21602",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.21602",
+    "identity_tokens": [
+      "arXiv:2607.21602"
+    ],
+    "reason": "edge LLM配備候補の実測を減らすため、ハードウェア・ランタイム・モデル・prompt特徴と動的telemetryを統合しprefill/decode別遅延を予測する手法。Pixel 8/8 Proで静的特徴のみの予測器よりR²が改善し、端末間calibrationで負のR²から0.94前後へ改善する例を示す。推論実行そのものの高速化ではなく事前のモデル/デバイス選定・profiling費用削減が主題なのでborderline。",
+    "first_checked_at": "2026-11-18T12:19:45+00:00",
+    "last_checked_at": "2026-11-18T12:19:45+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Transferable Latency Prediction for Fast LLM Screening on Heterogeneous Edge Devices"
+  },
+  "processed_at": "2026-11-18T12:19:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd581ca908e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

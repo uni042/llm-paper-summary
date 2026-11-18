@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-789d4ba570513e57-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.06577",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.06577",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.06577",
+      "arXiv:2603.06577"
+    ],
+    "reason": "マスク型離散拡散モデルでテキスト・音声・画像のany-to-any理解と生成を統一するモデルアーキテクチャを提案。一次要旨の評価はマルチモーダル能力ベンチマーク中心で、サービング実装、KV管理、実測レイテンシ・スループット改善の直接証拠はない。並列復号に関係するため境界的だが、推論システム論文としてacceptする根拠は不足。",
+    "first_checked_at": "2026-11-18T12:19:36+00:00",
+    "last_checked_at": "2026-11-18T12:19:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion"
+  },
+  "processed_at": "2026-11-18T12:19:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-789d4ba57051",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

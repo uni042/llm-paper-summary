@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fed8dbb70982d8b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.23701",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.23701",
+    "identity_tokens": [
+      "arXiv:2505.23701"
+    ],
+    "reason": "原著要旨はGSM8K・SVAMPで数式の抽象化と算術計算を分離して推論能力を評価し、CoTは主に計算段階を助けると分析する。因果パッチングで表現順序を調べる認知・能力解析であり、デコード高速化、推論メモリ、GPU実行、サービングのシステム最適化を扱わないためunrelated。",
+    "first_checked_at": "2026-11-18T12:19:29+00:00",
+    "last_checked_at": "2026-11-18T12:19:29+00:00",
+    "linked_from": [],
+    "title": "Can LLMs Reason Abstractly Over Math Word Problems Without CoT? Disentangling Abstract Formulation From Arithmetic Computation"
+  },
+  "processed_at": "2026-11-18T12:19:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fed8dbb7098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c019c31550d301a2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.12769",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.12769",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.12769",
+      "arXiv:2507.12769"
+    ],
+    "reason": "byte-levelモデルで学習済みルータが一部のbyteを概念トークンとして深い層へ渡す。192概念トークン程度でBBPE約241トークンと比較可能な品質を報告するが、本文ではLlama3より約1.5倍のFLOPsが必要であり、現状の実測推論高速化は示されていない。",
+    "first_checked_at": "2026-11-18T12:19:39+00:00",
+    "last_checked_at": "2026-11-18T12:19:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Synergy: End-to-end Concept Model"
+  },
+  "processed_at": "2026-11-18T12:19:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c019c31550d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

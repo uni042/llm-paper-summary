@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-344c65b8d8c0ed5d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.03884",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.03884",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2502.03884",
+      "arXiv:2502.03884"
+    ],
+    "reason": "原著一次要旨はHILOを、LoRAアダプタを用いるMoEのファインチューニングで層ごとのexpert数とアダプタrankを調整し、学習可能パラメータ数を抑えつつ下流タスクの精度を改善する手法と説明する。生成推論の実行時間・サービング・KVキャッシュ・実行時メモリを改善する貢献は要旨に示されず、学習専用最適化の凍結範囲に該当する。",
+    "first_checked_at": "2026-11-18T07:47:39+00:00",
+    "last_checked_at": "2026-11-18T12:19:30+00:00",
+    "linked_from": [
+      "Adaptive Expert Computation / Compression",
+      "MoE routing / expert choice / heterogeneous conditional computation",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+    ],
+    "title": "Rank Also Matters: Hierarchical Configuration for Mixture of Adapter Experts in LLM Fine-Tuning"
+  },
+  "processed_at": "2026-11-18T12:19:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-344c65b8d8c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fed8dbb70982d8b-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.03333",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.03333",
+    "identity_tokens": [
+      "arXiv:2508.03333"
+    ],
+    "reason": "原著要旨は単一LLMと単一報酬モデルによるBest-of-N等の限界に対し、複数エージェントと複数報酬モデルを協調させるCTTS-MMを提案。ACSでLLMの組合せを探索し、PRESを使うMoRで報酬モデルを選択する。7ベンチマークでBest-of-N比+4.82%の性能改善を報告するが、トークン数・GPU時間・サービングコスト削減は要旨で示されず、推論品質向上が主目的のためborderline。",
+    "first_checked_at": "2026-11-18T08:08:10+00:00",
+    "last_checked_at": "2026-11-18T12:19:29+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CTTS: Collective Test-Time Scaling"
+  },
+  "processed_at": "2026-11-18T12:19:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fed8dbb7098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

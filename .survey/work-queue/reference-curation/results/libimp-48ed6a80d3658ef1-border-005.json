@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-48ed6a80d3658ef1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:bcb436a91252538ff023130c235220a571061b62",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:bcb436a91252538ff023130c235220a571061b62",
+    "identity_tokens": [
+      "OpenReview:6UurSaf08jx",
+      "SemanticScholar:bcb436a91252538ff023130c235220a571061b62"
+    ],
+    "reason": "著者のOpenReview一次要旨を確認。SubformerはSandwich型パラメータ共有とself-attentive embedding factorization（SAFE）を組み合わせ、機械翻訳・要約・言語モデルでTransformer比40〜70%のパラメータ削減を評価。モデルの保存サイズ・重み共有は推論メモリ効率に関係するが、主要対象は旧世代encoder-decoderの学習とモデル設計で、LLMサービングや推論時間の直接評価がないためborderline。",
+    "first_checked_at": "2026-11-18T12:19:31+00:00",
+    "last_checked_at": "2026-11-18T12:19:31+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 165; identity and title individually verified"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Subformer: A Parameter Reduced Transformer"
+  },
+  "processed_at": "2026-11-18T12:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48ed6a80d365",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

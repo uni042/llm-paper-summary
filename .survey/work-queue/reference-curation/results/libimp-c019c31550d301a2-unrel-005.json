@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c019c31550d301a2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.07854",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.07854",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.07854",
+      "arXiv:2602.07854"
+    ],
+    "reason": "カメラ視線方向をRoPEへ組み込むViewRoPEと幾何的frame-sparse attentionで動画world modelの3D一貫性を改善する。動画生成・幾何保持が対象で、LLM生成推論の効率化は直接評価していない。",
+    "first_checked_at": "2026-11-18T12:19:41+00:00",
+    "last_checked_at": "2026-11-18T12:19:41+00:00",
+    "linked_from": [],
+    "title": "Geometry-Aware Rotary Position Embedding for Consistent Video World Model"
+  },
+  "processed_at": "2026-11-18T12:19:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c019c31550d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

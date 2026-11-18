@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T11:49:16+00:00",
-  "record_count": 12890,
+  "updated_at": "2026-11-18T12:19:44+00:00",
+  "record_count": 12900,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182369,24 +182369,6 @@
       ],
       "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion"
     },
-    "arXiv:2512.14256": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.14256",
-      "identity_tokens": [
-        "arXiv:2512.14256"
-      ],
-      "reason": "ウェハースケールチップ上のLLM訓練向けテンソル分割マッピングTEMP。テンソルストリーム分割とトポロジ配慮マッピングでオンチップメモリ制約を緩和するが、対象は一貫して訓練であり、推論への具体的な適用は要旨に示されていない。学習単独の高速化は凍結範囲。",
-      "first_checked_at": "2026-11-15T21:43:03+00:00",
-      "last_checked_at": "2026-11-15T21:43:03+00:00",
-      "linked_from": [
-        "Ring Attention / sequence parallelism / exact distributed attention",
-        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
-        "serving-scheduling",
-        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
-        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
-      ],
-      "title": "TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips"
-    },
     "arXiv:2605.04956": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.04956",
@@ -182434,21 +182416,6 @@
         "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
       ],
       "title": "Exploiting LLM Quantization"
-    },
-    "arXiv:2603.06577": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.06577",
-      "identity_tokens": [
-        "arXiv:2603.06577"
-      ],
-      "reason": "マスク離散拡散による統合マルチモーダルモデルOmni-Diffusion。テキスト・音声・画像を単一の拡散バックボーンで理解と生成の両方を行うモデルアーキテクチャの提案が中核で、推論効率やサービング機構への貢献は要旨に示されていない。モデル自体の改良であり対象外。",
-      "first_checked_at": "2026-11-15T21:43:10+00:00",
-      "last_checked_at": "2026-11-15T21:43:10+00:00",
-      "linked_from": [
-        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
-        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
-      ],
-      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion"
     },
     "arXiv:2602.01410": {
       "classification": "unrelated",
@@ -182701,9 +182668,9 @@
       "identity_tokens": [
         "arXiv:2609.10549"
       ],
-      "reason": "通信と計算の演算子分解による学習高速化Compass。演算子内融合と演算子間分解の2方式で通信を隠す、GPUクラスタでのLLM学習の最適化。対象は訓練であり、推論機構ではない。対象外。",
+      "reason": "タイトルにLLM trainingと明示され、推論効率ではないためタイトル先行除外。",
       "first_checked_at": "2026-11-18T06:11:57+00:00",
-      "last_checked_at": "2026-11-18T06:11:57+00:00",
+      "last_checked_at": "2026-11-18T12:19:34+00:00",
       "linked_from": [
         "その他システム研究"
       ],
@@ -182794,23 +182761,6 @@
         "sparse attention / long-context Transformer"
       ],
       "title": "Neural Language Generation: Formulation, Methods, and Evaluation"
-    },
-    "arXiv:2205.12476": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2205.12476",
-      "identity_tokens": [
-        "arXiv:2205.12476"
-      ],
-      "reason": "抽象型テキスト要約における局所性の活用。自己注意の二次メモリを避けるため、局所性で分けたページ単位にモデルを適用する初期の要約モデルの研究。LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:12:06+00:00",
-      "last_checked_at": "2026-11-18T06:12:06+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
-        "papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md",
-        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
-      ],
-      "title": "Leveraging Locality in Abstractive Text Summarization"
     },
     "arXiv:2403.16899": {
       "classification": "unrelated",
@@ -182965,11 +182915,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.11111",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.11111",
         "arXiv:2605.11111"
       ],
-      "reason": "科学機械学習向けドメイン並列ShardTensor。バッチサイズ1未満への入力データ分割を一般化する並列化パラダイム。対象は科学計算の学習・推論基盤であり、LLM推論システムではない。対象外。",
+      "reason": "巨大な空間データを複数デバイスへdomain分割する科学機械学習の分散テンソル基盤。学習・推論の拡張性は評価するが、LLMテキスト生成のサービング・KV管理を対象としない。",
       "first_checked_at": "2026-11-18T06:12:13+00:00",
-      "last_checked_at": "2026-11-18T06:12:13+00:00",
+      "last_checked_at": "2026-11-18T12:19:41+00:00",
       "linked_from": [
         "PyTorch 2 torch.compileの設計と評価を報告する論文。",
         "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
@@ -183825,11 +183776,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2406.02013",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.02013",
         "arXiv:2406.02013"
       ],
-      "reason": "意思決定者としてのMamba。オフライン強化学習における多規模系列モデリングの探求。対象は強化学習であり、LLM推論システムの機構ではない。対象外。",
+      "reason": "MambaDMはoffline RLのAtari/Gym行動系列の局所・大域依存を学習する。主指標はRLスコアであり、LLMテキスト生成の推論速度・メモリ最適化ではない。",
       "first_checked_at": "2026-11-18T07:47:38+00:00",
-      "last_checked_at": "2026-11-18T07:47:38+00:00",
+      "last_checked_at": "2026-11-18T12:19:42+00:00",
       "linked_from": [
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
         "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
@@ -183858,11 +183810,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2502.03884",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.03884",
         "arXiv:2502.03884"
       ],
-      "reason": "ランクも重要である：アダプタ専門家の階層構成。LoRAと専門家の混合によるパラメータ効率微調整の研究。対象は微調整であり、推論機構ではない。対象外。",
+      "reason": "原著一次要旨はHILOを、LoRAアダプタを用いるMoEのファインチューニングで層ごとのexpert数とアダプタrankを調整し、学習可能パラメータ数を抑えつつ下流タスクの精度を改善する手法と説明する。生成推論の実行時間・サービング・KVキャッシュ・実行時メモリを改善する貢献は要旨に示されず、学習専用最適化の凍結範囲に該当する。",
       "first_checked_at": "2026-11-18T07:47:39+00:00",
-      "last_checked_at": "2026-11-18T07:47:39+00:00",
+      "last_checked_at": "2026-11-18T12:19:30+00:00",
       "linked_from": [
         "Adaptive Expert Computation / Compression",
         "MoE routing / expert choice / heterogeneous conditional computation",
@@ -184230,21 +184183,6 @@
       ],
       "title": "PHOENIX: Open-Source Language Adaption for Direct Preference Optimization"
     },
-    "arXiv:2407.18601": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2407.18601",
-      "identity_tokens": [
-        "arXiv:2407.18601"
-      ],
-      "reason": "表現力のある注意による注意空間幾何の再編。二乗内積に基づく注意の幾何を研究する理論的論考。対象は注意の理論であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T08:08:20+00:00",
-      "last_checked_at": "2026-11-18T08:08:20+00:00",
-      "linked_from": [
-        "inference-systems",
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
-      ],
-      "title": "Reorganizing attention-space geometry with expressive attention"
-    },
     "arXiv:2506.19761": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2506.19761",
@@ -184481,23 +184419,6 @@
         "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
       ],
       "title": "Bi-directional Recurrence Improves Transformer in Partially Observable Markov Decision Processes"
-    },
-    "arXiv:2507.12769": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2507.12769",
-      "identity_tokens": [
-        "arXiv:2507.12769"
-      ],
-      "reason": "バイトレベルから概念トークンを学習するトークナイザ不要アーキテクチャの能力研究であり、推論システムへの焦点はない。",
-      "first_checked_at": "2026-11-18T08:17:53+00:00",
-      "last_checked_at": "2026-11-18T08:17:53+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
-        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
-        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
-        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
-      ],
-      "title": "Synergy: End-to-end Concept Model"
     },
     "arXiv:2502.12784": {
       "classification": "unrelated",
@@ -184781,9 +184702,9 @@
       "identity_tokens": [
         "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8"
       ],
-      "reason": "タイトルでinsertion-based language modelをゼロから学習する研究と判明。推論サービング・実行時メモリ・デコードカーネルの最適化ではないためタイトル先行除外。",
+      "reason": "タイトルにモデルのfrom-scratch trainingと明示され、推論サービングの最適化は明示されないためタイトル先行除外。",
       "first_checked_at": "2026-11-18T09:48:40+00:00",
-      "last_checked_at": "2026-11-18T09:48:40+00:00",
+      "last_checked_at": "2026-11-18T12:19:35+00:00",
       "linked_from": [],
       "title": "InsNeXt: Training Scalable Insertion-Based Language Models From Scratch"
     },
@@ -184793,9 +184714,9 @@
       "identity_tokens": [
         "DOI:10.1109/hpca56546.2023.10071077"
       ],
-      "reason": "タイトルで対象がmulti-GPUの大規模モデルtrainingとinter-operator parallelismによる学習メモリ削減と判明。推論専用の最終適用が明示されずタイトル先行除外。",
+      "reason": "タイトルにbillion-scale model trainingと明示され、推論サービングではないためタイトル先行除外。",
       "first_checked_at": "2026-11-18T09:48:41+00:00",
-      "last_checked_at": "2026-11-18T09:48:41+00:00",
+      "last_checked_at": "2026-11-18T12:19:35+00:00",
       "linked_from": [],
       "title": "MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism"
     },
@@ -184805,9 +184726,9 @@
       "identity_tokens": [
         "DOI:10.1109/ijcnn64981.2025.11228370"
       ],
-      "reason": "タイトルでdropoutのbitmask化によるtraining高速化が主題と判明。生成LLMの推論・サービング最適化ではないためタイトル先行除外。",
+      "reason": "タイトルにmodel trainingの高速化と明示されLLM推論・サービングではないためタイトル先行除外。",
       "first_checked_at": "2026-11-18T09:48:41+00:00",
-      "last_checked_at": "2026-11-18T09:48:41+00:00",
+      "last_checked_at": "2026-11-18T12:19:36+00:00",
       "linked_from": [],
       "title": "Accelerated Dropout: A Bitmask Approach to Speed Up Model Training"
     },
@@ -185535,6 +185456,208 @@
       "last_checked_at": "2026-11-18T11:49:15+00:00",
       "linked_from": [],
       "title": "QiMeng: Fully Automated Hardware and Software Design for Processor Chip"
+    },
+    "arXiv:2610.41485": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41485",
+      "identity_tokens": [
+        "arXiv:2610.41485"
+      ],
+      "reason": "ImageNet-1K画像分類用の階層的特徴抽出器BDNetを提案し、4段の参照bufferと低rank残差演算で画像分類の頑健性を評価。推論時の演算量がtoken数に線形と説明するが、対象は専用画像分類backboneの設計・精度でありLLM/MLLM推論、KV、GPU serving、量子化・MoEの直接技術を示さないためunrelated。",
+      "first_checked_at": "2026-11-18T12:19:24+00:00",
+      "last_checked_at": "2026-11-18T12:19:24+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "title": "BDNet: Fast-slow thinking is all you need"
+    },
+    "DOI:10.1109/tcad.2024.3443692": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2024.3443692",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3443692"
+      ],
+      "reason": "著者の一次原稿（PMC）要旨。AMD Versal ACAP上で画像認識向けViTのINT8演算、FPGA/AIE協調と演算融合を最適化する。LLMや生成型VLMの推論・KVキャッシュ・サービングは評価対象ではなく、画像ViT専用アクセラレータであるため対象外。",
+      "first_checked_at": "2026-11-18T12:19:26+00:00",
+      "last_checked_at": "2026-11-18T12:19:26+00:00",
+      "linked_from": [],
+      "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture"
+    },
+    "DOI:10.1109/access.2025.3609798": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2025.3609798",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3609798"
+      ],
+      "reason": "IEEE出版社一次要旨。PTQ/QATを併用した汎用エッジAI量子化でJetson、Raspberry Piなどを評価し推論遅延最大31.8%減と報告。対象は自動運転、医療画像、監視、IoT等の汎用AIであり、LLM/VLM生成推論の直接的な検証がないため対象外。",
+      "first_checked_at": "2026-11-18T12:19:26+00:00",
+      "last_checked_at": "2026-11-18T12:19:26+00:00",
+      "linked_from": [],
+      "title": "QuantEdge: A Hybrid Quantization Approach for Optimized AI Deployment Across Edge Devices"
+    },
+    "arXiv:2503.21473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21473",
+      "identity_tokens": [
+        "arXiv:2503.21473"
+      ],
+      "reason": "一次arXiv要旨。Gaussian Processの事前分布サンプリングをニューラル近似で置換し、時空間統計推論の計算量をO(N^3)からO(N^2)に低減。教育貧困の地理統計などを評価し、言語モデルのtoken生成やサービングとは無関係。",
+      "first_checked_at": "2026-11-18T12:19:27+00:00",
+      "last_checked_at": "2026-11-18T12:19:27+00:00",
+      "linked_from": [],
+      "title": "DeepRV: Accelerating Spatiotemporal Inference with Pre-trained Neural Priors"
+    },
+    "arXiv:2505.23701": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23701",
+      "identity_tokens": [
+        "arXiv:2505.23701"
+      ],
+      "reason": "原著要旨はGSM8K・SVAMPで数式の抽象化と算術計算を分離して推論能力を評価し、CoTは主に計算段階を助けると分析する。因果パッチングで表現順序を調べる認知・能力解析であり、デコード高速化、推論メモリ、GPU実行、サービングのシステム最適化を扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T12:19:29+00:00",
+      "last_checked_at": "2026-11-18T12:19:29+00:00",
+      "linked_from": [],
+      "title": "Can LLMs Reason Abstractly Over Math Word Problems Without CoT? Disentangling Abstract Formulation From Arithmetic Computation"
+    },
+    "arXiv:2403.01251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01251",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.01251",
+        "arXiv:2403.01251"
+      ],
+      "reason": "原著一次要旨で、Probe samplingは小型draftモデルと対象LLMの予測類似度に基づいて敵対的プロンプト候補を間引き、GCGによる脱獄攻撃・AutoPrompt・APE・AutoDAN等のプロンプト最適化探索を高速化する方式と確認した。最大5.6倍という値も攻撃プロンプト探索の高速化であり、LLM生成推論のレイテンシ、サービング、KVキャッシュなどのシステム効率を改善する研究ではないため対象外。",
+      "first_checked_at": "2026-11-18T12:19:31+00:00",
+      "last_checked_at": "2026-11-18T12:19:31+00:00",
+      "linked_from": [],
+      "title": "Accelerating Greedy Coordinate Gradient and General Prompt Optimization via Probe Sampling"
+    },
+    "arXiv:2411.08212": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.08212",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2411.08212",
+        "SemanticScholar:9928a2eb9e7d861e71cab7f36c01ac80f8572dcc",
+        "arXiv:2411.08212"
+      ],
+      "reason": "著者のarXiv一次要旨を確認。PERFTはOLMoE-1B-7BとMixtral-8×7BのMoEに、独立ルータを持つLoRA等のパラメータ効率的適応モジュールを組み込み、常識・算術推論タスクへのfine-tuning性能を比較する研究。主たる貢献と評価は学習・適応時のルーティングと性能であり、LLM推論ランタイムの高速化、サービング、KV管理の技術的改善を示さないため、現在凍結されている学習中心範囲としてunrelated。",
+      "first_checked_at": "2026-11-18T12:19:32+00:00",
+      "last_checked_at": "2026-11-18T12:19:32+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 282; MoE / training"
+      ],
+      "title": "PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model"
+    },
+    "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582",
+      "identity_tokens": [
+        "OpenReview:YgvIjdzR4C",
+        "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582"
+      ],
+      "reason": "ICLR 2026投稿のOpenReview一次PDFの要旨を確認。自然な順序を保つmulti-stream sequence learningと、持続的隠れ状態を持つGLRUベースのMemoraを提案し、シャッフルした短い独立チャンクによる学習と比較して連続系列学習の改善を示す。主な貢献は訓練データ提示方法と学習アーキテクチャであり、LLMの推論サービングや実行時カーネル、推論レイテンシの最適化を直接検証しないためunrelated。",
+      "first_checked_at": "2026-11-18T12:19:32+00:00",
+      "last_checked_at": "2026-11-18T12:19:32+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 351; streaming sequence learning"
+      ],
+      "title": "Sequence Learning from Continuous Streams of Data"
+    },
+    "DOI:10.4230/dagrep.14.7.153": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4230/dagrep.14.7.153",
+      "identity_tokens": [
+        "DOI:10.4230/dagrep.14.7.153",
+        "SemanticScholar:f629f105cd08a15ee6020ecec65b9e184327cf14"
+      ],
+      "reason": "Dagstuhl Reportsの公式書誌・要旨を確認。ML全般の資源効率について、データ準備、再学習、アクセラレータ、HW/SW協調設計、低遅延サービングの議論をまとめたセミナー報告。LLM推論・KV管理・量子化・スケジューラ等について新規手法の具体的提案と評価を行う一次研究ではなく、一般的な議論の報告であるためunrelated。",
+      "first_checked_at": "2026-11-18T12:19:33+00:00",
+      "last_checked_at": "2026-11-18T12:19:33+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 67; identity and title individually verified"
+      ],
+      "title": "Resource-Efficient Machine Learning (Dagstuhl Seminar 24311)"
+    },
+    "SemanticScholar:ad63539cb6f200d789a7def3e6a387a1e3d8a0a7": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:ad63539cb6f200d789a7def3e6a387a1e3d8a0a7",
+      "identity_tokens": [
+        "SemanticScholar:ad63539cb6f200d789a7def3e6a387a1e3d8a0a7",
+        "https://mlanthology.org/neuripsw/2024/brown2024neuripsw-llm/"
+      ],
+      "reason": "NeurIPS 2024 SoLaRワークショップ公開要旨を確認。推論効率のためではなく、LLM重みの不正持出しに特化した圧縮と攻撃成功確率を研究し、最大16倍の圧縮により流出時間を短縮できるリスクを報告。主眼はモデル重みのセキュリティと攻撃可能性であり、推論サービング・実行時最適化の対象外としてunrelated。",
+      "first_checked_at": "2026-11-18T12:19:33+00:00",
+      "last_checked_at": "2026-11-18T12:19:33+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 221; identity and title individually verified"
+      ],
+      "title": "How Does LLM Compression Affect Weight Exfiltration Attacks?"
+    },
+    "SemanticScholar:af07b1b454f16ed351c893376c85be11d6dc2b5c": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:af07b1b454f16ed351c893376c85be11d6dc2b5c",
+      "identity_tokens": [
+        "SemanticScholar:af07b1b454f16ed351c893376c85be11d6dc2b5c"
+      ],
+      "reason": "タイトルがspatiotemporal modelingの付録でありLLM推論・サービングを対象としないためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T12:19:34+00:00",
+      "last_checked_at": "2026-11-18T12:19:34+00:00",
+      "linked_from": [],
+      "title": "Appendix for: Convolutional State Space Models for Long-range 651 Spatiotemporal Modeling"
+    },
+    "DOI:10.1145/3767295.3803611": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3767295.3803611",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3803611"
+      ],
+      "reason": "タイトルにpoint cloud neural networksと明示されLLM推論・サービングとは異なるためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T12:19:34+00:00",
+      "last_checked_at": "2026-11-18T12:19:34+00:00",
+      "linked_from": [],
+      "title": "PointShuffler: Accelerating Point Cloud Neural Networks on General-Purpose GPUs"
+    },
+    "arXiv:2602.07854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07854",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.07854",
+        "arXiv:2602.07854"
+      ],
+      "reason": "カメラ視線方向をRoPEへ組み込むViewRoPEと幾何的frame-sparse attentionで動画world modelの3D一貫性を改善する。動画生成・幾何保持が対象で、LLM生成推論の効率化は直接評価していない。",
+      "first_checked_at": "2026-11-18T12:19:41+00:00",
+      "last_checked_at": "2026-11-18T12:19:41+00:00",
+      "linked_from": [],
+      "title": "Geometry-Aware Rotary Position Embedding for Consistent Video World Model"
+    },
+    "arXiv:2604.17104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17104",
+      "identity_tokens": [
+        "SemanticScholar:aae8a1669cc38b76eb9cd911ac82859a7eebf181",
+        "arXiv:2604.17104"
+      ],
+      "reason": "arXiv一次資料のabstract・導入・システム設計によれば、TStore（初期版名TensorHub）はモデルハブ内の多数のfine-tuned LLM等の重みテンソルを対象に、TensorSketchで重複・類似を検出し、TensorPredとFlexSplitで差分圧縮の基底を選択して、モデル保管容量とモデル配布時の圧縮・復元効率を改善するストレージシステムである。2,890モデルの保管量と圧縮・復元帯域を評価するが、推論時のKVキャッシュ、prefill/decode、LLMサービングの実行性能や推論ワークロードの最適化を主題としない。モデルの保管・配布という隣接領域であり、現行推論システムサーベイの直接対象外としてunrelated。本文全体の精読ではなく一次abstractと導入・設計節を確認。",
+      "first_checked_at": "2026-11-18T12:19:43+00:00",
+      "last_checked_at": "2026-11-18T12:19:43+00:00",
+      "linked_from": [],
+      "title": "TStore: Rethinking AI Model Hub with Tensor-Centric Compression"
+    },
+    "arXiv:2310.09436": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.09436",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2310.09436",
+        "arXiv:2310.09436"
+      ],
+      "reason": "原著arXivの要旨によると、異種タスクの継続学習で破滅的忘却を防ぎつつ知識転移を促すため、タスクごとにサブネットワークを発見し、過去の知識を保護するsoft-maskingを用いる。分類・生成・情報抽出のタスクで学習性能を比較する研究であり、LLM推論サービング、KVキャッシュ、推論カーネル、メモリ階層、デコードの効率改善を提案・評価していないため、現在の推論システム技術サーベイではunrelatedと判定。",
+      "first_checked_at": "2026-11-18T12:19:44+00:00",
+      "last_checked_at": "2026-11-18T12:19:44+00:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 500"
+      ],
+      "title": "Sub-network Discovery and Soft-masking for Continual Learning of Mixed Tasks"
     }
   }
 }

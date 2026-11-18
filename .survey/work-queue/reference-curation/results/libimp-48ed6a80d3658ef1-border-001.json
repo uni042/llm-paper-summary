@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-48ed6a80d3658ef1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:15fab62c8afba1b16af81a095cfefb329c100671",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:15fab62c8afba1b16af81a095cfefb329c100671",
+    "identity_tokens": [
+      "SemanticScholar:15fab62c8afba1b16af81a095cfefb329c100671",
+      "https://www.usenix.org/conference/atc25/presentation/bartolomeo"
+    ],
+    "reason": "USENIX ATC 2025の公式要旨を確認。2DFSは機械学習モデルを分割して配布するための二次元ファイルシステムで、OCI互換のbuilder・registry・階層キャッシュを備え、モデル部品の更新とコンテナイメージ再構築を効率化する。14モデルの評価でビルド時間最大56倍、キャッシュ効率最大25倍の改善を報告。ただし主な対象は一般の分散MLモデル配置であり、LLM推論のKVキャッシュ・サービングスケジューラ・生成速度を直接最適化した実証ではないためborderline。",
+    "first_checked_at": "2026-11-18T12:19:31+00:00",
+    "last_checked_at": "2026-11-18T12:19:31+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 278; distributed ML deployment / inference infrastructure"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On-Demand Container Partitioning for Distributed ML"
+  },
+  "processed_at": "2026-11-18T12:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48ed6a80d365",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

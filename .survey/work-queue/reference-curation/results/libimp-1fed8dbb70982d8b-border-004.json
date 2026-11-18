@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fed8dbb70982d8b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.20202",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.20202",
+    "identity_tokens": [
+      "arXiv:2405.20202"
+    ],
+    "reason": "原著要旨は量子化構成ごとの再学習を減らすため、共有重みの干渉を分離しLoRAと非パラメトリックな構成サンプリング調整を組み合わせるonce-for-all量子化LLMを提案。LLaMA2で複数配備条件に向けたモデル生成の準備時間削減を示すが、主要機構は学習時のsupernet最適化で、デコード速度や推論実行メモリの直接改善を確認できないためborderline。",
+    "first_checked_at": "2026-11-18T07:16:36+00:00",
+    "last_checked_at": "2026-11-18T12:19:28+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "One QuantLLM for ALL: Fine-tuning Quantized LLMs Once for Efficient Deployments"
+  },
+  "processed_at": "2026-11-18T12:19:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fed8dbb7098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

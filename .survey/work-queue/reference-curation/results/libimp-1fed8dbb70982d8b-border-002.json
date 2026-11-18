@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fed8dbb70982d8b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.02112",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.02112",
+    "identity_tokens": [
+      "arXiv:2602.02112"
+    ],
+    "reason": "原著要旨はmasked diffusion、自己回帰、block diffusionの生成順序を統一するOeMDMと、順序と拡散モデルを同時学習するLoMDMを提案。評価は言語モデルの生成品質比較が中心で、並列復号の具体的な実行時間、メモリ、サービング改善は要旨で示されない。生成順序の機構は推論設計に関連するが、システム高速化への直接的寄与は未確定のためborderline。",
+    "first_checked_at": "2026-11-18T12:19:28+00:00",
+    "last_checked_at": "2026-11-18T12:19:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Unifying Masked Diffusion Models with Various Generation Orders and Beyond"
+  },
+  "processed_at": "2026-11-18T12:19:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fed8dbb7098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

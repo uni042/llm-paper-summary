@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c019c31550d301a2-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.00686",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.00686",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.00686",
+      "arXiv:2602.00686"
+    ],
+    "reason": "ロボットVLAでCached Token SelectorとCache Ratio Predictorを学習し、再利用する視覚トークンを場面に応じて変える。LIBEROで1.76倍のwall-clock推論高速化を報告するが、主対象は行動生成であり一般のLLM推論への直接評価はない。",
+    "first_checked_at": "2026-11-18T06:12:11+00:00",
+    "last_checked_at": "2026-11-18T12:19:39+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md",
+      "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching"
+  },
+  "processed_at": "2026-11-18T12:19:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c019c31550d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

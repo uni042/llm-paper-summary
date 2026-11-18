@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1fed8dbb70982d8b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.20893",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.20893",
+    "identity_tokens": [
+      "arXiv:2508.20893"
+    ],
+    "reason": "原著要旨では5モデル（1.7B～70B）と55言語を対象に、AWQ、BitsAndBytes、GGUF、AutoRoundの翻訳品質を比較。4ビットでは高資源言語の品質を概ね保つ一方、2ビットでは低資源言語で劣化し、GGUFの頑健性と校正言語の影響を報告する。低ビットLLM配備の精度・校正選択に関係するが、推論カーネル、メモリ管理、サービング速度の新方式を提案していないためborderline。",
+    "first_checked_at": "2026-11-18T12:19:28+00:00",
+    "last_checked_at": "2026-11-18T12:19:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The Uneven Impact of Post-Training Quantization in Machine Translation"
+  },
+  "processed_at": "2026-11-18T12:19:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1fed8dbb7098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-48ed6a80d3658ef1-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:23c569d8cf5e2c4f580c6691871150023011279f",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:23c569d8cf5e2c4f580c6691871150023011279f",
+    "identity_tokens": [
+      "OpenReview:wpK4IMJfdX",
+      "SemanticScholar:23c569d8cf5e2c4f580c6691871150023011279f"
+    ],
+    "reason": "ICLR 2025ワークショップ著者公開一次論文の要旨を確認。Dynasor-CoTは推論途中で回答をprobeし、回答の一貫性を用いて冗長なCoT生成を早期停止するtraining-free手法。数学問題で最大29%の出力トークン削減を報告するが、バッチ化したLLMサービングやGPU実行時間の実測は一次要旨から確認できない。推論トークン予算管理と関連するものの、推論基盤への直接性は限定的なのでborderline。",
+    "first_checked_at": "2026-11-18T12:19:32+00:00",
+    "last_checked_at": "2026-11-18T12:19:32+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 226; identity and title individually verified"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reasoning Without Self-Doubt: More Efficient Chain-of-Thought Through Certainty Probing"
+  },
+  "processed_at": "2026-11-18T12:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48ed6a80d365",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c019c31550d301a2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.11111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.11111",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.11111",
+      "arXiv:2605.11111"
+    ],
+    "reason": "巨大な空間データを複数デバイスへdomain分割する科学機械学習の分散テンソル基盤。学習・推論の拡張性は評価するが、LLMテキスト生成のサービング・KV管理を対象としない。",
+    "first_checked_at": "2026-11-18T06:12:13+00:00",
+    "last_checked_at": "2026-11-18T12:19:41+00:00",
+    "linked_from": [
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "ShardTensor: Domain Parallelism for Scientific Machine Learning"
+  },
+  "processed_at": "2026-11-18T12:19:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c019c31550d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

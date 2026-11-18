@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0f07122c0e10a7a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.09111",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.09111",
+    "identity_tokens": [
+      "SemanticScholar:0f8416693b3fc1bc42166a574328a10decdcaf6b",
+      "arXiv:2411.09111"
+    ],
+    "reason": "推論時CoTの計算削減を目的としたsparse attentionとGiantRabbitの実験であり技術的には近い。一方、arXiv一次要旨の比較対象は外部のo1 Previewで、同一モデル・同一実行基盤の制御比較、実測GPUメモリ/throughput、再現可能な推論性能は要旨から確認できない。一般的な推論エンジン高速化としての証拠が限定的なためborderline。",
+    "first_checked_at": "2026-11-18T12:19:37+00:00",
+    "last_checked_at": "2026-11-18T12:19:37+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 306; inference-early-exit, inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Reducing Reasoning Costs: The Path of Optimization for Chain of Thought via Sparse Attention Mechanism"
+  },
+  "processed_at": "2026-11-18T12:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0f07122c0e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

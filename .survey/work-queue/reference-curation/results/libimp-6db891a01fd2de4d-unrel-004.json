@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6db891a01fd2de4d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8",
+    "identity_tokens": [
+      "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8"
+    ],
+    "reason": "タイトルにモデルのfrom-scratch trainingと明示され、推論サービングの最適化は明示されないためタイトル先行除外。",
+    "first_checked_at": "2026-11-18T09:48:40+00:00",
+    "last_checked_at": "2026-11-18T12:19:35+00:00",
+    "linked_from": [],
+    "title": "InsNeXt: Training Scalable Insertion-Based Language Models From Scratch"
+  },
+  "processed_at": "2026-11-18T12:19:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6db891a01fd2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

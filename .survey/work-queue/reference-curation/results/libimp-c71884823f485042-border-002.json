@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c71884823f485042-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.01663",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.01663",
+    "identity_tokens": [
+      "SemanticScholar:36a0e72c2b0ea3bfefcbc1d6f8bdcf09f8ed569e",
+      "arXiv:2411.01663"
+    ],
+    "reason": "arXivの一次要旨を確認。1ビット重みを持つ2層線形ネットワークの学習ダイナミクスをNeural Tangent Kernelの枠組みで解析し、幅を増やした際の学習損失の収束と全精度ネットワークとの一般化差を理論的に扱う。1-bit LLMを動機とし低精度モデル設計の基礎にはなるが、主要な貢献は学習収束・スケーリング則の証明で、LLM推論ランタイム、カーネル、メモリ使用量や実測サービング速度の改善手法を提示しないためborderline。",
+    "first_checked_at": "2026-11-18T12:19:43+00:00",
+    "last_checked_at": "2026-11-18T12:19:43+00:00",
+    "linked_from": [
+      "WORKLIST-45.md rank 59; SemanticScholar:36a0e72c2b0ea3bfefcbc1d6f8bdcf09f8ed569e"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unlocking the Theory Behind Scaling 1-Bit Neural Networks"
+  },
+  "processed_at": "2026-11-18T12:19:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c71884823f48",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

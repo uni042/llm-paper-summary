@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd581ca908e7b4be-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.13159",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.13159",
+    "identity_tokens": [
+      "arXiv:2609.13159"
+    ],
+    "reason": "llama.cppに対象を限定し、モバイル/edge機器上の小型LLMについて精度、prefill/decode速度、TTFT、メモリ、バッテリーを同一評価系で比較するベンチマーク。推論効率の測定基盤として関連するが、abstractでは新規のKV圧縮・kernel・scheduler等の高速化方式を提案せず、定量的な性能改善値もない。測定・選定の補助研究としてborderline。",
+    "first_checked_at": "2026-11-18T12:19:44+00:00",
+    "last_checked_at": "2026-11-18T12:19:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MobiBench: Benchmarking LLMs for On-Device Performance"
+  },
+  "processed_at": "2026-11-18T12:19:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd581ca908e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

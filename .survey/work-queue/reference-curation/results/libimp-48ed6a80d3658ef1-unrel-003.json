@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-48ed6a80d3658ef1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582",
+    "identity_tokens": [
+      "OpenReview:YgvIjdzR4C",
+      "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582"
+    ],
+    "reason": "ICLR 2026投稿のOpenReview一次PDFの要旨を確認。自然な順序を保つmulti-stream sequence learningと、持続的隠れ状態を持つGLRUベースのMemoraを提案し、シャッフルした短い独立チャンクによる学習と比較して連続系列学習の改善を示す。主な貢献は訓練データ提示方法と学習アーキテクチャであり、LLMの推論サービングや実行時カーネル、推論レイテンシの最適化を直接検証しないためunrelated。",
+    "first_checked_at": "2026-11-18T12:19:32+00:00",
+    "last_checked_at": "2026-11-18T12:19:32+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 351; streaming sequence learning"
+    ],
+    "title": "Sequence Learning from Continuous Streams of Data"
+  },
+  "processed_at": "2026-11-18T12:19:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-48ed6a80d365",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

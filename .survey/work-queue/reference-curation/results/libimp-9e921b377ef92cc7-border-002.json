@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e921b377ef92cc7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.21189",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.21189",
+    "identity_tokens": [
+      "arXiv:2505.21189"
+    ],
+    "reason": "arXiv一次要旨は凍結LLMに2つの学習済み埋込みを与えると、1回の並列forward passで数百トークンを再構成できる現象を実証し、非自己回帰生成の可能性を論じる。ただし任意入力の実用エンコーダや生成サービングの遅延削減は未実装・未評価で、現時点では推論効率の基礎研究として保留。",
+    "first_checked_at": "2026-11-18T07:16:49+00:00",
+    "last_checked_at": "2026-11-18T12:19:37+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Hidden Capacity of LLMs for One-Step Text Generation"
+  },
+  "processed_at": "2026-11-18T12:19:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e921b377ef9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

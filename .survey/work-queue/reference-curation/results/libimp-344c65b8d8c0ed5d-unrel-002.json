@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-344c65b8d8c0ed5d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.01251",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.01251",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.01251",
+      "arXiv:2403.01251"
+    ],
+    "reason": "原著一次要旨で、Probe samplingは小型draftモデルと対象LLMの予測類似度に基づいて敵対的プロンプト候補を間引き、GCGによる脱獄攻撃・AutoPrompt・APE・AutoDAN等のプロンプト最適化探索を高速化する方式と確認した。最大5.6倍という値も攻撃プロンプト探索の高速化であり、LLM生成推論のレイテンシ、サービング、KVキャッシュなどのシステム効率を改善する研究ではないため対象外。",
+    "first_checked_at": "2026-11-18T12:19:31+00:00",
+    "last_checked_at": "2026-11-18T12:19:31+00:00",
+    "linked_from": [],
+    "title": "Accelerating Greedy Coordinate Gradient and General Prompt Optimization via Probe Sampling"
+  },
+  "processed_at": "2026-11-18T12:19:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-344c65b8d8c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

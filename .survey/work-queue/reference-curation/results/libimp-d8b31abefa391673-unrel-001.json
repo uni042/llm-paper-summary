@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8b31abefa391673-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.09436",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.09436",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2310.09436",
+      "arXiv:2310.09436"
+    ],
+    "reason": "原著arXivの要旨によると、異種タスクの継続学習で破滅的忘却を防ぎつつ知識転移を促すため、タスクごとにサブネットワークを発見し、過去の知識を保護するsoft-maskingを用いる。分類・生成・情報抽出のタスクで学習性能を比較する研究であり、LLM推論サービング、KVキャッシュ、推論カーネル、メモリ階層、デコードの効率改善を提案・評価していないため、現在の推論システム技術サーベイではunrelatedと判定。",
+    "first_checked_at": "2026-11-18T12:19:44+00:00",
+    "last_checked_at": "2026-11-18T12:19:44+00:00",
+    "linked_from": [
+      "WORKLIST-45.md rank 500"
+    ],
+    "title": "Sub-network Discovery and Soft-masking for Continual Learning of Mixed Tasks"
+  },
+  "processed_at": "2026-11-18T12:19:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8b31abefa39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

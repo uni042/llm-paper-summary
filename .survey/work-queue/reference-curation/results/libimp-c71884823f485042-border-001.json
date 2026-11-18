@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c71884823f485042-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.52202/085713-5113",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.52202/085713-5113",
+    "identity_tokens": [
+      "DOI:10.52202/085713-5113",
+      "https://proceedings.nips.cc/paper_files/paper/2025/hash/e067d57f9f113dc49dadcfefce1738d6-Abstract-Conference.html"
+    ],
+    "reason": "NeurIPS 2025の公式要旨を確認。VETA-DiTは拡散Transformerのチャネル間分散をKarhunen–Loève変換で均一化し、反復デノイズ中の活性分布の時間変動に応じて量子化が難しい時刻を適応的に校正する。W4A4でDiT-XL/2やPixArt-Σの画像生成品質を評価している。一方、対象は画像・動画生成のDiTであり、自己回帰LLMのデコード速度、KVキャッシュ、サービング効率の直接検証はない。低ビット量子化の周辺技術として関連するが、現行LLM推論サーベイへの直接性は弱いためborderline。",
+    "first_checked_at": "2026-11-18T12:19:42+00:00",
+    "last_checked_at": "2026-11-18T12:19:42+00:00",
+    "linked_from": [
+      "WORKLIST-45.md rank 42"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VETA-DiT: Variance-Equalized and Temporally Adaptive Quantization for Efficient 4-bit Diffusion Transformers"
+  },
+  "processed_at": "2026-11-18T12:19:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c71884823f48",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

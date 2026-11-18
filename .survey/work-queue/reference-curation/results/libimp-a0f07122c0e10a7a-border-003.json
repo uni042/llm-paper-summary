@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0f07122c0e10a7a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133",
+    "identity_tokens": [
+      "ACL:2025.coling-main.575",
+      "SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133"
+    ],
+    "reason": "COLING 2025のACL Anthology一次要旨。Transformer/Mambaへ微分可能なFlashback記憶機構を組み込み、The Pileで次token予測・速度・メモリを評価。ただし学習時の勾配保持問題も主要課題であり、現行LLM推論サービングでの実測高速化は要旨から確認できないためborderline。",
+    "first_checked_at": "2026-11-18T12:19:38+00:00",
+    "last_checked_at": "2026-11-18T12:19:38+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 343; Linear/Recurrent LM / Memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Flashback: Memory Mechanism for Enhancing Memory Efficiency and Speed in Deep Sequential Models"
+  },
+  "processed_at": "2026-11-18T12:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0f07122c0e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
