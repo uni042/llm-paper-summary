@@ -1,0 +1,277 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d20145b099241b95-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d20145b09924",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.19481",
+    "arXiv:2508.17291",
+    "arXiv:2603.00188",
+    "arXiv:2604.00886",
+    "arXiv:2606.13361",
+    "arXiv:2607.12266"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8321407eaf94af7bb5d325859340f0713f573175",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:43:44.333440+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.19481",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.17291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.00188",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/2026.findings-emnlp.455"
+    },
+    {
+      "requested_id": "arXiv:2604.00886",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.00886"
+    },
+    {
+      "requested_id": "arXiv:2606.13361",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.13361"
+    },
+    {
+      "requested_id": "arXiv:2607.12266",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.12266"
+    }
+  ],
+  "results": [
+    {
+      "title": "Win Fast or Lose Slow: Balancing Speed and Accuracy in Latency-Sensitive Decisions of LLMs",
+      "source_url": "https://arxiv.org/abs/2505.19481",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown remarkable performance across diverse reasoning and generation tasks, and are increasingly deployed as agents in dynamic environments such as code generation and recommendation systems. However, many real-world applications, such as high-frequency trading and real-time competitive gaming, require decisions under strict latency constraints, where faster responses directly translate into higher rewards. Despite the importance of this latency quality trade off, it remains underexplored in the context of LLM based agents. In this work, we present the first systematic study of this trade off in real time decision making tasks. To support our investigation, we introduce two new benchmarks: HFTBench, a high frequency trading simulation, and StreetFighter, a competitive gaming platform. Our analysis reveals that optimal latency quality balance varies by task, and that sacrificing quality for lower latency can significantly enhance downstream performance. To address this, we propose FPX, an adaptive framework that dynamically selects model size and quantization level based on real time demands. Our method achieves the best performance on both benchmarks, improving win rate by up to 80% in Street Fighter and boosting daily yield by up to 26.52% in trading, underscoring the need for latency aware evaluation and deployment strategies for LLM based agents. These results demonstrate the critical importance of latency aware evaluation and deployment strategies for real world LLM based agents. Our benchmarks are available at Latency Sensitive Benchmarks.",
+      "identifiers": [
+        "SemanticScholar:c34cee11069f9181e83b8dfc3023b2fb6bac0811"
+      ],
+      "semantic_scholar_id": "c34cee11069f9181e83b8dfc3023b2fb6bac0811",
+      "canonical_id": "arXiv:2505.19481",
+      "arxiv_id": "2505.19481",
+      "doi": "10.48550/arXiv.2505.19481",
+      "authors": [
+        "Hao Kang",
+        "Qingru Zhang",
+        "Han-Yu Cai",
+        "Weiyuan Xu",
+        "Tushar Krishna",
+        "Yi-Lun Du",
+        "T. Weissman"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 541,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Meta-R1: Empowering Large Reasoning Models with Metacognition",
+      "source_url": "https://arxiv.org/abs/2508.17291",
+      "year": 2025,
+      "published": "2025-08-24",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) demonstrate remarkable capabilities on complex tasks, exhibiting emergent, human-like thinking patterns. Despite their advances, we identify a fundamental limitation: current LRMs lack a dedicated meta-level cognitive system-an essential faculty in human cognition that enables\"thinking about thinking\". This absence leaves their emergent abilities uncontrollable (non-adaptive reasoning), unreliable (intermediate error), and inflexible (lack of a clear methodology). To address this gap, we introduce Meta-R1, a systematic and generic framework that endows LRMs with explicit metacognitive capabilities. Drawing on principles from cognitive science, Meta-R1 decomposes the reasoning process into distinct object-level and meta-level components, orchestrating proactive planning, online regulation, and adaptive early stopping within a cascaded framework. Experiments on three challenging benchmarks and against eight competitive baselines demonstrate that Meta-R1 is: (I) high-performing, surpassing state-of-the-art methods by up to 27.3%; (II) token-efficient, reducing token consumption to 15.7% ~ 32.7% and improving efficiency by up to 14.8% when compared to its vanilla counterparts; and (III) transferable, maintaining robust performance across datasets and model backbones.",
+      "identifiers": [
+        "SemanticScholar:45ceb2a9187f2eed46eada2f53ec44ab1475d5ca"
+      ],
+      "semantic_scholar_id": "45ceb2a9187f2eed46eada2f53ec44ab1475d5ca",
+      "canonical_id": "arXiv:2508.17291",
+      "arxiv_id": "2508.17291",
+      "doi": "10.48550/arXiv.2508.17291",
+      "authors": [
+        "Hao-Nan Dong",
+        "Hao-Ran Ye",
+        "Wenhao Zhu",
+        "Ke-Han Jiang",
+        "Guo-Jie Song"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 451,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.19481",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19481",
+        "id:SemanticScholar:c34cee11069f9181e83b8dfc3023b2fb6bac0811",
+        "id:arXiv:2505.19481",
+        "title:win fast or lose slow balancing speed and accuracy in latencysensitive decisions of llms",
+        "url:https://arxiv.org/abs/2505.19481"
+      ],
+      "record": {
+        "title": "Win Fast or Lose Slow: Balancing Speed and Accuracy in Latency-Sensitive Decisions of LLMs",
+        "source_url": "https://arxiv.org/abs/2505.19481",
+        "year": 2025,
+        "published": "2025-05-26",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown remarkable performance across diverse reasoning and generation tasks, and are increasingly deployed as agents in dynamic environments such as code generation and recommendation systems. However, many real-world applications, such as high-frequency trading and real-time competitive gaming, require decisions under strict latency constraints, where faster responses directly translate into higher rewards. Despite the importance of this latency quality trade off, it remains underexplored in the context of LLM based agents. In this work, we present the first systematic study of this trade off in real time decision making tasks. To support our investigation, we introduce two new benchmarks: HFTBench, a high frequency trading simulation, and StreetFighter, a competitive gaming platform. Our analysis reveals that optimal latency quality balance varies by task, and that sacrificing quality for lower latency can significantly enhance downstream performance. To address this, we propose FPX, an adaptive framework that dynamically selects model size and quantization level based on real time demands. Our method achieves the best performance on both benchmarks, improving win rate by up to 80% in Street Fighter and boosting daily yield by up to 26.52% in trading, underscoring the need for latency aware evaluation and deployment strategies for LLM based agents. These results demonstrate the critical importance of latency aware evaluation and deployment strategies for real world LLM based agents. Our benchmarks are available at Latency Sensitive Benchmarks.",
+        "identifiers": [
+          "SemanticScholar:c34cee11069f9181e83b8dfc3023b2fb6bac0811"
+        ],
+        "semantic_scholar_id": "c34cee11069f9181e83b8dfc3023b2fb6bac0811",
+        "canonical_id": "arXiv:2505.19481",
+        "arxiv_id": "2505.19481",
+        "doi": "10.48550/arXiv.2505.19481",
+        "authors": [
+          "Hao Kang",
+          "Qingru Zhang",
+          "Han-Yu Cai",
+          "Weiyuan Xu",
+          "Tushar Krishna",
+          "Yi-Lun Du",
+          "T. Weissman"
+        ],
+        "priority": 32,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 32,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 541,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.17291",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.17291",
+        "id:SemanticScholar:45ceb2a9187f2eed46eada2f53ec44ab1475d5ca",
+        "id:arXiv:2508.17291",
+        "title:metar1 empowering large reasoning models with metacognition",
+        "url:https://arxiv.org/abs/2508.17291"
+      ],
+      "record": {
+        "title": "Meta-R1: Empowering Large Reasoning Models with Metacognition",
+        "source_url": "https://arxiv.org/abs/2508.17291",
+        "year": 2025,
+        "published": "2025-08-24",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) demonstrate remarkable capabilities on complex tasks, exhibiting emergent, human-like thinking patterns. Despite their advances, we identify a fundamental limitation: current LRMs lack a dedicated meta-level cognitive system-an essential faculty in human cognition that enables\"thinking about thinking\". This absence leaves their emergent abilities uncontrollable (non-adaptive reasoning), unreliable (intermediate error), and inflexible (lack of a clear methodology). To address this gap, we introduce Meta-R1, a systematic and generic framework that endows LRMs with explicit metacognitive capabilities. Drawing on principles from cognitive science, Meta-R1 decomposes the reasoning process into distinct object-level and meta-level components, orchestrating proactive planning, online regulation, and adaptive early stopping within a cascaded framework. Experiments on three challenging benchmarks and against eight competitive baselines demonstrate that Meta-R1 is: (I) high-performing, surpassing state-of-the-art methods by up to 27.3%; (II) token-efficient, reducing token consumption to 15.7% ~ 32.7% and improving efficiency by up to 14.8% when compared to its vanilla counterparts; and (III) transferable, maintaining robust performance across datasets and model backbones.",
+        "identifiers": [
+          "SemanticScholar:45ceb2a9187f2eed46eada2f53ec44ab1475d5ca"
+        ],
+        "semantic_scholar_id": "45ceb2a9187f2eed46eada2f53ec44ab1475d5ca",
+        "canonical_id": "arXiv:2508.17291",
+        "arxiv_id": "2508.17291",
+        "doi": "10.48550/arXiv.2508.17291",
+        "authors": [
+          "Hao-Nan Dong",
+          "Hao-Ran Ye",
+          "Wenhao Zhu",
+          "Ke-Han Jiang",
+          "Guo-Jie Song"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 451,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:328f3b8ba3e67d4c338b1c97c00c498cb0e01b9eac919dfc18311d5bcda0c244",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

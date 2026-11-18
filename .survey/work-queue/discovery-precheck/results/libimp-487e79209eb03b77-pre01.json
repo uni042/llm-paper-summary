@@ -1,0 +1,153 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-487e79209eb03b77-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-487e79209eb0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2512.08365"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8321407eaf94af7bb5d325859340f0713f573175",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:43:43.798407+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2512.08365",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Magneton: Optimizing Energy Efficiency of ML Systems via Differential Energy Debugging",
+      "source_url": "https://arxiv.org/abs/2512.08365",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The training and deployment of machine learning (ML) models have become extremely energy-intensive. While existing optimization efforts focus primarily on hardware energy efficiency, a significant but overlooked source of inefficiency is software energy waste caused by poor software design. This often includes redundant or poorly designed operations that consume more energy without improving performance. These inefficiencies arise in widely used ML frameworks and applications, yet developers often lack the visibility and tools to detect and diagnose them. We propose differential energy debugging, a novel approach that leverages the observation that competing ML systems often implement similar functionality with vastly different energy consumption. Building on this insight, we design and implement Magneton, an energy profiler that compares energy consumption between similar ML systems at the operator level and automatically pinpoints code regions and configuration choices responsible for excessive energy use. Applied to 9 popular ML systems spanning LLM inference, general ML frameworks, and image generation, Magneton detects and diagnoses 16 known cases of software energy inefficiency and further discovers 8 previously unknown cases, 7 of which have been confirmed by developers.",
+      "identifiers": [
+        "SemanticScholar:80959f41ee8f7c49b9bbcb0e304cf19ad06e2f57"
+      ],
+      "semantic_scholar_id": "80959f41ee8f7c49b9bbcb0e304cf19ad06e2f57",
+      "canonical_id": "arXiv:2512.08365",
+      "arxiv_id": "2512.08365",
+      "doi": "10.48550/arXiv.2512.08365",
+      "authors": [
+        "Yi Pan",
+        "Wenbo Qian",
+        "Dedong Xie",
+        "Ruiyan Hu",
+        "Yi-Gong Hu",
+        "Baris Kasikci"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 344,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.08365",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.08365",
+        "id:SemanticScholar:80959f41ee8f7c49b9bbcb0e304cf19ad06e2f57",
+        "id:arXiv:2512.08365",
+        "title:magneton optimizing energy efficiency of ml systems via differential energy debugging",
+        "url:https://arxiv.org/abs/2512.08365"
+      ],
+      "record": {
+        "title": "Magneton: Optimizing Energy Efficiency of ML Systems via Differential Energy Debugging",
+        "source_url": "https://arxiv.org/abs/2512.08365",
+        "year": 2025,
+        "published": "2025-12-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The training and deployment of machine learning (ML) models have become extremely energy-intensive. While existing optimization efforts focus primarily on hardware energy efficiency, a significant but overlooked source of inefficiency is software energy waste caused by poor software design. This often includes redundant or poorly designed operations that consume more energy without improving performance. These inefficiencies arise in widely used ML frameworks and applications, yet developers often lack the visibility and tools to detect and diagnose them. We propose differential energy debugging, a novel approach that leverages the observation that competing ML systems often implement similar functionality with vastly different energy consumption. Building on this insight, we design and implement Magneton, an energy profiler that compares energy consumption between similar ML systems at the operator level and automatically pinpoints code regions and configuration choices responsible for excessive energy use. Applied to 9 popular ML systems spanning LLM inference, general ML frameworks, and image generation, Magneton detects and diagnoses 16 known cases of software energy inefficiency and further discovers 8 previously unknown cases, 7 of which have been confirmed by developers.",
+        "identifiers": [
+          "SemanticScholar:80959f41ee8f7c49b9bbcb0e304cf19ad06e2f57"
+        ],
+        "semantic_scholar_id": "80959f41ee8f7c49b9bbcb0e304cf19ad06e2f57",
+        "canonical_id": "arXiv:2512.08365",
+        "arxiv_id": "2512.08365",
+        "doi": "10.48550/arXiv.2512.08365",
+        "authors": [
+          "Yi Pan",
+          "Wenbo Qian",
+          "Dedong Xie",
+          "Ruiyan Hu",
+          "Yi-Gong Hu",
+          "Baris Kasikci"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 344,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6f43b39b2395103e2cc3597dbbae7ed16b5e82f7f7e9650a9fb6b1fc6ff274e7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,303 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-eb84374b8332711e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-eb84374b8332",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.03599",
+    "arXiv:2603.17946",
+    "arXiv:2605.06052",
+    "arXiv:2608.01185",
+    "arXiv:2608.15008",
+    "arXiv:2609.01925",
+    "arXiv:2609.11998",
+    "arXiv:2609.30950"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8321407eaf94af7bb5d325859340f0713f573175",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:44:15.270982+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.03599",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2412.03599"
+    },
+    {
+      "requested_id": "arXiv:2603.17946",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.17946"
+    },
+    {
+      "requested_id": "arXiv:2605.06052",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/isca66397.2026.00177"
+    },
+    {
+      "requested_id": "arXiv:2608.01185",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.15008",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.01925",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/2026.emnlp-main.184"
+    },
+    {
+      "requested_id": "arXiv:2609.11998",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.11998"
+    },
+    {
+      "requested_id": "arXiv:2609.30950",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.30950"
+    }
+  ],
+  "results": [
+    {
+      "title": "Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents",
+      "source_url": "https://arxiv.org/abs/2608.15008",
+      "year": 2026,
+      "published": "2026-08-15",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Memory is becoming core infrastructure for long-horizon LLM agents, yet existing evaluations offer limited guidance on which memory substrate, namely the underlying medium in which memory is represented and stored, should be used under different operating regimes. We introduce a unified suite of 26 performance and efficiency metrics, including auxiliary-LLM costs attributed to the write, read, and management stages, and apply it identically to 11 memory methods in a controlled harness that varies only the memory substrate. The methods cover dense and sparse indices, text records, structural stores, hierarchical stores, refinement-based memories, parametric updates, and activation-compatible context mechanisms, and we evaluate them with three backbone models on four benchmark suites spanning user-centric question answering and agent-centric decision-making. Our results show that no single substrate consistently dominates: broad retrieval benefits long-context factual QA, while excessive retrieval can harm sequential decision-making by shifting attention away from action-critical context. Scalability introduces a further routing axis, as substrates that perform well at moderate history lengths can become costly or brittle at longer horizons. These regime-dependent reversals make substrate selection a design axis. Choosing a substrate per observable operating regime improves over the best fixed substrate on our benchmarks, while query-level routing leaves most of the oracle headroom open. The findings provide empirical guidance for designing efficient, reliable, and regime-aware long-term memory for LLM agents.",
+      "identifiers": [
+        "SemanticScholar:188e4015ea1a4efcd7015ef6071a24bcf8a27a13"
+      ],
+      "semantic_scholar_id": "188e4015ea1a4efcd7015ef6071a24bcf8a27a13",
+      "canonical_id": "arXiv:2608.15008",
+      "arxiv_id": "2608.15008",
+      "doi": "10.48550/arXiv.2608.15008",
+      "authors": [
+        "Wei-Chieh Huang",
+        "Wei-Zhi Zhang",
+        "Yu-Chen Wu",
+        "Yan-Kai Chen",
+        "E. Jiang",
+        "Wooseong Yang",
+        "Yiwei Yang",
+        "Henry Peng Zou",
+        "Han-Rong Zhang",
+        "Ying-Nian Wu",
+        "Hao-Lun Wu",
+        "Kai-Wei Chang",
+        "Philip S. Yu",
+        "Xue Liu",
+        "Aylin Caliskan"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 95,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "3DZip: Spatial-Aware Feature Diversity-Guided Token Compression for 3D Question Answering",
+      "source_url": "https://arxiv.org/abs/2608.01185",
+      "year": 2026,
+      "published": "2026-08-02",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent 3D vision-language models (3D VLMs) construct geometry aware tokens by projecting 2D visual features into world coordinates, enabling spatial reasoning for tasks such as 3D question answering. However, this design generates thousands of tokens per scene, resulting in substantial computational and memory overhead. While token compression has been extensively studied in 2D VLMs, existing approaches rely on semantic relevance or attention-based selection that overlook the structured spatial nature of 3D tokens. Moreover, redundancy in 3D representations cannot be resolved by spatial proximity alone, as object-level token imbalance persists even after spatial aggregation. To address this, we propose 3DZip, a three-stage token compression framework that first applies coarse voxelization to remove point-level redundancy, then selects anchor tokens based on feature-space diversity via a Determinantal Point Process, and finally merges remaining tokens under spatial constraints to preserve geometric coherence. Experiments on three 3D question answering benchmarks demonstrate that 3DZip consistently outperforms existing compression methods, retaining 94.7% of the original performance with only 128 tokens, achieving a $1.92\\times$ faster inference speed.",
+      "identifiers": [
+        "SemanticScholar:511ada5e588e600b0f00a27dbc493863b4b74e23"
+      ],
+      "semantic_scholar_id": "511ada5e588e600b0f00a27dbc493863b4b74e23",
+      "canonical_id": "arXiv:2608.01185",
+      "arxiv_id": "2608.01185",
+      "doi": "10.1007/978-3-032-37321-2_25",
+      "authors": [
+        "Changwoo Baek",
+        "Kyeongbo Kong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 108,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.15008",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.15008",
+        "id:SemanticScholar:188e4015ea1a4efcd7015ef6071a24bcf8a27a13",
+        "id:arXiv:2608.15008",
+        "title:harness the memory a holistic evaluation of memory substrates in memory agents",
+        "url:https://arxiv.org/abs/2608.15008"
+      ],
+      "record": {
+        "title": "Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents",
+        "source_url": "https://arxiv.org/abs/2608.15008",
+        "year": 2026,
+        "published": "2026-08-15",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Memory is becoming core infrastructure for long-horizon LLM agents, yet existing evaluations offer limited guidance on which memory substrate, namely the underlying medium in which memory is represented and stored, should be used under different operating regimes. We introduce a unified suite of 26 performance and efficiency metrics, including auxiliary-LLM costs attributed to the write, read, and management stages, and apply it identically to 11 memory methods in a controlled harness that varies only the memory substrate. The methods cover dense and sparse indices, text records, structural stores, hierarchical stores, refinement-based memories, parametric updates, and activation-compatible context mechanisms, and we evaluate them with three backbone models on four benchmark suites spanning user-centric question answering and agent-centric decision-making. Our results show that no single substrate consistently dominates: broad retrieval benefits long-context factual QA, while excessive retrieval can harm sequential decision-making by shifting attention away from action-critical context. Scalability introduces a further routing axis, as substrates that perform well at moderate history lengths can become costly or brittle at longer horizons. These regime-dependent reversals make substrate selection a design axis. Choosing a substrate per observable operating regime improves over the best fixed substrate on our benchmarks, while query-level routing leaves most of the oracle headroom open. The findings provide empirical guidance for designing efficient, reliable, and regime-aware long-term memory for LLM agents.",
+        "identifiers": [
+          "SemanticScholar:188e4015ea1a4efcd7015ef6071a24bcf8a27a13"
+        ],
+        "semantic_scholar_id": "188e4015ea1a4efcd7015ef6071a24bcf8a27a13",
+        "canonical_id": "arXiv:2608.15008",
+        "arxiv_id": "2608.15008",
+        "doi": "10.48550/arXiv.2608.15008",
+        "authors": [
+          "Wei-Chieh Huang",
+          "Wei-Zhi Zhang",
+          "Yu-Chen Wu",
+          "Yan-Kai Chen",
+          "E. Jiang",
+          "Wooseong Yang",
+          "Yiwei Yang",
+          "Henry Peng Zou",
+          "Han-Rong Zhang",
+          "Ying-Nian Wu",
+          "Hao-Lun Wu",
+          "Kai-Wei Chang",
+          "Philip S. Yu",
+          "Xue Liu",
+          "Aylin Caliskan"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 95,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01185",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-37321-2_25",
+        "id:SemanticScholar:511ada5e588e600b0f00a27dbc493863b4b74e23",
+        "id:arXiv:2608.01185",
+        "title:3dzip spatialaware feature diversityguided token compression for 3d question answering",
+        "url:https://arxiv.org/abs/2608.01185"
+      ],
+      "record": {
+        "title": "3DZip: Spatial-Aware Feature Diversity-Guided Token Compression for 3D Question Answering",
+        "source_url": "https://arxiv.org/abs/2608.01185",
+        "year": 2026,
+        "published": "2026-08-02",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent 3D vision-language models (3D VLMs) construct geometry aware tokens by projecting 2D visual features into world coordinates, enabling spatial reasoning for tasks such as 3D question answering. However, this design generates thousands of tokens per scene, resulting in substantial computational and memory overhead. While token compression has been extensively studied in 2D VLMs, existing approaches rely on semantic relevance or attention-based selection that overlook the structured spatial nature of 3D tokens. Moreover, redundancy in 3D representations cannot be resolved by spatial proximity alone, as object-level token imbalance persists even after spatial aggregation. To address this, we propose 3DZip, a three-stage token compression framework that first applies coarse voxelization to remove point-level redundancy, then selects anchor tokens based on feature-space diversity via a Determinantal Point Process, and finally merges remaining tokens under spatial constraints to preserve geometric coherence. Experiments on three 3D question answering benchmarks demonstrate that 3DZip consistently outperforms existing compression methods, retaining 94.7% of the original performance with only 128 tokens, achieving a $1.92\\times$ faster inference speed.",
+        "identifiers": [
+          "SemanticScholar:511ada5e588e600b0f00a27dbc493863b4b74e23"
+        ],
+        "semantic_scholar_id": "511ada5e588e600b0f00a27dbc493863b4b74e23",
+        "canonical_id": "arXiv:2608.01185",
+        "arxiv_id": "2608.01185",
+        "doi": "10.1007/978-3-032-37321-2_25",
+        "authors": [
+          "Changwoo Baek",
+          "Kyeongbo Kong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 108,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1b9e02c04142ceb1a7f5ca8514a9f8683b5bd87fce7d859854ec76f03866722e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

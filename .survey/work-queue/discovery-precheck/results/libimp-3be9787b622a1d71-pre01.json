@@ -1,0 +1,345 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3be9787b622a1d71-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3be9787b622a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.13474",
+    "arXiv:2610.20136",
+    "arXiv:2610.20637",
+    "arXiv:2610.25519",
+    "arXiv:2610.32279"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8321407eaf94af7bb5d325859340f0713f573175",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T13:44:14.554336+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.13474",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20136",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:64895dce4c3ce5829f06a99220b82e54e81de893"
+    },
+    {
+      "requested_id": "arXiv:2610.20637",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25519",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2610.32279",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States",
+      "source_url": "https://arxiv.org/abs/2610.20637",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We expand the exponential kernel of attention into a truncated Taylor series of $n$ terms and factorize each term into a tensor-power inner product, which collapses the causal history into exactly $n$ recurrent states, each updated by one rank-one outer product per token and independent of context length $N$. The recursion is lossless with respect to the truncated kernel ($2.2 \\times 10^{-16}$ in float64), and the states are additive across chunks ($5.7 \\times 10^{-14}$), so prefill admits a parallel scan. Measured exponents are $t \\propto N^{2.28}$ for softmax against $N^{0.91}$ for states, with a crossover at $N \\approx 728$ and $20.8\\times$ at $N = 8192$; per-token decoding latency is constant at $7.3\\,\\mu$s against $N^{1.04}$ for softmax, giving $76.0\\times$ at $N = 65536$. Accuracy improves exponentially in $n$ while cost grows combinatorially, since the $m$-th state is $\\binom{d+m-1}{m}$ wide---a bound confirmed by SVD---so the optimum is second order, $n = 3$, at $6.5 \\times 10^{-4}$ error and $9{,}945$ elements per head. Query and key normalization is a prerequisite: without it the argument exceeds the convergence radius and adding terms stops helping.",
+      "identifiers": [
+        "SemanticScholar:ecd7d3f965bde6839247afda372140cf66ad982d"
+      ],
+      "semantic_scholar_id": "ecd7d3f965bde6839247afda372140cf66ad982d",
+      "canonical_id": "arXiv:2610.20637",
+      "arxiv_id": "2610.20637",
+      "authors": [
+        "Zi-Cong Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking",
+      "source_url": "https://arxiv.org/abs/2610.13474",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern attention workloads require diverse masking patterns whose boundaries depend on runtime metadata, yet efficient attention kernels natively support only a small set of patterns. Existing methods for supporting custom masks in these kernels face an expressiveness-efficiency trade-off. Predicate-based methods are expressive but incur substantial preprocessing and execution overhead, whereas interval-based methods execute efficiently but restrict expressiveness through a predefined interval count. We present CompileMask, which addresses this trade-off by connecting expressive mask specifications with efficient attention execution. We design a compiler that analyzes visibility rules during the offline stage and generates a mask-specific preprocess kernel. We further propose MaskSpec, a region-based DSL that lets users express these rules. During the online stage, the generated kernel reads batch metadata and produces a compact Execution Descriptor that lets the attention kernel efficiently check visibility by comparing element indices against precomputed endpoints. Experiments show that CompileMask achieves up to $3.8\\times$ speedup over state-of-the-art methods.",
+      "identifiers": [
+        "SemanticScholar:c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac"
+      ],
+      "semantic_scholar_id": "c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac",
+      "canonical_id": "arXiv:2610.13474",
+      "arxiv_id": "2610.13474",
+      "authors": [
+        "Hong-Zheng Li",
+        "Jia-Cheng Wan",
+        "Z. Xing",
+        "Zhi-Da Jiang",
+        "Yuan-Hang Yang",
+        "J. Shu",
+        "Jia-Xing Wang",
+        "Xu-Peng Miao",
+        "Ying-Xia Shao",
+        "Zhen Chen",
+        "Ke Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
+      "source_url": "https://arxiv.org/abs/2610.32279",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale Transformers have achieved remarkable success across NLP, computer vision, and robotics, but their growing computational and memory demands challenge efficient inference. Spatial accelerators offer advantages in on-chip bandwidth and energy efficiency, yet designing them for large models remains costly and time-consuming. Existing accelerator generators typically focus on single-operation support, overlooking the benefits of multi-operation pipelining, which limits throughput and energy efficiency. We propose TranSAGE, a compiler-based framework that jointly optimizes scheduling for large-scale transformers under multi-operation pipelining and generates corresponding accelerator implementations. Our approach integrates a DSE engine with multi-operation dataflow optimization and a dynamic programming-based graph partitioning algorithm to efficiently identify pipeline-friendly operation clusters and their optimal dataflow parameters. We further design spatial architecture primitives and lowering passes to automatically generate efficient RTL implementations. Evaluations on four representative LLMs demonstrate that TranSAGE achieves up to 2.41× higher throughput and 13.04× higher energy efficiency over commercial GPU/NPU baselines. Compared with state-of-the-art accelerator generators, TranSAGE achieves up to 11.33× higher throughput and 6.07× higher energy efficiency. Our code is available at https://github.com/sjtu-zhao-lab/TranSAGE.git.",
+      "identifiers": [
+        "SemanticScholar:677e510cd193857260c81ef53692c2bc662ec4f3"
+      ],
+      "semantic_scholar_id": "677e510cd193857260c81ef53692c2bc662ec4f3",
+      "canonical_id": "arXiv:2610.32279",
+      "arxiv_id": "2610.32279",
+      "doi": "10.1145/3845814.3850039",
+      "authors": [
+        "Chi Zhang",
+        "Yi Sun",
+        "Wei-Chuang Zhang",
+        "Quan Chen",
+        "Jie-Ru Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.20637",
+      "identity_tokens": [
+        "id:SemanticScholar:ecd7d3f965bde6839247afda372140cf66ad982d",
+        "id:arXiv:2610.20637",
+        "title:expanding attention a taylorseries route to lineartime transformers with a fixed number of recurrent states",
+        "url:https://arxiv.org/abs/2610.20637"
+      ],
+      "record": {
+        "title": "Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States",
+        "source_url": "https://arxiv.org/abs/2610.20637",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We expand the exponential kernel of attention into a truncated Taylor series of $n$ terms and factorize each term into a tensor-power inner product, which collapses the causal history into exactly $n$ recurrent states, each updated by one rank-one outer product per token and independent of context length $N$. The recursion is lossless with respect to the truncated kernel ($2.2 \\times 10^{-16}$ in float64), and the states are additive across chunks ($5.7 \\times 10^{-14}$), so prefill admits a parallel scan. Measured exponents are $t \\propto N^{2.28}$ for softmax against $N^{0.91}$ for states, with a crossover at $N \\approx 728$ and $20.8\\times$ at $N = 8192$; per-token decoding latency is constant at $7.3\\,\\mu$s against $N^{1.04}$ for softmax, giving $76.0\\times$ at $N = 65536$. Accuracy improves exponentially in $n$ while cost grows combinatorially, since the $m$-th state is $\\binom{d+m-1}{m}$ wide---a bound confirmed by SVD---so the optimum is second order, $n = 3$, at $6.5 \\times 10^{-4}$ error and $9{,}945$ elements per head. Query and key normalization is a prerequisite: without it the argument exceeds the convergence radius and adding terms stops helping.",
+        "identifiers": [
+          "SemanticScholar:ecd7d3f965bde6839247afda372140cf66ad982d"
+        ],
+        "semantic_scholar_id": "ecd7d3f965bde6839247afda372140cf66ad982d",
+        "canonical_id": "arXiv:2610.20637",
+        "arxiv_id": "2610.20637",
+        "authors": [
+          "Zi-Cong Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.13474",
+      "identity_tokens": [
+        "id:SemanticScholar:c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac",
+        "id:arXiv:2610.13474",
+        "title:compilemask bridging the gap between expressiveness and efficiency in attention masking",
+        "url:https://arxiv.org/abs/2610.13474"
+      ],
+      "record": {
+        "title": "CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking",
+        "source_url": "https://arxiv.org/abs/2610.13474",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern attention workloads require diverse masking patterns whose boundaries depend on runtime metadata, yet efficient attention kernels natively support only a small set of patterns. Existing methods for supporting custom masks in these kernels face an expressiveness-efficiency trade-off. Predicate-based methods are expressive but incur substantial preprocessing and execution overhead, whereas interval-based methods execute efficiently but restrict expressiveness through a predefined interval count. We present CompileMask, which addresses this trade-off by connecting expressive mask specifications with efficient attention execution. We design a compiler that analyzes visibility rules during the offline stage and generates a mask-specific preprocess kernel. We further propose MaskSpec, a region-based DSL that lets users express these rules. During the online stage, the generated kernel reads batch metadata and produces a compact Execution Descriptor that lets the attention kernel efficiently check visibility by comparing element indices against precomputed endpoints. Experiments show that CompileMask achieves up to $3.8\\times$ speedup over state-of-the-art methods.",
+        "identifiers": [
+          "SemanticScholar:c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac"
+        ],
+        "semantic_scholar_id": "c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac",
+        "canonical_id": "arXiv:2610.13474",
+        "arxiv_id": "2610.13474",
+        "authors": [
+          "Hong-Zheng Li",
+          "Jia-Cheng Wan",
+          "Z. Xing",
+          "Zhi-Da Jiang",
+          "Yuan-Hang Yang",
+          "J. Shu",
+          "Jia-Xing Wang",
+          "Xu-Peng Miao",
+          "Ying-Xia Shao",
+          "Zhen Chen",
+          "Ke Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.32279",
+      "identity_tokens": [
+        "id:DOI:10.1145/3845814.3850039",
+        "id:SemanticScholar:677e510cd193857260c81ef53692c2bc662ec4f3",
+        "id:arXiv:2610.32279",
+        "title:transage automating spatial accelerator generation for largescale transformer models",
+        "url:https://arxiv.org/abs/2610.32279"
+      ],
+      "record": {
+        "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
+        "source_url": "https://arxiv.org/abs/2610.32279",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale Transformers have achieved remarkable success across NLP, computer vision, and robotics, but their growing computational and memory demands challenge efficient inference. Spatial accelerators offer advantages in on-chip bandwidth and energy efficiency, yet designing them for large models remains costly and time-consuming. Existing accelerator generators typically focus on single-operation support, overlooking the benefits of multi-operation pipelining, which limits throughput and energy efficiency. We propose TranSAGE, a compiler-based framework that jointly optimizes scheduling for large-scale transformers under multi-operation pipelining and generates corresponding accelerator implementations. Our approach integrates a DSE engine with multi-operation dataflow optimization and a dynamic programming-based graph partitioning algorithm to efficiently identify pipeline-friendly operation clusters and their optimal dataflow parameters. We further design spatial architecture primitives and lowering passes to automatically generate efficient RTL implementations. Evaluations on four representative LLMs demonstrate that TranSAGE achieves up to 2.41× higher throughput and 13.04× higher energy efficiency over commercial GPU/NPU baselines. Compared with state-of-the-art accelerator generators, TranSAGE achieves up to 11.33× higher throughput and 6.07× higher energy efficiency. Our code is available at https://github.com/sjtu-zhao-lab/TranSAGE.git.",
+        "identifiers": [
+          "SemanticScholar:677e510cd193857260c81ef53692c2bc662ec4f3"
+        ],
+        "semantic_scholar_id": "677e510cd193857260c81ef53692c2bc662ec4f3",
+        "canonical_id": "arXiv:2610.32279",
+        "arxiv_id": "2610.32279",
+        "doi": "10.1145/3845814.3850039",
+        "authors": [
+          "Chi Zhang",
+          "Yi Sun",
+          "Wei-Chuang Zhang",
+          "Quan Chen",
+          "Jie-Ru Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:85c7d1d1c3dbfe8feee31e37fd5fa4e27ca334406b4ddeada892ad68843f0c95",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
