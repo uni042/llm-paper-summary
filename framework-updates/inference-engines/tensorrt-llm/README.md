@@ -40,6 +40,14 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 主要更新
 
+### 2026-11-18 — TensorRT-LLM v1.4.0rc4（公開候補版）
+
+- 新モデル: Apertus / Apertus 1.5、GLM-5.2 NVFP4 Modeling V2（Rubin向けhigh-throughput / low-latency target）、GLM-5.3-Flash NVFP4 Modeling V2（SM100 / SM120、sparse attention）、MiniMax-M3 NVFP4 low-latency decode（Rubin）、Qwen3.8-Flash-Next NVFP4 Modeling V2（GB300並列構成）、native Qwen3 reranking、Muse Spark Open serving、FastH3等。
+- KV cache: KV cache manager V2でDeepSeek-V4 Flash / GLM-5.2向けsparse KV offloadを追加。mixed-precision KV cacheを投機的デコード・sparse MLA・cold-page圧縮へ拡張し、DSpark / DFlashのKV cache統一と共有drafter KV pool、SSD offload最適化も含む。
+- **BREAKING**: checkpoint I/O policyとcheckpoint formatをstring enumへ変更。**非推奨化**: KV cache manager V1とC++ cache transceiver（1.4でdeprecated、移行期間は3か月）。Modeling V2のLLM引数はデフォルトがautoへ変更。
+- Known Issuesとして、DeepSeek-R1 FP4のdisaggregated serving（B300、CUDA graphs使用時）での誤出力可能性、GLM-5.2 NVFP4 SM103 TP8の初期化失敗、Kimi K3 NVFP4 KV cacheの初期化失敗、Qwen3.8-Flash-Next FP8（PLE offloading等併用時）の初期化失敗等が明記されている。release notes内に公式benchmark数値の記載はない。
+- [公式release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc4)
+
 ### 2026-11-07 — TensorRT-LLM v1.4.0rc3（公開候補版）
 
 - 新モデル: Muse Spark Open、GLM-5.2 NVFP4 Modeling V2（GB300 / SM103）、MiniMax-M3 NVFP4 low-latency decode（Blackwell）、MiniMax-M3.1-Flash DSpark、Kimi K3 native modeling統合＋NVFP4 KV cache、DeepSeek-V4.1-Flash on SM120、LTX-2.3等。

@@ -14,6 +14,13 @@ vLLM-Omniの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-11-18 — vLLM-Omni v0.34.0rc1（公開候補版）
+
+- upstream vLLM 0.34.0への整合を目的とする初のRC。AR / generation stageでModelRunner V2が必須となり、Python 3.11〜3.13とvLLM 0.34.0の一致が必要。
+- 新モデル: Haru-4B（speech-to-speech）、MiniMax-H3-Image（画像生成・編集）、PAN2（video生成）。duplex stage間のsession-aware routing、Qwen3-Omni duplex session向けMooncake KV / hidden-state cachingを追加。MiniCPM-o 4.5でCUDA V2 K-step decodingを有効化し、MOSS-TTS-Nano / MOSS-TTS-RealtimeをV2へ移行。
+- **互換性（breaking的変更）**: 旧Omni V1 runnerを選択するworkflowは拒否される（Drama 3 / Fish-Omni、LFM3-Omni、PersonaPlex、YuE2、Qwen3-TTS / Qwen3-OmniのROCm・MUSA override等）。Kokoro-82MとJoyAI-Image-Editは廃止。ネイティブvLLM 0.34のAscend実行は未検証と明記されている。
+- [公式release](https://github.com/vllm-project/vllm-omni/releases/tag/v0.34.0rc1)
+
 ### 2026-11-04 — vLLM-Omni v0.33.0rc1（公開候補版）
 
 - upstream vLLM 0.33.0（正式版）への整合を目的とするRC。runtime integration、依存更新、インストール手順、upgrade-validation修正が中心で、release notesに新モデル・benchmark・breaking changeの記載はない。

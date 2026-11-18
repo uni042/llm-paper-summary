@@ -3,7 +3,7 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-11-18**
+- リリース情報の最終確認: **2026-11-19**
 - 用語・可読性の最終監査: **2026-09-07**
 
 2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。
@@ -28,6 +28,8 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 | リリース日 | モデル | 系統 | 概要 | 詳細 |
 |---|---|---|---|---|
+| 2026-11-18 | Gemini 4 Neon | Gemini | Gemini 4世代の新モデル。最大1M-token context、入力$3 / 出力$15。複雑なcoding・分析・科学workflow向けで、高速なtask完了を重視。 | [Gemini系](gemini.md) |
+| 2026-11-17 | Microsoft MAIモデル群 | Microsoft MAI | Ignite 2026で7モデルを発表。MAI Code 2 / Code 2 FlashとDecision 1.1が一般提供。数値はMicrosoft報告値。 | [Microsoft MAI系](microsoft-mai.md) |
 | 2026-11-17 | GPT-6.2 Astra / Sol | OpenAI GPT | GPT-6世代の更新。Astraは入力$8 / 出力$40へ20%値下げし、ChatGPT Work / CodexとAPIで提供（通常のChatには追加されない）。最大1,050,000-token context。 | [OpenAI GPT系](openai-gpt.md) |
 | 2026-11-16 | Qwen4-Max | Qwen | Qwen4世代flagshipの一般提供。最大1M-token context、text / image / video入力。重み非公開・fine-tuning不可のAPI専用。 | [Qwen系](qwen.md) |
 | 2026-11-16 | Liquid AI d1.2 / d1.2-ultra | Liquid AI | 判断モデルの新版。音声入力と新task 5種を追加したhostedモデル（重み非公開）。旧d1系は非推奨化。 | [Liquid AI系](liquid-ai.md) |
