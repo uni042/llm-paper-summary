@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-11-17T23:44:15+00:00",
+  "generated_at": "2026-11-18T00:05:32+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,35 +12,8 @@
     ],
     "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id"
   },
-  "count": 18,
+  "count": 14,
   "entries": [
-    {
-      "canonical_id": "arXiv:2605.06850",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2605.06850",
-      "returned_at": "2026-10-20T10:57:45+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 145 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5359,
-        "body_paragraphs": 31,
-        "method_chars": 1724,
-        "method_paragraphs": 10,
-        "evaluation_chars": 145,
-        "limitation_chars": 486,
-        "insufficiency_flags": [
-          "評価説明量 145 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-schedu.json",
-      "worker_run_key": "20261020-1655-scheduled-chat-00/r01"
-    },
     {
       "canonical_id": "DOI:10.1145/3725338",
       "title": null,
@@ -262,33 +235,6 @@
       "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2601.14277",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2601.14277",
-      "returned_at": "2026-10-30T03:22:54+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5949,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1661,
-        "limitation_chars": 820,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a741243f8a93--libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a741243f8a93--libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-ch.json",
-      "worker_run_key": "20261030-0630-scheduled-chat-30/r02"
-    },
-    {
       "canonical_id": "arXiv:2510.19498",
       "title": null,
       "source_url": "https://arxiv.org/abs/2510.19498",
@@ -399,62 +345,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20d7bcb2518d--libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-20d7bcb2518d--libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.json",
       "worker_run_key": "20261030-1332-scheduled-chat-30/r02"
-    },
-    {
-      "canonical_id": "arXiv:2609.32759",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2609.32759",
-      "returned_at": "2026-10-30T09:39:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6918,
-        "body_paragraphs": 49,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1878,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled-chat-30-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled.json",
-      "worker_run_key": "20261030-1332-scheduled-chat-30/r02"
-    },
-    {
-      "canonical_id": "arXiv:2604.07173",
-      "title": null,
-      "source_url": "https://arxiv.org/abs/2604.07173",
-      "returned_at": "2026-10-30T09:48:00+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9811,
-        "body_paragraphs": 58,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 651,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bcbddf51d83b--libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-bcbddf51d83b--libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-schedu.json",
-      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",

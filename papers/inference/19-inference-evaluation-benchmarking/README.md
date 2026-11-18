@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（117本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -277,6 +277,10 @@
 - **2026-02 · [On the Optimal Reasoning Length for RL-Trained Language Models](2026-2602.09591-on-the-optimal-reasoning-length-for-rl-trained-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長くすることで最頻回答が正解になる問題は増えるが、その正解周辺に個々の標本が集中しなくなるため、単発回答の成功率が下がり得る。
+
+- **2026-01 · [Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct](2026-2601.14277-which-quantization-should-i-use-a-unified-evaluation-of-llama-cpp-quanti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同じ80億パラメータモデルを半精度から13形式へ変換し、五つの下流課題と困惑度と速度を統一条件で比べ、5ビットと調整のよい4ビットが容量を約3分の2減らしても品質をほぼ保ち、最も強い3ビットだけが推論課題で大きく崩れることを示した実務指針。
 
 - **2026-01 · [L³: Large Lookup Layers](2026-2601.21461-l-large-lookup-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

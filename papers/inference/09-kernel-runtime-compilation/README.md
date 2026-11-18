@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（221本）
+## 自動生成の論文一覧（222本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -382,6 +382,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/czariv/simple_attention) ・ リポジトリ内被引用：0  
   連続する行列積が毎回入出力を詰め替える無駄を除くため、GEMMを初期・中間・終端の3種類に分割し、内部の詰め込み配置を次の行列積へ伝播するLP-GEMMを提案。
 
+- **2026-04 · [InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models](2026-2604.07173-infinilora-disaggregated-multi-lora-serving-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ランク適応の保持と計算を基盤モデルから切り離して専用サーバーで共有し、遠隔実行の通信を専門家計算と二重に重ねて隠すことで、基盤モデルを複製せずに適応の保持容量だけを増やせるようにした分離型の多数適応提供方式。
+
 - **2026-04 · [Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference](2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   静的Transformer演算をCUDA Graph再生、動的制御を実行時コンパイルへ分け、短系列・バッチ1推論の起動オーバーヘッドと尾部遅延を削減する。
@@ -596,6 +600,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   CCGQAはさらにGQA型の鍵・値ヘッド共有を潜在空間で行い、クエリの圧縮率 $C1$ とKVの圧縮率 $C2$ を分離する。H100上の融合カーネル評価では、隠れ次元2048、BF16、系列長16Kの事前処理で、CCAの4倍圧縮設定がMHA比約1.6〜1.7倍低遅延、逆伝播で約1.2〜1.3倍高速となる。
 
+- **2025-08 · [ExpertWeave: Efficiently Serving Expert-Specialized Fine-Tuned Adapters at Scale](2025-2508.17624-expertweave-efficiently-serving-expert-specialized-fine-tuned-adapters-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  従来のLoRA配信は基盤重みに低ランク差分を加算する設計であり、ESFTで必要な「ルーティングが選んだ元専門家を、タスク固有の別重みに差し替える」動作には直接対応しない。単一64GB NPUで二つのアダプタを扱う際、個別mergedモデル方式のKVキャッシュ容量約6K トークンに対し、ExpertWeaveは572K トークン超を確保した。
+
 - **2025-07 · [Cloud Native System for LLM Inference Serving](2025-2507.18007-cloud-native-system-for-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、LLM推論を一体のモデルプロセスとして固定配置する方式では、あるTransformer層だけが過負荷になってもモデル全体を複製するしかなく、必要な資源へ局所的に対処しにくいと指摘する。実験はLLaMA-2-13B、A100 80GBを備えた3ノードのKubernetesクラスタで行う。
@@ -676,10 +684,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/FlyFoxPlayer/FlexQ) ・ リポジトリ内被引用：0  
   FlexQは、LLMの重みと活性値を6bitへ量子化して品質を維持しつつ、GPU上で本当に高速に実行するための方式である。
 
-- **2025-08 · [ExpertWeave: Efficiently Serving Expert-Specialized Fine-Tuned Adapters at Scale](2025-2508.17624-expertweave-efficiently-serving-expert-specialized-fine-tuned-adapters-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  従来のLoRA配信は基盤重みに低ランク差分を加算する設計であり、ESFTで必要な「ルーティングが選んだ元専門家を、タスク固有の別重みに差し替える」動作には直接対応しない。単一64GB NPUで二つのアダプタを扱う際、個別mergedモデル方式のKVキャッシュ容量約6K トークンに対し、ExpertWeaveは572K トークン超を確保した。
-
 - **2025-08 · [APT-LLM: Exploiting Arbitrary-Precision Tensor Core Computing for LLM Acceleration](2025-2508.19087-apt-llm-exploiting-arbitrary-precision-tensor-core-computing-for-llm-acc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   APT-LLMが解くのは、モデルをINT2やINT3まで量子化しても、GPUの行列積命令がその精度を直接サポートしないため、低ビット化した理論上の利点を実際の推論速度へ移しにくい問題である。
@@ -735,7 +739,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：44  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
