@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "High-Rate Quantized Matrix Multiplication II",
+      "source_url": "https://arxiv.org/abs/2605.13768",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "IEEE BITS the Information Theory Magazine",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This is the second part of the work investigating quantized matrix multiplication (MatMul). In part I we considered the case of calibration-free quantization, whereas here we discuss the setting where covariance matrix $\\Sigma_X$ of the columns of the second factor is available. This setting arises in the ubiquitous task of weight-only post-training quantization of LLMs. Weight-only quantization is related to the problem of weighted mean squared error (WMSE) source coding, whose classical (reverse) waterfilling solution dictates how one should distribute rate between coordinates of the vector. We show how waterfilling can be used to improve practical LLM quantization algorithms (GPTQ), which at present allocate rate equally. A recent scheme (known as ``WaterSIC'') that only uses scalar INT quantizers is analyzed and its high-rate performance is shown to be (a) basis free (i.e., characterized by the determinant of $\\Sigma_X$ and, thus, unlike existing schemes, is immune to applying random rotations); and (b) within a multiplicative factor of $\\frac{2\\pi e}{12}$ (or 0.25 bit/entry) of the information-theoretic distortion limit. GPTQ's performance, in turn, is affected by the choice of basis, but for a random rotation and actual $\\Sigma_X$ from Llama-3-8B we find it to be within 0.1 bit (depending on the layer type) of WaterSIC, suggesting that GPTQ with random rotation is also near optimal, at least in the high-rate regime.",
+      "identifiers": [
+        "SemanticScholar:3782d434de2188191049ae8556e66209c1fdc4fd"
+      ],
+      "semantic_scholar_id": "3782d434de2188191049ae8556e66209c1fdc4fd",
+      "canonical_id": "arXiv:2605.13768",
+      "arxiv_id": "2605.13768",
+      "doi": "10.48550/arXiv.2605.13768",
+      "authors": [
+        "Or Ordentlich",
+        "Yury Polyanskiy"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重みのみのLLM学習後量子化を、入力列共分散Σ_Xを使う重み付き二乗誤差の情報理論問題として解析。waterfillingによるビット配分とWaterSIC/GPTQの高レート性能を比較し、Llama-3-8Bの共分散で回転付きGPTQがWaterSICに0.1bit以内と報告する。推論向け量子化アルゴリズムの理論的貢献が直接ある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Remember to Forget: Gated Adaptive Positional Encoding",
+      "source_url": "https://arxiv.org/abs/2605.10414",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rotary Positional Encoding (RoPE) is widely used in modern large language models. However, when sequences are extended beyond the range seen during training, rotary phases can enter out-of-distribution regimes, leading to spurious long-range alignments, diffuse attention, and degraded retrieval. Existing remedies only partially address these failures, as they often trade local positional resolution for long-context stability. We propose GAPE (Gated Adaptive Positional Encoding), a drop-in augmentation for positional encodings that introduces a content-aware bias directly into the attention logits while preserving the rotary geometry. GAPE decouples distance-based suppression from token importance through a query-dependent gate that contracts irrelevant context and a key-dependent gate that preserves salient distant tokens. We show that weakly protected distant context is exponentially attenuated as a function of the query gate, while selected keys can remain accessible through landmark protection. We further show that GAPE can be implemented within standard scaled dot-product attention. Empirically, GAPE improves long-context robustness across controlled retrieval and language-modeling experiments, extrapolating up to 8x the training length. We further retrofit GAPE into a pretrained 7B model, maintaining performance on standard benchmarks and improving performance at the longest evaluated context. These results support adaptive context suppression as a complement to positional representation for long-context generalization.",
+      "identifiers": [
+        "SemanticScholar:77482ddcfec0727a0ca984c41abf5a67c05acb8c"
+      ],
+      "semantic_scholar_id": "77482ddcfec0727a0ca984c41abf5a67c05acb8c",
+      "canonical_id": "arXiv:2605.10414",
+      "arxiv_id": "2605.10414",
+      "doi": "10.48550/arXiv.2605.10414",
+      "authors": [
+        "Riccardo Ali",
+        "Alessio Borgi",
+        "Christopher Irwin",
+        "M. Severino",
+        "P. Lio'"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GAPEはRoPEを保ったまま、query依存ゲートで無関係な遠距離文脈を抑制しkey依存ゲートで重要なランドマークを保護する注意ロジット補正を提案。一次要旨は7B既学習モデルへの後付けと訓練長の最大8倍への外挿を報告し、長文脈推論時の注意機構の直接改善に該当する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs",
+      "source_url": "https://arxiv.org/abs/2410.12187",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel in various tasks but face deployment challenges due to hardware constraints. We propose density-aware post-training weight-only quantization (DAQ), which has two stages: 1) density-centric alignment, which identifies the center of high-density weights and centers the dynamic range on this point to align high-density weight regions with floating-point high-precision regions; 2) learnable dynamic range adjustment, which adjusts the dynamic range by optimizing quantization parameters (i.e., scale and zero-point) based on the impact of weights on the model output. Experiments on LLaMA and LLaMA-2 show that DAQ consistently outperforms the best baseline method, reducing perplexity loss by an average of 22.8% on LLaMA and 19.6% on LLaMA-2. Our code is available at https://github.com/LuoYingSong/DAQ.",
+      "identifiers": [
+        "SemanticScholar:0304d11f052375a237f8a2401e73298e618e3198"
+      ],
+      "semantic_scholar_id": "0304d11f052375a237f8a2401e73298e618e3198",
+      "canonical_id": "arXiv:2410.12187",
+      "arxiv_id": "2410.12187",
+      "doi": "10.48550/arXiv.2410.12187",
+      "authors": [
+        "YING‐JIA Luo",
+        "Ling-Wei Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 763,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLaMA/LLaMA-2の重みのみの学習後量子化を対象に、重みの高密度領域へ量子化表現を整列させるdensity-centric alignmentと、出力影響に応じてscale/zero-pointを学習調整する方式を提案。一次要旨はLLaMAで平均22.8%、LLaMA-2で19.6%の困惑度損失低減を報告し、LLM推論向け圧縮への直接的貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e25584d6a639",
+    "round": "libimp-e25584d6a639b8b9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e25584d6a639b8b9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e25584d6a639b8b9-pre01.json",
+    "receipt": "sha256:1e071cd80db2fa0abccb1df2f28fd51c469239791c6a5fc69716cab8a5d109db"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e25584d6a639",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.30832",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Reasoning Models have significantly improved chain-of-thought (CoT) capabilities via reinforcement learning (RL). However, generated reasoning chains frequently suffer from structural redundancy (i.e., \\emph{overthinking}), incurring high computational overhead without improving answer correctness. Existing mitigation strategies typically rely on token-uniform length penalties, which provide coarse, segment-agnostic pressure toward shorter outputs and can inadvertently suppress useful reasoning alongside redundancy. To address this, we demonstrate that inefficiency concentrates in high-probability segments with low marginal utility. We derive a theoretical characterization of segment suboptimality under the correctness-length trade-off objective and propose \\textsc{SLAT} (Segment-Level Adaptive Trimming), an RL framework that selectively suppresses redundant segments based on this criterion. Empirical results on standard benchmarks indicate that \\textsc{SLAT} establishes a superior accuracy-efficiency Pareto frontier, reducing reasoning length by $50\\%$ relative to uncompressed baselines while maintaining competitive accuracy. Overall, our results suggest that theoretically grounded, segment-aware trimming is a promising direction for efficient CoT reasoning in large language models.",
+      "identifiers": [
+        "SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa"
+      ],
+      "semantic_scholar_id": "06fc6178df4128519609bcf459120c54ce1659aa",
+      "canonical_id": "arXiv:2605.30832",
+      "arxiv_id": "2605.30832",
+      "doi": "10.48550/arXiv.2605.30832",
+      "authors": [
+        "Jiangqi Yao",
+        "Xiong Luo",
+        "Ran Cheng",
+        "Kay Chen Tan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論軌跡の高確率・低限界効用の冗長区間を選択的に短縮するsegment-aware RLのSLATを提案。CoT生成長を無圧縮比50%削減しつつ正答率を概ね維持するため、推論トークン予算削減に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models",
+      "source_url": "https://arxiv.org/abs/2604.03829",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba is an emerging, complex workload with various short-range and long-range dependencies, nonlinearities, and elementwise computations that are unable to run at near-peak speeds on modern hardware. Specifically, Mamba's complex dependency graph makes fusion across its full operator cascade difficult, leaving substantial inter-operator memory traffic on the table. To address these challenges, we propose Mambalaya, a novel reconfigurable accelerator that leverages fusion to overcome the limitations of Mamba. We use the recently proposed cascade-of-Einsums abstraction to characterize Mamba's full computational structure, then apply the extended Einsum framework to systematically explore inter-Einsum fusion opportunities. This principled approach yields a series of fusion mappings that reduce off-chip inter-Einsum traffic. These mappings are supported by the underlying Mambalaya architecture. Mambalaya achieves a layer performance speedup of 4.9$\\times$ for prefill and 1.9$\\times$ for generation over MARCA. In prefill-dominated scenarios, it achieves up to 1.5$\\times$ over a recent fine-grained, memory-aware fusion accelerator for Mamba.",
+      "identifiers": [
+        "SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3"
+      ],
+      "semantic_scholar_id": "03d89e5e083813143ff91c0b71627382984408c3",
+      "canonical_id": "arXiv:2604.03829",
+      "arxiv_id": "2604.03829",
+      "doi": "10.48550/arXiv.2604.03829",
+      "authors": [
+        "Toluwanimi O. Odemuyiwa",
+        "John D. Owens",
+        "J. Emer",
+        "M. Pellauer"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mambaの演算列をeinsumのcascadeとして表現し、オフチップ転送を減らす融合マッピングと再構成可能な専用アクセラレータを提案。MARCA比でprefill 4.9倍、generation 1.9倍の層単位速度改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-eb66e9e5d0d0",
+    "round": "libimp-eb66e9e5d0d05558-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-eb66e9e5d0d05558-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-eb66e9e5d0d05558-pre01.json",
+    "receipt": "sha256:9de8db484bfbf36067e6690f5bd1206f2cc048777e8c26eb42a2a17f5712d739"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-eb66e9e5d0d0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

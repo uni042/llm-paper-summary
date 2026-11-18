@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Optimal Stopping vs Best-of-N for Inference Time Optimization",
+      "source_url": "https://arxiv.org/abs/2510.01394",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) generation often requires balancing output quality against inference cost, especially when using multiple generations. We introduce a new framework for inference-time optimization based on the classical Pandora's Box problem. Viewing each generation as opening a costly\"box\"with random reward, we develop algorithms that decide when to stop generating without knowing the underlying reward distribution. Our first contribution is a UCB-style Pandora's Box algorithm, which achieves performance that is provably close to Weitzman's algorithm, the optimal strategy when the distribution is known. We further adapt this method to practical LLM settings by addressing reward scaling across prompts via a Bradley-Terry inspired transformation. This leads to an adaptive inference-time optimization method that normalizes rewards and learns stopping thresholds on the fly. Experiments on the AlpacaFarm and HH-RLHF datasets, using multiple LLM-reward model pairs, show that our adaptive strategy can obtain the same performance as non-adaptive Best-of-N sampling while requiring 15-35 percent fewer generations on average. Our results establish a principled bridge between optimal stopping theory and inference-time scaling, providing both theoretical performance bounds and practical efficiency gains for LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:f424beba20f4aecf24dc3225806cb8712bccf380"
+      ],
+      "semantic_scholar_id": "f424beba20f4aecf24dc3225806cb8712bccf380",
+      "canonical_id": "arXiv:2510.01394",
+      "arxiv_id": "2510.01394",
+      "doi": "10.48550/arXiv.2510.01394",
+      "authors": [
+        "Yusuf Hakan Kalayci",
+        "Vinod Raman",
+        "S. Dughmi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 413,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は複数LLM生成の報酬を未知分布の有料サンプルと見なすPandoraの箱問題に定式化し、UCB型の適応停止規則とプロンプト間報酬較正を提案。AlpacaFarm/HH-RLHFで固定Best-of-Nと同等の性能を平均15〜35%少ない生成回数で達成し、推論時サンプリング費用を直接削減する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.18773",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with chain-of-thought reasoning have demonstrated remarkable problem-solving capabilities, but controlling their computational effort remains a significant challenge for practical deployment. Recent proprietary systems like OpenAI's gpt-oss series have introduced discrete operational modes for intuitive reasoning control, but the open-source community has largely failed to achieve such capabilities. In this paper, we introduce ThinkDial, the first open-recipe end-to-end framework that successfully implements gpt-oss-style controllable reasoning through discrete operational modes. Our system enables seamless switching between three distinct reasoning regimes: High mode (full reasoning capability), Medium mode (50 percent token reduction with<10 percent performance degradation), and Low mode (75 percent token reduction with<15 percent performance degradation). We achieve this through an end-to-end training paradigm that integrates budget-mode control throughout the entire pipeline: budget-mode supervised fine-tuning that embeds controllable reasoning capabilities directly into the learning process, and two-phase budget-aware reinforcement learning with adaptive reward shaping. Extensive experiments demonstrate that ThinkDial achieves target compression-performance trade-offs with clear response length reductions while maintaining performance thresholds. The framework also exhibits strong generalization capabilities on out-of-distribution tasks.",
+      "identifiers": [
+        "SemanticScholar:76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8"
+      ],
+      "semantic_scholar_id": "76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8",
+      "canonical_id": "arXiv:2508.18773",
+      "arxiv_id": "2508.18773",
+      "doi": "10.48550/arXiv.2508.18773",
+      "authors": [
+        "Qianyu He",
+        "Siyu Yuan",
+        "Xuefeng Li",
+        "Ming-Xuan Wang",
+        "Jiang-Jie Chen"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 449,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論モデルのHigh/Medium/Lowの離散的思考モードを、予算条件付きSFTと段階的RLで実現するThinkDialを提案。Mediumで推論トークン50%削減・性能劣化10%未満、Lowで75%削減・劣化15%未満と報告し、実行時の思考予算を直接制御する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ec61375f9c85",
+    "round": "libimp-ec61375f9c851bbe-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ec61375f9c851bbe-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ec61375f9c851bbe-pre01.json",
+    "receipt": "sha256:281b243b43e1667d92fc58413f9867d3ebea72eb54fd1d5bb5baae45121f7966"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ec61375f9c85",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

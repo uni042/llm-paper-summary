@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory",
+      "source_url": "https://arxiv.org/abs/2606.06532",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic long-video question answering often relies on sparse RGB sampling and caption retrieval. This reliance can lead to missed brief motion events and repeated processing of irrelevant intervals. We introduce GOPAgen, a framework that integrates codec-native Groups of Pictures (GOPs) and motion vectors into an agentic retrieval pipeline. GOPAgen constructs global textual memory and uses two-stage query-conditioned temporal selection. A global-sufficiency check precedes local evidence extraction. Caption and motion agents represent selected intervals as typed memory pages containing complementary appearance and motion evidence, temporal metadata, and provenance. A GOP-Tree organizes these pages for conditional retrieval when the global evidence is insufficient. GOPAgen achieves 65.3\\% accuracy on MotionBench Test and 78.7\\% on EgoSchema, exceeding the reported agentic baselines listed for these benchmarks. It also achieves 73.2\\% on LongVideoBench validation and 77.3\\% on MLVU, while remaining below the strongest listed baseline on LVBench and Video-MME Long. These results support codec-aware structured memory as an effective interface for selective long-video reasoning.",
+      "identifiers": [
+        "SemanticScholar:3af39b674e5250f6124ea319512ef9123233dabc"
+      ],
+      "semantic_scholar_id": "3af39b674e5250f6124ea319512ef9123233dabc",
+      "canonical_id": "arXiv:2606.06532",
+      "arxiv_id": "2606.06532",
+      "authors": [
+        "Hao-Zhe Chi",
+        "Yang Jin",
+        "Ya-Dong Mu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 168,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は動画コーデックのGOPと動きベクトルを使い、エージェントが必要な区間だけ視覚証拠を検索・保持するGOPAgenを提案。MotionBenchやEgoSchemaなどで精度を比較し、長時間動画推論の無関係区間の再処理と履歴メモリを削減。MLLMエージェント推論の選択的実行に直接関連するが、GPU遅延実測は要旨にない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.29",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a simple variable quantization approach that quantizes different layers of a large language model (LLM) at different bit levels. Specifically, we quantize the most important layers to higher bit precision and less important layers to lower bits to achieve floating point quantization levels. We propose two effective strategies to measure the importance of layers within LLMs: the first measures the importance of a layer based on how different its output embeddings are from the input embeddings (the higher the better); the second estimates the importance of a layer using the number of layer weights that are much larger than average (the smaller the better). We show that quantizing different layers at varying bits according to our importance scores results in minimal performance drop with a far more compressed model size. Finally, we present several practical key takeaways from our variable layer-wise quantization experiments: (a) LLM performance under variable quantization remains close to the original model until 25-50% of layers are moved in lower quantization using our proposed ordering but only until 5-10% if moved using no specific ordering; (b) Quantizing LLMs to lower bits performs substantially better than pruning unless extreme quantization (2-bit) is used; and (c) Layer-wise quantization to lower bits works better in the case of larger LLMs with more layers compared to smaller LLMs with fewer layers. The code used to run the experiments is available at: https://github.com/RazvanDu/LayerwiseQuant.",
+      "identifiers": [
+        "SemanticScholar:5760a16be85faa9b4403670865a34418e9fe8f8d"
+      ],
+      "semantic_scholar_id": "5760a16be85faa9b4403670865a34418e9fe8f8d",
+      "doi": "10.18653/v1/2025.findings-acl.29",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+      "authors": [
+        "Razvan-Gabriel Dumitru",
+        "Vikas Yadav",
+        "Rishabh Maheshwary",
+        "Paul-Ioan Clotan",
+        "Sathwik Tejaswi Madhusudhan",
+        "M. Surdeanu"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL公式要旨は層の入出力埋め込み差や大振幅重み数で重要度を測り、重要層に高ビットを割り当てる可変層別量子化を提案。優先順位に従う場合は25〜50%の層を低精度化しても性能維持するが、無作為順序では5〜10%にとどまる。推論向け混合精度圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.34977",
+      "year": 2026,
+      "published": "2026-09-17",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models face significant efficiency challenges that stem from two distinct yet coupled sources: data redundancy and computational redundancy. While most methods focus on data redundancy by pruning visual tokens from the output of the visual encoder or computing redundancy in LLM decoders using blockwise importance, the finer-grained inter-layer representation shifts and the distribution differences within the layers themselves have not been fully explored. In this work, we comprehensively investigate this dual-level inefficiency. We posit that intermediate layer tokens from vision encoders should be considered for effective visual token pruning, as semantic focus shifts across layers, with middle-layer tokens capturing more detailed object-centric information that deeper layers may abstract away. Furthermore, we reveal the differential contributions of Attention and FFNs across distinct LLM decoder layers. Building upon these discoveries, we propose SPIDER, a training-free framework that integrates multi-layer Semantic visual token PrunIng with an aDaptive sub-layER skipping mechanism. Experimental evaluations demonstrate that SPIDER consistently maintains strong performance across various MLLM architectures and reduction ratios. For instance, on LLaVA-NeXT-7B, SPIDER reduces FLOPs by $80\\%$ while maintaining 96$\\%$ of the baseline performance.",
+      "identifiers": [
+        "SemanticScholar:5e1d526dfbc85b01abc9e9ed7243f4900f441a7f"
+      ],
+      "semantic_scholar_id": "5e1d526dfbc85b01abc9e9ed7243f4900f441a7f",
+      "canonical_id": "arXiv:2609.34977",
+      "arxiv_id": "2609.34977",
+      "doi": "10.1109/TPAMI.2026.3734987",
+      "authors": [
+        "Tian-Xiang Chen",
+        "Zhentao Tan",
+        "Zi Ye",
+        "Yue Wu",
+        "Xiao-Bing Tu",
+        "Jin-Kui Ren",
+        "Xian-Tao Zhang",
+        "Tao Gong",
+        "Qi Chu",
+        "Neng-Hai Yu",
+        "Xi-Peng Qiu",
+        "Jie-Ping Ye"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 62,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は視覚エンコーダの中間層トークンから意味情報を選別し、LLMデコーダで注意・FFNの役割差に応じサブレイヤをスキップするSPIDERを提案。LLaVA-NeXT-7BでFLOPs79%削減し元性能96%維持と報告。MLLMの視覚・デコーダ双方の計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-180648464125",
+    "round": "libimp-180648464125e6c0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-180648464125e6c0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-180648464125e6c0-pre01.json",
+    "receipt": "sha256:7a8d61d37610813683ecc984ad39171a1ea46e68c7dfce018a0ec9726b916cd7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-180648464125",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
