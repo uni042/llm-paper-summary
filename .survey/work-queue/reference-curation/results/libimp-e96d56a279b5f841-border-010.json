@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.24605",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.24605",
+    "identity_tokens": [
+      "arXiv:2510.24605"
+    ],
+    "reason": "可変生成長を持つ拡散LLM（dLLM-Var）。生成長を事前に決める必要がある拡散LLMに対し、EOSトークンを正確に予測するよう訓練して長さをネイティブに推論させる。生成効率に関わるが、モデルの訓練が機構の実体であり境界。",
+    "first_checked_at": "2026-11-18T06:39:39+00:00",
+    "last_checked_at": "2026-11-18T06:39:39+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "inference-systems",
+      "拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way"
+  },
+  "processed_at": "2026-11-18T06:39:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

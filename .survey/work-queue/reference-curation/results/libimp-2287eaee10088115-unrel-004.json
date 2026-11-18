@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2287eaee10088115-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.02785",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.02785",
+    "identity_tokens": [
+      "arXiv:2509.02785"
+    ],
+    "reason": "動的ルーティング拡散DrDiff。長文生成のための拡散フレームワークで、専門家スケジューリングと階層的疎注意、DPMソルバの組合せ。生成モデルの構築であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:39:28+00:00",
+    "last_checked_at": "2026-11-18T06:39:28+00:00",
+    "linked_from": [
+      "sparse attention / long-context Transformer",
+      "疎注意 / KVキャッシュ選択 / 長文脈推論"
+    ],
+    "title": "DrDiff: Dynamic Routing Diffusion with Hierarchical Attention for Breaking the Efficiency-Quality Trade-off"
+  },
+  "processed_at": "2026-11-18T06:39:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2287eaee1008",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

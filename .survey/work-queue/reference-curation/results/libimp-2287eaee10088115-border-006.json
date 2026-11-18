@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2287eaee10088115-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.05069",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.05069",
+    "identity_tokens": [
+      "arXiv:2510.05069"
+    ],
+    "reason": "潜在と明示を切り替える推論SwiReasoning。潜在推論が確率質量を拡散させ過剰思考も残る問題に対し、潜在空間と明示CoTを切り替える枠組み。推論時の効率化が狙いだが、推論パラダイムの提案であり境界。",
+    "first_checked_at": "2026-11-18T06:39:27+00:00",
+    "last_checked_at": "2026-11-18T06:39:27+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV-cache compression / attention-based token selection / long-context inference",
+      "inference-systems",
+      "投機的復号 / 無損失復号高速化",
+      "投機的復号・オンライン適応・知識蒸留",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SwiReasoning: Switch-Thinking in Latent and Explicit for Pareto-Superior Reasoning LLMs"
+  },
+  "processed_at": "2026-11-18T06:39:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2287eaee1008",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

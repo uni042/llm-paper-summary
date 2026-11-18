@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8262178b3b4a0d5-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.22107",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.22107",
+    "identity_tokens": [
+      "arXiv:2505.22107"
+    ],
+    "reason": "長文脈Transformerにおける高次元の呪いの分析。注意重みが疎であるのに全トークンが等しく計算資源を消費する冗長性を、確率的系列モデリングを教師あり学習として再定式化して理論的に分析する。疎注意の理論的基盤だが、機構の提案ではなく境界。",
+    "first_checked_at": "2026-11-18T06:39:33+00:00",
+    "last_checked_at": "2026-11-18T06:39:33+00:00",
+    "linked_from": [
+      "KV Cache Optimization / Compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "inference-systems",
+      "long-context inference / dynamic sparse attention / prefill acceleration",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Curse of High Dimensionality Issue in Transformer for Long-context Modeling"
+  },
+  "processed_at": "2026-11-18T06:39:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

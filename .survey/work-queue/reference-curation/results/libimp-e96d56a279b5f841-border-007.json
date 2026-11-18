@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.19187",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.19187",
+    "identity_tokens": [
+      "arXiv:2505.19187"
+    ],
+    "reason": "困惑度に基づく推論洗練LIMOPro。推論チェーンの機能的要素（検証・別解・誤り訂正）がテスト時推論の計算を膨らませる問題に対し、重要度を定量化して洗練する枠組み。テスト時スケーリングの効率化が主題だが、洗練の実体は推論データ側の処理であり境界。",
+    "first_checked_at": "2026-11-18T06:39:37+00:00",
+    "last_checked_at": "2026-11-18T06:39:37+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LIMOPro: Reasoning Refinement for Efficient and Effective Test-time Scaling"
+  },
+  "processed_at": "2026-11-18T06:39:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

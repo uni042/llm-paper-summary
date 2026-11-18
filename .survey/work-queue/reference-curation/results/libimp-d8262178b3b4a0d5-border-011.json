@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8262178b3b4a0d5-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.12638",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.12638",
+    "identity_tokens": [
+      "arXiv:2511.12638"
+    ],
+    "reason": "ML GPUカーネルの等価性検査Volta。手書き・LLM生成・コンパイラ最適化のカーネルが等価であることを形式的に検証する初の等価性検査器。推論カーネルの最適化を支える道具であり、推論機構そのものではないため境界。",
+    "first_checked_at": "2026-11-18T06:39:34+00:00",
+    "last_checked_at": "2026-11-18T06:39:34+00:00",
+    "linked_from": [
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Equivalence Checking of ML GPU Kernels"
+  },
+  "processed_at": "2026-11-18T06:39:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

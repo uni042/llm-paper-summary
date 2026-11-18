@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b076cd27b6311201-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.13165",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.13165",
+    "identity_tokens": [
+      "arXiv:2605.13165"
+    ],
+    "reason": "長形推論の構造化オンポリシー剪定STOP。低データ微調整の条件で、自己蒸留した軌跡を構造化した推論界面へ写し、オンポリシーに推論跡を剪定する。推論効率が目的だが、機構は微調整過程のアルゴリズムであり境界。",
+    "first_checked_at": "2026-11-18T06:39:31+00:00",
+    "last_checked_at": "2026-11-18T06:39:31+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes"
+  },
+  "processed_at": "2026-11-18T06:39:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b076cd27b631",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

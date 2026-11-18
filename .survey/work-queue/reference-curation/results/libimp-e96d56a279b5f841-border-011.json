@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.12033",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.12033",
+    "identity_tokens": [
+      "arXiv:2601.12033"
+    ],
+    "reason": "量子化LLMの公平性と安全性の系統研究。静的・動的量子化が多言語文脈で公平性と安全性へ与える影響をベンチマークで系統的に調べ、量子化が一貫して両者を劣化させることを示す。量子化推論の計測ではあるが、主題は公平性・安全性の評価であり境界。",
+    "first_checked_at": "2026-11-18T06:39:39+00:00",
+    "last_checked_at": "2026-11-18T06:39:39+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection"
+  },
+  "processed_at": "2026-11-18T06:39:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

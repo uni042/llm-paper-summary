@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T06:12:17+00:00",
-  "record_count": 12734,
+  "updated_at": "2026-11-18T06:39:41+00:00",
+  "record_count": 12742,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -183158,6 +183158,137 @@
         "inference-systems"
       ],
       "title": "k-Maximum Inner Product Attention for Graph Transformers and the Expressive Power of GraphGPS"
+    },
+    "arXiv:2506.09853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09853",
+      "identity_tokens": [
+        "arXiv:2506.09853"
+      ],
+      "reason": "因果的十分性・必要性によるCoT推論の改善。推論ステップの十分性と必要性を因果の枠組みで特徴づける推論品質の研究。推論システムの効率機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:28+00:00",
+      "last_checked_at": "2026-11-18T06:39:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+      ],
+      "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning"
+    },
+    "arXiv:2509.02785": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.02785",
+      "identity_tokens": [
+        "arXiv:2509.02785"
+      ],
+      "reason": "動的ルーティング拡散DrDiff。長文生成のための拡散フレームワークで、専門家スケジューリングと階層的疎注意、DPMソルバの組合せ。生成モデルの構築であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:28+00:00",
+      "last_checked_at": "2026-11-18T06:39:28+00:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer",
+        "疎注意 / KVキャッシュ選択 / 長文脈推論"
+      ],
+      "title": "DrDiff: Dynamic Routing Diffusion with Hierarchical Attention for Breaking the Efficiency-Quality Trade-off"
+    },
+    "arXiv:2509.03871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.03871",
+      "identity_tokens": [
+        "arXiv:2509.03871"
+      ],
+      "reason": "推論するLLMの信頼性の包括的総説。真実性・安全性・頑健性・公平性・プライバシの5次元でCoT推論の信頼性を整理する総説。推論システムの効率機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:29+00:00",
+      "last_checked_at": "2026-11-18T06:39:29+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md"
+      ],
+      "title": "A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models"
+    },
+    "arXiv:2410.03440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03440",
+      "identity_tokens": [
+        "arXiv:2410.03440"
+      ],
+      "reason": "事前学習における活性疎性の探求。学習中の活性の疎性がどう変化するかを調べ、切替可能な疎・密学習を提案する。対象は事前学習であり、推論機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:35+00:00",
+      "last_checked_at": "2026-11-18T06:39:35+00:00",
+      "linked_from": [
+        "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+        "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization",
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "dense-to-MoE conversion / conditional FFN computation / expert routing",
+        "inference-systems",
+        "オフロード／階層メモリ"
+      ],
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training"
+    },
+    "arXiv:2509.20072": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20072",
+      "identity_tokens": [
+        "arXiv:2509.20072"
+      ],
+      "reason": "音声言語モデル向け非自己回帰の共同枠組みText-to-Talk。音声対音声の会話システムでテキスト生成と音声拡散を1つのTransformerに統合するモデル設計。対象は音声モデルの構築であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:36+00:00",
+      "last_checked_at": "2026-11-18T06:39:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "From Text to Talk: Audio-Language Model Needs Non-Autoregressive Joint Training"
+    },
+    "arXiv:2207.01844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.01844",
+      "identity_tokens": [
+        "arXiv:2207.01844"
+      ],
+      "reason": "適応文脈プーリングによる表現学習ContextPool。注意の粒度をトークンごとに適応させる表現学習のアーキテクチャ研究。LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:40+00:00",
+      "last_checked_at": "2026-11-18T06:39:40+00:00",
+      "linked_from": [
+        "inference-systems",
+        "sparse attention / long-context Transformer"
+      ],
+      "title": "Efficient Representation Learning via Adaptive Context Pooling"
+    },
+    "arXiv:2502.07244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07244",
+      "identity_tokens": [
+        "arXiv:2502.07244"
+      ],
+      "reason": "線形TransformerのVARモデルとしての解釈。時系列予測における線形注意と自己回帰構造の整合を論じる理論研究。LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:40+00:00",
+      "last_checked_at": "2026-11-18T06:39:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting"
+    },
+    "arXiv:2504.04060": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04060",
+      "identity_tokens": [
+        "arXiv:2504.04060"
+      ],
+      "reason": "マルチトークン予測による音声LLMの高速化VocalNet。リアルタイム音声対話向けの音声LLMモデル系列とその訓練枠組み。対象は音声モデルの構築であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T06:39:41+00:00",
+      "last_checked_at": "2026-11-18T06:39:41+00:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "title": "VocalNet: Speech LLM with Multi-Token Prediction for Faster and High-Quality Generation"
     }
   }
 }

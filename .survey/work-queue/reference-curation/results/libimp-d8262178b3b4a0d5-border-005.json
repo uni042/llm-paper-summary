@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8262178b3b4a0d5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.14709",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.14709",
+    "identity_tokens": [
+      "arXiv:2505.14709"
+    ],
+    "reason": "自己回帰動画生成向けキャッシュ注意リプレイFastCar。隣接フレームのMLP出力の時間冗長性を使い、デコード段階を高速化する。デコード高速化の機構ではあるが、対象は動画生成モデルであり境界。",
+    "first_checked_at": "2026-11-18T06:39:32+00:00",
+    "last_checked_at": "2026-11-18T06:39:32+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV cache quantization / long-context inference / activation compression",
+      "KVキャッシュ最適化／適応圧縮",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FastCar: Cache Attentive Replay for Fast Auto-Regressive Video Generation on the Edge"
+  },
+  "processed_at": "2026-11-18T06:39:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

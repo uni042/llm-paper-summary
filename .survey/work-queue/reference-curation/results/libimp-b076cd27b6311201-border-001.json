@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b076cd27b6311201-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.11232",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.11232",
+    "identity_tokens": [
+      "arXiv:2605.11232"
+    ],
+    "reason": "不正・AML向けLLMOpsスタックの再考。前方一致の重いプロンプトやスキーマ制約など、コンプライアンス用途特有の提供要件に対し、前方一致再利用やKV効率、実行時調整、モデル編成、出力検証を一級の関心事とするワークロード配慮型スタック。推論基盤の運用設計ではあるが、領域特化の運用論であり境界。",
+    "first_checked_at": "2026-11-18T06:39:30+00:00",
+    "last_checked_at": "2026-11-18T06:39:30+00:00",
+    "linked_from": [
+      "15-inference-simulation-emulation",
+      "LLM Serving / Scheduling / Disaggregation",
+      "投機的復号 / EAGLE",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack"
+  },
+  "processed_at": "2026-11-18T06:39:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b076cd27b631",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2287eaee10088115-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.09853",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.09853",
+    "identity_tokens": [
+      "arXiv:2506.09853"
+    ],
+    "reason": "因果的十分性・必要性によるCoT推論の改善。推論ステップの十分性と必要性を因果の枠組みで特徴づける推論品質の研究。推論システムの効率機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:39:28+00:00",
+    "last_checked_at": "2026-11-18T06:39:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+    ],
+    "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-11-18T06:39:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2287eaee1008",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

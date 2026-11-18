@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8262178b3b4a0d5-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.03440",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.03440",
+    "identity_tokens": [
+      "arXiv:2410.03440"
+    ],
+    "reason": "事前学習における活性疎性の探求。学習中の活性の疎性がどう変化するかを調べ、切替可能な疎・密学習を提案する。対象は事前学習であり、推論機構の提案ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:39:35+00:00",
+    "last_checked_at": "2026-11-18T06:39:35+00:00",
+    "linked_from": [
+      "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+      "Mixture-of-Experts / random routing / self-slimmable networks / dropout regularization",
+      "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+      "dense-to-MoE conversion / conditional FFN computation / expert routing",
+      "inference-systems",
+      "オフロード／階層メモリ"
+    ],
+    "title": "Exploring the Benefit of Activation Sparsity in Pre-training"
+  },
+  "processed_at": "2026-11-18T06:39:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

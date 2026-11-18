@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8262178b3b4a0d5-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.13223",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.13223",
+    "identity_tokens": [
+      "arXiv:2511.13223"
+    ],
+    "reason": "推論LLM向けトークン圧縮TokenSqueeze。長いCoTのトークン費用に対し、性能を保ちながら推論長を下げる長から短への圧縮。推論効率が目的だが、圧縮の実体はモデルの適応であり境界。",
+    "first_checked_at": "2026-11-18T06:39:35+00:00",
+    "last_checked_at": "2026-11-18T06:39:35+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs"
+  },
+  "processed_at": "2026-11-18T06:39:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

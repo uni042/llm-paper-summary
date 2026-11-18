@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2305.11916",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2305.11916",
+    "identity_tokens": [
+      "arXiv:2305.11916"
+    ],
+    "reason": "柔軟な忍耐ベース早期終了F-PABEE。事前学習言語モデルの分類タスクで、層間の予測分布の類似が続けば早期に終了する。推論高速化の機構ではあるが、対象は符号器型分類モデルであり境界。",
+    "first_checked_at": "2026-11-18T06:39:37+00:00",
+    "last_checked_at": "2026-11-18T06:39:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "F-PABEE: Flexible-Patience-Based Early Exiting For Single-Label and Multi-Label Text Classification Tasks"
+  },
+  "processed_at": "2026-11-18T06:39:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.19481",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.19481",
+    "identity_tokens": [
+      "arXiv:2505.19481"
+    ],
+    "reason": "遅延感受性の高い意思決定での速度と精度の研究。高頻度取引や対戦ゲームのような厳しい遅延制約の下でのLLMエージェントの遅延・品質トレードオフを、2つの新しいベンチマークで初めて体系的に調べる。推論基盤の計測ではあるが、主題は意思決定タスクの評価であり境界。",
+    "first_checked_at": "2026-11-18T06:39:38+00:00",
+    "last_checked_at": "2026-11-18T06:39:38+00:00",
+    "linked_from": [
+      "16-weight-quantization-compression",
+      "KV cache quantization / long-context inference / activation compression",
+      "LLM Serving / Scheduling / Disaggregation",
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Win Fast or Lose Slow: Balancing Speed and Accuracy in Latency-Sensitive Decisions of LLMs"
+  },
+  "processed_at": "2026-11-18T06:39:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

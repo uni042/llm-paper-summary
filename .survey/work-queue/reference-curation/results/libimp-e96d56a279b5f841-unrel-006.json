@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.04060",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.04060",
+    "identity_tokens": [
+      "arXiv:2504.04060"
+    ],
+    "reason": "マルチトークン予測による音声LLMの高速化VocalNet。リアルタイム音声対話向けの音声LLMモデル系列とその訓練枠組み。対象は音声モデルの構築であり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T06:39:41+00:00",
+    "last_checked_at": "2026-11-18T06:39:41+00:00",
+    "linked_from": [
+      "Speculative Decoding"
+    ],
+    "title": "VocalNet: Speech LLM with Multi-Token Prediction for Faster and High-Quality Generation"
+  },
+  "processed_at": "2026-11-18T06:39:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e96d56a279b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8262178b3b4a0d5-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.17739",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.17739",
+    "identity_tokens": [
+      "arXiv:2508.17739"
+    ],
+    "reason": "投機的安全配慮デコードSSD。小さなモデルが安全性性質を持つ前提で、デコード時に安全性を備えさせながら推論も加速する軽量な方式。デコード機構ではあるが、主題は安全性の付与であり境界。",
+    "first_checked_at": "2026-11-18T06:39:34+00:00",
+    "last_checked_at": "2026-11-18T06:39:34+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculative Safety-Aware Decoding"
+  },
+  "processed_at": "2026-11-18T06:39:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8262178b3b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
