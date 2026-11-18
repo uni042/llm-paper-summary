@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r05",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.19499",
+      "identity_tokens": [
+        "arXiv:2609.19499"
+      ],
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "reason": "arXiv v2一次要旨は同じ8候補生成でも1×8バッチと8×1逐次ではGPUエネルギーが4.64〜4.86倍、P95遅延が5.77〜6.12倍異なることをA100で実測。推論時多数候補生成のスケジューリングと消費電力の直接的なシステム評価。",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22269",
+      "identity_tokens": [
+        "arXiv:2605.22269"
+      ],
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "reason": "arXiv一次要旨は長時間動画QAでパッチ・フレーム・セグメント単位の多粒度KV圧縮と半階層検索を組み合わせ、記憶容量を抑えつつオンライン質問応答を改善。LLMの映像入力KVキャッシュ圧縮・検索と推論効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08030",
+      "identity_tokens": [
+        "arXiv:2602.08030"
+      ],
+      "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+      "reason": "arXiv v2一次要旨はFree-Module LoRAを用いて推論と履歴清掃を交互に実行し、不要なCoT区間を削除して文脈を圧縮するFree()LMを提案。8B〜685Bで評価し、長期推論時の文脈肥大化を抑えつつ品質を改善。実行時の推論状態削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2602.08030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01718",
+      "identity_tokens": [
+        "arXiv:2608.01718"
+      ],
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "reason": "arXiv v2一次要旨は意味キャッシュの衝突攻撃に対し、問い合わせ類似性だけでなく投機的に生成した先頭kトークンも検査するLaCacheを提案。攻撃成功率をほぼ0にしつつ正常キャッシュ効用の90%超を維持と報告。LLMサービングにおけるキャッシュ再利用の信頼性・効率の直接的な研究。",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 83
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31291",
+      "identity_tokens": [
+        "arXiv:2609.31291"
+      ],
+      "title": "Softmax Reparameterization for Output-Head Quantization",
+      "reason": "arXiv v2一次要旨は出力ヘッドの機能同値な行平均シフトを量子化前に探索し、KL損失を低減。W4でXGLMのテストKLをRTN比93%削減、Phiのパック済みW4ヘッドではバッチ1生成遅延10.8%削減を報告。LLM推論時の出力層量子化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.31291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 85
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15179",
+      "identity_tokens": [
+        "arXiv:2606.15179"
+      ],
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG under Document Isolation",
+      "reason": "arXiv一次要旨は端末とクラウドで文書を共有できないRAG推論に対し、遠隔証拠の非同期到着と必要最小限の補充を使うCONCORDを提案。クラウドに照会するステップでは密な統合と同一のgreedyトークンを維持し、Natural QuestionsとWikiText-2でE2Eスループット1.66倍・2.15倍を報告。端末・クラウド協調推論の直接的な高速化。",
+      "source_url": "https://arxiv.org/abs/2606.15179",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 86
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.18005",
+      "identity_tokens": [
+        "arXiv:2609.18005"
+      ],
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "reason": "arXiv一次要旨は量子化・early exit・投機的復号の品質変化を同じプロンプトで比較するため、LLMジャッジの再現ノイズと同分布null条件を較正する計測方法を提案。4bitと16bitの差が±0.3点分解能以下の条件や3bitの多言語・数学での劣化を定量化。推論最適化の品質評価基盤に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.18005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 88
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.10059",
+      "identity_tokens": [
+        "arXiv:2507.10059"
+      ],
+      "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+      "reason": "arXiv v2一次要旨は重み統合を伴うlayer collapseと残差更新類似度・言語モデルKLを使った進化的探索で圧縮と品質のPareto前線を推定。基盤・指示調整LLMの生成評価を含み、配備用モデルサイズ削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2507.10059",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 89
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10553",
+      "identity_tokens": [
+        "arXiv:2410.10553"
+      ],
+      "title": "SLaNC: Static LayerNorm Calibration",
+      "reason": "arXiv一次要旨は低精度ハードウェア上でLayerNorm分散計算の広い動的範囲が問題となる点に対し、直前の線形層の静的重みだけからオフラインでスケーリング係数を求める手法を提案。推論時に追加の較正遅延をほぼ持ち込まず低ビット実行を支援するため、推論カーネル数値処理に直接該当。",
+      "source_url": "https://arxiv.org/abs/2410.10553",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.27875",
+      "identity_tokens": [
+        "arXiv:2608.27875"
+      ],
+      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+      "reason": "arXiv一次要旨は注意行列の縦線トークンと近傍窓だけ高精度に残し、他の注意状態を低ビット化するHyQuantを提案。prefillの混合精度注意とdecodeのKV圧縮・逆量子化融合を一貫して扱い、LLM注意の品質とメモリ・ハードウェア効率を両立。",
+      "source_url": "https://arxiv.org/abs/2608.27875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:10:43+09:00",
+      "last_checked_at": "2026-10-30T15:10:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 92
+    }
+  ]
+}
