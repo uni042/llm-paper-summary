@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-18T21:05:04+00:00`
+Generated: `2026-11-18T22:05:39+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -572,7 +572,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 345 | 1 | 3 | 5 | arXiv:2507.21522 | Model-Free Speculative Decoding for Transformer-Based ASR with Token Map Drafting | 2025-07-29 | European Signal Processing Conference | 1 | 5 | 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2507.21522) |
 | 346 | 14 | 3 | 5 | arXiv:2505.16950 | Bottlenecked Transformers: Periodic KV Cache Consolidation for Generalised Reasoning | 2025-05-22 | International Conference on Learning Representations | 4 | 5 | KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2505.16950) |
 | 347 | 44 | 3 | 5 | arXiv:2502.07972 | Training Sparse Mixture Of Experts Text Embedding Models | 2025-02-11 | arXiv.org | 44 | 5 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2502.07972) |
-| 348 | 10 | 3 | 5 | DOI:10.1109/PESGM58988.2026.11693290 | Learning to Compress: Energy-Aware Large Language Model Serving via Adaptive KV Caching | 2026-07-01 | IEEE Power & Energy Society General Meeting | 0 | 5 | KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/PESGM58988.2026.11693290) |
+| 348 | 10 | 3 | 5 | DOI:10.1109/ISPASS69572.2026.00038 | An Empirical Study of LLM Serving in Confidential GPUs | 2026-04-26 | IEEE International Symposium on Performance Analysis of Systems and Software | 0 | 5 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, PyTorch 2 torch.compileの設計と評価を報告する論文。 | [source](https://doi.org/10.1109/ISPASS69572.2026.00038) |
 | 349 | 1 | 3 | 5 | arXiv:2510.05186 | OptPipe: Memory- and Scheduling-Optimized Pipeline Parallelism for LLM Training | 2025-10-06 | arXiv.org | 1 | 5 | Training Offload / Memory Systems, その他システム研究 | [source](https://arxiv.org/abs/2510.05186) |
 | 350 | 101 | 3 | 5 | arXiv:2604.16583 | POLAR: Online Learning for LoRA Adapter Caching and Routing in Edge LLM Serving | 2026-04-17 | ACM Interational Symposium on Mobile Ad Hoc Networking and Computing | 1 | 5 | llm-serving-scheduling-disaggregation, multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling | [source](https://arxiv.org/abs/2604.16583) |
 | 351 | 8 | 3 | 5 | DOI:10.14722/ndss.2026.242812 | Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks | 2026 | Network and Distributed System Security Symposium | 8 | 5 | LLM Serving / Scheduling / Disaggregation, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://doi.org/10.14722/ndss.2026.242812) |

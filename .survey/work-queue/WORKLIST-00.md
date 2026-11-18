@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-18T21:05:04+00:00`
+Generated: `2026-11-18T22:05:39+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -572,7 +572,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 345 | 10 | 3 | 5 | arXiv:2605.14305 | Factorization-Error-Free Discrete Diffusion Language Model via Speculative Decoding | 2026-05-14 | arXiv.org | 0 | 5 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2605.14305) |
 | 346 | 104 | 3 | 5 | arXiv:2602.08798 | CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse | 2026-02-09 | arXiv.org | 4 | 5 | 99-other-inference-systems, オフロード／階層メモリ | [source](https://arxiv.org/abs/2602.08798) |
 | 347 | 10 | 3 | 5 | arXiv:2611.04042 | Testing Processor Contracts in Speculative Decoding Engines | 2026-11-02 |  | 0 | 5 | KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, kernel-runtime-compilation, speculative-decoding | [source](https://arxiv.org/abs/2611.04042) |
-| 348 | 10 | 3 | 5 | DOI:10.1109/ISPASS69572.2026.00038 | An Empirical Study of LLM Serving in Confidential GPUs | 2026-04-26 | IEEE International Symposium on Performance Analysis of Systems and Software | 0 | 5 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, PyTorch 2 torch.compileの設計と評価を報告する論文。 | [source](https://doi.org/10.1109/ISPASS69572.2026.00038) |
+| 348 | 101 | 3 | 5 | arXiv:2605.00539 | AGoQ: Activation and Gradient Quantization for Memory-Efficient Distributed Training of LLMs | 2026-05-01 | arXiv.org | 1 | 5 | Training / Optimizer State Quantization and Memory Reduction, Training Offload / Memory Systems, その他システム研究, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2605.00539) |
 | 349 | 1 | 3 | 5 | DOI:10.1109/INDICON63790.2024.10958315 | Optimizing Transformer Based Inference Efficiency Using CMM-D | 2024-12-19 | IEEE India Conference | 1 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/INDICON63790.2024.10958315) |
 | 350 | 102 | 3 | 5 | arXiv:2604.03270 | Knowledge Packs: Zero-Token Knowledge Delivery via KV Cache Injection | 2026-03-22 | arXiv.org | 2 | 5 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache persistence / edge multi-agent inference / storage offload, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2604.03270) |
 | 351 | 10 | 3 | 5 | arXiv:2601.09865 | Advancing Model Refinement: Muon-Optimized Distillation and Quantization for LLM Deployment | 2026-01-14 | arXiv.org | 0 | 5 | post-training quantization / second-order compression / weight-only LLM inference, survey-edge-llm | [source](https://arxiv.org/abs/2601.09865) |

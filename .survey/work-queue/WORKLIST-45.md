@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-18T21:05:04+00:00`
+Generated: `2026-11-18T22:05:39+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -571,7 +571,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 344 | 10 | 3 | 5 | DOI:10.1109/TED.2026.3670094 | 3-D 1T-nC-1T Ferroelectric-Based KV Cache for Efficient Long-Context LLM Inference | 2026-05-01 | IEEE Transactions on Electron Devices | 0 | 5 | KV Cache Optimization / Compression, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.1109/TED.2026.3670094) |
 | 345 | 101 | 3 | 5 | DOI:10.1109/icassp55912.2026.11463423 | Acceptance-Guided Adaptive Speculative Decoding for Efficient Large Language Model Inference | 2026-05-03 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 1 | 5 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, survey-speculative-decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1109/icassp55912.2026.11463423) |
 | 346 | 1 | 3 | 5 | DOI:10.1109/AICAS64808.2025.11173114 | KV Cache Compression Based on Token-Level Redundancy Elimination and Bit-Level Encoding | 2025-04-28 | International Conference on Artificial Intelligence Circuits and Systems | 1 | 5 | KVキャッシュ再利用／圧縮／ネットワーク転送, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化 | [source](https://doi.org/10.1109/AICAS64808.2025.11173114) |
-| 347 | 101 | 3 | 5 | arXiv:2605.00539 | AGoQ: Activation and Gradient Quantization for Memory-Efficient Distributed Training of LLMs | 2026-05-01 | arXiv.org | 1 | 5 | Training / Optimizer State Quantization and Memory Reduction, Training Offload / Memory Systems, その他システム研究, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2605.00539) |
+| 347 | 101 | 3 | 5 | DOI:10.1109/PESGM58988.2026.11693290 | Learning to Compress: Energy-Aware Large Language Model Serving via Adaptive KV Caching | 2026-07-01 | IEEE Power & Energy Society General Meeting | 1 | 5 | KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/PESGM58988.2026.11693290) |
 | 348 | 5 | 3 | 5 | arXiv:2412.06458 | Pruning All-Rounder: Rethinking and Improving Inference Efficiency for Large Vision Language Models | 2024-12-09 | IEEE International Conference on Computer Vision | 5 | 5 |  | [source](https://arxiv.org/abs/2412.06458) |
 | 349 | 111 | 3 | 5 | arXiv:2605.03644 | AdapShot: Adaptive Many-Shot In-Context Learning with Semantic-Aware KV Cache Reuse | 2026-05-05 | Annual Meeting of the Association for Computational Linguistics | 1 | 5 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2605.03644) |
 | 350 | 20 | 3 | 5 | DOI:10.1145/3805621.3807628 | Reducing Language Model Inference Latency using CPU-Assisted Serving | 2026-04-27 | EuroMLSys@EuroSys | 0 | 5 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, kv-cache-offload-recomputation | [source](https://doi.org/10.1145/3805621.3807628) |
