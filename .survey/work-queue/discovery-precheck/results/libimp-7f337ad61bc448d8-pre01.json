@@ -1,0 +1,450 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-7f337ad61bc448d8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-7f337ad61bc4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.findings-emnlp.914",
+    "arXiv:2410.20488",
+    "arXiv:2412.11741",
+    "arXiv:2503.17101",
+    "arXiv:2505.03373",
+    "arXiv:2507.09616",
+    "arXiv:2508.09471"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d7f7a9b86e6c75aba95786afd7d815cbd9a1ac9b",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "acl_anthology_record",
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:17:15.436164+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.914",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "acl_anthology_record",
+      "filter_reason": "identity_token",
+      "matched_token": "title:faedkv infinitewindow fourier transform for unbiased kv cache compression"
+    },
+    {
+      "requested_id": "arXiv:2410.20488",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.11741",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.17101",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.17101"
+    },
+    {
+      "requested_id": "arXiv:2505.03373",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.09616",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.09471",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2508.09471"
+    }
+  ],
+  "results": [
+    {
+      "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
+      "source_url": "https://arxiv.org/abs/2412.11741",
+      "year": 2024,
+      "published": "2024-12-16",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The emergence of long-context text applications utilizing large language models (LLMs) has presented significant scalability challenges, particularly in memory footprint. The linear growth of the Key-Value (KV) cache, which stores attention keys and values to reduce redundant computations, can significantly increase memory usage and may prevent models from functioning properly in memory-constrained environments. To address this issue, we propose a novel approach called Cache Sparse Representation (CSR), which converts the KV cache by transforming the dense Key-Value cache tensor into sparse indexes and weights, offering a more memory-efficient representation during LLM inference. Furthermore, we introduce NeuralDict, a novel neural network-based method to automatically generate the dictionary used in our sparse representation. Our extensive experiments demonstrate that CSR matches the performance of state-of-the-art KV cache quantization algorithms while ensuring robust functionality in memory-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604"
+      ],
+      "semantic_scholar_id": "c8424bf742e789de1f7528d6ee418b5d8414b604",
+      "canonical_id": "arXiv:2412.11741",
+      "arxiv_id": "2412.11741",
+      "doi": "10.48550/arXiv.2412.11741",
+      "authors": [
+        "Hong-Xuan Zhang",
+        "Yao Zhao",
+        "Jia-Qi Zheng",
+        "Chen-Yi Zhuang",
+        "Jin-Jie Gu",
+        "Guihai Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 702,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPAP: Structured Pruning via Alternating Optimization and Penalty Methods",
+      "source_url": "https://arxiv.org/abs/2505.03373",
+      "year": 2025,
+      "published": "2025-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large language models (LLMs) is often constrained by their substantial computational and memory demands. While structured pruning presents a viable approach by eliminating entire network components, existing methods suffer from performance degradation, reliance on heuristic metrics, or expensive finetuning. To address these challenges, we propose SPAP (Structured Pruning via Alternating Optimization and Penalty Methods), a novel and efficient structured pruning framework for LLMs grounded in optimization theory. SPAP formulates the pruning problem through a mixed-integer optimization model, employs a penalty method that effectively makes pruning decisions to minimize pruning errors, and introduces an alternating minimization algorithm tailored to the splittable problem structure for efficient weight updates and performance recovery. Extensive experiments on OPT, LLaMA-3/3.1/3.2, and Qwen2.5 models demonstrate SPAP's superiority over state-of-the-art methods, delivering linear inference speedups (1.29$\\times$ at 30% sparsity) and proportional memory reductions. Our work offers a practical, optimization-driven solution for pruning LLMs while preserving model performance.",
+      "identifiers": [
+        "SemanticScholar:ebd1355bcd48b3ee49c2c7e99c61ac7d357a7535"
+      ],
+      "semantic_scholar_id": "ebd1355bcd48b3ee49c2c7e99c61ac7d357a7535",
+      "canonical_id": "arXiv:2505.03373",
+      "arxiv_id": "2505.03373",
+      "doi": "10.48550/arXiv.2505.03373",
+      "authors": [
+        "Hanyu Hu",
+        "Xiao-Ming Yuan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 561,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MLoRQ: Bridging Low-Rank and Quantization for Transformer Compression",
+      "source_url": "https://arxiv.org/abs/2507.09616",
+      "year": 2025,
+      "published": "2025-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying transformer-based neural networks on resource-constrained edge devices presents a significant challenge. This challenge is often addressed through various techniques, such as low-rank approximation and mixed-precision quantization. In this work, we introduce Mixed Low-Rank and Quantization (MLoRQ), a novel method that integrates both techniques. MLoRQ employs a two-stage optimization process to determine optimal bit-width and rank assignments for each layer, adhering to predefined memory constraints. This process includes: (i) an intra-layer optimization that identifies potentially optimal compression solutions out of all low-rank and quantization combinations; (ii) an inter-layer optimization that assigns bit-width precision and rank to each layer while ensuring the memory constraint is met. An optional final step applies a sequential optimization process using a modified adaptive rounding technique to mitigate compression-induced errors in joint low-rank approximation and quantization. The method is compatible and can be seamlessly integrated with most existing quantization algorithms. MLoRQ shows state-of-the-art results with up to 15\\% performance improvement, evaluated on Vision Transformers for image classification, object detection, and instance segmentation tasks.",
+      "identifiers": [
+        "SemanticScholar:276aa3dd297998f415636fd878cbd4801c521712"
+      ],
+      "semantic_scholar_id": "276aa3dd297998f415636fd878cbd4801c521712",
+      "canonical_id": "arXiv:2507.09616",
+      "arxiv_id": "2507.09616",
+      "doi": "10.48550/arXiv.2507.09616",
+      "authors": [
+        "Ofir Gordon",
+        "Ariel Lapid",
+        "Elad Cohen",
+        "Yarden Yagil",
+        "Arnon Netzer",
+        "H. Habi"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 493,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FIRP: Faster LLM Inference via Future Intermediate Representation Prediction",
+      "source_url": "https://arxiv.org/abs/2410.20488",
+      "year": 2024,
+      "published": "2024-10-27",
+      "venue": "Natural Language Processing and Chinese Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in Large Language Models (LLMs) have shown remarkable performance across a wide range of tasks. Despite this, the auto-regressive nature of LLM decoding, which generates only a single token per forward propagation, fails to fully exploit the parallel computational power of GPUs, leading to considerable latency. To address this, we introduce a novel speculative decoding method named FIRP which generates multiple tokens instead of one at each decoding step. We achieve this by predicting the intermediate hidden states of future tokens (tokens have not been decoded yet) and then using these pseudo hidden states to decode future tokens, specifically, these pseudo hidden states are predicted with simple linear transformation in intermediate layers of LLMs. Once predicted, they participate in the computation of all the following layers, thereby assimilating richer semantic information. As the layers go deeper, the semantic gap between pseudo and real hidden states is narrowed and it becomes feasible to decode future tokens with high accuracy. To validate the effectiveness of FIRP, we conduct extensive experiments, showing a speedup ratio of 1.9x-3x in several models and datasets, analytical experiments also prove our motivations.",
+      "identifiers": [
+        "SemanticScholar:3ecb55bba1205f8bee877c29d042663499a4125b"
+      ],
+      "semantic_scholar_id": "3ecb55bba1205f8bee877c29d042663499a4125b",
+      "canonical_id": "arXiv:2410.20488",
+      "arxiv_id": "2410.20488",
+      "doi": "10.1007/978-981-97-9437-9_13",
+      "authors": [
+        "Peng-Fei Wu",
+        "Jia-Hao Liu",
+        "Zhuo-Cheng Gong",
+        "Qi-Fan Wang",
+        "Jinpeng Li",
+        "Jin-Gang Wang",
+        "Xun-Liang Cai",
+        "Dong-Yan Zhao"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 752,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2412.11741",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.11741",
+        "id:SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604",
+        "id:arXiv:2412.11741",
+        "title:csrachieving 1 bit keyvalue cache via sparse representation",
+        "url:https://arxiv.org/abs/2412.11741"
+      ],
+      "record": {
+        "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
+        "source_url": "https://arxiv.org/abs/2412.11741",
+        "year": 2024,
+        "published": "2024-12-16",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The emergence of long-context text applications utilizing large language models (LLMs) has presented significant scalability challenges, particularly in memory footprint. The linear growth of the Key-Value (KV) cache, which stores attention keys and values to reduce redundant computations, can significantly increase memory usage and may prevent models from functioning properly in memory-constrained environments. To address this issue, we propose a novel approach called Cache Sparse Representation (CSR), which converts the KV cache by transforming the dense Key-Value cache tensor into sparse indexes and weights, offering a more memory-efficient representation during LLM inference. Furthermore, we introduce NeuralDict, a novel neural network-based method to automatically generate the dictionary used in our sparse representation. Our extensive experiments demonstrate that CSR matches the performance of state-of-the-art KV cache quantization algorithms while ensuring robust functionality in memory-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604"
+        ],
+        "semantic_scholar_id": "c8424bf742e789de1f7528d6ee418b5d8414b604",
+        "canonical_id": "arXiv:2412.11741",
+        "arxiv_id": "2412.11741",
+        "doi": "10.48550/arXiv.2412.11741",
+        "authors": [
+          "Hong-Xuan Zhang",
+          "Yao Zhao",
+          "Jia-Qi Zheng",
+          "Chen-Yi Zhuang",
+          "Jin-Jie Gu",
+          "Guihai Chen"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 702,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.03373",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.03373",
+        "id:SemanticScholar:ebd1355bcd48b3ee49c2c7e99c61ac7d357a7535",
+        "id:arXiv:2505.03373",
+        "title:spap structured pruning via alternating optimization and penalty methods",
+        "url:https://arxiv.org/abs/2505.03373"
+      ],
+      "record": {
+        "title": "SPAP: Structured Pruning via Alternating Optimization and Penalty Methods",
+        "source_url": "https://arxiv.org/abs/2505.03373",
+        "year": 2025,
+        "published": "2025-05-06",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of large language models (LLMs) is often constrained by their substantial computational and memory demands. While structured pruning presents a viable approach by eliminating entire network components, existing methods suffer from performance degradation, reliance on heuristic metrics, or expensive finetuning. To address these challenges, we propose SPAP (Structured Pruning via Alternating Optimization and Penalty Methods), a novel and efficient structured pruning framework for LLMs grounded in optimization theory. SPAP formulates the pruning problem through a mixed-integer optimization model, employs a penalty method that effectively makes pruning decisions to minimize pruning errors, and introduces an alternating minimization algorithm tailored to the splittable problem structure for efficient weight updates and performance recovery. Extensive experiments on OPT, LLaMA-3/3.1/3.2, and Qwen2.5 models demonstrate SPAP's superiority over state-of-the-art methods, delivering linear inference speedups (1.29$\\times$ at 30% sparsity) and proportional memory reductions. Our work offers a practical, optimization-driven solution for pruning LLMs while preserving model performance.",
+        "identifiers": [
+          "SemanticScholar:ebd1355bcd48b3ee49c2c7e99c61ac7d357a7535"
+        ],
+        "semantic_scholar_id": "ebd1355bcd48b3ee49c2c7e99c61ac7d357a7535",
+        "canonical_id": "arXiv:2505.03373",
+        "arxiv_id": "2505.03373",
+        "doi": "10.48550/arXiv.2505.03373",
+        "authors": [
+          "Hanyu Hu",
+          "Xiao-Ming Yuan"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 561,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.09616",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.09616",
+        "id:SemanticScholar:276aa3dd297998f415636fd878cbd4801c521712",
+        "id:arXiv:2507.09616",
+        "title:mlorq bridging lowrank and quantization for transformer compression",
+        "url:https://arxiv.org/abs/2507.09616"
+      ],
+      "record": {
+        "title": "MLoRQ: Bridging Low-Rank and Quantization for Transformer Compression",
+        "source_url": "https://arxiv.org/abs/2507.09616",
+        "year": 2025,
+        "published": "2025-07-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying transformer-based neural networks on resource-constrained edge devices presents a significant challenge. This challenge is often addressed through various techniques, such as low-rank approximation and mixed-precision quantization. In this work, we introduce Mixed Low-Rank and Quantization (MLoRQ), a novel method that integrates both techniques. MLoRQ employs a two-stage optimization process to determine optimal bit-width and rank assignments for each layer, adhering to predefined memory constraints. This process includes: (i) an intra-layer optimization that identifies potentially optimal compression solutions out of all low-rank and quantization combinations; (ii) an inter-layer optimization that assigns bit-width precision and rank to each layer while ensuring the memory constraint is met. An optional final step applies a sequential optimization process using a modified adaptive rounding technique to mitigate compression-induced errors in joint low-rank approximation and quantization. The method is compatible and can be seamlessly integrated with most existing quantization algorithms. MLoRQ shows state-of-the-art results with up to 15\\% performance improvement, evaluated on Vision Transformers for image classification, object detection, and instance segmentation tasks.",
+        "identifiers": [
+          "SemanticScholar:276aa3dd297998f415636fd878cbd4801c521712"
+        ],
+        "semantic_scholar_id": "276aa3dd297998f415636fd878cbd4801c521712",
+        "canonical_id": "arXiv:2507.09616",
+        "arxiv_id": "2507.09616",
+        "doi": "10.48550/arXiv.2507.09616",
+        "authors": [
+          "Ofir Gordon",
+          "Ariel Lapid",
+          "Elad Cohen",
+          "Yarden Yagil",
+          "Arnon Netzer",
+          "H. Habi"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 493,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.20488",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-981-97-9437-9_13",
+        "id:SemanticScholar:3ecb55bba1205f8bee877c29d042663499a4125b",
+        "id:arXiv:2410.20488",
+        "title:firp faster llm inference via future intermediate representation prediction",
+        "url:https://arxiv.org/abs/2410.20488"
+      ],
+      "record": {
+        "title": "FIRP: Faster LLM Inference via Future Intermediate Representation Prediction",
+        "source_url": "https://arxiv.org/abs/2410.20488",
+        "year": 2024,
+        "published": "2024-10-27",
+        "venue": "Natural Language Processing and Chinese Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advancements in Large Language Models (LLMs) have shown remarkable performance across a wide range of tasks. Despite this, the auto-regressive nature of LLM decoding, which generates only a single token per forward propagation, fails to fully exploit the parallel computational power of GPUs, leading to considerable latency. To address this, we introduce a novel speculative decoding method named FIRP which generates multiple tokens instead of one at each decoding step. We achieve this by predicting the intermediate hidden states of future tokens (tokens have not been decoded yet) and then using these pseudo hidden states to decode future tokens, specifically, these pseudo hidden states are predicted with simple linear transformation in intermediate layers of LLMs. Once predicted, they participate in the computation of all the following layers, thereby assimilating richer semantic information. As the layers go deeper, the semantic gap between pseudo and real hidden states is narrowed and it becomes feasible to decode future tokens with high accuracy. To validate the effectiveness of FIRP, we conduct extensive experiments, showing a speedup ratio of 1.9x-3x in several models and datasets, analytical experiments also prove our motivations.",
+        "identifiers": [
+          "SemanticScholar:3ecb55bba1205f8bee877c29d042663499a4125b"
+        ],
+        "semantic_scholar_id": "3ecb55bba1205f8bee877c29d042663499a4125b",
+        "canonical_id": "arXiv:2410.20488",
+        "arxiv_id": "2410.20488",
+        "doi": "10.1007/978-981-97-9437-9_13",
+        "authors": [
+          "Peng-Fei Wu",
+          "Jia-Hao Liu",
+          "Zhuo-Cheng Gong",
+          "Qi-Fan Wang",
+          "Jinpeng Li",
+          "Jin-Gang Wang",
+          "Xun-Liang Cai",
+          "Dong-Yan Zhao"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 752,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bec017c7c75b4e9113c47c229c1b1897901248180245b738de0894e0163ce770",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

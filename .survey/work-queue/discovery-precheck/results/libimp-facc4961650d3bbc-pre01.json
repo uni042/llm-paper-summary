@@ -1,0 +1,265 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-facc4961650d3bbc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-facc4961650d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.16045",
+    "arXiv:2510.18525",
+    "arXiv:2511.11729"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d7f7a9b86e6c75aba95786afd7d815cbd9a1ac9b",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:16:46.671708+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.16045",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.16045"
+    },
+    {
+      "requested_id": "arXiv:2510.18525",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.11729",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing",
+      "source_url": "https://arxiv.org/abs/2510.18525",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models achieve impressive performance across diverse tasks but exhibit high inference latency due to their large parameter sizes. While quantization reduces model size, it often leads to performance degradation compared to the full model. Speculative decoding remains lossless but typically incurs extra overheads. We propose SPEQ, an algorithm-hardware co-designed speculative decoding method that uses part of the full-model weight bits to form a quantized draft model, thereby eliminating additional training or storage overhead. A reconfigurable processing element array enables efficient execution of both the draft and verification passes. Experimental results across 15 LLMs and tasks demonstrate that SPEQ achieves speedups of 2.07x, 1.53x, and 1.45x compared over FP16, Olive, and Tender, respectively.",
+      "identifiers": [
+        "SemanticScholar:8c03a1a7a604d51fee49deb6473be3aa22a9c224"
+      ],
+      "semantic_scholar_id": "8c03a1a7a604d51fee49deb6473be3aa22a9c224",
+      "canonical_id": "arXiv:2510.18525",
+      "arxiv_id": "2510.18525",
+      "doi": "10.48550/arXiv.2510.18525",
+      "authors": [
+        "Yu-Shu Zhao",
+        "Yu-Bin Qin",
+        "Yang Wang",
+        "Xiao-Long Yang",
+        "Hui-Ming Han",
+        "Shao-Jun Wei",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 393,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+      "source_url": "https://arxiv.org/abs/2511.11729",
+      "year": 2025,
+      "published": "2025-11-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed under the Model-as-a-Service (MaaS) paradigm. To meet stringent quality-of-service (QoS) requirements, existing LLM serving systems disaggregate the prefill and decode phases of inference. However, decode instances often experience low GPU utilization due to their memory-bound nature and insufficient batching in dynamic workloads, leaving compute resources underutilized. We introduce Harli, a serving system that improves GPU utilization by co-locating parameter-efficient finetuning (PEFT) tasks with LLM decode instances. PEFT tasks are compute-bound and memory-efficient, making them ideal candidates for safe co-location. Specifically, Harli addresses key challenges--limited memory and unpredictable interference--using three components: a unified memory allocator for runtime memory reuse, a two-stage latency predictor for decode latency modeling, and a QoS-guaranteed throughput-maximizing scheduler for throughput maximization. Experimental results show that Harli improves the finetune throughput by 46.2% on average (up to 92.0%) over state-of-the-art serving systems, while maintaining strict QoS guarantees for inference decode.",
+      "identifiers": [
+        "SemanticScholar:39105bbb12ad60e82993409b201ce0dd37e404a7"
+      ],
+      "semantic_scholar_id": "39105bbb12ad60e82993409b201ce0dd37e404a7",
+      "canonical_id": "arXiv:2511.11729",
+      "arxiv_id": "2511.11729",
+      "doi": "10.48550/arXiv.2511.11729",
+      "authors": [
+        "Ao Xu",
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Quan Chen",
+        "Yu-Kang Chen",
+        "Shulai Zhang",
+        "Shuang Chen",
+        "Jie Jiang",
+        "Zhi-Bin Yu",
+        "Min-Yi Guo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.18525",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.18525",
+        "id:SemanticScholar:8c03a1a7a604d51fee49deb6473be3aa22a9c224",
+        "id:arXiv:2510.18525",
+        "title:from quarter to all accelerating speculative llm decoding via floatingpoint exponent remapping and parameter sharing",
+        "url:https://arxiv.org/abs/2510.18525"
+      ],
+      "record": {
+        "title": "From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing",
+        "source_url": "https://arxiv.org/abs/2510.18525",
+        "year": 2025,
+        "published": "2025-10-21",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models achieve impressive performance across diverse tasks but exhibit high inference latency due to their large parameter sizes. While quantization reduces model size, it often leads to performance degradation compared to the full model. Speculative decoding remains lossless but typically incurs extra overheads. We propose SPEQ, an algorithm-hardware co-designed speculative decoding method that uses part of the full-model weight bits to form a quantized draft model, thereby eliminating additional training or storage overhead. A reconfigurable processing element array enables efficient execution of both the draft and verification passes. Experimental results across 15 LLMs and tasks demonstrate that SPEQ achieves speedups of 2.07x, 1.53x, and 1.45x compared over FP16, Olive, and Tender, respectively.",
+        "identifiers": [
+          "SemanticScholar:8c03a1a7a604d51fee49deb6473be3aa22a9c224"
+        ],
+        "semantic_scholar_id": "8c03a1a7a604d51fee49deb6473be3aa22a9c224",
+        "canonical_id": "arXiv:2510.18525",
+        "arxiv_id": "2510.18525",
+        "doi": "10.48550/arXiv.2510.18525",
+        "authors": [
+          "Yu-Shu Zhao",
+          "Yu-Bin Qin",
+          "Yang Wang",
+          "Xiao-Long Yang",
+          "Hui-Ming Han",
+          "Shao-Jun Wei",
+          "Yang Hu",
+          "Shou-Yi Yin"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 393,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.11729",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.11729",
+        "id:SemanticScholar:39105bbb12ad60e82993409b201ce0dd37e404a7",
+        "id:arXiv:2511.11729",
+        "title:harli sloaware colocation of llm inference and peftbased finetuning on modelasaservice platforms",
+        "url:https://arxiv.org/abs/2511.11729"
+      ],
+      "record": {
+        "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+        "source_url": "https://arxiv.org/abs/2511.11729",
+        "year": 2025,
+        "published": "2025-11-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly deployed under the Model-as-a-Service (MaaS) paradigm. To meet stringent quality-of-service (QoS) requirements, existing LLM serving systems disaggregate the prefill and decode phases of inference. However, decode instances often experience low GPU utilization due to their memory-bound nature and insufficient batching in dynamic workloads, leaving compute resources underutilized. We introduce Harli, a serving system that improves GPU utilization by co-locating parameter-efficient finetuning (PEFT) tasks with LLM decode instances. PEFT tasks are compute-bound and memory-efficient, making them ideal candidates for safe co-location. Specifically, Harli addresses key challenges--limited memory and unpredictable interference--using three components: a unified memory allocator for runtime memory reuse, a two-stage latency predictor for decode latency modeling, and a QoS-guaranteed throughput-maximizing scheduler for throughput maximization. Experimental results show that Harli improves the finetune throughput by 46.2% on average (up to 92.0%) over state-of-the-art serving systems, while maintaining strict QoS guarantees for inference decode.",
+        "identifiers": [
+          "SemanticScholar:39105bbb12ad60e82993409b201ce0dd37e404a7"
+        ],
+        "semantic_scholar_id": "39105bbb12ad60e82993409b201ce0dd37e404a7",
+        "canonical_id": "arXiv:2511.11729",
+        "arxiv_id": "2511.11729",
+        "doi": "10.48550/arXiv.2511.11729",
+        "authors": [
+          "Ao Xu",
+          "Han Zhao",
+          "Wei-Hao Cui",
+          "Quan Chen",
+          "Yu-Kang Chen",
+          "Shulai Zhang",
+          "Shuang Chen",
+          "Jie Jiang",
+          "Zhi-Bin Yu",
+          "Min-Yi Guo"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 370,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9c481c1be23be7e7daac7e212ae6a42150307fc54b3e121cad3317f0ee4303ec",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

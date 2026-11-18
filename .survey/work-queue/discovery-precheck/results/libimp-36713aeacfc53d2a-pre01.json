@@ -1,0 +1,115 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-36713aeacfc53d2a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-36713aeacfc5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.61784/adsj3036",
+    "DOI:10.61784/its3024",
+    "arXiv:2512.13586",
+    "arXiv:2602.02159",
+    "arXiv:2602.03060",
+    "arXiv:2602.03295",
+    "arXiv:2602.19870",
+    "arXiv:2604.06787"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d7f7a9b86e6c75aba95786afd7d815cbd9a1ac9b",
+  "raw_search_result_count": 0,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 0,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 0,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 8,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:17:15.049263+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.61784/adsj3036",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "DOI:10.61784/its3024",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2512.13586",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2602.02159",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2602.03060",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2602.03295",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2602.19870",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "arXiv:2604.06787",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_batch",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    }
+  ],
+  "results": [],
+  "allowed_records": [],
+  "receipt": "sha256:ad2083be56cf74c68bbcbc25defabdd68e890c926f3c0f493b80fc32d503e779",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

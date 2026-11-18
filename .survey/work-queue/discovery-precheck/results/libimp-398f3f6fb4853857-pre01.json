@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-398f3f6fb4853857-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-398f3f6fb485",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2508.03726",
+    "arXiv:2508.03760"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d7f7a9b86e6c75aba95786afd7d815cbd9a1ac9b",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:16:46.666228+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2508.03726",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.03760",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2508.03760"
+    }
+  ],
+  "results": [
+    {
+      "title": "Hierarchical Verification of Speculative Beams for Accelerating LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.03726",
+      "year": 2025,
+      "published": "2025-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable success across diverse natural language processing tasks but face persistent challenges in inference efficiency due to their autoregressive nature. While speculative decoding and beam sampling offer notable improvements, traditional methods verify draft sequences sequentially without prioritization, leading to unnecessary computational overhead. This work proposes the Hierarchical Verification Tree (HVT), a novel framework that restructures speculative beam decoding by prioritizing high-likelihood drafts and enabling early pruning of suboptimal candidates. Theoretical foundations and a formal verification-pruning algorithm are developed to ensure correctness and efficiency. Integration with standard LLM inference pipelines is achieved without requiring retraining or architecture modification. Experimental evaluations across multiple datasets and models demonstrate that HVT consistently outperforms existing speculative decoding schemes, achieving substantial reductions in inference time and energy consumption while maintaining or enhancing output quality. The findings highlight the potential of hierarchical verification strategies as a new direction for accelerating large language model inference.",
+      "identifiers": [
+        "SemanticScholar:161c8611c5640fb89100bff8c0bd7e79e341d2b3"
+      ],
+      "semantic_scholar_id": "161c8611c5640fb89100bff8c0bd7e79e341d2b3",
+      "canonical_id": "arXiv:2508.03726",
+      "arxiv_id": "2508.03726",
+      "doi": "10.1007/978-3-032-07735-6_19",
+      "authors": [
+        "Jaydip Sen",
+        "Harshitha Puvvala",
+        "Subhasis Dasgupta"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 476,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2508.03726",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-032-07735-6_19",
+        "id:SemanticScholar:161c8611c5640fb89100bff8c0bd7e79e341d2b3",
+        "id:arXiv:2508.03726",
+        "title:hierarchical verification of speculative beams for accelerating llm inference",
+        "url:https://arxiv.org/abs/2508.03726"
+      ],
+      "record": {
+        "title": "Hierarchical Verification of Speculative Beams for Accelerating LLM Inference",
+        "source_url": "https://arxiv.org/abs/2508.03726",
+        "year": 2025,
+        "published": "2025-07-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved remarkable success across diverse natural language processing tasks but face persistent challenges in inference efficiency due to their autoregressive nature. While speculative decoding and beam sampling offer notable improvements, traditional methods verify draft sequences sequentially without prioritization, leading to unnecessary computational overhead. This work proposes the Hierarchical Verification Tree (HVT), a novel framework that restructures speculative beam decoding by prioritizing high-likelihood drafts and enabling early pruning of suboptimal candidates. Theoretical foundations and a formal verification-pruning algorithm are developed to ensure correctness and efficiency. Integration with standard LLM inference pipelines is achieved without requiring retraining or architecture modification. Experimental evaluations across multiple datasets and models demonstrate that HVT consistently outperforms existing speculative decoding schemes, achieving substantial reductions in inference time and energy consumption while maintaining or enhancing output quality. The findings highlight the potential of hierarchical verification strategies as a new direction for accelerating large language model inference.",
+        "identifiers": [
+          "SemanticScholar:161c8611c5640fb89100bff8c0bd7e79e341d2b3"
+        ],
+        "semantic_scholar_id": "161c8611c5640fb89100bff8c0bd7e79e341d2b3",
+        "canonical_id": "arXiv:2508.03726",
+        "arxiv_id": "2508.03726",
+        "doi": "10.1007/978-3-032-07735-6_19",
+        "authors": [
+          "Jaydip Sen",
+          "Harshitha Puvvala",
+          "Subhasis Dasgupta"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 476,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1c8ab6a0ecca8f7b42437d1100b49a83fab5ee0d7baf70dbbea8763c954a4061",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
