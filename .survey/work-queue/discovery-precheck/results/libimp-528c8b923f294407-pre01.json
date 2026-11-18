@@ -1,0 +1,826 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-528c8b923f294407-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-528c8b923f29",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/aibdf67964.2025.11440682",
+    "DOI:10.1109/asap65064.2025.00031",
+    "DOI:10.1109/hpcc67675.2025.00060",
+    "DOI:10.1109/icaiic68212.2026.11454275",
+    "DOI:10.1109/iceic64972.2025.10879771",
+    "DOI:10.1109/icic68258.2025.11413215",
+    "DOI:10.1109/icpads67057.2025.11322900",
+    "DOI:10.1109/icpads67057.2025.11323105",
+    "DOI:10.1109/iwcmc69287.2026.11579993"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c8b6ecf42faf1b815e0131e5455294454494a357",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:52:05.917981+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/aibdf67964.2025.11440682",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/asap65064.2025.00031",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/hpcc67675.2025.00060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icaiic68212.2026.11454275",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iceic64972.2025.10879771",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icic68258.2025.11413215",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icpads67057.2025.11322900",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icpads67057.2025.11323105",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iwcmc69287.2026.11579993",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting",
+      "source_url": "https://doi.org/10.1109/ASAP65064.2025.00031",
+      "year": 2025,
+      "published": "2025-07-28",
+      "venue": "IEEE International Conference on Application-Specific Systems, Architectures, and Processors",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) are increasingly deployed for on-device applications, optimizing inference on edge platforms becomes critical. In real-world scenarios, LLM inference must satisfy diverse constraints and user requirements, such as low latency, high energy efficiency, or low Energy-Delay Product (EDP). Most state-of-the-art edge platforms, such as AI PCs and mobile SoCs, integrate heterogeneous processing units, including CPUs, GPUs, and Neural Processing Units (NPUs), each with distinct performance and power characteristics. However, existing approaches often adopt static mapping to a single processing unit (e.g., CPU, GPU, or NPU) and perform optimizations for either latency or energy consumption. This limits their effectiveness in meeting the requirements of diverse application scenarios. Moreover, LLM inference consists of two distinct phases: a highly parallel, compute-intensive Prefill phase, and a sequential, memory-intensive Decode phase. These phases have different computational characteristics, and splitting them across suitable processing units can potentially yield better energy efficiency and EDP than static mapping. However, such improvements may not be realized in all cases, as the actual benefit depends on many factors, including prompt characteristics, the models used, and features of the target hardware. To address these challenges, we propose ellie, a lightweight inference framework for edge heterogeneous platforms that dynamically selects the optimal execution plan based on the usage scenario, LLM, hardware feature, and input prompt. ELLIE builds performance models by regressing latency and power from offline profiling data, and integrates it with a lightweight output token length predictor. At runtime, it estimates the latency and energy of candidate execution plans using the predicted output length and selects an optimized device mapping accordingly. We implement ellie on an Intel AI PC platform with integrated CPU, GPU, and NPU. On average, when optimizing for EDP, ELLIE reduces energy consumption by $1.8 \\times$, improves EDP by $1.5 \\times$, and achieves latency comparable to GPU-only inference, across diverse LLMs and prompt types.",
+      "identifiers": [
+        "SemanticScholar:0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b"
+      ],
+      "semantic_scholar_id": "0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b",
+      "doi": "10.1109/ASAP65064.2025.00031",
+      "canonical_id": "DOI:10.1109/ASAP65064.2025.00031",
+      "authors": [
+        "Haoyang Fan",
+        "Yi-Chien Lin",
+        "V. Prasanna"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 478,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Low-Rank SVD Compression for Memory-Efficient Transformer Attention",
+      "source_url": "https://doi.org/10.1109/ICIC68258.2025.11413215",
+      "year": 2025,
+      "published": "2025-12-10",
+      "venue": "International Conference on Intelligent Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large language models (LLMs) such as as GPT-2 and GPT-3 have very powerful generative capabilities, they use a large amount of memory because of the Key-Value (KV) cache utilized during inference. Since the KV cache grows in linear proportion to the sequence lengths, it creates a limit on the usage of such models by low-resource devices. In order to achieve a reduction in attention memory without retraining or trade-off, the paper presents a KV compression architecture that is built upon Singular Value Decomposition (SVD). In contrast to the fixed-rank methods, our method has the ability to dynamically choose the best rank of each attention head due to its ability to preserve about 90 percent of the spectral energy of the input, guaranteeing that the most significant contextual information is represented. This dynamic approach generates a memory drop of up to 95% on a variety of model dimensions (GPT-2, GPT-2-medium, GPT-2-large, and DistilGPT-2) and scores on quality at above 85% in majority of the setups. The results prove that adaptive SVD offers a consistent, hardware-agnostic, and model-agnostic approach to perform effective LLM inference by utilizing best low-rank structures in transformer attention at a variety of architecture sizes.",
+      "identifiers": [
+        "SemanticScholar:4e28e63b09515876b1b4cef246af9faf5751b5b6"
+      ],
+      "semantic_scholar_id": "4e28e63b09515876b1b4cef246af9faf5751b5b6",
+      "doi": "10.1109/ICIC68258.2025.11413215",
+      "canonical_id": "DOI:10.1109/ICIC68258.2025.11413215",
+      "authors": [
+        "Muhammad Anas Shah",
+        "Reema Qaiser Khan",
+        "Memoona Masood"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 343,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PQC-LLM: Post-Quantization Delta Compression for LLMs",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11322900",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The massive parameter scale and substantial storage requirements of large language models (LLMs) hinder their deployment on edge devices and in real-world applications, even after quantization. To address this challenge, we propose PQC-LLM, a Post-Quantization delta Compression scheme for LLMs. PQC-LLM is motivated by two key observations: (1) quantized LLMs still exhibit redundancy on the least significant bits (LSBs); (2) State-of-the-art (SOTA) quantization techniques could only converge to a local optimum. To exploit the potential, PQC-LLM performs a tile-wise deterministic bit replacement by uniformly substituting the least significant $N$ bits of all weights within the same tile with the constant bit value. We employ a network architecture search (NAS) mechanism to determine the optimal bit length and value of the uniform replacement. Subsequently, we perform delta compression on each tile using the first weight as the base value. Extensive experiments show that, PQC-LLM effectively reduces the storage requirements of quantized LLMs with negligible lossy or improved task accuracy.",
+      "identifiers": [
+        "SemanticScholar:f98999457bbd67ac7fb3a5ab19e94995c043fdb5"
+      ],
+      "semantic_scholar_id": "f98999457bbd67ac7fb3a5ab19e94995c043fdb5",
+      "doi": "10.1109/ICPADS67057.2025.11322900",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11322900",
+      "authors": [
+        "Yu-Jin Zhong",
+        "Chao Wu",
+        "Cheng Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 339,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LISLLM: Long Context Inference of Large Language Models with Short KV Cache",
+      "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323105",
+      "year": 2025,
+      "published": "2025-12-14",
+      "venue": "International Conference on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across various language tasks. However, in the process of generating long texts, the linearly increasing keyvalue (KV) cache imposes a large volume of memory footprint on HBM, resulting in significant time and energy consumption during inference. By retaining only the initial and recent tokens, existing methods ignore the intermediate tokens and the effect of the distance between current tokens and those in the KV cache, which causes significant accuracy degradation and limits the potential for KV cache compression. To overcome the above problems, we propose LISLLM, a KV cache compression mechanism that takes both the difference in importance and the distance between tokens into consideration for efficient inference of LLMs in long-context settings. Compared to the state-of-theart method, our method achieves compression ratios of up to $1.91 \\times$ and speedup of $1.20 \\times$ with better accuracy.",
+      "identifiers": [
+        "SemanticScholar:ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912"
+      ],
+      "semantic_scholar_id": "ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912",
+      "doi": "10.1109/ICPADS67057.2025.11323105",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323105",
+      "authors": [
+        "Tie-Long Liu",
+        "Gang Li",
+        "Ze-Yu Zhu",
+        "Zi-Tao Mo",
+        "Xing-Ting Yao",
+        "Jian Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 339,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ASDT: Adaptive Speculative Decoding Tree Based on Token Acceptance Feedback",
+      "source_url": "https://doi.org/10.1109/AIBDF67964.2025.11440682",
+      "year": 2025,
+      "published": "2025-12-26",
+      "venue": "2025 5th International Symposium on Artificial Intelligence and Big Data (AIBDF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by drafting multiple tokens in parallel and verifying them using the base model. However, existing tree-structured approaches rely on fixed draft configurations, which are suboptimal for heterogeneous inputs: deep trees can lead to excessive computation on difficult inputs, while shallow trees underexploit potential speedups on simpler ones. We propose ASDT (Adaptive Speculative Decoding Tree), a lightweight runtime controller that dynamically adjusts the speculative token tree based on token-level acceptance feedback. By modifying tree depth and width in response to input difficulty, ASDT keeps the per-step speculative cost approximately constant without altering the base model or requiring retraining. Experiments on dialogue, mathematical reasoning, and code generation tasks show that ASDT achieves consistent speedup improvements of 2.0-4.3% over Static Tree baselines, with up to 4.3% relative gain on the 3B model. By committing more tokens per step and reducing token-level latency, ASDT accelerates decoding while preserving the exact output distribution of standard autoregressive sampling. Our method is plug-and-play, training-free, and compatible with production deployment, making it a practical and effective solution for efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:5f74b71d000e646daf965c736c0c7d8a7d63496d"
+      ],
+      "semantic_scholar_id": "5f74b71d000e646daf965c736c0c7d8a7d63496d",
+      "doi": "10.1109/AIBDF67964.2025.11440682",
+      "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440682",
+      "authors": [
+        "Yizi Song",
+        "Han Xia",
+        "Fei Duan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 327,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "One-Shot Training for Reduction of Performance Variance in LLM Rotation Quantization",
+      "source_url": "https://doi.org/10.1109/ICAIIC68212.2026.11454275",
+      "year": 2026,
+      "published": "2026-02-24",
+      "venue": "Digital Signal Processing and Signal Processing Education Workshop",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rotation-based quantization techniques have emerged as effective methods for compressing Large Language Models by mitigating the impact of activation outliers. However, existing approaches face significant challenges: random rotation methods like QuaRot exhibit substantial performance variability across different random seeds, while learned rotation methods like SpinQuant require hundreds of calibration samples, increasing the training cost. To address these limitations, we propose OneRot, a novel one-shot rotation-based quantization technique that achieves stable performance with only a single calibration sample. OneRot introduces random perturbations to layer activations during training, which amplify gradients and enable effective rotation matrix learning in a single attempt while simulating diverse activation distributions. Experimental results on Llama-2 7B, Llama-3.2 3B, and Llama-3.2 1B models with 4-bit quantization demonstrate that OneRot reduces perplexity by $0.25,2.88$, and 21.48, respectively, compared to QuaRot, and reduces standard deviation by $0.01,0.24$, and 1.41, respectively, while achieving comparable performance to SpinQuant using 800 times fewer samples. OneRot provides a practical solution for efficient LLM deployment by combining the stability of learned rotations with the computational efficiency of random approaches.",
+      "identifiers": [
+        "SemanticScholar:232952681741e703cbe4de4e3640dde82daaa1d2"
+      ],
+      "semantic_scholar_id": "232952681741e703cbe4de4e3640dde82daaa1d2",
+      "doi": "10.1109/ICAIIC68212.2026.11454275",
+      "canonical_id": "DOI:10.1109/ICAIIC68212.2026.11454275",
+      "authors": [
+        "Sangki Park",
+        "Chanhoon Kim",
+        "Ki-Seok Chung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 267,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Semantics-Aware Scheduling for Low-Latency LLM Serving in Heterogeneous Computing Networks",
+      "source_url": "https://doi.org/10.1109/IWCMC69287.2026.11579993",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Conference on Wireless Communications and Mobile Computing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive nature of Large Language Models (LLMs) inference introduces inherent workload uncertainty, leading to severe head-of-line blocking and resource underutilization, particularly in heterogeneous computing networks. Existing LLM inference scheduling paradigms typically rely on large-scale neural predictors, incurring additional overhead and making it difficult to balance prediction cost against task scheduling efficiency. To address these challenges, this paper proposes a novel semantics-aware scheduling framework that predicts LLM inference workloads using LiPER, a lightweight prompt-enhanced response length predictor. We design LiPER as a small-scale language model by framing response-length estimation as a semantic classification problem. Specifically, LiPER encodes the prompt and directly predicts a discrete length bin with negligible inference overhead. Building on fine-grained workload priors, we propose LiPER-Sched, a discrete deep reinforcement-learning scheduler. By embedding predicted workloads into the system state, LiPER-Sched proactively dispatches tasks across heterogeneous computing nodes to improve load balance and minimize end-to-end latency. Extensive experiments on real-world datasets and simulated clusters show that our framework outperforms state-of-the-art baselines. LiPER-Sched cuts P99 tail latency by 45% over rule-based heuristics and converges to oracle-level performance with ground-truth information.",
+      "identifiers": [
+        "SemanticScholar:8d0500012272ccc081515fc4a5c88ef02b08cc40"
+      ],
+      "semantic_scholar_id": "8d0500012272ccc081515fc4a5c88ef02b08cc40",
+      "doi": "10.1109/IWCMC69287.2026.11579993",
+      "canonical_id": "DOI:10.1109/IWCMC69287.2026.11579993",
+      "authors": [
+        "Rui Wang",
+        "Xingyan Chen",
+        "Yu Zhao",
+        "Mu Wang",
+        "Chang-Qiao Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AG-BiLLM: Activation-Guided Fully Binarized Large Language Models",
+      "source_url": "https://doi.org/10.1109/ICEIC64972.2025.10879771",
+      "year": 2025,
+      "published": "2025-01-19",
+      "venue": "International Conference on Electronics, Information and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are attracting attention in various fields with remarkable performance as their size becomes enormous. However, deploying LLMs in memory-limited environments is very difficult due to their vast number of parameters. Binarization, a method of representing parameters in 1-bit, can efficiently represent LLMs in terms of memory. Previous LLMs binarization studies used the Hessian matrix but faced several limitations. To overcome those limitations, we apply activation awareness to binarization by determining the saliency of weight columns using activation magnitude. Our method reduces perplexity by up to 87% compared to previous studies.",
+      "identifiers": [
+        "SemanticScholar:9641b7caceafcb51d27008312af5b729913ed274"
+      ],
+      "semantic_scholar_id": "9641b7caceafcb51d27008312af5b729913ed274",
+      "doi": "10.1109/ICEIC64972.2025.10879771",
+      "canonical_id": "DOI:10.1109/ICEIC64972.2025.10879771",
+      "authors": [
+        "Aeri Kim",
+        "Eunchong Lee",
+        "Minkyu Lee",
+        "Yumi Kim",
+        "Sung-Joon Jang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 668,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VIFMM: Custom RISC-V Vector Instructions with INT-FP Mixed-Precision Computing for Accelerating LLM Inference",
+      "source_url": "https://doi.org/10.1109/HPCC67675.2025.00060",
+      "year": 2025,
+      "published": "2025-08-13",
+      "venue": "IEEE International Conference on High Performance Computing and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only quantization has been demonstrated to be an effective method to reduce memory and storage requirements for large language model (LLMs) deployed on resourceconstrained edge devices. However, it introduces frequent mixed precision operations between interger (INT) weights and floatingpoint (FP) activations. Conventional solutions typically quantize FP activations or dequantize INT weights during inference, which can degrade numerical accuracy and incur additional software overhead, ultimately slowing down inference. To eliminate this overhead, we propose VIFMM, an instruction set architecture (ISA) solution based on RISC-V vector (RVV) extension, supporting INT-FP mixed-precision computing, especially for operations between INT weights and FP activations, avoiding non-negligible data conversion in software. We implement VIFMM based on Ara, an open-source RVV core, along with a hardwarebased precision compensation mechanism to reuse the integer multiply accumulate calculation (MAC) units, to reduce hardware consumption and increase data precision. Experimental results show that VIFMM improves inference speed by 4%, with only 1.13% increase in hardware resource and 0.67% increase in power consumption, compared to conventional vector instructions. These findings illustrate that architecture-level support for INT-FP mixed-precision operations can significantly enhance LLM inference efficiency without sacrificing accuracy.",
+      "identifiers": [
+        "SemanticScholar:a9ee56a07b94e5c1ec1b76ebde2d367908f33a14"
+      ],
+      "semantic_scholar_id": "a9ee56a07b94e5c1ec1b76ebde2d367908f33a14",
+      "doi": "10.1109/HPCC67675.2025.00060",
+      "canonical_id": "DOI:10.1109/HPCC67675.2025.00060",
+      "authors": [
+        "Kai Gu",
+        "Jian Fang",
+        "Guangda Zhang",
+        "Bing-Xi Pei",
+        "Tian-Bo Zhang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 462,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/asap65064.2025.00031",
+      "identity_tokens": [
+        "id:DOI:10.1109/asap65064.2025.00031",
+        "id:SemanticScholar:0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b",
+        "title:ellie energyefficient llm inference at the edge via prefilldecode splitting",
+        "url:https://doi.org/10.1109/ASAP65064.2025.00031"
+      ],
+      "record": {
+        "title": "ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting",
+        "source_url": "https://doi.org/10.1109/ASAP65064.2025.00031",
+        "year": 2025,
+        "published": "2025-07-28",
+        "venue": "IEEE International Conference on Application-Specific Systems, Architectures, and Processors",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) are increasingly deployed for on-device applications, optimizing inference on edge platforms becomes critical. In real-world scenarios, LLM inference must satisfy diverse constraints and user requirements, such as low latency, high energy efficiency, or low Energy-Delay Product (EDP). Most state-of-the-art edge platforms, such as AI PCs and mobile SoCs, integrate heterogeneous processing units, including CPUs, GPUs, and Neural Processing Units (NPUs), each with distinct performance and power characteristics. However, existing approaches often adopt static mapping to a single processing unit (e.g., CPU, GPU, or NPU) and perform optimizations for either latency or energy consumption. This limits their effectiveness in meeting the requirements of diverse application scenarios. Moreover, LLM inference consists of two distinct phases: a highly parallel, compute-intensive Prefill phase, and a sequential, memory-intensive Decode phase. These phases have different computational characteristics, and splitting them across suitable processing units can potentially yield better energy efficiency and EDP than static mapping. However, such improvements may not be realized in all cases, as the actual benefit depends on many factors, including prompt characteristics, the models used, and features of the target hardware. To address these challenges, we propose ellie, a lightweight inference framework for edge heterogeneous platforms that dynamically selects the optimal execution plan based on the usage scenario, LLM, hardware feature, and input prompt. ELLIE builds performance models by regressing latency and power from offline profiling data, and integrates it with a lightweight output token length predictor. At runtime, it estimates the latency and energy of candidate execution plans using the predicted output length and selects an optimized device mapping accordingly. We implement ellie on an Intel AI PC platform with integrated CPU, GPU, and NPU. On average, when optimizing for EDP, ELLIE reduces energy consumption by $1.8 \\times$, improves EDP by $1.5 \\times$, and achieves latency comparable to GPU-only inference, across diverse LLMs and prompt types.",
+        "identifiers": [
+          "SemanticScholar:0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b"
+        ],
+        "semantic_scholar_id": "0827b6ab8db1b1cccfdb0d6469231cbb5febfe5b",
+        "doi": "10.1109/ASAP65064.2025.00031",
+        "canonical_id": "DOI:10.1109/ASAP65064.2025.00031",
+        "authors": [
+          "Haoyang Fan",
+          "Yi-Chien Lin",
+          "V. Prasanna"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 478,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icic68258.2025.11413215",
+      "identity_tokens": [
+        "id:DOI:10.1109/icic68258.2025.11413215",
+        "id:SemanticScholar:4e28e63b09515876b1b4cef246af9faf5751b5b6",
+        "title:lowrank svd compression for memoryefficient transformer attention",
+        "url:https://doi.org/10.1109/ICIC68258.2025.11413215"
+      ],
+      "record": {
+        "title": "Low-Rank SVD Compression for Memory-Efficient Transformer Attention",
+        "source_url": "https://doi.org/10.1109/ICIC68258.2025.11413215",
+        "year": 2025,
+        "published": "2025-12-10",
+        "venue": "International Conference on Intelligent Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although large language models (LLMs) such as as GPT-2 and GPT-3 have very powerful generative capabilities, they use a large amount of memory because of the Key-Value (KV) cache utilized during inference. Since the KV cache grows in linear proportion to the sequence lengths, it creates a limit on the usage of such models by low-resource devices. In order to achieve a reduction in attention memory without retraining or trade-off, the paper presents a KV compression architecture that is built upon Singular Value Decomposition (SVD). In contrast to the fixed-rank methods, our method has the ability to dynamically choose the best rank of each attention head due to its ability to preserve about 90 percent of the spectral energy of the input, guaranteeing that the most significant contextual information is represented. This dynamic approach generates a memory drop of up to 95% on a variety of model dimensions (GPT-2, GPT-2-medium, GPT-2-large, and DistilGPT-2) and scores on quality at above 85% in majority of the setups. The results prove that adaptive SVD offers a consistent, hardware-agnostic, and model-agnostic approach to perform effective LLM inference by utilizing best low-rank structures in transformer attention at a variety of architecture sizes.",
+        "identifiers": [
+          "SemanticScholar:4e28e63b09515876b1b4cef246af9faf5751b5b6"
+        ],
+        "semantic_scholar_id": "4e28e63b09515876b1b4cef246af9faf5751b5b6",
+        "doi": "10.1109/ICIC68258.2025.11413215",
+        "canonical_id": "DOI:10.1109/ICIC68258.2025.11413215",
+        "authors": [
+          "Muhammad Anas Shah",
+          "Reema Qaiser Khan",
+          "Memoona Masood"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 343,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icpads67057.2025.11322900",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpads67057.2025.11322900",
+        "id:SemanticScholar:f98999457bbd67ac7fb3a5ab19e94995c043fdb5",
+        "title:pqcllm postquantization delta compression for llms",
+        "url:https://doi.org/10.1109/ICPADS67057.2025.11322900"
+      ],
+      "record": {
+        "title": "PQC-LLM: Post-Quantization Delta Compression for LLMs",
+        "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11322900",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "International Conference on Parallel and Distributed Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The massive parameter scale and substantial storage requirements of large language models (LLMs) hinder their deployment on edge devices and in real-world applications, even after quantization. To address this challenge, we propose PQC-LLM, a Post-Quantization delta Compression scheme for LLMs. PQC-LLM is motivated by two key observations: (1) quantized LLMs still exhibit redundancy on the least significant bits (LSBs); (2) State-of-the-art (SOTA) quantization techniques could only converge to a local optimum. To exploit the potential, PQC-LLM performs a tile-wise deterministic bit replacement by uniformly substituting the least significant $N$ bits of all weights within the same tile with the constant bit value. We employ a network architecture search (NAS) mechanism to determine the optimal bit length and value of the uniform replacement. Subsequently, we perform delta compression on each tile using the first weight as the base value. Extensive experiments show that, PQC-LLM effectively reduces the storage requirements of quantized LLMs with negligible lossy or improved task accuracy.",
+        "identifiers": [
+          "SemanticScholar:f98999457bbd67ac7fb3a5ab19e94995c043fdb5"
+        ],
+        "semantic_scholar_id": "f98999457bbd67ac7fb3a5ab19e94995c043fdb5",
+        "doi": "10.1109/ICPADS67057.2025.11322900",
+        "canonical_id": "DOI:10.1109/ICPADS67057.2025.11322900",
+        "authors": [
+          "Yu-Jin Zhong",
+          "Chao Wu",
+          "Cheng Ji"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 339,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icpads67057.2025.11323105",
+      "identity_tokens": [
+        "id:DOI:10.1109/icpads67057.2025.11323105",
+        "id:SemanticScholar:ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912",
+        "title:lisllm long context inference of large language models with short kv cache",
+        "url:https://doi.org/10.1109/ICPADS67057.2025.11323105"
+      ],
+      "record": {
+        "title": "LISLLM: Long Context Inference of Large Language Models with Short KV Cache",
+        "source_url": "https://doi.org/10.1109/ICPADS67057.2025.11323105",
+        "year": 2025,
+        "published": "2025-12-14",
+        "venue": "International Conference on Parallel and Distributed Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across various language tasks. However, in the process of generating long texts, the linearly increasing keyvalue (KV) cache imposes a large volume of memory footprint on HBM, resulting in significant time and energy consumption during inference. By retaining only the initial and recent tokens, existing methods ignore the intermediate tokens and the effect of the distance between current tokens and those in the KV cache, which causes significant accuracy degradation and limits the potential for KV cache compression. To overcome the above problems, we propose LISLLM, a KV cache compression mechanism that takes both the difference in importance and the distance between tokens into consideration for efficient inference of LLMs in long-context settings. Compared to the state-of-theart method, our method achieves compression ratios of up to $1.91 \\times$ and speedup of $1.20 \\times$ with better accuracy.",
+        "identifiers": [
+          "SemanticScholar:ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912"
+        ],
+        "semantic_scholar_id": "ebd076a91c0d4bca562e63dfb5b43bc5e2ee4912",
+        "doi": "10.1109/ICPADS67057.2025.11323105",
+        "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323105",
+        "authors": [
+          "Tie-Long Liu",
+          "Gang Li",
+          "Ze-Yu Zhu",
+          "Zi-Tao Mo",
+          "Xing-Ting Yao",
+          "Jian Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 339,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/aibdf67964.2025.11440682",
+      "identity_tokens": [
+        "id:DOI:10.1109/aibdf67964.2025.11440682",
+        "id:SemanticScholar:5f74b71d000e646daf965c736c0c7d8a7d63496d",
+        "title:asdt adaptive speculative decoding tree based on token acceptance feedback",
+        "url:https://doi.org/10.1109/AIBDF67964.2025.11440682"
+      ],
+      "record": {
+        "title": "ASDT: Adaptive Speculative Decoding Tree Based on Token Acceptance Feedback",
+        "source_url": "https://doi.org/10.1109/AIBDF67964.2025.11440682",
+        "year": 2025,
+        "published": "2025-12-26",
+        "venue": "2025 5th International Symposium on Artificial Intelligence and Big Data (AIBDF)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by drafting multiple tokens in parallel and verifying them using the base model. However, existing tree-structured approaches rely on fixed draft configurations, which are suboptimal for heterogeneous inputs: deep trees can lead to excessive computation on difficult inputs, while shallow trees underexploit potential speedups on simpler ones. We propose ASDT (Adaptive Speculative Decoding Tree), a lightweight runtime controller that dynamically adjusts the speculative token tree based on token-level acceptance feedback. By modifying tree depth and width in response to input difficulty, ASDT keeps the per-step speculative cost approximately constant without altering the base model or requiring retraining. Experiments on dialogue, mathematical reasoning, and code generation tasks show that ASDT achieves consistent speedup improvements of 2.0-4.3% over Static Tree baselines, with up to 4.3% relative gain on the 3B model. By committing more tokens per step and reducing token-level latency, ASDT accelerates decoding while preserving the exact output distribution of standard autoregressive sampling. Our method is plug-and-play, training-free, and compatible with production deployment, making it a practical and effective solution for efficient LLM inference.",
+        "identifiers": [
+          "SemanticScholar:5f74b71d000e646daf965c736c0c7d8a7d63496d"
+        ],
+        "semantic_scholar_id": "5f74b71d000e646daf965c736c0c7d8a7d63496d",
+        "doi": "10.1109/AIBDF67964.2025.11440682",
+        "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440682",
+        "authors": [
+          "Yizi Song",
+          "Han Xia",
+          "Fei Duan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 327,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icaiic68212.2026.11454275",
+      "identity_tokens": [
+        "id:DOI:10.1109/icaiic68212.2026.11454275",
+        "id:SemanticScholar:232952681741e703cbe4de4e3640dde82daaa1d2",
+        "title:oneshot training for reduction of performance variance in llm rotation quantization",
+        "url:https://doi.org/10.1109/ICAIIC68212.2026.11454275"
+      ],
+      "record": {
+        "title": "One-Shot Training for Reduction of Performance Variance in LLM Rotation Quantization",
+        "source_url": "https://doi.org/10.1109/ICAIIC68212.2026.11454275",
+        "year": 2026,
+        "published": "2026-02-24",
+        "venue": "Digital Signal Processing and Signal Processing Education Workshop",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Rotation-based quantization techniques have emerged as effective methods for compressing Large Language Models by mitigating the impact of activation outliers. However, existing approaches face significant challenges: random rotation methods like QuaRot exhibit substantial performance variability across different random seeds, while learned rotation methods like SpinQuant require hundreds of calibration samples, increasing the training cost. To address these limitations, we propose OneRot, a novel one-shot rotation-based quantization technique that achieves stable performance with only a single calibration sample. OneRot introduces random perturbations to layer activations during training, which amplify gradients and enable effective rotation matrix learning in a single attempt while simulating diverse activation distributions. Experimental results on Llama-2 7B, Llama-3.2 3B, and Llama-3.2 1B models with 4-bit quantization demonstrate that OneRot reduces perplexity by $0.25,2.88$, and 21.48, respectively, compared to QuaRot, and reduces standard deviation by $0.01,0.24$, and 1.41, respectively, while achieving comparable performance to SpinQuant using 800 times fewer samples. OneRot provides a practical solution for efficient LLM deployment by combining the stability of learned rotations with the computational efficiency of random approaches.",
+        "identifiers": [
+          "SemanticScholar:232952681741e703cbe4de4e3640dde82daaa1d2"
+        ],
+        "semantic_scholar_id": "232952681741e703cbe4de4e3640dde82daaa1d2",
+        "doi": "10.1109/ICAIIC68212.2026.11454275",
+        "canonical_id": "DOI:10.1109/ICAIIC68212.2026.11454275",
+        "authors": [
+          "Sangki Park",
+          "Chanhoon Kim",
+          "Ki-Seok Chung"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 267,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iwcmc69287.2026.11579993",
+      "identity_tokens": [
+        "id:DOI:10.1109/iwcmc69287.2026.11579993",
+        "id:SemanticScholar:8d0500012272ccc081515fc4a5c88ef02b08cc40",
+        "title:semanticsaware scheduling for lowlatency llm serving in heterogeneous computing networks",
+        "url:https://doi.org/10.1109/IWCMC69287.2026.11579993"
+      ],
+      "record": {
+        "title": "Semantics-Aware Scheduling for Low-Latency LLM Serving in Heterogeneous Computing Networks",
+        "source_url": "https://doi.org/10.1109/IWCMC69287.2026.11579993",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Conference on Wireless Communications and Mobile Computing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The autoregressive nature of Large Language Models (LLMs) inference introduces inherent workload uncertainty, leading to severe head-of-line blocking and resource underutilization, particularly in heterogeneous computing networks. Existing LLM inference scheduling paradigms typically rely on large-scale neural predictors, incurring additional overhead and making it difficult to balance prediction cost against task scheduling efficiency. To address these challenges, this paper proposes a novel semantics-aware scheduling framework that predicts LLM inference workloads using LiPER, a lightweight prompt-enhanced response length predictor. We design LiPER as a small-scale language model by framing response-length estimation as a semantic classification problem. Specifically, LiPER encodes the prompt and directly predicts a discrete length bin with negligible inference overhead. Building on fine-grained workload priors, we propose LiPER-Sched, a discrete deep reinforcement-learning scheduler. By embedding predicted workloads into the system state, LiPER-Sched proactively dispatches tasks across heterogeneous computing nodes to improve load balance and minimize end-to-end latency. Extensive experiments on real-world datasets and simulated clusters show that our framework outperforms state-of-the-art baselines. LiPER-Sched cuts P99 tail latency by 45% over rule-based heuristics and converges to oracle-level performance with ground-truth information.",
+        "identifiers": [
+          "SemanticScholar:8d0500012272ccc081515fc4a5c88ef02b08cc40"
+        ],
+        "semantic_scholar_id": "8d0500012272ccc081515fc4a5c88ef02b08cc40",
+        "doi": "10.1109/IWCMC69287.2026.11579993",
+        "canonical_id": "DOI:10.1109/IWCMC69287.2026.11579993",
+        "authors": [
+          "Rui Wang",
+          "Xingyan Chen",
+          "Yu Zhao",
+          "Mu Wang",
+          "Chang-Qiao Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iceic64972.2025.10879771",
+      "identity_tokens": [
+        "id:DOI:10.1109/iceic64972.2025.10879771",
+        "id:SemanticScholar:9641b7caceafcb51d27008312af5b729913ed274",
+        "title:agbillm activationguided fully binarized large language models",
+        "url:https://doi.org/10.1109/ICEIC64972.2025.10879771"
+      ],
+      "record": {
+        "title": "AG-BiLLM: Activation-Guided Fully Binarized Large Language Models",
+        "source_url": "https://doi.org/10.1109/ICEIC64972.2025.10879771",
+        "year": 2025,
+        "published": "2025-01-19",
+        "venue": "International Conference on Electronics, Information and Communications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are attracting attention in various fields with remarkable performance as their size becomes enormous. However, deploying LLMs in memory-limited environments is very difficult due to their vast number of parameters. Binarization, a method of representing parameters in 1-bit, can efficiently represent LLMs in terms of memory. Previous LLMs binarization studies used the Hessian matrix but faced several limitations. To overcome those limitations, we apply activation awareness to binarization by determining the saliency of weight columns using activation magnitude. Our method reduces perplexity by up to 87% compared to previous studies.",
+        "identifiers": [
+          "SemanticScholar:9641b7caceafcb51d27008312af5b729913ed274"
+        ],
+        "semantic_scholar_id": "9641b7caceafcb51d27008312af5b729913ed274",
+        "doi": "10.1109/ICEIC64972.2025.10879771",
+        "canonical_id": "DOI:10.1109/ICEIC64972.2025.10879771",
+        "authors": [
+          "Aeri Kim",
+          "Eunchong Lee",
+          "Minkyu Lee",
+          "Yumi Kim",
+          "Sung-Joon Jang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 668,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/hpcc67675.2025.00060",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpcc67675.2025.00060",
+        "id:SemanticScholar:a9ee56a07b94e5c1ec1b76ebde2d367908f33a14",
+        "title:vifmm custom riscv vector instructions with intfp mixedprecision computing for accelerating llm inference",
+        "url:https://doi.org/10.1109/HPCC67675.2025.00060"
+      ],
+      "record": {
+        "title": "VIFMM: Custom RISC-V Vector Instructions with INT-FP Mixed-Precision Computing for Accelerating LLM Inference",
+        "source_url": "https://doi.org/10.1109/HPCC67675.2025.00060",
+        "year": 2025,
+        "published": "2025-08-13",
+        "venue": "IEEE International Conference on High Performance Computing and Communications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight-only quantization has been demonstrated to be an effective method to reduce memory and storage requirements for large language model (LLMs) deployed on resourceconstrained edge devices. However, it introduces frequent mixed precision operations between interger (INT) weights and floatingpoint (FP) activations. Conventional solutions typically quantize FP activations or dequantize INT weights during inference, which can degrade numerical accuracy and incur additional software overhead, ultimately slowing down inference. To eliminate this overhead, we propose VIFMM, an instruction set architecture (ISA) solution based on RISC-V vector (RVV) extension, supporting INT-FP mixed-precision computing, especially for operations between INT weights and FP activations, avoiding non-negligible data conversion in software. We implement VIFMM based on Ara, an open-source RVV core, along with a hardwarebased precision compensation mechanism to reuse the integer multiply accumulate calculation (MAC) units, to reduce hardware consumption and increase data precision. Experimental results show that VIFMM improves inference speed by 4%, with only 1.13% increase in hardware resource and 0.67% increase in power consumption, compared to conventional vector instructions. These findings illustrate that architecture-level support for INT-FP mixed-precision operations can significantly enhance LLM inference efficiency without sacrificing accuracy.",
+        "identifiers": [
+          "SemanticScholar:a9ee56a07b94e5c1ec1b76ebde2d367908f33a14"
+        ],
+        "semantic_scholar_id": "a9ee56a07b94e5c1ec1b76ebde2d367908f33a14",
+        "doi": "10.1109/HPCC67675.2025.00060",
+        "canonical_id": "DOI:10.1109/HPCC67675.2025.00060",
+        "authors": [
+          "Kai Gu",
+          "Jian Fang",
+          "Guangda Zhang",
+          "Bing-Xi Pei",
+          "Tian-Bo Zhang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 462,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b2f5417590c9da4287ebfe9b583c5db512d412db49a1370727d2faaf15ee0a4b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

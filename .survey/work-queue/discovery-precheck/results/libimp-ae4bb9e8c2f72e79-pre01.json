@@ -1,0 +1,223 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ae4bb9e8c2f72e79-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ae4bb9e8c2f7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2502.02790",
+    "arXiv:2503.22196",
+    "arXiv:2507.00797",
+    "arXiv:2509.00935",
+    "arXiv:2601.22132",
+    "arXiv:2603.25340",
+    "arXiv:2606.16825",
+    "arXiv:2607.07740",
+    "arXiv:2607.13500",
+    "arXiv:2608.13057"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c8b6ecf42faf1b815e0131e5455294454494a357",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 9,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 9,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:52:05.905374+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2502.02790",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2502.02790"
+    },
+    {
+      "requested_id": "arXiv:2503.22196",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.22196"
+    },
+    {
+      "requested_id": "arXiv:2507.00797",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/dac63849.2025.11132861"
+    },
+    {
+      "requested_id": "arXiv:2509.00935",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2509.00935"
+    },
+    {
+      "requested_id": "arXiv:2601.22132",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.22132"
+    },
+    {
+      "requested_id": "arXiv:2603.25340",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.25340"
+    },
+    {
+      "requested_id": "arXiv:2606.16825",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.16825"
+    },
+    {
+      "requested_id": "arXiv:2607.07740",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.13500",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.13500"
+    },
+    {
+      "requested_id": "arXiv:2608.13057",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.13057"
+    }
+  ],
+  "results": [
+    {
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+      "source_url": "https://arxiv.org/abs/2607.07740",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLMs are increasingly deployed in long-context applications such as retrieval-augmented generation, repository-level coding, and agentic workflows whose accumulated reasoning and tool traces routinely push the input an order of magnitude past the pretraining window, making zero-shot context extension the dominant deployment path for open-weight checkpoints. The dominant zero-shot methods (YaRN, Self-Extend, DCA) fix a single rescaling factor up front, so an aggressive factor sacrifices short-context fidelity while a conservative one breaks down at long contexts; recent length-aware variants adapt the mapping, but with a fitted or distance-dependent schedule. We propose Jet-Long, a tuning-free zero-shot method that pairs a local RoPE-faithful window with a long-range window whose rescaling factor adapts dynamically to the current sequence length via a parameter-free analytic schedule, recovering the base model exactly at short inputs while extrapolating cleanly at long ones. An inclusion-exclusion attention merge and on-the-fly RoPE correction enable a fused CuTe implementation. On H100 at 64K-128K, prefill retains 83-88% of FlashAttention-3 throughput across the evaluated Qwen3 sizes and 88-93% of a matched CuTe control; Qwen3-8B single-batch generation reaches 1.04-1.08 times FlashAttention-3 throughput. On Qwen3-1.7B/4B/8B up to 128K context, Jet-Long leads RULER by +4.79/+2.18/+2.03 percentage points over the strongest baseline at 1.7B/4B/8B, achieves the best overall accuracy on HELMET-RAG (a benchmark identified by HELMET as the most efficient predictor of downstream long-context performance) and attains the lowest PG-19 perplexity. Additional evaluations cover Meta-Llama-3-8B, post-trained Qwen3 checkpoints, and the hybrid Jet-Nemotron architecture, supporting broader applicability without retraining. The local-window hyperparameter remains robust across the tested settings.",
+      "identifiers": [
+        "SemanticScholar:0345040b59003ccd1c88b709ddaeb689be88c73f"
+      ],
+      "semantic_scholar_id": "0345040b59003ccd1c88b709ddaeb689be88c73f",
+      "canonical_id": "arXiv:2607.07740",
+      "arxiv_id": "2607.07740",
+      "doi": "10.48550/arXiv.2607.07740",
+      "authors": [
+        "Hao-Zhan Tang",
+        "Ze-Rui Wang",
+        "Yu-Xian Gu",
+        "Song Han",
+        "Han Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.07740",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.07740",
+        "id:SemanticScholar:0345040b59003ccd1c88b709ddaeb689be88c73f",
+        "id:arXiv:2607.07740",
+        "title:jetlong efficient longcontext extension with dynamic bifocal rope",
+        "url:https://arxiv.org/abs/2607.07740"
+      ],
+      "record": {
+        "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+        "source_url": "https://arxiv.org/abs/2607.07740",
+        "year": 2026,
+        "published": "2026-07-08",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern LLMs are increasingly deployed in long-context applications such as retrieval-augmented generation, repository-level coding, and agentic workflows whose accumulated reasoning and tool traces routinely push the input an order of magnitude past the pretraining window, making zero-shot context extension the dominant deployment path for open-weight checkpoints. The dominant zero-shot methods (YaRN, Self-Extend, DCA) fix a single rescaling factor up front, so an aggressive factor sacrifices short-context fidelity while a conservative one breaks down at long contexts; recent length-aware variants adapt the mapping, but with a fitted or distance-dependent schedule. We propose Jet-Long, a tuning-free zero-shot method that pairs a local RoPE-faithful window with a long-range window whose rescaling factor adapts dynamically to the current sequence length via a parameter-free analytic schedule, recovering the base model exactly at short inputs while extrapolating cleanly at long ones. An inclusion-exclusion attention merge and on-the-fly RoPE correction enable a fused CuTe implementation. On H100 at 64K-128K, prefill retains 83-88% of FlashAttention-3 throughput across the evaluated Qwen3 sizes and 88-93% of a matched CuTe control; Qwen3-8B single-batch generation reaches 1.04-1.08 times FlashAttention-3 throughput. On Qwen3-1.7B/4B/8B up to 128K context, Jet-Long leads RULER by +4.79/+2.18/+2.03 percentage points over the strongest baseline at 1.7B/4B/8B, achieves the best overall accuracy on HELMET-RAG (a benchmark identified by HELMET as the most efficient predictor of downstream long-context performance) and attains the lowest PG-19 perplexity. Additional evaluations cover Meta-Llama-3-8B, post-trained Qwen3 checkpoints, and the hybrid Jet-Nemotron architecture, supporting broader applicability without retraining. The local-window hyperparameter remains robust across the tested settings.",
+        "identifiers": [
+          "SemanticScholar:0345040b59003ccd1c88b709ddaeb689be88c73f"
+        ],
+        "semantic_scholar_id": "0345040b59003ccd1c88b709ddaeb689be88c73f",
+        "canonical_id": "arXiv:2607.07740",
+        "arxiv_id": "2607.07740",
+        "doi": "10.48550/arXiv.2607.07740",
+        "authors": [
+          "Hao-Zhan Tang",
+          "Ze-Rui Wang",
+          "Yu-Xian Gu",
+          "Song Han",
+          "Han Cai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 133,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2c79ebb043741f795971b2cfdc2c60cde5cb722bbb0cf102c0a844739a812cd4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

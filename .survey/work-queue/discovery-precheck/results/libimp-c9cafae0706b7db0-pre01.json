@@ -1,0 +1,830 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c9cafae0706b7db0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c9cafae0706b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.04537",
+    "arXiv:2610.04753",
+    "arXiv:2610.07940",
+    "arXiv:2610.13060",
+    "arXiv:2610.15366",
+    "arXiv:2610.18014",
+    "arXiv:2610.28576",
+    "arXiv:2610.36564",
+    "arXiv:2610.40039"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c8b6ecf42faf1b815e0131e5455294454494a357",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:52:06.353408+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.04537",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04753",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07940",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.13060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15366",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18014",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28576",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36564",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40039",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Hybrid Latent Attention for Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.07940",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped language models apply the same stack of layers T times to each token, which deepens the model without adding parameters but multiplies its key-value (KV) cache by T. The larger cache limits how many sequences a GPU can decode at once and slows each decoding step, which reads the whole cache. We propose Hybrid Latent Attention (HLA), which keeps exact keys and values within a sliding window of W recent tokens and stores each older token as a compact latent that the query of each loop reads directly, without reconstructing keys and values. We uptrain HLA on Ouro looped models (T=4) with 1.4B and 2.6B parameters, keeping the pretrained weights frozen and training only the added parameters to reproduce the original attention. The cache shrinks by 10.7x per token, fitting 4.0-8.8x as many concurrent sequences per GPU, and decoding throughput improves by 2.5x at 1K-token contexts and by up to 7.4x at 16K. HLA retains over 97% of the original accuracy on math, knowledge and reasoning benchmarks, and 96-100% on long-context retrieval up to 16K tokens. After supervised fine-tuning, it performs on par with the fine-tuned original model on competition-level math.",
+      "identifiers": [
+        "SemanticScholar:7f7015123417412c0c9d5e98f34e560da19282d4"
+      ],
+      "semantic_scholar_id": "7f7015123417412c0c9d5e98f34e560da19282d4",
+      "canonical_id": "arXiv:2610.07940",
+      "arxiv_id": "2610.07940",
+      "authors": [
+        "Yu-Han Chen",
+        "Si-Yuan Zhang",
+        "Nan Wang",
+        "Fei-Yang Kang",
+        "Ruo-Xi Jia"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KV-Repurpose: A Testbed for Evaluating Non-Prefix KV-Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2610.13060",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache reuse in large language model serving is commonly limited to exact prompt prefixes, preventing reuse when the same retrieved document appears after different system prompts, conversation histories, or dynamic metadata. We present KV-Repurpose, an open-source, vLLM-based system for developing and evaluating segment-wise KV-cache reuse beyond exact prefixes. The system combines cache-aware segment scheduling, prompt construction, capacity management, workload generation, and runtime monitoring. Experiments on long-context benchmarks show that naive segment reuse largely preserves output quality for single-document question answering and summarization, while exposing clear limitations in cross-document reasoning. Under a Zipfian RAG-style workload in which 20% of requests share a fixed prefix, KV-Repurpose achieves a substantially higher token-level cache hit rate than prefix caching at the same 30 GB cache capacity, 63.9% versus 3.3%, resulting in lower TTFT. Even with 1 TB of cache capacity, prefix caching reaches only a 17.9% hit rate in this workload. Source code is available under the Apache-2.0 license at https://github.com/taiga333/eval-kv-repurpose.",
+      "identifiers": [
+        "SemanticScholar:15d31a2a46c1bd465fbb479269e3ddb8c939cfcf"
+      ],
+      "semantic_scholar_id": "15d31a2a46c1bd465fbb479269e3ddb8c939cfcf",
+      "canonical_id": "arXiv:2610.13060",
+      "arxiv_id": "2610.13060",
+      "authors": [
+        "Taiga Ikeda",
+        "D. Miyashita",
+        "J. Deguchi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatentRemedy: Efficient Remedy For Non-Prefix KV Cache Reuse in Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2610.18014",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Non-prefix KV cache reuse is a promising approach for improving inference efficiency in multi-agent systems as agents share the same context blocks. However, when agents have conflicting tasks, directly reusing non-prefix KV caches across agents can severely degrade model performance, causing up to a 90% drop. Existing remedies, including selective recomputation and offset-based calibration, recover a limited fraction of this loss. We argue that the problem lies not only in contaminated KV representations but also in the agent's difficulty interpreting reused context under its own instructions. To this end, we introduce LatentRemedy, which uses a few task-conditioned latent tokens to help the target agent leverage reused context without recomputing the shared block. Specifically, we use an MLP to map the last hidden state of the target prefix into a small number of latent tokens, which are placed after the reused KV block to interact with the shared context. To guide subsequent predictions toward the target task, we train the MLP through full-prefill distillation. Experiments show that LatentRemedy consistently outperforms existing reuse baselines on conflicting tasks while maintaining TTFT close to direct reuse as cache size grows. Code and data are available at https://github.com/chenzhwsysu57/kvreuse.",
+      "identifiers": [
+        "SemanticScholar:69379625a6922262ba920206480400d596390ca0"
+      ],
+      "semantic_scholar_id": "69379625a6922262ba920206480400d596390ca0",
+      "canonical_id": "arXiv:2610.18014",
+      "arxiv_id": "2610.18014",
+      "authors": [
+        "Zhi-Wei Chen",
+        "Zhong-Tao Rao",
+        "Wai-Kit Xiu",
+        "Yu-Xiang Zhang",
+        "Shu-Ting Cui",
+        "Jian Chen",
+        "Tian-Xiang Zhao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop",
+      "source_url": "https://arxiv.org/abs/2610.36564",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "DeepInfer-Mac runs the 750B-class DeepSeek-V4.1-Flash model on a MacBook Air with 24 GB of unified memory. A mixed low-bit conversion occupies 338 GiB on the internal SSD. About 7.6 GiB of weights remain resident; routed experts and Engram rows are loaded when needed. This separation makes the model executable, but it leaves each generated token waiting for a succession of storage reads. We organize expert weights so that reads fill reusable GPU buffers directly, and couple cache allocation with the lifetime of those buffers. In end-to-end runs, the system generates English, Chinese and code at 0.21-0.72 tokens per second, with a largest sampled process footprint of 16.73 GiB across the tested requests. Matched decode comparisons show a 21.0% throughput gain from next-layer prefetching over resident-expert overlap alone, at the cost of additional reads. Longer prompts remain costly. We describe the design, provide the implementation and measurement scripts, and identify the limits of this operating point: a model far larger than memory can run locally, while storage and prefill still govern the user's wait.",
+      "identifiers": [
+        "SemanticScholar:abaedbc1ffd707273def0d39f55bed12700b20b8"
+      ],
+      "semantic_scholar_id": "abaedbc1ffd707273def0d39f55bed12700b20b8",
+      "canonical_id": "arXiv:2610.36564",
+      "arxiv_id": "2610.36564",
+      "authors": [
+        "Hao-Rui Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs on Unified Memory",
+      "source_url": "https://arxiv.org/abs/2610.04537",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device assistants run GPU-based LLM inference alongside CPU retrieval on unified-memory systems. Under a saturated local-retrieval workload, four concurrent retrieval workers raise 95th-percentile (p95) decode latency by 60-61% on two M4 systems, whereas prefill latency rises by only 5.7-6.9%. We study LLM phase as an admission signal for independent CPU retrieval under controlled LLM workloads. PHASEGATE calibrates separate concurrency limits for prefill and decode, selecting four and one on our base-M4 configuration. Under a backlogged queue, it achieves 2.0 times the aggregate retrieval throughput of the best tested feasible fixed policy, with both p95 LLM latency metrics within 1.25 times their no-retrieval baselines in all seven held-out runs. A phase-blind control, TimeGate, uses the same two limits on a calibration-derived schedule without observing LLM phase. It achieves similar retrieval throughput but violates the output-token latency limit in every run. M2 and M2 Pro Mac minis reproduce the policy ordering, while output-length sweeps show that the advantage narrows as decode occupies more of each request.",
+      "identifiers": [
+        "SemanticScholar:aa3ca07aa7d471259c85b506ec4de3dd15b457dd"
+      ],
+      "semantic_scholar_id": "aa3ca07aa7d471259c85b506ec4de3dd15b457dd",
+      "canonical_id": "arXiv:2610.04537",
+      "arxiv_id": "2610.04537",
+      "authors": [
+        "Seoyoon Yum",
+        "Sehoon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "More Value per Key: Asymmetric Sparse Attention for Faster LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2610.04753",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive generation in Large Language Models (LLMs) is constrained by the memory and computational demands of attention mechanisms. Sparse attention methods mitigate this cost by selecting only high-probability entries of the attention matrix. We observe that in many such methods, this renders the probability-value multiplication negligible, shifting the bottleneck to the query-key step. Key heads can therefore be reduced to accelerate inference, while retaining more value heads preserves capacity with limited additional decoding cost. We introduce Sparse Asymmetric Group-Query Attention (SAGA), which decouples key and value head counts to exploit this principle, and pair it with approximate top-N (Atop-N) attention, a simple sparse attention method designed to study the interaction between sparsity and head-count asymmetry. We formalize the benefits of this asymmetry theoretically and validate them empirically through latency measurements and quality evaluations on models up to 1.5B parameters. Together, SAGA and Atop-N achieve end-to-end decoding speedups exceeding $2\\times$ over our full-attention GQA baseline at long contexts. Models trained from scratch with SAGA nearly match the quality of comparable GQA variants on the evaluated benchmarks. To facilitate adoption, we introduce an efficient fine-tuning method that converts pretrained models to the SAGA architecture, enabling practitioners to benefit from our approach without costly retraining.",
+      "identifiers": [
+        "SemanticScholar:1df85775b30e3716a21224be9dbd377269e34197"
+      ],
+      "semantic_scholar_id": "1df85775b30e3716a21224be9dbd377269e34197",
+      "canonical_id": "arXiv:2610.04753",
+      "arxiv_id": "2610.04753",
+      "authors": [
+        "Noam Elata",
+        "Itay Lamprecht",
+        "Mikey Shechter",
+        "Daniel Ohayon",
+        "Itay Hubara",
+        "Daniel Soudry"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compositional Performance Modeling of LLM Inference Clusters with Hierarchical KV Caching",
+      "source_url": "https://arxiv.org/abs/2610.15366",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Design-space exploration of LLM inference clusters requires predicting how hardware and serving policies interact with hierarchical key-value (KV) caching. Isolated operation profiles alone do not determine cluster latency: reuse changes computational demand, while KV location, capacity, and contention govern execution order. We present a compositional discrete-event simulator based on separating local service costs from shared resource and KV availability. Compute and transfer models calibrated on one-prefill/one-decode (1P-1D) deployments are reused across compatible workers, enabling policy and topology comparisons without per-configuration latency fitting. Validation against SGLang covers Qwen3-8B and Qwen3-32B on 1P-1D and 3P-1D clusters. Mean request end-to-end latency error is 1.34% for question answering and 6.36% for captured coding sessions, measured as mean absolute percentage error. CPU simulation reduces replay turnaround by 15.33 times on average; real replay includes prescribed arrival gaps. Measured session-affinity and simulated retention studies demonstrate how the framework guides policy selection by predicting the joint effects on computation, latency, and KV occupancy.",
+      "identifiers": [
+        "SemanticScholar:519d76c91348308fb28193be0f1cca2b183d56a5"
+      ],
+      "semantic_scholar_id": "519d76c91348308fb28193be0f1cca2b183d56a5",
+      "canonical_id": "arXiv:2610.15366",
+      "arxiv_id": "2610.15366",
+      "authors": [
+        "Rui-Yang Ma",
+        "Sheng Qi",
+        "Dai-Kang Kuang",
+        "Teng Ma",
+        "Guo-Jie Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token",
+      "source_url": "https://arxiv.org/abs/2610.28576",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Energy-efficient deployment of large language models requires understanding how model architecture, hardware, and serving settings shape energy per generated token. We introduce the Token-Energy Law, a compact, interpretable model of GPU-board energy per output token for dense, full-history decoding. It relates token energy to two core dimensions: active bytes and realized decode time. Active bytes describe logical byte demand per output, separating dense weights shared within a decode iteration from private key--value (KV) histories read and updated for each request. Realized decode time is the elapsed decode duration divided by the number of output tokens produced. We combine the two byte coordinates and time in a common affine form, with coefficients calibrated for each model and hardware/runtime configuration. This formulation explains how batching amortizes shared-weight work, longer attended histories increase private KV demand, and throughput determines the time-associated cost per output. Our experiments cover three models under BF16 decoding on NVIDIA Hopper and Blackwell GPUs, including two-GPU tensor parallelism on Hopper. Using fixed coefficients and observed decode time, held-out condition-mean energy estimates differ from measurements by at most 3.73%.",
+      "identifiers": [
+        "SemanticScholar:a0d91566c27c6f1c6b615693d74f133ea5f2dc95"
+      ],
+      "semantic_scholar_id": "a0d91566c27c6f1c6b615693d74f133ea5f2dc95",
+      "canonical_id": "arXiv:2610.28576",
+      "arxiv_id": "2610.28576",
+      "authors": [
+        "Chenxu Niu",
+        "Batuhan Sencer",
+        "Wei Zhang",
+        "Yong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs",
+      "source_url": "https://arxiv.org/abs/2610.40039",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diverse optimizations spanning model architecture, inference runtime, and hardware acceleration have been proposed for on-device vision-language model (VLM) deployment on edge NPUs. Still, cross-layer coordination of VLM execution on edge NPUs remains largely underexplored. This paper presents an empirical measurement study across six representative VLMs, three real-world edge platforms, and ten multimodal benchmarks. Our evaluation drills down from end-to-end application-level latency and thermal traces down to low-level kernel-scale execution behaviors, challenging several widely held community assumptions. First, softmax dominates attention costs; even lookup-table-based softmax optimizations cannot eliminate pipeline bubbles that severely underutilize NPU matrix units. Second, theoretical speedups from linear attention vanish under real-NPU execution due to prohibitive tensor-rearrangement overhead. Third, no hardware backend universally dominates autoregressive decoding: attention-tensor-shaped parallelism dictates NPU efficiency and shifts the CPU-NPU performance balance. We further find task-specific Sweet Resolutions for VLMs, which deliver meaningful accuracy gains at only modest latency overhead. Complementing these findings, we provide actionable cross-layer recommendations for hardware architects, runtime developers, and model designers.",
+      "identifiers": [
+        "SemanticScholar:87cad274113e4c0fa0b0d2937ed42c860ceac50d"
+      ],
+      "semantic_scholar_id": "87cad274113e4c0fa0b0d2937ed42c860ceac50d",
+      "canonical_id": "arXiv:2610.40039",
+      "arxiv_id": "2610.40039",
+      "authors": [
+        "Huan Yang",
+        "Shi-Qi Jiang",
+        "Yuning Mao",
+        "Chuan-Yue Xiong",
+        "De-Yu Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.07940",
+      "identity_tokens": [
+        "id:SemanticScholar:7f7015123417412c0c9d5e98f34e560da19282d4",
+        "id:arXiv:2610.07940",
+        "title:hybrid latent attention for looped language models",
+        "url:https://arxiv.org/abs/2610.07940"
+      ],
+      "record": {
+        "title": "Hybrid Latent Attention for Looped Language Models",
+        "source_url": "https://arxiv.org/abs/2610.07940",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped language models apply the same stack of layers T times to each token, which deepens the model without adding parameters but multiplies its key-value (KV) cache by T. The larger cache limits how many sequences a GPU can decode at once and slows each decoding step, which reads the whole cache. We propose Hybrid Latent Attention (HLA), which keeps exact keys and values within a sliding window of W recent tokens and stores each older token as a compact latent that the query of each loop reads directly, without reconstructing keys and values. We uptrain HLA on Ouro looped models (T=4) with 1.4B and 2.6B parameters, keeping the pretrained weights frozen and training only the added parameters to reproduce the original attention. The cache shrinks by 10.7x per token, fitting 4.0-8.8x as many concurrent sequences per GPU, and decoding throughput improves by 2.5x at 1K-token contexts and by up to 7.4x at 16K. HLA retains over 97% of the original accuracy on math, knowledge and reasoning benchmarks, and 96-100% on long-context retrieval up to 16K tokens. After supervised fine-tuning, it performs on par with the fine-tuned original model on competition-level math.",
+        "identifiers": [
+          "SemanticScholar:7f7015123417412c0c9d5e98f34e560da19282d4"
+        ],
+        "semantic_scholar_id": "7f7015123417412c0c9d5e98f34e560da19282d4",
+        "canonical_id": "arXiv:2610.07940",
+        "arxiv_id": "2610.07940",
+        "authors": [
+          "Yu-Han Chen",
+          "Si-Yuan Zhang",
+          "Nan Wang",
+          "Fei-Yang Kang",
+          "Ruo-Xi Jia"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 43,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.13060",
+      "identity_tokens": [
+        "id:SemanticScholar:15d31a2a46c1bd465fbb479269e3ddb8c939cfcf",
+        "id:arXiv:2610.13060",
+        "title:kvrepurpose a testbed for evaluating nonprefix kvcache reuse",
+        "url:https://arxiv.org/abs/2610.13060"
+      ],
+      "record": {
+        "title": "KV-Repurpose: A Testbed for Evaluating Non-Prefix KV-Cache Reuse",
+        "source_url": "https://arxiv.org/abs/2610.13060",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV-cache reuse in large language model serving is commonly limited to exact prompt prefixes, preventing reuse when the same retrieved document appears after different system prompts, conversation histories, or dynamic metadata. We present KV-Repurpose, an open-source, vLLM-based system for developing and evaluating segment-wise KV-cache reuse beyond exact prefixes. The system combines cache-aware segment scheduling, prompt construction, capacity management, workload generation, and runtime monitoring. Experiments on long-context benchmarks show that naive segment reuse largely preserves output quality for single-document question answering and summarization, while exposing clear limitations in cross-document reasoning. Under a Zipfian RAG-style workload in which 20% of requests share a fixed prefix, KV-Repurpose achieves a substantially higher token-level cache hit rate than prefix caching at the same 30 GB cache capacity, 63.9% versus 3.3%, resulting in lower TTFT. Even with 1 TB of cache capacity, prefix caching reaches only a 17.9% hit rate in this workload. Source code is available under the Apache-2.0 license at https://github.com/taiga333/eval-kv-repurpose.",
+        "identifiers": [
+          "SemanticScholar:15d31a2a46c1bd465fbb479269e3ddb8c939cfcf"
+        ],
+        "semantic_scholar_id": "15d31a2a46c1bd465fbb479269e3ddb8c939cfcf",
+        "canonical_id": "arXiv:2610.13060",
+        "arxiv_id": "2610.13060",
+        "authors": [
+          "Taiga Ikeda",
+          "D. Miyashita",
+          "J. Deguchi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18014",
+      "identity_tokens": [
+        "id:SemanticScholar:69379625a6922262ba920206480400d596390ca0",
+        "id:arXiv:2610.18014",
+        "title:latentremedy efficient remedy for nonprefix kv cache reuse in multiagent systems",
+        "url:https://arxiv.org/abs/2610.18014"
+      ],
+      "record": {
+        "title": "LatentRemedy: Efficient Remedy For Non-Prefix KV Cache Reuse in Multi-Agent Systems",
+        "source_url": "https://arxiv.org/abs/2610.18014",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Non-prefix KV cache reuse is a promising approach for improving inference efficiency in multi-agent systems as agents share the same context blocks. However, when agents have conflicting tasks, directly reusing non-prefix KV caches across agents can severely degrade model performance, causing up to a 90% drop. Existing remedies, including selective recomputation and offset-based calibration, recover a limited fraction of this loss. We argue that the problem lies not only in contaminated KV representations but also in the agent's difficulty interpreting reused context under its own instructions. To this end, we introduce LatentRemedy, which uses a few task-conditioned latent tokens to help the target agent leverage reused context without recomputing the shared block. Specifically, we use an MLP to map the last hidden state of the target prefix into a small number of latent tokens, which are placed after the reused KV block to interact with the shared context. To guide subsequent predictions toward the target task, we train the MLP through full-prefill distillation. Experiments show that LatentRemedy consistently outperforms existing reuse baselines on conflicting tasks while maintaining TTFT close to direct reuse as cache size grows. Code and data are available at https://github.com/chenzhwsysu57/kvreuse.",
+        "identifiers": [
+          "SemanticScholar:69379625a6922262ba920206480400d596390ca0"
+        ],
+        "semantic_scholar_id": "69379625a6922262ba920206480400d596390ca0",
+        "canonical_id": "arXiv:2610.18014",
+        "arxiv_id": "2610.18014",
+        "authors": [
+          "Zhi-Wei Chen",
+          "Zhong-Tao Rao",
+          "Wai-Kit Xiu",
+          "Yu-Xiang Zhang",
+          "Shu-Ting Cui",
+          "Jian Chen",
+          "Tian-Xiang Zhao"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36564",
+      "identity_tokens": [
+        "id:SemanticScholar:abaedbc1ffd707273def0d39f55bed12700b20b8",
+        "id:arXiv:2610.36564",
+        "title:deepinfermac running a 750bclass moe on a 24 gb laptop",
+        "url:https://arxiv.org/abs/2610.36564"
+      ],
+      "record": {
+        "title": "DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop",
+        "source_url": "https://arxiv.org/abs/2610.36564",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "DeepInfer-Mac runs the 750B-class DeepSeek-V4.1-Flash model on a MacBook Air with 24 GB of unified memory. A mixed low-bit conversion occupies 338 GiB on the internal SSD. About 7.6 GiB of weights remain resident; routed experts and Engram rows are loaded when needed. This separation makes the model executable, but it leaves each generated token waiting for a succession of storage reads. We organize expert weights so that reads fill reusable GPU buffers directly, and couple cache allocation with the lifetime of those buffers. In end-to-end runs, the system generates English, Chinese and code at 0.21-0.72 tokens per second, with a largest sampled process footprint of 16.73 GiB across the tested requests. Matched decode comparisons show a 21.0% throughput gain from next-layer prefetching over resident-expert overlap alone, at the cost of additional reads. Longer prompts remain costly. We describe the design, provide the implementation and measurement scripts, and identify the limits of this operating point: a model far larger than memory can run locally, while storage and prefill still govern the user's wait.",
+        "identifiers": [
+          "SemanticScholar:abaedbc1ffd707273def0d39f55bed12700b20b8"
+        ],
+        "semantic_scholar_id": "abaedbc1ffd707273def0d39f55bed12700b20b8",
+        "canonical_id": "arXiv:2610.36564",
+        "arxiv_id": "2610.36564",
+        "authors": [
+          "Hao-Rui Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04537",
+      "identity_tokens": [
+        "id:SemanticScholar:aa3ca07aa7d471259c85b506ec4de3dd15b457dd",
+        "id:arXiv:2610.04537",
+        "title:phasegate phaseaware cpu retrieval scheduling for ondevice llms on unified memory",
+        "url:https://arxiv.org/abs/2610.04537"
+      ],
+      "record": {
+        "title": "PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs on Unified Memory",
+        "source_url": "https://arxiv.org/abs/2610.04537",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On-device assistants run GPU-based LLM inference alongside CPU retrieval on unified-memory systems. Under a saturated local-retrieval workload, four concurrent retrieval workers raise 95th-percentile (p95) decode latency by 60-61% on two M4 systems, whereas prefill latency rises by only 5.7-6.9%. We study LLM phase as an admission signal for independent CPU retrieval under controlled LLM workloads. PHASEGATE calibrates separate concurrency limits for prefill and decode, selecting four and one on our base-M4 configuration. Under a backlogged queue, it achieves 2.0 times the aggregate retrieval throughput of the best tested feasible fixed policy, with both p95 LLM latency metrics within 1.25 times their no-retrieval baselines in all seven held-out runs. A phase-blind control, TimeGate, uses the same two limits on a calibration-derived schedule without observing LLM phase. It achieves similar retrieval throughput but violates the output-token latency limit in every run. M2 and M2 Pro Mac minis reproduce the policy ordering, while output-length sweeps show that the advantage narrows as decode occupies more of each request.",
+        "identifiers": [
+          "SemanticScholar:aa3ca07aa7d471259c85b506ec4de3dd15b457dd"
+        ],
+        "semantic_scholar_id": "aa3ca07aa7d471259c85b506ec4de3dd15b457dd",
+        "canonical_id": "arXiv:2610.04537",
+        "arxiv_id": "2610.04537",
+        "authors": [
+          "Seoyoon Yum",
+          "Sehoon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04753",
+      "identity_tokens": [
+        "id:SemanticScholar:1df85775b30e3716a21224be9dbd377269e34197",
+        "id:arXiv:2610.04753",
+        "title:more value per key asymmetric sparse attention for faster llm decoding",
+        "url:https://arxiv.org/abs/2610.04753"
+      ],
+      "record": {
+        "title": "More Value per Key: Asymmetric Sparse Attention for Faster LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2610.04753",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive generation in Large Language Models (LLMs) is constrained by the memory and computational demands of attention mechanisms. Sparse attention methods mitigate this cost by selecting only high-probability entries of the attention matrix. We observe that in many such methods, this renders the probability-value multiplication negligible, shifting the bottleneck to the query-key step. Key heads can therefore be reduced to accelerate inference, while retaining more value heads preserves capacity with limited additional decoding cost. We introduce Sparse Asymmetric Group-Query Attention (SAGA), which decouples key and value head counts to exploit this principle, and pair it with approximate top-N (Atop-N) attention, a simple sparse attention method designed to study the interaction between sparsity and head-count asymmetry. We formalize the benefits of this asymmetry theoretically and validate them empirically through latency measurements and quality evaluations on models up to 1.5B parameters. Together, SAGA and Atop-N achieve end-to-end decoding speedups exceeding $2\\times$ over our full-attention GQA baseline at long contexts. Models trained from scratch with SAGA nearly match the quality of comparable GQA variants on the evaluated benchmarks. To facilitate adoption, we introduce an efficient fine-tuning method that converts pretrained models to the SAGA architecture, enabling practitioners to benefit from our approach without costly retraining.",
+        "identifiers": [
+          "SemanticScholar:1df85775b30e3716a21224be9dbd377269e34197"
+        ],
+        "semantic_scholar_id": "1df85775b30e3716a21224be9dbd377269e34197",
+        "canonical_id": "arXiv:2610.04753",
+        "arxiv_id": "2610.04753",
+        "authors": [
+          "Noam Elata",
+          "Itay Lamprecht",
+          "Mikey Shechter",
+          "Daniel Ohayon",
+          "Itay Hubara",
+          "Daniel Soudry"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 46,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15366",
+      "identity_tokens": [
+        "id:SemanticScholar:519d76c91348308fb28193be0f1cca2b183d56a5",
+        "id:arXiv:2610.15366",
+        "title:compositional performance modeling of llm inference clusters with hierarchical kv caching",
+        "url:https://arxiv.org/abs/2610.15366"
+      ],
+      "record": {
+        "title": "Compositional Performance Modeling of LLM Inference Clusters with Hierarchical KV Caching",
+        "source_url": "https://arxiv.org/abs/2610.15366",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Design-space exploration of LLM inference clusters requires predicting how hardware and serving policies interact with hierarchical key-value (KV) caching. Isolated operation profiles alone do not determine cluster latency: reuse changes computational demand, while KV location, capacity, and contention govern execution order. We present a compositional discrete-event simulator based on separating local service costs from shared resource and KV availability. Compute and transfer models calibrated on one-prefill/one-decode (1P-1D) deployments are reused across compatible workers, enabling policy and topology comparisons without per-configuration latency fitting. Validation against SGLang covers Qwen3-8B and Qwen3-32B on 1P-1D and 3P-1D clusters. Mean request end-to-end latency error is 1.34% for question answering and 6.36% for captured coding sessions, measured as mean absolute percentage error. CPU simulation reduces replay turnaround by 15.33 times on average; real replay includes prescribed arrival gaps. Measured session-affinity and simulated retention studies demonstrate how the framework guides policy selection by predicting the joint effects on computation, latency, and KV occupancy.",
+        "identifiers": [
+          "SemanticScholar:519d76c91348308fb28193be0f1cca2b183d56a5"
+        ],
+        "semantic_scholar_id": "519d76c91348308fb28193be0f1cca2b183d56a5",
+        "canonical_id": "arXiv:2610.15366",
+        "arxiv_id": "2610.15366",
+        "authors": [
+          "Rui-Yang Ma",
+          "Sheng Qi",
+          "Dai-Kang Kuang",
+          "Teng Ma",
+          "Guo-Jie Luo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 38,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28576",
+      "identity_tokens": [
+        "id:SemanticScholar:a0d91566c27c6f1c6b615693d74f133ea5f2dc95",
+        "id:arXiv:2610.28576",
+        "title:the tokenenergy law of llm decode active bytes and realized time account for joules per token",
+        "url:https://arxiv.org/abs/2610.28576"
+      ],
+      "record": {
+        "title": "The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token",
+        "source_url": "https://arxiv.org/abs/2610.28576",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Energy-efficient deployment of large language models requires understanding how model architecture, hardware, and serving settings shape energy per generated token. We introduce the Token-Energy Law, a compact, interpretable model of GPU-board energy per output token for dense, full-history decoding. It relates token energy to two core dimensions: active bytes and realized decode time. Active bytes describe logical byte demand per output, separating dense weights shared within a decode iteration from private key--value (KV) histories read and updated for each request. Realized decode time is the elapsed decode duration divided by the number of output tokens produced. We combine the two byte coordinates and time in a common affine form, with coefficients calibrated for each model and hardware/runtime configuration. This formulation explains how batching amortizes shared-weight work, longer attended histories increase private KV demand, and throughput determines the time-associated cost per output. Our experiments cover three models under BF16 decoding on NVIDIA Hopper and Blackwell GPUs, including two-GPU tensor parallelism on Hopper. Using fixed coefficients and observed decode time, held-out condition-mean energy estimates differ from measurements by at most 3.73%.",
+        "identifiers": [
+          "SemanticScholar:a0d91566c27c6f1c6b615693d74f133ea5f2dc95"
+        ],
+        "semantic_scholar_id": "a0d91566c27c6f1c6b615693d74f133ea5f2dc95",
+        "canonical_id": "arXiv:2610.28576",
+        "arxiv_id": "2610.28576",
+        "authors": [
+          "Chenxu Niu",
+          "Batuhan Sencer",
+          "Wei Zhang",
+          "Yong Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.40039",
+      "identity_tokens": [
+        "id:SemanticScholar:87cad274113e4c0fa0b0d2937ed42c860ceac50d",
+        "id:arXiv:2610.40039",
+        "title:how far are we from ondevice vlm inference a measurement study on edge npus",
+        "url:https://arxiv.org/abs/2610.40039"
+      ],
+      "record": {
+        "title": "How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs",
+        "source_url": "https://arxiv.org/abs/2610.40039",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diverse optimizations spanning model architecture, inference runtime, and hardware acceleration have been proposed for on-device vision-language model (VLM) deployment on edge NPUs. Still, cross-layer coordination of VLM execution on edge NPUs remains largely underexplored. This paper presents an empirical measurement study across six representative VLMs, three real-world edge platforms, and ten multimodal benchmarks. Our evaluation drills down from end-to-end application-level latency and thermal traces down to low-level kernel-scale execution behaviors, challenging several widely held community assumptions. First, softmax dominates attention costs; even lookup-table-based softmax optimizations cannot eliminate pipeline bubbles that severely underutilize NPU matrix units. Second, theoretical speedups from linear attention vanish under real-NPU execution due to prohibitive tensor-rearrangement overhead. Third, no hardware backend universally dominates autoregressive decoding: attention-tensor-shaped parallelism dictates NPU efficiency and shifts the CPU-NPU performance balance. We further find task-specific Sweet Resolutions for VLMs, which deliver meaningful accuracy gains at only modest latency overhead. Complementing these findings, we provide actionable cross-layer recommendations for hardware architects, runtime developers, and model designers.",
+        "identifiers": [
+          "SemanticScholar:87cad274113e4c0fa0b0d2937ed42c860ceac50d"
+        ],
+        "semantic_scholar_id": "87cad274113e4c0fa0b0d2937ed42c860ceac50d",
+        "canonical_id": "arXiv:2610.40039",
+        "arxiv_id": "2610.40039",
+        "authors": [
+          "Huan Yang",
+          "Shi-Qi Jiang",
+          "Yuning Mao",
+          "Chuan-Yue Xiong",
+          "De-Yu Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c12a337fe2e77d9bdc913a839d1b02aa5db364427a6f88bfaab01451a9459864",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

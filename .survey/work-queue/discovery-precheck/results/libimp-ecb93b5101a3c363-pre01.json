@@ -1,0 +1,147 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ecb93b5101a3c363-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ecb93b5101a3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2403.07339"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c8b6ecf42faf1b815e0131e5455294454494a357",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:52:12.329114+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2403.07339",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "IM-Unpack: Training and Inference with Arbitrarily Low Precision Integers",
+      "source_url": "https://arxiv.org/abs/2403.07339",
+      "year": 2024,
+      "published": "2024-03-12",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GEneral Matrix Multiply (GEMM) is a central operation in deep learning and corresponds to the largest chunk of the compute footprint. Therefore, improving its efficiency is an active topic of ongoing research. A popular strategy is the use of low bit-width integers to approximate the original entries in a matrix. This allows efficiency gains, but often requires sophisticated techniques to control the rounding error incurred. In this work, we first verify/check that when the low bit-width restriction is removed, for a variety of Transformer-based models, whether integers are sufficient for all GEMMs need -- for {\\em both} training and inference stages, and can achieve parity with floating point counterparts. No sophisticated techniques are needed. We find that while a large majority of entries in matrices (encountered in such models) can be easily represented by {\\em low} bit-width integers, the existence of a few heavy hitter entries make it difficult to achieve efficiency gains via the exclusive use of low bit-width GEMMs alone. To address this issue, we develop a simple algorithm, Integer Matrix Unpacking (IM-Unpack), to {\\em unpack} a matrix with large integer entries into a larger matrix whose entries all lie within the representable range of arbitrarily low bit-width integers. This allows {\\em equivalence} with the original GEMM, i.e., the exact result can be obtained using purely low bit-width integer GEMMs. This comes at the cost of additional operations -- we show that for many popular models, this overhead is quite small.",
+      "identifiers": [
+        "SemanticScholar:de29959e3eaade5fb871920ef07895c153753285"
+      ],
+      "semantic_scholar_id": "de29959e3eaade5fb871920ef07895c153753285",
+      "canonical_id": "arXiv:2403.07339",
+      "arxiv_id": "2403.07339",
+      "doi": "10.48550/arXiv.2403.07339",
+      "authors": [
+        "Zhanpeng Zeng",
+        "Karthikeyan Sankaralingam",
+        "Vikas Singh"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 981,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2403.07339",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.07339",
+        "id:SemanticScholar:de29959e3eaade5fb871920ef07895c153753285",
+        "id:arXiv:2403.07339",
+        "title:imunpack training and inference with arbitrarily low precision integers",
+        "url:https://arxiv.org/abs/2403.07339"
+      ],
+      "record": {
+        "title": "IM-Unpack: Training and Inference with Arbitrarily Low Precision Integers",
+        "source_url": "https://arxiv.org/abs/2403.07339",
+        "year": 2024,
+        "published": "2024-03-12",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "GEneral Matrix Multiply (GEMM) is a central operation in deep learning and corresponds to the largest chunk of the compute footprint. Therefore, improving its efficiency is an active topic of ongoing research. A popular strategy is the use of low bit-width integers to approximate the original entries in a matrix. This allows efficiency gains, but often requires sophisticated techniques to control the rounding error incurred. In this work, we first verify/check that when the low bit-width restriction is removed, for a variety of Transformer-based models, whether integers are sufficient for all GEMMs need -- for {\\em both} training and inference stages, and can achieve parity with floating point counterparts. No sophisticated techniques are needed. We find that while a large majority of entries in matrices (encountered in such models) can be easily represented by {\\em low} bit-width integers, the existence of a few heavy hitter entries make it difficult to achieve efficiency gains via the exclusive use of low bit-width GEMMs alone. To address this issue, we develop a simple algorithm, Integer Matrix Unpacking (IM-Unpack), to {\\em unpack} a matrix with large integer entries into a larger matrix whose entries all lie within the representable range of arbitrarily low bit-width integers. This allows {\\em equivalence} with the original GEMM, i.e., the exact result can be obtained using purely low bit-width integer GEMMs. This comes at the cost of additional operations -- we show that for many popular models, this overhead is quite small.",
+        "identifiers": [
+          "SemanticScholar:de29959e3eaade5fb871920ef07895c153753285"
+        ],
+        "semantic_scholar_id": "de29959e3eaade5fb871920ef07895c153753285",
+        "canonical_id": "arXiv:2403.07339",
+        "arxiv_id": "2403.07339",
+        "doi": "10.48550/arXiv.2403.07339",
+        "authors": [
+          "Zhanpeng Zeng",
+          "Karthikeyan Sankaralingam",
+          "Vikas Singh"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 981,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0eb832a953f8813f299546044fba91b86aa7bb4f6fb33f2980003a779e708d5f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

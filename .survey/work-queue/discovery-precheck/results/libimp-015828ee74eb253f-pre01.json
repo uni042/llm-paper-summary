@@ -1,0 +1,353 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-015828ee74eb253f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-015828ee74eb",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.07103",
+    "arXiv:2509.06502",
+    "arXiv:2510.27419"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c8b6ecf42faf1b815e0131e5455294454494a357",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:52:05.885114+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.07103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.06502",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.27419",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FireRedChat: A Pluggable, Full-Duplex Voice Interaction System with Cascaded and Semi-Cascaded Implementations",
+      "source_url": "https://arxiv.org/abs/2509.06502",
+      "year": 2025,
+      "published": "2025-09-08",
+      "venue": "arXiv.org",
+      "citation_count": 36,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Full-duplex voice interaction allows users and agents to speak simultaneously with controllable barge-in, enabling lifelike assistants and customer service. Existing solutions are either end-to-end, difficult to design and hard to control, or modular pipelines governed by turn-taking controllers that ease upgrades and per-module optimization; however, prior modular frameworks depend on non-open components and external providers, limiting holistic optimization. In this work, we present a complete, practical full-duplex voice interaction system comprising a turn-taking controller, an interaction module, and a dialogue manager. The controller integrates streaming personalized VAD (pVAD) to suppress false barge-ins from noise and non-primary speakers, precisely timestamp primary-speaker segments, and explicitly enable primary-speaker barge-ins; a semantic end-of-turn detector improves stop decisions. It upgrades heterogeneous half-duplex pipelines, cascaded, semi-cascaded, and speech-to-speech, to full duplex. Using internal models, we implement cascaded and semi-cascaded variants; the semi-cascaded one captures emotional and paralinguistic cues, yields more coherent responses, lowers latency and error propagation, and improves robustness. A dialogue manager extends capabilities via tool invocation and context management. We also propose three system-level metrics, barge-in, end-of-turn detection accuracy, and end-to-end latency, to assess naturalness, control accuracy, and efficiency. Experiments show fewer false interruptions, more accurate semantic ends, and lower latency approaching industrial systems, enabling robust, natural, real-time full-duplex interaction. Demos: https://fireredteam.github.io/demos/firered_chat.",
+      "identifiers": [
+        "SemanticScholar:47a4a604a5edb977f3af8e1a9bc3623b33921305"
+      ],
+      "semantic_scholar_id": "47a4a604a5edb977f3af8e1a9bc3623b33921305",
+      "canonical_id": "arXiv:2509.06502",
+      "arxiv_id": "2509.06502",
+      "doi": "10.48550/arXiv.2509.06502",
+      "authors": [
+        "Jun-Jie Chen",
+        "Yao Hu",
+        "Junjie Li",
+        "Kang Li",
+        "Kun Liu",
+        "Wenpeng Li",
+        "Xu Li",
+        "Ziyuan Li",
+        "Fei-Yu Shen",
+        "Xu Tang",
+        "Manzhen Wei",
+        "Yichen Wu",
+        "Feng-Long Xie",
+        "Kaituo Xu",
+        "Kun Xie"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 36,
+        "citation_count": 36,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 436,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains",
+      "source_url": "https://arxiv.org/abs/2510.27419",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have demonstrated impressive capabilities but suffer from cognitive inefficiencies like\"overthinking\"simple problems and\"underthinking\"complex ones. While existing methods that use supervised fine-tuning (SFT) or reinforcement learning (RL) with token-length rewards can improve efficiency, they often do so at the cost of accuracy. This paper introduces DeepCompress, a novel framework that simultaneously enhances both the accuracy and efficiency of LRMs. We challenge the prevailing approach of consistently favoring shorter reasoning paths, showing that longer responses can contain a broader range of correct solutions for difficult problems. DeepCompress employs an adaptive length reward mechanism that dynamically classifies problems as\"Simple\"or\"Hard\"in real-time based on the model's evolving capability. It encourages shorter, more efficient reasoning for\"Simple\"problems while promoting longer, more exploratory thought chains for\"Hard\"problems. This dual-reward strategy enables the model to autonomously adjust its Chain-of-Thought (CoT) length, compressing reasoning for well-mastered problems and extending it for those it finds challenging. Experimental results on challenging mathematical benchmarks show that DeepCompress consistently outperforms baseline methods, achieving superior accuracy while significantly improving token efficiency.",
+      "identifiers": [
+        "SemanticScholar:08d6d6ed47cdcbc71948577cab884af1d4f752e6"
+      ],
+      "semantic_scholar_id": "08d6d6ed47cdcbc71948577cab884af1d4f752e6",
+      "canonical_id": "arXiv:2510.27419",
+      "arxiv_id": "2510.27419",
+      "doi": "10.48550/arXiv.2510.27419",
+      "authors": [
+        "Tian Liang",
+        "Wenxiang Jiao",
+        "Zhiwei He",
+        "Jia-Hao Xu",
+        "Hai-Tao Mi",
+        "Dong Yu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Evaluating the Impact of Post-Training Quantization on Large Language Models for Code Generation",
+      "source_url": "https://arxiv.org/abs/2503.07103",
+      "year": 2025,
+      "published": "2025-03-10",
+      "venue": "IEEE International Conference on Program Comprehension",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have shown an impressive capability in code generation. The LLM effectiveness generally increases with its size: The higher the number of LLM’s trainable parameters the better its ability to implement code. However, when it comes to deploying LLM-based code generators, larger LLMs pose significant challenges related to their memory (and, consequently, carbon) footprint. A previous work by Wei et al. proposed to leverage quantization techniques to reduce the memory footprint of LLM-based code generators without substantially degrading their effectiveness. In short, they studied LLMs featuring up to 16B parameters, quantizing their precision from floating point 32 bits down to int 8 bits and showing their limited impact on code generation performance. Given the fast pace at which LLM capabilities and quantization techniques are evolving, in this work we present a differentiated replication of the work by Wei et al. in which we consider (i) on the one side, more recent and larger code-related LLMs, of up to 34B parameters; (ii) the latest advancements in model quantization techniques, which allow pushing the compression to the extreme quantization level of 2 bits per model parameter and; (iii) different types of calibration datasets to guide the quantization process, including code-specific ones. Our empirical evaluation reveals that the new frontier for LLM quantization is 4-bit precision, resulting in an average memory footprint reduction of 70% compared to the original model without observing any significant decrease in performance. Additionally, when the quantization becomes even more extreme (3 and 2 bits), a code-specific calibration dataset helps to limit the loss of performance.",
+      "identifiers": [
+        "SemanticScholar:da4fbdab0325b48eb43f40f8192deeb8a92f6583"
+      ],
+      "semantic_scholar_id": "da4fbdab0325b48eb43f40f8192deeb8a92f6583",
+      "canonical_id": "arXiv:2503.07103",
+      "arxiv_id": "2503.07103",
+      "doi": "10.1145/3794763.3794810",
+      "authors": [
+        "Alessandro Giagnorio",
+        "A. Mastropaolo",
+        "Saima Afrin",
+        "M. D. Di Penta",
+        "G. Bavota"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 618,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2509.06502",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.06502",
+        "id:SemanticScholar:47a4a604a5edb977f3af8e1a9bc3623b33921305",
+        "id:arXiv:2509.06502",
+        "title:fireredchat a pluggable fullduplex voice interaction system with cascaded and semicascaded implementations",
+        "url:https://arxiv.org/abs/2509.06502"
+      ],
+      "record": {
+        "title": "FireRedChat: A Pluggable, Full-Duplex Voice Interaction System with Cascaded and Semi-Cascaded Implementations",
+        "source_url": "https://arxiv.org/abs/2509.06502",
+        "year": 2025,
+        "published": "2025-09-08",
+        "venue": "arXiv.org",
+        "citation_count": 36,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Full-duplex voice interaction allows users and agents to speak simultaneously with controllable barge-in, enabling lifelike assistants and customer service. Existing solutions are either end-to-end, difficult to design and hard to control, or modular pipelines governed by turn-taking controllers that ease upgrades and per-module optimization; however, prior modular frameworks depend on non-open components and external providers, limiting holistic optimization. In this work, we present a complete, practical full-duplex voice interaction system comprising a turn-taking controller, an interaction module, and a dialogue manager. The controller integrates streaming personalized VAD (pVAD) to suppress false barge-ins from noise and non-primary speakers, precisely timestamp primary-speaker segments, and explicitly enable primary-speaker barge-ins; a semantic end-of-turn detector improves stop decisions. It upgrades heterogeneous half-duplex pipelines, cascaded, semi-cascaded, and speech-to-speech, to full duplex. Using internal models, we implement cascaded and semi-cascaded variants; the semi-cascaded one captures emotional and paralinguistic cues, yields more coherent responses, lowers latency and error propagation, and improves robustness. A dialogue manager extends capabilities via tool invocation and context management. We also propose three system-level metrics, barge-in, end-of-turn detection accuracy, and end-to-end latency, to assess naturalness, control accuracy, and efficiency. Experiments show fewer false interruptions, more accurate semantic ends, and lower latency approaching industrial systems, enabling robust, natural, real-time full-duplex interaction. Demos: https://fireredteam.github.io/demos/firered_chat.",
+        "identifiers": [
+          "SemanticScholar:47a4a604a5edb977f3af8e1a9bc3623b33921305"
+        ],
+        "semantic_scholar_id": "47a4a604a5edb977f3af8e1a9bc3623b33921305",
+        "canonical_id": "arXiv:2509.06502",
+        "arxiv_id": "2509.06502",
+        "doi": "10.48550/arXiv.2509.06502",
+        "authors": [
+          "Jun-Jie Chen",
+          "Yao Hu",
+          "Junjie Li",
+          "Kang Li",
+          "Kun Liu",
+          "Wenpeng Li",
+          "Xu Li",
+          "Ziyuan Li",
+          "Fei-Yu Shen",
+          "Xu Tang",
+          "Manzhen Wei",
+          "Yichen Wu",
+          "Feng-Long Xie",
+          "Kaituo Xu",
+          "Kun Xie"
+        ],
+        "priority": 36,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 36,
+          "citation_count": 36,
+          "total": 36,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 436,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.27419",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.27419",
+        "id:SemanticScholar:08d6d6ed47cdcbc71948577cab884af1d4f752e6",
+        "id:arXiv:2510.27419",
+        "title:deepcompress a dual reward strategy for dynamically exploring and compressing reasoning chains",
+        "url:https://arxiv.org/abs/2510.27419"
+      ],
+      "record": {
+        "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains",
+        "source_url": "https://arxiv.org/abs/2510.27419",
+        "year": 2025,
+        "published": "2025-10-31",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) have demonstrated impressive capabilities but suffer from cognitive inefficiencies like\"overthinking\"simple problems and\"underthinking\"complex ones. While existing methods that use supervised fine-tuning (SFT) or reinforcement learning (RL) with token-length rewards can improve efficiency, they often do so at the cost of accuracy. This paper introduces DeepCompress, a novel framework that simultaneously enhances both the accuracy and efficiency of LRMs. We challenge the prevailing approach of consistently favoring shorter reasoning paths, showing that longer responses can contain a broader range of correct solutions for difficult problems. DeepCompress employs an adaptive length reward mechanism that dynamically classifies problems as\"Simple\"or\"Hard\"in real-time based on the model's evolving capability. It encourages shorter, more efficient reasoning for\"Simple\"problems while promoting longer, more exploratory thought chains for\"Hard\"problems. This dual-reward strategy enables the model to autonomously adjust its Chain-of-Thought (CoT) length, compressing reasoning for well-mastered problems and extending it for those it finds challenging. Experimental results on challenging mathematical benchmarks show that DeepCompress consistently outperforms baseline methods, achieving superior accuracy while significantly improving token efficiency.",
+        "identifiers": [
+          "SemanticScholar:08d6d6ed47cdcbc71948577cab884af1d4f752e6"
+        ],
+        "semantic_scholar_id": "08d6d6ed47cdcbc71948577cab884af1d4f752e6",
+        "canonical_id": "arXiv:2510.27419",
+        "arxiv_id": "2510.27419",
+        "doi": "10.48550/arXiv.2510.27419",
+        "authors": [
+          "Tian Liang",
+          "Wenxiang Jiao",
+          "Zhiwei He",
+          "Jia-Hao Xu",
+          "Hai-Tao Mi",
+          "Dong Yu"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 383,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.07103",
+      "identity_tokens": [
+        "id:DOI:10.1145/3794763.3794810",
+        "id:SemanticScholar:da4fbdab0325b48eb43f40f8192deeb8a92f6583",
+        "id:arXiv:2503.07103",
+        "title:evaluating the impact of posttraining quantization on large language models for code generation",
+        "url:https://arxiv.org/abs/2503.07103"
+      ],
+      "record": {
+        "title": "Evaluating the Impact of Post-Training Quantization on Large Language Models for Code Generation",
+        "source_url": "https://arxiv.org/abs/2503.07103",
+        "year": 2025,
+        "published": "2025-03-10",
+        "venue": "IEEE International Conference on Program Comprehension",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have shown an impressive capability in code generation. The LLM effectiveness generally increases with its size: The higher the number of LLM’s trainable parameters the better its ability to implement code. However, when it comes to deploying LLM-based code generators, larger LLMs pose significant challenges related to their memory (and, consequently, carbon) footprint. A previous work by Wei et al. proposed to leverage quantization techniques to reduce the memory footprint of LLM-based code generators without substantially degrading their effectiveness. In short, they studied LLMs featuring up to 16B parameters, quantizing their precision from floating point 32 bits down to int 8 bits and showing their limited impact on code generation performance. Given the fast pace at which LLM capabilities and quantization techniques are evolving, in this work we present a differentiated replication of the work by Wei et al. in which we consider (i) on the one side, more recent and larger code-related LLMs, of up to 34B parameters; (ii) the latest advancements in model quantization techniques, which allow pushing the compression to the extreme quantization level of 2 bits per model parameter and; (iii) different types of calibration datasets to guide the quantization process, including code-specific ones. Our empirical evaluation reveals that the new frontier for LLM quantization is 4-bit precision, resulting in an average memory footprint reduction of 70% compared to the original model without observing any significant decrease in performance. Additionally, when the quantization becomes even more extreme (3 and 2 bits), a code-specific calibration dataset helps to limit the loss of performance.",
+        "identifiers": [
+          "SemanticScholar:da4fbdab0325b48eb43f40f8192deeb8a92f6583"
+        ],
+        "semantic_scholar_id": "da4fbdab0325b48eb43f40f8192deeb8a92f6583",
+        "canonical_id": "arXiv:2503.07103",
+        "arxiv_id": "2503.07103",
+        "doi": "10.1145/3794763.3794810",
+        "authors": [
+          "Alessandro Giagnorio",
+          "A. Mastropaolo",
+          "Saima Afrin",
+          "M. D. Di Penta",
+          "G. Bavota"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 618,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:87960485dcdf70f3e00ee163471dc0b49a132a47faa2ab46c3b9408e65a57caf",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

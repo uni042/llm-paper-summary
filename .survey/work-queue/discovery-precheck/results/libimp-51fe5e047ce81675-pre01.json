@@ -1,0 +1,609 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-51fe5e047ce81675-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-51fe5e047ce8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.07219",
+    "arXiv:2610.07443",
+    "arXiv:2610.15899",
+    "arXiv:2610.28947",
+    "arXiv:2610.29873",
+    "arXiv:2610.30480",
+    "arXiv:2610.36339",
+    "arXiv:2610.37230",
+    "arXiv:2610.37810",
+    "arXiv:2610.40292"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c8b6ecf42faf1b815e0131e5455294454494a357",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:52:05.909934+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.07219",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07443",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15899",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.28947",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.29873",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:8de422553079cefc4b37ce9ec224b991312d0b31"
+    },
+    {
+      "requested_id": "arXiv:2610.30480",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36339",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37230",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:27df0fda9e29ed7ff64fbac979e254bdb7df71f0"
+    },
+    {
+      "requested_id": "arXiv:2610.37810",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:bdb3d841f9531475eac4f56b4109df300cccf69e"
+    },
+    {
+      "requested_id": "arXiv:2610.40292",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:468e7dda54d0771a0a96d124ba98a2bf45c950a1"
+    }
+  ],
+  "results": [
+    {
+      "title": "Cascadia: Resident 975B MoE Inference on Eleven AI PCs",
+      "source_url": "https://arxiv.org/abs/2610.07219",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-experts models make nearly trillion-parameter capacity accessible with sparse per-token computation, provided that the serving system can distribute the weights and coordinate their execution. We present Cascadia's resident execution of Inkling, a 975B-total/41B-active-parameter model, on eleven Intel Core Ultra X7 358H AI PCs, each with 64 GB of memory, Arc B390 integrated graphics and gigabit Ethernet. We contribute a custom resident MoE engine that preserves Inkling's routing rules, constructs compressed graphs for OpenVINO's fused iGPU primitives, and coordinates FP16 expert computation with FP32 output restoration. The engine fits six consecutive decoder layers per machine and represents dense feed-forward blocks as all-active expert slices, reducing measured dense-layer call time from approximately 8.1 to 4.5 ms. A streaming pipeline coordinates concurrent generation, while captured-state draft evaluation measures agreement with the deployed numerical path. Paired measurements at fifteen concurrency levels from 1 to 176 streams reach 60.29 aggregate decode tokens/s at 88 streams, with 46.87 tokens/s over the complete serving phases. At fifteen streams, median first-token latency is 6.05 s. Raising the context budget from the 1,024-position default, real prompts of 1k to 64k tokens recover the embedded code in all 19 measured answers, with first-token time growing as $aN+bN^2$ and decode latency growing approximately linearly, both bounded by a single-threaded CPU attention loop rather than by memory, which holds 512k positions per stream. Evaluation on captured fleet states separates the effects of vocabulary selection and weight quantization on draft agreement. Together, these contributions establish an execution and evaluation approach for large sparse models on distributed client systems with shared CPU-GPU memory.",
+      "identifiers": [
+        "SemanticScholar:71c282c2a53ee8c6577c266b493bbaf1d5b1fde7"
+      ],
+      "semantic_scholar_id": "71c282c2a53ee8c6577c266b493bbaf1d5b1fde7",
+      "canonical_id": "arXiv:2610.07219",
+      "arxiv_id": "2610.07219",
+      "authors": [
+        "Tate Berenbaum",
+        "Matias Parij",
+        "Muthaiah Venkatachalam"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Shape-Adaptive Architecture with Disaggregated Quantization for Efficient LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.07443",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have become the backbone of modern AI applications, but pose significant challenges for efficient inference. Their autoregressive generation divides execution into two phases: prefill, dominated by large GEMMs, and decoding, dominated by small GEMVs. Modern serving systems further introduce complexity through continuous batching and prefill-decoding disaggregation, leading to dynamic workloads and phase separation. However, existing accelerators remain poorly aligned with these system-level behaviors, resulting in inefficiencies in LLM serving. In this work, we present DynaCore, a unified architecture for efficient LLM serving via system-architecture co-design. We observe that the compute tile a systolic array executes, its Minimum Efficient Unit (MEU), spans all three GEMM dimensions. DynaCore reshapes the MEU along all three: spatially it trades array width against height asymmetrically, raising weight delivery while leaving the input path untouched, and temporally Split-K maps the reduction onto the array, folding partial sums through the interconnect the array already has. To exploit phase separation, we further propose disaggregated quantization, applying dual-side quantization to prefill and weight-only quantization to decoding, with an inner-product mixed-precision datapath that keeps output width invariant to precision. A runtime scheduling framework then selects an MEU per batch. Evaluation with real-world serving traces shows that DynaCore substantially reduces service-level latency over quantization and reconfigurable accelerators, improving TTFT by 3.50x and 2.97x and TPOT by 36.55x and 8.02x, respectively.",
+      "identifiers": [
+        "SemanticScholar:afde09b5f9973ee376406f6ac8a6b0f3584d28eb"
+      ],
+      "semantic_scholar_id": "afde09b5f9973ee376406f6ac8a6b0f3584d28eb",
+      "canonical_id": "arXiv:2610.07443",
+      "arxiv_id": "2610.07443",
+      "authors": [
+        "Cong Guo",
+        "Chi-Yue Wei",
+        "Bo-Wen Duan",
+        "Haoxuan Shan",
+        "Benjamin F. Morris",
+        "Yin-Tao He",
+        "HaiHelenLi",
+        "Yi-Ran Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures",
+      "source_url": "https://arxiv.org/abs/2610.15899",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model serving is increasingly limited not only by model size and GPU speed, but also by scheduling during autoregressive decoding, where continuous batching interleaves requests at token granularity as sequences arrive and finish. We study whether lightweight scheduling policies can improve latency-throughput tradeoffs without changing model architectures, kernels, or deploying learned schedulers. We implement a Python/PyTorch continuous-batching testbench with real Hugging Face execution and evaluate eight policies across 1,152 GPU-model-scheduler-workload runs using ShareGPT-derived traffic, six Qwen, Gemma, and Mistral models, and Modal L40S, A100, and H100 GPUs. Scheduler choice changes throughput, TTFT, completion latency, and tail behavior under fixed model, GPU, workload, batch size, and prefill budget. Aging shortest-prompt-first is the strongest practical baseline in many L40S and mixed-workload settings, while oracle remaining-length scheduling shows that job-size knowledge alone is insufficient because batching and hardware effects also shape performance. The custom dataset has been uploaded to Hugging Face.",
+      "identifiers": [
+        "SemanticScholar:48019535badefc5bdb0497e85e88a55dd2025fc2"
+      ],
+      "semantic_scholar_id": "48019535badefc5bdb0497e85e88a55dd2025fc2",
+      "canonical_id": "arXiv:2610.15899",
+      "arxiv_id": "2610.15899",
+      "authors": [
+        "Ashman Mehra",
+        "Akshan Agrawal",
+        "Aryeh Carmi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.28947",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "NVIDIA tensor cores have supported 2:4 semi-structured sparsity since Ampere, and the pattern composes with quantization. When the two are combined, the practical question is which step to take next: from a given precision, add 2:4 sparsity or drop to the next lower precision? We compare the two at equal bits, with sparsity metadata counted, and at equal nominal tensor-core tiers, over all six GEMM operands of a transformer layer, with kernels measured on three GPU generations and online pruning and quantization included. Our results show that as long as a lower precision is available, adding 2:4 is the worse step, both less accurate and slower, because the energy that 2:4 discards from each group of four along the hardware-forced axis does not shrink with bits, while quantization error does. Once quantization reaches the lowest precision the hardware supports, 2:4 still speeds up linear layers by 1.3--1.7\\x{}, and on an H100 a retrained 2:4 model served in FP8 by vLLM reaches 27\\% higher prefill throughput than the dense FP8 model, with GSM8K accuracy on par. Its quality has to be won back by retraining, however, which restores perplexity long before reasoning; on Blackwell, whose sparse FP4 uses a pairwise 4:8 pattern, the loss is larger and our retraining budget did not recover it.",
+      "identifiers": [
+        "SemanticScholar:fd02c5ca54d1f5b3cf87005d1328582a2c8873e3"
+      ],
+      "semantic_scholar_id": "fd02c5ca54d1f5b3cf87005d1328582a2c8873e3",
+      "canonical_id": "arXiv:2610.28947",
+      "arxiv_id": "2610.28947",
+      "authors": [
+        "Xiu-Yi Qin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.30480",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only quantization keeps LLM activations in floating point and stores weights as low-bit integers, turning the dominant workload into floating-point-integer (FP-INT) general matrix multiplication. Recent quantizers reach a 2-3-bit average with mixed precision, but hardware has not kept pace: GPUs dequantize weights to FP16 before the tensor-core multiply-accumulate, and bit-parallel FP-INT accelerators run at a single weight precision, so fewer bits save memory but not computation. In this paper, we present FIGFLEX, an algorithm-hardware co-designed mixed-precision accelerator whose bit-parallel datapath scales throughput as precision falls. FIGFLEX contributes (1) a shift-add, radix-4 reformulation of FP-INT multiplication that fuses the multiply-accumulate into a unified, precision-flexible partial-product reduction and roughly halves the partial products, together with a novel INT3 optimization that reclaims the idle datapath radix-4 leaves at that precision; and (2) a mixed-precision quantizer that assigns each channel group its bit-width according to the error GPTQ cannot compensate, with a per-input-channel column scaling whose power-of-two normalization keeps the scaled activations out of the FP16 subnormal range, so that the quantized model maps directly onto FIGFLEX's datapath with the same accuracy as on a GPU. On LLaMA-2-7B, FIGFLEX attains 5.85 and 8.77 WikiText-2 perplexity at 3- and 2-bit average precision, lower than GPTQ, AWQ, SliM-LLM, AMQ, and QuIP# (without fine-tuning), while delivering 1.56x and 1.42x higher whole-chip throughput per area on the linear GEMMs of a 3-bit mixed-precision model than AxCore and FIGLUT, respectively.",
+      "identifiers": [
+        "SemanticScholar:94eddf82cc39442074450bba35372c867e66694d"
+      ],
+      "semantic_scholar_id": "94eddf82cc39442074450bba35372c867e66694d",
+      "canonical_id": "arXiv:2610.30480",
+      "arxiv_id": "2610.30480",
+      "authors": [
+        "Faraz Tahmasebi",
+        "Hao-Cheng Xu",
+        "Andrew Trauger",
+        "Yomal Perera",
+        "Zhen-Yu Tang",
+        "Nael Chowdhury",
+        "Si-Tao Huang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel Mixture-of-Experts Inference",
+      "source_url": "https://arxiv.org/abs/2610.36339",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In expert-parallel mixture-of-experts (MoE) serving, dispatch moves tokens to the accelerators hosting their selected experts, and combine returns expert outputs to each token's owner. Both operations lie on the critical path and can dominate MoE layer latency in multi-node deployments. We present INC-MoE, an expert-parallel MoE layer that offloads dispatch and combine to the network switch and overlaps both collectives with each other and with expert computation. Dispatch uses in-network AllGather through switch-side multicast, while combine uses in-network ReduceScatter through switch-side reduction. Both collectives use message semantics between the end hosts and the switch. Because the in-network collectives load opposite directions of each link, executing them concurrently reduces bandwidth-bound communication time by $(N-2)/(2(N-1))$ relative to concurrent ring-based collectives: 33% for four ranks and 43% for eight. INC-MoE partitions tokens into bands and processes them through a three-stage AllGather-feed-forward network (FFN)-ReduceScatter pipeline inside a single persistent kernel. At steady state, role-specialized thread blocks gather the next band, compute the current band, and reduce the previous band concurrently, overlapping both collectives with each other and with computation using device-side synchronization. INC-MoE integrates as a drop-in replacement for the MoE layer of vLLM. We evaluate it in an emulated four-node scale-out deployment with a dedicated accelerator emulating an in-network computing (INC) switch. On OLMoE prefill with four-way expert parallelism, INC-MoE reduces time to first token (TTFT) by up to 33% and increases throughput by up to 50% relative to vLLM's default collective path, while matching its outputs.",
+      "identifiers": [
+        "SemanticScholar:2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e"
+      ],
+      "semantic_scholar_id": "2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e",
+      "canonical_id": "arXiv:2610.36339",
+      "arxiv_id": "2610.36339",
+      "authors": [
+        "John Stephan",
+        "Razvan-Stefan Puscasu",
+        "Yong Xu",
+        "Jiu-Tao Ding",
+        "Zi-Xuan Guan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.07219",
+      "identity_tokens": [
+        "id:SemanticScholar:71c282c2a53ee8c6577c266b493bbaf1d5b1fde7",
+        "id:arXiv:2610.07219",
+        "title:cascadia resident 975b moe inference on eleven ai pcs",
+        "url:https://arxiv.org/abs/2610.07219"
+      ],
+      "record": {
+        "title": "Cascadia: Resident 975B MoE Inference on Eleven AI PCs",
+        "source_url": "https://arxiv.org/abs/2610.07219",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-experts models make nearly trillion-parameter capacity accessible with sparse per-token computation, provided that the serving system can distribute the weights and coordinate their execution. We present Cascadia's resident execution of Inkling, a 975B-total/41B-active-parameter model, on eleven Intel Core Ultra X7 358H AI PCs, each with 64 GB of memory, Arc B390 integrated graphics and gigabit Ethernet. We contribute a custom resident MoE engine that preserves Inkling's routing rules, constructs compressed graphs for OpenVINO's fused iGPU primitives, and coordinates FP16 expert computation with FP32 output restoration. The engine fits six consecutive decoder layers per machine and represents dense feed-forward blocks as all-active expert slices, reducing measured dense-layer call time from approximately 8.1 to 4.5 ms. A streaming pipeline coordinates concurrent generation, while captured-state draft evaluation measures agreement with the deployed numerical path. Paired measurements at fifteen concurrency levels from 1 to 176 streams reach 60.29 aggregate decode tokens/s at 88 streams, with 46.87 tokens/s over the complete serving phases. At fifteen streams, median first-token latency is 6.05 s. Raising the context budget from the 1,024-position default, real prompts of 1k to 64k tokens recover the embedded code in all 19 measured answers, with first-token time growing as $aN+bN^2$ and decode latency growing approximately linearly, both bounded by a single-threaded CPU attention loop rather than by memory, which holds 512k positions per stream. Evaluation on captured fleet states separates the effects of vocabulary selection and weight quantization on draft agreement. Together, these contributions establish an execution and evaluation approach for large sparse models on distributed client systems with shared CPU-GPU memory.",
+        "identifiers": [
+          "SemanticScholar:71c282c2a53ee8c6577c266b493bbaf1d5b1fde7"
+        ],
+        "semantic_scholar_id": "71c282c2a53ee8c6577c266b493bbaf1d5b1fde7",
+        "canonical_id": "arXiv:2610.07219",
+        "arxiv_id": "2610.07219",
+        "authors": [
+          "Tate Berenbaum",
+          "Matias Parij",
+          "Muthaiah Venkatachalam"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07443",
+      "identity_tokens": [
+        "id:SemanticScholar:afde09b5f9973ee376406f6ac8a6b0f3584d28eb",
+        "id:arXiv:2610.07443",
+        "title:a shapeadaptive architecture with disaggregated quantization for efficient llm serving",
+        "url:https://arxiv.org/abs/2610.07443"
+      ],
+      "record": {
+        "title": "A Shape-Adaptive Architecture with Disaggregated Quantization for Efficient LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.07443",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have become the backbone of modern AI applications, but pose significant challenges for efficient inference. Their autoregressive generation divides execution into two phases: prefill, dominated by large GEMMs, and decoding, dominated by small GEMVs. Modern serving systems further introduce complexity through continuous batching and prefill-decoding disaggregation, leading to dynamic workloads and phase separation. However, existing accelerators remain poorly aligned with these system-level behaviors, resulting in inefficiencies in LLM serving. In this work, we present DynaCore, a unified architecture for efficient LLM serving via system-architecture co-design. We observe that the compute tile a systolic array executes, its Minimum Efficient Unit (MEU), spans all three GEMM dimensions. DynaCore reshapes the MEU along all three: spatially it trades array width against height asymmetrically, raising weight delivery while leaving the input path untouched, and temporally Split-K maps the reduction onto the array, folding partial sums through the interconnect the array already has. To exploit phase separation, we further propose disaggregated quantization, applying dual-side quantization to prefill and weight-only quantization to decoding, with an inner-product mixed-precision datapath that keeps output width invariant to precision. A runtime scheduling framework then selects an MEU per batch. Evaluation with real-world serving traces shows that DynaCore substantially reduces service-level latency over quantization and reconfigurable accelerators, improving TTFT by 3.50x and 2.97x and TPOT by 36.55x and 8.02x, respectively.",
+        "identifiers": [
+          "SemanticScholar:afde09b5f9973ee376406f6ac8a6b0f3584d28eb"
+        ],
+        "semantic_scholar_id": "afde09b5f9973ee376406f6ac8a6b0f3584d28eb",
+        "canonical_id": "arXiv:2610.07443",
+        "arxiv_id": "2610.07443",
+        "authors": [
+          "Cong Guo",
+          "Chi-Yue Wei",
+          "Bo-Wen Duan",
+          "Haoxuan Shan",
+          "Benjamin F. Morris",
+          "Yin-Tao He",
+          "HaiHelenLi",
+          "Yi-Ran Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15899",
+      "identity_tokens": [
+        "id:SemanticScholar:48019535badefc5bdb0497e85e88a55dd2025fc2",
+        "id:arXiv:2610.15899",
+        "title:lightweight scheduling policies for continuously batched llm serving across gpu architectures",
+        "url:https://arxiv.org/abs/2610.15899"
+      ],
+      "record": {
+        "title": "Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures",
+        "source_url": "https://arxiv.org/abs/2610.15899",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model serving is increasingly limited not only by model size and GPU speed, but also by scheduling during autoregressive decoding, where continuous batching interleaves requests at token granularity as sequences arrive and finish. We study whether lightweight scheduling policies can improve latency-throughput tradeoffs without changing model architectures, kernels, or deploying learned schedulers. We implement a Python/PyTorch continuous-batching testbench with real Hugging Face execution and evaluate eight policies across 1,152 GPU-model-scheduler-workload runs using ShareGPT-derived traffic, six Qwen, Gemma, and Mistral models, and Modal L40S, A100, and H100 GPUs. Scheduler choice changes throughput, TTFT, completion latency, and tail behavior under fixed model, GPU, workload, batch size, and prefill budget. Aging shortest-prompt-first is the strongest practical baseline in many L40S and mixed-workload settings, while oracle remaining-length scheduling shows that job-size knowledge alone is insufficient because batching and hardware effects also shape performance. The custom dataset has been uploaded to Hugging Face.",
+        "identifiers": [
+          "SemanticScholar:48019535badefc5bdb0497e85e88a55dd2025fc2"
+        ],
+        "semantic_scholar_id": "48019535badefc5bdb0497e85e88a55dd2025fc2",
+        "canonical_id": "arXiv:2610.15899",
+        "arxiv_id": "2610.15899",
+        "authors": [
+          "Ashman Mehra",
+          "Akshan Agrawal",
+          "Aryeh Carmi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 38,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.28947",
+      "identity_tokens": [
+        "id:SemanticScholar:fd02c5ca54d1f5b3cf87005d1328582a2c8873e3",
+        "id:arXiv:2610.28947",
+        "title:is 24 sparsity still worth it semistructured sparsity versus quantization in llm inference",
+        "url:https://arxiv.org/abs/2610.28947"
+      ],
+      "record": {
+        "title": "Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.28947",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "NVIDIA tensor cores have supported 2:4 semi-structured sparsity since Ampere, and the pattern composes with quantization. When the two are combined, the practical question is which step to take next: from a given precision, add 2:4 sparsity or drop to the next lower precision? We compare the two at equal bits, with sparsity metadata counted, and at equal nominal tensor-core tiers, over all six GEMM operands of a transformer layer, with kernels measured on three GPU generations and online pruning and quantization included. Our results show that as long as a lower precision is available, adding 2:4 is the worse step, both less accurate and slower, because the energy that 2:4 discards from each group of four along the hardware-forced axis does not shrink with bits, while quantization error does. Once quantization reaches the lowest precision the hardware supports, 2:4 still speeds up linear layers by 1.3--1.7\\x{}, and on an H100 a retrained 2:4 model served in FP8 by vLLM reaches 27\\% higher prefill throughput than the dense FP8 model, with GSM8K accuracy on par. Its quality has to be won back by retraining, however, which restores perplexity long before reasoning; on Blackwell, whose sparse FP4 uses a pairwise 4:8 pattern, the loss is larger and our retraining budget did not recover it.",
+        "identifiers": [
+          "SemanticScholar:fd02c5ca54d1f5b3cf87005d1328582a2c8873e3"
+        ],
+        "semantic_scholar_id": "fd02c5ca54d1f5b3cf87005d1328582a2c8873e3",
+        "canonical_id": "arXiv:2610.28947",
+        "arxiv_id": "2610.28947",
+        "authors": [
+          "Xiu-Yi Qin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.30480",
+      "identity_tokens": [
+        "id:SemanticScholar:94eddf82cc39442074450bba35372c867e66694d",
+        "id:arXiv:2610.30480",
+        "title:figflex a mixedprecision fpint gemm accelerator codesigned with lowbit llm quantization",
+        "url:https://arxiv.org/abs/2610.30480"
+      ],
+      "record": {
+        "title": "FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2610.30480",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight-only quantization keeps LLM activations in floating point and stores weights as low-bit integers, turning the dominant workload into floating-point-integer (FP-INT) general matrix multiplication. Recent quantizers reach a 2-3-bit average with mixed precision, but hardware has not kept pace: GPUs dequantize weights to FP16 before the tensor-core multiply-accumulate, and bit-parallel FP-INT accelerators run at a single weight precision, so fewer bits save memory but not computation. In this paper, we present FIGFLEX, an algorithm-hardware co-designed mixed-precision accelerator whose bit-parallel datapath scales throughput as precision falls. FIGFLEX contributes (1) a shift-add, radix-4 reformulation of FP-INT multiplication that fuses the multiply-accumulate into a unified, precision-flexible partial-product reduction and roughly halves the partial products, together with a novel INT3 optimization that reclaims the idle datapath radix-4 leaves at that precision; and (2) a mixed-precision quantizer that assigns each channel group its bit-width according to the error GPTQ cannot compensate, with a per-input-channel column scaling whose power-of-two normalization keeps the scaled activations out of the FP16 subnormal range, so that the quantized model maps directly onto FIGFLEX's datapath with the same accuracy as on a GPU. On LLaMA-2-7B, FIGFLEX attains 5.85 and 8.77 WikiText-2 perplexity at 3- and 2-bit average precision, lower than GPTQ, AWQ, SliM-LLM, AMQ, and QuIP# (without fine-tuning), while delivering 1.56x and 1.42x higher whole-chip throughput per area on the linear GEMMs of a 3-bit mixed-precision model than AxCore and FIGLUT, respectively.",
+        "identifiers": [
+          "SemanticScholar:94eddf82cc39442074450bba35372c867e66694d"
+        ],
+        "semantic_scholar_id": "94eddf82cc39442074450bba35372c867e66694d",
+        "canonical_id": "arXiv:2610.30480",
+        "arxiv_id": "2610.30480",
+        "authors": [
+          "Faraz Tahmasebi",
+          "Hao-Cheng Xu",
+          "Andrew Trauger",
+          "Yomal Perera",
+          "Zhen-Yu Tang",
+          "Nael Chowdhury",
+          "Si-Tao Huang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36339",
+      "identity_tokens": [
+        "id:SemanticScholar:2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e",
+        "id:arXiv:2610.36339",
+        "title:incmoe overlapping innetwork collectives and expert computation for expertparallel mixtureofexperts inference",
+        "url:https://arxiv.org/abs/2610.36339"
+      ],
+      "record": {
+        "title": "INC-MoE: Overlapping In-Network Collectives and Expert Computation for Expert-Parallel Mixture-of-Experts Inference",
+        "source_url": "https://arxiv.org/abs/2610.36339",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In expert-parallel mixture-of-experts (MoE) serving, dispatch moves tokens to the accelerators hosting their selected experts, and combine returns expert outputs to each token's owner. Both operations lie on the critical path and can dominate MoE layer latency in multi-node deployments. We present INC-MoE, an expert-parallel MoE layer that offloads dispatch and combine to the network switch and overlaps both collectives with each other and with expert computation. Dispatch uses in-network AllGather through switch-side multicast, while combine uses in-network ReduceScatter through switch-side reduction. Both collectives use message semantics between the end hosts and the switch. Because the in-network collectives load opposite directions of each link, executing them concurrently reduces bandwidth-bound communication time by $(N-2)/(2(N-1))$ relative to concurrent ring-based collectives: 33% for four ranks and 43% for eight. INC-MoE partitions tokens into bands and processes them through a three-stage AllGather-feed-forward network (FFN)-ReduceScatter pipeline inside a single persistent kernel. At steady state, role-specialized thread blocks gather the next band, compute the current band, and reduce the previous band concurrently, overlapping both collectives with each other and with computation using device-side synchronization. INC-MoE integrates as a drop-in replacement for the MoE layer of vLLM. We evaluate it in an emulated four-node scale-out deployment with a dedicated accelerator emulating an in-network computing (INC) switch. On OLMoE prefill with four-way expert parallelism, INC-MoE reduces time to first token (TTFT) by up to 33% and increases throughput by up to 50% relative to vLLM's default collective path, while matching its outputs.",
+        "identifiers": [
+          "SemanticScholar:2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e"
+        ],
+        "semantic_scholar_id": "2e75a31d685b214ab8c309ef43ffd9a9f9a33c9e",
+        "canonical_id": "arXiv:2610.36339",
+        "arxiv_id": "2610.36339",
+        "authors": [
+          "John Stephan",
+          "Razvan-Stefan Puscasu",
+          "Yong Xu",
+          "Jiu-Tao Ding",
+          "Zi-Xuan Guan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:08dde67b92d677609e8d28ad8c00401a3d72661174112724493e79661cf2cf48",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
