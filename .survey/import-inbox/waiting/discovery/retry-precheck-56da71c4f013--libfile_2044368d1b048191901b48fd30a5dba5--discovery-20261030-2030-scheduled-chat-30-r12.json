@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r12",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00543",
+      "identity_tokens": [
+        "arXiv:2606.00543",
+        "DOI:10.48550/arXiv.2606.00543"
+      ],
+      "title": "ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs",
+      "reason": "視覚情報を指示条件付きの予測に十分な統計量へ蒸留し、テキスト対画像のクロス注意と変分情報蒸留で少数の視覚トークンへ圧縮する。LLaVA-1.5-7BとQwen3-VL-2Bで単一トークンまで削減し、推論時KV負荷を抑える直接的なVLM圧縮手法。",
+      "source_url": "https://arxiv.org/abs/2606.00543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 360,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20519",
+      "identity_tokens": [
+        "arXiv:2607.20519",
+        "DOI:10.48550/arXiv.2607.20519"
+      ],
+      "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+      "reason": "反復Transformerの停止ゲートと深さ別教師信号を分離して評価し、固定事前分布で形成した軌跡に対する事後信頼度readoutが学習済みゲートを上回る場合を示す。Ouro-1.4B/2.6Bで平均反復深さ減少が実測遅延削減に結び付くことを確認する適応計算研究。",
+      "source_url": "https://arxiv.org/abs/2607.20519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 362,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18806",
+      "identity_tokens": [
+        "arXiv:2603.18806",
+        "DOI:10.48550/arXiv.2603.18806"
+      ],
+      "title": "dTRPO: Trajectory Reduction in Policy Optimization of Diffusion Large Language Models",
+      "reason": "拡散LLMの方策最適化で中間軌跡の確率を単一forwardで推定し、オフラインRL訓練費用を削減するdTRPOを提案。生成効率の改善にも言及するが、中心となる削減対象は訓練時の軌跡確率計算であり、推論時速度・KV占有の独立した実測は要確認。",
+      "source_url": "https://arxiv.org/abs/2603.18806",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 363,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03092",
+      "identity_tokens": [
+        "arXiv:2606.03092",
+        "DOI:10.48550/arXiv.2606.03092"
+      ],
+      "title": "The Shadow Price of Reasoning: Economic Perspective on Optimal Budget Allocation for LLMs",
+      "reason": "各要求の思考効用をshifted-surge関数でモデル化し、全体トークン予算の影価格に基づいて解けない要求から解ける要求へ計算を再配分するCLEARを提案。資源不足条件で一律予算配分比最大3倍の全体正解率を報告する推論時予算スケジューリング。",
+      "source_url": "https://arxiv.org/abs/2606.03092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 364,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.04585",
+      "identity_tokens": [
+        "arXiv:2408.04585",
+        "DOI:10.48550/arXiv.2408.04585"
+      ],
+      "title": "Towards Resilient and Efficient LLMs: A Comparative Study of Efficiency, Performance, and Adversarial Robustness",
+      "reason": "Transformer++・GLA・MatMul-Free LMの効率と敵対的頑健性をGLUE/AdvGLUEで比較する。アーキテクチャ効率には関係するが、主な評価は分類品質・敵対的頑健性であり、生成LLMの実測復号速度やサービング効率は直接検証されていない。",
+      "source_url": "https://arxiv.org/abs/2408.04585",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 365,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12027",
+      "identity_tokens": [
+        "arXiv:2511.12027",
+        "DOI:10.48550/arXiv.2511.12027"
+      ],
+      "title": "GCAgent: Long-Video Understanding via Schematic and Narrative Episodic Memory",
+      "reason": "長動画を構造化した出来事・因果・時系列のepisodic memoryとして保存し、エージェントが必要部分を取り出して推論する。Video-MME Longで最大23.5%の精度改善を報告するが、主眼は理解品質であり、推論トークン数・遅延・メモリ削減の実測は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2511.12027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 369,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.14892",
+      "identity_tokens": [
+        "arXiv:2603.14892",
+        "DOI:10.48550/arXiv.2603.14892"
+      ],
+      "title": "Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs",
+      "reason": "サンプルごとの意味的顕著性に応じて局所重要度と全体カバレッジへ視覚トークン予算を動的配分するPromPruneを提案。LLaVA-NeXT-7BでFLOPs 88%削減、prefill遅延22%削減、元精度97.5%保持と報告する。",
+      "source_url": "https://arxiv.org/abs/2603.14892",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 370,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.10205",
+      "identity_tokens": [
+        "arXiv:2506.10205",
+        "DOI:10.48550/arXiv.2506.10205"
+      ],
+      "title": "AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent",
+      "reason": "活性依存の重み枝刈りと量子化を射影勾配法で統一し、Iterative Hard Thresholdingとの関係を使って層別PTQを最適化する。枝刈りの収束保証とLLM圧縮品質の改善を提示する直接的な推論向けモデル圧縮法。",
+      "source_url": "https://arxiv.org/abs/2506.10205",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 373,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.00483",
+      "identity_tokens": [
+        "arXiv:2208.00483",
+        "DOI:10.48550/arXiv.2208.00483"
+      ],
+      "title": "Building an Efficiency Pipeline: Commutativity and Cumulativeness of Efficiency Operators for Transformers",
+      "reason": "枝刈り・蒸留・動的推論・量子化を連結した際の順序依存性と効果の累積性を分析し、単独の効率化手法の効果から複合効果を推定する。実務的に参考になるが、古い汎用NLP Transformerが主対象で生成LLM推論サービングへの直接検証は要確認。",
+      "source_url": "https://arxiv.org/abs/2208.00483",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 374,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.01581",
+      "identity_tokens": [
+        "arXiv:2510.01581",
+        "DOI:10.48550/arXiv.2510.01581"
+      ],
+      "title": "Think Right: Learning to Mitigate Under-Over Thinking via Adaptive, Attentive Compression",
+      "reason": "注意に基づく冗長思考ステップ削除と難易度予測をRL報酬へ組み込むTRAACを提案。Qwen3-4Bで元モデル比平均精度8.4ポイント向上と推論長36.8%削減、強いRL基準比でも精度7.9ポイント向上・長さ29.4%削減を報告する。",
+      "source_url": "https://arxiv.org/abs/2510.01581",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:39:32+09:00",
+      "last_checked_at": "2026-10-30T20:39:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 376,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
