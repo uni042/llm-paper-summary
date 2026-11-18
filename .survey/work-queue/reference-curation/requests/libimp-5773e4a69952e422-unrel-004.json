@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5773e4a69952e422-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2512.16136",
+  "reason": "分離メモリ上のOLTP分散トランザクションを対象に、データとロックの分離、計算ノード上のロック配置、lock-firstトランザクションプロトコルでRDMA atomic操作を削減する。一次要旨の性能評価は分散データベースのトランザクションthroughputとlatencyであり、LLM推論・KVキャッシュ・モデル配置への直接的な技術的貢献を評価していない。文中でLLM用分離メモリを関連事例として挙げても対象研究ではないためunrelated。",
+  "title": "Lotus: Optimizing Disaggregated Transactions with Disaggregated Locks",
+  "identity_tokens": [
+    "arXiv:2512.16136",
+    "DOI:10.48550/arXiv.2512.16136"
+  ],
+  "linked_from": [
+    "WORKLIST-30.md rank 500; OLTP distributed transactions / disaggregated memory"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5773e4a69952",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

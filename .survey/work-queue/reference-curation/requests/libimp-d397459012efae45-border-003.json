@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d397459012efae45-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.jbi.2026.104988",
+  "reason": "出版社Elsevier刊行論文の著者要旨をPubMedの原文書誌（PMID 41571171）で確認。Patience-based early exitingと不確実例の拒否を統合し、11件の医療データセットでTransformer分類の精度・マクロF1・高速化率を評価。MIMIC-IIIで拒否2.79%時の精度90.73%、高効率条件で最大80% speed-up ratioを報告。ただし生成LLMのトークン逐次復号やサービングを検証せず、医療分類モデルの推論効率が中心なのでborderline。",
+  "title": "PEER: Towards reliable and efficient inference via Patience-Based Early Exiting with Rejection",
+  "identity_tokens": [
+    "DOI:10.1016/j.jbi.2026.104988",
+    "PMID:41571171"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d397459012ef",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

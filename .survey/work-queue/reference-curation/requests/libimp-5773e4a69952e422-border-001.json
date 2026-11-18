@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5773e4a69952e422-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2506.12035",
+  "reason": "画像生成向けMasked Autoregressiveモデルで、活性トークンとキャッシュ済みトークンを分離したattention計算と、生成済みトークンへの注意スコアに基づく選択的KV再計算を組み合わせる。一次要旨は最大1.7倍の生成高速化と画像品質への小さい影響を報告するが、対象はOpenSora等のLLM推論ではなく画像生成MARである。KV再利用機構の転用可能性はある一方、LLMサービングでの実証はなく境界的と判定。",
+  "title": "MARché: Fast Masked Autoregressive Image Generation with Cache-Aware Attention",
+  "identity_tokens": [
+    "arXiv:2506.12035",
+    "DOI:10.48550/arXiv.2506.12035"
+  ],
+  "linked_from": [
+    "WORKLIST-30.md rank 276; cache-aware attention / image generation"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5773e4a69952",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

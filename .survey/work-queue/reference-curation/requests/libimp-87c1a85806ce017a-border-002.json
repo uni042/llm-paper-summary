@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-87c1a85806ce017a-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.40945",
+  "reason": "RL rolloutを推論エンジンが生成しtrainerが勾配計算する際の数値差とstale policy lagを分解し、prefix単位の中心化・重要度重みclip・再同期からなるDLCを提案。Qwen3-0.6B/1.7BのRL学習安定性が主な評価で、サービングのlatency/throughput/KV効率を改善する方式ではない。推論エンジンの数値整合という接点はあるためborderlineとし、即Researchには回さない。",
+  "title": "On the Origin and Evolution of Training-Inference Mismatch in LLM Reinforcement Learning",
+  "identity_tokens": [
+    "arXiv:2610.40945"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-87c1a85806ce",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

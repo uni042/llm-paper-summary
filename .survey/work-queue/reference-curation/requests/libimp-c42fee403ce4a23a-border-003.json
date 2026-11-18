@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c42fee403ce4a23a-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41819",
+  "reason": "表形式予測用Transformerの実行深さを単一モデル内で可変にするため、ランダムに選んだearly exitへ学習時監督を与える。30のOpenML分類datasetで深さ別6モデル相当の性能を単一モデルで再現し、TabPFN型12層基準と同等の性能を推論FLOPs25%削減で達成したと報告。推論予算適応は関連するが対象が表形式モデルでLLMサービングではないためborderline。",
+  "title": "ElTab: Elastically Looped Tabular Transformers",
+  "identity_tokens": [
+    "arXiv:2610.41819"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new",
+    "https://arxiv.org/list/cs.AI/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42fee403ce4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

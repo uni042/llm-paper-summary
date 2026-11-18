@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-557d3bbfb3b20aca-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.35336",
+  "reason": "単一megakernelへの最大融合が必ずしも最良ではないと示し、通常graph profileと単体kernel測定から複数megakernelへの分割点を予測する。著者要旨はNH-TTS、Qwen3-TTS、Llama-1Bの13条件で最良構成を選択し、NH-TTSでmonolith比TTFA21.4%減・throughput28%増と報告。LLM系の推論kernel融合に関連するが、主たる定量効果は音声生成モデルで示されており汎用LLM自回帰推論への直接性は限定的なためborderline。",
+  "title": "One Megakernel is Not Enough: Predicting Where to Cut for Streaming Inference",
+  "identity_tokens": [
+    "id:arXiv:2610.35336",
+    "id:DOI:10.48550/arXiv.2610.35336"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-557d3bbfb3b2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

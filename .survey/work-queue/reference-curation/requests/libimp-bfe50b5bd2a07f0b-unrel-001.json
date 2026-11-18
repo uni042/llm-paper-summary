@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-bfe50b5bd2a07f0b-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2502.07244",
+  "reason": "arXiv原著要旨で、線形注意層を動的ベクトル自己回帰（VAR）として解釈し、多層構成を時系列予測の自己回帰目的へ整合させるSAMoVARを提案していることを確認。最終評価対象は多変量時系列予測の精度・解釈可能性・計算効率であり、LLMの生成推論・サービング・KVキャッシュ・GPU実行基盤を直接改善する研究ではないためunrelated。",
+  "title": "Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting",
+  "identity_tokens": [
+    "arXiv:2502.07244",
+    "DOI:10.48550/arXiv.2502.07244"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfe50b5bd2a0",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

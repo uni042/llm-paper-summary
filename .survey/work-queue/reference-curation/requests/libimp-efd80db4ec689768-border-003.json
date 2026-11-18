@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-efd80db4ec689768-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2512.21627",
+  "reason": "arXiv一次要旨で、Qwen2.5-VLを用いた生涯ナビゲーション向けにDINOv3特徴とPixelUnshuffle/Convで画像履歴を圧縮し、16倍設定では画像約30トークンへ縮小すると確認。視覚文脈圧縮は関連するが、主評価はGOAT-Bench/HM3D-OVONの移動性能であり、汎用VLMサービングの速度・メモリ最適化を直接検証していないため境界的。",
+  "title": "AstraNav-Memory: Contexts Compression for Long Memory",
+  "identity_tokens": [
+    "arXiv:2512.21627"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-efd80db4ec68",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

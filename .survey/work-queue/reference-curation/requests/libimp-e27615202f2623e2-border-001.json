@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e27615202f2623e2-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41040",
+  "reason": "agentのtool catalogをPDDLへ決定的に変換し、LLMが要求をgoalへ変換した後、古典プランナが実行可能なtool呼出し計画を作る。実行中の引数根拠と検証も制約し、ToolSandbox等で標準tool-calling agent比最大28.9ポイントの成功率改善。試行錯誤的なLLM呼出しの抑制につながり得るが、一次要旨にLLM呼出し回数・推論時間・費用の実測削減はなく、主評価はタスク成功率のためborderline。",
+  "title": "Capability-Grounded Agentic Planning",
+  "identity_tokens": [
+    "arXiv:2610.41040"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AI/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e27615202f26",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

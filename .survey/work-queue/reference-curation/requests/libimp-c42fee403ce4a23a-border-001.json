@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c42fee403ce4a23a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41460",
+  "reason": "画像編集agentの再試行において失敗履歴に依存した成功率を推定し、モデルの再利用・上位モデルへの切替・打切りをqueue待ち時間込みで計画する。6つの編集モデルで再試行成功率が初回の17〜53%になるsticky failureを観測し、GPU testbedのSLO内編集完了率を既存最良比5.0〜6.3ポイント改善。サービングroutingの技術はあるが主対象が画像編集モデルでLLM推論そのものではないためborderline。",
+  "title": "RetryRoute: Retry-Aware Model Routing for Agentic Image Editing Services",
+  "identity_tokens": [
+    "arXiv:2610.41460"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.LG/new",
+    "https://arxiv.org/list/cs.AI/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c42fee403ce4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
