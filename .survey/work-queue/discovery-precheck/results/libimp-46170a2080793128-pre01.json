@@ -1,0 +1,868 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-46170a2080793128-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-46170a208079",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.03027",
+    "arXiv:2610.07457",
+    "arXiv:2610.17321",
+    "arXiv:2610.21241",
+    "arXiv:2610.21249",
+    "arXiv:2610.21500",
+    "arXiv:2610.24499",
+    "arXiv:2610.25675",
+    "arXiv:2610.32243",
+    "arXiv:2610.34731"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "40ce4946fbabf3cf479b41531157512af4dfe2a3",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:14:03.354355+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.03027",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07457",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17321",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21241",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21249",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/imns67862.2026.11655252"
+    },
+    {
+      "requested_id": "arXiv:2610.21500",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24499",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.25675",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32243",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34731",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tailoring the Quantization Space for 1-Bit KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2610.03027",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache becomes a major memory bottleneck in long-context LLM inference, placing substantial pressure on memory capacity and bandwidth. To mitigate this bottleneck, vector quantization (VQ) has emerged as a promising approach for aggressive KV cache compression. However, existing VQ methods degrade substantially in the 1-bit regime. At such extreme compression, each codebook must represent a larger group of channels with a limited set of centroids, making effective use of its capacity increasingly challenging. To address this, we introduce $\\textbf{TaSQ}$, which tailors the VQ target space by combining query-guided channel weighting, cross-head normalization, and covariance-aware channel grouping to better reflect the error sensitivity and statistical structure of cached activations. Since these transforms are RoPE-compatible and can be easily merged into projection weights and codebooks, TaSQ preserves the conventional VQ lookup structure and adds negligible serving overhead. Across general, long-chain-of-thought reasoning, and long-context retrieval benchmarks, TaSQ consistently outperforms existing low-bit KV cache VQ baselines while preserving reasoning stability. On a single RTX 6000 Ada GPU, its SGLang implementation supports up to $14\\times$ larger batch sizes and achieves $1.87\\times$ higher peak throughput compared to the BF16 baseline.",
+      "identifiers": [
+        "SemanticScholar:111f4141684da6355cbb525002535bfe4ceb2094"
+      ],
+      "semantic_scholar_id": "111f4141684da6355cbb525002535bfe4ceb2094",
+      "canonical_id": "arXiv:2610.03027",
+      "arxiv_id": "2610.03027",
+      "authors": [
+        "Minsoo Cheong",
+        "Donghyun Son",
+        "Sungjoo Yoo"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.25675",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) enables efficient deployment of Large Language Models (LLMs), yet activation outliers remain a key challenge for low-bit quantization. Existing global transformation methods overlook heterogeneous channel sensitivity to quantization noise, leading to suboptimal accuracy-efficiency trade-offs. To address this, we propose \\textbf{Locally Isolated Rotation Quantization (LIRQuant)}, a sensitivity-aware framework that selectively applies transformations. LIRQuant identifies sensitive channels using a noise-weighted sensitivity metric, applying expressive learnable rotations only to these channels and lightweight fixed rotations to the remaining ones. This decoupled design reduces optimization complexity without sacrificing outlier smoothing capability. Extensive experiments across the LLaMA-2/3, Mistral, Qwen3, and Mixtral families demonstrate that LIRQuant achieves state-of-the-art accuracy under the challenging W4A4KV4 setting. Meanwhile, LIRQuant calibrates LLaMA-3-8B in only 25 minutes with 20.3 GB peak GPU memory, achieving the fastest calibration and the lowest memory footprint among recent learnable-rotation methods, and its fused inference kernels deliver up to $2.3\\times$ prefill speedup and $3.5\\times$ memory saving over FP16.",
+      "identifiers": [
+        "SemanticScholar:c4685b9637c16725234d4c71d313debc8fb39b15"
+      ],
+      "semantic_scholar_id": "c4685b9637c16725234d4c71d313debc8fb39b15",
+      "canonical_id": "arXiv:2610.25675",
+      "arxiv_id": "2610.25675",
+      "doi": "10.18653/2026.findings-emnlp.1589",
+      "authors": [
+        "De-Sheng Xu",
+        "Hang Li",
+        "Tian-Chen Song",
+        "Zhi-Yong Zhao",
+        "Kun Zhan"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "AlignQuant: Tile-Aligned Mixed-Precision Quantization for Efficient LLM Generation",
+      "source_url": "https://arxiv.org/abs/2610.07457",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fine-grained mixed-precision quantization promises efficient large language model inference, but local precision choices can conflict with regular GPU storage and computation units. This precision-boundary mismatch limits the translation of compression into practical acceleration. We introduce AlignQuant, a post-training quantization method that uses GPU-compatible two-dimensional weight tiles as the common unit of precision allocation, compact storage, and execution. This shared partition lets precision follow sensitivity within output channels. Joint prefill/decode calibration scores precision reductions using projection-output perturbations weighted by language-model loss gradients under quantized activations. Phase-normalized scores prioritize higher precision for tiles important to either phase under a model-wide weight-storage budget. Each tile stores one selected representation, while phase-specialized kernels reuse the packed model and expand lower-bit weights for INT8 computation with 8-bit activations. Across four LLMs spanning 3B to 14B parameters, AlignQuant achieves up to $2.50\\times$ generation speedup over BF16 while preserving model quality. Evaluations further cover three GPUs and contexts up to 64K tokens. These results show that local precision flexibility and regular GPU execution can coexist through a shared tile unit. The implementation is available at https://github.com/HanzhiZhang-Ulrica/AlignQuant.",
+      "identifiers": [
+        "SemanticScholar:f143d50c78b138c62e5869ec8bc1b91e88919242"
+      ],
+      "semantic_scholar_id": "f143d50c78b138c62e5869ec8bc1b91e88919242",
+      "canonical_id": "arXiv:2610.07457",
+      "arxiv_id": "2610.07457",
+      "authors": [
+        "Han-Zhi Zhang",
+        "Qiao Zhang",
+        "Qing-Lei Cao",
+        "Heng Fan",
+        "Yan Huang",
+        "Ke-Wei Sha",
+        "Yun-He Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.17321",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As demand for LLM inference grows and consumer GPUs grow more capable, edge deployment is becoming increasingly attractive. WebGPU is compelling in this setting because it offers cross-platform portability and browser accessibility. However, these same strengths also make high performance difficult to achieve, as an implementation that performs well in one context may not perform well in another. To address this, we present GPU Goldmines, a framework for specifying, executing, and tuning WebGPU kernels. We instantiate GPU Goldmines with kernels for key LLM building blocks: matrix multiplication, matrix-vector multiplication, and flash attention. We characterize performance across diverse devices, shapes, and browsers, and use the resulting database to accelerate subsequent autotuning and configuration selection. On shapes drawn from Llama and Qwen models, our matrix multiplication kernels outperform ONNX Runtime and llama.cpp WebGPU kernels by 7.0x and 1.41x geometric mean, respectively, and deliver end-to-end improvements of 1.48x in the prefill stage of llama.cpp for chat workloads.",
+      "identifiers": [
+        "SemanticScholar:48ec13f683bb27cd973e77ed79e47a7cdc1c7311"
+      ],
+      "semantic_scholar_id": "48ec13f683bb27cd973e77ed79e47a7cdc1c7311",
+      "canonical_id": "arXiv:2610.17321",
+      "arxiv_id": "2610.17321",
+      "authors": [
+        "Rithik Sharma",
+        "Reese Levine",
+        "Zhe-Yuan Chen",
+        "A. Srikanth",
+        "Yan-Wen Xu",
+        "Tyler Sorensen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Range: Decoupling KV-Cache Reuse Granularity from Storage Work",
+      "source_url": "https://arxiv.org/abs/2610.21241",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM serving reuses cached key-value (KV) state to skip prefill, and growing contexts push that state past GPU HBM and CPU DRAM onto NVMe SSDs, placing prefix restore on the critical path of time-to-first-token (TTFT). We find that on a well-configured host-issued path the SSD is not the bottleneck: restoring the same 6 GiB of KV takes 2.1 s as 192 objects but 3.0 s as 6,144 objects, and more under layerwise loading, because every layer of the storage stack - lookup, allocation, I/O submission, GPU delivery, store, index - charges per logical object while the bytes stay the same. This cost grows with the KV footprint: longer contexts, deeper models under layerwise loading, and tensor parallelism each multiply the object count. Prior systems move this per-object work from the CPU to the GPU; the work remains per object. This paper presents Range, a KV-cache storage engine for vLLM and LMCache built on one principle: every cost on the storage path scales with bytes or physical batches, never with logical objects. Range tickets replace per-key lookup and ownership with token metadata and physical leases; byte stripes make the on-media layout independent of reuse granularity; completion-owned GPU transfer banks batch delivery and extraction and release each layer to attention as it lands. Range keeps the kernel cuFile path and changes four lines of vLLM. On a fixed 6 GiB restore, Range's median TTFT stays at 1.79-1.80 s across a 32x range of object counts and under layerwise delivery, within 70 ms of the prefix already being resident in GPU memory, while tuned in-process LMCache rises from 2.12 s to 3.01 s. Range improves on the fastest multiprocess DRAM-bounced path by 0.44 s at coarse granularity while moving no payload through host memory, and holds layerwise reuse at the cost of coarse-grained reuse, where the best stock path takes 2.24 s.",
+      "identifiers": [
+        "SemanticScholar:b37533fcbbf221b51e9fb257cfc128c2f342bb17"
+      ],
+      "semantic_scholar_id": "b37533fcbbf221b51e9fb257cfc128c2f342bb17",
+      "canonical_id": "arXiv:2610.21241",
+      "arxiv_id": "2610.21241",
+      "authors": [
+        "Ding-Sen Shi",
+        "Jia-Hao Zhang",
+        "Li-Qiang Lv",
+        "Bo Huang",
+        "Yan-Bo Dai",
+        "Ying He",
+        "Dong-Er Chen",
+        "Harry Fu",
+        "Wang Feng",
+        "Song Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill",
+      "source_url": "https://arxiv.org/abs/2610.21500",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reusing the attention KV cache across requests is a standard way to cut prefill cost in long-context LLM serving, and production systems increasingly back the per-engine cache with a remote tier shared by every engine. We study such a tier in a disaggregated deployment of GLM-5.3, an FP8 mixture-of-experts model with multi-head latent attention (MLA), on 8xB300 nodes running prefill context parallelism (PCP8). Enabling the remote tier (LMCache with a Valkey store) left median time-to-first-token unchanged but raised the 16k-token p99 from 3.96 s to 17.3 s. Replaying a production request stream on an isolated engine, we find that a remote hit took 0.88 s against 0.31 s to recompute the prompt, and that synchronous loading turned a hit-heavy stream into an unstable queue: p99 83.32 s with the GPUs 7% busy. A two-term cost model explains both: a hit pays off only if the tier delivers more than B* = sR (2.53 GB/s for this model and GPU), and a fixed per-hit engine cost (T0 ~ 0.33 s) means that hits on prompts shorter than about 17k tokens cannot beat recompute at any bandwidth. Guided by the model, we (i) shard the MLA KV store across PCP ranks, with a proof that the existing minimum-over-ranks lookup returns the longest cached prefix and a load protocol that can never desynchronize collectives; (ii) partition the remote tier by rank, one server instance per rank with no coordination, which raises GET bandwidth 6.3x to 10.76 GB/s; (iii) add asynchronous loading to the sharded store; and (iv) fix three client bugs that caused unbounded stalls. On the hit-heavy stream, with 98.5% of prompt tokens served from the remote tier, p99 falls from 83.32 s to 0.67 s. The sharded store raises prefill throughput by 14%, and by 34% together with an upstream kernel fix. All changes are submitted upstream to LMCache.",
+      "identifiers": [
+        "SemanticScholar:3a26d4c055ba0566a7e7f0c69d890050c81a2cb5"
+      ],
+      "semantic_scholar_id": "3a26d4c055ba0566a7e7f0c69d890050c81a2cb5",
+      "canonical_id": "arXiv:2610.21500",
+      "arxiv_id": "2610.21500",
+      "authors": [
+        "M. Ibrahim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TideKV: Delayed KV eviction via layer-wise chunked prefill for memory-efficient long-context LLM inference",
+      "source_url": "https://arxiv.org/abs/2610.24499",
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": "Journal of systems architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language model (LLM) inference is important for modern intelligent applications but remains constrained by peak memory during prompt prefill. Existing KV cache compression reduces decoding memory but typically requires full-prompt prefill to preserve global context, retaining a high construction peak. Online chunk-level eviction lowers memory earlier but selects before each layer has observed the complete prompt, potentially degrading cache construction and decoding. We present TideKV, an on-GPU cache-construction architecture using layer-major delayed eviction. TideKV processes all prompt chunks within each Transformer layer, retains full-prompt KV only for the active layer, and evicts at layer end. This schedule preserves full-prompt-aware selection while reducing activation and temporary memory. Experiments across multiple computing platforms show that TideKV preserves the inference quality and final cache size of the evaluated compression methods. At 64K on A100, it reduces the construction-time transient footprint by 83.89%. On RTX 4090, it increases time to first token by only 1.06% at 64K and enables 128K prefill. TideKV also completes 128K on Jetson, whereas matched post-prefill compression runs out of memory on both resource-constrained platforms. These results show that delayed layer-end eviction substantially expands feasible context lengths without sacrificing cache utility.",
+      "identifiers": [
+        "SemanticScholar:b8596428c8ba72d19a5dba21ff7f224be427487f"
+      ],
+      "semantic_scholar_id": "b8596428c8ba72d19a5dba21ff7f224be427487f",
+      "canonical_id": "arXiv:2610.24499",
+      "arxiv_id": "2610.24499",
+      "doi": "10.1016/j.sysarc.2026.104036",
+      "authors": [
+        "Yu Wang",
+        "Zhu Wang",
+        "Ning Hu",
+        "Yi-Fan Guo",
+        "Xiu-Jun Ma",
+        "Bin Guo",
+        "Zhi-Wen Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BiLoCo: Binary Low-Rank Corrections for Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2610.32243",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) to FP4 has emerged as a key technique for reducing large language model inference cost, especially on Blackwell GPUs, which offer native FP4 tensor core support. Direct PTQ to FP4, however, still leaves a noticeable accuracy gap. Recent work on SVDQuant mitigates the errors introduced through FP4 quantization for diffusion models by adding high-precision low-rank corrections obtained via SVD. However, this high-precision low-rank correction requires many bits per rank, and it runs on the same tensor cores as the main FP4 GEMM. We introduce BiLoCo, a low-rank correction method whose left and right factors are stored as binary ${\\{\\pm 1\\}}$ sign vectors rather than as BF16 numbers. The signed format uses $16{\\times}$ less storage per rank-one component, and since the correction now consists of additions/subtractions, this can be run on CUDA cores concurrently with the FP4 tensor-core GEMM. On 4B--72B LLMs, BiLoCo matches or improves memory-matched SVDQuant for PTQ. We implement BiLoCo on B300 as a fused single kernel, where the FP4 GEMM runs on tensor cores, the bit-packed correction on the CUDA cores of the same launch, and the two are combined in the GEMM epilogue. With batch size $1$, the fused kernel is at most $11\\%$ slower than the FP4-only GEMM for every rank up to $512$. At rank $128$, it is at most $20\\%$ slower up to batch size $8$.",
+      "identifiers": [
+        "SemanticScholar:de38fe5d23dc2776c0f5f036804a1d445cd4f926"
+      ],
+      "semantic_scholar_id": "de38fe5d23dc2776c0f5f036804a1d445cd4f926",
+      "canonical_id": "arXiv:2610.32243",
+      "arxiv_id": "2610.32243",
+      "authors": [
+        "David Jin",
+        "Beshr IslamBouli",
+        "Tarushii Goel",
+        "Han Guo",
+        "Yoon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MCF: A Memory- and Communication-Aware Co-Designed Framework for Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.34731",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents Memory- and Communication-Aware Framework for Long-Context LLM Inference (MCF) that optimizes long-context inference through communication-aware and stage-adaptive KV-cache layout transitions. At the core of MCF is {Memory-Aware Replication and Scheduling} (MARS), a dynamic orchestration mechanism for chunked prefill. MARS exploits early-stage memory headroom by selectively replicating highly reused KV blocks, improving locality and hiding KV propagation latency behind attention computation. As prefill progresses and memory pressure increases, MARS progressively drains redundant replicas and converges the KV cache into a sharded decode-ready layout, avoiding expensive layout conversion at the prefill--decode boundary. For decoding, MCF adopts a query-centric execution model in which KV shards remain stationary while lightweight query tensors are routed across workers. This changes communication from KV-cache-dependent transfer to query-dependent transfer, reducing communication growth with context length. MCF further integrates a hardware-software co-designed execution layer based on an FPGA compute-NIC datapath, enabling metadata-driven KV routing and collective operations directly in the network path. Experiments show that MCF improves TTFT, throughput, and scalability over state-of-the-art distributed inference systems, with larger benefits as context length and cluster size increase.",
+      "identifiers": [
+        "SemanticScholar:c99eedeca6d610cb667cbdd3aa6e5f50eca43d46"
+      ],
+      "semantic_scholar_id": "c99eedeca6d610cb667cbdd3aa6e5f50eca43d46",
+      "canonical_id": "arXiv:2610.34731",
+      "arxiv_id": "2610.34731",
+      "authors": [
+        "Huai-Zhi Zhang",
+        "Jia-Cheng Zhu",
+        "Xu-Qi Zhu",
+        "Junkyu Lee",
+        "K. Mcdonald-Maier",
+        "Xiao-Jun Zhai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.03027",
+      "identity_tokens": [
+        "id:SemanticScholar:111f4141684da6355cbb525002535bfe4ceb2094",
+        "id:arXiv:2610.03027",
+        "title:tailoring the quantization space for 1bit kv cache compression",
+        "url:https://arxiv.org/abs/2610.03027"
+      ],
+      "record": {
+        "title": "Tailoring the Quantization Space for 1-Bit KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2610.03027",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache becomes a major memory bottleneck in long-context LLM inference, placing substantial pressure on memory capacity and bandwidth. To mitigate this bottleneck, vector quantization (VQ) has emerged as a promising approach for aggressive KV cache compression. However, existing VQ methods degrade substantially in the 1-bit regime. At such extreme compression, each codebook must represent a larger group of channels with a limited set of centroids, making effective use of its capacity increasingly challenging. To address this, we introduce $\\textbf{TaSQ}$, which tailors the VQ target space by combining query-guided channel weighting, cross-head normalization, and covariance-aware channel grouping to better reflect the error sensitivity and statistical structure of cached activations. Since these transforms are RoPE-compatible and can be easily merged into projection weights and codebooks, TaSQ preserves the conventional VQ lookup structure and adds negligible serving overhead. Across general, long-chain-of-thought reasoning, and long-context retrieval benchmarks, TaSQ consistently outperforms existing low-bit KV cache VQ baselines while preserving reasoning stability. On a single RTX 6000 Ada GPU, its SGLang implementation supports up to $14\\times$ larger batch sizes and achieves $1.87\\times$ higher peak throughput compared to the BF16 baseline.",
+        "identifiers": [
+          "SemanticScholar:111f4141684da6355cbb525002535bfe4ceb2094"
+        ],
+        "semantic_scholar_id": "111f4141684da6355cbb525002535bfe4ceb2094",
+        "canonical_id": "arXiv:2610.03027",
+        "arxiv_id": "2610.03027",
+        "authors": [
+          "Minsoo Cheong",
+          "Donghyun Son",
+          "Sungjoo Yoo"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.25675",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.findings-emnlp.1589",
+        "id:SemanticScholar:c4685b9637c16725234d4c71d313debc8fb39b15",
+        "id:arXiv:2610.25675",
+        "title:lirquant an efficient locally isolated rotation quantization method for large language models",
+        "url:https://arxiv.org/abs/2610.25675"
+      ],
+      "record": {
+        "title": "LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.25675",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) enables efficient deployment of Large Language Models (LLMs), yet activation outliers remain a key challenge for low-bit quantization. Existing global transformation methods overlook heterogeneous channel sensitivity to quantization noise, leading to suboptimal accuracy-efficiency trade-offs. To address this, we propose \\textbf{Locally Isolated Rotation Quantization (LIRQuant)}, a sensitivity-aware framework that selectively applies transformations. LIRQuant identifies sensitive channels using a noise-weighted sensitivity metric, applying expressive learnable rotations only to these channels and lightweight fixed rotations to the remaining ones. This decoupled design reduces optimization complexity without sacrificing outlier smoothing capability. Extensive experiments across the LLaMA-2/3, Mistral, Qwen3, and Mixtral families demonstrate that LIRQuant achieves state-of-the-art accuracy under the challenging W4A4KV4 setting. Meanwhile, LIRQuant calibrates LLaMA-3-8B in only 25 minutes with 20.3 GB peak GPU memory, achieving the fastest calibration and the lowest memory footprint among recent learnable-rotation methods, and its fused inference kernels deliver up to $2.3\\times$ prefill speedup and $3.5\\times$ memory saving over FP16.",
+        "identifiers": [
+          "SemanticScholar:c4685b9637c16725234d4c71d313debc8fb39b15"
+        ],
+        "semantic_scholar_id": "c4685b9637c16725234d4c71d313debc8fb39b15",
+        "canonical_id": "arXiv:2610.25675",
+        "arxiv_id": "2610.25675",
+        "doi": "10.18653/2026.findings-emnlp.1589",
+        "authors": [
+          "De-Sheng Xu",
+          "Hang Li",
+          "Tian-Chen Song",
+          "Zhi-Yong Zhao",
+          "Kun Zhan"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07457",
+      "identity_tokens": [
+        "id:SemanticScholar:f143d50c78b138c62e5869ec8bc1b91e88919242",
+        "id:arXiv:2610.07457",
+        "title:alignquant tilealigned mixedprecision quantization for efficient llm generation",
+        "url:https://arxiv.org/abs/2610.07457"
+      ],
+      "record": {
+        "title": "AlignQuant: Tile-Aligned Mixed-Precision Quantization for Efficient LLM Generation",
+        "source_url": "https://arxiv.org/abs/2610.07457",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Fine-grained mixed-precision quantization promises efficient large language model inference, but local precision choices can conflict with regular GPU storage and computation units. This precision-boundary mismatch limits the translation of compression into practical acceleration. We introduce AlignQuant, a post-training quantization method that uses GPU-compatible two-dimensional weight tiles as the common unit of precision allocation, compact storage, and execution. This shared partition lets precision follow sensitivity within output channels. Joint prefill/decode calibration scores precision reductions using projection-output perturbations weighted by language-model loss gradients under quantized activations. Phase-normalized scores prioritize higher precision for tiles important to either phase under a model-wide weight-storage budget. Each tile stores one selected representation, while phase-specialized kernels reuse the packed model and expand lower-bit weights for INT8 computation with 8-bit activations. Across four LLMs spanning 3B to 14B parameters, AlignQuant achieves up to $2.50\\times$ generation speedup over BF16 while preserving model quality. Evaluations further cover three GPUs and contexts up to 64K tokens. These results show that local precision flexibility and regular GPU execution can coexist through a shared tile unit. The implementation is available at https://github.com/HanzhiZhang-Ulrica/AlignQuant.",
+        "identifiers": [
+          "SemanticScholar:f143d50c78b138c62e5869ec8bc1b91e88919242"
+        ],
+        "semantic_scholar_id": "f143d50c78b138c62e5869ec8bc1b91e88919242",
+        "canonical_id": "arXiv:2610.07457",
+        "arxiv_id": "2610.07457",
+        "authors": [
+          "Han-Zhi Zhang",
+          "Qiao Zhang",
+          "Qing-Lei Cao",
+          "Heng Fan",
+          "Yan Huang",
+          "Ke-Wei Sha",
+          "Yun-He Feng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17321",
+      "identity_tokens": [
+        "id:SemanticScholar:48ec13f683bb27cd973e77ed79e47a7cdc1c7311",
+        "id:arXiv:2610.17321",
+        "title:gpu goldmines tunable webgpu kernels for edge llm inference",
+        "url:https://arxiv.org/abs/2610.17321"
+      ],
+      "record": {
+        "title": "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.17321",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As demand for LLM inference grows and consumer GPUs grow more capable, edge deployment is becoming increasingly attractive. WebGPU is compelling in this setting because it offers cross-platform portability and browser accessibility. However, these same strengths also make high performance difficult to achieve, as an implementation that performs well in one context may not perform well in another. To address this, we present GPU Goldmines, a framework for specifying, executing, and tuning WebGPU kernels. We instantiate GPU Goldmines with kernels for key LLM building blocks: matrix multiplication, matrix-vector multiplication, and flash attention. We characterize performance across diverse devices, shapes, and browsers, and use the resulting database to accelerate subsequent autotuning and configuration selection. On shapes drawn from Llama and Qwen models, our matrix multiplication kernels outperform ONNX Runtime and llama.cpp WebGPU kernels by 7.0x and 1.41x geometric mean, respectively, and deliver end-to-end improvements of 1.48x in the prefill stage of llama.cpp for chat workloads.",
+        "identifiers": [
+          "SemanticScholar:48ec13f683bb27cd973e77ed79e47a7cdc1c7311"
+        ],
+        "semantic_scholar_id": "48ec13f683bb27cd973e77ed79e47a7cdc1c7311",
+        "canonical_id": "arXiv:2610.17321",
+        "arxiv_id": "2610.17321",
+        "authors": [
+          "Rithik Sharma",
+          "Reese Levine",
+          "Zhe-Yuan Chen",
+          "A. Srikanth",
+          "Yan-Wen Xu",
+          "Tyler Sorensen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 37,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21241",
+      "identity_tokens": [
+        "id:SemanticScholar:b37533fcbbf221b51e9fb257cfc128c2f342bb17",
+        "id:arXiv:2610.21241",
+        "title:range decoupling kvcache reuse granularity from storage work",
+        "url:https://arxiv.org/abs/2610.21241"
+      ],
+      "record": {
+        "title": "Range: Decoupling KV-Cache Reuse Granularity from Storage Work",
+        "source_url": "https://arxiv.org/abs/2610.21241",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM serving reuses cached key-value (KV) state to skip prefill, and growing contexts push that state past GPU HBM and CPU DRAM onto NVMe SSDs, placing prefix restore on the critical path of time-to-first-token (TTFT). We find that on a well-configured host-issued path the SSD is not the bottleneck: restoring the same 6 GiB of KV takes 2.1 s as 192 objects but 3.0 s as 6,144 objects, and more under layerwise loading, because every layer of the storage stack - lookup, allocation, I/O submission, GPU delivery, store, index - charges per logical object while the bytes stay the same. This cost grows with the KV footprint: longer contexts, deeper models under layerwise loading, and tensor parallelism each multiply the object count. Prior systems move this per-object work from the CPU to the GPU; the work remains per object. This paper presents Range, a KV-cache storage engine for vLLM and LMCache built on one principle: every cost on the storage path scales with bytes or physical batches, never with logical objects. Range tickets replace per-key lookup and ownership with token metadata and physical leases; byte stripes make the on-media layout independent of reuse granularity; completion-owned GPU transfer banks batch delivery and extraction and release each layer to attention as it lands. Range keeps the kernel cuFile path and changes four lines of vLLM. On a fixed 6 GiB restore, Range's median TTFT stays at 1.79-1.80 s across a 32x range of object counts and under layerwise delivery, within 70 ms of the prefix already being resident in GPU memory, while tuned in-process LMCache rises from 2.12 s to 3.01 s. Range improves on the fastest multiprocess DRAM-bounced path by 0.44 s at coarse granularity while moving no payload through host memory, and holds layerwise reuse at the cost of coarse-grained reuse, where the best stock path takes 2.24 s.",
+        "identifiers": [
+          "SemanticScholar:b37533fcbbf221b51e9fb257cfc128c2f342bb17"
+        ],
+        "semantic_scholar_id": "b37533fcbbf221b51e9fb257cfc128c2f342bb17",
+        "canonical_id": "arXiv:2610.21241",
+        "arxiv_id": "2610.21241",
+        "authors": [
+          "Ding-Sen Shi",
+          "Jia-Hao Zhang",
+          "Li-Qiang Lv",
+          "Bo Huang",
+          "Yan-Bo Dai",
+          "Ying He",
+          "Dong-Er Chen",
+          "Harry Fu",
+          "Wang Feng",
+          "Song Fu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21500",
+      "identity_tokens": [
+        "id:SemanticScholar:3a26d4c055ba0566a7e7f0c69d890050c81a2cb5",
+        "id:arXiv:2610.21500",
+        "title:when the kv cache is slower than the gpu scaling remote kv tiers for contextparallel prefill",
+        "url:https://arxiv.org/abs/2610.21500"
+      ],
+      "record": {
+        "title": "When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill",
+        "source_url": "https://arxiv.org/abs/2610.21500",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reusing the attention KV cache across requests is a standard way to cut prefill cost in long-context LLM serving, and production systems increasingly back the per-engine cache with a remote tier shared by every engine. We study such a tier in a disaggregated deployment of GLM-5.3, an FP8 mixture-of-experts model with multi-head latent attention (MLA), on 8xB300 nodes running prefill context parallelism (PCP8). Enabling the remote tier (LMCache with a Valkey store) left median time-to-first-token unchanged but raised the 16k-token p99 from 3.96 s to 17.3 s. Replaying a production request stream on an isolated engine, we find that a remote hit took 0.88 s against 0.31 s to recompute the prompt, and that synchronous loading turned a hit-heavy stream into an unstable queue: p99 83.32 s with the GPUs 7% busy. A two-term cost model explains both: a hit pays off only if the tier delivers more than B* = sR (2.53 GB/s for this model and GPU), and a fixed per-hit engine cost (T0 ~ 0.33 s) means that hits on prompts shorter than about 17k tokens cannot beat recompute at any bandwidth. Guided by the model, we (i) shard the MLA KV store across PCP ranks, with a proof that the existing minimum-over-ranks lookup returns the longest cached prefix and a load protocol that can never desynchronize collectives; (ii) partition the remote tier by rank, one server instance per rank with no coordination, which raises GET bandwidth 6.3x to 10.76 GB/s; (iii) add asynchronous loading to the sharded store; and (iv) fix three client bugs that caused unbounded stalls. On the hit-heavy stream, with 98.5% of prompt tokens served from the remote tier, p99 falls from 83.32 s to 0.67 s. The sharded store raises prefill throughput by 14%, and by 34% together with an upstream kernel fix. All changes are submitted upstream to LMCache.",
+        "identifiers": [
+          "SemanticScholar:3a26d4c055ba0566a7e7f0c69d890050c81a2cb5"
+        ],
+        "semantic_scholar_id": "3a26d4c055ba0566a7e7f0c69d890050c81a2cb5",
+        "canonical_id": "arXiv:2610.21500",
+        "arxiv_id": "2610.21500",
+        "authors": [
+          "M. Ibrahim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.24499",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.104036",
+        "id:SemanticScholar:b8596428c8ba72d19a5dba21ff7f224be427487f",
+        "id:arXiv:2610.24499",
+        "title:tidekv delayed kv eviction via layerwise chunked prefill for memoryefficient longcontext llm inference",
+        "url:https://arxiv.org/abs/2610.24499"
+      ],
+      "record": {
+        "title": "TideKV: Delayed KV eviction via layer-wise chunked prefill for memory-efficient long-context LLM inference",
+        "source_url": "https://arxiv.org/abs/2610.24499",
+        "year": 2026,
+        "published": "2026-10-17",
+        "venue": "Journal of systems architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context large language model (LLM) inference is important for modern intelligent applications but remains constrained by peak memory during prompt prefill. Existing KV cache compression reduces decoding memory but typically requires full-prompt prefill to preserve global context, retaining a high construction peak. Online chunk-level eviction lowers memory earlier but selects before each layer has observed the complete prompt, potentially degrading cache construction and decoding. We present TideKV, an on-GPU cache-construction architecture using layer-major delayed eviction. TideKV processes all prompt chunks within each Transformer layer, retains full-prompt KV only for the active layer, and evicts at layer end. This schedule preserves full-prompt-aware selection while reducing activation and temporary memory. Experiments across multiple computing platforms show that TideKV preserves the inference quality and final cache size of the evaluated compression methods. At 64K on A100, it reduces the construction-time transient footprint by 83.89%. On RTX 4090, it increases time to first token by only 1.06% at 64K and enables 128K prefill. TideKV also completes 128K on Jetson, whereas matched post-prefill compression runs out of memory on both resource-constrained platforms. These results show that delayed layer-end eviction substantially expands feasible context lengths without sacrificing cache utility.",
+        "identifiers": [
+          "SemanticScholar:b8596428c8ba72d19a5dba21ff7f224be427487f"
+        ],
+        "semantic_scholar_id": "b8596428c8ba72d19a5dba21ff7f224be427487f",
+        "canonical_id": "arXiv:2610.24499",
+        "arxiv_id": "2610.24499",
+        "doi": "10.1016/j.sysarc.2026.104036",
+        "authors": [
+          "Yu Wang",
+          "Zhu Wang",
+          "Ning Hu",
+          "Yi-Fan Guo",
+          "Xiu-Jun Ma",
+          "Bin Guo",
+          "Zhi-Wen Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.32243",
+      "identity_tokens": [
+        "id:SemanticScholar:de38fe5d23dc2776c0f5f036804a1d445cd4f926",
+        "id:arXiv:2610.32243",
+        "title:biloco binary lowrank corrections for posttraining quantization",
+        "url:https://arxiv.org/abs/2610.32243"
+      ],
+      "record": {
+        "title": "BiLoCo: Binary Low-Rank Corrections for Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2610.32243",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) to FP4 has emerged as a key technique for reducing large language model inference cost, especially on Blackwell GPUs, which offer native FP4 tensor core support. Direct PTQ to FP4, however, still leaves a noticeable accuracy gap. Recent work on SVDQuant mitigates the errors introduced through FP4 quantization for diffusion models by adding high-precision low-rank corrections obtained via SVD. However, this high-precision low-rank correction requires many bits per rank, and it runs on the same tensor cores as the main FP4 GEMM. We introduce BiLoCo, a low-rank correction method whose left and right factors are stored as binary ${\\{\\pm 1\\}}$ sign vectors rather than as BF16 numbers. The signed format uses $16{\\times}$ less storage per rank-one component, and since the correction now consists of additions/subtractions, this can be run on CUDA cores concurrently with the FP4 tensor-core GEMM. On 4B--72B LLMs, BiLoCo matches or improves memory-matched SVDQuant for PTQ. We implement BiLoCo on B300 as a fused single kernel, where the FP4 GEMM runs on tensor cores, the bit-packed correction on the CUDA cores of the same launch, and the two are combined in the GEMM epilogue. With batch size $1$, the fused kernel is at most $11\\%$ slower than the FP4-only GEMM for every rank up to $512$. At rank $128$, it is at most $20\\%$ slower up to batch size $8$.",
+        "identifiers": [
+          "SemanticScholar:de38fe5d23dc2776c0f5f036804a1d445cd4f926"
+        ],
+        "semantic_scholar_id": "de38fe5d23dc2776c0f5f036804a1d445cd4f926",
+        "canonical_id": "arXiv:2610.32243",
+        "arxiv_id": "2610.32243",
+        "authors": [
+          "David Jin",
+          "Beshr IslamBouli",
+          "Tarushii Goel",
+          "Han Guo",
+          "Yoon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34731",
+      "identity_tokens": [
+        "id:SemanticScholar:c99eedeca6d610cb667cbdd3aa6e5f50eca43d46",
+        "id:arXiv:2610.34731",
+        "title:mcf a memory and communicationaware codesigned framework for longcontext llm inference",
+        "url:https://arxiv.org/abs/2610.34731"
+      ],
+      "record": {
+        "title": "MCF: A Memory- and Communication-Aware Co-Designed Framework for Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.34731",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper presents Memory- and Communication-Aware Framework for Long-Context LLM Inference (MCF) that optimizes long-context inference through communication-aware and stage-adaptive KV-cache layout transitions. At the core of MCF is {Memory-Aware Replication and Scheduling} (MARS), a dynamic orchestration mechanism for chunked prefill. MARS exploits early-stage memory headroom by selectively replicating highly reused KV blocks, improving locality and hiding KV propagation latency behind attention computation. As prefill progresses and memory pressure increases, MARS progressively drains redundant replicas and converges the KV cache into a sharded decode-ready layout, avoiding expensive layout conversion at the prefill--decode boundary. For decoding, MCF adopts a query-centric execution model in which KV shards remain stationary while lightweight query tensors are routed across workers. This changes communication from KV-cache-dependent transfer to query-dependent transfer, reducing communication growth with context length. MCF further integrates a hardware-software co-designed execution layer based on an FPGA compute-NIC datapath, enabling metadata-driven KV routing and collective operations directly in the network path. Experiments show that MCF improves TTFT, throughput, and scalability over state-of-the-art distributed inference systems, with larger benefits as context length and cluster size increase.",
+        "identifiers": [
+          "SemanticScholar:c99eedeca6d610cb667cbdd3aa6e5f50eca43d46"
+        ],
+        "semantic_scholar_id": "c99eedeca6d610cb667cbdd3aa6e5f50eca43d46",
+        "canonical_id": "arXiv:2610.34731",
+        "arxiv_id": "2610.34731",
+        "authors": [
+          "Huai-Zhi Zhang",
+          "Jia-Cheng Zhu",
+          "Xu-Qi Zhu",
+          "Junkyu Lee",
+          "K. Mcdonald-Maier",
+          "Xiao-Jun Zhai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:36bcc73a51a4344d42ea4381601ec179d376a3c474fde9b94ceb5c77c57ec94c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

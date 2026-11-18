@@ -1,0 +1,185 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1a12e2a107002c3e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1a12e2a10700",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2506.12860",
+    "arXiv:2601.11200",
+    "arXiv:2605.17260",
+    "arXiv:2610.26531"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "40ce4946fbabf3cf479b41531157512af4dfe2a3",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:14:03.346510+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2506.12860",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.11200",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.11200"
+    },
+    {
+      "requested_id": "arXiv:2605.17260",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2605.17260"
+    },
+    {
+      "requested_id": "arXiv:2610.26531",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:9a4869f061b8f7eaec74f748f09ed73f38d9621e"
+    }
+  ],
+  "results": [
+    {
+      "title": "QFFT, Question-Free Fine-Tuning for Adaptive Reasoning",
+      "source_url": "https://arxiv.org/abs/2506.12860",
+      "year": 2025,
+      "published": "2025-06-15",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in Long Chain-of-Thought (CoT) reasoning models have improved performance on complex tasks, but they suffer from overthinking, which generates redundant reasoning steps, especially for simple questions. This paper revisits the reasoning patterns of Long and Short CoT models, observing that the Short CoT patterns offer concise reasoning efficiently, while the Long CoT patterns excel in challenging scenarios where the Short CoT patterns struggle. To enable models to leverage both patterns, we propose Question-Free Fine-Tuning (QFFT), a fine-tuning approach that removes the input question during training and learns exclusively from Long CoT responses. This approach enables the model to adaptively employ both reasoning patterns: it prioritizes the Short CoT patterns and activates the Long CoT patterns only when necessary. Experiments on various mathematical datasets demonstrate that QFFT reduces average response length by more than 50\\%, while achieving performance comparable to Supervised Fine-Tuning (SFT). Additionally, QFFT exhibits superior performance compared to SFT in noisy, out-of-domain, and low-resource scenarios.",
+      "identifiers": [
+        "SemanticScholar:b4f39231109b9fed59a33bc54ef6a2922761bd41"
+      ],
+      "semantic_scholar_id": "b4f39231109b9fed59a33bc54ef6a2922761bd41",
+      "canonical_id": "arXiv:2506.12860",
+      "arxiv_id": "2506.12860",
+      "doi": "10.48550/arXiv.2506.12860",
+      "authors": [
+        "Wanlong Liu",
+        "Jun Xu",
+        "Fei Yu",
+        "Yukang Lin",
+        "Ke Ji",
+        "Wen-Yu Chen",
+        "Li-Feng Shang",
+        "Ya-Sheng Wang",
+        "Yan Xu",
+        "Ben-You Wang"
+      ],
+      "priority": 37,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 37,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 521,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2506.12860",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.12860",
+        "id:SemanticScholar:b4f39231109b9fed59a33bc54ef6a2922761bd41",
+        "id:arXiv:2506.12860",
+        "title:qfft questionfree finetuning for adaptive reasoning",
+        "url:https://arxiv.org/abs/2506.12860"
+      ],
+      "record": {
+        "title": "QFFT, Question-Free Fine-Tuning for Adaptive Reasoning",
+        "source_url": "https://arxiv.org/abs/2506.12860",
+        "year": 2025,
+        "published": "2025-06-15",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 27,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advancements in Long Chain-of-Thought (CoT) reasoning models have improved performance on complex tasks, but they suffer from overthinking, which generates redundant reasoning steps, especially for simple questions. This paper revisits the reasoning patterns of Long and Short CoT models, observing that the Short CoT patterns offer concise reasoning efficiently, while the Long CoT patterns excel in challenging scenarios where the Short CoT patterns struggle. To enable models to leverage both patterns, we propose Question-Free Fine-Tuning (QFFT), a fine-tuning approach that removes the input question during training and learns exclusively from Long CoT responses. This approach enables the model to adaptively employ both reasoning patterns: it prioritizes the Short CoT patterns and activates the Long CoT patterns only when necessary. Experiments on various mathematical datasets demonstrate that QFFT reduces average response length by more than 50\\%, while achieving performance comparable to Supervised Fine-Tuning (SFT). Additionally, QFFT exhibits superior performance compared to SFT in noisy, out-of-domain, and low-resource scenarios.",
+        "identifiers": [
+          "SemanticScholar:b4f39231109b9fed59a33bc54ef6a2922761bd41"
+        ],
+        "semantic_scholar_id": "b4f39231109b9fed59a33bc54ef6a2922761bd41",
+        "canonical_id": "arXiv:2506.12860",
+        "arxiv_id": "2506.12860",
+        "doi": "10.48550/arXiv.2506.12860",
+        "authors": [
+          "Wanlong Liu",
+          "Jun Xu",
+          "Fei Yu",
+          "Yukang Lin",
+          "Ke Ji",
+          "Wen-Yu Chen",
+          "Li-Feng Shang",
+          "Ya-Sheng Wang",
+          "Yan Xu",
+          "Ben-You Wang"
+        ],
+        "priority": 37,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 27,
+          "citation_count": 27,
+          "total": 37,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 521,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2e32a08ea35b7647f72fcad1ab4391f218f1c89f7c1219bfd7f41c32a95ca9e3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

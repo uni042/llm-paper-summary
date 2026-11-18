@@ -1,0 +1,261 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-704a8610ba5c1ff2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-704a8610ba5c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2405.13358",
+    "arXiv:2603.24680",
+    "arXiv:2603.26365",
+    "arXiv:2608.21134",
+    "arXiv:2610.11750"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "40ce4946fbabf3cf479b41531157512af4dfe2a3",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:13:51.041282+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2405.13358",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.13358"
+    },
+    {
+      "requested_id": "arXiv:2603.24680",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.24680"
+    },
+    {
+      "requested_id": "arXiv:2603.26365",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.21134",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.11750",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:63149e698ae73b7faa81a8063390a3f4812ce8a6"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dynamic Token Compression for Efficient Video Understanding through Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2603.26365",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models have demonstrated remarkable capabilities in video understanding, yet face prohibitive computational costs and performance degradation from''context rot''due to massive visual token redundancy. Existing compression strategies typically rely on heuristics or fixed transformations that are often decoupled from the downstream task objectives, limiting their adaptability and effectiveness. To address this, we propose SCORE (Surprise-augmented token COmpression via REinforcement learning), a unified framework that learns an adaptive token compression policy. SCORE introduces a lightweight policy network conditioned on a surprise-augmented state representation that incorporates inter-frame residuals to explicitly capture temporal dynamics and motion saliency. We optimize this policy using a group-wise reinforcement learning scheme with a split-advantage estimator, stabilized by a two-stage curriculum transferring from static pseudo-videos to real dynamic videos. Extensive experiments on diverse video understanding benchmarks demonstrate that SCORE significantly outperforms state-of-the-art baselines. Notably, SCORE achieves a 16x prefill speedup while preserving 99.5% of original performance at a 10% retention ratio, offering a scalable solution for efficient long-form video understanding.",
+      "identifiers": [
+        "SemanticScholar:aaaa661ff9a0b2efa2de3c98c423b4e6eea7ba56"
+      ],
+      "semantic_scholar_id": "aaaa661ff9a0b2efa2de3c98c423b4e6eea7ba56",
+      "canonical_id": "arXiv:2603.26365",
+      "arxiv_id": "2603.26365",
+      "doi": "10.48550/arXiv.2603.26365",
+      "authors": [
+        "Shi-Da Wang",
+        "Yong-Xiang Hua",
+        "Zhou Tao",
+        "Hao-Yu Cao",
+        "Lin-Li Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs",
+      "source_url": "https://arxiv.org/abs/2608.21134",
+      "year": 2026,
+      "published": "2026-08-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying vision-language models (VLMs) on mobile devices is challenging due to their significant memory and compute requirements. We present a framework for quantizing VLMs for efficient inference on resource-constrained hardware. Our approach combines a quantization pipeline that uses the model itself to generate training data and does not require access to the training setup, with a novel 2.7-bit-per-parameter format supporting efficient execution on Arm CPUs. We validate our approach by compressing the Llama 3.2 11B Vision Instruct model to 3.7 GB with 8-bit activations, preserving strong performance on a set of standard visual question answering tasks.",
+      "identifiers": [
+        "SemanticScholar:66565f1a21a0f7b63a667670b4923a5fce6c19f8"
+      ],
+      "semantic_scholar_id": "66565f1a21a0f7b63a667670b4923a5fce6c19f8",
+      "canonical_id": "arXiv:2608.21134",
+      "arxiv_id": "2608.21134",
+      "doi": "10.48550/arXiv.2608.21134",
+      "authors": [
+        "Luka Ribar",
+        "Jeevan Bhoot",
+        "Douglas Orr"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 89,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.26365",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.26365",
+        "id:SemanticScholar:aaaa661ff9a0b2efa2de3c98c423b4e6eea7ba56",
+        "id:arXiv:2603.26365",
+        "title:dynamic token compression for efficient video understanding through reinforcement learning",
+        "url:https://arxiv.org/abs/2603.26365"
+      ],
+      "record": {
+        "title": "Dynamic Token Compression for Efficient Video Understanding through Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2603.26365",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models have demonstrated remarkable capabilities in video understanding, yet face prohibitive computational costs and performance degradation from''context rot''due to massive visual token redundancy. Existing compression strategies typically rely on heuristics or fixed transformations that are often decoupled from the downstream task objectives, limiting their adaptability and effectiveness. To address this, we propose SCORE (Surprise-augmented token COmpression via REinforcement learning), a unified framework that learns an adaptive token compression policy. SCORE introduces a lightweight policy network conditioned on a surprise-augmented state representation that incorporates inter-frame residuals to explicitly capture temporal dynamics and motion saliency. We optimize this policy using a group-wise reinforcement learning scheme with a split-advantage estimator, stabilized by a two-stage curriculum transferring from static pseudo-videos to real dynamic videos. Extensive experiments on diverse video understanding benchmarks demonstrate that SCORE significantly outperforms state-of-the-art baselines. Notably, SCORE achieves a 16x prefill speedup while preserving 99.5% of original performance at a 10% retention ratio, offering a scalable solution for efficient long-form video understanding.",
+        "identifiers": [
+          "SemanticScholar:aaaa661ff9a0b2efa2de3c98c423b4e6eea7ba56"
+        ],
+        "semantic_scholar_id": "aaaa661ff9a0b2efa2de3c98c423b4e6eea7ba56",
+        "canonical_id": "arXiv:2603.26365",
+        "arxiv_id": "2603.26365",
+        "doi": "10.48550/arXiv.2603.26365",
+        "authors": [
+          "Shi-Da Wang",
+          "Yong-Xiang Hua",
+          "Zhou Tao",
+          "Hao-Yu Cao",
+          "Lin-Li Xu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 236,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.21134",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.21134",
+        "id:SemanticScholar:66565f1a21a0f7b63a667670b4923a5fce6c19f8",
+        "id:arXiv:2608.21134",
+        "title:llamamobile efficient 27bit quantization of vlms",
+        "url:https://arxiv.org/abs/2608.21134"
+      ],
+      "record": {
+        "title": "Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs",
+        "source_url": "https://arxiv.org/abs/2608.21134",
+        "year": 2026,
+        "published": "2026-08-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying vision-language models (VLMs) on mobile devices is challenging due to their significant memory and compute requirements. We present a framework for quantizing VLMs for efficient inference on resource-constrained hardware. Our approach combines a quantization pipeline that uses the model itself to generate training data and does not require access to the training setup, with a novel 2.7-bit-per-parameter format supporting efficient execution on Arm CPUs. We validate our approach by compressing the Llama 3.2 11B Vision Instruct model to 3.7 GB with 8-bit activations, preserving strong performance on a set of standard visual question answering tasks.",
+        "identifiers": [
+          "SemanticScholar:66565f1a21a0f7b63a667670b4923a5fce6c19f8"
+        ],
+        "semantic_scholar_id": "66565f1a21a0f7b63a667670b4923a5fce6c19f8",
+        "canonical_id": "arXiv:2608.21134",
+        "arxiv_id": "2608.21134",
+        "doi": "10.48550/arXiv.2608.21134",
+        "authors": [
+          "Luka Ribar",
+          "Jeevan Bhoot",
+          "Douglas Orr"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 89,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d77af9e8b486e8db8c64a9b88fbeebae1183d06b42109bdbc227d3d9b9143dbc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

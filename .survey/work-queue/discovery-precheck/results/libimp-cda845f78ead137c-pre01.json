@@ -1,0 +1,273 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cda845f78ead137c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cda845f78ead",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2508.18773",
+    "arXiv:2603.05663",
+    "arXiv:2604.04930",
+    "arXiv:2605.13486",
+    "arXiv:2609.01507",
+    "arXiv:2609.36314"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "40ce4946fbabf3cf479b41531157512af4dfe2a3",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:13:55.463252+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2508.18773",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2508.18773"
+    },
+    {
+      "requested_id": "arXiv:2603.05663",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.05663"
+    },
+    {
+      "requested_id": "arXiv:2604.04930",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.04930"
+    },
+    {
+      "requested_id": "arXiv:2605.13486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.01507",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.01507"
+    },
+    {
+      "requested_id": "arXiv:2609.36314",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "R^2-Mem: Reflective Experience for Memory Search",
+      "source_url": "https://arxiv.org/abs/2605.13486",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep search has recently emerged as a promising paradigm for enabling agents to retrieve fine-grained historical information without heavy memory pre-managed. However, existing deep search agents for memory system repeat past error behaviors because they fail to learn from the prior high- and low-quality search trajectories. To address this limitation, we propose R^2-Mem, a reflective experience framework for memory search systems. In the offline stage, a Rubric-guided Evaluator scores low- and high-quality steps in historical trajectories, and a self-Reflection Learner distills the corresponding abstract experience. During the online inference, the retrieved experience will guide future search actions to avoid repeated mistakes and maintain high-quality behaviors. Extensive experiments demonstrate that R^2-Mem consistently improves both effectiveness and efficiency over strong baselines, improving F1 scores by up to 22.6%, while reducing token consumption by 12.9% and search iterations by 20.2%. These results verify that R^2-Mem provides a RL-free and low-cost solution for self-improving LLM agents.",
+      "identifiers": [
+        "SemanticScholar:a1dc64e51b6c1cbbfe663571a752e8dda5e50c81"
+      ],
+      "semantic_scholar_id": "a1dc64e51b6c1cbbfe663571a752e8dda5e50c81",
+      "canonical_id": "arXiv:2605.13486",
+      "arxiv_id": "2605.13486",
+      "doi": "10.48550/arXiv.2605.13486",
+      "authors": [
+        "X. Wang",
+        "Wen-Yu Mao",
+        "Junkang Wu",
+        "Xiang Wang",
+        "Xiang-Nan He"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fractional State Space Transition for Long Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2609.36314",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "State Space Models (SSMs) compress sequence history into a bounded recurrent state, making the resulting memory law a central architectural choice for long-context performance. Most modern SSMs rely on ODE-based dynamics that lead to exponential forgetting, limiting their ability to retain information over broad temporal ranges. We introduce FRAC, a selective SSM architecture derived from fractional dynamics that replaces this exponential decay with power-law long memory. To make fractional dynamics practical, FRAC approximates the heavy-tailed target kernel with a finite-state, log-spaced sum of exponential modes. This construction turns fractional memory into an efficient recurrent module with parallel training and prefill, while retaining bounded-state autoregressive decoding. Extensive experiments, including 1.3B-parameter language modeling, demonstrate that FRAC consistently improves long-context performance over state-of-the-art SSM baselines while staying competitive on short-context. These results show that fractional dynamics provide a practical and effective prior for long-context SSMs.",
+      "identifiers": [
+        "SemanticScholar:f1d7c351312f1250711c6c3cd2a1f4472eb6bc38"
+      ],
+      "semantic_scholar_id": "f1d7c351312f1250711c6c3cd2a1f4472eb6bc38",
+      "canonical_id": "arXiv:2609.36314",
+      "arxiv_id": "2609.36314",
+      "doi": "10.48550/arXiv.2609.36314",
+      "authors": [
+        "I. Kobyzev",
+        "Abbas Ghaddar",
+        "Ali Nasiri-Sarvi",
+        "Li-Feng Shang",
+        "Yu-Fei Cui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.13486",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13486",
+        "id:SemanticScholar:a1dc64e51b6c1cbbfe663571a752e8dda5e50c81",
+        "id:arXiv:2605.13486",
+        "title:r2mem reflective experience for memory search",
+        "url:https://arxiv.org/abs/2605.13486"
+      ],
+      "record": {
+        "title": "R^2-Mem: Reflective Experience for Memory Search",
+        "source_url": "https://arxiv.org/abs/2605.13486",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep search has recently emerged as a promising paradigm for enabling agents to retrieve fine-grained historical information without heavy memory pre-managed. However, existing deep search agents for memory system repeat past error behaviors because they fail to learn from the prior high- and low-quality search trajectories. To address this limitation, we propose R^2-Mem, a reflective experience framework for memory search systems. In the offline stage, a Rubric-guided Evaluator scores low- and high-quality steps in historical trajectories, and a self-Reflection Learner distills the corresponding abstract experience. During the online inference, the retrieved experience will guide future search actions to avoid repeated mistakes and maintain high-quality behaviors. Extensive experiments demonstrate that R^2-Mem consistently improves both effectiveness and efficiency over strong baselines, improving F1 scores by up to 22.6%, while reducing token consumption by 12.9% and search iterations by 20.2%. These results verify that R^2-Mem provides a RL-free and low-cost solution for self-improving LLM agents.",
+        "identifiers": [
+          "SemanticScholar:a1dc64e51b6c1cbbfe663571a752e8dda5e50c81"
+        ],
+        "semantic_scholar_id": "a1dc64e51b6c1cbbfe663571a752e8dda5e50c81",
+        "canonical_id": "arXiv:2605.13486",
+        "arxiv_id": "2605.13486",
+        "doi": "10.48550/arXiv.2605.13486",
+        "authors": [
+          "X. Wang",
+          "Wen-Yu Mao",
+          "Junkang Wu",
+          "Xiang Wang",
+          "Xiang-Nan He"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 189,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36314",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.36314",
+        "id:SemanticScholar:f1d7c351312f1250711c6c3cd2a1f4472eb6bc38",
+        "id:arXiv:2609.36314",
+        "title:fractional state space transition for long sequence modeling",
+        "url:https://arxiv.org/abs/2609.36314"
+      ],
+      "record": {
+        "title": "Fractional State Space Transition for Long Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2609.36314",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "State Space Models (SSMs) compress sequence history into a bounded recurrent state, making the resulting memory law a central architectural choice for long-context performance. Most modern SSMs rely on ODE-based dynamics that lead to exponential forgetting, limiting their ability to retain information over broad temporal ranges. We introduce FRAC, a selective SSM architecture derived from fractional dynamics that replaces this exponential decay with power-law long memory. To make fractional dynamics practical, FRAC approximates the heavy-tailed target kernel with a finite-state, log-spaced sum of exponential modes. This construction turns fractional memory into an efficient recurrent module with parallel training and prefill, while retaining bounded-state autoregressive decoding. Extensive experiments, including 1.3B-parameter language modeling, demonstrate that FRAC consistently improves long-context performance over state-of-the-art SSM baselines while staying competitive on short-context. These results show that fractional dynamics provide a practical and effective prior for long-context SSMs.",
+        "identifiers": [
+          "SemanticScholar:f1d7c351312f1250711c6c3cd2a1f4472eb6bc38"
+        ],
+        "semantic_scholar_id": "f1d7c351312f1250711c6c3cd2a1f4472eb6bc38",
+        "canonical_id": "arXiv:2609.36314",
+        "arxiv_id": "2609.36314",
+        "doi": "10.48550/arXiv.2609.36314",
+        "authors": [
+          "I. Kobyzev",
+          "Abbas Ghaddar",
+          "Ali Nasiri-Sarvi",
+          "Li-Feng Shang",
+          "Yu-Fei Cui"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:89ddc6cfea86db4085170ab73bc668586926e8c11374c02217f4a4f704e36d53",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

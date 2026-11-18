@@ -1,0 +1,592 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c82abd693a5fd914-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c82abd693a5f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.63317/55jabgg3m92d",
+    "arXiv:2406.11477",
+    "arXiv:2505.03810",
+    "arXiv:2506.04953",
+    "arXiv:2602.02538",
+    "arXiv:2603.08741"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "40ce4946fbabf3cf479b41531157512af4dfe2a3",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:13:48.957911+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.63317/55jabgg3m92d",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.11477",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.03810",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.04953",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02538",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.08741",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Enhancing Post-Training Quantization via Future Activation Awareness",
+      "source_url": "https://arxiv.org/abs/2602.02538",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a widely used method to compress large language models (LLMs) without fine-tuning. It typically sets quantization hyperparameters (e.g., scaling factors) based on current-layer activations. Although this method is efficient, it suffers from quantization bias and error accumulation, resulting in suboptimal and unstable quantization, especially when the calibration data is biased. To overcome these issues, we propose Future-Aware Quantization (FAQ), which leverages future-layer activations to guide quantization. This allows better identification and preservation of important weights, while reducing sensitivity to calibration noise. We further introduce a window-wise preview mechanism to softly aggregate multiple future-layer activations, mitigating over-reliance on any single layer. To avoid expensive greedy search, we use a pre-searched configuration to minimize overhead. Experiments show that FAQ consistently outperforms prior methods with negligible extra cost, requiring no backward passes, data reconstruction, or tuning, making it well-suited for edge deployment.",
+      "identifiers": [
+        "SemanticScholar:50f7a05b2946aec36877d235585fcc9cea5c4b6d"
+      ],
+      "semantic_scholar_id": "50f7a05b2946aec36877d235585fcc9cea5c4b6d",
+      "canonical_id": "arXiv:2602.02538",
+      "arxiv_id": "2602.02538",
+      "doi": "10.48550/arXiv.2602.02538",
+      "authors": [
+        "Zhe-Qi Lv",
+        "Zhen-Xuan Fan",
+        "Qi Tian",
+        "Wen-Qiao Zhang",
+        "Yue-Ting Zhuang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "How Can We Effectively Expand the Vocabulary of LLMs with 0.01GB of Target Language Text?",
+      "source_url": "https://arxiv.org/abs/2406.11477",
+      "year": 2024,
+      "published": "2024-06-17",
+      "venue": "Computational Linguistics",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n Large language models (LLMs) have shown remarkable capabilities in many languages beyond English. Yet, LLMs require more inference steps when generating non-English text due to their reliance on English-centric tokenizers and vocabulary, resulting in higher usage costs to non-English speakers. Vocabulary expansion with target language tokens is a widely used cross-lingual vocabulary adaptation approach to remedy this issue. Despite its effectiveness in inference speedup, previous work on vocabulary expansion has focused on high-resource settings assuming access to a substantial amount of target language data to effectively initialize the embeddings of the new tokens and adapt the LLM to the target language. However, vocabulary expansion in low-resource settings has yet to be explored. In this article, we investigate vocabulary expansion in low-resource settings by considering embedding initialization methods and continual pre-training strategies. Through extensive experiments across typologically diverse languages, tasks and models, we establish a set of strategies to perform vocabulary expansion for faster inference, while striving to maintain competitive downstream performance to baselines. This is achieved with only 30K sentences (∼0.01GB text data) from the target language.",
+      "identifiers": [
+        "SemanticScholar:c76a0746402af9a7cf237de24b196ea9597895e8"
+      ],
+      "semantic_scholar_id": "c76a0746402af9a7cf237de24b196ea9597895e8",
+      "canonical_id": "arXiv:2406.11477",
+      "arxiv_id": "2406.11477",
+      "doi": "10.1162/COLI.a.581",
+      "authors": [
+        "Atsuki Yamaguchi",
+        "Aline Villavicencio",
+        "Nikolaos Aletras"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 884,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Grouped Sequency-arranged Rotation: Optimizing Rotation Transformation for Quantization for Free",
+      "source_url": "https://arxiv.org/abs/2505.03810",
+      "year": 2025,
+      "published": "2025-05-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) face deployment challenges due to high computational costs, and while Post-Training Quantization (PTQ) offers a solution, existing rotation-based methods struggle at very low bit-widths like 2-bit. We introduce a novel, training-free approach to construct an improved rotation matrix, addressing the limitations of current methods. The key contributions include leveraging the Walsh-Hadamard transform with sequency ordering, which clusters similar frequency components to reduce quantization error compared to standard Hadamard matrices, significantly improving performance. Furthermore, we propose a Grouped Sequency-arranged Rotation (GSR) using block-diagonal matrices with smaller Walsh blocks, effectively isolating outlier impacts and achieving performance comparable to optimization-based methods without requiring any training. Our method demonstrates robust performance on reasoning tasks and Perplexity (PPL) score on WikiText-2. Our method also enhances results even when applied over existing learned rotation techniques.",
+      "identifiers": [
+        "SemanticScholar:52b8294435def175acdcff3552f63b4d202e9708"
+      ],
+      "semantic_scholar_id": "52b8294435def175acdcff3552f63b4d202e9708",
+      "canonical_id": "arXiv:2505.03810",
+      "arxiv_id": "2505.03810",
+      "doi": "10.48550/arXiv.2505.03810",
+      "authors": [
+        "Euntae Choi",
+        "Su-Min Song",
+        "Woo-Sang Lim",
+        "Sungjoo Yoo"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 565,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "The AetherFloat Family: Block-Scale-Free Quad-Radix Floating-Point Architectures for AI Accelerators",
+      "source_url": "https://arxiv.org/abs/2603.08741",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The IEEE 754 floating-point standard is the bedrock of modern computing, but its structural requirements -- a hidden leading bit, Base-2 bit-level normalization, and Sign-Magnitude encoding -- impose significant silicon area and power overhead in massively parallel Neural Processing Units (NPUs). Furthermore, the industry's recent shift to 8-bit formats (e.g., FP8 E4M3, OCP MX formats) has introduced a new hardware penalty: the strict necessity of Block-Scaling (AMAX) logic to prevent out-of-bound Large Language Model (LLM) activations from overflowing and degrading accuracy. The AetherFloat Family is a parameterizable architectural replacement designed from first principles for Hardware/Software Co-Design in AI acceleration. By synthesizing Lexicographic One's Complement Unpacking, Quad-Radix (Base-4) Scaling, and an Explicit Mantissa, AetherFloat achieves zero-cycle native integer comparability, branchless subnormal handling, and a verified 33.17% area, 21.99% total power, and 11.73% critical path delay reduction across the multiply-accumulate (MAC) unit. Instantiated as AetherFloat-8 (AF8), the architecture relies on a purely explicit 3-bit mantissa. Combined with Base-4 scaling, AF8 delivers a substantially wider dynamic range, acting as a ``Block-Scale-Free''format for inference that circumvents dynamic scaling microarchitecture. Finally, a novel Vector-Shared 32-bit Galois Stochastic Rounding topology bounds precision variance while neutralizing the vanishing gradients that plague legacy formats. While AF16 serves as a near-lossless bfloat16 replacement via post-training quantization, AF8 is designed as a QAT-first inference format: its Block-Scale-Free property eliminates dynamic AMAX hardware at the cost of requiring quantization-aware fine-tuning for deployment.",
+      "identifiers": [
+        "SemanticScholar:8e192ea1d7308134d95343157968d1222ed484ae"
+      ],
+      "semantic_scholar_id": "8e192ea1d7308134d95343157968d1222ed484ae",
+      "canonical_id": "arXiv:2603.08741",
+      "arxiv_id": "2603.08741",
+      "doi": "10.48550/arXiv.2603.08741",
+      "authors": [
+        "Keita Morisaki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "APVR: Hour-Level Long Video Understanding with Adaptive Pivot Visual Information Retrieval",
+      "source_url": "https://arxiv.org/abs/2506.04953",
+      "year": 2025,
+      "published": "2025-06-05",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current multimodal large language models (MLLMs) struggle with hour-level video understanding, facing significant challenges not only in modeling the substantial information volume of long videos but also in overcoming the memory wall and resource constraints during both training and inference. Although recent training-free approaches have alleviated resource demands by compressing visual features, their reliance on incomplete visual information limits the performance potential. To address these limitations, we propose Adaptive Pivot Visual information Retrieval (APVR), a training-free framework that hierarchically retrieves and retains sufficient and important visual information. It breakthroughs the memory wall limitation via two complementary components: Pivot Frame Retrieval employs query expansion and iterative spatio-semantic confidence scoring to identify relevant video frames, and Pivot Token Retrieval performs query-aware attention-driven token selection within up to 1024 pivot frames. This dual granularity approach enables the processing of hour-long videos while maintaining semantic fidelity. Experimental validations on three different baseline MLLMs demonstrate significant performance improvements up to 9.5%, 4.6% and 9.7% on LongVideoBench, VideoMME and MLVU, respectively. APVR achieves state-of-the-art results for both training-free and training-based approaches.",
+      "identifiers": [
+        "SemanticScholar:a81bf6e278aeedfb7077d0a8e75411fe685aaeba"
+      ],
+      "semantic_scholar_id": "a81bf6e278aeedfb7077d0a8e75411fe685aaeba",
+      "canonical_id": "arXiv:2506.04953",
+      "arxiv_id": "2506.04953",
+      "doi": "10.48550/arXiv.2506.04953",
+      "authors": [
+        "Hong Gao",
+        "Yi-Ming Bao",
+        "Xue-Zhen Tu",
+        "Bin Zhong",
+        "Li-Nan Yue",
+        "Min-Ling Zhang"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 531,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization",
+      "source_url": "https://doi.org/10.63317/55jabgg3m92d",
+      "year": 2024,
+      "published": "2024-05-01",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Transformers achieved impressive results on various Natural Language Processing tasks over the last few years. The one downside of this success is the size of these models. Huge capacity, which sometimes surpasses billions of parameters, improves generalization abilities, but makes it difficult to employ. Developing field of model compression seeks to reduce the model size and inference latency. This research focuses on one of the compression techniques — Post-Training Quantization. We present a methodology to effectively quantize at least 95% of Transformer weights and corresponding activations to INT8 without any access to task-specific data so the drop in performance does not exceed 0.02%. Furthermore, we provide intriguing observations that reflect cross-domain nature of some of the quantization properties.",
+      "identifiers": [
+        "SemanticScholar:485abda4ff27c752ae533bdfa8d15779e4708d3b"
+      ],
+      "semantic_scholar_id": "485abda4ff27c752ae533bdfa8d15779e4708d3b",
+      "doi": "10.63317/55jabgg3m92d",
+      "canonical_id": "DOI:10.63317/55jabgg3m92d",
+      "authors": [
+        "Nikita Martynov",
+        "A. Goncharov",
+        "Gleb Kumichev",
+        "E. Egorov",
+        "S. Pavlov",
+        "Mikhail Sergeevich Durinov",
+        "Aleksandr Zuev",
+        "Egor Anatolievich Filimonov"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 931,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.02538",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.02538",
+        "id:SemanticScholar:50f7a05b2946aec36877d235585fcc9cea5c4b6d",
+        "id:arXiv:2602.02538",
+        "title:enhancing posttraining quantization via future activation awareness",
+        "url:https://arxiv.org/abs/2602.02538"
+      ],
+      "record": {
+        "title": "Enhancing Post-Training Quantization via Future Activation Awareness",
+        "source_url": "https://arxiv.org/abs/2602.02538",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) is a widely used method to compress large language models (LLMs) without fine-tuning. It typically sets quantization hyperparameters (e.g., scaling factors) based on current-layer activations. Although this method is efficient, it suffers from quantization bias and error accumulation, resulting in suboptimal and unstable quantization, especially when the calibration data is biased. To overcome these issues, we propose Future-Aware Quantization (FAQ), which leverages future-layer activations to guide quantization. This allows better identification and preservation of important weights, while reducing sensitivity to calibration noise. We further introduce a window-wise preview mechanism to softly aggregate multiple future-layer activations, mitigating over-reliance on any single layer. To avoid expensive greedy search, we use a pre-searched configuration to minimize overhead. Experiments show that FAQ consistently outperforms prior methods with negligible extra cost, requiring no backward passes, data reconstruction, or tuning, making it well-suited for edge deployment.",
+        "identifiers": [
+          "SemanticScholar:50f7a05b2946aec36877d235585fcc9cea5c4b6d"
+        ],
+        "semantic_scholar_id": "50f7a05b2946aec36877d235585fcc9cea5c4b6d",
+        "canonical_id": "arXiv:2602.02538",
+        "arxiv_id": "2602.02538",
+        "doi": "10.48550/arXiv.2602.02538",
+        "authors": [
+          "Zhe-Qi Lv",
+          "Zhen-Xuan Fan",
+          "Qi Tian",
+          "Wen-Qiao Zhang",
+          "Yue-Ting Zhuang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 294,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.11477",
+      "identity_tokens": [
+        "id:DOI:10.1162/coli.a.581",
+        "id:SemanticScholar:c76a0746402af9a7cf237de24b196ea9597895e8",
+        "id:arXiv:2406.11477",
+        "title:how can we effectively expand the vocabulary of llms with 001gb of target language text",
+        "url:https://arxiv.org/abs/2406.11477"
+      ],
+      "record": {
+        "title": "How Can We Effectively Expand the Vocabulary of LLMs with 0.01GB of Target Language Text?",
+        "source_url": "https://arxiv.org/abs/2406.11477",
+        "year": 2024,
+        "published": "2024-06-17",
+        "venue": "Computational Linguistics",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "\n Large language models (LLMs) have shown remarkable capabilities in many languages beyond English. Yet, LLMs require more inference steps when generating non-English text due to their reliance on English-centric tokenizers and vocabulary, resulting in higher usage costs to non-English speakers. Vocabulary expansion with target language tokens is a widely used cross-lingual vocabulary adaptation approach to remedy this issue. Despite its effectiveness in inference speedup, previous work on vocabulary expansion has focused on high-resource settings assuming access to a substantial amount of target language data to effectively initialize the embeddings of the new tokens and adapt the LLM to the target language. However, vocabulary expansion in low-resource settings has yet to be explored. In this article, we investigate vocabulary expansion in low-resource settings by considering embedding initialization methods and continual pre-training strategies. Through extensive experiments across typologically diverse languages, tasks and models, we establish a set of strategies to perform vocabulary expansion for faster inference, while striving to maintain competitive downstream performance to baselines. This is achieved with only 30K sentences (∼0.01GB text data) from the target language.",
+        "identifiers": [
+          "SemanticScholar:c76a0746402af9a7cf237de24b196ea9597895e8"
+        ],
+        "semantic_scholar_id": "c76a0746402af9a7cf237de24b196ea9597895e8",
+        "canonical_id": "arXiv:2406.11477",
+        "arxiv_id": "2406.11477",
+        "doi": "10.1162/COLI.a.581",
+        "authors": [
+          "Atsuki Yamaguchi",
+          "Aline Villavicencio",
+          "Nikolaos Aletras"
+        ],
+        "priority": 31,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 31,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 884,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.03810",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.03810",
+        "id:SemanticScholar:52b8294435def175acdcff3552f63b4d202e9708",
+        "id:arXiv:2505.03810",
+        "title:grouped sequencyarranged rotation optimizing rotation transformation for quantization for free",
+        "url:https://arxiv.org/abs/2505.03810"
+      ],
+      "record": {
+        "title": "Grouped Sequency-arranged Rotation: Optimizing Rotation Transformation for Quantization for Free",
+        "source_url": "https://arxiv.org/abs/2505.03810",
+        "year": 2025,
+        "published": "2025-05-02",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) face deployment challenges due to high computational costs, and while Post-Training Quantization (PTQ) offers a solution, existing rotation-based methods struggle at very low bit-widths like 2-bit. We introduce a novel, training-free approach to construct an improved rotation matrix, addressing the limitations of current methods. The key contributions include leveraging the Walsh-Hadamard transform with sequency ordering, which clusters similar frequency components to reduce quantization error compared to standard Hadamard matrices, significantly improving performance. Furthermore, we propose a Grouped Sequency-arranged Rotation (GSR) using block-diagonal matrices with smaller Walsh blocks, effectively isolating outlier impacts and achieving performance comparable to optimization-based methods without requiring any training. Our method demonstrates robust performance on reasoning tasks and Perplexity (PPL) score on WikiText-2. Our method also enhances results even when applied over existing learned rotation techniques.",
+        "identifiers": [
+          "SemanticScholar:52b8294435def175acdcff3552f63b4d202e9708"
+        ],
+        "semantic_scholar_id": "52b8294435def175acdcff3552f63b4d202e9708",
+        "canonical_id": "arXiv:2505.03810",
+        "arxiv_id": "2505.03810",
+        "doi": "10.48550/arXiv.2505.03810",
+        "authors": [
+          "Euntae Choi",
+          "Su-Min Song",
+          "Woo-Sang Lim",
+          "Sungjoo Yoo"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 565,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.08741",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.08741",
+        "id:SemanticScholar:8e192ea1d7308134d95343157968d1222ed484ae",
+        "id:arXiv:2603.08741",
+        "title:the aetherfloat family blockscalefree quadradix floatingpoint architectures for ai accelerators",
+        "url:https://arxiv.org/abs/2603.08741"
+      ],
+      "record": {
+        "title": "The AetherFloat Family: Block-Scale-Free Quad-Radix Floating-Point Architectures for AI Accelerators",
+        "source_url": "https://arxiv.org/abs/2603.08741",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The IEEE 754 floating-point standard is the bedrock of modern computing, but its structural requirements -- a hidden leading bit, Base-2 bit-level normalization, and Sign-Magnitude encoding -- impose significant silicon area and power overhead in massively parallel Neural Processing Units (NPUs). Furthermore, the industry's recent shift to 8-bit formats (e.g., FP8 E4M3, OCP MX formats) has introduced a new hardware penalty: the strict necessity of Block-Scaling (AMAX) logic to prevent out-of-bound Large Language Model (LLM) activations from overflowing and degrading accuracy. The AetherFloat Family is a parameterizable architectural replacement designed from first principles for Hardware/Software Co-Design in AI acceleration. By synthesizing Lexicographic One's Complement Unpacking, Quad-Radix (Base-4) Scaling, and an Explicit Mantissa, AetherFloat achieves zero-cycle native integer comparability, branchless subnormal handling, and a verified 33.17% area, 21.99% total power, and 11.73% critical path delay reduction across the multiply-accumulate (MAC) unit. Instantiated as AetherFloat-8 (AF8), the architecture relies on a purely explicit 3-bit mantissa. Combined with Base-4 scaling, AF8 delivers a substantially wider dynamic range, acting as a ``Block-Scale-Free''format for inference that circumvents dynamic scaling microarchitecture. Finally, a novel Vector-Shared 32-bit Galois Stochastic Rounding topology bounds precision variance while neutralizing the vanishing gradients that plague legacy formats. While AF16 serves as a near-lossless bfloat16 replacement via post-training quantization, AF8 is designed as a QAT-first inference format: its Block-Scale-Free property eliminates dynamic AMAX hardware at the cost of requiring quantization-aware fine-tuning for deployment.",
+        "identifiers": [
+          "SemanticScholar:8e192ea1d7308134d95343157968d1222ed484ae"
+        ],
+        "semantic_scholar_id": "8e192ea1d7308134d95343157968d1222ed484ae",
+        "canonical_id": "arXiv:2603.08741",
+        "arxiv_id": "2603.08741",
+        "doi": "10.48550/arXiv.2603.08741",
+        "authors": [
+          "Keita Morisaki"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 265,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.04953",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.04953",
+        "id:SemanticScholar:a81bf6e278aeedfb7077d0a8e75411fe685aaeba",
+        "id:arXiv:2506.04953",
+        "title:apvr hourlevel long video understanding with adaptive pivot visual information retrieval",
+        "url:https://arxiv.org/abs/2506.04953"
+      ],
+      "record": {
+        "title": "APVR: Hour-Level Long Video Understanding with Adaptive Pivot Visual Information Retrieval",
+        "source_url": "https://arxiv.org/abs/2506.04953",
+        "year": 2025,
+        "published": "2025-06-05",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Current multimodal large language models (MLLMs) struggle with hour-level video understanding, facing significant challenges not only in modeling the substantial information volume of long videos but also in overcoming the memory wall and resource constraints during both training and inference. Although recent training-free approaches have alleviated resource demands by compressing visual features, their reliance on incomplete visual information limits the performance potential. To address these limitations, we propose Adaptive Pivot Visual information Retrieval (APVR), a training-free framework that hierarchically retrieves and retains sufficient and important visual information. It breakthroughs the memory wall limitation via two complementary components: Pivot Frame Retrieval employs query expansion and iterative spatio-semantic confidence scoring to identify relevant video frames, and Pivot Token Retrieval performs query-aware attention-driven token selection within up to 1024 pivot frames. This dual granularity approach enables the processing of hour-long videos while maintaining semantic fidelity. Experimental validations on three different baseline MLLMs demonstrate significant performance improvements up to 9.5%, 4.6% and 9.7% on LongVideoBench, VideoMME and MLVU, respectively. APVR achieves state-of-the-art results for both training-free and training-based approaches.",
+        "identifiers": [
+          "SemanticScholar:a81bf6e278aeedfb7077d0a8e75411fe685aaeba"
+        ],
+        "semantic_scholar_id": "a81bf6e278aeedfb7077d0a8e75411fe685aaeba",
+        "canonical_id": "arXiv:2506.04953",
+        "arxiv_id": "2506.04953",
+        "doi": "10.48550/arXiv.2506.04953",
+        "authors": [
+          "Hong Gao",
+          "Yi-Ming Bao",
+          "Xue-Zhen Tu",
+          "Bin Zhong",
+          "Li-Nan Yue",
+          "Min-Ling Zhang"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 531,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.63317/55jabgg3m92d",
+      "identity_tokens": [
+        "id:DOI:10.63317/55jabgg3m92d",
+        "id:SemanticScholar:485abda4ff27c752ae533bdfa8d15779e4708d3b",
+        "title:on the way to lossless compression of language transformers exploring crossdomain properties of quantization",
+        "url:https://doi.org/10.63317/55jabgg3m92d"
+      ],
+      "record": {
+        "title": "On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization",
+        "source_url": "https://doi.org/10.63317/55jabgg3m92d",
+        "year": 2024,
+        "published": "2024-05-01",
+        "venue": "International Conference on Language Resources and Evaluation",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern Transformers achieved impressive results on various Natural Language Processing tasks over the last few years. The one downside of this success is the size of these models. Huge capacity, which sometimes surpasses billions of parameters, improves generalization abilities, but makes it difficult to employ. Developing field of model compression seeks to reduce the model size and inference latency. This research focuses on one of the compression techniques — Post-Training Quantization. We present a methodology to effectively quantize at least 95% of Transformer weights and corresponding activations to INT8 without any access to task-specific data so the drop in performance does not exceed 0.02%. Furthermore, we provide intriguing observations that reflect cross-domain nature of some of the quantization properties.",
+        "identifiers": [
+          "SemanticScholar:485abda4ff27c752ae533bdfa8d15779e4708d3b"
+        ],
+        "semantic_scholar_id": "485abda4ff27c752ae533bdfa8d15779e4708d3b",
+        "doi": "10.63317/55jabgg3m92d",
+        "canonical_id": "DOI:10.63317/55jabgg3m92d",
+        "authors": [
+          "Nikita Martynov",
+          "A. Goncharov",
+          "Gleb Kumichev",
+          "E. Egorov",
+          "S. Pavlov",
+          "Mikhail Sergeevich Durinov",
+          "Aleksandr Zuev",
+          "Egor Anatolievich Filimonov"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 931,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:39bfdbef9ccad0fdad5dd8e39ce894cabdb59c7688589cfdf511d677fb71af4c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
