@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ST-Prune: Training-Free Spatio-Temporal Token Pruning for Vision-Language Models in Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2604.19145",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have become central to autonomous driving systems, yet their deployment is severely bottlenecked by the massive computational overhead of multi-view camera and multi-frame video input. Existing token pruning methods, primarily designed for single-image inputs, treat each frame or view in isolation and thus fail to exploit the inherent spatio-temporal redundancies in driving scenarios. To bridge this gap, we propose ST-Prune, a training-free, plug-and-play framework comprising two complementary modules: Motion-aware Temporal Pruning (MTP) and Ring-view Spatial Pruning (RSP). MTP addresses temporal redundancy by encoding motion volatility and temporal recency as soft constraints within the diversity selection objective, prioritizing dynamic trajectories and current-frame content over static historical background. RSP further resolves spatial redundancy by exploiting the ring-view camera geometry to penalize bilateral cross-view similarity, eliminating duplicate projections and residual background that temporal pruning alone cannot suppress. These two modules together constitute a complete spatio-temporal pruning process, preserving key scene information under strict compression. Validated across four benchmarks spanning perception, prediction, and planning, ST-Prune establishes new state-of-the-art for training-free token pruning. Notably, even at 90\\% token reduction, ST-Prune achieves near-lossless performance with certain metrics surpassing the full-model baseline, while maintaining inference speeds comparable to existing pruning approaches.",
+      "identifiers": [
+        "SemanticScholar:a52e80449ac86776b9b7a78b40afa41ed50fa7eb"
+      ],
+      "semantic_scholar_id": "a52e80449ac86776b9b7a78b40afa41ed50fa7eb",
+      "canonical_id": "arXiv:2604.19145",
+      "arxiv_id": "2604.19145",
+      "doi": "10.48550/arXiv.2604.19145",
+      "authors": [
+        "Linjie Sha",
+        "Hai-Yun Guo",
+        "Tao Wang",
+        "Cong Zhang",
+        "Min Huang",
+        "Jin-Qiao Wang",
+        "Qinghai Miao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 211,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は自動運転VLMで複数カメラ・時系列映像の冗長な視覚トークンを、動きと時間的新しさ、カメラ間の重複投影から剪定するST-Pruneを提案。90%トークン削減時にも多くの性能指標を維持し、VLM推論の入力計算量を直接削減する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d3cadeb0085a",
+    "round": "libimp-d3cadeb0085ae9b3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d3cadeb0085ae9b3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d3cadeb0085ae9b3-pre01.json",
+    "receipt": "sha256:65519577039102409f8c488c49c17d88b4b438528baae634150abae5fea2b989"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d3cadeb0085a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

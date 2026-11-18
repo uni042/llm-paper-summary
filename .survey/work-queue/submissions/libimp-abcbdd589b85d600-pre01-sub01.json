@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Task Profiling and Draft Model Selection for Accelerating Distributed Speculative Decoding",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571558",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) has emerged as an effective strategy to accelerate Large Language Model (LLM) inference by leveraging lightweight draft models to speculate candidate tokens. The heterogeneity of devices in edge-cloud systems provides a unique opportunity to deploy task-specialized draft models, leveraging each device’s distinctive computational profile to maximize speculative efficiency. However, existing draft model selection strategies often neglect the impact of task profiles. To address this gap, we propose D-PROMISE (Distributed task PROfiling based draft Model Selection Engine), a framework that minimizes end-to-end inference latency through request-level optimization. Specifically, D-PROMISE categorizes the task into four types based on its task entropy and reasoning intensity. The engine maintains statistical records of draft model proficiencies across these categories to predict task-specific acceptance rates. Simultaneously, D-PROMISE monitors real-time edge device dynamics, including computational loads and wireless channel conditions. Taking task profiling and dynamic device states into consideration, the scheduler identifies the optimal device and speculative length for each request. Trace-driven simulations, parameterized with empirical hardware and network profiles, show that D-PROMISE achieves up to a 45% increase in inference speed compared to task-agnostic speculative decoding, demonstrating the necessity of integrating task profiling and device dynamics for speculative inference.",
+      "identifiers": [
+        "SemanticScholar:5deee40c8c3c6564a5adf9696d728427b0659fb2"
+      ],
+      "semantic_scholar_id": "5deee40c8c3c6564a5adf9696d728427b0659fb2",
+      "doi": "10.1109/INFOCOM59046.2026.11571558",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571558",
+      "authors": [
+        "Jia-Lin Dong",
+        "Yao-Dan Xu",
+        "Tan Chen",
+        "Sheng Zhou",
+        "Zhi-Sheng Niu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "D-PROMISEはエッジ・クラウド分散投機的デコードにおいて、タスクをエントロピーと推論強度から4類型へ分類し、タスク別draftモデルの受理率履歴、端末の計算負荷と無線チャネル状態を使って要求単位でdraft実行端末と投機長を選ぶ。IEEE出版社の一次要旨は、実測ハードウェア・ネットワーク特性に基づくトレース駆動シミュレーションでタスク非依存方式より推論速度が最大45%向上したと報告。LLMの分散推論遅延・投機デコードの直接最適化なのでaccept。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LMIE-BERT: A Learnable Method for Inter-Layer Ensembles to Accelerate Inference of BERT-Style Pre-trained Models",
+      "source_url": "https://doi.org/10.1109/BIGCOM61073.2023.00044",
+      "year": 2023,
+      "published": "2023-08-04",
+      "venue": "International Conference on Big Data Computing and Communications",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained models have brought tremendous accuracy improvements to Natural Language Processing(NLP) and Computer Vision tasks, but they suffer from slow inference speed due to the heavy model, which hinders their deployment in production. The early exit methods have been proposed to accelerate the inference speed of large pre-trained models. However, these methods will lose control of accuracy at higher speed ratios. In order to balance the trade-off between model speed and accuracy better, we propose a novel early-exit mechanism called LMIE-BERT. To achieve this, we introduce a learnable method for inter-layer ensemble strategy in the internal classifier, it trains the model to fit the information from both the previous and current layers, which enables the early exit method to get more robust results. The experimental results demonstrate that LMIE-BERT can maintain over 90% of the accuracy of the original model while achieving a 4× inference speed up in multiple tasks. Our method is ahead of other early exit methods in terms of model accuracy for the same speed ratio.",
+      "identifiers": [
+        "SemanticScholar:b5895d435fe4db0febf69399a9bc199d6e6cf17f"
+      ],
+      "semantic_scholar_id": "b5895d435fe4db0febf69399a9bc199d6e6cf17f",
+      "doi": "10.1109/BIGCOM61073.2023.00044",
+      "canonical_id": "DOI:10.1109/BIGCOM61073.2023.00044",
+      "authors": [
+        "Weikai Qi",
+        "Xing Guo",
+        "Haohua Du"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1202,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LMIE-BERTはBERT系事前学習モデルの推論時早期終了において、中間分類器へ前層と現層の情報を学習可能な層間アンサンブルとして取り込み、単純な早期終了で高い高速化率ほど精度が崩れる問題を緩和する。IEEE出版社の一次要旨は複数タスクで原モデル精度の90%超を維持しながら推論4倍高速化と報告。生成LLMではなくエンコーダ型BERT系が直接対象だが、既収録のBERT早期終了・条件付き計算系統と同種の推論実行機構に直接寄与するためaccept（生成LLMへの移植可能性はResearchで別途検証）。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-abcbdd589b85",
+    "round": "libimp-abcbdd589b85d600-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-abcbdd589b85d600-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-abcbdd589b85d600-pre01.json",
+    "receipt": "sha256:65c70b8a289471dd9d217cb6e03bba96e03d1c2a0b93111946e7606a15eec08c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-abcbdd589b85",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

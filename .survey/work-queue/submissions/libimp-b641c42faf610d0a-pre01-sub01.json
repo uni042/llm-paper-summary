@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.25155",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models are promising for clinical visual question answering tasks, but scaling to 3D imaging is hindered by high computational costs. Prior methods often rely on 2D slices or fixed-length token compression, disrupting volumetric continuity and obscuring subtle findings. We present Photon, a framework that represents 3D medical volumes with token sequences of variable length. Photon introduces instruction-conditioned token scheduling and surrogate gradient propagation to adaptively reduce tokens during both training and inference, which lowers computational cost while mitigating the attention dilution caused by redundant tokens. It incorporates a custom backpropagation rule with gradient restoration to enable differentiable optimization despite discrete token drop. To stabilize token compression and ensure reliable use of visual evidence, Photon further applies regularization objectives that mitigate language-only bias and improve reliability. Experiments on diverse medical visual question answering tasks show that Photon achieves state-of-the-art accuracy while reducing resource usage and accelerating both training and inference.",
+      "identifiers": [
+        "SemanticScholar:f85adbb085942d116d40cedcbda0c5b0ea7204fb"
+      ],
+      "semantic_scholar_id": "f85adbb085942d116d40cedcbda0c5b0ea7204fb",
+      "canonical_id": "arXiv:2603.25155",
+      "arxiv_id": "2603.25155",
+      "doi": "10.48550/arXiv.2603.25155",
+      "authors": [
+        "Cheng-Yu Fang",
+        "Heng Guo",
+        "Zhengyao Jiang",
+        "Chun-Ming He",
+        "Xiu Li",
+        "Min-Feng Xu"
+      ],
+      "priority": 122,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 122,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "3D医用画像を扱うマルチモーダルLLMで、instructionに応じて視覚token長を変えるスケジューリングと、離散的token削除を学習可能にする代理勾配・勾配復元を提案する。医用VQAで学習・推論の計算資源を削減しつつ精度を改善したと報告する。医療領域に特化するが、VLM推論時のtoken圧縮機構を直接扱うためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b641c42faf61",
+    "round": "libimp-b641c42faf610d0a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b641c42faf610d0a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b641c42faf610d0a-pre01.json",
+    "receipt": "sha256:34a8e06e5a1aee1bad15fbd66c0fd1f3987d24402be09fbed3fe8cf5310fe948"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b641c42faf61",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

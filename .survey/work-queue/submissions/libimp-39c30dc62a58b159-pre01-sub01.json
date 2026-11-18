@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A More Word-like Image Tokenization for MLLMs",
+      "source_url": "https://arxiv.org/abs/2605.17954",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern multimodal large language models (MLLMs) typically keep the language model fixed and train a visual projector that maps the pixels into a sequence of tokens in its embedding space, so that images can be presented in essentially the same form as text. However, the language model has been optimized to operate on discrete, semantically meaningful tokens, while prevailing visual projectors transform an image into a long stream of continuous and highly correlated embeddings. This causes the visual tokens to behave differently from the word-like units that LLMs are originally trained to understand. We propose a novel Disentangled Visual Tokenization (DiVT) that clusters patch embeddings into coherent semantic units, so each token corresponds to a distinct visual concept instead of a rigid grid cell. DiVT further adapts its token budget to image complexity, providing an explicit accuracy-compute trade-off modifying neither the vision encoder nor the language model. Across diverse multimodal benchmarks, DiVT matches or surpasses baselines with significantly fewer visual tokens, demonstrating robustness under limited token budgets, significantly reducing memory cost and latency while making visual inputs more compatible with LLMs. Our code is available at https://github.com/snuviplab/DiVT.",
+      "identifiers": [
+        "SemanticScholar:74fb8a716d2b6ee11572810136d7151a441cf7f2"
+      ],
+      "semantic_scholar_id": "74fb8a716d2b6ee11572810136d7151a441cf7f2",
+      "canonical_id": "arXiv:2605.17954",
+      "arxiv_id": "2605.17954",
+      "doi": "10.48550/arXiv.2605.17954",
+      "authors": [
+        "Hyun Lee",
+        "Hyemin Jeong",
+        "Yejin Kim",
+        "Hyungwook Choi",
+        "Hyunsoo Cho",
+        "Sooah Kim",
+        "Joonseok Lee"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚パッチ埋込みを意味的まとまりへクラスタ化するDiVTで、画像複雑度に応じて視覚トークン数を可変にする。言語モデルや画像エンコーダを変更せず、マルチモーダル推論の入力トークン数・メモリ・遅延を削減する方式である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-39c30dc62a58",
+    "round": "libimp-39c30dc62a58b159-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-39c30dc62a58b159-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-39c30dc62a58b159-pre01.json",
+    "receipt": "sha256:100e636f9c49e0392c2d9524da05eb7f9267eaea866a0c6c65a3bf32690c105d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-39c30dc62a58",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

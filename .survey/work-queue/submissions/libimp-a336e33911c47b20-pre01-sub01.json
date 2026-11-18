@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.11184",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture of Experts (MoE) models have achieved great success by significantly improving performance while maintaining computational efficiency through sparse expert activation. However, their enormous parameter sizes and memory demands pose major challenges for deployment in resource-constrained environments. Vector Quantization (VQ) offers a promising approach for ultra-low-bit compression in Large Language Models (LLMs) by leveraging a codebook, where weight vectors are mapped to the most similar discrete codewords. Yet, directly applying VQ to MoEs often leads to substantial performance degradation due to two critical obstacles: (1) redundant representations among experts cause VQ to repeatedly quantize similar representations for each expert, resulting in inefficient use of limited codebook capacity; and (2) cumulative output bias is amplified by expert aggregation in MoE layers, leading to distributional shifts in the quantized outputs. To address these issues, we propose KBVQ-MoE, a novel VQ framework to enhance extremely low-bit quantization for MoE-based LLMs. KBVQ-MoE integrates two techniques: (1) input-driven redundancy elimination, where a Karhunen-Loeve Transform (KLT) guided singular value decomposition (SVD) extracts dominant weight components and shares them across experts; and (2) bias-corrected output stabilization, where vector quantization is applied only to expert-specific (non-redundant) representations and the quantized outputs are corrected via channel-wise affine compensation. Experiments on various MoE LLMs demonstrate that KBVQ-MoE preserves accuracy substantially better than existing quantization methods. For example, 3-bit quantization of Qwen1.5-MoE-A2.7B achieves an average accuracy of 67.99, nearly identical to the FP16 baseline of 68.07, underscoring KBVQ-MoE's potential for efficient deployment on edge devices and other resource-constrained platforms.",
+      "identifiers": [
+        "SemanticScholar:89719405958e7d7fcfa3a10947c313a660a112c9"
+      ],
+      "semantic_scholar_id": "89719405958e7d7fcfa3a10947c313a660a112c9",
+      "canonical_id": "arXiv:2602.11184",
+      "arxiv_id": "2602.11184",
+      "doi": "10.48550/arXiv.2602.11184",
+      "authors": [
+        "Zu-Kang Xu",
+        "Zhi-Xiong Zhao",
+        "Xing Hu",
+        "Zhi-Xuan Chen",
+        "Da-Wei Yang"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "ICLR 2026公式要旨。KLT誘導SVDでエキスパート間の共有重み成分を分離し、固有残差だけをベクトル量子化してチャネル別アフィン補償で出力バイアスを補正。Qwen1.5-MoE-A2.7Bの3bit平均精度67.99対FP16の68.07を報告し、MoE重み圧縮・推論メモリ削減に直接関連。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "FPGA Acceleration With Hessian-Based Comprehensive Intra-Layer Mixed-Precision Quantization for Transformer Models",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3563196",
+      "year": 2025,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in using FPGAs as co-processors for language model acceleration, particularly for energy efficiency and flexibility, face challenges due to limited memory capacity. This limitation hinders the deployment of transformer-based language models. To address this challenge, we propose a novel software-hardware co-optimization framework that integrates Hessian-based intra-layer mixed-precision quantization with a runtime bit-configurable FPGA accelerator. Our proposed Hessian-based row-wise weight quantization addresses hardware inefficiencies in traditional parameter-wise and channel-wise approaches by enabling mixed-precision weight matrices to be split into two uniform-precision matrices, thereby simplifying hardware requirements. Additionally, our Query-Key coupled attention activation quantization optimally aligns precision within each outer product pair in attention calculations, reducing hardware complexity and memory management overhead. Our concurrent quantization method balances the benefits of row-wise weight quantization and Query-Key coupled activation quantization while maximizing energy efficiency through multi-precision optimization. To support this algorithm, we design a multi-precision FPGA accelerator capable of handling both 2n-based and non-2n mixed-precision operations. It is implemented on a single Xilinx ZCU102 FPGA board, operating at 200MHz with a power consumption of 15.08W during inference on the 110-million-parameter BERT-Base and 345-million-parameter GPT-2 Medium transformer models. Coupled with the proposed algorithm and dataflow optimization, it enables on-chip storage of all necessary parameters, minimizing off-chip memory access. Experimental results demonstrate that our FPGA accelerator significantly outperforms existing solutions, achieving energy efficiency improvements ranging from $2.22\\times $ to $17.23\\times $ over state-of-the-art FPGA accelerators.",
+      "identifiers": [
+        "SemanticScholar:c906d50ae47e38fee1e060cc1cfc66f00b8a5af9"
+      ],
+      "semantic_scholar_id": "c906d50ae47e38fee1e060cc1cfc66f00b8a5af9",
+      "doi": "10.1109/ACCESS.2025.3563196",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3563196",
+      "authors": [
+        "Woohong Byun",
+        "J. Woo",
+        "S. Mukhopadhyay"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開のIEEE Access原著要旨。Hessianに基づく行別重み混合精度とQuery-Key連動の活性量子化を組み合わせ、非2冪ビット幅も扱うFPGA演算器を設計。ZCU102でBERT-BaseとGPT-2 Mediumを実装し200MHz・推論時15.08Wを報告する。大規模生成LLM専用の実機評価ではないが、Transformer推論の量子化・専用アクセラレータに直接関連。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a336e33911c4",
+    "round": "libimp-a336e33911c47b20-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a336e33911c47b20-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a336e33911c47b20-pre01.json",
+    "receipt": "sha256:2e0945d67f53c541f1656158a8af8c7908fd6681f6cba48e8e3de1eb3de89f97"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a336e33911c4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

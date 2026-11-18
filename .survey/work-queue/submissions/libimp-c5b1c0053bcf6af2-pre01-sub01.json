@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Do LLMs Really Need 10+ Thoughts for \"Find the Time 1000 Days Later\"? Towards Structural Understanding of LLM Overthinking",
+      "source_url": "https://arxiv.org/abs/2510.07880",
+      "year": 2025,
+      "published": "2025-10-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Models employing long chain-of-thought (CoT) reasoning have shown superior performance on complex reasoning tasks. Yet, this capability introduces a critical and often overlooked inefficiency -- overthinking -- models often engage in unnecessarily extensive reasoning even for simple queries, incurring significant computations without accuracy improvements. While prior work has explored solutions to mitigate overthinking, a fundamental gap remains in our understanding of its underlying causes. Most existing analyses are limited to superficial, profiling-based observations, failing to delve into LLMs'inner workings. This study introduces a systematic, fine-grained analyzer of LLMs'thought process to bridge the gap, TRACE. We first benchmark the overthinking issue, confirming that long-thinking models are five to twenty times slower on simple tasks with no substantial gains. We then use TRACE to first decompose the thought process into minimally complete sub-thoughts. Next, by inferring discourse relationships among sub-thoughts, we construct granular thought progression graphs and subsequently identify common thinking patterns for topically similar queries. Our analysis reveals two major patterns for open-weight thinking models -- Explorer and Late Landing. This finding provides evidence that over-verification and over-exploration are the primary drivers of overthinking in LLMs. Grounded in thought structures, we propose a utility-based definition of overthinking, which moves beyond length-based metrics. This revised definition offers a more insightful understanding of LLMs'thought progression, as well as practical guidelines for principled overthinking management.",
+      "identifiers": [
+        "SemanticScholar:e13b6230efe460e25b0a202a484d0fe06c6bfba3"
+      ],
+      "semantic_scholar_id": "e13b6230efe460e25b0a202a484d0fe06c6bfba3",
+      "canonical_id": "arXiv:2510.07880",
+      "arxiv_id": "2510.07880",
+      "doi": "10.48550/arXiv.2510.07880",
+      "authors": [
+        "Xinliang Frederick Zhang",
+        "An-had Mohananey",
+        "A. Chronopoulou",
+        "Pinelopi Papalampidi",
+        "Somit Gupta",
+        "T. Munkhdalai",
+        "Lu Wang",
+        "Shyam Upadhyay"
+      ],
+      "priority": 29,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 29,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 405,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨は簡単な問題で長思考モデルが5〜20倍遅くなる過剰思考を、TRACEによる思考単位と談話関係のグラフ化で解析。過剰検証・過剰探索を主因として示し、不要な推論計算を特定するための指標を提案。CoTトークン効率に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c5b1c0053bcf",
+    "round": "libimp-c5b1c0053bcf6af2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c5b1c0053bcf6af2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c5b1c0053bcf6af2-pre01.json",
+    "receipt": "sha256:d4e52bc966baaf6d4b861ffbd2a9709bc7cce8bac73733dff5f5ea846caf5875"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c5b1c0053bcf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

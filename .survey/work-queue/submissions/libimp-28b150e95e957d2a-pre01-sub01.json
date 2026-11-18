@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "xSwitch: An Adaptive O-E-integrated Interconnect for Scale-up Networks",
+      "source_url": "https://doi.org/10.1145/3789240.3822607",
+      "year": 2026,
+      "published": "2026-08-17",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To adapt to the intensive, bursty, and latency-constrained traffic from large language model (LLM) training and inference, scale-up networks are now facing tremendous challenges. Existing electrical packet switching (EPS) fabrics provide packet-level flexibility at the cost of high power consumption and long latency. Introducing optical circuit switching (OCS) in scale-up networks offers direct optical connections that can effectively reduce power consumption and latency, but OCS lacks the packet-level flexibility required by LLM inference (especially for mixture-of-experts (MoE) inference). To address these dilemmas, this work presents xSwitch, an optical-electrical-integrated (O-E-integrated) interconnect for scale-up networks, and demonstrates its effectiveness experimentally. Unlike the traditional hybrid-optical-electrical interconnects that usually place EPS and OCS in parallel, xSwitch integrates one port-count-reduced (defined by the O/E port ratio) EPS layer (ESL) on top of an OCS layer (OSL). Then, OSL can establish optical connections for xPU pairs with stable and intensive traffic demands, while bypassing the ESL for energy and latency reduction, and the dynamic and unpredictable traffic between xPUs can be provisioned by letting OSL forward it to the ESL. We prototype xSwitch with off-the-shelf components, validate its effectiveness with real-world MoE inference tasks, and also confirm its scalability with large-scale simulations. Our results indicate that for MoE inference workloads, xSwitch with a 2:1 O/E port ratio limits the average gaps to the full-EPS baseline to 1.96% in TTFT and 0.59% in TPOT.",
+      "identifiers": [
+        "SemanticScholar:72793bbef1981965995e0db01b6bf5eceddb44f3"
+      ],
+      "semantic_scholar_id": "72793bbef1981965995e0db01b6bf5eceddb44f3",
+      "doi": "10.1145/3789240.3822607",
+      "canonical_id": "DOI:10.1145/3789240.3822607",
+      "authors": [
+        "Wei-Chi Wu",
+        "Xuanmiao Mu",
+        "Xiao-Liang Chen",
+        "Bin-Jun Tang",
+        "Xingming Cui",
+        "Yuxuan Dou",
+        "Zu-Qing Zhu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 93,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのMoE推論におけるexpert間all-to-all通信を対象に、光回線交換(OCS)層と縮小した電気パケット交換(EPS)層を縦方向に統合するscale-up interconnectを提案。トラフィックの安定したxPU間は光直結、変動する通信はEPS経由とする。著者が公開した原著本文とabstractではMoE推論のTTFT・TPOTを評価し、O/Eポート比2:1で全EPSベースラインとの平均遅延差をTTFT 1.96%、TPOT 0.59%に抑えたと報告。推論サービングの通信基盤最適化に直接関係するためaccept。数値は著者報告であり独立再現ではない。",
+      "library_body_check": "author_uploaded_original_full_text_and_abstract_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_chat_30_worklist_rank_397_author_uploaded_primary_full_text_after_identity_inbox_search"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-28b150e95e95",
+    "round": "libimp-28b150e95e957d2a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-28b150e95e957d2a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-28b150e95e957d2a-pre01.json",
+    "receipt": "sha256:d780e8c7a76b82083bef9d817cab1d617dca4efaded7374c30f39918cc870310"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-28b150e95e95",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fast Byte Latent Transformer",
+      "source_url": "https://arxiv.org/abs/2605.08044",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generation. We address this bottleneck in the Byte Latent Transformer (BLT) through new training and generation techniques. First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss. This enables an inference procedure that generates multiple bytes in parallel per decoding step, substantially reducing the number of forward passes required to generate a sequence. Second, we propose two extensions inspired by speculative decoding that trade some of this speed for higher generation quality: BLT Self-speculation (BLT-S), in which BLT's local decoder continues generating past its normal patch boundaries to draft bytes, which are then verified with a single full-model forward pass; and BLT Diffusion+Verification (BLT-DV), which augments BLT-D with an autoregressive verification step after diffusion-based generation. All methods may achieve an estimated memory-bandwidth cost over 50% lower than BLT on generation tasks. Each approach offers its own unique advantages, together removing key barriers to the practical use of byte-level LMs.",
+      "identifiers": [
+        "SemanticScholar:a662b8d7e294424e97f1732d254bd971221621f3"
+      ],
+      "semantic_scholar_id": "a662b8d7e294424e97f1732d254bd971221621f3",
+      "canonical_id": "arXiv:2605.08044",
+      "arxiv_id": "2605.08044",
+      "doi": "10.48550/arXiv.2605.08044",
+      "authors": [
+        "Julie Kallini",
+        "Artidoro Pagnoni",
+        "Tomasz Limisiewicz",
+        "Gargi Ghosh",
+        "Luke S. Zettlemoyer",
+        "Christopher Potts",
+        "Xiao-Chuang Han",
+        "Srinivasan Iyer"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はByte Latent Transformerの1バイト逐次生成を改善するBLT-D（ブロック単位拡散）、BLT-S（局所デコーダによる自己投機）、BLT-DV（拡散後の自己回帰検証）を提案。複数バイトの並列生成でforward回数を減らし、生成メモリ帯域費用をBLT比50%以上削減し得ると見積もる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7e15c8bcd9ec",
+    "round": "libimp-7e15c8bcd9ec3294-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7e15c8bcd9ec3294-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7e15c8bcd9ec3294-pre01.json",
+    "receipt": "sha256:a6fb11adf78a76e057e13965f409b890730de7a33073e1574e855f10b99691b6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7e15c8bcd9ec",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

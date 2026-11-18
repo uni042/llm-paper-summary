@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ODIA: Oriented Distillation for Inline Acceleration of LLM-based Function Calling",
+      "source_url": "https://arxiv.org/abs/2507.08877",
+      "year": 2025,
+      "published": "2025-07-10",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Function Calling is a crucial technique that enables Large Language Models (LLMs) to interact with external systems through APIs. However, the high latency associated with LLM-based Function Calling significantly impacts user experience. This paper presents a novel approach called Oriented Distillation for Inline Acceleration (ODIA) that leverages online user interaction data to accelerate Function Calling. By automatically identifying\"simple queries\"from production traffic and distilling knowledge from larger models to smaller ones, our method reduces response latency by 45% (expected) and 78% (median) while maintaining accuracy. We demonstrate the effectiveness of our approach through real-world deployment in a music application, where the smaller model successfully handles 60% of traffic with negligible accuracy loss. Our method requires minimal human intervention and continuously improves through automated data collection and model updating, making it a practical solution for production environments.",
+      "identifiers": [
+        "SemanticScholar:b87221547a836a5384bc4dc7c58d6f36e2cf84e8"
+      ],
+      "semantic_scholar_id": "b87221547a836a5384bc4dc7c58d6f36e2cf84e8",
+      "canonical_id": "arXiv:2507.08877",
+      "arxiv_id": "2507.08877",
+      "doi": "10.48550/arXiv.2507.08877",
+      "authors": [
+        "Han-Long Zhang",
+        "Jingsheng Yang",
+        "Hao Li",
+        "Yu-Hao He",
+        "Franck Gong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 496,
+        "matched_prestigious_venue": null
+      },
+      "reason": "本番のLLM function callingから簡単な要求を抽出して小型モデルへ知識蒸留し、要求に応じて処理を分配する。一次要旨では実運用音楽アプリの60%トラフィックを小型モデルが処理し、期待遅延45%、中央値遅延78%削減と報告。実運用推論ルーティングの効率改善に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e216ed912dce",
+    "round": "libimp-e216ed912dce0f82-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e216ed912dce0f82-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e216ed912dce0f82-pre01.json",
+    "receipt": "sha256:c065e5ea4863f84c31d34deaf5c6445e85fe1216940993c5cf78fa8ab0107149"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e216ed912dce",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
