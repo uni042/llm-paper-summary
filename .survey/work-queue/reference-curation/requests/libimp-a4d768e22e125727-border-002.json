@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a4d768e22e125727-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2512.05542",
+  "reason": "arXiv一次要旨は複数LLMへbest-of-nの生成を逐次振り分け、rewardと出力間の合意度から次モデルを選ぶRoBoNを提案。同等の生成計算量で単一モデルbest-of-nより精度を改善するが、主たる目的は計算予算固定下の品質向上であり直接の速度・メモリ削減は限定的。",
+  "title": "RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs",
+  "identity_tokens": [
+    "arXiv:2512.05542"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4d768e22e12",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a475c6d90fb3aac0-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/ICME57554.2024.10688073",
+  "reason": "IEEE公式abstractに基づく。音声翻訳向け事前学習済み音声エンコーダの系列長を、注意スコアに基づく重要度と固定・段階的剪定率で層ごとに削減する。出力トークン55%減、性能低下0.7%、エンコーディング最大1.76倍高速化を報告。ただし対象は音声翻訳の音声エンコーダであり、LLM生成推論・サービング・KVキャッシュ等への直接的な適用や評価は示されないため、現行LLM推論システム範囲ではunrelated。",
+  "title": "Efficient Speech-to-Text Translation: Progressive Pruning for Accelerated Speech Pre-trained Model",
+  "identity_tokens": [
+    "DOI:10.1109/ICME57554.2024.10688073"
+  ],
+  "linked_from": [
+    "WORKLIST-45.md rank 385"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a475c6d90fb3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

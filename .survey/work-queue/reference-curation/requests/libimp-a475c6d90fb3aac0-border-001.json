@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a475c6d90fb3aac0-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440879",
+  "reason": "IEEE公式abstractに基づく。DPDRは推論過程をthinkingとsolutionの2段階に分け、正答ゲート付き減衰報酬と柔らかな長さペナルティでChain-of-Thoughtの冗長トークンを抑える強化学習手法。精度を保ちながら生成トークンを減らすが、主眼は学習・推論方策の最適化で、GPU実行・KVキャッシュ・実測サービング遅延・スループットの改善を要旨から直接確認できない。推論時計算量への接点はあるためborderline。",
+  "title": "Double Phase Decaying Reasoning: Phase-Aware RL for Accuracy–Token Efficiency",
+  "identity_tokens": [
+    "DOI:10.1109/AIBDF67964.2025.11440879"
+  ],
+  "linked_from": [
+    "WORKLIST-45.md rank 149"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a475c6d90fb3",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

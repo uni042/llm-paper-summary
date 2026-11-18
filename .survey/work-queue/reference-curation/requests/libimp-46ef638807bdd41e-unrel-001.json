@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-46ef638807bdd41e-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2312.09211",
+  "reason": "arXiv一次要旨で扱うのは、言語モデルの低精度fine-tuningにおける活性値外れ値をINT8で表現し、整数演算とoperator tilingを用いてfine-tuningの頑健性と性能を改善する手法である。推論時の量子化・サービング・KVキャッシュ・推論スケジューラを対象とする評価や最終適用先は要旨に示されていない。低精度化技術は隣接するが、主要貢献は学習段階の最適化であり、凍結された学習専用範囲としてunrelated。本文未読。",
+  "title": "Mitigating Outlier Activations in Low-Precision Fine-Tuning of Language Models",
+  "identity_tokens": [
+    "arXiv:2312.09211",
+    "DOI:10.48550/arXiv.2312.09211"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46ef638807bd",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
