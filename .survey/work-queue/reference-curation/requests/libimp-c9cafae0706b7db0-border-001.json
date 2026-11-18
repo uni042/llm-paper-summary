@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c9cafae0706b7db0-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.17901",
+  "reason": "FlashMask-3はHopperのTMA/WGMMA・warp specializationに対応したstructured mask-aware attention kernelと、mask境界ベクトルの通信不要な分割・疎性対応load balancingを組み合わせる。H100単体の達成TFLOPsやcontext parallelのthroughputを改善するが、主要なend-to-end実証は128H100上の118B-A14B MoEの学習であり、推論decodeの評価は中心ではないためborderline。",
+  "title": "FlashMask-3: Efficient and Expressive Mask-Aware Distributed Attention",
+  "identity_tokens": [
+    "id:arXiv:2610.17901",
+    "id:DOI:10.48550/arXiv.2610.17901"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9cafae0706b",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
