@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ARION: Attention-Optimized Transformer Inference on Encrypted Data",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.134756",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": "IACR Cryptology ePrint Archive",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "—Privacy-preserving Transformer inference (PPTI) is essential for deploying large language models (LLMs) such as BERT and LLaMA in sensitive domains. In these models, the attention mechanism is both the main source of expressiveness and the dominant performance bottleneck under fully homomorphic encryption (FHE), due to large ciphertext matrix multiplications and the softmax nonlinearity. This paper presents ARION, a non-interactive FHE-based PPTI protocol that specifically optimizes the computation of encrypted attention. First, for the three consecutive ciphertext matrix multiplications in multi-head attention, we introduce the double Baby-Step Giant-Step algorithm, which significantly reduces the number of ciphertext rotations. On BERT-Base, ARION achieves an 82.5% reduction in rotations over the state-of-the-art PPTI protocol MOAI (2025), corresponding to a 5.7x reduction in rotation cost. Second, we propose a linear–nonlinear fusion technique tailored to the softmax evaluation in attention. By decomposing softmax into shift-by-maximum, exponentiation, and reciprocal sub-steps and fusing them with the surrounding encrypted matrix operations, ARION enables efficient attention evaluation while remaining compatible with diverse ciphertext packing formats. We implement ARION using Lattigo and first evaluate attention kernels on popular LLMs including BERT-Tiny, BERT-Base, and LLaMA, confirming the practicality and scalability of the proposed optimizations for encrypted attention computation. For end-to-end applications, on classification tasks for several benchmark datasets, ARION attains accuracy comparable to plaintext inference and yields up to 2.5x end-to-end speedups over MOAI for BERT-Base. 1",
+      "identifiers": [
+        "SemanticScholar:7c8bd3966d807033fea9648f03db7070492b8069"
+      ],
+      "semantic_scholar_id": "7c8bd3966d807033fea9648f03db7070492b8069",
+      "doi": "10.1016/j.eswa.2026.134756",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.134756",
+      "authors": [
+        "Lin-Han Yang",
+        "Jing-Wei Chen",
+        "Wang-Chen Dai",
+        "Shuai Wang",
+        "Wen-Yuan Wu",
+        "Yong Feng"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 48,
+        "matched_prestigious_venue": null
+      },
+      "reason": "完全準同型暗号下のTransformer推論で支配的な暗号文行列積とソフトマックスに対し、二重Baby-Step Giant-Stepで回転数を82.5%削減するARIONを提案し、暗号化注意計算を5.7倍相当に高速化する。秘匿推論の計算機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Boosting Long-Context Information Seeking via Query-Guided Activation Refilling",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.465",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long contexts poses a significant challenge for large language models (LLMs) due to their inherent context-window limitations and the computational burden of extensive key-value (KV) activations, which severely impact efficiency. For information-seeking tasks, full context perception is often unnecessary, as a query’s information needs can dynamically range from localized details to a global perspective, depending on its complexity. However, existing methods struggle to adapt effectively to these dynamic information needs. In the paper, we propose a method for processing long-context information-seeking tasks via query-guided AC tivation RE filling (ACRE). ACRE constructs a Bi-layer KV Cache for long contexts, where the layer-1 (L1) cache compactly captures global information, and the layer-2 (L2) cache provides detailed and localized information. ACRE establishes a proxying relationship between the two caches, allowing the input query to attend to the L1 cache and dynamically refill it with relevant entries from the L2 cache. This mechanism integrates global understanding with query-specific local details, thus improving answer decoding. Experiments on a variety of long-context information-seeking datasets demonstrate ACRE’s effectiveness, achieving improvements in both performance and efficiency. We will release our source codes in this repository .",
+      "identifiers": [
+        "SemanticScholar:95d3ed2a4f20a41381bea4327ed9e26bbf8ff758"
+      ],
+      "semantic_scholar_id": "95d3ed2a4f20a41381bea4327ed9e26bbf8ff758",
+      "doi": "10.18653/v1/2025.acl-long.465",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.465",
+      "authors": [
+        "Hong-Jin Qian",
+        "Zheng Liu",
+        "Peitian Zhang",
+        "Zhi-Cheng Dou",
+        "De-Fu Lian"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "長文脈の情報探索向けに、大域情報を担う第1層と局所詳細を担う第2層の二層KVキャッシュを構築し、クエリに応じて活性を再充填するACREを提案する。KV活性の保持・再利用を制御する長文脈推論機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DyMerge-LoRA: On-GPU Post-Merge Fusion for High-Throughput Multi-Tenant Composite LoRA Serving",
+      "source_url": "https://doi.org/10.1145/3770854.3780270",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we consider the problem of efficiently serving multi-tenant requests for large language models (LLMs) equipped with compositions of multiple Low-Rank Adaptation (LoRA) adapters, aiming to optimize inference throughput, latency, and GPU memory usage. Existing multi-tenant inference systems are primarily architected for a one-to-one mapping between requests and single adapters, limiting their efficiency in handling compositions of multiple LoRA adapters. To address these issues, we propose DyMerge-LoRA, a novel inference serving system specifically designed for high-throughput multi-tenant scenarios by dynamically fusing corresponding LoRA adapters on the GPU. DyMerge-LoRA introduces a Base Adapter Manager (BAM) for efficient GPU memory management of individual basic adapters, a LoRA-Aware Greedy Scheduler (LAG) for batching, and a Mapping-based Adapter Fusion Matrix-Vector Multiplication (MAF-MVM) kernel for high computational throughput. Experimental evaluations conducted on multiple setups demonstrate that DyMerge-LoRA achieves up to 1.1-4× improvement in inference throughput compared to state-of-the-art methods, significantly reduces TTFT, and effectively mitigates GPU memory consumption, validating its effectiveness and performance advantages under diverse workload conditions.",
+      "identifiers": [
+        "SemanticScholar:ddb57134df1fbbb3339b4ea140c82d9d6cedf663"
+      ],
+      "semantic_scholar_id": "ddb57134df1fbbb3339b4ea140c82d9d6cedf663",
+      "doi": "10.1145/3770854.3780270",
+      "canonical_id": "DOI:10.1145/3770854.3780270",
+      "authors": [
+        "Rui Xu",
+        "Long Chen",
+        "Huazheng Lao",
+        "Jin-Quan Zhang",
+        "Xia Zhu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数LoRAの合成を扱うマルチテナントサービング向けに、GPU上で対応アダプタを動的に融合するDyMerge-LoRAを提案し、基本アダプタ管理、LoRA認識バッチスケジューラ、融合行列ベクトル積カーネルを備える。LoRAサービングシステムへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MLIPS: Multi-Layer Indexer Pool Sharing",
+      "source_url": "https://arxiv.org/abs/2610.27438",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention limits the keys used by each query, but finding those keys can still require a full-prefix scan at every layer. We introduce $MLIPS:$ $Multi$-$Layer$ $Indexer$ $Pool$ $Sharing$, a training-free method that shares candidate search while retaining each consumer's own scoring and selection. A producer publishes a top-$M$ pool larger than the attention budget $K$; subsequent layers select their own top-$K$ from that pool. Measurements across three sparse-attention model families show substantially higher coverage from broad pools than overlap between final selections. We implement layerwise sharing, persistent decode reuse, and a coarse producer in vLLM for DeepSeek-V4-Flash. Across four long-context suites, three consumer layers per producer give $1.14$-$1.40\\times$ speedups and $14.8$-$27.4\\%$ lower GPU energy, with observed accuracy changes of $-1.49$ to $+0.29$ percentage points in single runs. More extensive sharing exposes task-dependent quality losses. Sampled prefill traces also reveal recurring selected KV positions across query groups and layers. We characterize this shared working-set structure and use it to motivate Top-$G$, an exploratory bounded pool construction for prefill. Its deployment, task accuracy, and serving benefits remain open.",
+      "identifiers": [
+        "SemanticScholar:dd680f0166ec29e240b56d389ef0d0ad31f13fd6"
+      ],
+      "semantic_scholar_id": "dd680f0166ec29e240b56d389ef0d0ad31f13fd6",
+      "canonical_id": "arXiv:2610.27438",
+      "arxiv_id": "2610.27438",
+      "authors": [
+        "Samkit Jain",
+        "Saikishan Pampana",
+        "Shlok Agarwal",
+        "Yashwant Marathe",
+        "Bhargava Gopireddy",
+        "Aradhana Mohan Parvathy",
+        "Sachin Idgunji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "疎注意で各層が全接頭辞を走査する費用に対し、上位候補プールを層間で共有し各層が自前のスコアで選び直すMLIPSをvLLMに実装して、長文脈で1.14〜1.40倍の高速化とGPUエネルギー14.8〜27.4%削減を示す。推論カーネル／インデクサ機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
+      "source_url": "https://arxiv.org/abs/2611.08363",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization reduces the memory and bandwidth demands of large language model (LLM) inference but can degrade accuracy; offloading higher-precision data can instead stall generation. We introduce StrataFlux, a framework that challenges this tradeoff by recovering accuracy lost to low-bit weight and key-value (KV) cache quantization while retaining quantization's memory and speed advantages. StrataFlux co-designs refinement representation, selection, and delivery to make host RAM and solid-state drives useful sources of additional precision. Its selective precision streaming reduces transfer volume, overlaps delivery with computation, and reuses fetched precision across decoding steps so generation need not wait for every transfer. We evaluate 2-4-bit weights and 2-3-bit KV-cache on dedicated GPUs and unified-memory platforms. For 2-bit Llama-3.1-8B-Instruct weights, StrataFlux reduces WikiText-2 perplexity from 9.46 to 8.40 while maintaining 95.4% of the quantized base's throughput on RTX 5090. With 2-bit weights and KV, StrataFlux raises Qwen3-8B's AIME 2024/2025 accuracy from 11.0% to 47.1% at unchanged GPU memory use. At 128K context, Llama-3.1-8B-Instruct with 3-bit weights and 2-bit KV achieves comparable perplexity and speed to vLLM's 4-bit AWQ weights and 8-bit KV on RTX 5090, using approximately half the GPU memory. These results show that GPU-resident precision need not set the accuracy ceiling, nor offloading-tier latency dictate decoding speed.",
+      "identifiers": [
+        "SemanticScholar:e245140b27e80990d365f22fc3a1494c17404ac6"
+      ],
+      "semantic_scholar_id": "e245140b27e80990d365f22fc3a1494c17404ac6",
+      "canonical_id": "arXiv:2611.08363",
+      "arxiv_id": "2611.08363",
+      "authors": [
+        "Jake Hyun",
+        "Zi-Yu Zhao",
+        "Jae-sun Seo",
+        "Mohamed S. Abdelfattah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低ビット量子化の精度劣化に対し、ホストRAMやSSDから追加精度を選択的にストリーミングして計算と重ね、デコードステップ間で再利用するStrataFluxで、2ビット重みと2〜3ビットKVキャッシュのメモリ・速度利点を保ったまま精度を回復する。階層メモリ型推論への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ae032ec6c5ee",
+    "round": "libimp-ae032ec6c5ee9e81-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ae032ec6c5ee9e81-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ae032ec6c5ee9e81-pre01.json",
+    "receipt": "sha256:5292b1fff0233657194caf7c3d9b91e1eef9247848ed6a792eaf9342167aae56"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ae032ec6c5ee",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

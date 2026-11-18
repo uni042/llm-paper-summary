@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Language Modeling With Factorization Memory",
+      "source_url": "https://arxiv.org/abs/2511.00315",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Factorization Memory, an efficient recurrent neural network (RNN) architecture that achieves performance comparable to Transformer models on short-context language modeling tasks while also demonstrating superior generalization in long-context scenarios. Our model builds upon Mamba-2, enabling Factorization Memory to exploit parallel computations during training while preserving constant computational and memory complexity during inference. To further optimize model efficiency and representational capacity, we develop a sparse formulation of Factorization Memory that updates only a subset of recurrent states at each step while preserving the strong performance of its dense counterpart. To our knowledge, this represents the first RNN architecture that successfully combines sparse memory activation with competitive performance across both short and long-context settings. This work provides a systematic empirical analysis of Factorization Memory in comparison to Transformer and Mamba-2 architectures.",
+      "identifiers": [
+        "SemanticScholar:c977a9215d1ef3fdc0c2626d58cda52e626fccbc"
+      ],
+      "semantic_scholar_id": "c977a9215d1ef3fdc0c2626d58cda52e626fccbc",
+      "canonical_id": "arXiv:2511.00315",
+      "arxiv_id": "2511.00315",
+      "doi": "10.48550/arXiv.2511.00315",
+      "authors": [
+        "Lee Xiong",
+        "M. Tkachenko",
+        "Johanes Effendi",
+        "Ting Cai"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mamba-2を基盤に推論時の計算・メモリ複雑度を定数に保ち、一部の再帰状態だけを更新する疎な定式化で効率と表現力を両立させるFactorization Memoryを提案する。線形・再帰型言語モデルの推論効率が中核の主張として評価されており直接貢献とみなす。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5a1636b5651e",
+    "round": "libimp-5a1636b5651ef1a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 3,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5a1636b5651ef1a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5a1636b5651ef1a7-pre01.json",
+    "receipt": "sha256:33b942af45460188be344930da8c49db439d4d26a2918440f83e7f40342c65f6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5a1636b5651e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

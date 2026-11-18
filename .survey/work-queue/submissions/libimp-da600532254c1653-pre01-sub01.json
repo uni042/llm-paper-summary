@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2610.27123",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models reduce computation through sparse expert activation, but deployment still requires storing a large number of expert parameters. We study post-training expert pruning using task-domain calibration data as a subset-selection problem: given a pretrained MoE layer, select a fixed number of experts that best reconstruct its original output. Exact subset search is combinatorial and becomes intractable for modern MoE models with many experts per layer. We develop OptEP, a scalable continuous relaxation that directly optimizes differentiable expert-selection variables, followed by a lightweight reconstruction-based update of the retained expert weights. Across multiple MoE architectures and tasks spanning mathematical reasoning and code generation, our approach improves over the strongest existing expert-pruning baselines, with absolute accuracy gains of up to 15.05% on Qwen3-30B-A3B, 14.55% on Qwen3-235B-A22B, 11.06% on GLM-4.5-Air, and 16.20% on Mixtral-8x7B. The improvements are particularly pronounced under aggressive pruning, demonstrating that reconstruction-driven expert selection and weight adaptation can preserve substantially more of the original model's performance while reducing the number of retained experts.",
+      "identifiers": [
+        "SemanticScholar:cc2ae4f5808905bdb1b72519c651a07e88d1de79"
+      ],
+      "semantic_scholar_id": "cc2ae4f5808905bdb1b72519c651a07e88d1de79",
+      "canonical_id": "arXiv:2610.27123",
+      "arxiv_id": "2610.27123",
+      "authors": [
+        "Jelena Markovic-Voronov",
+        "P. Prastakos",
+        "Kayhan Behdin",
+        "Jincheng Cao",
+        "Zhi-Peng Wang",
+        "Shayan Mohajer Hamidi",
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "Wen-Hui Zhu",
+        "R. Mazumder"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習済みMoEの専門家プルーニングを、校正データ上で元出力を最もよく再構成する部分集合選択問題として定式化し、微分可能な選択変数の連続緩和と残存専門家の再構成更新で解くOptEPを提案する。積極的プルーニング下で既存法を大きく上回るMoE圧縮機構であり直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective",
+      "source_url": "https://doi.org/10.52202/085713-4538",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ". Abstract Mixture-of-Experts (MoE) architectures enable efficient scaling of large language models but face prohibitive memory demands due to massive parameterization. Existing pruning methods rely on heuristic metrics or impractical enumeration of expert subsets, leading to suboptimal performance or scalability. In this paper, we propose Shapley-MoE, an efficient pruning method for MoE models inspired by cooperative game theory. By quantifying each expert’s contribution via Shapley value, our method identifies important experts without exhaustive combination evaluations. To overcome the NP-hard complexity of exact Shapley computation, we introduce a Monte Carlo sampling strategy for efficient approximation that reduces complexity to quadratic time. However, vanilla Monte Carlo sampling still faces issues of insufficient estimation accuracy and low sampling efficiency. To address these issues, we further propose two novel methods to improve sampling accuracy and efficiency: (1) Early Truncation, which early terminates unstable sampling steps caused by overly small expert subsets, and (2) Router-Guided Importance Sampling, which prioritize sampling important expert subsets using gating activation probabilities. Both theoretical and experimental analyses show that both methods can accelerate Shapley value estimation and improve accuracy. Extensive empirical evaluations demonstrate that our pruned MoE models outperform existing expert pruning methods. Notably, when applied to the Qwen2-57B-A14B model, our method reduces the number of experts by 25 % with only a 0.92 increase in perplexity and over 96.4 % of the average zero-shot accuracy is maintained.",
+      "identifiers": [
+        "SemanticScholar:81c8ef664f6fb914963403aa370f321f2010f8f1"
+      ],
+      "semantic_scholar_id": "81c8ef664f6fb914963403aa370f321f2010f8f1",
+      "doi": "10.52202/085713-4538",
+      "canonical_id": "DOI:10.52202/085713-4538",
+      "authors": [
+        "Wei-Zhong Huang",
+        "Yuxin Zhang",
+        "Xia-Wu Zheng",
+        "Fei Chao",
+        "Rongrong Ji",
+        "Liu-Juan Cao"
+      ],
+      "priority": 31,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 31,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "MoEの専門家プルーニングを協調ゲームのShapley値で定量化し、モンテカルロ近似とEarly Truncation等で二次時間に抑えて重要専門家を同定するShapley-MoEを提案する。MoEのメモリ需要を削る配置前圧縮機構であり、推論展開への直接貢献が確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "UniMAC: Multi-Precision MAC with a Unified Computing Architecture for Efficient Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562248",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization techniques vary considerably in their requirements for computational precision. Although prior works have introduced various multi-precision multiply-accumulate (MAC) units, most offer limited precision coverage. Moreover, most designs focus on standard arithmetic and lack optimizations for inference in large language models (LLMs). To overcome these limitations, this paper proposes UniMAC, a multi-precision MAC architecture that unifies integer, floating-point, and FP-INT operations within a single computing datapath by employing a new General-Purpose Data Partitioning (GPDP) method and an Iterative Neighbor Grouping Scheduling (INGS) strategy. In addition, we implement two acceleration modes for FP16 guided by an on-the-fly activation-to-activation (act-to-act) search (OAS) algorithm to improve throughput and efficiency in act-to-act computations, a dominant contributor to inference latency in LLMs with long contexts. Compared with prior works, the proposed design supports a wider range of precision formats while delivering up to 3.9× higher energy efficiency in FP8 and 2× for act-to-act computations in FP16.",
+      "identifiers": [
+        "SemanticScholar:c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc"
+      ],
+      "semantic_scholar_id": "c9f0adb3eb0d933dc7f93c3664de6e4f2588ccfc",
+      "doi": "10.1109/ISCAS66217.2026.11562248",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562248",
+      "authors": [
+        "Xiao Cong",
+        "Xingyuan Hu",
+        "Jun-Tao Liu",
+        "Xulong Zhang",
+        "Hao-Ran Geng",
+        "Qi Wu",
+        "Yuan Du",
+        "Li Du"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      },
+      "reason": "整数・浮動小数点・FP-INTを単一データパスで扱う多精度MACアーキテクチャUniMACを提案し、汎用データ分割と隣接グループスケジューリングに加え、長文脈で支配的な活性同士演算をオンザフライ探索で高速化してFP8で最大3.9倍のエネルギー効率を示す。LLM推論ハードウェアへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PrismKV: Harmonizing Heterogeneous Compression Strategies through Layer-adaptive Partition Scoring",
+      "source_url": "https://doi.org/10.1109/IJCNN69854.2026.11729267",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) encounter significant scalability bottlenecks in long-context scenarios due to the prohibitive memory overhead of the Key-Value (KV) cache. Current optimization paradigms often overlook the hierarchical heterogeneity of Transformer layers, leading to suboptimal resource allocation. To address this, we propose PrismKV, a novel KV cache compression framework that leverages adaptive partition scoring to orchestrate heterogeneous compression strategies. PrismKV employs an unsupervised, layer-adaptive scoring function that jointly evaluates compositional redundancy and attention sensitivity to dynamically bifurcate Transformer layers into distinct operational zones. For shallow regions characterized by high directional alignment, we implement a reconstructible codebook-based replacement strategy to achieve high-ratio structured compression by clustering redundant vectors. Conversely, for deep regions exhibiting sparse, task-specific attention, we transition to an importance-aware dynamic eviction policy that quantifies spatiotemporal saliency for precise information retention. Experimental results across three prevailing LLMs demonstrate that PrismKV reduces the KV cache to 10.8% of its original size with a marginal performance degradation of only 1.9%. Our approach consistently outperforms existing baselines in long-context benchmarks and achieves 65.8% decoding acceleration in 32K context scenarios. By precisely aligning heterogeneous compression primitives with the intrinsic evolution of layer-wise representations, PrismKV achieves a superior balance between hardware-level inference efficiency and high-fidelity generation.",
+      "identifiers": [
+        "SemanticScholar:5f7be856871ea02b9410cee13aa7795c1296390e"
+      ],
+      "semantic_scholar_id": "5f7be856871ea02b9410cee13aa7795c1296390e",
+      "doi": "10.1109/IJCNN69854.2026.11729267",
+      "canonical_id": "DOI:10.1109/IJCNN69854.2026.11729267",
+      "authors": [
+        "Dong-Cheng Shi",
+        "Yong-Xiang Cao",
+        "Hong-Xu Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer層の階層的異質性を捉える層適応パーティションスコアで層を二分し、浅い層にはコードブック置換による高圧縮、深い層には重要度ベースの動的削除を使い分けるKVキャッシュ圧縮PrismKVを提案する。長文脈KV圧縮機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "UPServe: Backend Agnostic Proxy for Black-box Heterogeneous LLM Scheduling",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661114",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference is increasingly deployed in heterogeneous environments, demanding efficient serving across diverse hardware platforms and backend engines. While existing load balancers and specialized serving systems facilitate request routing, they still suffer from various limitations, manifested in metric misalignment and observability gaps of black-box backends, non-linear performance degradation under heterogeneity, and conflicting multi-objective optimization goals. To solve these problems, we propose UPServe, a backendagnostic proxy designed for stateless LLM serving, which features three key designs: (1) a phase-aware cost modeling to estimate inference costs without relying on engine internals, (2) a unified score-based scheduling mechanism that integrates phase-aware concurrency and hardware speed normalization to handle heterogeneous non-linear degradation, and (3) an online scheduling algorithm named Phase-Aware Weighted Least Connections (PA-WLC) that drives adaptive dispatching to balance tail latency and aggregate throughput. Finally, we implement UPServe as a transparent proxy and conduct experiments for evaluations in heterogeneous environments. Comparison results demonstrate that UPServe significantly outperforms existing baselines, which reduces tail latency by up to 2.6$\\times$ (P99 TTFT) and 2.1$\\times$ (P99 TPOT), and improves aggregate throughput by up to 16%. Besides, UPServe operates without modifying inference engine internals, and incurs a negligible scheduling overhead of less than 0.3 ms per request.",
+      "identifiers": [
+        "SemanticScholar:a1b6038c1758644d7ace1e028d73270bf3c1490e"
+      ],
+      "semantic_scholar_id": "a1b6038c1758644d7ace1e028d73270bf3c1490e",
+      "doi": "10.1109/IWQoS70441.2026.11661114",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661114",
+      "authors": [
+        "Hao-Rui Wan",
+        "Chen-Yang Hei",
+        "Fu-Liang Li",
+        "Cheng-Xi Gao",
+        "Yuwen Jia",
+        "Tong-Rui Liu",
+        "Xing-Wei Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "異種ハードウェア・異種バックエンド混在環境向けに、エンジン内部に依存せずフェーズ別コストモデルで推論コストを推定し、Phase-Aware Weighted Least Connectionsで適応的に振り分けるバックエンド非依存プロキシUPServeを提案する。LLMスケジューリング機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-da600532254c",
+    "round": "libimp-da600532254c1653-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-da600532254c1653-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-da600532254c1653-pre01.json",
+    "receipt": "sha256:55560f26f817b0c7eaac7459fd02ca29d9788747f2be0f0f8b362bf9579d400f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-da600532254c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
