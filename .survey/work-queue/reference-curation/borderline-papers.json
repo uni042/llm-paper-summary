@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T08:47:48+00:00",
-  "record_count": 6083,
+  "updated_at": "2026-11-18T09:08:24+00:00",
+  "record_count": 6085,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85005,7 +85005,7 @@
       ],
       "reason": "GraphGuardは分散GPU実装の出力が逐次モデルと一致するか、反復的な式書換えで静的に検証し、GPT/Llama-3の分散実装にも適用する。LLMサービングの正確性検証に関連するが、推論速度・メモリを直接削減するアルゴリズムではない。",
       "first_checked_at": "2026-10-30T11:54:47+00:00",
-      "last_checked_at": "2026-10-30T11:54:47+00:00",
+      "last_checked_at": "2026-11-18T09:08:21+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Verify Distributed Deep Learning Model Implementation Refinement with Iterative Relation Inference"
@@ -85019,7 +85019,7 @@
       ],
       "reason": "学習済み写像でDHTの範囲検索を高速化し、試験環境でメッセージ費用と検索遅延を80～90%以上削減する。LLM servingを用途例に挙げるが、要旨でLLMのKV配置・モデルルーティング・推論遅延の直接評価は示されず、一般的な分散データ構造の研究。",
       "first_checked_at": "2026-10-30T11:54:48+00:00",
-      "last_checked_at": "2026-10-30T11:54:48+00:00",
+      "last_checked_at": "2026-11-18T09:08:22+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A Distributed Learned Hash Table"
@@ -85251,7 +85251,7 @@
       ],
       "reason": "McDiffuSEはmasked diffusion language modelの空欄補完順序をMCTSの先読み探索で選択し、数学・コード生成の品質を改善する。一次要旨の主指標は正答率（plan-and-infill比平均8.0%改善）で、生成順序の制御は関連するが推論時間・メモリ・スループット削減を実証したシステム研究ではないため境界扱い。",
       "first_checked_at": "2026-10-30T13:55:12+00:00",
-      "last_checked_at": "2026-10-30T13:55:12+00:00",
+      "last_checked_at": "2026-11-18T09:08:24+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Can I Have Your Order? Monte-Carlo Tree Search for Slot Filling Ordering in Diffusion Language Models"
@@ -85264,7 +85264,7 @@
       ],
       "reason": "Progressive Draft Adaptationは小型モデルに合う短い推論軌跡をSFTと二段階RLで学習させ、推論時のdraft/adaptive/step-by-step指示を使い分ける。一次要旨はMATH500で5668→986トークン、精度93.0%→90.6%と報告。生成費用削減は関連するが主要新規性はモデルの訓練・推論様式で、サービング/カーネル機構への寄与が薄いため境界。",
       "first_checked_at": "2026-10-30T13:55:12+00:00",
-      "last_checked_at": "2026-10-30T13:55:12+00:00",
+      "last_checked_at": "2026-11-18T09:08:24+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Draft-Thinking: Learning Efficient Reasoning in Long Chain-of-Thought LLMs"
@@ -85375,7 +85375,7 @@
       ],
       "reason": "arXiv一次要旨。情報幾何学と低ランク作用素分解の観点から、事前学習モデル圧縮におけるdivergence、fine-tuning時のtrainability、反復特異値閾値法の収束を理論化する。モデル圧縮の一般理論として参考になるが、生成LLMの具体的な推論メモリ・latency・throughput評価は要旨で確認できないためborderline。",
       "first_checked_at": "2026-10-30T15:55:58+00:00",
-      "last_checked_at": "2026-10-30T15:55:58+00:00",
+      "last_checked_at": "2026-11-18T09:08:18+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "On Information Geometry and Iterative Optimization in Model Compression: Operator Factorization"
@@ -85388,7 +85388,7 @@
       ],
       "reason": "arXiv一次要旨。校正データなしでSVD主成分に沿った重要重みをFP32で保護し、残差を低ビット化するmixed-precision PTQを提案。ただし実験はDistilBERTによるGLUE分類が中心で、生成LLMのdecode性能やメモリ帯域削減の実証はない。量子化の着想は関連するが対象検証が不足するためborderline。",
       "first_checked_at": "2026-10-30T15:55:58+00:00",
-      "last_checked_at": "2026-10-30T15:55:58+00:00",
+      "last_checked_at": "2026-11-18T09:08:18+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Intrinsic Structure as a Proxy for Saliency: SVD-Based Weight Preservation for Mixed-Precision Quantization in Large Language Models"
@@ -85714,7 +85714,7 @@
       ],
       "reason": "MoE専門家の重複を減らすため、同一tokenに対するSwiGLU活性の類似性を罰する層内損失と、隣接層のtop-kルーティング確率を結び付ける層間損失を追加する。Megatron-LM上の学習・zero-shot性能改善と経路安定化を報告し推論高速化にも言及するが、要旨の主貢献は学習時の正則化で、推論システムの実測・新runtimeは不明なためborderline。",
       "first_checked_at": "2026-10-30T20:07:32+00:00",
-      "last_checked_at": "2026-10-30T20:07:32+00:00",
+      "last_checked_at": "2026-11-18T09:08:23+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Synergistic Intra- and Cross-Layer Regularization Losses for MoE Expert Specialization"
@@ -85727,7 +85727,7 @@
       ],
       "reason": "HOLOはLLMが生成初期に目的文のキーワードを捉える性質を利用し、短い生成ステップでキーワードを抽出した後、語彙制約付き並列テキスト生成で文章を完成させる。推論ステップ削減の可能性はあるが、一次要旨の主要評価は自動・人手品質指標であり、実測latencyや生成throughputの改善幅が示されないためborderline。",
       "first_checked_at": "2026-10-30T20:07:32+00:00",
-      "last_checked_at": "2026-10-30T20:07:32+00:00",
+      "last_checked_at": "2026-11-18T09:08:23+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Towards the Holographic Characteristic of LLMs for Efficient Short-text Generation"
@@ -85740,7 +85740,7 @@
       ],
       "reason": "3TFは推論あり／なし両モードの混合学習とCoT付き追加学習によって、明示的な思考列を出力せず推論品質を保つようモデルを訓練する。生成される思考token削減は推論費用へ波及し得るが、要旨は学習方法とreasoning benchmarkの品質改善が中心で、実測サービング速度やruntime機構の改善は提示していないためborderline。",
       "first_checked_at": "2026-10-30T20:07:32+00:00",
-      "last_checked_at": "2026-10-30T20:07:32+00:00",
+      "last_checked_at": "2026-11-18T09:08:23+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Efficient Reasoning via Thought-Training and Thought-Free Inference"
@@ -86047,7 +86047,7 @@
       ],
       "reason": "推論連鎖を意味的に統合した木から短い優先経路を選び、DPOと教師あり損失で冗長な思考ステップを抑える学習データ生成・学習手法。一次要旨は推論ステップ長と計算負荷の削減、正確性維持または改善を報告する。一方で主たる技術貢献は学習時の思考経路最適化であり、推論ランタイムのKV管理、GPUカーネル、サービング・スケジューラへの直接貢献は確認できないため境界分類。",
       "first_checked_at": "2026-10-31T03:44:21+00:00",
-      "last_checked_at": "2026-10-31T03:44:21+00:00",
+      "last_checked_at": "2026-11-18T09:08:20+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ChainPrune: Evaluating and Reducing Redundancy in Long Chain-of-Thought Reasoning"
@@ -86133,7 +86133,7 @@
       ],
       "reason": "TritonのCPU側MLIR/LLVMコンパイル処理にRowhammer bit flipを起こし、正しい出力を保つが非最適なGPU kernelを生成・disk cacheさせてLLMサービングを持続的に遅くするLLVMhammer攻撃を研究する。著者要旨はRTX4090/RX7900XTXと複数LLMで推論遅延4～16%増を報告。推論kernelの脆弱性と性能劣化に関係するが、新規推論高速化手法でなく攻撃・セキュリティ研究なのでborderline。",
       "first_checked_at": "2026-11-02T00:55:49+00:00",
-      "last_checked_at": "2026-11-02T00:55:49+00:00",
+      "last_checked_at": "2026-11-18T09:08:20+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Amplifying Latency and Cost of LLM Inference via Rowhammer Attack"
@@ -86389,7 +86389,7 @@
       ],
       "reason": "260 open-weight LLMの回答文・正誤・質問からmodel embeddingを構築し、400問（全24,118問の1.3%の推論計算量）でfull-pool性能の91%以上を維持するmodel profiling法。大量のbenchmark inference costを削減するが、実際のLLM request servingやKV/カーネルの高速化ではなくmodel選定前の評価効率が主題のためborderline。",
       "first_checked_at": "2026-11-03T12:00:07+00:00",
-      "last_checked_at": "2026-11-03T12:00:07+00:00",
+      "last_checked_at": "2026-11-18T09:08:19+00:00",
       "linked_from": [
         "https://arxiv.org/list/cs.AI/new"
       ],
@@ -86404,7 +86404,7 @@
       ],
       "reason": "異種AIモデルの推論を仕入れ・再販するmarketplaceで、費用と性能に応じたモデル割当を最適化する問題のNP困難性と、逓減収益条件下の効率的解法・少数probeでの性能推定を示す。推論費用に関係するが、LLMサービングの実装・latency・throughput・memoryの最適化ではなく経済的allocationが主題のためborderline。",
       "first_checked_at": "2026-11-03T12:00:07+00:00",
-      "last_checked_at": "2026-11-03T12:00:07+00:00",
+      "last_checked_at": "2026-11-18T09:08:19+00:00",
       "linked_from": [
         "https://arxiv.org/list/cs.AI/new"
       ],
@@ -94925,6 +94925,35 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures"
+    },
+    "arXiv:2508.15371": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.15371",
+      "identity_tokens": [
+        "arXiv:2508.15371"
+      ],
+      "reason": "CM-ASDはdraft分布のentropy/marginで投機長と検証閾値を適応調整する。一次PDF本文のWMT翻訳表では固定SpecDec(k=25)が5.1/5.5/4.6/4.8倍に対しCM-ASDは4.7/5.0/4.2/4.4倍で、比較対象の固定SpecDec(k=25)より速くない。CNN/DailyMailでもSpecDec 5.1倍、CM-ASD 4.0倍で、ROUGE-1は43.11対41.90。緩和検証はtarget分布を厳密保存しないため、推論効率に関連するが新方式の優位性と品質保証が限定的でborderline。",
+      "first_checked_at": "2026-11-18T09:08:18+00:00",
+      "last_checked_at": "2026-11-18T09:08:18+00:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Confidence-Modulated Speculative Decoding for Large Language Models"
+    },
+    "arXiv:2506.09713": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.09713",
+      "identity_tokens": [
+        "DOI:10.1145/3788873",
+        "arXiv:2506.09713"
+      ],
+      "reason": "LLM専用推論エンジン5種（llama.cpp、vLLM、DeepSpeed、MLC-LLM、TensorRT-LLM）の公開issue/修正記録から929件の実バグを抽出し、6種類の症状と28種類の根本原因を体系化する一次実証研究。推論・サービング段階に664件（71%）が集中し、クラッシュ以外の症状が35%超、エンジン間の障害傾向の相関が0.5超という結果は、量子化・KV管理・カーネル最適化の回帰試験設計に有用。一方、新しい推論高速化アルゴリズム、メモリ削減法、性能改善率の提案・評価ではないため、推論システム信頼性の隣接研究としてborderline。ACM出版社の一次全文（方法・評価・妥当性脅威）を確認。",
+      "first_checked_at": "2026-11-18T09:08:19+00:00",
+      "last_checked_at": "2026-11-18T09:08:19+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A First Look at Bugs in LLM Inference Engines"
     }
   }
 }

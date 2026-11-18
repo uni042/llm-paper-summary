@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T08:47:47+00:00",
+  "updated_at": "2026-11-18T09:08:25+00:00",
   "record_count": 12847,
   "records": {
     "arXiv:2303.08774": {
@@ -181210,7 +181210,7 @@
       ],
       "reason": "Zero-Error Horizonという正確性評価指標でLLMの単純計算失敗を分析する研究。木構造とonline softmaxで指標計算自体を最大一桁高速化するが、対象は評価手続きでありLLM生成推論サービングの効率化ではない。",
       "first_checked_at": "2026-10-30T11:54:48+00:00",
-      "last_checked_at": "2026-10-30T11:54:48+00:00",
+      "last_checked_at": "2026-11-18T09:08:22+00:00",
       "linked_from": [],
       "title": "Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs"
     },
@@ -181223,7 +181223,7 @@
       ],
       "reason": "音声の自己教師あり表現学習における訓練・微調整・データ効率を整理するレビュー。LLM生成推論・KVキャッシュ・サービングの技術的改善を直接扱わず、対象外。",
       "first_checked_at": "2026-10-30T11:54:49+00:00",
-      "last_checked_at": "2026-10-30T11:54:49+00:00",
+      "last_checked_at": "2026-11-18T09:08:22+00:00",
       "linked_from": [],
       "title": "Efficiency-oriented approaches for self-supervised speech representation learning"
     },
@@ -181323,7 +181323,7 @@
       ],
       "reason": "SoLA-VisionはImageNet-1Kと密な画像予測タスクを主対象とする純粋な視覚バックボーンで、線形注意とsoftmax注意の層別混合を研究する。一次要旨に生成LLM推論、KVキャッシュ、LLMサービングへの適用はなく、本サーベイのLLM推論システムの直接対象外。",
       "first_checked_at": "2026-10-30T13:55:13+00:00",
-      "last_checked_at": "2026-10-30T13:55:13+00:00",
+      "last_checked_at": "2026-11-18T09:08:25+00:00",
       "linked_from": [],
       "title": "SoLA-Vision: Fine-grained Layer-wise Linear Softmax Hybrid Attention"
     },
@@ -181335,7 +181335,7 @@
       ],
       "reason": "FileGramEngineの行動トレース合成、FileGramBenchの個人化記憶評価、FileGramOSの手続き・意味・エピソード記憶構築を中心とするエージェント個人化研究。一次要旨はファイルシステム行動に基づく記憶品質・評価が主題で、LLM推論速度・メモリ階層・サービングの最適化を示していない。",
       "first_checked_at": "2026-10-30T13:55:13+00:00",
-      "last_checked_at": "2026-10-30T13:55:13+00:00",
+      "last_checked_at": "2026-11-18T09:08:25+00:00",
       "linked_from": [],
       "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces"
     },
@@ -181509,7 +181509,7 @@
       ],
       "reason": "arXiv一次要旨。next-scale predictionを行う画像生成VAR Transformerのスケール別KV cache圧縮を提案し、画像生成でKV 84.83%削減とattention latency60.48%減を報告する。対象は画像生成専用モデルであり、言語LLM・VLMのテキスト生成推論やサービングではないため対象外。",
       "first_checked_at": "2026-10-30T15:55:59+00:00",
-      "last_checked_at": "2026-10-30T15:55:59+00:00",
+      "last_checked_at": "2026-11-18T09:08:19+00:00",
       "linked_from": [],
       "title": "AMS-KV: Adaptive KV Caching in Multi-Scale Visual Autoregressive Transformers"
     },
@@ -181617,7 +181617,7 @@
       ],
       "reason": "線形再帰ネットワークのGlorot初期化において幅nに対する長さO(√n)の系列で状態ノルムが不安定化する理論を示し、スペクトル半径を1未満に調整する初期化を提案。研究対象は学習初期化と数理的安定性であり、LLM推論時の処理・メモリ最適化は実証していない。",
       "first_checked_at": "2026-10-30T17:58:08+00:00",
-      "last_checked_at": "2026-10-30T17:58:08+00:00",
+      "last_checked_at": "2026-11-18T09:08:25+00:00",
       "linked_from": [],
       "title": "Revisiting Glorot Initialization for Long-Range Linear Recurrences"
     },
@@ -181942,7 +181942,7 @@
       ],
       "reason": "TFOはWhisperで信頼度フィルタ済みの時刻付き転写を作り、凍結したVLMの言語入力へ渡して音声・動画理解を改善する。要旨の比較は56ベンチマーク・21言語の理解性能と学習不要の適応性が中心で、LLM推論の実行時間・KV・サービング・カーネル効率を改善する機構や実測は示していないため対象外。",
       "first_checked_at": "2026-10-30T20:07:33+00:00",
-      "last_checked_at": "2026-10-30T20:07:33+00:00",
+      "last_checked_at": "2026-11-18T09:08:23+00:00",
       "linked_from": [],
       "title": "Training-Free Speech-Centric Omni Understanding with Frozen VLMs"
     },
@@ -181954,7 +181954,7 @@
       ],
       "reason": "LongLive-RAGは自己回帰動画拡散モデルの長時間生成で外観が劣化する問題に対し、生成済みlatent履歴を検索し、Window Temporal Delta Lossで有意な時間変化を捉える。要旨の主指標は動画品質VBench-Longであり、LLM推論や生成システムの速度・メモリ効率改善ではない。動画生成の品質研究として対象外。",
       "first_checked_at": "2026-10-30T20:07:33+00:00",
-      "last_checked_at": "2026-10-30T20:07:33+00:00",
+      "last_checked_at": "2026-11-18T09:08:24+00:00",
       "linked_from": [],
       "title": "LongLive-RAG: A General Retrieval-Augmented Framework for Long Video Generation"
     },
@@ -181966,7 +181966,7 @@
       ],
       "reason": "ViM-QはVision Mambaの活性・重み量子化とFPGA上のLUT演算・状態空間モデルのパイプラインを協調設計し、ViM-tinyでRTX 3090比較の速度・電力改善を報告する。効率化手法は具体的だが対象は画像認識用Vision Mambaであり、LLM推論やMoEサービングへの適用実証は要旨にないため本サーベイでは対象外。",
       "first_checked_at": "2026-10-30T20:07:34+00:00",
-      "last_checked_at": "2026-10-30T20:07:34+00:00",
+      "last_checked_at": "2026-11-18T09:08:24+00:00",
       "linked_from": [],
       "title": "ViM-Q: Scalable Algorithm-Hardware Co-Design for Vision Mamba Model Inference on FPGA"
     },
@@ -182002,7 +182002,7 @@
       ],
       "reason": "arXiv一次要旨では音声理解、音声生成、発話対話、音声映像理解の4領域における音声ネイティブ基盤モデルの能力・課題をレビューする。推論カーネル、KVメモリ、サービング、圧縮の技術改善を主要貢献として扱わないため、対象外。",
       "first_checked_at": "2026-10-31T00:43:41+00:00",
-      "last_checked_at": "2026-10-31T00:43:41+00:00",
+      "last_checked_at": "2026-11-18T09:08:20+00:00",
       "linked_from": [],
       "title": "Towards General Auditory Intelligence: Large Multimodal Models for Machine Listening and Speaking"
     },
@@ -182014,7 +182014,7 @@
       ],
       "reason": "arXiv一次要旨では画像・文章・動画・分子を含む深層生成モデルの汎用性、信頼性、普及を阻む未解決課題を俯瞰し、研究課題を提案する。LLMの推論実行時資源やサービング機構を設計・評価する研究ではないため、対象外。",
       "first_checked_at": "2026-10-31T00:43:42+00:00",
-      "last_checked_at": "2026-10-31T00:43:42+00:00",
+      "last_checked_at": "2026-11-18T09:08:21+00:00",
       "linked_from": [],
       "title": "On the Challenges and Opportunities in Generative AI"
     },
@@ -182026,7 +182026,7 @@
       ],
       "reason": "出版社Wileyの一次要旨・本文を照合。電力・エネルギー時系列予測用Transformerに対し、周波数特徴を用いたMA-LSHで系列を固定長チャンクへまとめ、チャンク内注意と全域特徴蒸留で計算・メモリを線形化する。効率化技術ではあるが、検証対象は時系列予測であり、LLM推論・サービングへの直接適用や評価がないため、現行サーベイでは対象外。",
       "first_checked_at": "2026-10-31T00:43:42+00:00",
-      "last_checked_at": "2026-10-31T00:43:42+00:00",
+      "last_checked_at": "2026-11-18T09:08:21+00:00",
       "linked_from": [],
       "title": "Optimising Time Series Forecasting Transformers to Linear Complexity"
     },
@@ -182038,7 +182038,7 @@
       ],
       "reason": "著者所属大学の一次書誌・要旨を照合。実世界でのembodied AIを対象に、基盤モデルによる高水準計画、affordance学習、強化学習・模倣学習によるロボット制御、SSM利用の展望を総覧する。LLM推論の実行基盤・キャッシュ・通信・量子化の技術評価を主題としないため、対象外。",
       "first_checked_at": "2026-10-31T00:43:43+00:00",
-      "last_checked_at": "2026-10-31T00:43:43+00:00",
+      "last_checked_at": "2026-11-18T09:08:21+00:00",
       "linked_from": [],
       "title": "Reinforced Intelligence Through Active Interaction in Real World: A Survey on Embodied AI"
     },
@@ -182178,7 +182178,7 @@
       ],
       "reason": "一次arXiv要旨で対象はvision-language-action、video-action、world action modelのリアルタイムphysical AI policyであり、LIBERO-10のロボット操作成功率やJetson AGX Thor/RTX5090での推論遅延を評価する。kernel融合とstate reuseは汎用的だが、LLM自回帰生成、KVキャッシュ、MoE/LLM servingへの実証的適用は示されないため、今回のLLM推論システムサーベイではunrelated。タイトルだけでなく要旨を確認して判定。",
       "first_checked_at": "2026-11-02T00:55:50+00:00",
-      "last_checked_at": "2026-11-02T00:55:50+00:00",
+      "last_checked_at": "2026-11-18T09:08:20+00:00",
       "linked_from": [],
       "title": "FlashRT-PAI: Fast Kernels Are Not Fast Pipelines for Physical AI Inference"
     },

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52d39bfe6ce5c6e4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.09713",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.09713",
+    "identity_tokens": [
+      "DOI:10.1145/3788873",
+      "arXiv:2506.09713"
+    ],
+    "reason": "LLM専用推論エンジン5種（llama.cpp、vLLM、DeepSpeed、MLC-LLM、TensorRT-LLM）の公開issue/修正記録から929件の実バグを抽出し、6種類の症状と28種類の根本原因を体系化する一次実証研究。推論・サービング段階に664件（71%）が集中し、クラッシュ以外の症状が35%超、エンジン間の障害傾向の相関が0.5超という結果は、量子化・KV管理・カーネル最適化の回帰試験設計に有用。一方、新しい推論高速化アルゴリズム、メモリ削減法、性能改善率の提案・評価ではないため、推論システム信頼性の隣接研究としてborderline。ACM出版社の一次全文（方法・評価・妥当性脅威）を確認。",
+    "first_checked_at": "2026-11-18T09:08:19+00:00",
+    "last_checked_at": "2026-11-18T09:08:19+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A First Look at Bugs in LLM Inference Engines"
+  },
+  "processed_at": "2026-11-18T09:08:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52d39bfe6ce5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

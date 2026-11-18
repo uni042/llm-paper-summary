@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-16e6bae42ddcd669-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.15371",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.15371",
+    "identity_tokens": [
+      "arXiv:2508.15371"
+    ],
+    "reason": "CM-ASDはdraft分布のentropy/marginで投機長と検証閾値を適応調整する。一次PDF本文のWMT翻訳表では固定SpecDec(k=25)が5.1/5.5/4.6/4.8倍に対しCM-ASDは4.7/5.0/4.2/4.4倍で、比較対象の固定SpecDec(k=25)より速くない。CNN/DailyMailでもSpecDec 5.1倍、CM-ASD 4.0倍で、ROUGE-1は43.11対41.90。緩和検証はtarget分布を厳密保存しないため、推論効率に関連するが新方式の優位性と品質保証が限定的でborderline。",
+    "first_checked_at": "2026-11-18T09:08:18+00:00",
+    "last_checked_at": "2026-11-18T09:08:18+00:00",
+    "linked_from": [
+      "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Confidence-Modulated Speculative Decoding for Large Language Models"
+  },
+  "processed_at": "2026-11-18T09:08:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-16e6bae42ddc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
