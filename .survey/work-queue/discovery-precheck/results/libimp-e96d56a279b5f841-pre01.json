@@ -1,0 +1,469 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e96d56a279b5f841-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e96d56a279b5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2306.01841",
+    "arXiv:2310.10054",
+    "arXiv:2402.08958",
+    "arXiv:2502.00258",
+    "arXiv:2505.10118",
+    "arXiv:2505.12044",
+    "arXiv:2505.19812",
+    "arXiv:2512.23049",
+    "arXiv:2603.05454"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2372dfad16090b17fcd206193e6ba22755a5c506",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 5,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 5,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T06:43:50.222153+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2306.01841",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.10054",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2310.10054"
+    },
+    {
+      "requested_id": "arXiv:2402.08958",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.00258",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2502.00258"
+    },
+    {
+      "requested_id": "arXiv:2505.10118",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.10118"
+    },
+    {
+      "requested_id": "arXiv:2505.12044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19812",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.19812"
+    },
+    {
+      "requested_id": "arXiv:2512.23049",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.23049"
+    },
+    {
+      "requested_id": "arXiv:2603.05454",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Beyond Scattered Acceptance: Fast and Coherent Inference for DLMs via Longest Stable Prefixes",
+      "source_url": "https://arxiv.org/abs/2603.05454",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) promise highly parallel text generation, yet their practical inference speed is often bottlenecked by suboptimal decoding schedulers. Standard approaches rely on'scattered acceptance'-committing high confidence tokens at disjoint positions throughout the sequence. This approach inadvertently fractures the Key-Value (KV) cache, destroys memory locality, and forces the model into costly, repeated repairs across unstable token boundaries. To resolve this, we present the Longest Stable Prefix (LSP) scheduler, a training-free and model-agnostic inference paradigm based on monolithic prefix absorption. In each denoising step, LSP evaluates token stability via a single forward pass, dynamically identifies a contiguous left-aligned block of stable predictions, and snaps its boundary to natural linguistic or structural delimiters before an atomic commitment. This prefix-first topology yields dual benefits: systemically, it converts fragmented KV cache updates into efficient, contiguous appends; algorithmically, it preserves bidirectional lookahead over a geometrically shrinking active suffix, drastically reducing token flip rates and denoiser calls. Extensive evaluations on LLaDA-8B and Dream-7B demonstrate that LSP accelerates inference by up to 3.4x across rigorous benchmarks including mathematical reasoning, code generation, multilingual (CJK) tasks, and creative writing while matching or slightly improving output quality. By fundamentally restructuring the commitment topology, LSP bridges the gap between the theoretical parallelism of DLMs and practical hardware efficiency.",
+      "identifiers": [
+        "SemanticScholar:3eb02a5ac1a87f0692e15333c8b1b1b6c69392bd"
+      ],
+      "semantic_scholar_id": "3eb02a5ac1a87f0692e15333c8b1b1b6c69392bd",
+      "canonical_id": "arXiv:2603.05454",
+      "arxiv_id": "2603.05454",
+      "doi": "10.48550/arXiv.2603.05454",
+      "authors": [
+        "Peng-Xiang Li",
+        "Joey Tsai",
+        "Hong-Wei Xue",
+        "Kun-Yu Shi",
+        "Shi-Lin Yan"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 258,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "FlashBias: Fast Computation of Attention with Bias",
+      "source_url": "https://arxiv.org/abs/2505.12044",
+      "year": 2025,
+      "published": "2025-05-17",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention with bias, which extends standard attention by introducing prior knowledge as an additive bias matrix to the query-key scores, has been widely deployed in vision, language, protein-folding and other advanced scientific models, underscoring its status as a key evolution of this foundational module. However, introducing bias terms creates a severe efficiency bottleneck in attention computation. It disrupts the tightly fused memory-compute pipeline that underlies the speed of accelerators like FlashAttention, thereby stripping away most of their performance gains and leaving biased attention computationally expensive. Surprisingly, despite its common usage, targeted efficiency optimization for attention with bias remains absent, which seriously hinders its application in complex tasks. Diving into the computation of FlashAttention, we prove that its optimal efficiency is determined by the rank of the attention weight matrix. Inspired by this theoretical result, this paper presents FlashBias based on the low-rank compressed sensing theory, which can provide fast-exact computation for many widely used attention biases and a fast-accurate approximation for biases in general formalizations. FlashBias can fully take advantage of the extremely optimized matrix multiplication operation in modern GPUs, achieving 1.5$\\times$ speedup for Pairformer in AlphaFold 3, and over 2$\\times$ speedup for attention with bias in vision and language models without loss of accuracy. Code is available at this repository: https://github.com/thuml/FlashBias.",
+      "identifiers": [
+        "SemanticScholar:efdfef40962d20d8f5a591002dab7448da69e4a9"
+      ],
+      "semantic_scholar_id": "efdfef40962d20d8f5a591002dab7448da69e4a9",
+      "canonical_id": "arXiv:2505.12044",
+      "arxiv_id": "2505.12044",
+      "doi": "10.48550/arXiv.2505.12044",
+      "authors": [
+        "Haixu Wu",
+        "Ming-Hao Guo",
+        "Yue-Zhou Ma",
+        "Yuan-Xu Sun",
+        "Jian-Min Wang",
+        "W. Matusik",
+        "Ming-Sheng Long"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Binary and Ternary Natural Language Generation",
+      "source_url": "https://arxiv.org/abs/2306.01841",
+      "year": 2023,
+      "published": "2023-06-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary and binary neural networks enable multiplication-free computation and promise multiple orders of magnitude efficiency gains over full-precision networks if implemented on specialized hardware. However, since both the parameter and the output space are highly discretized, such networks have proven very difficult to optimize. The difficulties are compounded for the class of transformer text generation models due to the sensitivity of the attention operation to quantization and the noise-compounding effects of autoregressive decoding in the high-cardinality output space. We approach the problem with a mix of statistics-based quantization for the weights and elastic quantization of the activations and demonstrate the first ternary and binary transformer models on the downstream tasks of summarization and machine translation. Our ternary BART base achieves an R1 score of 41 on the CNN/DailyMail benchmark, which is merely 3.9 points behind the full model while being 16x more efficient. Our binary model, while less accurate, achieves a highly non-trivial score of 35.6. For machine translation, we achieved BLEU scores of 21.7 and 17.6 on the WMT16 En-Ro benchmark, compared with a full precision mBART model score of 26.8. We also compare our approach in the 8-bit activation setting, where our ternary and even binary weight models can match or outperform the best existing 8-bit weight models in the literature. Our code and models are available at: https://github.com/facebookresearch/Ternary_Binary_Transformer.",
+      "identifiers": [
+        "SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6"
+      ],
+      "semantic_scholar_id": "1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+      "canonical_id": "arXiv:2306.01841",
+      "arxiv_id": "2306.01841",
+      "doi": "10.48550/arXiv.2306.01841",
+      "authors": [
+        "Ze-Chun Liu",
+        "Barlas Oğuz",
+        "Aasish Pappu",
+        "Yangyang Shi",
+        "Raghuraman Krishnamoorthi"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1265,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers",
+      "source_url": "https://arxiv.org/abs/2402.08958",
+      "year": 2024,
+      "published": "2024-02-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the increasing complexity of generative AI models, post-training quantization (PTQ) has emerged as a promising solution for deploying hyper-scale models on edge devices such as mobile and TVs. Existing PTQ schemes, however, consume considerable time and resources, which could be a bottleneck in real situations where frequent model updates and multiple hyperparameter tunings are required. As a cost-effective alternative, learning-free PTQ schemes have been proposed. However, the performance is somewhat limited because they cannot consider the inter-layer dependency within the attention module, which is a significant feature of Transformers. In this paper, we thus propose a novel PTQ algorithm that balances accuracy and efficiency. The key idea of the proposed algorithm called aespa is to perform quantization layer-wise for efficiency while targeting attention-wise reconstruction to consider the cross-layer dependency. Through extensive experiments on various language models and complexity analysis, we demonstrate that aespa is accurate and efficient in quantizing Transformer models.",
+      "identifiers": [
+        "SemanticScholar:ac98a2b6a2eff37f3d3ba880013c8134cd871e07"
+      ],
+      "semantic_scholar_id": "ac98a2b6a2eff37f3d3ba880013c8134cd871e07",
+      "canonical_id": "arXiv:2402.08958",
+      "arxiv_id": "2402.08958",
+      "doi": "10.48550/arXiv.2402.08958",
+      "authors": [
+        "Junhan Kim",
+        "Chungman Lee",
+        "Eulrang Cho",
+        "Kyungphil Park",
+        "Ho-Young Kim",
+        "Joonyoung Kim",
+        "Yongkweon Jeon"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1008,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.05454",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.05454",
+        "id:SemanticScholar:3eb02a5ac1a87f0692e15333c8b1b1b6c69392bd",
+        "id:arXiv:2603.05454",
+        "title:beyond scattered acceptance fast and coherent inference for dlms via longest stable prefixes",
+        "url:https://arxiv.org/abs/2603.05454"
+      ],
+      "record": {
+        "title": "Beyond Scattered Acceptance: Fast and Coherent Inference for DLMs via Longest Stable Prefixes",
+        "source_url": "https://arxiv.org/abs/2603.05454",
+        "year": 2026,
+        "published": "2026-03-05",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) promise highly parallel text generation, yet their practical inference speed is often bottlenecked by suboptimal decoding schedulers. Standard approaches rely on'scattered acceptance'-committing high confidence tokens at disjoint positions throughout the sequence. This approach inadvertently fractures the Key-Value (KV) cache, destroys memory locality, and forces the model into costly, repeated repairs across unstable token boundaries. To resolve this, we present the Longest Stable Prefix (LSP) scheduler, a training-free and model-agnostic inference paradigm based on monolithic prefix absorption. In each denoising step, LSP evaluates token stability via a single forward pass, dynamically identifies a contiguous left-aligned block of stable predictions, and snaps its boundary to natural linguistic or structural delimiters before an atomic commitment. This prefix-first topology yields dual benefits: systemically, it converts fragmented KV cache updates into efficient, contiguous appends; algorithmically, it preserves bidirectional lookahead over a geometrically shrinking active suffix, drastically reducing token flip rates and denoiser calls. Extensive evaluations on LLaDA-8B and Dream-7B demonstrate that LSP accelerates inference by up to 3.4x across rigorous benchmarks including mathematical reasoning, code generation, multilingual (CJK) tasks, and creative writing while matching or slightly improving output quality. By fundamentally restructuring the commitment topology, LSP bridges the gap between the theoretical parallelism of DLMs and practical hardware efficiency.",
+        "identifiers": [
+          "SemanticScholar:3eb02a5ac1a87f0692e15333c8b1b1b6c69392bd"
+        ],
+        "semantic_scholar_id": "3eb02a5ac1a87f0692e15333c8b1b1b6c69392bd",
+        "canonical_id": "arXiv:2603.05454",
+        "arxiv_id": "2603.05454",
+        "doi": "10.48550/arXiv.2603.05454",
+        "authors": [
+          "Peng-Xiang Li",
+          "Joey Tsai",
+          "Hong-Wei Xue",
+          "Kun-Yu Shi",
+          "Shi-Lin Yan"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 258,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.12044",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.12044",
+        "id:SemanticScholar:efdfef40962d20d8f5a591002dab7448da69e4a9",
+        "id:arXiv:2505.12044",
+        "title:flashbias fast computation of attention with bias",
+        "url:https://arxiv.org/abs/2505.12044"
+      ],
+      "record": {
+        "title": "FlashBias: Fast Computation of Attention with Bias",
+        "source_url": "https://arxiv.org/abs/2505.12044",
+        "year": 2025,
+        "published": "2025-05-17",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention with bias, which extends standard attention by introducing prior knowledge as an additive bias matrix to the query-key scores, has been widely deployed in vision, language, protein-folding and other advanced scientific models, underscoring its status as a key evolution of this foundational module. However, introducing bias terms creates a severe efficiency bottleneck in attention computation. It disrupts the tightly fused memory-compute pipeline that underlies the speed of accelerators like FlashAttention, thereby stripping away most of their performance gains and leaving biased attention computationally expensive. Surprisingly, despite its common usage, targeted efficiency optimization for attention with bias remains absent, which seriously hinders its application in complex tasks. Diving into the computation of FlashAttention, we prove that its optimal efficiency is determined by the rank of the attention weight matrix. Inspired by this theoretical result, this paper presents FlashBias based on the low-rank compressed sensing theory, which can provide fast-exact computation for many widely used attention biases and a fast-accurate approximation for biases in general formalizations. FlashBias can fully take advantage of the extremely optimized matrix multiplication operation in modern GPUs, achieving 1.5$\\times$ speedup for Pairformer in AlphaFold 3, and over 2$\\times$ speedup for attention with bias in vision and language models without loss of accuracy. Code is available at this repository: https://github.com/thuml/FlashBias.",
+        "identifiers": [
+          "SemanticScholar:efdfef40962d20d8f5a591002dab7448da69e4a9"
+        ],
+        "semantic_scholar_id": "efdfef40962d20d8f5a591002dab7448da69e4a9",
+        "canonical_id": "arXiv:2505.12044",
+        "arxiv_id": "2505.12044",
+        "doi": "10.48550/arXiv.2505.12044",
+        "authors": [
+          "Haixu Wu",
+          "Ming-Hao Guo",
+          "Yue-Zhou Ma",
+          "Yuan-Xu Sun",
+          "Jian-Min Wang",
+          "W. Matusik",
+          "Ming-Sheng Long"
+        ],
+        "priority": 26,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 26,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 550,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2306.01841",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2306.01841",
+        "id:SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+        "id:arXiv:2306.01841",
+        "title:binary and ternary natural language generation",
+        "url:https://arxiv.org/abs/2306.01841"
+      ],
+      "record": {
+        "title": "Binary and Ternary Natural Language Generation",
+        "source_url": "https://arxiv.org/abs/2306.01841",
+        "year": 2023,
+        "published": "2023-06-02",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ternary and binary neural networks enable multiplication-free computation and promise multiple orders of magnitude efficiency gains over full-precision networks if implemented on specialized hardware. However, since both the parameter and the output space are highly discretized, such networks have proven very difficult to optimize. The difficulties are compounded for the class of transformer text generation models due to the sensitivity of the attention operation to quantization and the noise-compounding effects of autoregressive decoding in the high-cardinality output space. We approach the problem with a mix of statistics-based quantization for the weights and elastic quantization of the activations and demonstrate the first ternary and binary transformer models on the downstream tasks of summarization and machine translation. Our ternary BART base achieves an R1 score of 41 on the CNN/DailyMail benchmark, which is merely 3.9 points behind the full model while being 16x more efficient. Our binary model, while less accurate, achieves a highly non-trivial score of 35.6. For machine translation, we achieved BLEU scores of 21.7 and 17.6 on the WMT16 En-Ro benchmark, compared with a full precision mBART model score of 26.8. We also compare our approach in the 8-bit activation setting, where our ternary and even binary weight models can match or outperform the best existing 8-bit weight models in the literature. Our code and models are available at: https://github.com/facebookresearch/Ternary_Binary_Transformer.",
+        "identifiers": [
+          "SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6"
+        ],
+        "semantic_scholar_id": "1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+        "canonical_id": "arXiv:2306.01841",
+        "arxiv_id": "2306.01841",
+        "doi": "10.48550/arXiv.2306.01841",
+        "authors": [
+          "Ze-Chun Liu",
+          "Barlas Oğuz",
+          "Aasish Pappu",
+          "Yangyang Shi",
+          "Raghuraman Krishnamoorthi"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1265,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2402.08958",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.08958",
+        "id:SemanticScholar:ac98a2b6a2eff37f3d3ba880013c8134cd871e07",
+        "id:arXiv:2402.08958",
+        "title:towards nextlevel posttraining quantization of hyperscale transformers",
+        "url:https://arxiv.org/abs/2402.08958"
+      ],
+      "record": {
+        "title": "Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers",
+        "source_url": "https://arxiv.org/abs/2402.08958",
+        "year": 2024,
+        "published": "2024-02-14",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the increasing complexity of generative AI models, post-training quantization (PTQ) has emerged as a promising solution for deploying hyper-scale models on edge devices such as mobile and TVs. Existing PTQ schemes, however, consume considerable time and resources, which could be a bottleneck in real situations where frequent model updates and multiple hyperparameter tunings are required. As a cost-effective alternative, learning-free PTQ schemes have been proposed. However, the performance is somewhat limited because they cannot consider the inter-layer dependency within the attention module, which is a significant feature of Transformers. In this paper, we thus propose a novel PTQ algorithm that balances accuracy and efficiency. The key idea of the proposed algorithm called aespa is to perform quantization layer-wise for efficiency while targeting attention-wise reconstruction to consider the cross-layer dependency. Through extensive experiments on various language models and complexity analysis, we demonstrate that aespa is accurate and efficient in quantizing Transformer models.",
+        "identifiers": [
+          "SemanticScholar:ac98a2b6a2eff37f3d3ba880013c8134cd871e07"
+        ],
+        "semantic_scholar_id": "ac98a2b6a2eff37f3d3ba880013c8134cd871e07",
+        "canonical_id": "arXiv:2402.08958",
+        "arxiv_id": "2402.08958",
+        "doi": "10.48550/arXiv.2402.08958",
+        "authors": [
+          "Junhan Kim",
+          "Chungman Lee",
+          "Eulrang Cho",
+          "Kyungphil Park",
+          "Ho-Young Kim",
+          "Joonyoung Kim",
+          "Yongkweon Jeon"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1008,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c872743758b15b0aba7f3e9fa8f8f2a5ae87147617e5e00dbf7369ec009903ec",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
