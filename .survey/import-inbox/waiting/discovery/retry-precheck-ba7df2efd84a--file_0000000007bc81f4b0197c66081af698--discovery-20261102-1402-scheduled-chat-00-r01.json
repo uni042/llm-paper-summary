@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r01",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08373",
+      "identity_tokens": [
+        "id:arXiv:2610.08373",
+        "id:DOI:10.48550/arXiv.2610.08373"
+      ],
+      "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+      "reason": "AttentionとFFNを別GPU群に置くAFDサービングの配置・GPU動作周波数・電力制限を、パイプライン段階のエネルギー事前モデルとGaussian process残差補正を組み合わせて共同探索する。著者の一次要旨はA6000/A100、Qwen/DeepSeekの16条件で、固定した構成を別リクエストで評価し、既定構成比平均40.5%のエネルギー削減と20.7%の出力token率増加を報告。SLOを制約とする実推論サービング構成探索でありaccept。",
+      "source_url": "https://arxiv.org/abs/2610.08373",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19819",
+      "identity_tokens": [
+        "id:arXiv:2610.19819",
+        "id:DOI:10.48550/arXiv.2610.19819"
+      ],
+      "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+      "reason": "RAGや長文脈で増えるprefill入力tokenのエネルギーを、Llama-3.1/Qwen-2とNVIDIA A100の高分解能電力計測で特徴付ける。PagedAttentionを用いた最適化サービングは112K tokenで標準方式比最大8.9倍のエネルギー効率を示し、入力と出力tokenのエネルギー比もengineで変化すると報告。推論時のprefill・decodeエネルギーと実装差を直接計測しているためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.19819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04473",
+      "identity_tokens": [
+        "id:arXiv:2610.04473",
+        "id:DOI:10.48550/arXiv.2610.04473"
+      ],
+      "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+      "reason": "KV保持率の層別連続値とMoE expert数の層別離散値を共通の制約付き多目的black-box最適化で探索する。予算超過構成をモデル実行前に除外し、proxy集合で探索したPareto解を本評価で再検証する。一次要旨はQwen2.5-7Bの16K KVを64.4%削減しTPOTを22.9～48.5%短縮、DeepSeek-V2-Liteでtoken-expert対を43.0%削減したと報告。KV圧縮・MoE推論の具体的設定最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.04473",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22543",
+      "identity_tokens": [
+        "id:arXiv:2610.22543",
+        "id:DOI:10.48550/arXiv.2610.22543"
+      ],
+      "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+      "reason": "拡散言語モデルの投機復号で、tokenだけでなく確定させる位置の順序を予測する0.62MパラメータのSPOT drafterを提案。target出力分布から位置順序と候補木を生成し、共有Gumbel雑音を用いたstate一致で厳密検証する。一次要旨はSDAR-8Bでtarget実行回数最大6.8倍削減、標準復号比最大3.4倍throughput、SPOT-Setsで閾値復号比平均59%増を報告。生成分布を維持する拡散LLM推論高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22347",
+      "identity_tokens": [
+        "id:arXiv:2610.22347",
+        "id:DOI:10.48550/arXiv.2610.22347"
+      ],
+      "title": "Speculative Forcing for Efficient Autoregressive Video Generation",
+      "reason": "少数stepの自己回帰動画生成器で、中間denoise推定が十分なtokenを早期確定し残りのdenoiseを省略するSpeculative Forcingを提案。一次要旨はLongLiveやLingbot-Worldの動画・world生成でfps改善を評価するが、対象は映像生成器のdenoisingであり、LLMのtoken復号・サービング・KV圧縮の改善を検証していないため現行LLM推論サーベイ対象外。",
+      "source_url": "https://arxiv.org/abs/2610.22347",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36576",
+      "identity_tokens": [
+        "id:arXiv:2610.36576",
+        "id:DOI:10.48550/arXiv.2610.36576"
+      ],
+      "title": "Less is more: learning what to profile for GPU kernel optimization",
+      "reason": "LLMによるGPU kernel書換えに必要な性能カウンタを固定せず、kernel別にREWRITE/SPLITで決定木を学習してprofiling項目を選択するAutoProfilerを提案。構築後はkernelごとの最小限のprofile情報を取得してLLM rewriterを一度呼ぶ設計。一次要旨はKernelBenchで固定profiling構成より制約予算下のkernel最適化が改善したと報告。推論kernelを含むGPU実装最適化の直接的基盤としてaccept（LLMサービングでのend-to-end評価は要確認）。",
+      "source_url": "https://arxiv.org/abs/2610.36576",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04277",
+      "identity_tokens": [
+        "id:arXiv:2610.04277",
+        "id:DOI:10.48550/arXiv.2610.04277"
+      ],
+      "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+      "reason": "Intel GPUのmatrix-engineレイアウト、L1 prefetch、GPU stack間通信をtile APIへ埋め込んだSyclKittensを提案し、kernel実装の探索空間を構造化する。一次要旨はGEMMでoneDNN比57.5%から82.1%へ、手動調整を含むkernel suiteで96%へ到達し、Llama-3.1-8B推論がtorch.compile比単一GPUで1.59倍、複数GPU decodeでoneCCL比最大2.91倍高速と報告。LLM推論kernelの具体的runtime/実装としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.04277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39418",
+      "identity_tokens": [
+        "id:arXiv:2610.39418",
+        "id:DOI:10.48550/arXiv.2610.39418"
+      ],
+      "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+      "reason": "線形・gated・delta-ruleの再帰演算で、計算結果を保存する回転・対角scale・decay/write配置変更など7種の不変変換を導出し、低精度prefillの数値誤差を低減する。既存SSDi8のMamba-2 prefillへ適用し、一次要旨はMamba-2 1.3B/2.7B/8BとNemotron-H 8Bで同等latency時のperplexity改善を報告。ハイブリッドLLMの推論量子化・prefill kernelに直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39418",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19026",
+      "identity_tokens": [
+        "id:arXiv:2610.19026",
+        "id:DOI:10.48550/arXiv.2610.19026"
+      ],
+      "title": "Joint Subspace Sparse Attention for Efficient Long-Context Decoding",
+      "reason": "長文脈decodeのtoken単位KV選択に対し、query/keyスコアを保つ共有低次元部分空間をspectral解で学習し、GQAのhead別選択をgather-free indexed attention kernelで実行するJSSAを提案。一次要旨はGQA/滑動窓/MLAでfull-KVに近い精度を保ち、B200の128K文脈でfull-KV比最大6.43倍decode throughputを報告。KV traffic削減とGPU kernelの共同設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.19026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22985",
+      "identity_tokens": [
+        "id:arXiv:2610.22985",
+        "id:DOI:10.48550/arXiv.2610.22985"
+      ],
+      "title": "Prism Attention: Proposal-Refined Index Sharing Mechanism for Efficient LLMs Inference",
+      "reason": "層を跨いで疎attention indexを再利用すると重要token集合がずれる問題に対し、anchor層の候補indexを後続層で局所的に精緻化するPrism Attentionを提案。選択tokenの中心は安定し変化が境界付近に集中するという観測に基づき、層別適応性とindex再計算削減を両立する。一次要旨は128K文脈でFlashAttention比3.4倍のend-to-end decode高速化と推論・長文脈benchmarkでの精度維持を報告。LLM sparse attentionの直接的な推論高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:07:43+09:00",
+      "last_checked_at": "2026-11-02T14:07:43+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
