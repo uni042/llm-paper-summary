@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a1636b5651ef1a7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.18676",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.18676",
+    "identity_tokens": [
+      "arXiv:2603.18676"
+    ],
+    "reason": "大域的ワークスペース理論を具現化する注意の一般化MANARは、線形時間性は副産物として述べられるものの、評価はGLUEやImageNet等の能力ベンチマークが中心の認知アーキテクチャ研究であり、LLM推論システムへの技術的貢献はない。",
+    "first_checked_at": "2026-11-18T22:49:15+00:00",
+    "last_checked_at": "2026-11-18T22:49:15+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+      "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "MANAR: Memory-augmented Attention with Navigational Abstract Conceptual Representation"
+  },
+  "processed_at": "2026-11-18T22:49:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a1636b5651e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

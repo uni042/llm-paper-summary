@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da600532254c1653-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.24766",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.24766",
+    "identity_tokens": [
+      "arXiv:2610.24766"
+    ],
+    "reason": "複数トークン予測を補助モジュールでなく backbone 自身の最終層に担わせ、推論時に自己ドラフトも可能にするECHOだが、要旨の主たる成果は事前学習の精度と学習オーバーヘッド半減であり、サービングでの高速化の定量評価は示されず境界とする。",
+    "first_checked_at": "2026-11-18T22:49:19+00:00",
+    "last_checked_at": "2026-11-18T22:49:19+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2601.05724-overcoming-joint-intractability-with-lossless-hierarchical-speculative-d.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2605.18810-d-pace.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction"
+  },
+  "processed_at": "2026-11-18T22:49:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da600532254c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

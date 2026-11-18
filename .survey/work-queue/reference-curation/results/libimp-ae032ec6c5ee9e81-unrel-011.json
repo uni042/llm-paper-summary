@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae032ec6c5ee9e81-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.12026",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.12026",
+    "identity_tokens": [
+      "arXiv:2510.12026"
+    ],
+    "reason": "Mambaが低次元ターゲットを文脈内学習できることを、テスト時特徴学習のサンプル複雑度まで含めて証明する理論解析であり、推論システムへの具体的な機構や効率の適用は示されていないため対象外とする。",
+    "first_checked_at": "2026-11-18T22:49:19+00:00",
+    "last_checked_at": "2026-11-18T22:49:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+    ],
+    "title": "Mamba Can Learn Low-Dimensional Targets In-Context via Test-Time Feature Learning"
+  },
+  "processed_at": "2026-11-18T22:49:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae032ec6c5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

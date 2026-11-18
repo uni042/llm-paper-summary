@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da600532254c1653-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.135448",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.neucom.2026.135448",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2026.135448"
+    ],
+    "reason": "小規模言語モデルのオンデバイスRAGについて、量子化・プルーニング・蒸留等の圧縮とNPU最適化、検索、Green AIの三領域を横断整理したサーベイであり、オンデバイス推論に触れるものの新規の推論機構の提案はなく境界とする。",
+    "first_checked_at": "2026-11-18T22:49:20+00:00",
+    "last_checked_at": "2026-11-18T22:49:20+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Toward sustainable on-device intelligence: A survey on energy-efficient RAG systems with small language models"
+  },
+  "processed_at": "2026-11-18T22:49:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da600532254c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

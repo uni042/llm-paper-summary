@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae032ec6c5ee9e81-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.15715",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.15715",
+    "identity_tokens": [
+      "arXiv:2610.15715"
+    ],
+    "reason": "線形注意の固定長状態に疎なエピソード記憶NoteBankを併設し、学習不要で証拠を再生して100万トークンでの検索精度を上げる研究で、機構は推論時に動作するものの主たる評価軸は長文脈の能力・精度であり効率の検証は副次的なため境界とする。",
+    "first_checked_at": "2026-11-18T22:49:16+00:00",
+    "last_checked_at": "2026-11-18T22:49:16+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+      "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+      "papers/inference/99-other-inference-systems/2024-2402.09906-generative-representational-instruction-tuning.md",
+      "papers/inference/99-other-inference-systems/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "History Replays Itself: Unleashing Long-Context Capability in Linear Attention"
+  },
+  "processed_at": "2026-11-18T22:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae032ec6c5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

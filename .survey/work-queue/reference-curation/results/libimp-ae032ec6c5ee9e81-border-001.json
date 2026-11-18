@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae032ec6c5ee9e81-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/ciml69155.2026.11692797",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/ciml69155.2026.11692797",
+    "identity_tokens": [
+      "DOI:10.1109/ciml69155.2026.11692797"
+    ],
+    "reason": "共有vLLMバックエンド上で動くマルチエージェント社会シミュレーションについて、認知フェーズとメッセージフェーズを二つのルーフライン領域として平均ステップ時間をモデル化した容量計画の事例研究であり、サービング機構の改善提案ではないため境界とする。",
+    "first_checked_at": "2026-11-18T22:49:15+00:00",
+    "last_checked_at": "2026-11-18T22:49:15+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Dual-Roofline Runtime Model for Capacity Planning in Shared-Backend LLM Multi-Agent Social Simulation: A Case Study of AgentSociety"
+  },
+  "processed_at": "2026-11-18T22:49:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae032ec6c5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

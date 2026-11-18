@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a1636b5651ef1a7-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.12204",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.12204",
+    "identity_tokens": [
+      "arXiv:2602.12204"
+    ],
+    "reason": "反復パターンの固定化により注意利用が訓練とともに減少し注意計算を37.8倍削減できるとするCRAMだが、機構は学習過程でのエピソード記憶の意味記憶への蒸留に依存し、評価も専用ベンチマーク中心で、既存モデルのサービング適用は示されていないため境界とする。",
+    "first_checked_at": "2026-11-18T22:49:12+00:00",
+    "last_checked_at": "2026-11-18T22:49:12+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction"
+  },
+  "processed_at": "2026-11-18T22:49:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a1636b5651e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

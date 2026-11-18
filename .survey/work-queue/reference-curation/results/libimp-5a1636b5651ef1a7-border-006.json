@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a1636b5651ef1a7-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/cloud67622.2025.00027",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/cloud67622.2025.00027",
+    "identity_tokens": [
+      "DOI:10.1109/cloud67622.2025.00027"
+    ],
+    "reason": "クラウドLLM推論向けInferSaveは、SLOとワークロードからKVキャッシュオフロード時のGPUメモリ需要を見積もり低コストなVMインスタンスを推薦する枠組みであり、実行時のサービング機構ではなく配置・コスト計画の支援であるため境界とする。",
+    "first_checked_at": "2026-11-18T22:49:13+00:00",
+    "last_checked_at": "2026-11-18T22:49:13+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cost-Efficient VM Selection for Cloud-Based LLM Inference with KV Cache Offloading"
+  },
+  "processed_at": "2026-11-18T22:49:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a1636b5651e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

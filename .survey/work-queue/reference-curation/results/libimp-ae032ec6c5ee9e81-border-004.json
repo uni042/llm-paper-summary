@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae032ec6c5ee9e81-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.00010",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.00010",
+    "identity_tokens": [
+      "arXiv:2610.00010"
+    ],
+    "reason": "長期エージェントの外部メモリについて、繰り返し検索が一部の状態へ集中する重尾な利用分布を検索方策とグラフ構造を横断して監査した研究で、メモリ効率改善への示唆は示すものの、推論システムの機構提案はなく境界とする。",
+    "first_checked_at": "2026-11-18T22:49:16+00:00",
+    "last_checked_at": "2026-11-18T22:49:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents"
+  },
+  "processed_at": "2026-11-18T22:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae032ec6c5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

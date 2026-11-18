@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T14:27:10+00:00",
-  "record_count": 6359,
+  "updated_at": "2026-11-18T22:49:20+00:00",
+  "record_count": 6378,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -98924,6 +98924,348 @@
       ],
       "borderline_recheck_count": 0,
       "title": "PALBERT: Teaching ALBERT to Ponder"
+    },
+    "DOI:10.52202/085713-1372": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-1372",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1372"
+      ],
+      "reason": "ブロック内とブロック間の二段疎注意で通常注意を近似するDuSAは学習と推論の双方を高速化するとするが、評価は長距離アリーナや画像分類・分割・検出など汎用タスクが中心で、LLM推論システムへの直接の適用・検証は薄いため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:12+00:00",
+      "last_checked_at": "2026-11-18T22:49:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DuSA: Fast and Accurate Dual-Stage Sparse Attention Mechanism Accelerating Both Training and Inference"
+    },
+    "arXiv:2602.12204": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12204",
+      "identity_tokens": [
+        "arXiv:2602.12204"
+      ],
+      "reason": "反復パターンの固定化により注意利用が訓練とともに減少し注意計算を37.8倍削減できるとするCRAMだが、機構は学習過程でのエピソード記憶の意味記憶への蒸留に依存し、評価も専用ベンチマーク中心で、既存モデルのサービング適用は示されていないため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:12+00:00",
+      "last_checked_at": "2026-11-18T22:49:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction"
+    },
+    "DOI:10.18653/v1/2025.emnlp-main.123": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.123",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.123"
+      ],
+      "reason": "位置符号なし層とスライディングウィンドウ注意層を交互配置するSWANは訓練長を超える長さへの汎化が主成果で、推論スループットの向上も述べられるが、貢献の中心は長文脈言語モデリングのアーキテクチャ能力にあるため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:13+00:00",
+      "last_checked_at": "2026-11-18T22:49:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SWAN: An Efficient and Scalable Approach for Long-Context Language Modeling"
+    },
+    "DOI:10.1109/cloud67622.2025.00027": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud67622.2025.00027",
+      "identity_tokens": [
+        "DOI:10.1109/cloud67622.2025.00027"
+      ],
+      "reason": "クラウドLLM推論向けInferSaveは、SLOとワークロードからKVキャッシュオフロード時のGPUメモリ需要を見積もり低コストなVMインスタンスを推薦する枠組みであり、実行時のサービング機構ではなく配置・コスト計画の支援であるため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:13+00:00",
+      "last_checked_at": "2026-11-18T22:49:13+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cost-Efficient VM Selection for Cloud-Based LLM Inference with KV Cache Offloading"
+    },
+    "DOI:10.1109/jstsp.2025.3568224": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jstsp.2025.3568224",
+      "identity_tokens": [
+        "DOI:10.1109/jstsp.2025.3568224"
+      ],
+      "reason": "再学習なし構造プルーニングの復元を保った重みへの線形補間で誤差蓄積を抑えるLIARは、考え方自体はLLM圧縮にも通じるが、要旨の評価はBERTによるGLUEやSQuADが中心で、大規模生成モデルの推論への適用確認が薄いため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:13+00:00",
+      "last_checked_at": "2026-11-18T22:49:13+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reconstruct the Pruned Model Without Retraining"
+    },
+    "DOI:10.1109/icast68191.2025.11300172": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icast68191.2025.11300172",
+      "identity_tokens": [
+        "DOI:10.1109/icast68191.2025.11300172"
+      ],
+      "reason": "注意値の重要度情報をゲートに取り込むAMoEはMoEの性能改善を目的としたアーキテクチャ改良であり、推論コストの削減はMoE一般の性質として述べられるに留まり、推論システム機構としての具体的な貢献は薄いため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:14+00:00",
+      "last_checked_at": "2026-11-18T22:49:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Attention-enhanced Gating for Mixture of Expert LLM"
+    },
+    "DOI:10.1109/ciml69155.2026.11692797": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ciml69155.2026.11692797",
+      "identity_tokens": [
+        "DOI:10.1109/ciml69155.2026.11692797"
+      ],
+      "reason": "共有vLLMバックエンド上で動くマルチエージェント社会シミュレーションについて、認知フェーズとメッセージフェーズを二つのルーフライン領域として平均ステップ時間をモデル化した容量計画の事例研究であり、サービング機構の改善提案ではないため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:15+00:00",
+      "last_checked_at": "2026-11-18T22:49:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Dual-Roofline Runtime Model for Capacity Planning in Shared-Backend LLM Multi-Agent Social Simulation: A Case Study of AgentSociety"
+    },
+    "arXiv:2606.00532": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00532",
+      "identity_tokens": [
+        "arXiv:2606.00532"
+      ],
+      "reason": "凍結した言語モデルに対し、問題ごとに推論量と提示する学習済み知識カードを選ぶKACEは、段階的自己整合で推論支出の配分にも触れるが、主貢献は数学推論向けのプロンプト知識管理でありサービング機構ではないため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:15+00:00",
+      "last_checked_at": "2026-11-18T22:49:15+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.25140-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.12262-cascadedebate-multi-agent-deliberation-for-cost-aware-llm-cascades.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KACE: Knowledge-Adaptive Context Engineering for Mathematical Reasoning"
+    },
+    "arXiv:2610.15715": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.15715",
+      "identity_tokens": [
+        "arXiv:2610.15715"
+      ],
+      "reason": "線形注意の固定長状態に疎なエピソード記憶NoteBankを併設し、学習不要で証拠を再生して100万トークンでの検索精度を上げる研究で、機構は推論時に動作するものの主たる評価軸は長文脈の能力・精度であり効率の検証は副次的なため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:16+00:00",
+      "last_checked_at": "2026-11-18T22:49:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2024-2402.09906-generative-representational-instruction-tuning.md",
+        "papers/inference/99-other-inference-systems/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "History Replays Itself: Unleashing Long-Context Capability in Linear Attention"
+    },
+    "arXiv:2610.00010": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00010",
+      "identity_tokens": [
+        "arXiv:2610.00010"
+      ],
+      "reason": "長期エージェントの外部メモリについて、繰り返し検索が一部の状態へ集中する重尾な利用分布を検索方策とグラフ構造を横断して監査した研究で、メモリ効率改善への示唆は示すものの、推論システムの機構提案はなく境界とする。",
+      "first_checked_at": "2026-11-18T22:49:16+00:00",
+      "last_checked_at": "2026-11-18T22:49:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00615-acon-optimizing-context-compression-for-long-horizon-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents"
+    },
+    "arXiv:2611.05345": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2611.05345",
+      "identity_tokens": [
+        "arXiv:2611.05345"
+      ],
+      "reason": "投機的デコードの検証ウィンドウ内数値ノイズが長期エージェントの推論精度を左右することを示し、重要局面で意図的に棄却されるようドラフトを訓練して精度を上げる研究で、投機的デコードを題材にするものの目的は高速化でなく推論能力の改善にあるため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:16+00:00",
+      "last_checked_at": "2026-11-18T22:49:16+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2501.19309-judge-decoding-faster-speculative-sampling-requires-going-beyond-model-a.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents"
+    },
+    "arXiv:2506.12149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12149",
+      "identity_tokens": [
+        "arXiv:2506.12149"
+      ],
+      "reason": "推論時にモデルの勾配を使って文書混合を最適化する検索手法RICOは、状態空間モデル等の有界な推論資源を動機とするが、貢献の中心はRAGの検索品質であり、推論サービングやメモリ機構の提案ではないため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:17+00:00",
+      "last_checked_at": "2026-11-18T22:49:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2402.09906-generative-representational-instruction-tuning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Maximally-Informative Retrieval for State Space Model Generation"
+    },
+    "arXiv:2510.14823": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.14823",
+      "identity_tokens": [
+        "arXiv:2510.14823"
+      ],
+      "reason": "32ビットから4ビットへ段階的に精度を落とす分数ビット量子化認識学習FraQATは、スマートフォン展開を動機とするものの対象は画像合成を含む生成モデル全般で、手法も学習側の最適化が中心であり、推論機構への直接貢献は間接的なため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:17+00:00",
+      "last_checked_at": "2026-11-18T22:49:17+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2025-2501.16385-fbquant-feedback-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FraQAT: Quantization Aware Training with Fractional bits"
+    },
+    "arXiv:2610.34977": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34977",
+      "identity_tokens": [
+        "arXiv:2610.34977"
+      ],
+      "reason": "長期エージェントのメモリについて、保存内容でなくアクセス状態だけを検索履歴から進化させるAMIEはプラグイン層として検索を再重み付けするが、対象はエージェントの経験メモリ管理であり、LLM推論システムのメモリ・キャッシュ機構とは層が異なるため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:17+00:00",
+      "last_checked_at": "2026-11-18T22:49:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Memory Index Evolution for Agents"
+    },
+    "arXiv:2506.10716": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.10716",
+      "identity_tokens": [
+        "arXiv:2506.10716"
+      ],
+      "reason": "数学推論の冗長な思考過程を、トレース診断と勾配風プロンプト最適化で削るPREMISEはトークン量と推論コストの削減を狙うが、手段はブラックボックスなプロンプト書き換えのみで、推論システムの機構提案ではないため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:18+00:00",
+      "last_checked_at": "2026-11-18T22:49:18+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PREMISE: Scalable and Strategic Prompt Optimization for Efficient Mathematical Reasoning in Large Models"
+    },
+    "arXiv:2610.13506": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.13506",
+      "identity_tokens": [
+        "arXiv:2610.13506"
+      ],
+      "reason": "自動音声認識向けにEAGLE式投機的デコードを移植したEAGLE-ASRは、汎用ドラフトモジュールで無損失にASRデコードを高速化するが、対象モデルは音響・Conformer系であり、LLM推論システムそのものへの貢献としては応用寄りのため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:18+00:00",
+      "last_checked_at": "2026-11-18T22:49:18+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2507.18181-specasr-accelerating-llm-based-automatic-speech-recognition-via-speculat.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding"
+    },
+    "arXiv:2610.24766": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24766",
+      "identity_tokens": [
+        "arXiv:2610.24766"
+      ],
+      "reason": "複数トークン予測を補助モジュールでなく backbone 自身の最終層に担わせ、推論時に自己ドラフトも可能にするECHOだが、要旨の主たる成果は事前学習の精度と学習オーバーヘッド半減であり、サービングでの高速化の定量評価は示されず境界とする。",
+      "first_checked_at": "2026-11-18T22:49:19+00:00",
+      "last_checked_at": "2026-11-18T22:49:19+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2601.05724-overcoming-joint-intractability-with-lossless-hierarchical-speculative-d.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2605.18810-d-pace.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction"
+    },
+    "DOI:10.32604/cmc.2026.079522": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.32604/cmc.2026.079522",
+      "identity_tokens": [
+        "DOI:10.32604/cmc.2026.079522"
+      ],
+      "reason": "残差エントロピーを正則化に加えた学習後量子化DARE-Qは推論ロジック不変の線形モジュールとして差し込めるものの、検証はOPT-125M/350Mの perplexity のみで汎用ニューラルネット量子化の域を出ず、LLM推論システムへの具体性が弱いため境界とする。",
+      "first_checked_at": "2026-11-18T22:49:19+00:00",
+      "last_checked_at": "2026-11-18T22:49:19+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI Model Compression Methods: A Distribution-Aware Residual Entropy Quantization"
+    },
+    "DOI:10.1016/j.neucom.2026.135448": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.135448",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.135448"
+      ],
+      "reason": "小規模言語モデルのオンデバイスRAGについて、量子化・プルーニング・蒸留等の圧縮とNPU最適化、検索、Green AIの三領域を横断整理したサーベイであり、オンデバイス推論に触れるものの新規の推論機構の提案はなく境界とする。",
+      "first_checked_at": "2026-11-18T22:49:20+00:00",
+      "last_checked_at": "2026-11-18T22:49:20+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toward sustainable on-device intelligence: A survey on energy-efficient RAG systems with small language models"
     }
   }
 }

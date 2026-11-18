@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae032ec6c5ee9e81-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.05345",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.05345",
+    "identity_tokens": [
+      "arXiv:2611.05345"
+    ],
+    "reason": "投機的デコードの検証ウィンドウ内数値ノイズが長期エージェントの推論精度を左右することを示し、重要局面で意図的に棄却されるようドラフトを訓練して精度を上げる研究で、投機的デコードを題材にするものの目的は高速化でなく推論能力の改善にあるため境界とする。",
+    "first_checked_at": "2026-11-18T22:49:16+00:00",
+    "last_checked_at": "2026-11-18T22:49:16+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2501.19309-judge-decoding-faster-speculative-sampling-requires-going-beyond-model-a.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents"
+  },
+  "processed_at": "2026-11-18T22:49:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae032ec6c5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

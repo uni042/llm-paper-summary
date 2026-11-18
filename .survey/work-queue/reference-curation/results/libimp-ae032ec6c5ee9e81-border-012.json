@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae032ec6c5ee9e81-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.13506",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.13506",
+    "identity_tokens": [
+      "arXiv:2610.13506"
+    ],
+    "reason": "自動音声認識向けにEAGLE式投機的デコードを移植したEAGLE-ASRは、汎用ドラフトモジュールで無損失にASRデコードを高速化するが、対象モデルは音響・Conformer系であり、LLM推論システムそのものへの貢献としては応用寄りのため境界とする。",
+    "first_checked_at": "2026-11-18T22:49:18+00:00",
+    "last_checked_at": "2026-11-18T22:49:18+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2507.18181-specasr-accelerating-llm-based-automatic-speech-recognition-via-speculat.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2509.11815-specvlm-fast-speculative-decoding-in-vision-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Lossless Inference Acceleration for ASR via EAGLE-Style Speculative Decoding"
+  },
+  "processed_at": "2026-11-18T22:49:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae032ec6c5ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

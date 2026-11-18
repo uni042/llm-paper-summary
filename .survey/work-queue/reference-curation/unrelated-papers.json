@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T14:10:35+00:00",
-  "record_count": 12925,
+  "updated_at": "2026-11-18T22:49:20+00:00",
+  "record_count": 12930,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -185933,6 +185933,91 @@
         "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
       ],
       "title": "When All Rollouts Fail: Policy-Compatible Joint Decoding for Hard-Problem Reasoning"
+    },
+    "arXiv:2610.32132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32132",
+      "identity_tokens": [
+        "arXiv:2610.32132"
+      ],
+      "reason": "ストリーミング動画理解で推論と応答のタイミングを同期させるSyncProは、主眼が先回り応答という動画アシスタントの能力・振る舞いの改善にあり、LLM推論システムの機構への貢献は確認できない。",
+      "first_checked_at": "2026-11-18T22:49:14+00:00",
+      "last_checked_at": "2026-11-18T22:49:14+00:00",
+      "linked_from": [
+        "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+        "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md",
+        "papers/inference/99-other-inference-systems/2026-2601.10323-roma-real-time-omni-multimodal-assistant-with-interactive-streaming-unde.md"
+      ],
+      "title": "SyncPro: Synchronous Reasoning and Responding for Proactive Streaming Video Understanding"
+    },
+    "arXiv:2603.18676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18676",
+      "identity_tokens": [
+        "arXiv:2603.18676"
+      ],
+      "reason": "大域的ワークスペース理論を具現化する注意の一般化MANARは、線形時間性は副産物として述べられるものの、評価はGLUEやImageNet等の能力ベンチマークが中心の認知アーキテクチャ研究であり、LLM推論システムへの技術的貢献はない。",
+      "first_checked_at": "2026-11-18T22:49:15+00:00",
+      "last_checked_at": "2026-11-18T22:49:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/16-weight-quantization-compression/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "MANAR: Memory-augmented Attention with Navigational Abstract Conceptual Representation"
+    },
+    "arXiv:2610.03286": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03286",
+      "identity_tokens": [
+        "arXiv:2610.03286"
+      ],
+      "reason": "エージェント強化学習の学習スループットを律速する軌跡完了の偏りとサンドボックスのメモリ浪費に対し、完全分離型の学習システムVenusRLを提案する研究であり、対象はRL学習基盤であって推論サービングの高速化ではないため対象外とする。",
+      "first_checked_at": "2026-11-18T22:49:18+00:00",
+      "last_checked_at": "2026-11-18T22:49:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
+      ],
+      "title": "VenusRL: A Fully Disaggregated Agentic RL System with Priority Scheduling and Scalable Interaction"
+    },
+    "arXiv:2510.12026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12026",
+      "identity_tokens": [
+        "arXiv:2510.12026"
+      ],
+      "reason": "Mambaが低次元ターゲットを文脈内学習できることを、テスト時特徴学習のサンプル複雑度まで含めて証明する理論解析であり、推論システムへの具体的な機構や効率の適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T22:49:19+00:00",
+      "last_checked_at": "2026-11-18T22:49:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Mamba Can Learn Low-Dimensional Targets In-Context via Test-Time Feature Learning"
+    },
+    "DOI:10.1109/ccmcc67628.2025.11380554": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ccmcc67628.2025.11380554",
+      "identity_tokens": [
+        "DOI:10.1109/ccmcc67628.2025.11380554"
+      ],
+      "reason": "容量性メモリ内処理（PUM）アナログ加速器向けの精度配慮学習とADC分解能削減の設計指針だが、検証はResNet18の画像分類であり対象は汎用DNNハードウェアであって、LLM推論システムへの適用は確認できない。",
+      "first_checked_at": "2026-11-18T22:49:20+00:00",
+      "last_checked_at": "2026-11-18T22:49:20+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md"
+      ],
+      "title": "A Blueprint for Accurate, Energy-Efficient DNN Inference via Capacitive In-Memory Processing"
     }
   }
 }
