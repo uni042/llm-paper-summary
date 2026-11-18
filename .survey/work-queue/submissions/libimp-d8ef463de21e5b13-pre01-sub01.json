@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+      "source_url": "https://arxiv.org/abs/2607.27591",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Feed-forward networks (FFNs) dominate memory traffic and computation in large language model (LLM) inference, making them a primary target for activation sparsification. However, existing training-free methods suffer substantial model-quality degradation at high sparsity due to limitations in their channel-selection strategies. We observe that the SwiGLU intermediate state provides a highly effective channel-selection signal, but obtaining it requires costly dense computation. To address this, we present \\emph{Prox}, a two-stage training-free framework for sparse SwiGLU FFNs. Prox hinges on the key insight: sparse execution requires only the channel mask induced by the intermediate state, which can be constructed from the magnitude ranking of its entries rather than their exact values. Specifically, Stage 1 uses input sparsity and quantized proxy weights to construct a shared mask; Stage 2 computes the selected channels exactly, enabling sparse execution of all three projections. Across ten LLMs from six model families, Prox outperforms training-free baselines at all sparsity levels, achieves up to a $1.99\\times$ end-to-end decoding speedup at 70\\% FFN sparsity, and is compatible with quantization and sparse attention.",
+      "identifiers": [
+        "SemanticScholar:444deb2112acc6802700ab2452a30591c46e5fea"
+      ],
+      "semantic_scholar_id": "444deb2112acc6802700ab2452a30591c46e5fea",
+      "canonical_id": "arXiv:2607.27591",
+      "arxiv_id": "2607.27591",
+      "doi": "10.48550/arXiv.2607.27591",
+      "authors": [
+        "Jinyi Liu",
+        "Wei Chen",
+        "Peng-Yu Chen",
+        "Xin Yuan",
+        "Minghe Bai",
+        "Guo-Quan Wu",
+        "Jun Wei"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 111,
+        "matched_prestigious_venue": null
+      },
+      "reason": "近似中間状態による訓練不要FFN活性疎性Prox。FFNが推論のメモリトラフィックと計算を支配する一方、訓練不要の疎化は高疎性で品質が落ちる問題に対し、SwiGLU中間状態の近似でチャネル選択信号を得る2段階の枠組み。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TriSP: Tri-Signal Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.22587",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve strong performance across diverse tasks but their deployment is constrained by the memory and compute cost of their parameters. Structured pruning addresses this by removing entire structures such as attention heads and Multi-Layer Perceptron (MLP) neurons to produce smaller dense models that run efficiently on standard hardware. However, existing methods rely on either gradient-based importance estimation, which is memory-prohibitive, or activation-based statistical proxies, which do not directly measure the effect of removal on the loss. Furthermore, the interaction between the importance criterion and the post-pruning recovery strategy has not been systematically studied. We propose TriSP (Tri-Signal Structured Pruning), an importance metric that combines weight magnitude scaled by activation norm with first-order gradient sensitivity via a geometric mean, producing a channel-level score that captures both structural and loss-sensitivity signals. Combined with adaptive per-layer budget allocation and low-rank adaptation (LoRA) recovery, TriSP achieves the lowest perplexity and highest zero-shot accuracy across all tested configurations, reaching 6.80 WikiText-2 perplexity at 20% pruning on LLaMA-7B. Inference throughput improves by 82% at 50% pruning, while still maintaining competitive performance.",
+      "identifiers": [
+        "SemanticScholar:15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c"
+      ],
+      "semantic_scholar_id": "15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c",
+      "canonical_id": "arXiv:2607.22587",
+      "arxiv_id": "2607.22587",
+      "doi": "10.48550/arXiv.2607.22587",
+      "authors": [
+        "Manel Kara Laouar",
+        "Soumia Bouyahiaoui",
+        "Aicha Boutorh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "3信号構造化剪定TriSP。勾配ベースはメモリを食い、活性ベースは損失への影響を直接測らないという既存の構造化剪定の問題に対し、3つの信号を組み合わせて注意ヘッドとMLPニューロンを剪定する。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.30509",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference exhibits substantial variability across adaptation modes, context lengths, and request concurrency, creating challenges for maintaining high utilization, memory efficiency, and scalable performance on compute-in-memory (CIM) accelerators. This paper presents CHIPSMORE, a multi-mode and multi-request LLM inference accelerator that integrates compute-in-interconnect and CIM to support both base-mode and low-rank adaptation (LoRA) inference under diverse workloads. CHIPSMORE employs heterogeneous processing elements consisting of resistive RAM analog compute-in-memory (RRAM-ACIM) and static RAM digital compute-in-memory (SRAM-DCIM) interconnected through a programmable Inter-PE computational network (IPCN). A composable hierarchical key-value (KV) memory scheme dynamically allocates router scratchpad, SRAM-DCIM, and embedded DRAM (eDRAM) resources according to workload requirements, enabling scalable support for long-context and batched inference. Furthermore, a non-replicated multi-request execution pipeline exploits request-level parallelism without duplicating pretrained weights, while a state-aware resource reconfiguration mechanism selectively retains runtime states and power-gates inactive resources to improve energy efficiency. Evaluation using cycle-accurate hardware-software co-simulation demonstrates that CHIPSMORE effectively sustains high throughput across varying model sizes, context lengths, and batch sizes while maintaining favorable power scaling. Compared with Nvidia H100, CHIPSMORE achieves up to $2.38\\times$ higher throughput and $27\\times$ higher energy efficiency on Mistral-7B inference while eliminating weight replication for multi-request serving.",
+      "identifiers": [
+        "SemanticScholar:6dde5d5d83a425a67cdfab710a23b9b988554ccd"
+      ],
+      "semantic_scholar_id": "6dde5d5d83a425a67cdfab710a23b9b988554ccd",
+      "canonical_id": "arXiv:2608.30509",
+      "arxiv_id": "2608.30509",
+      "doi": "10.48550/arXiv.2608.30509",
+      "authors": [
+        "Yue Jiet Chong",
+        "Yi-Min Wang",
+        "Zhen Wu",
+        "Zi-Xuan Wang",
+        "Wei Zhang",
+        "Xuan-Yao Fong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 79,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複合モードLLM推論向け相互接続・メモリ内計算チップレットCHIPSMORE。適応モードや文脈長、同時要請数で変動するLLM推論の利用率とメモリ効率の問題に対し、抵抗変化メモリのアナログ計算と相互接続内計算を統合したアクセラレータ。推論ハードウェアそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d8ef463de21e",
+    "round": "libimp-d8ef463de21e5b13-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d8ef463de21e5b13-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d8ef463de21e5b13-pre01.json",
+    "receipt": "sha256:b6f63777c5828a405cbdf60da6a39bc9d7e5a60cde78361d318541e4bad510ab"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d8ef463de21e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

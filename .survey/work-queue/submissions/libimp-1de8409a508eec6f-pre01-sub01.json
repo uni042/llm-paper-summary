@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BELT : BEhavior-Aligned Low-Rank KV Cache Compression with Learned Top-k Rank Allocation",
+      "source_url": "https://arxiv.org/abs/2610.17966",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference makes the key-value (KV) cache a major memory bottleneck for large language models. We propose BELT, a low-rank KV cache compression framework. Its key-side objective targets attention distributions rather than raw keys or pre-softmax logits, yielding a quadratic surrogate with a closed-form low-rank solution. A learned global rank allocator uses differentiable soft selection during training and hard selection at deployment to meet a user-specified component budget. Experiments demonstrate improved model quality under aggressive compression and increased decoding throughput at comparable accuracy. Evaluated across three LLMs and multiple benchmarks, BELT achieves up to 70% low-rank KV cache compression while outperforming the strongest baseline by up to 23.3 points on LongBench, and up to 17.8x overall KV cache reduction when combined with quantization. With Triton-based GPU kernels and a quantized cache, BELT delivers up to 2.7x speedup for the attention module and 3.3x end-to-end decoding throughput.",
+      "identifiers": [
+        "SemanticScholar:8ee3b555c25da3b2a15e1b746e52576e68947bff"
+      ],
+      "semantic_scholar_id": "8ee3b555c25da3b2a15e1b746e52576e68947bff",
+      "canonical_id": "arXiv:2610.17966",
+      "arxiv_id": "2610.17966",
+      "authors": [
+        "Yao-Yang Liu",
+        "Shu-Wei Shen",
+        "Jin-Cheng Tang",
+        "Jin-Guang Liu",
+        "Jin-Bao Xue",
+        "Hai-Long Yang",
+        "Ke Zhang",
+        "Yin-Jun Wu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "行動整合型低ランクKVキャッシュ圧縮BELT。キー側の目的を生のキーやソフトマックス前ロジットではなく注意分布に置き、閉形式の低ランク解と学習した大域ランク配分で、積極的圧縮でも品質を保つ。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs",
+      "source_url": "https://arxiv.org/abs/2606.19993",
+      "year": 2026,
+      "published": "2026-06-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Activation- and Influence-Aware Ranks (AIR), an SVD-based LLM compression framework that guides each weight matrix's low-rank approximation with a backward-signal influence metric. Starting from the activation-aware optimum of SVD-LLM(W), AIR runs a single closed-form alternating least squares (ALS) sweep that integrates influence element-wise under a monotone-descent guarantee. AIR is layer-local and composes orthogonally with end-to-end methods: alone it exceeds ACIP, and AIR+LoRA outperforms it further. AIR improves perplexity over SVD-LLM(W) by>18% at<=60% parameter retention, matches its quality with ~90% less calibration data, and turns parameter savings into FLOP, peak-memory, and per-token latency gains.",
+      "identifiers": [
+        "SemanticScholar:13a24323e3fef2d97321de86bb69188808abee10"
+      ],
+      "semantic_scholar_id": "13a24323e3fef2d97321de86bb69188808abee10",
+      "canonical_id": "arXiv:2606.19993",
+      "arxiv_id": "2606.19993",
+      "doi": "10.48550/arXiv.2606.19993",
+      "authors": [
+        "Nico Harder",
+        "Daniel Becking",
+        "Karsten Mueller",
+        "W. Samek"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      },
+      "reason": "活性・影響配慮型ランクAIR。SVD系圧縮で各重み行列の低ランク近似を、後方信号の影響指標で導き、関数保存の観点で閉形式の交互最小二乗を回す。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Activation Denoising: A Robustness View on Parallel vs Sequential LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2610.07522",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization is a powerful tool for compressing large language models. The most scalable methods quantize every layer in parallel, but quantization errors then compound through the residual stream, as no layer corrects for the errors of the layers before it. Sequential quantization accounts for this error compounding by re-calibrating each layer on the already-quantized outputs of its predecessors, yielding stronger results but at the cost of a serial schedule that becomes a bottleneck at scale. As a solution, we propose parallel quantization with activation denoising, which recovers much of the sequential benefit while keeping quantization fully parallel. Rather than re-calibrating layer-by-layer, we take a robustness perspective and model the upstream error as noise, regularizing to be robust to it through a preprocessing step followed by metric-weighted rounding. Applied at every layer, this regularization forms a depth-compounding smoothness penalty that dampens how strongly quantization errors amplify through the model. Unlike orthogonal rotations commonly used in quantization, which must preserve the model's function, we multiply the weights by a more general linear transformation. We find that the two are complementary and their effects compound. Empirically, our robustness regularization recovers a significant part of sequential quantization's benefit in a single parallel pass, at a fraction of its time. Overall, by treating compounding quantization errors as a robustness problem, we offer a principled foundation for more efficient and accurate LLM quantization at scale.",
+      "identifiers": [
+        "SemanticScholar:0dc0d8a5b4eaeadd1353b250d556521b13e4c971"
+      ],
+      "semantic_scholar_id": "0dc0d8a5b4eaeadd1353b250d556521b13e4c971",
+      "canonical_id": "arXiv:2610.07522",
+      "arxiv_id": "2610.07522",
+      "authors": [
+        "Yan Scholten",
+        "Rachel Lawrence",
+        "J. Hensman",
+        "Stephan Günnemann",
+        "Alicia Curth",
+        "Riccardo Grazzi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "活性ノイズ除去：並列量子化の頑健性の視点。層を逐次に再較正する量子化は強いが直列で遅い問題に対し、並列量子化に活性のノイズ除去を組み合わせて誤差の複合を抑える。推論量子化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Prism Attention: Proposal-Refined Index Sharing Mechanism for Efficient LLMs Inference",
+      "source_url": "https://arxiv.org/abs/2610.22985",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding in large language models (LLMs) is increasingly bottlenecked by the memory and computation required to attend over an ever-growing Key-Value (KV) cache at each autoregressive step. Although token-level sparse attention reduces this burden by restricting computation to a small subset of relevant past tokens, its practical gains are often offset by repeatedly recomputing layer-wise sparse indices as the context grows. A common remedy is to share sparse indices across layers by computing them only at designated anchor layers, but such static reuse ignores the layer-wise evolution of attention patterns, causing the reused indices to progressively deviate from the layer-specific optima and incur substantial attention loss. By revisiting cross-layer sparsity from the perspective of attention dynamics, we find that inter-layer salient token shift is highly localized: although the exact top-$\\kappa$ indices differ across layers, the core high-attention tokens remain stable, with changes concentrated near the expanded boundary of previously selected regions. Motivated by this, we propose Prism Attention, a proposal-refined sparse attention framework. It replaces rigid cross-layer index reuse with a coarse-to-fine strategy, preserving layer-wise adaptability while retaining the efficiency benefits of cross-layer sharing. Extensive experiments show that Prism Attention achieves state-of-the-art performance among mainstream sparse attention methods on both reasoning and long-context benchmarks, while attaining a $3.4\\times$ end-to-end decoding speedup over FlashAttention at 128K context length.",
+      "identifiers": [
+        "SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6"
+      ],
+      "semantic_scholar_id": "e0d3f6fd574d906f44edaacc1241127f64851ce6",
+      "canonical_id": "arXiv:2610.22985",
+      "arxiv_id": "2610.22985",
+      "authors": [
+        "Zhen-Xu Tian",
+        "Ke-Bin Liu",
+        "Zheng-Wu Yang",
+        "Yi Su",
+        "Qing-Qing Dang",
+        "Yan-Lin Sha",
+        "Kai-Peng Deng",
+        "Dian-Hai Yu",
+        "Yan-Jun Ma",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "提案洗練型索引共有Prism Attention。層ごとに疎索引を再計算する費用に対し、固定層での静的共有が層ごとの変化を無視する問題を、提案と洗練で解く索引共有機構。推論の注意機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2610.26531",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block diffusion drafters accelerate speculative decoding by generating multiple draft tokens in a single forward pass. However, each pass produces only a fixed-length block from a single target-generated anchor, limiting how far the draft can extend. Meanwhile, target verification computes hidden states even at positions beyond the first rejection, but these states are typically discarded rather than reused. We propose ReAnchor, a training-free method that reanchors a pretrained drafter at shifted positions using discarded verifier states to generate parallel draft blocks. These blocks improve predictions within the original block and extend coverage beyond its endpoint. At sampling temperature of T=0, ReAnchor achieves its largest average gains on Gemma 4-12B, improving acceptance length by 19.4% and decoding speed by 17.9% across eight benchmarks. Averaged equally over four target models and eight benchmarks, it improves acceptance length by 15.2% and decoding speed by 13.4% with pretrained DFlash drafters.",
+      "identifiers": [
+        "SemanticScholar:9a4869f061b8f7eaec74f748f09ed73f38d9621e"
+      ],
+      "semantic_scholar_id": "9a4869f061b8f7eaec74f748f09ed73f38d9621e",
+      "canonical_id": "arXiv:2610.26531",
+      "arxiv_id": "2610.26531",
+      "authors": [
+        "Sanghyun Lee",
+        "Wonjin Nam",
+        "Seung-Ho Jang",
+        "Jaeho Lee",
+        "Jiho Park",
+        "Jaewoo Lee",
+        "Seungryong Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散下書きのための棄却検証状態の再利用ReAnchor。ブロック拡散の下書きが単一アンカーからの固定長に限られる問題に対し、棄却位置より先の検証隠れ状態を捨てずに再アンカーして並列の下書きブロックを作る、訓練不要の方式。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1de8409a508e",
+    "round": "libimp-1de8409a508eec6f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1de8409a508eec6f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1de8409a508eec6f-pre01.json",
+    "receipt": "sha256:92d8e1af8b1adedcf0d6b7110aa0cf754bdf9897b7132e3aaa6f4b784f411158"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1de8409a508e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
