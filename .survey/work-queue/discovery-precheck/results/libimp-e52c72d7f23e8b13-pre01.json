@@ -1,0 +1,253 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e52c72d7f23e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.08891",
+    "arXiv:2607.07724",
+    "arXiv:2608.01655",
+    "arXiv:2608.25068"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a51bbe1ec602766b217c3965362333ee9f0df00a",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:51:38.038277+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.08891",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.07724",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.07724"
+    },
+    {
+      "requested_id": "arXiv:2608.01655",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:d462125803c28c3e87d2afa0dc6798c38773935f"
+    },
+    {
+      "requested_id": "arXiv:2608.25068",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+      "source_url": "https://arxiv.org/abs/2608.25068",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Depth pruning removes entire Transformer blocks to reduce the inference cost of large language models, but disrupts the hidden-state distributions expected by downstream layers, leading to significant accuracy loss. We introduce SHIFT-LLM, a training-free post-pruning correction framework that inserts a Linear Residual Adapter (LRA) at each pruning site. Each LRA preserves the identity pathway of the original residual block and adds a lightweight affine residual correction. This correction is calibrated via closed-form least-squares regression on a small held-out set, without gradient computation, to approximate the missing residual update produced by the pruned block. Together with the preserved identity pathway, the resulting LRA output approximates the hidden state produced by the original block, thereby mitigating the distributional mismatch introduced by layer removal while avoiding the expensive attention and feed-forward computations of the removed blocks. The resulting LRAs support low-rank factorization and exact merging across consecutive pruned layers for additional compression, and combine naturally with parameter-efficient fine-tuning for further recovery beyond fine-tuning the pruned model alone. Experiments on five model families, six layer-selection criteria, and seven zero-shot benchmarks show that SHIFT-LLM consistently recovers accuracy lost to depth pruning across most configurations, achieving gains up to +15.7 points on Llama-3.1-8B-Instruct while requiring only a few hundred calibration samples and no gradient computation.",
+      "identifiers": [
+        "SemanticScholar:430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3"
+      ],
+      "semantic_scholar_id": "430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
+      "canonical_id": "arXiv:2608.25068",
+      "arxiv_id": "2608.25068",
+      "doi": "10.48550/arXiv.2608.25068",
+      "authors": [
+        "Ali Bahri",
+        "Hang Li",
+        "Hong-Liang Li",
+        "Zhi-Tang Chen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.08891",
+      "year": 2026,
+      "published": "2026-06-08",
+      "venue": "International Symposium on Low Power Electronics and Design",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly deployed on edge devices with tight power and area budgets. While mixed-precision GEMM reduces arithmetic complexity, quantized inference is often dominated by dequantization and nonlinear operators. Lookup Table (LUT)-based method mitigates these costs by precomputing outputs and replacing repeated arithmetic with table lookups, but existing designs incur significant capacity and lookup-latency overheads. This paper presents PALUTE, a LUT-based Processing-In-Memory accelerator built on Monolithic 3D DRAM for efficient edge LLM inference. PALUTE enables in-DRAM LUT queries that exploit the vertical organization of M3D DRAM memory array tiles to achieve high parallelism with low area overhead. A near-memory LUT generator supports low-latency LUT generation for both GEMM and element-wise nonlinear operators, while a system-level tiering and scheduling strategy minimizes data movement across memory tiers. Evaluation using cycle-accurate simulation and RTL synthesis shows that PALUTE achieves 1,264 TPS end-to-end throughput at 0.16 W, improving energy efficiency by 12.8× over CHIME [4] and 1.6× over FIGLUT [21], improving area efficiency by 2.0× over PIMPAL [12] under W4A4 across Qwen3-4B models.",
+      "identifiers": [
+        "SemanticScholar:0de624b1cce656408139d0a2225a1a8cc390a723"
+      ],
+      "semantic_scholar_id": "0de624b1cce656408139d0a2225a1a8cc390a723",
+      "canonical_id": "arXiv:2606.08891",
+      "arxiv_id": "2606.08891",
+      "doi": "10.1145/3816440.3818590",
+      "authors": [
+        "Run-Yang Tian",
+        "Yan-Ru Chen",
+        "Wei-Hong Xu",
+        "T. Rosing"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.25068",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.25068",
+        "id:SemanticScholar:430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
+        "id:arXiv:2608.25068",
+        "title:shiftllm distribution shift correction in depthpruned llms",
+        "url:https://arxiv.org/abs/2608.25068"
+      ],
+      "record": {
+        "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+        "source_url": "https://arxiv.org/abs/2608.25068",
+        "year": 2026,
+        "published": "2026-08-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Depth pruning removes entire Transformer blocks to reduce the inference cost of large language models, but disrupts the hidden-state distributions expected by downstream layers, leading to significant accuracy loss. We introduce SHIFT-LLM, a training-free post-pruning correction framework that inserts a Linear Residual Adapter (LRA) at each pruning site. Each LRA preserves the identity pathway of the original residual block and adds a lightweight affine residual correction. This correction is calibrated via closed-form least-squares regression on a small held-out set, without gradient computation, to approximate the missing residual update produced by the pruned block. Together with the preserved identity pathway, the resulting LRA output approximates the hidden state produced by the original block, thereby mitigating the distributional mismatch introduced by layer removal while avoiding the expensive attention and feed-forward computations of the removed blocks. The resulting LRAs support low-rank factorization and exact merging across consecutive pruned layers for additional compression, and combine naturally with parameter-efficient fine-tuning for further recovery beyond fine-tuning the pruned model alone. Experiments on five model families, six layer-selection criteria, and seven zero-shot benchmarks show that SHIFT-LLM consistently recovers accuracy lost to depth pruning across most configurations, achieving gains up to +15.7 points on Llama-3.1-8B-Instruct while requiring only a few hundred calibration samples and no gradient computation.",
+        "identifiers": [
+          "SemanticScholar:430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3"
+        ],
+        "semantic_scholar_id": "430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
+        "canonical_id": "arXiv:2608.25068",
+        "arxiv_id": "2608.25068",
+        "doi": "10.48550/arXiv.2608.25068",
+        "authors": [
+          "Ali Bahri",
+          "Hang Li",
+          "Hong-Liang Li",
+          "Zhi-Tang Chen"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.08891",
+      "identity_tokens": [
+        "id:DOI:10.1145/3816440.3818590",
+        "id:SemanticScholar:0de624b1cce656408139d0a2225a1a8cc390a723",
+        "id:arXiv:2606.08891",
+        "title:palute processinginmemory acceleration via lookup table for edge llm inference",
+        "url:https://arxiv.org/abs/2606.08891"
+      ],
+      "record": {
+        "title": "PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.08891",
+        "year": 2026,
+        "published": "2026-06-08",
+        "venue": "International Symposium on Low Power Electronics and Design",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are increasingly deployed on edge devices with tight power and area budgets. While mixed-precision GEMM reduces arithmetic complexity, quantized inference is often dominated by dequantization and nonlinear operators. Lookup Table (LUT)-based method mitigates these costs by precomputing outputs and replacing repeated arithmetic with table lookups, but existing designs incur significant capacity and lookup-latency overheads. This paper presents PALUTE, a LUT-based Processing-In-Memory accelerator built on Monolithic 3D DRAM for efficient edge LLM inference. PALUTE enables in-DRAM LUT queries that exploit the vertical organization of M3D DRAM memory array tiles to achieve high parallelism with low area overhead. A near-memory LUT generator supports low-latency LUT generation for both GEMM and element-wise nonlinear operators, while a system-level tiering and scheduling strategy minimizes data movement across memory tiers. Evaluation using cycle-accurate simulation and RTL synthesis shows that PALUTE achieves 1,264 TPS end-to-end throughput at 0.16 W, improving energy efficiency by 12.8× over CHIME [4] and 1.6× over FIGLUT [21], improving area efficiency by 2.0× over PIMPAL [12] under W4A4 across Qwen3-4B models.",
+        "identifiers": [
+          "SemanticScholar:0de624b1cce656408139d0a2225a1a8cc390a723"
+        ],
+        "semantic_scholar_id": "0de624b1cce656408139d0a2225a1a8cc390a723",
+        "canonical_id": "arXiv:2606.08891",
+        "arxiv_id": "2606.08891",
+        "doi": "10.1145/3816440.3818590",
+        "authors": [
+          "Run-Yang Tian",
+          "Yan-Ru Chen",
+          "Wei-Hong Xu",
+          "T. Rosing"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 163,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:31c765862ed26517f6f331169c069f6b8ca6f0e615ba7939b1fc76a13aadcc29",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

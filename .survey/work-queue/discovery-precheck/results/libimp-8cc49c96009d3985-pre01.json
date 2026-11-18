@@ -1,0 +1,362 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8cc49c96009d3985-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8cc49c96009d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.26660",
+    "arXiv:2610.26991",
+    "arXiv:2610.31169",
+    "arXiv:2611.03992"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a51bbe1ec602766b217c3965362333ee9f0df00a",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:51:35.667358+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.26660",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:12102076ffdeed5d91d69558a3d84360fea9c782"
+    },
+    {
+      "requested_id": "arXiv:2610.26991",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.31169",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.03992",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP",
+      "source_url": "https://arxiv.org/abs/2610.26991",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) have become a mainstream way to scale Large Language Models (LLMs), because each token activates only a small subset of experts, reducing inference cost. However, MoE decode remains highly memory-bound and exhibits strongly skewed, time-varying expert loads. 3D-stacked DRAM near-memory processing (NMP) provides the bandwidth that decode demands, yet its tiled organization makes load balancing expensive: expert parallelism (EP) preserves locality but suffers from hotspot-induced imbalance, while more distributed strategies weaken locality and increase NoC traffic. To address this locality-balance conflict, we observe that domain-specialized token routing creates offsetting expert-load fluctuations across decode steps, a property we call expert complementarity. Using this insight, we propose 3D-MoE, a hardware--software co-designed system for MoE decode on 3D-stacked NMP. 3D-MoE uses offline, one-time complementarity-guided grouping and locality-aware mapping to establish coarse-grained inter-group balance, handles residual intra-group hotspots through a lightweight Collaborative Memory-Network (CMN) that streams each hot expert's weight tiles once from its host DRAM channel to helper cores over a reconfigured local broadcast path, and uses cost-aware online remapping to remain robust to workload drift. Across MoE models, 3D-MoE achieves an average 4.63$\\times$ MoE-layer speedup over EP and improves end-to-end throughput by 1.58$\\times$--1.86$\\times$ over the strongest NMP baselines, with 2.11\\% additional logic-die area.",
+      "identifiers": [
+        "SemanticScholar:da506a97d451c02eaf05658f82f9817e6b165be8"
+      ],
+      "semantic_scholar_id": "da506a97d451c02eaf05658f82f9817e6b165be8",
+      "canonical_id": "arXiv:2610.26991",
+      "arxiv_id": "2610.26991",
+      "authors": [
+        "Yu-Dong Pan",
+        "Lian Liu",
+        "Shi-Xin Zhao",
+        "Yin-Tao He",
+        "Kai-Yan Chang",
+        "Tian Han",
+        "Chen-Yang Ai",
+        "Hao-Nan Zhu",
+        "Meng-Di Wang",
+        "Yi Han",
+        "Ying Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SARIA: Persistence-Aware KV Caching with Coordinated DRAM--SSD Reload for LLM Agents",
+      "source_url": "https://arxiv.org/abs/2610.31169",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-turn LLM agents usually reuse long context prefixes, making key value (KV) caching crucial for reducing prefill latency. SSDs provide a low-cost extension to limited DRAM capacity but introduce two key challenges. Eagerly persisting all KV cache blocks incurs substantial write traffic and rapidly consumes finite SSD endurance. Meanwhile, the small number of SSDs provisioned in typical GPU servers limits aggregate reload bandwidth, making SSD-resident KV cache much slower to retrieve than that in DRAM and inflating prefill latency. We present \\textsc{Saria} (Selective Admission and Reload for Inference Acceleration), a KV caching system that jointly manages DRAM and SSD by exploiting the session-level temporal locality of LLM agents to reduce SSD writes and accelerate cache reload. On the write path, \\textsc{Saria} uses eviction and reuse history to selectively persist KV cache blocks that exhibit reuse opportunities beyond their DRAM residency, avoiding unnecessary writes for KV cache already hosted in DRAM. On the read path, \\textsc{Saria} promotes selected SSD-hit KV cache blocks from GPU memory into DRAM after prefill, allowing subsequent reuse within the same session to reduce SSD read traffic while limiting DRAM contention. A transfer coordinator paces DRAM reads while SSD transfers are active, allowing both paths to make progress and efficiently share GPU ingress bandwidth. We implement \\textsc{Saria} on LMCache MP and evaluate it using workloads from TraceLab and WEKA, covering both full-attention and hybrid-attention models. The results show that \\textsc{Saria} reduces SSD writes by 57.1--58.9\\% compared with popular full duplicate caching and the mean time to first token (TTFT) by 42.3--79.7\\% over DRAM-only caching.",
+      "identifiers": [
+        "SemanticScholar:e0bf5cee7005db9d0ab48c231fe7862ae5de29a6"
+      ],
+      "semantic_scholar_id": "e0bf5cee7005db9d0ab48c231fe7862ae5de29a6",
+      "canonical_id": "arXiv:2610.31169",
+      "arxiv_id": "2610.31169",
+      "authors": [
+        "Hui Li",
+        "Qi-Hui Zhou",
+        "Xiao Yan",
+        "Shu-Meng Zhang",
+        "Zi-Jie Dai",
+        "Ze-Qun Gong",
+        "Ming-Cong Song",
+        "Guo-Ping Long",
+        "Hong-Jie Si",
+        "James Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlagRot: Selective Rotation for Low-Bit KV Caches",
+      "source_url": "https://arxiv.org/abs/2611.03992",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference is bound by the KV cache, which 2-bit codes could shrink about sixfold if their error stays in check. The usual remedy rotates keys before quantizing, assuming rotation always helps. However, we observe that it does not: rotation flattens a spiky piece of a key but can give a flat one a new peak, and both coexist within one key. We therefore propose FlagRot, which stores each 32-channel piece rotated or as is, whichever has the smaller calibrated attention error, and rotates the query instead when reading. We further show that how often to decide follows the quantization axis: per-channel caches such as KIVI need one decision per head, at no write cost, while per-token caches decide per key, with the choice stored in existing sign bits. At 2.5 bits per value, FlagRot lowers the twelve-model KL divergence of KIVI from 18.7 to 12.4 x 10^-3, below RotateKV on 9 of 12 models. Served as a vLLM plugin, it raises RULER at 128k tokens by +2.9 points and the LongBench v1 mean by +0.4 to +1.9 points on the three of four models where 2-bit KIVI loses accuracy. It also lowers the error of 4-bit integer and FP4 caches.",
+      "identifiers": [
+        "SemanticScholar:8eae0e3b1765bdc24f3ec8778930a200fabcf2dc"
+      ],
+      "semantic_scholar_id": "8eae0e3b1765bdc24f3ec8778930a200fabcf2dc",
+      "canonical_id": "arXiv:2611.03992",
+      "arxiv_id": "2611.03992",
+      "authors": [
+        "Kun-Ming Shao",
+        "Xi-Jie Huang",
+        "Jie-Run Chen",
+        "Jia-Qi Shao",
+        "Yan-Li Wang",
+        "Jiang-Nan Yu",
+        "Qi-Wei Li",
+        "Wei-Tong Zhang",
+        "Kwang-Ting Cheng",
+        "Chi-Ying Tsui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.26991",
+      "identity_tokens": [
+        "id:SemanticScholar:da506a97d451c02eaf05658f82f9817e6b165be8",
+        "id:arXiv:2610.26991",
+        "title:3dmoe complementarityguided hardwaresoftware codesign for moe decode on 3dstacked nmp",
+        "url:https://arxiv.org/abs/2610.26991"
+      ],
+      "record": {
+        "title": "3D-MoE: Complementarity-Guided Hardware-Software Co-Design for MoE Decode on 3D-Stacked NMP",
+        "source_url": "https://arxiv.org/abs/2610.26991",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) have become a mainstream way to scale Large Language Models (LLMs), because each token activates only a small subset of experts, reducing inference cost. However, MoE decode remains highly memory-bound and exhibits strongly skewed, time-varying expert loads. 3D-stacked DRAM near-memory processing (NMP) provides the bandwidth that decode demands, yet its tiled organization makes load balancing expensive: expert parallelism (EP) preserves locality but suffers from hotspot-induced imbalance, while more distributed strategies weaken locality and increase NoC traffic. To address this locality-balance conflict, we observe that domain-specialized token routing creates offsetting expert-load fluctuations across decode steps, a property we call expert complementarity. Using this insight, we propose 3D-MoE, a hardware--software co-designed system for MoE decode on 3D-stacked NMP. 3D-MoE uses offline, one-time complementarity-guided grouping and locality-aware mapping to establish coarse-grained inter-group balance, handles residual intra-group hotspots through a lightweight Collaborative Memory-Network (CMN) that streams each hot expert's weight tiles once from its host DRAM channel to helper cores over a reconfigured local broadcast path, and uses cost-aware online remapping to remain robust to workload drift. Across MoE models, 3D-MoE achieves an average 4.63$\\times$ MoE-layer speedup over EP and improves end-to-end throughput by 1.58$\\times$--1.86$\\times$ over the strongest NMP baselines, with 2.11\\% additional logic-die area.",
+        "identifiers": [
+          "SemanticScholar:da506a97d451c02eaf05658f82f9817e6b165be8"
+        ],
+        "semantic_scholar_id": "da506a97d451c02eaf05658f82f9817e6b165be8",
+        "canonical_id": "arXiv:2610.26991",
+        "arxiv_id": "2610.26991",
+        "authors": [
+          "Yu-Dong Pan",
+          "Lian Liu",
+          "Shi-Xin Zhao",
+          "Yin-Tao He",
+          "Kai-Yan Chang",
+          "Tian Han",
+          "Chen-Yang Ai",
+          "Hao-Nan Zhu",
+          "Meng-Di Wang",
+          "Yi Han",
+          "Ying Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.31169",
+      "identity_tokens": [
+        "id:SemanticScholar:e0bf5cee7005db9d0ab48c231fe7862ae5de29a6",
+        "id:arXiv:2610.31169",
+        "title:saria persistenceaware kv caching with coordinated dramssd reload for llm agents",
+        "url:https://arxiv.org/abs/2610.31169"
+      ],
+      "record": {
+        "title": "SARIA: Persistence-Aware KV Caching with Coordinated DRAM--SSD Reload for LLM Agents",
+        "source_url": "https://arxiv.org/abs/2610.31169",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-turn LLM agents usually reuse long context prefixes, making key value (KV) caching crucial for reducing prefill latency. SSDs provide a low-cost extension to limited DRAM capacity but introduce two key challenges. Eagerly persisting all KV cache blocks incurs substantial write traffic and rapidly consumes finite SSD endurance. Meanwhile, the small number of SSDs provisioned in typical GPU servers limits aggregate reload bandwidth, making SSD-resident KV cache much slower to retrieve than that in DRAM and inflating prefill latency. We present \\textsc{Saria} (Selective Admission and Reload for Inference Acceleration), a KV caching system that jointly manages DRAM and SSD by exploiting the session-level temporal locality of LLM agents to reduce SSD writes and accelerate cache reload. On the write path, \\textsc{Saria} uses eviction and reuse history to selectively persist KV cache blocks that exhibit reuse opportunities beyond their DRAM residency, avoiding unnecessary writes for KV cache already hosted in DRAM. On the read path, \\textsc{Saria} promotes selected SSD-hit KV cache blocks from GPU memory into DRAM after prefill, allowing subsequent reuse within the same session to reduce SSD read traffic while limiting DRAM contention. A transfer coordinator paces DRAM reads while SSD transfers are active, allowing both paths to make progress and efficiently share GPU ingress bandwidth. We implement \\textsc{Saria} on LMCache MP and evaluate it using workloads from TraceLab and WEKA, covering both full-attention and hybrid-attention models. The results show that \\textsc{Saria} reduces SSD writes by 57.1--58.9\\% compared with popular full duplicate caching and the mean time to first token (TTFT) by 42.3--79.7\\% over DRAM-only caching.",
+        "identifiers": [
+          "SemanticScholar:e0bf5cee7005db9d0ab48c231fe7862ae5de29a6"
+        ],
+        "semantic_scholar_id": "e0bf5cee7005db9d0ab48c231fe7862ae5de29a6",
+        "canonical_id": "arXiv:2610.31169",
+        "arxiv_id": "2610.31169",
+        "authors": [
+          "Hui Li",
+          "Qi-Hui Zhou",
+          "Xiao Yan",
+          "Shu-Meng Zhang",
+          "Zi-Jie Dai",
+          "Ze-Qun Gong",
+          "Ming-Cong Song",
+          "Guo-Ping Long",
+          "Hong-Jie Si",
+          "James Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.03992",
+      "identity_tokens": [
+        "id:SemanticScholar:8eae0e3b1765bdc24f3ec8778930a200fabcf2dc",
+        "id:arXiv:2611.03992",
+        "title:flagrot selective rotation for lowbit kv caches",
+        "url:https://arxiv.org/abs/2611.03992"
+      ],
+      "record": {
+        "title": "FlagRot: Selective Rotation for Low-Bit KV Caches",
+        "source_url": "https://arxiv.org/abs/2611.03992",
+        "year": 2026,
+        "published": "2026-11-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference is bound by the KV cache, which 2-bit codes could shrink about sixfold if their error stays in check. The usual remedy rotates keys before quantizing, assuming rotation always helps. However, we observe that it does not: rotation flattens a spiky piece of a key but can give a flat one a new peak, and both coexist within one key. We therefore propose FlagRot, which stores each 32-channel piece rotated or as is, whichever has the smaller calibrated attention error, and rotates the query instead when reading. We further show that how often to decide follows the quantization axis: per-channel caches such as KIVI need one decision per head, at no write cost, while per-token caches decide per key, with the choice stored in existing sign bits. At 2.5 bits per value, FlagRot lowers the twelve-model KL divergence of KIVI from 18.7 to 12.4 x 10^-3, below RotateKV on 9 of 12 models. Served as a vLLM plugin, it raises RULER at 128k tokens by +2.9 points and the LongBench v1 mean by +0.4 to +1.9 points on the three of four models where 2-bit KIVI loses accuracy. It also lowers the error of 4-bit integer and FP4 caches.",
+        "identifiers": [
+          "SemanticScholar:8eae0e3b1765bdc24f3ec8778930a200fabcf2dc"
+        ],
+        "semantic_scholar_id": "8eae0e3b1765bdc24f3ec8778930a200fabcf2dc",
+        "canonical_id": "arXiv:2611.03992",
+        "arxiv_id": "2611.03992",
+        "authors": [
+          "Kun-Ming Shao",
+          "Xi-Jie Huang",
+          "Jie-Run Chen",
+          "Jia-Qi Shao",
+          "Yan-Li Wang",
+          "Jiang-Nan Yu",
+          "Qi-Wei Li",
+          "Wei-Tong Zhang",
+          "Kwang-Ting Cheng",
+          "Chi-Ying Tsui"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6081946e1a9c060cc202a6eb9a2e9088c8b0c702aa61821fcafb088790447026",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-21948301638f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2501.07139",
+    "arXiv:2504.03717",
+    "arXiv:2504.07479",
+    "arXiv:2507.11959"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a51bbe1ec602766b217c3965362333ee9f0df00a",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:51:38.034710+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2501.07139",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2501.07139"
+    },
+    {
+      "requested_id": "arXiv:2504.03717",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2504.03717"
+    },
+    {
+      "requested_id": "arXiv:2504.07479",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/dac63849.2025.11133273"
+    },
+    {
+      "requested_id": "arXiv:2507.11959",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "PoTPTQ: A Two-step Power-of-Two Post-training for LLMs",
+      "source_url": "https://arxiv.org/abs/2507.11959",
+      "year": 2025,
+      "published": "2025-07-16",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across various natural language processing (NLP) tasks. However, their deployment is challenging due to the substantial computational resources required. Power-of-two (PoT) quantization is a general tool to counteract this difficulty. Albeit previous works on PoT quantization can be efficiently dequantized on CPUs using fixed-point addition, it showed less effectiveness on GPUs. The reason is entanglement of the sign bit and sequential bit manipulations needed for dequantization. We propose a novel POT quantization framework for LLM weights that (i) outperforms state-of-the-art accuracy in extremely low-precision number formats, and (ii) enables faster inference through more efficient dequantization. To maintain the accuracy of the quantized model, we introduce a two-step post-training algorithm: (i) initialize the quantization scales with a robust starting point, and (ii) refine these scales using a minimal calibration set. The performance of our PoT post-training algorithm surpasses the current state-of-the-art in integer quantization, particularly at low precisions such as 2- and 3-bit formats. Our PoT quantization accelerates the dequantization step required for the floating point inference and leads to $3.67\\times$ speed up on a NVIDIA V100, and $1.63\\times$ on a NVIDIA RTX 4090, compared to uniform integer dequantization.",
+      "identifiers": [
+        "SemanticScholar:e35ff2ada7b449458f2cd7af2d4b9fd45c3adbdd"
+      ],
+      "semantic_scholar_id": "e35ff2ada7b449458f2cd7af2d4b9fd45c3adbdd",
+      "canonical_id": "arXiv:2507.11959",
+      "arxiv_id": "2507.11959",
+      "doi": "10.48550/arXiv.2507.11959",
+      "authors": [
+        "Xin-Yu Wang",
+        "Vahid Partovi Nia",
+        "Peng Lu",
+        "Jerry M. Huang",
+        "Xiao-Wen Chang",
+        "Bo-Xing Chen",
+        "Yu-Fei Cui"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 490,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2507.11959",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.11959",
+        "id:SemanticScholar:e35ff2ada7b449458f2cd7af2d4b9fd45c3adbdd",
+        "id:arXiv:2507.11959",
+        "title:potptq a twostep poweroftwo posttraining for llms",
+        "url:https://arxiv.org/abs/2507.11959"
+      ],
+      "record": {
+        "title": "PoTPTQ: A Two-step Power-of-Two Post-training for LLMs",
+        "source_url": "https://arxiv.org/abs/2507.11959",
+        "year": 2025,
+        "published": "2025-07-16",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across various natural language processing (NLP) tasks. However, their deployment is challenging due to the substantial computational resources required. Power-of-two (PoT) quantization is a general tool to counteract this difficulty. Albeit previous works on PoT quantization can be efficiently dequantized on CPUs using fixed-point addition, it showed less effectiveness on GPUs. The reason is entanglement of the sign bit and sequential bit manipulations needed for dequantization. We propose a novel POT quantization framework for LLM weights that (i) outperforms state-of-the-art accuracy in extremely low-precision number formats, and (ii) enables faster inference through more efficient dequantization. To maintain the accuracy of the quantized model, we introduce a two-step post-training algorithm: (i) initialize the quantization scales with a robust starting point, and (ii) refine these scales using a minimal calibration set. The performance of our PoT post-training algorithm surpasses the current state-of-the-art in integer quantization, particularly at low precisions such as 2- and 3-bit formats. Our PoT quantization accelerates the dequantization step required for the floating point inference and leads to $3.67\\times$ speed up on a NVIDIA V100, and $1.63\\times$ on a NVIDIA RTX 4090, compared to uniform integer dequantization.",
+        "identifiers": [
+          "SemanticScholar:e35ff2ada7b449458f2cd7af2d4b9fd45c3adbdd"
+        ],
+        "semantic_scholar_id": "e35ff2ada7b449458f2cd7af2d4b9fd45c3adbdd",
+        "canonical_id": "arXiv:2507.11959",
+        "arxiv_id": "2507.11959",
+        "doi": "10.48550/arXiv.2507.11959",
+        "authors": [
+          "Xin-Yu Wang",
+          "Vahid Partovi Nia",
+          "Peng Lu",
+          "Jerry M. Huang",
+          "Xiao-Wen Chang",
+          "Bo-Xing Chen",
+          "Yu-Fei Cui"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 490,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:06d51a219e8193e30b89873ad3f2fa8a405ce9b587acc08076222286da63e01d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
