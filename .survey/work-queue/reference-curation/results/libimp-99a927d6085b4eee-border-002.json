@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99a927d6085b4eee-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:70c8a633874d458b582ad7f0fb059704defe22ef",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:70c8a633874d458b582ad7f0fb059704defe22ef",
+    "identity_tokens": [
+      "SemanticScholar:70c8a633874d458b582ad7f0fb059704defe22ef",
+      "URL:https://openreview.net/forum?id=XUgM4M4Aua"
+    ],
+    "reason": "IACR ePrint 2026/105の公式一次要旨を確認。クライアントだけがプロンプトと生成文を読めるという機密性要件の下でTEE、暗号補助、完全準同型暗号によるLLM推論を信頼仮定・スケーラビリティ・実装成熟度で比較するサーベイ。推論基盤の運用上は有用だが、単独の高速化/メモリ削減アルゴリズムを提案する一次実験研究ではない。",
+    "first_checked_at": "2026-11-18T09:48:39+00:00",
+    "last_checked_at": "2026-11-18T11:08:44+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 215; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Privacy-Preserving LLM Inference in Practice: A Comparative Survey of Techniques, Trade-Offs, and Deployability"
+  },
+  "processed_at": "2026-11-18T11:08:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99a927d6085b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

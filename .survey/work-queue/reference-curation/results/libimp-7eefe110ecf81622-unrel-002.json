@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7eefe110ecf81622-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:dbaee2b312ac358ce827a175fcaa33e109f354e5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:dbaee2b312ac358ce827a175fcaa33e109f354e5",
+    "identity_tokens": [
+      "SemanticScholar:dbaee2b312ac358ce827a175fcaa33e109f354e5"
+    ],
+    "reason": "タイトルが対象とするのはRNAの二次構造予測であり、LLM推論・サービング・メモリ階層・量子化・カーネルなどのシステム技術ではない。線形注意研究から引用されていても、その事実だけでは収録対象とならない。",
+    "first_checked_at": "2026-11-18T11:08:41+00:00",
+    "last_checked_at": "2026-11-18T11:08:41+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md",
+      "papers/inference/99-other-inference-systems/2022-2202.08791-cosformer-rethinking-softmax-in-attention.md",
+      "papers/inference/99-other-inference-systems/2022-2202.10447-transformer-quality-in-linear-time.md"
+    ],
+    "title": "RFold: RNA Secondary Structure Prediction with Decoupled Optimization"
+  },
+  "processed_at": "2026-11-18T11:08:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7eefe110ecf8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

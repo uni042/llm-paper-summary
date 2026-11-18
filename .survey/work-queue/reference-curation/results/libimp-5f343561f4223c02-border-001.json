@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f343561f4223c02-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.21834",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.21834",
+    "identity_tokens": [
+      "arXiv:2609.21834"
+    ],
+    "reason": "QATの全精度shadow重みではなく離散量子化端点の更新則を解析し、量子化コードへ直接作用するQARでshadow重みを保持せず学習メモリを減らす。一次要旨のLLM実験は後学習の端点損失とメモリ費用を扱い、生成推論ランタイムの直接高速化は中心でないためborderline。",
+    "first_checked_at": "2026-11-18T03:45:12+00:00",
+    "last_checked_at": "2026-11-18T11:08:38+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent"
+  },
+  "processed_at": "2026-11-18T11:08:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f343561f422",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0de9e9ed40f36844-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2209.05948",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2209.05948",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2209.05948",
+      "arXiv:2209.05948"
+    ],
+    "reason": "大規模コード補完モデルへの低価値リクエストを事前に軽量推定器で拒否するFrugalCoder系研究。arXiv一次要旨では、補完要求の20%をprecision 97.4%で事前拒否できたと報告。不要なLLM呼び出しを削減するサービス効率には関連するが、モデル内部の推論演算・トークン復号の高速化ではなく、コード補完という限定タスクの品質・省エネ最適化であるためborderline。worklist旧題と現在のarXiv題名が異なる。",
+    "first_checked_at": "2026-11-18T08:08:25+00:00",
+    "last_checked_at": "2026-11-18T11:08:36+00:00",
+    "linked_from": [
+      "WORKLIST-00.md rank 226; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367",
+      "papers/inference/99-other-inference-systems/2016-1606.09274-compression-of-neural-machine-translation-models-via-pruning.md",
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+      "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+      "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Don't Complete It! Preventing Unhelpful Code Completion for Productive and Sustainable Neural Code Completion Systems"
+  },
+  "processed_at": "2026-11-18T11:08:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0de9e9ed40f3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

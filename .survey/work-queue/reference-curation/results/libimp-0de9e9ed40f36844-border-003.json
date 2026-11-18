@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0de9e9ed40f36844-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.28876",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.28876",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2606.28876",
+      "arXiv:2606.28876"
+    ],
+    "reason": "高速なrecurrent/sparse backboneに明示的な編集可能メモリスロットとクエリ時の疎検索を併設する長文脈推論の概念検証。2097152トークンの制御実験で50/50、2.74Mパラメータの小規模モデルで595/600などを報告する一方、原著は学習済み汎用生成モデルのシステム性能優位性を主張していない。実装・速度改善の直接証拠が不足するためborderline。",
+    "first_checked_at": "2026-11-18T08:17:55+00:00",
+    "last_checked_at": "2026-11-18T11:08:36+00:00",
+    "linked_from": [
+      "WORKLIST-00.md rank 132; 2026-10-31 main fixed d1468f311feee5a7e88064b608db19014d4c1367",
+      "papers/inference/09-kernel-runtime-compilation/2025-2510.04008-race-attention-a-strictly-linear-time-attention-layer-for-training-on-ou.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory-Managed Long-Context Attention: A Preliminary Study of Editable Request-Local Memory"
+  },
+  "processed_at": "2026-11-18T11:08:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0de9e9ed40f3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

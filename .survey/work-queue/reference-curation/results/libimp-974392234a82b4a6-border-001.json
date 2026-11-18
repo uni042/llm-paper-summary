@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-974392234a82b4a6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.00433",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.00433",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2405.00433",
+      "arXiv:2405.00433"
+    ],
+    "reason": "小規模Penn Treebank/WikiText-2のスパイキング言語モデルで活性疎性と重み疎性の相乗効果を分析する。言語生成の省演算モデル設計に関係するが、生成LLMの実GPU推論や大規模モデルでの速度評価はない。arXivに文章重複の管理者注記あり。",
+    "first_checked_at": "2026-11-18T11:08:42+00:00",
+    "last_checked_at": "2026-11-18T11:08:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Weight Sparsity Complements Activity Sparsity in Neuromorphic Language Models"
+  },
+  "processed_at": "2026-11-18T11:08:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-974392234a82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
