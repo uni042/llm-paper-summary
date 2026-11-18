@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.20467",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) prompting improves LLM reasoning but incurs high latency and memory cost due to verbose traces, motivating CoT compression with preserved correctness. Existing methods either shorten CoTs at the semantic level, which is often conservative, or prune tokens aggressively, which can miss task-critical cues and degrade accuracy. Moreover, combining the two is non-trivial due to sequential dependency, task-agnostic pruning, and distribution mismatch. We propose \\textbf{CtrlCoT}, a dual-granularity CoT compression framework that harmonizes semantic abstraction and token-level pruning through three components: Hierarchical Reasoning Abstraction produces CoTs at multiple semantic granularities; Logic-Preserving Distillation trains a logic-aware pruner to retain indispensable reasoning cues (e.g., numbers and operators) across pruning ratios; and Distribution-Alignment Generation aligns compressed traces with fluent inference-time reasoning styles to avoid fragmentation. On MATH-500 with Qwen2.5-7B-Instruct, CtrlCoT uses 30.7\\% fewer tokens while achieving 7.6 percentage points higher than the strongest baseline, demonstrating more efficient and reliable reasoning. Our code will be publicly available at https://github.com/fanzhenxuan/Ctrl-CoT.",
+      "identifiers": [
+        "SemanticScholar:65119b500b6c4363f934af411b370caac3a21e2f"
+      ],
+      "semantic_scholar_id": "65119b500b6c4363f934af411b370caac3a21e2f",
+      "canonical_id": "arXiv:2601.20467",
+      "arxiv_id": "2601.20467",
+      "doi": "10.48550/arXiv.2601.20467",
+      "authors": [
+        "Zhen-Xuan Fan",
+        "Jie Cao",
+        "Yang Dai",
+        "Zhe-Qi Lv",
+        "Wen-Qiao Zhang",
+        "Zhong-Le Xie",
+        "Lu Peng",
+        "B. Ooi"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はCoTの意味段階の抽象化と重要トークンの論理保存枝刈り、生成分布の再整合を組み合わせるCtrlCoTを提案。MATH-500でQwen2.5-7Bの推論トークン30.7%削減し、比較方式比7.6ポイントの精度改善を報告。推論トークン数削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ACPruner: Visual Token Pruning as Biased Attention Coverage Maximization in LVLMs",
+      "source_url": "https://arxiv.org/abs/2609.34558",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) face significant computational inefficiencies caused by the large number of visual tokens. Existing visual token pruning methods mainly focus on either retaining individually important tokens or selecting mutually diverse ones. In this work, we revisit visual token pruning from a coverage perspective and formulate it as a biased attention coverage maximization problem. The key idea is to select a compact token subset whose encoder-side outgoing attention can jointly cover the image while assigning higher coverage priority to more informative regions. From this perspective, we propose ACPruner, a training-free visual token pruning framework for efficient LVLM inference. ACPruner first estimates token importance by combining intra-modal saliency and inter-modal relevance, then derives token-wise coverage from attention patterns within the vision encoder, and finally performs greedy selection to maximize the proposed coverage objective. Extensive experiments across multiple LVLM backbones, including LLaVA-1.5-7B/13B, LLaVA-NeXT-7B/13B, Qwen2.5-VL-7B, and LLaVA-OneVision-7B, show that ACPruner consistently achieves strong performance retention while delivering substantial end-to-end inference speedups.",
+      "identifiers": [
+        "SemanticScholar:0ff4ac461892820ceab3955a75af3a670f569f2d"
+      ],
+      "semantic_scholar_id": "0ff4ac461892820ceab3955a75af3a670f569f2d",
+      "canonical_id": "arXiv:2609.34558",
+      "arxiv_id": "2609.34558",
+      "doi": "10.48550/arXiv.2609.34558",
+      "authors": [
+        "Xu Li",
+        "Yuxuan Liang",
+        "Yi Zheng",
+        "Zhe Liu",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Rui Zhu",
+        "Fan Shi",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は視覚トークン選択を注意カバレッジ最大化として定式化し、顕著性・質問関連性と視覚エンコーダ注意を用いたgreedy選択ACPrunerを提案。LLaVA、Qwen2.5-VLなどでE2E推論高速化と品質維持を報告。MLLM視覚プリフィル圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention",
+      "source_url": "https://arxiv.org/abs/2511.00295",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "IEEE Transactions on Circuits and Systems for Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have significantly advanced AI and machine learning through their powerful attention mechanism. However, computing attention on long sequences can become a computational bottleneck. FlashAttention mitigates this by fusing the softmax and matrix operations into a tiled computation pattern that decouples performance from sequence length. Though designed for GPUs, its simplicity also makes it well suited for direct hardware acceleration. To improve hardware implementation, we compute FlashAttention using a mixture of floating-point and fixed-point logarithm domain representations. Floating-point is used to compute attention scores from query and key matrices, while logarithmic computation simplifies the fused computation of softmax normalization and the multiplication with the value matrix. This transformation, called H-FA, replaces vector-wide floating-point multiplication and division operations by additions and subtractions implemented efficiently with fixed-point arithmetic in the logarithm domain. Exponential function evaluations are effectively omitted and fused with the rest operations, and the final result is directly returned to floating-point arithmetic without any additional hardware overhead. Hardware implementation results at 28nm demonstrate that H-FA achieves a 26.5% reduction in area and a 23.4% reduction in power, on average, compared to FlashAttention parallel hardware architectures built solely with floating-point datapaths, without hindering performance.",
+      "identifiers": [
+        "SemanticScholar:a30f0a47edf649e7aff46c281a37a72e1ae0e4e6"
+      ],
+      "semantic_scholar_id": "a30f0a47edf649e7aff46c281a37a72e1ae0e4e6",
+      "canonical_id": "arXiv:2511.00295",
+      "arxiv_id": "2511.00295",
+      "doi": "10.1109/TCASAI.2025.3630164",
+      "authors": [
+        "Kosmas Alexandridis",
+        "G. Dimitrakopoulos"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v3一次要旨はFlashAttentionのQK計算を浮動小数、softmax正規化とPVを固定小数の対数領域で処理するH-FAを提案。28nmハードウェア実装で浮動小数のみの回路比面積26.5%、電力23.4%削減と報告。注意演算の推論向け専用回路に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e42ce56e10d3",
+    "round": "libimp-e42ce56e10d3ae49-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e42ce56e10d3ae49-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e42ce56e10d3ae49-pre01.json",
+    "receipt": "sha256:ab321677d64f0d70949ba50c1681815d7563544b07040ed96d0b5829a9f22522"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e42ce56e10d3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

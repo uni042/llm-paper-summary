@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Sampling Where It Matters: Predicting LLM Serving Performance",
+      "source_url": "https://doi.org/10.1145/3805621.3807633",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "EuroMLSys@EuroSys",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Characterizing Large Language Model (LLM) serving performance is a combinatorial problem where a suboptimal choice wastes profiling budget: every change in model, hardware, or software version requires fresh profiling, yet exhaustive benchmarking is infeasible. Existing approaches - simulators and static performance estimators - lose fidelity on novel architectures or target only optima. We introduce Predictive Kernel Herding (PKH), a sampler which reformulates Random Forest leaf co-occurrence as linear-time histogram matching, replacing O(N2) kernel comparisons. On four real-world LLM serving traces spanning 3,000+ configurations, PKH is the only sampler that delivers top-ranked accuracy on both throughput and latency predictions, dominating the cost-accuracy Pareto frontier. PKH predicts output throughput within 10% MAPE and mean Time to First Token (TTFT) within 20% MAPE, reaching practically useful accuracy with up to 1.6× lower profiling time than the next-best method at equivalent error.",
+      "identifiers": [
+        "SemanticScholar:92cdbf6fcb3315e51d027028351899668c661776"
+      ],
+      "semantic_scholar_id": "92cdbf6fcb3315e51d027028351899668c661776",
+      "doi": "10.1145/3805621.3807633",
+      "canonical_id": "DOI:10.1145/3805621.3807633",
+      "authors": [
+        "Emile Aydar",
+        "Christian Pinto",
+        "S. Venugopal",
+        "Dimitris Chatzopoulos"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": "EuroSys"
+      },
+      "reason": "著者所属IBM Researchの一次公開要旨。Predictive Kernel Herdingにより3,000超のLLMサービング構成の性能測定点を選択し、4実トレースで出力throughputを10%以内のMAPE、平均TTFTを20%以内のMAPEで予測。比較法と同等誤差に達するプロファイル時間を最大1.6倍削減。実際のLLMサービング性能推定・プロファイリング予算最適化を直接扱う。",
+      "library_body_check": "primary_author_institution_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-10d5fa4379b0",
+    "round": "libimp-10d5fa4379b0d8b2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-10d5fa4379b0d8b2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-10d5fa4379b0d8b2-pre01.json",
+    "receipt": "sha256:27b6389b35b8f0d9c46196221172e9a4494b1cd0f5d8fe8b766e776aa55d71fc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-10d5fa4379b0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

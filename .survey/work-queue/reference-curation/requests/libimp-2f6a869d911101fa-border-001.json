@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2f6a869d911101fa-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "SemanticScholar:e545797fd29206a6b77f26fa89f17401f5f365b5",
+  "reason": "TMLR向け一次PDFを確認。エージェントの全履歴を毎ターン再投入する代わりにGoal/World/Constraintの構造化状態を更新し、bounded-state仮定下で累積トークン量をO(T²)からO(T)へ抑える。ALFWorld等でトークン消費60.8〜67.6%減を報告する。LLM呼び出しの入力トークン削減は推論費用に関係する一方、KVキャッシュ実装、カーネル、サービング実行系の直接最適化ではなく、エージェントの文脈管理が主題のためborderline。",
+  "title": "ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents",
+  "identity_tokens": [
+    "semanticscholar:e545797fd29206a6b77f26fa89f17401f5f365b5",
+    "title:zipact zipping interaction history into a compact state for efficient llm agents"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f6a869d9111",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

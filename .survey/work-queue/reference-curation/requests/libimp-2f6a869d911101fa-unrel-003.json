@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2f6a869d911101fa-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2603.21465",
+  "reason": "一次arXiv abstractを確認。PyTorch参照実装をTriton/CUDAカーネルへ変換するLLMを、合成データと強化学習で訓練し、KernelBench上の生成カーネル性能を評価する研究。高速なカーネルを生成するAIの訓練が主題であり、既存LLMの推論サービング・推論実行カーネルを直接高速化する研究ではないためunrelated。worklistの題名は原著のDrivenが抜けているため一次資料表記に修正。",
+  "title": "DRTriton: Large-Scale Synthetic Data Driven Reinforcement Learning for Triton Kernel Generation",
+  "identity_tokens": [
+    "arxiv:2603.21465",
+    "title:drtriton large scale synthetic data driven reinforcement learning for triton kernel generation"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f6a869d9111",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

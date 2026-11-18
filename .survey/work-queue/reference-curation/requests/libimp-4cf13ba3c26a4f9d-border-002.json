@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4cf13ba3c26a4f9d-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41617",
+  "reason": "SALTはPython型注釈補完で静的解析を先行させ、LLMへ問い合わせる箇所を絞り、必要な型文脈だけを短いプロンプトへ入れる。12の実プロジェクトで精度を維持しつつ強いコード支援基準に比べ推定LLMコストを最大78.5%削減。LLM呼出し回数とトークン費用の削減は実行効率に隣接するが、アプリケーション特化の型推論で推論サーバーやGPU最適化ではないためborderline。",
+  "title": "Prompt Less, Infer More: Static Analysis-Guided LLM Type Annotation for Python",
+  "identity_tokens": [
+    "arXiv:2610.41617"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.SE/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4cf13ba3c26a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "XC-Cache: Cross-Attending to Cached Context for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2404.15420",
+      "year": 2024,
+      "published": "2024-04-23",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In-context learning (ICL) approaches typically leverage prompting to condition decoder-only language model generation on reference information. Just-in-time processing of a context is inefficient due to the quadratic cost of self-attention operations, and caching is desirable. However, caching transformer states can easily require almost as much space as the model parameters. When the right context isn't known in advance, caching ICL can be challenging. This work addresses these limitations by introducing models that, inspired by the encoder-decoder architecture, use cross-attention to condition generation on reference text without the prompt. More precisely, we leverage pre-trained decoder-only models and only train a small number of added layers. We use Question-Answering (QA) as a testbed to evaluate the ability of our models to perform conditional generation and observe that they outperform ICL, are comparable to fine-tuned prompted LLMs, and drastically reduce the space footprint relative to standard KV caching by two orders of magnitude.",
+      "identifiers": [
+        "SemanticScholar:f34c0d2e10737531ac028cf7de8a01e0db9d4728"
+      ],
+      "semantic_scholar_id": "f34c0d2e10737531ac028cf7de8a01e0db9d4728",
+      "canonical_id": "arXiv:2404.15420",
+      "arxiv_id": "2404.15420",
+      "doi": "10.48550/arXiv.2404.15420",
+      "authors": [
+        "João Monteiro",
+        "Étienne Marcotte",
+        "Pierre-André Noël",
+        "V. Zantedeschi",
+        "David Vázquez",
+        "Nicolas Chapados",
+        "C. Pal",
+        "Perouz Taslakian"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 939,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "AO-BFP: An Adaptive Mixed-Precision and Outlier-Aware Block Floating-Point Accelerator for Large Language Model Inference",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539329",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success in Natural Language Processing (NLP) tasks, but their deployment is severely constrained by intensive computation and memory costs. Block Floating-Point (BFP) extends the dynamic range beyond INT with shared exponents, while reducing memory and alignment overhead compared to floating-point formats. However, when bit-widths are further reduced, BFP becomes sensitive to outliers; existing mixed-precision BFP methods largely rely on heuristic settings of mantissa width and block size, and the induced bit-level sparsity has yet to be systematically leveraged in hardware. In this paper, we propose AO-BFP, an adaptive BFP framework for LLM inference. At the algorithm level, we propose an adaptive outlier exponent mapping mechanism combined with mixed-precision exploration driven by layer-wise sensitivity analysis. At the hardware level, we design a reconfigurable bit-serial accelerator with a unified datapath that efficiently leverages BFP-induced bit sparsity. Compared with prior LLM accelerators such as ANT, OliVe, and BitMoD, AO-BFP achieves superior performance while preserving model accuracy, delivering speedups of 1.61×, 1.39×, and 1.11×, respectively.",
+      "identifiers": [
+        "SemanticScholar:6755ff06d153084f02247c430f89319b0fde005d"
+      ],
+      "semantic_scholar_id": "6755ff06d153084f02247c430f89319b0fde005d",
+      "doi": "10.23919/DATE69613.2026.11539329",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539329",
+      "authors": [
+        "Yi-Fan Wang",
+        "Ze-Tao Guo",
+        "Wendi Sun",
+        "Wenhao Sun",
+        "Qi-Yan Fang",
+        "Song Chen",
+        "Yi Kang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 212,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM推論の混合精度・外れ値対応BFP量子化とbit-serial再構成可能アクセラレータを協調設計する直接的な推論効率化研究。IEEE DATE 2026の出版社一次要旨ではANT/OliVe/BitMoDに対してそれぞれ1.61/1.39/1.11倍の高速化を報告。異なる比較系の値であり一般的なGPU実行速度には外挿しない。本文・評価設定の詳細は未精査。",
+      "library_body_check": "IEEE Xplore出版社一次要旨を確認。本文全体は未読。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Prophet: An LLM Inference Engine Optimized For Head-of-Line Blocking",
+      "source_url": "https://www.semanticscholar.org/paper/c4bc2ea83fd0bd21bd3e0fefd78ca0dbb25449f2",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:c4bc2ea83fd0bd21bd3e0fefd78ca0dbb25449f2"
+      ],
+      "semantic_scholar_id": "c4bc2ea83fd0bd21bd3e0fefd78ca0dbb25449f2",
+      "canonical_id": "SemanticScholar:c4bc2ea83fd0bd21bd3e0fefd78ca0dbb25449f2",
+      "authors": [
+        "Schwinn Saereesitthipitak",
+        "Ashish Rao",
+        "Cathy Zhou",
+        "William Li"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Stanford大学ホストの著者一次PDFに基づく。iteration単位のスケジューリング、prefill/decodeの分離、SRPT/MLFQ優先度制御を組み合わせ、head-of-line blockingによるLLMサービング遅延を直接扱う。TTFT・TPOT・JCTで評価するが、一次要旨に数値改善率は記載されていない。授業プロジェクトの原稿であり査読済み論文としては扱わない。",
+      "library_body_check": "Stanford公式ドメインに置かれた著者一次PDFのAbstract・Introductionを確認。全文精査は未実施。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dictionary-Based Speculative Decoding for Non-Latin-Script Languages",
+      "source_url": "https://www.semanticscholar.org/paper/0bc56b6500b3eece739cb48d60f9f26c9d805010",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:0bc56b6500b3eece739cb48d60f9f26c9d805010"
+      ],
+      "semantic_scholar_id": "0bc56b6500b3eece739cb48d60f9f26c9d805010",
+      "canonical_id": "SemanticScholar:0bc56b6500b3eece739cb48d60f9f26c9d805010",
+      "authors": [
+        "Oleksiy Syvokon"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "UNLP 2026のACL Anthology一次要旨。学習不要の静的n-gram辞書をdraftに使うDictSpecをvLLMプラグインとして実装し、3B〜70Bのモデルでウクライナ語・クリミアタタール語を評価。制御されたemulationでverification step最大1.65倍削減、live vLLMでhybrid最大1.76倍高速化を報告。純粋DictSpecの実機改善は小さいと明記。",
+      "library_body_check": "ACL Anthology公式Abstractと著者PDFの限界節を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "E 2 -RAG: Towards Editable Efficient RAG by Editing Compressed KV Caches",
+      "source_url": "https://www.semanticscholar.org/paper/57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f"
+      ],
+      "semantic_scholar_id": "57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+      "canonical_id": "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+      "authors": [
+        "Tongxu Luo",
+        "Wen-Yu Du",
+        "Han-Wen Hao",
+        "Min Zhang",
+        "Hao Yang",
+        "Ben-You Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "COLM 2025査読済み一次PDF。RAG文書チャンクの圧縮KVをINSERT/DELETE/UPDATEで直接編集し、再計算に対して編集約40倍高速、標準RAGに対して生成約3倍高速、QA品質1〜5%低下を報告。編集時間と生成時間を混同しない。",
+      "library_body_check": "OpenReviewの著者論文PDFと著者公式コードのAbstractを確認。全文精査未実施。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a0f07122c0e1",
+    "round": "libimp-a0f07122c0e10a7a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a0f07122c0e10a7a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a0f07122c0e10a7a-pre01.json",
+    "receipt": "sha256:3e7100e16583a1e91d1aa97b9dfba6d2078faa4b61b2f667c1f59d7a677c71f5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a0f07122c0e1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

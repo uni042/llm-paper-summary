@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Silicon Showdown: Performance, Efficiency, and Ecosystem Barriers in Consumer-Grade LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.00519",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The operational landscape of local Large Language Model (LLM) inference has shifted from lightweight models to datacenter-class weights exceeding 70B parameters, creating profound systems challenges for consumer hardware. This paper presents a systematic empirical analysis of the Nvidia and Apple Silicon ecosystems, specifically characterizing the distinct intra-architecture trade-offs required to deploy these massive models. On the Nvidia Blackwell architecture, we identify a critical\"Backend Dichotomy\"within the TensorRT-LLM stack: while the new NVFP4 quantization format delivers a 1.6x throughput advantage over optimized BF16 baselines (151 tokens/s vs. 92 tokens/s), realizing this performance requires navigating complex runtime constraints that trade startup latency for generation speed. Furthermore, we characterize the\"VRAM Wall\"for 70B+ models: on discrete GPUs, users face a destructive choice between aggressive quantization (e.g., Q2) that degrades model intelligence to fit in VRAM, or PCIe-bottlenecked CPU offloading, which reduces throughput by over 90% compared to full-GPU execution. Conversely, Apple's Unified Memory Architecture (UMA) circumvents these bottlenecks, enabling linear scaling for 80B parameter models at practical 4-bit precisions. This architectural divergence extends to operational sustainability, where Apple's SoC design demonstrates up to a 23x advantage in energy efficiency (tokens/joule). We conclude that for consumer-grade inference, the optimal hardware is defined by a complex interplay between compute density (Nvidia) and memory capacity (Apple), moderated by the significant\"ecosystem friction\"of proprietary quantization workflows.",
+      "identifiers": [
+        "SemanticScholar:916f4401fad2651d6e4baaac55cbe0b99986d4b4"
+      ],
+      "semantic_scholar_id": "916f4401fad2651d6e4baaac55cbe0b99986d4b4",
+      "canonical_id": "arXiv:2605.00519",
+      "arxiv_id": "2605.00519",
+      "doi": "10.48550/arXiv.2605.00519",
+      "authors": [
+        "Abdurrahman Javat",
+        "Allan Kazakov"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 201,
+        "matched_prestigious_venue": null
+      },
+      "reason": "消費者向けNVIDIA GPUとApple Siliconの70B級ローカルLLM推論を比較する実測システム研究。RTX 5090上でNVFP4がBF16比151対92 token/s（約1.6倍）を示す一方、backendと起動遅延にトレードオフがある。VRAM不足時のPCIeオフロードで推論throughputが大幅低下し、統合メモリ機との実装上の差を分析。特定構成・測定条件依存で普遍的な優劣を証明するものではないが、量子化・オフロード・ランタイム選定の推論性能実測に直接寄与するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen"
+    },
+    {
+      "title": "LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters",
+      "source_url": "https://arxiv.org/abs/2607.17175",
+      "year": 2026,
+      "published": "2026-07-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) services increasingly operate on edge infrastructure, enabling low-latency and privacy-preserving AI services. However, efficiently serving LLM requests across heterogeneous and resource-constrained edge devices require orchestration mechanisms that jointly determine model configuration (family, size, and quantization level) and execution placement while satisfying user- and system-level quality of service (QoS) requirements. This paper introduces LMEdge, a QoS-aware orchestration service that dynamically makes these decisions across heterogeneous edge devices. We formulate the problem as a binary integer linear programming (BILP) optimization that minimizes response time under accuracy, network, and resource constraints. To enable scalable online scheduling, we employ five lightweight machine learning (ML) models to predict query-specific latency, accuracy, resource usage, and response size for each model-size-quantization-device combination, and design a lightweight heuristic that approximates the BILP solution. We collect a comprehensive benchmarking dataset of over 59000 rows to train models and support reproducibility. Evaluation on a Kubernetes-based edge testbed with 57 instances and diverse query categories shows that LMEdge reduces latency, preserves accuracy, improves resource utilization, and increases serving ratio compared to two baselines.",
+      "identifiers": [
+        "SemanticScholar:2305c67f83e9be891efa7c84b13b715cbfbf68fe"
+      ],
+      "semantic_scholar_id": "2305c67f83e9be891efa7c84b13b715cbfbf68fe",
+      "canonical_id": "arXiv:2607.17175",
+      "arxiv_id": "2607.17175",
+      "doi": "10.48550/arXiv.2607.17175",
+      "authors": [
+        "Reza Farahani",
+        "Zoha Azimi",
+        "Mario Colosi",
+        "S. Dustdar"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LMEdgeは異種edgeクラスタ上でモデルfamily・サイズ・量子化精度・配置先を問い合わせごとに選択するQoS-aware推論オーケストレーション。応答遅延、精度、メモリ、ネットワークの制約をBILPと軽量近似法で扱い、59,000超の構成測定データと57インスタンスのKubernetesテストベッドで評価。比較2方式より遅延・resource利用・serving ratioが改善と報告するがabstractには統一倍率がない。LLM推論運用の直接最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen"
+    },
+    {
+      "title": "MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness",
+      "source_url": "https://arxiv.org/abs/2509.10372",
+      "year": 2025,
+      "published": "2025-09-12",
+      "venue": "Micro",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face significant inference latency due to inefficiencies in GEMM operations, weight access, and KV cache access, especially in real-time scenarios. This highlights the need for a versatile compute-memory efficient accelerator. Unfortunately, existing Transformer accelerators struggle to address both aspects simultaneously, as they focus on value-level processing, missing fine-grained opportunities to optimize computation and memory collaboratively. This paper introduces MCBP, a bit-grained compute-memory efficient algorithm-hardware co-design that leverages bit-slice (BS) enabled repetitiveness and sparsity to accelerate LLM inference. MCBP features three key innovations: 1) BS-repetitiveness-enabled computation reduction (BRCR), which eliminates redundant GEMM computations via leveraging redundancy hidden among BS vectors; 2) BS-sparsity-enabled two-state coding (BSTC), which reduces weight access via exploiting significant sparsity in high-order bit-slice weight; 3) Bit-grained progressive prediction (BGPP), which reduces KV cache access by leveraging early-termination-based bit-grained prediction. These techniques, supported by custom accelerator designs, effectively alleviate the burden in GEMM, weight access, and KV cache access. Extensive experiments on 26 benchmarks show that MCBP achieves 9.43 × speed up and 31.1 × higher energy efficiency than Nvidia A100 GPU. Compared to SOTA Transformer accelerators, MCBP achieves 35 × , 5.2 × and 3.2 × energy saving than Spatten, FACT and SOFA, respectively.",
+      "identifiers": [
+        "SemanticScholar:b499db00e6b1a3c64f43dccc6c8291297d9bf8a8"
+      ],
+      "semantic_scholar_id": "b499db00e6b1a3c64f43dccc6c8291297d9bf8a8",
+      "canonical_id": "arXiv:2509.10372",
+      "arxiv_id": "2509.10372",
+      "doi": "10.1145/3725843.3756037",
+      "authors": [
+        "Hui-Zheng Wang",
+        "Zichuan Wang",
+        "Zhi-Heng Yue",
+        "Yousheng Long",
+        "Tai-Quan Wei",
+        "Jian-Xun Yang",
+        "Yang Wang",
+        "Chao Li",
+        "Shao-Jun Wei",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 25,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 25,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 432,
+        "matched_prestigious_venue": "MICRO"
+      },
+      "reason": "bit-sliceの反復性を使うGEMM演算省略、上位bit-slice疎性を利用した重みアクセス削減、段階的bit予測によるKV読出し削減を統合するLLM向けアクセラレータ。26ベンチマークでA100比9.43倍高速・31.1倍エネルギー効率を報告。ただし専用ハードウェア対汎用GPUの比較であり同一GPU上のランタイム最適化とは異なる。演算・重み・KVの3ボトルネックを直接削減するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen"
+    },
+    {
+      "title": "FusionCIM: Accelerating LLM Inference with Fusion-Driven Computing-in-Memory Architecture",
+      "source_url": "https://arxiv.org/abs/2604.25317",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose FusionCIM, an operator-fusion-driven compute-in-memory (CIM) accelerator architecture for efficient and scalable LLM inference, with three key innovations: (1) a hybrid CIM pipeline architecture that maps QKT computation on inner-product-based CIM (IP-CIM) and PV aggregation on outer-product-based CIM (OP-CIM) for efficient matrix multiplications fusion; (2) a QO-stationary dataflow that eliminates repeated KV loading in CIM and K-matrix access in buffer under transpose fusion, significantly improving data reuse on chip; and (3) a pattern-aware online-softmax mechanism that exploits distribution regularities of attention scores to reduce exponential rescaling overhead for non-linear fusion. Experimental results on LLaMA-3 model show that FusionCIM achieves up to 3.86x energy saving, and 1.98x speedup compared with prior SOTA CIM-based designs with 29.4 TOPS/W energy efficiency at the system level.",
+      "identifiers": [
+        "SemanticScholar:5aff7fa5d472523f5cd50dcf0dc0fd78f47f5a0b"
+      ],
+      "semantic_scholar_id": "5aff7fa5d472523f5cd50dcf0dc0fd78f47f5a0b",
+      "canonical_id": "arXiv:2604.25317",
+      "arxiv_id": "2604.25317",
+      "doi": "10.48550/arXiv.2604.25317",
+      "authors": [
+        "Zi-Hao Xuan",
+        "Jia Chen",
+        "Ye-Wen Li",
+        "Wei Xuan",
+        "He-Gan Chen",
+        "Xiao Huo",
+        "Feng-Bin Tu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FusionCIMはLLM attentionのQK転置積とPV集約を異なるCIM演算様式へ割り当て、QO-stationary dataflowでKV再読出しを抑制し、online softmaxの再スケーリングも削減するハードウェア協調設計。LLaMA-3で従来CIMアクセラレータ比最大1.98倍高速・3.86倍の省エネルギー、システム29.4 TOPS/Wを一次abstractが報告。専用CIM設計の比較値であり既存GPUにソフトウェアだけで適用できる高速化ではない。LLM推論のデータ移動・計算最適化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen"
+    },
+    {
+      "title": "Generation Quality-Latency Tradeoff-Aware Inference Offloading for Multimodal LLMs in Cloud-Edge Continuum",
+      "source_url": "https://arxiv.org/abs/2606.15210",
+      "year": 2026,
+      "published": "2026-06-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Beyond pure cloud, some efforts are being made to deploy Large Language Models (LLMs) in edge to accelerate inference response. So the deployment of LLMs in cloud-edge continuum becomes a promising paradigm, where the tasks involving multimodal data occupy a large part of requests. Under this continuum, users usually concern about multiple Quality-of-Service (QoS) attributes, but it is always intractable to jointly optimize them. In this paper, we propose to study the joint optimization of those attributes and focus on two key representatives, i.e., content generation quality and response latency. We propose to study the offloading technology to achieve a tradeoff between the two objectives in the cloud-edge collaborative Multimodal LLM (MLLM) system. However, it is highly difficult to predict generation quality and inference latency for MLLM inference tasks while optimizing this offloading process. To address these unprecedented difficulties, we propose a Quality-Latency Tradeoff-Aware MLLM Inference Offloading (QLMIO) framework to make decisions that optimally balance generation quality and response latency. Meanwhile, recognizing the absence of publicly available datasets tailored to the MLLM inference offloading problem, we constructed a real-world cloud-edge collaborative MLLM system and subsequently collected an MLLM Inference Offloading Benchmark (MIOBench) to comprehensively evaluate our framework and facilitate the study of this problem. Extensive experimental results demonstrate that the QLMIO framework reduces latency by up to 58.14\\% compared to baselines, while simultaneously matching the task completion rate achieved under the case that executes all requests exclusively on a cloud server. The dataset and codes are available at Github.",
+      "identifiers": [
+        "SemanticScholar:c8ae23b4c3c942f164da3c01f0b8a383e56c154a"
+      ],
+      "semantic_scholar_id": "c8ae23b4c3c942f164da3c01f0b8a383e56c154a",
+      "canonical_id": "arXiv:2606.15210",
+      "arxiv_id": "2606.15210",
+      "doi": "10.48550/arXiv.2606.15210",
+      "authors": [
+        "Zhong-Xiao Wang",
+        "Yue-Shen Xu",
+        "Xin-Kui Zhao",
+        "Wei Shao",
+        "Rui Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QLMIOはマルチモーダルLLMのcloud/edge実行配置を生成品質と応答遅延の双方で最適化するオフロード制御を提案。自作の実cloud-edge協調環境とMIOBenchで評価し、比較対象比最大58.14%の遅延削減とcloud-onlyに匹敵するタスク完了率を報告。数値は当該テストベッド条件でありLLM内部kernel高速化ではない。MLLM推論の配置・レイテンシ最適化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-dd581ca908e7",
+    "round": "libimp-dd581ca908e7b4be-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-dd581ca908e7b4be-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-dd581ca908e7b4be-pre01.json",
+    "receipt": "sha256:2a9953a007f86e184a60e5c5456f49dd935ab4a38a3815f6b587f75295e856fb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-dd581ca908e7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
