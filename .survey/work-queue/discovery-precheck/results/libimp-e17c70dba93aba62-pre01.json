@@ -1,0 +1,409 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e17c70dba93aba62-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e17c70dba93a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2605.05994",
+    "arXiv:2606.01544",
+    "arXiv:2610.06917",
+    "arXiv:2610.06927",
+    "arXiv:2610.15579"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8e7def3b53a5efae5858321ca831b7370316f53b",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:41:42.521953+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2605.05994",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.01544",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06917",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.06927",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:df5b82211f4b447b2335e3daace6e4b55f7a4da3"
+    },
+    {
+      "requested_id": "arXiv:2610.15579",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression",
+      "source_url": "https://arxiv.org/abs/2605.05994",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose DiBA (Diagonal and Binary Matrix Approximation), a compact matrix factorization for neural network weight compression. Many components of modern networks, including linear layers, $1\\times1$ convolutions, attention projections, and embedding layers, have dense matrix weights. DiBA approximates $A\\in\\mathbb{R}^{m\\times n}$ by $\\widehat A=D_1B_1D_2B_2D_3$, where $D_1,D_2,D_3$ are diagonal matrices and $B_1,B_2$ are $0/1$ binary matrices. The intermediate dimension $k$ controls the trade-off between theoretical storage and approximation accuracy. For matrix-vector products, DiBA decomposes dense multiplication into three element-wise scaling operations and two binary mixing operations, reducing the floating-point multiplication count from $mn$ to $m+k+n$. For optimization, we introduce DiBA-Greedy, an alternating solver that combines closed-form least-squares updates for the diagonal factors with exact one-bit improvement tests for the binary factors. We also introduce DiBARD (DiBA with Retuning only Diagonal factors), which replaces dense-matrix layers by DiBA factors, freezes the binary matrices, and retunes only the diagonal entries on downstream data. This preserves compact binary mixing without discrete search during adaptation. On 40 dense weight matrices extracted from public pretrained models, DiBA-Greedy yields consistent SNR improvements as the theoretical storage ratio increases. After DiBA replacement in two component-replacement studies, DiBARD improves DistilBERT/WikiText masked-token accuracy from 0.4447 to 0.5210 and Speech Commands test accuracy for an Audio Spectrogram Transformer from 0.7684 to 0.9781 without reoptimizing the binary factors.",
+      "identifiers": [
+        "SemanticScholar:3edca58b20992306ffa8aa6af78a1a24729508fe"
+      ],
+      "semantic_scholar_id": "3edca58b20992306ffa8aa6af78a1a24729508fe",
+      "canonical_id": "arXiv:2605.05994",
+      "arxiv_id": "2605.05994",
+      "doi": "10.48550/arXiv.2605.05994",
+      "authors": [
+        "Nobutaka Ono"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search",
+      "source_url": "https://arxiv.org/abs/2606.01544",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) in practice incurs substantial memory and computational costs. Post-training pruning (PTP) is an effective approach to reducing these costs by removing weights without additional training. Among existing methods, RIA introduces relative importance scores normalized by row and column sums, achieving state-of-the-art accuracy. However, RIA considers only 1D cross-shaped (row/column) directional information and assigns equal weight to row and column contributions. In this paper, we propose \\textbf{CRePE}, which incorporates 2D local neighborhood context and adaptive coefficients into Relative Importance scoring. CRePE consistently outperforms existing PTP methods across diverse models and sparsity settings. However, identifying optimal adaptive coefficients via perplexity (PPL)-based hill climbing requires numerous PPL evaluations and approximately 11 hours of search time. To address this, we propose \\textbf{PHO} (Proxy-based Hyperparameter Optimization), which eliminates the need for repeated PPL measurements and reduces the search time to approximately 20 minutes. Furthermore, the optimal hyperparameter configuration found by PHO on one model transfers well to other models, demonstrating strong generalization. Finally, we verify that CRePE can be orthogonally combined with existing techniques including Channel Permutation, non-uniform sparsity allocation, and re-pruning methods.",
+      "identifiers": [
+        "SemanticScholar:75b7079d2d05922e75d9f9f1edd9111078ac7daf"
+      ],
+      "semantic_scholar_id": "75b7079d2d05922e75d9f9f1edd9111078ac7daf",
+      "canonical_id": "arXiv:2606.01544",
+      "arxiv_id": "2606.01544",
+      "doi": "10.48550/arXiv.2606.01544",
+      "authors": [
+        "Cheonjun Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.06917",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existing systems typically combine a fixed prefill/decode worker ratio with request routing across workers. However, real-world workloads exhibit both short bursts and sustained shifts in the prefill-to-decode demand ratio. As a result, a configuration that is well provisioned at one time may quickly become mismatched, causing latency SLO violations even when idle capacity exists elsewhere. Existing autoscaling mechanisms can add capacity, but they react slowly, require spare GPUs, and do not directly address short-timescale phase imbalance. We present FluidPD, a P/D-disaggregated serving system that provides SLO-aware in-place elasticity. FluidPD introduces two complementary mechanisms. FluidToken handles transient imbalance by offloading a bounded portion of prefill computation to decode workers when decode-side slack is available. FluidRole handles sustained imbalance by reassigning running workers between prefill and decode roles in place, avoiding model reload and engine restart. Both mechanisms are guided by lightweight pressure indices that expose prefill and decode-side resource pressure before they appear as SLO violations. Across production Azure trace workloads, FluidPD improves overall SLO attainment over static SGLang by up to 94.6 percentage points, demonstrating that SLO-aware in-place P/D elasticity improves service quality without provisioning additional workers.",
+      "identifiers": [
+        "SemanticScholar:4d48b38919091ce3a677ca16ff2d7de7f18dc323"
+      ],
+      "semantic_scholar_id": "4d48b38919091ce3a677ca16ff2d7de7f18dc323",
+      "canonical_id": "arXiv:2610.06917",
+      "arxiv_id": "2610.06917",
+      "authors": [
+        "Kartik Ramesh",
+        "Kai-Di Fu",
+        "Zi-Han Zheng",
+        "Jia-Huan Yu",
+        "Fabio Oliveira",
+        "Carlos H. A. Costa",
+        "Min-Jia Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Approximation Algorithms for Dual-Memory Request Scheduling in Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.15579",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregated LLM inference executes the prefill and decode phases on separate resource pools, reducing interference between the two phases. However, this architecture introduces a coupled scheduling problem because a request that completes prefill retains its prompt KV cache in prefill memory until it is admitted to the decode pool. Prefill and decode admission decisions therefore jointly determine memory occupancy and request completion times. To the best of our knowledge, this problem lacks a formal formulation, and no approximation guarantees are known for request scheduling in disaggregated LLM inference. We formalize this setting as the dual-memory request scheduling (DMRS) problem, whose objective is to minimize the sum of request completion times, and prove that it is strongly NP-hard. We develop two deterministic polynomial-time approximation algorithms. The first applies to instances satisfying $\\alpha<1$ and $\\beta<1$ and achieves an approximation ratio of $8+\\frac{4}{1-\\alpha}+\\frac{8}{1-\\beta}$, where $\\alpha$ and $\\beta$ are the maximum normalized prefill and peak decode memory demands among all requests, respectively. In particular, it yields a $32$-approximation when $\\alpha,\\beta\\leq 1/2$. The second algorithm applies to all feasible instances and achieves a uniform $36$-approximation. Finally, evaluations on two H100 GPUs using trace-derived offline workloads show that the proposed algorithms reduce the sum of request completion times relative to multiple vLLM deployment baselines.",
+      "identifiers": [
+        "SemanticScholar:1a9241f599daabf583f69c34639001e228b1f32d"
+      ],
+      "semantic_scholar_id": "1a9241f599daabf583f69c34639001e228b1f32d",
+      "canonical_id": "arXiv:2610.15579",
+      "arxiv_id": "2610.15579",
+      "authors": [
+        "Xin Wang",
+        "Hong Shen",
+        "Hui Tian",
+        "Ye Tao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.05994",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.05994",
+        "id:SemanticScholar:3edca58b20992306ffa8aa6af78a1a24729508fe",
+        "id:arXiv:2605.05994",
+        "title:diba diagonal and binary matrix approximation for neural network weight compression",
+        "url:https://arxiv.org/abs/2605.05994"
+      ],
+      "record": {
+        "title": "DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression",
+        "source_url": "https://arxiv.org/abs/2605.05994",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we propose DiBA (Diagonal and Binary Matrix Approximation), a compact matrix factorization for neural network weight compression. Many components of modern networks, including linear layers, $1\\times1$ convolutions, attention projections, and embedding layers, have dense matrix weights. DiBA approximates $A\\in\\mathbb{R}^{m\\times n}$ by $\\widehat A=D_1B_1D_2B_2D_3$, where $D_1,D_2,D_3$ are diagonal matrices and $B_1,B_2$ are $0/1$ binary matrices. The intermediate dimension $k$ controls the trade-off between theoretical storage and approximation accuracy. For matrix-vector products, DiBA decomposes dense multiplication into three element-wise scaling operations and two binary mixing operations, reducing the floating-point multiplication count from $mn$ to $m+k+n$. For optimization, we introduce DiBA-Greedy, an alternating solver that combines closed-form least-squares updates for the diagonal factors with exact one-bit improvement tests for the binary factors. We also introduce DiBARD (DiBA with Retuning only Diagonal factors), which replaces dense-matrix layers by DiBA factors, freezes the binary matrices, and retunes only the diagonal entries on downstream data. This preserves compact binary mixing without discrete search during adaptation. On 40 dense weight matrices extracted from public pretrained models, DiBA-Greedy yields consistent SNR improvements as the theoretical storage ratio increases. After DiBA replacement in two component-replacement studies, DiBARD improves DistilBERT/WikiText masked-token accuracy from 0.4447 to 0.5210 and Speech Commands test accuracy for an Audio Spectrogram Transformer from 0.7684 to 0.9781 without reoptimizing the binary factors.",
+        "identifiers": [
+          "SemanticScholar:3edca58b20992306ffa8aa6af78a1a24729508fe"
+        ],
+        "semantic_scholar_id": "3edca58b20992306ffa8aa6af78a1a24729508fe",
+        "canonical_id": "arXiv:2605.05994",
+        "arxiv_id": "2605.05994",
+        "doi": "10.48550/arXiv.2605.05994",
+        "authors": [
+          "Nobutaka Ono"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 195,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.01544",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.01544",
+        "id:SemanticScholar:75b7079d2d05922e75d9f9f1edd9111078ac7daf",
+        "id:arXiv:2606.01544",
+        "title:crepe convolutionaware relative importance in posttraining pruning with efficient search",
+        "url:https://arxiv.org/abs/2606.01544"
+      ],
+      "record": {
+        "title": "CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search",
+        "source_url": "https://arxiv.org/abs/2606.01544",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) in practice incurs substantial memory and computational costs. Post-training pruning (PTP) is an effective approach to reducing these costs by removing weights without additional training. Among existing methods, RIA introduces relative importance scores normalized by row and column sums, achieving state-of-the-art accuracy. However, RIA considers only 1D cross-shaped (row/column) directional information and assigns equal weight to row and column contributions. In this paper, we propose \\textbf{CRePE}, which incorporates 2D local neighborhood context and adaptive coefficients into Relative Importance scoring. CRePE consistently outperforms existing PTP methods across diverse models and sparsity settings. However, identifying optimal adaptive coefficients via perplexity (PPL)-based hill climbing requires numerous PPL evaluations and approximately 11 hours of search time. To address this, we propose \\textbf{PHO} (Proxy-based Hyperparameter Optimization), which eliminates the need for repeated PPL measurements and reduces the search time to approximately 20 minutes. Furthermore, the optimal hyperparameter configuration found by PHO on one model transfers well to other models, demonstrating strong generalization. Finally, we verify that CRePE can be orthogonally combined with existing techniques including Channel Permutation, non-uniform sparsity allocation, and re-pruning methods.",
+        "identifiers": [
+          "SemanticScholar:75b7079d2d05922e75d9f9f1edd9111078ac7daf"
+        ],
+        "semantic_scholar_id": "75b7079d2d05922e75d9f9f1edd9111078ac7daf",
+        "canonical_id": "arXiv:2606.01544",
+        "arxiv_id": "2606.01544",
+        "doi": "10.48550/arXiv.2606.01544",
+        "authors": [
+          "Cheonjun Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06917",
+      "identity_tokens": [
+        "id:SemanticScholar:4d48b38919091ce3a677ca16ff2d7de7f18dc323",
+        "id:arXiv:2610.06917",
+        "title:fluidpd inplace elasticity for sloaware prefilldecode disaggregated llm serving",
+        "url:https://arxiv.org/abs/2610.06917"
+      ],
+      "record": {
+        "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.06917",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existing systems typically combine a fixed prefill/decode worker ratio with request routing across workers. However, real-world workloads exhibit both short bursts and sustained shifts in the prefill-to-decode demand ratio. As a result, a configuration that is well provisioned at one time may quickly become mismatched, causing latency SLO violations even when idle capacity exists elsewhere. Existing autoscaling mechanisms can add capacity, but they react slowly, require spare GPUs, and do not directly address short-timescale phase imbalance. We present FluidPD, a P/D-disaggregated serving system that provides SLO-aware in-place elasticity. FluidPD introduces two complementary mechanisms. FluidToken handles transient imbalance by offloading a bounded portion of prefill computation to decode workers when decode-side slack is available. FluidRole handles sustained imbalance by reassigning running workers between prefill and decode roles in place, avoiding model reload and engine restart. Both mechanisms are guided by lightweight pressure indices that expose prefill and decode-side resource pressure before they appear as SLO violations. Across production Azure trace workloads, FluidPD improves overall SLO attainment over static SGLang by up to 94.6 percentage points, demonstrating that SLO-aware in-place P/D elasticity improves service quality without provisioning additional workers.",
+        "identifiers": [
+          "SemanticScholar:4d48b38919091ce3a677ca16ff2d7de7f18dc323"
+        ],
+        "semantic_scholar_id": "4d48b38919091ce3a677ca16ff2d7de7f18dc323",
+        "canonical_id": "arXiv:2610.06917",
+        "arxiv_id": "2610.06917",
+        "authors": [
+          "Kartik Ramesh",
+          "Kai-Di Fu",
+          "Zi-Han Zheng",
+          "Jia-Huan Yu",
+          "Fabio Oliveira",
+          "Carlos H. A. Costa",
+          "Min-Jia Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.15579",
+      "identity_tokens": [
+        "id:SemanticScholar:1a9241f599daabf583f69c34639001e228b1f32d",
+        "id:arXiv:2610.15579",
+        "title:approximation algorithms for dualmemory request scheduling in disaggregated llm inference",
+        "url:https://arxiv.org/abs/2610.15579"
+      ],
+      "record": {
+        "title": "Approximation Algorithms for Dual-Memory Request Scheduling in Disaggregated LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.15579",
+        "year": 2026,
+        "published": "2026-10-11",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Disaggregated LLM inference executes the prefill and decode phases on separate resource pools, reducing interference between the two phases. However, this architecture introduces a coupled scheduling problem because a request that completes prefill retains its prompt KV cache in prefill memory until it is admitted to the decode pool. Prefill and decode admission decisions therefore jointly determine memory occupancy and request completion times. To the best of our knowledge, this problem lacks a formal formulation, and no approximation guarantees are known for request scheduling in disaggregated LLM inference. We formalize this setting as the dual-memory request scheduling (DMRS) problem, whose objective is to minimize the sum of request completion times, and prove that it is strongly NP-hard. We develop two deterministic polynomial-time approximation algorithms. The first applies to instances satisfying $\\alpha<1$ and $\\beta<1$ and achieves an approximation ratio of $8+\\frac{4}{1-\\alpha}+\\frac{8}{1-\\beta}$, where $\\alpha$ and $\\beta$ are the maximum normalized prefill and peak decode memory demands among all requests, respectively. In particular, it yields a $32$-approximation when $\\alpha,\\beta\\leq 1/2$. The second algorithm applies to all feasible instances and achieves a uniform $36$-approximation. Finally, evaluations on two H100 GPUs using trace-derived offline workloads show that the proposed algorithms reduce the sum of request completion times relative to multiple vLLM deployment baselines.",
+        "identifiers": [
+          "SemanticScholar:1a9241f599daabf583f69c34639001e228b1f32d"
+        ],
+        "semantic_scholar_id": "1a9241f599daabf583f69c34639001e228b1f32d",
+        "canonical_id": "arXiv:2610.15579",
+        "arxiv_id": "2610.15579",
+        "authors": [
+          "Xin Wang",
+          "Hong Shen",
+          "Hui Tian",
+          "Ye Tao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 38,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8df9f108144dc31f175af56ec9fca33d55372823a4c402692e8cb87ab429dfd0",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

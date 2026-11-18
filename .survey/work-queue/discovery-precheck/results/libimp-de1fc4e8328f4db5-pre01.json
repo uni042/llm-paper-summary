@@ -1,0 +1,516 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-de1fc4e8328f4db5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-de1fc4e8328f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.30791",
+    "arXiv:2610.31098",
+    "arXiv:2610.32009",
+    "arXiv:2611.02082",
+    "arXiv:2611.05611",
+    "arXiv:2611.13017"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8e7def3b53a5efae5858321ca831b7370316f53b",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:41:57.049461+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.30791",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:d15e994e398c46ff3a14a075c2e53621640af9b3"
+    },
+    {
+      "requested_id": "arXiv:2610.31098",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32009",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.02082",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.05611",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.13017",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training",
+      "source_url": "https://arxiv.org/abs/2610.31098",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is a popular decode acceleration method. As such, it is particularly relevant to long-output generation, which requires an increasingly large KV cache. KV cache compression offers a way to constrain costs in long-context drafting. However, compression methods that focus on prefill information can lose relevance as the output length grows. We term this phenomenon decode staleness and show that it degrades draft model accuracy under selection-based KV cache compression. We introduce RIFT, a family of selection-based KV cache compression strategies that balance prefill information and recent generated tokens. We show that refreshing the KV cache selection during token generation significantly improves the drafter's quality at the cost of additional decode latency. To alleviate the refresh costs, we propose an adaptive KV refresh strategy that reduces the number of score calculations while retaining the drafter's quality. We further demonstrate how a compressibility-driven drafter training phase, based on sparse attention masks, can improve the drafter's quality under a compressed KV cache. Combined with compressibility training, RIFT enables Qwen3.5-4B, drafting for Qwen3.5-122B, to retain over 98% of its full-cache acceptance length on 32K-token inputs, 4K-token outputs, and an 8K-token KV cache budget.",
+      "identifiers": [
+        "SemanticScholar:0a93836720a92ea3ea1e153094cb85c3fcf73666"
+      ],
+      "semantic_scholar_id": "0a93836720a92ea3ea1e153094cb85c3fcf73666",
+      "canonical_id": "arXiv:2610.31098",
+      "arxiv_id": "2610.31098",
+      "authors": [
+        "Dor Tsur",
+        "Maor Ashkenazi",
+        "Maximilian Golub",
+        "Peter Hicks",
+        "Yaniv Galron",
+        "Talor Abramovich",
+        "Yoav Miron",
+        "Tiyasa Mitra",
+        "B. Rouhani",
+        "Ran Zilberstein"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning",
+      "source_url": "https://arxiv.org/abs/2610.32009",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models reduce computation through sparse activation, but storing their expert parameters remains a major memory bottleneck. We introduce GS-MoE, a training-free compression framework that addresses redundancy across and within experts through two compression axes: shared-subspace rank and expert intermediate width. Groupwise low-rank representations capture shared structure across experts while retaining expert-specific projections, and Nystr\\\"om-based neuron compression reduces intermediate width within each expert. For fixed shared subspaces, we derive per-expert reconstruction-error reductions from the reconstruction objective and use them to guide expert grouping. Budgets are allocated hierarchically using a gradient-free layer-importance score to guide the allocation of rank and width budgets across layers, which eigenvalues and leverage then distribute as non-uniform ranks across groups and intermediate widths across experts. Experiments demonstrate the complementary benefits of compression along both axes, particularly at high compression rates on fine-grained MoE models. On DeepSeek-MoE-16B-Base, at a 60% reduction in total model parameters, GS-MoE retains approximately 90% of the uncompressed model's average reasoning performance, compared with 73% for D$^2$-MoE, while achieving 20% lower out-of-domain perplexity. We provide a code implementation at: https://github.com/cbacary/GS-MoE",
+      "identifiers": [
+        "SemanticScholar:b5c59d89735f561d2b435d00727624597cd73a95"
+      ],
+      "semantic_scholar_id": "b5c59d89735f561d2b435d00727624597cd73a95",
+      "canonical_id": "arXiv:2610.32009",
+      "arxiv_id": "2610.32009",
+      "authors": [
+        "Carson Cary",
+        "Yu-Kai Jin",
+        "Yi-Hao Huang",
+        "Zhan-Kai Ye",
+        "Fang-Yi Li",
+        "Ting Hua",
+        "Xin Liu",
+        "Shang-Qian Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fairway: Load-Aware KV Cache Reuse for LLM Prefill Scheduling",
+      "source_url": "https://arxiv.org/abs/2611.02082",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM-based applications often employ agentic workflows and retrieval-augmented generation (RAG), which build long prompts from shared context. When prefixes are shared across requests, serving engines reuse the key-value (KV) cache to skip parts of the prefill computation. Reuse is typically graded: the uncached work of requests in a queue can differ by up to 100x. In this setting, the order of scheduling determines the time-to-first-token (TTFT) for the queued requests. KV reuse-first scheduling, which prioritizes the requests with the longest KV cache hit, gives the lowest median TTFT but starves expensive requests under load spikes; first-come-first-served (FCFS) scheduling bounds the tail but raises the median TTFT. We present Fairway, a prefill scheduler built on adaptive reuse prioritization: it favors KV cache reuse while queues are short, and shifts toward fair allocation as requests wait longer relative to their own prefill time. Fairway employs a virtual dual lane model: a KV reuse-first Fast lane and a Fair lane atop the serving engine's waiting queue that enables speeding up of cheap reuse requests without starving expensive ones. This model automatically adapts to the workload without any per-workload tuning. Fairway lowers the tail TTFT at no cost to the median in transient overload. Across workloads and load levels, Fairway matches or beats the best baseline, with a p99 TTFT up to 8.6x lower than prior prefix-aware schedulers. During load spikes, it keeps the tail of FCFS at a 6x lower median TTFT.",
+      "identifiers": [
+        "SemanticScholar:0b613001885c5f5e2bb2b33ebcd9dd7e76b6d1c2"
+      ],
+      "semantic_scholar_id": "0b613001885c5f5e2bb2b33ebcd9dd7e76b6d1c2",
+      "canonical_id": "arXiv:2611.02082",
+      "arxiv_id": "2611.02082",
+      "authors": [
+        "Hamidreza Alikhani",
+        "Nazmul Takbir",
+        "Matin Khajavi",
+        "Rajat Bhattacharjya",
+        "S. A. Jyothi",
+        "N. Dutt"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter",
+      "source_url": "https://arxiv.org/abs/2611.05611",
+      "year": 2026,
+      "published": "2026-11-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) speeds up large language model (LLM) serving, but its gain depends on the workload's \\emph{shape}, such as batch size and context length, and on its \\emph{content}. A model-based drafter proposes a short block on any content, while a model-free drafter such as n-gram lookup proposes long copies at almost no cost when the output repeats its input, as in code editing. Adaptive verification spends a batch-wide verification budget on the draft tokens most likely to be accepted, but it supports only one model-based drafter. Model-free drafters provide no per-token confidence, so they cannot take part in budget allocation, and deployments must either fix one drafter or split their GPUs between drafters. We present \\sys, a framework that runs a model-based and a model-free drafter on every step and gives each request the better of their chains, within adaptive verification and entirely on the GPU, which keeps asynchronous scheduling intact. The key idea is a price per verified draft token: the goodput that slot would earn elsewhere in the batch. Once the model-free drafter's tokens carry calibrated acceptance estimates, fit once on general text, this price puts both drafters'chains on one scale. Instantiated with \\dspark and an n-gram drafter in vLLM, \\sys achieves 1.10--1.62\\x the output throughput of \\dspark on code editing at batch size~4 and 1.04--1.27\\x at batch size~128, while staying at 0.97--1.01\\x of it on chat at temperature~0. A single deployment can therefore serve both workloads.",
+      "identifiers": [
+        "SemanticScholar:977f0bd8e0248adffbc28436d055e8a5101bb090"
+      ],
+      "semantic_scholar_id": "977f0bd8e0248adffbc28436d055e8a5101bb090",
+      "canonical_id": "arXiv:2611.05611",
+      "arxiv_id": "2611.05611",
+      "authors": [
+        "Ekagra Ranjan",
+        "Bharat Venkitesh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Future Drafting: Mixture Block Drafters for Tree-Verified Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.13017",
+      "year": 2026,
+      "published": "2026-11-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block drafters such as DFlash draft a block of future tokens in one forward pass, and draft trees such as DDTree verify the prefixes ranked highest by the product of the drafter's per-position distributions. Under tree verification, the expected number of accepted tokens is the probability mass the tree covers. We show that a product misallocates it: when the continuation can follow several futures, it splices them into chimeras, prefixes stitched together from different futures that the target never produces, and gives them as much budget as the futures themselves. Barring ties, no product-ranked tree can hold two futures that disagree in $m$ positions without $2^{m-1}-1$ chimeras, however well the drafter is trained, and in practice chimeras make up 27-33% of a 64-node tree. We propose Multi-Future Drafting (MFD), which restores the coupling with a latent variable instead of the chain rule: $K$ learned mode embeddings at the drafter's input draft $K$ coherent blocks in the same pass, and a mixture DDTree lets the verifier pick the future the target takes, losslessly and with $K+1$ extra vectors. On four Qwen targets from 4B to 27B parameters, at batch size 1, MFD reaches up to 7.8$\\times$ speedup, 5-8% faster than the best single-mode tree trained identically and, on Qwen3-4B and Qwen3-8B, 9-16% faster than the released DARTree trained on the same prompts.",
+      "identifiers": [
+        "SemanticScholar:8b59e0674925f940f57e3f6766d3f97b8213b3a8"
+      ],
+      "semantic_scholar_id": "8b59e0674925f940f57e3f6766d3f97b8213b3a8",
+      "canonical_id": "arXiv:2611.13017",
+      "arxiv_id": "2611.13017",
+      "authors": [
+        "Hao-Yu Huang",
+        "Jia-Liang Kang",
+        "Lin-Lin Yang",
+        "Xiao Yang",
+        "Bao-Chang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.31098",
+      "identity_tokens": [
+        "id:SemanticScholar:0a93836720a92ea3ea1e153094cb85c3fcf73666",
+        "id:arXiv:2610.31098",
+        "title:rift kv cache compression for draft models with complementary compressibility training",
+        "url:https://arxiv.org/abs/2610.31098"
+      ],
+      "record": {
+        "title": "RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training",
+        "source_url": "https://arxiv.org/abs/2610.31098",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding is a popular decode acceleration method. As such, it is particularly relevant to long-output generation, which requires an increasingly large KV cache. KV cache compression offers a way to constrain costs in long-context drafting. However, compression methods that focus on prefill information can lose relevance as the output length grows. We term this phenomenon decode staleness and show that it degrades draft model accuracy under selection-based KV cache compression. We introduce RIFT, a family of selection-based KV cache compression strategies that balance prefill information and recent generated tokens. We show that refreshing the KV cache selection during token generation significantly improves the drafter's quality at the cost of additional decode latency. To alleviate the refresh costs, we propose an adaptive KV refresh strategy that reduces the number of score calculations while retaining the drafter's quality. We further demonstrate how a compressibility-driven drafter training phase, based on sparse attention masks, can improve the drafter's quality under a compressed KV cache. Combined with compressibility training, RIFT enables Qwen3.5-4B, drafting for Qwen3.5-122B, to retain over 98% of its full-cache acceptance length on 32K-token inputs, 4K-token outputs, and an 8K-token KV cache budget.",
+        "identifiers": [
+          "SemanticScholar:0a93836720a92ea3ea1e153094cb85c3fcf73666"
+        ],
+        "semantic_scholar_id": "0a93836720a92ea3ea1e153094cb85c3fcf73666",
+        "canonical_id": "arXiv:2610.31098",
+        "arxiv_id": "2610.31098",
+        "authors": [
+          "Dor Tsur",
+          "Maor Ashkenazi",
+          "Maximilian Golub",
+          "Peter Hicks",
+          "Yaniv Galron",
+          "Talor Abramovich",
+          "Yoav Miron",
+          "Tiyasa Mitra",
+          "B. Rouhani",
+          "Ran Zilberstein"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.32009",
+      "identity_tokens": [
+        "id:SemanticScholar:b5c59d89735f561d2b435d00727624597cd73a95",
+        "id:arXiv:2610.32009",
+        "title:gsmoe trainingfree moe compression via groupwise subspace sharing and pruning",
+        "url:https://arxiv.org/abs/2610.32009"
+      ],
+      "record": {
+        "title": "GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning",
+        "source_url": "https://arxiv.org/abs/2610.32009",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models reduce computation through sparse activation, but storing their expert parameters remains a major memory bottleneck. We introduce GS-MoE, a training-free compression framework that addresses redundancy across and within experts through two compression axes: shared-subspace rank and expert intermediate width. Groupwise low-rank representations capture shared structure across experts while retaining expert-specific projections, and Nystr\\\"om-based neuron compression reduces intermediate width within each expert. For fixed shared subspaces, we derive per-expert reconstruction-error reductions from the reconstruction objective and use them to guide expert grouping. Budgets are allocated hierarchically using a gradient-free layer-importance score to guide the allocation of rank and width budgets across layers, which eigenvalues and leverage then distribute as non-uniform ranks across groups and intermediate widths across experts. Experiments demonstrate the complementary benefits of compression along both axes, particularly at high compression rates on fine-grained MoE models. On DeepSeek-MoE-16B-Base, at a 60% reduction in total model parameters, GS-MoE retains approximately 90% of the uncompressed model's average reasoning performance, compared with 73% for D$^2$-MoE, while achieving 20% lower out-of-domain perplexity. We provide a code implementation at: https://github.com/cbacary/GS-MoE",
+        "identifiers": [
+          "SemanticScholar:b5c59d89735f561d2b435d00727624597cd73a95"
+        ],
+        "semantic_scholar_id": "b5c59d89735f561d2b435d00727624597cd73a95",
+        "canonical_id": "arXiv:2610.32009",
+        "arxiv_id": "2610.32009",
+        "authors": [
+          "Carson Cary",
+          "Yu-Kai Jin",
+          "Yi-Hao Huang",
+          "Zhan-Kai Ye",
+          "Fang-Yi Li",
+          "Ting Hua",
+          "Xin Liu",
+          "Shang-Qian Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.02082",
+      "identity_tokens": [
+        "id:SemanticScholar:0b613001885c5f5e2bb2b33ebcd9dd7e76b6d1c2",
+        "id:arXiv:2611.02082",
+        "title:fairway loadaware kv cache reuse for llm prefill scheduling",
+        "url:https://arxiv.org/abs/2611.02082"
+      ],
+      "record": {
+        "title": "Fairway: Load-Aware KV Cache Reuse for LLM Prefill Scheduling",
+        "source_url": "https://arxiv.org/abs/2611.02082",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM-based applications often employ agentic workflows and retrieval-augmented generation (RAG), which build long prompts from shared context. When prefixes are shared across requests, serving engines reuse the key-value (KV) cache to skip parts of the prefill computation. Reuse is typically graded: the uncached work of requests in a queue can differ by up to 100x. In this setting, the order of scheduling determines the time-to-first-token (TTFT) for the queued requests. KV reuse-first scheduling, which prioritizes the requests with the longest KV cache hit, gives the lowest median TTFT but starves expensive requests under load spikes; first-come-first-served (FCFS) scheduling bounds the tail but raises the median TTFT. We present Fairway, a prefill scheduler built on adaptive reuse prioritization: it favors KV cache reuse while queues are short, and shifts toward fair allocation as requests wait longer relative to their own prefill time. Fairway employs a virtual dual lane model: a KV reuse-first Fast lane and a Fair lane atop the serving engine's waiting queue that enables speeding up of cheap reuse requests without starving expensive ones. This model automatically adapts to the workload without any per-workload tuning. Fairway lowers the tail TTFT at no cost to the median in transient overload. Across workloads and load levels, Fairway matches or beats the best baseline, with a p99 TTFT up to 8.6x lower than prior prefix-aware schedulers. During load spikes, it keeps the tail of FCFS at a 6x lower median TTFT.",
+        "identifiers": [
+          "SemanticScholar:0b613001885c5f5e2bb2b33ebcd9dd7e76b6d1c2"
+        ],
+        "semantic_scholar_id": "0b613001885c5f5e2bb2b33ebcd9dd7e76b6d1c2",
+        "canonical_id": "arXiv:2611.02082",
+        "arxiv_id": "2611.02082",
+        "authors": [
+          "Hamidreza Alikhani",
+          "Nazmul Takbir",
+          "Matin Khajavi",
+          "Rajat Bhattacharjya",
+          "S. A. Jyothi",
+          "N. Dutt"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.05611",
+      "identity_tokens": [
+        "id:SemanticScholar:977f0bd8e0248adffbc28436d055e8a5101bb090",
+        "id:arXiv:2611.05611",
+        "title:hybrid spark adaptive speculative decoding that lets the content choose the drafter",
+        "url:https://arxiv.org/abs/2611.05611"
+      ],
+      "record": {
+        "title": "Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter",
+        "source_url": "https://arxiv.org/abs/2611.05611",
+        "year": 2026,
+        "published": "2026-11-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) speeds up large language model (LLM) serving, but its gain depends on the workload's \\emph{shape}, such as batch size and context length, and on its \\emph{content}. A model-based drafter proposes a short block on any content, while a model-free drafter such as n-gram lookup proposes long copies at almost no cost when the output repeats its input, as in code editing. Adaptive verification spends a batch-wide verification budget on the draft tokens most likely to be accepted, but it supports only one model-based drafter. Model-free drafters provide no per-token confidence, so they cannot take part in budget allocation, and deployments must either fix one drafter or split their GPUs between drafters. We present \\sys, a framework that runs a model-based and a model-free drafter on every step and gives each request the better of their chains, within adaptive verification and entirely on the GPU, which keeps asynchronous scheduling intact. The key idea is a price per verified draft token: the goodput that slot would earn elsewhere in the batch. Once the model-free drafter's tokens carry calibrated acceptance estimates, fit once on general text, this price puts both drafters'chains on one scale. Instantiated with \\dspark and an n-gram drafter in vLLM, \\sys achieves 1.10--1.62\\x the output throughput of \\dspark on code editing at batch size~4 and 1.04--1.27\\x at batch size~128, while staying at 0.97--1.01\\x of it on chat at temperature~0. A single deployment can therefore serve both workloads.",
+        "identifiers": [
+          "SemanticScholar:977f0bd8e0248adffbc28436d055e8a5101bb090"
+        ],
+        "semantic_scholar_id": "977f0bd8e0248adffbc28436d055e8a5101bb090",
+        "canonical_id": "arXiv:2611.05611",
+        "arxiv_id": "2611.05611",
+        "authors": [
+          "Ekagra Ranjan",
+          "Bharat Venkitesh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 15,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.13017",
+      "identity_tokens": [
+        "id:SemanticScholar:8b59e0674925f940f57e3f6766d3f97b8213b3a8",
+        "id:arXiv:2611.13017",
+        "title:multifuture drafting mixture block drafters for treeverified speculative decoding",
+        "url:https://arxiv.org/abs/2611.13017"
+      ],
+      "record": {
+        "title": "Multi-Future Drafting: Mixture Block Drafters for Tree-Verified Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2611.13017",
+        "year": 2026,
+        "published": "2026-11-09",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block drafters such as DFlash draft a block of future tokens in one forward pass, and draft trees such as DDTree verify the prefixes ranked highest by the product of the drafter's per-position distributions. Under tree verification, the expected number of accepted tokens is the probability mass the tree covers. We show that a product misallocates it: when the continuation can follow several futures, it splices them into chimeras, prefixes stitched together from different futures that the target never produces, and gives them as much budget as the futures themselves. Barring ties, no product-ranked tree can hold two futures that disagree in $m$ positions without $2^{m-1}-1$ chimeras, however well the drafter is trained, and in practice chimeras make up 27-33% of a 64-node tree. We propose Multi-Future Drafting (MFD), which restores the coupling with a latent variable instead of the chain rule: $K$ learned mode embeddings at the drafter's input draft $K$ coherent blocks in the same pass, and a mixture DDTree lets the verifier pick the future the target takes, losslessly and with $K+1$ extra vectors. On four Qwen targets from 4B to 27B parameters, at batch size 1, MFD reaches up to 7.8$\\times$ speedup, 5-8% faster than the best single-mode tree trained identically and, on Qwen3-4B and Qwen3-8B, 9-16% faster than the released DARTree trained on the same prompts.",
+        "identifiers": [
+          "SemanticScholar:8b59e0674925f940f57e3f6766d3f97b8213b3a8"
+        ],
+        "semantic_scholar_id": "8b59e0674925f940f57e3f6766d3f97b8213b3a8",
+        "canonical_id": "arXiv:2611.13017",
+        "arxiv_id": "2611.13017",
+        "authors": [
+          "Hao-Yu Huang",
+          "Jia-Liang Kang",
+          "Lin-Lin Yang",
+          "Xiao Yang",
+          "Bao-Chang Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bb5cde9bdab3aeab5e24f28126fbbb49b0426513d78eedb8c4c9f775315d0d4d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

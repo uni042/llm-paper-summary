@@ -1,0 +1,831 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c5a2bedf866655f7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c5a2bedf8666",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2607.10137",
+    "arXiv:2610.02713",
+    "arXiv:2610.12338",
+    "arXiv:2610.18451",
+    "arXiv:2610.37386",
+    "arXiv:2610.42147",
+    "arXiv:2611.00486",
+    "arXiv:2611.04055",
+    "arXiv:2611.07025"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8e7def3b53a5efae5858321ca831b7370316f53b",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:41:42.513395+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2607.10137",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.02713",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.12338",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18451",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37386",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.42147",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.00486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.04055",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.07025",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RDQ: Residual Distribution Quantization for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.10137",
+      "year": 2026,
+      "published": "2026-07-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) of large language models degrades sharply below 4-bit precision. We identify the root cause as residual stream distributional drift: quantization noise injected at each transformer layer accumulates in the shared residual representation, causing KL divergence from the FP16 baseline to grow super-linearly with depth (Pearson r=0.999 with log-perplexity, p<0.001, confirmed across all tested methods and bit-widths). We discover that 84% of LLaMA-3-8B layers exhibit non-Gaussian residual distributions (KS test, p<=0.05), and that per-layer residual stream variance grows 6,548x across depth. We propose RDQ (Residual Distribution Quantization), a PTQ framework whose central contribution is Cascaded Error Compensation (CEC): a sequential calibration procedure that captures the actual drifted activations each layer receives (computed by running calibration data through already-quantized upstream layers) and fits per-channel AWQ-style scales against those drifted inputs, with scales folded into preceding RMSNorm weights for exact mathematical equivalence at zero inference overhead. RDQ achieves state-of-the-art results on all three tested architectures: LLaMA-3-8B: 7.55 / 5.62 PPL (W3/W4); Qwen-2.5-7B: 7.46 / 6.38 PPL; Mistral-7B: 6.88 / 5.73 PPL. RDQ beats the best published baseline (LeanQuant/SpinQuant) at every model and bit-width combination, with gains up to -46.4% vs. RTN at W3A16 on LLaMA-3-8B. All output is standard group-128 asymmetric quantization, deployable on Qualcomm AIMET, GGUF, and any standard inference stack at zero runtime overhead.",
+      "identifiers": [
+        "SemanticScholar:5f803869ca967d393064c6b7500e03e50a1ac9ff"
+      ],
+      "semantic_scholar_id": "5f803869ca967d393064c6b7500e03e50a1ac9ff",
+      "canonical_id": "arXiv:2607.10137",
+      "arxiv_id": "2607.10137",
+      "doi": "10.48550/arXiv.2607.10137",
+      "authors": [
+        "Prateek Singh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+      "source_url": "https://arxiv.org/abs/2610.02713",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most KV-cache compression methods classify attention heads once, either offline or during prefill, and keep this classification fixed throughout generation. Across three models (1.5B-8B) and three regimes (needle retrieval, long chain-of-thought, and multi-turn recall), we measure head behavior on four model-regime combinations and find that most heads change their reading behavior at least once during generation. We introduce WakeKV, a reactive residency policy that moves cooling heads to a recoverable CPU reservoir rather than freezing or permanently evicting their state. At matched memory or budget, WakeKV consistently improves miss rate over frozen classification and destructive eviction, evaluated across five model-regime combinations and over three cited baselines (SnapKV, uniform R-KV, and ReasonAlloc) across four eligible combinations. A FlexiCache/vLLM implementation on Mistral-7B confirms the benefit on real hardware, improving throughput while retaining LongBench quality.",
+      "identifiers": [
+        "SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46"
+      ],
+      "semantic_scholar_id": "17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+      "canonical_id": "arXiv:2610.02713",
+      "arxiv_id": "2610.02713",
+      "authors": [
+        "Utkarsh Ranjan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+      "source_url": "https://arxiv.org/abs/2610.12338",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While caching key-value (KV) states accelerates Large Language Model (LLM) decoding, this cache can dominate memory usage at long context lengths. One solution is to compress this memory by exploiting inter-layer cache similarities. However, most existing techniques necessitate architectural changes to LLMs and incur substantial overhead. In this work, we propose a symmetry-aware value cache merging strategy that reduces cache memory while avoiding both harmful performance degradation and architectural overhead during decoding. Furthermore, we show that this approach can be exploited alongside existing cache compression techniques, composing with high-ratio quantization or key cache pruning to reach compression ratios that neither method reaches alone, with minimal additional cost. Ultimately, our findings reveal a major source of underutilized capacity in the value cache, offering a simple yet highly effective direction for scaling context windows under memory constraints.",
+      "identifiers": [
+        "SemanticScholar:2bf552cca9eac56f5f498efb6f5469aa330724b8"
+      ],
+      "semantic_scholar_id": "2bf552cca9eac56f5f498efb6f5469aa330724b8",
+      "canonical_id": "arXiv:2610.12338",
+      "arxiv_id": "2610.12338",
+      "authors": [
+        "Neha Verma",
+        "Sung Won Kim",
+        "Kenton Murray",
+        "Kevin Duh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+      "source_url": "https://arxiv.org/abs/2610.18451",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large-scale expert parallelism (EP) has become the standard deployment configuration for Mixture-of-Experts (MoE) models in production. Meanwhile, the highly dynamic nature of LLM workloads requires providers to continuously adjust serving capacity to match fluctuating demand. Scaling MoE serving cannot be efficiently achieved by simply adding or removing serving instances; instead, it often requires resizing the EP group within an existing instance, which we refer to as intra-instance scaling.Existing inference engines primarily rely on instance-level scaling, which destroys and reconstructs entire serving instances, incurring substantial scaling overhead. We present FastEEP (Fast Elastic Expert Parallel), a fast intra-instance scaling system for MoE serving based on the principle of Partial Reuse. FastEEP reuses existing runtime state across worker execution, GPU memory, and communication by separating reusable execution structures from the resources activated by the current EP configuration. This separation enables coordinated resource reclamation and reconfiguration while preserving costly-to-reconstruct state, allowing fast EP scaling without full instance teardown and reconstruction. Our evaluation shows that FastEEP achieves 4.5x--11.7x faster scaling than the existing vLLM-based approach across different models, enabling efficient, fine-grained scaling of MoE serving.",
+      "identifiers": [
+        "SemanticScholar:4ba91ba8cdc752c6471c8c9bc1987348456a88a2"
+      ],
+      "semantic_scholar_id": "4ba91ba8cdc752c6471c8c9bc1987348456a88a2",
+      "canonical_id": "arXiv:2610.18451",
+      "arxiv_id": "2610.18451",
+      "authors": [
+        "Yun-Fei Feng",
+        "Jing-Kai He",
+        "Shi-Qi Liu",
+        "Cheng Zhang",
+        "Dong Du",
+        "Er-Hu Feng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data",
+      "source_url": "https://arxiv.org/abs/2610.37386",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models are bottlenecked by loading routed-expert weights from memory during interactive decoding at small batch sizes. Because most intermediate channels in a routed expert contribute little to any single token, channel selectors predict which channels matter and read only their weights, typically keeping channels above a threshold calibrated on offline data. We show that channel selection needs no calibration data. First, a calibrated threshold does not fix how much a selector reads, because the number of channels passing it varies across inputs; Prox with thresholds calibrated for an 18% read budget actually reads only 12.9% on average across our benchmarks. Second, top-k keeps each token's k highest-scoring channels and needs no calibration data. At the calibrated budget, a selector's top-k version matches or beats its threshold version on the same score in 40 of 43 comparisons at 13% and 18% budgets, including all 23 on generation tasks. The top-k versions also avoid the repetition-loop collapse that calibrated thresholds cause on Gemma 4. Calibrating a threshold thus provides neither of the two things selectors use it for: a known read budget and a consistent accuracy gain at that budget. We furthermore introduce a reader built entirely from the model's weights, which screens channels with a ternary sketch and recovers the skipped ones with a low-rank map. Across three post-trained MoE models, our reader retains 98.1% of full-model accuracy at 17.8% of routed-expert reads, with Triton kernels running MoE blocks 1.60 to 1.90x faster than optimized vLLM at batch one and up to 2.69x at larger batches on the same three models.",
+      "identifiers": [
+        "SemanticScholar:54cd4d59a8cec79a5946b6ef3d28757c8de30ec1"
+      ],
+      "semantic_scholar_id": "54cd4d59a8cec79a5946b6ef3d28757c8de30ec1",
+      "canonical_id": "arXiv:2610.37386",
+      "arxiv_id": "2610.37386",
+      "authors": [
+        "Geun-Hyung Kim",
+        "SungJoon Hwang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "source_url": "https://arxiv.org/abs/2610.42147",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+      "identifiers": [
+        "SemanticScholar:2fe5fb0b1071a1441b18decf5969f16732c63751"
+      ],
+      "semantic_scholar_id": "2fe5fb0b1071a1441b18decf5969f16732c63751",
+      "canonical_id": "arXiv:2610.42147",
+      "arxiv_id": "2610.42147",
+      "authors": [
+        "Ales Kubicek",
+        "Andrea Caciolai",
+        "Liang-Zu Peng",
+        "Sukrit Sumant",
+        "Benjamin Hoover",
+        "Fraser Greenlee",
+        "R. Battleday",
+        "Radim Urban",
+        "T. Hoefler",
+        "James C. R. Whittington"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Integer-Exact Microscaling: Running MXFP4 Language Models on INT8 Matrix Units",
+      "source_url": "https://arxiv.org/abs/2611.00486",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On hardware whose fastest matrix datapath is INT8$\\times$INT8, such as the Neural Accelerators of Apple's M5 GPUs, 4-bit weights must become INT8 operands. Existing MXFP4 kernels already map FP4 (E2M1) values to integers by doubling them, but apply every 32-element block scale inside the reduction. We show when no per-block work is needed: a row of MXFP4 weights is exactly one INT8 vector times one power-of-two scale if its block exponents span at most three, so a linear layer becomes a single INT8 GEMM with one rescale per output. Enforcing the condition adds at most 1/16 of a row's largest rounding error to the blocks it changes, and real weights already satisfy it: 97.9-99.97% of rows across seven models, including 99.93% of the 95M rows of a 125B-parameter mixture-of-experts (MoE) model, Qwen3.8-Flash-Next. The resulting spread-constrained MXFP4 files stay standard MXFP4. With integer instead of power-of-two block multipliers, an integer-exact format (16-wide blocks, multipliers 1..10, 4.26 bits) runs as one exact INT8 GEMM and is more accurate than NVFP4 (4.5 bits) with its standard scale rule on five small models, within 0.06 perplexity of NVFP4 with scale search. On Qwen3.8-Flash-Next's routed experts with INT8 activations it is as close to the FP8 model as NVFP4 with scale search (KL divergence 0.0557 vs. 0.0553) and closer than MLX's MXFP4 and affine INT4; with every matrix quantized it solves 94.8% of GSM8K vs. 91.0% for MLX's MXFP4. Quantizing only the 74k routed expert matrices (96% of the parameters) to either of our formats with INT8 activations costs at most 0.2% perplexity. A complete W4A8 system on the M5 produces outputs bit-identical to the quantized reference; prefill is 1.34-1.74x faster than MLX on a dense model, 1.10-1.57x on two MoE models up to 35B parameters and 1.22-1.29x on Qwen3.8-Flash-Next, where shared non-GEMM work bounds the gain.",
+      "identifiers": [
+        "SemanticScholar:289a850a2c5b18d37f61cc111196784855aaafec"
+      ],
+      "semantic_scholar_id": "289a850a2c5b18d37f61cc111196784855aaafec",
+      "canonical_id": "arXiv:2611.00486",
+      "arxiv_id": "2611.00486",
+      "authors": [
+        "Shinyoung Kang",
+        "Junhyung Ahn",
+        "Yujun Kim",
+        "J. Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HybridSpec: Throughput-Aware Speculative Decoding for Hybrid GDN-MoE Models",
+      "source_url": "https://arxiv.org/abs/2611.04055",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In speculative decoding, parallel drafters such as DFlash make drafting cheap, so target verification dominates each round. A central choice is the verification length, the number of tokens that the target processes in each round. Verifying more draft tokens can accept more of them, but work after the first rejection is wasted. For hybrid target models that combine Gated DeltaNet (GDN) and mixture-of-experts (MoE) layers, verification time grows much faster with this length than for dense models. In a single-request profile of Qwen3.6-35B-A3B with DFlash, it grew by 71% from length 4 to 16, almost entirely in GDN and MoE layers, compared with 4%-6% for a dense Qwen3-4B target. Each GDN layer must update a recurrent state at every token and recover it at the end of the accepted prefix. The MoE cost depends on the experts that the tokens activate, which are known only once verification runs. We present HybridSpec, which selects the verification length on the GPU from draft-side acceptance estimates and measured target latency. Verification then runs this length plus one extra token up to the first MoE router, before any expert runs. There, a lightweight routing correction uses the observed expert assignments to decide whether to keep that token. The rest of verification runs only on the selected tokens. Block-parallel GDN kernels avoid storing a state after every token and reconstruct the accepted state of every GDN layer in one launch. In isolated benchmarks at verification lengths 4 to 16 with every draft token accepted, these kernels, including accepted-state reconstruction, are $1.54\\times$-$4.04\\times$ faster than the default kernels. With three GDN-MoE target models in single-request greedy decoding, HybridSpec is $1.75\\times$-$1.88\\times$ faster than autoregressive decoding and $1.30\\times$-$1.33\\times$ faster than DFlash.",
+      "identifiers": [
+        "SemanticScholar:2e26430205729678832c92a139215ecf56b0370a"
+      ],
+      "semantic_scholar_id": "2e26430205729678832c92a139215ecf56b0370a",
+      "canonical_id": "arXiv:2611.04055",
+      "arxiv_id": "2611.04055",
+      "authors": [
+        "Hai-Yu Wang",
+        "Sai-Qian Zhang",
+        "Ze-Chun Liu",
+        "Steven Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
+      "source_url": "https://arxiv.org/abs/2611.07025",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding relies on the KV cache, whose memory footprint grows linearly with context length and caps batch size and throughput. Existing post-training methods exploit redundancy across tokens, layers, and feature dimensions, or lower numerical precision. We identify a complementary axis: within each attention head, values are largely predictable from their corresponding keys. We exploit this with value cache amortisation, which fits a lightweight per-head predictor at test time and stores residuals only for the tokens it reconstructs worst, giving $4\\times$ near-lossless value compression. The predictor can be initialised by meta-learning for substantially reduced prefill overhead, or fitted from scratch in settings that allow a one-off cost, such as multi-query inference. We pair value amortisation with cross-layer low-rank key compression to produce LowRAM, an asymmetric compression pipeline that stays close to lossless across three model families. By reconstructing only a selected subset of KV pairs at each decoding step, LowRAM can keep decoding overhead minimal and achieve up to $5\\times$ higher peak decode throughput at $4\\times$ compression. LowRAM further composes with quantisation and eviction, reaching $26.9\\times$ compression at $94.5\\%$ of baseline performance on long contexts. These results show that treating keys and values as structurally distinct enables efficient, aggressive, and composable KV cache compression.",
+      "identifiers": [
+        "SemanticScholar:c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7"
+      ],
+      "semantic_scholar_id": "c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7",
+      "canonical_id": "arXiv:2611.07025",
+      "arxiv_id": "2611.07025",
+      "authors": [
+        "Teresa Delgado",
+        "Hugo Hazard",
+        "Martin Benfeghoul",
+        "Jun Wang",
+        "Z. Fountas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.10137",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.10137",
+        "id:SemanticScholar:5f803869ca967d393064c6b7500e03e50a1ac9ff",
+        "id:arXiv:2607.10137",
+        "title:rdq residual distribution quantization for large language models",
+        "url:https://arxiv.org/abs/2607.10137"
+      ],
+      "record": {
+        "title": "RDQ: Residual Distribution Quantization for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.10137",
+        "year": 2026,
+        "published": "2026-07-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) of large language models degrades sharply below 4-bit precision. We identify the root cause as residual stream distributional drift: quantization noise injected at each transformer layer accumulates in the shared residual representation, causing KL divergence from the FP16 baseline to grow super-linearly with depth (Pearson r=0.999 with log-perplexity, p<0.001, confirmed across all tested methods and bit-widths). We discover that 84% of LLaMA-3-8B layers exhibit non-Gaussian residual distributions (KS test, p<=0.05), and that per-layer residual stream variance grows 6,548x across depth. We propose RDQ (Residual Distribution Quantization), a PTQ framework whose central contribution is Cascaded Error Compensation (CEC): a sequential calibration procedure that captures the actual drifted activations each layer receives (computed by running calibration data through already-quantized upstream layers) and fits per-channel AWQ-style scales against those drifted inputs, with scales folded into preceding RMSNorm weights for exact mathematical equivalence at zero inference overhead. RDQ achieves state-of-the-art results on all three tested architectures: LLaMA-3-8B: 7.55 / 5.62 PPL (W3/W4); Qwen-2.5-7B: 7.46 / 6.38 PPL; Mistral-7B: 6.88 / 5.73 PPL. RDQ beats the best published baseline (LeanQuant/SpinQuant) at every model and bit-width combination, with gains up to -46.4% vs. RTN at W3A16 on LLaMA-3-8B. All output is standard group-128 asymmetric quantization, deployable on Qualcomm AIMET, GGUF, and any standard inference stack at zero runtime overhead.",
+        "identifiers": [
+          "SemanticScholar:5f803869ca967d393064c6b7500e03e50a1ac9ff"
+        ],
+        "semantic_scholar_id": "5f803869ca967d393064c6b7500e03e50a1ac9ff",
+        "canonical_id": "arXiv:2607.10137",
+        "arxiv_id": "2607.10137",
+        "doi": "10.48550/arXiv.2607.10137",
+        "authors": [
+          "Prateek Singh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 130,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.02713",
+      "identity_tokens": [
+        "id:SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+        "id:arXiv:2610.02713",
+        "title:wakekv reactive reversible kv residency for heads that change their minds",
+        "url:https://arxiv.org/abs/2610.02713"
+      ],
+      "record": {
+        "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+        "source_url": "https://arxiv.org/abs/2610.02713",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Most KV-cache compression methods classify attention heads once, either offline or during prefill, and keep this classification fixed throughout generation. Across three models (1.5B-8B) and three regimes (needle retrieval, long chain-of-thought, and multi-turn recall), we measure head behavior on four model-regime combinations and find that most heads change their reading behavior at least once during generation. We introduce WakeKV, a reactive residency policy that moves cooling heads to a recoverable CPU reservoir rather than freezing or permanently evicting their state. At matched memory or budget, WakeKV consistently improves miss rate over frozen classification and destructive eviction, evaluated across five model-regime combinations and over three cited baselines (SnapKV, uniform R-KV, and ReasonAlloc) across four eligible combinations. A FlexiCache/vLLM implementation on Mistral-7B confirms the benefit on real hardware, improving throughput while retaining LongBench quality.",
+        "identifiers": [
+          "SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46"
+        ],
+        "semantic_scholar_id": "17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+        "canonical_id": "arXiv:2610.02713",
+        "arxiv_id": "2610.02713",
+        "authors": [
+          "Utkarsh Ranjan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.12338",
+      "identity_tokens": [
+        "id:SemanticScholar:2bf552cca9eac56f5f498efb6f5469aa330724b8",
+        "id:arXiv:2610.12338",
+        "title:vfold symmetryaware crosslayer value cache compression",
+        "url:https://arxiv.org/abs/2610.12338"
+      ],
+      "record": {
+        "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+        "source_url": "https://arxiv.org/abs/2610.12338",
+        "year": 2026,
+        "published": "2026-10-08",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While caching key-value (KV) states accelerates Large Language Model (LLM) decoding, this cache can dominate memory usage at long context lengths. One solution is to compress this memory by exploiting inter-layer cache similarities. However, most existing techniques necessitate architectural changes to LLMs and incur substantial overhead. In this work, we propose a symmetry-aware value cache merging strategy that reduces cache memory while avoiding both harmful performance degradation and architectural overhead during decoding. Furthermore, we show that this approach can be exploited alongside existing cache compression techniques, composing with high-ratio quantization or key cache pruning to reach compression ratios that neither method reaches alone, with minimal additional cost. Ultimately, our findings reveal a major source of underutilized capacity in the value cache, offering a simple yet highly effective direction for scaling context windows under memory constraints.",
+        "identifiers": [
+          "SemanticScholar:2bf552cca9eac56f5f498efb6f5469aa330724b8"
+        ],
+        "semantic_scholar_id": "2bf552cca9eac56f5f498efb6f5469aa330724b8",
+        "canonical_id": "arXiv:2610.12338",
+        "arxiv_id": "2610.12338",
+        "authors": [
+          "Neha Verma",
+          "Sung Won Kim",
+          "Kenton Murray",
+          "Kevin Duh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18451",
+      "identity_tokens": [
+        "id:SemanticScholar:4ba91ba8cdc752c6471c8c9bc1987348456a88a2",
+        "id:arXiv:2610.18451",
+        "title:fasteep fast intrainstance elastic scaling for expertparallel moe serving",
+        "url:https://arxiv.org/abs/2610.18451"
+      ],
+      "record": {
+        "title": "FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving",
+        "source_url": "https://arxiv.org/abs/2610.18451",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large-scale expert parallelism (EP) has become the standard deployment configuration for Mixture-of-Experts (MoE) models in production. Meanwhile, the highly dynamic nature of LLM workloads requires providers to continuously adjust serving capacity to match fluctuating demand. Scaling MoE serving cannot be efficiently achieved by simply adding or removing serving instances; instead, it often requires resizing the EP group within an existing instance, which we refer to as intra-instance scaling.Existing inference engines primarily rely on instance-level scaling, which destroys and reconstructs entire serving instances, incurring substantial scaling overhead. We present FastEEP (Fast Elastic Expert Parallel), a fast intra-instance scaling system for MoE serving based on the principle of Partial Reuse. FastEEP reuses existing runtime state across worker execution, GPU memory, and communication by separating reusable execution structures from the resources activated by the current EP configuration. This separation enables coordinated resource reclamation and reconfiguration while preserving costly-to-reconstruct state, allowing fast EP scaling without full instance teardown and reconstruction. Our evaluation shows that FastEEP achieves 4.5x--11.7x faster scaling than the existing vLLM-based approach across different models, enabling efficient, fine-grained scaling of MoE serving.",
+        "identifiers": [
+          "SemanticScholar:4ba91ba8cdc752c6471c8c9bc1987348456a88a2"
+        ],
+        "semantic_scholar_id": "4ba91ba8cdc752c6471c8c9bc1987348456a88a2",
+        "canonical_id": "arXiv:2610.18451",
+        "arxiv_id": "2610.18451",
+        "authors": [
+          "Yun-Fei Feng",
+          "Jing-Kai He",
+          "Shi-Qi Liu",
+          "Cheng Zhang",
+          "Dong Du",
+          "Er-Hu Feng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37386",
+      "identity_tokens": [
+        "id:SemanticScholar:54cd4d59a8cec79a5946b6ef3d28757c8de30ec1",
+        "id:arXiv:2610.37386",
+        "title:channel selection for mixtureofexperts decoding needs no calibration data",
+        "url:https://arxiv.org/abs/2610.37386"
+      ],
+      "record": {
+        "title": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data",
+        "source_url": "https://arxiv.org/abs/2610.37386",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models are bottlenecked by loading routed-expert weights from memory during interactive decoding at small batch sizes. Because most intermediate channels in a routed expert contribute little to any single token, channel selectors predict which channels matter and read only their weights, typically keeping channels above a threshold calibrated on offline data. We show that channel selection needs no calibration data. First, a calibrated threshold does not fix how much a selector reads, because the number of channels passing it varies across inputs; Prox with thresholds calibrated for an 18% read budget actually reads only 12.9% on average across our benchmarks. Second, top-k keeps each token's k highest-scoring channels and needs no calibration data. At the calibrated budget, a selector's top-k version matches or beats its threshold version on the same score in 40 of 43 comparisons at 13% and 18% budgets, including all 23 on generation tasks. The top-k versions also avoid the repetition-loop collapse that calibrated thresholds cause on Gemma 4. Calibrating a threshold thus provides neither of the two things selectors use it for: a known read budget and a consistent accuracy gain at that budget. We furthermore introduce a reader built entirely from the model's weights, which screens channels with a ternary sketch and recovers the skipped ones with a low-rank map. Across three post-trained MoE models, our reader retains 98.1% of full-model accuracy at 17.8% of routed-expert reads, with Triton kernels running MoE blocks 1.60 to 1.90x faster than optimized vLLM at batch one and up to 2.69x at larger batches on the same three models.",
+        "identifiers": [
+          "SemanticScholar:54cd4d59a8cec79a5946b6ef3d28757c8de30ec1"
+        ],
+        "semantic_scholar_id": "54cd4d59a8cec79a5946b6ef3d28757c8de30ec1",
+        "canonical_id": "arXiv:2610.37386",
+        "arxiv_id": "2610.37386",
+        "authors": [
+          "Geun-Hyung Kim",
+          "SungJoon Hwang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.42147",
+      "identity_tokens": [
+        "id:SemanticScholar:2fe5fb0b1071a1441b18decf5969f16732c63751",
+        "id:arXiv:2610.42147",
+        "title:latent sparse attention towards subquadratic ultralong context attention",
+        "url:https://arxiv.org/abs/2610.42147"
+      ],
+      "record": {
+        "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+        "source_url": "https://arxiv.org/abs/2610.42147",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+        "identifiers": [
+          "SemanticScholar:2fe5fb0b1071a1441b18decf5969f16732c63751"
+        ],
+        "semantic_scholar_id": "2fe5fb0b1071a1441b18decf5969f16732c63751",
+        "canonical_id": "arXiv:2610.42147",
+        "arxiv_id": "2610.42147",
+        "authors": [
+          "Ales Kubicek",
+          "Andrea Caciolai",
+          "Liang-Zu Peng",
+          "Sukrit Sumant",
+          "Benjamin Hoover",
+          "Fraser Greenlee",
+          "R. Battleday",
+          "Radim Urban",
+          "T. Hoefler",
+          "James C. R. Whittington"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.00486",
+      "identity_tokens": [
+        "id:SemanticScholar:289a850a2c5b18d37f61cc111196784855aaafec",
+        "id:arXiv:2611.00486",
+        "title:integerexact microscaling running mxfp4 language models on int8 matrix units",
+        "url:https://arxiv.org/abs/2611.00486"
+      ],
+      "record": {
+        "title": "Integer-Exact Microscaling: Running MXFP4 Language Models on INT8 Matrix Units",
+        "source_url": "https://arxiv.org/abs/2611.00486",
+        "year": 2026,
+        "published": "2026-10-31",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On hardware whose fastest matrix datapath is INT8$\\times$INT8, such as the Neural Accelerators of Apple's M5 GPUs, 4-bit weights must become INT8 operands. Existing MXFP4 kernels already map FP4 (E2M1) values to integers by doubling them, but apply every 32-element block scale inside the reduction. We show when no per-block work is needed: a row of MXFP4 weights is exactly one INT8 vector times one power-of-two scale if its block exponents span at most three, so a linear layer becomes a single INT8 GEMM with one rescale per output. Enforcing the condition adds at most 1/16 of a row's largest rounding error to the blocks it changes, and real weights already satisfy it: 97.9-99.97% of rows across seven models, including 99.93% of the 95M rows of a 125B-parameter mixture-of-experts (MoE) model, Qwen3.8-Flash-Next. The resulting spread-constrained MXFP4 files stay standard MXFP4. With integer instead of power-of-two block multipliers, an integer-exact format (16-wide blocks, multipliers 1..10, 4.26 bits) runs as one exact INT8 GEMM and is more accurate than NVFP4 (4.5 bits) with its standard scale rule on five small models, within 0.06 perplexity of NVFP4 with scale search. On Qwen3.8-Flash-Next's routed experts with INT8 activations it is as close to the FP8 model as NVFP4 with scale search (KL divergence 0.0557 vs. 0.0553) and closer than MLX's MXFP4 and affine INT4; with every matrix quantized it solves 94.8% of GSM8K vs. 91.0% for MLX's MXFP4. Quantizing only the 74k routed expert matrices (96% of the parameters) to either of our formats with INT8 activations costs at most 0.2% perplexity. A complete W4A8 system on the M5 produces outputs bit-identical to the quantized reference; prefill is 1.34-1.74x faster than MLX on a dense model, 1.10-1.57x on two MoE models up to 35B parameters and 1.22-1.29x on Qwen3.8-Flash-Next, where shared non-GEMM work bounds the gain.",
+        "identifiers": [
+          "SemanticScholar:289a850a2c5b18d37f61cc111196784855aaafec"
+        ],
+        "semantic_scholar_id": "289a850a2c5b18d37f61cc111196784855aaafec",
+        "canonical_id": "arXiv:2611.00486",
+        "arxiv_id": "2611.00486",
+        "authors": [
+          "Shinyoung Kang",
+          "Junhyung Ahn",
+          "Yujun Kim",
+          "J. Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.04055",
+      "identity_tokens": [
+        "id:SemanticScholar:2e26430205729678832c92a139215ecf56b0370a",
+        "id:arXiv:2611.04055",
+        "title:hybridspec throughputaware speculative decoding for hybrid gdnmoe models",
+        "url:https://arxiv.org/abs/2611.04055"
+      ],
+      "record": {
+        "title": "HybridSpec: Throughput-Aware Speculative Decoding for Hybrid GDN-MoE Models",
+        "source_url": "https://arxiv.org/abs/2611.04055",
+        "year": 2026,
+        "published": "2026-11-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In speculative decoding, parallel drafters such as DFlash make drafting cheap, so target verification dominates each round. A central choice is the verification length, the number of tokens that the target processes in each round. Verifying more draft tokens can accept more of them, but work after the first rejection is wasted. For hybrid target models that combine Gated DeltaNet (GDN) and mixture-of-experts (MoE) layers, verification time grows much faster with this length than for dense models. In a single-request profile of Qwen3.6-35B-A3B with DFlash, it grew by 71% from length 4 to 16, almost entirely in GDN and MoE layers, compared with 4%-6% for a dense Qwen3-4B target. Each GDN layer must update a recurrent state at every token and recover it at the end of the accepted prefix. The MoE cost depends on the experts that the tokens activate, which are known only once verification runs. We present HybridSpec, which selects the verification length on the GPU from draft-side acceptance estimates and measured target latency. Verification then runs this length plus one extra token up to the first MoE router, before any expert runs. There, a lightweight routing correction uses the observed expert assignments to decide whether to keep that token. The rest of verification runs only on the selected tokens. Block-parallel GDN kernels avoid storing a state after every token and reconstruct the accepted state of every GDN layer in one launch. In isolated benchmarks at verification lengths 4 to 16 with every draft token accepted, these kernels, including accepted-state reconstruction, are $1.54\\times$-$4.04\\times$ faster than the default kernels. With three GDN-MoE target models in single-request greedy decoding, HybridSpec is $1.75\\times$-$1.88\\times$ faster than autoregressive decoding and $1.30\\times$-$1.33\\times$ faster than DFlash.",
+        "identifiers": [
+          "SemanticScholar:2e26430205729678832c92a139215ecf56b0370a"
+        ],
+        "semantic_scholar_id": "2e26430205729678832c92a139215ecf56b0370a",
+        "canonical_id": "arXiv:2611.04055",
+        "arxiv_id": "2611.04055",
+        "authors": [
+          "Hai-Yu Wang",
+          "Sai-Qian Zhang",
+          "Ze-Chun Liu",
+          "Steven Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.07025",
+      "identity_tokens": [
+        "id:SemanticScholar:c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7",
+        "id:arXiv:2611.07025",
+        "title:lowram lowrank keys and amortised values for composable kv cache compression at testtime",
+        "url:https://arxiv.org/abs/2611.07025"
+      ],
+      "record": {
+        "title": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
+        "source_url": "https://arxiv.org/abs/2611.07025",
+        "year": 2026,
+        "published": "2026-11-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive decoding relies on the KV cache, whose memory footprint grows linearly with context length and caps batch size and throughput. Existing post-training methods exploit redundancy across tokens, layers, and feature dimensions, or lower numerical precision. We identify a complementary axis: within each attention head, values are largely predictable from their corresponding keys. We exploit this with value cache amortisation, which fits a lightweight per-head predictor at test time and stores residuals only for the tokens it reconstructs worst, giving $4\\times$ near-lossless value compression. The predictor can be initialised by meta-learning for substantially reduced prefill overhead, or fitted from scratch in settings that allow a one-off cost, such as multi-query inference. We pair value amortisation with cross-layer low-rank key compression to produce LowRAM, an asymmetric compression pipeline that stays close to lossless across three model families. By reconstructing only a selected subset of KV pairs at each decoding step, LowRAM can keep decoding overhead minimal and achieve up to $5\\times$ higher peak decode throughput at $4\\times$ compression. LowRAM further composes with quantisation and eviction, reaching $26.9\\times$ compression at $94.5\\%$ of baseline performance on long contexts. These results show that treating keys and values as structurally distinct enables efficient, aggressive, and composable KV cache compression.",
+        "identifiers": [
+          "SemanticScholar:c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7"
+        ],
+        "semantic_scholar_id": "c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7",
+        "canonical_id": "arXiv:2611.07025",
+        "arxiv_id": "2611.07025",
+        "authors": [
+          "Teresa Delgado",
+          "Hugo Hazard",
+          "Martin Benfeghoul",
+          "Jun Wang",
+          "Z. Fountas"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b9f1e71e75fe8efe602dd89bec2be92043447fdc004a4a01e3d69b7b4552a14d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
