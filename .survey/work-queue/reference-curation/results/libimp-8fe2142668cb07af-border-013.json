@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fe2142668cb07af-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.19871",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.19871",
+    "identity_tokens": [
+      "arXiv:2610.19871"
+    ],
+    "reason": "複数のテキスト推論経路を固定長潜在列上の条件付きフローへ蒸留するRDDは、長文CoTの反復生成コストを避ける狙いだが、主題は潜在推論の分布モデリングでありデコード機構への貢献は間接的である。",
+    "first_checked_at": "2026-11-18T23:19:06+00:00",
+    "last_checked_at": "2026-11-18T23:19:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rationale Distribution Distillation via Flow Matching for Distributional Continuous Latent Reasoning"
+  },
+  "processed_at": "2026-11-18T23:19:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fe2142668cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fe2142668cb07af-unrel-011",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19878",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19878",
+    "identity_tokens": [
+      "arXiv:2609.19878"
+    ],
+    "reason": "画像・3D点群・ロボット状態など複数モーダルの推論ステップを共有潜在空間へ統一するUni-LaDiRは、マルチモーダル推論能力の枠組みであり推論効率化機構を扱わない。",
+    "first_checked_at": "2026-11-18T23:19:09+00:00",
+    "last_checked_at": "2026-11-18T23:19:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md",
+      "papers/inference/99-other-inference-systems/2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md",
+      "papers/inference/99-other-inference-systems/2025-2512.05665-interleaved-latent-visual-reasoning-with-selective-perceptual-modeling.md"
+    ],
+    "title": "Uni-LaDiR: Latent Diffusion Unifies Multimodal Reasoning"
+  },
+  "processed_at": "2026-11-18T23:19:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fe2142668cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

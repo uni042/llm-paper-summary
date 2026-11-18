@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b09b266ed737d4f-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21484",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21484",
+    "identity_tokens": [
+      "arXiv:2601.21484"
+    ],
+    "reason": "最適RL方策から学習なしにサンプリングするETSはエネルギー項のオンライン推定と高速化基盤の利用で推論遅延を下げるが、主目的はRL整合の代替であり推論システム機構の貢献は副次的である。",
+    "first_checked_at": "2026-11-18T23:19:02+00:00",
+    "last_checked_at": "2026-11-18T23:19:02+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ETS: Energy-Guided Test-Time Scaling for Training-Free RL Alignment"
+  },
+  "processed_at": "2026-11-18T23:19:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b09b266ed73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

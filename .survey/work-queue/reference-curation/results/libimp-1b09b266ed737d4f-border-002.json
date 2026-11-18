@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b09b266ed737d4f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.07068",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.07068",
+    "identity_tokens": [
+      "arXiv:2605.07068"
+    ],
+    "reason": "文書をWikiへ編纂してKVキャッシュ推論で提供するLLM Wiki方式の編纂ギャップを反例誘導型の反復精緻化で埋めるWiCERは、KV再利用に触れるが主題は知識編纂品質であり推論機構の貢献は限定的である。",
+    "first_checked_at": "2026-11-18T23:18:59+00:00",
+    "last_checked_at": "2026-11-18T23:18:59+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems"
+  },
+  "processed_at": "2026-11-18T23:18:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b09b266ed73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

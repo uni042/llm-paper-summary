@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fe2142668cb07af-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.10720",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.10720",
+    "identity_tokens": [
+      "arXiv:2608.10720"
+    ],
+    "reason": "テキスト・パーソナライズ音声・参照条件付き動画を協調生成する全モーダル対話モデルEx-Omni-2Dの能力構築が主題であり、推論システムの効率化機構は提示されていない。",
+    "first_checked_at": "2026-11-18T23:19:07+00:00",
+    "last_checked_at": "2026-11-18T23:19:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+      "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+      "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+    ],
+    "title": "Ex-Omni-2D: Expressive Omni-Modal Dialogue Models with Native Visual Presence"
+  },
+  "processed_at": "2026-11-18T23:19:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fe2142668cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

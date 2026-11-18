@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-164d6d0ec5ab87a8-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/access.2026.3695927",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/access.2026.3695927",
+    "identity_tokens": [
+      "DOI:10.1109/access.2026.3695927"
+    ],
+    "reason": "AIアクセラレータの多層協調設計をCNN・GNN・LLM横断で概観する総説であり、LLM向けKV最適化や量子化の話題を含むものの、特定の推論システム機構の新規貢献ではない。",
+    "first_checked_at": "2026-11-18T23:18:55+00:00",
+    "last_checked_at": "2026-11-18T23:18:55+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Overview of Multilevel Co-Design for AI Accelerator: From Fundamentals to the Frontier"
+  },
+  "processed_at": "2026-11-18T23:18:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-164d6d0ec5ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

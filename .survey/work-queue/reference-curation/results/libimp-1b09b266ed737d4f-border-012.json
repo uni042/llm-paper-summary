@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b09b266ed737d4f-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.18747",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.18747",
+    "identity_tokens": [
+      "arXiv:2409.18747"
+    ],
+    "reason": "ソフトマックスをコサイン類似度へ置き換え線形メモリと定数メモリ推論を両立させるCottentionは注意機構の改変として推論効率に関わるが、BERT・GPTでの基礎評価にとどまるアーキテクチャ研究である。",
+    "first_checked_at": "2026-11-18T23:19:02+00:00",
+    "last_checked_at": "2026-11-18T23:19:02+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Cottention: Linear Transformers With Cosine Attention"
+  },
+  "processed_at": "2026-11-18T23:19:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b09b266ed73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

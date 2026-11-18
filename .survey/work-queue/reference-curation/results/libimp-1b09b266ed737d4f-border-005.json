@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b09b266ed737d4f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.02173",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.02173",
+    "identity_tokens": [
+      "arXiv:2501.02173"
+    ],
+    "reason": "クリック率予測向けRAG推薦にGCN検索と多ヘッド早期終了を組み合わせ推論を動的に打ち切る枠組みだが、評価対象は推薦応用パイプラインであり汎用LLM推論機構としての根拠は弱い。",
+    "first_checked_at": "2026-11-18T23:19:00+00:00",
+    "last_checked_at": "2026-11-18T23:19:00+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Efficiency vs. Accuracy Trade-off: Optimizing RAG-Enhanced LLM Recommender Systems Using Multi-Head Early Exit"
+  },
+  "processed_at": "2026-11-18T23:19:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b09b266ed73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

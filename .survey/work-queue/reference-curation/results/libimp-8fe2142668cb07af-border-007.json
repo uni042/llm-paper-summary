@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fe2142668cb07af-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.22870",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.22870",
+    "identity_tokens": [
+      "arXiv:2606.22870"
+    ],
+    "reason": "動画理解向けに潜在自己強制の学習パラダイムで視覚潜在推論を行うVideoLatentは、CoT注釈や推論オーバーヘッドの削減をうたうものの、主眼は動画質問応答の能力向上であり推論システム機構の貢献は薄い。",
+    "first_checked_at": "2026-11-18T23:19:05+00:00",
+    "last_checked_at": "2026-11-18T23:19:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+      "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md",
+      "papers/inference/99-other-inference-systems/2025-2512.05665-interleaved-latent-visual-reasoning-with-selective-perceptual-modeling.md",
+      "papers/inference/99-other-inference-systems/2025-2512.09616-rethinking-chain-of-thought-reasoning-for-videos.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VideoLatent: Video-Language Learning via Latent Self-Forcing"
+  },
+  "processed_at": "2026-11-18T23:19:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fe2142668cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

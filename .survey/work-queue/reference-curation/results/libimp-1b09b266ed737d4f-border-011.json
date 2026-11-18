@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1b09b266ed737d4f-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.08798",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.08798",
+    "identity_tokens": [
+      "arXiv:2510.08798"
+    ],
+    "reason": "学習可能な確率ゲートで保持トークンを全体予算Mの下で選ぶAdaptive Retentionは、ピークメモリ削減とスループット改善を示すが、対象はエンコーダ型モデルの分類・QAでありLLMサービングへの適用は未確認である。",
+    "first_checked_at": "2026-11-18T23:19:01+00:00",
+    "last_checked_at": "2026-11-18T23:19:01+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning What to Remember: Adaptive Probabilistic Memory Retention for Memory-Efficient Language Models"
+  },
+  "processed_at": "2026-11-18T23:19:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b09b266ed73",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

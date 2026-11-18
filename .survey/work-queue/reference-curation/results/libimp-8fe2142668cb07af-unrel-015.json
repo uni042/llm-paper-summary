@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8fe2142668cb07af-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.29431",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.29431",
+    "identity_tokens": [
+      "arXiv:2610.29431"
+    ],
+    "reason": "全スライド画像質問応答のために形態学バンクと証拠検索を融合するBEYONDPATHは病理画像QAという医療応用が主題であり、LLM推論システムとは無関係である。",
+    "first_checked_at": "2026-11-18T23:19:10+00:00",
+    "last_checked_at": "2026-11-18T23:19:10+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/04-conditional-computation/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md",
+      "papers/inference/99-other-inference-systems/2025-2505.18757-todre-effective-visual-token-pruning-via-token-diversity-and-task-releva.md"
+    ],
+    "title": "Look Beyond the Question: Preserve-Focus-Fuse for Whole-Slide Image Question Answering"
+  },
+  "processed_at": "2026-11-18T23:19:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8fe2142668cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
