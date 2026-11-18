@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c6a198af7c9686c6-unrel-010",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2603.02885",
+  "reason": "マルチテナントデータセンターで複数のPEFT微調整タスクがバックボーンを時空間多重化して同時実行するMuxTuneであり、対象は微調整という学習ワークロードの資源効率であって推論サービングではないため対象外とする。",
+  "title": "MuxTune: Efficient Multi-Task LLM Fine-Tuning in Multi-Tenant Datacenters via Spatial-Temporal Backbone Multiplexing",
+  "identity_tokens": [
+    "arXiv:2603.02885",
+    "https://arxiv.org/abs/2603.02885"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+    "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6a198af7c96",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

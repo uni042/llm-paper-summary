@@ -1,0 +1,454 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261119-r03::chunk-0002-of-0003",
+  "reference_main_sha": "8b9aef70119f84520d399785cbd58249b223b6c5",
+  "record_count": 20,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.11235",
+      "identity_tokens": [
+        "arXiv:2608.11235",
+        "https://arxiv.org/abs/2608.11235"
+      ],
+      "title": "CORA-Diff: Confidence-Oriented Residual Acceptance for Efficient Diffusion Language Model Inference",
+      "reason": "拡散言語モデルのブロック単位デコードが早期に安定した位置まで密な順伝播を繰り返す無駄に対し、軌跡由来の確信度と持続性で残差位置の受理をゲートする学習不要のCORA-Diffを提案する。拡散LLMデコード高速化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2608.11235",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.20179-tide-io-aware-expert-offload.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "worklist_rank": 78,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IISWC55918.2022.00018",
+      "identity_tokens": [
+        "DOI:10.1109/IISWC55918.2022.00018",
+        "https://doi.org/10.1109/IISWC55918.2022.00018"
+      ],
+      "title": "Accelerating Transformer Networks through Recomposing Softmax Layers",
+      "reason": "Transformerのソフトマックス層を分解・再構成して高速化する手法だが、対象は画像・ゲノム・NLPを含む汎用Transformer全般で、LLM推論に特化した適用や生成デコードでの検証は示されておらず境界とする。",
+      "source_url": "https://doi.org/10.1109/IISWC55918.2022.00018",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "worklist_rank": 78,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00017",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00017",
+        "https://doi.org/10.1109/ISCA66397.2026.00017"
+      ],
+      "title": "MLX: Multi-Layer Execution for Structured LLM Workload Acceleration on Spatial Architectures",
+      "reason": "蝶型構造化疎射影がGPUで非効率になる問題に対し、意味認識FFT圧縮と階層的疎射影を空間データフロー実行と組み合わせ、層をまたぐ折り畳みとパイプライン化を可能にするMLXを提案する。構造化LLM推論のアルゴリズム・アーキテクチャ協調設計への直接貢献である。",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00017",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "worklist_rank": 79,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26632",
+      "identity_tokens": [
+        "arXiv:2605.26632",
+        "https://arxiv.org/abs/2605.26632"
+      ],
+      "title": "RT-Lynx: Putting GEMM Sparsity in the Right Place for Diffusion Models",
+      "reason": "拡散Transformerの推論費用に対し、重みより活性の方がN:M半構造化疎性に頑健という観測からGEMM疎性を活性側へ置くRT-Lynxを提案するが、対象は画像生成DiTでありLLM推論への適用は確認できないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.26632",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/04-conditional-computation/2025-2507.01299-la-rosa-enhancing-llm-efficiency-via-layerwise-rotated-sparse-activation.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md"
+      ],
+      "worklist_rank": 79,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22720",
+      "identity_tokens": [
+        "arXiv:2607.22720",
+        "https://arxiv.org/abs/2607.22720"
+      ],
+      "title": "CausalGate: Causal Importance Distillation for Transformer Module Pruning",
+      "reason": "隠れ状態類似度等の観測的ヒューリスティクスに代わり、注意・MLPサブ層の出力をゼロ化した介入で最終ロジットのKL乖離として因果的重要度を測り、モジュールを剪定するCausalGateを提案する。推論時ルーティング負荷なしのプルーニング機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2607.22720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ],
+      "worklist_rank": 79,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36202",
+      "identity_tokens": [
+        "arXiv:2609.36202",
+        "https://arxiv.org/abs/2609.36202"
+      ],
+      "title": "FastGuide: Accelerating Reward Guidance for Diffusion Large Language Models",
+      "reason": "マスク拡散言語モデルの報酬誘導で各反復に拡散モデルの順伝播と報酬モデルの逆伝播が掛かる費用に対し、誘導をステップごとに償却して複数トークン生成へ再利用する並列・自己回帰ハイブリッドのFastGuideを提案する。拡散LLMの推論時誘導高速化への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2609.36202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2510.04147-self-speculative-decoding-for-diffusion-large-language-models.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2606.02544-simsd-simple-speculative-decoding-in-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ],
+      "worklist_rank": 80,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.13060",
+      "identity_tokens": [
+        "arXiv:2410.13060",
+        "https://arxiv.org/abs/2410.13060"
+      ],
+      "title": "AERO: Entropy-Guided Framework for Private LLM Inference",
+      "reason": "暗号化データ上の私的LLM推論で非線形演算が遅延と通信を支配する問題に対し、層別エントロピーの崩壊・過負荷を避けながら非線形を戦略的に除去するAEROを提案する。秘匿推論の計算機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2410.13060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "worklist_rank": 80,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.21174",
+      "identity_tokens": [
+        "arXiv:2504.21174",
+        "https://arxiv.org/abs/2504.21174"
+      ],
+      "title": "Efficient LLMs with AMP: Attention Heads and MLP Pruning",
+      "reason": "注意ヘッドとMLPを対象とした構造プルーニングAMPを提案し、パラメータ削減で資源制約環境での推論費用と遅延を下げることを直接の目的とする研究であり、LLMプルーニングによる推論効率化への直接貢献が確認できる。",
+      "source_url": "https://arxiv.org/abs/2504.21174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md"
+      ],
+      "worklist_rank": 80,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.02675",
+      "identity_tokens": [
+        "arXiv:2510.02675",
+        "https://arxiv.org/abs/2510.02675"
+      ],
+      "title": "HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference",
+      "reason": "低バッチ・長文脈の対話型LLM推論向けに、HBMベースのCompute-in-DRAMとオンチップのアナログCompute-in-Memoryを2.5D統合した異種メモリ中心アクセラレータHALOを提案する。プリフィル・デコード両相の推論ハードウェアへの直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2510.02675",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md"
+      ],
+      "worklist_rank": 81,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.10547",
+      "identity_tokens": [
+        "arXiv:2512.10547",
+        "https://arxiv.org/abs/2512.10547"
+      ],
+      "title": "Unlocking the Address Book: Dissecting the Sparse Semantic Structure of LLM Key-Value Caches via Sparse Autoencoders",
+      "reason": "KVキャッシュをTop-K疎自己符号化器で意味的原子へ分解し、キーと値の非対称性から二重予算で成分を選別保持するSTA-Attentionだが、成果の中心はKVキャッシュの解釈可能性分析であり、圧縮の検証も再構成のperplexity維持までにとどまるため境界とする。",
+      "source_url": "https://arxiv.org/abs/2512.10547",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md"
+      ],
+      "worklist_rank": 82,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TPDS.2025.3587445",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2025.3587445",
+        "https://doi.org/10.1109/TPDS.2025.3587445"
+      ],
+      "title": "m2LLM: A Multi-Dimensional Optimization Framework for On-Device LLM Inference",
+      "reason": "モバイル端末上のLLM推論について、ハードウェア認識モデルカスタマイズ、弾力的チャンク単位パイプライン、遅延誘導プロンプト圧縮、層別資源スケジューリングを多面的に共同最適化し、TTFTを2.99〜13.5倍高速化する枠組みを提案する。オンデバイス推論システムへの直接貢献である。",
+      "source_url": "https://doi.org/10.1109/TPDS.2025.3587445",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "worklist_rank": 82,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.05707",
+      "identity_tokens": [
+        "arXiv:2609.05707",
+        "https://arxiv.org/abs/2609.05707"
+      ],
+      "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+      "reason": "共通文脈を持つ複数質問を別プロンプトで生成する際の注意のメモリボトルネックに対し、単一プロンプト内で文脈を共有しながら複数回答を並列デコードするIPPDを提案する。デコード並列化機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2609.05707",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ],
+      "worklist_rank": 82,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15419",
+      "identity_tokens": [
+        "arXiv:2411.15419",
+        "https://arxiv.org/abs/2411.15419"
+      ],
+      "title": "Communication-Efficient Sparsely-Activated Model Training via Sequence Migration and Token Condensation",
+      "reason": "MoE学習の専門家並列で全対全通信が重い問題に対し、系列移行とトークン凝縮で中間データ交換を減らす手法だが、対象は分散学習の通信効率であり推論への適用は示されていないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2411.15419",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "worklist_rank": 83,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14442",
+      "identity_tokens": [
+        "arXiv:2604.14442",
+        "https://arxiv.org/abs/2604.14442"
+      ],
+      "title": "Hierarchical vs. Flat Iteration in Shared-Weight Transformers",
+      "reason": "共有重み再帰の階層構造が独立層の積み重ねと同等の表現品質を持つかをパラメータ整合条件で検証した実証研究であり、結果も表現力の差の報告が中心で、推論システムの機構提案や効率の実測はないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2604.14442",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.03482-qjl-1-bit-quantized-jl-transform-for-kv-cache-quantization-with-zero-ove.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "worklist_rank": 83,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37725",
+      "identity_tokens": [
+        "arXiv:2609.37725",
+        "https://arxiv.org/abs/2609.37725"
+      ],
+      "title": "Context Language Models",
+      "reason": "文脈をファイルとしてモデル自身が更新・管理するContext Language Modelsは、タスク精度の向上とともにFLOPs削減も報告するが、貢献の中心は文脈管理というモデル能力の拡張であり、推論システムのメモリ・キャッシュ機構としての設計ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2609.37725",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.15332-epic-position-independent-caching.md"
+      ],
+      "worklist_rank": 83,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.06679",
+      "identity_tokens": [
+        "arXiv:2409.06679",
+        "https://arxiv.org/abs/2409.06679"
+      ],
+      "title": "E2LLM: Encoder Elongated Large Language Models for Long-Context Understanding and Reasoning",
+      "reason": "長文をチャンク化して事前学習済みエンコーダでソフトプロンプトへ圧縮しデコーダ専用LLMへ接続するE2LLMは、低計算量も掲げるが主たる評価軸は長文脈理解・推論の性能であり、推論システムとしての効率検証は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2409.06679",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md",
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "worklist_rank": 84,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.01925",
+      "identity_tokens": [
+        "arXiv:2302.01925",
+        "https://arxiv.org/abs/2302.01925"
+      ],
+      "title": "Learning a Fourier Transform for Linear Relative Positional Encodings in Transformers",
+      "reason": "相対位置符号化をスペクトル表現の学習として定式化した線形Transformerの理論・アーキテクチャ研究であり、推論システムへの具体的な機構や効率の適用・実測は示されていないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2302.01925",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "worklist_rank": 84,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.23198",
+      "identity_tokens": [
+        "arXiv:2603.23198",
+        "https://arxiv.org/abs/2603.23198"
+      ],
+      "title": "Sparser, Faster, Lighter Transformer Language Models",
+      "reason": "LLMのフィードフォワード層の非構造化疎性について、新しい疎パッキング形式とCUDAカーネル群で現代GPUの実行パイプラインへ統合し、L1正則化で99%超の疎性を誘導して推論と学習の双方で疎計算を効率化する。疎推論カーネルへの直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2603.23198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md"
+      ],
+      "worklist_rank": 84,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00523",
+      "identity_tokens": [
+        "arXiv:2606.00523",
+        "https://arxiv.org/abs/2606.00523"
+      ],
+      "title": "ProactiveLLM: Learning Active Interaction for Streaming Large Language Models",
+      "reason": "ストリーミング入力に対し、部分入力からの意味的十分性をモデル内在状態で学習して対話開始時点を決めるProactiveLLMは、遅延と計算の削減を狙うものの手段は学習による振る舞いの獲得であり、推論システムの機構としての検証は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2606.00523",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md"
+      ],
+      "worklist_rank": 85,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17355",
+      "identity_tokens": [
+        "arXiv:2610.17355",
+        "https://arxiv.org/abs/2610.17355"
+      ],
+      "title": "WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs",
+      "reason": "動画言語モデルで全フレーム埋め込みがプリフィル・KVキャッシュ・生成の全てを重くする問題に対し、映像条件付け計算の一部を重みへの一時的な低ランク更新へ移すWIREで視覚列を3.5倍に圧縮し、プリフィルを最大4.14倍高速化する。マルチモーダルLLM推論機構への直接貢献である。",
+      "source_url": "https://arxiv.org/abs/2610.17355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-19T08:08:00+09:00",
+      "last_checked_at": "2026-11-19T08:13:15+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/04-conditional-computation/2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.15745-infinipot-v-memory-constrained-kv-cache-compression-for-streaming-video-.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md"
+      ],
+      "worklist_rank": 85,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261119-r03",
+  "chunk_index": 2,
+  "chunk_count": 3,
+  "source_record_count": 60
+}

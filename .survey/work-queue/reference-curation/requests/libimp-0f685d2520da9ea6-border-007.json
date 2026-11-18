@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0f685d2520da9ea6-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2409.06679",
+  "reason": "長文をチャンク化して事前学習済みエンコーダでソフトプロンプトへ圧縮しデコーダ専用LLMへ接続するE2LLMは、低計算量も掲げるが主たる評価軸は長文脈理解・推論の性能であり、推論システムとしての効率検証は薄いため境界とする。",
+  "title": "E2LLM: Encoder Elongated Large Language Models for Long-Context Understanding and Reasoning",
+  "identity_tokens": [
+    "arXiv:2409.06679",
+    "https://arxiv.org/abs/2409.06679"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md",
+    "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+    "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

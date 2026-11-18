@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-0f685d2520da9ea6-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.26632",
+  "reason": "拡散Transformerの推論費用に対し、重みより活性の方がN:M半構造化疎性に頑健という観測からGEMM疎性を活性側へ置くRT-Lynxを提案するが、対象は画像生成DiTでありLLM推論への適用は確認できないため境界とする。",
+  "title": "RT-Lynx: Putting GEMM Sparsity in the Right Place for Diffusion Models",
+  "identity_tokens": [
+    "arXiv:2605.26632",
+    "https://arxiv.org/abs/2605.26632"
+  ],
+  "linked_from": [
+    "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+    "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+    "papers/inference/04-conditional-computation/2025-2507.01299-la-rosa-enhancing-llm-efficiency-via-layerwise-rotated-sparse-activation.md",
+    "papers/inference/09-kernel-runtime-compilation/2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
