@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f685d2520da9ea6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.10547",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.10547",
+    "identity_tokens": [
+      "arXiv:2512.10547"
+    ],
+    "reason": "KVキャッシュをTop-K疎自己符号化器で意味的原子へ分解し、キーと値の非対称性から二重予算で成分を選別保持するSTA-Attentionだが、成果の中心はKVキャッシュの解釈可能性分析であり、圧縮の検証も再構成のperplexity維持までにとどまるため境界とする。",
+    "first_checked_at": "2026-11-18T23:21:06+00:00",
+    "last_checked_at": "2026-11-18T23:21:06+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Unlocking the Address Book: Dissecting the Sparse Semantic Structure of LLM Key-Value Caches via Sparse Autoencoders"
+  },
+  "processed_at": "2026-11-18T23:21:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

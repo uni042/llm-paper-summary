@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T23:19:10+00:00",
-  "record_count": 12947,
+  "updated_at": "2026-11-18T23:21:22+00:00",
+  "record_count": 12963,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -186307,6 +186307,276 @@
         "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
       ],
       "title": "KAME: Tandem Architecture for Enhancing Knowledge in Real-Time Speech-to-Speech Conversational AI"
+    },
+    "arXiv:2411.15419": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15419",
+      "identity_tokens": [
+        "arXiv:2411.15419"
+      ],
+      "reason": "MoE学習の専門家並列で全対全通信が重い問題に対し、系列移行とトークン凝縮で中間データ交換を減らす手法だが、対象は分散学習の通信効率であり推論への適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:08+00:00",
+      "last_checked_at": "2026-11-18T23:21:08+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Communication-Efficient Sparsely-Activated Model Training via Sequence Migration and Token Condensation"
+    },
+    "arXiv:2604.14442": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14442",
+      "identity_tokens": [
+        "arXiv:2604.14442"
+      ],
+      "reason": "共有重み再帰の階層構造が独立層の積み重ねと同等の表現品質を持つかをパラメータ整合条件で検証した実証研究であり、結果も表現力の差の報告が中心で、推論システムの機構提案や効率の実測はないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:08+00:00",
+      "last_checked_at": "2026-11-18T23:21:08+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.03482-qjl-1-bit-quantized-jl-transform-for-kv-cache-quantization-with-zero-ove.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "Hierarchical vs. Flat Iteration in Shared-Weight Transformers"
+    },
+    "arXiv:2302.01925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.01925",
+      "identity_tokens": [
+        "arXiv:2302.01925"
+      ],
+      "reason": "相対位置符号化をスペクトル表現の学習として定式化した線形Transformerの理論・アーキテクチャ研究であり、推論システムへの具体的な機構や効率の適用・実測は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:09+00:00",
+      "last_checked_at": "2026-11-18T23:21:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Learning a Fourier Transform for Linear Relative Positional Encodings in Transformers"
+    },
+    "arXiv:2410.19096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19096",
+      "identity_tokens": [
+        "arXiv:2410.19096"
+      ],
+      "reason": "LLM自体と生成コンテンツへの電子透かしについて、脅威モデル別の手法と攻撃耐性を整理した展望であり、知的財産保護と誤情報対策が主題で推論システムへの貢献はないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:14+00:00",
+      "last_checked_at": "2026-11-18T23:21:14+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "Watermarking Large Language Models and the Generated Content: Opportunities and Challenges"
+    },
+    "DOI:10.1109/icc59461.2026.11587781": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icc59461.2026.11587781",
+      "identity_tokens": [
+        "DOI:10.1109/icc59461.2026.11587781"
+      ],
+      "reason": "MoE学習で非対称なAlltoallv通信のスケジュール合成を、トラフィック分解に基づくハイブリッド合成器HYDRAで解く研究であり、対象は学習時の通信スケジューリングであって推論への適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:14+00:00",
+      "last_checked_at": "2026-11-18T23:21:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
+      ],
+      "title": "HYDRA: A Hybrid Synthesizer for Asymmetric Mixture-of-Experts Communication Scheduling"
+    },
+    "arXiv:2604.13508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13508",
+      "identity_tokens": [
+        "arXiv:2604.13508"
+      ],
+      "reason": "事前学習済み密モデルの活性を意味クラスタへ分け、部分空間表現でMoE専門家を初期化するクラスタ認識アップサイクリングであり、対象はMoE構築の初期化手法で推論効率の機構ではないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:15+00:00",
+      "last_checked_at": "2026-11-18T23:21:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+        "papers/inference/06-moe-quantization-compression/2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "Enhancing Mixture-of-Experts Specialization via Cluster-Aware Upcycling"
+    },
+    "arXiv:2602.00398": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00398",
+      "identity_tokens": [
+        "arXiv:2602.00398"
+      ],
+      "reason": "フィードフォワード層を注意から分離して文脈なしの神経検索メモリとして解釈するMemoryLLMであり、対象はTransformer構成要素の解釈可能性であって、推論効率の機構提案や検証はないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:15+00:00",
+      "last_checked_at": "2026-11-18T23:21:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+        "papers/inference/04-conditional-computation/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "MemoryLLM: Plug-n-Play Interpretable Feed-Forward Memory for Transformers"
+    },
+    "DOI:10.1145/3801489.3806911": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3801489.3806911",
+      "identity_tokens": [
+        "DOI:10.1145/3801489.3806911"
+      ],
+      "reason": "LLM学習でドロップアウトの乱数生成を先行GEMMと重ねて遅延を隠す最適化であり、対象は学習時のカーネル実行であって推論への適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:16+00:00",
+      "last_checked_at": "2026-11-18T23:21:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Optimizing Dropout in LLM Training: Performance Comparison of Fusion and Overlap"
+    },
+    "arXiv:2602.02632": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02632",
+      "identity_tokens": [
+        "arXiv:2602.02632"
+      ],
+      "reason": "学術向けテストベッドFABRIC上で小規模言語モデルの事前学習技法の性能を実証した研究であり、対象は学習の並列化性能の計測であって推論システムへの貢献はないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:16+00:00",
+      "last_checked_at": "2026-11-18T23:21:16+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+      ],
+      "title": "Performance of Small Language Model Pretraining on FABRIC: An Empirical Study"
+    },
+    "arXiv:2312.16018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.16018",
+      "identity_tokens": [
+        "arXiv:2312.16018"
+      ],
+      "reason": "LLMを推薦システムのランキング器として指示チューニングするRecRankerであり、対象は推薦精度という応用タスクの改善であって、LLM推論システムの機構への貢献は確認できないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:19+00:00",
+      "last_checked_at": "2026-11-18T23:21:19+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "RecRanker: Instruction Tuning Large Language Model as Ranker for Top-k Recommendation"
+    },
+    "arXiv:2410.19034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19034",
+      "identity_tokens": [
+        "arXiv:2410.19034"
+      ],
+      "reason": "専門家数を増やすと記憶は伸びるが推論能力は飽和するというMoEの能力トレードオフを理論と実験で示す分析であり、推論システムの機構提案や効率改善の検証はなく、能力評価のみのため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:19+00:00",
+      "last_checked_at": "2026-11-18T23:21:19+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Mixture of Parrots: Experts improve memorization more than reasoning"
+    },
+    "DOI:10.48550/arxiv.2303.06318": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2303.06318",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.06318",
+        "arXiv:2303.06318"
+      ],
+      "reason": "データ・テンソル・専門家の三次元ハイブリッド並列でMoEの学習規模を拡大するDeepSpeed-TEDであり、対象は学習基盤の並列化であって推論への具体的な適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:20+00:00",
+      "last_checked_at": "2026-11-18T23:21:20+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "A Hybrid Tensor-Expert-Data Parallelism Approach to Optimize Mixture-of-Experts Training"
+    },
+    "arXiv:2605.31463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31463",
+      "identity_tokens": [
+        "arXiv:2605.31463"
+      ],
+      "reason": "MoE学習フレームワークをAIコーディングエージェントが理解・拡張するコストという観点で再設計したPithTrainであり、対象は学習システムの開発効率であって推論システムへの貢献ではないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:20+00:00",
+      "last_checked_at": "2026-11-18T23:21:20+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "PithTrain: A Compact and Agent-Native MoE Training System"
+    },
+    "arXiv:2504.09983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.09983",
+      "identity_tokens": [
+        "arXiv:2504.09983"
+      ],
+      "reason": "FSDP／ZeRO系の分散学習について、プリフェッチやアンシャーディングのメモリ・通信スケジューリングをコンパイラで細粒度に協調させるDeepCompileであり、対象は学習基盤のみで推論への適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:21+00:00",
+      "last_checked_at": "2026-11-18T23:21:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ],
+      "title": "DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training"
+    },
+    "arXiv:2603.02885": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02885",
+      "identity_tokens": [
+        "arXiv:2603.02885"
+      ],
+      "reason": "マルチテナントデータセンターで複数のPEFT微調整タスクがバックボーンを時空間多重化して同時実行するMuxTuneであり、対象は微調整という学習ワークロードの資源効率であって推論サービングではないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:21+00:00",
+      "last_checked_at": "2026-11-18T23:21:21+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "title": "MuxTune: Efficient Multi-Task LLM Fine-Tuning in Multi-Tenant Datacenters via Spatial-Temporal Backbone Multiplexing"
+    },
+    "arXiv:2605.23764": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23764",
+      "identity_tokens": [
+        "arXiv:2605.23764"
+      ],
+      "reason": "Ascend NPUの行列・ベクトル異種ユニットを静的スケジューリングのタイルレベルタスクフローで活用するHyperParallel-MoEだが、対象はMoE学習のコンパイルとスケジューリングであり、推論への適用は示されていないため対象外とする。",
+      "first_checked_at": "2026-11-18T23:21:22+00:00",
+      "last_checked_at": "2026-11-18T23:21:22+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md"
+      ],
+      "title": "HyperParallel-MoE: Multi-Core Interleaved Scheduling for Fast MoE Training on Ascend NPUs"
     }
   }
 }

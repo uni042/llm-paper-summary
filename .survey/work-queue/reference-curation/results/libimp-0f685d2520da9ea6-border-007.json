@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f685d2520da9ea6-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.06679",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.06679",
+    "identity_tokens": [
+      "arXiv:2409.06679"
+    ],
+    "reason": "長文をチャンク化して事前学習済みエンコーダでソフトプロンプトへ圧縮しデコーダ専用LLMへ接続するE2LLMは、低計算量も掲げるが主たる評価軸は長文脈理解・推論の性能であり、推論システムとしての効率検証は薄いため境界とする。",
+    "first_checked_at": "2026-11-18T23:21:07+00:00",
+    "last_checked_at": "2026-11-18T23:21:07+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md",
+      "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "E2LLM: Encoder Elongated Large Language Models for Long-Context Understanding and Reasoning"
+  },
+  "processed_at": "2026-11-18T23:21:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

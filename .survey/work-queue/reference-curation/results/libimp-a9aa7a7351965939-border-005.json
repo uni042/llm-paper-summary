@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9aa7a7351965939-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.24785",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.24785",
+    "identity_tokens": [
+      "arXiv:2605.24785"
+    ],
+    "reason": "マルチモーダルWebエージェントの反復行動やプロンプトキャッシュ再利用の低さ等の非効率に対し、オンライン技能蒸留で経験から効率化するPANDOだが、対象はエージェントのタスク実行層であり推論システムの機構ではないため境界とする。",
+    "first_checked_at": "2026-11-18T23:21:11+00:00",
+    "last_checked_at": "2026-11-18T23:21:11+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.17126-large-language-models-as-tool-makers.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PANDO: Efficient Multimodal AI Agents via Online Skill Distillation"
+  },
+  "processed_at": "2026-11-18T23:21:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9aa7a735196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

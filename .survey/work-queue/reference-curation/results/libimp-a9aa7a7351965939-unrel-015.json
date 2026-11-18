@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9aa7a7351965939-unrel-015",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.02632",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.02632",
+    "identity_tokens": [
+      "arXiv:2602.02632"
+    ],
+    "reason": "学術向けテストベッドFABRIC上で小規模言語モデルの事前学習技法の性能を実証した研究であり、対象は学習の並列化性能の計測であって推論システムへの貢献はないため対象外とする。",
+    "first_checked_at": "2026-11-18T23:21:16+00:00",
+    "last_checked_at": "2026-11-18T23:21:16+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+      "papers/inference/15-inference-simulation-emulation/2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md",
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md"
+    ],
+    "title": "Performance of Small Language Model Pretraining on FABRIC: An Empirical Study"
+  },
+  "processed_at": "2026-11-18T23:21:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9aa7a735196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

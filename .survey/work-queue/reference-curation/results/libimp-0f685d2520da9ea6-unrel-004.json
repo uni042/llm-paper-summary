@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f685d2520da9ea6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.15419",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.15419",
+    "identity_tokens": [
+      "arXiv:2411.15419"
+    ],
+    "reason": "MoE学習の専門家並列で全対全通信が重い問題に対し、系列移行とトークン凝縮で中間データ交換を減らす手法だが、対象は分散学習の通信効率であり推論への適用は示されていないため対象外とする。",
+    "first_checked_at": "2026-11-18T23:21:08+00:00",
+    "last_checked_at": "2026-11-18T23:21:08+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+    ],
+    "title": "Communication-Efficient Sparsely-Activated Model Training via Sequence Migration and Token Condensation"
+  },
+  "processed_at": "2026-11-18T23:21:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

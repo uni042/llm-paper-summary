@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f685d2520da9ea6-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2302.01925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2302.01925",
+    "identity_tokens": [
+      "arXiv:2302.01925"
+    ],
+    "reason": "相対位置符号化をスペクトル表現の学習として定式化した線形Transformerの理論・アーキテクチャ研究であり、推論システムへの具体的な機構や効率の適用・実測は示されていないため対象外とする。",
+    "first_checked_at": "2026-11-18T23:21:09+00:00",
+    "last_checked_at": "2026-11-18T23:21:09+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+    ],
+    "title": "Learning a Fourier Transform for Linear Relative Positional Encodings in Transformers"
+  },
+  "processed_at": "2026-11-18T23:21:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

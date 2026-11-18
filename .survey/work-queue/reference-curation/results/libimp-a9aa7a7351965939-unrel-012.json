@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9aa7a7351965939-unrel-012",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.13508",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.13508",
+    "identity_tokens": [
+      "arXiv:2604.13508"
+    ],
+    "reason": "事前学習済み密モデルの活性を意味クラスタへ分け、部分空間表現でMoE専門家を初期化するクラスタ認識アップサイクリングであり、対象はMoE構築の初期化手法で推論効率の機構ではないため対象外とする。",
+    "first_checked_at": "2026-11-18T23:21:15+00:00",
+    "last_checked_at": "2026-11-18T23:21:15+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+      "papers/inference/06-moe-quantization-compression/2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md",
+      "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+    ],
+    "title": "Enhancing Mixture-of-Experts Specialization via Cluster-Aware Upcycling"
+  },
+  "processed_at": "2026-11-18T23:21:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9aa7a735196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

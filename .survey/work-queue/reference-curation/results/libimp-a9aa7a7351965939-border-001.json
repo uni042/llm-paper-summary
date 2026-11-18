@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9aa7a7351965939-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.04595",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.04595",
+    "identity_tokens": [
+      "arXiv:2510.04595"
+    ],
+    "reason": "Mambaからの知識蒸留でスパイキングニューラルネット版LLMを構築しエネルギー効率を狙うSpikingMambaだが、手法の中心はモデル変換のための蒸留であり、推論実行の機構や実機での効率検証は要旨では限定的なため境界とする。",
+    "first_checked_at": "2026-11-18T23:21:10+00:00",
+    "last_checked_at": "2026-11-18T23:21:10+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SpikingMamba: Towards Energy-Efficient Large Language Models via Knowledge Distillation from Mamba"
+  },
+  "processed_at": "2026-11-18T23:21:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9aa7a735196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f685d2520da9ea6-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.00523",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.00523",
+    "identity_tokens": [
+      "arXiv:2606.00523"
+    ],
+    "reason": "ストリーミング入力に対し、部分入力からの意味的十分性をモデル内在状態で学習して対話開始時点を決めるProactiveLLMは、遅延と計算の削減を狙うものの手段は学習による振る舞いの獲得であり、推論システムの機構としての検証は薄いため境界とする。",
+    "first_checked_at": "2026-11-18T23:21:07+00:00",
+    "last_checked_at": "2026-11-18T23:21:07+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ProactiveLLM: Learning Active Interaction for Streaming Large Language Models"
+  },
+  "processed_at": "2026-11-18T23:21:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f685d2520da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

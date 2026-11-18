@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9aa7a7351965939-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.00398",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.00398",
+    "identity_tokens": [
+      "arXiv:2602.00398"
+    ],
+    "reason": "フィードフォワード層を注意から分離して文脈なしの神経検索メモリとして解釈するMemoryLLMであり、対象はTransformer構成要素の解釈可能性であって、推論効率の機構提案や検証はないため対象外とする。",
+    "first_checked_at": "2026-11-18T23:21:15+00:00",
+    "last_checked_at": "2026-11-18T23:21:15+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2503.15798-mixture-of-lookup-experts.md",
+      "papers/inference/04-conditional-computation/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "MemoryLLM: Plug-n-Play Interpretable Feed-Forward Memory for Transformers"
+  },
+  "processed_at": "2026-11-18T23:21:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9aa7a735196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
