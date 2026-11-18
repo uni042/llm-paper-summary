@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-19 08:27:55 JST**
+> 自動生成: **2026-11-19 08:37:29 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1982** |
 | 未claim Research job | **1982** |
-| 直近24hのResearch処理完了 | **8** |
-| 最終Research処理完了 | **11-19 08:25:00 JST** |
+| 直近24hのResearch処理完了 | **9** |
+| 最終Research処理完了 | **11-19 08:35:00 JST** |
 | 最終Discovery探索完了 | **11-19 08:17:52 JST** |
 | 整合性異常 | **0** |
 
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **150960** |
+| 探索候補総数 | **150965** |
 | 処理済み | **24032** |
-| 未処理Discovery候補 | **126928** |
+| 未処理Discovery候補 | **126933** |
 | 収録済み | **3855** |
 | Research / Audit候補へ昇格済み | **1155** |
 | 無関係として除外 | **12824** |
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **126928** |
+| 未処理候補（フィルタ前） | **126933** |
 | 機械規則による暫定隔離 | **2200** |
 | 拡張機械規則による追加隔離 | **1404** |
-| 機械規則通過後 | **123324** |
-| 系統内前方引用スコアによる選抜保留 | **117157** |
-| 暫定隔離合計 | **120761** |
+| 機械規則通過後 | **123329** |
+| 系統内前方引用スコアによる選抜保留 | **117162** |
+| 暫定隔離合計 | **120766** |
 | **読解可能候補（隔離後）** | **6167** |
 | 前方引用が同一系統で2本以上の候補 | **10387** |
 | 前方引用が同一系統で3本以上の候補 | **2628** |
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.9%**
-- 現在の生在庫: 後方references **59170件** / 前方引用 **70137件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128488件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **59179件** / 前方引用 **70137件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128493件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-18 13:56:05 JST（18時間31分前）** |
+| 最終maintenance完了 | **11-18 13:56:05 JST（18時間41分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **8** |
+| 直近6hのResearch完了 | **9** |
 | 直近6hのDiscovery run | **8** |
 | 直近6hのDiscovery本文確認・分類 | **160** |
-| 最終Research完了 | **11-19 08:25:00 JST** |
+| 最終Research完了 | **11-19 08:35:00 JST** |
 | 最終Discovery完了 | **11-19 08:17:52 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-19 08:25:00 JST** / worker — / run muse-20261119-research-2604.05887 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-language-model-inference.json
+- Research: **11-19 08:35:00 JST** / worker — / run muse-20261119-research3b-2602.02159 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/2026-2602.02159-focus-dllm-accelerating-long-context-diffusion-llm-inference-via-confidence-guided-context-focusing.json
 - Discovery: **11-19 08:17:52 JST** / worker muse / run muse-discovery-20261119-r01::chunk-0002-of-0003
   - 本文確認・分類 **20件** / accept **12件** / unrelated+borderline **8件**
   - evidence: .survey/import-inbox/results/discovery/discovery-20261119-0730-muse-r01--chunk-0002-of-0003.json
