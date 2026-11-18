@@ -1,0 +1,285 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-eb66e9e5d0d05558-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-eb66e9e5d0d0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.01873",
+    "arXiv:2506.07416",
+    "arXiv:2601.07212",
+    "arXiv:2602.10953",
+    "arXiv:2604.03829",
+    "arXiv:2605.30832",
+    "arXiv:2609.18916",
+    "arXiv:2609.24847"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "703384371cb27d619335c68459aa26c9b8ca6bd8",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T09:14:55.033019+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.01873",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.01873"
+    },
+    {
+      "requested_id": "arXiv:2506.07416",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2506.07416"
+    },
+    {
+      "requested_id": "arXiv:2601.07212",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.07212"
+    },
+    {
+      "requested_id": "arXiv:2602.10953",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2602.10953"
+    },
+    {
+      "requested_id": "arXiv:2604.03829",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.18916",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+    },
+    {
+      "requested_id": "arXiv:2609.24847",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+    }
+  ],
+  "results": [
+    {
+      "title": "SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.30832",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Reasoning Models have significantly improved chain-of-thought (CoT) capabilities via reinforcement learning (RL). However, generated reasoning chains frequently suffer from structural redundancy (i.e., \\emph{overthinking}), incurring high computational overhead without improving answer correctness. Existing mitigation strategies typically rely on token-uniform length penalties, which provide coarse, segment-agnostic pressure toward shorter outputs and can inadvertently suppress useful reasoning alongside redundancy. To address this, we demonstrate that inefficiency concentrates in high-probability segments with low marginal utility. We derive a theoretical characterization of segment suboptimality under the correctness-length trade-off objective and propose \\textsc{SLAT} (Segment-Level Adaptive Trimming), an RL framework that selectively suppresses redundant segments based on this criterion. Empirical results on standard benchmarks indicate that \\textsc{SLAT} establishes a superior accuracy-efficiency Pareto frontier, reducing reasoning length by $50\\%$ relative to uncompressed baselines while maintaining competitive accuracy. Overall, our results suggest that theoretically grounded, segment-aware trimming is a promising direction for efficient CoT reasoning in large language models.",
+      "identifiers": [
+        "SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa"
+      ],
+      "semantic_scholar_id": "06fc6178df4128519609bcf459120c54ce1659aa",
+      "canonical_id": "arXiv:2605.30832",
+      "arxiv_id": "2605.30832",
+      "doi": "10.48550/arXiv.2605.30832",
+      "authors": [
+        "Jiangqi Yao",
+        "Xiong Luo",
+        "Ran Cheng",
+        "Kay Chen Tan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 173,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models",
+      "source_url": "https://arxiv.org/abs/2604.03829",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba is an emerging, complex workload with various short-range and long-range dependencies, nonlinearities, and elementwise computations that are unable to run at near-peak speeds on modern hardware. Specifically, Mamba's complex dependency graph makes fusion across its full operator cascade difficult, leaving substantial inter-operator memory traffic on the table. To address these challenges, we propose Mambalaya, a novel reconfigurable accelerator that leverages fusion to overcome the limitations of Mamba. We use the recently proposed cascade-of-Einsums abstraction to characterize Mamba's full computational structure, then apply the extended Einsum framework to systematically explore inter-Einsum fusion opportunities. This principled approach yields a series of fusion mappings that reduce off-chip inter-Einsum traffic. These mappings are supported by the underlying Mambalaya architecture. Mambalaya achieves a layer performance speedup of 4.9$\\times$ for prefill and 1.9$\\times$ for generation over MARCA. In prefill-dominated scenarios, it achieves up to 1.5$\\times$ over a recent fine-grained, memory-aware fusion accelerator for Mamba.",
+      "identifiers": [
+        "SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3"
+      ],
+      "semantic_scholar_id": "03d89e5e083813143ff91c0b71627382984408c3",
+      "canonical_id": "arXiv:2604.03829",
+      "arxiv_id": "2604.03829",
+      "doi": "10.48550/arXiv.2604.03829",
+      "authors": [
+        "Toluwanimi O. Odemuyiwa",
+        "John D. Owens",
+        "J. Emer",
+        "M. Pellauer"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.30832",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30832",
+        "id:SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa",
+        "id:arXiv:2605.30832",
+        "title:slat segmentlevel adaptive trimming for efficient cot reasoning",
+        "url:https://arxiv.org/abs/2605.30832"
+      ],
+      "record": {
+        "title": "SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.30832",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in Large Reasoning Models have significantly improved chain-of-thought (CoT) capabilities via reinforcement learning (RL). However, generated reasoning chains frequently suffer from structural redundancy (i.e., \\emph{overthinking}), incurring high computational overhead without improving answer correctness. Existing mitigation strategies typically rely on token-uniform length penalties, which provide coarse, segment-agnostic pressure toward shorter outputs and can inadvertently suppress useful reasoning alongside redundancy. To address this, we demonstrate that inefficiency concentrates in high-probability segments with low marginal utility. We derive a theoretical characterization of segment suboptimality under the correctness-length trade-off objective and propose \\textsc{SLAT} (Segment-Level Adaptive Trimming), an RL framework that selectively suppresses redundant segments based on this criterion. Empirical results on standard benchmarks indicate that \\textsc{SLAT} establishes a superior accuracy-efficiency Pareto frontier, reducing reasoning length by $50\\%$ relative to uncompressed baselines while maintaining competitive accuracy. Overall, our results suggest that theoretically grounded, segment-aware trimming is a promising direction for efficient CoT reasoning in large language models.",
+        "identifiers": [
+          "SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa"
+        ],
+        "semantic_scholar_id": "06fc6178df4128519609bcf459120c54ce1659aa",
+        "canonical_id": "arXiv:2605.30832",
+        "arxiv_id": "2605.30832",
+        "doi": "10.48550/arXiv.2605.30832",
+        "authors": [
+          "Jiangqi Yao",
+          "Xiong Luo",
+          "Ran Cheng",
+          "Kay Chen Tan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 173,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.03829",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.03829",
+        "id:SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3",
+        "id:arXiv:2604.03829",
+        "title:mambalaya einsumbased fusion optimizations on statespace models",
+        "url:https://arxiv.org/abs/2604.03829"
+      ],
+      "record": {
+        "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models",
+        "source_url": "https://arxiv.org/abs/2604.03829",
+        "year": 2026,
+        "published": "2026-04-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mamba is an emerging, complex workload with various short-range and long-range dependencies, nonlinearities, and elementwise computations that are unable to run at near-peak speeds on modern hardware. Specifically, Mamba's complex dependency graph makes fusion across its full operator cascade difficult, leaving substantial inter-operator memory traffic on the table. To address these challenges, we propose Mambalaya, a novel reconfigurable accelerator that leverages fusion to overcome the limitations of Mamba. We use the recently proposed cascade-of-Einsums abstraction to characterize Mamba's full computational structure, then apply the extended Einsum framework to systematically explore inter-Einsum fusion opportunities. This principled approach yields a series of fusion mappings that reduce off-chip inter-Einsum traffic. These mappings are supported by the underlying Mambalaya architecture. Mambalaya achieves a layer performance speedup of 4.9$\\times$ for prefill and 1.9$\\times$ for generation over MARCA. In prefill-dominated scenarios, it achieves up to 1.5$\\times$ over a recent fine-grained, memory-aware fusion accelerator for Mamba.",
+        "identifiers": [
+          "SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3"
+        ],
+        "semantic_scholar_id": "03d89e5e083813143ff91c0b71627382984408c3",
+        "canonical_id": "arXiv:2604.03829",
+        "arxiv_id": "2604.03829",
+        "doi": "10.48550/arXiv.2604.03829",
+        "authors": [
+          "Toluwanimi O. Odemuyiwa",
+          "John D. Owens",
+          "J. Emer",
+          "M. Pellauer"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 228,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9de8db484bfbf36067e6690f5bd1206f2cc048777e8c26eb42a2a17f5712d739",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,385 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-180648464125e6c0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-180648464125",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.findings-acl.29",
+    "arXiv:2406.17404",
+    "arXiv:2604.09558",
+    "arXiv:2604.15732",
+    "arXiv:2605.03190",
+    "arXiv:2606.06532",
+    "arXiv:2607.23264",
+    "arXiv:2609.34866",
+    "arXiv:2609.34977"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "703384371cb27d619335c68459aa26c9b8ca6bd8",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T09:14:52.069997+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-acl.29",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2406.17404",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2406.17404"
+    },
+    {
+      "requested_id": "arXiv:2604.09558",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.09558"
+    },
+    {
+      "requested_id": "arXiv:2604.15732",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3805621.3807652"
+    },
+    {
+      "requested_id": "arXiv:2605.03190",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2605.03190"
+    },
+    {
+      "requested_id": "arXiv:2606.06532",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.23264",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:369ca42c464d4c9fac4e4dbb5777dc872b6b5888"
+    },
+    {
+      "requested_id": "arXiv:2609.34866",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.34866"
+    },
+    {
+      "requested_id": "arXiv:2609.34977",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory",
+      "source_url": "https://arxiv.org/abs/2606.06532",
+      "year": 2026,
+      "published": "2026-06-03",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic long-video question answering often relies on sparse RGB sampling and caption retrieval. This reliance can lead to missed brief motion events and repeated processing of irrelevant intervals. We introduce GOPAgen, a framework that integrates codec-native Groups of Pictures (GOPs) and motion vectors into an agentic retrieval pipeline. GOPAgen constructs global textual memory and uses two-stage query-conditioned temporal selection. A global-sufficiency check precedes local evidence extraction. Caption and motion agents represent selected intervals as typed memory pages containing complementary appearance and motion evidence, temporal metadata, and provenance. A GOP-Tree organizes these pages for conditional retrieval when the global evidence is insufficient. GOPAgen achieves 65.3\\% accuracy on MotionBench Test and 78.7\\% on EgoSchema, exceeding the reported agentic baselines listed for these benchmarks. It also achieves 73.2\\% on LongVideoBench validation and 77.3\\% on MLVU, while remaining below the strongest listed baseline on LVBench and Video-MME Long. These results support codec-aware structured memory as an effective interface for selective long-video reasoning.",
+      "identifiers": [
+        "SemanticScholar:3af39b674e5250f6124ea319512ef9123233dabc"
+      ],
+      "semantic_scholar_id": "3af39b674e5250f6124ea319512ef9123233dabc",
+      "canonical_id": "arXiv:2606.06532",
+      "arxiv_id": "2606.06532",
+      "authors": [
+        "Hao-Zhe Chi",
+        "Yang Jin",
+        "Ya-Dong Mu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 168,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.29",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a simple variable quantization approach that quantizes different layers of a large language model (LLM) at different bit levels. Specifically, we quantize the most important layers to higher bit precision and less important layers to lower bits to achieve floating point quantization levels. We propose two effective strategies to measure the importance of layers within LLMs: the first measures the importance of a layer based on how different its output embeddings are from the input embeddings (the higher the better); the second estimates the importance of a layer using the number of layer weights that are much larger than average (the smaller the better). We show that quantizing different layers at varying bits according to our importance scores results in minimal performance drop with a far more compressed model size. Finally, we present several practical key takeaways from our variable layer-wise quantization experiments: (a) LLM performance under variable quantization remains close to the original model until 25-50% of layers are moved in lower quantization using our proposed ordering but only until 5-10% if moved using no specific ordering; (b) Quantizing LLMs to lower bits performs substantially better than pruning unless extreme quantization (2-bit) is used; and (c) Layer-wise quantization to lower bits works better in the case of larger LLMs with more layers compared to smaller LLMs with fewer layers. The code used to run the experiments is available at: https://github.com/RazvanDu/LayerwiseQuant.",
+      "identifiers": [
+        "SemanticScholar:5760a16be85faa9b4403670865a34418e9fe8f8d"
+      ],
+      "semantic_scholar_id": "5760a16be85faa9b4403670865a34418e9fe8f8d",
+      "doi": "10.18653/v1/2025.findings-acl.29",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+      "authors": [
+        "Razvan-Gabriel Dumitru",
+        "Vikas Yadav",
+        "Rishabh Maheshwary",
+        "Paul-Ioan Clotan",
+        "Sathwik Tejaswi Madhusudhan",
+        "M. Surdeanu"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.34977",
+      "year": 2026,
+      "published": "2026-09-17",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models face significant efficiency challenges that stem from two distinct yet coupled sources: data redundancy and computational redundancy. While most methods focus on data redundancy by pruning visual tokens from the output of the visual encoder or computing redundancy in LLM decoders using blockwise importance, the finer-grained inter-layer representation shifts and the distribution differences within the layers themselves have not been fully explored. In this work, we comprehensively investigate this dual-level inefficiency. We posit that intermediate layer tokens from vision encoders should be considered for effective visual token pruning, as semantic focus shifts across layers, with middle-layer tokens capturing more detailed object-centric information that deeper layers may abstract away. Furthermore, we reveal the differential contributions of Attention and FFNs across distinct LLM decoder layers. Building upon these discoveries, we propose SPIDER, a training-free framework that integrates multi-layer Semantic visual token PrunIng with an aDaptive sub-layER skipping mechanism. Experimental evaluations demonstrate that SPIDER consistently maintains strong performance across various MLLM architectures and reduction ratios. For instance, on LLaVA-NeXT-7B, SPIDER reduces FLOPs by $80\\%$ while maintaining 96$\\%$ of the baseline performance.",
+      "identifiers": [
+        "SemanticScholar:5e1d526dfbc85b01abc9e9ed7243f4900f441a7f"
+      ],
+      "semantic_scholar_id": "5e1d526dfbc85b01abc9e9ed7243f4900f441a7f",
+      "canonical_id": "arXiv:2609.34977",
+      "arxiv_id": "2609.34977",
+      "doi": "10.1109/TPAMI.2026.3734987",
+      "authors": [
+        "Tian-Xiang Chen",
+        "Zhentao Tan",
+        "Zi Ye",
+        "Yue Wu",
+        "Xiao-Bing Tu",
+        "Jin-Kui Ren",
+        "Xian-Tao Zhang",
+        "Tao Gong",
+        "Qi Chu",
+        "Neng-Hai Yu",
+        "Xi-Peng Qiu",
+        "Jie-Ping Ye"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 62,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.06532",
+      "identity_tokens": [
+        "id:SemanticScholar:3af39b674e5250f6124ea319512ef9123233dabc",
+        "id:arXiv:2606.06532",
+        "title:gopagen codecaware agentic longvideo understanding with structured memory",
+        "url:https://arxiv.org/abs/2606.06532"
+      ],
+      "record": {
+        "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory",
+        "source_url": "https://arxiv.org/abs/2606.06532",
+        "year": 2026,
+        "published": "2026-06-03",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic long-video question answering often relies on sparse RGB sampling and caption retrieval. This reliance can lead to missed brief motion events and repeated processing of irrelevant intervals. We introduce GOPAgen, a framework that integrates codec-native Groups of Pictures (GOPs) and motion vectors into an agentic retrieval pipeline. GOPAgen constructs global textual memory and uses two-stage query-conditioned temporal selection. A global-sufficiency check precedes local evidence extraction. Caption and motion agents represent selected intervals as typed memory pages containing complementary appearance and motion evidence, temporal metadata, and provenance. A GOP-Tree organizes these pages for conditional retrieval when the global evidence is insufficient. GOPAgen achieves 65.3\\% accuracy on MotionBench Test and 78.7\\% on EgoSchema, exceeding the reported agentic baselines listed for these benchmarks. It also achieves 73.2\\% on LongVideoBench validation and 77.3\\% on MLVU, while remaining below the strongest listed baseline on LVBench and Video-MME Long. These results support codec-aware structured memory as an effective interface for selective long-video reasoning.",
+        "identifiers": [
+          "SemanticScholar:3af39b674e5250f6124ea319512ef9123233dabc"
+        ],
+        "semantic_scholar_id": "3af39b674e5250f6124ea319512ef9123233dabc",
+        "canonical_id": "arXiv:2606.06532",
+        "arxiv_id": "2606.06532",
+        "authors": [
+          "Hao-Zhe Chi",
+          "Yang Jin",
+          "Ya-Dong Mu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 168,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-acl.29",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-acl.29",
+        "id:SemanticScholar:5760a16be85faa9b4403670865a34418e9fe8f8d",
+        "title:variable layerwise quantization a simple and effective approach to quantize llms",
+        "url:https://doi.org/10.18653/v1/2025.findings-acl.29"
+      ],
+      "record": {
+        "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.29",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present a simple variable quantization approach that quantizes different layers of a large language model (LLM) at different bit levels. Specifically, we quantize the most important layers to higher bit precision and less important layers to lower bits to achieve floating point quantization levels. We propose two effective strategies to measure the importance of layers within LLMs: the first measures the importance of a layer based on how different its output embeddings are from the input embeddings (the higher the better); the second estimates the importance of a layer using the number of layer weights that are much larger than average (the smaller the better). We show that quantizing different layers at varying bits according to our importance scores results in minimal performance drop with a far more compressed model size. Finally, we present several practical key takeaways from our variable layer-wise quantization experiments: (a) LLM performance under variable quantization remains close to the original model until 25-50% of layers are moved in lower quantization using our proposed ordering but only until 5-10% if moved using no specific ordering; (b) Quantizing LLMs to lower bits performs substantially better than pruning unless extreme quantization (2-bit) is used; and (c) Layer-wise quantization to lower bits works better in the case of larger LLMs with more layers compared to smaller LLMs with fewer layers. The code used to run the experiments is available at: https://github.com/RazvanDu/LayerwiseQuant.",
+        "identifiers": [
+          "SemanticScholar:5760a16be85faa9b4403670865a34418e9fe8f8d"
+        ],
+        "semantic_scholar_id": "5760a16be85faa9b4403670865a34418e9fe8f8d",
+        "doi": "10.18653/v1/2025.findings-acl.29",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+        "authors": [
+          "Razvan-Gabriel Dumitru",
+          "Vikas Yadav",
+          "Rishabh Maheshwary",
+          "Paul-Ioan Clotan",
+          "Sathwik Tejaswi Madhusudhan",
+          "M. Surdeanu"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34977",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpami.2026.3734987",
+        "id:SemanticScholar:5e1d526dfbc85b01abc9e9ed7243f4900f441a7f",
+        "id:arXiv:2609.34977",
+        "title:spider multilayer semantic token pruning and adaptive sublayer skipping in multimodal large language models",
+        "url:https://arxiv.org/abs/2609.34977"
+      ],
+      "record": {
+        "title": "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.34977",
+        "year": 2026,
+        "published": "2026-09-17",
+        "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models face significant efficiency challenges that stem from two distinct yet coupled sources: data redundancy and computational redundancy. While most methods focus on data redundancy by pruning visual tokens from the output of the visual encoder or computing redundancy in LLM decoders using blockwise importance, the finer-grained inter-layer representation shifts and the distribution differences within the layers themselves have not been fully explored. In this work, we comprehensively investigate this dual-level inefficiency. We posit that intermediate layer tokens from vision encoders should be considered for effective visual token pruning, as semantic focus shifts across layers, with middle-layer tokens capturing more detailed object-centric information that deeper layers may abstract away. Furthermore, we reveal the differential contributions of Attention and FFNs across distinct LLM decoder layers. Building upon these discoveries, we propose SPIDER, a training-free framework that integrates multi-layer Semantic visual token PrunIng with an aDaptive sub-layER skipping mechanism. Experimental evaluations demonstrate that SPIDER consistently maintains strong performance across various MLLM architectures and reduction ratios. For instance, on LLaVA-NeXT-7B, SPIDER reduces FLOPs by $80\\%$ while maintaining 96$\\%$ of the baseline performance.",
+        "identifiers": [
+          "SemanticScholar:5e1d526dfbc85b01abc9e9ed7243f4900f441a7f"
+        ],
+        "semantic_scholar_id": "5e1d526dfbc85b01abc9e9ed7243f4900f441a7f",
+        "canonical_id": "arXiv:2609.34977",
+        "arxiv_id": "2609.34977",
+        "doi": "10.1109/TPAMI.2026.3734987",
+        "authors": [
+          "Tian-Xiang Chen",
+          "Zhentao Tan",
+          "Zi Ye",
+          "Yue Wu",
+          "Xiao-Bing Tu",
+          "Jin-Kui Ren",
+          "Xian-Tao Zhang",
+          "Tao Gong",
+          "Qi Chu",
+          "Neng-Hai Yu",
+          "Xi-Peng Qiu",
+          "Jie-Ping Ye"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 62,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7a8d61d37610813683ecc984ad39171a1ea46e68c7dfce018a0ec9726b916cd7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
