@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Intra-Prompt Parallel Decoding for Common-Context Question Answering",
+      "source_url": "https://arxiv.org/abs/2609.05707",
+      "year": 2026,
+      "published": "2026-09-04",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In common-context question answering (CCQA) tasks, multiple input questions share a common context to base their answers from. However, Large Language Models typically generate each answer using an independent prompt. While existing batching and caching techniques help improve parallelism and reduce repeated computations, the separation of questions across prompts limits the achievable speedup, as modern GPUs are underutilized due to a memory bottleneck during attention. We present Intra-Prompt Parallel Decoding (IPPD), a novel inference method that answers multiple common-context questions in parallel within a single prompt. IPPD directly addresses the bottleneck by efficiently sharing both memory and computation during the attention process, as the next token for every question is decoded in a single inference step. IPPD uses virtual position IDs and attention mask manipulation to generate the same output as standard prompting without requiring fine-tuning or any changes to the LLM architecture. Since all parallelism occurs within a prompt, IPPD is fully compatible with batched inference, even when each prompt features a different context. Our experiments show that IPPD delivers up to 7X the effective throughput as standard decoding without quality degradation, and outperforms prefix caching with PagedAttention in most settings.",
+      "identifiers": [
+        "SemanticScholar:7873a8d24622217a17fa04948e04c4fd5dd3d688"
+      ],
+      "semantic_scholar_id": "7873a8d24622217a17fa04948e04c4fd5dd3d688",
+      "canonical_id": "arXiv:2609.05707",
+      "arxiv_id": "2609.05707",
+      "doi": "10.18653/2026.emnlp-main.2592",
+      "authors": [
+        "Theodore Glavas",
+        "Nikhita Vedula",
+        "Dushyanta Dhyani",
+        "Antonios Valkanas",
+        "Yilun Zhu",
+        "S. Malmasi"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "共通文脈を持つ複数質問を別プロンプトで生成する際の注意のメモリボトルネックに対し、単一プロンプト内で文脈を共有しながら複数回答を並列デコードするIPPDを提案する。デコード並列化機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sparser, Faster, Lighter Transformer Language Models",
+      "source_url": "https://arxiv.org/abs/2603.23198",
+      "year": 2026,
+      "published": "2026-03-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling autoregressive large language models (LLMs) has driven unprecedented progress but comes with vast computational costs. In this work, we tackle these costs by leveraging unstructured sparsity within an LLM's feedforward layers, the components accounting for most of the model parameters and execution FLOPs. To achieve this, we introduce a new sparse packing format and a set of CUDA kernels designed to seamlessly integrate with the optimized execution pipelines of modern GPUs, enabling efficient sparse computation during LLM inference and training. To substantiate our gains, we provide a quantitative study of LLM sparsity, demonstrating that simple L1 regularization can induce over 99% sparsity with negligible impact on downstream performance. When paired with our kernels, we show that these sparsity levels translate into substantial throughput, energy efficiency, and memory usage benefits that increase with model scale. We will release all code and kernels under an open-source license to promote adoption and accelerate research toward establishing sparsity as a practical axis for improving the efficiency and scalability of modern foundation models.",
+      "identifiers": [
+        "SemanticScholar:1663af41280c87591e3588272ebe1106bd9a543d"
+      ],
+      "semantic_scholar_id": "1663af41280c87591e3588272ebe1106bd9a543d",
+      "canonical_id": "arXiv:2603.23198",
+      "arxiv_id": "2603.23198",
+      "doi": "10.48550/arXiv.2603.23198",
+      "authors": [
+        "Edoardo Cetin",
+        "Stefano Peluchetti",
+        "Emilio Castillo",
+        "Akira Naruse",
+        "Mana Murakami",
+        "Llion Jones"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのフィードフォワード層の非構造化疎性について、新しい疎パッキング形式とCUDAカーネル群で現代GPUの実行パイプラインへ統合し、L1正則化で99%超の疎性を誘導して推論と学習の双方で疎計算を効率化する。疎推論カーネルへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CORA-Diff: Confidence-Oriented Residual Acceptance for Efficient Diffusion Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2608.11235",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) update many tokens in parallel, yet practical decoders often use a fixed denoising horizon. Many predictions stabilize early, but blockwise decoding continues until all positions are resolved, causing repeated dense forward passes. Existing accelerators often rely on learned filters, modified scores, dependency models, or cache-specific mechanisms. We ask whether native trajectory signals can identify residual positions likely to match the deterministic dense endpoint. We propose CORA-Diff, a training-free method that preserves the original transfer rule and applies confidence-and-persistence gating only to positions that rule leaves unresolved. Accepted tokens remain visible as context, and the block terminates once all positions are resolved. This requires no backbone change, learned acceptance model, or logit modification. Our theory explains why high-confidence, persistent predictions are more likely to match the fixed-horizon dense endpoint, and paired post-intervention trajectories provide direct empirical support. We select one operating point on a separate GSM8K calibration subset and freeze it for all evaluations. Under a matched Learn2PD-style LLaDA protocol, CORA-Diff has the lowest measured runtime in all eight task-length settings. Task scores match or exceed dense decoding in five settings, and the largest observed drop is 1.22 points. Its incremental speedups over EOS-aware dense decoding are 2.70x and 3.32x on GSM8K and HumanEval. It also reaches 13.14x under the fixed-horizon 1024/1024 mechanism-isolation protocol and transfers to Dream without retuning at 3.18x-3.53x. These results show that native confidence and persistence enable reliable residual acceptance, reducing repeated denoising computation while preserving task quality.",
+      "identifiers": [
+        "SemanticScholar:74389593979febd3454f901276fb1c76d4b51c1c"
+      ],
+      "semantic_scholar_id": "74389593979febd3454f901276fb1c76d4b51c1c",
+      "canonical_id": "arXiv:2608.11235",
+      "arxiv_id": "2608.11235",
+      "doi": "10.48550/arXiv.2608.11235",
+      "authors": [
+        "Yi-Fan Wu",
+        "Yu-Feng Zhang",
+        "Ken-Li Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルのブロック単位デコードが早期に安定した位置まで密な順伝播を繰り返す無駄に対し、軌跡由来の確信度と持続性で残差位置の受理をゲートする学習不要のCORA-Diffを提案する。拡散LLMデコード高速化への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MLX: Multi-Layer Execution for Structured LLM Workload Acceleration on Spatial Architectures",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00017",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured sparsity is a promising approach to scaling large-language-model (LLM) inference, but existing forms such as butterfly-structured sparse projections and transformations often map inefficiently to GPUs due to deep stage dependencies and limited bulk parallelism. This paper presents MLX, an algorithm–architecture co-design for structured LLM inference. MLX couples semantic-aware FFT compression and hierarchical sparse projections with spatial dataflow execution, enabling staged structured operators to run efficiently on compact arrays. MLX defines Closed Dependency Components (CDCs) to capture deterministic forward-only dataflow regions that can be folded across layers and pipelined on compact arrays. It then realizes CDCs through a multi-layer execution architecture with bounded-hop skip-hop routing, tag-based scheduling, and decoupled compute/transfer pipelines to overlap communication and computation across deep operators. We prototype MLX in 12 nm and show that it achieves $3.2 \\times$ hardware speedup and $3.1 \\times$ energy savings over Jetson Xavier. A transformer-specialized reduced design further delivers up to 5.7× speedup over prior sparse accelerators. MLX also scales nearly linearly to $8 \\times 8$ meshes and remains effective for long sequences from $\\mathbf{1 K}$ to 4 K, demonstrating that structured operator semantics can be translated into efficient spatial execution for sparse LLMs.",
+      "identifiers": [
+        "SemanticScholar:1612f4dc2230af2b47073f84fdab2dd0121f5976"
+      ],
+      "semantic_scholar_id": "1612f4dc2230af2b47073f84fdab2dd0121f5976",
+      "doi": "10.1109/ISCA66397.2026.00017",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00017",
+      "authors": [
+        "Hai-Bin Wu",
+        "Wen-Ming Li",
+        "Zhi-Hua Fan",
+        "Zi-Rui Ma",
+        "Yu-Qun Liu",
+        "Tengfei Xia",
+        "Yan-Huan Liu",
+        "Kunming Zhang",
+        "Xiao-Chun Ye",
+        "Dong-Rui Fan",
+        "Jian Weng"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "蝶型構造化疎射影がGPUで非効率になる問題に対し、意味認識FFT圧縮と階層的疎射影を空間データフロー実行と組み合わせ、層をまたぐ折り畳みとパイプライン化を可能にするMLXを提案する。構造化LLM推論のアルゴリズム・アーキテクチャ協調設計への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CausalGate: Causal Importance Distillation for Transformer Module Pruning",
+      "source_url": "https://arxiv.org/abs/2607.22720",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing adaptive inference methods for Large Language Models rely on observational heuristics, such as hidden-state similarity or activation magnitudes, to drop redundant modules. However, these correlation-based metrics often fail to capture subtle, non-linear structural computations vital for semantic accuracy. We introduce CausalGate, an intervention-guided framework for compute-efficient transformer inference. During a calibration phase, CausalGate isolates individual Attention and MLP sub-layers, zeros out their respective outputs, and measures the exact semantic damage via the Kullback-Leibler divergence of the final logit distribution. To eliminate runtime routing overhead, this structural importance hierarchy is distilled into a global set of static, lightweight scalar gates using an Exponential Moving Average smoothing objective paired with a differentiable pairwise ranking loss. Evaluated on TinyLlama-1.1B, Qwen2.5-3B, and Llama-3.1-8B across language modeling and commonsense reasoning benchmarks, CausalGate consistently outperforms prominent dynamic routing and layer-skipping baselines, translating theoretical compute savings into concrete hardware latency reductions with zero operational overhead.",
+      "identifiers": [
+        "SemanticScholar:8e26f6510b261ade1153cd362f01466ec2febd08"
+      ],
+      "semantic_scholar_id": "8e26f6510b261ade1153cd362f01466ec2febd08",
+      "canonical_id": "arXiv:2607.22720",
+      "arxiv_id": "2607.22720",
+      "doi": "10.48550/arXiv.2607.22720",
+      "authors": [
+        "Kiran Nair",
+        "Smriti Regmi",
+        "Rodrigue Rizk"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      },
+      "reason": "隠れ状態類似度等の観測的ヒューリスティクスに代わり、注意・MLPサブ層の出力をゼロ化した介入で最終ロジットのKL乖離として因果的重要度を測り、モジュールを剪定するCausalGateを提案する。推論時ルーティング負荷なしのプルーニング機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0f685d2520da",
+    "round": "libimp-0f685d2520da9ea6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 11,
+    "round_submission_count": 3,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0f685d2520da9ea6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0f685d2520da9ea6-pre01.json",
+    "receipt": "sha256:96c57d33845b78fa61bcca85aef75973ed470e67d4487e0b2bed46f9d9c2af69"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0f685d2520da",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

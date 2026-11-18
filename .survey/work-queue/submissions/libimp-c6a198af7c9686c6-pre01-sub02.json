@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference",
+      "source_url": "https://arxiv.org/abs/2605.27435",
+      "year": 2026,
+      "published": "2026-05-22",
+      "venue": "International Conference on Artificial Intelligence Circuits and Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on mobile devices increasingly relies on heterogeneous execution, yet no prior study has systematically characterized NPU effectiveness at the operator and pipeline level. We present the first stage-aware, multi-level benchmarking study of mobile LLM inference on a CPU–NPU heterogeneous SoC. We introduce OPMASK-based controlled pipeline decomposition methodology that isolates communication, quantization, and computation overheads within the NPU execution path. Our results reveal a counter-intuitive stage-level performance reversal: CPUs outperform NPUs in the compute-intensive Prefill stage (up to 1.6x), while NPUs provide only limited acceleration in the memory-bound Decode stage (1.05–1.2x). We further show that scheduling overhead and cross-backend fallback reduce the practical benefits of NPU offloading. For the energy trend, increasing NPU offloading leads to higher energy consumption (up to 51%). Based on these findings, we derive design guidelines for NPU architects targeting on-device LLM inference.",
+      "identifiers": [
+        "SemanticScholar:46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee"
+      ],
+      "semantic_scholar_id": "46b7d153b05cad48c77d4ec2c5cbfa4f89a2dfee",
+      "canonical_id": "arXiv:2605.27435",
+      "arxiv_id": "2605.27435",
+      "doi": "10.1109/AICAS69579.2026.11762122",
+      "authors": [
+        "Pu-Hao Li",
+        "Jia-Wen Qi",
+        "Qin-Yu Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "モバイルLLM推論について、演算子・パイプライン段階ごとに通信・量子化・計算のオーバーヘッドを分離測定するOPMASK手法で、プリフィルではCPUがNPUを最大1.6倍上回る等の段階別逆転を初めて示した計測研究であり、推論基盤の特性化への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LayerBoost: Layer-Aware Attention Reduction for Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2604.22050",
+      "year": 2026,
+      "published": "2026-04-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are mostly relying on softmax attention, which introduces quadratic complexity with respect to sequence length and remains a major bottleneck for efficient inference. Prior work on linear or hybrid attention typically replaces softmax attention uniformly across all layers, often leading to significant performance degradation or requiring extensive retraining to recover model quality. This work proposes LayerBoost, a layer-aware attention reduction method that selectively modifies the attention mechanism based on the sensitivity of individual transformer layers. It first performs a systematic sensitivity analysis on a pretrained model to identify layers that are critical for maintaining performance. Guided by this analysis, three distinct strategies can be applied: retaining standard softmax attention in highly sensitive layers, replacing it with linear sliding window attention in moderately sensitive layers, and removing attention entirely in layers that exhibit low sensitivity. To recover performance after these architectural modifications, we introduce a lightweight distillation-based healing phase requiring only 10M additional training tokens. LayerBoost reduces inference latency and improves throughput by up to 68% at high concurrency, while maintaining competitive model quality. It matches base model performance on several benchmarks, exhibits only minor degradations on others, and significantly outperforms state-of-the-art attention linearization methods. These efficiency gains make our method particularly well-suited for high-concurrency serving and hardware-constrained deployment scenarios, where inference cost and memory footprint are critical bottlenecks.",
+      "identifiers": [
+        "SemanticScholar:63646da8eeff97738608636aecde27498b61bb39"
+      ],
+      "semantic_scholar_id": "63646da8eeff97738608636aecde27498b61bb39",
+      "canonical_id": "arXiv:2604.22050",
+      "arxiv_id": "2604.22050",
+      "doi": "10.48550/arXiv.2604.22050",
+      "authors": [
+        "Mohamed Ali Souibgui",
+        "Jan Fostier",
+        "R. Abadía-Heredia",
+        "Bohdan Denysenko",
+        "Christian Marschke",
+        "Igor Peric"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層ごとに注意機構への感度が異なる点に着目し、感度分析で重要層を特定して選択的に注意を削減するLayerBoostを提案し、全面線形化の品質劣化を避けながら二次計算量のボトルネックを下げる。注意削減による推論効率化への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration",
+      "source_url": "https://arxiv.org/abs/2611.04032",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving an LLM efficiently depends on the engine, how the model is split across GPUs, precision, scheduler settings, speculative decoding, KV-cache management, and prefill-decode disaggregation. The best configuration depends on the model, hardware, workload, and objective. Operators usually find it by trial and error. Exhaustively measuring the candidates in our study would take about 25,000 GPU-hours. ROCm InferaSim predicts serving performance from a few short measurements. Choices such as batch size, prompt length, and GPU count change the amount of work per GPU without changing the kernels. ROCm InferaSim benchmarks each distinct set of kernels once, on at most one node. We call this measurement an anchor. Analytical laws carry that anchor to other deployments that run the same kernels. For multi-node deployments, ROCm InferaSim reduces the configuration to a single-node equivalent, measures it, and scales the result analytically. A simulator replays multi-turn traffic, and a tuning agent searches configurations using the predictions. On AMD Instinct MI355X GPUs with vLLM, SGLang, and ATOM, 11 anchors took 9.1 GPU-hours, against 204 GPU-hours to measure the 226 fixed-length configurations they cover. On 172 configurations, time per output token has 8.1% median error. On a multi-turn coding workload, throughput is within 8%. For 159 disaggregated deployments, none used as an anchor, throughput is within 5.5%. A five-candidate short list contains a deployment within 12% of the best feasible pairing of model and latency target.",
+      "identifiers": [
+        "SemanticScholar:9805caff04c195a5540b7550e40855304226e4f2"
+      ],
+      "semantic_scholar_id": "9805caff04c195a5540b7550e40855304226e4f2",
+      "canonical_id": "arXiv:2611.04032",
+      "arxiv_id": "2611.04032",
+      "authors": [
+        "Anshu Raina",
+        "Yao Fu",
+        "Jie-Jing Zhang",
+        "Peyman Razaghi",
+        "Shiksha Patel",
+        "Ravi Gupta",
+        "Deval Shah",
+        "Adeem Jassani",
+        "Subhajit Dutta Chowdhury",
+        "Lorri Rao",
+        "Kailash Gogineni",
+        "Zhen-Yu Gu",
+        "Onil Gunawardana",
+        "Emad Barsoum"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エンジン・並列分割・精度・スケジューラ・投機的デコード・KVキャッシュ管理等のサービング構成空間について、相異なるカーネル集合を最大1ノードで一度だけ実測して全体性能を予測するROCm InferaSimを提案する。LLMサービングの計測・シミュレーション基盤への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TURNIP: A \"Nondeterministic\" GPU Runtime with CPU RAM Offload",
+      "source_url": "https://arxiv.org/abs/2405.16283",
+      "year": 2024,
+      "published": "2024-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "An obvious way to alleviate memory difficulties in GPU-based AI computing is via CPU offload, where data are moved between GPU and CPU RAM, so inexpensive CPU RAM is used to increase the amount of storage available. While CPU offload is an obvious idea, it can greatly slow down a computation, due to the relatively slow transfer rate between CPU RAM and GPU RAM. Thus, any system for CPU offload needs to ensure that when such a transfer needs to happen, no computation is blocked waiting for the transfer to finish. One of the key challenges when using CPU offload is that memory transfers introduce nondeterminacy into the system: it is not possible to know before runtime when the transfers will finish, and hence what is the best order of operations to run to ensure there is no blocking. In this paper, we describe TURNIP, which is a system for running AI computations using CPU offload. The key innovation in TURNIP is the compilation of the AI computation into a dependency graph that gives the TURNIP runtime freedom to run operations such as GPU kernel calls in many different orders; at runtime, TURNIP chooses the best order in response to real-time events.",
+      "identifiers": [
+        "SemanticScholar:62051926adbdb23011931c13f0c5e5f6dd1c8ce6"
+      ],
+      "semantic_scholar_id": "62051926adbdb23011931c13f0c5e5f6dd1c8ce6",
+      "canonical_id": "arXiv:2405.16283",
+      "arxiv_id": "2405.16283",
+      "doi": "10.48550/arXiv.2405.16283",
+      "authors": [
+        "Zhi-Min Ding",
+        "Jiawen Yao",
+        "Brianna Barrow",
+        "Tania Lorido Botran",
+        "C. Jermaine",
+        "Yu-Xin Tang",
+        "Jie-Hui Li",
+        "Xinyu Yao",
+        "S. Abdelghafar",
+        "Daniel Bourgeois"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 907,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPU計算のCPU RAMオフロードで転送完了時刻の不確定性が計算をブロックする問題に対し、計算を依存グラフへコンパイルして実行時にイベント応答で演算順序を選ぶランタイムTURNIPを提案する。オフロード実行時メモリ管理への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c6a198af7c96",
+    "round": "libimp-c6a198af7c9686c6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c6a198af7c9686c6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c6a198af7c9686c6-pre01.json",
+    "receipt": "sha256:d69ff00837fb0adf7d5c1dd1e89a1d2c95064756f29c03d5fc30277edd05c8f5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c6a198af7c96",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

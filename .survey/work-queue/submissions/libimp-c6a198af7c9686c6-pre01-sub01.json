@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DIAMoND: Dynamic Inference for Adaptive Edge MOE with Heterogeneous In-NAND and Near-DRAM Compute Architecture",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00078",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Among modern large language models (LLMs), the Mixture-of-Experts (MoE) model stands out as a promising approach. Although MoE models activate only small portions of experts during inference, the full model size can reach 50~100GB, posing challenges for the memory capacity of edge devices. Additionally, single-batch decoding in edge applications places significant memory bandwidth demands for parameter loading, and the dynamic expert selection in MoE models further complicates loading patterns. Previous studies have explored using NAND-Flash-based SSD to provide the large storage capacity needed for holding LLM parameters. However, the performance of near-NAND computing remains limited by the memory data transfer rate, and these studies lack designs to accommodate the complex execution flow of MoE models. To fully release the computational capacity on the memory side while considering memory characteristics, we introduce DIAMoND, a heterogeneous accelerator that integrates in-NAND and near-DRAM computing via a 2.5D package to support all operations in MoE inference efficiently. To address mismatches between varying matrix sizes and the fixed NAND array size, we propose a mask-based mapping method under in-NAND computing. Finally, a dynamic online expert selection scheme based on in-NAND computing is proposed to enhance MoE inference efficiency. Overall, our proposed architecture enables the edge inference of Mixtral-8×7B at a speed of 197.3 tokens/s and a peak energy efficiency of 5.8 tokens/J, with the speed being $9.7 \\times$ and ${2. 6} \\sim {1 1. 7} \\times$ better than GPU and ASIC LLM edge accelerators.",
+      "identifiers": [
+        "SemanticScholar:d63ea5f13d28293c764b9d505afcbe5c59fb44b6"
+      ],
+      "semantic_scholar_id": "d63ea5f13d28293c764b9d505afcbe5c59fb44b6",
+      "doi": "10.1109/ISCA66397.2026.00078",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00078",
+      "authors": [
+        "Ling Liang",
+        "Tian-Yang Luo",
+        "Shu-Zhang Zhong",
+        "Dong-Xue Zhao",
+        "Qi-Chao Ma",
+        "Ren-Jie Wei",
+        "Jingyu Wang",
+        "Meng Li",
+        "Guang-Yu Sun",
+        "Zong-Wei Wang",
+        "Yi-Mao Cai"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "エッジ向けMoE推論で全パラメータ保持と動的専門家選択がメモリ容量・帯域を圧迫する問題に対し、In-NAND計算とNear-DRAM計算を異種統合したDIAMoNDアーキテクチャで動的推論を行う。エッジMoE推論ハードウェアへの直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HCInfer: Hierarchical Coordination for Real-Time Collaborative Inference of LLM on the Edge",
+      "source_url": "https://doi.org/10.1109/RTSS66672.2025.00021",
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "IEEE Real-Time Systems Symposium",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) on edge devices enables real-time responses while preserving user privacy. However, constrained memory and compute resources pose significant challenges for high-quality, single-device inference. To address this, we propose HCInfer, a hierarchical coordination framework for collaborative LLM inference across edge devices. By leveraging idle neighboring devices, HCInfer alleviates performance bottlenecks typical in isolated deployments. HCInfer employs a two-level coordination strategy. At the inter-device level, it leverages idle neighboring devices to collaboratively process attention computations, significantly reducing synchronization overhead. At the intra-device level, it applies finegrained memory and compute optimizations to fully exploit local hardware capabilities. Building on this architecture, HCInfer integrates three key components: (1) Asymmetric Transformer decomposition decouples attention and FFN computation, enabling selective and parallel execution across devices. (2) Layer-wise subdeadline scheduling dynamically profiles execution latency and adapts precision or structure to meet real-time constraints (3) An Overhead Mitigation Module efficiently manages on-device resource usage to support scalability without overwhelming hardware. We evaluate HCInfer on PC, smart home, and mobile platforms using OPT-13B, Qwen2.5-14B, and Llama2-13B models. Experiments show HCInfer achieves 1.67× to 4.3× speedup in TTFT and 1.16× to 17.15× speedup in TPOT compared to existing baselines, maintaining a sub-deadline miss rate (SubDMR) of 15.3% under worst-case conditions while keeping model accuracy degradation within 8% for typical cases and up to 11% in extreme scenarios. These results demonstrate HCInfer's potential to enable efficient and responsive LLM inference in real-world edge environments.",
+      "identifiers": [
+        "SemanticScholar:bc61e82a025b209b70eaa408ce67f6598015add8"
+      ],
+      "semantic_scholar_id": "bc61e82a025b209b70eaa408ce67f6598015add8",
+      "doi": "10.1109/RTSS66672.2025.00021",
+      "canonical_id": "DOI:10.1109/RTSS66672.2025.00021",
+      "authors": [
+        "Kaiyuan Liu",
+        "Lizi Zhang",
+        "Cheng-Zhong Xu",
+        "Li Li"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 351,
+        "matched_prestigious_venue": null
+      },
+      "reason": "単一エッジデバイスの資源制約に対し、近隣の遊休デバイスと協調して注意計算を分散し、二階層の協調で同期オーバーヘッドを抑えるHCInferを提案する。エッジ協調LLM推論の分散実行機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating",
+      "source_url": "https://arxiv.org/abs/2602.13665",
+      "year": 2026,
+      "published": "2026-02-14",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While agentic AI systems rely on LLMs to translate user intent into structured function calls, this process is fraught with computational redundancy, leading to high inference latency that hinders real-time applications. This paper identifies and addresses three key redundancies: (1) the redundant processing of a large library of function descriptions for every request; (2) the redundant use of a large, slow model to generate an entire, often predictable, token sequence; and (3) the redundant generation of fixed, boilerplate parameter syntax. We introduce HyFunc, a novel framework that systematically eliminates these inefficiencies. HyFunc employs a hybrid-model cascade where a large model distills user intent into a single ''soft token.'' This token guides a lightweight retriever to select relevant functions and directs a smaller, prefix-tuned model to generate the final call, thus avoiding redundant context processing and full-sequence generation by the large model. To eliminate syntactic redundancy, our ''dynamic templating'' technique injects boilerplate parameter syntax on-the-fly within an extended vLLM engine. To avoid potential limitations in generalization, we evaluate HyFunc on an unseen benchmark dataset, BFCL. Experimental results demonstrate that HyFunc achieves an excellent balance between efficiency and performance. It achieves an inference latency of 0.828 seconds, outperforming all baseline models, and reaches a performance of 80.1%, surpassing all models with a comparable parameter scale. These results suggest that HyFunc offers a more efficient paradigm for agentic AI. Our code is publicly available at https://github.com/MrBlankness/HyFunc.",
+      "identifiers": [
+        "SemanticScholar:89cbd97c351c414acccd29237376faa902b796d6"
+      ],
+      "semantic_scholar_id": "89cbd97c351c414acccd29237376faa902b796d6",
+      "canonical_id": "arXiv:2602.13665",
+      "arxiv_id": "2602.13665",
+      "doi": "10.1145/3770854.3780283",
+      "authors": [
+        "Wei-Bin Liao",
+        "Jian-Guang Lou",
+        "Hao Xiong"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 277,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェントの関数呼び出し生成にある関数記述の再処理・大規模モデルの全生成・定型構文の再生成という三つの冗長性に対し、小大モデルのカスケードと動的テンプレート化で除去するHyFuncを提案する。関数呼び出し推論の遅延削減機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Deterministic Differentiable Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.08065",
+      "year": 2026,
+      "published": "2026-03-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning reduces LLM inference cost by removing low-importance architectural components. This can be viewed as learning a multiplicative gate for each component under an l0 sparsity constraint. Due to the discreteness of the l0 norm, prior work typically adopts stochastic hard-concrete relaxations to enable differentiable optimization; however, this stochasticity can introduce a train--test mismatch when sampled masks are discretized for deployment and restricts masks to a bounded, near-binary range. To address this, we propose Deterministic Differentiable Pruning (DDP), a mask-only optimization method that eliminates stochasticity by directly optimizing a deterministic soft surrogate of the discrete l0 objective. Compared with prior approaches, DDP offers greater expressiveness, reduced train--test mismatch, and faster convergence. We apply our method to several dense and MoE models, including Qwen3-32B and Qwen3-30B-A3B, achieving a performance loss as small as 1% on downstream tasks while outperforming previous methods at 20% sparsity. We further demonstrate end-to-end inference speedups in realistic deployment settings with vLLM.",
+      "identifiers": [
+        "SemanticScholar:c302150751e13ef36419bbcbbe1f91fcb1c56008"
+      ],
+      "semantic_scholar_id": "c302150751e13ef36419bbcbbe1f91fcb1c56008",
+      "canonical_id": "arXiv:2603.08065",
+      "arxiv_id": "2603.08065",
+      "doi": "10.48550/arXiv.2603.08065",
+      "authors": [
+        "Wei-Yu Huang",
+        "Peng-Le Zhang",
+        "Xiaolu Zhang",
+        "Jun Zhou",
+        "Jun Zhu",
+        "Jian-Fei Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 254,
+        "matched_prestigious_venue": null
+      },
+      "reason": "構造プルーニングの確率的緩和が招く学習時と展開時のマスク不一致に対し、決定論的な微分可能マスク最適化で注意・MLP等の構成要素を除去するDDPを提案し、推論コスト削減を直接の目的とする。LLMプルーニング機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SNLP: Layer-Parallel Inference via Structured Newton Corrections",
+      "source_url": "https://arxiv.org/abs/2605.17842",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive language models execute Transformer layers sequentially, creating a latency bottleneck that is not removed by conventional tensor or pipeline parallelism. We study whether this layerwise dependency can be relaxed by treating the hidden-state trace across layers as the solution of a nonlinear residual equation and solving it with parallel Newton-style updates. While this view is principled, exact Newton corrections require expensive Jacobian-vector products and naive fixed-point iterations are unstable on trained Transformers. We introduce Structured Newton Layer Parallelism (SNLP), a training and inference framework that replaces exact layer Jacobians with cheap architecture-induced surrogate dynamics. In residual Transformers, this yields Identity Newton (IDN), where the correction reduces to a prefix-sum-like update; in mHC-style architectures, HC Newton (HCN) uses the model's residual mixing matrix. We also study SNLP-aware training, including pretraining regularization and direct SNLP-forward SFT. Experiments on Nanochat-scale Transformers show that SNLP exposes a practical speed-quality frontier: on 0.5B models, it reaches up to 2.58x wall-clock speedup, and a less aggressive configuration reaches 1.40x speedup without increasing PPL. The useful tradeoff comes from the biased finite-iteration computation induced by IDN/HCN rather than exact recovery of the sequential trace. We further show that SNLP-forward SFT can preserve downstream task accuracy, and that SNLP can serve as a drafter for self-speculative decoding while a sequential verifier preserves output correctness.",
+      "identifiers": [
+        "SemanticScholar:767351320e68f4eb61957e767daad9ca4175ef0d"
+      ],
+      "semantic_scholar_id": "767351320e68f4eb61957e767daad9ca4175ef0d",
+      "canonical_id": "arXiv:2605.17842",
+      "arxiv_id": "2605.17842",
+      "doi": "10.48550/arXiv.2605.17842",
+      "authors": [
+        "Li-Gong Han",
+        "Kai Xu",
+        "Hao Wang",
+        "Akash Srivastava"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer層の逐次実行という遅延ボトルネックに対し、層間隠れ状態遷移を非線形残差方程式とみなし、ヤコビアンの安価な代替動力学による構造化Newton補正で層並列に解くSNLPを提案し、0.5Bモデルで最大2.58倍の高速化と自己投機的デコードのドラフタ利用を示す。層並列推論機構への直接貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c6a198af7c96",
+    "round": "libimp-c6a198af7c9686c6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c6a198af7c9686c6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c6a198af7c9686c6-pre01.json",
+    "receipt": "sha256:d69ff00837fb0adf7d5c1dd1e89a1d2c95064756f29c03d5fc30277edd05c8f5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c6a198af7c96",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
