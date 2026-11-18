@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Budgeted Cache Repair for Cross-Context KV-Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2610.02233",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cross-context KV-cache reuse predicts a shared segment's keys and values under a new prefix instead of recomputing them, and has been reported to do so without quality loss. We find otherwise, and identify two problems. (1) A hidden cost: on MMLU and GSM8K, reuse costs substantial accuracy. (2) A decision at the wrong unit: no rule for deciding whether to reuse a cache removes that cost. What does help is choosing which parts of the cache to recompute, and the value of choosing well falls as the unit of choice grows: informed selection removes 49.5% of the cache error beyond chance at single rows (one token's keys and values), 10.6% at 64-token chunks, and nothing at the level of whole calls. Budgeted Cache Repair (BCR) acts at the unit where selection still pays. It drafts two tokens from the assembled cache, ranks cache rows by the attention those tokens pay them, and recomputes a fixed budget of rows exactly, in one of three layouts. The cost is paid rather than predicted away, and the draft that fails as a gate succeeds as a selector. BCR restores GSM8K to dense-prefill accuracy while still serving most calls from cache, and its best layout outperforms every reuse baseline's mean in the reference grid. The draft also beats a coin-flip selector at the same budget - a control prior evaluations lack.",
+      "identifiers": [
+        "SemanticScholar:a101b97b89b9a8523c5c8813fe5856bbe5a620ea"
+      ],
+      "semantic_scholar_id": "a101b97b89b9a8523c5c8813fe5856bbe5a620ea",
+      "canonical_id": "arXiv:2610.02233",
+      "arxiv_id": "2610.02233",
+      "authors": [
+        "Haeyong Kang",
+        "C. D. Yoo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      },
+      "reason": "文脈跨ぎKVキャッシュ再利用のための予算つきキャッシュ修復。再利用が無損失という報告に反して精度費用があることを示し、再利用するかではなく、キャッシュのどの部分を再計算するかを選ぶことで誤差を取り除く。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Weights That Stay: On-Chip Megakernels for Serial Heads in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.00506",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel speculative drafters use a lightweight serial head to recover token dependencies within a block generated in parallel. Each head step updates only a small state, yet projects that state through the same vocabulary-sized matrix. Step-wise execution repeatedly transfers this large, immutable projection, making the head a meaningful source of latency despite its low arithmetic cost. We present Weights That Stay, an execution design that keeps projection shards on chip for the entire serial draft walk. A persistent megakernel couples weight residency with GPU-side token selection and state advancement, reusing resident weights while exchanging only compact state between steps. The design supports full or partial residency and accommodates both Markov and recurrent heads on H100 and B200. Integrated into SGLang, Weights That Stay improves throughput for Markov drafting on Qwen3-4B and Qwen3-8B, with gains of up to 12.3%. At the head level, the DSpark walk is up to 11.6$\\times$ faster than the fastest measured SGLang reference path. These results show that aligning weight residency with the full draft walk translates cross-step reuse into end-to-end serving gains.",
+      "identifiers": [
+        "SemanticScholar:1209f20e353c1f6519dc8f8bbc600945787364d4"
+      ],
+      "semantic_scholar_id": "1209f20e353c1f6519dc8f8bbc600945787364d4",
+      "canonical_id": "arXiv:2611.00506",
+      "arxiv_id": "2611.00506",
+      "authors": [
+        "Xin-Wei Qiang",
+        "Zi-Yi Xu",
+        "Zai-Feng Pan",
+        "Chang Chen",
+        "Yu-Fei Ding"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的デコードの直列ヘッド向けオンチップメガカーネル。並列下書きの直列ヘッドが、語彙規模の射影行列をステップごとに繰り返し転送して遅延源になる問題に対し、射影の断片をチップ上に常駐させる永続メガカーネル。推論カーネルそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HyFlash: A Prefix-Memory Prior for On-Device Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.07263",
+      "year": 2026,
+      "published": "2026-11-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Parallel block drafting accelerates speculative decoding by predicting multiple future positions in a single backbone pass, but on-device deployment constrains both drafter capacity and context storage. Under tight memory budgets, drafters must model long-range dependencies and fine-grained draft-position interactions without the growing KV-cache overhead of full-context attention. We propose HyFlash, a compact parallel drafter that introduces a prefix-memory prior to separate long-range context modeling from fine-grained draft-position interactions with limited capacity. Local attention captures recent context and draft-position interactions, while recurrent memory compresses historical target features into fixed-size states. This inductive bias enables effective local and long-range modeling with bounded draft-side memory. Experiments show that HyFlash achieves higher acceptance than full-context attention with substantially less KV storage and with larger gains for shallow drafters and long contexts.",
+      "identifiers": [
+        "SemanticScholar:2d43b1d682499398b415c0c125920d1d3bacca9e"
+      ],
+      "semantic_scholar_id": "2d43b1d682499398b415c0c125920d1d3bacca9e",
+      "canonical_id": "arXiv:2611.07263",
+      "arxiv_id": "2611.07263",
+      "authors": [
+        "Jongwoo Ko",
+        "Pashmina Cameron"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "オンデバイス投機的デコード向け接頭辞メモリ事前分布HyFlash。並列ブロック下書きで、装置上の容量と文脈保存の制約の下、下書き役が長距離依存と位置相互作用を扱えない問題に対し、接頭辞メモリの事前分布で分離するコンパクトな下書き役。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-62c91f67a287",
+    "round": "libimp-62c91f67a287d431-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-62c91f67a287d431-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-62c91f67a287d431-pre01.json",
+    "receipt": "sha256:3125183683b97774c95ec38839fb13cf6c1dd55929528c5405373d3e12ee4287"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-62c91f67a287",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "source_url": "https://arxiv.org/abs/2610.42147",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+      "identifiers": [
+        "SemanticScholar:2fe5fb0b1071a1441b18decf5969f16732c63751"
+      ],
+      "semantic_scholar_id": "2fe5fb0b1071a1441b18decf5969f16732c63751",
+      "canonical_id": "arXiv:2610.42147",
+      "arxiv_id": "2610.42147",
+      "authors": [
+        "Ales Kubicek",
+        "Andrea Caciolai",
+        "Liang-Zu Peng",
+        "Sukrit Sumant",
+        "Benjamin Hoover",
+        "Fraser Greenlee",
+        "R. Battleday",
+        "Radim Urban",
+        "T. Hoefler",
+        "James C. R. Whittington"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "潜在疎注意。100万トークンを超える超長文脈で、索引付けが二次費用か精度喪失のどちらかになる問題に対し、潜在空間での疎注意で精度を保ちながら準二次を狙う。推論の注意機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Integer-Exact Microscaling: Running MXFP4 Language Models on INT8 Matrix Units",
+      "source_url": "https://arxiv.org/abs/2611.00486",
+      "year": 2026,
+      "published": "2026-10-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On hardware whose fastest matrix datapath is INT8$\\times$INT8, such as the Neural Accelerators of Apple's M5 GPUs, 4-bit weights must become INT8 operands. Existing MXFP4 kernels already map FP4 (E2M1) values to integers by doubling them, but apply every 32-element block scale inside the reduction. We show when no per-block work is needed: a row of MXFP4 weights is exactly one INT8 vector times one power-of-two scale if its block exponents span at most three, so a linear layer becomes a single INT8 GEMM with one rescale per output. Enforcing the condition adds at most 1/16 of a row's largest rounding error to the blocks it changes, and real weights already satisfy it: 97.9-99.97% of rows across seven models, including 99.93% of the 95M rows of a 125B-parameter mixture-of-experts (MoE) model, Qwen3.8-Flash-Next. The resulting spread-constrained MXFP4 files stay standard MXFP4. With integer instead of power-of-two block multipliers, an integer-exact format (16-wide blocks, multipliers 1..10, 4.26 bits) runs as one exact INT8 GEMM and is more accurate than NVFP4 (4.5 bits) with its standard scale rule on five small models, within 0.06 perplexity of NVFP4 with scale search. On Qwen3.8-Flash-Next's routed experts with INT8 activations it is as close to the FP8 model as NVFP4 with scale search (KL divergence 0.0557 vs. 0.0553) and closer than MLX's MXFP4 and affine INT4; with every matrix quantized it solves 94.8% of GSM8K vs. 91.0% for MLX's MXFP4. Quantizing only the 74k routed expert matrices (96% of the parameters) to either of our formats with INT8 activations costs at most 0.2% perplexity. A complete W4A8 system on the M5 produces outputs bit-identical to the quantized reference; prefill is 1.34-1.74x faster than MLX on a dense model, 1.10-1.57x on two MoE models up to 35B parameters and 1.22-1.29x on Qwen3.8-Flash-Next, where shared non-GEMM work bounds the gain.",
+      "identifiers": [
+        "SemanticScholar:289a850a2c5b18d37f61cc111196784855aaafec"
+      ],
+      "semantic_scholar_id": "289a850a2c5b18d37f61cc111196784855aaafec",
+      "canonical_id": "arXiv:2611.00486",
+      "arxiv_id": "2611.00486",
+      "authors": [
+        "Shinyoung Kang",
+        "Junhyung Ahn",
+        "Yujun Kim",
+        "J. Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "整数厳密マイクロスケーリング。最速の行列データパスがINT8のハードウェアでMXFP4モデルを動かす際、ブロック指数の広がりが3以内の行は1つのINT8ベクトルと2の冪スケールに厳密に等しいことを示し、ブロックごとの作業を省く。推論カーネルそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HybridSpec: Throughput-Aware Speculative Decoding for Hybrid GDN-MoE Models",
+      "source_url": "https://arxiv.org/abs/2611.04055",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In speculative decoding, parallel drafters such as DFlash make drafting cheap, so target verification dominates each round. A central choice is the verification length, the number of tokens that the target processes in each round. Verifying more draft tokens can accept more of them, but work after the first rejection is wasted. For hybrid target models that combine Gated DeltaNet (GDN) and mixture-of-experts (MoE) layers, verification time grows much faster with this length than for dense models. In a single-request profile of Qwen3.6-35B-A3B with DFlash, it grew by 71% from length 4 to 16, almost entirely in GDN and MoE layers, compared with 4%-6% for a dense Qwen3-4B target. Each GDN layer must update a recurrent state at every token and recover it at the end of the accepted prefix. The MoE cost depends on the experts that the tokens activate, which are known only once verification runs. We present HybridSpec, which selects the verification length on the GPU from draft-side acceptance estimates and measured target latency. Verification then runs this length plus one extra token up to the first MoE router, before any expert runs. There, a lightweight routing correction uses the observed expert assignments to decide whether to keep that token. The rest of verification runs only on the selected tokens. Block-parallel GDN kernels avoid storing a state after every token and reconstruct the accepted state of every GDN layer in one launch. In isolated benchmarks at verification lengths 4 to 16 with every draft token accepted, these kernels, including accepted-state reconstruction, are $1.54\\times$-$4.04\\times$ faster than the default kernels. With three GDN-MoE target models in single-request greedy decoding, HybridSpec is $1.75\\times$-$1.88\\times$ faster than autoregressive decoding and $1.30\\times$-$1.33\\times$ faster than DFlash.",
+      "identifiers": [
+        "SemanticScholar:2e26430205729678832c92a139215ecf56b0370a"
+      ],
+      "semantic_scholar_id": "2e26430205729678832c92a139215ecf56b0370a",
+      "canonical_id": "arXiv:2611.04055",
+      "arxiv_id": "2611.04055",
+      "authors": [
+        "Hai-Yu Wang",
+        "Sai-Qian Zhang",
+        "Ze-Chun Liu",
+        "Steven Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ハイブリッドGDN-MoE向けスループット配慮型投機的デコードHybridSpec。並列下書きで検証が支配的になる中、検証長を増やすと最初の棄却後の作業が無駄になる問題に対し、ハイブリッド目標モデルで検証時間が長さに強く伸びる性質を踏まえて検証長を選ぶ。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
+      "source_url": "https://arxiv.org/abs/2611.07025",
+      "year": 2026,
+      "published": "2026-11-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive decoding relies on the KV cache, whose memory footprint grows linearly with context length and caps batch size and throughput. Existing post-training methods exploit redundancy across tokens, layers, and feature dimensions, or lower numerical precision. We identify a complementary axis: within each attention head, values are largely predictable from their corresponding keys. We exploit this with value cache amortisation, which fits a lightweight per-head predictor at test time and stores residuals only for the tokens it reconstructs worst, giving $4\\times$ near-lossless value compression. The predictor can be initialised by meta-learning for substantially reduced prefill overhead, or fitted from scratch in settings that allow a one-off cost, such as multi-query inference. We pair value amortisation with cross-layer low-rank key compression to produce LowRAM, an asymmetric compression pipeline that stays close to lossless across three model families. By reconstructing only a selected subset of KV pairs at each decoding step, LowRAM can keep decoding overhead minimal and achieve up to $5\\times$ higher peak decode throughput at $4\\times$ compression. LowRAM further composes with quantisation and eviction, reaching $26.9\\times$ compression at $94.5\\%$ of baseline performance on long contexts. These results show that treating keys and values as structurally distinct enables efficient, aggressive, and composable KV cache compression.",
+      "identifiers": [
+        "SemanticScholar:c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7"
+      ],
+      "semantic_scholar_id": "c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7",
+      "canonical_id": "arXiv:2611.07025",
+      "arxiv_id": "2611.07025",
+      "authors": [
+        "Teresa Delgado",
+        "Hugo Hazard",
+        "Martin Benfeghoul",
+        "Jun Wang",
+        "Z. Fountas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      },
+      "reason": "合成可能なKVキャッシュ圧縮のための低ランクキーと償却値LowRAM。各ヘッド内で値がキーから概ね予測できる冗長性を使い、テスト時に軽量な予測器を合わせ、再構成の悪いトークンだけ残差を保存する。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c5a2bedf8666",
+    "round": "libimp-c5a2bedf866655f7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c5a2bedf866655f7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c5a2bedf866655f7-pre01.json",
+    "receipt": "sha256:b9f1e71e75fe8efe602dd89bec2be92043447fdc004a4a01e3d69b7b4552a14d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c5a2bedf8666",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

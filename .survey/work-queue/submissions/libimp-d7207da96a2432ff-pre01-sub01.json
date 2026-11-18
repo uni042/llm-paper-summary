@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RaMP: Runtime-Aware Megakernel Polymorphism for Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2604.26039",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM serving systems autotune their GPU kernels offline by timing candidate kernel configurations, like tile sizes, at a range of batch sizes. This works when the number of tokens determines a kernel's work, as in dense layers. However, we show that it does not hold for Mixture-of-Experts (MoE) layers where the router decides how the tokens are split across experts and GPUs. We find that the best kernel configuration depends on this split, and not only on the number of tokens--under expert parallelism, choosing the configuration for each GPU's actual token distribution is up to 1.45x faster than the existing choice. The split is not known until the router runs, so it cannot be looked up in advance. Hence, we introduce RaMP, which chooses the kernel configuration at run time from the routing split itself. RaMP compiles top configurations into one polymorphic kernel, and a small cost model on the GPU picks among them in a few microseconds. On serving traffic its cost model was never fit on, the configurations RaMP's cost model chooses from the kernel's full configuration space are up to 1.45x faster than those vLLM's offline autotuner picks for the same kernel on batches of 128 tokens or more (1.27x over all batches), and within 3.5% of an exhaustive search that times every configuration. RaMP's kernel and choice together make the MoE layer up to 1.84x faster than vLLM's Triton MoE on batches of 128 tokens or more. In vLLM, under both tensor and expert parallelism, RaMP lowers time per output token by up to 1.11x over the fastest stock MoE backend.",
+      "identifiers": [
+        "SemanticScholar:2742d0aa6ea068a1d2a0c50c787978f40c37e881"
+      ],
+      "semantic_scholar_id": "2742d0aa6ea068a1d2a0c50c787978f40c37e881",
+      "canonical_id": "arXiv:2604.26039",
+      "arxiv_id": "2604.26039",
+      "doi": "10.48550/arXiv.2604.26039",
+      "authors": [
+        "Vyom Sharma",
+        "Debajyoti Datta"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE向け実行時配慮メガカーネル多形性RaMP。提供システムのオフライン自動調整がトークン数だけに依る前提が、専門家の分割で最適構成が変わるMoE層では崩れることを示し、GPUごとの実際のトークン分布に合わせる。推論基盤のカーネル機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
+      "source_url": "https://arxiv.org/abs/2607.19368",
+      "year": 2026,
+      "published": "2026-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-prompt inference remains expensive because prefill attention scales quadratically with sequence length. We propose Spectral-LSH, a training-free prompt compression method that operates before the prompt enters the language model. Spectral-LSH approximates the dominant components of an implicit attention-kernel operator using a Krylov subspace method together with random features, avoiding explicit $O(N^2)$ attention-kernel materialization. It then applies SimHash in the resulting attention eigenspace to group similar tokens and aggregate them into macro-tokens with causal positional assignments. We evaluate Mistral-7B-Instruct-v0.3, Qwen2.5-7B-Instruct, and Qwen2.5-14B-Instruct on C4. Our experiments reveal a compression-ratio phase transition. Below $\\rho = 4 \\times$, local token redundancy is low enough that lightweight chunking typically provides the best latency--quality trade-off. Above $\\rho = 8 \\times$, the spectral path preserves quality that chunking loses. At $\\rho = 16 \\times$, Qwen2.5-7B (adaptive) reduces the PPL ratio from 353.409 to 196.963, while Qwen2.5-14B (adaptive) reduces it from 9.533 to 3.427. On a small long-context structured stress test containing JSON-like, code-like, and table-like inputs, local LSH also improves every metric over chunking at $8 \\times$. The adaptive backend captures both regimes by using the chunk path at low compression and spectral clustering at high compression, although chunking remains the fastest backend in total latency.",
+      "identifiers": [
+        "SemanticScholar:77f02a68cd3a806a778fa81d35da3ea90c87e99a"
+      ],
+      "semantic_scholar_id": "77f02a68cd3a806a778fa81d35da3ea90c87e99a",
+      "canonical_id": "arXiv:2607.19368",
+      "arxiv_id": "2607.19368",
+      "doi": "10.48550/arXiv.2607.19368",
+      "authors": [
+        "Ali Mahdavi",
+        "Azadeh Zamanifar",
+        "Amirfarhad Farhadi",
+        "Omid Kashefi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 159,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Krylov射影局所性鋭敏ハッシュによる準二次プロンプト圧縮Spectral-LSH。プリフィルの注意が二次に伸びる問題に対し、プロンプトが言語モデルに入る前に、注意カーネル演算子の主要成分を近似してトークンをマクロトークンへ集約する、訓練不要の圧縮。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
+      "source_url": "https://arxiv.org/abs/2606.22840",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present RLM-Cascade, a proxy-layer system that applies speculative decoding at the response level to reduce LLM API costs without requiring model architecture access or a shared vocabulary. A fast, inexpensive draft model generates a candidate response; a capable verify model accepts, enhances, or is bypassed entirely depending on a lightweight complexity router. On a real-world agentic coding workload (Claude Code), RLM-Cascade achieves a draft-use rate of 88.8% across 125 production requests, reducing API cost by 45.8% relative to a direct Opus baseline. Counter-intuitively, the proxy also reduces end-to-end latency: median response time is 2,026 ms versus 3,698 ms for Native Opus -- a 1.83X speedup at p50 -- because the SKIPPED path (DeepSeek only, no Opus call) dominates the workload distribution. Quality matches or exceeds the Opus baseline: 100% pass rate on a 20-task Code/Math/Instruct benchmark versus 95% for Native Opus. We further describe a rule-based complexity router that selects the SKIPPED path for simple agentic turns and a hybrid tool-call strategy that bypasses the speculative pipeline for schema-critical tool-selection turns. RLM-Cascade is deployed in production as an enterprise AI infrastructure component and published as open source with a live metrics dashboard and Prometheus endpoint.",
+      "identifiers": [
+        "SemanticScholar:b4debda8ca6146bc995b4101b68b37a4ff7ae387"
+      ],
+      "semantic_scholar_id": "b4debda8ca6146bc995b4101b68b37a4ff7ae387",
+      "canonical_id": "arXiv:2606.22840",
+      "arxiv_id": "2606.22840",
+      "doi": "10.48550/arXiv.2606.22840",
+      "authors": [
+        "Hai-Feng Wu",
+        "Srinivasan Manoharan",
+        "Fang Tu",
+        "Jun Zhao",
+        "Jianwei Wan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      },
+      "reason": "費用効率的LLM向け応答レベル投機的デコードRLM-Cascade。モデルへのアクセスなしに代理層で応答レベルの投機的デコードを行い、複雑さルータで検証モデルを使い分けてAPI費用を下げる。推論基盤機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d7207da96a24",
+    "round": "libimp-d7207da96a2432ff-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d7207da96a2432ff-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d7207da96a2432ff-pre01.json",
+    "receipt": "sha256:6925cdfbada1bc1e8012194af8e425a2e8b1407aa02a1e0928530db059247e67"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d7207da96a24",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

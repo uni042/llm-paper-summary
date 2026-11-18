@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DiBA: Diagonal and Binary Matrix Approximation for Neural Network Weight Compression",
+      "source_url": "https://arxiv.org/abs/2605.05994",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose DiBA (Diagonal and Binary Matrix Approximation), a compact matrix factorization for neural network weight compression. Many components of modern networks, including linear layers, $1\\times1$ convolutions, attention projections, and embedding layers, have dense matrix weights. DiBA approximates $A\\in\\mathbb{R}^{m\\times n}$ by $\\widehat A=D_1B_1D_2B_2D_3$, where $D_1,D_2,D_3$ are diagonal matrices and $B_1,B_2$ are $0/1$ binary matrices. The intermediate dimension $k$ controls the trade-off between theoretical storage and approximation accuracy. For matrix-vector products, DiBA decomposes dense multiplication into three element-wise scaling operations and two binary mixing operations, reducing the floating-point multiplication count from $mn$ to $m+k+n$. For optimization, we introduce DiBA-Greedy, an alternating solver that combines closed-form least-squares updates for the diagonal factors with exact one-bit improvement tests for the binary factors. We also introduce DiBARD (DiBA with Retuning only Diagonal factors), which replaces dense-matrix layers by DiBA factors, freezes the binary matrices, and retunes only the diagonal entries on downstream data. This preserves compact binary mixing without discrete search during adaptation. On 40 dense weight matrices extracted from public pretrained models, DiBA-Greedy yields consistent SNR improvements as the theoretical storage ratio increases. After DiBA replacement in two component-replacement studies, DiBARD improves DistilBERT/WikiText masked-token accuracy from 0.4447 to 0.5210 and Speech Commands test accuracy for an Audio Spectrogram Transformer from 0.7684 to 0.9781 without reoptimizing the binary factors.",
+      "identifiers": [
+        "SemanticScholar:3edca58b20992306ffa8aa6af78a1a24729508fe"
+      ],
+      "semantic_scholar_id": "3edca58b20992306ffa8aa6af78a1a24729508fe",
+      "canonical_id": "arXiv:2605.05994",
+      "arxiv_id": "2605.05994",
+      "doi": "10.48550/arXiv.2605.05994",
+      "authors": [
+        "Nobutaka Ono"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": null
+      },
+      "reason": "対角・二値行列近似DiBA。稠密な重み行列を対角行列と0/1二値行列の積で近似するコンパクトな行列因数分解で、神経網の重みを圧縮する。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search",
+      "source_url": "https://arxiv.org/abs/2606.01544",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) in practice incurs substantial memory and computational costs. Post-training pruning (PTP) is an effective approach to reducing these costs by removing weights without additional training. Among existing methods, RIA introduces relative importance scores normalized by row and column sums, achieving state-of-the-art accuracy. However, RIA considers only 1D cross-shaped (row/column) directional information and assigns equal weight to row and column contributions. In this paper, we propose \\textbf{CRePE}, which incorporates 2D local neighborhood context and adaptive coefficients into Relative Importance scoring. CRePE consistently outperforms existing PTP methods across diverse models and sparsity settings. However, identifying optimal adaptive coefficients via perplexity (PPL)-based hill climbing requires numerous PPL evaluations and approximately 11 hours of search time. To address this, we propose \\textbf{PHO} (Proxy-based Hyperparameter Optimization), which eliminates the need for repeated PPL measurements and reduces the search time to approximately 20 minutes. Furthermore, the optimal hyperparameter configuration found by PHO on one model transfers well to other models, demonstrating strong generalization. Finally, we verify that CRePE can be orthogonally combined with existing techniques including Channel Permutation, non-uniform sparsity allocation, and re-pruning methods.",
+      "identifiers": [
+        "SemanticScholar:75b7079d2d05922e75d9f9f1edd9111078ac7daf"
+      ],
+      "semantic_scholar_id": "75b7079d2d05922e75d9f9f1edd9111078ac7daf",
+      "canonical_id": "arXiv:2606.01544",
+      "arxiv_id": "2606.01544",
+      "doi": "10.48550/arXiv.2606.01544",
+      "authors": [
+        "Cheonjun Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "畳み込み配慮型相対重要度による学習後剪定CRePE。行と列の1次元情報だけを見る相対重要度に対し、2次元の局所近傍文脈を取り入れて学習後剪定の精度を上げる。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.06917",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existing systems typically combine a fixed prefill/decode worker ratio with request routing across workers. However, real-world workloads exhibit both short bursts and sustained shifts in the prefill-to-decode demand ratio. As a result, a configuration that is well provisioned at one time may quickly become mismatched, causing latency SLO violations even when idle capacity exists elsewhere. Existing autoscaling mechanisms can add capacity, but they react slowly, require spare GPUs, and do not directly address short-timescale phase imbalance. We present FluidPD, a P/D-disaggregated serving system that provides SLO-aware in-place elasticity. FluidPD introduces two complementary mechanisms. FluidToken handles transient imbalance by offloading a bounded portion of prefill computation to decode workers when decode-side slack is available. FluidRole handles sustained imbalance by reassigning running workers between prefill and decode roles in place, avoiding model reload and engine restart. Both mechanisms are guided by lightweight pressure indices that expose prefill and decode-side resource pressure before they appear as SLO violations. Across production Azure trace workloads, FluidPD improves overall SLO attainment over static SGLang by up to 94.6 percentage points, demonstrating that SLO-aware in-place P/D elasticity improves service quality without provisioning additional workers.",
+      "identifiers": [
+        "SemanticScholar:4d48b38919091ce3a677ca16ff2d7de7f18dc323"
+      ],
+      "semantic_scholar_id": "4d48b38919091ce3a677ca16ff2d7de7f18dc323",
+      "canonical_id": "arXiv:2610.06917",
+      "arxiv_id": "2610.06917",
+      "authors": [
+        "Kartik Ramesh",
+        "Kai-Di Fu",
+        "Zi-Han Zheng",
+        "Jia-Huan Yu",
+        "Fabio Oliveira",
+        "Carlos H. A. Costa",
+        "Min-Jia Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SLO配慮型プリフィル・デコード分離のその場弾力性FluidPD。固定したワーカー比率が需要比率の変動に追随できず、空き容量があるのにSLO違反になる問題に対し、その場で弾力的に構成を変える。推論基盤機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Approximation Algorithms for Dual-Memory Request Scheduling in Disaggregated LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.15579",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Disaggregated LLM inference executes the prefill and decode phases on separate resource pools, reducing interference between the two phases. However, this architecture introduces a coupled scheduling problem because a request that completes prefill retains its prompt KV cache in prefill memory until it is admitted to the decode pool. Prefill and decode admission decisions therefore jointly determine memory occupancy and request completion times. To the best of our knowledge, this problem lacks a formal formulation, and no approximation guarantees are known for request scheduling in disaggregated LLM inference. We formalize this setting as the dual-memory request scheduling (DMRS) problem, whose objective is to minimize the sum of request completion times, and prove that it is strongly NP-hard. We develop two deterministic polynomial-time approximation algorithms. The first applies to instances satisfying $\\alpha<1$ and $\\beta<1$ and achieves an approximation ratio of $8+\\frac{4}{1-\\alpha}+\\frac{8}{1-\\beta}$, where $\\alpha$ and $\\beta$ are the maximum normalized prefill and peak decode memory demands among all requests, respectively. In particular, it yields a $32$-approximation when $\\alpha,\\beta\\leq 1/2$. The second algorithm applies to all feasible instances and achieves a uniform $36$-approximation. Finally, evaluations on two H100 GPUs using trace-derived offline workloads show that the proposed algorithms reduce the sum of request completion times relative to multiple vLLM deployment baselines.",
+      "identifiers": [
+        "SemanticScholar:1a9241f599daabf583f69c34639001e228b1f32d"
+      ],
+      "semantic_scholar_id": "1a9241f599daabf583f69c34639001e228b1f32d",
+      "canonical_id": "arXiv:2610.15579",
+      "arxiv_id": "2610.15579",
+      "authors": [
+        "Xin Wang",
+        "Hong Shen",
+        "Hui Tian",
+        "Ye Tao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分離型推論における二重メモリ要請スケジューリングの近似アルゴリズム。プリフィル完了後もデコードへ入るまでプロンプトKVがプリフィルメモリを占有する結合問題を初めて定式化し、近似保証を与える。推論基盤のスケジューリング機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e17c70dba93a",
+    "round": "libimp-e17c70dba93aba62-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e17c70dba93aba62-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e17c70dba93aba62-pre01.json",
+    "receipt": "sha256:8df9f108144dc31f175af56ec9fca33d55372823a4c402692e8cb87ab429dfd0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e17c70dba93a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
