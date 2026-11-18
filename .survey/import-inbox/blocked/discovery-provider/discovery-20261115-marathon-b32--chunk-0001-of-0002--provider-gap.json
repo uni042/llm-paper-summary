@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-discovery-20261115-marathon-b32::provider-gap",
+  "reference_main_sha": "ee886add2287384e7c8e340d44b3b45ca5aa890d",
+  "record_count": 7,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.15346",
+      "identity_tokens": [
+        "arXiv:2405.15346",
+        "https://arxiv.org/abs/2405.15346"
+      ],
+      "title": "BiSup: Bidirectional Quantization Error Suppression for Large Language Models",
+      "reason": "双方向量子化誤差抑制BiSup。重み・活性量子化で、単一の行列積の結果だけを見る既存法が量子化誤差の双方向の伝播を無視する問題に対処する。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2405.15346",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 366,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.17470",
+      "identity_tokens": [
+        "arXiv:2405.17470",
+        "https://arxiv.org/abs/2405.17470"
+      ],
+      "title": "Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information",
+      "reason": "効率的ブロック単位学習後量子化Athena。一様な写像に依る従来の量子化に対し、ブロック単位で学習後量子化を行い、保存と計算と配備の要求を下げる。推論量子化機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2405.17470",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "worklist_rank": 231,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.00030",
+      "identity_tokens": [
+        "arXiv:2406.00030",
+        "https://arxiv.org/abs/2406.00030"
+      ],
+      "title": "Large Language Model Pruning",
+      "reason": "大規模言語モデルの剪定。モデル剪定の技法を提案し、過学習や幻覚、装置の制約といった問題に対処する。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2406.00030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md",
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md"
+      ],
+      "worklist_rank": 309,
+      "worklist_source": "worker-worklist-45.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.01873",
+      "identity_tokens": [
+        "arXiv:2503.01873",
+        "https://arxiv.org/abs/2503.01873"
+      ],
+      "title": "Online Pseudo-average Shifting Attention(PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis",
+      "reason": "オンライン擬似平均シフト注意PASA。長系列推論で注意計算が重い問題に対し、FlashAttentionに基づく低精度で数学的に等価なアルゴリズムで、半精度のまま溢れや精度劣化を避ける。推論カーネルそのもの。",
+      "source_url": "https://arxiv.org/abs/2503.01873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "worklist_rank": 408,
+      "worklist_source": "worker-worklist-00.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.05300",
+      "identity_tokens": [
+        "arXiv:2506.05300",
+        "https://arxiv.org/abs/2506.05300"
+      ],
+      "title": "Power Law Guided Dynamic Sifting for Efficient Attention",
+      "reason": "冪乗則誘導の動的ふるいによる効率的注意SiftAttention。近似注意が高価なトップk演算に依る問題に対し、閾値による要素単位のフィルタリングで置き換え、メモリ帯域の制限に対処する。推論の注意機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2506.05300",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算",
+        "Sparse Attention"
+      ],
+      "worklist_rank": 339,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.11120",
+      "identity_tokens": [
+        "arXiv:2506.11120",
+        "https://arxiv.org/abs/2506.11120"
+      ],
+      "title": "SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models",
+      "reason": "自己蒸留MLP剪定SDMPrune。勾配ベース剪定がワンホットラベルで元のモデルの予測情報を逃す問題に対し、剪定段階で自己蒸留損失を入れて勾配情報を正確にする。推論圧縮機構そのもの。",
+      "source_url": "https://arxiv.org/abs/2506.11120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "worklist_rank": 310,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.09010",
+      "identity_tokens": [
+        "arXiv:2507.09010",
+        "https://arxiv.org/abs/2507.09010"
+      ],
+      "title": "Hybrid Systolic Array Accelerator with Optimized Dataflow for Edge Large Language Model Inference",
+      "reason": "エッジLLM推論向け最適化データフローのハイブリッドシストリックアレイアクセラレータ。メモリ律速のデコード段階で外部メモリアクセスを最小化し、計算律速のプリフィル段階でエネルギー効率を保つ、面積効率の高いエッジ加速器。推論ハードウェアそのもの。",
+      "source_url": "https://arxiv.org/abs/2507.09010",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-16T06:40:00+09:00",
+      "last_checked_at": "2026-11-16T06:40:00+09:00",
+      "linked_from": [
+        "16-weight-quantization-compression",
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "worklist_rank": 408,
+      "worklist_source": "worker-worklist-30.json discovery_review"
+    }
+  ],
+  "parent_run_key": "muse-discovery-20261115-marathon-b32",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30,
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261115-marathon-b32--chunk-0001-of-0002.json",
+  "provider_gap_ids": [
+    "arXiv:2405.15346",
+    "arXiv:2405.17470",
+    "arXiv:2406.00030",
+    "arXiv:2503.01873",
+    "arXiv:2506.05300",
+    "arXiv:2506.11120",
+    "arXiv:2507.09010"
+  ]
+}

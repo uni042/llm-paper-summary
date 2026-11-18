@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-bb93e74aed04f493-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2502.12784",
+  "reason": "Volta GPUのテンソルコア向けに多頭注意を高速化するライブラリだが、対象はTransformerの学習時間短縮であり、推論への具体的適用は示されていない（学習のみの高速化は範囲外）。",
+  "title": "SparkAttention: High-Performance Multi-Head Attention for Large Models on Volta GPU Architecture",
+  "identity_tokens": [
+    "arXiv:2502.12784",
+    "https://arxiv.org/abs/2502.12784"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+    "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb93e74aed04",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

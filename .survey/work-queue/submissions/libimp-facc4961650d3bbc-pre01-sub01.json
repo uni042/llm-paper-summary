@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing",
+      "source_url": "https://arxiv.org/abs/2510.18525",
+      "year": 2025,
+      "published": "2025-10-21",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models achieve impressive performance across diverse tasks but exhibit high inference latency due to their large parameter sizes. While quantization reduces model size, it often leads to performance degradation compared to the full model. Speculative decoding remains lossless but typically incurs extra overheads. We propose SPEQ, an algorithm-hardware co-designed speculative decoding method that uses part of the full-model weight bits to form a quantized draft model, thereby eliminating additional training or storage overhead. A reconfigurable processing element array enables efficient execution of both the draft and verification passes. Experimental results across 15 LLMs and tasks demonstrate that SPEQ achieves speedups of 2.07x, 1.53x, and 1.45x compared over FP16, Olive, and Tender, respectively.",
+      "identifiers": [
+        "SemanticScholar:8c03a1a7a604d51fee49deb6473be3aa22a9c224"
+      ],
+      "semantic_scholar_id": "8c03a1a7a604d51fee49deb6473be3aa22a9c224",
+      "canonical_id": "arXiv:2510.18525",
+      "arxiv_id": "2510.18525",
+      "doi": "10.48550/arXiv.2510.18525",
+      "authors": [
+        "Yu-Shu Zhao",
+        "Yu-Bin Qin",
+        "Yang Wang",
+        "Xiao-Long Yang",
+        "Hui-Ming Han",
+        "Shao-Jun Wei",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 393,
+        "matched_prestigious_venue": null
+      },
+      "reason": "浮動小数点の部分利用による投機的LLMデコードの高速化SPEQ。量子化は性能を落とし投機的デコードは追加のオーバーヘッドを持つ問題に対し、完全モデルの重みビットの一部で量子化した下書きモデルを構成する、アルゴリズム・ハードウェア共同設計。推論高速化機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+      "source_url": "https://arxiv.org/abs/2511.11729",
+      "year": 2025,
+      "published": "2025-11-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly deployed under the Model-as-a-Service (MaaS) paradigm. To meet stringent quality-of-service (QoS) requirements, existing LLM serving systems disaggregate the prefill and decode phases of inference. However, decode instances often experience low GPU utilization due to their memory-bound nature and insufficient batching in dynamic workloads, leaving compute resources underutilized. We introduce Harli, a serving system that improves GPU utilization by co-locating parameter-efficient finetuning (PEFT) tasks with LLM decode instances. PEFT tasks are compute-bound and memory-efficient, making them ideal candidates for safe co-location. Specifically, Harli addresses key challenges--limited memory and unpredictable interference--using three components: a unified memory allocator for runtime memory reuse, a two-stage latency predictor for decode latency modeling, and a QoS-guaranteed throughput-maximizing scheduler for throughput maximization. Experimental results show that Harli improves the finetune throughput by 46.2% on average (up to 92.0%) over state-of-the-art serving systems, while maintaining strict QoS guarantees for inference decode.",
+      "identifiers": [
+        "SemanticScholar:39105bbb12ad60e82993409b201ce0dd37e404a7"
+      ],
+      "semantic_scholar_id": "39105bbb12ad60e82993409b201ce0dd37e404a7",
+      "canonical_id": "arXiv:2511.11729",
+      "arxiv_id": "2511.11729",
+      "doi": "10.48550/arXiv.2511.11729",
+      "authors": [
+        "Ao Xu",
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Quan Chen",
+        "Yu-Kang Chen",
+        "Shulai Zhang",
+        "Shuang Chen",
+        "Jie Jiang",
+        "Zhi-Bin Yu",
+        "Min-Yi Guo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SLO配慮型のLLM推論とPEFT微調整の共配置Harli。デコードインスタンスのGPU利用率が低い問題に対し、パラメータ効率微調整のタスクをデコードと共配置して利用率を上げる提供システム。推論基盤機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-facc4961650d",
+    "round": "libimp-facc4961650d3bbc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-facc4961650d3bbc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-facc4961650d3bbc-pre01.json",
+    "receipt": "sha256:9c481c1be23be7e7daac7e212ae6a42150307fc54b3e121cad3317f0ee4303ec"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-facc4961650d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
