@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TeCoP: Accelerating Diffusion Large Language Model Decoding via Tentative Context Pipelining",
+      "source_url": "https://arxiv.org/abs/2610.27583",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) predict multiple token positions per forward pass, yet block-wise decoders serialize generation and repeatedly recompute stable predictions. We attribute this inefficiency to coupling a prediction's readiness for irreversible commitment with its utility as context. We introduce Tentative Context Pipelining (TeCoP), a training-free decoder that decouples these roles through staggered block-parallel pipelining and draft-and-verify. TeCoP reuses stable but uncommitted predictions as provisional cross-block context, with commitment governed by confidence and stability checks. Across four LLaDA and Dream dLLMs on GSM8K, Minerva MATH, and MBPP, TeCoP reduces number of forward evaluations by up to 87% and achieves up to 7.50-fold throughput without KV caching and 11.77-fold with caching over the uncached original decoder. It outperforms Fast-dLLM and DSB in throughput across all 12 model-benchmark settings, with and without caching, while keeping average cached accuracy within one percentage point of the original decoder.",
+      "identifiers": [
+        "SemanticScholar:a813c48a95bacf1d182b3bc1aca7b23969ef3c42"
+      ],
+      "semantic_scholar_id": "a813c48a95bacf1d182b3bc1aca7b23969ef3c42",
+      "canonical_id": "arXiv:2610.27583",
+      "arxiv_id": "2610.27583",
+      "authors": [
+        "Jui-Chien Tsou",
+        "Hsuan-Chi Liu",
+        "Wei Wang",
+        "Yu-Syuan Xu",
+        "Chun-Yi Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散型LLMのブロック逐次復号を、未確定の安定予測を暫定文脈として再利用するブロック並列パイプラインとdraft-and-verifyで高速化。LLaDA/Dreamの4モデル、GSM8K/Minerva MATH/MBPPでforward評価回数最大87%削減、キャッシュなし最大7.50倍、キャッシュ利用時に非キャッシュ原方式比最大11.77倍のスループットを著者が報告。推論速度の直接改善でありaccept。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-57070811ee44",
+    "round": "libimp-57070811ee4407c3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-57070811ee4407c3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-57070811ee4407c3-pre01.json",
+    "receipt": "sha256:41446551ce47456ad71c757b4512055df8392bae0bd81be32b182bf6a3537cc8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-57070811ee44",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

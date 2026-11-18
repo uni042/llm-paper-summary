@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "S2Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.01224",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning reduces the inference overhead of multimodal large language models (MLLMs) by retaining only a subset of visual tokens. Existing methods usually select tokens based on importance or redundancy. However, we observe that these criteria produce stable spatial biases across inputs and do not always outperform simple Uniform Grid sampling, highlighting the value of broad spatial coverage. Motivated by this, we propose S$^2$Prune, a training-free pruning method that preserves spatial coverage while adapting token density to local image structure. We first divide the image into regions and assign at least one token to each region to preserve coverage. The remaining token budget is then distributed according to Laplacian variation, giving more tokens to regions with richer structure. We then use Early Representation Change (ERC), computed from the first decoder block, to select representative tokens within each region. We evaluate S$^2$Prune across diverse settings and two MLLM architectures. On Qwen2.5-VL-7B-Instruct, it achieves the highest average accuracy among the evaluated training-free pruning methods. With only 32 of the original 576 visual tokens, it still retains 79.3% of the full-model performance. Code is available at https://github.com/yuanyuanjia71-spec/S2Prune.",
+      "identifiers": [
+        "SemanticScholar:613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72"
+      ],
+      "semantic_scholar_id": "613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72",
+      "canonical_id": "arXiv:2609.01224",
+      "arxiv_id": "2609.01224",
+      "doi": "10.48550/arXiv.2609.01224",
+      "authors": [
+        "Yuan-Yuan Jia",
+        "Shun-Pu Tang",
+        "Qian-Qian Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 78,
+        "matched_prestigious_venue": null
+      },
+      "reason": "学習不要の視覚トークン枝刈り。画像を領域に分けて空間被覆を保証し、Laplacian variationで領域別予算を配分、初期decoder blockの表現変化から残すトークンを選択。Qwen2.5-VL-7Bで576中32トークンでも元性能の79.3%を維持したと報告。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0f752a1373fe",
+    "round": "libimp-0f752a1373fe7c5d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0f752a1373fe7c5d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0f752a1373fe7c5d-pre01.json",
+    "receipt": "sha256:fa389aeaf43a3e8edf28f02236a09dbdc09662bd2574817155f9cdb08fb0f43d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0f752a1373fe",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

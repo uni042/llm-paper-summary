@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Load Testing for Machine Learning Model Serving Systems at Scale",
+      "source_url": "https://arxiv.org/abs/2606.22013",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "European Conference on Software Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Machine learning (ML) model serving has become a dominant consumer of GPU infrastructure, yet capacity planning in these systems remains largely ad hoc. Under-provisioning leads to service-level objective (SLO) violations and production incidents, while over-provisioning results in substantial resource waste. This paper presents \\sys, an industrial load testing framework for ML serving systems that systematically estimates serving capacity through an adaptive, feedback-driven search strategy. The approach leverages real-time performance signals, incorporating dampening, spike tolerance, and convergence detection to efficiently identify maximum sustainable throughput under SLO constraints. We evaluate \\sys through a longitudinal analysis of 14 industrial case studies spanning four ML architecture classes: recommendation, ranking, vision, and NLP. This study demonstrates that systematic load testing leads to substantial improvements in GPU resource efficiency and operational reliability. Prior to adopting \\sys, a significant fraction of model launches were under-provisioned, resulting in recurring incidents; these issues were substantially reduced after deployment. Our results show that ML-specific design decisions are critical to accurate capacity estimation: workload calibration using recorded traffic reduces estimation error from approximately 30\\% to 2--6\\%, while proper warmup handling yields a 22.2\\% improvement in accuracy. Further analysis reveals key factors influencing prediction error, including model size and co-location effects. This paper distills six lessons and derive architectural guidelines for ML load testing, offering actionable insights for building reliable and efficient ML serving systems.",
+      "identifiers": [
+        "SemanticScholar:55a0cb567e3022ab656966f45b32c95d042b1e6d"
+      ],
+      "semantic_scholar_id": "55a0cb567e3022ab656966f45b32c95d042b1e6d",
+      "canonical_id": "arXiv:2606.22013",
+      "arxiv_id": "2606.22013",
+      "doi": "10.48550/arXiv.2606.22013",
+      "authors": [
+        "Amr S. Abdelfattah",
+        "Nakul Tirumalai",
+        "Indu Mohanan",
+        "Xiao Li",
+        "Pengchao Wang",
+        "Dinakar Dhurjati",
+        "Eric Sung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "機械学習モデルのサービング能力をSLO制約下で推定する適応的負荷試験フレームワークVanguardを提案。実運用14事例で評価し、実トラフィックに基づく負荷校正で容量推定誤差を約30%から2〜6%へ改善したと報告する。LLMを含む推論サービング基盤のGPU容量計画、遅延制約、資源効率に直接関連する。評価対象はNLPだけでなく推薦・ランキング・画像モデルも含む点に注意する。",
+      "library_body_check": "primary_arxiv_indexed_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e3630a6cb1b5",
+    "round": "libimp-e3630a6cb1b58754-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e3630a6cb1b58754-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e3630a6cb1b58754-pre01.json",
+    "receipt": "sha256:fef6849c65320f849df5c33cf3aa3b79530e376694e5160b0031ec49f8423b59"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e3630a6cb1b5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

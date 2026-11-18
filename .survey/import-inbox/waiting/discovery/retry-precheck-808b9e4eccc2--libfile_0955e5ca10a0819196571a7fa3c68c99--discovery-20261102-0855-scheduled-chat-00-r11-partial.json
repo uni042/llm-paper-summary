@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r11",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 3,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30791",
+      "identity_tokens": [
+        "id:arXiv:2610.30791",
+        "id:DOI:10.48550/arXiv.2610.30791"
+      ],
+      "title": "Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving",
+      "reason": "LLM agent/多ターン会話のKVをSSDへ無差別に書くとflash寿命が月単位へ短縮され得るため、単純なアクセス履歴だけでなくattention方式の違いを使ってSSD admissionを制御するGandalfを提案する。full-attention由来KVを他方式より優先して保持する。著者のarXiv登録要旨は複数トレースと容量条件でSSD寿命平均7.3倍、KV hit率への影響は無視できる程度と報告。SSD KV offloadと耐久性を直接扱うためaccept。過去のGitHub provider-gap結果は未解決として破棄されており、分類済み成果ではないことを確認。",
+      "source_url": "https://arxiv.org/abs/2610.30791",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:12:21+09:00",
+      "last_checked_at": "2026-11-02T09:12:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.30798",
+      "identity_tokens": [
+        "id:arXiv:2610.30798",
+        "id:DOI:10.48550/arXiv.2610.30798"
+      ],
+      "title": "Amplifying Latency and Cost of LLM Inference via Rowhammer Attack",
+      "reason": "TritonのCPU側MLIR/LLVMコンパイル処理にRowhammer bit flipを起こし、正しい出力を保つが非最適なGPU kernelを生成・disk cacheさせてLLMサービングを持続的に遅くするLLVMhammer攻撃を研究する。著者要旨はRTX4090/RX7900XTXと複数LLMで推論遅延4～16%増を報告。推論kernelの脆弱性と性能劣化に関係するが、新規推論高速化手法でなく攻撃・セキュリティ研究なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.30798",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:12:21+09:00",
+      "last_checked_at": "2026-11-02T09:12:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.24349",
+      "identity_tokens": [
+        "id:arXiv:2610.24349",
+        "id:DOI:10.48550/arXiv.2610.24349"
+      ],
+      "title": "FlashRT-PAI: Fast Kernels Are Not Fast Pipelines for Physical AI Inference",
+      "reason": "一次arXiv要旨で対象はvision-language-action、video-action、world action modelのリアルタイムphysical AI policyであり、LIBERO-10のロボット操作成功率やJetson AGX Thor/RTX5090での推論遅延を評価する。kernel融合とstate reuseは汎用的だが、LLM自回帰生成、KVキャッシュ、MoE/LLM servingへの実証的適用は示されないため、今回のLLM推論システムサーベイではunrelated。タイトルだけでなく要旨を確認して判定。",
+      "source_url": "https://arxiv.org/abs/2610.24349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:12:21+09:00",
+      "last_checked_at": "2026-11-02T09:12:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}

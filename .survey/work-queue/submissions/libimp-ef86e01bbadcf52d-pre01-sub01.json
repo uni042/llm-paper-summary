@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs",
+      "source_url": "https://arxiv.org/abs/2607.20357",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have recently demonstrated strong performance across vision-language tasks. However, their high inference cost, arising from both the large number of input visual tokens and the heavy computation of the large language model (LLM), remains a key barrier to practical deployment. Recent work attempts to reduce the cost by adaptively optimizing individual dimensions, e.g., pruning redundant visual tokens or skipping LLM layers and heads. Nonetheless, prior approaches typically treat these dimensions independently and overlook a fundamental coupling: the available compute resources must be dynamically allocated across all dimensions based on the input content. To bridge the gap, we propose SmartVL, a unified adaptive inference framework that jointly controls vision token number and model compute capability in response to varying input contents and compute budgets. SmartVL introduces a vision-side token controller that dynamically selects informative visual tokens and an LLM-side compute controller that adaptively adjusts LLM computation. Importantly, these controllers are trained to coordinate with each other so that the overall inference cost satisfies a target budget. To allow this joint scheduling, we connect the controllers using a shared budget encoding and leverage a differentiable latency estimator for end-to-end training. This design enables SmartVL to learn cross-stage allocation strategies that adapt to both input complexity and runtime compute constraints. Experiments across multiple MLLM benchmarks demonstrate that, with joint scheduling, SmartVL consistently outperforms prior adaptive methods and achieves superior accuracy-efficiency Pareto frontiers. Project page: https://www.schaterji.io/publications/2026/jointtokencompute.",
+      "identifiers": [
+        "SemanticScholar:0200816dc463d534f3f2f60daed4051b4ead2822"
+      ],
+      "semantic_scholar_id": "0200816dc463d534f3f2f60daed4051b4ead2822",
+      "canonical_id": "arXiv:2607.20357",
+      "arxiv_id": "2607.20357",
+      "doi": "10.48550/arXiv.2607.20357",
+      "authors": [
+        "Peng-Cheng Wang",
+        "Zhiquan Wang",
+        "Jayoung Lee",
+        "Zhuoyan Xu",
+        "Ran Xu",
+        "S. Bagchi",
+        "Yin Li",
+        "S. Chaterji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次要旨によるとSmartVLは画像トークン選択器とLLM計算制御器を共通の予算符号化と微分可能な遅延推定器で連携学習し、入力内容と計算予算に応じて視覚トークン数とLLM側の計算量を共同調整する。複数MLLMベンチマークで従来の独立適応方式より精度・効率のパレート性能を改善すると報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ef86e01bbadc",
+    "round": "libimp-ef86e01bbadcf52d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ef86e01bbadcf52d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ef86e01bbadcf52d-pre01.json",
+    "receipt": "sha256:bc0d0c6092eee7b369df6debe5807e7abcc4fd17dbac21f2b073016eae59dad7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ef86e01bbadc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
