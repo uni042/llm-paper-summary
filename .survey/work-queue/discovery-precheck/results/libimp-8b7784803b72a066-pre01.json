@@ -1,0 +1,148 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8b7784803b72a066-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8b7784803b72",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3774904.3793001"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e80bf3668f2f4e7d0795a0518f56b23f8c284a97",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:43:20.807146+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3774904.3793001",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Fair and Carbon-Aware LLM Routing for Web Services",
+      "source_url": "https://doi.org/10.1145/3774904.3793001",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "The Web Conference",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d"
+      ],
+      "semantic_scholar_id": "a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d",
+      "doi": "10.1145/3774904.3793001",
+      "canonical_id": "DOI:10.1145/3774904.3793001",
+      "authors": [
+        "Ting-Ting Li",
+        "Zi-Ming Zhao",
+        "Zhao-Xuan Li",
+        "Xiao-Fei Yue",
+        "Jiongchi Yu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3774904.3793001",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774904.3793001",
+        "id:SemanticScholar:a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d",
+        "title:fair and carbonaware llm routing for web services",
+        "url:https://doi.org/10.1145/3774904.3793001"
+      ],
+      "record": {
+        "title": "Fair and Carbon-Aware LLM Routing for Web Services",
+        "source_url": "https://doi.org/10.1145/3774904.3793001",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "The Web Conference",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d"
+        ],
+        "semantic_scholar_id": "a977ba50a7bc65188db94a75ff8b34ec2bcfdb0d",
+        "doi": "10.1145/3774904.3793001",
+        "canonical_id": "DOI:10.1145/3774904.3793001",
+        "authors": [
+          "Ting-Ting Li",
+          "Zi-Ming Zhao",
+          "Zhao-Xuan Li",
+          "Xiao-Fei Yue",
+          "Jiongchi Yu"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 219,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:4315bd07381743d4ccb00307f02f502c8205915a9cc6dce2ad76ba8575f368a8",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

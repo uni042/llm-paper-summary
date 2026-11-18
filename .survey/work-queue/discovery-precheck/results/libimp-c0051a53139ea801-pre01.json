@@ -1,0 +1,275 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c0051a53139ea801-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c0051a53139e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.02118",
+    "arXiv:2507.20630",
+    "arXiv:2510.18087",
+    "arXiv:2602.07375",
+    "arXiv:2605.08467"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e80bf3668f2f4e7d0795a0518f56b23f8c284a97",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:43:06.761256+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.02118",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/cvprw67362.2025.00634"
+    },
+    {
+      "requested_id": "arXiv:2507.20630",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2507.20630"
+    },
+    {
+      "requested_id": "arXiv:2510.18087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.07375",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2602.07375"
+    },
+    {
+      "requested_id": "arXiv:2605.08467",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CUDAHercules: Benchmarking Hardware-Aware Expert-level CUDA Optimization for LLMs",
+      "source_url": "https://arxiv.org/abs/2605.08467",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models show promise for automated CUDA programming, however even the strongest coding models (e.g., Claude-Opus-4.6) may still fall short of expert-level, architecture-aware optimization. We introduce CUDAHercules, a benchmark that evaluates generated CUDA against end-to-end human-expert SOTA systems. It spans single kernels, module-level operators, full applications, and unsolved challenge tasks across Ampere, Hopper, and Blackwell GPUs, with end-to-end tasks gated by domain-specific semantic validators. Evaluating models such as Claude-Opus-4.6 and GPT-5.4 shows a large gap between runnable CUDA and expert CUDA engineering: models often compile and pass tests, but rarely recover the optimization strategies needed to match expert performance. Application semantics further reduce success, and iterative or tool-augmented feedback can improve correctness while drifting toward slow fallback implementations. These results show that automated CUDA programming remains far from fully solved and requires stronger hardware reasoning, better tool use, and training objectives that connect code understanding to hardware architecture-grounded intelligence.",
+      "identifiers": [
+        "SemanticScholar:ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2"
+      ],
+      "semantic_scholar_id": "ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2",
+      "canonical_id": "arXiv:2605.08467",
+      "arxiv_id": "2605.08467",
+      "doi": "10.48550/arXiv.2605.08467",
+      "authors": [
+        "Shi-Yang Li",
+        "Zijian Zhang",
+        "Guan Sun",
+        "Yue-Bo Luo",
+        "Winson Chen",
+        "Yan-Zhi Wang",
+        "Ming-Yi Hong",
+        "Cai-Wen Ding"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Planned Diffusion",
+      "source_url": "https://arxiv.org/abs/2510.18087",
+      "year": 2025,
+      "published": "2025-10-20",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most large language models are autoregressive: they generate tokens one at a time. Discrete diffusion language models can generate multiple tokens in parallel, but sampling from them requires a denoising order: a strategy for deciding which tokens to decode at each step. Determining a good denoising order is difficult, and existing approaches use heuristics that create a steep trade-off between quality and latency. We propose planned diffusion, a system that trains the model to determine its own denoising order. Planned diffusion uses a single model that transitions between autoregressive and diffusion-based generation: first, the model autoregressively generates a plan that partitions the response into semantically independent chunks; second, the model denoises all chunks in parallel. The autoregressive plan enables the model to define the denoising order itself. On AlpacaEval, planned diffusion achieves 1.27x to 1.81x speedup over autoregressive generation with only 0.87% to 5.4% drop in win rate, establishing a new Pareto frontier for parallel generation with discrete diffusion. Additionally, planned diffusion's instruction following quality continues to improve with more finetuning compute, while the autoregressive baseline plateaus. Our implementation provides simple runtime knobs that offer tunable control over the quality-latency trade-off.",
+      "identifiers": [
+        "SemanticScholar:35c144451602a79cefac400a8835afaab30500d6"
+      ],
+      "semantic_scholar_id": "35c144451602a79cefac400a8835afaab30500d6",
+      "canonical_id": "arXiv:2510.18087",
+      "arxiv_id": "2510.18087",
+      "doi": "10.48550/arXiv.2510.18087",
+      "authors": [
+        "Daniel Mingyi Israel",
+        "Tian Jin",
+        "Ellie Y. Cheng",
+        "Guy Van den Broeck",
+        "Aditya Grover",
+        "Suvinay Subramanian",
+        "Michael Carbin"
+      ],
+      "priority": 23,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 23,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 394,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.08467",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08467",
+        "id:SemanticScholar:ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2",
+        "id:arXiv:2605.08467",
+        "title:cudahercules benchmarking hardwareaware expertlevel cuda optimization for llms",
+        "url:https://arxiv.org/abs/2605.08467"
+      ],
+      "record": {
+        "title": "CUDAHercules: Benchmarking Hardware-Aware Expert-level CUDA Optimization for LLMs",
+        "source_url": "https://arxiv.org/abs/2605.08467",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models show promise for automated CUDA programming, however even the strongest coding models (e.g., Claude-Opus-4.6) may still fall short of expert-level, architecture-aware optimization. We introduce CUDAHercules, a benchmark that evaluates generated CUDA against end-to-end human-expert SOTA systems. It spans single kernels, module-level operators, full applications, and unsolved challenge tasks across Ampere, Hopper, and Blackwell GPUs, with end-to-end tasks gated by domain-specific semantic validators. Evaluating models such as Claude-Opus-4.6 and GPT-5.4 shows a large gap between runnable CUDA and expert CUDA engineering: models often compile and pass tests, but rarely recover the optimization strategies needed to match expert performance. Application semantics further reduce success, and iterative or tool-augmented feedback can improve correctness while drifting toward slow fallback implementations. These results show that automated CUDA programming remains far from fully solved and requires stronger hardware reasoning, better tool use, and training objectives that connect code understanding to hardware architecture-grounded intelligence.",
+        "identifiers": [
+          "SemanticScholar:ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2"
+        ],
+        "semantic_scholar_id": "ed0468f7e9fc8fc259a2ad41f1e82f4d08fb96d2",
+        "canonical_id": "arXiv:2605.08467",
+        "arxiv_id": "2605.08467",
+        "doi": "10.48550/arXiv.2605.08467",
+        "authors": [
+          "Shi-Yang Li",
+          "Zijian Zhang",
+          "Guan Sun",
+          "Yue-Bo Luo",
+          "Winson Chen",
+          "Yan-Zhi Wang",
+          "Ming-Yi Hong",
+          "Cai-Wen Ding"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 194,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.18087",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.18087",
+        "id:SemanticScholar:35c144451602a79cefac400a8835afaab30500d6",
+        "id:arXiv:2510.18087",
+        "title:planned diffusion",
+        "url:https://arxiv.org/abs/2510.18087"
+      ],
+      "record": {
+        "title": "Planned Diffusion",
+        "source_url": "https://arxiv.org/abs/2510.18087",
+        "year": 2025,
+        "published": "2025-10-20",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Most large language models are autoregressive: they generate tokens one at a time. Discrete diffusion language models can generate multiple tokens in parallel, but sampling from them requires a denoising order: a strategy for deciding which tokens to decode at each step. Determining a good denoising order is difficult, and existing approaches use heuristics that create a steep trade-off between quality and latency. We propose planned diffusion, a system that trains the model to determine its own denoising order. Planned diffusion uses a single model that transitions between autoregressive and diffusion-based generation: first, the model autoregressively generates a plan that partitions the response into semantically independent chunks; second, the model denoises all chunks in parallel. The autoregressive plan enables the model to define the denoising order itself. On AlpacaEval, planned diffusion achieves 1.27x to 1.81x speedup over autoregressive generation with only 0.87% to 5.4% drop in win rate, establishing a new Pareto frontier for parallel generation with discrete diffusion. Additionally, planned diffusion's instruction following quality continues to improve with more finetuning compute, while the autoregressive baseline plateaus. Our implementation provides simple runtime knobs that offer tunable control over the quality-latency trade-off.",
+        "identifiers": [
+          "SemanticScholar:35c144451602a79cefac400a8835afaab30500d6"
+        ],
+        "semantic_scholar_id": "35c144451602a79cefac400a8835afaab30500d6",
+        "canonical_id": "arXiv:2510.18087",
+        "arxiv_id": "2510.18087",
+        "doi": "10.48550/arXiv.2510.18087",
+        "authors": [
+          "Daniel Mingyi Israel",
+          "Tian Jin",
+          "Ellie Y. Cheng",
+          "Guy Van den Broeck",
+          "Aditya Grover",
+          "Suvinay Subramanian",
+          "Michael Carbin"
+        ],
+        "priority": 23,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 23,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 394,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6c94d2c0c04e6188a22425d8ec47e56163aedd8d3c1e550fdcfd65c16926df53",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

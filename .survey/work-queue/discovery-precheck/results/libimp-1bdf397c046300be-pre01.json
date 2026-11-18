@@ -1,0 +1,152 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1bdf397c046300be-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1bdf397c0463",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3746027.3755526"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e80bf3668f2f4e7d0795a0518f56b23f8c284a97",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:43:06.093800+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3746027.3755526",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process",
+      "source_url": "https://doi.org/10.1145/3746027.3755526",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "ACM Multimedia",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have demonstrated remarkable performance in computer vision tasks. However, their increasing model size leads to substantial memory demands and higher latency, hindering practical deployment. This paper presents an adaptive dynamic layer-skipping framework based on Markov Decision Process, which determines optimal computational paths based on the current state of input samples. We introduce a Temporal Importance Difference Reward mechanism to address the credit assignment problem in layer-skipping decisions, and develop a knowledge distillation strategy using learnable cognitive tokens to compensate for information loss. Experiments on various models demonstrate that our method significantly reduces computational costs while maintaining accuracy, offering a practical solution for deploying high-performance Transformer models in resource-constrained environments. The code is available at https://github.com/wjjkhl/ASTER",
+      "identifiers": [
+        "SemanticScholar:c3a9b56703c8e5942ee10567951cc7ea8e61a273"
+      ],
+      "semantic_scholar_id": "c3a9b56703c8e5942ee10567951cc7ea8e61a273",
+      "doi": "10.1145/3746027.3755526",
+      "canonical_id": "DOI:10.1145/3746027.3755526",
+      "authors": [
+        "Fang-Xin Liu",
+        "Jun-Jie Wang",
+        "Ning Yang",
+        "Zong-Wu Wang",
+        "Junping Zhao",
+        "Li Jiang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 387,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3746027.3755526",
+      "identity_tokens": [
+        "id:DOI:10.1145/3746027.3755526",
+        "id:SemanticScholar:c3a9b56703c8e5942ee10567951cc7ea8e61a273",
+        "title:aster adaptive dynamic layerskipping for efficient transformer inference via markov decision process",
+        "url:https://doi.org/10.1145/3746027.3755526"
+      ],
+      "record": {
+        "title": "ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process",
+        "source_url": "https://doi.org/10.1145/3746027.3755526",
+        "year": 2025,
+        "published": "2025-10-27",
+        "venue": "ACM Multimedia",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have demonstrated remarkable performance in computer vision tasks. However, their increasing model size leads to substantial memory demands and higher latency, hindering practical deployment. This paper presents an adaptive dynamic layer-skipping framework based on Markov Decision Process, which determines optimal computational paths based on the current state of input samples. We introduce a Temporal Importance Difference Reward mechanism to address the credit assignment problem in layer-skipping decisions, and develop a knowledge distillation strategy using learnable cognitive tokens to compensate for information loss. Experiments on various models demonstrate that our method significantly reduces computational costs while maintaining accuracy, offering a practical solution for deploying high-performance Transformer models in resource-constrained environments. The code is available at https://github.com/wjjkhl/ASTER",
+        "identifiers": [
+          "SemanticScholar:c3a9b56703c8e5942ee10567951cc7ea8e61a273"
+        ],
+        "semantic_scholar_id": "c3a9b56703c8e5942ee10567951cc7ea8e61a273",
+        "doi": "10.1145/3746027.3755526",
+        "canonical_id": "DOI:10.1145/3746027.3755526",
+        "authors": [
+          "Fang-Xin Liu",
+          "Jun-Jie Wang",
+          "Ning Yang",
+          "Zong-Wu Wang",
+          "Junping Zhao",
+          "Li Jiang",
+          "Hai-Bing Guan"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 387,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:384a4bfc8ddf1a9e977f9d55bcc70e9da5a5d152b72f695a5a7a537d20a1743b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

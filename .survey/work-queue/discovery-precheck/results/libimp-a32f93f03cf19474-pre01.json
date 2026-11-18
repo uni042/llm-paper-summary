@@ -1,0 +1,311 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a32f93f03cf19474-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a32f93f03cf1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2405.15346",
+    "arXiv:2506.23025",
+    "arXiv:2510.14961",
+    "arXiv:2604.06330",
+    "arXiv:2606.30005",
+    "arXiv:2607.07724",
+    "arXiv:2608.25068",
+    "arXiv:2608.26574",
+    "arXiv:2609.34683"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e80bf3668f2f4e7d0795a0518f56b23f8c284a97",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:43:06.539492+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2405.15346",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.15346"
+    },
+    {
+      "requested_id": "arXiv:2506.23025",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.14961",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2510.14961"
+    },
+    {
+      "requested_id": "arXiv:2604.06330",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.06330"
+    },
+    {
+      "requested_id": "arXiv:2606.30005",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:f9677639620dd9591d86111dad758f841d0d8027"
+    },
+    {
+      "requested_id": "arXiv:2607.07724",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.07724"
+    },
+    {
+      "requested_id": "arXiv:2608.25068",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.25068"
+    },
+    {
+      "requested_id": "arXiv:2608.26574",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.26574"
+    },
+    {
+      "requested_id": "arXiv:2609.34683",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+      "source_url": "https://arxiv.org/abs/2609.34683",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+      "identifiers": [
+        "SemanticScholar:f5f84ddf2ae4639c221aec8839a91f4c2dfab05c"
+      ],
+      "semantic_scholar_id": "f5f84ddf2ae4639c221aec8839a91f4c2dfab05c",
+      "canonical_id": "arXiv:2609.34683",
+      "arxiv_id": "2609.34683",
+      "doi": "10.48550/arXiv.2609.34683",
+      "authors": [
+        "Cheuk H. Lau",
+        "Ze-Yu Cao",
+        "K. Yin",
+        "Yao Lai",
+        "Hao-Ran Wu",
+        "N. Lane",
+        "Robert Mullins",
+        "Ilia Shumailov",
+        "Yi-Ren Zhao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models",
+      "source_url": "https://arxiv.org/abs/2506.23025",
+      "year": 2025,
+      "published": "2025-06-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are increasingly used across research and industry applications, yet their inference efficiency remains a significant challenge. As the computational power of modern GPU architectures continuously improves, their memory bandwidth and capacity have not scaled proportionally, creating a critical bottleneck during inference. To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements. We first analyze the scalability of TriLMs by conducting a scaling law analysis, revealing that TriLMs benefit more from increasing training data than from scaling model parameters. Based on this observation, we introduce Spectra-1.1, an open suite of TriLMs trained on up to 1.2 trillion tokens, demonstrating sustained performance gains at scale. Furthermore, to improve inference efficiency, we propose novel 2-bit and 1.6-bit packing schemes for ternary weights, which demonstrate accelerated inference across various CPU architectures. Also, building on the 2-bit packing, we develop a GPU kernel called TriRun that accelerates end-to-end model inference by up to 5 times compared to floating-point baselines. To encourage further exploration and development of TriLMs, we will release the Spectra-1.1 suite and TriRun inference kernels. Overall, our work lays the foundation for building and deploying efficient LLMs, providing a valuable resource for the research community.",
+      "identifiers": [
+        "SemanticScholar:acf4a853ef88832915dfff01142782c3cc07ff23"
+      ],
+      "semantic_scholar_id": "acf4a853ef88832915dfff01142782c3cc07ff23",
+      "canonical_id": "arXiv:2506.23025",
+      "arxiv_id": "2506.23025",
+      "doi": "10.48550/arXiv.2506.23025",
+      "authors": [
+        "Tejas Vaidhya",
+        "Ayush Kaushal",
+        "Vineet Jain",
+        "Francis Couture Harpin",
+        "Prashant Shishodia",
+        "M. Behbahani",
+        "Y. Nevmyvaka",
+        "I. Rish"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.34683",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34683",
+        "id:SemanticScholar:f5f84ddf2ae4639c221aec8839a91f4c2dfab05c",
+        "id:arXiv:2609.34683",
+        "title:agentperfbench a benchmarking and evaluation suite for inference performance of agentic llms",
+        "url:https://arxiv.org/abs/2609.34683"
+      ],
+      "record": {
+        "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+        "source_url": "https://arxiv.org/abs/2609.34683",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The optimization of LLM serving engines, such as vLLM and SGLang, is largely benchmark-driven: optimizations, scheduling policies, hardware and system designs are all selected based on representative workloads. However, a significant mismatch has emerged in the agentic era. Existing benchmarks primarily focus on simple single-turn chatbot workloads. LLM applications are increasingly agentic: coding agents, terminal execution systems, and tool-use agents issue multi-turn requests with growing context lengths. We introduce AgentPerfBench, a benchmark suite for agentic inference. It uses real traces from agentic benchmarks, such as SWE-Bench and TerminalBench, alongside standard chat baselines. This enables benchmarking of models on multi-turn tasks involving tool calling, skill utilization, and increasing context lengths. AgentPerfBench also samples from empirical distributions of input length, output length, and turn count derived from the real traces, generating representative synthetic profiles for cheap and accurate measurements on new hardware. In addition, we further find that several existing benchmarks fail to accurately reflect real hardware performance for two key reasons: 1) they do not account for realistic context-length growth, and 2) they measure inference performance without operating at hardware saturation. We discuss these issues in detail and provide rich kernel-level Nsight Compute (NCU) traces to construct a new multi-dimensional roofline model that captures hardware-system limitations in both memory bandwidth and memory capacity footprint. The benchmarking suite then includes automated scripts to identify potential bottleneck conditions on emerging hardware when evaluated with diverse agentic traces. Together, these contributions quantify the chat-to-agentic gap in current inference benchmarks and characterise per-kernel GPU resource utilisation via roofline analysis.",
+        "identifiers": [
+          "SemanticScholar:f5f84ddf2ae4639c221aec8839a91f4c2dfab05c"
+        ],
+        "semantic_scholar_id": "f5f84ddf2ae4639c221aec8839a91f4c2dfab05c",
+        "canonical_id": "arXiv:2609.34683",
+        "arxiv_id": "2609.34683",
+        "doi": "10.48550/arXiv.2609.34683",
+        "authors": [
+          "Cheuk H. Lau",
+          "Ze-Yu Cao",
+          "K. Yin",
+          "Yao Lai",
+          "Hao-Ran Wu",
+          "N. Lane",
+          "Robert Mullins",
+          "Ilia Shumailov",
+          "Yi-Ren Zhao"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.23025",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.23025",
+        "id:SemanticScholar:acf4a853ef88832915dfff01142782c3cc07ff23",
+        "id:arXiv:2506.23025",
+        "title:spectra 11 scaling laws and efficient inference for ternary language models",
+        "url:https://arxiv.org/abs/2506.23025"
+      ],
+      "record": {
+        "title": "Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models",
+        "source_url": "https://arxiv.org/abs/2506.23025",
+        "year": 2025,
+        "published": "2025-06-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are increasingly used across research and industry applications, yet their inference efficiency remains a significant challenge. As the computational power of modern GPU architectures continuously improves, their memory bandwidth and capacity have not scaled proportionally, creating a critical bottleneck during inference. To address this, we investigate ternary language models (TriLMs) that employ quantization-aware training to significantly reduce memory requirements. We first analyze the scalability of TriLMs by conducting a scaling law analysis, revealing that TriLMs benefit more from increasing training data than from scaling model parameters. Based on this observation, we introduce Spectra-1.1, an open suite of TriLMs trained on up to 1.2 trillion tokens, demonstrating sustained performance gains at scale. Furthermore, to improve inference efficiency, we propose novel 2-bit and 1.6-bit packing schemes for ternary weights, which demonstrate accelerated inference across various CPU architectures. Also, building on the 2-bit packing, we develop a GPU kernel called TriRun that accelerates end-to-end model inference by up to 5 times compared to floating-point baselines. To encourage further exploration and development of TriLMs, we will release the Spectra-1.1 suite and TriRun inference kernels. Overall, our work lays the foundation for building and deploying efficient LLMs, providing a valuable resource for the research community.",
+        "identifiers": [
+          "SemanticScholar:acf4a853ef88832915dfff01142782c3cc07ff23"
+        ],
+        "semantic_scholar_id": "acf4a853ef88832915dfff01142782c3cc07ff23",
+        "canonical_id": "arXiv:2506.23025",
+        "arxiv_id": "2506.23025",
+        "doi": "10.48550/arXiv.2506.23025",
+        "authors": [
+          "Tejas Vaidhya",
+          "Ayush Kaushal",
+          "Vineet Jain",
+          "Francis Couture Harpin",
+          "Prashant Shishodia",
+          "M. Behbahani",
+          "Y. Nevmyvaka",
+          "I. Rish"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3f685012c018e92f77e946d82d17c2315e9575a4998c80b906d4ed94cab87d63",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

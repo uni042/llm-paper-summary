@@ -1,0 +1,611 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4f2223c7b5968225-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4f2223c7b596",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.acl-long.703",
+    "DOI:10.18653/v1/2025.findings-acl.1356",
+    "DOI:10.18653/v1/2026.acl-long.1971",
+    "DOI:10.18653/v1/2026.acl-long.2213",
+    "DOI:10.18653/v1/2026.acl-long.25",
+    "DOI:10.18653/v1/2026.acl-long.530",
+    "DOI:10.52202/085713-1596",
+    "DOI:10.52202/085713-4115"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e80bf3668f2f4e7d0795a0518f56b23f8c284a97",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:43:06.135960+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.acl-long.703",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2025.acl-long.703"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-acl.1356",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.1971",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.2213",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.25",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.530",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2026.acl-long.530"
+    },
+    {
+      "requested_id": "DOI:10.52202/085713-1596",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.52202/085713-4115",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1356",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:685d5c1d94d1908d9bf45058bfc5088250e1d30e"
+      ],
+      "semantic_scholar_id": "685d5c1d94d1908d9bf45058bfc5088250e1d30e",
+      "doi": "10.18653/v1/2025.findings-acl.1356",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1356",
+      "authors": [
+        "Jia-Bei Chen",
+        "Guang Liu",
+        "Shi-Zhu He",
+        "Kun Luo",
+        "Yao Xu",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "SharVeT: Similarity-aware Parameter Sharing with Vector-based Tuning for Efficient LLM Compression",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.2213",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How can we share parameters within large language models to significantly reduce memory costs while preserving accuracy? While parameter sharing is a promising solution to the memory overhead of large language models, existing methods rely on naive grouping and fail to correct sharing-induced discrepancies. We propose an accurate and efficient parameter sharing framework, SharVeT (Similarity-aware sharing with Vector-based Tuning), which performs similarity-based grouping to ensure accurate sharing, allocates parameters adaptively to preserve diversity within each group, and applies lightweight refinement with knowledge distillation to correct sharing-induced discrepancies. Experiments show that SharVeT outperforms existing sharing methods, achieving up to 32.1% lower perplexity and 21.2% higher few-shot reasoning accuracy.",
+      "identifiers": [
+        "SemanticScholar:b3813855a20d773bbc2fe61cde6a7f24386e9e55"
+      ],
+      "semantic_scholar_id": "b3813855a20d773bbc2fe61cde6a7f24386e9e55",
+      "doi": "10.18653/v1/2026.acl-long.2213",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.2213",
+      "authors": [
+        "Jeongin Yun",
+        "Jaeri Lee",
+        "Jongjin Kim",
+        "Minjun Kim",
+        "Jinho Song",
+        "U. Kang"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.25",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:de809f0ed8625182413f6f33260f03cbfb4a1351"
+      ],
+      "semantic_scholar_id": "de809f0ed8625182413f6f33260f03cbfb4a1351",
+      "doi": "10.18653/v1/2026.acl-long.25",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.25",
+      "authors": [
+        "Zi-Ao Ma",
+        "Xian-Ling Mao",
+        "Tian Lan",
+        "Chen Xu",
+        "Zhi-Jing Wu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Lua-LLM: Learning Unstructured-Sparsity Allocation for Large Language Models",
+      "source_url": "https://doi.org/10.52202/085713-4115",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their extensive parameter scales pose significant challenges for practical deployment. Unstructured pruning has emerged as an effective model compression strategy with minimal performance loss, which introduces fine-grained sparsity for weight parameters. While existing methods employ a layer-wise pruning strategy to avoid the complexity of global pruning for billion-scale LLMs, they require appropriate sparsity allocation for the layer-wise pruning objectives and often lead to suboptimal solutions for the overall model. In this paper, we propose Lua-LLM ( L earning u nstructured-sparsity a llocation in LLMs), a learning-based global pruning framework that explores the optimal unstructured sparsity allocation. Unlike existing pruning methods, which primarily focus on allocating per-layer sparsity, Lua-LLM achieves flexible allocation for both layer-wise and intra-layer sparsity. Furthermore, Lua-LLM leverages a soft Top-K operator to approximate the importance-based mask selection mechanism, enabling efficient binary mask learning. Experimental results on LLaMA and OPT families demonstrate significant performance improvements over existing methods.",
+      "identifiers": [
+        "SemanticScholar:7d215ffdae6154ad3d364932c0c6ba44fdab3114"
+      ],
+      "semantic_scholar_id": "7d215ffdae6154ad3d364932c0c6ba44fdab3114",
+      "doi": "10.52202/085713-4115",
+      "canonical_id": "DOI:10.52202/085713-4115",
+      "authors": [
+        "Ming Lu",
+        "Jing-Wei Sun",
+        "Jun-Qing Lin",
+        "Ze-Chun Zhou",
+        "Guang-Zhong Sun"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "ACBQ: Adaptive Cross-Block Quantization of Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1971",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has emerged as a promising approach for reducing the memory footprint and computational cost of large language models (LLMs), enabling efficient deployment without full model retraining. However, existing PTQ methods struggle to simultaneously support weight–activation joint quantization and extreme low-bit weight quantization. This limitation primarily arises from the depth of LLMs and their strong cross-layer dependencies, which cause quantization errors to propagate and accumulate across layers, ultimately leading to significant performance degradation. In this paper, we present ACBQ, a simple yet effective framework that simultaneously addresses weight–activation joint quantization and extreme weight quantization. We first pro-pose a granular quantization strategy that treats self-attention and FFN as separate quantization units with module-specific optimization objectives. To mitigate the propagation and accumulation of quantization errors across layers, we introduce an adaptive cross-block quantization strategy that explicitly accounts for cross-layer dependencies by encouraging consistency across blocks. Extensive experiments across diverse LLMs, including OPT and the LLaMA family, demonstrate that ACBQ achieves superior performance under both W4A4 and highly aggressive W2 settings, while incurring negligible additional computational overhead.",
+      "identifiers": [
+        "SemanticScholar:dc5db32a5ad304a5636163d03272e911f1ff728f"
+      ],
+      "semantic_scholar_id": "dc5db32a5ad304a5636163d03272e911f1ff728f",
+      "doi": "10.18653/v1/2026.acl-long.1971",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1971",
+      "authors": [
+        "Hai-Ling Wang",
+        "Jiang-Lin Lu",
+        "Yi-Tian Zhang",
+        "Hui-Min Zeng",
+        "Yun Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Computation and Memory-Efficient Model Compression with Gradient Reweighting",
+      "source_url": "https://doi.org/10.52202/085713-1596",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is a commonly employed technique for deep neural networks (DNNs) aiming at compressing the model size to reduce computational and memory costs during inference. In contrast to conventional neural networks, large language models (LLMs) pose a unique challenge regarding pruning efficiency due to their substantial computational and memory demands. Existing methods, particularly optimization-based ones, often require considerable computational resources in gradient estimation because they cannot effectively leverage weight sparsity of the intermediate pruned network to lower compuation and memory costs in each iteration. The fundamental challenge lies in the need to frequently instantiate intermediate pruned sub-models to achieve these savings, a task that becomes infeasible even for moderately sized neural networks. To this end, this paper proposes a novel pruning method for DNNs that is both computationally and memory-efficient. Our key idea is to develop an effective reweighting mechanism that enables us to estimate the gradient of the pruned network in current iteration via reweigting the gradient estimated on an outdated intermediate sub-model instantiated at an earlier stage, thereby significantly reducing model instantiation frequency. We further develop a series of techniques, e.g., clipping and preconditioning matrix, to reduce the variance of gradient estimation and stabilize the optimization process. We conducted extensive experimental validation across various domains. Our approach achieves 50% sparsity and a 1.58 × speedup in forward pass on Llama2-7B model with only 6 GB of memory usage, outperforming state-of-the-art methods with respect to both perplexity",
+      "identifiers": [
+        "SemanticScholar:88ec6871aafb755eb68487eb08b547e880a38218"
+      ],
+      "semantic_scholar_id": "88ec6871aafb755eb68487eb08b547e880a38218",
+      "doi": "10.52202/085713-1596",
+      "canonical_id": "DOI:10.52202/085713-1596",
+      "authors": [
+        "Zhiwei Li",
+        "Yuesen Liao",
+        "Bin-Rui Wu",
+        "Yuquan Zhou",
+        "Xupeng Shi",
+        "Dong-Sheng Jiang",
+        "Yin Li",
+        "Weizhong Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-acl.1356",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-acl.1356",
+        "id:SemanticScholar:685d5c1d94d1908d9bf45058bfc5088250e1d30e",
+        "title:searchincontext efficient multihop qa over long contexts via monte carlo tree search with dynamic kv retrieval",
+        "url:https://doi.org/10.18653/v1/2025.findings-acl.1356"
+      ],
+      "record": {
+        "title": "Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1356",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:685d5c1d94d1908d9bf45058bfc5088250e1d30e"
+        ],
+        "semantic_scholar_id": "685d5c1d94d1908d9bf45058bfc5088250e1d30e",
+        "doi": "10.18653/v1/2025.findings-acl.1356",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1356",
+        "authors": [
+          "Jia-Bei Chen",
+          "Guang Liu",
+          "Shi-Zhu He",
+          "Kun Luo",
+          "Yao Xu",
+          "Jun Zhao",
+          "Kang Liu"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.2213",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.2213",
+        "id:SemanticScholar:b3813855a20d773bbc2fe61cde6a7f24386e9e55",
+        "title:sharvet similarityaware parameter sharing with vectorbased tuning for efficient llm compression",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.2213"
+      ],
+      "record": {
+        "title": "SharVeT: Similarity-aware Parameter Sharing with Vector-based Tuning for Efficient LLM Compression",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.2213",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "How can we share parameters within large language models to significantly reduce memory costs while preserving accuracy? While parameter sharing is a promising solution to the memory overhead of large language models, existing methods rely on naive grouping and fail to correct sharing-induced discrepancies. We propose an accurate and efficient parameter sharing framework, SharVeT (Similarity-aware sharing with Vector-based Tuning), which performs similarity-based grouping to ensure accurate sharing, allocates parameters adaptively to preserve diversity within each group, and applies lightweight refinement with knowledge distillation to correct sharing-induced discrepancies. Experiments show that SharVeT outperforms existing sharing methods, achieving up to 32.1% lower perplexity and 21.2% higher few-shot reasoning accuracy.",
+        "identifiers": [
+          "SemanticScholar:b3813855a20d773bbc2fe61cde6a7f24386e9e55"
+        ],
+        "semantic_scholar_id": "b3813855a20d773bbc2fe61cde6a7f24386e9e55",
+        "doi": "10.18653/v1/2026.acl-long.2213",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.2213",
+        "authors": [
+          "Jeongin Yun",
+          "Jaeri Lee",
+          "Jongjin Kim",
+          "Minjun Kim",
+          "Jinho Song",
+          "U. Kang"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.25",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.25",
+        "id:SemanticScholar:de809f0ed8625182413f6f33260f03cbfb4a1351",
+        "title:your reasoning model knows what counts selfguided chainofthought pruning for efficient reasoning",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.25"
+      ],
+      "record": {
+        "title": "Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.25",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:de809f0ed8625182413f6f33260f03cbfb4a1351"
+        ],
+        "semantic_scholar_id": "de809f0ed8625182413f6f33260f03cbfb4a1351",
+        "doi": "10.18653/v1/2026.acl-long.25",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.25",
+        "authors": [
+          "Zi-Ao Ma",
+          "Xian-Ling Mao",
+          "Tian Lan",
+          "Chen Xu",
+          "Zhi-Jing Wu"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/085713-4115",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-4115",
+        "id:SemanticScholar:7d215ffdae6154ad3d364932c0c6ba44fdab3114",
+        "title:luallm learning unstructuredsparsity allocation for large language models",
+        "url:https://doi.org/10.52202/085713-4115"
+      ],
+      "record": {
+        "title": "Lua-LLM: Learning Unstructured-Sparsity Allocation for Large Language Models",
+        "source_url": "https://doi.org/10.52202/085713-4115",
+        "year": 2025,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their extensive parameter scales pose significant challenges for practical deployment. Unstructured pruning has emerged as an effective model compression strategy with minimal performance loss, which introduces fine-grained sparsity for weight parameters. While existing methods employ a layer-wise pruning strategy to avoid the complexity of global pruning for billion-scale LLMs, they require appropriate sparsity allocation for the layer-wise pruning objectives and often lead to suboptimal solutions for the overall model. In this paper, we propose Lua-LLM ( L earning u nstructured-sparsity a llocation in LLMs), a learning-based global pruning framework that explores the optimal unstructured sparsity allocation. Unlike existing pruning methods, which primarily focus on allocating per-layer sparsity, Lua-LLM achieves flexible allocation for both layer-wise and intra-layer sparsity. Furthermore, Lua-LLM leverages a soft Top-K operator to approximate the importance-based mask selection mechanism, enabling efficient binary mask learning. Experimental results on LLaMA and OPT families demonstrate significant performance improvements over existing methods.",
+        "identifiers": [
+          "SemanticScholar:7d215ffdae6154ad3d364932c0c6ba44fdab3114"
+        ],
+        "semantic_scholar_id": "7d215ffdae6154ad3d364932c0c6ba44fdab3114",
+        "doi": "10.52202/085713-4115",
+        "canonical_id": "DOI:10.52202/085713-4115",
+        "authors": [
+          "Ming Lu",
+          "Jing-Wei Sun",
+          "Jun-Qing Lin",
+          "Ze-Chun Zhou",
+          "Guang-Zhong Sun"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.1971",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1971",
+        "id:SemanticScholar:dc5db32a5ad304a5636163d03272e911f1ff728f",
+        "title:acbq adaptive crossblock quantization of large language models",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.1971"
+      ],
+      "record": {
+        "title": "ACBQ: Adaptive Cross-Block Quantization of Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1971",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) has emerged as a promising approach for reducing the memory footprint and computational cost of large language models (LLMs), enabling efficient deployment without full model retraining. However, existing PTQ methods struggle to simultaneously support weight–activation joint quantization and extreme low-bit weight quantization. This limitation primarily arises from the depth of LLMs and their strong cross-layer dependencies, which cause quantization errors to propagate and accumulate across layers, ultimately leading to significant performance degradation. In this paper, we present ACBQ, a simple yet effective framework that simultaneously addresses weight–activation joint quantization and extreme weight quantization. We first pro-pose a granular quantization strategy that treats self-attention and FFN as separate quantization units with module-specific optimization objectives. To mitigate the propagation and accumulation of quantization errors across layers, we introduce an adaptive cross-block quantization strategy that explicitly accounts for cross-layer dependencies by encouraging consistency across blocks. Extensive experiments across diverse LLMs, including OPT and the LLaMA family, demonstrate that ACBQ achieves superior performance under both W4A4 and highly aggressive W2 settings, while incurring negligible additional computational overhead.",
+        "identifiers": [
+          "SemanticScholar:dc5db32a5ad304a5636163d03272e911f1ff728f"
+        ],
+        "semantic_scholar_id": "dc5db32a5ad304a5636163d03272e911f1ff728f",
+        "doi": "10.18653/v1/2026.acl-long.1971",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.1971",
+        "authors": [
+          "Hai-Ling Wang",
+          "Jiang-Lin Lu",
+          "Yi-Tian Zhang",
+          "Hui-Min Zeng",
+          "Yun Fu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.52202/085713-1596",
+      "identity_tokens": [
+        "id:DOI:10.52202/085713-1596",
+        "id:SemanticScholar:88ec6871aafb755eb68487eb08b547e880a38218",
+        "title:computation and memoryefficient model compression with gradient reweighting",
+        "url:https://doi.org/10.52202/085713-1596"
+      ],
+      "record": {
+        "title": "Computation and Memory-Efficient Model Compression with Gradient Reweighting",
+        "source_url": "https://doi.org/10.52202/085713-1596",
+        "year": 2025,
+        "published": null,
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning is a commonly employed technique for deep neural networks (DNNs) aiming at compressing the model size to reduce computational and memory costs during inference. In contrast to conventional neural networks, large language models (LLMs) pose a unique challenge regarding pruning efficiency due to their substantial computational and memory demands. Existing methods, particularly optimization-based ones, often require considerable computational resources in gradient estimation because they cannot effectively leverage weight sparsity of the intermediate pruned network to lower compuation and memory costs in each iteration. The fundamental challenge lies in the need to frequently instantiate intermediate pruned sub-models to achieve these savings, a task that becomes infeasible even for moderately sized neural networks. To this end, this paper proposes a novel pruning method for DNNs that is both computationally and memory-efficient. Our key idea is to develop an effective reweighting mechanism that enables us to estimate the gradient of the pruned network in current iteration via reweigting the gradient estimated on an outdated intermediate sub-model instantiated at an earlier stage, thereby significantly reducing model instantiation frequency. We further develop a series of techniques, e.g., clipping and preconditioning matrix, to reduce the variance of gradient estimation and stabilize the optimization process. We conducted extensive experimental validation across various domains. Our approach achieves 50% sparsity and a 1.58 × speedup in forward pass on Llama2-7B model with only 6 GB of memory usage, outperforming state-of-the-art methods with respect to both perplexity",
+        "identifiers": [
+          "SemanticScholar:88ec6871aafb755eb68487eb08b547e880a38218"
+        ],
+        "semantic_scholar_id": "88ec6871aafb755eb68487eb08b547e880a38218",
+        "doi": "10.52202/085713-1596",
+        "canonical_id": "DOI:10.52202/085713-1596",
+        "authors": [
+          "Zhiwei Li",
+          "Yuesen Liao",
+          "Bin-Rui Wu",
+          "Yuquan Zhou",
+          "Xupeng Shi",
+          "Dong-Sheng Jiang",
+          "Yin Li",
+          "Weizhong Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2c52de4cd9976b9909669938875b60e3bdf49f8c570ecabc2505e9c89129d1d3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,612 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-47045426656c3491-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-47045426656c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2609.24875",
+    "arXiv:2610.09424",
+    "arXiv:2610.15417",
+    "arXiv:2610.18444",
+    "arXiv:2610.23006",
+    "arXiv:2610.29820",
+    "arXiv:2610.31827",
+    "arXiv:2610.38355",
+    "arXiv:2610.39761"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e80bf3668f2f4e7d0795a0518f56b23f8c284a97",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T12:43:06.136685+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2609.24875",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09424",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15417",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:2be0fdcb1940213e6aed2ba4ecaf933bea79795d"
+    },
+    {
+      "requested_id": "arXiv:2610.18444",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.23006",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.29820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.31827",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:58c1b733cf61573379acdfb41a3cf19e79e678c7"
+    },
+    {
+      "requested_id": "arXiv:2610.38355",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:287620f6f8134df71b7ce763fe1ab1f5bbcd4565"
+    },
+    {
+      "requested_id": "arXiv:2610.39761",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SPHQuant: Efficient extreme low bit weight quantization for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.24875",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent foundation models are moving toward native multimodal Vision-Language Models (VLMs), making VLMs a central form of next-generation foundation models. However, their large language backbones make edge deployment difficult due to high memory footprint and memory-bound autoregressive decoding. Weight-only post-training quantization is a practical solution, but pushing VLMs to extreme low bit-widths remains challenging: existing rotation-free methods suffer from outliers at 2-3 bits, while rotation-based methods improve accuracy at the cost of additional runtime overhead. We propose SPHQuant, a rotation-free spherical weight-only quantization framework for VLMs. Instead of quantizing weights directly in Cartesian coordinates, SPHQuant decomposes each 8D weight vector into coordinate signs, radius, and a positive unit direction. This representation isolates outlier magnitude into the radius while keeping directions bounded and statistically regular. Based on this insight, SPHQuant allocates extra precision to the radius to mitigate accuracy degradation induced by outliers. It further uses a compact positive-direction codebook and fine-tunes codebook entries through angular parameterization to preserve the unit-sphere constraint. We also design a hardware-friendly GEMV kernel that keeps the direction codebook small enough for shared-memory lookup and packs radial bits efficiently. Experiments show that SPHQuant matches the performance of state-of-the-art extreme low-bit quantization methods while improving decode throughput over QTIP by 30.3% on RTX A6000. Code will be released in https://github.com/Pushazf/SPHQuant.",
+      "identifiers": [
+        "SemanticScholar:08b576ca6ee83cab76cd26afda90e5cb047b8627"
+      ],
+      "semantic_scholar_id": "08b576ca6ee83cab76cd26afda90e5cb047b8627",
+      "canonical_id": "arXiv:2609.24875",
+      "arxiv_id": "2609.24875",
+      "doi": "10.48550/arXiv.2609.24875",
+      "authors": [
+        "Ke-Wei Zhang",
+        "Zheng Chen",
+        "Hao-Tong Qin",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 58,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+      "source_url": "https://arxiv.org/abs/2610.09424",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Mixture-of-Experts (MoE) models relies heavily on Expert Parallelism, which generates intense inter-GPU communication. Consequently, state-of-the-art inference systems require high-bandwidth, P2P interconnects (e.g., NVLink) in datacenter GPUs to handle massive token routing, making deployment prohibitively expensive. Consumer GPUs offer comparable compute power at significantly lower cost, promising to democratize MoE inference for individuals and enable privacy-preserving local deployments. However, their bandwidth-limited (only weak PCIe bus bandwidth) and host-mediated interconnects (no P2P support) introduce severe communication bottlenecks. We present CoMoE, a communication-efficient MoE inference system that resolves this mismatch through novel host-centric routing. Our key insight is that the unique communication topology provides the opportunity to elevate the host to an active routing hub, which can fundamentally reduce communication volume and eliminate global synchronization-induced stalls. Specifically, for token dispatch, we introduce host-backed token multicast to write shared tokens to the host exactly once, eliminating outbound transmission redundancy. For token combine, we propose a fine-grained, token-level aggregation mechanism using host staging buffers, which replaces rigid global synchronization and mitigates straggler effects. Evaluation on RTX 5090 GPUs shows that CoMoE improves inference throughput by up to 1.46x, approaching the performance of NVLink-capable A800 GPUs at only 23.4% of the hardware cost.",
+      "identifiers": [
+        "SemanticScholar:6aa10b9034e99787dfb481dbf040f8561bdf6d29"
+      ],
+      "semantic_scholar_id": "6aa10b9034e99787dfb481dbf040f8561bdf6d29",
+      "canonical_id": "arXiv:2610.09424",
+      "arxiv_id": "2610.09424",
+      "authors": [
+        "Ru-Wen Fan",
+        "Yue-Zhi Zu",
+        "Min-Hui Xie",
+        "Jun-Ru Li",
+        "Qing-Da Hu",
+        "Xin-Jun Yang",
+        "Ji-Wu Shu",
+        "You-You Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "An Optical KV Cache Network for Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.18444",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In disaggregated LLM serving, each request's KV cache moves from a prefill GPU to a decode GPU before the response begins, and a coding-agent turn often moves the KV cache of its whole long context. Behind an oversubscribed packet fabric, this transfer adds to the time to first token (TTFT). An optical circuit switch (OCS) can give every transfer a full-rate circuit for less than an oversubscribed packet fabric costs, but a mechanical OCS needs tens of milliseconds to reconfigure. We hide this delay inside the prefill. A reservation scheduler commits each circuit while the prefill is still computing, so the circuit is ready when the KV cache is, and each GPU reaches the OCS through its own wavelength-multiplexed (WDM) optics on one fiber pair. In simulations of GPU clusters on real serving traces with prefill times measured on H100 GPUs, this optical KV cache network matches 400G packet fabrics with adaptive routing at 0.55 to 0.78 times the cost of a 2:1 fabric and tolerates the 50 ms reconfiguration delay of a 384-port mechanical OCS.",
+      "identifiers": [
+        "SemanticScholar:8c52545b6b11f7c70fad8c0fc4ed4e0e7dd3aec2"
+      ],
+      "semantic_scholar_id": "8c52545b6b11f7c70fad8c0fc4ed4e0e7dd3aec2",
+      "canonical_id": "arXiv:2610.18444",
+      "arxiv_id": "2610.18444",
+      "authors": [
+        "Seongwon Yoon",
+        "Shi-Meng Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient CPU-GPU collaborative MoE inference via Adaptive Expert Assignment",
+      "source_url": "https://arxiv.org/abs/2610.23006",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models reduce inference computation through sparse expert activation, but their large expert memory footprint often exceeds GPU capacity, making expert offloading necessary for memory-constrained inference. However, existing systems typically handle GPU-missed experts by either transferring them to the GPU, incurring substantial PCIe transfer latency, or executing them on the CPU, making the slower CPU computation the bottleneck. To address these limitations, we present \\method, a CPU-GPU collaborative MoE inference system that adaptively assigns these missed experts to the CPU or GPU for efficient execution. By exploiting differences in expert token-loads, \\method selectively transfers high-load experts to the GPU while executing low-load experts on the CPU. To minimize inference latency, \\method adaptively adjusts expert assignments to balance the CPU computation path against the GPU transfer-and-computation path, allowing both execution paths to complete as early as possible. Extensive experiments on three representative MoE LLMs show that \\method improves prefill speed by up to 51.9\\% and decode throughput by up to 39.5\\% over the strongest baseline across the evaluated batch sizes, with consistent gains under different GPU-memory budgets.",
+      "identifiers": [
+        "SemanticScholar:db5b136a2c0139ee3717ca1b8855f1c87e1b3bbd"
+      ],
+      "semantic_scholar_id": "db5b136a2c0139ee3717ca1b8855f1c87e1b3bbd",
+      "canonical_id": "arXiv:2610.23006",
+      "arxiv_id": "2610.23006",
+      "authors": [
+        "Wen-Hui Lv",
+        "Yun-Ming Liao",
+        "Hong-Li Xu",
+        "Yang Xu",
+        "Jun-Hao Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.29820",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference in large language models (LLMs) imposes substantial memory requirements for the key-value (KV) cache. Token-selective sparse attention reduces attention computation and memory traffic, but KV entries must still be retained for future queries. KV storage capacity therefore remains a constraint on decoding concurrency. Combining GPU and CPU memory expands this capacity but requires efficient access across heterogeneous memory pools. We present UlaCache, a KV cache management system that provides unified logical addressing across GPU and CPU memory. Its logical-slot interface enables the inference engine to allocate, write, access, and release KV entries using stable identifiers across attention parallelism modes. UlaCache manages physical placement, residency, and transfers, updating address mappings after KV transfers. Parallel Bucketed LRU (PB-LRU) reduces the overhead of KV replacement by parallelizing recency updates and eviction-candidate selection within a GPU memory pool shared across requests. We evaluate UlaCache against state-of-the-art baselines. Under tensor-parallel attention (TP), UlaCache provides up to $11.4\\times$ the usable KV cache capacity of HiSparse. For GLM-5.3 on eight H200 GPUs, UlaCache achieves peak decoding throughput of $1.10\\times$ and $1.59\\times$ that of HiSparse under data-parallel attention (DPA) and TP, respectively. For HY4 Preview on eight B300 GPUs, the corresponding throughput ratios are $1.27\\times$ and $1.93\\times$.",
+      "identifiers": [
+        "SemanticScholar:88e2ea6396ce764dcf93a2dba45b61cd83085ae2"
+      ],
+      "semantic_scholar_id": "88e2ea6396ce764dcf93a2dba45b61cd83085ae2",
+      "canonical_id": "arXiv:2610.29820",
+      "arxiv_id": "2610.29820",
+      "authors": [
+        "Isaac Zhu",
+        "Alan Cao",
+        "Hugh Yin",
+        "Rocky Wang",
+        "Orion Wang",
+        "Hscos Zhang",
+        "Jack Li",
+        "Jason Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GPU-Resident Speculative Decoding for In-Browser LLM Inference with WebGPU",
+      "source_url": "https://arxiv.org/abs/2610.39761",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "WebGPU enables private, offline LLM inference inside web pages, but browser dispatch, inter-process communication, synchronous readback and single-token kernels slow decoding and make conventional speculative decoding inefficient. We present a WebGPU runtime that addresses these browser-specific costs. Deterministic small-batch integer kernels accelerate multi-token verification while preserving exact agreement with greedy decoding in the same quantized runtime. A GPU-resident loop performs drafting, verification, acceptance and KV-cache maintenance without a per-token CPU decision. A draft-free context-mixing drafter reuses page content, conversation history and session memory, while a device-aware controller adapts the speculation width and the submission window to measured costs. Across seven models from 0.5B to 8B parameters, 11 tasks and three client GPUs, our runtime decodes 3.5 to 5.4$\\times$ faster than WebLLM on a laptop GPU, 4.8 to 6.2$\\times$ faster on an integrated GPU and 4.8 to 8.6$\\times$ faster on a workstation GPU. The GPU-resident loop and speculation contribute a further 1.8 to 3.2$\\times$ over the optimized kernels on the workstation. Outputs match the quantized greedy decoding of the runtime exactly, and the mean GSM8K accuracy matches that of WebLLM. Optional draft heads raise the peak speedup to 10.2$\\times$, while session memory provides additional gains without downloading extra weights.",
+      "identifiers": [
+        "SemanticScholar:be31299f60b6c0109ccbb2f54b95f0eb4cd0f300"
+      ],
+      "semantic_scholar_id": "be31299f60b6c0109ccbb2f54b95f0eb4cd0f300",
+      "canonical_id": "arXiv:2610.39761",
+      "arxiv_id": "2610.39761",
+      "authors": [
+        "Wei Song",
+        "Yu-Xin Cao",
+        "Zi-Qi Ding",
+        "Xiao-Hun Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.24875",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.24875",
+        "id:SemanticScholar:08b576ca6ee83cab76cd26afda90e5cb047b8627",
+        "id:arXiv:2609.24875",
+        "title:sphquant efficient extreme low bit weight quantization for visionlanguage models",
+        "url:https://arxiv.org/abs/2609.24875"
+      ],
+      "record": {
+        "title": "SPHQuant: Efficient extreme low bit weight quantization for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.24875",
+        "year": 2026,
+        "published": "2026-09-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent foundation models are moving toward native multimodal Vision-Language Models (VLMs), making VLMs a central form of next-generation foundation models. However, their large language backbones make edge deployment difficult due to high memory footprint and memory-bound autoregressive decoding. Weight-only post-training quantization is a practical solution, but pushing VLMs to extreme low bit-widths remains challenging: existing rotation-free methods suffer from outliers at 2-3 bits, while rotation-based methods improve accuracy at the cost of additional runtime overhead. We propose SPHQuant, a rotation-free spherical weight-only quantization framework for VLMs. Instead of quantizing weights directly in Cartesian coordinates, SPHQuant decomposes each 8D weight vector into coordinate signs, radius, and a positive unit direction. This representation isolates outlier magnitude into the radius while keeping directions bounded and statistically regular. Based on this insight, SPHQuant allocates extra precision to the radius to mitigate accuracy degradation induced by outliers. It further uses a compact positive-direction codebook and fine-tunes codebook entries through angular parameterization to preserve the unit-sphere constraint. We also design a hardware-friendly GEMV kernel that keeps the direction codebook small enough for shared-memory lookup and packs radial bits efficiently. Experiments show that SPHQuant matches the performance of state-of-the-art extreme low-bit quantization methods while improving decode throughput over QTIP by 30.3% on RTX A6000. Code will be released in https://github.com/Pushazf/SPHQuant.",
+        "identifiers": [
+          "SemanticScholar:08b576ca6ee83cab76cd26afda90e5cb047b8627"
+        ],
+        "semantic_scholar_id": "08b576ca6ee83cab76cd26afda90e5cb047b8627",
+        "canonical_id": "arXiv:2609.24875",
+        "arxiv_id": "2609.24875",
+        "doi": "10.48550/arXiv.2609.24875",
+        "authors": [
+          "Ke-Wei Zhang",
+          "Zheng Chen",
+          "Hao-Tong Qin",
+          "Yu-Lun Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 58,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.09424",
+      "identity_tokens": [
+        "id:SemanticScholar:6aa10b9034e99787dfb481dbf040f8561bdf6d29",
+        "id:arXiv:2610.09424",
+        "title:democratizing moe inference on commodity gpus with comoe",
+        "url:https://arxiv.org/abs/2610.09424"
+      ],
+      "record": {
+        "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
+        "source_url": "https://arxiv.org/abs/2610.09424",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Mixture-of-Experts (MoE) models relies heavily on Expert Parallelism, which generates intense inter-GPU communication. Consequently, state-of-the-art inference systems require high-bandwidth, P2P interconnects (e.g., NVLink) in datacenter GPUs to handle massive token routing, making deployment prohibitively expensive. Consumer GPUs offer comparable compute power at significantly lower cost, promising to democratize MoE inference for individuals and enable privacy-preserving local deployments. However, their bandwidth-limited (only weak PCIe bus bandwidth) and host-mediated interconnects (no P2P support) introduce severe communication bottlenecks. We present CoMoE, a communication-efficient MoE inference system that resolves this mismatch through novel host-centric routing. Our key insight is that the unique communication topology provides the opportunity to elevate the host to an active routing hub, which can fundamentally reduce communication volume and eliminate global synchronization-induced stalls. Specifically, for token dispatch, we introduce host-backed token multicast to write shared tokens to the host exactly once, eliminating outbound transmission redundancy. For token combine, we propose a fine-grained, token-level aggregation mechanism using host staging buffers, which replaces rigid global synchronization and mitigates straggler effects. Evaluation on RTX 5090 GPUs shows that CoMoE improves inference throughput by up to 1.46x, approaching the performance of NVLink-capable A800 GPUs at only 23.4% of the hardware cost.",
+        "identifiers": [
+          "SemanticScholar:6aa10b9034e99787dfb481dbf040f8561bdf6d29"
+        ],
+        "semantic_scholar_id": "6aa10b9034e99787dfb481dbf040f8561bdf6d29",
+        "canonical_id": "arXiv:2610.09424",
+        "arxiv_id": "2610.09424",
+        "authors": [
+          "Ru-Wen Fan",
+          "Yue-Zhi Zu",
+          "Min-Hui Xie",
+          "Jun-Ru Li",
+          "Qing-Da Hu",
+          "Xin-Jun Yang",
+          "Ji-Wu Shu",
+          "You-You Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 42,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18444",
+      "identity_tokens": [
+        "id:SemanticScholar:8c52545b6b11f7c70fad8c0fc4ed4e0e7dd3aec2",
+        "id:arXiv:2610.18444",
+        "title:an optical kv cache network for disaggregated llm serving",
+        "url:https://arxiv.org/abs/2610.18444"
+      ],
+      "record": {
+        "title": "An Optical KV Cache Network for Disaggregated LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.18444",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In disaggregated LLM serving, each request's KV cache moves from a prefill GPU to a decode GPU before the response begins, and a coding-agent turn often moves the KV cache of its whole long context. Behind an oversubscribed packet fabric, this transfer adds to the time to first token (TTFT). An optical circuit switch (OCS) can give every transfer a full-rate circuit for less than an oversubscribed packet fabric costs, but a mechanical OCS needs tens of milliseconds to reconfigure. We hide this delay inside the prefill. A reservation scheduler commits each circuit while the prefill is still computing, so the circuit is ready when the KV cache is, and each GPU reaches the OCS through its own wavelength-multiplexed (WDM) optics on one fiber pair. In simulations of GPU clusters on real serving traces with prefill times measured on H100 GPUs, this optical KV cache network matches 400G packet fabrics with adaptive routing at 0.55 to 0.78 times the cost of a 2:1 fabric and tolerates the 50 ms reconfiguration delay of a 384-port mechanical OCS.",
+        "identifiers": [
+          "SemanticScholar:8c52545b6b11f7c70fad8c0fc4ed4e0e7dd3aec2"
+        ],
+        "semantic_scholar_id": "8c52545b6b11f7c70fad8c0fc4ed4e0e7dd3aec2",
+        "canonical_id": "arXiv:2610.18444",
+        "arxiv_id": "2610.18444",
+        "authors": [
+          "Seongwon Yoon",
+          "Shi-Meng Yu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.23006",
+      "identity_tokens": [
+        "id:SemanticScholar:db5b136a2c0139ee3717ca1b8855f1c87e1b3bbd",
+        "id:arXiv:2610.23006",
+        "title:efficient cpugpu collaborative moe inference via adaptive expert assignment",
+        "url:https://arxiv.org/abs/2610.23006"
+      ],
+      "record": {
+        "title": "Efficient CPU-GPU collaborative MoE inference via Adaptive Expert Assignment",
+        "source_url": "https://arxiv.org/abs/2610.23006",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models reduce inference computation through sparse expert activation, but their large expert memory footprint often exceeds GPU capacity, making expert offloading necessary for memory-constrained inference. However, existing systems typically handle GPU-missed experts by either transferring them to the GPU, incurring substantial PCIe transfer latency, or executing them on the CPU, making the slower CPU computation the bottleneck. To address these limitations, we present \\method, a CPU-GPU collaborative MoE inference system that adaptively assigns these missed experts to the CPU or GPU for efficient execution. By exploiting differences in expert token-loads, \\method selectively transfers high-load experts to the GPU while executing low-load experts on the CPU. To minimize inference latency, \\method adaptively adjusts expert assignments to balance the CPU computation path against the GPU transfer-and-computation path, allowing both execution paths to complete as early as possible. Extensive experiments on three representative MoE LLMs show that \\method improves prefill speed by up to 51.9\\% and decode throughput by up to 39.5\\% over the strongest baseline across the evaluated batch sizes, with consistent gains under different GPU-memory budgets.",
+        "identifiers": [
+          "SemanticScholar:db5b136a2c0139ee3717ca1b8855f1c87e1b3bbd"
+        ],
+        "semantic_scholar_id": "db5b136a2c0139ee3717ca1b8855f1c87e1b3bbd",
+        "canonical_id": "arXiv:2610.23006",
+        "arxiv_id": "2610.23006",
+        "authors": [
+          "Wen-Hui Lv",
+          "Yun-Ming Liao",
+          "Hong-Li Xu",
+          "Yang Xu",
+          "Jun-Hao Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.29820",
+      "identity_tokens": [
+        "id:SemanticScholar:88e2ea6396ce764dcf93a2dba45b61cd83085ae2",
+        "id:arXiv:2610.29820",
+        "title:ulacache unified logical addressing for sparse llm serving",
+        "url:https://arxiv.org/abs/2610.29820"
+      ],
+      "record": {
+        "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.29820",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context inference in large language models (LLMs) imposes substantial memory requirements for the key-value (KV) cache. Token-selective sparse attention reduces attention computation and memory traffic, but KV entries must still be retained for future queries. KV storage capacity therefore remains a constraint on decoding concurrency. Combining GPU and CPU memory expands this capacity but requires efficient access across heterogeneous memory pools. We present UlaCache, a KV cache management system that provides unified logical addressing across GPU and CPU memory. Its logical-slot interface enables the inference engine to allocate, write, access, and release KV entries using stable identifiers across attention parallelism modes. UlaCache manages physical placement, residency, and transfers, updating address mappings after KV transfers. Parallel Bucketed LRU (PB-LRU) reduces the overhead of KV replacement by parallelizing recency updates and eviction-candidate selection within a GPU memory pool shared across requests. We evaluate UlaCache against state-of-the-art baselines. Under tensor-parallel attention (TP), UlaCache provides up to $11.4\\times$ the usable KV cache capacity of HiSparse. For GLM-5.3 on eight H200 GPUs, UlaCache achieves peak decoding throughput of $1.10\\times$ and $1.59\\times$ that of HiSparse under data-parallel attention (DPA) and TP, respectively. For HY4 Preview on eight B300 GPUs, the corresponding throughput ratios are $1.27\\times$ and $1.93\\times$.",
+        "identifiers": [
+          "SemanticScholar:88e2ea6396ce764dcf93a2dba45b61cd83085ae2"
+        ],
+        "semantic_scholar_id": "88e2ea6396ce764dcf93a2dba45b61cd83085ae2",
+        "canonical_id": "arXiv:2610.29820",
+        "arxiv_id": "2610.29820",
+        "authors": [
+          "Isaac Zhu",
+          "Alan Cao",
+          "Hugh Yin",
+          "Rocky Wang",
+          "Orion Wang",
+          "Hscos Zhang",
+          "Jack Li",
+          "Jason Zhao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39761",
+      "identity_tokens": [
+        "id:SemanticScholar:be31299f60b6c0109ccbb2f54b95f0eb4cd0f300",
+        "id:arXiv:2610.39761",
+        "title:gpuresident speculative decoding for inbrowser llm inference with webgpu",
+        "url:https://arxiv.org/abs/2610.39761"
+      ],
+      "record": {
+        "title": "GPU-Resident Speculative Decoding for In-Browser LLM Inference with WebGPU",
+        "source_url": "https://arxiv.org/abs/2610.39761",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "WebGPU enables private, offline LLM inference inside web pages, but browser dispatch, inter-process communication, synchronous readback and single-token kernels slow decoding and make conventional speculative decoding inefficient. We present a WebGPU runtime that addresses these browser-specific costs. Deterministic small-batch integer kernels accelerate multi-token verification while preserving exact agreement with greedy decoding in the same quantized runtime. A GPU-resident loop performs drafting, verification, acceptance and KV-cache maintenance without a per-token CPU decision. A draft-free context-mixing drafter reuses page content, conversation history and session memory, while a device-aware controller adapts the speculation width and the submission window to measured costs. Across seven models from 0.5B to 8B parameters, 11 tasks and three client GPUs, our runtime decodes 3.5 to 5.4$\\times$ faster than WebLLM on a laptop GPU, 4.8 to 6.2$\\times$ faster on an integrated GPU and 4.8 to 8.6$\\times$ faster on a workstation GPU. The GPU-resident loop and speculation contribute a further 1.8 to 3.2$\\times$ over the optimized kernels on the workstation. Outputs match the quantized greedy decoding of the runtime exactly, and the mean GSM8K accuracy matches that of WebLLM. Optional draft heads raise the peak speedup to 10.2$\\times$, while session memory provides additional gains without downloading extra weights.",
+        "identifiers": [
+          "SemanticScholar:be31299f60b6c0109ccbb2f54b95f0eb4cd0f300"
+        ],
+        "semantic_scholar_id": "be31299f60b6c0109ccbb2f54b95f0eb4cd0f300",
+        "canonical_id": "arXiv:2610.39761",
+        "arxiv_id": "2610.39761",
+        "authors": [
+          "Wei Song",
+          "Yu-Xin Cao",
+          "Zi-Qi Ding",
+          "Xiao-Hun Cheng"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:d5ac1a0f08ecfe0be8f26bbafae39eb2b4321c97cfccf018fa99088a1da3dd77",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
