@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83a8479426f94d25-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32353",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32353",
+    "identity_tokens": [
+      "arXiv:2609.32353"
+    ],
+    "reason": "極端な視覚トークン削減向けオンポリシー自己蒸留LT-OPD。強く圧縮したモデルの生成が誘導する状態の上で、全トークンの対向モデルを教師として自己蒸留する訓練枠組み。推論時のトークン削減が前提だが、機構の実体は訓練であり境界。",
+    "first_checked_at": "2026-11-18T03:45:01+00:00",
+    "last_checked_at": "2026-11-18T03:45:01+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/04-conditional-computation/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction"
+  },
+  "processed_at": "2026-11-18T03:45:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83a8479426f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

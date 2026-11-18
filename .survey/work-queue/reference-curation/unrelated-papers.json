@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T02:48:10+00:00",
-  "record_count": 12702,
+  "updated_at": "2026-11-18T03:45:10+00:00",
+  "record_count": 12712,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182673,6 +182673,153 @@
         "papers/inference/99-other-inference-systems/2025-2509.17765-qwen3-omni-technical-report.md"
       ],
       "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue"
+    },
+    "arXiv:2211.08842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.08842",
+      "identity_tokens": [
+        "arXiv:2211.08842"
+      ],
+      "reason": "全文精読の結果、対象はALBERT系符号器による金融感情分析の分類システムであり、LLM推論機構への直接貢献はない。読解後再判定により対象外として記録。",
+      "first_checked_at": "2026-11-18T03:44:58+00:00",
+      "last_checked_at": "2026-11-18T03:44:58+00:00",
+      "linked_from": [],
+      "title": "Fast and Accurate FSA System Using ELBERT: An Efficient and Lightweight BERT"
+    },
+    "arXiv:2505.21835": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21835",
+      "identity_tokens": [
+        "arXiv:2505.21835"
+      ],
+      "reason": "微調整と圧縮の同時最適化という訓練手順の改善であり、評価も視覚モデルの画像分類のみ。全文精読による再判定で対象外として記録。",
+      "first_checked_at": "2026-11-18T03:45:00+00:00",
+      "last_checked_at": "2026-11-18T03:45:00+00:00",
+      "linked_from": [],
+      "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models"
+    },
+    "arXiv:2405.13088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.13088",
+      "identity_tokens": [
+        "arXiv:2405.13088"
+      ],
+      "reason": "画像分類DNN（VGG16+ImageNet）向けの汎用チャネル剪定手法であり、LLM/Transformerへの適用・検証はない。全文精読による再判定で対象外として記録。",
+      "first_checked_at": "2026-11-18T03:45:01+00:00",
+      "last_checked_at": "2026-11-18T03:45:01+00:00",
+      "linked_from": [],
+      "title": "Combining Relevance and Magnitude for Resource-Saving DNN Pruning"
+    },
+    "arXiv:2610.05416": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.05416",
+      "identity_tokens": [
+        "arXiv:2610.05416"
+      ],
+      "reason": "2K共同動画・音声生成向け動的疎注意Prism。対象は生成モデルのネイティブな学習であり、疎注意も学習信号の希釈を防ぐための訓練側の仕組み。推論高速化の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:02+00:00",
+      "last_checked_at": "2026-11-18T03:45:02+00:00",
+      "linked_from": [
+        "疎注意／長文脈学習"
+      ],
+      "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training"
+    },
+    "arXiv:2606.12199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12199",
+      "identity_tokens": [
+        "arXiv:2606.12199"
+      ],
+      "reason": "音声表現とテキストネイティブ推論の整合の研究。音声トークンの時間粒度の不一致が推論を弱めるという仮説の下で、フレームレートを走査する表現選択の実証研究。対象は音声対話モデルの表現設計であり、推論システム機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:03+00:00",
+      "last_checked_at": "2026-11-18T03:45:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation"
+    },
+    "arXiv:2512.22307": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22307",
+      "identity_tokens": [
+        "arXiv:2512.22307"
+      ],
+      "reason": "生成モデルの知的財産保護LLA。ニューロンへの鍵ビット埋め込みとアクセラレータ側のロック機構で、モデル窃取や改竄、情報漏洩から守るハードウェア・ソフトウェア協調の保護方式。対象はセキュリティであり、推論効率や推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:08+00:00",
+      "last_checked_at": "2026-11-18T03:45:08+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "title": "LLA: Enhancing Security and Privacy for Generative Models with Logic-Locked Accelerators"
+    },
+    "arXiv:2601.01296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.01296",
+      "identity_tokens": [
+        "arXiv:2601.01296"
+      ],
+      "reason": "積極的圧縮が重み窃取を可能にするという分析。流出攻撃のために解凍制約を緩めた圧縮で16〜100倍の圧縮が得られ、データセンターからの重み持ち出し時間が短くなることを示すセキュリティ研究。推論システムの技術提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:08+00:00",
+      "last_checked_at": "2026-11-18T03:45:08+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "arXiv:2405.16406のICLR 2025採録版。",
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "title": "Aggressive Compression Enables LLM Weight Theft"
+    },
+    "arXiv:2602.22718": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.22718",
+      "identity_tokens": [
+        "arXiv:2602.22718"
+      ],
+      "reason": "RLHF向けサーバレス基盤RLHFless。推論と訓練が共存するRLHFの動的な資源需要に、サーバレス計算で細粒度に対応する学習基盤の提案。対象は学習後訓練の実行基盤であり、推論システムではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:09+00:00",
+      "last_checked_at": "2026-11-18T03:45:09+00:00",
+      "linked_from": [
+        "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "大規模分散学習・整合学習基盤"
+      ],
+      "title": "RLHFless: Serverless Computing for Efficient RLHF"
+    },
+    "arXiv:2604.21330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21330",
+      "identity_tokens": [
+        "arXiv:2604.21330"
+      ],
+      "reason": "視覚MoE向け教師誘導ルーティング。選択されなかった専門家への勾配が遮断される問題を、教師の誘導でルータ学習を安定化させる訓練手法。対象はMoEの訓練であり、推論機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:09+00:00",
+      "last_checked_at": "2026-11-18T03:45:09+00:00",
+      "linked_from": [
+        "Mixture-of-Experts / differentiable routing / parameter merging / modular learning",
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "MoE routing / expert choice / heterogeneous conditional computation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "Teacher-Guided Routing for Sparse Vision Mixture-of-Experts"
+    },
+    "arXiv:2606.00437": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00437",
+      "identity_tokens": [
+        "arXiv:2606.00437"
+      ],
+      "reason": "プロセス報酬モデルのストレステストEST-PRM。ラベル保存変換の下でPRMスコアが段階正しさの安定した代理であり続けるかを検証する評価枠組み。対象は訓練監督の品質評価であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T03:45:10+00:00",
+      "last_checked_at": "2026-11-18T03:45:10+00:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "title": "EST-PRM: Stress-Testing Process Reward Models Before They Become Load-Bearing"
     }
   }
 }

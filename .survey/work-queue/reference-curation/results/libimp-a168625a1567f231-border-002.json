@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a168625a1567f231-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.12526",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.12526",
+    "identity_tokens": [
+      "arXiv:2602.12526"
+    ],
+    "reason": "効率的CoTのための制約修正訓練CRT。長さ配慮の報酬やプロンプト較正といったヒューリスティクスに代え、原理的な制約付き訓練で推論長と精度のバランスを取る強化学習の枠組み。狙いは推論費用の削減だが、機構の実体は訓練であり境界。",
+    "first_checked_at": "2026-11-18T03:45:04+00:00",
+    "last_checked_at": "2026-11-18T03:45:04+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Constraint-Rectified Training for Efficient Chain-of-Thought"
+  },
+  "processed_at": "2026-11-18T03:45:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a168625a1567",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

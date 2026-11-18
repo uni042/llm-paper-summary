@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26cb3830af238f06-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.04759",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.04759",
+    "identity_tokens": [
+      "arXiv:2404.04759"
+    ],
+    "reason": "小データ事前学習モデルAfriBERTaへの既存圧縮手法の適用評価であり、新しい推論機構の提案はない。全文精読による再判定で境界として記録。",
+    "first_checked_at": "2026-11-18T03:44:58+00:00",
+    "last_checked_at": "2026-11-18T03:44:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models"
+  },
+  "processed_at": "2026-11-18T03:44:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26cb3830af23",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

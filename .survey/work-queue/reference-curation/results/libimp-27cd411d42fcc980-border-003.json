@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27cd411d42fcc980-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.20175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.20175",
+    "identity_tokens": [
+      "arXiv:2610.20175"
+    ],
+    "reason": "投機的デコード向けドラフト木の学習TreeSpark。並列ドラフタの初期不一致で受理が伸びない問題に対し、親条件つき候補木の構築と、その展開・剪定・予算詰めを訓練時に再生する統一枠組み。推論機構とドラフタ訓練が一体であり境界。",
+    "first_checked_at": "2026-11-18T03:45:00+00:00",
+    "last_checked_at": "2026-11-18T03:45:00+00:00",
+    "linked_from": [
+      "inference-systems",
+      "speculative-decoding",
+      "投機的復号 / EAGLE"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding"
+  },
+  "processed_at": "2026-11-18T03:45:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27cd411d42fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

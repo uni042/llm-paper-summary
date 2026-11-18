@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca69e9b16fc243e3-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.18042",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.18042",
+    "identity_tokens": [
+      "arXiv:2606.18042"
+    ],
+    "reason": "NPU推論向け遅延予測LENS。非公開のマイクロアーキテクチャやコンパイラ最適化、バケット化による非線形性を前提情報なしに扱う遅延推定器。並列化やバッチングの構成探索を支えるが、機構ではなく予測方法論であり境界。",
+    "first_checked_at": "2026-11-18T03:45:07+00:00",
+    "last_checked_at": "2026-11-18T03:45:07+00:00",
+    "linked_from": [
+      "08-edge-on-device-llm-systems",
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+      "on-device LLM / heterogeneous inference / NPU offloading",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latency Prediction for LLM Inference on NPU Systems"
+  },
+  "processed_at": "2026-11-18T03:45:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca69e9b16fc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

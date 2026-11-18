@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ccf1165e8665305e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.03484",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.03484",
+    "identity_tokens": [
+      "arXiv:2601.03484"
+    ],
+    "reason": "ハードウェア配慮型量子化エージェントHAQA。LLM自体を使って量子化と配置のハイパーパラメータ調整を自動化し、専門知識のない利用者でもハードウェア要件に合う量子化を行えるようにする自動化枠組み。推論配置に直結するが、貢献は自動化の道具立てであり境界。",
+    "first_checked_at": "2026-11-18T03:45:10+00:00",
+    "last_checked_at": "2026-11-18T03:45:10+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs"
+  },
+  "processed_at": "2026-11-18T03:45:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccf1165e8665",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

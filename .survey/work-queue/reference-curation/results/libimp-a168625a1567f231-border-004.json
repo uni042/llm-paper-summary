@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a168625a1567f231-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.10769",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.10769",
+    "identity_tokens": [
+      "arXiv:2604.10769"
+    ],
+    "reason": "ワークロード構成と集約電力需要の研究。共有GPUシステムでバッチと推論の混合比が電力変動とランプ特性をどう変えるかを、到着・キューイング・スケジューリング・GPU電力をつないだトレース較正枠組みで示す。推論基盤の運用計測ではあるが、機構の提案ではなく境界。",
+    "first_checked_at": "2026-11-18T03:45:04+00:00",
+    "last_checked_at": "2026-11-18T03:45:04+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM serving / energy management / cluster scheduling / dynamic reconfiguration"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Workload composition smooths aggregate power demand while sustaining short-horizon ramps in AI data centers"
+  },
+  "processed_at": "2026-11-18T03:45:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a168625a1567",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

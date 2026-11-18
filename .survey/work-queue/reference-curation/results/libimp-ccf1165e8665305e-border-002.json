@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ccf1165e8665305e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.20219",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.20219",
+    "identity_tokens": [
+      "arXiv:2603.20219"
+    ],
+    "reason": "潜在先読み訓練。次トークン予測が各ステップでの確定を強いる問題に対し、選んだ位置で潜在空間で複数ステップの先読みをしてから生成する訓練戦略。計算配分の不均一化が狙いだが、機構の実体はモデルの訓練であり境界。",
+    "first_checked_at": "2026-11-18T03:45:10+00:00",
+    "last_checked_at": "2026-11-18T03:45:10+00:00",
+    "linked_from": [
+      "Speculative Decoding"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Thinking into the Future: Latent Lookahead Training for Transformers"
+  },
+  "processed_at": "2026-11-18T03:45:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ccf1165e8665",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

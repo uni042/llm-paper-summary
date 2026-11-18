@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca69e9b16fc243e3-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.20327",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.20327",
+    "identity_tokens": [
+      "arXiv:2607.20327"
+    ],
+    "reason": "トークン水準の小・大モデル協調PyroDash。小型モデルが制御トークンで支援要否を自ら判断し、大規模モデルへ一回の受け渡しで補完させる費用配慮型の協調推論。推論時の振り分けではあるが、方策を小型モデルの3段階訓練で内在化させる点が中心であり境界。",
+    "first_checked_at": "2026-11-18T03:45:07+00:00",
+    "last_checked_at": "2026-11-18T03:45:07+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM routing、hybrid inference、quality-aware model selection",
+      "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+      "Speculative Decoding",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "survey-speculative-decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference"
+  },
+  "processed_at": "2026-11-18T03:45:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca69e9b16fc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

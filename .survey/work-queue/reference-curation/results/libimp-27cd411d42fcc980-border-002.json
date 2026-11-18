@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27cd411d42fcc980-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.04198",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.04198",
+    "identity_tokens": [
+      "arXiv:2610.04198"
+    ],
+    "reason": "適応ループ型拡散言語モデルALoDLM。デノイズの各ステップで全位置へ一様な計算深さを与える前提をやめ、トークンの難しさに応じて潜在再帰の計算を配る。拡散生成の効率化が狙いだが、貢献は訓練を要するアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T03:44:59+00:00",
+    "last_checked_at": "2026-11-18T03:44:59+00:00",
+    "linked_from": [
+      "Other Inference Systems / Lossless Parallel Decoding",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "speculative-parallel-decoding",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ALoDLM: Adaptively Looped Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T03:44:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27cd411d42fc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

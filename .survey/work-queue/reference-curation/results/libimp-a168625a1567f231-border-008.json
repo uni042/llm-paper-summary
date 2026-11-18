@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a168625a1567f231-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.27255",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.27255",
+    "identity_tokens": [
+      "arXiv:2605.27255"
+    ],
+    "reason": "潜在マルチトークン予測PIPO。入力側の潜在圧縮と出力側のマルチトークン予測を鏡像の操作として統一し、高価な検証パスなしにデコードを速くする。推論デコードの効率化が狙いだが、圧縮器と予測ヘッドの学習を要するアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T03:45:06+00:00",
+    "last_checked_at": "2026-11-18T03:45:06+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的復号 / EAGLE",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Pair-In, Pair-Out: Latent Multi-Token Prediction for Efficient LLMs"
+  },
+  "processed_at": "2026-11-18T03:45:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a168625a1567",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

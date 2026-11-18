@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83a8479426f94d25-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.39765",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.39765",
+    "identity_tokens": [
+      "arXiv:2609.39765"
+    ],
+    "reason": "言語エージェント向け自己プログラミング階層メモリMemCodex。経験を実行可能なメモリプログラムとして組織し、層プログラムの構築・索引・検索・ルーティング自体を書き換える開放的な進化で適応させる。エージェントのメモリ設計であり、推論システム機構とは距離があるため境界。",
+    "first_checked_at": "2026-11-18T03:45:01+00:00",
+    "last_checked_at": "2026-11-18T03:45:01+00:00",
+    "linked_from": [
+      "agentic inference / persistent memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MemCodex: Self-Programming Hierarchical Memory for Language Agents"
+  },
+  "processed_at": "2026-11-18T03:45:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83a8479426f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

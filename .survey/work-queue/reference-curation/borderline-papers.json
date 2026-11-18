@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T02:48:10+00:00",
-  "record_count": 5675,
+  "updated_at": "2026-11-18T03:45:12+00:00",
+  "record_count": 5699,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -87725,6 +87725,413 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale"
+    },
+    "arXiv:2404.04759": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.04759",
+      "identity_tokens": [
+        "arXiv:2404.04759"
+      ],
+      "reason": "小データ事前学習モデルAfriBERTaへの既存圧縮手法の適用評価であり、新しい推論機構の提案はない。全文精読による再判定で境界として記録。",
+      "first_checked_at": "2026-11-18T03:44:58+00:00",
+      "last_checked_at": "2026-11-18T03:44:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models"
+    },
+    "arXiv:2609.28769": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28769",
+      "identity_tokens": [
+        "arXiv:2609.28769"
+      ],
+      "reason": "バイナリ水準計装によるGPUカーネル内トレーシングXtrace。コンパイル済みバイナリへ直接プローブを挿入し、コンパイラ最適化への干渉をほぼなくして実行時オーバーヘッドも抑える。推論カーネルの性能最適化を支える道具であり、推論機構そのものではないため境界。",
+      "first_checked_at": "2026-11-18T03:44:59+00:00",
+      "last_checked_at": "2026-11-18T03:44:59+00:00",
+      "linked_from": [
+        "inference-systems",
+        "その他システム研究",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing"
+    },
+    "arXiv:2610.04198": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04198",
+      "identity_tokens": [
+        "arXiv:2610.04198"
+      ],
+      "reason": "適応ループ型拡散言語モデルALoDLM。デノイズの各ステップで全位置へ一様な計算深さを与える前提をやめ、トークンの難しさに応じて潜在再帰の計算を配る。拡散生成の効率化が狙いだが、貢献は訓練を要するアーキテクチャであり境界。",
+      "first_checked_at": "2026-11-18T03:44:59+00:00",
+      "last_checked_at": "2026-11-18T03:44:59+00:00",
+      "linked_from": [
+        "Other Inference Systems / Lossless Parallel Decoding",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "inference-systems",
+        "speculative-parallel-decoding",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ALoDLM: Adaptively Looped Diffusion Language Models"
+    },
+    "arXiv:2610.20175": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.20175",
+      "identity_tokens": [
+        "arXiv:2610.20175"
+      ],
+      "reason": "投機的デコード向けドラフト木の学習TreeSpark。並列ドラフタの初期不一致で受理が伸びない問題に対し、親条件つき候補木の構築と、その展開・剪定・予算詰めを訓練時に再生する統一枠組み。推論機構とドラフタ訓練が一体であり境界。",
+      "first_checked_at": "2026-11-18T03:45:00+00:00",
+      "last_checked_at": "2026-11-18T03:45:00+00:00",
+      "linked_from": [
+        "inference-systems",
+        "speculative-decoding",
+        "投機的復号 / EAGLE"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding"
+    },
+    "arXiv:2609.32353": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32353",
+      "identity_tokens": [
+        "arXiv:2609.32353"
+      ],
+      "reason": "極端な視覚トークン削減向けオンポリシー自己蒸留LT-OPD。強く圧縮したモデルの生成が誘導する状態の上で、全トークンの対向モデルを教師として自己蒸留する訓練枠組み。推論時のトークン削減が前提だが、機構の実体は訓練であり境界。",
+      "first_checked_at": "2026-11-18T03:45:01+00:00",
+      "last_checked_at": "2026-11-18T03:45:01+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+        "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+        "papers/inference/04-conditional-computation/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction"
+    },
+    "arXiv:2609.39765": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39765",
+      "identity_tokens": [
+        "arXiv:2609.39765"
+      ],
+      "reason": "言語エージェント向け自己プログラミング階層メモリMemCodex。経験を実行可能なメモリプログラムとして組織し、層プログラムの構築・索引・検索・ルーティング自体を書き換える開放的な進化で適応させる。エージェントのメモリ設計であり、推論システム機構とは距離があるため境界。",
+      "first_checked_at": "2026-11-18T03:45:01+00:00",
+      "last_checked_at": "2026-11-18T03:45:01+00:00",
+      "linked_from": [
+        "agentic inference / persistent memory"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MemCodex: Self-Programming Hierarchical Memory for Language Agents"
+    },
+    "arXiv:2607.11262": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.11262",
+      "identity_tokens": [
+        "arXiv:2607.11262"
+      ],
+      "reason": "タイル中心GPUシミュレーション基盤GPU-Tile-Sim。LLMカーネルの性能が個別命令の遅延より依存構造で決まるという洞察に基づき、タイル単位で依存と重なりを表す性能モデルを提供する。ハードウェア・ソフトウェア協調設計の道具であり、推論機構そのものではないため境界。",
+      "first_checked_at": "2026-11-18T03:45:02+00:00",
+      "last_checked_at": "2026-11-18T03:45:02+00:00",
+      "linked_from": [
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GPU-Tile-Sim: A Tile-Centric GPU Simulation Framework for LLM Hardware-Software Co-Design"
+    },
+    "arXiv:2602.09130": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09130",
+      "identity_tokens": [
+        "arXiv:2602.09130"
+      ],
+      "reason": "LLM圧縮の統一評価UniComp。剪定・量子化・蒸留を性能・信頼性・効率の3次元で、40超のデータセットと比較する評価枠組みと実測研究。圧縮手法そのものではなく、その比較評価であり境界。",
+      "first_checked_at": "2026-11-18T03:45:03+00:00",
+      "last_checked_at": "2026-11-18T03:45:03+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "inference-systems",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UniComp: A Unified Evaluation of Large Language Model Compression via Pruning, Quantization and Distillation"
+    },
+    "arXiv:2602.12526": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12526",
+      "identity_tokens": [
+        "arXiv:2602.12526"
+      ],
+      "reason": "効率的CoTのための制約修正訓練CRT。長さ配慮の報酬やプロンプト較正といったヒューリスティクスに代え、原理的な制約付き訓練で推論長と精度のバランスを取る強化学習の枠組み。狙いは推論費用の削減だが、機構の実体は訓練であり境界。",
+      "first_checked_at": "2026-11-18T03:45:04+00:00",
+      "last_checked_at": "2026-11-18T03:45:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Constraint-Rectified Training for Efficient Chain-of-Thought"
+    },
+    "arXiv:2603.06731": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06731",
+      "identity_tokens": [
+        "arXiv:2603.06731"
+      ],
+      "reason": "AIチップ向けMLIRコンパイラ基盤PolyBlocks。ループネストとSSAへの変換をパスパイプラインで構成し、多水準タイリングや融合、注意層の融合などを解析的費用モデルで自動適用する。一般のAIコンパイラ基盤であり、LLM推論に特化した機構ではないため境界。",
+      "first_checked_at": "2026-11-18T03:45:04+00:00",
+      "last_checked_at": "2026-11-18T03:45:04+00:00",
+      "linked_from": [
+        "GPU Kernel Framework",
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "inference-systems",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks"
+    },
+    "arXiv:2604.10769": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.10769",
+      "identity_tokens": [
+        "arXiv:2604.10769"
+      ],
+      "reason": "ワークロード構成と集約電力需要の研究。共有GPUシステムでバッチと推論の混合比が電力変動とランプ特性をどう変えるかを、到着・キューイング・スケジューリング・GPU電力をつないだトレース較正枠組みで示す。推論基盤の運用計測ではあるが、機構の提案ではなく境界。",
+      "first_checked_at": "2026-11-18T03:45:04+00:00",
+      "last_checked_at": "2026-11-18T03:45:04+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving / energy management / cluster scheduling / dynamic reconfiguration"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Workload composition smooths aggregate power demand while sustaining short-horizon ramps in AI data centers"
+    },
+    "arXiv:2605.08776": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08776",
+      "identity_tokens": [
+        "arXiv:2605.08776"
+      ],
+      "reason": "混合方策蒸留による推論圧縮MPD。大きな推論モデルが短い軌跡を出す性質を使い、小さなモデルの冗長な推論を大きなモデルからの蒸留で圧縮する。推論時のトークン削減が目的だが、機構の実体は蒸留訓練であり境界。",
+      "first_checked_at": "2026-11-18T03:45:05+00:00",
+      "last_checked_at": "2026-11-18T03:45:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reasoning Compression with Mixed-Policy Distillation"
+    },
+    "arXiv:2605.17260": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17260",
+      "identity_tokens": [
+        "arXiv:2605.17260"
+      ],
+      "reason": "効率的視覚エンコーダLiteFrame。事後的なトークン削減ではボトルネックが視覚エンコーダのフレーム処理へ移る問題に対し、圧縮トークン蒸留で小型の生徒エンコーダを訓練する。推論遅延の削減が目的だが、貢献の実体はエンコーダの訓練であり境界。",
+      "first_checked_at": "2026-11-18T03:45:05+00:00",
+      "last_checked_at": "2026-11-18T03:45:05+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs"
+    },
+    "arXiv:2605.19150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.19150",
+      "identity_tokens": [
+        "arXiv:2605.19150"
+      ],
+      "reason": "メモリ最適化した構造化疎状態空間モデルFlash PD-SSM。遷移行列の構造が表現力と効率のトレードオフを決める問題に対し、構造化した疎行列の学習可能な集合で、広く使われる構造化SSM並みのスループットとより強い表現力保証を両立させる。アーキテクチャ設計の研究であり境界。",
+      "first_checked_at": "2026-11-18T03:45:06+00:00",
+      "last_checked_at": "2026-11-18T03:45:06+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Flash PD-SSM: Memory-Optimized Structured Sparse State-Space Models"
+    },
+    "arXiv:2605.27255": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27255",
+      "identity_tokens": [
+        "arXiv:2605.27255"
+      ],
+      "reason": "潜在マルチトークン予測PIPO。入力側の潜在圧縮と出力側のマルチトークン予測を鏡像の操作として統一し、高価な検証パスなしにデコードを速くする。推論デコードの効率化が狙いだが、圧縮器と予測ヘッドの学習を要するアーキテクチャであり境界。",
+      "first_checked_at": "2026-11-18T03:45:06+00:00",
+      "last_checked_at": "2026-11-18T03:45:06+00:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "投機的復号 / EAGLE",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pair-In, Pair-Out: Latent Multi-Token Prediction for Efficient LLMs"
+    },
+    "arXiv:2606.06532": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06532",
+      "identity_tokens": [
+        "arXiv:2606.06532"
+      ],
+      "reason": "コーデック配慮型のエージェント長動画理解GOPAgen。コーデック由来のGOPと動きベクトルを検索パイプラインへ組み込み、型つきメモリページとGOP木で証拠を段階的に取り出す。推論処理の無駄を減らす工夫はあるが、貢献の中心は動画質問応答のパイプライン設計であり境界。",
+      "first_checked_at": "2026-11-18T03:45:06+00:00",
+      "last_checked_at": "2026-11-18T03:45:06+00:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GOPAgen: Codec-Aware Agentic Long-Video Understanding with Structured Memory"
+    },
+    "arXiv:2606.18042": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18042",
+      "identity_tokens": [
+        "arXiv:2606.18042"
+      ],
+      "reason": "NPU推論向け遅延予測LENS。非公開のマイクロアーキテクチャやコンパイラ最適化、バケット化による非線形性を前提情報なしに扱う遅延推定器。並列化やバッチングの構成探索を支えるが、機構ではなく予測方法論であり境界。",
+      "first_checked_at": "2026-11-18T03:45:07+00:00",
+      "last_checked_at": "2026-11-18T03:45:07+00:00",
+      "linked_from": [
+        "08-edge-on-device-llm-systems",
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM serving simulation / heterogeneous accelerators / disaggregation / memory hierarchy / hardware-software co-design",
+        "on-device LLM / heterogeneous inference / NPU offloading",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latency Prediction for LLM Inference on NPU Systems"
+    },
+    "arXiv:2607.20327": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20327",
+      "identity_tokens": [
+        "arXiv:2607.20327"
+      ],
+      "reason": "トークン水準の小・大モデル協調PyroDash。小型モデルが制御トークンで支援要否を自ら判断し、大規模モデルへ一回の受け渡しで補完させる費用配慮型の協調推論。推論時の振り分けではあるが、方策を小型モデルの3段階訓練で内在化させる点が中心であり境界。",
+      "first_checked_at": "2026-11-18T03:45:07+00:00",
+      "last_checked_at": "2026-11-18T03:45:07+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "LLM routing、hybrid inference、quality-aware model selection",
+        "LLMサービング、エッジ推論、協調推論、資源管理・スケジューリング",
+        "Speculative Decoding",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "survey-speculative-decoding",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference"
+    },
+    "arXiv:2601.03484": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03484",
+      "identity_tokens": [
+        "arXiv:2601.03484"
+      ],
+      "reason": "ハードウェア配慮型量子化エージェントHAQA。LLM自体を使って量子化と配置のハイパーパラメータ調整を自動化し、専門知識のない利用者でもハードウェア要件に合う量子化を行えるようにする自動化枠組み。推論配置に直結するが、貢献は自動化の道具立てであり境界。",
+      "first_checked_at": "2026-11-18T03:45:10+00:00",
+      "last_checked_at": "2026-11-18T03:45:10+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs"
+    },
+    "arXiv:2603.20219": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20219",
+      "identity_tokens": [
+        "arXiv:2603.20219"
+      ],
+      "reason": "潜在先読み訓練。次トークン予測が各ステップでの確定を強いる問題に対し、選んだ位置で潜在空間で複数ステップの先読みをしてから生成する訓練戦略。計算配分の不均一化が狙いだが、機構の実体はモデルの訓練であり境界。",
+      "first_checked_at": "2026-11-18T03:45:10+00:00",
+      "last_checked_at": "2026-11-18T03:45:10+00:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Thinking into the Future: Latent Lookahead Training for Transformers"
+    },
+    "arXiv:2603.22276": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.22276",
+      "identity_tokens": [
+        "arXiv:2603.22276"
+      ],
+      "reason": "DoRAの高ランク適応の拡張。因数分解したノルム計算で稠密な積の実体化を避け、融合Tritonカーネルで高ランクDoRAの一時メモリを大幅に減らすシステム貢献。カーネル工学ではあるが、対象は適応訓練の前向き計算であり境界。",
+      "first_checked_at": "2026-11-18T03:45:11+00:00",
+      "last_checked_at": "2026-11-18T03:45:11+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+        "inference-systems",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels"
+    },
+    "arXiv:2606.16429": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16429",
+      "identity_tokens": [
+        "arXiv:2606.16429"
+      ],
+      "reason": "ハイブリッド線形注意への変換初期化Taylor-Calibrate。学習済みTransformerをGated DeltaNetへ変換する際、再帰の減衰や書き込みの動態が未指定で初期状態が悪い問題を、テイラー較正で原理的に初期化する。長文脈推論の効率化が狙いだが、貢献は変換と蒸留の初期化であり境界。",
+      "first_checked_at": "2026-11-18T03:45:11+00:00",
+      "last_checked_at": "2026-11-18T03:45:11+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Taylor-Calibrate: Principled Initialization for Hybrid Linear Attention Distillation"
+    },
+    "arXiv:2609.07821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.07821",
+      "identity_tokens": [
+        "arXiv:2609.07821"
+      ],
+      "reason": "幾何動態による潜在推論A*-Thought-V2。CoTを隠れ状態の軌跡としてモデル化し、質問から解への大域方向との整合を測って、整合するステップは明示テキストに、逸れるステップは連続潜在トークンへ圧縮する。推論圧縮の枠組みだが、潜在アーキテクチャとその学習が中心であり境界。",
+      "first_checked_at": "2026-11-18T03:45:12+00:00",
+      "last_checked_at": "2026-11-18T03:45:12+00:00",
+      "linked_from": [
+        "Conditional Computation"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A*-Thought-V2: Efficient Latent Reasoning via Geometric Dynamics of LLM"
+    },
+    "arXiv:2609.21834": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21834",
+      "identity_tokens": [
+        "arXiv:2609.21834"
+      ],
+      "reason": "量子化配慮訓練の終点動態としての説明。影の重みで説明されてきたQATの成功を、有限格子上の終点動態として捉え直し、配備される量子化終点の損失が改善する一方で影の損失が改善しない観察を説明する。量子化の理解に資するが、対象は訓練の理論であり境界。",
+      "first_checked_at": "2026-11-18T03:45:12+00:00",
+      "last_checked_at": "2026-11-18T03:45:12+00:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent"
     }
   }
 }

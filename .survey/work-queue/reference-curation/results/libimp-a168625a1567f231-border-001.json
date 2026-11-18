@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a168625a1567f231-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.09130",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.09130",
+    "identity_tokens": [
+      "arXiv:2602.09130"
+    ],
+    "reason": "LLM圧縮の統一評価UniComp。剪定・量子化・蒸留を性能・信頼性・効率の3次元で、40超のデータセットと比較する評価枠組みと実測研究。圧縮手法そのものではなく、その比較評価であり境界。",
+    "first_checked_at": "2026-11-18T03:45:03+00:00",
+    "last_checked_at": "2026-11-18T03:45:03+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UniComp: A Unified Evaluation of Large Language Model Compression via Pruning, Quantization and Distillation"
+  },
+  "processed_at": "2026-11-18T03:45:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a168625a1567",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
