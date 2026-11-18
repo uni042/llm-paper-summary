@@ -1,0 +1,721 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-82dbf5ae6b3b47ac-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-82dbf5ae6b3b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2607.06202",
+    "arXiv:2607.10640",
+    "arXiv:2607.28418",
+    "arXiv:2608.01718",
+    "arXiv:2608.08506",
+    "arXiv:2609.30820",
+    "arXiv:2609.39819"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f650645082d5a1907393f73d1661dcb632ead362",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T02:59:24.025744+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2607.06202",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.10640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.28418",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01718",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08506",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.30820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39819",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+      "source_url": "https://arxiv.org/abs/2607.06202",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Mixture-of-Experts (MoE) models on production high-bandwidth superpods, such as NVIDIA's NVL72/576 and Huawei's CloudMatrix384, introduces critical challenges beyond raw interconnect bandwidth. While these systems provide unified global address spaces and high-bandwidth fabrics, their full potential for sparse MoE communication is hindered by three fundamental bottlenecks: (1) Strict execution serialization imposed by coarse-grained Bulk Synchronous Parallel (BSP) orchestration of interdependent communication phases; (2) Prohibitive synchronization overhead that fails to scale alongside high interconnect bandwidth; and (3) Severe load imbalance resulting from distance-agnostic scheduling of irregular token traffic. To eliminate these bottlenecks, we introduce UBEP (Unified-Bus Expert Parallelism), a production-ready communication library that rethinks MoE's All-to-All primitives for modern superpod architectures. Through large-scale experiments, UBEP reduces All-to-All latency by up to 52.4% and MoE inference Time Per Output Token (TPOT) by up to 11.1%.",
+      "identifiers": [
+        "SemanticScholar:5da1eaa0da5f14c5133b44466a979e282b87ac32"
+      ],
+      "semantic_scholar_id": "5da1eaa0da5f14c5133b44466a979e282b87ac32",
+      "canonical_id": "arXiv:2607.06202",
+      "arxiv_id": "2607.06202",
+      "doi": "10.1145/3789240.3829183",
+      "authors": [
+        "Yi-Peng Liu",
+        "Chang Liu",
+        "Si-Tan Shen",
+        "Jia-Qi Zheng",
+        "Ming-Fan Li",
+        "Yu-Yang Yang",
+        "Guan-Hua Li",
+        "Yu-Quan Zhang",
+        "Yimeng Xu",
+        "Zhong-Zhe Hu",
+        "Zhi-Yuan Huang",
+        "Qi-Hang Duan",
+        "Jun-Sheng Wang",
+        "Wen-Kai Ling",
+        "Bao-Chun Yang",
+        "Xian-Zhi Yu",
+        "Han Bao",
+        "Yi-Jie Chen",
+        "Guihai Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 134,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.10640",
+      "year": 2026,
+      "published": "2026-07-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+      "identifiers": [
+        "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+      ],
+      "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+      "canonical_id": "arXiv:2607.10640",
+      "arxiv_id": "2607.10640",
+      "doi": "10.48550/arXiv.2607.10640",
+      "authors": [
+        "Zhao-Yang Li",
+        "Yanjun Li",
+        "Wang-Kai Li",
+        "Yu-Jia Chen",
+        "Tianzhu Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is a promising approach for improving the efficiency of large language models (LLMs). Static structured pruning is hardware-friendly, but its input-agnostic computation allocation often degrades model quality at high sparsity. Dynamic pruning adapts computation to individual tokens, but coarse-grained layer-level routing limits allocation flexibility, and finer-grained decisions introduce irregular execution that can offset computational savings. To address these challenges, we present WIDE, the first end-to-end differentiable framework that combines token-wise structured dynamic width pruning with GPU kernel co-design for both prefill and decoding. WIDE uses differentiable routers to select GQA-aligned query-head groups and GPU-tile-aligned FFN-channel groups for each token. To execute these decisions efficiently, it reorders routing masks to cluster active tokens within each group, enabling hardware-agnostic block-level skipping and architecture-aware skipping of inactive loads and tensor-core operations. Experiments on the Llama3 and Qwen3 families demonstrate improved quality retention over representative static and dynamic pruning methods. At 50\\% target routing sparsity, WIDE improves Llama3.1-8B average zero-shot accuracy by up to 20.26 points over the strongest dynamic-depth baseline under calibration-only settings, while retaining 97.6\\%/88.2\\% of dense Qwen3-14B likelihood/generation performance after LoRA tuning. Separate latency benchmarks demonstrate end-to-end speedups of up to $1.68\\times$ for prefill and $1.55\\times$ for decoding over the dense baseline. These results demonstrate that pruning--kernel co-design pushes the frontier of token-wise dynamic structured pruning, combining improved quality retention with practical acceleration across both prefill and decoding. Our code is avaliable at \\url{https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE}.",
+      "identifiers": [
+        "SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7"
+      ],
+      "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+      "canonical_id": "arXiv:2607.28418",
+      "arxiv_id": "2607.28418",
+      "doi": "10.48550/arXiv.2607.28418",
+      "authors": [
+        "Hao-Zhe Hu",
+        "Hao Wu",
+        "Pei-Ran Yin",
+        "Chao Han",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 111,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Semantic caching, reusing responses to answer semantically similar queries, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversary pollutes the cache by injecting adversarial queries, corrupting responses to subsequent legitimate requests. We present LaCache, a simple yet principled redesign of semantic caching that provides provable defense against such attacks. The key insight is that while the adversary has full control over the adversarial query, it has far less control over the corresponding LLM-generated response, which must simultaneously satisfy multiple competing constraints. Thus, LaCache shifts the integrity check from the query to the response: rather than checking only the cache hit of a query, LaCache additionally checks the cache hit of its first $k$ speculatively decoded tokens. Analytically, we prove that LaCache detects any cache-collision attack that produces a semantically distinct response with provably high probability. Empirically, evaluation across diverse LLMs and benchmarks confirms that LaCache reduces attack hit rate to near zero while preserving over 90% of benign cache utility. To our best knowledge, this work is the first to exploit the inherent constraints on adversarial responses in cache-collision attacks to provide provable security, pointing to a promising direction for building robust semantic caching.",
+      "identifiers": [
+        "SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada"
+      ],
+      "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+      "canonical_id": "arXiv:2608.01718",
+      "arxiv_id": "2608.01718",
+      "doi": "10.48550/arXiv.2608.01718",
+      "authors": [
+        "Jia-Cheng Liang",
+        "Yu-Hui Wang",
+        "Tan-Qiu Jiang",
+        "Ting Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs",
+      "source_url": "https://arxiv.org/abs/2608.08506",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free low-rank compression frameworks have been gaining prominence for LLM compression given their effectiveness in reducing model parameter count while maintaining task-level accuracy. However, existing SOTA frameworks share two key limitations: (1) residual errors in calibration data activations accumulate across layers during compression, causing misalignment between representations simulated at compression time and those experienced at inference; (2) the assumption that layer importance distribution is preserved post-compression does not hold. Together, these two effects introduce misalignment in the compression process in relation to the deployed model. We study these effects and propose a simple, training-free methodology compatible with existing frameworks to mitigate them, comprising: (1) Layer-by-Layer Compression with Calibration Correction; (2) Iterative Compression with Rank Allocation Correction. Implemented atop an existing SOTA decomposition framework, and evaluated on Llama and Qwen3 models across various benchmarks and compression rates, our approach demonstrates up to ~1-2.5 accuracy point improvements over per-weight and joint decomposition baselines on zero-shot tasks.",
+      "identifiers": [
+        "SemanticScholar:7532a5fc2724bd67c4cae45ce0543405d0c10bcd"
+      ],
+      "semantic_scholar_id": "7532a5fc2724bd67c4cae45ce0543405d0c10bcd",
+      "canonical_id": "arXiv:2608.08506",
+      "arxiv_id": "2608.08506",
+      "doi": "10.48550/arXiv.2608.08506",
+      "authors": [
+        "Mohanad Odema",
+        "Gabrielle de Micheli",
+        "Dayin Gou",
+        "Nilesh Malpeddi",
+        "Prathamesh Vaste",
+        "Jacob Song"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+      "source_url": "https://arxiv.org/abs/2609.30820",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped transformers reuse weights across recurrence steps, making low-bit quantization especially attractive. We identify two distinct failure modes of standard post-training quantization. On Huginn-3.5B, per-channel INT4 fails primarily at the non-residual loop-entry adapter, while quantizing the residual core is much less damaging. We call this feedback exposure: a quantized layer perturbs the recurrent state without an identity path, and the resulting error is fed back at later steps. Controlled experiments on linear filters and Mamba state-space models show that feedback exposure also occurs outside transformers. Grouped INT4 reveals a separate failure, calibration blindness: our one-step GPTQ baseline builds its Hessian from step-0 activations, leaving input directions used later in the recurrence nearly unweighted. Across nine checkpoints from seven looped architectures, one-step GPTQ is worse than round-to-nearest (RTN) on the primary task metric for five checkpoints. Accumulating the GPTQ Hessian across recurrence steps outperforms both one-step GPTQ and RTN on all nine checkpoints and recovers bf16-level accuracy on Huginn. These results separate two questions for PTQ on looped models: where quantization error enters the recurrence, and which states calibration sees.",
+      "identifiers": [
+        "SemanticScholar:b8f9e46da59d38485931c18154fab4f79137ec01"
+      ],
+      "semantic_scholar_id": "b8f9e46da59d38485931c18154fab4f79137ec01",
+      "canonical_id": "arXiv:2609.30820",
+      "arxiv_id": "2609.30820",
+      "doi": "10.48550/arXiv.2609.30820",
+      "authors": [
+        "Nux Li"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+      "source_url": "https://arxiv.org/abs/2609.39819",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+      "identifiers": [
+        "SemanticScholar:90977290d9c326ca54d1edcef2ef38018e790eba"
+      ],
+      "semantic_scholar_id": "90977290d9c326ca54d1edcef2ef38018e790eba",
+      "canonical_id": "arXiv:2609.39819",
+      "arxiv_id": "2609.39819",
+      "doi": "10.48550/arXiv.2609.39819",
+      "authors": [
+        "Kai-Hua Fu",
+        "Yu-Kun Zhou",
+        "Chaokun Chang",
+        "Ying-Hao Yu",
+        "Lu-Ping Wang",
+        "Guo-Dong Yang",
+        "Jiu-Chen Shi",
+        "Quan Chen",
+        "Wei Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.06202",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3829183",
+        "id:SemanticScholar:5da1eaa0da5f14c5133b44466a979e282b87ac32",
+        "id:arXiv:2607.06202",
+        "title:ubep rearchitecting expert parallelism communication library for production superpods",
+        "url:https://arxiv.org/abs/2607.06202"
+      ],
+      "record": {
+        "title": "UBEP: Re-architecting Expert Parallelism Communication Library for Production Superpods",
+        "source_url": "https://arxiv.org/abs/2607.06202",
+        "year": 2026,
+        "published": "2026-07-07",
+        "venue": "Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Mixture-of-Experts (MoE) models on production high-bandwidth superpods, such as NVIDIA's NVL72/576 and Huawei's CloudMatrix384, introduces critical challenges beyond raw interconnect bandwidth. While these systems provide unified global address spaces and high-bandwidth fabrics, their full potential for sparse MoE communication is hindered by three fundamental bottlenecks: (1) Strict execution serialization imposed by coarse-grained Bulk Synchronous Parallel (BSP) orchestration of interdependent communication phases; (2) Prohibitive synchronization overhead that fails to scale alongside high interconnect bandwidth; and (3) Severe load imbalance resulting from distance-agnostic scheduling of irregular token traffic. To eliminate these bottlenecks, we introduce UBEP (Unified-Bus Expert Parallelism), a production-ready communication library that rethinks MoE's All-to-All primitives for modern superpod architectures. Through large-scale experiments, UBEP reduces All-to-All latency by up to 52.4% and MoE inference Time Per Output Token (TPOT) by up to 11.1%.",
+        "identifiers": [
+          "SemanticScholar:5da1eaa0da5f14c5133b44466a979e282b87ac32"
+        ],
+        "semantic_scholar_id": "5da1eaa0da5f14c5133b44466a979e282b87ac32",
+        "canonical_id": "arXiv:2607.06202",
+        "arxiv_id": "2607.06202",
+        "doi": "10.1145/3789240.3829183",
+        "authors": [
+          "Yi-Peng Liu",
+          "Chang Liu",
+          "Si-Tan Shen",
+          "Jia-Qi Zheng",
+          "Ming-Fan Li",
+          "Yu-Yang Yang",
+          "Guan-Hua Li",
+          "Yu-Quan Zhang",
+          "Yimeng Xu",
+          "Zhong-Zhe Hu",
+          "Zhi-Yuan Huang",
+          "Qi-Hang Duan",
+          "Jun-Sheng Wang",
+          "Wen-Kai Ling",
+          "Bao-Chun Yang",
+          "Xian-Zhi Yu",
+          "Han Bao",
+          "Yi-Jie Chen",
+          "Guihai Chen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 134,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10640",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.10640",
+        "id:SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+        "id:arXiv:2607.10640",
+        "title:spectral heat flow for conservative token condensation in visionlanguage models",
+        "url:https://arxiv.org/abs/2607.10640"
+      ],
+      "record": {
+        "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2607.10640",
+        "year": 2026,
+        "published": "2026-07-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+        "identifiers": [
+          "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+        ],
+        "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+        "canonical_id": "arXiv:2607.10640",
+        "arxiv_id": "2607.10640",
+        "doi": "10.48550/arXiv.2607.10640",
+        "authors": [
+          "Zhao-Yang Li",
+          "Yanjun Li",
+          "Wang-Kai Li",
+          "Yu-Jia Chen",
+          "Tianzhu Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.28418",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.28418",
+        "id:SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+        "id:arXiv:2607.28418",
+        "title:wide boosting adaptive llm inference via tokenlevel dynamic width pruning",
+        "url:https://arxiv.org/abs/2607.28418"
+      ],
+      "record": {
+        "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+        "source_url": "https://arxiv.org/abs/2607.28418",
+        "year": 2026,
+        "published": "2026-07-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning is a promising approach for improving the efficiency of large language models (LLMs). Static structured pruning is hardware-friendly, but its input-agnostic computation allocation often degrades model quality at high sparsity. Dynamic pruning adapts computation to individual tokens, but coarse-grained layer-level routing limits allocation flexibility, and finer-grained decisions introduce irregular execution that can offset computational savings. To address these challenges, we present WIDE, the first end-to-end differentiable framework that combines token-wise structured dynamic width pruning with GPU kernel co-design for both prefill and decoding. WIDE uses differentiable routers to select GQA-aligned query-head groups and GPU-tile-aligned FFN-channel groups for each token. To execute these decisions efficiently, it reorders routing masks to cluster active tokens within each group, enabling hardware-agnostic block-level skipping and architecture-aware skipping of inactive loads and tensor-core operations. Experiments on the Llama3 and Qwen3 families demonstrate improved quality retention over representative static and dynamic pruning methods. At 50\\% target routing sparsity, WIDE improves Llama3.1-8B average zero-shot accuracy by up to 20.26 points over the strongest dynamic-depth baseline under calibration-only settings, while retaining 97.6\\%/88.2\\% of dense Qwen3-14B likelihood/generation performance after LoRA tuning. Separate latency benchmarks demonstrate end-to-end speedups of up to $1.68\\times$ for prefill and $1.55\\times$ for decoding over the dense baseline. These results demonstrate that pruning--kernel co-design pushes the frontier of token-wise dynamic structured pruning, combining improved quality retention with practical acceleration across both prefill and decoding. Our code is avaliable at \\url{https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE}.",
+        "identifiers": [
+          "SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7"
+        ],
+        "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+        "canonical_id": "arXiv:2607.28418",
+        "arxiv_id": "2607.28418",
+        "doi": "10.48550/arXiv.2607.28418",
+        "authors": [
+          "Hao-Zhe Hu",
+          "Hao Wu",
+          "Pei-Ran Yin",
+          "Chao Han",
+          "Yun-Pu Ma",
+          "Xiao-Yu Shen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 111,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01718",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.01718",
+        "id:SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+        "id:arXiv:2608.01718",
+        "title:lacache robust semantic caching for llm serving",
+        "url:https://arxiv.org/abs/2608.01718"
+      ],
+      "record": {
+        "title": "LaCache: Robust Semantic Caching for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2608.01718",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Semantic caching, reusing responses to answer semantically similar queries, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversary pollutes the cache by injecting adversarial queries, corrupting responses to subsequent legitimate requests. We present LaCache, a simple yet principled redesign of semantic caching that provides provable defense against such attacks. The key insight is that while the adversary has full control over the adversarial query, it has far less control over the corresponding LLM-generated response, which must simultaneously satisfy multiple competing constraints. Thus, LaCache shifts the integrity check from the query to the response: rather than checking only the cache hit of a query, LaCache additionally checks the cache hit of its first $k$ speculatively decoded tokens. Analytically, we prove that LaCache detects any cache-collision attack that produces a semantically distinct response with provably high probability. Empirically, evaluation across diverse LLMs and benchmarks confirms that LaCache reduces attack hit rate to near zero while preserving over 90% of benign cache utility. To our best knowledge, this work is the first to exploit the inherent constraints on adversarial responses in cache-collision attacks to provide provable security, pointing to a promising direction for building robust semantic caching.",
+        "identifiers": [
+          "SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada"
+        ],
+        "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+        "canonical_id": "arXiv:2608.01718",
+        "arxiv_id": "2608.01718",
+        "doi": "10.48550/arXiv.2608.01718",
+        "authors": [
+          "Jia-Cheng Liang",
+          "Yu-Hui Wang",
+          "Tan-Qiu Jiang",
+          "Ting Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 107,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08506",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.08506",
+        "id:SemanticScholar:7532a5fc2724bd67c4cae45ce0543405d0c10bcd",
+        "id:arXiv:2608.08506",
+        "title:understanding calibration and truncation error propagation in trainingfree lowrank compression for llms",
+        "url:https://arxiv.org/abs/2608.08506"
+      ],
+      "record": {
+        "title": "Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs",
+        "source_url": "https://arxiv.org/abs/2608.08506",
+        "year": 2026,
+        "published": "2026-08-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training-free low-rank compression frameworks have been gaining prominence for LLM compression given their effectiveness in reducing model parameter count while maintaining task-level accuracy. However, existing SOTA frameworks share two key limitations: (1) residual errors in calibration data activations accumulate across layers during compression, causing misalignment between representations simulated at compression time and those experienced at inference; (2) the assumption that layer importance distribution is preserved post-compression does not hold. Together, these two effects introduce misalignment in the compression process in relation to the deployed model. We study these effects and propose a simple, training-free methodology compatible with existing frameworks to mitigate them, comprising: (1) Layer-by-Layer Compression with Calibration Correction; (2) Iterative Compression with Rank Allocation Correction. Implemented atop an existing SOTA decomposition framework, and evaluated on Llama and Qwen3 models across various benchmarks and compression rates, our approach demonstrates up to ~1-2.5 accuracy point improvements over per-weight and joint decomposition baselines on zero-shot tasks.",
+        "identifiers": [
+          "SemanticScholar:7532a5fc2724bd67c4cae45ce0543405d0c10bcd"
+        ],
+        "semantic_scholar_id": "7532a5fc2724bd67c4cae45ce0543405d0c10bcd",
+        "canonical_id": "arXiv:2608.08506",
+        "arxiv_id": "2608.08506",
+        "doi": "10.48550/arXiv.2608.08506",
+        "authors": [
+          "Mohanad Odema",
+          "Gabrielle de Micheli",
+          "Dayin Gou",
+          "Nilesh Malpeddi",
+          "Prathamesh Vaste",
+          "Jacob Song"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 101,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.30820",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.30820",
+        "id:SemanticScholar:b8f9e46da59d38485931c18154fab4f79137ec01",
+        "id:arXiv:2609.30820",
+        "title:quantizing looped transformers feedback exposure and calibration blindness",
+        "url:https://arxiv.org/abs/2609.30820"
+      ],
+      "record": {
+        "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+        "source_url": "https://arxiv.org/abs/2609.30820",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped transformers reuse weights across recurrence steps, making low-bit quantization especially attractive. We identify two distinct failure modes of standard post-training quantization. On Huginn-3.5B, per-channel INT4 fails primarily at the non-residual loop-entry adapter, while quantizing the residual core is much less damaging. We call this feedback exposure: a quantized layer perturbs the recurrent state without an identity path, and the resulting error is fed back at later steps. Controlled experiments on linear filters and Mamba state-space models show that feedback exposure also occurs outside transformers. Grouped INT4 reveals a separate failure, calibration blindness: our one-step GPTQ baseline builds its Hessian from step-0 activations, leaving input directions used later in the recurrence nearly unweighted. Across nine checkpoints from seven looped architectures, one-step GPTQ is worse than round-to-nearest (RTN) on the primary task metric for five checkpoints. Accumulating the GPTQ Hessian across recurrence steps outperforms both one-step GPTQ and RTN on all nine checkpoints and recovers bf16-level accuracy on Huginn. These results separate two questions for PTQ on looped models: where quantization error enters the recurrence, and which states calibration sees.",
+        "identifiers": [
+          "SemanticScholar:b8f9e46da59d38485931c18154fab4f79137ec01"
+        ],
+        "semantic_scholar_id": "b8f9e46da59d38485931c18154fab4f79137ec01",
+        "canonical_id": "arXiv:2609.30820",
+        "arxiv_id": "2609.30820",
+        "doi": "10.48550/arXiv.2609.30820",
+        "authors": [
+          "Nux Li"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39819",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.39819",
+        "id:SemanticScholar:90977290d9c326ca54d1edcef2ef38018e790eba",
+        "id:arXiv:2609.39819",
+        "title:capture the lifecycle kv cache management in react agents with kvtether",
+        "url:https://arxiv.org/abs/2609.39819"
+      ],
+      "record": {
+        "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
+        "source_url": "https://arxiv.org/abs/2609.39819",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient serving of long-context reasoning-and-acting (ReAct) agents relies on KV cache reuse to reduce large language model (LLM) prefill latency and monetary cost. However, a semantic gap exists between agent harnesses and the underlying serving stack. Through context mutation, tool execution, and subagent coordination, context messages may become actively engaged, permanently discarded, and temporarily unused, while the serving stack only observes accesses to the corresponding KV cache. This lifecycle blindness prevents recency-only policies such as LRU from reclaiming dead KV promptly and from preserving older KV that will be reused sooner than newer entries. We present KVTether, a lifecycle-aware KV cache management framework for ReAct agents. By tracing semantic primitives embedded in agent harnesses, KVTether captures runtime lifecycle semantics during highly dynamic execution. KVTether then translates message-level semantics into KV-level lifecycle states and uses these states to drive state-prioritized cache management without exposing physical complexities to agent harnesses. After reclaiming dead KV, KVTether preferentially preserves live-but-idle KV that is waiting for reuse, reducing premature eviction before reuse. Across agent benchmarks and production workloads, KVTether reduces end-to-end request latency by up to 26.3% and 17.4% relative to LMCache and MORI, respectively, and lowers estimated task cost by 40.0% and 33.2% on average.",
+        "identifiers": [
+          "SemanticScholar:90977290d9c326ca54d1edcef2ef38018e790eba"
+        ],
+        "semantic_scholar_id": "90977290d9c326ca54d1edcef2ef38018e790eba",
+        "canonical_id": "arXiv:2609.39819",
+        "arxiv_id": "2609.39819",
+        "doi": "10.48550/arXiv.2609.39819",
+        "authors": [
+          "Kai-Hua Fu",
+          "Yu-Kun Zhou",
+          "Chaokun Chang",
+          "Ying-Hao Yu",
+          "Lu-Ping Wang",
+          "Guo-Dong Yang",
+          "Jiu-Chen Shi",
+          "Quan Chen",
+          "Wei Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 49,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:353a706be225734e18cbe97966ff47fa7a2c59edf8710ee78cc8b844c01cbe58",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
