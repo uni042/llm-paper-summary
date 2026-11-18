@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0002-scheduled-chat-00/r01",
+  "reference_main_sha": "67e9465d6a63dbfa3a71a8b8c1eb1142de42713c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.03717",
+      "identity_tokens": [
+        "arXiv:2504.03717"
+      ],
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "reason": "arXiv一次要旨で、RaBitQ-Hによるランダム化ベクトル量子化と、層別感度に基づくAllocateBitsのビット配分を確認。少量の校正データと柔軟なビット幅でLLMの推論用重みを圧縮するPTQ手法であり、推論時のメモリ・計算効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 20,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21848",
+      "identity_tokens": [
+        "arXiv:2606.21848"
+      ],
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "reason": "arXiv一次要旨。key射影を専用のvalue-space routing射影へ置換し、従来のkey表現をキャッシュしないValue-Only Cacheを提案。KVキャッシュメモリ50%削減、復号スループット改善、PPL・下流タスク性能を比較しており、長文脈LLM推論のメモリ帯域最適化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 27,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15682",
+      "identity_tokens": [
+        "arXiv:2606.15682"
+      ],
+      "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+      "reason": "arXiv一次要旨。W4A4KV4で低エントロピーの数字・演算子トークンに量子化誤差が集中する問題に対し、Trace-Aligned QAT、選択的エントロピー最小化、RoPE整合のQ-FIT初期化を組み合わせる。DGX Spark最大3.9倍、B200最大3.1倍の推論スループットを報告し、推論用FP4量子化に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2606.15682",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 30,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.05699",
+      "identity_tokens": [
+        "arXiv:2605.05699"
+      ],
+      "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
+      "reason": "arXiv一次要旨。Apple Silicon統合メモリ上でFFT符号ランダム化、チャネル係数、group abs-max、int4 packを融合したMetalカーネルをKVキャッシュに適用。Gemma-3 1Bの256〜4096 tokenでfp16より約3〜8%短いms/token、永続メモリ約3倍圧縮を報告し、オンデバイスLLM推論の具体的カーネル・帯域最適化である。",
+      "source_url": "https://arxiv.org/abs/2605.05699",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 31,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08966",
+      "identity_tokens": [
+        "arXiv:2605.08966"
+      ],
+      "title": "VORT: Adaptive Power-Law Memory for NLP Transformers",
+      "reason": "arXiv一次要旨。各トークンに学習可能な分数階のべき乗保持カーネルを割り当て、Gauss–Laguerre求積による指数和近似でMarkov型再帰へ変換する。定数状態の系列演算・効率的検索という推論アーキテクチャ上の接点はあるが、評価はZipf検索とentity label-copyの合成課題で、生成LLMの実機復号・サービング性能は要旨で未確認のためborderline。",
+      "source_url": "https://arxiv.org/abs/2605.08966",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 131,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.19260",
+      "identity_tokens": [
+        "arXiv:2605.19260"
+      ],
+      "title": "AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees",
+      "reason": "arXiv一次要旨。GUI画面の空間的情報密度に応じて適応四分木を構築し、葉ごとに代表視覚トークンを残す学習不要の推論時圧縮。連続画面では前回の四分木を再利用して重要な文字・アイコンを保護し、GUI-Owl-1.5-32Bで視覚トークン29.52%削減、最大13.22%高速化、フルトークン性能99.06%保持を報告する。",
+      "source_url": "https://arxiv.org/abs/2605.19260",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 168,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19368",
+      "identity_tokens": [
+        "arXiv:2607.19368"
+      ],
+      "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
+      "reason": "arXiv一次要旨。prefill前にKrylov部分空間とランダム特徴で暗黙attentionカーネルの支配成分を近似し、SimHashで近いトークンをマクロトークンへ集約する学習不要のプロンプト圧縮。Mistral-7BとQwen2.5-7B/14Bを評価し、高圧縮率では品質改善する一方、低圧縮率では単純chunkingが速度・品質で優位と報告する。",
+      "source_url": "https://arxiv.org/abs/2607.19368",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 271,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.30842",
+      "identity_tokens": [
+        "arXiv:2605.30842"
+      ],
+      "title": "CoMem: Context Management with A Decoupled Long-Context Model",
+      "reason": "arXiv一次要旨。エージェントの履歴要約を主推論から切り離し、k-step-off非同期パイプラインでメモリモデルの要約処理とエージェント推論を重ねる。SWE-Bench Verifiedで従来の長文脈方式より約1.4倍の遅延改善と性能維持を報告し、エージェントサービングの文脈圧縮・非同期実行に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2605.30842",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 273,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.27591",
+      "identity_tokens": [
+        "arXiv:2607.27591"
+      ],
+      "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
+      "reason": "arXiv一次要旨。SwiGLU中間状態の大きさ順位からチャネルmaskだけを低コストで近似し、選択チャネルのみ正確に計算する二段階の学習不要FFN疎実行。6系列10モデルで評価し、FFN疎率70%でend-to-end復号最大1.99倍を報告。量子化・疎attentionと併用可能なLLM推論カーネル最適化である。",
+      "source_url": "https://arxiv.org/abs/2607.27591",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 281,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21808",
+      "identity_tokens": [
+        "arXiv:2610.21808"
+      ],
+      "title": "RoleQ: Role-Aligned Scales for Converting Language Models to Ternary",
+      "reason": "arXiv一次要旨。Transformer残差ストリームの読み取り側・書き込み側という機能的役割に合わせて量子化スケール軸を切り替え、校正不要で既存モデルを三値重みに変換。数GPU時間で約1.59 bit/weightの事後変換を行い、0.6B〜14BのPPL・MMLUを比較する。超低ビットLLM推論の重みメモリ削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2610.21808",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:13:11+09:00",
+      "last_checked_at": "2026-10-31T00:13:11+09:00",
+      "linked_from": [],
+      "worklist_rank": 284,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r05",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.12167",
+      "identity_tokens": [
+        "arXiv:2503.12167",
+        "DOI:10.48550/arXiv.2503.12167"
+      ],
+      "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+      "reason": "エッジ向けのモデル・ハードウェア協調設計でMulti-head Latent Attentionと二乗ReLUの活性疎性を採用し、推論時ピークメモリと活性パラメータ数を抑える。携帯電話・Raspberry Pi・一般GPUでの展開を評価しており、小型LLM推論アーキテクチャに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2503.12167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 242,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.11820",
+      "identity_tokens": [
+        "arXiv:2505.11820",
+        "DOI:10.48550/arXiv.2505.11820"
+      ],
+      "title": "Chain-of-Model Learning for Language Model",
+      "reason": "隠れ次元を因果的な複数chainに分け、chain数に応じて複数サイズのモデルを同一重みから切り替えられるCoLMを提案する。CoLM-Airは最初のchainで計算したKVを後続chainへ共有し、可変計算量推論とprefill高速化に結び付ける。",
+      "source_url": "https://arxiv.org/abs/2505.11820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 245,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00465",
+      "identity_tokens": [
+        "arXiv:2610.00465",
+        "DOI:10.48550/arXiv.2610.00465"
+      ],
+      "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+      "reason": "基地局からLLM重みを無線送信し、端末側のRF mixerで直接GEMVを実行する、重みをローカル保存しないエッジ推論アーキテクチャ。Sionna都市チャネルとRFミキサのプロファイルによる評価で、LLaMA-3.1-8BのWikiText-2困惑度4.0%悪化の下、FP16比157.7倍のエネルギー節約をモデル化。実都市実装の実測ではない点に留意。",
+      "source_url": "https://arxiv.org/abs/2610.00465",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 247,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03295",
+      "identity_tokens": [
+        "arXiv:2602.03295",
+        "DOI:10.48550/arXiv.2602.03295"
+      ],
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "reason": "prefillでは深層の重要度が低くdecodeでは重要という非対称性に着目し、prefillだけ深層を省略するPOPを提案。独立KV射影と最初の生成トークンの境界処理でキャッシュ整合性を保ち、Llama-3.1/Qwen3-VL/Gemma-3でprefill遅延最大1.37倍改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 250,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.08719",
+      "identity_tokens": [
+        "arXiv:2504.08719",
+        "DOI:10.48550/arXiv.2504.08719"
+      ],
+      "title": "SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language Modeling",
+      "reason": "位置符号化なしのNoPE層とRoPE付きsliding-window attention層を交互に置き、推論時の注意スコア動的スケーリングで学習時より長い文脈へ外挿する。標準GPTより安価な学習と高スループットを報告し、長文脈推論アーキテクチャとして直接関連する。",
+      "source_url": "https://arxiv.org/abs/2504.08719",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 251,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.07531",
+      "identity_tokens": [
+        "arXiv:2410.07531",
+        "DOI:10.48550/arXiv.2410.07531"
+      ],
+      "title": "Reducing the Cost of Dropout in Flash-Attention by Hiding RNG with GEMM",
+      "reason": "FlashAttentionのdropout乱数生成を前段GEMMと重ね、GH100上のLlama3学習ブロックで1.22倍改善を示す研究。dropoutを有効化する学習時の演算重畳が対象で、通常dropoutを無効化するLLM推論サービングの直接最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2410.07531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 252,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.02380",
+      "identity_tokens": [
+        "arXiv:2505.02380",
+        "DOI:10.48550/arXiv.2505.02380"
+      ],
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "reason": "非対称量子化とHuffman符号化で重みのエントロピーを下げ、並列復号でエッジ端末のメモリ帯域負荷を抑える。SmolLM/Phi-3/Mistral-7Bなどでuint4比最大65%の保存量削減と、Jetson P3450等で31.9～146.6%の推論高速化を報告する。",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 253,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03440",
+      "identity_tokens": [
+        "arXiv:2410.03440",
+        "DOI:10.48550/arXiv.2410.03440"
+      ],
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "reason": "学習中の活性疎性を観察し、MoE疎学習と密学習を切り替えるSSDを提案する。訓練費用削減が中心だが、生成したモデルはMoEとして疎推論に直接利用でき、同程度の品質で最大2倍の推論速度改善を報告するため推論圧縮にも関係する。",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 255,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25340",
+      "identity_tokens": [
+        "arXiv:2603.25340",
+        "DOI:10.48550/arXiv.2603.25340"
+      ],
+      "title": "Large Language Model as Token Compressor and Decompressor",
+      "reason": "事前学習LLMにLoRAを加え、長文を可変長の離散Z-tokenへ自己符号化し、必要に応じて自然言語やタスク出力へ復号する。内容密度に応じてトークン予算を割り当て、長文脈の有効長・生成時メモリ・end-to-end遅延を削減する推論時文脈圧縮法。",
+      "source_url": "https://arxiv.org/abs/2603.25340",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 256,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.23431",
+      "identity_tokens": [
+        "arXiv:2506.23431",
+        "DOI:10.48550/arXiv.2506.23431"
+      ],
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "reason": "自己回帰モデルの逐次生成制約に対し、複数部分列を同時に開始し、各時刻でそれぞれ一トークンずつ並列生成するpipelined decoderを提案する。質問応答・要約・キーフレーズ生成で追加メモリを大きく増やさず生成速度を改善すると報告する。",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:34:17+09:00",
+      "last_checked_at": "2026-10-30T20:34:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 258,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}

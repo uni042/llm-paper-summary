@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7a35893e4c6b9df0-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.34427",
+  "reason": "共有Transformer blockを複数回回すlooped modelのRL rolloutでは、深いloopを遅延実行する高速化とlearner側のdense再計算で浮動小数点のlog probabilityが食い違う。ScaleRLTはrolloutの実行スケジュールをno-gradで再生して値を一致させ、勾配はdense learnerから取るhybrid log probabilityを提案する。単一GPUのrollout throughputを1.47～1.56倍に改善するが主目的は強化学習の更新整合性で、汎用LLM推論サービングへの直接評価がないためborderline。",
+  "title": "ScaleRLT: Exact Log-Probabilities and Fast Deferred Rollouts for Reinforcement Learning on Looped Transformers",
+  "identity_tokens": [
+    "id:arXiv:2610.34427",
+    "id:DOI:10.48550/arXiv.2610.34427"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a35893e4c6b",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
