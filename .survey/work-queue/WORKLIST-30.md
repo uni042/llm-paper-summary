@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-18T17:00:51+00:00`
+Generated: `2026-11-18T17:40:09+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -683,8 +683,8 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 456 | 107 | 3 | 5 | arXiv:2605.31215 | Fixed-Point Masked Generative Modeling | 2026-05-29 | arXiv.org | 7 | 6 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion | [source](https://arxiv.org/abs/2605.31215) |
 | 457 | 105 | 3 | 5 | arXiv:2602.01472 | ConPress: Learning Efficient Reasoning from Multi-Question Contextual Pressure | 2026-02-01 | arXiv.org | 5 | 6 |  | [source](https://arxiv.org/abs/2602.01472) |
 | 458 | 105 | 3 | 5 | arXiv:2608.20316 | Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation | 2026-08-20 | arXiv.org | 5 | 5 | inference-systems | [source](https://arxiv.org/abs/2608.20316) |
-| 459 | 104 | 3 | 5 | arXiv:2609.21967 | NemotronLabs VoiceChat: An Open Full-duplex Speech-to-Speech Model with Tool Calling Capabilities | 2026-09-18 |  | 4 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.21967) |
-| 460 | 103 | 3 | 5 | arXiv:2603.19567 | Efficiency Follows Global-Local Decoupling | 2026-03-20 | Computer Vision and Pattern Recognition | 3 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2603.19567) |
+| 459 | 104 | 3 | 5 | arXiv:2607.01737 | ReQuest: Rethinking-based Question-Aware Frame Selection for Long-Form Video QA | 2026-07-02 | European Conference on Computer Vision | 4 | 5 |  | [source](https://arxiv.org/abs/2607.01737) |
+| 460 | 103 | 3 | 5 | arXiv:2603.08859 | Expressivity-Efficiency Tradeoffs for Hybrid Sequence Models | 2026-03-09 | arXiv.org | 3 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2603.08859) |
 | 461 | 103 | 3 | 5 | arXiv:2609.00291 | StreamScout: Learning When to Look Deeper for Streaming Video Understanding | 2026-08-31 | arXiv.org | 3 | 6 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2609.00291) |
 | 462 | 101 | 3 | 5 | DOI:10.1109/TKDE.2026.3668215 | Dynamic State Space Models With Temporal Adaptation for Time-Varying Sequence Modeling | 2026-06-01 | IEEE Transactions on Knowledge and Data Engineering | 1 | 5 | 99-other-inference-systems, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://doi.org/10.1109/TKDE.2026.3668215) |
 | 463 | 101 | 3 | 5 | arXiv:2601.22617 | EntroCut: Entropy-Guided Adaptive Truncation for Efficient Chain-of-Thought Reasoning in Small-scale Large Reasoning Models | 2026-01-30 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 1 | 5 | Conditional Computation | [source](https://arxiv.org/abs/2601.22617) |

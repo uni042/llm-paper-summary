@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-18T17:00:51+00:00`
+Generated: `2026-11-18T17:40:09+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -496,7 +496,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 269 | 10 | 3 | 6 | arXiv:2607.09385 | STEEL: Sparsity-Aware Fused Attention for Energy-Efficient Long-Sequence Inference on AMD's XDNA NPU | 2026-07-10 | arXiv.org | 0 | 6 | LLM Serving / Scheduling / Disaggregation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2607.09385) |
 | 270 | 3 | 3 | 6 | DOI:10.1145/3652892.3700767 | Cannikin: Optimal Adaptive Distributed DNN Training over Heterogeneous Clusters | 2024-12-02 | International Middleware Conference | 3 | 6 |  | [source](https://doi.org/10.1145/3652892.3700767) |
 | 271 | 1 | 3 | 6 | arXiv:2402.05302 | Training DNN Models over Heterogeneous Clusters with Optimal Performance | 2024-02-07 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2402.05302) |
-| 272 | 120 | 3 | 6 | arXiv:2604.09377 | Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios | 2026-04-10 | Annual Meeting of the Association for Computational Linguistics | 10 | 7 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2604.09377) |
+| 272 | 119 | 3 | 6 | arXiv:2604.09377 | Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios | 2026-04-10 | Annual Meeting of the Association for Computational Linguistics | 9 | 7 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2604.09377) |
 | 273 | 104 | 3 | 6 | arXiv:2607.14427 | Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers | 2026-07-15 | arXiv.org | 4 | 6 | Conditional Computation | [source](https://arxiv.org/abs/2607.14427) |
 | 274 | 102 | 3 | 6 | arXiv:2602.22479 | Efficient Continual Learning in Language Models via Thalamically Routed Cortical Columns | 2026-02-25 | arXiv.org | 2 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2602.22479) |
 | 275 | 40 | 3 | 6 | arXiv:2509.16679 | Reinforcement Learning Meets Large Language Models: A Survey of Advancements and Applications Across the LLM Lifecycle | 2025-09-20 | arXiv.org | 40 | 7 |  | [source](https://arxiv.org/abs/2509.16679) |
@@ -682,9 +682,9 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 455 | 109 | 3 | 5 | arXiv:2601.13719 | Hierarchical Long Video Understanding with Audiovisual Entity Cohesion and Agentic Search | 2026-01-20 | Computer Vision and Pattern Recognition | 9 | 6 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2601.13719) |
 | 456 | 106 | 3 | 5 | arXiv:2605.17921 | An Efficient Streaming Video Understanding Framework with Agentic Control | 2026-05-18 | arXiv.org | 6 | 7 | 11-llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2605.17921) |
 | 457 | 105 | 3 | 5 | arXiv:2604.11628 | Back to Basics: Let Conversational Agents Remember with Just Retrieval and Generation | 2026-04-13 |  | 5 | 5 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2604.11628) |
-| 458 | 104 | 3 | 5 | arXiv:2606.30852 | When Does Learning to Stop Help? A Cost-Aware Study of Early Exits in Reasoning Models | 2026-06-29 | arXiv.org | 4 | 5 | Conditional Computation | [source](https://arxiv.org/abs/2606.30852) |
-| 459 | 103 | 3 | 5 | arXiv:2602.11408 | GHOST: Unmasking Phantom States in Mamba2 via Grouped Hidden-state Output-aware Selection & Truncation | 2026-02-11 | arXiv.org | 3 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2602.11408) |
-| 460 | 103 | 3 | 5 | arXiv:2604.06613 | The Detection-Extraction Gap: Models Know the Answer Before They Can Say It | 2026-04-08 | arXiv.org | 3 | 6 | Conditional Computation | [source](https://arxiv.org/abs/2604.06613) |
+| 458 | 104 | 3 | 5 | arXiv:2605.07112 | Switchcraft: AI Model Router for Agentic Tool Calling | 2026-05-08 | arXiv.org | 4 | 6 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2605.07112) |
+| 459 | 104 | 3 | 5 | arXiv:2609.21967 | NemotronLabs VoiceChat: An Open Full-duplex Speech-to-Speech Model with Tool Calling Capabilities | 2026-09-18 |  | 4 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.21967) |
+| 460 | 103 | 3 | 5 | arXiv:2603.19567 | Efficiency Follows Global-Local Decoupling | 2026-03-20 | Computer Vision and Pattern Recognition | 3 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2603.19567) |
 | 461 | 103 | 3 | 5 | arXiv:2609.36059 | Mnemon: Raw Records, Fast Judgments, Slow Thoughts | 2026-09-28 | arXiv.org | 3 | 5 | Inference / Agent Memory and Context Management, agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.36059) |
 | 462 | 101 | 3 | 5 | arXiv:2512.06989 | Flash Multi-Head Feed-Forward Network | 2025-12-07 | arXiv.org | 1 | 5 | 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.06989) |
 | 463 | 101 | 3 | 5 | arXiv:2603.00207 | VisRef: Visual Refocusing while Thinking Improves Test-Time Scaling in Multi-Modal Large Reasoning Models | 2026-02-27 | Computer Vision and Pattern Recognition | 1 | 6 |  | [source](https://arxiv.org/abs/2603.00207) |
