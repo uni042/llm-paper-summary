@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QStore: Quantization-Aware Compressed Model Storage",
+      "source_url": "https://arxiv.org/abs/2505.04081",
+      "year": 2025,
+      "published": "2025-05-07",
+      "venue": "Proceedings of the VLDB Endowment",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern applications commonly leverage large, multi-modal foundation models, in complex workflows that demand the storage and usage of similar models in multiple precisions. A straightforward approach is to maintain a separate file for each model precision (e.g., INT8, BF16), which is indeed taken by model providers such as HuggingFace and Ollama. However, this approach incurs excessive storage costs as a higher precision model (e.g., BF16) is a superset of a lower precision model (e.g., INT8) in terms of information. Unfortunately, simply maintaining only the higher-precision model and requiring every user to dynamically convert the model precision is not desirable because every user of lower precision models must pay the cost for model download and precision conversion.\n \n In this paper, we present QStore, a unified, lossless compression format for simultaneously storing a model in two (high and low) precisions efficiently. Instead of storing low and high-precision models separately, QStore stores low-precision model and only\n residual information\n needed to reconstruct high-precision models. The residual information size is significantly smaller than the original high-precision models, thus, achieving high storage cost savings. Moreover, QStore does not compromise model loading speed: The low-precision models can still be loaded quickly, while the high-precision models can also be reconstructed efficiently by merging low-precision data and the residual with QStore's lightweight decoding. We evaluate QStore for compressing multiple precisions of popular foundation models, and show that QStore reduces overall storage cost by up to 2.2× while enabling up to 1.7× and 1.8× faster model saving and loading versus existing approaches.\n",
+      "identifiers": [
+        "SemanticScholar:572a42c3118dd72a481d47367c96fb56b2c5d717"
+      ],
+      "semantic_scholar_id": "572a42c3118dd72a481d47367c96fb56b2c5d717",
+      "canonical_id": "arXiv:2505.04081",
+      "arxiv_id": "2505.04081",
+      "doi": "10.48550/arXiv.2505.04081",
+      "authors": [
+        "Raunak Shah",
+        "Zhao-Heng Li",
+        "Yongjoo Park"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 560,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量子化配慮型の圧縮モデル保存QStore。複数精度のモデルを別ファイルで持つ保存費用の無駄に対し、高精度モデルが低精度を情報として含む性質を使って保存を圧縮する。推論配備の保存システムそのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SwiftPrune: Hessian-Free Weight Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2501.16376",
+      "year": 2025,
+      "published": "2025-01-24",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training pruning, as one of the key techniques for compressing large language models, plays a vital role in lightweight model deployment and model sparsity. However, current mainstream pruning methods dependent on the Hessian matrix face significant limitations in both pruning speed and practical effectiveness due to the computationally intensive nature of second-order derivative calculations. This paper presents SwiftPrune, a novel Hessian-free weight pruning method that achieves hardware-efficient model compression through two key innovations: 1) SwiftPrune eliminates the need for computationally intensive Hessian matrix calculations by introducing a contribution-based weight metric, which evaluates the importance of weights without relying on second-order derivatives. 2) we employ the Exponentially Weighted Moving Average (EWMA) technique to bypass weight sorting, enabling the selection of weights that contribute most to LLM accuracy and further reducing time complexity. Our approach is extended to support structured sparsity pruning, facilitating efficient execution on modern hardware accelerators. We validate the SwiftPrune on three LLMs (namely LLaMA2, LLaMA3, and Pythia), demonstrating that it significantly enhances compression performance. The experimental findings reveal that SwiftPrune completes the pruning process within seconds, achieving an average speedup of 12.29x (up to 56.02x) over existing SOTA approaches.",
+      "identifiers": [
+        "SemanticScholar:527f839abdd0c0a969fec76f6fa268c024cd6881"
+      ],
+      "semantic_scholar_id": "527f839abdd0c0a969fec76f6fa268c024cd6881",
+      "canonical_id": "arXiv:2501.16376",
+      "arxiv_id": "2501.16376",
+      "doi": "10.18653/v1/2025.findings-emnlp.690",
+      "authors": [
+        "Yuhan Kang",
+        "Yang Shi",
+        "Mei Wen",
+        "Jun He",
+        "Jian-Chao Yang",
+        "Zeyu Xue",
+        "Jing Feng",
+        "Xin-Wang Liu"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 663,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ヘッセ行列不要の重み剪定SwiftPrune。寄与度に基づく重み指標で二階微分の計算を排し、ハードウェア効率の良い学習後剪定を実現する。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-15555ae74619",
+    "round": "libimp-15555ae7461997d2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-15555ae7461997d2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-15555ae7461997d2-pre01.json",
+    "receipt": "sha256:6a8103b759965bb74dd263c6108c29e395b8a51abae461e9e14ce88eef75fb71"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-15555ae74619",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

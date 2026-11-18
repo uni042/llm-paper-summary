@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi",
+      "source_url": "https://arxiv.org/abs/2504.02118",
+      "year": 2025,
+      "published": "2025-04-02",
+      "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on resource-constrained edge devices like the Raspberry Pi presents challenges in computational efficiency, power consumption, and response latency. This paper explores quantization-based optimization techniques to enable high-throughput, energy-efficient execution of LLMs on low-power embedded systems. Our approach leverages k-quantization, a Post-Training Quantization (PTQ) method designed for differ-ent bit-widths, enabling efficient 2-bit, 4-bit, 6-bit, and 8-bit weight quantization. Additionally, we employ ternary quan-tization using Quantization-Aware Training (QAT) for Bit-Net models, allowingfor more effective adaptation to lower-bit representations while preserving accuracy. Our findings highlight the potential of quantized LLMs for real-time conversational AI on edge devices, paving the way for low-power, high-efficiency AI deployment in mobile and embedded applications. This study demonstrates that aggressive quantization strategies can significantly reduce energy consumption while maintaining inference quality, making LLMs practical for resource-limited environments.",
+      "identifiers": [
+        "SemanticScholar:7d1ec6ca980cf66b3443f25812ba3336d4bb106c"
+      ],
+      "semantic_scholar_id": "7d1ec6ca980cf66b3443f25812ba3336d4bb106c",
+      "canonical_id": "arXiv:2504.02118",
+      "arxiv_id": "2504.02118",
+      "doi": "10.1109/CVPRW67362.2025.00634",
+      "authors": [
+        "Mahsa Ardakani",
+        "Jinendra Malekar",
+        "Ramtin Zand"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Raspberry Pi向け高スループット最適化LLMPi。量子化に基づく最適化で、低電力の組込み装置上で2〜8ビットの重み量子化により高スループットで省エネなLLM実行を可能にする。エッジ推論の配備機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features",
+      "source_url": "https://arxiv.org/abs/2504.00557",
+      "year": 2025,
+      "published": "2025-04-01",
+      "venue": "arXiv.org",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token reduction lowers inference costs caused by extensive image features in large vision-language models (LVLMs). Unlike relevant studies that prune tokens in self-attention-only LVLMs, our work uniquely addresses cross-attention-based models, which achieve superior performance. We identify that the key-value (KV) cache size for image tokens in cross-attention layers significantly exceeds that of text tokens in self-attention layers, posing a major compute bottleneck. To mitigate this issue, we exploit the sparse nature in cross-attention maps to selectively prune redundant visual features. Our Trimmed Llama effectively reduces KV cache demands without requiring additional training. By benefiting from 50%-reduced visual features, our model can reduce inference latency and memory usage while achieving benchmark parity.",
+      "identifiers": [
+        "SemanticScholar:f26cdcfa41d4b8ade4686da862945c7124b52539"
+      ],
+      "semantic_scholar_id": "f26cdcfa41d4b8ade4686da862945c7124b52539",
+      "canonical_id": "arXiv:2504.00557",
+      "arxiv_id": "2504.00557",
+      "doi": "10.48550/arXiv.2504.00557",
+      "authors": [
+        "Jewon Lee",
+        "Ki-Ung Song",
+        "Seungmin Yang",
+        "Donguk Lim",
+        "Jaeyeon Kim",
+        "Wooksu Shin",
+        "Bo-Kyeong Kim",
+        "Y. Lee",
+        "Tae-Ho Kim"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 596,
+        "matched_prestigious_venue": null
+      },
+      "reason": "交差注意型視覚特徴の刈り込みによるLLaMA-3.2-Visionの効率化。画像トークンのKVキャッシュが計算のボトルネックであることに対し、交差注意マップの疎性を利用して冗長な視覚特徴を選択的に刈り、追加訓練なしでKV需要を下げる。推論メモリ機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Two-Stage Regularization-Based Structured Pruning for LLMs",
+      "source_url": "https://arxiv.org/abs/2505.18232",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of large language models (LLMs) is largely hindered by their large number of parameters. Structural pruning has emerged as a promising solution. Prior structured pruning methods directly remove unimportant parameters based on certain metrics, which often causes knowledge loss and necessitates extensive retraining. To overcome this, we introduce a novel pruning method TRSP: Two-Stage Regularization-Based Structured Pruning for LLMs. Specifically, we multiply the output of each transformer layer by an initial learnable weight and iteratively learn these weights by adding their $\\ell_1$-norm as a regularization term to the loss function, serving as the first-stage regularization. Subsequently, we apply additional regularization to the difference between the output and input of layers with smaller weights, encouraging the shift of knowledge to the preserved layers. This serves as the second-stage regularization. TRSP retains more knowledge and better preserves model performance than direct parameter elimination. Through extensive experimentation we show that TRSP outperforms strong layer-wise structured pruning methods without requiring retraining. As a layer-wise pruning method, it delivers notable end-to-end acceleration, making it a promising solution for efficient LLM deployment.Code is available at https://github.com/fmk345/TRSP.",
+      "identifiers": [
+        "SemanticScholar:1bf5936280129f8a2d1799f1ddbe90f4447f3c40"
+      ],
+      "semantic_scholar_id": "1bf5936280129f8a2d1799f1ddbe90f4447f3c40",
+      "canonical_id": "arXiv:2505.18232",
+      "arxiv_id": "2505.18232",
+      "doi": "10.18653/v1/2026.acl-long.136",
+      "authors": [
+        "Mingkuan Feng",
+        "Jin-Yang Wu",
+        "Si-Yuan Liu",
+        "Shuai Zhang",
+        "Hong-Jian Fang",
+        "Rui-Han Jin",
+        "Feihu Che",
+        "Peng-Peng Shao",
+        "Zheng-Qi Wen",
+        "Jian-Hua Tao"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 544,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "2段階正則化によるLLM構造化剪定TRSP。各層の出力に学習可能な重みを掛け、そのL1ノルムを正則化として段階的に学習することで、知識喪失と大規模な再訓練を避けながら構造化剪定する。推論圧縮機構そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
+      "source_url": "https://arxiv.org/abs/2504.12984",
+      "year": 2025,
+      "published": "2025-04-17",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving Large Language Models (LLMs) is critical for AI-powered applications, yet it demands substantial computational resources, particularly in memory bandwidth and computational throughput. Low-precision computation has emerged as a key technique to improve efficiency while reducing resource consumption. Existing approaches for generating low-precision kernels are limited to weight bit widths that are powers of two and suffer from suboptimal performance because of high-level GPU programming abstractions. These abstractions restrict critical optimizations, such as fine-grained register management and optimized memory access patterns, that are essential for efficient low-precision computations. In this paper, we introduce Tilus, a domain-specific language designed for General-Purpose GPU (GPGPU) computing that supports low-precision data types with arbitrary bit widths from 1 to 8 while maintaining GPU programmability. Tilus features a thread-block-level programming model, a hierarchical memory space, a novel algebraic layout system, and extensive support for diverse low-precision data types. Tilus programs are compiled into highly efficient GPU programs through automatic vectorization and instruction selection. Extensive experiments demonstrate that Tilus efficiently supports a full spectrum of low-precision data types, and outperforms state-of-the-art low-precision kernels. Compared to existing compilers such as Triton and Ladder, as well as hand-optimized kernels such as QuantLLM and Marlin, Tilus achieves performance improvements of: 1.75x, 2.61x, 1.29x and 1.03x, respectively. We open-source Tilus at https://github.com/NVIDIA/tilus.",
+      "identifiers": [
+        "SemanticScholar:dcb25e0ebfe080947075252c7f75bf92296afe04"
+      ],
+      "semantic_scholar_id": "dcb25e0ebfe080947075252c7f75bf92296afe04",
+      "canonical_id": "arXiv:2504.12984",
+      "arxiv_id": "2504.12984",
+      "doi": "10.1145/3760250.3762219",
+      "authors": [
+        "Yao-Yao Ding",
+        "Bohan Hou",
+        "Xiao Zhang",
+        "Allan Lin",
+        "Tianqi Chen",
+        "C. Yu",
+        "Yi-Da Wang",
+        "Gennady Pekhimenko"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 580,
+        "matched_prestigious_venue": null
+      },
+      "reason": "低精度計算向けタイルレベルGPGPU言語Tilus。LLM提供の低精度カーネル生成が2の冪のビット幅に限られ、高水準抽象で細粒度のレジスタ管理やメモリアクセス最適化ができない問題に対し、タイルレベルの言語で低精度カーネルを書けるようにする。推論カーネル基盤そのもの。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-465214ea3927",
+    "round": "libimp-465214ea3927094c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-465214ea3927094c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-465214ea3927094c-pre01.json",
+    "receipt": "sha256:f86798c6aa0243eef139562d02ef2f1511ab233422ab82e7f4039162b3d015c5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-465214ea3927",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
