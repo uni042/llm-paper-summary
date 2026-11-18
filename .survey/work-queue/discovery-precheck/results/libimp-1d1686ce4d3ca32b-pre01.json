@@ -1,0 +1,924 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1d1686ce4d3ca32b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1d1686ce4d3c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.3390/electronics15143179",
+    "arXiv:2512.05542",
+    "arXiv:2602.06527",
+    "arXiv:2602.12618",
+    "arXiv:2603.00356",
+    "arXiv:2603.04162",
+    "arXiv:2604.13440",
+    "arXiv:2605.09982",
+    "arXiv:2605.27494",
+    "arXiv:2607.24148"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c7e1f754290652852568ac48d5ab6fce9cbb6d1c",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T06:17:39.116045+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.3390/electronics15143179",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.05542",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.06527",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.12618",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.00356",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04162",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.13440",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.09982",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27494",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.24148",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models",
+      "source_url": "https://arxiv.org/abs/2604.13440",
+      "year": 2026,
+      "published": "2026-04-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) on edge devices faces severe computational and memory constraints, limiting real-time processing and on-device intelligence. Hybrid architectures combining Structured State Space Models (SSMs) with transformer-based LLMs offer a balance of efficiency and performance. Aggressive quantization can drastically cut model size and speed up inference, but its uneven effects on different components require careful management. In this work, we propose a lightweight, backpropagation-free, surrogate-based sensitivity analysis framework to identify hybrid SSM-Transformer components most susceptible to quantization-induced degradation. Relying solely on forward-pass metrics, our method avoids expensive gradient computations and retraining, making it suitable for situations where access to in-domain data is limited due to proprietary restrictions or privacy constraints. We also provide a formal analysis showing that the Kullback-Leibler (KL) divergence metric better captures quantization sensitivity for Language modeling tasks than widely adopted alternatives such as mean squared error (MSE) and signal-to-quantization-noise ratio (SQNR). Through extensive experiments on SSM and hybrid architectures, our ablation studies confirm that KL-based rankings align with observed performance drops and outperform alternative metrics. This framework enables the practical deployment of advanced hybrid models on resource-constrained edge devices with minimal accuracy loss. We further validate our approach with real-world on-device profiling on Intel Lunar Lake hardware, demonstrating that KL-guided mixed-precision achieves near-FP16 perplexity with model sizes and throughput competitive with Uniform INT4 on both CPU and GPU execution modes. Code is available at https://github.com/jasonkongie/kl-ssm-quant.",
+      "identifiers": [
+        "SemanticScholar:3fe9e59ba9e36578180dad4cf2a5819df1c59aa9"
+      ],
+      "semantic_scholar_id": "3fe9e59ba9e36578180dad4cf2a5819df1c59aa9",
+      "canonical_id": "arXiv:2604.13440",
+      "arxiv_id": "2604.13440",
+      "doi": "10.48550/arXiv.2604.13440",
+      "authors": [
+        "Jason Kong",
+        "N. Pandey",
+        "Flavio Ponzina",
+        "T. Šimunić"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs",
+      "source_url": "https://arxiv.org/abs/2512.05542",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Best-of-$n$ is a widely used test-time scaling approach for LLM inference. Yet despite evidence that LLMs exhibit complementary strengths across tasks, traditionally best-of-$n$ relies on a single model to generate responses. We propose RoBoN (Routed Online Best-of-$n$), a sequential multi-LLM alternative to the prevailing single-model best-of-$n$. Given a suite of models $\\{m_i\\}_{i=1}^M$, RoBoN sequentially routes generations one-by-one across models, based on scores computed using a reward model and an agreement signal on the predicted responses. This online routing requires no additional training, keeps compute parity, and works with any plug-in reward model. Across reasoning benchmarks (MATH500, OlympiadBench, MinervaMath, GSM8K, MMLU), RoBoN consistently outperforms standard best-of-$n$ applied to each individual model for larger $n$, with gains of up to 3.4\\% in absolute accuracy, and also improves over a uniform multi-model portfolio baseline. Our results indicate that diversity across models can be exploited at inference to improve best-of-$n$ performance over any constituent model alone, providing a simple, training-free path to test-time scaling with multiple LLMs.",
+      "identifiers": [
+        "SemanticScholar:56043ee4021297f26c09427e9fe2eaa248fb6e30"
+      ],
+      "semantic_scholar_id": "56043ee4021297f26c09427e9fe2eaa248fb6e30",
+      "canonical_id": "arXiv:2512.05542",
+      "arxiv_id": "2512.05542",
+      "doi": "10.48550/arXiv.2512.05542",
+      "authors": [
+        "Jonathan Geuter",
+        "Gregor Kornhardt"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.12618",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) incur significant computational cost from processing numerous vision tokens through all LLM layers. Prior pruning methods operate either before the LLM, limiting generality due to diverse encoder-projector designs or within the LLM using heuristics that are incompatible with FlashAttention. We take a different approach: rather than identifying unimportant tokens, we treat the LLM itself as the optimal guide for compression. Observing that deeper layers naturally transmit vision-to-text information, we introduce attention-driven self-compression, a simple, architecture-agnostic method that progressively reduces vision tokens using only the LLM's attention mechanism. Our method applies uniform token downsampling at selected layers, forming bottlenecks that encourage the model to reorganize and compress information into the remaining tokens. It requires no score computation, auxiliary modules, or attention modification, and remains fully compatible with FlashAttention. Applied to LLaVA-1.5, it reduces FLOPs by $\\sim 56.5 \\%$ while pruning $\\sim 66.7 \\%$ of vision tokens, retaining $\\sim 98.2 \\%$ of the original performance. Across multiple benchmarks, it outperforms prior pruning approaches in both efficiency and accuracy. Crucially, under high compression ratios, our method remains robust while heuristicbased techniques degrade sharply.",
+      "identifiers": [
+        "SemanticScholar:d9c75a3516464a30d87691f77bdb83523927423b"
+      ],
+      "semantic_scholar_id": "d9c75a3516464a30d87691f77bdb83523927423b",
+      "canonical_id": "arXiv:2602.12618",
+      "arxiv_id": "2602.12618",
+      "doi": "10.1109/BigData66926.2025.11402394",
+      "authors": [
+        "Omer Faruk Deniz",
+        "Rui Mao",
+        "Ruochen Li",
+        "Yapeng Tian",
+        "Latifur Khan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 345,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+      "source_url": "https://arxiv.org/abs/2605.27494",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+      "identifiers": [
+        "SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91"
+      ],
+      "semantic_scholar_id": "919628398eba1f2a91772d69253fa4db73342c91",
+      "canonical_id": "arXiv:2605.27494",
+      "arxiv_id": "2605.27494",
+      "doi": "10.48550/arXiv.2605.27494",
+      "authors": [
+        "Syed Huma Shah"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction",
+      "source_url": "https://arxiv.org/abs/2602.06527",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling test-time compute with multi-path chain-of-thought improves reasoning accuracy, but its effectiveness depends critically on the exploration-exploitation trade-off. Existing approaches address this trade-off in rigid ways: tree-structured search hard-codes exploration through brittle expansion rules that interfere with post-trained reasoning, while parallel reasoning over-explores redundant hypothesis paths and relies on weak answer selection. Motivated by the observation that the optimal balance is phase-dependent and that correct and incorrect reasoning paths often diverge only at late stages, we reformulate test-time scaling as a dynamic expand-reduce control problem over a pool of hypotheses. We propose HyPER, a training-free online control policy for multi-path decoding in mixture-of-experts models that reallocates computation under a fixed budget using lightweight path statistics. HyPER consists of an online controller that transitions from exploration to exploitation as the hypothesis pool evolves, a token-level refinement mechanism that enables efficient generation-time exploitation without full-path resampling, and a length- and confidence-aware aggregation strategy for reliable answer-time exploitation. Experiments on four mixture-of-experts language models across diverse reasoning benchmarks show that HyPER consistently achieves a superior accuracy-compute trade-off, improving accuracy by 8 to 10 percent while reducing token usage by 25 to 40 percent.",
+      "identifiers": [
+        "SemanticScholar:954dfc684df2753b0d60e3fbab6a1aaa0299e1b6"
+      ],
+      "semantic_scholar_id": "954dfc684df2753b0d60e3fbab6a1aaa0299e1b6",
+      "canonical_id": "arXiv:2602.06527",
+      "arxiv_id": "2602.06527",
+      "doi": "10.48550/arXiv.2602.06527",
+      "authors": [
+        "Sheng-Xuan Qiu",
+        "Hao-Chen Huang",
+        "Shu-Zhang Zhong",
+        "Peng-Fei Zuo",
+        "Meng Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Token Management in Multi-Tenant AI Inference Platforms",
+      "source_url": "https://arxiv.org/abs/2603.00356",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-tenant AI inference platforms must balance resource utilization against service-level guarantees under variable demand. Conventional approaches fail to achieve this balance: dedicated endpoints strand capacity on idle models, while rate limits ignore the heterogeneous cost of inference requests. We introduce \\emph{token pools}, a control-plane abstraction that represents inference capacity as explicit entitlements expressed in inference-native units (token throughput, KV cache, concurrency). Unlike rate limits, which govern request admission without regard to execution cost, token pools authorize both admission and autoscaling from the same capacity model, ensuring consistency between what is promised and what is provisioned. The abstraction captures burst modes across multiple dimensions invisible to conventional throttling. Dynamic per-entitlement limits on each burst dimension enable fine-grained control over resource consumption while permitting work-conserving backfill by low-priority traffic. The design supports priority-aware allocation, service tiers with differentiated guarantees, and debt-based fairness mechanisms, all without modifying the underlying inference runtime or cluster scheduler. In experiments on a Kubernetes cluster with vLLM backends, token pools maintain a bounded P99 latency for guaranteed workloads during overload by selectively throttling spot traffic, while a baseline without admission control experiences unbounded latency degradation across all workloads. A second experiment demonstrates debt-based fair-share convergence among elastic workloads with heterogeneous SLO requirements during capacity scarcity.",
+      "identifiers": [
+        "SemanticScholar:f9a9dd25aa7a6dbabb593dac964cb089996921ee"
+      ],
+      "semantic_scholar_id": "f9a9dd25aa7a6dbabb593dac964cb089996921ee",
+      "canonical_id": "arXiv:2603.00356",
+      "arxiv_id": "2603.00356",
+      "doi": "10.48550/arXiv.2603.00356",
+      "authors": [
+        "William J. Cunningham"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+      "source_url": "https://arxiv.org/abs/2603.04162",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Bielik-Q2-Sharp, the first systematic academic evaluation of extreme 2-bit quantization applied to a Polish large language model. Using Bielik-11B-v2.3-Instruct (11B parameters, Mistral architecture) as our base model, we compare six state-of-the-art post-training quantization methods -- QuIP#, SpinQuant+GPTQ, ButterflyQuant, QTIP, VPTQ, and AQLM -- all calibrated on a Polish-language corpus (CulturaX-PL) with shared Hessian matrices. Our best variant (QuIP# E8P12) achieves 71.92% across 22 Polish benchmarks versus 72.07% for the IQ2_XXS baseline -- within statistical noise, at a modest size premium (3.26 GB vs. ~2.6 GB). On eq_bench, our method scores 47.14 versus 43.53 (+3.6pp), suggesting superior preservation of higher-order reasoning. QTIP achieves the best per-bit efficiency (79.4% MC acc_norm at ~2.4 bpw, 3.27 GB), matching VPTQ's quality at 35% smaller size. We additionally document a MC-generation dissociation phenomenon where rotation-based methods preserve log-likelihood quality but fail catastrophically at autoregressive generation. The entire project was conducted by a single independent researcher on cloud GPUs (vast.ai) within a $285 budget. All models, Hessians, and evaluation logs are publicly available.",
+      "identifiers": [
+        "SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239"
+      ],
+      "semantic_scholar_id": "e346cc4f590fde9366629370de9f772ea11c1239",
+      "canonical_id": "arXiv:2603.04162",
+      "arxiv_id": "2603.04162",
+      "doi": "10.48550/arXiv.2603.04162",
+      "authors": [
+        "Jakub Prejzner"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 259,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ERASE: Eliminating Redundant Visual Tokens via Adaptive Two-Stage Token Pruning",
+      "source_url": "https://arxiv.org/abs/2605.09982",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Vision-Language Models (VLMs) enable large language models (LLMs) to process high-resolution images, significantly improving real-world multimodal understanding. However, this capability introduces a large number of vision tokens, incurring substantial computational overhead. To mitigate this issue, various vision token compression methods have been proposed. Existing methods often estimate different sources of visual redundancy using learned representations or fixed pruning schedules. We propose ERASE, an adaptive two-stage framework that separates image-level redundancy removal from instruction-dependent token pruning. Stage 1 derives image-dependent token retention from lightweight raw-image statistics, while Stage 2 progressively removes instruction-irrelevant tokens across decoder layers. Experiments demonstrate substantial token reduction while preserving accuracy: on Qwen2.5-VL-7B, ERASE retains 95.70% of the original model's accuracy at 25% token retention. Our code is available at https://github.com/Tuna-Luna/ERASE.",
+      "identifiers": [
+        "SemanticScholar:86a0f7b63f606ffc55770acb48b9dc76b10fa9c3"
+      ],
+      "semantic_scholar_id": "86a0f7b63f606ffc55770acb48b9dc76b10fa9c3",
+      "canonical_id": "arXiv:2605.09982",
+      "arxiv_id": "2605.09982",
+      "doi": "10.48550/arXiv.2605.09982",
+      "authors": [
+        "Yuna Lee",
+        "Kyoung-Wook Min",
+        "Yulhwa Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Runtime-Controlled Evaluation of Speculative Decoding Methods",
+      "source_url": "https://doi.org/10.3390/electronics15143179",
+      "year": 2026,
+      "published": "2026-07-20",
+      "venue": "Electronics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reported Speculative decoding (SD) speedups are difficult to compare because methods are commonly evaluated with different serving runtimes and configurations. We present SpecLLM, a pluggable evaluation framework that applies common scheduling, batching, KV-cache, CUDA Graph, and execution-backend policies across methods while preserving method-required proposal and verification paths. We implement eight Speculative Decoding (SD) methods and evaluate them across batch sizes, controlled online loads, and two model scales. We decompose throughput speedup as S=τ/c, where τ is the average number of committed tokens per SD step and c is the dimensionless execution cost of that step relative to a matched autoregressive decode step. The measured c is conditional on the method–runtime interaction, hardware, workload, baseline, and configuration. Under the evaluated conditions, method rankings change with batch size and online load, and a longer commit length does not necessarily yield lower latency when execution cost or queueing increases. SpecLLM therefore provides controlled within-runtime comparability rather than runtime-independent fairness; SD results should report (τ,c), latency, feasibility, and the conditions under which they were measured.",
+      "identifiers": [
+        "SemanticScholar:8e9f9cc05be2b275796180593b55d32fda750dc5"
+      ],
+      "semantic_scholar_id": "8e9f9cc05be2b275796180593b55d32fda750dc5",
+      "doi": "10.3390/electronics15143179",
+      "canonical_id": "DOI:10.3390/electronics15143179",
+      "authors": [
+        "Sungkyun Kim",
+        "Jaemin Kim",
+        "Yeongpil Cho",
+        "Jiwon Seo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference",
+      "source_url": "https://arxiv.org/abs/2607.24148",
+      "year": 2026,
+      "published": "2026-07-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language-Action (VLA) models have demonstrated strong potential for embodied AI, yet their high inference latency on GPUs limits real-time deployment. Existing accelerators, such as Dadu-Corki, improve efficiency but treat VLA models as full-precision workloads, leaving substantial redundancy in both memory and computation underexploited. In this paper, we propose VQVLA, an algorithm-hardware co-design framework that accelerates VLA inference by exploiting weight similarity and execution dynamics. We first introduce MotionVQ, a motion-aware vector quantization scheme that dynamically adjusts quantization precision based on the robot's execution state, reducing memory access while preserving task success rate. We then propose a merged-centroid vectorized GEMM paradigm that operates on the codebook-index representation, eliminating redundant multiplications through spatial aggregation and temporal reuse of centroids. To realize these optimizations, we design an accelerator that efficiently supports dynamic precision selection and centroid-reuse computation. Experimental results show that VQVLA achieves 6.5x, 2.8x, 1.9x, 3.3x, and 4.3x speedup over the A100 GPU, Dadu-Corki, LUT-DLA, CodeGEMM, and ShiftAddLLM, respectively, with negligible accuracy degradation.",
+      "identifiers": [
+        "SemanticScholar:bda17b82c18ea8ecf6166023313ac14329b69b3e"
+      ],
+      "semantic_scholar_id": "bda17b82c18ea8ecf6166023313ac14329b69b3e",
+      "canonical_id": "arXiv:2607.24148",
+      "arxiv_id": "2607.24148",
+      "doi": "10.48550/arXiv.2607.24148",
+      "authors": [
+        "Zhuo-Ran Song",
+        "Hao-Zhe Jiang",
+        "Chun-Yu Qi",
+        "Min-Nan Pei",
+        "Gang Li",
+        "Xiao-Yao Liang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.13440",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.13440",
+        "id:SemanticScholar:3fe9e59ba9e36578180dad4cf2a5819df1c59aa9",
+        "id:arXiv:2604.13440",
+        "title:a kl lens on quantization fast forwardonly sensitivity for mixedprecision ssmtransformer models",
+        "url:https://arxiv.org/abs/2604.13440"
+      ],
+      "record": {
+        "title": "A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models",
+        "source_url": "https://arxiv.org/abs/2604.13440",
+        "year": 2026,
+        "published": "2026-04-15",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLMs) on edge devices faces severe computational and memory constraints, limiting real-time processing and on-device intelligence. Hybrid architectures combining Structured State Space Models (SSMs) with transformer-based LLMs offer a balance of efficiency and performance. Aggressive quantization can drastically cut model size and speed up inference, but its uneven effects on different components require careful management. In this work, we propose a lightweight, backpropagation-free, surrogate-based sensitivity analysis framework to identify hybrid SSM-Transformer components most susceptible to quantization-induced degradation. Relying solely on forward-pass metrics, our method avoids expensive gradient computations and retraining, making it suitable for situations where access to in-domain data is limited due to proprietary restrictions or privacy constraints. We also provide a formal analysis showing that the Kullback-Leibler (KL) divergence metric better captures quantization sensitivity for Language modeling tasks than widely adopted alternatives such as mean squared error (MSE) and signal-to-quantization-noise ratio (SQNR). Through extensive experiments on SSM and hybrid architectures, our ablation studies confirm that KL-based rankings align with observed performance drops and outperform alternative metrics. This framework enables the practical deployment of advanced hybrid models on resource-constrained edge devices with minimal accuracy loss. We further validate our approach with real-world on-device profiling on Intel Lunar Lake hardware, demonstrating that KL-guided mixed-precision achieves near-FP16 perplexity with model sizes and throughput competitive with Uniform INT4 on both CPU and GPU execution modes. Code is available at https://github.com/jasonkongie/kl-ssm-quant.",
+        "identifiers": [
+          "SemanticScholar:3fe9e59ba9e36578180dad4cf2a5819df1c59aa9"
+        ],
+        "semantic_scholar_id": "3fe9e59ba9e36578180dad4cf2a5819df1c59aa9",
+        "canonical_id": "arXiv:2604.13440",
+        "arxiv_id": "2604.13440",
+        "doi": "10.48550/arXiv.2604.13440",
+        "authors": [
+          "Jason Kong",
+          "N. Pandey",
+          "Flavio Ponzina",
+          "T. Šimunić"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.05542",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.05542",
+        "id:SemanticScholar:56043ee4021297f26c09427e9fe2eaa248fb6e30",
+        "id:arXiv:2512.05542",
+        "title:robon routed online bestofn for testtime scaling with multiple llms",
+        "url:https://arxiv.org/abs/2512.05542"
+      ],
+      "record": {
+        "title": "RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs",
+        "source_url": "https://arxiv.org/abs/2512.05542",
+        "year": 2025,
+        "published": "2025-12-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Best-of-$n$ is a widely used test-time scaling approach for LLM inference. Yet despite evidence that LLMs exhibit complementary strengths across tasks, traditionally best-of-$n$ relies on a single model to generate responses. We propose RoBoN (Routed Online Best-of-$n$), a sequential multi-LLM alternative to the prevailing single-model best-of-$n$. Given a suite of models $\\{m_i\\}_{i=1}^M$, RoBoN sequentially routes generations one-by-one across models, based on scores computed using a reward model and an agreement signal on the predicted responses. This online routing requires no additional training, keeps compute parity, and works with any plug-in reward model. Across reasoning benchmarks (MATH500, OlympiadBench, MinervaMath, GSM8K, MMLU), RoBoN consistently outperforms standard best-of-$n$ applied to each individual model for larger $n$, with gains of up to 3.4\\% in absolute accuracy, and also improves over a uniform multi-model portfolio baseline. Our results indicate that diversity across models can be exploited at inference to improve best-of-$n$ performance over any constituent model alone, providing a simple, training-free path to test-time scaling with multiple LLMs.",
+        "identifiers": [
+          "SemanticScholar:56043ee4021297f26c09427e9fe2eaa248fb6e30"
+        ],
+        "semantic_scholar_id": "56043ee4021297f26c09427e9fe2eaa248fb6e30",
+        "canonical_id": "arXiv:2512.05542",
+        "arxiv_id": "2512.05542",
+        "doi": "10.48550/arXiv.2512.05542",
+        "authors": [
+          "Jonathan Geuter",
+          "Gregor Kornhardt"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.12618",
+      "identity_tokens": [
+        "id:DOI:10.1109/bigdata66926.2025.11402394",
+        "id:SemanticScholar:d9c75a3516464a30d87691f77bdb83523927423b",
+        "id:arXiv:2602.12618",
+        "title:vision token reduction via attentiondriven selfcompression for efficient multimodal large language models",
+        "url:https://arxiv.org/abs/2602.12618"
+      ],
+      "record": {
+        "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2602.12618",
+        "year": 2025,
+        "published": "2025-12-08",
+        "venue": "BigData Congress [Services Society]",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) incur significant computational cost from processing numerous vision tokens through all LLM layers. Prior pruning methods operate either before the LLM, limiting generality due to diverse encoder-projector designs or within the LLM using heuristics that are incompatible with FlashAttention. We take a different approach: rather than identifying unimportant tokens, we treat the LLM itself as the optimal guide for compression. Observing that deeper layers naturally transmit vision-to-text information, we introduce attention-driven self-compression, a simple, architecture-agnostic method that progressively reduces vision tokens using only the LLM's attention mechanism. Our method applies uniform token downsampling at selected layers, forming bottlenecks that encourage the model to reorganize and compress information into the remaining tokens. It requires no score computation, auxiliary modules, or attention modification, and remains fully compatible with FlashAttention. Applied to LLaVA-1.5, it reduces FLOPs by $\\sim 56.5 \\%$ while pruning $\\sim 66.7 \\%$ of vision tokens, retaining $\\sim 98.2 \\%$ of the original performance. Across multiple benchmarks, it outperforms prior pruning approaches in both efficiency and accuracy. Crucially, under high compression ratios, our method remains robust while heuristicbased techniques degrade sharply.",
+        "identifiers": [
+          "SemanticScholar:d9c75a3516464a30d87691f77bdb83523927423b"
+        ],
+        "semantic_scholar_id": "d9c75a3516464a30d87691f77bdb83523927423b",
+        "canonical_id": "arXiv:2602.12618",
+        "arxiv_id": "2602.12618",
+        "doi": "10.1109/BigData66926.2025.11402394",
+        "authors": [
+          "Omer Faruk Deniz",
+          "Rui Mao",
+          "Ruochen Li",
+          "Yapeng Tian",
+          "Latifur Khan"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 345,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27494",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27494",
+        "id:SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91",
+        "id:arXiv:2605.27494",
+        "title:grounded cache routing for retrievalaugmented generation when is it safe to reuse an answer",
+        "url:https://arxiv.org/abs/2605.27494"
+      ],
+      "record": {
+        "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+        "source_url": "https://arxiv.org/abs/2605.27494",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+        "identifiers": [
+          "SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91"
+        ],
+        "semantic_scholar_id": "919628398eba1f2a91772d69253fa4db73342c91",
+        "canonical_id": "arXiv:2605.27494",
+        "arxiv_id": "2605.27494",
+        "doi": "10.48550/arXiv.2605.27494",
+        "authors": [
+          "Syed Huma Shah"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06527",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.06527",
+        "id:SemanticScholar:954dfc684df2753b0d60e3fbab6a1aaa0299e1b6",
+        "id:arXiv:2602.06527",
+        "title:hyper bridging exploration and exploitation for scalable llm reasoning with hypothesis path expansion and reduction",
+        "url:https://arxiv.org/abs/2602.06527"
+      ],
+      "record": {
+        "title": "HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction",
+        "source_url": "https://arxiv.org/abs/2602.06527",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling test-time compute with multi-path chain-of-thought improves reasoning accuracy, but its effectiveness depends critically on the exploration-exploitation trade-off. Existing approaches address this trade-off in rigid ways: tree-structured search hard-codes exploration through brittle expansion rules that interfere with post-trained reasoning, while parallel reasoning over-explores redundant hypothesis paths and relies on weak answer selection. Motivated by the observation that the optimal balance is phase-dependent and that correct and incorrect reasoning paths often diverge only at late stages, we reformulate test-time scaling as a dynamic expand-reduce control problem over a pool of hypotheses. We propose HyPER, a training-free online control policy for multi-path decoding in mixture-of-experts models that reallocates computation under a fixed budget using lightweight path statistics. HyPER consists of an online controller that transitions from exploration to exploitation as the hypothesis pool evolves, a token-level refinement mechanism that enables efficient generation-time exploitation without full-path resampling, and a length- and confidence-aware aggregation strategy for reliable answer-time exploitation. Experiments on four mixture-of-experts language models across diverse reasoning benchmarks show that HyPER consistently achieves a superior accuracy-compute trade-off, improving accuracy by 8 to 10 percent while reducing token usage by 25 to 40 percent.",
+        "identifiers": [
+          "SemanticScholar:954dfc684df2753b0d60e3fbab6a1aaa0299e1b6"
+        ],
+        "semantic_scholar_id": "954dfc684df2753b0d60e3fbab6a1aaa0299e1b6",
+        "canonical_id": "arXiv:2602.06527",
+        "arxiv_id": "2602.06527",
+        "doi": "10.48550/arXiv.2602.06527",
+        "authors": [
+          "Sheng-Xuan Qiu",
+          "Hao-Chen Huang",
+          "Shu-Zhang Zhong",
+          "Peng-Fei Zuo",
+          "Meng Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 285,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00356",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.00356",
+        "id:SemanticScholar:f9a9dd25aa7a6dbabb593dac964cb089996921ee",
+        "id:arXiv:2603.00356",
+        "title:token management in multitenant ai inference platforms",
+        "url:https://arxiv.org/abs/2603.00356"
+      ],
+      "record": {
+        "title": "Token Management in Multi-Tenant AI Inference Platforms",
+        "source_url": "https://arxiv.org/abs/2603.00356",
+        "year": 2026,
+        "published": "2026-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-tenant AI inference platforms must balance resource utilization against service-level guarantees under variable demand. Conventional approaches fail to achieve this balance: dedicated endpoints strand capacity on idle models, while rate limits ignore the heterogeneous cost of inference requests. We introduce \\emph{token pools}, a control-plane abstraction that represents inference capacity as explicit entitlements expressed in inference-native units (token throughput, KV cache, concurrency). Unlike rate limits, which govern request admission without regard to execution cost, token pools authorize both admission and autoscaling from the same capacity model, ensuring consistency between what is promised and what is provisioned. The abstraction captures burst modes across multiple dimensions invisible to conventional throttling. Dynamic per-entitlement limits on each burst dimension enable fine-grained control over resource consumption while permitting work-conserving backfill by low-priority traffic. The design supports priority-aware allocation, service tiers with differentiated guarantees, and debt-based fairness mechanisms, all without modifying the underlying inference runtime or cluster scheduler. In experiments on a Kubernetes cluster with vLLM backends, token pools maintain a bounded P99 latency for guaranteed workloads during overload by selectively throttling spot traffic, while a baseline without admission control experiences unbounded latency degradation across all workloads. A second experiment demonstrates debt-based fair-share convergence among elastic workloads with heterogeneous SLO requirements during capacity scarcity.",
+        "identifiers": [
+          "SemanticScholar:f9a9dd25aa7a6dbabb593dac964cb089996921ee"
+        ],
+        "semantic_scholar_id": "f9a9dd25aa7a6dbabb593dac964cb089996921ee",
+        "canonical_id": "arXiv:2603.00356",
+        "arxiv_id": "2603.00356",
+        "doi": "10.48550/arXiv.2603.00356",
+        "authors": [
+          "William J. Cunningham"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 264,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04162",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04162",
+        "id:SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239",
+        "id:arXiv:2603.04162",
+        "title:bielikq2sharp a comparative study of extreme 2bit quantization methods for a polish 11b language model",
+        "url:https://arxiv.org/abs/2603.04162"
+      ],
+      "record": {
+        "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+        "source_url": "https://arxiv.org/abs/2603.04162",
+        "year": 2026,
+        "published": "2026-03-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Bielik-Q2-Sharp, the first systematic academic evaluation of extreme 2-bit quantization applied to a Polish large language model. Using Bielik-11B-v2.3-Instruct (11B parameters, Mistral architecture) as our base model, we compare six state-of-the-art post-training quantization methods -- QuIP#, SpinQuant+GPTQ, ButterflyQuant, QTIP, VPTQ, and AQLM -- all calibrated on a Polish-language corpus (CulturaX-PL) with shared Hessian matrices. Our best variant (QuIP# E8P12) achieves 71.92% across 22 Polish benchmarks versus 72.07% for the IQ2_XXS baseline -- within statistical noise, at a modest size premium (3.26 GB vs. ~2.6 GB). On eq_bench, our method scores 47.14 versus 43.53 (+3.6pp), suggesting superior preservation of higher-order reasoning. QTIP achieves the best per-bit efficiency (79.4% MC acc_norm at ~2.4 bpw, 3.27 GB), matching VPTQ's quality at 35% smaller size. We additionally document a MC-generation dissociation phenomenon where rotation-based methods preserve log-likelihood quality but fail catastrophically at autoregressive generation. The entire project was conducted by a single independent researcher on cloud GPUs (vast.ai) within a $285 budget. All models, Hessians, and evaluation logs are publicly available.",
+        "identifiers": [
+          "SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239"
+        ],
+        "semantic_scholar_id": "e346cc4f590fde9366629370de9f772ea11c1239",
+        "canonical_id": "arXiv:2603.04162",
+        "arxiv_id": "2603.04162",
+        "doi": "10.48550/arXiv.2603.04162",
+        "authors": [
+          "Jakub Prejzner"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 259,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.09982",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.09982",
+        "id:SemanticScholar:86a0f7b63f606ffc55770acb48b9dc76b10fa9c3",
+        "id:arXiv:2605.09982",
+        "title:erase eliminating redundant visual tokens via adaptive twostage token pruning",
+        "url:https://arxiv.org/abs/2605.09982"
+      ],
+      "record": {
+        "title": "ERASE: Eliminating Redundant Visual Tokens via Adaptive Two-Stage Token Pruning",
+        "source_url": "https://arxiv.org/abs/2605.09982",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in Vision-Language Models (VLMs) enable large language models (LLMs) to process high-resolution images, significantly improving real-world multimodal understanding. However, this capability introduces a large number of vision tokens, incurring substantial computational overhead. To mitigate this issue, various vision token compression methods have been proposed. Existing methods often estimate different sources of visual redundancy using learned representations or fixed pruning schedules. We propose ERASE, an adaptive two-stage framework that separates image-level redundancy removal from instruction-dependent token pruning. Stage 1 derives image-dependent token retention from lightweight raw-image statistics, while Stage 2 progressively removes instruction-irrelevant tokens across decoder layers. Experiments demonstrate substantial token reduction while preserving accuracy: on Qwen2.5-VL-7B, ERASE retains 95.70% of the original model's accuracy at 25% token retention. Our code is available at https://github.com/Tuna-Luna/ERASE.",
+        "identifiers": [
+          "SemanticScholar:86a0f7b63f606ffc55770acb48b9dc76b10fa9c3"
+        ],
+        "semantic_scholar_id": "86a0f7b63f606ffc55770acb48b9dc76b10fa9c3",
+        "canonical_id": "arXiv:2605.09982",
+        "arxiv_id": "2605.09982",
+        "doi": "10.48550/arXiv.2605.09982",
+        "authors": [
+          "Yuna Lee",
+          "Kyoung-Wook Min",
+          "Yulhwa Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 191,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.3390/electronics15143179",
+      "identity_tokens": [
+        "id:DOI:10.3390/electronics15143179",
+        "id:SemanticScholar:8e9f9cc05be2b275796180593b55d32fda750dc5",
+        "title:runtimecontrolled evaluation of speculative decoding methods",
+        "url:https://doi.org/10.3390/electronics15143179"
+      ],
+      "record": {
+        "title": "Runtime-Controlled Evaluation of Speculative Decoding Methods",
+        "source_url": "https://doi.org/10.3390/electronics15143179",
+        "year": 2026,
+        "published": "2026-07-20",
+        "venue": "Electronics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reported Speculative decoding (SD) speedups are difficult to compare because methods are commonly evaluated with different serving runtimes and configurations. We present SpecLLM, a pluggable evaluation framework that applies common scheduling, batching, KV-cache, CUDA Graph, and execution-backend policies across methods while preserving method-required proposal and verification paths. We implement eight Speculative Decoding (SD) methods and evaluate them across batch sizes, controlled online loads, and two model scales. We decompose throughput speedup as S=τ/c, where τ is the average number of committed tokens per SD step and c is the dimensionless execution cost of that step relative to a matched autoregressive decode step. The measured c is conditional on the method–runtime interaction, hardware, workload, baseline, and configuration. Under the evaluated conditions, method rankings change with batch size and online load, and a longer commit length does not necessarily yield lower latency when execution cost or queueing increases. SpecLLM therefore provides controlled within-runtime comparability rather than runtime-independent fairness; SD results should report (τ,c), latency, feasibility, and the conditions under which they were measured.",
+        "identifiers": [
+          "SemanticScholar:8e9f9cc05be2b275796180593b55d32fda750dc5"
+        ],
+        "semantic_scholar_id": "8e9f9cc05be2b275796180593b55d32fda750dc5",
+        "doi": "10.3390/electronics15143179",
+        "canonical_id": "DOI:10.3390/electronics15143179",
+        "authors": [
+          "Sungkyun Kim",
+          "Jaemin Kim",
+          "Yeongpil Cho",
+          "Jiwon Seo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.24148",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.24148",
+        "id:SemanticScholar:bda17b82c18ea8ecf6166023313ac14329b69b3e",
+        "id:arXiv:2607.24148",
+        "title:a motionaware vector quantization framework with centroid reuse for efficient vla inference",
+        "url:https://arxiv.org/abs/2607.24148"
+      ],
+      "record": {
+        "title": "A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference",
+        "source_url": "https://arxiv.org/abs/2607.24148",
+        "year": 2026,
+        "published": "2026-07-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language-Action (VLA) models have demonstrated strong potential for embodied AI, yet their high inference latency on GPUs limits real-time deployment. Existing accelerators, such as Dadu-Corki, improve efficiency but treat VLA models as full-precision workloads, leaving substantial redundancy in both memory and computation underexploited. In this paper, we propose VQVLA, an algorithm-hardware co-design framework that accelerates VLA inference by exploiting weight similarity and execution dynamics. We first introduce MotionVQ, a motion-aware vector quantization scheme that dynamically adjusts quantization precision based on the robot's execution state, reducing memory access while preserving task success rate. We then propose a merged-centroid vectorized GEMM paradigm that operates on the codebook-index representation, eliminating redundant multiplications through spatial aggregation and temporal reuse of centroids. To realize these optimizations, we design an accelerator that efficiently supports dynamic precision selection and centroid-reuse computation. Experimental results show that VQVLA achieves 6.5x, 2.8x, 1.9x, 3.3x, and 4.3x speedup over the A100 GPU, Dadu-Corki, LUT-DLA, CodeGEMM, and ShiftAddLLM, respectively, with negligible accuracy degradation.",
+        "identifiers": [
+          "SemanticScholar:bda17b82c18ea8ecf6166023313ac14329b69b3e"
+        ],
+        "semantic_scholar_id": "bda17b82c18ea8ecf6166023313ac14329b69b3e",
+        "canonical_id": "arXiv:2607.24148",
+        "arxiv_id": "2607.24148",
+        "doi": "10.48550/arXiv.2607.24148",
+        "authors": [
+          "Zhuo-Ran Song",
+          "Hao-Zhe Jiang",
+          "Chun-Yu Qi",
+          "Min-Nan Pei",
+          "Gang Li",
+          "Xiao-Yao Liang",
+          "Hai-Bing Guan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 114,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:04ce87012fea044c536f9f1e115bcc6efa1945da63cc12c85ec1972bae34911a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,411 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-057cae0d88b491a6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-057cae0d88b4",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.29350",
+    "arXiv:2609.00224",
+    "arXiv:2610.05106",
+    "arXiv:2610.42148"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "c7e1f754290652852568ac48d5ab6fce9cbb6d1c",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T06:17:38.801087+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.29350",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.00224",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.05106",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.42148",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization",
+      "source_url": "https://arxiv.org/abs/2609.00224",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only post-training quantization (PTQ) can alleviate the computational burden of serving large language models (LLMs) at scale. However, existing PTQ methods often fail to generalize across models and suffer severe accuracy loss below 2 bits. Many leverage unstructured sparsity to mitigate this loss, but at the cost of regularity and GPU-friendly execution. We present QTEA, a sub-2-bit PTQ framework that quantizes weights into ternary values and uses salient weights as residual error compensators. To maintain hardware efficiency, residuals are assigned to selected columns with semi-structured $1:4$ sparsity within the salient columns. We further add column-wise rescale refinement to GPTQ-style column-by-column quantization, alternately updating per-column scales and ternary assignments to reduce reconstruction error. We also identify order-dependent error propagation in GPTQ and introduce error decay to attenuate late-stage error accumulation. On Qwen3-14B, QTEA compresses all weights to an effective 1.7 bits per weight while improving average accuracy over the strongest ternary PTQ baseline by 16.7%. It also achieves 1.40$\\times$ and 2.61$\\times$ lower perplexity on WikiText and C4 respectively. This trend holds on Llama3-8B, where QTEA obtains a 6.6% accuracy gain and 1.34$\\times$ / 1.95$\\times$ lower perplexity on the same datasets. Finally, we develop a lookup-table based kernel that achieves 7.2$\\times$ faster per-token generation over an FP16 baseline. Code is available at https://github.com/Intelligent-Microsystems-Lab/QTEA.",
+      "identifiers": [
+        "SemanticScholar:d41d4555152fba5da1e727c877383a18833045bf"
+      ],
+      "semantic_scholar_id": "d41d4555152fba5da1e727c877383a18833045bf",
+      "canonical_id": "arXiv:2609.00224",
+      "arxiv_id": "2609.00224",
+      "doi": "10.18653/2026.emnlp-main.1775",
+      "authors": [
+        "Yi-Pin Guo",
+        "Arun M. George",
+        "Jie Fu",
+        "Tareq Mahmoud",
+        "Situo Xing",
+        "Siddharth Joshi"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 79,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs",
+      "source_url": "https://arxiv.org/abs/2606.29350",
+      "year": 2026,
+      "published": "2026-06-28",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models and vision-language action models endow the robot with unprecedented capabilities. However, the input of video and high-resolution images yields a massive number of visual tokens, leading to extremely high inference latency and severely hindering the robot's real-time control. To break through this computational bottleneck, we propose ST-Merge, a plug-and-play, training-free framework that efficiently fuses redundant tokens directly during the visual encoding phase. By explicitly constructing 3D spatiotemporal coordinates, it employs a multi-queue parallel matching and weighted aggregation mechanism to achieve efficient and geometrically consistent fusion of redundant tokens across frames. In addition, we introduce a post-merge positional correction mechanism that effectively eliminates spatial deviation caused by merging by dynamically re-evaluating the rotational position code of the weighted centroid of the vision token, thereby ensuring the high-precision spatial awareness required for dexterous operation. In the Video Question Answering task on the mainstream VLM, Qwen2.5-VL, ST-Merge achieves a 2$\\times$ inference speedup with only a tiny 1\\% loss in precision. When deployed on the $\\pi_{0.5}$ VLA policy, ST-Merge achieves an 8.3$\\times$ speedup at 1024 $\\times$ 1024 resolution and matches the baseline success rate at this high-resolution setting. At lower resolutions, it introduces a small drop in accuracy.",
+      "identifiers": [
+        "SemanticScholar:906e059d371f275a6ca9da3a92cd26047bf4d536"
+      ],
+      "semantic_scholar_id": "906e059d371f275a6ca9da3a92cd26047bf4d536",
+      "canonical_id": "arXiv:2606.29350",
+      "arxiv_id": "2606.29350",
+      "doi": "10.48550/arXiv.2606.29350",
+      "authors": [
+        "Junzhou Chen",
+        "Jin-Dong Wang",
+        "Gang Zhou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SharpDraft: Accelerating Long-Context Speculative Decoding with Cardinality-Aware Query Scaling",
+      "source_url": "https://arxiv.org/abs/2610.05106",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-form reasoning makes inference expensive, and speculative decoding mitigates this cost by verifying multiple draft tokens in parallel. Its speedup, however, can fade as context grows and draft acceptance declines. We focus on attention-mass dilution: as softmax normalizes over more visible Keys, the mass concentrated on the highest-scoring Keys can decrease. We introduce SharpDraft, a training-free method that counteracts this effect through cardinality-aware Query scaling, without the computational overhead of online adaptation. Under explicit assumptions, we derive an exact top-$k$ mass correction and deploy a closed-form fixed-slope approximation. Across AIME-26, GPQA-Diamond, and LongGenBench Diary, SharpDraft achieves $2.59$-$3.19\\times$ geometric-mean end-to-end speedups over target-only autoregressive decoding when applied to DFlash, PARD, and EAGLE 3.1. With DFlash, it improves decoding speed and outperforms full-parameter and LoRA-based online adaptation in end-to-end speedup, while matching the unmodified drafter's reported peak allocated GPU memory.",
+      "identifiers": [
+        "SemanticScholar:25cbba60ec7e23d0f00c96f93bb5219637563eb3"
+      ],
+      "semantic_scholar_id": "25cbba60ec7e23d0f00c96f93bb5219637563eb3",
+      "canonical_id": "arXiv:2610.05106",
+      "arxiv_id": "2610.05106",
+      "authors": [
+        "Jeonghoon Park",
+        "Seo-An Jo",
+        "Jongwon Lee",
+        "Taesik Gong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "source_url": "https://arxiv.org/abs/2610.42148",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+      "identifiers": [
+        "SemanticScholar:0ca299cd36a00195162b1ca71a9a0fbbe87846d5"
+      ],
+      "semantic_scholar_id": "0ca299cd36a00195162b1ca71a9a0fbbe87846d5",
+      "canonical_id": "arXiv:2610.42148",
+      "arxiv_id": "2610.42148",
+      "authors": [
+        "Bobo Li",
+        "Jia-Jia Song",
+        "Hao Fei",
+        "Wynne Hsu",
+        "Mong Li Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.00224",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.emnlp-main.1775",
+        "id:SemanticScholar:d41d4555152fba5da1e727c877383a18833045bf",
+        "id:arXiv:2609.00224",
+        "title:qtea ternary llms with sparse residual salient weight and bycolumn optimization",
+        "url:https://arxiv.org/abs/2609.00224"
+      ],
+      "record": {
+        "title": "QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization",
+        "source_url": "https://arxiv.org/abs/2609.00224",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight-only post-training quantization (PTQ) can alleviate the computational burden of serving large language models (LLMs) at scale. However, existing PTQ methods often fail to generalize across models and suffer severe accuracy loss below 2 bits. Many leverage unstructured sparsity to mitigate this loss, but at the cost of regularity and GPU-friendly execution. We present QTEA, a sub-2-bit PTQ framework that quantizes weights into ternary values and uses salient weights as residual error compensators. To maintain hardware efficiency, residuals are assigned to selected columns with semi-structured $1:4$ sparsity within the salient columns. We further add column-wise rescale refinement to GPTQ-style column-by-column quantization, alternately updating per-column scales and ternary assignments to reduce reconstruction error. We also identify order-dependent error propagation in GPTQ and introduce error decay to attenuate late-stage error accumulation. On Qwen3-14B, QTEA compresses all weights to an effective 1.7 bits per weight while improving average accuracy over the strongest ternary PTQ baseline by 16.7%. It also achieves 1.40$\\times$ and 2.61$\\times$ lower perplexity on WikiText and C4 respectively. This trend holds on Llama3-8B, where QTEA obtains a 6.6% accuracy gain and 1.34$\\times$ / 1.95$\\times$ lower perplexity on the same datasets. Finally, we develop a lookup-table based kernel that achieves 7.2$\\times$ faster per-token generation over an FP16 baseline. Code is available at https://github.com/Intelligent-Microsystems-Lab/QTEA.",
+        "identifiers": [
+          "SemanticScholar:d41d4555152fba5da1e727c877383a18833045bf"
+        ],
+        "semantic_scholar_id": "d41d4555152fba5da1e727c877383a18833045bf",
+        "canonical_id": "arXiv:2609.00224",
+        "arxiv_id": "2609.00224",
+        "doi": "10.18653/2026.emnlp-main.1775",
+        "authors": [
+          "Yi-Pin Guo",
+          "Arun M. George",
+          "Jie Fu",
+          "Tareq Mahmoud",
+          "Situo Xing",
+          "Siddharth Joshi"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 79,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.29350",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.29350",
+        "id:SemanticScholar:906e059d371f275a6ca9da3a92cd26047bf4d536",
+        "id:arXiv:2606.29350",
+        "title:fast enough to act spatiotemporal visual token merging for lowlatency robotic vlms and vlas",
+        "url:https://arxiv.org/abs/2606.29350"
+      ],
+      "record": {
+        "title": "Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs",
+        "source_url": "https://arxiv.org/abs/2606.29350",
+        "year": 2026,
+        "published": "2026-06-28",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language models and vision-language action models endow the robot with unprecedented capabilities. However, the input of video and high-resolution images yields a massive number of visual tokens, leading to extremely high inference latency and severely hindering the robot's real-time control. To break through this computational bottleneck, we propose ST-Merge, a plug-and-play, training-free framework that efficiently fuses redundant tokens directly during the visual encoding phase. By explicitly constructing 3D spatiotemporal coordinates, it employs a multi-queue parallel matching and weighted aggregation mechanism to achieve efficient and geometrically consistent fusion of redundant tokens across frames. In addition, we introduce a post-merge positional correction mechanism that effectively eliminates spatial deviation caused by merging by dynamically re-evaluating the rotational position code of the weighted centroid of the vision token, thereby ensuring the high-precision spatial awareness required for dexterous operation. In the Video Question Answering task on the mainstream VLM, Qwen2.5-VL, ST-Merge achieves a 2$\\times$ inference speedup with only a tiny 1\\% loss in precision. When deployed on the $\\pi_{0.5}$ VLA policy, ST-Merge achieves an 8.3$\\times$ speedup at 1024 $\\times$ 1024 resolution and matches the baseline success rate at this high-resolution setting. At lower resolutions, it introduces a small drop in accuracy.",
+        "identifiers": [
+          "SemanticScholar:906e059d371f275a6ca9da3a92cd26047bf4d536"
+        ],
+        "semantic_scholar_id": "906e059d371f275a6ca9da3a92cd26047bf4d536",
+        "canonical_id": "arXiv:2606.29350",
+        "arxiv_id": "2606.29350",
+        "doi": "10.48550/arXiv.2606.29350",
+        "authors": [
+          "Junzhou Chen",
+          "Jin-Dong Wang",
+          "Gang Zhou"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.05106",
+      "identity_tokens": [
+        "id:SemanticScholar:25cbba60ec7e23d0f00c96f93bb5219637563eb3",
+        "id:arXiv:2610.05106",
+        "title:sharpdraft accelerating longcontext speculative decoding with cardinalityaware query scaling",
+        "url:https://arxiv.org/abs/2610.05106"
+      ],
+      "record": {
+        "title": "SharpDraft: Accelerating Long-Context Speculative Decoding with Cardinality-Aware Query Scaling",
+        "source_url": "https://arxiv.org/abs/2610.05106",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-form reasoning makes inference expensive, and speculative decoding mitigates this cost by verifying multiple draft tokens in parallel. Its speedup, however, can fade as context grows and draft acceptance declines. We focus on attention-mass dilution: as softmax normalizes over more visible Keys, the mass concentrated on the highest-scoring Keys can decrease. We introduce SharpDraft, a training-free method that counteracts this effect through cardinality-aware Query scaling, without the computational overhead of online adaptation. Under explicit assumptions, we derive an exact top-$k$ mass correction and deploy a closed-form fixed-slope approximation. Across AIME-26, GPQA-Diamond, and LongGenBench Diary, SharpDraft achieves $2.59$-$3.19\\times$ geometric-mean end-to-end speedups over target-only autoregressive decoding when applied to DFlash, PARD, and EAGLE 3.1. With DFlash, it improves decoding speed and outperforms full-parameter and LoRA-based online adaptation in end-to-end speedup, while matching the unmodified drafter's reported peak allocated GPU memory.",
+        "identifiers": [
+          "SemanticScholar:25cbba60ec7e23d0f00c96f93bb5219637563eb3"
+        ],
+        "semantic_scholar_id": "25cbba60ec7e23d0f00c96f93bb5219637563eb3",
+        "canonical_id": "arXiv:2610.05106",
+        "arxiv_id": "2610.05106",
+        "authors": [
+          "Jeonghoon Park",
+          "Seo-An Jo",
+          "Jongwon Lee",
+          "Taesik Gong"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.42148",
+      "identity_tokens": [
+        "id:SemanticScholar:0ca299cd36a00195162b1ca71a9a0fbbe87846d5",
+        "id:arXiv:2610.42148",
+        "title:flide accelerating decision inference with exact state forking",
+        "url:https://arxiv.org/abs/2610.42148"
+      ],
+      "record": {
+        "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+        "source_url": "https://arxiv.org/abs/2610.42148",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decision models such as Jev have emerged as a highly promising paradigm for LLM agent systems, providing lightweight and reliable categorical reasoning for rapid System One execution. However, existing generation-oriented inference engines fail to support these workloads effectively, suffering from severe prefix recomputation overheads or distorted output probabilities. To address this challenge, we propose Flide, an efficient and exact inference engine that decouples the logical tree structure of a decision request from its physical execution within a single flattened token stream. Through ForkAttention, Flide navigates request dependencies using GPU-resident indices across both standard attention and recurrent Gated DeltaNet layers, guaranteeing in exact arithmetic that every query branch evaluates identically to an isolated forward pass. By expressing branch topologies directly in GPU-resident metadata, Flide accommodates diverse request mixtures with a compact set of pre-recorded execution graphs while enabling expanding agent histories to resume from checkpoints saved in earlier passes. Extensive evaluations on public hybrid and decision models demonstrate that Flide answers queries up to 9.5 times faster than vLLM and SGLang while staying closest to a float32 reference in total variation distance. By unifying physical execution throughput with mathematical exactness, Flide establishes a principled foundation for scalable, latency-critical decision intelligence in agent systems.",
+        "identifiers": [
+          "SemanticScholar:0ca299cd36a00195162b1ca71a9a0fbbe87846d5"
+        ],
+        "semantic_scholar_id": "0ca299cd36a00195162b1ca71a9a0fbbe87846d5",
+        "canonical_id": "arXiv:2610.42148",
+        "arxiv_id": "2610.42148",
+        "authors": [
+          "Bobo Li",
+          "Jia-Jia Song",
+          "Hao Fei",
+          "Wynne Hsu",
+          "Mong Li Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b41f1c83889171dfd7bd02cc4921e5f4cc3f8bf2208c10bcfb619fe6380b4e6e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
