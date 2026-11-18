@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ee378857679632a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.23798",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.23798",
+    "identity_tokens": [
+      "arXiv:2604.23798"
+    ],
+    "reason": "結合的モノイドによるonline softmaxのparallel prefix scanでFP32正確性とO(log n)深さを実現し、A100/Jetsonで評価。Attention kernelとして転用可能だが主対象はVision Transformer、BERTやedge vision系でありLLM serving専用ではない。",
+    "first_checked_at": "2026-11-18T11:28:58+00:00",
+    "last_checked_at": "2026-11-18T11:28:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers"
+  },
+  "processed_at": "2026-11-18T11:28:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ee378857679",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18ae8a80e55aeb52-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.18799",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.18799",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.18799",
+      "arXiv:2505.18799"
+    ],
+    "reason": "下流タスクの微調整で重要な注意ヘッドのみ更新し、学習する注意パラメータを10%に抑えるALPSを提案。削減対象はアラインメント訓練費用であり、推論時のモデル層・重み・トークン計算量を削除する手法ではない。",
+    "first_checked_at": "2026-11-18T08:08:24+00:00",
+    "last_checked_at": "2026-11-18T11:28:51+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models"
+  },
+  "processed_at": "2026-11-18T11:28:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18ae8a80e55a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

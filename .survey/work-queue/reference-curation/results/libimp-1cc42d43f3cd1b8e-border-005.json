@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc42d43f3cd1b8e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32564",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32564",
+    "identity_tokens": [
+      "arXiv:2609.32564"
+    ],
+    "reason": "arXiv由来一次書誌・要旨では、ユーザー履歴を共有初期値からテスト時学習で小さなパラメータ記憶へ圧縮し、プロファイル教師で意味記憶を形成するProTTTを提案。全文履歴を文脈へ入れる方法より推論費用を抑えると報告するが、主目的は個人化の記憶学習であり、KVキャッシュや推論サービングの汎用実装技術とは区別する。",
+    "first_checked_at": "2026-11-18T11:28:52+00:00",
+    "last_checked_at": "2026-11-18T11:28:52+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ProTTT: Learning to Learn Semantic User Memory with Test-Time Training"
+  },
+  "processed_at": "2026-11-18T11:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc42d43f3cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

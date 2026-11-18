@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68041a52e03652ff-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.23186",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.23186",
+    "identity_tokens": [
+      "arXiv:2509.23186"
+    ],
+    "reason": "Multi-Token Predictionの転送層が多段隣接関係を学習して未観測の推移関係を獲得することを理論・実験で検証。Next-Token Injectionなどを提案し、合成グラフとBlocksworld計画性能を改善。MTP自体は並列復号技術と関係するが、本論文の主目的は計画能力の向上で、推論スループットや遅延削減の検証は一次要旨にない。",
+    "first_checked_at": "2026-11-18T11:28:56+00:00",
+    "last_checked_at": "2026-11-18T11:28:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Understanding and Enhancing the Planning Capability of Language Models via Multi-Token Prediction"
+  },
+  "processed_at": "2026-11-18T11:28:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68041a52e036",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

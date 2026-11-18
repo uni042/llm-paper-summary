@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-600a72688276cc75-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.21862",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.21862",
+    "identity_tokens": [
+      "arXiv:2603.21862"
+    ],
+    "reason": "arXiv一次要旨。MoEのトークン当たりFLOPs、活性パラメータ、総パラメータを独立制約として扱い、二段階探索へ分解して670超のMoEモデルから最適構成のスケーリング則を導く。活性重み・メモリという推論設計上の関連はあるが、主評価は学習compute予算に対するアーキテクチャ探索であり、実際の推論遅延・スループット比較は要旨にないためborderline。",
+    "first_checked_at": "2026-11-18T11:28:55+00:00",
+    "last_checked_at": "2026-11-18T11:28:55+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Holistic Scaling Laws for Optimal Mixture-of-Experts Architecture Optimization"
+  },
+  "processed_at": "2026-11-18T11:28:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-600a72688276",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

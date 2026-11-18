@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ee378857679632a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.20317",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.20317",
+    "identity_tokens": [
+      "arXiv:2601.20317"
+    ],
+    "reason": "VGGTによる3D復元のW4A8/W4A4量子化とBF16/INT8/INT4混合精度アクセラレータを提案。4種の3D視覚ベンチマークで評価しているが、対象は言語モデル推論ではなく3D視覚Transformer。量子化・長系列attentionの設計は隣接技術として有用。",
+    "first_checked_at": "2026-11-18T11:28:58+00:00",
+    "last_checked_at": "2026-11-18T11:28:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "VersaQ-3D: Architecture Support for Visual Geometry Grounded Transformers via Versatile Quantization"
+  },
+  "processed_at": "2026-11-18T11:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ee378857679",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

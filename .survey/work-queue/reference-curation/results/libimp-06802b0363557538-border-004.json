@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-06802b0363557538-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.21797",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.21797",
+    "identity_tokens": [
+      "arXiv:2601.21797"
+    ],
+    "reason": "対話履歴から挑戦者が質問を生成し、評価者の誤答分析を受けて適応者が記憶内容と構築方針を更新するAMA。LoCoMoで対話記憶の質問応答品質を評価する。記憶管理には関連するが、主処理はオフラインのタスク適応・精度改善であり、KVキャッシュや推論時メモリ帯域の削減を直接実証していない。",
+    "first_checked_at": "2026-11-18T06:12:10+00:00",
+    "last_checked_at": "2026-11-18T11:28:48+00:00",
+    "linked_from": [
+      "Inference / Multimodal Long-Context Memory Compression",
+      "agentic inference / persistent memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Enhancing Conversational Agents via Task-Oriented Adversarial Memory Adaptation"
+  },
+  "processed_at": "2026-11-18T11:28:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06802b036355",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

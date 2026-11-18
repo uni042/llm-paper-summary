@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ee378857679632a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.13368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.13368",
+    "identity_tokens": [
+      "arXiv:2512.13368"
+    ],
+    "reason": "長短期の推薦履歴を別々のsparse attentionで計算しgating統合するBlossomRec。MovieLens/Gowalla/Amazon等の推薦ベンチマークで評価し、LLM推論・KV管理は対象外。注意疎化の一般手法として隣接するが本サーベイの中核から外れる。",
+    "first_checked_at": "2026-11-18T11:28:59+00:00",
+    "last_checked_at": "2026-11-18T11:28:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations"
+  },
+  "processed_at": "2026-11-18T11:28:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ee378857679",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

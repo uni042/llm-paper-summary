@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c3d4ed36fd9fe5f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.14475",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.14475",
+    "identity_tokens": [
+      "arXiv:2610.14475"
+    ],
+    "reason": "8.39Mパラメータ・33.6MBの極小decoderモデルとRaspberry Pi 5を使い、圧縮KVを実際に読みながらtoken単位の損失差を測るLCDFを提案。極座標系のK圧縮が同等bit数の単純RTNより劣り、測定した圧縮方式がFP16よりtoken当たりのエネルギー効率で劣る負の結果も示す。KV圧縮の評価方法は関連する一方、対象モデルが通常の大規模LLMより著しく小さく、一般的なLLMサービングへの性能外挿はできないためborderline。",
+    "first_checked_at": "2026-11-18T07:37:56+00:00",
+    "last_checked_at": "2026-11-18T11:28:57+00:00",
+    "linked_from": [
+      "05-kv-cache-compression-management",
+      "99-other-inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "EdgeLLM-Nano: Auditing Polar-Guided Key-Cache Compression and Consistency-Anchored Pruning on a 33.6 MB On-Device Language Model"
+  },
+  "processed_at": "2026-11-18T11:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c3d4ed36fd9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

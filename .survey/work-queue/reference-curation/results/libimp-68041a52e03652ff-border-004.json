@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68041a52e03652ff-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.10218",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.10218",
+    "identity_tokens": [
+      "arXiv:2605.10218"
+    ],
+    "reason": "Diffusion LLMのRLVRで系列log-ratioを正確に計算しにくい問題に対し、報酬advantageから推定した目標相対log-ratioへ校正するRSPOを提案。数学・計画タスクで後学習の安定性と性能を評価。拡散LMの並列生成と隣接するが、主たる成果はRL後学習アルゴリズムであり、推論ランタイム速度の直接評価ではない。",
+    "first_checked_at": "2026-11-18T11:28:56+00:00",
+    "last_checked_at": "2026-11-18T11:28:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Relative Score Policy Optimization for Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T11:28:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68041a52e036",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

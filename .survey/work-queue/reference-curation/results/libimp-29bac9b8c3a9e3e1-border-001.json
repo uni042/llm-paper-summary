@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29bac9b8c3a9e3e1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41384",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41384",
+    "identity_tokens": [
+      "arXiv:2610.41384"
+    ],
+    "reason": "一次HTML本文のonline isotonic regression、Expected Search-space Reduction（ESR）、DPR検証実験を確認。包含関係にある証拠spanを単調制約で扱い、検証済み結果から未検証候補を推論し、次に検証するspanを選択。特定の検証集合で最小oracle領域までの中央値はP-GREEDYの16 verifier callsからESRの11 callsへ減少。NQ/DPR下流readerのF1改善はcall budgetで小幅でありtoken budgetではgenerator-greedyを下回る条件もある。LLM生成のKV/サービングではなく証拠検証回数の最適化なのでborderline。",
+    "first_checked_at": "2026-11-18T11:28:54+00:00",
+    "last_checked_at": "2026-11-18T11:28:54+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new",
+      "https://arxiv.org/list/cs.IR/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Online Evidence-Containment Prediction over Text Spans under Distinct Queries"
+  },
+  "processed_at": "2026-11-18T11:28:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29bac9b8c3a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

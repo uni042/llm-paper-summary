@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc42d43f3cd1b8e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.11593",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.11593",
+    "identity_tokens": [
+      "arXiv:2608.11593"
+    ],
+    "reason": "arXiv一次要旨では音声コーデック言語モデルを拡散型生成へ転換し、リアルタイム版は32フレーム単位でブロック自己回帰・内部並列ノイズ除去とKVキャッシュを組み合わせる。ウォーム状態で初回ブロック41.6ms、エンドツーエンドRTF 0.0240を報告。生成推論高速化の実装要素はあるが、主対象は音声合成品質・音声モデルであり汎用LLMサービングへの寄与は限定的。",
+    "first_checked_at": "2026-11-18T11:28:51+00:00",
+    "last_checked_at": "2026-11-18T11:28:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Luna-TTS Family Technical Report"
+  },
+  "processed_at": "2026-11-18T11:28:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc42d43f3cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

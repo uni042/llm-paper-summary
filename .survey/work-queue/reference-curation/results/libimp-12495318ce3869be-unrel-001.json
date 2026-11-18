@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12495318ce3869be-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.09350",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.09350",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.09350",
+      "arXiv:2508.09350"
+    ],
+    "reason": "arXiv v3の一次要旨では、文字起こしを使わない音声言語モデルにおいて、意味トークンと連続音響フレーム表現を同時生成し、flow matchingによって音響情報を学習する。複数の未来意味トークン予測により言語情報を保ち、生成音声の音響詳細を改善することが中心。評価は言語尤度と音声生成の音響品質であり、LLMの推論サービング、実行時メモリ、KVキャッシュ、デコード高速化、ハードウェア効率を改善するシステム技術は一次要旨で示されないためunrelated。",
+    "first_checked_at": "2026-11-18T11:28:49+00:00",
+    "last_checked_at": "2026-11-18T11:28:49+00:00",
+    "linked_from": [],
+    "title": "Flow-SLM: Joint Learning of Linguistic and Acoustic Information for Spoken Language Modeling"
+  },
+  "processed_at": "2026-11-18T11:28:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12495318ce38",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

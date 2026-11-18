@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8acb6b073d3a5a05-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41675",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41675",
+    "identity_tokens": [
+      "arXiv:2610.41675"
+    ],
+    "reason": "polymer force-fieldの長距離相互作用に対し、重心からの原子距離をradial featureに写し、query/keyとの組合せをfactorized aggregationするRKAを提案。固定特徴次元では原子数に線形のglobal通信を可能にし、OPoly26の5M規模比較でper-atom energy/force MAEを67.4%/36.3%削減。線形attention演算として一般性はあるがLLM/MLLMでの性能・推論費用の評価はなくpolymer物性予測が主目的のためborderline。",
+    "first_checked_at": "2026-11-18T11:28:58+00:00",
+    "last_checked_at": "2026-11-18T11:28:58+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CV/new",
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Radial Kernel Attention for Long-Range Modeling in Polymer Machine Learning Force Fields"
+  },
+  "processed_at": "2026-11-18T11:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8acb6b073d3a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

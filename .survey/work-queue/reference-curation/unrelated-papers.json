@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T11:08:46+00:00",
+  "updated_at": "2026-11-18T11:28:59+00:00",
   "record_count": 12883,
   "records": {
     "arXiv:2303.08774": {
@@ -182266,9 +182266,9 @@
       "identity_tokens": [
         "arXiv:2605.05227"
       ],
-      "reason": "LLM訓練のデータキュレーションをオンライン再重み付けにするADAPT。事前学習と微調整のサンプル重要度を類似度ベースの品質信号で動的に変える訓練手法であり、推論への適用はない。学習側のみの研究は対象外。",
+      "reason": "タイトルはLLM学習データのオンライン重み付けと汎化を主題としており、推論サービング最適化ではなく現行凍結対象の学習データ選別である。",
       "first_checked_at": "2026-11-15T21:42:50+00:00",
-      "last_checked_at": "2026-11-15T21:42:50+00:00",
+      "last_checked_at": "2026-11-18T11:28:53+00:00",
       "linked_from": [
         "モデルカスケード / 複数LLMサービング / 経路・配置共同最適化 / SLO対応スケジューリング",
         "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
@@ -182369,18 +182369,6 @@
       ],
       "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion"
     },
-    "arXiv:2607.06540": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2607.06540",
-      "identity_tokens": [
-        "arXiv:2607.06540"
-      ],
-      "reason": "全二重音声言語モデルLychee-FD。音響と意味の勾配競合という学習 dynamics の分析と、深層でのモダリティ分離というモデルアーキテクチャの提案が中核で、推論効率やサービング機構への貢献は要旨に示されていない。モデル自体の改良であり対象外。",
-      "first_checked_at": "2026-11-15T21:43:03+00:00",
-      "last_checked_at": "2026-11-15T21:43:03+00:00",
-      "linked_from": [],
-      "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs"
-    },
     "arXiv:2512.14256": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2512.14256",
@@ -182413,32 +182401,15 @@
       ],
       "title": "KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels"
     },
-    "arXiv:2512.13368": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.13368",
-      "identity_tokens": [
-        "arXiv:2512.13368"
-      ],
-      "reason": "逐次推薦向け疎注意BlossomRec。長期・短期の関心を2種の疎注意パターンで計算しゲートで合成して注意の計算量とメモリを減らす。対象は推薦モデルの注意効率であり、LLM推論システムの研究ではない。異分野応用のため対象外。",
-      "first_checked_at": "2026-11-15T21:43:06+00:00",
-      "last_checked_at": "2026-11-15T21:43:06+00:00",
-      "linked_from": [
-        "inference-systems",
-        "long-context inference / dynamic sparse attention / prefill acceleration",
-        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
-        "疎注意／長文脈学習"
-      ],
-      "title": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations"
-    },
     "arXiv:2602.19091": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.19091",
       "identity_tokens": [
         "arXiv:2602.19091"
       ],
-      "reason": "マルチモーダル検索向け表現強化CREM。学習可能なコーラストークンで情報を集約する圧縮型プロンプト設計により、生成能力を保ちながら埋め込み検索の表現を改善する。圧縮は表現整列のためのもので、推論効率化の機構ではない。対象外。",
+      "reason": "学習可能なchorus tokenと圧縮対応注意によりマルチモーダル埋め込み表現を改善し、対照学習と生成学習を両立する研究。MMEB検索精度と理解能力が主評価であり、トークン圧縮という名称でも推論時の計算量・KV・メモリ削減を目的とするシステム最適化ではない。",
       "first_checked_at": "2026-11-15T21:43:06+00:00",
-      "last_checked_at": "2026-11-15T21:43:06+00:00",
+      "last_checked_at": "2026-11-18T11:28:49+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2402.09906-generative-representational-instruction-tuning.md",
         "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
@@ -182446,21 +182417,6 @@
         "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md"
       ],
       "title": "CREM: Compression-Driven Representation Enhancement for Multimodal Retrieval and Comprehension"
-    },
-    "arXiv:2605.28873": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.28873",
-      "identity_tokens": [
-        "arXiv:2605.28873"
-      ],
-      "reason": "4ビット量子化ベンチマークの検出可能効果量を事前登録する計画法ノート。対になった二値結果の標本サイズ計算を量子化ベンチの信頼性予算へ適応した統計的方法の提示であり、推論技術やシステム機構の提案ではない。評価方法論のみで対象外。",
-      "first_checked_at": "2026-11-15T21:43:07+00:00",
-      "last_checked_at": "2026-11-15T21:43:07+00:00",
-      "linked_from": [
-        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
-        "重み専用量子化 / 推論カーネル"
-      ],
-      "title": "Pre-Registering the Detectable Effect: A Paired-MDE Budget for 4-bit Quantization Benchmarks, with a Pilot Audit"
     },
     "arXiv:2405.18137": {
       "classification": "unrelated",
@@ -182753,21 +182709,6 @@
       ],
       "title": "Compass: Dissecting Communication and Computation Operators for Efficient LLM Training"
     },
-    "arXiv:2608.11593": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2608.11593",
-      "identity_tokens": [
-        "arXiv:2608.11593"
-      ],
-      "reason": "拡散言語モデル型TTSの技術報告Luna-TTS。自己回帰コーデック言語モデルの逐次デコードの遅延や誤り蓄積に対し、完全に非自己回帰な音声合成モデル族を事前学習する。対象は音声合成モデルの構築であり、LLM推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T06:11:57+00:00",
-      "last_checked_at": "2026-11-18T06:11:57+00:00",
-      "linked_from": [
-        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
-        "llm-serving-scheduling-disaggregation"
-      ],
-      "title": "Luna-TTS Family Technical Report"
-    },
     "arXiv:2602.07832": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2602.07832",
@@ -182804,11 +182745,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.11215",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.11215",
         "arXiv:2605.11215"
       ],
-      "reason": "耐障害な事前学習システムReCoVer。巨大GPUクラスタでの学習を、障害があっても失敗なし実行と確率的に等価な勾配を保ちながら継続させるための集合通信と回復プロトコル。対象は学習基盤であり、推論システムではない。対象外。",
+      "reason": "512 GPUまでの事前学習で故障時もmicrobatch数を維持し、勾配の確率的等価性を守るReCoVerを提案。チェックポイント再開比2.23倍の有効スループットは学習時の値であり、LLM推論サービングではない。",
       "first_checked_at": "2026-11-18T06:12:00+00:00",
-      "last_checked_at": "2026-11-18T06:12:00+00:00",
+      "last_checked_at": "2026-11-18T11:28:50+00:00",
       "linked_from": [
         "llm-serving-scheduling-disaggregation",
         "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
@@ -182959,11 +182901,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2106.10207",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2106.10207",
         "arXiv:2106.10207"
       ],
-      "reason": "開放的協働での分散深層学習。計算資源を出し合うボランティア計算で大規模モデルを訓練する枠組みの研究。対象は学習の実行形態であり、推論システムではない。対象外。",
+      "reason": "ボランティア計算でSwAV/ALBERT事前学習を分散させる共同訓練の枠組み。高遅延・非対称帯域を扱うが、生成LLMの推論・KV・サービング最適化の直接評価はない。",
       "first_checked_at": "2026-11-18T06:12:11+00:00",
-      "last_checked_at": "2026-11-18T06:12:11+00:00",
+      "last_checked_at": "2026-11-18T11:28:50+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
         "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
@@ -183304,22 +183247,6 @@
       ],
       "title": "GIViC: Generative Implicit Video Compression"
     },
-    "arXiv:2604.23798": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2604.23798",
-      "identity_tokens": [
-        "arXiv:2604.23798"
-      ],
-      "reason": "高速でメモリ軽量な視覚訓練向け厳密線形走査注意ELSA。オンラインソフトマックス注意を連想モノイド上の接頭辞走査として再定式化する。対象は視覚Transformerの訓練であり、LLM推論の機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:16:58+00:00",
-      "last_checked_at": "2026-11-18T07:16:58+00:00",
-      "linked_from": [
-        "sparse attention / long-context Transformer",
-        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
-        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
-      ],
-      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers"
-    },
     "arXiv:2605.17985": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.17985",
@@ -183437,9 +183364,9 @@
       "identity_tokens": [
         "arXiv:2506.22175"
       ],
-      "reason": "適応パイプラインつきメモリ効率MoE学習ライブラリMPipeMoE。事前学習済みモデルのMoE学習を、通信とメモリの非効率に対処して高速化する。対象は学習であり、推論ではない。対象外。",
+      "reason": "一次要旨はMoEの学習を複数substageへ分割するadaptive pipeline parallelismと、学習中のactivation・一時buffer再利用を中心に説明する。対象はMoE trainingのメモリ・通信効率であり、LLMの推論サービング、decode、推論時expert配置の具体的貢献は要旨から確認できない。現行サーベイの学習専用高速化凍結範囲に該当。",
       "first_checked_at": "2026-11-18T07:17:09+00:00",
-      "last_checked_at": "2026-11-18T07:17:09+00:00",
+      "last_checked_at": "2026-11-18T11:28:54+00:00",
       "linked_from": [
         "MoE inference systems / expert parallelism / model compression / knowledge distillation",
         "分散MoE学習 / ZeRO / CPUオフロード / 多次元並列",
@@ -183722,20 +183649,6 @@
         "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
       ],
       "title": "Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm"
-    },
-    "arXiv:2603.21862": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.21862",
-      "identity_tokens": [
-        "arXiv:2603.21862"
-      ],
-      "reason": "MoEアーキテクチャ最適化のための全体スケーリング則。MoEの精密なアーキテクチャ構成を導く再利用可能な枠組み。対象はモデルのアーキテクチャ設計であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:37:42+00:00",
-      "last_checked_at": "2026-11-18T07:37:42+00:00",
-      "linked_from": [
-        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
-      ],
-      "title": "Holistic Scaling Laws for Optimal Mixture-of-Experts Architecture Optimization"
     },
     "arXiv:2604.00785": {
       "classification": "unrelated",
@@ -184467,11 +184380,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2505.18799",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.18799",
         "arXiv:2505.18799"
       ],
-      "reason": "一次abstractによれば、タスク感度の高いattention headだけを微調整することで下流タスクへのalignment学習コストを減らす研究。attention parameterの10%のみをfine-tuningし性能を改善したとの評価であり、推論時のattention剪定、レイテンシ、KVキャッシュ、サービング等の改善を提案・評価していないため推論システムサーベイの対象外。",
+      "reason": "下流タスクの微調整で重要な注意ヘッドのみ更新し、学習する注意パラメータを10%に抑えるALPSを提案。削減対象はアラインメント訓練費用であり、推論時のモデル層・重み・トークン計算量を削除する手法ではない。",
       "first_checked_at": "2026-11-18T08:08:24+00:00",
-      "last_checked_at": "2026-11-18T08:17:49+00:00",
+      "last_checked_at": "2026-11-18T11:28:51+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
@@ -185461,6 +185375,79 @@
         "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md"
       ],
       "title": "Big Data Analysis From the Perspective of Fully Actuated System"
+    },
+    "arXiv:2508.09350": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.09350",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.09350",
+        "arXiv:2508.09350"
+      ],
+      "reason": "arXiv v3の一次要旨では、文字起こしを使わない音声言語モデルにおいて、意味トークンと連続音響フレーム表現を同時生成し、flow matchingによって音響情報を学習する。複数の未来意味トークン予測により言語情報を保ち、生成音声の音響詳細を改善することが中心。評価は言語尤度と音声生成の音響品質であり、LLMの推論サービング、実行時メモリ、KVキャッシュ、デコード高速化、ハードウェア効率を改善するシステム技術は一次要旨で示されないためunrelated。",
+      "first_checked_at": "2026-11-18T11:28:49+00:00",
+      "last_checked_at": "2026-11-18T11:28:49+00:00",
+      "linked_from": [],
+      "title": "Flow-SLM: Joint Learning of Linguistic and Acoustic Information for Spoken Language Modeling"
+    },
+    "arXiv:2402.04032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.04032",
+      "identity_tokens": [
+        "arXiv:2402.04032"
+      ],
+      "reason": "arXiv一次要旨では推薦システムの埋め込み表を圧縮したQR-trick・TT-RecのメモリアクセスをHBM内の二段PIMとSRAM先読みで高速化し、2.22倍・2.15倍の改善を報告する。対象は推薦モデルの埋め込み層で、LLM推論・注意・KV・サービングへの直接的貢献は要旨に示されない。",
+      "first_checked_at": "2026-11-18T11:28:52+00:00",
+      "last_checked_at": "2026-11-18T11:28:52+00:00",
+      "linked_from": [],
+      "title": "ProactivePIM: Accelerating Weight-Sharing Embedding Layer with PIM for Scalable Recommendation System"
+    },
+    "DOI:10.1109/esic64052.2025.10962699": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/esic64052.2025.10962699",
+      "identity_tokens": [
+        "DOI:10.1109/esic64052.2025.10962699"
+      ],
+      "reason": "タイトルは学術文書中のAI生成テキスト検出を研究対象と明記しており、LLM推論エンジンの速度・メモリ・量子化・サービングを改善する研究ではない。",
+      "first_checked_at": "2026-11-18T11:28:53+00:00",
+      "last_checked_at": "2026-11-18T11:28:53+00:00",
+      "linked_from": [],
+      "title": "Mamba-Hybrid Language Models: Advancing Detection of AI-Generated Text in Academic Contexts"
+    },
+    "arXiv:2405.16440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16440",
+      "identity_tokens": [
+        "arXiv:2405.16440"
+      ],
+      "reason": "タイトルは長期時系列予測用の選択的状態空間モデル改良を対象とし、言語モデル推論・KVキャッシュ・サービングの寄与を示さない。",
+      "first_checked_at": "2026-11-18T11:28:53+00:00",
+      "last_checked_at": "2026-11-18T11:28:53+00:00",
+      "linked_from": [],
+      "title": "MambaTS: Improved Selective State Space Models for Long-term Time Series Forecasting"
+    },
+    "DOI:10.1145/3599957.3606231": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3599957.3606231",
+      "identity_tokens": [
+        "DOI:10.1145/3599957.3606231"
+      ],
+      "reason": "正式書誌題名はBiGRUとBahdanau Attentionを用いた学術論文の全文分類であり、生成LLM推論の計算量・KV管理・サービング効率を対象としていない。worklistの省略題名FulltextAttentionを完全題名に正規化してタイトル先行除外。",
+      "first_checked_at": "2026-11-18T11:28:54+00:00",
+      "last_checked_at": "2026-11-18T11:28:54+00:00",
+      "linked_from": [],
+      "title": "FulltextAttention: Full-text Classification of Scientific Papers Using Combined Model of BiGRU and Bahdanau Attention"
+    },
+    "DOI:10.1145/3777884.3797005": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3777884.3797005",
+      "identity_tokens": [
+        "DOI:10.1145/3777884.3797005"
+      ],
+      "reason": "暗号化された入力に対するsecure neural network inferenceのoffline前処理とonline推論を重ねるスケジューラ。ACM一次要旨の評価モデルはM1、M2、HiNet、AlexNet、VGG-16で、LLMやTransformer推論は評価していない。汎用暗号化NN処理のスケジューリングであり、本サーベイのLLM推論・学習システムとの直接の対応が乏しい。",
+      "first_checked_at": "2026-11-18T11:28:56+00:00",
+      "last_checked_at": "2026-11-18T11:28:56+00:00",
+      "linked_from": [],
+      "title": "SwiftSNNI: Optimized Scheduling for Secure Neural Network Inference (SNNI) on Multi-Core Systems"
     }
   }
 }

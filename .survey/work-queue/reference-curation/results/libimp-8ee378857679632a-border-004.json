@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ee378857679632a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.18348",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.18348",
+    "identity_tokens": [
+      "arXiv:2604.18348"
+    ],
+    "reason": "動画拡散TransformerのQ/Kクラスタリングによるsparse attention高速化。CogVideoX/Hunyuan/Wan2.1の生成画質とA40/H100上の速度を比較するが、LLMの自己回帰decodeやKV-cache servingではない。疎注意カーネルの転用可能性はあるため境界候補。",
+    "first_checked_at": "2026-11-18T08:47:44+00:00",
+    "last_checked_at": "2026-11-18T11:28:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation"
+  },
+  "processed_at": "2026-11-18T11:28:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ee378857679",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

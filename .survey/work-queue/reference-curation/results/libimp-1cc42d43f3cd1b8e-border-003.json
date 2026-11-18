@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc42d43f3cd1b8e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.24065",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.24065",
+    "identity_tokens": [
+      "arXiv:2503.24065"
+    ],
+    "reason": "arXiv一次要旨では視覚言語ナビゲーションに状態空間モジュールとTransformerを組み合わせ、Round Selective Scanと二流路のCross-modal Selective State Space Moduleで計算費を抑える。REVERIE・R2R・R2R-CEで評価するが、対象はロボットナビゲーション専用のモデル構造であり生成LLM推論システムとの直接的な接続は限定的。",
+    "first_checked_at": "2026-11-18T11:28:51+00:00",
+    "last_checked_at": "2026-11-18T11:28:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "COSMO: Combination of Selective Memorization for Low-cost Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-11-18T11:28:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc42d43f3cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

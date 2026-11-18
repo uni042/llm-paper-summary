@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc42d43f3cd1b8e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.15736",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.15736",
+    "identity_tokens": [
+      "arXiv:2607.15736"
+    ],
+    "reason": "一次arXiv書誌・要旨に基づく。BIRDは短い正解推論列で事前SFTし、続いて簡潔な自己教師による逆KL蒸留を行う二段階の学習法。Qwen3-8BでMATH-500正答率86.2%から92.0%、平均応答長3,099から1,115トークンと報告するが、主貢献は学習時の推論列蒸留であり、推論ランタイム・サービングの直接最適化ではない。",
+    "first_checked_at": "2026-11-18T08:17:47+00:00",
+    "last_checked_at": "2026-11-18T11:28:51+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Better Starts, Better Ends: Bootstrapped Iterative Self-Reasoning Distillation for Compressed Reasoning"
+  },
+  "processed_at": "2026-11-18T11:28:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc42d43f3cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

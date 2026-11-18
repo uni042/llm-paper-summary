@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d3a40d97a44862f-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.26441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.26441",
+    "identity_tokens": [
+      "arXiv:2606.26441"
+    ],
+    "reason": "SPLADEの転置索引をGPU並列化し、warp-coalesced posting listとbatched scatter-add、Triton融合カーネルで厳密な疎検索を高速化。MS MARCO 880万文書ではPyserini CPU比235倍（1 queryあたり298ms→1.27ms）を報告。RAGの検索側に使えるGPU実行技術だが、LLMの生成推論、KV cache、サービングの直接最適化ではなくretrieverのscoring engineが主題なのでborderline。",
+    "first_checked_at": "2026-11-18T11:28:57+00:00",
+    "last_checked_at": "2026-11-18T11:28:57+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.DC/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "GPUSparse: GPU-Accelerated Learned Sparse Retrieval with Parallel Inverted Indices"
+  },
+  "processed_at": "2026-11-18T11:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d3a40d97a44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
