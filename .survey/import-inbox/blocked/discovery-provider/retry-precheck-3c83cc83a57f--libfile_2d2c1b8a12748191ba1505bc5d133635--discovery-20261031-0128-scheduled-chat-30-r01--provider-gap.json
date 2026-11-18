@@ -2,58 +2,10 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
-  "run_key": "20261031-0128-scheduled-chat-30/r01",
+  "run_key": "20261031-0128-scheduled-chat-30/r01::provider-gap",
   "reference_main_sha": "163a9e35dcda90e98906efbe26ee51875b0ecc94",
-  "record_count": 10,
+  "record_count": 5,
   "records": [
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2604.27039",
-      "identity_tokens": [
-        "arXiv:2604.27039"
-      ],
-      "title": "Length Value Model: Scalable Value Pretraining for Token-Level Length Modeling",
-      "reason": "LenVMは生成各ステップで残りトークン長を割引returnのvalue推定として予測し、正確な出力長制御や長さと品質の調整を可能にする。GSM8Kで固定200トークン予算より正解率を維持するが、主な評価は長さ制御・回答品質であり、実サービングのTPSや資源削減は直接検証していないため境界的。",
-      "source_url": "https://arxiv.org/abs/2604.27039",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:33:30+09:00",
-      "last_checked_at": "2026-10-31T01:33:30+09:00",
-      "linked_from": [],
-      "worklist_rank": 348,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.13382",
-      "identity_tokens": [
-        "arXiv:2605.13382"
-      ],
-      "title": "BlockVLA: Accelerating Autoregressive VLA via Block Diffusion Finetuning",
-      "reason": "BlockVLAはロボットVLAのaction生成をブロック単位の自己回帰とブロック内並列diffusionに分け、prefix KV再利用で通常の離散diffusion方式比3.3倍高速化を報告。推論最適化はあるが、評価対象がロボット制御policyであり一般LLM推論サービングへの適用を示していないため境界的。",
-      "source_url": "https://arxiv.org/abs/2605.13382",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:33:30+09:00",
-      "last_checked_at": "2026-10-31T01:33:30+09:00",
-      "linked_from": [],
-      "worklist_rank": 399,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.12260",
-      "identity_tokens": [
-        "arXiv:2605.12260"
-      ],
-      "title": "PRISM: Pareto-Efficient Retrieval over Intent-Aware Structured Memory for Long-Horizon Agents",
-      "reason": "PRISMは長期agent履歴のグラフ型メモリからquery intentに応じた経路探索、証拠圧縮、ゼロLLM段の適応routingを組み合わせ、LoCoMoで少ないcontext token予算と回答品質を両立する。推論入力のトークン費削減はあるが、中心はRAG側の情報検索・記憶でありLLM推論エンジン自体の最適化は弱い。",
-      "source_url": "https://arxiv.org/abs/2605.12260",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:33:30+09:00",
-      "last_checked_at": "2026-10-31T01:33:30+09:00",
-      "linked_from": [],
-      "worklist_rank": 408,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
     {
       "classification": "accept",
       "canonical_id": "arXiv:2509.02785",
@@ -68,38 +20,6 @@
       "last_checked_at": "2026-10-31T01:35:52+09:00",
       "linked_from": [],
       "worklist_rank": 415,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2603.22404",
-      "identity_tokens": [
-        "arXiv:2603.22404"
-      ],
-      "title": "Computational Arbitrage in AI Model Markets",
-      "reason": "異なる価格・性能のモデル提供者に推論予算を配分するモデル市場のarbitrageを分析し、SWE-benchでGPT-5 miniとDeepSeek v3.2の組合せが最大40%純利益率を生むと報告。推論時モデル選択とコスト管理に関連するが、主題は市場経済と収益でありLLMサービングエンジンの計算効率実測ではない。",
-      "source_url": "https://arxiv.org/abs/2603.22404",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:35:52+09:00",
-      "last_checked_at": "2026-10-31T01:35:52+09:00",
-      "linked_from": [],
-      "worklist_rank": 421,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.03123",
-      "identity_tokens": [
-        "arXiv:2610.03123"
-      ],
-      "title": "Foresight: planning future perception in streaming VLMs without retraining",
-      "reason": "FORESIGHTは共有重み・入力encoder・KV cacheを持つ2つのSiamese LLM streamで、片方が動画を処理する間にもう片方が未来の知覚対象と計算密度を予測し、再学習なしにonline計算経路を変更する。Qwen3-VL-8BでStreamingBench等の品質改善を報告するが、要旨に実測レイテンシ削減やGPU計算量の削減率はなく効率改善の定量性が不足する。",
-      "source_url": "https://arxiv.org/abs/2610.03123",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T01:35:52+09:00",
-      "last_checked_at": "2026-10-31T01:35:52+09:00",
-      "linked_from": [],
-      "worklist_rank": 432,
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
@@ -168,5 +88,14 @@
       "worklist_rank": 495,
       "origin": "discovery_worklist_primary_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261031-0128-scheduled-chat-30/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-precheck-3c83cc83a57f--libfile_2d2c1b8a12748191ba1505bc5d133635--discovery-20261031-0128-scheduled-chat-30-r01.json",
+  "provider_gap_ids": [
+    "DOI:10.1016/j.eswa.2026.134756",
+    "arXiv:2410.07278",
+    "arXiv:2509.02785",
+    "arXiv:2509.25958",
+    "arXiv:2608.01638"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4897594a53200086-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.34817",
+  "reason": "10種類のOSS agentにおけるprompt-cache関連PR 120件を分析し、キャッシュ設定・利用量計数の静かな不整合を調査。CACHELINTはCodeQLとprovider別仕様照合を用い、既知事例でprecision 0.71・recall 0.78、571 projectで32件を検出。キャッシュ不適切利用の費用・遅延に関係するが、主貢献はアプリ統合の静的検査で、cache eviction・推論kernel・serving schedulerの新規最適化ではないためborderline。",
+  "title": "Silent and Costly: Characterizing and Detecting Prompt-Caching Mis-Integration in LLM Agents",
+  "identity_tokens": [
+    "arXiv:2610.34817"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AI/2026-10"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4897594a5320",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

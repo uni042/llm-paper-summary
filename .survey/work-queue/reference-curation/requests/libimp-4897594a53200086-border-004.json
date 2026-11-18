@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4897594a53200086-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.33965",
+  "reason": "open-weight LLMのprefill/decodeを分けてGPU消費電力を実測し、非GPUサーバー電力は推論実行時間から推定。Bayesian linear regressionとMonte Carloでclosed-weightモデルの不確実性を含むtoken当たりenergy・CO2・水消費を推定する方法論。推論エネルギー計測には有用だが、kernel・scheduler・cache等の実行効率を直接改善する新方式ではないためborderline。",
+  "title": "Greenpixie's AI Token Methodology: Assessing the Energy, Water and CO2-eq Impact of AI Tokens for Open and Closed Weight Models",
+  "identity_tokens": [
+    "arXiv:2609.33965"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.AI/2026-09"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4897594a5320",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
