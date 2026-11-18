@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-00",
-  "run_key": "20261030-2202-scheduled-chat-00/r04",
+  "run_key": "20261030-2202-scheduled-chat-00/r04::provider-gap",
   "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
-  "record_count": 10,
+  "record_count": 8,
   "records": [
     {
       "classification": "accept",
@@ -139,28 +139,6 @@
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2505.15727",
-      "identity_tokens": [
-        "arXiv:2505.15727"
-      ],
-      "title": "VocalBench: Benchmarking the Vocal Conversational Abilities for Speech Interaction Models",
-      "reason": "VocalBenchは英語・中国語の音声対話約24,000例で意味、音響、会話行動、頑健性を27モデルに評価するベンチマーク。一次要旨の貢献は対話能力と環境音への頑健性の比較であり、LLM推論速度・メモリ・カーネル・サービング資源を改善する技術ではないためunrelated。",
-      "source_url": "https://arxiv.org/abs/2505.15727",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T22:18:00+09:00",
-      "last_checked_at": "2026-10-30T22:18:30+09:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
-        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
-        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
-        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
-      ],
-      "worklist_rank": 488,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2506.10446",
       "identity_tokens": [
@@ -180,29 +158,6 @@
         "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
       ],
       "worklist_rank": 489,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.48550/arXiv.2510.24941",
-      "identity_tokens": [
-        "DOI:10.48550/arXiv.2510.24941",
-        "arXiv:2510.24941"
-      ],
-      "title": "Can Aha Moments Be Fake? Towards Quantifying Decorative and True Thinking in Chain-of-Thought",
-      "reason": "True Thinking ScoreはCoT各段の最終回答への因果寄与を測り、飾りの思考と実効的な思考を区別する。一次要旨では低TTSの50%段落を削除しても性能を概ね維持し、剪定CoTの自己学習でNemotron3-Nano-30Bの思考長66%削減。ただし中心は推論の忠実性分析であり、ランタイムでの直接的な高速化方式は副次的なためborderline。公式題名はworklistの旧表記から変更。",
-      "source_url": "https://arxiv.org/abs/2510.24941",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T22:18:00+09:00",
-      "last_checked_at": "2026-10-30T22:18:30+09:00",
-      "linked_from": [
-        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
-        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
-        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
-        "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md",
-        "papers/inference/99-other-inference-systems/2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md"
-      ],
-      "worklist_rank": 491,
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
@@ -227,5 +182,17 @@
       "worklist_rank": 492,
       "origin": "discovery_worklist_primary_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261030-2202-scheduled-chat-00/r04",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/retry-precheck-348235a078ca--libfile_393b4ae07a2c8191b648df8d71625504--discovery-20261030-2202-scheduled-chat-00-r04.json",
+  "provider_gap_ids": [
+    "arXiv:2506.10446",
+    "arXiv:2605.08813",
+    "arXiv:2605.08985",
+    "arXiv:2605.13165",
+    "arXiv:2605.22138",
+    "arXiv:2605.23074",
+    "arXiv:2608.22516",
+    "arXiv:2608.25115"
   ]
 }

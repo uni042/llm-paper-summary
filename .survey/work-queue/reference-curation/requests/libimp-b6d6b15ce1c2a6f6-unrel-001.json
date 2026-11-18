@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b6d6b15ce1c2a6f6-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2604.06916",
+  "reason": "Sol-RLはFLUX.1、SANA、SD3.5など画像生成拡散モデルの強化学習で、FP4で大量候補を探索しBF16で選別候補を再生成して学習する方式。一次要旨の最大4.64倍は画像拡散モデルの学習収束高速化であり、生成LLMの推論エンジン・KV・デコード最適化ではないため対象外。",
+  "title": "FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling",
+  "identity_tokens": [
+    "arXiv:2604.06916"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6d6b15ce1c2",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
