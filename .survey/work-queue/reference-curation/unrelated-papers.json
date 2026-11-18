@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T09:29:00+00:00",
-  "record_count": 12855,
+  "updated_at": "2026-11-18T09:48:43+00:00",
+  "record_count": 12864,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181521,7 +181521,7 @@
       ],
       "reason": "FP8/INT4学習時の高精度master weightsを除去し、量子化誤差をoptimizer momentumへ戻す誤差補償で学習メモリを削減する研究。評価はTransformer・Gemma・Sparse MoEの事前学習と微調整であり、推論時の実行機構、サービング、KV管理、推論速度の直接的改善を提案・評価していないため、現在凍結された学習単独範囲として除外。",
       "first_checked_at": "2026-10-30T16:56:39+00:00",
-      "last_checked_at": "2026-10-30T16:56:39+00:00",
+      "last_checked_at": "2026-11-18T09:48:30+00:00",
       "linked_from": [],
       "title": "ECO: Quantized Training without Full-Precision Master Weights"
     },
@@ -181533,7 +181533,7 @@
       ],
       "reason": "1層Mambaの線形注意と非線形ゲートについて、外れ値を含む入力例からのin-context learningと学習収束・一般化を理論解析する。Mambaの計算効率には言及するが、主貢献は分類タスクでの学習ダイナミクスと外れ値耐性の証明であり、推論ランタイムや圧縮・サービングの新規最適化はないため対象外。",
       "first_checked_at": "2026-10-30T16:56:39+00:00",
-      "last_checked_at": "2026-10-30T16:56:39+00:00",
+      "last_checked_at": "2026-11-18T09:48:31+00:00",
       "linked_from": [],
       "title": "How Can Mamba Learn In Context with Outliers and Generalize Provably?"
     },
@@ -182474,9 +182474,9 @@
       "identity_tokens": [
         "arXiv:2405.18137"
       ],
-      "reason": "量子化されたモデルにのみ悪意ある挙動を残すセキュリティ攻撃を扱う。悪性モデルのfine-tuning、同一量子化結果へ写る重み制約の算出、射影勾配降下によるfull-precision版の挙動除去という三段階であり、量子化の推論性能・メモリ・カーネル改善手法を提案していないため本サーベイの推論システム技術対象外。",
+      "reason": "arXiv一次要旨は量子化前の全精度LLMを無害に見せ、量子化後に悪意ある挙動が現れるよう重みを細工するセキュリティ攻撃を提案。LLM量子化を扱うが、目的・評価は脆弱性と攻撃成立性であり、推論の速度・メモリ・カーネル・サービング効率を改善するシステム貢献はない。",
       "first_checked_at": "2026-11-15T21:43:10+00:00",
-      "last_checked_at": "2026-11-18T08:47:46+00:00",
+      "last_checked_at": "2026-11-18T09:48:29+00:00",
       "linked_from": [
         "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
         "Weight Quantization / Compression",
@@ -184621,9 +184621,9 @@
       "identity_tokens": [
         "arXiv:2411.16991"
       ],
-      "reason": "過去のミニバッチによる動的自己蒸留。小さい言語モデルの微調整のための自己蒸留。対象は微調整であり、推論機構ではない。対象外。",
+      "reason": "タイトルでsmall language modelのfine-tuningと過去mini-batchを使うself-distillation学習が中心と判明。LLM生成推論システムの最適化ではないためタイトル先行除外。",
       "first_checked_at": "2026-11-18T08:08:24+00:00",
-      "last_checked_at": "2026-11-18T08:08:24+00:00",
+      "last_checked_at": "2026-11-18T09:48:40+00:00",
       "linked_from": [
         "weight-quantization-compression"
       ],
@@ -185096,6 +185096,119 @@
         "WORKLIST-00.md rank 87; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
       ],
       "title": "When and How to Rotate: Loss Design and Activation Granularity for Rotation-Based Vision Model Quantization"
+    },
+    "arXiv:2506.19847": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19847",
+      "identity_tokens": [
+        "arXiv:2506.19847"
+      ],
+      "reason": "arXivとEMNLP 2025一次要旨を確認。OFTv2は重み中心の行列積を入力中心の行列ベクトル演算へ変更し、Cayley–Neumannパラメータ化で直交fine-tuningを最大10倍高速化し学習時GPUメモリを3分の1程度にする。評価対象はfinetuning計算と学習安定性であり、LLMの生成推論サービングやデコード高速化を直接評価していないため凍結中の学習単独最適化としてunrelated。",
+      "first_checked_at": "2026-11-18T09:48:32+00:00",
+      "last_checked_at": "2026-11-18T09:48:32+00:00",
+      "linked_from": [],
+      "title": "Orthogonal Finetuning Made Scalable"
+    },
+    "arXiv:2404.19543": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.19543",
+      "identity_tokens": [
+        "arXiv:2404.19543"
+      ],
+      "reason": "arXiv一次要旨はRetrieval-Augmented Generation/Understandingの分類、retrieverとlanguage modelの構成、翻訳・対話・知識集約タスクの応用、および頑健性・正確性・関連性の評価を整理するサーベイ。計算効率を将来課題として言及するが、LLM推論カーネル、KVキャッシュ、サービング、オフロードの具体的なシステム最適化を調査の中心にしていないためunrelated。",
+      "first_checked_at": "2026-11-18T09:48:33+00:00",
+      "last_checked_at": "2026-11-18T09:48:33+00:00",
+      "linked_from": [],
+      "title": "RAG and RAU: A Survey on Retrieval-Augmented Language Model in Natural Language Processing"
+    },
+    "arXiv:2505.11165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11165",
+      "identity_tokens": [
+        "arXiv:2505.11165"
+      ],
+      "reason": "arXiv一次要旨はイベントカメラの非同期イベント列を学習表現へ変換するEVA（Event Asynchronous representation learning）を提案し、DVS128-Gesture/N-Carsの認識とGen1の物体検出で評価する。言語モデルのlinear attentionと自己教師あり学習から着想を得るが、最終用途はイベントベース視覚認識・検出であり、LLMの生成推論・サービングは対象外なのでunrelated。",
+      "first_checked_at": "2026-11-18T09:48:33+00:00",
+      "last_checked_at": "2026-11-18T09:48:33+00:00",
+      "linked_from": [],
+      "title": "Maximizing Asynchronicity in Event-based Neural Networks"
+    },
+    "arXiv:2610.42024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.42024",
+      "identity_tokens": [
+        "arXiv:2610.42024"
+      ],
+      "reason": "LLM支援の記号回帰で複数の候補方程式間の不一致を構造的不確実性として表現し、外挿時の予測区間のカバレッジを改善するLLM-SR-UQ。一次要旨の評価はLLM-SRBenchの記号回帰予測品質であり、LLM生成推論の高速化・メモリ管理・サービング実行に関する技術的貢献を示さないためunrelated。",
+      "first_checked_at": "2026-11-18T09:48:37+00:00",
+      "last_checked_at": "2026-11-18T09:48:37+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent"
+      ],
+      "title": "Know When the Equation Is Wrong: Structural Uncertainty for LLM-Guided Symbolic Regression under Extrapolation"
+    },
+    "arXiv:2610.35328": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.35328",
+      "identity_tokens": [
+        "arXiv:2610.35328"
+      ],
+      "reason": "format/validity/reasoning constraintの3種がLLMの回答正確性・抽出可能性へ与える影響を、4 model family・11 open-source modelの因果的ablationで検証。非等価promptやoutput formatが性能劣化の見かけを生むことを示し、validity/reasoning制約による回答品質改善を分析する。ここでのperformanceは主として回答品質で、推論latency・throughput・GPU memory削減の手法・評価は一次要旨にないため、推論効率サーベイの範囲外としてunrelated。",
+      "first_checked_at": "2026-11-18T09:48:38+00:00",
+      "last_checked_at": "2026-11-18T09:48:38+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "title": "Constrained Decoding: Harmful or Beneficial? Revisiting Its Impact on LLM Performance"
+    },
+    "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8",
+      "identity_tokens": [
+        "SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8"
+      ],
+      "reason": "タイトルでinsertion-based language modelをゼロから学習する研究と判明。推論サービング・実行時メモリ・デコードカーネルの最適化ではないためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T09:48:40+00:00",
+      "last_checked_at": "2026-11-18T09:48:40+00:00",
+      "linked_from": [],
+      "title": "InsNeXt: Training Scalable Insertion-Based Language Models From Scratch"
+    },
+    "DOI:10.1109/hpca56546.2023.10071077": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca56546.2023.10071077",
+      "identity_tokens": [
+        "DOI:10.1109/hpca56546.2023.10071077"
+      ],
+      "reason": "タイトルで対象がmulti-GPUの大規模モデルtrainingとinter-operator parallelismによる学習メモリ削減と判明。推論専用の最終適用が明示されずタイトル先行除外。",
+      "first_checked_at": "2026-11-18T09:48:41+00:00",
+      "last_checked_at": "2026-11-18T09:48:41+00:00",
+      "linked_from": [],
+      "title": "MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism"
+    },
+    "DOI:10.1109/ijcnn64981.2025.11228370": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ijcnn64981.2025.11228370",
+      "identity_tokens": [
+        "DOI:10.1109/ijcnn64981.2025.11228370"
+      ],
+      "reason": "タイトルでdropoutのbitmask化によるtraining高速化が主題と判明。生成LLMの推論・サービング最適化ではないためタイトル先行除外。",
+      "first_checked_at": "2026-11-18T09:48:41+00:00",
+      "last_checked_at": "2026-11-18T09:48:41+00:00",
+      "linked_from": [],
+      "title": "Accelerated Dropout: A Bitmask Approach to Speed Up Model Training"
+    },
+    "DOI:10.1007/s00521-025-11226-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00521-025-11226-1",
+      "identity_tokens": [
+        "DOI:10.1007/s00521-025-11226-1",
+        "SemanticScholar:f6f9dc13572e3711fb451b73acec68ee96e55c6a"
+      ],
+      "reason": "Springer公式要旨では、ViTのattentionをMLP-Mixer由来のトークン混合ゲートを持つnetwork-in-networkブロックに置換し、画像分類データセットで精度と計算量を比較する。LLM推論、生成時KV、サービングの実装・評価はなく、視覚分類アーキテクチャの改善が最終目的であるため対象外。",
+      "first_checked_at": "2026-11-18T09:48:43+00:00",
+      "last_checked_at": "2026-11-18T09:48:43+00:00",
+      "linked_from": [],
+      "title": "NiNformer: a network in network transformer with token mixing generated gating function"
     }
   }
 }

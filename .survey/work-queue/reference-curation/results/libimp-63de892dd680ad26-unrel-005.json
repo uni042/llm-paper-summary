@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63de892dd680ad26-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.42024",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.42024",
+    "identity_tokens": [
+      "arXiv:2610.42024"
+    ],
+    "reason": "LLM支援の記号回帰で複数の候補方程式間の不一致を構造的不確実性として表現し、外挿時の予測区間のカバレッジを改善するLLM-SR-UQ。一次要旨の評価はLLM-SRBenchの記号回帰予測品質であり、LLM生成推論の高速化・メモリ管理・サービング実行に関する技術的貢献を示さないためunrelated。",
+    "first_checked_at": "2026-11-18T09:48:37+00:00",
+    "last_checked_at": "2026-11-18T09:48:37+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/recent"
+    ],
+    "title": "Know When the Equation Is Wrong: Structural Uncertainty for LLM-Guided Symbolic Regression under Extrapolation"
+  },
+  "processed_at": "2026-11-18T09:48:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63de892dd680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

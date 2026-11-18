@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7b96d773b6de6a2-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.09221",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.09221",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.09221",
+      "arXiv:2603.09221"
+    ],
+    "reason": "arXivの登録要旨でTTC層は有限ホライズンLQRを潜在状態で解く推論時の計画機構であり、シンプレクティックな並列ソルバと融合CUDAカーネルを導入する。評価の中心はMATH-500の推論精度+27.8%など能力向上で、サービング遅延・メモリ・トークン当たり計算量の改善を主目的とするかは未確定。本文HTMLの題名は「Beyond Test-Time Memory」に変更されており同一arXiv IDで版確認が必要。",
+    "first_checked_at": "2026-11-18T08:17:57+00:00",
+    "last_checked_at": "2026-11-18T09:48:42+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+      "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control"
+  },
+  "processed_at": "2026-11-18T09:48:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7b96d773b6d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

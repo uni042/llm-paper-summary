@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34466bdad8c57cab-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.10447",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.10447",
+    "identity_tokens": [
+      "arXiv:2608.10447"
+    ],
+    "reason": "arXiv一次要旨では、推薦タスク向けslow-thinking LLMとfast-thinking LLMの重みをattention head単位で融合し、重要な推論根拠を守りつつ生成するreasoning traceを最大24.3%短縮するREAMを提案する。生成トークン数削減は推論費用に関連するが、評価は推薦精度と説明の簡潔さが中心で、LLMサービングのスループットやカーネル・KVメモリを直接改善する機構ではないためborderline。",
+    "first_checked_at": "2026-11-18T07:37:47+00:00",
+    "last_checked_at": "2026-11-18T09:48:31+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Efficient Reasoning in LLM-Based Recommender Systems via Model Merging"
+  },
+  "processed_at": "2026-11-18T09:48:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34466bdad8c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

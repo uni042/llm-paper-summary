@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cdf60f7429369aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.02267",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.02267",
+    "identity_tokens": [
+      "arXiv:2405.02267"
+    ],
+    "reason": "arXiv一次要旨はBERT/RoBERTaの分類向け微調整モデルに対し、重み共有型ニューラル構造探索で層・構造を剪定しサイズ・遅延・精度のPareto集合を得る方式。推論効率化の技術はあるが生成LLMやデコード・サービングを対象とせず、現行系統との接続は境界的。",
+    "first_checked_at": "2026-11-18T07:47:30+00:00",
+    "last_checked_at": "2026-11-18T09:48:28+00:00",
+    "linked_from": [
+      "03-model-compression-pruning",
+      "Weight Quantization / Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Structural Pruning of Pre-trained Language Models via Neural Architecture Search"
+  },
+  "processed_at": "2026-11-18T09:48:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cdf60f74293",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

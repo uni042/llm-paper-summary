@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34466bdad8c57cab-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.52202/085713-1356",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.52202/085713-1356",
+    "identity_tokens": [
+      "DOI:10.52202/085713-1356"
+    ],
+    "reason": "NeurIPS 2025の一次要旨では、未知の混合ドメインで複数の領域特化モデルから入力ごとの適切なモデルを選ぶ問題をmultiple-source domain adaptationとして定式化し、ソースドメインのregretに基づく理論保証を与える。推論時のモデルルーティングに接点はあるが、LLMの推論遅延、GPU資源、サービング費用を最適化する機構・評価は一次要旨で示されず、一般的なモデル選択理論が主目的なのでborderline。",
+    "first_checked_at": "2026-11-18T09:48:31+00:00",
+    "last_checked_at": "2026-11-18T09:48:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Principled Model Routing for Unknown Mixtures of Source Domains"
+  },
+  "processed_at": "2026-11-18T09:48:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34466bdad8c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

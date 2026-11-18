@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63de892dd680ad26-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.38458",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.38458",
+    "identity_tokens": [
+      "arXiv:2610.38458"
+    ],
+    "reason": "Firecracker micro-VM内のAI agentをネットワークカードなしで隔離し、ホストのvsockゲートウェイで外向き通信・秘密情報・モデルAPI呼出し・ワークスペース差分を承認・署名する実行基盤。一次要旨は13件のE2E検査と署名ログの検証を示す。LLM呼出しを含むagent実行の安全性には関係するが、推論モデルの計算・メモリ・サービング効率改善は評価対象でなく、推論システムサーベイとの関連は周辺的なためborderline。",
+    "first_checked_at": "2026-11-18T09:48:36+00:00",
+    "last_checked_at": "2026-11-18T09:48:36+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.OS/recent"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tracekit Box: Running AI Agents in Micro-VMs Where Every Way Out Is Decided and Signed"
+  },
+  "processed_at": "2026-11-18T09:48:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63de892dd680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

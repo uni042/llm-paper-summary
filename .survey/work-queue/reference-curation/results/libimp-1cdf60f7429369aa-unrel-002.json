@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cdf60f7429369aa-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.18137",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.18137",
+    "identity_tokens": [
+      "arXiv:2405.18137"
+    ],
+    "reason": "arXiv一次要旨は量子化前の全精度LLMを無害に見せ、量子化後に悪意ある挙動が現れるよう重みを細工するセキュリティ攻撃を提案。LLM量子化を扱うが、目的・評価は脆弱性と攻撃成立性であり、推論の速度・メモリ・カーネル・サービング効率を改善するシステム貢献はない。",
+    "first_checked_at": "2026-11-15T21:43:10+00:00",
+    "last_checked_at": "2026-11-18T09:48:29+00:00",
+    "linked_from": [
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "Weight Quantization / Compression",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+    ],
+    "title": "Exploiting LLM Quantization"
+  },
+  "processed_at": "2026-11-18T09:48:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cdf60f74293",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-63de892dd680ad26-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.33380",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.33380",
+    "identity_tokens": [
+      "arXiv:2610.33380"
+    ],
+    "reason": "FPGA上のMEERKATにより、Linuxがアクセラレータを周辺装置扱いする際の呼出し・割込み・通信・スケジューリングのオーバーヘッドを計測し、仮想メモリ対応通信、軽量起動、動的polling/interrupt切替、アクセラレータ対応schedulerを提案。一次要旨で通信最大260倍、wall-clock性能2〜6倍を報告。ただし評価は汎用異種SoCであり、LLM推論モデル・KVキャッシュ・GPUサービングへの適用は要旨から実証できないためborderline。",
+    "first_checked_at": "2026-11-18T09:48:36+00:00",
+    "last_checked_at": "2026-11-18T09:48:36+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.OS/recent"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Operating System Support for Accelerators as First-Class Compute Elements in Heterogeneous Systems"
+  },
+  "processed_at": "2026-11-18T09:48:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-63de892dd680",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

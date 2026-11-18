@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-34466bdad8c57cab-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.12102",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.12102",
+    "identity_tokens": [
+      "arXiv:2402.12102"
+    ],
+    "reason": "arXiv一次要旨では、量子化時に問題となる重み・活性のoutlierを事前学習中に抑制する既存softmax変更がfull-precision性能を悪化させると指摘し、系列長に不変な正規化へ修正してcausal language modelの事前学習へ適用する。低ビット推論の品質維持と技術的に関連するが、主たる提案・検証は事前学習手法であり、推論時の量子化カーネル・メモリ・レイテンシ改善は要旨で確証できないためborderline。",
+    "first_checked_at": "2026-11-18T09:48:32+00:00",
+    "last_checked_at": "2026-11-18T09:48:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Is It a Free Lunch for Removing Outliers during Pretraining?"
+  },
+  "processed_at": "2026-11-18T09:48:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-34466bdad8c5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

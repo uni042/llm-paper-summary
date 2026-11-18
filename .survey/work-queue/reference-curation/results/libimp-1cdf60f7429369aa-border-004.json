@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cdf60f7429369aa-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.08864",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.08864",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.08864",
+      "arXiv:2602.08864"
+    ],
+    "reason": "arXiv一次要旨はトークンごとに反復深度を変えるANIRAを合成言語・アルゴリズム課題で分析し、計算割当が課題複雑度と一致しても未知入力長へ汎化しないことを示す。適応推論計算の分析基盤だが、実際の生成LLMサービングの計測・効率改善は主要成果ではないため境界的。",
+    "first_checked_at": "2026-11-15T21:43:05+00:00",
+    "last_checked_at": "2026-11-18T09:48:28+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Understanding Dynamic Compute Allocation in Recurrent Transformers"
+  },
+  "processed_at": "2026-11-18T09:48:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cdf60f74293",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

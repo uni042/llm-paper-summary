@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f7b96d773b6de6a2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:a054d7c36a7246281eba672d8edce9e573fe6898",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:a054d7c36a7246281eba672d8edce9e573fe6898",
+    "identity_tokens": [
+      "OpenReview:LnKDcqOfgy",
+      "SemanticScholar:a054d7c36a7246281eba672d8edce9e573fe6898"
+    ],
+    "reason": "OpenReview公開原稿の要旨はOPTQの丸め操作にビット率コストを加え、NNCodec系の予測符号化モデルでレートと歪みを同時最適化する。視覚系の事前学習モデルでNNCodec比最大2.7倍のファイル圧縮を評価し、低ビットGPU推論との互換性は述べるがLLM推論の直接評価は示さないため境界候補とする。",
+    "first_checked_at": "2026-11-18T09:48:42+00:00",
+    "last_checked_at": "2026-11-18T09:48:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Rate/Distortion Constrained Model Quantization for Efficient Storage and Inference"
+  },
+  "processed_at": "2026-11-18T09:48:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f7b96d773b6d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
