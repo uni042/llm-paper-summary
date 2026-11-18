@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r07",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v40i27.39425"
+      ],
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "reason": "AAAI出版社公式要旨は活性に応じた局所テンソル分解を注意全体の結合分解へ拡張し、LLMを低次元潜在構造へ変換するLatentLLMを提案。計算量・メモリ削減と圧縮時の品質維持を目的とし、マルチモーダル推論も評価。推論用構造圧縮に直接該当。",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 105
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34680",
+      "identity_tokens": [
+        "arXiv:2609.34680"
+      ],
+      "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+      "reason": "arXiv一次要旨はLLM駆動のプログラム進化で量子化誤差の仮説・反証を保持し、MXFP4 W4A4の座標変換、符号割当、残差回復を組み合わせるHiResを探索。7モデルのRobust Fitを評価し、巨大LLMの推論向け量子化精度を改善。量子化手法と自動設計の直接的貢献。",
+      "source_url": "https://arxiv.org/abs/2609.34680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.14706",
+      "identity_tokens": [
+        "arXiv:2609.14706"
+      ],
+      "title": "WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians",
+      "reason": "arXiv v2一次要旨はKronecker分解Hessianの近似誤差を情報理論的な歪み係数で評価し、行列両側のGPTQと水充填型スケール、flip-flop更新を導出。入力のみ等のHessian近似よりKLとPPLを改善。LLMの推論向けPTQの理論と品質に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.14706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.16219",
+      "identity_tokens": [
+        "arXiv:2603.16219"
+      ],
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "reason": "arXiv一次要旨は端末にある私的文脈をクラウドへ送らず、端末ドラフトとクラウド検証をDraft–Verify–Recoverとして組み合わせるSpecSteerを提案。分散投機的復号で推論品質とプライバシーを両立し、標準ベースライン比2.36倍高速化を報告。端末・クラウド協調LLM推論に直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 108
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.30217",
+      "identity_tokens": [
+        "arXiv:2606.30217"
+      ],
+      "title": "Before Thinking, Learn to Decide: Proactive Routing for Efficient Visual Reasoning",
+      "reason": "arXiv v2一次要旨は視覚推論の質問に対し、ドラフトとターゲット両モデルの解答可能性を予測し、生成前に適切なモデルへルーティングするPRPを提案。単純な難易度判定ではなくモデル能力差を用いて推論資源を割り当てるため、MLLMのモデル選択による計算量削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.30217",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.14277",
+      "identity_tokens": [
+        "arXiv:2601.14277"
+      ],
+      "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+      "reason": "arXiv一次要旨はLlama-3.1-8B-Instructを同一条件でllama.cpp GGUFの3〜8bit K-quant・legacy形式へ量子化し、PPL・CPU prefill/decodeスループット・サイズ・量子化時間・複数タスク品質を統一比較。ローカルLLM推論の形式選択に直接使える実測サーベイ。",
+      "source_url": "https://arxiv.org/abs/2601.14277",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.05023",
+      "identity_tokens": [
+        "arXiv:2605.05023"
+      ],
+      "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+      "reason": "arXiv一次要旨は専門家実装のCUDA注意カーネルを実行可能IRに持ち上げ、PyTorch仕様から検証・移植して高速CUDAへ復元するCuBridgeを提案。注意変種とGPUプラットフォームで正しさと性能を評価し、一般コンパイラや従来LLM生成カーネルより優位と報告。推論注意カーネル生成の直接的な実装貢献。",
+      "source_url": "https://arxiv.org/abs/2605.05023",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 113
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.26446",
+      "identity_tokens": [
+        "arXiv:2510.26446"
+      ],
+      "title": "1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models",
+      "reason": "arXiv一次要旨は枝刈りと低ランク近似を一体の反復最適化として扱うSSLCを提案。LLaMA・Qwen2.5の7B〜70Bで追加学習なしの圧縮を評価し、Qwen2.5の50%圧縮で品質低下なし・少なくとも1.63倍の推論高速化を報告。推論向け重み圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2510.26446",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 114
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.16734",
+      "identity_tokens": [
+        "arXiv:2604.16734"
+      ],
+      "title": "Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines",
+      "reason": "arXiv一次要旨はMLLMのprefill中に視覚KVがピークメモリを増大させる点を対象に、全入力処理後ではなくprefill進行中に構造認識KV圧縮を行い、固定メモリ予算を守る方式を提案。生成品質を大きく損なわずピークメモリを削減するため、VLM推論のメモリ管理に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.16734",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 115
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.18920",
+      "identity_tokens": [
+        "arXiv:2511.18920"
+      ],
+      "title": "EventSTU: Event-Guided Efficient Spatio-Temporal Understanding for Video Large Language Models",
+      "reason": "arXiv一次要旨は動画の変化イベントに基づく粗密キーフレーム選択と、イベント顕著性・質問関連性による視覚トークン削減を組み合わせるEventSTUを提案。動画LLMでFLOPs最大3.01倍削減、prefill最大3.10倍高速化を報告し、長動画推論の時間・空間両方の計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2511.18920",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:12:38+09:00",
+      "last_checked_at": "2026-10-30T15:12:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 117
+    }
+  ]
+}

@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-45",
-  "run_key": "20261030-1943-scheduled-chat-45/r02",
+  "run_key": "20261030-1943-scheduled-chat-45/r02::provider-gap",
   "reference_main_sha": "7129fd60a2a16899cd3a0dab1f4af179c46a7d28",
-  "record_count": 10,
+  "record_count": 6,
   "records": [
     {
       "canonical_id": "arXiv:2603.04460",
@@ -71,38 +71,6 @@
       "origin": "discovery_primary_fulltext"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2601.20317",
-      "identity_tokens": [
-        "arXiv:2601.20317"
-      ],
-      "title": "VersaQ-3D: Architecture Support for Visual Geometry Grounded Transformers via Versatile Quantization",
-      "reason": "VGGTによる3D復元のW4A8/W4A4量子化とBF16/INT8/INT4混合精度アクセラレータを提案。4種の3D視覚ベンチマークで評価しているが、対象は言語モデル推論ではなく3D視覚Transformer。量子化・長系列attentionの設計は隣接技術として有用。",
-      "source_url": "https://arxiv.org/html/2601.20317v2",
-      "body_check": "primary_fulltext_verified: arXiv HTML v2 sections 3-5, camera pose and point map benchmarks, hardware methodology",
-      "first_checked_at": "2026-10-30T19:53:13+09:00",
-      "last_checked_at": "2026-10-30T19:53:13+09:00",
-      "linked_from": [],
-      "worklist_rank": 147,
-      "origin": "discovery_primary_fulltext"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2604.23798",
-      "identity_tokens": [
-        "arXiv:2604.23798"
-      ],
-      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
-      "reason": "結合的モノイドによるonline softmaxのparallel prefix scanでFP32正確性とO(log n)深さを実現し、A100/Jetsonで評価。Attention kernelとして転用可能だが主対象はVision Transformer、BERTやedge vision系でありLLM serving専用ではない。",
-      "source_url": "https://arxiv.org/html/2604.23798v1",
-      "body_check": "primary_fulltext_verified: arXiv HTML v1 algorithm and numerical analysis, A100 and Jetson experiments, supplementary",
-      "first_checked_at": "2026-10-30T19:53:13+09:00",
-      "last_checked_at": "2026-10-30T19:53:13+09:00",
-      "linked_from": [],
-      "worklist_rank": 160,
-      "origin": "discovery_primary_fulltext"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2605.30836",
       "identity_tokens": [
@@ -133,38 +101,16 @@
       "linked_from": [],
       "worklist_rank": 165,
       "origin": "discovery_primary_fulltext"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.13368",
-      "identity_tokens": [
-        "arXiv:2512.13368"
-      ],
-      "title": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations",
-      "reason": "長短期の推薦履歴を別々のsparse attentionで計算しgating統合するBlossomRec。MovieLens/Gowalla/Amazon等の推薦ベンチマークで評価し、LLM推論・KV管理は対象外。注意疎化の一般手法として隣接するが本サーベイの中核から外れる。",
-      "source_url": "https://arxiv.org/html/2512.13368v3",
-      "body_check": "primary_fulltext_verified: arXiv HTML v3 sections 3-4, recommendation datasets and attention efficiency",
-      "first_checked_at": "2026-10-30T19:53:13+09:00",
-      "last_checked_at": "2026-10-30T19:53:13+09:00",
-      "linked_from": [],
-      "worklist_rank": 167,
-      "origin": "discovery_primary_fulltext"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2604.18348",
-      "identity_tokens": [
-        "arXiv:2604.18348"
-      ],
-      "title": "AdaCluster: Adaptive Query-Key Clustering for Sparse Attention in Video Generation",
-      "reason": "動画拡散TransformerのQ/Kクラスタリングによるsparse attention高速化。CogVideoX/Hunyuan/Wan2.1の生成画質とA40/H100上の速度を比較するが、LLMの自己回帰decodeやKV-cache servingではない。疎注意カーネルの転用可能性はあるため境界候補。",
-      "source_url": "https://arxiv.org/html/2604.18348v1",
-      "body_check": "primary_fulltext_verified: arXiv HTML v1 sections 3-4, video DiT evaluations, A40/H100 ablations",
-      "first_checked_at": "2026-10-30T19:53:13+09:00",
-      "last_checked_at": "2026-10-30T19:53:13+09:00",
-      "linked_from": [],
-      "worklist_rank": 150,
-      "origin": "discovery_primary_fulltext"
     }
+  ],
+  "parent_run_key": "20261030-1943-scheduled-chat-45/r02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_83d77b26c928819188f22fdcd9d2dfde--discovery-20261030-1943-scheduled-chat-45-r02.json",
+  "provider_gap_ids": [
+    "arXiv:2510.18525",
+    "arXiv:2512.12560",
+    "arXiv:2603.04460",
+    "arXiv:2605.04075",
+    "arXiv:2605.30836",
+    "arXiv:2609.34612"
   ]
 }

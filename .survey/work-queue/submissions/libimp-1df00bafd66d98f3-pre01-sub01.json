@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FutureFill: Fast Generation from Convolutional Sequence Models",
+      "source_url": "https://arxiv.org/abs/2410.03766",
+      "year": 2024,
+      "published": "2024-10-02",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We address the challenge of efficient auto-regressive generation in sequence prediction models by introducing FutureFill, a general-purpose fast generation method for any sequence prediction algorithm based on convolutional operators. FutureFill reduces generation time from quadratic to quasilinear in the context length. Moreover, when generating from a prompt, it requires a prefill cache whose size grows only with the number of tokens to be generated, often much smaller than the caches required by standard convolutional or attention based models. We validate our theoretical claims with experiments on synthetic tasks and demonstrate substantial efficiency gains when generating from a deep convolutional sequence prediction model.",
+      "identifiers": [
+        "SemanticScholar:d25924cb4f1b17d9f3a808ee586788866c30faab"
+      ],
+      "semantic_scholar_id": "d25924cb4f1b17d9f3a808ee586788866c30faab",
+      "canonical_id": "arXiv:2410.03766",
+      "arxiv_id": "2410.03766",
+      "doi": "10.48550/arXiv.2410.03766",
+      "authors": [
+        "Naman Agarwal",
+        "Xin-Yi Chen",
+        "Evan Dogariu",
+        "Devan Shah",
+        "Hubert Strauss",
+        "Vladimir Feinberg",
+        "Daniel Suo",
+        "P. Bartlett",
+        "Elad Hazan"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 777,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "畳み込み演算に基づく系列予測モデルで自己回帰生成を高速化するFutureFillを提案。系列長に対する生成計算を二乗から準線形へ下げ、promptのprefill cacheサイズも生成予定token数に依存する構造へ変更する。合成課題と深い畳み込み系列モデルで検証しており、Transformer専用ではないが、非attention型の言語生成推論・メモリ効率の基礎技術として関連。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "StickyInvoc: Rethinking Task Models for High-throughput Workflows in the LLM Era",
+      "source_url": "https://arxiv.org/abs/2606.22175",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of LLMs into high-throughput workflows is creating a new class of workloads on HPC clusters that promises to accelerate advances in scientific discovery with unprecedented generative capabilities. However, the traditional task model imposes a prohibitive overhead in this new domain: each task must create its computational state from scratch and destroy it upon completion. For each LLM inference task, this\"create-destroy\"model forces the repeated and costly transfer of multi-gigabyte model parameters from a long-term, reliable storage to a compute node's local disk, its CPU memory, and finally its GPU memory. This overhead, compounded by the inherently high startup cost of LLM inference, the typical scale of thousands of tasks in high-throughput workflows, and the heterogeneous and preemptible nature of high-throughput resources, presents a significant performance barrier. To overcome this barrier, this paper presents StickyInvoc: a symbiotic relationship between two new task models for high-throughput workflows. Specifically, a\"sticky\"task creates a persistent state on a compute node from a user-provided template, but doesn't execute any goodput computation by itself. Instead, this state is then inherited by subsequent\"invocation\"tasks, which perform the actual computation without incurring the state creation overhead or destroying the state upon exit. StickyInvoc thus allows the decoupling of the creation and destruction of computational states, allowing the computational state of LLM models to be created once per sticky task and its cost amortized over many subsequent invocation tasks. Our evaluation shows that when rewritten in the StickyInvoc paradigm, a claim verification workflow consisting of 150k inferences achieves a 3.6x speedup on a stable testbed with 20 GPUs, and completes in just 784 seconds by incrementally scaling out to 186 otherwise idle GPUs.",
+      "identifiers": [
+        "SemanticScholar:f530a54c7698348b3d5c48b87814bce09d4212b4"
+      ],
+      "semantic_scholar_id": "f530a54c7698348b3d5c48b87814bce09d4212b4",
+      "canonical_id": "arXiv:2606.22175",
+      "arxiv_id": "2606.22175",
+      "doi": "10.48550/arXiv.2606.22175",
+      "authors": [
+        "Thanh Son Phung",
+        "D. Thain"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HPC上の大量のLLM推論タスクが起動ごとに巨大なモデル重みをstorage→disk→CPU→GPUへ読み込むcreate-destroy overheadを問題化する。StickyInvocは永続的なsticky taskにモデル状態を作らせ、後続のinvocation taskがその状態を引き継いで実際の推論を実行する二段階タスクモデルを提案する。多数の短命LLMタスクのcold start・重みロードを削減するサービング基盤技術。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "Systematic Evaluation of Optimization Techniques for Long-Context Language Models",
+      "source_url": "https://arxiv.org/abs/2508.00305",
+      "year": 2025,
+      "published": "2025-08-01",
+      "venue": "IEEE International Conference on Cluster Computing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with long contexts are bottlenecked by parameter memory, KV-cache memory, and decode-time compute. While inference optimizations promise relief, their effectiveness and interactions in long context settings remain underexplored. We first analyze individual optimization methods for two LLM architectures supporting long context and then systematically evaluate combinations of these techniques to assess how this deeper analysis impacts performance metrics. The study spans multiple long-context tasks and includes scaling experiments to characterize how optimization behavior shifts with scale and task regime, revealing when gains compound or diminish. By integrating system-level profiling with task-specific insights, this study helps LLM practitioners and researchers explore and balance efficiency, accuracy, and scalability across tasks and hardware configurations.",
+      "identifiers": [
+        "SemanticScholar:7825f59f1bc101c25adbc2e21ce968d7e25d5b92"
+      ],
+      "semantic_scholar_id": "7825f59f1bc101c25adbc2e21ce968d7e25d5b92",
+      "canonical_id": "arXiv:2508.00305",
+      "arxiv_id": "2508.00305",
+      "doi": "10.1109/CLUSTER68337.2026.00047",
+      "authors": [
+        "Ammar Ahmed",
+        "Sheng Di",
+        "F. Cappello",
+        "Zi-Rui Liu",
+        "Jingoo Han",
+        "Ali Anwar"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 474,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈LLMのpruning・quantization・token droppingを単独および組合せで評価し、GPUメモリ・遅延・throughputと生成品質の両面を測定するベンチマーク。70Bモデルへの拡張では近似誤差が重なり、単純な最適化の足し合わせが品質を悪化させ得ると一次要旨で指摘する。F1だけではprecision/recallの変化を隠す点も分析し、推論システム評価に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1df00bafd66d",
+    "round": "libimp-1df00bafd66d98f3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1df00bafd66d98f3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1df00bafd66d98f3-pre01.json",
+    "receipt": "sha256:2793ff779c669566f15782299720bd8513e092038ef1d42c9ec2ae0ecafe6433"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1df00bafd66d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

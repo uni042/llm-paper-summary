@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
-  "run_key": "20261030-2030-scheduled-chat-30/r14",
+  "run_key": "20261030-2030-scheduled-chat-30/r14::provider-gap",
   "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
-  "record_count": 10,
+  "record_count": 6,
   "records": [
     {
       "classification": "accept",
@@ -41,40 +41,6 @@
       "origin": "discovery_worklist_abstract_screen"
     },
     {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2605.11215",
-      "identity_tokens": [
-        "arXiv:2605.11215",
-        "DOI:10.48550/arXiv.2605.11215"
-      ],
-      "title": "ReCoVer: Resilient LLM Pre-Training System via Fault-Tolerant Collective and Versatile Workload",
-      "reason": "512 GPUまでの事前学習で故障時もmicrobatch数を維持し、勾配の確率的等価性を守るReCoVerを提案。チェックポイント再開比2.23倍の有効スループットは学習時の値であり、LLM推論サービングではない。",
-      "source_url": "https://arxiv.org/abs/2605.11215",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T20:40:59+09:00",
-      "last_checked_at": "2026-10-30T20:40:59+09:00",
-      "linked_from": [],
-      "worklist_rank": 401,
-      "origin": "discovery_worklist_abstract_screen"
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2106.10207",
-      "identity_tokens": [
-        "arXiv:2106.10207",
-        "DOI:10.48550/arXiv.2106.10207"
-      ],
-      "title": "Distributed Deep Learning in Open Collaborations",
-      "reason": "ボランティア計算でSwAV/ALBERT事前学習を分散させる共同訓練の枠組み。高遅延・非対称帯域を扱うが、生成LLMの推論・KV・サービング最適化の直接評価はない。",
-      "source_url": "https://arxiv.org/abs/2106.10207",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T20:40:59+09:00",
-      "last_checked_at": "2026-10-30T20:40:59+09:00",
-      "linked_from": [],
-      "worklist_rank": 402,
-      "origin": "discovery_worklist_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2504.09897",
       "identity_tokens": [
@@ -92,23 +58,6 @@
       "origin": "discovery_worklist_abstract_screen"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2511.02681",
-      "identity_tokens": [
-        "arXiv:2511.02681",
-        "DOI:10.48550/arXiv.2511.02681"
-      ],
-      "title": "Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes",
-      "reason": "微調整済みモデルの差分更新が低ランクかつ疎であることを利用し、特異ベクトルの重要度を考慮して更新差分を保存する。複数タスク版の保存容量を抑えるが、一次要旨で生成時メモリ帯域・速度改善を実証していないため境界扱い。",
-      "source_url": "https://arxiv.org/abs/2511.02681",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T20:40:59+09:00",
-      "last_checked_at": "2026-10-30T20:40:59+09:00",
-      "linked_from": [],
-      "worklist_rank": 404,
-      "origin": "discovery_worklist_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2609.39138",
       "identity_tokens": [
@@ -123,23 +72,6 @@
       "last_checked_at": "2026-10-30T20:40:59+09:00",
       "linked_from": [],
       "worklist_rank": 406,
-      "origin": "discovery_worklist_abstract_screen"
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2505.18799",
-      "identity_tokens": [
-        "arXiv:2505.18799",
-        "DOI:10.48550/arXiv.2505.18799"
-      ],
-      "title": "ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models",
-      "reason": "下流タスクの微調整で重要な注意ヘッドのみ更新し、学習する注意パラメータを10%に抑えるALPSを提案。削減対象はアラインメント訓練費用であり、推論時のモデル層・重み・トークン計算量を削除する手法ではない。",
-      "source_url": "https://arxiv.org/abs/2505.18799",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T20:40:59+09:00",
-      "last_checked_at": "2026-10-30T20:40:59+09:00",
-      "linked_from": [],
-      "worklist_rank": 407,
       "origin": "discovery_worklist_abstract_screen"
     },
     {
@@ -176,5 +108,15 @@
       "worklist_rank": 410,
       "origin": "discovery_worklist_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261030-2030-scheduled-chat-30/r14",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_8209b8bb0ac88191a0486420c54f0419--discovery-20261030-2030-scheduled-chat-30-r14.json",
+  "provider_gap_ids": [
+    "arXiv:2504.09897",
+    "arXiv:2510.11052",
+    "arXiv:2602.03249",
+    "arXiv:2602.09130",
+    "arXiv:2603.01376",
+    "arXiv:2609.39138"
   ]
 }

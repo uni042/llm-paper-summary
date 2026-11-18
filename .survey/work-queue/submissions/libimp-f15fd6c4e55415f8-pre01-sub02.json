@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient On-Device Agents via Adaptive Context Management",
+      "source_url": "https://arxiv.org/abs/2511.03728",
+      "year": 2025,
+      "published": "2025-09-24",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-device AI agents offer the potential for personalized, low-latency assistance, but their deployment is fundamentally constrained by limited memory capacity. Context in agentic settings worsens this problem due to large static tool schemas and a growing interaction history that continually expands the persistent KV cache. To maintain on-device feasibility, agents must operate near the minimum task-sufficient context, while preserving task performance. We introduce two complementary mechanisms: (1) a learned intra-session memory architecture that distills trajectories into an append-only Context State Object (CSO), preserving current state and relevant details from previous steps that may have future utility, while still supporting KV-cache reuse, and (2) a just-in-time schema-passing mechanism that loads full tool definitions only upon tool selection. We instantiate this framework by adapting 3B-parameter SLMs and profiling them on smartphone hardware. In our evaluations, CSO-based memory outperforms KV-cache compression and trained summarization while retaining performance near or even above full-history execution. Deployed on-device, our framework reduces initial tool context by over $6\\times$ and interaction-context growth by 10-25 times, substantially reducing initial",
+      "identifiers": [
+        "SemanticScholar:b2c9f9366e7be11d358e99192fe797dda7c2e76b"
+      ],
+      "semantic_scholar_id": "b2c9f9366e7be11d358e99192fe797dda7c2e76b",
+      "canonical_id": "arXiv:2511.03728",
+      "arxiv_id": "2511.03728",
+      "doi": "10.48550/arXiv.2511.03728",
+      "authors": [
+        "Sanidhya Vijayvargiya",
+        "Rahul Lokesh"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 420,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は端末内エージェントの会話履歴をLoRAで構造化Context State Objectへ圧縮し、ツール定義を選択時だけ投入するJITスキーマ方式を提案。3B SLMの実装で初期ツール文脈を6分の1以下、会話文脈増大率を10〜25分の1へ抑え、推論時文脈・KVメモリ負荷を直接減らす。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f15fd6c4e554",
+    "round": "libimp-f15fd6c4e55415f8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f15fd6c4e55415f8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f15fd6c4e55415f8-pre01.json",
+    "receipt": "sha256:ddf12860d1f70097948cc899c7857675397f9d8eb7aca9c2d0b1a81a4ecee3cf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f15fd6c4e554",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

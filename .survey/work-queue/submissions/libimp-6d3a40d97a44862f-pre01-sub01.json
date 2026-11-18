@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Accelerated Dataflow: scaling inference in streaming data analytics with efficiency",
+      "source_url": "https://arxiv.org/abs/2610.22731",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming data analytics helps businesses identify opportunities and spot risks in a timely fashion. As large language model (LLM) usage grows, people are exploring incorporating agents or LLMs in streaming data pipelines to help find patterns in datasets without supervision or interpret natural languages for content moderation. However, most streaming systems are currently optimized for data movement and perform poorly on GPU intensive workloads such as performing inference with LLMs. We introduce a system on Google Cloud Dataflow designed to tackle hybrid streaming machine learning workloads with co-designed autoscaling on heterogeneous worker pools and prefix-aware batching. This increases throughput 1.5x to 2x for streaming pipelines using LLMs while maintaining similar latency with up to 75% peak resource savings and 84% lower peak tail latency compared with existing streaming data processing systems.",
+      "identifiers": [
+        "SemanticScholar:121847def36596fdb3e8d4dff9e1435df65b5f62"
+      ],
+      "semantic_scholar_id": "121847def36596fdb3e8d4dff9e1435df65b5f62",
+      "canonical_id": "arXiv:2610.22731",
+      "arxiv_id": "2610.22731",
+      "authors": [
+        "RuiLong Jiang",
+        "Dustin Rhodes",
+        "Danny McCormick",
+        "Yuta Labur",
+        "R. Rokni"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Google Cloud Dataflow上のLLMを含むstreaming ML推論を、異種worker poolの協調autoscalingとprefix-aware batchingで実行する設計。データ移動中心の従来streaming基盤がGPU推論で非効率になる問題に対し、LLMを使うpipelineでthroughput 1.5〜2倍、最大75%のpeak resource削減、最大84%のpeak tail latency削減を報告。LLMを組み込む実行基盤の直接的な性能改善なのでaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Calibration of Large Model Quantization based on HiFloat4 Format",
+      "source_url": "https://arxiv.org/abs/2610.41112",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization of Large Language Models (LLMs) has become increasingly important for reducing the computational costs and resource requirements for practical deployment. Growing interest in this area has motivated the community to move beyond 8-bit quantization towards 4-bit precision, leading to the development of customized 4-bit formats such as MXFP4 and NVFP4. Recently, HiFloat4 (HiF4) has emerged as a competitive alternative which adopts a Block Floating-Point (BFP) format with a three-level scaling hierarchy, thereby achieving a significantly larger dynamic range. While quantization can substantially reduce memory usage and accelerate inference, it frequently introduces accuracy degradation. Calibration is therefore essential for narrowing the performance gap between low-precision quantized models and their full-precision counterparts. Nevertheless, existing calibration methods are mainly designed and validated using integer-precision formats, such as INT4, lacking support for HiF4 due to its hierarchical BFP structure. In this paper, we investigate three calibration approaches, namely HiGPTQ, HiAutoRound, and HiFlatQuant, to further enhance model quantization based on the HiF4 format. Extensive experiment s demonstrate that all three proposed approaches improve inference accuracy compared with direct HiF4 conversion, reducing the gap between HiF4 and BF16 to less than 1% and outperforming the state-of-the-art NVFP4 format across various models and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:26762ad39f75de4c9c425802a77bc3cd9c630d16"
+      ],
+      "semantic_scholar_id": "26762ad39f75de4c9c425802a77bc3cd9c630d16",
+      "canonical_id": "arXiv:2610.41112",
+      "arxiv_id": "2610.41112",
+      "authors": [
+        "Jing Huang",
+        "Yu Cheng",
+        "Zi-Wei Yu",
+        "Lan Zhao",
+        "Sian Li",
+        "Guang-Xiu Yao",
+        "Xin Wang",
+        "Yuan-Yong Luo",
+        "Heng-Yi Liang",
+        "Ting-Yu Li",
+        "Bo-Ling Liu",
+        "Hu Liu",
+        "Michael Bi Mi",
+        "Heng Liao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "3段階スケールを持つblock floating-pointのHiFloat4（HiF4）でLLMを4bit化する際の校正不足に対し、HiGPTQ・HiAutoRound・HiFlatQuantの3方式を検討。直接HiF4変換より推論精度を改善し、BF16との精度差を1%未満へ抑え、評価したモデルと下流タスクでNVFP4を上回ると要旨で報告。低bit推論用量子化品質を直接改善するためaccept。実測tokens/sの値はabstractにない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6d3a40d97a44",
+    "round": "libimp-6d3a40d97a44862f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6d3a40d97a44862f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6d3a40d97a44862f-pre01.json",
+    "receipt": "sha256:ccf7cd9ac6c288b5a09735751a3ea17f92fd8e68bf5e1f09cf0f0c77c8ad2b60"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6d3a40d97a44",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

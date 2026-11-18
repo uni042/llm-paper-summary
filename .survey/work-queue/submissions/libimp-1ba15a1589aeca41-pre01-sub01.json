@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Advancements in Large Language Model Efficiency: A Literature Review on 1-bit Quantization",
+      "source_url": "https://doi.org/10.36948/ijfmr.2024.v06i06.32856",
+      "year": 2024,
+      "published": "2024-12-10",
+      "venue": "International Journal For Multidisciplinary Research",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models suffer from most of the challenges regarding computational cost, memory, and energy consumption, which makes their scaling difficult. BitNet b1.58 addresses these issues by introducing a novel 1.58-bit quantization with ternary weights {-1, 0, 1}. This can achieve performance comparable to FP16 models with much lower resource requirements. BitNet b1.58 provides 2.71x faster inference and 3.55x less memory usage than FP16 baselines. Its ternary weights allow for efficient feature filtering, making it a versatile choice for many AI applications. This makes it a standout solution, balancing high performance with resource efficiency. While BitNet b1.58 has its 1-bit mover heads that make it affordable for edge and mobile devices, it also allows longer sequences. This will mark further developments toward making AI scalable and resource-aware for various applications.",
+      "identifiers": [
+        "SemanticScholar:5f0b096339fb3fd8537e9a084b5aa13670d83ba9"
+      ],
+      "semantic_scholar_id": "5f0b096339fb3fd8537e9a084b5aa13670d83ba9",
+      "doi": "10.36948/ijfmr.2024.v06i06.32856",
+      "canonical_id": "DOI:10.36948/ijfmr.2024.v06i06.32856",
+      "authors": [
+        "L. P",
+        "N. B"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 708,
+        "matched_prestigious_venue": null
+      },
+      "reason": "出版社IJFMRの原著掲載ページと公式PDF冒頭の一次abstractを確認。BitNet b1.58の三値重み（-1,0,1）による約1.58-bitの重み表現を中心に、低ビット量子化がLLM推論のメモリ使用量・演算コスト・エネルギー負荷を抑える既存技術をレビューする。abstractに記載された2.71倍の推論高速化と3.55倍のメモリ節約は引用対象のBitNet方式の報告値であり、本レビュー自身の新規実機測定ではない。LLMの推論向け重み量子化と実行資源削減を直接調査しているためaccept。対象範囲は主に1-bit/1.58-bit量子化であり、包括的なサービング比較ではない点をResearchで検証する。",
+      "library_body_check": "publisher_primary_abstract_screen_only; official_pdf_first_page_excerpt_confirmed; full_body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1ba15a1589ae",
+    "round": "libimp-1ba15a1589aeca41-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1ba15a1589aeca41-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1ba15a1589aeca41-pre01.json",
+    "receipt": "sha256:2cc3b6220d91dc37374428ef0fbc2d0ae2b5ed9a93d6d1ecf40d5eda2ca2a103"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1ba15a1589ae",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Adapting Methods for Domain-Specific Japanese Small LMs: Scale, Architecture, and Quantization",
+      "source_url": "https://arxiv.org/abs/2603.18037",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents a systematic methodology for building domain-specific Japanese small language models using QLoRA fine-tuning. We address three core questions: optimal training scale, base-model selection, and architecture-aware quantization. Stage 1 (Training scale): Scale-learning experiments (1k--5k samples) identify n=4,000 as optimal, where test-set NLL reaches minimum (1.127) before overfitting at 5k samples. Stage 2 (Compare finetuned SLMs): Comparing four Japanese LLMs shows that Llama-3 models with Japanese continual pre-training (Swallow-8B, ELYZA-JP-8B) outperform multilingual models (Qwen2.5-7B). Stage 3 (Quantization): Llama-3 architectures improve under Q4_K_M quantization, while GQA architectures degrade severely (Qwen2.5: -0.280 points). Production recommendation: Swallow-8B Q4_K_M achieves 2.830/3 score, 8.9 s/question, 4.9 GB size. The methodology generalizes to low-resource technical domains and provides actionable guidance for compact Japanese specialist LMs on consumer hardware.",
+      "identifiers": [
+        "SemanticScholar:5556972de8400a7b09922101a51fcffb51eec9ac"
+      ],
+      "semantic_scholar_id": "5556972de8400a7b09922101a51fcffb51eec9ac",
+      "canonical_id": "arXiv:2603.18037",
+      "arxiv_id": "2603.18037",
+      "doi": "10.48550/arXiv.2603.18037",
+      "authors": [
+        "Takato Yasuno"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 251,
+        "matched_prestigious_venue": null
+      },
+      "reason": "日本語専門分野の小規模言語モデルをQLoRA学習・基盤モデル選択・量子化の3段階で比較する。一次要旨ではSwallow-8B Q4_K_Mのモデルサイズ4.9GB、質問当たり8.9秒、3点満点中2.830を報告し、Qwen2.5-7Bの量子化後品質悪化も示す。消費者向け機器でのSLM実用配備と量子化の実証研究として関連。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ReCUT: Balancing Reasoning Length and Accuracy in LLMs via Stepwise Trails and Preference Optimization",
+      "source_url": "https://arxiv.org/abs/2506.10822",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Chain-of-Thought (CoT) prompting have substantially improved the reasoning capabilities of Large Language Models (LLMs). However, these methods often suffer from overthinking, leading to unnecessarily lengthy or redundant reasoning traces. Existing approaches attempt to mitigate this issue through curating multiple reasoning chains for training LLMs, but their effectiveness is often constrained by the quality of the generated data and prone to overfitting. To address the challenge, we propose Reasoning Compression ThroUgh Stepwise Trials (ReCUT), a novel method aimed at balancing the accuracy and length of reasoning trajectory. Specifically, ReCUT employs a stepwise exploration mechanism and a long-short switched sampling strategy, enabling LLMs to incrementally generate diverse reasoning paths. These paths are evaluated and used to construct preference pairs to train two specialized models (Gemini LLMs)-one optimized for reasoning accuracy, the other for shorter reasoning. A final integrated model is obtained by interpolating the parameters of these two models. Experimental results across multiple math reasoning datasets and backbone models demonstrate that ReCUT significantly reduces reasoning lengths by approximately 30-50%, while maintaining or improving reasoning accuracy compared to various baselines. All codes and data will be released via https://github.com/NEUIR/ReCUT.",
+      "identifiers": [
+        "SemanticScholar:d1ca06c8f609ea16690dada536354e875a9ff4df"
+      ],
+      "semantic_scholar_id": "d1ca06c8f609ea16690dada536354e875a9ff4df",
+      "canonical_id": "arXiv:2506.10822",
+      "arxiv_id": "2506.10822",
+      "doi": "10.48550/arXiv.2506.10822",
+      "authors": [
+        "Zhen-Sheng Jin",
+        "Xin-Ze Li",
+        "Yi-Fan Ji",
+        "Chun-Yi Peng",
+        "Zheng-Hao Liu",
+        "Qi Shi",
+        "Yu-Kun Yan",
+        "Shuo Wang",
+        "Fu-Rong Peng",
+        "Ge Yu"
+      ],
+      "priority": 29,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 29,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 524,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ReCUTは推論過程の段階的探索と長短切替サンプリングで好み比較ペアを作り、正答重視・短い推論重視モデルを学習後にパラメータ補間する。数学推論で精度を維持または改善しながらCoT長を約30〜50%削減と報告。生成トークン削減によるLLM推論効率に直接関連。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "When Are 1.58 Bits Enough? A Bottom-up Exploration of Quantization-Aware Training with Ternary Weights",
+      "source_url": "https://doi.org/10.5220/0013382400003890",
+      "year": 2025,
+      "published": null,
+      "venue": "International Conference on Agents and Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ": Contemporary machine learning models, such as language models, are powerful, but come with immense resource requirements both at training and inference time. Quantization aware pre-training with ternary weights (1.58 bits per weight) has shown promising results in decoder-only language models and facilitates memory-efficient inference. However, little is known about how quantization-aware training influences the training dynamics beyond such Transformer-based decoder-only language models. Here, we engage in a bottom-up exploration of quantization-aware training, starting with multi-layer perceptrons and graph neural networks. Then, we explore 1.58-bit training in other transformer-based language models: encoder-only and encoder-decoder models. Our results show that in all of these settings, 1.58-bit training is on par with standard 32/16-bit models, yet we also identify challenges specific to 1.58-bit encoder-decoder models. Our results on decoder-only language models hint at a possible regularization effect introduced by quantization-aware training.",
+      "identifiers": [
+        "SemanticScholar:06aa19c0fe62b79607ed1f7401a2f5b355c67dde"
+      ],
+      "semantic_scholar_id": "06aa19c0fe62b79607ed1f7401a2f5b355c67dde",
+      "doi": "10.5220/0013382400003890",
+      "canonical_id": "DOI:10.5220/0013382400003890",
+      "authors": [
+        "Jacob Nielsen",
+        "Lukas Galke Poech",
+        "Peter Schneider-Kamp"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "三値重みの1.58-bit QATをMLP・GNNからencoder-only/encoder-decoder Transformer言語モデルまで評価。一次出版社論文ではencoder-onlyは隠れ幅増大により16-bit相当の精度を得られる一方、T5型encoder-decoderは16-bitより性能が落ちる負の結果を報告。言語モデル低ビット圧縮の適用範囲と限界を示す直接関連研究。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Sparse Ternary Matrix Multiplication with Tensor Core for Transformer",
+      "source_url": "https://doi.org/10.1109/CANDARW64572.2024.00031",
+      "year": 2024,
+      "published": "2024-11-26",
+      "venue": "2024 Twelfth International Symposium on Computing and Networking Workshops (CANDARW)",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Transformer architecture, despite its scaling law, faces expensive computational cost challenges as the number of parameters increases. Quantization methods like Ternary-BERT and BitNet address this issue using ternary matrices for weight parameters. While most research focuses on accelerating ternary matrix multiplication (TMM) on specific hardware such as FPGAs, our work aims to accelerate TMM on GPUs by co-designing around the characteristics of sparse ternary matrices and GPU architecture. In this paper, we propose two TMM methods that leverage the performance of CUDA Cores and Tensor Cores, respectively. We demonstrate that the proposed methods outperform dense matrix multiplication at sparsity levels of about 88% and above.",
+      "identifiers": [
+        "SemanticScholar:cfe63930c1b1383b1a1c87d7bc038d30d5454c1d"
+      ],
+      "semantic_scholar_id": "cfe63930c1b1383b1a1c87d7bc038d30d5454c1d",
+      "doi": "10.1109/CANDARW64572.2024.00031",
+      "canonical_id": "DOI:10.1109/CANDARW64572.2024.00031",
+      "authors": [
+        "Yushi Ogiwara",
+        "Hideyuki Kawashima"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 722,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GPUのCUDA CoreとTensor Coreに適合させた疎三値行列乗算（TMM）を提案。Ternary-BERTやBitNetのような三値重みTransformerを動機とし、疎性約88%以上でdense行列乗算を上回ると著者所属機関の一次書誌要旨で報告。Transformer低ビット推論カーネルの直接的な研究。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Focused Chain-of-Thought: Efficient LLM Reasoning via Structured Input Information",
+      "source_url": "https://arxiv.org/abs/2511.22176",
+      "year": 2025,
+      "published": "2025-11-27",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent large language models achieve strong reasoning performance by generating detailed chain-of-thought traces, but this often leads to excessive token use and high inference latency. Existing efficiency approaches typically focus on model-centric interventions, such as reinforcement learning or supervised fine-tuning, to reduce verbosity. In contrast, we propose a training-free, input-centric approach. Inspired by cognitive psychology, we introduce Focused Chain-of-Thought (F-CoT), which separates information extraction from the reasoning process. F-CoT first organizes the essential information from a query into a concise, structured context and then guides the model to reason exclusively over this context. By preventing attention to irrelevant details, F-CoT naturally produces shorter reasoning paths. On arithmetic word problems, F-CoT reduces generated tokens by 2-3x while maintaining accuracy comparable to standard zero-shot CoT. These results highlight structured input as a simple yet effective lever for more efficient LLM reasoning.",
+      "identifiers": [
+        "SemanticScholar:dbd60d5071f1709a06a5dde63fe98539c6d85320"
+      ],
+      "semantic_scholar_id": "dbd60d5071f1709a06a5dde63fe98539c6d85320",
+      "canonical_id": "arXiv:2511.22176",
+      "arxiv_id": "2511.22176",
+      "doi": "10.48550/arXiv.2511.22176",
+      "authors": [
+        "Lukas Struppek",
+        "Dominik Hintersdorf",
+        "Hannah Struppek",
+        "D. Neider",
+        "K. Kersting"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 356,
+        "matched_prestigious_venue": null
+      },
+      "reason": "F-CoTは入力から推論に必要な情報を構造化して抽出し、その簡潔な文脈だけを使って推論させる学習不要の方式。算術文章題でzero-shot CoTと同程度の精度を保ちながら生成トークンを2〜3分の1に削減と一次要旨で報告。LLM推論時のトークン費用と遅延削減に直接関連する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-68041a52e036",
+    "round": "libimp-68041a52e03652ff-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-68041a52e03652ff-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-68041a52e03652ff-pre01.json",
+    "receipt": "sha256:544c9c04df042e26334122c8f3a929f321ccebf31ebbeb57314c4145d66c08b5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-68041a52e036",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KITE: Retrieval as a Decision Procedure for Long-Term Conversational Memory",
+      "source_url": "https://arxiv.org/abs/2610.41521",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many long-term memory systems for LLM agents are built around embedding-based retrieval. Al- though effective for semantic matching, similarity ranking alone does not establish whether re- trieved memories satisfy the conditions implied by a question. In this paper, we introduce KITE (Knowledge-Indexed Temporal Evidence), a vector-free framework that formulates memory re- trieval as an explicit decision procedure. KITE organizes multi-session conversations as structured knowledge indexed by a governed topic vocabulary, which evolves through controlled expansion and consolidation. At query time, questions are compiled into inspectable retrieval plans over the same knowledge index that guides memory construction. The plans are then executed through fixed lookup and ranking operations, while sparse lexical retrieval recovers surface details omitted from the structured representation. Experiments on LoCoMo and LongMemEval-S show that KITE achieves 93.5% and 86.0% accuracy while using only about 1.6k reader-context tokens per ques- tion. These results demonstrate that conversational memory can move beyond similarity ranking by unifying memory construction and query compilation around a governed index, turning retrieval into an inspectable decision procedure for determining which evidence satisfies the question.",
+      "identifiers": [
+        "SemanticScholar:fa6f2278a700d5a8361a77a9ba2d0e4a195e9a7a"
+      ],
+      "semantic_scholar_id": "fa6f2278a700d5a8361a77a9ba2d0e4a195e9a7a",
+      "canonical_id": "arXiv:2610.41521",
+      "arxiv_id": "2610.41521",
+      "authors": [
+        "Feng Li",
+        "Kai-Lun Tan",
+        "Zhi-Bo Zhou",
+        "You Wang",
+        "Leslie Liu",
+        "Huai-Gu Li",
+        "Fei Du",
+        "Hui-Long An"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次HTML本文の手法節・評価表を確認。対話履歴から構造化memoryと統制されたtopic索引を構築し、質問を型付き検索計画にコンパイルして決定的なposting-list演算で証拠を選ぶ。LoCoMoでreader入力平均1.5k tokens、accuracy 93.5%（full contextは20.3k tokens、90.9%）、LongMemEval-Sで1.6k tokens、86.0%（full contextは105.1k tokens、56.8%）。長期memoryのLLM入力token削減へ直接寄与するためaccept。ただしmemory抽出・索引構築・計画コンパイルの費用、E2E latencyの実測比較はこの数値に含まれない。",
+      "library_body_check": "primary_html_method_and_evaluation_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_and_alias_screen"
+    },
+    {
+      "title": "Search When Needed, Proceed When Reliable: Metacognitive Reliability Supervision for Efficient Agentic Search",
+      "source_url": "https://arxiv.org/abs/2610.41738",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient agentic search requires large language models (LLMs) to determine whether they can reliably proceed with their current knowledge or need additional external evidence. Supervision based on final-answer correctness or trajectory-level feedback evaluates realized trajectory performance. However, observed trajectory performance is jointly shaped by stochastic generation, retrieval quality, and downstream reasoning. Such signals therefore provide only indirect evidence of how reliable the current decision state was and how retrieved evidence changed its reliability. An effective reward should encourage search when external information is needed and favor searches that contribute to the answer. To this end, we propose a metacognitive framework for training LLMs to make search decisions based on the reliability of their intermediate reasoning states. Our framework estimates the reliability of local conclusions to distinguish whether the current information supports proceeding without search from how much retrieved evidence improves that reliability. The current-state reliability score assesses whether the model can proceed without search. The search-action score measures how retrieved evidence changes estimated reliability. Together, these scores define a reliability-aware process reward for Group Relative Policy Optimization (GRPO), providing finer-grained supervision for search and no-search behavior. Experiments across seven question-answering benchmarks demonstrate that our method achieves a better accuracy-efficiency trade-off than strong agentic-search baselines. Our code and model checkpoints will be open-sourced.",
+      "identifiers": [
+        "SemanticScholar:4d63fe02915a8d9d1ef4d4340c3a47029f0bf5c1"
+      ],
+      "semantic_scholar_id": "4d63fe02915a8d9d1ef4d4340c3a47029f0bf5c1",
+      "canonical_id": "arXiv:2610.41738",
+      "arxiv_id": "2610.41738",
+      "authors": [
+        "Min-Hao Sun",
+        "Zhi-Jing Wu",
+        "Xian-Ling Mao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次HTML本文の報酬設計・実験節を確認。推論中に外部検索を実施するかを局所結論の信頼性と検索後の信頼性増分で学習し、GRPO process rewardとして最適化。7Bの統一比較で1問当たり検索回数1.64、HiPRAG再実装1.76より6.8%少なく、Search Wisely 1.83より10.4%少ない。7 QA benchmark平均CEM 69.3でHiPRAGを2.1ポイント上回る。agentic推論の検索回数を直接減らすためaccept。ただし学習step時間はHiPRAG再実装比14.6%増、推論E2E latencyの改善は本文の主指標ではない。",
+      "library_body_check": "primary_html_method_and_evaluation_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_and_alias_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-29bac9b8c3a9",
+    "round": "libimp-29bac9b8c3a9e3e1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-29bac9b8c3a9e3e1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-29bac9b8c3a9e3e1-pre01.json",
+    "receipt": "sha256:a56093cc02b92e530612844253b2c820fb23add31bcc75c8f67899fc3841e259"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-29bac9b8c3a9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

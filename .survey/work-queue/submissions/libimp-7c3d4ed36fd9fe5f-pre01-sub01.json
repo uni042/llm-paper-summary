@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KV$^2$: A Self-Refining KV Cache",
+      "source_url": "https://arxiv.org/abs/2610.03198",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The memory footprint of the key-value (KV) cache constrains the practical use of long-context models, and it dominates cost when one prefilled context must later serve many different queries. In this reusable setting, query-agnostic compression trades cost against quality: lightweight estimators are cheap but less accurate, whereas full-context reconstruction scoring is more accurate yet reprocesses the entire prompt. We introduce KV$^2$, a query-agnostic KV-cache compression method based on selective reconstruction. KV$^2$ first uses a lightweight proxy scorer to identify informative in-context tokens, then reprocesses only this subset to compute final eviction scores. On RULER, Needle-in-a-Haystack, and LongBench, KV$^2$'s margin over baselines widens as the budget tightens: on RULER 16K at a 2% KV-cache budget it improves the average score over the next-best baseline by more than 40 percentage points, and on LongBench it attains the highest average across 2%-10% budgets at lower compression-stage runtime and peak memory than full-context reconstruction. Reusable KV-cache compression thus does not require reprocessing the full context. Our code is available at https://anonymous.4open.science/r/KVsquared-0B97.",
+      "identifiers": [
+        "SemanticScholar:082c6f988d0aa3ade2a27bfddfcfc6aec217b32d"
+      ],
+      "semantic_scholar_id": "082c6f988d0aa3ade2a27bfddfcfc6aec217b32d",
+      "canonical_id": "arXiv:2610.03198",
+      "arxiv_id": "2610.03198",
+      "authors": [
+        "J. Wesch",
+        "Danni Liu",
+        "J. Niehues"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数の後続質問で再利用する長文脈KVキャッシュを対象に、軽量proxy scoreで情報量の高い文脈トークンを選び、その一部だけを再構成queryとして使って最終的なKV削除スコアを計算する二段階方式。全プロンプト再処理を省き、RULER 16KのKV予算2%では次善方式より平均スコアが40ポイント超高いと一次論文が報告する。推論時のKV圧縮・キャッシュ再利用に直接寄与するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_arxiv_primary_discovery"
+    },
+    {
+      "title": "RISK-KV: Quality-Aware Selective KV Cache Reconstruction for Distributed LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.29544",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Request migration and interruption recovery in distributed large language model (LLM) inference rely on historical key-value (KV) caches. Retaining or transferring a complete cache incurs substantial state overhead, whereas replaying historical tokens requires additional computation. This paper proposes RISK-KV, a quality-aware method for selective historical KV reconstruction in pretrained models. RISK-KV uses exact KV states on both sides of a target layer and cross-layer ridge regression to predict the missing layer's attention-projection input; it then folds in the original model's KV projection matrices to reduce predictor storage. Reconstruction risk is measured by the change in negative log-likelihood (NLL) caused by actual reconstruction, and low-overhead topology search with quality gating selects the layer groups to reconstruct. Independent tests on three language models show that representative recovery configurations omit 18.2 percent to 33.3 percent of historical KV, with perplexity changes below 0.5 percent. In a local request-recovery experiment with a 512-token history, RISK-KV achieves a 1.51 to 3.31 times speedup over full Token Replay. These results indicate that selective KV reconstruction can reduce historical cache overhead with small changes in predictive quality and improve request-recovery efficiency under the evaluated deployment conditions.",
+      "identifiers": [
+        "SemanticScholar:c865c2dedc1fa019048bc08088e11165c47df33c"
+      ],
+      "semantic_scholar_id": "c865c2dedc1fa019048bc08088e11165c47df33c",
+      "canonical_id": "arXiv:2610.29544",
+      "arxiv_id": "2610.29544",
+      "authors": [
+        "Yue-Kai Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分散LLM推論での要求移行・中断復旧に際し、保持した前後層の正確なKVをアンカーにridge回帰で欠損層の注意入力を予測し、元モデルのKV射影行列を折り込んで履歴KVを再構成する。実際の再構成によるNLL増分を品質リスクとして層群を選別。3モデルの試験で履歴KVを18.2〜33.3%省略しperplexity変化0.5%未満、512トークンのローカル復旧で全token replay比1.51〜3.31倍高速と報告。ただし実ネットワーク越し移行は未評価。KV転送・復旧の直接的な推論システム技術としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_arxiv_primary_discovery"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7c3d4ed36fd9",
+    "round": "libimp-7c3d4ed36fd9fe5f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7c3d4ed36fd9fe5f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7c3d4ed36fd9fe5f-pre01.json",
+    "receipt": "sha256:f766396aa983d1f9e7c50f16f04e7e142b794350036819d8ff48b73ccf9f586c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7c3d4ed36fd9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

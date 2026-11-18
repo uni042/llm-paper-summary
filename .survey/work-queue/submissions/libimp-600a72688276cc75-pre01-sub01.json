@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way",
+      "source_url": "https://arxiv.org/abs/2510.24605",
+      "year": 2025,
+      "published": "2025-10-28",
+      "venue": "arXiv.org",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large language models (dLLMs) have exhibited substantial potential for parallel text generation, which may enable more efficient generation compared to autoregressive models. However, current dLLMs suffer from fixed generation lengths, which indicates the generation lengths of dLLMs have to be determined before decoding as a hyper-parameter, leading to issues in efficiency and flexibility. To solve these problems, in this work, we propose to train a diffusion LLM with native variable generation lengths, abbreviated as dLLM-Var. Concretely, we aim to train a model to accurately predict the [EOS] token in the generated text, which makes a dLLM be able to natively infer in a block diffusion manner, while still maintaining the ability of global bi-directional (full) attention and high parallelism. Experiments on standard benchmarks demonstrate that our method achieves a 30.1x speedup over traditional dLLM inference paradigms and a 2.4x speedup relative to autoregressive models such as Qwen and Llama. Our method achieves higher accuracy and faster inference, elevating dLLMs beyond mere academic novelty and supporting their practical use in real-world applications. Codes and models have been released.",
+      "identifiers": [
+        "SemanticScholar:96d7f31d69f4dd16ff186730c43fc2a0a855164b"
+      ],
+      "semantic_scholar_id": "96d7f31d69f4dd16ff186730c43fc2a0a855164b",
+      "canonical_id": "arXiv:2510.24605",
+      "arxiv_id": "2510.24605",
+      "doi": "10.48550/arXiv.2510.24605",
+      "authors": [
+        "Yicun Yang",
+        "Cong Wang",
+        "Shao-Bo Wang",
+        "Zichen Wen",
+        "Biqing Qi",
+        "Hanlin Xu",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。拡散LLMの固定生成長制約に対しEOSを明示的に学習し、双方向注意と並列性を維持しつつブロック拡散で可変長生成するdLLM-Varを提案。標準ベンチマークで従来dLLM推論比30.1倍、自己回帰Qwen/Llama比2.4倍と報告し、拡散LLMの推論時間・生成長制御に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline",
+      "source_url": "https://arxiv.org/abs/2609.35394",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video Large Language Models (Video LLMs) have achieved remarkable progress in video understanding, but their inference efficiency is constrained by the large number of visual tokens produced by long videos. Recent video token compression methods increasingly introduce sophisticated strategies for token selection, pruning, and merging. This raises a fundamental question: how much of compression performance can be obtained by simply preserving the structure encoded in the visual representations? We investigate this question with SimpleCluster, a simple and training-free baseline that performs position-aware cross-frame clustering in the visual feature space and represents each cluster using the mean of its original visual features. Extensive experiments across four video understanding benchmarks and three representative Video LLMs show that SimpleCluster achieves competitive or superior performance over recent compression methods across a wide range of token retention ratios, with particularly strong robustness under extremely low retention rates (e.g., 1%). To understand this behavior, we analyze the feature space preserved by different compression methods in terms of local approximation fidelity and global coverage. The results show that stronger downstream performance is consistently associated with better preservation of the original visual feature distribution, especially its global coverage. These findings highlight feature-space preservation as an important consideration for video token compression under highly constrained token budgets. Our code is available at https://github.com/xiaozhang79/SimpleCluster.",
+      "identifiers": [
+        "SemanticScholar:9939eec1c8e45d86662b875b9f158132781a18da"
+      ],
+      "semantic_scholar_id": "9939eec1c8e45d86662b875b9f158132781a18da",
+      "canonical_id": "arXiv:2609.35394",
+      "arxiv_id": "2609.35394",
+      "doi": "10.48550/arXiv.2609.35394",
+      "authors": [
+        "Xiao Zhang",
+        "Wang Zeng",
+        "Sheng Jin",
+        "Wen-Tao Liu",
+        "Chen Qian",
+        "Shi-Chao Kan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。学習不要のSimpleClusterが動画フレーム間の位置を考慮した特徴クラスタリングと平均代表値で視覚トークンを圧縮。3種類のVideo LLM、4ベンチマークで低保持率1%を含め比較し、元特徴分布の全域被覆が精度維持に重要と分析。動画LLMの視覚トークン数とprefillコストの削減に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-600a72688276",
+    "round": "libimp-600a72688276cc75-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-600a72688276cc75-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-600a72688276cc75-pre01.json",
+    "receipt": "sha256:9aa21e4cb2f5258a285fff61523093ce31f5bcece40f0d9574359b07644d5759"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-600a72688276",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
