@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-398f3f6fb4853857-border-008",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2510.26690",
+  "reason": "超低ビットへのLoRAの混合精度量子化LoRAQuant。多数のアダプタを同時読み込みする際の総費用に対し、アダプタを特異値分解で再パラメータ化して混合精度に量子化する。アダプタの量子化であり境界。",
+  "title": "LoRAQuant: Mixed-Precision Quantization of LoRA to Ultra-Low Bits",
+  "identity_tokens": [
+    "arXiv:2510.26690",
+    "https://arxiv.org/abs/2510.26690"
+  ],
+  "linked_from": [
+    "Weight Quantization / Compression",
+    "inference-systems",
+    "llm-serving-scheduling-disaggregation",
+    "post-training quantization / second-order compression / weight-only LLM inference",
+    "重み専用量子化 / 推論カーネル"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-398f3f6fb485",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

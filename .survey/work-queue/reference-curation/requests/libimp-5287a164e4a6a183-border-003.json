@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5287a164e4a6a183-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2608.11152",
+  "reason": "RLポストトレーニングのロールアウトが共有推論サービス上で競合する問題に対し、前缀局所性を超えたスケジューリングを扱う。KV容量競合という推論側の論点はあるが、主目的は学習パイプラインのスループットであり境界。",
+  "title": "Scheduling Mixed RL Rollouts Beyond Prefix Locality",
+  "identity_tokens": [
+    "arXiv:2608.11152",
+    "https://arxiv.org/abs/2608.11152"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+    "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5287a164e4a6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

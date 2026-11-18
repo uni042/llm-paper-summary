@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5287a164e4a6a183-border-007",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.17999",
+  "reason": "マスク拡散言語モデルのパディング慣行がEOS溢れを招く問題に、VOIDトークンで役割を分離するVoidPadding。デコード時の不具合を扱うが、修正は指示チューニング側の慣行変更であり、推論機構としては境界。",
+  "title": "VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination",
+  "identity_tokens": [
+    "arXiv:2606.17999",
+    "https://arxiv.org/abs/2606.17999"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+    "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+    "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+    "papers/inference/07-kv-cache-optimization-compression/2026-2606.26120-dynamic-dllm-cache-budget-parallel-decoding.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5287a164e4a6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

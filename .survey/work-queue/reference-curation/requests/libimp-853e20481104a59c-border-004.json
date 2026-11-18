@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-853e20481104a59c-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "SemanticScholar:a50373538368bcbd0b35bd9a7487f36526a25d75",
+  "reason": "低ランク線形化によるLLMの線形化LoLCATs。二次注意を線形注意へ置き換える線形化の品質劣化と訓練量の問題に対し、注意転移による2段階の方法で桁違いに少ない計算で線形化する。推論効率のための変換だが、機構の実体は変換の訓練であり境界。",
+  "title": "Low-rank Linearization of Large Language Models",
+  "identity_tokens": [
+    "SemanticScholar:a50373538368bcbd0b35bd9a7487f36526a25d75",
+    "https://www.semanticscholar.org/paper/a50373538368bcbd0b35bd9a7487f36526a25d75"
+  ],
+  "linked_from": [
+    "inference-systems",
+    "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+    "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853e20481104",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
