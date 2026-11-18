@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e22d894f7d14ce8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.22757",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.22757",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.22757",
+      "arXiv:2505.22757"
+    ],
+    "reason": "小規模言語モデルにmulti-token predictionを学習させるforward/reverse curriculumの比較。forward方式は自己投機的復号の利点を維持するがreverse方式は維持しないと一次要旨に明記。主貢献は事前学習のカリキュラムで、推論速度・受理率の定量的改善は要旨から確定できず、推論システムへの貢献は間接的なためborderline。",
+    "first_checked_at": "2026-11-18T08:27:44+00:00",
+    "last_checked_at": "2026-11-18T08:27:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models"
+  },
+  "processed_at": "2026-11-18T08:27:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e22d894f7d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

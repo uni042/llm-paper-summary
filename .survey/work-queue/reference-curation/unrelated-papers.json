@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T08:17:59+00:00",
-  "record_count": 12848,
+  "updated_at": "2026-11-18T08:27:46+00:00",
+  "record_count": 12847,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182192,7 +182192,7 @@
       ],
       "reason": "少数stepの自己回帰動画生成器で、中間denoise推定が十分なtokenを早期確定し残りのdenoiseを省略するSpeculative Forcingを提案。一次要旨はLongLiveやLingbot-Worldの動画・world生成でfps改善を評価するが、対象は映像生成器のdenoisingであり、LLMのtoken復号・サービング・KV圧縮の改善を検証していないため現行LLM推論サーベイ対象外。",
       "first_checked_at": "2026-11-02T05:57:30+00:00",
-      "last_checked_at": "2026-11-02T05:57:30+00:00",
+      "last_checked_at": "2026-11-18T08:27:46+00:00",
       "linked_from": [],
       "title": "Speculative Forcing for Efficient Autoregressive Video Generation"
     },
@@ -183334,22 +183334,6 @@
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
       "title": "Learning 1D Causal Visual Representation with De-focus Attention Networks"
-    },
-    "arXiv:2505.22757": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2505.22757",
-      "identity_tokens": [
-        "arXiv:2505.22757"
-      ],
-      "reason": "複数トークン予測の事前学習カリキュラム。次トークン予測から複数トークン予測へ段階的に移す事前学習の戦略。対象は事前学習であり、推論機構の提案ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:16:41+00:00",
-      "last_checked_at": "2026-11-18T07:16:41+00:00",
-      "linked_from": [
-        "Conditional Computation",
-        "Speculative Decoding",
-        "inference-systems"
-      ],
-      "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models"
     },
     "arXiv:2610.39273": {
       "classification": "unrelated",

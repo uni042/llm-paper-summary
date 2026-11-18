@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-84aab8f94b6b5a74-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.10769",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.10769",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.10769",
+      "arXiv:2604.10769"
+    ],
+    "reason": "推論ジョブとバッチジョブの混合比が共有GPU設備の消費電力変動と短時間ランプを異なる形で変えることを、トレース較正した到着・待ち行列・スケジューリング・GPU電力モデルで評価。中間混合比ではバッチが推論の空き容量を埋め電力変動を抑える一方、短時間ランプは残る。LLM専用の最適化ではないがAI推論サービングの電力管理に関連するためborderline。",
+    "first_checked_at": "2026-11-18T03:45:04+00:00",
+    "last_checked_at": "2026-11-18T08:27:45+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLM serving / energy management / cluster scheduling / dynamic reconfiguration"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Workload composition smooths aggregate power demand while sustaining short-horizon ramps in AI data centers"
+  },
+  "processed_at": "2026-11-18T08:27:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84aab8f94b6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

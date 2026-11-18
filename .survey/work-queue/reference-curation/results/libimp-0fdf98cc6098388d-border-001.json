@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fdf98cc6098388d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.15038",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.15038",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.15038",
+      "arXiv:2512.15038"
+    ],
+    "reason": "自動運転向けに軽量線形クロスアテンションを用い、履歴長に依存しないO(1)の推論時時間・メモリ更新を提案。NAVSIMとBench2Driveで計画性能と遅延を評価。効率的注意の転用可能性はあるが、LLM推論自体を対象としていない。",
+    "first_checked_at": "2026-11-13T16:55:25+00:00",
+    "last_checked_at": "2026-11-18T08:27:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers"
+  },
+  "processed_at": "2026-11-18T08:27:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fdf98cc6098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

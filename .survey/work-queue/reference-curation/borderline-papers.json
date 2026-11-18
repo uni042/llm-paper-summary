@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-18T08:17:58+00:00",
-  "record_count": 6080,
+  "updated_at": "2026-11-18T08:27:45+00:00",
+  "record_count": 6081,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86527,11 +86527,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2512.15038",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.15038",
         "arXiv:2512.15038"
       ],
-      "reason": "自動運転の生成的経路計画を対象に軽量線形cross-attention (LICA)を導入し、長期履歴の推論計算・メモリを履歴長に対してO(1)とする。効率的attentionには関連するが、主対象は自動運転のマルチモーダル計画でLLM推論そのものではないためborderline。NAVSIM/Bench2Driveで評価。",
+      "reason": "自動運転向けに軽量線形クロスアテンションを用い、履歴長に依存しないO(1)の推論時時間・メモリ更新を提案。NAVSIMとBench2Driveで計画性能と遅延を評価。効率的注意の転用可能性はあるが、LLM推論自体を対象としていない。",
       "first_checked_at": "2026-11-13T16:55:25+00:00",
-      "last_checked_at": "2026-11-13T16:55:25+00:00",
+      "last_checked_at": "2026-11-18T08:27:44+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers"
@@ -87900,11 +87901,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2604.10769",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.10769",
         "arXiv:2604.10769"
       ],
-      "reason": "ワークロード構成と集約電力需要の研究。共有GPUシステムでバッチと推論の混合比が電力変動とランプ特性をどう変えるかを、到着・キューイング・スケジューリング・GPU電力をつないだトレース較正枠組みで示す。推論基盤の運用計測ではあるが、機構の提案ではなく境界。",
+      "reason": "推論ジョブとバッチジョブの混合比が共有GPU設備の消費電力変動と短時間ランプを異なる形で変えることを、トレース較正した到着・待ち行列・スケジューリング・GPU電力モデルで評価。中間混合比ではバッチが推論の空き容量を埋め電力変動を抑える一方、短時間ランプは残る。LLM専用の最適化ではないがAI推論サービングの電力管理に関連するためborderline。",
       "first_checked_at": "2026-11-18T03:45:04+00:00",
-      "last_checked_at": "2026-11-18T03:45:04+00:00",
+      "last_checked_at": "2026-11-18T08:27:45+00:00",
       "linked_from": [
         "LLM Serving / Scheduling / Disaggregation",
         "LLM serving / energy management / cluster scheduling / dynamic reconfiguration"
@@ -94883,6 +94885,20 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Watermarkable Multi-Draft Speculative Sampling via Poisson Processes"
+    },
+    "arXiv:2505.22757": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.22757",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.22757",
+        "arXiv:2505.22757"
+      ],
+      "reason": "小規模言語モデルにmulti-token predictionを学習させるforward/reverse curriculumの比較。forward方式は自己投機的復号の利点を維持するがreverse方式は維持しないと一次要旨に明記。主貢献は事前学習のカリキュラムで、推論速度・受理率の定量的改善は要旨から確定できず、推論システムへの貢献は間接的なためborderline。",
+      "first_checked_at": "2026-11-18T08:27:44+00:00",
+      "last_checked_at": "2026-11-18T08:27:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models"
     }
   }
 }
