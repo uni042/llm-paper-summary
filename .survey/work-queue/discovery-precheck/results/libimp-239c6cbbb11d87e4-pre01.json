@@ -1,0 +1,765 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-239c6cbbb11d87e4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-239c6cbbb11d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icccs69761.2026.11613211",
+    "DOI:10.1109/icicse66971.2025.11430117",
+    "DOI:10.1109/imcec66174.2025.11331709",
+    "DOI:10.1109/ipdps65963.2026.00037",
+    "DOI:10.1109/isca66397.2026.00176",
+    "DOI:10.1109/isdfs69419.2026.11459120",
+    "DOI:10.1109/iwqos70441.2026.11661192",
+    "DOI:10.1109/jiot.2026.3669144",
+    "DOI:10.1109/tvlsi.2026.3658251"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f359c1c41d491ef610056113173989064c0c0e34",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:14:17.506591+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icccs69761.2026.11613211",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/icccs69761.2026.11613211"
+    },
+    {
+      "requested_id": "DOI:10.1109/icicse66971.2025.11430117",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/imcec66174.2025.11331709",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ipdps65963.2026.00037",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/isca66397.2026.00176",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/isdfs69419.2026.11459120",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iwqos70441.2026.11661192",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/jiot.2026.3669144",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/tvlsi.2026.3658251",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Distributed Adaptive Speculative Decoding: Accelerating Large Language Model Inference With Context-Aware Draft Selection",
+      "source_url": "https://doi.org/10.1109/ISDFS69419.2026.11459120",
+      "year": 2026,
+      "published": "2026-03-19",
+      "venue": "International Symposium on Digital Forensics and Security",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized natural language processing, yet their autoregressive generation process remains a critical bottleneck for real-time applications. Speculative decoding has emerged as a promising approach to accelerate inference by leveraging smaller draft models to predict future tokens, which are then verified in parallel by the target model. However, existing methods rely on fixed draft models and single-node execution, limiting their effectiveness across diverse input distributions and scalability in production environments. We propose Distributed Adaptive Speculative Decoding (DASD), a novel framework that introduces three key innovations: (1) context-aware draft model selection using a lightweight routing network that dynamically chooses optimal draft models based on input characteristics, (2) asynchronous distributed speculation that pipelines draft generation and target verification across multiple GPUs with fault-tolerant rollback mechanisms, and (3) adaptive speculation length that adjusts the number of speculative tokens based on real-time acceptance rates. Through extensive experiments on NVIDIA A4000 GPUs using Llama-3-8B and multiple draft models, we demonstrate that DASD achieves $\\mathbf{2. 6 - 2. 8} \\times$ speedup compared to standard autoregressive decoding and $\\mathbf{1 5} \\boldsymbol{-} \\mathbf{2 0} \\boldsymbol{\\%}$ improvement over fixed-strategy speculative decoding, while maintaining identical output quality. Our approach shows consistent gains across code generation (76 % acceptance), factual QA (72 % acceptance), and conversational tasks (68 % acceptance). The proposed distributed protocol reduces end-to-end latency by 42 % in multi-GPU settings and provides graceful degradation under GPU failures. We release our implementation and comprehensive benchmarks to facilitate future research in efficient LLM serving.",
+      "identifiers": [
+        "SemanticScholar:9e5562c83cf863e397d749064e8e8c57848cc0c3"
+      ],
+      "semantic_scholar_id": "9e5562c83cf863e397d749064e8e8c57848cc0c3",
+      "doi": "10.1109/ISDFS69419.2026.11459120",
+      "canonical_id": "DOI:10.1109/ISDFS69419.2026.11459120",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Vinay R Soni",
+        "Amit Kumar Padhy",
+        "S. Bayyavarapu",
+        "Milan Parikh"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AASQ-GPT: Accurate Activation Static Quantization Towards Generative Pre-Trained Transformer",
+      "source_url": "https://doi.org/10.1109/IMCEC66174.2025.11331709",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "IEEE Advanced Information Management, Communicates, Electronic and Automation Control Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demonstrate exceptional general-purpose language processing capabilities, but they require extremely high memory and computational resources. Quantization techniques are crucial for deploying LLMs by improving memory efficiency and inference speed. Existing activation quantization methods are primarily dynamic, which, while achieving low quantization error, offer relatively limited inference acceleration. In contrast, static quantization, which provides faster inference, faces the challenge of significant quantization error. To address this, we propose AASQ-GPT, a novel technique that enables accurate activation static quantization without the need for retraining. Specifically, AASQ-GPT introduces a new quantization framework for activations, where after quantizing a batch of activations, the remaining unquantized activations are adjusted to minimize quantization error. Compared to traditional min-max quantization, AASQ-GPT significantly improves quantization perfor- mance without incurring any additional overhead. Experiments on LLMs of varying scales show that AASQ-GPT achieves state-of-the- art (SOTA) results in static quantization at the same bit width.",
+      "identifiers": [
+        "SemanticScholar:296dc9e5f407772a8441c8bffa1d76d716cf42d2"
+      ],
+      "semantic_scholar_id": "296dc9e5f407772a8441c8bffa1d76d716cf42d2",
+      "doi": "10.1109/IMCEC66174.2025.11331709",
+      "canonical_id": "DOI:10.1109/IMCEC66174.2025.11331709",
+      "authors": [
+        "Zhan-Peng Wang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UniCore: A Bit-Width Scalable GEMM Unit for Unified LLM Inference",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00176",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success across a broad range of applications but impose extreme computational and memory demands due to their reliance on massive General Matrix-Matrix Multiplication (GEMM) operations. Quantization has emerged as a key approach to improve efficiency by reducing data precision; however, modern LLMs exhibit diverse sensitivities to quantization, requiring multiple precision settings. Existing hardware accelerators fail to efficiently support this diversity: fixed-function accelerators are limited to a few discrete formats, while bit-composable architectures suffer from quadratic resource scaling, leading to severe performance degradation at higher precision. We propose UniCore, a unified GEMM architecture that achieves both bit-width scalability and accuracy preservation through a hardware-software co-design. UniCore introduces Scalable FPMA (S-FPMA), the first composable FPMA primitive that fuses into different precisions using uniform adder slices, maintaining linear hardware scaling. To ensure numerical fidelity, UniCore integrates a lightweight format-conversion and dual-path compensation pipeline that corrects FPMA's structured approximation error. Complementing the architecture, DynFP, a distribution-adaptive low-bit floating-point format, improves representational accuracy for diverse LLM weight and activation distributions. UniCore delivers $\\mathbf{1. 2 4} \\times-\\mathbf{3. 9 5} \\times$ higher area efficiency for W4A4/W4A8/W8A8 and up to 5.26× at W16A16 compared to prior composable-multiplier accelerators, while achieving the highest accuracy in nearly all configurations. UniCore is open-sourced at: https://github.com/CLab-HKUST-GZ/isca53-unicore",
+      "identifiers": [
+        "SemanticScholar:252485af717651c9211f72999a4b739da1421f90"
+      ],
+      "semantic_scholar_id": "252485af717651c9211f72999a4b739da1421f90",
+      "doi": "10.1109/ISCA66397.2026.00176",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00176",
+      "authors": [
+        "Yong-Hao Chen",
+        "Jia-Xiang Zou",
+        "Xing-Yu Chen",
+        "Chenxi Xu",
+        "Jingyu Guo",
+        "Xin-Yu Chen"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      }
+    },
+    {
+      "title": "SwiftServe: Efficient Disaggregated LLM Inference Serving via Hierarchical Max-Flow in Heterogeneous GPUs and Network",
+      "source_url": "https://doi.org/10.1109/ICICSE66971.2025.11430117",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": "2025 5th International Conference on Information Communication and Software Engineering (ICICSE)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved remarkable performance across a variety of tasks. Disaggregated LLM inference serving (DLIS), which separates the compute-intensive prefill phase and the memory-intensive decode phase, enables more flexible and efficient resource utilization in heterogeneous GPUs. However, deploying DLIS in real-world environments presents two significant challenges. Firstly, the heterogeneity of phase-specific resource requirements complicates the alignment of GPU capabilities with workload demands, often resulting in suboptimal performance. Secondly, transferring key-value (KV) caches between the prefill and decode phases over heterogeneous links introduces substantial communication overhead, creating performance bottlenecks. To address these challenges, we propose SwiftServe, an efficient disaggregated LLM inference serving system for heterogeneous GPUs. SwiftServe models DLIS deployment as a hierarchical max-flow deploying problem formulated as a constrained mixed-integer nonlinear program accounting for hardware and phase heterogeneity. We design a hierarchical alternating max-flow optimization algorithm for effective resource deployment. Experiments show SwiftServe achieves up to 1.68× higher throughput and 2.25× lower latency than existing methods.",
+      "identifiers": [
+        "SemanticScholar:f98d08c3df7cad321de2ca085d2821ff83b1b06e"
+      ],
+      "semantic_scholar_id": "f98d08c3df7cad321de2ca085d2821ff83b1b06e",
+      "doi": "10.1109/ICICSE66971.2025.11430117",
+      "canonical_id": "DOI:10.1109/ICICSE66971.2025.11430117",
+      "authors": [
+        "Tao Zhang",
+        "Yan Hu",
+        "Shuang-Wu Chen",
+        "Zian Wang",
+        "Hui-Huang Qin",
+        "Zi-Yang Zou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 341,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LOgIQ: Log-Domain Optimization for Hardware-Efficient Inference and Quantization of Transformers",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3658251",
+      "year": 2026,
+      "published": "2026-04-01",
+      "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization enables efficient large language model (LLM) inference by reducing memory and computation cost, but most existing methods sacrifice hardware simplicity through floating-point fallback, dequantization logic, or metadata routing. These overheads disrupt datapath regularity and limit gains in timing and area, especially in multiply-accumulate (MAC)-heavy transformer layers. We propose LogiMAC, a hardware-aligned quantization scheme that encodes weights in the log domain using shift-based arithmetic. LogiMAC embeds all decoding logic within the MAC unit, eliminates runtime scaling, and supports sublevel refinement without multipliers or look-up tables. The resulting datapath supports both shift directions with optional gating for unused paths. We evaluate LogiMAC across seven modern LLMs (ranging from 2B to 8B parameters) and compare it to strong baselines including SmoothQuant, GOBO, and SpinQuant. Our results show that while functional accuracy remains competitive, LogiMAC reduces area by $1.8\\times $ and dynamic power by $5.9\\times $ (in power-gated mode) compared to standard integer baselines. Timing analysis reveals over 50% of LogiMAC paths complete within just 12% of the normalized delay seen in other schemes. Validated over 34 million generated tokens, our findings demonstrate that accurate low-bit quantization can coexist with extreme hardware efficiency.",
+      "identifiers": [
+        "SemanticScholar:fba21375a64c003524c6aa569913ff90bf503aae"
+      ],
+      "semantic_scholar_id": "fba21375a64c003524c6aa569913ff90bf503aae",
+      "doi": "10.1109/TVLSI.2026.3658251",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3658251",
+      "authors": [
+        "T. Khan",
+        "Sanghamitra Roy",
+        "Koushik Chakraborty"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 231,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VoLLM: Smoothness-aware Serving of LLM-powered Voice Q&A via Adaptive Preemption",
+      "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00037",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed for voice Q&A, mainstream serving frameworks over-look inter-token latency, which is crucial for natural, real-time speech fluency. Current frameworks, optimized for end-to-end metrics, further struggle due to the monolithic co-batching of speech and LLM modules, preventing module-wise tuning under heterogeneous computational profiles and causing severe smoothness degradation under high concurrency. We introduce VoLLM, a smoothness-aware serving framework designed for SpeechLLMs. VoLLM’s core contributions are: (i) an offline latency-bounded sampling profiler that reduces sampling space for efficient latency modeling; (ii) an online time-budget-aware adaptive preemption scheduler that adaptively inserts new requests while preserving inter-token constraint for ongoing requests; and (iii) a stateful batch executor that enables module-wise batch inference based on request status. VoLLM achieves up to a 92.7% reduction in average response latency across diverse NVIDIA GPUs while guaranteeing fluent token emission.",
+      "identifiers": [
+        "SemanticScholar:8306f75e0622f30d475a0074f429d2c192b7c610"
+      ],
+      "semantic_scholar_id": "8306f75e0622f30d475a0074f429d2c192b7c610",
+      "doi": "10.1109/IPDPS65963.2026.00037",
+      "canonical_id": "DOI:10.1109/IPDPS65963.2026.00037",
+      "authors": [
+        "Xiang Wang",
+        "Yuan-Chun Li",
+        "Ju Ren",
+        "Li-Chen Pang",
+        "Shan-Song Yang",
+        "Yun-Xin Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Hot Expert Replication with Load and Topology-Aware Joint Gating for Distributed MoE Inference",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661192",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models enable efficient scaling of large language models via sparse expert activation. However, their inference latency and throughput in distributed settings are often constrained by expert load imbalance and communication overhead, especially in online inference with dynamic and non-stationary request patterns. Imbalanced expert popularity leads to hot experts, which degrades tail latency. Although replicating hot experts is an effective strategy to mitigate expert load imbalance, existing expert replication-based MoE inference systems often rely on noisy load signals and overlook communication topology, limiting their adaptability to rapidly changing workloads. To overcome these limitations, we propose DETAG, a distributed MoE inference system that combines dynamic hot expert replication with load- and topologyaware joint gating. Specifically, DETAG introduces a lightweight dynamic hot expert pool, enabling on-demand expert replication to improve expert load balance and reduce communication overhead. In addition, DETAG further incorporates an Exponential Moving Average (EMA) smoothed, load- and topologyaware joint gating mechanism that incorporates both smoothed expert load and communication cost into routing decisions. Experiments on multi-node GPU clusters with representative MoE models show that DETAG significantly reduces cross-node communication, improves expert load balance, and achieves up to 2.54× speedup over existing MoE inference systems.",
+      "identifiers": [
+        "SemanticScholar:e31fb9d8aea7281503405662e6da66fbd05b13a9"
+      ],
+      "semantic_scholar_id": "e31fb9d8aea7281503405662e6da66fbd05b13a9",
+      "doi": "10.1109/IWQoS70441.2026.11661192",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661192",
+      "authors": [
+        "Jing Yang",
+        "Hua-Qing Tu",
+        "Gong-Ming Zhao",
+        "Hong-Li Xu",
+        "Baoqing Wang",
+        "Long Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SEC: Enabling MLLMs for Low-Latency IoT Video Analysis via Semantic-Aware Edge–Cloud Collaboration",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3669144",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Internet of Things Journal",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid proliferation of Internet of Things (IoT)-enabled cameras has driven increasing demand for low-latency, intelligent video understanding in real-world applications such as smart cities and industrial automation. While multimodal large language models (MLLMs) offer unprecedented capabilities in semantic reasoning and natural language-based video comprehension, their deployment in latency-sensitive IoT environments remains challenging due to high computational costs and sequential decoding bottlenecks. Moreover, conventional edge–cloud video analysis frameworks often rely on semantic-agnostic frame sampling, leading to information loss or redundant data transmission. In this article, we propose <inline-formula> <tex-math notation=\"LaTeX\">$SEC$ </tex-math></inline-formula>, a semantic-aware edge–cloud collaborative framework for efficient and accurate video analysis. <inline-formula> <tex-math notation=\"LaTeX\">$SEC$ </tex-math></inline-formula> introduces a task-aware key frame selection mechanism at the edge to maximize semantic relevance while minimizing bandwidth usage and a novel adaptive speculative decoding (SPD) framework with tree-based parallel generation on the cloud to accelerate MLLM inference. Extensive experiments under realistic edge–cloud deployment settings on four video understanding benchmarks demonstrate that the proposed <inline-formula> <tex-math notation=\"LaTeX\">$SEC$ </tex-math></inline-formula> framework achieves superior performance, significantly reducing the end-to-end inference latency while improving the accuracy, a rare win-win in latency-critical IoT systems.",
+      "identifiers": [
+        "SemanticScholar:a319de710882d9e5a9b53441225516bbde2294f1"
+      ],
+      "semantic_scholar_id": "a319de710882d9e5a9b53441225516bbde2294f1",
+      "doi": "10.1109/JIOT.2026.3669144",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3669144",
+      "authors": [
+        "Meng-Yu Yang",
+        "Ye Tian",
+        "Pei-Zhuang Cong",
+        "Lanshan Zhang",
+        "Gongli Xi",
+        "Song Wang",
+        "Wen-Dong Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/isdfs69419.2026.11459120",
+      "identity_tokens": [
+        "id:DOI:10.1109/isdfs69419.2026.11459120",
+        "id:SemanticScholar:9e5562c83cf863e397d749064e8e8c57848cc0c3",
+        "title:distributed adaptive speculative decoding accelerating large language model inference with contextaware draft selection",
+        "url:https://doi.org/10.1109/ISDFS69419.2026.11459120"
+      ],
+      "record": {
+        "title": "Distributed Adaptive Speculative Decoding: Accelerating Large Language Model Inference With Context-Aware Draft Selection",
+        "source_url": "https://doi.org/10.1109/ISDFS69419.2026.11459120",
+        "year": 2026,
+        "published": "2026-03-19",
+        "venue": "International Symposium on Digital Forensics and Security",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have revolutionized natural language processing, yet their autoregressive generation process remains a critical bottleneck for real-time applications. Speculative decoding has emerged as a promising approach to accelerate inference by leveraging smaller draft models to predict future tokens, which are then verified in parallel by the target model. However, existing methods rely on fixed draft models and single-node execution, limiting their effectiveness across diverse input distributions and scalability in production environments. We propose Distributed Adaptive Speculative Decoding (DASD), a novel framework that introduces three key innovations: (1) context-aware draft model selection using a lightweight routing network that dynamically chooses optimal draft models based on input characteristics, (2) asynchronous distributed speculation that pipelines draft generation and target verification across multiple GPUs with fault-tolerant rollback mechanisms, and (3) adaptive speculation length that adjusts the number of speculative tokens based on real-time acceptance rates. Through extensive experiments on NVIDIA A4000 GPUs using Llama-3-8B and multiple draft models, we demonstrate that DASD achieves $\\mathbf{2. 6 - 2. 8} \\times$ speedup compared to standard autoregressive decoding and $\\mathbf{1 5} \\boldsymbol{-} \\mathbf{2 0} \\boldsymbol{\\%}$ improvement over fixed-strategy speculative decoding, while maintaining identical output quality. Our approach shows consistent gains across code generation (76 % acceptance), factual QA (72 % acceptance), and conversational tasks (68 % acceptance). The proposed distributed protocol reduces end-to-end latency by 42 % in multi-GPU settings and provides graceful degradation under GPU failures. We release our implementation and comprehensive benchmarks to facilitate future research in efficient LLM serving.",
+        "identifiers": [
+          "SemanticScholar:9e5562c83cf863e397d749064e8e8c57848cc0c3"
+        ],
+        "semantic_scholar_id": "9e5562c83cf863e397d749064e8e8c57848cc0c3",
+        "doi": "10.1109/ISDFS69419.2026.11459120",
+        "canonical_id": "DOI:10.1109/ISDFS69419.2026.11459120",
+        "authors": [
+          "Tejas Pravinbhai Patel",
+          "Vinay R Soni",
+          "Amit Kumar Padhy",
+          "S. Bayyavarapu",
+          "Milan Parikh"
+        ],
+        "priority": 107,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 107,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 244,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/imcec66174.2025.11331709",
+      "identity_tokens": [
+        "id:DOI:10.1109/imcec66174.2025.11331709",
+        "id:SemanticScholar:296dc9e5f407772a8441c8bffa1d76d716cf42d2",
+        "title:aasqgpt accurate activation static quantization towards generative pretrained transformer",
+        "url:https://doi.org/10.1109/IMCEC66174.2025.11331709"
+      ],
+      "record": {
+        "title": "AASQ-GPT: Accurate Activation Static Quantization Towards Generative Pre-Trained Transformer",
+        "source_url": "https://doi.org/10.1109/IMCEC66174.2025.11331709",
+        "year": 2025,
+        "published": "2025-12-05",
+        "venue": "IEEE Advanced Information Management, Communicates, Electronic and Automation Control Conference",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) demonstrate exceptional general-purpose language processing capabilities, but they require extremely high memory and computational resources. Quantization techniques are crucial for deploying LLMs by improving memory efficiency and inference speed. Existing activation quantization methods are primarily dynamic, which, while achieving low quantization error, offer relatively limited inference acceleration. In contrast, static quantization, which provides faster inference, faces the challenge of significant quantization error. To address this, we propose AASQ-GPT, a novel technique that enables accurate activation static quantization without the need for retraining. Specifically, AASQ-GPT introduces a new quantization framework for activations, where after quantizing a batch of activations, the remaining unquantized activations are adjusted to minimize quantization error. Compared to traditional min-max quantization, AASQ-GPT significantly improves quantization perfor- mance without incurring any additional overhead. Experiments on LLMs of varying scales show that AASQ-GPT achieves state-of-the- art (SOTA) results in static quantization at the same bit width.",
+        "identifiers": [
+          "SemanticScholar:296dc9e5f407772a8441c8bffa1d76d716cf42d2"
+        ],
+        "semantic_scholar_id": "296dc9e5f407772a8441c8bffa1d76d716cf42d2",
+        "doi": "10.1109/IMCEC66174.2025.11331709",
+        "canonical_id": "DOI:10.1109/IMCEC66174.2025.11331709",
+        "authors": [
+          "Zhan-Peng Wang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/isca66397.2026.00176",
+      "identity_tokens": [
+        "id:DOI:10.1109/isca66397.2026.00176",
+        "id:SemanticScholar:252485af717651c9211f72999a4b739da1421f90",
+        "title:unicore a bitwidth scalable gemm unit for unified llm inference",
+        "url:https://doi.org/10.1109/ISCA66397.2026.00176"
+      ],
+      "record": {
+        "title": "UniCore: A Bit-Width Scalable GEMM Unit for Unified LLM Inference",
+        "source_url": "https://doi.org/10.1109/ISCA66397.2026.00176",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Symposium on Computer Architecture",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have achieved remarkable success across a broad range of applications but impose extreme computational and memory demands due to their reliance on massive General Matrix-Matrix Multiplication (GEMM) operations. Quantization has emerged as a key approach to improve efficiency by reducing data precision; however, modern LLMs exhibit diverse sensitivities to quantization, requiring multiple precision settings. Existing hardware accelerators fail to efficiently support this diversity: fixed-function accelerators are limited to a few discrete formats, while bit-composable architectures suffer from quadratic resource scaling, leading to severe performance degradation at higher precision. We propose UniCore, a unified GEMM architecture that achieves both bit-width scalability and accuracy preservation through a hardware-software co-design. UniCore introduces Scalable FPMA (S-FPMA), the first composable FPMA primitive that fuses into different precisions using uniform adder slices, maintaining linear hardware scaling. To ensure numerical fidelity, UniCore integrates a lightweight format-conversion and dual-path compensation pipeline that corrects FPMA's structured approximation error. Complementing the architecture, DynFP, a distribution-adaptive low-bit floating-point format, improves representational accuracy for diverse LLM weight and activation distributions. UniCore delivers $\\mathbf{1. 2 4} \\times-\\mathbf{3. 9 5} \\times$ higher area efficiency for W4A4/W4A8/W8A8 and up to 5.26× at W16A16 compared to prior composable-multiplier accelerators, while achieving the highest accuracy in nearly all configurations. UniCore is open-sourced at: https://github.com/CLab-HKUST-GZ/isca53-unicore",
+        "identifiers": [
+          "SemanticScholar:252485af717651c9211f72999a4b739da1421f90"
+        ],
+        "semantic_scholar_id": "252485af717651c9211f72999a4b739da1421f90",
+        "doi": "10.1109/ISCA66397.2026.00176",
+        "canonical_id": "DOI:10.1109/ISCA66397.2026.00176",
+        "authors": [
+          "Yong-Hao Chen",
+          "Jia-Xiang Zou",
+          "Xing-Yu Chen",
+          "Chenxi Xu",
+          "Jingyu Guo",
+          "Xin-Yu Chen"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": "International Symposium on Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icicse66971.2025.11430117",
+      "identity_tokens": [
+        "id:DOI:10.1109/icicse66971.2025.11430117",
+        "id:SemanticScholar:f98d08c3df7cad321de2ca085d2821ff83b1b06e",
+        "title:swiftserve efficient disaggregated llm inference serving via hierarchical maxflow in heterogeneous gpus and network",
+        "url:https://doi.org/10.1109/ICICSE66971.2025.11430117"
+      ],
+      "record": {
+        "title": "SwiftServe: Efficient Disaggregated LLM Inference Serving via Hierarchical Max-Flow in Heterogeneous GPUs and Network",
+        "source_url": "https://doi.org/10.1109/ICICSE66971.2025.11430117",
+        "year": 2025,
+        "published": "2025-12-12",
+        "venue": "2025 5th International Conference on Information Communication and Software Engineering (ICICSE)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved remarkable performance across a variety of tasks. Disaggregated LLM inference serving (DLIS), which separates the compute-intensive prefill phase and the memory-intensive decode phase, enables more flexible and efficient resource utilization in heterogeneous GPUs. However, deploying DLIS in real-world environments presents two significant challenges. Firstly, the heterogeneity of phase-specific resource requirements complicates the alignment of GPU capabilities with workload demands, often resulting in suboptimal performance. Secondly, transferring key-value (KV) caches between the prefill and decode phases over heterogeneous links introduces substantial communication overhead, creating performance bottlenecks. To address these challenges, we propose SwiftServe, an efficient disaggregated LLM inference serving system for heterogeneous GPUs. SwiftServe models DLIS deployment as a hierarchical max-flow deploying problem formulated as a constrained mixed-integer nonlinear program accounting for hardware and phase heterogeneity. We design a hierarchical alternating max-flow optimization algorithm for effective resource deployment. Experiments show SwiftServe achieves up to 1.68× higher throughput and 2.25× lower latency than existing methods.",
+        "identifiers": [
+          "SemanticScholar:f98d08c3df7cad321de2ca085d2821ff83b1b06e"
+        ],
+        "semantic_scholar_id": "f98d08c3df7cad321de2ca085d2821ff83b1b06e",
+        "doi": "10.1109/ICICSE66971.2025.11430117",
+        "canonical_id": "DOI:10.1109/ICICSE66971.2025.11430117",
+        "authors": [
+          "Tao Zhang",
+          "Yan Hu",
+          "Shuang-Wu Chen",
+          "Zian Wang",
+          "Hui-Huang Qin",
+          "Zi-Yang Zou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 341,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tvlsi.2026.3658251",
+      "identity_tokens": [
+        "id:DOI:10.1109/tvlsi.2026.3658251",
+        "id:SemanticScholar:fba21375a64c003524c6aa569913ff90bf503aae",
+        "title:logiq logdomain optimization for hardwareefficient inference and quantization of transformers",
+        "url:https://doi.org/10.1109/TVLSI.2026.3658251"
+      ],
+      "record": {
+        "title": "LOgIQ: Log-Domain Optimization for Hardware-Efficient Inference and Quantization of Transformers",
+        "source_url": "https://doi.org/10.1109/TVLSI.2026.3658251",
+        "year": 2026,
+        "published": "2026-04-01",
+        "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization enables efficient large language model (LLM) inference by reducing memory and computation cost, but most existing methods sacrifice hardware simplicity through floating-point fallback, dequantization logic, or metadata routing. These overheads disrupt datapath regularity and limit gains in timing and area, especially in multiply-accumulate (MAC)-heavy transformer layers. We propose LogiMAC, a hardware-aligned quantization scheme that encodes weights in the log domain using shift-based arithmetic. LogiMAC embeds all decoding logic within the MAC unit, eliminates runtime scaling, and supports sublevel refinement without multipliers or look-up tables. The resulting datapath supports both shift directions with optional gating for unused paths. We evaluate LogiMAC across seven modern LLMs (ranging from 2B to 8B parameters) and compare it to strong baselines including SmoothQuant, GOBO, and SpinQuant. Our results show that while functional accuracy remains competitive, LogiMAC reduces area by $1.8\\times $ and dynamic power by $5.9\\times $ (in power-gated mode) compared to standard integer baselines. Timing analysis reveals over 50% of LogiMAC paths complete within just 12% of the normalized delay seen in other schemes. Validated over 34 million generated tokens, our findings demonstrate that accurate low-bit quantization can coexist with extreme hardware efficiency.",
+        "identifiers": [
+          "SemanticScholar:fba21375a64c003524c6aa569913ff90bf503aae"
+        ],
+        "semantic_scholar_id": "fba21375a64c003524c6aa569913ff90bf503aae",
+        "doi": "10.1109/TVLSI.2026.3658251",
+        "canonical_id": "DOI:10.1109/TVLSI.2026.3658251",
+        "authors": [
+          "T. Khan",
+          "Sanghamitra Roy",
+          "Koushik Chakraborty"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 231,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ipdps65963.2026.00037",
+      "identity_tokens": [
+        "id:DOI:10.1109/ipdps65963.2026.00037",
+        "id:SemanticScholar:8306f75e0622f30d475a0074f429d2c192b7c610",
+        "title:vollm smoothnessaware serving of llmpowered voice qa via adaptive preemption",
+        "url:https://doi.org/10.1109/IPDPS65963.2026.00037"
+      ],
+      "record": {
+        "title": "VoLLM: Smoothness-aware Serving of LLM-powered Voice Q&A via Adaptive Preemption",
+        "source_url": "https://doi.org/10.1109/IPDPS65963.2026.00037",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "IEEE International Parallel and Distributed Processing Symposium",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed for voice Q&A, mainstream serving frameworks over-look inter-token latency, which is crucial for natural, real-time speech fluency. Current frameworks, optimized for end-to-end metrics, further struggle due to the monolithic co-batching of speech and LLM modules, preventing module-wise tuning under heterogeneous computational profiles and causing severe smoothness degradation under high concurrency. We introduce VoLLM, a smoothness-aware serving framework designed for SpeechLLMs. VoLLM’s core contributions are: (i) an offline latency-bounded sampling profiler that reduces sampling space for efficient latency modeling; (ii) an online time-budget-aware adaptive preemption scheduler that adaptively inserts new requests while preserving inter-token constraint for ongoing requests; and (iii) a stateful batch executor that enables module-wise batch inference based on request status. VoLLM achieves up to a 92.7% reduction in average response latency across diverse NVIDIA GPUs while guaranteeing fluent token emission.",
+        "identifiers": [
+          "SemanticScholar:8306f75e0622f30d475a0074f429d2c192b7c610"
+        ],
+        "semantic_scholar_id": "8306f75e0622f30d475a0074f429d2c192b7c610",
+        "doi": "10.1109/IPDPS65963.2026.00037",
+        "canonical_id": "DOI:10.1109/IPDPS65963.2026.00037",
+        "authors": [
+          "Xiang Wang",
+          "Yuan-Chun Li",
+          "Ju Ren",
+          "Li-Chen Pang",
+          "Shan-Song Yang",
+          "Yun-Xin Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iwqos70441.2026.11661192",
+      "identity_tokens": [
+        "id:DOI:10.1109/iwqos70441.2026.11661192",
+        "id:SemanticScholar:e31fb9d8aea7281503405662e6da66fbd05b13a9",
+        "title:dynamic hot expert replication with load and topologyaware joint gating for distributed moe inference",
+        "url:https://doi.org/10.1109/IWQoS70441.2026.11661192"
+      ],
+      "record": {
+        "title": "Dynamic Hot Expert Replication with Load and Topology-Aware Joint Gating for Distributed MoE Inference",
+        "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661192",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "International Workshop on Quality of Service",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models enable efficient scaling of large language models via sparse expert activation. However, their inference latency and throughput in distributed settings are often constrained by expert load imbalance and communication overhead, especially in online inference with dynamic and non-stationary request patterns. Imbalanced expert popularity leads to hot experts, which degrades tail latency. Although replicating hot experts is an effective strategy to mitigate expert load imbalance, existing expert replication-based MoE inference systems often rely on noisy load signals and overlook communication topology, limiting their adaptability to rapidly changing workloads. To overcome these limitations, we propose DETAG, a distributed MoE inference system that combines dynamic hot expert replication with load- and topologyaware joint gating. Specifically, DETAG introduces a lightweight dynamic hot expert pool, enabling on-demand expert replication to improve expert load balance and reduce communication overhead. In addition, DETAG further incorporates an Exponential Moving Average (EMA) smoothed, load- and topologyaware joint gating mechanism that incorporates both smoothed expert load and communication cost into routing decisions. Experiments on multi-node GPU clusters with representative MoE models show that DETAG significantly reduces cross-node communication, improves expert load balance, and achieves up to 2.54× speedup over existing MoE inference systems.",
+        "identifiers": [
+          "SemanticScholar:e31fb9d8aea7281503405662e6da66fbd05b13a9"
+        ],
+        "semantic_scholar_id": "e31fb9d8aea7281503405662e6da66fbd05b13a9",
+        "doi": "10.1109/IWQoS70441.2026.11661192",
+        "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661192",
+        "authors": [
+          "Jing Yang",
+          "Hua-Qing Tu",
+          "Gong-Ming Zhao",
+          "Hong-Li Xu",
+          "Baoqing Wang",
+          "Long Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/jiot.2026.3669144",
+      "identity_tokens": [
+        "id:DOI:10.1109/jiot.2026.3669144",
+        "id:SemanticScholar:a319de710882d9e5a9b53441225516bbde2294f1",
+        "title:sec enabling mllms for lowlatency iot video analysis via semanticaware edgecloud collaboration",
+        "url:https://doi.org/10.1109/JIOT.2026.3669144"
+      ],
+      "record": {
+        "title": "SEC: Enabling MLLMs for Low-Latency IoT Video Analysis via Semantic-Aware Edge–Cloud Collaboration",
+        "source_url": "https://doi.org/10.1109/JIOT.2026.3669144",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "IEEE Internet of Things Journal",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid proliferation of Internet of Things (IoT)-enabled cameras has driven increasing demand for low-latency, intelligent video understanding in real-world applications such as smart cities and industrial automation. While multimodal large language models (MLLMs) offer unprecedented capabilities in semantic reasoning and natural language-based video comprehension, their deployment in latency-sensitive IoT environments remains challenging due to high computational costs and sequential decoding bottlenecks. Moreover, conventional edge–cloud video analysis frameworks often rely on semantic-agnostic frame sampling, leading to information loss or redundant data transmission. In this article, we propose <inline-formula> <tex-math notation=\"LaTeX\">$SEC$ </tex-math></inline-formula>, a semantic-aware edge–cloud collaborative framework for efficient and accurate video analysis. <inline-formula> <tex-math notation=\"LaTeX\">$SEC$ </tex-math></inline-formula> introduces a task-aware key frame selection mechanism at the edge to maximize semantic relevance while minimizing bandwidth usage and a novel adaptive speculative decoding (SPD) framework with tree-based parallel generation on the cloud to accelerate MLLM inference. Extensive experiments under realistic edge–cloud deployment settings on four video understanding benchmarks demonstrate that the proposed <inline-formula> <tex-math notation=\"LaTeX\">$SEC$ </tex-math></inline-formula> framework achieves superior performance, significantly reducing the end-to-end inference latency while improving the accuracy, a rare win-win in latency-critical IoT systems.",
+        "identifiers": [
+          "SemanticScholar:a319de710882d9e5a9b53441225516bbde2294f1"
+        ],
+        "semantic_scholar_id": "a319de710882d9e5a9b53441225516bbde2294f1",
+        "doi": "10.1109/JIOT.2026.3669144",
+        "canonical_id": "DOI:10.1109/JIOT.2026.3669144",
+        "authors": [
+          "Meng-Yu Yang",
+          "Ye Tian",
+          "Pei-Zhuang Cong",
+          "Lanshan Zhang",
+          "Gongli Xi",
+          "Song Wang",
+          "Wen-Dong Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:deb05178b45085c1da3e1137f0408149135625f369c3518ed09ba7215c15ff01",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

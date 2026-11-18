@@ -1,0 +1,664 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f57e1b3914d1bba6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f57e1b3914d1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2025.acl-long.1294",
+    "arXiv:2603.10535",
+    "arXiv:2603.17449",
+    "arXiv:2604.22281",
+    "arXiv:2606.01790",
+    "arXiv:2606.02963",
+    "arXiv:2606.10932",
+    "arXiv:2608.15943",
+    "arXiv:2608.27963",
+    "arXiv:2609.28769"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f359c1c41d491ef610056113173989064c0c0e34",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 4,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 4,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:14:17.960672+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2025.acl-long.1294",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.10535",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.17449",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.22281",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.22281"
+    },
+    {
+      "requested_id": "arXiv:2606.01790",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.01790"
+    },
+    {
+      "requested_id": "arXiv:2606.02963",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.10932",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.10932"
+    },
+    {
+      "requested_id": "arXiv:2608.15943",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.27963",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.27963"
+    },
+    {
+      "requested_id": "arXiv:2609.28769",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2603.10535",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning significantly enhances LLM capabilities but suffers from a critical issue: length inflation, where models adopt verbosity or inefficient reasoning to maximize rewards. Prior approaches struggle to address this challenge in a general and lossless manner, primarily because additive penalties introduce a compensatory effect that creates optimization shortcuts, while heuristic gating strategies lack generality beyond binary feedback. To bridge this gap, we present Group Relative Reward Rescaling (GR$^3$), which reframes length control as a multiplicative rescaling paradigm, effectively establishing a generalized, continuous, and reward-dependent gating mechanism. To further ensure lossless optimization, we incorporate group-relative regularization and advantage-aware calibration, which dynamically adapt length budgets to instance difficulty and preserve the advantage signal of high-quality trajectories. Empirically, across both RLHF and RLVR settings, GR$^3$~maintains training dynamics and downstream performance comparable to standard GRPO while significantly mitigating length inflation, outperforming state-of-the-art length-regularized baselines.",
+      "identifiers": [
+        "SemanticScholar:ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52"
+      ],
+      "semantic_scholar_id": "ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52",
+      "canonical_id": "arXiv:2603.10535",
+      "arxiv_id": "2603.10535",
+      "doi": "10.48550/arXiv.2603.10535",
+      "authors": [
+        "Zi-Chao Li",
+        "Jie Lou",
+        "FangCheng Dong",
+        "Zhi-Yuan Fan",
+        "Mengjie Ren",
+        "Hong-Yu Lin",
+        "Xian-Pei Han",
+        "De-Bing Zhang",
+        "Le Sun",
+        "Yaojie Lu",
+        "Xing Yu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KForge: LLM-Driven Cross-Platform Kernel Generation for AI Accelerators",
+      "source_url": "https://arxiv.org/abs/2606.02963",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Production inference increasingly targets a heterogeneous mix of accelerators. Agentic pipelines interleave reasoning, tool calls, and multi-agent coordination, each with distinct compute and memory profiles. For optimal efficiency, each stage should run on the accelerator best suited to it. This creates a systems challenge: each pipeline now requires high-performance kernels across a growing set of hardware backends and programming models. Writing these kernels by hand is time-consuming, demands deep low-level expertise, and does not scale as kernel complexity grows. Recently, Large Language Models (LLMs) have been leveraged for automatic kernel generation, but challenges in low-level code generation and cross-backend generalization persist. We present KForge, a cross-platform framework built around an iterative refinement loop driven by two collaborating LLM-based agents: a generation agent that produces and progressively refines kernels using compilation and correctness feedback, and a performance-analysis agent that interprets profiling data, from programmatic APIs to GUI-based tools, and emits recommendations that steer the next round of synthesis. The loop alternates between functional passes, which drive a candidate to correctness, and optimization passes, which close the performance gap to hand-tuned baselines. We evaluate KForge on two backends with very different baseline reference availability. On NVIDIA B200, KForge achieves a 2.12$\\%$ improvement in end-to-end throughput compared to TensorRT-LLM on the gpt-oss-20b inference speed benchmark. On Intel Arc B580, KForge generates Triton kernels achieving a 5.13$\\times$ geometric mean speedup over the faster of PyTorch eager and torch.compile on 37 GEMM + tail-ops workloads from KernelBench Level 2, primarily via operator fusion and mixed-precision execution.",
+      "identifiers": [
+        "SemanticScholar:3bb08e77e3d58c73ae185079f5917e8396f461d2"
+      ],
+      "semantic_scholar_id": "3bb08e77e3d58c73ae185079f5917e8396f461d2",
+      "canonical_id": "arXiv:2606.02963",
+      "arxiv_id": "2606.02963",
+      "doi": "10.48550/arXiv.2606.02963",
+      "authors": [
+        "Taras Sereda",
+        "Burak Bartan",
+        "Ankita Nayak",
+        "Tom St. John",
+        "Natalie Serrino",
+        "Zain Asgar"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TRiMS: Real-Time Tracking of Minimal Sufficient Length for Efficient Reasoning via RL",
+      "source_url": "https://arxiv.org/abs/2603.17449",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models achieve breakthroughs in complex reasoning via long chain-of-thought sequences. However, this often leads to severe reasoning inflation, causing substantial computational redundancy. To maximize Intelligence per Token, we introduce a theoretical metric, MSL-Minimal Sufficient Length. MSL rigorously characterizes the shortest reasoning length that preserves answer correctness. We provide a recursive definition based on independently sampled sequences and prove the existence of its limit, establishing the first measurable lower bound for reasoning-chain compression. Building on an analysis of mainstream CoT compression strategies, we identify key structural factors enabling a model to approach MSL. Based on these insights, we propose TRiMS which employs the GRPO algorithm in conjunction with MSL-based estimation during training, while mitigating instabilities during the training process through dynamic batch aggregation and advantage computation using batch-level standard deviation. TRiMS achieves over 80% CoT token reduction with a minor accuracy boost across all benchmarks.",
+      "identifiers": [
+        "SemanticScholar:818760579996e65efe42ba514ebcc809361e07d5"
+      ],
+      "semantic_scholar_id": "818760579996e65efe42ba514ebcc809361e07d5",
+      "canonical_id": "arXiv:2603.17449",
+      "arxiv_id": "2603.17449",
+      "doi": "10.48550/arXiv.2603.17449",
+      "authors": [
+        "Ting-Cheng Bian",
+        "Jin-Chang Luo",
+        "Ming-Ming Cheng",
+        "Jin-Yu Zhang",
+        "Xiao-Ling Xia",
+        "Nicole Li",
+        "Yan Tao",
+        "Hai-Wei Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 245,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+      "source_url": "https://arxiv.org/abs/2609.28769",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern GPU kernels fuse increasingly more work into a single kernel, and intra-kernel tracing has become the mainstream method to profile them. Tracing inserts probes into the kernel to record its runtime states, and the fidelity of the trace determines the efficiency of performance optimization. Unfortunately, existing tools insert probes before compilation. These tools interfere with the compiler's optimizations, so they trace a different binary from the one the GPU executes. They also add significant runtime overhead. Xtrace is the first GPU kernel tracing system with near-zero compile-time interference and minimized runtime overhead. Xtrace inserts probes directly into the compiled kernel binary. It reuses only the registers that hold dead values at the insertion address and resolves all hazards with the compiler's hazard tables. It further schedules the instruction order, register allocation, and control bits to minimize the runtime overhead the probe introduces. Xtrace supports 19 NVIDIA and AMD GPU architectures, and is publicly available for use at https://g-watch.github.io. We evaluate Xtrace on major production large language model (LLM) kernels against the state-of-the-art tracers Neutrino and IKET from NVIDIA. On H100, B300, and MI300X GPUs, Xtrace preserves 94-98% of the instructions of the kernel, while existing tools preserve only 8-48%. Xtrace adds only 0.9-2.8% overhead, while existing tools add 3.8-75.6%. Xtrace guides a coding agent to reach the same FlashAttention-3 performance with 3.9x fewer iterations than existing traces do. Thanks to our binary-level instrumentation, Xtrace also traces the faster closed-source cuDNN kernel, which guides the agent to lift the open-source FlashAttention-4 by 5.2-13.3% in throughput.",
+      "identifiers": [
+        "SemanticScholar:38524352e34b0fe2c6d2fa2cb460dadbd69f0afa"
+      ],
+      "semantic_scholar_id": "38524352e34b0fe2c6d2fa2cb460dadbd69f0afa",
+      "canonical_id": "arXiv:2609.28769",
+      "arxiv_id": "2609.28769",
+      "doi": "10.48550/arXiv.2609.28769",
+      "authors": [
+        "Zhuo-Bin Huang",
+        "Kai Zhang",
+        "Wei-Hao Cui",
+        "Hong-Shi Tan",
+        "Liang Luo",
+        "Christopher Dewan",
+        "Shen Li",
+        "Bing-Sheng He"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 56,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Laws and Efficient Inference for Ternary Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.1294",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:626d94a3179935942488df86898b492b1b92014e"
+      ],
+      "semantic_scholar_id": "626d94a3179935942488df86898b492b1b92014e",
+      "doi": "10.18653/v1/2025.acl-long.1294",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1294",
+      "authors": [
+        "Tejas Vaidhya",
+        "Ayush Kaushal",
+        "Vineet Jain",
+        "Francis Couture-Harpin",
+        "Prashant Shishodia",
+        "M. Behbahani",
+        "Y. Nevmyvaka",
+        "I. Rish"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+      "source_url": "https://arxiv.org/abs/2608.15943",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pipeline parallelism (PP) is widely used to scale large language model (LLM) training, but its efficiency is often limited by stage imbalance and pipeline bubbles. Meanwhile, cross-layer KV sharing has primarily been studied as a mechanism for reducing KV-cache costs during inference, without examining how KV reuse reshapes pipeline workloads. We present \\textbf{KV-Pipe}, a stage-aware KV-sharing mechanism that turns KV reuse into a pipeline-balancing control knob. KV-Pipe starts from the tail stage, converts selected attention layers to cross-layer KV sharing in a tail-first order, and iteratively retargets the current bottleneck to drive the FLOPs Imbalance Ratio (FIR) toward $1$. The procedure is performed offline and requires only a pipeline partition and per-layer FLOPs estimates, introducing negligible runtime overhead and requiring no online tuning. Across multiple pipeline-parallel configurations, KV-Pipe consistently improves utilization and throughput, achieving up to \\textbf{9.2\\%} higher training MFU and up to a \\textbf{9.8\\%} reduction in iteration time, with larger gains at higher pipeline-parallel degrees where stage imbalance is amplified. Furthermore, the same KV-sharing mechanism provides an inference-side benefit by reducing KV-cache growth and redundant KV projection work, resulting in higher decoding throughput for long-context workloads. These results identify KV layout as a system--architecture degree of freedom for jointly improving pipeline-parallel training efficiency and long-context inference.",
+      "identifiers": [
+        "SemanticScholar:9ce502492feb6ba78479de2953486b8f0e0a9769"
+      ],
+      "semantic_scholar_id": "9ce502492feb6ba78479de2953486b8f0e0a9769",
+      "canonical_id": "arXiv:2608.15943",
+      "arxiv_id": "2608.15943",
+      "doi": "10.48550/arXiv.2608.15943",
+      "authors": [
+        "Maryam Dialameh",
+        "Hossein Rajabzadeh",
+        "Harish Krishnamoorthy Murali",
+        "Walid Ahmed",
+        "Weiwei Zhang",
+        "Hyock Ju Kwon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.10535",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.10535",
+        "id:SemanticScholar:ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52",
+        "id:arXiv:2603.10535",
+        "title:tackling length inflation without tradeoffs group relative reward rescaling for reinforcement learning",
+        "url:https://arxiv.org/abs/2603.10535"
+      ],
+      "record": {
+        "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2603.10535",
+        "year": 2026,
+        "published": "2026-03-11",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reinforcement learning significantly enhances LLM capabilities but suffers from a critical issue: length inflation, where models adopt verbosity or inefficient reasoning to maximize rewards. Prior approaches struggle to address this challenge in a general and lossless manner, primarily because additive penalties introduce a compensatory effect that creates optimization shortcuts, while heuristic gating strategies lack generality beyond binary feedback. To bridge this gap, we present Group Relative Reward Rescaling (GR$^3$), which reframes length control as a multiplicative rescaling paradigm, effectively establishing a generalized, continuous, and reward-dependent gating mechanism. To further ensure lossless optimization, we incorporate group-relative regularization and advantage-aware calibration, which dynamically adapt length budgets to instance difficulty and preserve the advantage signal of high-quality trajectories. Empirically, across both RLHF and RLVR settings, GR$^3$~maintains training dynamics and downstream performance comparable to standard GRPO while significantly mitigating length inflation, outperforming state-of-the-art length-regularized baselines.",
+        "identifiers": [
+          "SemanticScholar:ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52"
+        ],
+        "semantic_scholar_id": "ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52",
+        "canonical_id": "arXiv:2603.10535",
+        "arxiv_id": "2603.10535",
+        "doi": "10.48550/arXiv.2603.10535",
+        "authors": [
+          "Zi-Chao Li",
+          "Jie Lou",
+          "FangCheng Dong",
+          "Zhi-Yuan Fan",
+          "Mengjie Ren",
+          "Hong-Yu Lin",
+          "Xian-Pei Han",
+          "De-Bing Zhang",
+          "Le Sun",
+          "Yaojie Lu",
+          "Xing Yu"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02963",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02963",
+        "id:SemanticScholar:3bb08e77e3d58c73ae185079f5917e8396f461d2",
+        "id:arXiv:2606.02963",
+        "title:kforge llmdriven crossplatform kernel generation for ai accelerators",
+        "url:https://arxiv.org/abs/2606.02963"
+      ],
+      "record": {
+        "title": "KForge: LLM-Driven Cross-Platform Kernel Generation for AI Accelerators",
+        "source_url": "https://arxiv.org/abs/2606.02963",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Production inference increasingly targets a heterogeneous mix of accelerators. Agentic pipelines interleave reasoning, tool calls, and multi-agent coordination, each with distinct compute and memory profiles. For optimal efficiency, each stage should run on the accelerator best suited to it. This creates a systems challenge: each pipeline now requires high-performance kernels across a growing set of hardware backends and programming models. Writing these kernels by hand is time-consuming, demands deep low-level expertise, and does not scale as kernel complexity grows. Recently, Large Language Models (LLMs) have been leveraged for automatic kernel generation, but challenges in low-level code generation and cross-backend generalization persist. We present KForge, a cross-platform framework built around an iterative refinement loop driven by two collaborating LLM-based agents: a generation agent that produces and progressively refines kernels using compilation and correctness feedback, and a performance-analysis agent that interprets profiling data, from programmatic APIs to GUI-based tools, and emits recommendations that steer the next round of synthesis. The loop alternates between functional passes, which drive a candidate to correctness, and optimization passes, which close the performance gap to hand-tuned baselines. We evaluate KForge on two backends with very different baseline reference availability. On NVIDIA B200, KForge achieves a 2.12$\\%$ improvement in end-to-end throughput compared to TensorRT-LLM on the gpt-oss-20b inference speed benchmark. On Intel Arc B580, KForge generates Triton kernels achieving a 5.13$\\times$ geometric mean speedup over the faster of PyTorch eager and torch.compile on 37 GEMM + tail-ops workloads from KernelBench Level 2, primarily via operator fusion and mixed-precision execution.",
+        "identifiers": [
+          "SemanticScholar:3bb08e77e3d58c73ae185079f5917e8396f461d2"
+        ],
+        "semantic_scholar_id": "3bb08e77e3d58c73ae185079f5917e8396f461d2",
+        "canonical_id": "arXiv:2606.02963",
+        "arxiv_id": "2606.02963",
+        "doi": "10.48550/arXiv.2606.02963",
+        "authors": [
+          "Taras Sereda",
+          "Burak Bartan",
+          "Ankita Nayak",
+          "Tom St. John",
+          "Natalie Serrino",
+          "Zain Asgar"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.17449",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.17449",
+        "id:SemanticScholar:818760579996e65efe42ba514ebcc809361e07d5",
+        "id:arXiv:2603.17449",
+        "title:trims realtime tracking of minimal sufficient length for efficient reasoning via rl",
+        "url:https://arxiv.org/abs/2603.17449"
+      ],
+      "record": {
+        "title": "TRiMS: Real-Time Tracking of Minimal Sufficient Length for Efficient Reasoning via RL",
+        "source_url": "https://arxiv.org/abs/2603.17449",
+        "year": 2026,
+        "published": "2026-03-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models achieve breakthroughs in complex reasoning via long chain-of-thought sequences. However, this often leads to severe reasoning inflation, causing substantial computational redundancy. To maximize Intelligence per Token, we introduce a theoretical metric, MSL-Minimal Sufficient Length. MSL rigorously characterizes the shortest reasoning length that preserves answer correctness. We provide a recursive definition based on independently sampled sequences and prove the existence of its limit, establishing the first measurable lower bound for reasoning-chain compression. Building on an analysis of mainstream CoT compression strategies, we identify key structural factors enabling a model to approach MSL. Based on these insights, we propose TRiMS which employs the GRPO algorithm in conjunction with MSL-based estimation during training, while mitigating instabilities during the training process through dynamic batch aggregation and advantage computation using batch-level standard deviation. TRiMS achieves over 80% CoT token reduction with a minor accuracy boost across all benchmarks.",
+        "identifiers": [
+          "SemanticScholar:818760579996e65efe42ba514ebcc809361e07d5"
+        ],
+        "semantic_scholar_id": "818760579996e65efe42ba514ebcc809361e07d5",
+        "canonical_id": "arXiv:2603.17449",
+        "arxiv_id": "2603.17449",
+        "doi": "10.48550/arXiv.2603.17449",
+        "authors": [
+          "Ting-Cheng Bian",
+          "Jin-Chang Luo",
+          "Ming-Ming Cheng",
+          "Jin-Yu Zhang",
+          "Xiao-Ling Xia",
+          "Nicole Li",
+          "Yan Tao",
+          "Hai-Wei Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 245,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.28769",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.28769",
+        "id:SemanticScholar:38524352e34b0fe2c6d2fa2cb460dadbd69f0afa",
+        "id:arXiv:2609.28769",
+        "title:xtrace highfidelity gpu intrakernel tracing via binarylevel instruction splicing",
+        "url:https://arxiv.org/abs/2609.28769"
+      ],
+      "record": {
+        "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+        "source_url": "https://arxiv.org/abs/2609.28769",
+        "year": 2026,
+        "published": "2026-09-23",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern GPU kernels fuse increasingly more work into a single kernel, and intra-kernel tracing has become the mainstream method to profile them. Tracing inserts probes into the kernel to record its runtime states, and the fidelity of the trace determines the efficiency of performance optimization. Unfortunately, existing tools insert probes before compilation. These tools interfere with the compiler's optimizations, so they trace a different binary from the one the GPU executes. They also add significant runtime overhead. Xtrace is the first GPU kernel tracing system with near-zero compile-time interference and minimized runtime overhead. Xtrace inserts probes directly into the compiled kernel binary. It reuses only the registers that hold dead values at the insertion address and resolves all hazards with the compiler's hazard tables. It further schedules the instruction order, register allocation, and control bits to minimize the runtime overhead the probe introduces. Xtrace supports 19 NVIDIA and AMD GPU architectures, and is publicly available for use at https://g-watch.github.io. We evaluate Xtrace on major production large language model (LLM) kernels against the state-of-the-art tracers Neutrino and IKET from NVIDIA. On H100, B300, and MI300X GPUs, Xtrace preserves 94-98% of the instructions of the kernel, while existing tools preserve only 8-48%. Xtrace adds only 0.9-2.8% overhead, while existing tools add 3.8-75.6%. Xtrace guides a coding agent to reach the same FlashAttention-3 performance with 3.9x fewer iterations than existing traces do. Thanks to our binary-level instrumentation, Xtrace also traces the faster closed-source cuDNN kernel, which guides the agent to lift the open-source FlashAttention-4 by 5.2-13.3% in throughput.",
+        "identifiers": [
+          "SemanticScholar:38524352e34b0fe2c6d2fa2cb460dadbd69f0afa"
+        ],
+        "semantic_scholar_id": "38524352e34b0fe2c6d2fa2cb460dadbd69f0afa",
+        "canonical_id": "arXiv:2609.28769",
+        "arxiv_id": "2609.28769",
+        "doi": "10.48550/arXiv.2609.28769",
+        "authors": [
+          "Zhuo-Bin Huang",
+          "Kai Zhang",
+          "Wei-Hao Cui",
+          "Hong-Shi Tan",
+          "Liang Luo",
+          "Christopher Dewan",
+          "Shen Li",
+          "Bing-Sheng He"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 56,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.acl-long.1294",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.acl-long.1294",
+        "id:SemanticScholar:626d94a3179935942488df86898b492b1b92014e",
+        "title:scaling laws and efficient inference for ternary language models",
+        "url:https://doi.org/10.18653/v1/2025.acl-long.1294"
+      ],
+      "record": {
+        "title": "Scaling Laws and Efficient Inference for Ternary Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.acl-long.1294",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:626d94a3179935942488df86898b492b1b92014e"
+        ],
+        "semantic_scholar_id": "626d94a3179935942488df86898b492b1b92014e",
+        "doi": "10.18653/v1/2025.acl-long.1294",
+        "canonical_id": "DOI:10.18653/v1/2025.acl-long.1294",
+        "authors": [
+          "Tejas Vaidhya",
+          "Ayush Kaushal",
+          "Vineet Jain",
+          "Francis Couture-Harpin",
+          "Prashant Shishodia",
+          "M. Behbahani",
+          "Y. Nevmyvaka",
+          "I. Rish"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15943",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.15943",
+        "id:SemanticScholar:9ce502492feb6ba78479de2953486b8f0e0a9769",
+        "id:arXiv:2608.15943",
+        "title:kvpipe on the relation between kv sharing and pipeline parallel efficiency in llms",
+        "url:https://arxiv.org/abs/2608.15943"
+      ],
+      "record": {
+        "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+        "source_url": "https://arxiv.org/abs/2608.15943",
+        "year": 2026,
+        "published": "2026-08-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pipeline parallelism (PP) is widely used to scale large language model (LLM) training, but its efficiency is often limited by stage imbalance and pipeline bubbles. Meanwhile, cross-layer KV sharing has primarily been studied as a mechanism for reducing KV-cache costs during inference, without examining how KV reuse reshapes pipeline workloads. We present \\textbf{KV-Pipe}, a stage-aware KV-sharing mechanism that turns KV reuse into a pipeline-balancing control knob. KV-Pipe starts from the tail stage, converts selected attention layers to cross-layer KV sharing in a tail-first order, and iteratively retargets the current bottleneck to drive the FLOPs Imbalance Ratio (FIR) toward $1$. The procedure is performed offline and requires only a pipeline partition and per-layer FLOPs estimates, introducing negligible runtime overhead and requiring no online tuning. Across multiple pipeline-parallel configurations, KV-Pipe consistently improves utilization and throughput, achieving up to \\textbf{9.2\\%} higher training MFU and up to a \\textbf{9.8\\%} reduction in iteration time, with larger gains at higher pipeline-parallel degrees where stage imbalance is amplified. Furthermore, the same KV-sharing mechanism provides an inference-side benefit by reducing KV-cache growth and redundant KV projection work, resulting in higher decoding throughput for long-context workloads. These results identify KV layout as a system--architecture degree of freedom for jointly improving pipeline-parallel training efficiency and long-context inference.",
+        "identifiers": [
+          "SemanticScholar:9ce502492feb6ba78479de2953486b8f0e0a9769"
+        ],
+        "semantic_scholar_id": "9ce502492feb6ba78479de2953486b8f0e0a9769",
+        "canonical_id": "arXiv:2608.15943",
+        "arxiv_id": "2608.15943",
+        "doi": "10.48550/arXiv.2608.15943",
+        "authors": [
+          "Maryam Dialameh",
+          "Hossein Rajabzadeh",
+          "Harish Krishnamoorthy Murali",
+          "Walid Ahmed",
+          "Weiwei Zhang",
+          "Hyock Ju Kwon"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 94,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3b3c3ce0a2465b3e623a3e628a6cf52b1f20ca9b53eea2d5d85587807844b538",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

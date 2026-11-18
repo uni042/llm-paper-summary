@@ -1,0 +1,607 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b9fd4700f85405b4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b9fd4700f854",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2405.15346",
+    "arXiv:2505.03373",
+    "arXiv:2510.14961",
+    "arXiv:2511.04686",
+    "arXiv:2602.08382",
+    "arXiv:2602.13628",
+    "arXiv:2607.14327"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f359c1c41d491ef610056113173989064c0c0e34",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:14:24.261676+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2405.15346",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.03373",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2505.03373"
+    },
+    {
+      "requested_id": "arXiv:2510.14961",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.04686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08382",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.13628",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.14327",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2602.08382",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) face significant challenges in long-context processing, including quadratic computational costs, information forgetting, and the context fragmentation inherent in retrieval-augmented generation (RAG). We propose a cognitively inspired framework for efficient long-context inference based on chunk-wise compression and selective memory recall, rather than processing all raw tokens. The framework segments long inputs into chunks and encodes each chunk into compressed memory representations using a learned compressor. A gating module dynamically selects relevant memory blocks, which are then iteratively processed by a reasoning module with an evolving working memory to solve downstream tasks. The compressor and reasoner are jointly optimized via end-to-end reinforcement learning, while the gating module is trained separately as a classifier. Experimental results show that the proposed method achieves competitive accuracy on multi-hop reasoning benchmarks such as RULER-HQA, extrapolates context length from 7K to 1.75M tokens, and offers a favorable accuracy-efficiency trade-off compared to strong long-context baselines. In particular, it achieves up to a 2 times reduction in peak GPU memory usage and a 6 times inference speedup over MemAgent.",
+      "identifiers": [
+        "SemanticScholar:4d4e7b4f3f28e3174ef81a22c84e72b2f127bee8"
+      ],
+      "semantic_scholar_id": "4d4e7b4f3f28e3174ef81a22c84e72b2f127bee8",
+      "canonical_id": "arXiv:2602.08382",
+      "arxiv_id": "2602.08382",
+      "doi": "10.48550/arXiv.2602.08382",
+      "authors": [
+        "Zhuo-En Chen",
+        "Dongfang Li",
+        "Mei-Shan Zhang",
+        "Bao-Tian Hu",
+        "Min Zhang"
+      ],
+      "priority": 122,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 122,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Compact LLM Deployment and World Model Assisted Offloading in Mobile Edge Computing",
+      "source_url": "https://arxiv.org/abs/2602.13628",
+      "year": 2026,
+      "published": "2026-02-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper investigates compact large language model (LLM) deployment and world-model-assisted inference offloading in mobile edge computing (MEC) networks. We first propose an edge compact LLM deployment (ECLD) framework that jointly applies structured pruning, low-bit quantization, and knowledge distillation to construct edge-deployable LLM variants, and we evaluate these models using four complementary metrics: accessibility, energy consumption, hallucination rate, and generalization accuracy. Building on the resulting compact models, we formulate an MEC offloading optimization problem that minimizes the long-term average inference latency subject to per-device energy budgets and LLM-specific quality-of-service constraints on effective accuracy and hallucination. To solve this problem under unknown and time-varying network dynamics, we develop a world model-proximal policy optimization (PPO) algorithm, which augments an on-policy PPO algorithm with a learned recurrent world model that provides improved value targets and short imagination rollouts. Extensive experiments on Llama-3.1-8B, Qwen3-8B, and Mistral-12B show that ECLD compresses base models by about 70-80% in storage (i.e., from 15.3 GB to 3.3 GB for Llama-3.1-8B) and reduces per-query energy consumption by up to 50%, while largely preserving accuracy and often lowering hallucination compared with quantization-only or pruning-only baselines. Moreover, they also show that world model-PPO speeds up convergence by about 50%, improves the final reward by 15.8% over vanilla PPO, and reduces average inference latency by 12-30% across different user populations, while satisfying the accuracy and hallucination constraints and approaching the generation quality of always-offloading with much of the efficiency of local execution.",
+      "identifiers": [
+        "SemanticScholar:755a6c7f08b4227f26273c438c31e15c070a1817"
+      ],
+      "semantic_scholar_id": "755a6c7f08b4227f26273c438c31e15c070a1817",
+      "canonical_id": "arXiv:2602.13628",
+      "arxiv_id": "2602.13628",
+      "doi": "10.48550/arXiv.2602.13628",
+      "authors": [
+        "Rui-Chen Zhang",
+        "Xiao-Feng Luo",
+        "Jiayi He",
+        "D. Niyato",
+        "Jia-Wen Kang",
+        "Ze-Hui Xiong",
+        "Yonghui Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 277,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PReM: Learning What to Preserve and When to Refresh for Context Compression",
+      "source_url": "https://arxiv.org/abs/2607.14327",
+      "year": 2026,
+      "published": "2026-07-15",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient long-context inference is not only about reducing memory cost, but also about keeping useful contextual evidence accessible as generation proceeds. However, existing compression-oriented approaches, such as key-value (KV) cache compression and context compression, often either make an early decision about which contextual information to keep or rely on an external compressor. Such designs make it difficult to adapt the compressed context to the evidence needed by later reasoning steps. This paper introduces PReM (Preserve and Refresh Memory), a context-compression framework that maintains the long context as the model's internal layer-wise KV memory and learns what to preserve and when to refresh it. Specifically, PReM uses a dedicated memory layer to make memory-selection decisions, and a special memory tokento trigger refreshes during generation. To train this behavior, PReM introduces Phase-Separated Refresh Training, aligning memory selection with memory-conditioned generation while preserving continuity across refreshes. Experiments with 32K-token contexts show that PReM outperforms strong baselines under both 16x and 32x compression, while maintaining a favorable balance between answer quality and inference efficiency.",
+      "identifiers": [
+        "SemanticScholar:0e64fa83649d8c72d65fafa4a24e06f8b3872ead"
+      ],
+      "semantic_scholar_id": "0e64fa83649d8c72d65fafa4a24e06f8b3872ead",
+      "canonical_id": "arXiv:2607.14327",
+      "arxiv_id": "2607.14327",
+      "doi": "10.48550/arXiv.2607.14327",
+      "authors": [
+        "Bo-Han Yu",
+        "Lei Shen",
+        "Chen-Xi Zhou",
+        "Chen Han",
+        "Jun-Lin Liu",
+        "Wen-Bo Su",
+        "Yu Cheng",
+        "Bo Zheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 126,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2510.14961",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language models with recurrent depth, also referred to as universal or looped when considering transformers, are defined by the capacity to increase their computation through the repetition of layers. Recent efforts in pretraining have demonstrated that these architectures can scale to modern language modeling tasks while exhibiting advantages in reasoning tasks. In this work, we examine the relationship between recurrent-depth models and diffusion language models. Building on their similarities, we develop a new diffusion forcing sampler for these models to accelerate generation. The sampler advances by decoding new tokens at every forward pass of the model, while the latent states of these tokens can be further refined in parallel through recurrence. Theoretically, generation with our sampler is strictly more expressive than the baseline autoregressive generation using the same time budget on modern hardware. Moreover, this sampler, based on principles from diffusion literature, can be directly applied to existing 3.5B recurrent-depth transformers without any tuning, leading to up to a 5x speedup. Consequently, our findings not only provide an efficient mechanism for parallelizing the extra computation in recurrent-depth models at inference, but also suggest that such models can be naturally viewed as strong continuous, though causal, diffusion language models.",
+      "identifiers": [
+        "SemanticScholar:1ccb997ceae17655b7d70205e04fb9a8d39741bf"
+      ],
+      "semantic_scholar_id": "1ccb997ceae17655b7d70205e04fb9a8d39741bf",
+      "canonical_id": "arXiv:2510.14961",
+      "arxiv_id": "2510.14961",
+      "doi": "10.48550/arXiv.2510.14961",
+      "authors": [
+        "Jonas Geiping",
+        "Xin-Yu Yang",
+        "Gui-Nan Su"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 398,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BiSup: Bidirectional Quantization Error Suppression for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2405.15346",
+      "year": 2024,
+      "published": "2024-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the size and context length of Large Language Models (LLMs) grow, weight-activation quantization has emerged as a crucial technique for efficient deployment of LLMs. Compared to weight-only quantization, weight-activation quantization presents greater challenges due to the presence of outliers in activations. Existing methods have made significant progress by exploring mixed-precision quantization and outlier suppression. However, these methods primarily focus on optimizing the results of single matrix multiplication, neglecting the bidirectional propagation of quantization errors in LLMs. Specifically, errors accumulate vertically within the same token through layers, and diffuse horizontally across different tokens due to self-attention mechanisms. To address this issue, we introduce BiSup, a Bidirectional quantization error Suppression method. By constructing appropriate optimizable parameter spaces, BiSup utilizes a small amount of data for quantization-aware parameter-efficient fine-tuning to suppress the error vertical accumulation. Besides, BiSup employs prompt mixed-precision quantization strategy, which preserves high precision for the key-value cache of system prompts, to mitigate the error horizontal diffusion. Extensive experiments on Llama and Qwen families demonstrate that BiSup can improve performance over two state-of-the-art methods (the average WikiText2 perplexity decreases from 13.26 to 9.41 for Atom and from 14.33 to 7.85 for QuaRot under the W3A3-g128 configuration), further facilitating the practical applications of low-bit weight-activation quantization.",
+      "identifiers": [
+        "SemanticScholar:2adfac5a499e1a9c80f5fc53a88fe370b964a911"
+      ],
+      "semantic_scholar_id": "2adfac5a499e1a9c80f5fc53a88fe370b964a911",
+      "canonical_id": "arXiv:2405.15346",
+      "arxiv_id": "2405.15346",
+      "doi": "10.48550/arXiv.2405.15346",
+      "authors": [
+        "Ming-Hui Zou",
+        "Ronghui Guo",
+        "Sai Zhang",
+        "Xiao-Wang Zhang",
+        "Zhi-Yong Feng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 908,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Stateful KV Cache Management for LLMs: Balancing Space, Time, Accuracy, and Positional Fidelity",
+      "source_url": "https://arxiv.org/abs/2511.04686",
+      "year": 2025,
+      "published": "2025-10-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Key-Value (KV) cache is integral to efficient autoregressive inference in large language models (LLMs), yet its unbounded growth in stateful multi-turn scenarios presents major challenges. This paper examines the interplay between KV cache management strategies, the architectural context limits of models like meta-llama/Meta-Llama-3-8b-instruct, and the often-overlooked integrity of positional encodings. Through empirical analysis using a stateful benchmarking framework, we show that LLM generation quality degrades sharply when the accumulated KV cache approaches or exceeds the model's trained context window (e.g., 8192 tokens for Llama 3), a failure mode distinct from GPU memory exhaustion. Common eviction strategies, even high-retention ones (e.g., 99% via AttentionTop), can worsen performance if they disrupt positional coherence. Because LLMs rely on consistent positional signals (e.g., RoPE), compacting a cache by removing non-contiguous tokens can scramble these signals and lead to degenerative outputs. We further show that simple strategies preserving contiguous context blocks (e.g., keeping an initial\"gist\") can yield more coherent generations than complex or positionally disruptive ones. We advocate for eviction techniques that respect architectural limits, preserve positional structure, and view\"cache health\"holistically beyond mere size.",
+      "identifiers": [
+        "SemanticScholar:5d0059996910dd01d72534fa5f4046ca3da5d89f"
+      ],
+      "semantic_scholar_id": "5d0059996910dd01d72534fa5f4046ca3da5d89f",
+      "canonical_id": "arXiv:2511.04686",
+      "arxiv_id": "2511.04686",
+      "doi": "10.48550/arXiv.2511.04686",
+      "authors": [
+        "Pratik Poudel"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 391,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.08382",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08382",
+        "id:SemanticScholar:4d4e7b4f3f28e3174ef81a22c84e72b2f127bee8",
+        "id:arXiv:2602.08382",
+        "title:dynamic long context reasoning over compressed memory via endtoend reinforcement learning",
+        "url:https://arxiv.org/abs/2602.08382"
+      ],
+      "record": {
+        "title": "Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2602.08382",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) face significant challenges in long-context processing, including quadratic computational costs, information forgetting, and the context fragmentation inherent in retrieval-augmented generation (RAG). We propose a cognitively inspired framework for efficient long-context inference based on chunk-wise compression and selective memory recall, rather than processing all raw tokens. The framework segments long inputs into chunks and encodes each chunk into compressed memory representations using a learned compressor. A gating module dynamically selects relevant memory blocks, which are then iteratively processed by a reasoning module with an evolving working memory to solve downstream tasks. The compressor and reasoner are jointly optimized via end-to-end reinforcement learning, while the gating module is trained separately as a classifier. Experimental results show that the proposed method achieves competitive accuracy on multi-hop reasoning benchmarks such as RULER-HQA, extrapolates context length from 7K to 1.75M tokens, and offers a favorable accuracy-efficiency trade-off compared to strong long-context baselines. In particular, it achieves up to a 2 times reduction in peak GPU memory usage and a 6 times inference speedup over MemAgent.",
+        "identifiers": [
+          "SemanticScholar:4d4e7b4f3f28e3174ef81a22c84e72b2f127bee8"
+        ],
+        "semantic_scholar_id": "4d4e7b4f3f28e3174ef81a22c84e72b2f127bee8",
+        "canonical_id": "arXiv:2602.08382",
+        "arxiv_id": "2602.08382",
+        "doi": "10.48550/arXiv.2602.08382",
+        "authors": [
+          "Zhuo-En Chen",
+          "Dongfang Li",
+          "Mei-Shan Zhang",
+          "Bao-Tian Hu",
+          "Min Zhang"
+        ],
+        "priority": 122,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 122,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 282,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.13628",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.13628",
+        "id:SemanticScholar:755a6c7f08b4227f26273c438c31e15c070a1817",
+        "id:arXiv:2602.13628",
+        "title:compact llm deployment and world model assisted offloading in mobile edge computing",
+        "url:https://arxiv.org/abs/2602.13628"
+      ],
+      "record": {
+        "title": "Compact LLM Deployment and World Model Assisted Offloading in Mobile Edge Computing",
+        "source_url": "https://arxiv.org/abs/2602.13628",
+        "year": 2026,
+        "published": "2026-02-14",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper investigates compact large language model (LLM) deployment and world-model-assisted inference offloading in mobile edge computing (MEC) networks. We first propose an edge compact LLM deployment (ECLD) framework that jointly applies structured pruning, low-bit quantization, and knowledge distillation to construct edge-deployable LLM variants, and we evaluate these models using four complementary metrics: accessibility, energy consumption, hallucination rate, and generalization accuracy. Building on the resulting compact models, we formulate an MEC offloading optimization problem that minimizes the long-term average inference latency subject to per-device energy budgets and LLM-specific quality-of-service constraints on effective accuracy and hallucination. To solve this problem under unknown and time-varying network dynamics, we develop a world model-proximal policy optimization (PPO) algorithm, which augments an on-policy PPO algorithm with a learned recurrent world model that provides improved value targets and short imagination rollouts. Extensive experiments on Llama-3.1-8B, Qwen3-8B, and Mistral-12B show that ECLD compresses base models by about 70-80% in storage (i.e., from 15.3 GB to 3.3 GB for Llama-3.1-8B) and reduces per-query energy consumption by up to 50%, while largely preserving accuracy and often lowering hallucination compared with quantization-only or pruning-only baselines. Moreover, they also show that world model-PPO speeds up convergence by about 50%, improves the final reward by 15.8% over vanilla PPO, and reduces average inference latency by 12-30% across different user populations, while satisfying the accuracy and hallucination constraints and approaching the generation quality of always-offloading with much of the efficiency of local execution.",
+        "identifiers": [
+          "SemanticScholar:755a6c7f08b4227f26273c438c31e15c070a1817"
+        ],
+        "semantic_scholar_id": "755a6c7f08b4227f26273c438c31e15c070a1817",
+        "canonical_id": "arXiv:2602.13628",
+        "arxiv_id": "2602.13628",
+        "doi": "10.48550/arXiv.2602.13628",
+        "authors": [
+          "Rui-Chen Zhang",
+          "Xiao-Feng Luo",
+          "Jiayi He",
+          "D. Niyato",
+          "Jia-Wen Kang",
+          "Ze-Hui Xiong",
+          "Yonghui Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 277,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14327",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.14327",
+        "id:SemanticScholar:0e64fa83649d8c72d65fafa4a24e06f8b3872ead",
+        "id:arXiv:2607.14327",
+        "title:prem learning what to preserve and when to refresh for context compression",
+        "url:https://arxiv.org/abs/2607.14327"
+      ],
+      "record": {
+        "title": "PReM: Learning What to Preserve and When to Refresh for Context Compression",
+        "source_url": "https://arxiv.org/abs/2607.14327",
+        "year": 2026,
+        "published": "2026-07-15",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient long-context inference is not only about reducing memory cost, but also about keeping useful contextual evidence accessible as generation proceeds. However, existing compression-oriented approaches, such as key-value (KV) cache compression and context compression, often either make an early decision about which contextual information to keep or rely on an external compressor. Such designs make it difficult to adapt the compressed context to the evidence needed by later reasoning steps. This paper introduces PReM (Preserve and Refresh Memory), a context-compression framework that maintains the long context as the model's internal layer-wise KV memory and learns what to preserve and when to refresh it. Specifically, PReM uses a dedicated memory layer to make memory-selection decisions, and a special memory tokento trigger refreshes during generation. To train this behavior, PReM introduces Phase-Separated Refresh Training, aligning memory selection with memory-conditioned generation while preserving continuity across refreshes. Experiments with 32K-token contexts show that PReM outperforms strong baselines under both 16x and 32x compression, while maintaining a favorable balance between answer quality and inference efficiency.",
+        "identifiers": [
+          "SemanticScholar:0e64fa83649d8c72d65fafa4a24e06f8b3872ead"
+        ],
+        "semantic_scholar_id": "0e64fa83649d8c72d65fafa4a24e06f8b3872ead",
+        "canonical_id": "arXiv:2607.14327",
+        "arxiv_id": "2607.14327",
+        "doi": "10.48550/arXiv.2607.14327",
+        "authors": [
+          "Bo-Han Yu",
+          "Lei Shen",
+          "Chen-Xi Zhou",
+          "Chen Han",
+          "Jun-Lin Liu",
+          "Wen-Bo Su",
+          "Yu Cheng",
+          "Bo Zheng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 126,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14961",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14961",
+        "id:SemanticScholar:1ccb997ceae17655b7d70205e04fb9a8d39741bf",
+        "id:arXiv:2510.14961",
+        "title:efficient parallel samplers for recurrentdepth models and their connection to diffusion language models",
+        "url:https://arxiv.org/abs/2510.14961"
+      ],
+      "record": {
+        "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2510.14961",
+        "year": 2025,
+        "published": "2025-10-16",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Language models with recurrent depth, also referred to as universal or looped when considering transformers, are defined by the capacity to increase their computation through the repetition of layers. Recent efforts in pretraining have demonstrated that these architectures can scale to modern language modeling tasks while exhibiting advantages in reasoning tasks. In this work, we examine the relationship between recurrent-depth models and diffusion language models. Building on their similarities, we develop a new diffusion forcing sampler for these models to accelerate generation. The sampler advances by decoding new tokens at every forward pass of the model, while the latent states of these tokens can be further refined in parallel through recurrence. Theoretically, generation with our sampler is strictly more expressive than the baseline autoregressive generation using the same time budget on modern hardware. Moreover, this sampler, based on principles from diffusion literature, can be directly applied to existing 3.5B recurrent-depth transformers without any tuning, leading to up to a 5x speedup. Consequently, our findings not only provide an efficient mechanism for parallelizing the extra computation in recurrent-depth models at inference, but also suggest that such models can be naturally viewed as strong continuous, though causal, diffusion language models.",
+        "identifiers": [
+          "SemanticScholar:1ccb997ceae17655b7d70205e04fb9a8d39741bf"
+        ],
+        "semantic_scholar_id": "1ccb997ceae17655b7d70205e04fb9a8d39741bf",
+        "canonical_id": "arXiv:2510.14961",
+        "arxiv_id": "2510.14961",
+        "doi": "10.48550/arXiv.2510.14961",
+        "authors": [
+          "Jonas Geiping",
+          "Xin-Yu Yang",
+          "Gui-Nan Su"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 398,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2405.15346",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2405.15346",
+        "id:SemanticScholar:2adfac5a499e1a9c80f5fc53a88fe370b964a911",
+        "id:arXiv:2405.15346",
+        "title:bisup bidirectional quantization error suppression for large language models",
+        "url:https://arxiv.org/abs/2405.15346"
+      ],
+      "record": {
+        "title": "BiSup: Bidirectional Quantization Error Suppression for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2405.15346",
+        "year": 2024,
+        "published": "2024-05-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the size and context length of Large Language Models (LLMs) grow, weight-activation quantization has emerged as a crucial technique for efficient deployment of LLMs. Compared to weight-only quantization, weight-activation quantization presents greater challenges due to the presence of outliers in activations. Existing methods have made significant progress by exploring mixed-precision quantization and outlier suppression. However, these methods primarily focus on optimizing the results of single matrix multiplication, neglecting the bidirectional propagation of quantization errors in LLMs. Specifically, errors accumulate vertically within the same token through layers, and diffuse horizontally across different tokens due to self-attention mechanisms. To address this issue, we introduce BiSup, a Bidirectional quantization error Suppression method. By constructing appropriate optimizable parameter spaces, BiSup utilizes a small amount of data for quantization-aware parameter-efficient fine-tuning to suppress the error vertical accumulation. Besides, BiSup employs prompt mixed-precision quantization strategy, which preserves high precision for the key-value cache of system prompts, to mitigate the error horizontal diffusion. Extensive experiments on Llama and Qwen families demonstrate that BiSup can improve performance over two state-of-the-art methods (the average WikiText2 perplexity decreases from 13.26 to 9.41 for Atom and from 14.33 to 7.85 for QuaRot under the W3A3-g128 configuration), further facilitating the practical applications of low-bit weight-activation quantization.",
+        "identifiers": [
+          "SemanticScholar:2adfac5a499e1a9c80f5fc53a88fe370b964a911"
+        ],
+        "semantic_scholar_id": "2adfac5a499e1a9c80f5fc53a88fe370b964a911",
+        "canonical_id": "arXiv:2405.15346",
+        "arxiv_id": "2405.15346",
+        "doi": "10.48550/arXiv.2405.15346",
+        "authors": [
+          "Ming-Hui Zou",
+          "Ronghui Guo",
+          "Sai Zhang",
+          "Xiao-Wang Zhang",
+          "Zhi-Yong Feng"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 908,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.04686",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.04686",
+        "id:SemanticScholar:5d0059996910dd01d72534fa5f4046ca3da5d89f",
+        "id:arXiv:2511.04686",
+        "title:stateful kv cache management for llms balancing space time accuracy and positional fidelity",
+        "url:https://arxiv.org/abs/2511.04686"
+      ],
+      "record": {
+        "title": "Stateful KV Cache Management for LLMs: Balancing Space, Time, Accuracy, and Positional Fidelity",
+        "source_url": "https://arxiv.org/abs/2511.04686",
+        "year": 2025,
+        "published": "2025-10-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Key-Value (KV) cache is integral to efficient autoregressive inference in large language models (LLMs), yet its unbounded growth in stateful multi-turn scenarios presents major challenges. This paper examines the interplay between KV cache management strategies, the architectural context limits of models like meta-llama/Meta-Llama-3-8b-instruct, and the often-overlooked integrity of positional encodings. Through empirical analysis using a stateful benchmarking framework, we show that LLM generation quality degrades sharply when the accumulated KV cache approaches or exceeds the model's trained context window (e.g., 8192 tokens for Llama 3), a failure mode distinct from GPU memory exhaustion. Common eviction strategies, even high-retention ones (e.g., 99% via AttentionTop), can worsen performance if they disrupt positional coherence. Because LLMs rely on consistent positional signals (e.g., RoPE), compacting a cache by removing non-contiguous tokens can scramble these signals and lead to degenerative outputs. We further show that simple strategies preserving contiguous context blocks (e.g., keeping an initial\"gist\") can yield more coherent generations than complex or positionally disruptive ones. We advocate for eviction techniques that respect architectural limits, preserve positional structure, and view\"cache health\"holistically beyond mere size.",
+        "identifiers": [
+          "SemanticScholar:5d0059996910dd01d72534fa5f4046ca3da5d89f"
+        ],
+        "semantic_scholar_id": "5d0059996910dd01d72534fa5f4046ca3da5d89f",
+        "canonical_id": "arXiv:2511.04686",
+        "arxiv_id": "2511.04686",
+        "doi": "10.48550/arXiv.2511.04686",
+        "authors": [
+          "Pratik Poudel"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 391,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5736801419a2c74a2ac46ee9f6b25574294b853cd97a12e8b04f6e682a1cc752",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

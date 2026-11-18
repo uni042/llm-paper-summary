@@ -1,0 +1,428 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-99a927d6085b4eee-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-99a927d6085b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/asp-dac66049.2026.11420504",
+    "DOI:10.1109/ijcnn64981.2025.11228725",
+    "DOI:10.1109/iscas66217.2026.11562456",
+    "arXiv:2607.04118",
+    "arXiv:2607.10137",
+    "arXiv:2610.15579"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f359c1c41d491ef610056113173989064c0c0e34",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:14:23.542272+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/asp-dac66049.2026.11420504",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/ijcnn64981.2025.11228725",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iscas66217.2026.11562456",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.04118",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.10137",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2607.10137"
+    },
+    {
+      "requested_id": "arXiv:2610.15579",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:1a9241f599daabf583f69c34639001e228b1f32d"
+    }
+  ],
+  "results": [
+    {
+      "title": "Parametric Memory Decoding for Zero-Shot Routing in LoRA-Based External Parametric Memory",
+      "source_url": "https://arxiv.org/abs/2607.04118",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of parametric memory, LoRA-based External Parametric Memory (EPM) has emerged as a modular solution, but existing routing methods often introduce additional training, deployment, and maintenance overhead. This raises a natural question: can a LoRA-based EPM bank be routed without maintaining an additional routing component? However, existing zero-shot LoRA routing methods still face two problems under the EPM setting: (1) their evaluations are scattered across different task settings rather than organized around EPM access, and (2) their routing signals lack a unified perspective to guide systematic improvement. To address these problems, we organize PMD-Bench, covering document-level, domain-level knowledge, and task-skill, and propose Parametric Memory Decoding (PMD), the first framework designed to systematically improve zero-shot LoRA routing by reframing it as decoding activations over external parametric memory. Based on PMD, we further instantiate PMDRouter, which scores each LoRA by its response magnitude from a single base-model prefill. Experiments on PMD-Bench show that PMDRouter achieves the strongest internal-signal performance across multiple zero-shot routing settings. These results demonstrate the feasibility of zero-shot LoRA routing and suggest that PMD can serve as a general framework for improving zero-shot routing methods. Sources: Github (https://anonymous.4open.science/r/Parametric-Memory-Decoding-872A/)",
+      "identifiers": [
+        "SemanticScholar:a0d794415ca05d14c8e704e1fe2ea4d5383b75e0"
+      ],
+      "semantic_scholar_id": "a0d794415ca05d14c8e704e1fe2ea4d5383b75e0",
+      "canonical_id": "arXiv:2607.04118",
+      "arxiv_id": "2607.04118",
+      "doi": "10.48550/arXiv.2607.04118",
+      "authors": [
+        "Feng-Xian Ji",
+        "Zhuo-Han Xie",
+        "Jing-Pu Yang",
+        "Fan Zhang",
+        "Zirui Song",
+        "Xiu-Ying Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 136,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepPiC: xPU-PIM Cluster Architecture with Adaptive Resource-Aware Task Orchestration for DeepSeek-Style MoE Inference",
+      "source_url": "https://doi.org/10.1109/ASP-DAC66049.2026.11420504",
+      "year": 2026,
+      "published": "2026-01-19",
+      "venue": "Asia and South Pacific Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The success of DeepSeek has driven demand for deploying high-performance inference clusters. However, due to its Transformer-based autoregressive structure, DeepSeek remains severely bandwidth-bound, limiting the scalability of traditional xPU (e.g., GPU/TPU). While DRAM-based processing-inmemory (PIM) offers a promising solution to overcome memory bottlenecks, its use in inference clusters for DeepSeek remains underexplored due to three challenges: (1) non-trivial inter-device communication overhead; (2) the need for expert parallelism in the mixture-of-experts (MoE) module; and (3) lack of efficient task offloading to PIM. To this end, we propose DeepPiC, a novel xPU-PIM cluster architecture designed for DeepSeek-style models with multi-latent attention (MLA) and MoE modules. DeepPiC introduces a heterogeneous xPU+HBM-PIM device to accelerate low arithmetic intensity operations. It can seamlessly replace conventional xPU devices without any modification to clusterlevel interconnect topology. However, DeepPiC cannot fully realize its performance potential under static scheduling, which fails to adapt to shifting compute and memory demands driven by multidimensional variability (model heterogeneity, cluster-scale volatility, runtime dynamics). This induces inter-device communication overhead and intra-device underutilization. Thus, we propose Adaptive Resource-Aware Task Orchestration (ARTO), a two-phase strategy that decouples global model partitioning from local task assignment by dynamically coordinating (1) crossdevice parallelism optimization and (2) intra-device xPU/PIM mapping. Evaluated on DeepSeek V3-671B using H20-, A100-, and $\\mathbf{H 2 0 0}$-Cluster ($\\mathbf{H 2 0}$ serves as a compute-limited alternative to high-end GPUs), DeepPiC (H20+HBM-PIM) achieves up to $\\mathbf{3} \\times \\mathbf{, 2} \\times$ and $\\mathbf{1. 3} \\times$ speedup over $\\mathbf{H 2 0}$-, A100-, and $\\mathbf{H 2 0 0}$-Cluster at small batch sizes, while maintaining $\\mathbf{7 4 \\%}$ and $\\mathbf{5 4 \\%}$ of A100and $\\mathbf{H 2 0 0}$-Cluster performance at large batch sizes. These results demonstrate that DeepPiC enables low-end xPU to approach or even exceed premium ones by fundamentally overcoming memory bottlenecks via adaptive scheduling that orchestrates PIM and xPU heterogeneous resources.",
+      "identifiers": [
+        "SemanticScholar:d69381d6bd0d8494326048fa0fe8da631e480107"
+      ],
+      "semantic_scholar_id": "d69381d6bd0d8494326048fa0fe8da631e480107",
+      "doi": "10.1109/ASP-DAC66049.2026.11420504",
+      "canonical_id": "DOI:10.1109/ASP-DAC66049.2026.11420504",
+      "authors": [
+        "Zi-Xu Li",
+        "Man-Ni Li",
+        "Zi-Jian Huang",
+        "Jia-Yu Yang",
+        "Wen-Ding Zhao",
+        "Yin-Yin Lin",
+        "Cheng-Chen Wang",
+        "Hai-Dong Tian",
+        "Xian-Kui Xiong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 303,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Token Compression for the Understanding and Generation Unified MLLMs",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562456",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "International Symposium on Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in multimodal large language models (MLLMs) leverage a single tokenizer for both visual understanding and generation, unifying perception and synthesis within one architecture. However, to effectively perform both generation and comprehension tasks, existing methods typically rely on a large number of tokens for reasoning, which significantly hinders practical applications. Thus, a general token compression strategy is urgently required to improve MLLMs’ efficiency. In this work, we systematically examine how token compression affects model performance. We classify the mainstream tokenizers into three categories according to their different focuses: Semantic-biased, Detail-biased, and Balanced. Then, we apply three potential ways for compression at the beginning, intermediate, and final stages. Through extensive experiments, we get some interesting findings: Detail-biased tokenizers are robust to compression at the input stage but highly sensitive on the final stage, while Balanced tokenizers inherit semantic robustness that mitigates compression degradation for the final representation. These insights inspire us to design a dual-branched Balanced tokenizer, whereas we conduct compression for the Detail-biased branch at the beginning as well as for the Semantic-biased branch at the ending, achieving a win-win effect.",
+      "identifiers": [
+        "SemanticScholar:dfd916cc6eb52294450517444d4a9c9d67e5da5c"
+      ],
+      "semantic_scholar_id": "dfd916cc6eb52294450517444d4a9c9d67e5da5c",
+      "doi": "10.1109/ISCAS66217.2026.11562456",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562456",
+      "authors": [
+        "Junyan Lin",
+        "Jin-Ming Liu",
+        "Shengyang Zhao",
+        "Xin Jin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 178,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "k-Odd One Clear (k-OOC), A Novel GPU Kernel That Improves Quantization Accuracy And Speed Of GPTQ Algorithm",
+      "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11228725",
+      "year": 2025,
+      "published": "2025-06-30",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Large Language Model (LLM) demonstrated tremendously useful applications in nowadays fast-evolving AI-driven technology. As model sizes grow larger, bigger and faster GPUs are required. Another way to alleviate this issue is by improving the compression quality of the trained model through quantization so that lower VRAM devices can run. Quantization paradigms such as GPTQ, PB-LLM, and BiLLM (Hessian-based with structural searching) are successful quantization mechanisms. In this paper, we propose the OOC technique, which enables us to pick an \"odd\" group to improve the quantization clarity so that the model can have a better reasoning ability overall. In addition, we define the Bit Family (Alim, Amax) to classify the compression rate of current and past quantization techniques, thus providing a more objective way of ranking different methodologies in the literature. Thirdly, to avoid compromising the quantization speed due to the scanning process overhead, we developed a specialized fused GPU kernel (k-OOC) where it can be 9x faster than the original GPTQ implementation (single-flow mode) and 22x faster than the naive OOC implementation (double-flow mode) due to the incorporation of techniques called Row-Flow-Selection Parallel and Input Batching. We measured the perplexity (PPL) of k-OOC (2 bits) with 14 major models such as OPT, LLAMA, and Bloom (125M to 70B parameters) and popular datasets (Wikitext2, C4, and PTB). We managed to improve the PPL of the small models by 8.9% and of the big models by 4.1% compared to the baseline of GPTQ (2 bits).",
+      "identifiers": [
+        "SemanticScholar:183d5e651a38038dd0d353e8cb157dbc72175308"
+      ],
+      "semantic_scholar_id": "183d5e651a38038dd0d353e8cb157dbc72175308",
+      "doi": "10.1109/IJCNN64981.2025.11228725",
+      "canonical_id": "DOI:10.1109/IJCNN64981.2025.11228725",
+      "authors": [
+        "Loi Huynh"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.04118",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.04118",
+        "id:SemanticScholar:a0d794415ca05d14c8e704e1fe2ea4d5383b75e0",
+        "id:arXiv:2607.04118",
+        "title:parametric memory decoding for zeroshot routing in lorabased external parametric memory",
+        "url:https://arxiv.org/abs/2607.04118"
+      ],
+      "record": {
+        "title": "Parametric Memory Decoding for Zero-Shot Routing in LoRA-Based External Parametric Memory",
+        "source_url": "https://arxiv.org/abs/2607.04118",
+        "year": 2026,
+        "published": "2026-07-05",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the rise of parametric memory, LoRA-based External Parametric Memory (EPM) has emerged as a modular solution, but existing routing methods often introduce additional training, deployment, and maintenance overhead. This raises a natural question: can a LoRA-based EPM bank be routed without maintaining an additional routing component? However, existing zero-shot LoRA routing methods still face two problems under the EPM setting: (1) their evaluations are scattered across different task settings rather than organized around EPM access, and (2) their routing signals lack a unified perspective to guide systematic improvement. To address these problems, we organize PMD-Bench, covering document-level, domain-level knowledge, and task-skill, and propose Parametric Memory Decoding (PMD), the first framework designed to systematically improve zero-shot LoRA routing by reframing it as decoding activations over external parametric memory. Based on PMD, we further instantiate PMDRouter, which scores each LoRA by its response magnitude from a single base-model prefill. Experiments on PMD-Bench show that PMDRouter achieves the strongest internal-signal performance across multiple zero-shot routing settings. These results demonstrate the feasibility of zero-shot LoRA routing and suggest that PMD can serve as a general framework for improving zero-shot routing methods. Sources: Github (https://anonymous.4open.science/r/Parametric-Memory-Decoding-872A/)",
+        "identifiers": [
+          "SemanticScholar:a0d794415ca05d14c8e704e1fe2ea4d5383b75e0"
+        ],
+        "semantic_scholar_id": "a0d794415ca05d14c8e704e1fe2ea4d5383b75e0",
+        "canonical_id": "arXiv:2607.04118",
+        "arxiv_id": "2607.04118",
+        "doi": "10.48550/arXiv.2607.04118",
+        "authors": [
+          "Feng-Xian Ji",
+          "Zhuo-Han Xie",
+          "Jing-Pu Yang",
+          "Fan Zhang",
+          "Zirui Song",
+          "Xiu-Ying Chen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 136,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/asp-dac66049.2026.11420504",
+      "identity_tokens": [
+        "id:DOI:10.1109/asp-dac66049.2026.11420504",
+        "id:SemanticScholar:d69381d6bd0d8494326048fa0fe8da631e480107",
+        "title:deeppic xpupim cluster architecture with adaptive resourceaware task orchestration for deepseekstyle moe inference",
+        "url:https://doi.org/10.1109/ASP-DAC66049.2026.11420504"
+      ],
+      "record": {
+        "title": "DeepPiC: xPU-PIM Cluster Architecture with Adaptive Resource-Aware Task Orchestration for DeepSeek-Style MoE Inference",
+        "source_url": "https://doi.org/10.1109/ASP-DAC66049.2026.11420504",
+        "year": 2026,
+        "published": "2026-01-19",
+        "venue": "Asia and South Pacific Design Automation Conference",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The success of DeepSeek has driven demand for deploying high-performance inference clusters. However, due to its Transformer-based autoregressive structure, DeepSeek remains severely bandwidth-bound, limiting the scalability of traditional xPU (e.g., GPU/TPU). While DRAM-based processing-inmemory (PIM) offers a promising solution to overcome memory bottlenecks, its use in inference clusters for DeepSeek remains underexplored due to three challenges: (1) non-trivial inter-device communication overhead; (2) the need for expert parallelism in the mixture-of-experts (MoE) module; and (3) lack of efficient task offloading to PIM. To this end, we propose DeepPiC, a novel xPU-PIM cluster architecture designed for DeepSeek-style models with multi-latent attention (MLA) and MoE modules. DeepPiC introduces a heterogeneous xPU+HBM-PIM device to accelerate low arithmetic intensity operations. It can seamlessly replace conventional xPU devices without any modification to clusterlevel interconnect topology. However, DeepPiC cannot fully realize its performance potential under static scheduling, which fails to adapt to shifting compute and memory demands driven by multidimensional variability (model heterogeneity, cluster-scale volatility, runtime dynamics). This induces inter-device communication overhead and intra-device underutilization. Thus, we propose Adaptive Resource-Aware Task Orchestration (ARTO), a two-phase strategy that decouples global model partitioning from local task assignment by dynamically coordinating (1) crossdevice parallelism optimization and (2) intra-device xPU/PIM mapping. Evaluated on DeepSeek V3-671B using H20-, A100-, and $\\mathbf{H 2 0 0}$-Cluster ($\\mathbf{H 2 0}$ serves as a compute-limited alternative to high-end GPUs), DeepPiC (H20+HBM-PIM) achieves up to $\\mathbf{3} \\times \\mathbf{, 2} \\times$ and $\\mathbf{1. 3} \\times$ speedup over $\\mathbf{H 2 0}$-, A100-, and $\\mathbf{H 2 0 0}$-Cluster at small batch sizes, while maintaining $\\mathbf{7 4 \\%}$ and $\\mathbf{5 4 \\%}$ of A100and $\\mathbf{H 2 0 0}$-Cluster performance at large batch sizes. These results demonstrate that DeepPiC enables low-end xPU to approach or even exceed premium ones by fundamentally overcoming memory bottlenecks via adaptive scheduling that orchestrates PIM and xPU heterogeneous resources.",
+        "identifiers": [
+          "SemanticScholar:d69381d6bd0d8494326048fa0fe8da631e480107"
+        ],
+        "semantic_scholar_id": "d69381d6bd0d8494326048fa0fe8da631e480107",
+        "doi": "10.1109/ASP-DAC66049.2026.11420504",
+        "canonical_id": "DOI:10.1109/ASP-DAC66049.2026.11420504",
+        "authors": [
+          "Zi-Xu Li",
+          "Man-Ni Li",
+          "Zi-Jian Huang",
+          "Jia-Yu Yang",
+          "Wen-Ding Zhao",
+          "Yin-Yin Lin",
+          "Cheng-Chen Wang",
+          "Hai-Dong Tian",
+          "Xian-Kui Xiong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 303,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iscas66217.2026.11562456",
+      "identity_tokens": [
+        "id:DOI:10.1109/iscas66217.2026.11562456",
+        "id:SemanticScholar:dfd916cc6eb52294450517444d4a9c9d67e5da5c",
+        "title:efficient token compression for the understanding and generation unified mllms",
+        "url:https://doi.org/10.1109/ISCAS66217.2026.11562456"
+      ],
+      "record": {
+        "title": "Efficient Token Compression for the Understanding and Generation Unified MLLMs",
+        "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562456",
+        "year": 2026,
+        "published": "2026-05-24",
+        "venue": "International Symposium on Circuits and Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in multimodal large language models (MLLMs) leverage a single tokenizer for both visual understanding and generation, unifying perception and synthesis within one architecture. However, to effectively perform both generation and comprehension tasks, existing methods typically rely on a large number of tokens for reasoning, which significantly hinders practical applications. Thus, a general token compression strategy is urgently required to improve MLLMs’ efficiency. In this work, we systematically examine how token compression affects model performance. We classify the mainstream tokenizers into three categories according to their different focuses: Semantic-biased, Detail-biased, and Balanced. Then, we apply three potential ways for compression at the beginning, intermediate, and final stages. Through extensive experiments, we get some interesting findings: Detail-biased tokenizers are robust to compression at the input stage but highly sensitive on the final stage, while Balanced tokenizers inherit semantic robustness that mitigates compression degradation for the final representation. These insights inspire us to design a dual-branched Balanced tokenizer, whereas we conduct compression for the Detail-biased branch at the beginning as well as for the Semantic-biased branch at the ending, achieving a win-win effect.",
+        "identifiers": [
+          "SemanticScholar:dfd916cc6eb52294450517444d4a9c9d67e5da5c"
+        ],
+        "semantic_scholar_id": "dfd916cc6eb52294450517444d4a9c9d67e5da5c",
+        "doi": "10.1109/ISCAS66217.2026.11562456",
+        "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562456",
+        "authors": [
+          "Junyan Lin",
+          "Jin-Ming Liu",
+          "Shengyang Zhao",
+          "Xin Jin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 178,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/ijcnn64981.2025.11228725",
+      "identity_tokens": [
+        "id:DOI:10.1109/ijcnn64981.2025.11228725",
+        "id:SemanticScholar:183d5e651a38038dd0d353e8cb157dbc72175308",
+        "title:kodd one clear kooc a novel gpu kernel that improves quantization accuracy and speed of gptq algorithm",
+        "url:https://doi.org/10.1109/IJCNN64981.2025.11228725"
+      ],
+      "record": {
+        "title": "k-Odd One Clear (k-OOC), A Novel GPU Kernel That Improves Quantization Accuracy And Speed Of GPTQ Algorithm",
+        "source_url": "https://doi.org/10.1109/IJCNN64981.2025.11228725",
+        "year": 2025,
+        "published": "2025-06-30",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Large Language Model (LLM) demonstrated tremendously useful applications in nowadays fast-evolving AI-driven technology. As model sizes grow larger, bigger and faster GPUs are required. Another way to alleviate this issue is by improving the compression quality of the trained model through quantization so that lower VRAM devices can run. Quantization paradigms such as GPTQ, PB-LLM, and BiLLM (Hessian-based with structural searching) are successful quantization mechanisms. In this paper, we propose the OOC technique, which enables us to pick an \"odd\" group to improve the quantization clarity so that the model can have a better reasoning ability overall. In addition, we define the Bit Family (Alim, Amax) to classify the compression rate of current and past quantization techniques, thus providing a more objective way of ranking different methodologies in the literature. Thirdly, to avoid compromising the quantization speed due to the scanning process overhead, we developed a specialized fused GPU kernel (k-OOC) where it can be 9x faster than the original GPTQ implementation (single-flow mode) and 22x faster than the naive OOC implementation (double-flow mode) due to the incorporation of techniques called Row-Flow-Selection Parallel and Input Batching. We measured the perplexity (PPL) of k-OOC (2 bits) with 14 major models such as OPT, LLAMA, and Bloom (125M to 70B parameters) and popular datasets (Wikitext2, C4, and PTB). We managed to improve the PPL of the small models by 8.9% and of the big models by 4.1% compared to the baseline of GPTQ (2 bits).",
+        "identifiers": [
+          "SemanticScholar:183d5e651a38038dd0d353e8cb157dbc72175308"
+        ],
+        "semantic_scholar_id": "183d5e651a38038dd0d353e8cb157dbc72175308",
+        "doi": "10.1109/IJCNN64981.2025.11228725",
+        "canonical_id": "DOI:10.1109/IJCNN64981.2025.11228725",
+        "authors": [
+          "Loi Huynh"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9fb92f1be7b9c990e90ae5a0d510ccdcb68011c264403bf77c3e9f9de61decb4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

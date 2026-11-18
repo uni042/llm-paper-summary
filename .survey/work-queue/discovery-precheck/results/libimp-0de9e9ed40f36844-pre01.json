@@ -1,0 +1,403 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0de9e9ed40f36844-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0de9e9ed40f3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3779212.3790174",
+    "DOI:10.18653/v1/2025.findings-acl.554",
+    "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+    "arXiv:2501.08631"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f359c1c41d491ef610056113173989064c0c0e34",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:14:17.513766+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3779212.3790174",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-acl.554",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.08631",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention",
+      "source_url": "https://doi.org/10.1145/3779212.3790174",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As GPUs and other accelerators become increasingly popular, optimizing I/O operations between on-chip and off-chip memory is increasingly critical. I/O analysis, however, is complex, requiring a deep understanding of application dataflow and memory hierarchy. Developing a practical I/O analysis methodology remains a timely challenge. Self-attention is employed extensively in transformer models, but its quadratic memory complexity poses significant challenges to modern memory systems. In this study, we explore how to use I/O analysis to develop optimal solutions for accelerating exact long-sequence self-attention. We first introduce a novel I/O analysis for tall-and-skinny matrix-matrix multiplication, which captures the dominant data movement behavior of long-sequence self-attention. Guided by systematic I/O analysis, we develop AttenIO, an I/O-driven accelerator for exact long-sequence self-attention with three key optimizations: (1) an analytically derived I/O-optimal tiling and scheduling to minimize I/O operations, (2) fine-grained three-level communication-computation overlapping to hide I/O stalls, and (3) parallel execution patterns for efficient softmax. Our evaluation shows that AttenIO achieves a 1.6×-8.8× speedup over the state-of-the-art solutions. Although AttenIO is designed for self-attention, it also highlights the broader potential of I/O analysis as a principled foundation for guiding high-performance I/O optimizations.",
+      "identifiers": [
+        "SemanticScholar:c20fa666b15e955f9708f1c28ba61b15ee83cf98"
+      ],
+      "semantic_scholar_id": "c20fa666b15e955f9708f1c28ba61b15ee83cf98",
+      "doi": "10.1145/3779212.3790174",
+      "canonical_id": "DOI:10.1145/3779212.3790174",
+      "authors": [
+        "Xiao-Yang Lu",
+        "Boyu Long",
+        "Xiao-Ming Chen",
+        "Yin-He Han",
+        "Xian-He Sun"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 241,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RQT: Hierarchical Residual Quantization for Multi-Model Compression",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.554",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:8f65800549e6ba0b4fd2a9aafdb798eb4bde022d"
+      ],
+      "semantic_scholar_id": "8f65800549e6ba0b4fd2a9aafdb798eb4bde022d",
+      "doi": "10.18653/v1/2025.findings-acl.554",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.554",
+      "authors": [
+        "Tian-Qi Chen",
+        "Pei-Song Wang",
+        "Wei-Xiang Xu",
+        "Ze-Yu Zhu",
+        "Jian Cheng"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Accelerating On-Device LLM Inference via Activation-guided FFN Distillation on Raspberry Pi",
+      "source_url": "https://www.semanticscholar.org/paper/0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6"
+      ],
+      "semantic_scholar_id": "0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "canonical_id": "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "authors": [
+        "Hyeon-Cheol Moon",
+        "SungHyeon Bae",
+        "Jinwoo Jeong"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SWSC: Shared Weight for Similar Channel in LLM",
+      "source_url": "https://arxiv.org/abs/2501.08631",
+      "year": 2025,
+      "published": "2025-01-15",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have spurred development in multiple industries. However, the growing number of their parameters brings substantial storage and computing burdens, making it essential to explore model compression techniques for parameter reduction and easier deployment. We propose SWSC, an LLM compression method based on the concept of Shared Weight for Similar Channel. It uses the K-Means clustering algorithm to cluster model weights channel-by-channel, generating clusters with highly similar vectors within each. A representative vector from each cluster is selected to approximately replace all vectors in the cluster, significantly reducing the number of model weight parameters. However, approximate restoration will inevitably cause damage to the performance of the model. To tackle this issue, we perform singular value decomposition on the weight error values before and after compression and retain the larger singular values and their corresponding singular vectors to compensate for the accuracy. The experimental results show that our method can effectively ensure the performance of the compressed LLM even under low-precision conditions.",
+      "identifiers": [
+        "SemanticScholar:5e384f0c8c2f27afac8683458e789eb847c70dad"
+      ],
+      "semantic_scholar_id": "5e384f0c8c2f27afac8683458e789eb847c70dad",
+      "canonical_id": "arXiv:2501.08631",
+      "arxiv_id": "2501.08631",
+      "doi": "10.48550/arXiv.2501.08631",
+      "authors": [
+        "Binrui Zeng",
+        "Yong-Tao Tang",
+        "Xiao-Dong Liu",
+        "Xiaopeng Li"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 672,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3779212.3790174",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790174",
+        "id:SemanticScholar:c20fa666b15e955f9708f1c28ba61b15ee83cf98",
+        "title:io analysis is all you need an io analysis for longsequence attention",
+        "url:https://doi.org/10.1145/3779212.3790174"
+      ],
+      "record": {
+        "title": "I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention",
+        "source_url": "https://doi.org/10.1145/3779212.3790174",
+        "year": 2026,
+        "published": "2026-03-22",
+        "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As GPUs and other accelerators become increasingly popular, optimizing I/O operations between on-chip and off-chip memory is increasingly critical. I/O analysis, however, is complex, requiring a deep understanding of application dataflow and memory hierarchy. Developing a practical I/O analysis methodology remains a timely challenge. Self-attention is employed extensively in transformer models, but its quadratic memory complexity poses significant challenges to modern memory systems. In this study, we explore how to use I/O analysis to develop optimal solutions for accelerating exact long-sequence self-attention. We first introduce a novel I/O analysis for tall-and-skinny matrix-matrix multiplication, which captures the dominant data movement behavior of long-sequence self-attention. Guided by systematic I/O analysis, we develop AttenIO, an I/O-driven accelerator for exact long-sequence self-attention with three key optimizations: (1) an analytically derived I/O-optimal tiling and scheduling to minimize I/O operations, (2) fine-grained three-level communication-computation overlapping to hide I/O stalls, and (3) parallel execution patterns for efficient softmax. Our evaluation shows that AttenIO achieves a 1.6×-8.8× speedup over the state-of-the-art solutions. Although AttenIO is designed for self-attention, it also highlights the broader potential of I/O analysis as a principled foundation for guiding high-performance I/O optimizations.",
+        "identifiers": [
+          "SemanticScholar:c20fa666b15e955f9708f1c28ba61b15ee83cf98"
+        ],
+        "semantic_scholar_id": "c20fa666b15e955f9708f1c28ba61b15ee83cf98",
+        "doi": "10.1145/3779212.3790174",
+        "canonical_id": "DOI:10.1145/3779212.3790174",
+        "authors": [
+          "Xiao-Yang Lu",
+          "Boyu Long",
+          "Xiao-Ming Chen",
+          "Yin-He Han",
+          "Xian-He Sun"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 241,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-acl.554",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-acl.554",
+        "id:SemanticScholar:8f65800549e6ba0b4fd2a9aafdb798eb4bde022d",
+        "title:rqt hierarchical residual quantization for multimodel compression",
+        "url:https://doi.org/10.18653/v1/2025.findings-acl.554"
+      ],
+      "record": {
+        "title": "RQT: Hierarchical Residual Quantization for Multi-Model Compression",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.554",
+        "year": 2025,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:8f65800549e6ba0b4fd2a9aafdb798eb4bde022d"
+        ],
+        "semantic_scholar_id": "8f65800549e6ba0b4fd2a9aafdb798eb4bde022d",
+        "doi": "10.18653/v1/2025.findings-acl.554",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-acl.554",
+        "authors": [
+          "Tian-Qi Chen",
+          "Pei-Song Wang",
+          "Wei-Xiang Xu",
+          "Ze-Yu Zhu",
+          "Jian Cheng"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "identity_tokens": [
+        "id:SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+        "title:accelerating ondevice llm inference via activationguided ffn distillation on raspberry pi",
+        "url:https://www.semanticscholar.org/paper/0d44c22c05f777b6f269846c4c6ebfff98747ea6"
+      ],
+      "record": {
+        "title": "Accelerating On-Device LLM Inference via Activation-guided FFN Distillation on Raspberry Pi",
+        "source_url": "https://www.semanticscholar.org/paper/0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6"
+        ],
+        "semantic_scholar_id": "0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+        "canonical_id": "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+        "authors": [
+          "Hyeon-Cheol Moon",
+          "SungHyeon Bae",
+          "Jinwoo Jeong"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.08631",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.08631",
+        "id:SemanticScholar:5e384f0c8c2f27afac8683458e789eb847c70dad",
+        "id:arXiv:2501.08631",
+        "title:swsc shared weight for similar channel in llm",
+        "url:https://arxiv.org/abs/2501.08631"
+      ],
+      "record": {
+        "title": "SWSC: Shared Weight for Similar Channel in LLM",
+        "source_url": "https://arxiv.org/abs/2501.08631",
+        "year": 2025,
+        "published": "2025-01-15",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have spurred development in multiple industries. However, the growing number of their parameters brings substantial storage and computing burdens, making it essential to explore model compression techniques for parameter reduction and easier deployment. We propose SWSC, an LLM compression method based on the concept of Shared Weight for Similar Channel. It uses the K-Means clustering algorithm to cluster model weights channel-by-channel, generating clusters with highly similar vectors within each. A representative vector from each cluster is selected to approximately replace all vectors in the cluster, significantly reducing the number of model weight parameters. However, approximate restoration will inevitably cause damage to the performance of the model. To tackle this issue, we perform singular value decomposition on the weight error values before and after compression and retain the larger singular values and their corresponding singular vectors to compensate for the accuracy. The experimental results show that our method can effectively ensure the performance of the compressed LLM even under low-precision conditions.",
+        "identifiers": [
+          "SemanticScholar:5e384f0c8c2f27afac8683458e789eb847c70dad"
+        ],
+        "semantic_scholar_id": "5e384f0c8c2f27afac8683458e789eb847c70dad",
+        "canonical_id": "arXiv:2501.08631",
+        "arxiv_id": "2501.08631",
+        "doi": "10.48550/arXiv.2501.08631",
+        "authors": [
+          "Binrui Zeng",
+          "Yong-Tao Tang",
+          "Xiao-Dong Liu",
+          "Xiaopeng Li"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 672,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6f2c3ad599e7b064970cb826e310e3efc285a00cc7e2e89f498e6258acf7ac04",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

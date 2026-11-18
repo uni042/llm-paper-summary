@@ -1,0 +1,142 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-45adb78ba95e27dc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-45adb78ba95e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3787330.3787361"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f359c1c41d491ef610056113173989064c0c0e34",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:14:17.444391+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3787330.3787361",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "TokenSkipping: A Practical and Robust KV Cache Pruning Method for Long-Context LLM Inference",
+      "source_url": "https://doi.org/10.1145/3787330.3787361",
+      "year": 2025,
+      "published": "2025-12-05",
+      "venue": "International Conference on Industrial Technology",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their deployment in long-context scenarios is severely hampered by the extensive memory and computational costs associated with the Key-Value (KV) cache. This paper introduces TokenSkipping, a practical and efficient KV cache pruning method designed to mitigate these challenges. TokenSkipping is a training-free, stateless, pre-storage method that employs a lightweight heuristic based on the L2 norm of key vectors, combined with a novel quota-based streaming algorithm for auto-regressive decoding. By deciding whether to admit or skip each token before writing to the cache, it eliminates cache-wide re-scoring and remains compatible with fused-attention kernels and Grouped Query Attention. A dual-mode design matches practical inference: during prefill, the policy retains the top-k highest-norm tokens under a fixed budget; during decoding, a streaming rule compares each new token’s norm to a reservoir-sampled percentile threshold, guaranteeing strict memory bounds with O(1) overhead. Anchor tokens are preserved to stabilize attention, and the policy operates independently per layer without retraining or kernel changes. Evaluated on Llama 3.1 8B (tested up to 128k tokens) and Mixtral-8 × 7B within their supported context windows, TokenSkipping substantially reduces KV cache memory while keeping throughput competitive with unpruned inference and cache-wide norm-based baselines. Our results reveal a distinct trade-off profile: aggressive pruning degrades fine-grained retrieval tasks (such as Needle-In-A-Haystack and QA), but TokenSkipping maintains robust performance on semantic summarization and coherence benchmarks, indicating that norm-based pruning can preserve global semantic context even when local precision is compressed. Compared to naive baselines like Sliding Window, TokenSkipping achieves better coherence under similar memory budgets and avoids global scoring, offering a simple, high-throughput optimization for memory-constrained long-context deployments.",
+      "identifiers": [
+        "SemanticScholar:cccb03b8b6fc23ac4313fccaefff50da60b397e0"
+      ],
+      "semantic_scholar_id": "cccb03b8b6fc23ac4313fccaefff50da60b397e0",
+      "doi": "10.1145/3787330.3787361",
+      "canonical_id": "DOI:10.1145/3787330.3787361",
+      "authors": [
+        "Narupol Hongthai",
+        "E. Chuangsuwanich"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 348,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3787330.3787361",
+      "identity_tokens": [
+        "id:DOI:10.1145/3787330.3787361",
+        "id:SemanticScholar:cccb03b8b6fc23ac4313fccaefff50da60b397e0",
+        "title:tokenskipping a practical and robust kv cache pruning method for longcontext llm inference",
+        "url:https://doi.org/10.1145/3787330.3787361"
+      ],
+      "record": {
+        "title": "TokenSkipping: A Practical and Robust KV Cache Pruning Method for Long-Context LLM Inference",
+        "source_url": "https://doi.org/10.1145/3787330.3787361",
+        "year": 2025,
+        "published": "2025-12-05",
+        "venue": "International Conference on Industrial Technology",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities, yet their deployment in long-context scenarios is severely hampered by the extensive memory and computational costs associated with the Key-Value (KV) cache. This paper introduces TokenSkipping, a practical and efficient KV cache pruning method designed to mitigate these challenges. TokenSkipping is a training-free, stateless, pre-storage method that employs a lightweight heuristic based on the L2 norm of key vectors, combined with a novel quota-based streaming algorithm for auto-regressive decoding. By deciding whether to admit or skip each token before writing to the cache, it eliminates cache-wide re-scoring and remains compatible with fused-attention kernels and Grouped Query Attention. A dual-mode design matches practical inference: during prefill, the policy retains the top-k highest-norm tokens under a fixed budget; during decoding, a streaming rule compares each new token’s norm to a reservoir-sampled percentile threshold, guaranteeing strict memory bounds with O(1) overhead. Anchor tokens are preserved to stabilize attention, and the policy operates independently per layer without retraining or kernel changes. Evaluated on Llama 3.1 8B (tested up to 128k tokens) and Mixtral-8 × 7B within their supported context windows, TokenSkipping substantially reduces KV cache memory while keeping throughput competitive with unpruned inference and cache-wide norm-based baselines. Our results reveal a distinct trade-off profile: aggressive pruning degrades fine-grained retrieval tasks (such as Needle-In-A-Haystack and QA), but TokenSkipping maintains robust performance on semantic summarization and coherence benchmarks, indicating that norm-based pruning can preserve global semantic context even when local precision is compressed. Compared to naive baselines like Sliding Window, TokenSkipping achieves better coherence under similar memory budgets and avoids global scoring, offering a simple, high-throughput optimization for memory-constrained long-context deployments.",
+        "identifiers": [
+          "SemanticScholar:cccb03b8b6fc23ac4313fccaefff50da60b397e0"
+        ],
+        "semantic_scholar_id": "cccb03b8b6fc23ac4313fccaefff50da60b397e0",
+        "doi": "10.1145/3787330.3787361",
+        "canonical_id": "DOI:10.1145/3787330.3787361",
+        "authors": [
+          "Narupol Hongthai",
+          "E. Chuangsuwanich"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 348,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:00858d38600976bbdeb45b6882dad0761b3807fe7942a9e675cfa86e41d736ee",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
