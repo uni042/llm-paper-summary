@@ -35,10 +35,15 @@
   "selection_reason": "マスク拡散モデルでKVキャッシュ再利用を可能にする再編成デコード。並列デコードをトークン単位からスロット単位へ引き上げ、スロット間は拡散で選びスロット内は自己回帰で埋め、生成済みスロットをマスク前方へ並べ替えることで因果注意の枠組みのまま全KV再利用を解禁する。拡散言語モデルの推論機構そのものへの直接貢献。",
   "semantic_scholar_id": "bf3e93d83229d7acd95596d0cf92371d0f28c7b5",
   "source_url": "https://arxiv.org/abs/2512.13586",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-18T23:06:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-d.md",
+  "represented_canonical_id": "arXiv:2512.13586",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

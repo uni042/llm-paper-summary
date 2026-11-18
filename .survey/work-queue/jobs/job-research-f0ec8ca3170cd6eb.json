@@ -35,10 +35,15 @@
   "selection_reason": "MoEエキスパート間の冗長な重み成分をKLT誘導SVDで共有し、エキスパート固有残差だけをベクトル量子化した上でチャネル別アフィン補正を行う。Qwen1.5-MoE-A2.7Bの3ビット量子化で平均精度67.99、FP16の68.07に近い。推論時の超低ビット圧縮が直接の対象。",
   "semantic_scholar_id": "89719405958e7d7fcfa3a10947c313a660a112c9",
   "source_url": "https://arxiv.org/abs/2602.11184",
-  "status": "ready",
+  "status": "superseded",
   "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:06:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-.md",
+  "represented_canonical_id": "arXiv:2602.11184",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

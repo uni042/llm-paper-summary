@@ -35,10 +35,15 @@
   "selection_reason": "VLM向け近似誤差誘導トークン圧縮ApET。視覚トークンを基底トークンの線形近似で再構成し、その近似誤差で情報量を測って圧縮するため、注意重みに依存せずFlashAttentionと両立する。視覚トークンの冗長性による推論コストへの直接の機構。",
   "semantic_scholar_id": "10edff9c9044cccef655de3d0656adab8d0501f5",
   "source_url": "https://arxiv.org/abs/2602.19870",
-  "status": "ready",
+  "status": "superseded",
   "title": "ApET: Approximation-Error Guided Token Compression for Efficient VLMs",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:06:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md",
+  "represented_canonical_id": "arXiv:2602.19870",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

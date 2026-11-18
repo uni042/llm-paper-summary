@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（125本）
+## 自動生成の論文一覧（126本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -109,6 +109,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
+
+- **2026-01 · [KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models](2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  MoEの重みから入力統計に基づく共有成分を抜いて全精度で残し、固有成分だけをベクトル量子化して出力の偏りを補正することで、3ビットでも全精度並みの正解率を保った量子化方式。
 
 - **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

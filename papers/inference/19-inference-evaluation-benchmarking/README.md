@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（117本）
+## 自動生成の論文一覧（118本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -285,6 +285,10 @@
 - **2026-01 · [L³: Large Lookup Layers](2026-2601.21461-l-large-lookup-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   このため、CPUに退避した専門家をGPUへ移す場合は、選択後の転送が計算の待ち時間になりやすい。推論速度はL³の配置に依存し、2.6B稼働モデルで最初のL³を第5層後に置くと、原著表2のバッチ1速度は密モデル776に対して772トークン/秒/系列だった。
+
+- **2026-01 · [FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning](2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasonin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意関数をSoftmax1へ替えて寄与の小さい推論文を生成されにくくする微調整方式で、トークンを約7割削りながら正解率を平均で改善した。
 
 ### 2年前（2024-12〜2025-11）
 

@@ -35,10 +35,15 @@
   "selection_reason": "著者原著はMLLMのheadをprefillのtext-centric attention sparsityからstatic/dynamicに分類し、階層的KV予算配分の後、static headにはtext-prior pruning、dynamic headにはCPUオフロードしたchunk-wise retrievalを適用する。Qwen2.5-VL-7B等の画像・動画評価で最大7.9倍のKV圧縮と1.52倍のdecode高速化を報告する。直接的な推論メモリ最適化としてaccept。",
   "semantic_scholar_id": "8b20dbc0457afc6685fa592cff89fbde6e66aac9",
   "source_url": "https://arxiv.org/abs/2604.05887",
-  "status": "ready",
+  "status": "superseded",
   "title": "HybridKV: Hybrid KV Cache Compression for Efficient Multimodal Large Language Model Inference",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:06:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-lang.md",
+  "represented_canonical_id": "arXiv:2604.05887",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

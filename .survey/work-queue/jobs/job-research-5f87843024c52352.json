@@ -35,10 +35,15 @@
   "selection_reason": "注意に基づく推論経路剪定FROST。推論アウトライヤという概念を導入し、注意重みで重要でない推論文を推論時に除去して軌跡を短縮する。トークン使用量を平均69.68%削減しつつ精度も上げる実測があり、推論時計算量の削減機構として直接的。",
   "semantic_scholar_id": "e133e64dde522c2912d2efb294bb900ef041b11d",
   "source_url": "https://arxiv.org/abs/2601.19001",
-  "status": "ready",
+  "status": "superseded",
   "title": "FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-18T23:06:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasonin.md",
+  "represented_canonical_id": "arXiv:2601.19001",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

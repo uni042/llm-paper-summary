@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（438本）
+## 自動生成の論文一覧（440本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -26,7 +26,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
-  実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：24  
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
@@ -264,6 +264,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing](2026-2604.22782-stochastic-kv-routing-enabling-adaptive-depth-wise-cache-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   既存の削減手法の多くは「どの時刻のトークンを捨てるか」に着目するが、本研究は「どの層が独自のKVを持つ必要があるか」を問い直す。
+
+- **2026-04 · [HybridKV: Hybrid KV Cache Compression for Efficient Multimodal Large Language Model Inference](2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  注意ヘッドを静的型と動的型へ分類し、枝刈りと検索を使い分ける混合型KVキャッシュ圧縮で、メモリを最大7.9分の1にしながら性能をほぼ維持した。
 
 - **2026-03 · [The Residual Stream Is All You Need: On the Redundancy of the KV Cache in Transformer Inference](2026-2603.19664-the-residual-stream-is-all-you-need-on-the-redundancy-of-the-kv-cache-in.md)**  
   実装：[✓](https://github.com/Kaleemullahqasim/KV-Direct) ・ リポジトリ内被引用：2  
@@ -1035,6 +1039,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   過去の映像を後から質問される可能性があるため、不要に見えるKVを永久削除する方式は会話の整合性を損なう。論文のエッジ向けV-Rex8構成は、KV長1K〜40KのCOIN動画でフレーム当たり121〜254 ms、すなわち3.9〜8.3 FPSを報告する。
 
+- **2025-12 · [ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding](2025-2512.13586-refusion-a-diffusion-large-language-model-with-parallel-autoregressive-d.md)**  
+  実装：[✓](https://github.com/ML-GSAI/ReFusion) ・ リポジトリ内被引用：0  
+  応答をスロットへ分割し、スロット間は拡散的に選んでスロット内は自己回帰で埋め、並べ替えでKVキャッシュを全面再利用することで、拡散モデルの並列性と自己回帰モデルの一貫性を両立させた生成方式。
+
 - **2025-12 · [Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers](2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md)**  
   実装：[✓](https://github.com/LivingFutureLab/FusedKV) ・ リポジトリ内被引用：0  
   長い系列と同時要求の増加に伴い、層数に比例するKVキャッシュ容量と読み出しがサービングの制約となる。著者は、上位層のキーと値が異なる深さの情報を必要とすることが原因の一つと考え、上位層のキー・値を下位層から非対称に再構成するFusedKVを設計した。
@@ -1046,7 +1054,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：94  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：95  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
@@ -1062,7 +1070,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   元文脈の再構成時に使われるKVを重要とみなし、将来クエリを知らずに再利用可能な長文脈KVキャッシュを3〜4倍圧縮する。
 
 - **2025-05 · [dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching](2025-2506.06295-dllm-cache-adaptive-caching.md)**  
-  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：55  
   プロンプトの長間隔キャッシュとV類似度による応答トークン選択更新で、拡散LLM推論の再計算を学習なしに削減する。
 
 - **2025-10 · [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution](2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md)**  
@@ -1106,7 +1114,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   合成トレースではなく本番サービスのトレースに基づく設計材料が不足しているという問題に対し、本研究はAliyun Tongyiの大規模serving クラスタから得た顧客向け(to-C)と企業向け(to-B)のトレースを特徴付け、観測した分布を使う追い出し 方策を提案する。
 
 - **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
-  実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：26  
   FlashDLMは拡散言語モデル（Diffusion Language モデル; DLM）の遅さを、1回のノイズ除去で再計算し過ぎる問題と、何回ノイズ除去を繰り返すかという問題に分ける。FreeCacheは前者を、Guided Diffusionは後者を削り、二つを組み合わせて大きな端末間高速化を得る。
 
 - **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
@@ -1385,6 +1393,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   入力長、出力長、注意機構、量子化、演算融合、カーネルの効率が時間とともに変わるためである。Llama2-7Bを対象に、プレフィル（プリフィル）で入力長256から65,536へ増やすと、行列積（GEMM）の計算量構成比が99.0%から27.5%へ下がり、バッチ行列積（BMM）が1.0%から71.6%へ増えると推計した（表4）。
 
+- **2025-06 · [MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference](2025-2506.15724-madakv-adaptive-modality-perception-kv-cache-eviction-for-efficient-mult.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  MadaKVは、各注意ヘッドが画像と文字のどちらへ注意を向けているかを測り、モダリティごとに異なるKV保持予算を割り当てるModality Preference Adaptation（MPA）と、層ごとの圧縮過不足を後続層へ補償するHierarchical Compression Compensation（HCC）を組み合わせる。
+
 - **2025-02 · [CalibQuant: 1-Bit KV Cache Quantization for Multimodal LLMs](2025-2502.14882-calibquant-1-bit-kv-cache-quantization-for-multimodal-llms.md)**  
   実装：[✓](https://github.com/insuhan/calibquant) ・ リポジトリ内被引用：2  
   主張は、視覚トークンのKVキャッシュを圧縮し、限られたメモリ予算下でバッチ数を増やしてデコードスループットを上げることであり、モデル重みを1bit化する方式ではない。主結果はCOCO Caption、DocVQA、MMBench-VideoとH100 80GBでのスループット評価である。
@@ -1432,10 +1444,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-06 · [TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering](2025-2506.04642-tada-training-free-recipe-for-decoding-with-adaptive-kv-cache-compressio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   TaDAは、自己回帰型の大規模言語モデル（LLM）で生成済みトークンの鍵・値を保存するKVキャッシュを、重み再学習なしに小さくする方式である。これは容量を27%まで削減したという意味であり、「27%だけ削減」とは異なる。
-
-- **2025-06 · [MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference](2025-2506.15724-madakv-adaptive-modality-perception-kv-cache-eviction-for-efficient-mult.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  MadaKVは、各注意ヘッドが画像と文字のどちらへ注意を向けているかを測り、モダリティごとに異なるKV保持予算を割り当てるModality Preference Adaptation（MPA）と、層ごとの圧縮過不足を後続層へ補償するHierarchical Compression Compensation（HCC）を組み合わせる。
 
 - **2025-05 · [EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse](2025-2505.21889-efim-infilling-kv-cache-reuse.md)**  
   実装：[✓](https://github.com/gty111/EFIM) ・ リポジトリ内被引用：1  
@@ -1516,7 +1524,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
-  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：263  
+  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：264  
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
