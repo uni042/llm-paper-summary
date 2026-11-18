@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-18T16:23:22+00:00`
+Generated: `2026-11-18T17:00:51+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127476** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121282** / 監査再投入 **0** / 機械規則適用後 **123867** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127478** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121284** / 監査再投入 **0** / 機械規則適用後 **123869** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -496,7 +496,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 269 | 10 | 3 | 6 | arXiv:2607.09385 | STEEL: Sparsity-Aware Fused Attention for Energy-Efficient Long-Sequence Inference on AMD's XDNA NPU | 2026-07-10 | arXiv.org | 0 | 6 | LLM Serving / Scheduling / Disaggregation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2607.09385) |
 | 270 | 3 | 3 | 6 | DOI:10.1145/3652892.3700767 | Cannikin: Optimal Adaptive Distributed DNN Training over Heterogeneous Clusters | 2024-12-02 | International Middleware Conference | 3 | 6 |  | [source](https://doi.org/10.1145/3652892.3700767) |
 | 271 | 1 | 3 | 6 | arXiv:2402.05302 | Training DNN Models over Heterogeneous Clusters with Optimal Performance | 2024-02-07 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2402.05302) |
-| 272 | 120 | 3 | 6 | arXiv:2604.09377 | Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios | 2026-04-10 | Annual Meeting of the Association for Computational Linguistics | 10 | 6 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2604.09377) |
+| 272 | 120 | 3 | 6 | arXiv:2604.09377 | Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios | 2026-04-10 | Annual Meeting of the Association for Computational Linguistics | 10 | 7 | LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2604.09377) |
 | 273 | 104 | 3 | 6 | arXiv:2607.14427 | Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers | 2026-07-15 | arXiv.org | 4 | 6 | Conditional Computation | [source](https://arxiv.org/abs/2607.14427) |
 | 274 | 102 | 3 | 6 | arXiv:2602.22479 | Efficient Continual Learning in Language Models via Thalamically Routed Cortical Columns | 2026-02-25 | arXiv.org | 2 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2602.22479) |
 | 275 | 40 | 3 | 6 | arXiv:2509.16679 | Reinforcement Learning Meets Large Language Models: A Survey of Advancements and Applications Across the LLM Lifecycle | 2025-09-20 | arXiv.org | 40 | 7 |  | [source](https://arxiv.org/abs/2509.16679) |

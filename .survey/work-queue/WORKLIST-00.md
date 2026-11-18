@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-18T16:23:22+00:00`
+Generated: `2026-11-18T17:00:51+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127476** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121282** / 監査再投入 **0** / 機械規則適用後 **123867** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127478** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121284** / 監査再投入 **0** / 機械規則適用後 **123869** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -685,7 +685,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 458 | 105 | 3 | 5 | arXiv:2606.10651 | Kwai Keye-VL-2.0 Technical Report | 2026-06-09 |  | 5 | 6 | 02-hardware-accelerators, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.10651) |
 | 459 | 104 | 3 | 5 | arXiv:2607.01737 | ReQuest: Rethinking-based Question-Aware Frame Selection for Long-Form Video QA | 2026-07-02 | European Conference on Computer Vision | 4 | 5 |  | [source](https://arxiv.org/abs/2607.01737) |
 | 460 | 103 | 3 | 5 | arXiv:2603.08859 | Expressivity-Efficiency Tradeoffs for Hybrid Sequence Models | 2026-03-09 | arXiv.org | 3 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2603.08859) |
-| 461 | 103 | 3 | 5 | arXiv:2605.07112 | Switchcraft: AI Model Router for Agentic Tool Calling | 2026-05-08 | arXiv.org | 3 | 5 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2605.07112) |
+| 461 | 103 | 3 | 5 | arXiv:2605.07112 | Switchcraft: AI Model Router for Agentic Tool Calling | 2026-05-08 | arXiv.org | 3 | 6 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2605.07112) |
 | 462 | 102 | 3 | 5 | arXiv:2610.23804 | Jarvis: Coordination Deserves a Brain of Its Own in Agentic Interactive Models | 2026-10-16 |  | 2 | 5 |  | [source](https://arxiv.org/abs/2610.23804) |
 | 463 | 101 | 3 | 5 | arXiv:2512.20017 | Scaling Point-based Differentiable Rendering for Large-scale Reconstruction | 2025-12-23 | arXiv.org | 1 | 5 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2512.20017) |
 | 464 | 101 | 3 | 5 | arXiv:2603.02230 | Generalized Discrete Diffusion with Self-Correction | 2026-02-13 | arXiv.org | 1 | 5 | diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2603.02230) |

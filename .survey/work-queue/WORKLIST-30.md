@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-18T16:23:22+00:00`
+Generated: `2026-11-18T17:00:51+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127476** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121282** / 監査再投入 **0** / 機械規則適用後 **123867** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127478** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121284** / 監査再投入 **0** / 機械規則適用後 **123869** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -623,7 +623,7 @@ ready総数: **1140** / 未claim総数: **1140** / このworker向け: **200**
 | 396 | 105 | 3 | 5 | arXiv:2602.01849 | Self-Rewarding Sequential Monte Carlo for Masked Diffusion Language Models | 2026-02-02 | arXiv.org | 5 | 5 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2602.01849) |
 | 397 | 102 | 3 | 5 | DOI:10.1145/3788882.3788890 | Measuring Energy Consumption of LLMs Inferences | 2026-01-09 | ACM SIGMETRICS Performance Evaluation Review | 2 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3788882.3788890) |
 | 398 | 102 | 3 | 5 | arXiv:2605.13667 | SceneGraphVLM: Dynamic Scene Graph Generation from Video with Vision-Language Models | 2026-05-13 | arXiv.org | 2 | 5 | LLM Serving / Scheduling / Disaggregation, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2605.13667) |
-| 399 | 101 | 3 | 5 | arXiv:2609.37362 | Pretrain Once, Route Anywhere: Towards a Foundation Model for LLM Routing | 2026-09-29 | arXiv.org | 1 | 5 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2609.37362) |
+| 399 | 101 | 3 | 5 | arXiv:2609.37362 | Pretrain Once, Route Anywhere: Towards a Foundation Model for LLM Routing | 2026-09-29 | arXiv.org | 1 | 6 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2609.37362) |
 | 400 | 34 | 3 | 5 | arXiv:2109.14382 | UFO-ViT: High Performance Linear Vision Transformer without Softmax | 2021-09-29 | arXiv.org | 34 | 5 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2109.14382) |
 | 401 | 25 | 3 | 5 | arXiv:2302.01128 | Mnemosyne: Learning to Train Transformers with Transformers | 2023-02-02 | Neural Information Processing Systems | 15 | 5 | inference-systems | [source](https://arxiv.org/abs/2302.01128) |
 | 402 | 15 | 3 | 5 | arXiv:2211.17135 | BudgetLongformer: Can we Cheaply Pretrain a SotA Legal Language Model From Scratch? | 2022-11-30 | arXiv.org | 15 | 5 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2211.17135) |
