@@ -1,0 +1,340 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0bc09eeb63816f29-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0bc09eeb6381",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.36520",
+    "arXiv:2610.36950",
+    "arXiv:2610.42112",
+    "arXiv:2611.01617",
+    "arXiv:2611.04253"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8cebcef652722a2f43d7828a59d720c8c2d64a79",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:31:22.577446+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.36520",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:4841668cc99c371def194a734614bc51e5568df4"
+    },
+    {
+      "requested_id": "arXiv:2610.36950",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:e3021d1f5f43f0f5865cca94ae1410c675a333ae"
+    },
+    {
+      "requested_id": "arXiv:2610.42112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.01617",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.04253",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Subquadratic Attention with a Hierarchical Tree-Structured Indexer",
+      "source_url": "https://arxiv.org/abs/2610.42112",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic scaling of attention is a fundamental bottleneck limiting the long-context capabilities of large language models (LLMs). A variety of approaches have attempted to circumvent this, but they either fail to match attention's expressiveness (e.g., sliding-window or linear attention variants with fixed-size state) or only achieve constant-factor speedups (e.g., sparse attention methods whose indexers themselves scale quadratically). In this paper, we derive an asymptotically subquadratic sparse attention method based on a hierarchical, tree-structured indexer, which we call Zyphra Hierarchical Attention (ZHA). ZHA constructs a tree of recursively compressed key summaries over the KV cache, which future queries traverse from the top down to retrieve a sparse subset of keys. Crucially, by iteratively growing the tree's depth, the total cost including routing and final attention grows sublinearly in sequence length, resulting in overall subquadratic (but superlinear) scaling for attention. We demonstrate that ZHA can be cheaply applied to existing pretrained models with only a short KL distillation training stage of a billion tokens, and maintains performance on long-context retrieval and challenging reasoning, mathematical, and agentic coding evaluation tasks. Moreover, we show that our method is highly robust to tree geometry including very deep trees of up to 6 levels. Finally, we develop a detailed performance model and show that our approach scales subquadratically, dramatically outperforms competing methods beyond 1 million tokens of context, and ultimately has the potential to extend effective context windows to the hundreds of millions or billions of tokens.",
+      "identifiers": [
+        "SemanticScholar:2868a73886858edf584c59283567b7a52f8ffe69"
+      ],
+      "semantic_scholar_id": "2868a73886858edf584c59283567b7a52f8ffe69",
+      "canonical_id": "arXiv:2610.42112",
+      "arxiv_id": "2610.42112",
+      "authors": [
+        "Leon Lufkin",
+        "C. Dawes",
+        "Alexander Speicher",
+        "Kamesh Krishnamurthy",
+        "Tomas Figliolia",
+        "Beren Millidge"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2611.01617",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates vision-language model (VLM) inference without altering the output distribution, yet two factors limit its gains. Existing drafters either lack the image evidence required for visually grounded tokens or pay to condition on every visual token, although a short draft block typically depends on only a few image regions. Moreover, the value of verifying additional candidates varies with GPU load, so no fixed verification structure is efficient across serving conditions. We present Uni-LaSpec, a block-parallel speculative decoding framework that addresses both factors. To improve draft quality, Uni-LaSpec reuses the verifier's own attention: the query retained from the preceding verification ranks the cached, int8-quantized visual keys, and a cross-layer vote selects a few visual tokens that the drafter fuses through gated cross-attention. Acceptance-aware training further weights each draft position by its contribution to the accepted prefix. To allocate verification, a marginal-cost criterion selects the structure per request and per round: draft trees exploit idle verifier capacity under light load, whereas a dynamic head truncates linear drafts under heavy load. Across six VLMs from three model families and 17 text and multimodal benchmarks, selecting eight visual tokens retains at least 98.6% of the acceptance obtained from the full image at sub-millisecond selection cost. With greedy decoding at concurrency one, Uni-LaSpec achieves up to 5.11x text and 3.24x multimodal throughput over autoregressive decoding. Across six load levels and three GPU types, it outperforms autoregressive decoding in every setting and matches or exceeds the best fixed verification strategy in 123 of 144 settings; under bursty arrivals, it reduces mean end-to-end latency by 47.6% relative to linear verification.",
+      "identifiers": [
+        "SemanticScholar:06afc6f96c614f55f7f2609a9ff041d824cb7de1"
+      ],
+      "semantic_scholar_id": "06afc6f96c614f55f7f2609a9ff041d824cb7de1",
+      "canonical_id": "arXiv:2611.01617",
+      "arxiv_id": "2611.01617",
+      "authors": [
+        "Hong Nie",
+        "Zhang-Chi Gao",
+        "Yu Liang",
+        "Jun Yu",
+        "Bo Wang",
+        "Jian-Qing Sun",
+        "Sheng-Ping Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
+      "source_url": "https://arxiv.org/abs/2611.04253",
+      "year": 2026,
+      "published": "2026-11-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "On-demand model loading dominates response latency for interactive on-device AI, yet unified memory architectures (UMAs), now common on edge devices, should make it cheap by placing weights in memory the GPU already sees. However, frameworks still use the loading flow built for discrete GPUs, leaving significant inefficiencies. This paper presents UMLoad, a system-level model-loading accelerator that decouples a framework's logical allocations from their physical page backing. UMLoad uses on-demand reconstruction to eliminate the weight copy while preserving copy independence, and GPU-assisted page zeroing to accelerate runtime allocation while preserving its security guarantee. Implemented on Intel, AMD, and NVIDIA UMA platforms and evaluated with llama$.$cpp, PyTorch, and vLLM across six models, UMLoad reduces average loading time by 36.6%-71.9% over vanilla and 19.9%-62.7% over pipelined loaders, and cuts mean LLM-routing time to first token (TTFT) by 51.3%-59.3% and model-backed tool completion latency by 10.2%-31.6%.",
+      "identifiers": [
+        "SemanticScholar:7673ad27c15f5a66d47136cfad83bb7bf4304881"
+      ],
+      "semantic_scholar_id": "7673ad27c15f5a66d47136cfad83bb7bf4304881",
+      "canonical_id": "arXiv:2611.04253",
+      "arxiv_id": "2611.04253",
+      "authors": [
+        "Zi-Meng Wang",
+        "Jin-Rong Yang",
+        "Rong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.42112",
+      "identity_tokens": [
+        "id:SemanticScholar:2868a73886858edf584c59283567b7a52f8ffe69",
+        "id:arXiv:2610.42112",
+        "title:subquadratic attention with a hierarchical treestructured indexer",
+        "url:https://arxiv.org/abs/2610.42112"
+      ],
+      "record": {
+        "title": "Subquadratic Attention with a Hierarchical Tree-Structured Indexer",
+        "source_url": "https://arxiv.org/abs/2610.42112",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic scaling of attention is a fundamental bottleneck limiting the long-context capabilities of large language models (LLMs). A variety of approaches have attempted to circumvent this, but they either fail to match attention's expressiveness (e.g., sliding-window or linear attention variants with fixed-size state) or only achieve constant-factor speedups (e.g., sparse attention methods whose indexers themselves scale quadratically). In this paper, we derive an asymptotically subquadratic sparse attention method based on a hierarchical, tree-structured indexer, which we call Zyphra Hierarchical Attention (ZHA). ZHA constructs a tree of recursively compressed key summaries over the KV cache, which future queries traverse from the top down to retrieve a sparse subset of keys. Crucially, by iteratively growing the tree's depth, the total cost including routing and final attention grows sublinearly in sequence length, resulting in overall subquadratic (but superlinear) scaling for attention. We demonstrate that ZHA can be cheaply applied to existing pretrained models with only a short KL distillation training stage of a billion tokens, and maintains performance on long-context retrieval and challenging reasoning, mathematical, and agentic coding evaluation tasks. Moreover, we show that our method is highly robust to tree geometry including very deep trees of up to 6 levels. Finally, we develop a detailed performance model and show that our approach scales subquadratically, dramatically outperforms competing methods beyond 1 million tokens of context, and ultimately has the potential to extend effective context windows to the hundreds of millions or billions of tokens.",
+        "identifiers": [
+          "SemanticScholar:2868a73886858edf584c59283567b7a52f8ffe69"
+        ],
+        "semantic_scholar_id": "2868a73886858edf584c59283567b7a52f8ffe69",
+        "canonical_id": "arXiv:2610.42112",
+        "arxiv_id": "2610.42112",
+        "authors": [
+          "Leon Lufkin",
+          "C. Dawes",
+          "Alexander Speicher",
+          "Kamesh Krishnamurthy",
+          "Tomas Figliolia",
+          "Beren Millidge"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.01617",
+      "identity_tokens": [
+        "id:SemanticScholar:06afc6f96c614f55f7f2609a9ff041d824cb7de1",
+        "id:arXiv:2611.01617",
+        "title:seeing what matters verifying what pays loadadaptive speculative decoding for visionlanguage models",
+        "url:https://arxiv.org/abs/2611.01617"
+      ],
+      "record": {
+        "title": "Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2611.01617",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates vision-language model (VLM) inference without altering the output distribution, yet two factors limit its gains. Existing drafters either lack the image evidence required for visually grounded tokens or pay to condition on every visual token, although a short draft block typically depends on only a few image regions. Moreover, the value of verifying additional candidates varies with GPU load, so no fixed verification structure is efficient across serving conditions. We present Uni-LaSpec, a block-parallel speculative decoding framework that addresses both factors. To improve draft quality, Uni-LaSpec reuses the verifier's own attention: the query retained from the preceding verification ranks the cached, int8-quantized visual keys, and a cross-layer vote selects a few visual tokens that the drafter fuses through gated cross-attention. Acceptance-aware training further weights each draft position by its contribution to the accepted prefix. To allocate verification, a marginal-cost criterion selects the structure per request and per round: draft trees exploit idle verifier capacity under light load, whereas a dynamic head truncates linear drafts under heavy load. Across six VLMs from three model families and 17 text and multimodal benchmarks, selecting eight visual tokens retains at least 98.6% of the acceptance obtained from the full image at sub-millisecond selection cost. With greedy decoding at concurrency one, Uni-LaSpec achieves up to 5.11x text and 3.24x multimodal throughput over autoregressive decoding. Across six load levels and three GPU types, it outperforms autoregressive decoding in every setting and matches or exceeds the best fixed verification strategy in 123 of 144 settings; under bursty arrivals, it reduces mean end-to-end latency by 47.6% relative to linear verification.",
+        "identifiers": [
+          "SemanticScholar:06afc6f96c614f55f7f2609a9ff041d824cb7de1"
+        ],
+        "semantic_scholar_id": "06afc6f96c614f55f7f2609a9ff041d824cb7de1",
+        "canonical_id": "arXiv:2611.01617",
+        "arxiv_id": "2611.01617",
+        "authors": [
+          "Hong Nie",
+          "Zhang-Chi Gao",
+          "Yu Liang",
+          "Jun Yu",
+          "Bo Wang",
+          "Jian-Qing Sun",
+          "Sheng-Ping Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.04253",
+      "identity_tokens": [
+        "id:SemanticScholar:7673ad27c15f5a66d47136cfad83bb7bf4304881",
+        "id:arXiv:2611.04253",
+        "title:umload fast ondemand model loading on unified memory architecture",
+        "url:https://arxiv.org/abs/2611.04253"
+      ],
+      "record": {
+        "title": "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
+        "source_url": "https://arxiv.org/abs/2611.04253",
+        "year": 2026,
+        "published": "2026-11-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "On-demand model loading dominates response latency for interactive on-device AI, yet unified memory architectures (UMAs), now common on edge devices, should make it cheap by placing weights in memory the GPU already sees. However, frameworks still use the loading flow built for discrete GPUs, leaving significant inefficiencies. This paper presents UMLoad, a system-level model-loading accelerator that decouples a framework's logical allocations from their physical page backing. UMLoad uses on-demand reconstruction to eliminate the weight copy while preserving copy independence, and GPU-assisted page zeroing to accelerate runtime allocation while preserving its security guarantee. Implemented on Intel, AMD, and NVIDIA UMA platforms and evaluated with llama$.$cpp, PyTorch, and vLLM across six models, UMLoad reduces average loading time by 36.6%-71.9% over vanilla and 19.9%-62.7% over pipelined loaders, and cuts mean LLM-routing time to first token (TTFT) by 51.3%-59.3% and model-backed tool completion latency by 10.2%-31.6%.",
+        "identifiers": [
+          "SemanticScholar:7673ad27c15f5a66d47136cfad83bb7bf4304881"
+        ],
+        "semantic_scholar_id": "7673ad27c15f5a66d47136cfad83bb7bf4304881",
+        "canonical_id": "arXiv:2611.04253",
+        "arxiv_id": "2611.04253",
+        "authors": [
+          "Zi-Meng Wang",
+          "Jin-Rong Yang",
+          "Rong Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 15,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b28c974a89a26fd3f41f771efcfbb73c3cb5a49d1dd0524404aaed0b2f235323",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

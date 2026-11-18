@@ -1,0 +1,542 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-edd189ae411db7e8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-edd189ae411d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.26446",
+    "arXiv:2512.06727",
+    "arXiv:2603.22324",
+    "arXiv:2606.12487",
+    "arXiv:2607.19358",
+    "arXiv:2609.34380",
+    "arXiv:2610.06686",
+    "arXiv:2610.14686",
+    "arXiv:2610.18642",
+    "arXiv:2610.19026"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8cebcef652722a2f43d7828a59d720c8c2d64a79",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 5,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 5,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:31:20.461145+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.26446",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.06727",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.22324",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.22324"
+    },
+    {
+      "requested_id": "arXiv:2606.12487",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc"
+    },
+    {
+      "requested_id": "arXiv:2607.19358",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2607.19358"
+    },
+    {
+      "requested_id": "arXiv:2609.34380",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.34380"
+    },
+    {
+      "requested_id": "arXiv:2610.06686",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14686",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:813bb84aa254e8f8c44475faef8fce2f28ead93a"
+    },
+    {
+      "requested_id": "arXiv:2610.18642",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.26446",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in language comprehension and generation; however, their widespread adoption is constrained by substantial bandwidth and computational demands. While pruning and low-rank approximation have each demonstrated promising performance individually, their synergy for LLMs remains underexplored. We introduce \\underline{S}ynergistic \\underline{S}parse and \\underline{L}ow-Rank \\underline{C}ompression (SSLC) methods for LLMs, which leverages the strengths of both techniques: low-rank approximation compresses the model by retaining its essential structure with minimal information loss, whereas sparse optimization eliminates non-essential weights, preserving those crucial for generalization. Based on theoretical analysis, we first formulate the low-rank approximation and sparse optimization as a unified problem and solve it by iterative optimization algorithm. Experiments on LLaMA and Qwen2.5 models (7B-70B) show that SSLC, without any additional training steps, consistently surpasses standalone methods, achieving state-of-the-arts results. Notably, SSLC compresses Qwen2.5 by 50\\% with no performance drop and achieves at least 1.63$\\times$ speedup, offering a practical solution for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6"
+      ],
+      "semantic_scholar_id": "c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+      "canonical_id": "arXiv:2510.26446",
+      "arxiv_id": "2510.26446",
+      "doi": "10.18653/v1/2025.findings-emnlp.765",
+      "authors": [
+        "Zeliang Zong",
+        "Kai Zhang",
+        "Zhe-Yang Li",
+        "Wen-Ming Tan",
+        "Ye Ren",
+        "Yiyan Zhai",
+        "Ji-Lin Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 384,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2512.06727",
+      "year": 2025,
+      "published": "2025-12-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) scale in size and context length, the memory requirements of the key value (KV) cache have emerged as a major bottleneck during autoregressive decoding. The KV cache grows with sequence length and embedding dimension, often exceeding the memory footprint of the model itself and limiting achievable batch sizes and context windows. To address this challenge, we present KV CAR, a unified and architecture agnostic framework that significantly reduces KV cache storage while maintaining model fidelity. KV CAR combines two complementary techniques. First, a lightweight autoencoder learns compact representations of key and value tensors along the embedding dimension, compressing them before they are stored in the KV cache and restoring them upon retrieval. Second, a similarity driven reuse mechanism identifies opportunities to reuse KV tensors of specific attention heads across adjacent layers. Together, these methods reduce the dimensional and structural redundancy in KV tensors without requiring changes to the transformer architecture. Evaluations on GPT 2 and TinyLLaMA models across Wikitext, C4, PIQA, and Winogrande datasets demonstrate that KV CAR achieves up to 47.85 percent KV cache memory reduction with minimal impact on perplexity and zero shot accuracy. System level measurements on an NVIDIA A40 GPU show that the reduced KV footprint directly translates into longer sequence lengths and larger batch sizes during inference. These results highlight the effectiveness of KV CAR in enabling memory efficient LLM inference.",
+      "identifiers": [
+        "SemanticScholar:78a7d0994ab6fb4ccafdfb87d9e8fc2f171558ef"
+      ],
+      "semantic_scholar_id": "78a7d0994ab6fb4ccafdfb87d9e8fc2f171558ef",
+      "canonical_id": "arXiv:2512.06727",
+      "arxiv_id": "2512.06727",
+      "doi": "10.48550/arXiv.2512.06727",
+      "authors": [
+        "Sourjya Roy",
+        "Shrihari Sridharan",
+        "Surya Selvam",
+        "A. Raghunathan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 346,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OVAL: Output-Aware Local Page Bases for KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2610.06686",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long context inference with large language models becomes increasingly expensive as attention must operate over an ever growing KV cache. Page sparse attention reduces this cost by representing each KV page compactly and retrieving only a subset for each query. Existing retrieval methods are designed to estimate attention scores or page relevance, but their objectives do not directly account for how approximation errors affect the resulting value weighted attention output. We introduce \\method{}, an output aware page encoding derived from the joint structure of keys and values while preserving the key information needed for accurate retrieval. \\method{} is training free and requires no additional value dependent statistics at inference time. Once constructed, its stored representation has the same size and decode time scoring cost as a key only spectral representation. Across long reasoning, long context understanding, and long generation benchmarks, \\method{} consistently improves over the key only spectral baseline and performs competitively with recent KV cache compression and retrieval methods. On long reasoning benchmarks, it achieves strong avg@\\(k\\) performance across model benchmark pairs, while matching or surpassing leading baselines on several long context understanding and generation settings with modest decoding overhead. Code is available at \\url{https://github.com/Ashkan13776/oval-kv}.",
+      "identifiers": [
+        "SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253"
+      ],
+      "semantic_scholar_id": "16b45397fe68d21ef5fb95e1cdb731e689e31253",
+      "canonical_id": "arXiv:2610.06686",
+      "arxiv_id": "2610.06686",
+      "authors": [
+        "Ashkan Shahbazi",
+        "Chayne Thrash",
+        "Soheil Kolouri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2610.18642",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Key-Value (KV) cache constitutes a dominant source of memory consumption during large language model (LLM) inference, particularly in long-context and complex reasoning scenarios. Existing KV cache quantization methods have explored different compression granularities, including layer-wise precision adjustment and token-level information preservation. In practical deployment, however, the key challenge is not merely compression, but how to allocate limited quantization resources among heterogeneous precision preservation strategies under a fixed KV cache memory budget. We propose MultiAlloc, a profiling-guided precision allocation framework for KV cache quantization that adaptively distributes limited quantization resources between layer-wise precision enhancement and token-wise preservation. MultiAlloc employs lightweight offline profiling to characterize layer sensitivity and token importance, enabling adaptive precision allocation under a fixed memory constraint. Guided by the profiled memory--accuracy trade-off, it automatically derives an effective precision allocation strategy without online allocation search, and applies the resulting policy during inference. Extensive experiments on reasoning and long-context benchmarks demonstrate that MultiAlloc consistently improves over layer-wise, token-wise, and recent multi-granularity KV cache quantization methods under matched memory budgets across diverse models, including Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+      "identifiers": [
+        "SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795"
+      ],
+      "semantic_scholar_id": "f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+      "canonical_id": "arXiv:2610.18642",
+      "arxiv_id": "2610.18642",
+      "authors": [
+        "Yang Zhou",
+        "Zhi-Ping Wu",
+        "Run-Chang Jiang",
+        "Dong-Dong Ren",
+        "You-Fang Han",
+        "Wei Zhao",
+        "Dong-Qi Cai",
+        "Wen-Bin Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Joint Subspace Sparse Attention for Efficient Long-Context Decoding",
+      "source_url": "https://arxiv.org/abs/2610.19026",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces the KV-cache traffic that dominates long-context LLM decoding, but practical methods largely operate at coarse granularity. Token-level selection offers finer control, yet presents two challenges: low-dimensional scoring may lose query--key structure needed for accurate ranking, while gathering scattered selected tokens can offset the resulting latency benefit. We introduce Joint Subspace Sparse Attention (JSSA) to address both challenges. For selection quality, JSSA learns a shared low-dimensional query--key subspace by minimizing token-score preservation error. We upper-bound the resulting non-convex objective with a tractable marginal objective that admits a closed-form spectral solution; direct refinement of the exact objective provides no measurable improvement in the tested settings. For execution efficiency, we develop a gather-free token-level indexed-attention kernel that supports distinct per-KV-head selections under the standard grouped-query attention (GQA) KV-cache layout. Across standard GQA, hybrid sliding-window/global attention, and Multi-head Latent Attention (MLA) models, JSSA consistently remains close to full-KV accuracy while avoiding the substantial generation-length inflation and architecture-dependent failures observed with competing methods. On an NVIDIA B200 GPU, JSSA achieves up to $6.43\\times$ the decoding throughput of full-KV attention at 128K context. JSSA achieves reasoning accuracy comparable to model-native DSA without model training and reaches 96--99\\% of its decoding throughput even at 700B scale large models.",
+      "identifiers": [
+        "SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2"
+      ],
+      "semantic_scholar_id": "f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+      "canonical_id": "arXiv:2610.19026",
+      "arxiv_id": "2610.19026",
+      "authors": [
+        "Jiwon Song",
+        "Yoon Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.26446",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.765",
+        "id:SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+        "id:arXiv:2510.26446",
+        "title:112 a synergistic sparse and lowrank compression method for large language models",
+        "url:https://arxiv.org/abs/2510.26446"
+      ],
+      "record": {
+        "title": "1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.26446",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in language comprehension and generation; however, their widespread adoption is constrained by substantial bandwidth and computational demands. While pruning and low-rank approximation have each demonstrated promising performance individually, their synergy for LLMs remains underexplored. We introduce \\underline{S}ynergistic \\underline{S}parse and \\underline{L}ow-Rank \\underline{C}ompression (SSLC) methods for LLMs, which leverages the strengths of both techniques: low-rank approximation compresses the model by retaining its essential structure with minimal information loss, whereas sparse optimization eliminates non-essential weights, preserving those crucial for generalization. Based on theoretical analysis, we first formulate the low-rank approximation and sparse optimization as a unified problem and solve it by iterative optimization algorithm. Experiments on LLaMA and Qwen2.5 models (7B-70B) show that SSLC, without any additional training steps, consistently surpasses standalone methods, achieving state-of-the-arts results. Notably, SSLC compresses Qwen2.5 by 50\\% with no performance drop and achieves at least 1.63$\\times$ speedup, offering a practical solution for efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6"
+        ],
+        "semantic_scholar_id": "c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+        "canonical_id": "arXiv:2510.26446",
+        "arxiv_id": "2510.26446",
+        "doi": "10.18653/v1/2025.findings-emnlp.765",
+        "authors": [
+          "Zeliang Zong",
+          "Kai Zhang",
+          "Zhe-Yang Li",
+          "Wen-Ming Tan",
+          "Ye Ren",
+          "Yiyan Zhai",
+          "Ji-Lin Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 384,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.06727",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.06727",
+        "id:SemanticScholar:78a7d0994ab6fb4ccafdfb87d9e8fc2f171558ef",
+        "id:arXiv:2512.06727",
+        "title:kvcar kv cache compression using autoencoders and kv reuse in large language models",
+        "url:https://arxiv.org/abs/2512.06727"
+      ],
+      "record": {
+        "title": "KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2512.06727",
+        "year": 2025,
+        "published": "2025-12-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) scale in size and context length, the memory requirements of the key value (KV) cache have emerged as a major bottleneck during autoregressive decoding. The KV cache grows with sequence length and embedding dimension, often exceeding the memory footprint of the model itself and limiting achievable batch sizes and context windows. To address this challenge, we present KV CAR, a unified and architecture agnostic framework that significantly reduces KV cache storage while maintaining model fidelity. KV CAR combines two complementary techniques. First, a lightweight autoencoder learns compact representations of key and value tensors along the embedding dimension, compressing them before they are stored in the KV cache and restoring them upon retrieval. Second, a similarity driven reuse mechanism identifies opportunities to reuse KV tensors of specific attention heads across adjacent layers. Together, these methods reduce the dimensional and structural redundancy in KV tensors without requiring changes to the transformer architecture. Evaluations on GPT 2 and TinyLLaMA models across Wikitext, C4, PIQA, and Winogrande datasets demonstrate that KV CAR achieves up to 47.85 percent KV cache memory reduction with minimal impact on perplexity and zero shot accuracy. System level measurements on an NVIDIA A40 GPU show that the reduced KV footprint directly translates into longer sequence lengths and larger batch sizes during inference. These results highlight the effectiveness of KV CAR in enabling memory efficient LLM inference.",
+        "identifiers": [
+          "SemanticScholar:78a7d0994ab6fb4ccafdfb87d9e8fc2f171558ef"
+        ],
+        "semantic_scholar_id": "78a7d0994ab6fb4ccafdfb87d9e8fc2f171558ef",
+        "canonical_id": "arXiv:2512.06727",
+        "arxiv_id": "2512.06727",
+        "doi": "10.48550/arXiv.2512.06727",
+        "authors": [
+          "Sourjya Roy",
+          "Shrihari Sridharan",
+          "Surya Selvam",
+          "A. Raghunathan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 346,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06686",
+      "identity_tokens": [
+        "id:SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253",
+        "id:arXiv:2610.06686",
+        "title:oval outputaware local page bases for kv cache retrieval",
+        "url:https://arxiv.org/abs/2610.06686"
+      ],
+      "record": {
+        "title": "OVAL: Output-Aware Local Page Bases for KV Cache Retrieval",
+        "source_url": "https://arxiv.org/abs/2610.06686",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long context inference with large language models becomes increasingly expensive as attention must operate over an ever growing KV cache. Page sparse attention reduces this cost by representing each KV page compactly and retrieving only a subset for each query. Existing retrieval methods are designed to estimate attention scores or page relevance, but their objectives do not directly account for how approximation errors affect the resulting value weighted attention output. We introduce \\method{}, an output aware page encoding derived from the joint structure of keys and values while preserving the key information needed for accurate retrieval. \\method{} is training free and requires no additional value dependent statistics at inference time. Once constructed, its stored representation has the same size and decode time scoring cost as a key only spectral representation. Across long reasoning, long context understanding, and long generation benchmarks, \\method{} consistently improves over the key only spectral baseline and performs competitively with recent KV cache compression and retrieval methods. On long reasoning benchmarks, it achieves strong avg@\\(k\\) performance across model benchmark pairs, while matching or surpassing leading baselines on several long context understanding and generation settings with modest decoding overhead. Code is available at \\url{https://github.com/Ashkan13776/oval-kv}.",
+        "identifiers": [
+          "SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253"
+        ],
+        "semantic_scholar_id": "16b45397fe68d21ef5fb95e1cdb731e689e31253",
+        "canonical_id": "arXiv:2610.06686",
+        "arxiv_id": "2610.06686",
+        "authors": [
+          "Ashkan Shahbazi",
+          "Chayne Thrash",
+          "Soheil Kolouri"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18642",
+      "identity_tokens": [
+        "id:SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+        "id:arXiv:2610.18642",
+        "title:multialloc budgetaware precision allocation for kv cache quantization",
+        "url:https://arxiv.org/abs/2610.18642"
+      ],
+      "record": {
+        "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+        "source_url": "https://arxiv.org/abs/2610.18642",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Key-Value (KV) cache constitutes a dominant source of memory consumption during large language model (LLM) inference, particularly in long-context and complex reasoning scenarios. Existing KV cache quantization methods have explored different compression granularities, including layer-wise precision adjustment and token-level information preservation. In practical deployment, however, the key challenge is not merely compression, but how to allocate limited quantization resources among heterogeneous precision preservation strategies under a fixed KV cache memory budget. We propose MultiAlloc, a profiling-guided precision allocation framework for KV cache quantization that adaptively distributes limited quantization resources between layer-wise precision enhancement and token-wise preservation. MultiAlloc employs lightweight offline profiling to characterize layer sensitivity and token importance, enabling adaptive precision allocation under a fixed memory constraint. Guided by the profiled memory--accuracy trade-off, it automatically derives an effective precision allocation strategy without online allocation search, and applies the resulting policy during inference. Extensive experiments on reasoning and long-context benchmarks demonstrate that MultiAlloc consistently improves over layer-wise, token-wise, and recent multi-granularity KV cache quantization methods under matched memory budgets across diverse models, including Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+        "identifiers": [
+          "SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795"
+        ],
+        "semantic_scholar_id": "f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+        "canonical_id": "arXiv:2610.18642",
+        "arxiv_id": "2610.18642",
+        "authors": [
+          "Yang Zhou",
+          "Zhi-Ping Wu",
+          "Run-Chang Jiang",
+          "Dong-Dong Ren",
+          "You-Fang Han",
+          "Wei Zhao",
+          "Dong-Qi Cai",
+          "Wen-Bin Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19026",
+      "identity_tokens": [
+        "id:SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+        "id:arXiv:2610.19026",
+        "title:joint subspace sparse attention for efficient longcontext decoding",
+        "url:https://arxiv.org/abs/2610.19026"
+      ],
+      "record": {
+        "title": "Joint Subspace Sparse Attention for Efficient Long-Context Decoding",
+        "source_url": "https://arxiv.org/abs/2610.19026",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention reduces the KV-cache traffic that dominates long-context LLM decoding, but practical methods largely operate at coarse granularity. Token-level selection offers finer control, yet presents two challenges: low-dimensional scoring may lose query--key structure needed for accurate ranking, while gathering scattered selected tokens can offset the resulting latency benefit. We introduce Joint Subspace Sparse Attention (JSSA) to address both challenges. For selection quality, JSSA learns a shared low-dimensional query--key subspace by minimizing token-score preservation error. We upper-bound the resulting non-convex objective with a tractable marginal objective that admits a closed-form spectral solution; direct refinement of the exact objective provides no measurable improvement in the tested settings. For execution efficiency, we develop a gather-free token-level indexed-attention kernel that supports distinct per-KV-head selections under the standard grouped-query attention (GQA) KV-cache layout. Across standard GQA, hybrid sliding-window/global attention, and Multi-head Latent Attention (MLA) models, JSSA consistently remains close to full-KV accuracy while avoiding the substantial generation-length inflation and architecture-dependent failures observed with competing methods. On an NVIDIA B200 GPU, JSSA achieves up to $6.43\\times$ the decoding throughput of full-KV attention at 128K context. JSSA achieves reasoning accuracy comparable to model-native DSA without model training and reaches 96--99\\% of its decoding throughput even at 700B scale large models.",
+        "identifiers": [
+          "SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2"
+        ],
+        "semantic_scholar_id": "f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+        "canonical_id": "arXiv:2610.19026",
+        "arxiv_id": "2610.19026",
+        "authors": [
+          "Jiwon Song",
+          "Yoon Kim",
+          "Jae-Joon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:296028c6ff7112c222cbad108251b743d3ff947e4b4d5613e5fe6e43405bfc25",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

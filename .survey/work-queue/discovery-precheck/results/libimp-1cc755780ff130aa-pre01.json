@@ -1,0 +1,259 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1cc755780ff130aa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1cc755780ff1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.07822",
+    "arXiv:2610.23935",
+    "arXiv:2610.37810",
+    "arXiv:2611.02508",
+    "arXiv:2611.02975"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "8cebcef652722a2f43d7828a59d720c8c2d64a79",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T07:31:20.378244+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.07822",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:80d792af6aecdbc491398cfa12fafbaf3f03b889"
+    },
+    {
+      "requested_id": "arXiv:2610.23935",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37810",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:bdb3d841f9531475eac4f56b4109df300cccf69e"
+    },
+    {
+      "requested_id": "arXiv:2611.02508",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.02975",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:1ffb83c59ee4ab1527bcdc972a3a91f1f58d72ba"
+    }
+  ],
+  "results": [
+    {
+      "title": "Factorization-Guided Training and Inference for Diffusion-Drafted Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.23935",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference through parallel verification of tokens proposed by a drafter. Diffusion drafters further parallelize proposal generation, but greater proposal capacity or higher mean accepted tokens (MAT) need not yield higher throughput. Because verification accepts only a consecutive prefix, early rejections can render later correct predictions ineffective, limiting MAT gains, while even higher MAT may not improve throughput if per-round latency increases. We introduce DScout, which uses two complementary factorizations to guide diffusion drafter training and inference for higher throughput. For training, DScout factorizes position-wise loss into inclusion, weighting, and prediction loss. This guides the design and combination of mixed-horizon training, intra-block unmasking, and acceptance-weighted loss to align supervision with prefix acceptance and improve MAT. For inference, DScout factorizes throughput as the ratio of MAT to per-round latency, guiding target-conditioning depth, drafter depth, and inference block size selection to identify a high-throughput configuration for each workload. Across six benchmarks, DScout achieves $3.84\\times$ and $4.14\\times$ mean speedups over autoregressive decoding on Qwen3-4B and Qwen3-8B, respectively, improving mean speedup over the state-of-the-art baseline by 9.1% and 7.1%. Across models and concurrency settings, our inference configuration policy provides up to 9.75% additional mean speedup over DScout's fixed configuration.",
+      "identifiers": [
+        "SemanticScholar:51c27e112a5394b75ee1aa26879d463aa58cb2ca"
+      ],
+      "semantic_scholar_id": "51c27e112a5394b75ee1aa26879d463aa58cb2ca",
+      "canonical_id": "arXiv:2610.23935",
+      "arxiv_id": "2610.23935",
+      "authors": [
+        "Jia-Kun Fan",
+        "Ming-Qing Xiao",
+        "Qiang Wang",
+        "Neiwen Ling",
+        "Zhi-Chao Liu",
+        "Zhi-Hao Jia",
+        "Dimitrios S. Nikolopoulos",
+        "Zi-Jun Wei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index",
+      "source_url": "https://arxiv.org/abs/2611.02508",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Learned sparse attention, used in production models such as DeepSeek-V4 and GLM-5, lets each query attend to only k keys chosen by a lightweight indexer, but the indexer still scores every key in the prefix. At one million tokens, this selection takes more than half of prefill time. Two-stage selection over contiguous blocks, as in HiSA, reduces this cost, but its recall declines as context grows at a fixed candidate budget. We present AttentionIndex, which routes each query over an inverted-file index that groups indexer keys by similarity and refines the candidates with the native indexer score. AttentionIndex builds the index during prefill, making new keys searchable immediately, reusing previous clustering to keep maintenance cheap, and exposing each query only to clusters built from its own prefix. On GLM-5.3 and DeepSeek-V4-Flash at one million tokens, AttentionIndex delivers 1.3-1.8 times the prefill throughput of exhaustive selection, and at throughput within 5% of HiSA, it recovers 17.0 and 10.0 percentage points more of the exhaustive top-k, respectively. AttentionIndex also improves accuracy on long-context benchmarks by up to 18.4 percentage points over HiSA at the same candidate budget.",
+      "identifiers": [
+        "SemanticScholar:a5e76a33b495ef0f17374e2334e7b8b5bade0baf"
+      ],
+      "semantic_scholar_id": "a5e76a33b495ef0f17374e2334e7b8b5bade0baf",
+      "canonical_id": "arXiv:2611.02508",
+      "arxiv_id": "2611.02508",
+      "authors": [
+        "Jeongmin Brian Park",
+        "Wen-mei W. Hwu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.23935",
+      "identity_tokens": [
+        "id:SemanticScholar:51c27e112a5394b75ee1aa26879d463aa58cb2ca",
+        "id:arXiv:2610.23935",
+        "title:factorizationguided training and inference for diffusiondrafted speculative decoding",
+        "url:https://arxiv.org/abs/2610.23935"
+      ],
+      "record": {
+        "title": "Factorization-Guided Training and Inference for Diffusion-Drafted Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.23935",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference through parallel verification of tokens proposed by a drafter. Diffusion drafters further parallelize proposal generation, but greater proposal capacity or higher mean accepted tokens (MAT) need not yield higher throughput. Because verification accepts only a consecutive prefix, early rejections can render later correct predictions ineffective, limiting MAT gains, while even higher MAT may not improve throughput if per-round latency increases. We introduce DScout, which uses two complementary factorizations to guide diffusion drafter training and inference for higher throughput. For training, DScout factorizes position-wise loss into inclusion, weighting, and prediction loss. This guides the design and combination of mixed-horizon training, intra-block unmasking, and acceptance-weighted loss to align supervision with prefix acceptance and improve MAT. For inference, DScout factorizes throughput as the ratio of MAT to per-round latency, guiding target-conditioning depth, drafter depth, and inference block size selection to identify a high-throughput configuration for each workload. Across six benchmarks, DScout achieves $3.84\\times$ and $4.14\\times$ mean speedups over autoregressive decoding on Qwen3-4B and Qwen3-8B, respectively, improving mean speedup over the state-of-the-art baseline by 9.1% and 7.1%. Across models and concurrency settings, our inference configuration policy provides up to 9.75% additional mean speedup over DScout's fixed configuration.",
+        "identifiers": [
+          "SemanticScholar:51c27e112a5394b75ee1aa26879d463aa58cb2ca"
+        ],
+        "semantic_scholar_id": "51c27e112a5394b75ee1aa26879d463aa58cb2ca",
+        "canonical_id": "arXiv:2610.23935",
+        "arxiv_id": "2610.23935",
+        "authors": [
+          "Jia-Kun Fan",
+          "Ming-Qing Xiao",
+          "Qiang Wang",
+          "Neiwen Ling",
+          "Zhi-Chao Liu",
+          "Zhi-Hao Jia",
+          "Dimitrios S. Nikolopoulos",
+          "Zi-Jun Wei"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 42,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.02508",
+      "identity_tokens": [
+        "id:SemanticScholar:a5e76a33b495ef0f17374e2334e7b8b5bade0baf",
+        "id:arXiv:2611.02508",
+        "title:attentionindex accelerating learned sparse attention with a causal invertedfile index",
+        "url:https://arxiv.org/abs/2611.02508"
+      ],
+      "record": {
+        "title": "AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index",
+        "source_url": "https://arxiv.org/abs/2611.02508",
+        "year": 2026,
+        "published": "2026-11-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Learned sparse attention, used in production models such as DeepSeek-V4 and GLM-5, lets each query attend to only k keys chosen by a lightweight indexer, but the indexer still scores every key in the prefix. At one million tokens, this selection takes more than half of prefill time. Two-stage selection over contiguous blocks, as in HiSA, reduces this cost, but its recall declines as context grows at a fixed candidate budget. We present AttentionIndex, which routes each query over an inverted-file index that groups indexer keys by similarity and refines the candidates with the native indexer score. AttentionIndex builds the index during prefill, making new keys searchable immediately, reusing previous clustering to keep maintenance cheap, and exposing each query only to clusters built from its own prefix. On GLM-5.3 and DeepSeek-V4-Flash at one million tokens, AttentionIndex delivers 1.3-1.8 times the prefill throughput of exhaustive selection, and at throughput within 5% of HiSA, it recovers 17.0 and 10.0 percentage points more of the exhaustive top-k, respectively. AttentionIndex also improves accuracy on long-context benchmarks by up to 18.4 percentage points over HiSA at the same candidate budget.",
+        "identifiers": [
+          "SemanticScholar:a5e76a33b495ef0f17374e2334e7b8b5bade0baf"
+        ],
+        "semantic_scholar_id": "a5e76a33b495ef0f17374e2334e7b8b5bade0baf",
+        "canonical_id": "arXiv:2611.02508",
+        "arxiv_id": "2611.02508",
+        "authors": [
+          "Jeongmin Brian Park",
+          "Wen-mei W. Hwu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a99e909199af4a5e10b220a4d6816b7d04a2836c578843694b5c499093cebf41",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
