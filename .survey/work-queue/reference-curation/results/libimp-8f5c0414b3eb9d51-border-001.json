@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f5c0414b3eb9d51-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05385",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05385",
+    "identity_tokens": [
+      "arXiv:2512.05385"
+    ],
+    "reason": "動画LLM向け浅層剪定ShaRP。浅いデコーダ層の注意スコアがトークン有用性の指標として不安定になる失敗様式を同定し、高い圧縮率でも劣化を抑える。視覚トークン剪定の機構ではあるが、動画LLMに特化し境界。",
+    "first_checked_at": "2026-11-18T07:17:00+00:00",
+    "last_checked_at": "2026-11-18T07:17:00+00:00",
+    "linked_from": [
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ShaRP: SHAllow-LayeR Pruning for Efficient Video Large Language Models"
+  },
+  "processed_at": "2026-11-18T07:17:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f5c0414b3eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

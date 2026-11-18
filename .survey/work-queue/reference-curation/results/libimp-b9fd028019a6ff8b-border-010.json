@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9fd028019a6ff8b-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.15503",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.15503",
+    "identity_tokens": [
+      "arXiv:2511.15503"
+    ],
+    "reason": "処理内メモリ向けMLカーネルのデータ中心コンパイルDCC。ホストとPIM装置の間で必要なデータ再配置を、MLカーネル（LLMを含む）のコンパイルで体系的に最適化する。推論カーネルの基盤ではあるが、汎用MLコンパイルであり境界。",
+    "first_checked_at": "2026-11-18T07:17:09+00:00",
+    "last_checked_at": "2026-11-18T07:17:09+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "Offload / Hierarchical Memory",
+      "cpu-offload",
+      "inference-systems",
+      "kernel-runtime-compilation",
+      "kv-cache-memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures"
+  },
+  "processed_at": "2026-11-18T07:17:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9fd028019a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

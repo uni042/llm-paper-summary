@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15555ae7461997d2-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.01407",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.01407",
+    "identity_tokens": [
+      "arXiv:2504.01407"
+    ],
+    "reason": "効率的長尺動画理解のための時間的ズームインZoomV。クエリに応じて関連する時間窓を検索し注目させる3段階の枠組み。動画理解の推論効率化ではあるが、検索と選択の枠組みであり境界。",
+    "first_checked_at": "2026-11-18T07:16:37+00:00",
+    "last_checked_at": "2026-11-18T07:16:37+00:00",
+    "linked_from": [
+      "Inference / Multimodal Long-Context Memory Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ZoomV: Temporal Zoom-in for Efficient Long Video Understanding"
+  },
+  "processed_at": "2026-11-18T07:16:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15555ae74619",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8787e9c32649b2a9-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.05780",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.05780",
+    "identity_tokens": [
+      "arXiv:2608.05780"
+    ],
+    "reason": "効率的長尺動画理解のための証拠駆動動的視覚選択EviSelect。外部の代理スコアラと硬いヒューリスティクスに依るフレーム選択を、対象MLLM内部の注意証拠に基づく細粒度の動的選択に置き換える。動画理解の推論効率化であり境界。",
+    "first_checked_at": "2026-11-18T07:16:55+00:00",
+    "last_checked_at": "2026-11-18T07:16:55+00:00",
+    "linked_from": [
+      "inference-systems",
+      "疎注意／長文脈学習"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding"
+  },
+  "processed_at": "2026-11-18T07:16:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

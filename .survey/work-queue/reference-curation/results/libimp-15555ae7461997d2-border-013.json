@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15555ae7461997d2-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.23225",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.23225",
+    "identity_tokens": [
+      "arXiv:2506.23225"
+    ],
+    "reason": "マスク付きゲート線形ユニットMGLU。ゲートと値で別々の重み行列を読むメモリ読み取りのボトルネックに対し、共有の重み行列への要素単位マスクで置き換え、効率的なカーネル実装を持つ。推論のメモリ効率に関わるが、モデル構成要素の設計であり境界。",
+    "first_checked_at": "2026-11-18T07:16:38+00:00",
+    "last_checked_at": "2026-11-18T07:16:38+00:00",
+    "linked_from": [
+      "Conditional Computation",
+      "Inference / Structured Model Compression and Pruning",
+      "inference-systems",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Masked Gated Linear Unit"
+  },
+  "processed_at": "2026-11-18T07:16:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15555ae74619",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

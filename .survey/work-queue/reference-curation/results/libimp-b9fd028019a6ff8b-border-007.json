@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9fd028019a6ff8b-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.23500",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.23500",
+    "identity_tokens": [
+      "arXiv:2509.23500"
+    ],
+    "reason": "外れ値を超えて：量子化下の最適化手法の研究。最適化手法の選択が学習後量子化と量子化配慮訓練の下での頑健性にどう影響するかを、6種の最適化手法で系統的に調べる研究。量子化の配備に関わるが、推論機構の提案ではなく研究であり境界。",
+    "first_checked_at": "2026-11-18T07:17:08+00:00",
+    "last_checked_at": "2026-11-18T07:17:08+00:00",
+    "linked_from": [
+      "arXiv:2405.16406のICLR 2025採録版。"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Outliers: A Study of Optimizers Under Quantization"
+  },
+  "processed_at": "2026-11-18T07:17:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9fd028019a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

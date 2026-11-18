@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8787e9c32649b2a9-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34972",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34972",
+    "identity_tokens": [
+      "arXiv:2609.34972"
+    ],
+    "reason": "MLPだけ：MLLM向け効率的視覚状態再構成。視覚トークンを捨てずに、視覚からテキストへの情報流への低ランク介入で表現の発展費用を下げる。MLLM推論の効率化ではあるが、モデル内部の設計であり境界。",
+    "first_checked_at": "2026-11-18T07:16:57+00:00",
+    "last_checked_at": "2026-11-18T07:16:57+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md",
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
+      "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models"
+  },
+  "processed_at": "2026-11-18T07:16:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

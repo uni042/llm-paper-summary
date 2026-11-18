@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42c454c067eaa4c4-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.14961",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.14961",
+    "identity_tokens": [
+      "arXiv:2510.14961"
+    ],
+    "reason": "再帰深度モデル向け効率的並列サンプラー。拡散強制のサンプラーで、毎回の前方計算で新トークンをデコードしながら生成を加速する。再帰深度という特殊なアーキテクチャ向けの生成手法であり境界。",
+    "first_checked_at": "2026-11-18T07:16:44+00:00",
+    "last_checked_at": "2026-11-18T07:16:44+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:16:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42c454c067ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

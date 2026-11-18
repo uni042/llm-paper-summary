@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42c454c067eaa4c4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.28369",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.28369",
+    "identity_tokens": [
+      "arXiv:2610.28369"
+    ],
+    "reason": "基線を飛ばすな：動的専門家スキップの統制比較。較正済み重要度や学習済み配分器など代表的な4手法を統一した分類の下でベンチマークし、比較条件の不統一を正す研究。推論時の専門家削減の評価研究であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:16:45+00:00",
+    "last_checked_at": "2026-11-18T07:16:45+00:00",
+    "linked_from": [
+      "adaptive-expert-computation-compression",
+      "fine-grained MoE inference / expert skipping / expert pruning / serving efficiency",
+      "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs"
+  },
+  "processed_at": "2026-11-18T07:16:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42c454c067ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

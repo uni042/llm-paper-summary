@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b96ef717612e1028-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.13202",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.13202",
+    "identity_tokens": [
+      "arXiv:2610.13202"
+    ],
+    "reason": "自己疎投機的デコードによる高速で忠実なRLロールアウトS3R。検証可能報酬つき強化学習のロールアウト生成で、疎注意が学習に使う応答群を変えてしまう問題を避けながらKVトラフィックを減らす。投機的デコードの応用だが、主題はRL訓練のロールアウトであり境界。",
+    "first_checked_at": "2026-11-18T07:17:05+00:00",
+    "last_checked_at": "2026-11-18T07:17:05+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "inference-systems",
+      "llm-serving-scheduling-disaggregation",
+      "speculative-decoding",
+      "training-reinforcement-learning-quantization",
+      "投機的復号 / EAGLE",
+      "長文LLM推論、疎注意、自己投機復号、鍵値キャッシュ選択"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "S$^3$R: Fast and Faithful RL Rollouts via Self-Sparse Speculative Decoding"
+  },
+  "processed_at": "2026-11-18T07:17:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b96ef717612e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

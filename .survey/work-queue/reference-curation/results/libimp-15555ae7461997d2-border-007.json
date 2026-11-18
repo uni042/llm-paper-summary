@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15555ae7461997d2-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.02406",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.02406",
+    "identity_tokens": [
+      "arXiv:2502.02406"
+    ],
+    "reason": "長い視覚入力向け分散交差注意LV-XAttn。交差注意層の通信オーバーヘッドを最小化した正確な分散交差注意で、複数GPUにまたがるMLLMの訓練と推論のボトルネックに対処する。推論にも関わるが、訓練と推論の双方を対象とする分散機構であり境界。",
+    "first_checked_at": "2026-11-18T07:16:36+00:00",
+    "last_checked_at": "2026-11-18T07:16:36+00:00",
+    "linked_from": [
+      "Ring Attention / sequence parallelism / exact distributed attention",
+      "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+      "inference-systems",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LV-XAttn: Distributed Cross-Attention for Long Visual Inputs in Multimodal Large Language Models"
+  },
+  "processed_at": "2026-11-18T07:16:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15555ae74619",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

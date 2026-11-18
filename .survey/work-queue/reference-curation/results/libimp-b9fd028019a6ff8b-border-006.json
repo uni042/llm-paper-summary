@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9fd028019a6ff8b-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.22144",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.22144",
+    "identity_tokens": [
+      "arXiv:2509.22144"
+    ],
+    "reason": "長から細へ：性能配慮型の適応的CoT圧縮MACC。トークン弾性現象を利用し、複数ラウンドの洗練でCoTを段階的に圧縮して入力ごとに最適な圧縮深度を決める。推論時の枠組みではあるが、推論軌跡の圧縮手法であり境界。",
+    "first_checked_at": "2026-11-18T07:17:07+00:00",
+    "last_checked_at": "2026-11-18T07:17:07+00:00",
+    "linked_from": [
+      "inference-systems",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Long to Lean: Performance-aware and Adaptive Chain-of-Thought Compression via Multi-round Refinement"
+  },
+  "processed_at": "2026-11-18T07:17:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9fd028019a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

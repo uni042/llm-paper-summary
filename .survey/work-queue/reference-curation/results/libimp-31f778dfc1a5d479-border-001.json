@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-31f778dfc1a5d479-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.23290",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.23290",
+    "identity_tokens": [
+      "arXiv:2610.23290"
+    ],
+    "reason": "情報流から見た拡散MLLMの繰り返しの呪いCoTA++。双方向注意で自己回帰KVキャッシュが使えない拡散MLLMの近似キャッシュが引き起こす繰り返し失敗を、文脈トークンの情報流から追う分析。キャッシュの分析であり境界。",
+    "first_checked_at": "2026-11-18T07:16:42+00:00",
+    "last_checked_at": "2026-11-18T07:16:42+00:00",
+    "linked_from": [
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "inference-systems",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+      "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CoTA++: Understanding the Repeat Curse in dMLLMs from an Information Flow Perspective"
+  },
+  "processed_at": "2026-11-18T07:16:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-31f778dfc1a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

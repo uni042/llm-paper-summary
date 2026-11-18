@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-465214ea3927094c-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.15252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.15252",
+    "identity_tokens": [
+      "arXiv:2505.15252"
+    ],
+    "reason": "自己回帰デコードしない効率的プライベートGPT。公開モデルで複数トークンを生成し、私有モデルで安全に検証する公開デコード＋安全検証の方式で、暗号的推論の遅延を下げる。投機的検証に似た推論機構ではあるが、主題はプライバシー保護であり境界。",
+    "first_checked_at": "2026-11-18T07:16:48+00:00",
+    "last_checked_at": "2026-11-18T07:16:48+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化",
+      "投機的復号・オンライン適応・知識蒸留"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "An Efficient Private GPT Never Autoregressively Decodes"
+  },
+  "processed_at": "2026-11-18T07:16:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-465214ea3927",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

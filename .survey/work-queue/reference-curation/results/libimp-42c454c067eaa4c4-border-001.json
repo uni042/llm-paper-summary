@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42c454c067eaa4c4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.11052",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.11052",
+    "identity_tokens": [
+      "arXiv:2510.11052"
+    ],
+    "reason": "拡散型言語モデル向け潜在洗練デコードLRD。非最終トークンの予測分布が捨てられる情報損失と、局所決定の不整合に対し、潜在洗練と予測フィードバックの2段階デコードを行う。デコード機構ではあるが、拡散型言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:16:44+00:00",
+    "last_checked_at": "2026-11-18T07:16:44+00:00",
+    "linked_from": [
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+      "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by Refining Belief States"
+  },
+  "processed_at": "2026-11-18T07:16:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42c454c067ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-465214ea3927094c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.05408",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.05408",
+    "identity_tokens": [
+      "arXiv:2501.05408"
+    ],
+    "reason": "記号的依存グラフによる動的深層学習のコンパイルTempo。動的形状を宣言的に表現し、eagerの柔軟さとグラフ全体最適化を両立させる。推論を含む汎用DLシステムのコンパイラであり、LLM推論に特化しないため境界。",
+    "first_checked_at": "2026-11-18T07:16:46+00:00",
+    "last_checked_at": "2026-11-18T07:16:46+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "inference-systems",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs"
+  },
+  "processed_at": "2026-11-18T07:16:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-465214ea3927",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

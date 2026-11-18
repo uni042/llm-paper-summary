@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f5c0414b3eb9d51-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34680",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34680",
+    "identity_tokens": [
+      "arXiv:2609.34680"
+    ],
+    "reason": "MXFP4学習後量子化の残差分解を発見するQuantForge。LLM駆動のプログラム進化で量子化の設計選択を探索し、競合する説明を記録して次に変えるべき設計を選ぶ発見システム。量子化の設計探索であり、機構そのものではないため境界。",
+    "first_checked_at": "2026-11-18T07:17:02+00:00",
+    "last_checked_at": "2026-11-18T07:17:02+00:00",
+    "linked_from": [
+      "arXiv:2405.16406のICLR 2025採録版。",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization"
+  },
+  "processed_at": "2026-11-18T07:17:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f5c0414b3eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

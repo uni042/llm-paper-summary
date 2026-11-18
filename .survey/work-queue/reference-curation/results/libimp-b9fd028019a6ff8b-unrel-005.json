@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b9fd028019a6ff8b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.19191",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.19191",
+    "identity_tokens": [
+      "arXiv:2509.19191"
+    ],
+    "reason": "画像をテキストのように読む視覚言語モデルの逐次画像理解。視覚処理を物体認識と空間知覚に分解して研究する分析。対象はVLMの知覚の分析であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:17:10+00:00",
+    "last_checked_at": "2026-11-18T07:17:10+00:00",
+    "linked_from": [
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models"
+  },
+  "processed_at": "2026-11-18T07:17:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b9fd028019a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

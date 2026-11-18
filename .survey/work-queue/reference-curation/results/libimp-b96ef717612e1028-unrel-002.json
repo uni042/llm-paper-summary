@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b96ef717612e1028-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.21129",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.21129",
+    "identity_tokens": [
+      "arXiv:2610.21129"
+    ],
+    "reason": "成長する疎性による動画生成の疎注意加速。拡散Transformerの動画生成で、ノイズ除去の進行に伴い注意が集中する性質を使い疎性を育てる。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:17:06+00:00",
+    "last_checked_at": "2026-11-18T07:17:06+00:00",
+    "linked_from": [
+      "inference-systems",
+      "疎注意／長文脈学習"
+    ],
+    "title": "Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search"
+  },
+  "processed_at": "2026-11-18T07:17:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b96ef717612e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

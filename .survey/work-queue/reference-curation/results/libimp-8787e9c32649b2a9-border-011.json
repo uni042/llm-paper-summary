@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8787e9c32649b2a9-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34558",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34558",
+    "identity_tokens": [
+      "arXiv:2609.34558"
+    ],
+    "reason": "偏りつき注意被覆最大化としての視覚トークン剪定ACPruner。視覚トークン剪定を、符号器側の外向き注意で画像を共同被覆する部分集合の選択として定式化する。LVLMの視覚トークン削減であり境界。",
+    "first_checked_at": "2026-11-18T07:16:57+00:00",
+    "last_checked_at": "2026-11-18T07:16:57+00:00",
+    "linked_from": [
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ACPruner: Visual Token Pruning as Biased Attention Coverage Maximization in LVLMs"
+  },
+  "processed_at": "2026-11-18T07:16:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

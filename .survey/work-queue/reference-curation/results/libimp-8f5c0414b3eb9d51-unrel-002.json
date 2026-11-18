@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f5c0414b3eb9d51-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.13438",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.13438",
+    "identity_tokens": [
+      "arXiv:2603.13438"
+    ],
+    "reason": "動画生成ポリシー向け下書き・目標サンプリング。ロボットポリシーとしての動画生成モデルの推論を、下書きと目標の2軌跡で高速化する拡散推論。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:17:03+00:00",
+    "last_checked_at": "2026-11-18T07:17:03+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "survey-speculative-decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "title": "Draft-and-Target Sampling for Video Generation Policy"
+  },
+  "processed_at": "2026-11-18T07:17:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f5c0414b3eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

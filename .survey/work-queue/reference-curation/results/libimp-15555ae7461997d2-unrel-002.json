@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15555ae7461997d2-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.06813",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.06813",
+    "identity_tokens": [
+      "arXiv:2301.06813"
+    ],
+    "reason": "自動分散深層学習AutoDDL。データ・演算子・パイプライン並列の組み合わせを自動探索する分散訓練の枠組み。対象は訓練であり、推論ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:16:40+00:00",
+    "last_checked_at": "2026-11-18T07:16:40+00:00",
+    "linked_from": [
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+    ],
+    "title": "AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost"
+  },
+  "processed_at": "2026-11-18T07:16:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15555ae74619",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

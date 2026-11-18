@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-465214ea3927094c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.04653",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.04653",
+    "identity_tokens": [
+      "arXiv:2504.04653"
+    ],
+    "reason": "条件付きトークン削減による効率的MLLM LEO-MINI。学習可能なクエリで視覚トークンを統合し数を減らしながら視覚推論を高める。視覚トークン削減の機構ではあるが、学習モジュールを含むモデル設計であり境界。",
+    "first_checked_at": "2026-11-18T07:16:47+00:00",
+    "last_checked_at": "2026-11-18T07:16:47+00:00",
+    "linked_from": [
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LEO-MINI: An Efficient Multimodal Large Language Model using Conditional Token Reduction and Mixture of Multi-Modal Experts"
+  },
+  "processed_at": "2026-11-18T07:16:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-465214ea3927",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

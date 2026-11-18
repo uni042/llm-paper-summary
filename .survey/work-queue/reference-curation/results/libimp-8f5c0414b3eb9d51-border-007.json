@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f5c0414b3eb9d51-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32256",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32256",
+    "identity_tokens": [
+      "arXiv:2609.32256"
+    ],
+    "reason": "検索スコア誤差 bound つき損失エージェントメモリLAM。エージェントの履歴が増えて推論費用と文脈窓を圧迫する問題に対し、決定論的な重複除去と、キャッシュ済み接頭辞を保ち圧縮を推論と重ねるメモリ管理を行う。推論基盤に隣接するが、主題はエージェントのメモリ管理であり境界。",
+    "first_checked_at": "2026-11-18T07:17:01+00:00",
+    "last_checked_at": "2026-11-18T07:17:01+00:00",
+    "linked_from": [
+      "KV Cache Offload / Recomputation",
+      "KV Cache Optimization / Compression",
+      "LLM Serving / Scheduling / Disaggregation",
+      "agentic inference / persistent memory",
+      "inference-systems",
+      "llm-serving-scheduling-disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LAM: Efficient Lossy Agent Memory Framework With A Retrieval-Score Error Bound"
+  },
+  "processed_at": "2026-11-18T07:17:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f5c0414b3eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

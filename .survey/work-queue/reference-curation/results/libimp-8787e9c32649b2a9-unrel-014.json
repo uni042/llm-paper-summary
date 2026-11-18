@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8787e9c32649b2a9-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.03226",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.03226",
+    "identity_tokens": [
+      "arXiv:2610.03226"
+    ],
+    "reason": "LLMエージェントが専門家の設計を効率的GPUカーネルへ変えられるかを測る診断ベンチマークD2K-Bench。対象はエージェントのカーネル生成能力の評価であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:16:59+00:00",
+    "last_checked_at": "2026-11-18T07:16:59+00:00",
+    "linked_from": [
+      "GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン",
+      "agentic GPU kernel generation / harness engineering / profile-guided optimization",
+      "inference-systems",
+      "kernel-runtime-compilation"
+    ],
+    "title": "D2K-Bench: Can LLM Agents Turn Expert Designs into Efficient GPU Kernels?"
+  },
+  "processed_at": "2026-11-18T07:17:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8787e9c32649b2a9-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.11440",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.11440",
+    "identity_tokens": [
+      "arXiv:2606.11440"
+    ],
+    "reason": "基盤配慮型マルチエージェント編成INFRAMIND。推論ワークフローが負荷を決め、負荷が推論の選択肢を決める結合問題に対し、提供条件に適応する階層方針。推論基盤に隣接するが、主題はエージェント編成であり境界。",
+    "first_checked_at": "2026-11-18T07:16:55+00:00",
+    "last_checked_at": "2026-11-18T07:16:55+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "agentic serving / workflow-aware scheduling / memory-aware dispatch"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "INFRAMIND: Infrastructure-Aware Multi-Agent Orchestration"
+  },
+  "processed_at": "2026-11-18T07:16:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

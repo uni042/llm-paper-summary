@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8787e9c32649b2a9-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.38878",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.38878",
+    "identity_tokens": [
+      "arXiv:2609.38878"
+    ],
+    "reason": "言語モデルが走る前に予測できる音声トークンの注意。音声トークンが受ける注意は符号器出力から線形に予測でき、言語モデルの前に順位付けして音声トークンを剪定できることを示す。音声言語モデルのプリフィル削減であり境界。",
+    "first_checked_at": "2026-11-18T07:16:58+00:00",
+    "last_checked_at": "2026-11-18T07:16:58+00:00",
+    "linked_from": [
+      "KV-cache compression / attention-based token selection / long-context inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Audio Token Attention Is Predictable Before the Language Model Runs"
+  },
+  "processed_at": "2026-11-18T07:16:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8787e9c32649",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

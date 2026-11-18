@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15555ae7461997d2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2025.acl-long.1294",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2025.acl-long.1294",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.acl-long.1294"
+    ],
+    "reason": "三値言語モデルのスケーリング則と効率的推論。量子化配慮訓練による三値モデルについて、パラメータより訓練データの拡大が効くスケーリング則を分析し、メモリ帯域が律速の推論効率に対処する。推論効率の分析を含むが、主体はモデルのスケーリング研究であり境界。",
+    "first_checked_at": "2026-11-18T07:16:35+00:00",
+    "last_checked_at": "2026-11-18T07:16:35+00:00",
+    "linked_from": [
+      "Offload / Hierarchical Memory",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Scaling Laws and Efficient Inference for Ternary Language Models"
+  },
+  "processed_at": "2026-11-18T07:16:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15555ae74619",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-465214ea3927094c-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.21189",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.21189",
+    "identity_tokens": [
+      "arXiv:2505.21189"
+    ],
+    "reason": "LLMの1ステップテキスト生成の隠れた能力の探求。凍結したLLMが学習した埋め込み2つだけで数百トークンを1回の並列前方計算で生成できることを示す分析。並列生成の可能性を示すが、機構の提案ではなく能力の分析であり境界。",
+    "first_checked_at": "2026-11-18T07:16:49+00:00",
+    "last_checked_at": "2026-11-18T07:16:49+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Hidden Capacity of LLMs for One-Step Text Generation"
+  },
+  "processed_at": "2026-11-18T07:16:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-465214ea3927",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

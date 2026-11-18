@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b96ef717612e1028-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.31819",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.31819",
+    "identity_tokens": [
+      "arXiv:2610.31819"
+    ],
+    "reason": "投機的拡散は2つのトレードオフの物語。無損失が特徴の投機的デコードと、品質を落として速くする拡散LLMを下書き役として比べる分析。投機的デコードの分析であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:17:05+00:00",
+    "last_checked_at": "2026-11-18T07:17:05+00:00",
+    "linked_from": [
+      "Other Inference Systems / Lossless Parallel Decoding",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "speculative-decoding",
+      "speculative-parallel-decoding"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculative Diffusion is a Tale of Two Tradeoffs"
+  },
+  "processed_at": "2026-11-18T07:17:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b96ef717612e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

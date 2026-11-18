@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T06:39:41+00:00",
-  "record_count": 12742,
+  "updated_at": "2026-11-18T07:17:11+00:00",
+  "record_count": 12760,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181845,7 +181845,7 @@
       ],
       "reason": "IEEE出版社の一次要旨はfoundation modelの大規模学習用SoC、データフロー、分散勾配同期、電気・エネルギー設計を中心に論じる総説。生成LLMの推論最適化を独立に評価した研究ではなく、現行推論効率化系統の範囲外。",
       "first_checked_at": "2026-10-30T19:08:31+00:00",
-      "last_checked_at": "2026-10-30T19:08:31+00:00",
+      "last_checked_at": "2026-11-18T07:17:11+00:00",
       "linked_from": [],
       "title": "AI SoC Design Challenges in the Foundation Model Era"
     },
@@ -183289,6 +183289,288 @@
         "Speculative Decoding"
       ],
       "title": "VocalNet: Speech LLM with Multi-Token Prediction for Faster and High-Quality Generation"
+    },
+    "arXiv:2301.06813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.06813",
+      "identity_tokens": [
+        "arXiv:2301.06813"
+      ],
+      "reason": "自動分散深層学習AutoDDL。データ・演算子・パイプライン並列の組み合わせを自動探索する分散訓練の枠組み。対象は訓練であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:40+00:00",
+      "last_checked_at": "2026-11-18T07:16:40+00:00",
+      "linked_from": [
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "AutoDDL: Automatic Distributed Deep Learning With Near-Optimal Bandwidth Cost"
+    },
+    "arXiv:2403.20262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.20262",
+      "identity_tokens": [
+        "arXiv:2403.20262"
+      ],
+      "reason": "長文脈LLM向け会議アシスタントベンチマークELITR-Bench。自動音声認識の書き起こしという実場面の長文脈を評価するベンチマーク。対象は評価であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:40+00:00",
+      "last_checked_at": "2026-11-18T07:16:40+00:00",
+      "linked_from": [
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "sparse attention / long-context Transformer",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "ELITR-Bench: A Meeting Assistant Benchmark for Long-Context Language Models"
+    },
+    "arXiv:2406.04342": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04342",
+      "identity_tokens": [
+        "arXiv:2406.04342"
+      ],
+      "reason": "脱焦点注意による1次元因果視覚表現の学習。画像を1次元因果モデリングで表す視覚表現の研究。対象は視覚モデルの表現学習であり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:41+00:00",
+      "last_checked_at": "2026-11-18T07:16:41+00:00",
+      "linked_from": [
+        "99-other-inference-systems",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Learning 1D Causal Visual Representation with De-focus Attention Networks"
+    },
+    "arXiv:2505.22757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22757",
+      "identity_tokens": [
+        "arXiv:2505.22757"
+      ],
+      "reason": "複数トークン予測の事前学習カリキュラム。次トークン予測から複数トークン予測へ段階的に移す事前学習の戦略。対象は事前学習であり、推論機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:41+00:00",
+      "last_checked_at": "2026-11-18T07:16:41+00:00",
+      "linked_from": [
+        "Conditional Computation",
+        "Speculative Decoding",
+        "inference-systems"
+      ],
+      "title": "Pre-Training Curriculum for Multi-Token Prediction in Language Models"
+    },
+    "arXiv:2610.39273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.39273",
+      "identity_tokens": [
+        "arXiv:2610.39273"
+      ],
+      "reason": "生成的推薦における注意の漸進的焦点化PFA。長い行動系列の自己回帰ビーム探索デコードを高速化する。対象は推薦システムのデコードであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:43+00:00",
+      "last_checked_at": "2026-11-18T07:16:43+00:00",
+      "linked_from": [
+        "13-sparse-attention",
+        "KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論",
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "title": "PFA: Attention Can Be Progressively Focused in Long-Sequence Generative Recommendation"
+    },
+    "arXiv:2511.05832": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05832",
+      "identity_tokens": [
+        "arXiv:2511.05832"
+      ],
+      "reason": "ヒルベルト誘導の疎局所注意。高解像度画像の局所注意を、ヒルベルト曲線で並べ替えてブロック疎に高速化する。対象は画像の注意であり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:46+00:00",
+      "last_checked_at": "2026-11-18T07:16:46+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "distributed attention / sequence parallelism / blockwise attention / long-context transformers",
+        "inference-systems",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Hilbert-Guided Sparse Local Attention"
+    },
+    "arXiv:2108.09190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.09190",
+      "identity_tokens": [
+        "arXiv:2108.09190"
+      ],
+      "reason": "長文文書マッチングのための教師あり対照学習。法的文書や特許のような長文の意味的マッチングのモデル。対象は文書マッチングであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:51+00:00",
+      "last_checked_at": "2026-11-18T07:16:51+00:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer"
+      ],
+      "title": "Supervised Contrastive Learning for Interpretable Long-Form Document Matching"
+    },
+    "arXiv:2503.19604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.19604",
+      "identity_tokens": [
+        "arXiv:2503.19604"
+      ],
+      "reason": "生成的暗黙動画圧縮GIViC。暗黙神経表現による動画符号化の性能限界を、暗黙拡散過程で押し上げる枠組み。対象は動画コーデックであり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:51+00:00",
+      "last_checked_at": "2026-11-18T07:16:51+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "GIViC: Generative Implicit Video Compression"
+    },
+    "arXiv:2604.23798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.23798",
+      "identity_tokens": [
+        "arXiv:2604.23798"
+      ],
+      "reason": "高速でメモリ軽量な視覚訓練向け厳密線形走査注意ELSA。オンラインソフトマックス注意を連想モノイド上の接頭辞走査として再定式化する。対象は視覚Transformerの訓練であり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:58+00:00",
+      "last_checked_at": "2026-11-18T07:16:58+00:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers"
+    },
+    "arXiv:2605.17985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17985",
+      "identity_tokens": [
+        "arXiv:2605.17985"
+      ],
+      "reason": "物理基盤モデル向け感度配慮SVD圧縮SAFE-SVD。物理的忠実度を保ちながら物理基盤モデルを圧縮する。対象は科学計算の基盤モデルであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:59+00:00",
+      "last_checked_at": "2026-11-18T07:16:59+00:00",
+      "linked_from": [
+        "inference-systems",
+        "weight-quantization-compression",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "SAFE-SVD: Sensitivity-Aware Fidelity-Enforcing SVD for Physics Foundation Models"
+    },
+    "arXiv:2610.03226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03226",
+      "identity_tokens": [
+        "arXiv:2610.03226"
+      ],
+      "reason": "LLMエージェントが専門家の設計を効率的GPUカーネルへ変えられるかを測る診断ベンチマークD2K-Bench。対象はエージェントのカーネル生成能力の評価であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:16:59+00:00",
+      "last_checked_at": "2026-11-18T07:16:59+00:00",
+      "linked_from": [
+        "GPUカーネル自動最適化、LLMエージェント、ハードウェアプロファイル、CUDAコンパイル・実行ツールチェーン",
+        "agentic GPU kernel generation / harness engineering / profile-guided optimization",
+        "inference-systems",
+        "kernel-runtime-compilation"
+      ],
+      "title": "D2K-Bench: Can LLM Agents Turn Expert Designs into Efficient GPU Kernels?"
+    },
+    "arXiv:2610.11765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.11765",
+      "identity_tokens": [
+        "arXiv:2610.11765"
+      ],
+      "reason": "思考の慣性：やめよと言われても考え続けるLLM。思考モードの対である無思考の振る舞いを測る研究。対象はモデルの振る舞いの分析であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:00+00:00",
+      "last_checked_at": "2026-11-18T07:17:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md"
+      ],
+      "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To"
+    },
+    "arXiv:2603.13438": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13438",
+      "identity_tokens": [
+        "arXiv:2603.13438"
+      ],
+      "reason": "動画生成ポリシー向け下書き・目標サンプリング。ロボットポリシーとしての動画生成モデルの推論を、下書きと目標の2軌跡で高速化する拡散推論。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:03+00:00",
+      "last_checked_at": "2026-11-18T07:17:03+00:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "survey-speculative-decoding",
+        "投機的デコード / 分布保存型デコード高速化",
+        "投機的復号 / 無損失復号高速化"
+      ],
+      "title": "Draft-and-Target Sampling for Video Generation Policy"
+    },
+    "arXiv:2606.04048": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04048",
+      "identity_tokens": [
+        "arXiv:2606.04048"
+      ],
+      "reason": "ゲート付きデルタネットワークの大規模特徴学習。最大更新パラメータ化を線形モデルへ拡張し、学習のスケーリング則を導く。対象は事前学習であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:04+00:00",
+      "last_checked_at": "2026-11-18T07:17:04+00:00",
+      "linked_from": [
+        "adaptive-expert-computation-compression",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Unlocking Feature Learning in Gated Delta Networks at Scale"
+    },
+    "arXiv:2608.01185": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01185",
+      "identity_tokens": [
+        "arXiv:2608.01185"
+      ],
+      "reason": "3D視覚言語モデル向け空間配慮型トークン圧縮3DZip。3Dシーンの何千ものトークンを特徴多様性で圧縮する。対象は3D VLMのトークン圧縮であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:04+00:00",
+      "last_checked_at": "2026-11-18T07:17:04+00:00",
+      "linked_from": [
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "3DZip: Spatial-Aware Feature Diversity-Guided Token Compression for 3D Question Answering"
+    },
+    "arXiv:2610.21129": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21129",
+      "identity_tokens": [
+        "arXiv:2610.21129"
+      ],
+      "reason": "成長する疎性による動画生成の疎注意加速。拡散Transformerの動画生成で、ノイズ除去の進行に伴い注意が集中する性質を使い疎性を育てる。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:06+00:00",
+      "last_checked_at": "2026-11-18T07:17:06+00:00",
+      "linked_from": [
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "title": "Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search"
+    },
+    "arXiv:2506.22175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.22175",
+      "identity_tokens": [
+        "arXiv:2506.22175"
+      ],
+      "reason": "適応パイプラインつきメモリ効率MoE学習ライブラリMPipeMoE。事前学習済みモデルのMoE学習を、通信とメモリの非効率に対処して高速化する。対象は学習であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:09+00:00",
+      "last_checked_at": "2026-11-18T07:17:09+00:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "分散MoE学習 / ZeRO / CPUオフロード / 多次元並列",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism"
+    },
+    "arXiv:2509.19191": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.19191",
+      "identity_tokens": [
+        "arXiv:2509.19191"
+      ],
+      "reason": "画像をテキストのように読む視覚言語モデルの逐次画像理解。視覚処理を物体認識と空間知覚に分解して研究する分析。対象はVLMの知覚の分析であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:17:10+00:00",
+      "last_checked_at": "2026-11-18T07:17:10+00:00",
+      "linked_from": [
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models"
     }
   }
 }

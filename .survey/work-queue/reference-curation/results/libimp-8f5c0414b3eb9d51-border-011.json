@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f5c0414b3eb9d51-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.06996",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.06996",
+    "identity_tokens": [
+      "arXiv:2610.06996"
+    ],
+    "reason": "ブロック拡散言語モデルのマスク誘導KV排除MaskAhead。大きなKVキャッシュを保持し続けるブロック拡散モデルで、現在ブロックのマスクによる選択と将来ブロックの探査による排除を1つの順位付けで解く。KV機構ではあるが、拡散型言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:17:03+00:00",
+    "last_checked_at": "2026-11-18T07:17:03+00:00",
+    "linked_from": [
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+      "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Mask-Guided KV Cache Eviction in Block Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:17:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f5c0414b3eb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
