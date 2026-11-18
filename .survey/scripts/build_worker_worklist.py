@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build dedicated worklists for scheduled-chat-00, scheduled-chat-30, and scheduled-chat-45.
 
-Research/Audit keeps the existing 200-item per-worker surface. Discovery review
-uses a larger 500-item per-worker surface so full-text suitability screening does
-not starve for candidates. The worklists are rebuildable selection indexes only.
+Research/Audit lists every claimable row, split across the three workers with
+no per-worker display cap. Discovery review uses a 500-item per-worker surface
+so full-text suitability screening does not starve for candidates. The worklists are rebuildable selection indexes only.
 Canonical job/claim state, paper files, and reference relevance ledgers remain
 authoritative. The three worker pages are deterministically disjoint whenever enough
 eligible rows exist for the requested per-lane limits. The status-dashboard publisher
@@ -30,7 +30,6 @@ import forward_citation_state
 import forward_lineage_citation
 import research_job_reconciliation
 
-DEFAULT_RESEARCH_LIMIT = 200
 DEFAULT_DISCOVERY_LIMIT = 500
 DEFAULT_BORDERLINE_REFILL_TARGET = 600
 DEFAULT_BORDERLINE_REPEAT_PENALTY = 100_000_000
@@ -478,14 +477,17 @@ def _exclude_reserved_identities(
     return out
 
 
-def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str, Any]]]:
-    """Assign canonical rows round-robin across all scheduled workers, with no overlap."""
+def _split(rows: list[dict[str, Any]], *, limit: int | None) -> dict[str, list[dict[str, Any]]]:
+    """Assign canonical rows round-robin across all scheduled workers, with no overlap.
+
+    A limit of None assigns every row (no display cap).
+    """
     assigned = {worker: [] for worker in WORKERS}
     for index, source in enumerate(rows):
         worker = None
         for offset in range(len(WORKERS)):
             candidate = WORKERS[(index + offset) % len(WORKERS)]
-            if len(assigned[candidate]) < limit:
+            if limit is None or len(assigned[candidate]) < limit:
                 worker = candidate
                 break
         if worker is None:
@@ -494,7 +496,7 @@ def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str
         row["rank"] = len(assigned[worker]) + 1
         row["assigned_worker"] = f"scheduled-chat-{worker}"
         assigned[worker].append(row)
-        if all(len(assigned[key]) >= limit for key in WORKERS):
+        if limit is not None and all(len(assigned[key]) >= limit for key in WORKERS):
             break
     return assigned
 
@@ -502,7 +504,7 @@ def _split(rows: list[dict[str, Any]], *, limit: int) -> dict[str, list[dict[str
 def build(
     root: Path,
     *,
-    research_limit: int = DEFAULT_RESEARCH_LIMIT,
+    research_limit: int | None = None,
     discovery_limit: int = DEFAULT_DISCOVERY_LIMIT,
     limit: int | None = None,
 ) -> dict[str, dict[str, Any]]:
@@ -512,7 +514,7 @@ def build(
             raise ValueError("limit must be > 0")
         research_limit = limit
         discovery_limit = limit
-    if research_limit <= 0:
+    if research_limit is not None and research_limit <= 0:
         raise ValueError("research_limit must be > 0")
     if discovery_limit <= 0:
         raise ValueError("discovery_limit must be > 0")
@@ -752,8 +754,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument(
-        "--research-limit", type=int, default=DEFAULT_RESEARCH_LIMIT,
-        help="per-worker Research/Audit display limit (default: 200)",
+        "--research-limit", type=int, default=None,
+        help="per-worker Research/Audit display limit (default: none; all claimable rows are shown)",
     )
     parser.add_argument(
         "--discovery-limit", type=int, default=DEFAULT_DISCOVERY_LIMIT,
@@ -776,7 +778,7 @@ def main() -> int:
             parser.error("--limit must be > 0")
         research_limit = args.limit
         discovery_limit = args.limit
-    if research_limit <= 0:
+    if research_limit is not None and research_limit <= 0:
         parser.error("--research-limit must be > 0")
     if discovery_limit <= 0:
         parser.error("--discovery-limit must be > 0")
