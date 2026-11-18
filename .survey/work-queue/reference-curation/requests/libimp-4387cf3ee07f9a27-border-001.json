@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4387cf3ee07f9a27-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2601.23027",
+  "reason": "並列推論で遅延を下げる分割統治CoT（DC-CoT）。モデルがサブタスクを切り出してワーカーを並列に走らせる形式をSFTと強化学習で訓練し、最長路長で測る理論遅延を下げる。狙いは生成遅延だが、機構の実体は訓練枠組みであり境界。",
+  "title": "Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning",
+  "identity_tokens": [
+    "arXiv:2601.23027",
+    "https://arxiv.org/abs/2601.23027"
+  ],
+  "linked_from": [
+    "LLM Serving / Scheduling / Disaggregation",
+    "Speculative Decoding",
+    "inference-systems",
+    "投機的デコード / 分布保存型デコード高速化",
+    "投機的復号 / 無損失復号高速化"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4387cf3ee07f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
