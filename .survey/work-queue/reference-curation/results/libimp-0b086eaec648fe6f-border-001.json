@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b086eaec648fe6f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.39358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.39358",
+    "identity_tokens": [
+      "arXiv:2609.39358"
+    ],
+    "reason": "計算の天井を迂回するGalahad。要請をまたいで状態を持たない提供が、既に読んだ文書の注意状態を再計算する無駄に対し、バイト厳密なメモリで再利用する。提供のキャッシュ再利用ではあるが、記憶の仕組みの提案が中心であり境界。",
+    "first_checked_at": "2026-11-18T07:47:26+00:00",
+    "last_checked_at": "2026-11-18T07:47:26+00:00",
+    "linked_from": [
+      "KV Cache Offload / Recomputation",
+      "KVキャッシュ再利用／圧縮／ネットワーク転送",
+      "LLM Serving / Scheduling / Disaggregation",
+      "kv-cache-offload-recomputation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost"
+  },
+  "processed_at": "2026-11-18T07:47:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b086eaec648",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce2e12dc9d2df0ae-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.07416",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.07416",
+    "identity_tokens": [
+      "arXiv:2506.07416"
+    ],
+    "reason": "組込み向け低遅延VLM推論パイプラインLiteVLM。パッチ選択、トークン選択、投機的デコードを共同で使い、自動運転の基盤上で端から端までの遅延を下げる。複合パイプラインであり境界。",
+    "first_checked_at": "2026-11-18T07:47:51+00:00",
+    "last_checked_at": "2026-11-18T07:47:51+00:00",
+    "linked_from": [
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LiteVLM: A Low-Latency Vision-Language Model Inference Pipeline for Resource-Constrained Environments"
+  },
+  "processed_at": "2026-11-18T07:47:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce2e12dc9d2d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

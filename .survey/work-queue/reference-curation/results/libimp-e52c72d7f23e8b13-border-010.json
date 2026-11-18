@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.17442",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.17442",
+    "identity_tokens": [
+      "arXiv:2608.17442"
+    ],
+    "reason": "暗号化状態スキャンによる長文脈私有推論の再構成FESC。暗号化Transformer注意の二次作業が律速になる問題に対し、選択的状態空間モデルの線形再帰をFHEとMPCのハイブリッドで実装する。私有推論のシステムではあるが、主題はプライバシー保護であり境界。",
+    "first_checked_at": "2026-11-18T07:47:54+00:00",
+    "last_checked_at": "2026-11-18T07:47:54+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FESC: Remodeling Long-Context Private Inference with Encrypted State-Space Models"
+  },
+  "processed_at": "2026-11-18T07:47:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

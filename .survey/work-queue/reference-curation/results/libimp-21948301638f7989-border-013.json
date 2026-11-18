@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.01394",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.01394",
+    "identity_tokens": [
+      "arXiv:2510.01394"
+    ],
+    "reason": "推論時最適化のための最適停止と最良N個の比較。複数生成の品質と費用のバランスをパンドラの箱問題として定式化し、報酬分布を知らずにいつ生成を止めるかを決めるアルゴリズム。推論時の枠組みではあるが、サンプリング方針の理論であり境界。",
+    "first_checked_at": "2026-11-18T07:47:32+00:00",
+    "last_checked_at": "2026-11-18T07:47:32+00:00",
+    "linked_from": [
+      "speculative-decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Optimal Stopping vs Best-of-N for Inference Time Optimization"
+  },
+  "processed_at": "2026-11-18T07:47:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

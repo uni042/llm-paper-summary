@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eeafe1405388b6b0-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.07242",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.07242",
+    "identity_tokens": [
+      "arXiv:2604.07242"
+    ],
+    "reason": "深層学習アーキテクチャの代数を形式化する圏論的枠組み。放送や合成を精密に表す数学的枠組み。対象は理論であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:48:01+00:00",
+    "last_checked_at": "2026-11-18T07:48:01+00:00",
+    "linked_from": [
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "Weaves, Wires, and Morphisms: Formalizing and Implementing the Algebra of Deep Learning"
+  },
+  "processed_at": "2026-11-18T07:48:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eeafe1405388",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

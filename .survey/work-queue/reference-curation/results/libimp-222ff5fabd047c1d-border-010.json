@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-222ff5fabd047c1d-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.20643",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.20643",
+    "identity_tokens": [
+      "arXiv:2505.20643"
+    ],
+    "reason": "過去の経験はLLMの推論を加速できるか。関連課題への反復曝露で推論が速くなるかを、課題関連性と計算の次元で定式化して調べる研究。推論時短の研究であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:47:36+00:00",
+    "last_checked_at": "2026-11-18T07:47:36+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+      "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+      "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Can Past Experience Accelerate LLM Reasoning?"
+  },
+  "processed_at": "2026-11-18T07:47:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-222ff5fabd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

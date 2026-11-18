@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3589c97876fdade6-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.03117",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.03117",
+    "identity_tokens": [
+      "arXiv:2507.03117"
+    ],
+    "reason": "ブロック疎Transformerによる高性能推論と事前学習BLaST。データ移動がエネルギー消費を支配する問題に対し、線形層などへ適用できる疎化の一般手法。推論と事前学習の双方を対象とし境界。",
+    "first_checked_at": "2026-11-18T07:47:41+00:00",
+    "last_checked_at": "2026-11-18T07:47:41+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "sparse attention / long-context Transformer",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers"
+  },
+  "processed_at": "2026-11-18T07:47:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3589c97876fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

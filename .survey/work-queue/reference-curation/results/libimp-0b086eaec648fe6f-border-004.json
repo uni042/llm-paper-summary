@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b086eaec648fe6f-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.31120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.31120",
+    "identity_tokens": [
+      "arXiv:2610.31120"
+    ],
+    "reason": "少数ステップ拡散言語モデルのための協調トークン確定SetCommit。個別には信頼できるトークンが共同では一貫しない問題に対し、信頼性と局所的な共同確定リスクのバランスで確定集合を選ぶ訓練不要の方法。デコード法ではあるが、拡散言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:47:27+00:00",
+    "last_checked_at": "2026-11-18T07:47:27+00:00",
+    "linked_from": [
+      "diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号",
+      "拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SetCommit: Coordinated Token Commitments for Few-Step Diffusion Language Model Decoding"
+  },
+  "processed_at": "2026-11-18T07:47:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b086eaec648",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-222ff5fabd047c1d-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.14985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.14985",
+    "identity_tokens": [
+      "arXiv:2503.14985"
+    ],
+    "reason": "多レベルコンパイルと言語拡張ML-Triton。Tritonがワークグループレベルから直接下げることで失われる最適化を、多レベル化で取り戻す。推論を含む計算のコンパイラであり境界。",
+    "first_checked_at": "2026-11-18T07:47:36+00:00",
+    "last_checked_at": "2026-11-18T07:47:36+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "PyTorch 2 torch.compileの設計と評価を報告する論文。",
+      "inference-systems",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ML-Triton, A Multi-Level Compilation and Language Extension to Triton GPU Programming"
+  },
+  "processed_at": "2026-11-18T07:47:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-222ff5fabd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

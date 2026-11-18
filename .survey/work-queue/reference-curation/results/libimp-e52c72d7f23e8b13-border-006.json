@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.22175",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.22175",
+    "identity_tokens": [
+      "arXiv:2606.22175"
+    ],
+    "reason": "高スループットワークフローのためのタスクモデルの再考StickyInvoc。HPCクラスタでLLM推論タスクごとに計算状態を作って壊すモデルが、ギガバイト級パラメータの繰り返し転送を強いる問題に対処する。推論基盤に隣接するが、HPCのタスクモデルの話であり境界。",
+    "first_checked_at": "2026-11-18T07:47:53+00:00",
+    "last_checked_at": "2026-11-18T07:47:53+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems",
+      "serving-scheduling",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "StickyInvoc: Rethinking Task Models for High-throughput Workflows in the LLM Era"
+  },
+  "processed_at": "2026-11-18T07:47:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.02348",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.02348",
+    "identity_tokens": [
+      "arXiv:2603.02348"
+    ],
+    "reason": "提供されるものとしてのエージェントのためのTetrisベンチマーク。価格や大きさが意思決定の質を予測しないことなど、エンドポイントとして提供されるモデルの実測。提供の計測であり、推論機構そのものではないため境界。",
+    "first_checked_at": "2026-11-18T07:47:52+00:00",
+    "last_checked_at": "2026-11-18T07:47:52+00:00",
+    "linked_from": [
+      "13-sparse-attention",
+      "KV Cache Offload / Recomputation",
+      "LLM Serving / Scheduling / Disaggregation",
+      "llm-serving-scheduling-disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Same Pieces, Different Servers: A Tetris Benchmark for AI Agents as Served"
+  },
+  "processed_at": "2026-11-18T07:47:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

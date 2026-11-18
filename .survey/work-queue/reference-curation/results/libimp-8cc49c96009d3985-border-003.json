@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8cc49c96009d3985-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.35804",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.35804",
+    "identity_tokens": [
+      "arXiv:2610.35804"
+    ],
+    "reason": "いつ確定するかを学ぶ：高速拡散言語生成のための予定蒸留dSpark。予測しやすいトークンが有用な文脈になるとは限らない問題に対し、確定の予定を蒸留で学ぶ。デコード法ではあるが、拡散言語モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:47:45+00:00",
+    "last_checked_at": "2026-11-18T07:47:45+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "diffusion language model inference / KV cache / training-free acceleration",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "inference-systems",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:47:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8cc49c96009d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

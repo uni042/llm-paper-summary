@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8cc49c96009d3985-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.28620",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.28620",
+    "identity_tokens": [
+      "arXiv:2610.28620"
+    ],
+    "reason": "重み配置だけでは不十分：複数ノードCPUデコードにおける同期。三値LLMの高速ランタイムがメモリ帯域の半分未満しか使えない原因を、ノード局所の重み配置ではなくスレッド間の同期待ちとして同定する分析。CPU推論の分析であり境界。",
+    "first_checked_at": "2026-11-18T07:47:45+00:00",
+    "last_checked_at": "2026-11-18T07:47:45+00:00",
+    "linked_from": [
+      "LLM推論カーネル融合／メガカーネル／GPUコンパイラ・ランタイム",
+      "llm-serving-scheduling-disaggregation",
+      "other-inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs"
+  },
+  "processed_at": "2026-11-18T07:47:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8cc49c96009d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

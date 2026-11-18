@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8cc49c96009d3985-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.06324",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.06324",
+    "identity_tokens": [
+      "arXiv:2609.06324"
+    ],
+    "reason": "周辺分布から結合分布への切符：1ステップ読み出しのための結合雑音蒸留CONDOR。拡散言語モデルが1回の前方計算で一貫したトークンブロックを生成できるかを、ゼロから訓練して探る。対象は拡散モデルの生成手法であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:46+00:00",
+    "last_checked_at": "2026-11-18T07:47:46+00:00",
+    "linked_from": [
+      "Inference / Parallel and Non-Autoregressive Decoding",
+      "Speculative Decoding",
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "投機的復号 / 無損失復号高速化",
+      "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+    ],
+    "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models"
+  },
+  "processed_at": "2026-11-18T07:47:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8cc49c96009d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

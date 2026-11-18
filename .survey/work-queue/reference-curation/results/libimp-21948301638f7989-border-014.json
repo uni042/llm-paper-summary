@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.02620",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.02620",
+    "identity_tokens": [
+      "arXiv:2511.02620"
+    ],
+    "reason": "モデル重み持ち出しを検出するためのLLM推論の検証。推論サーバを掌握した攻撃者が応答に重みを隠すステガノグラフィに対し、検証の枠組みを定式化する。推論の検証ではあるが、主題はセキュリティであり境界。",
+    "first_checked_at": "2026-11-18T07:47:33+00:00",
+    "last_checked_at": "2026-11-18T07:47:33+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / EAGLE",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Verifying LLM Inference to Detect Model Weight Exfiltration"
+  },
+  "processed_at": "2026-11-18T07:47:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

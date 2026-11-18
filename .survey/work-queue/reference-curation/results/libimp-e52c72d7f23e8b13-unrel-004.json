@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.06185",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.06185",
+    "identity_tokens": [
+      "arXiv:2605.06185"
+    ],
+    "reason": "超長尺動画のためのイベント因果RAG。イベント記憶と長距離関係の回復のための検索拡張枠組み。対象は動画理解であり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:57+00:00",
+    "last_checked_at": "2026-11-18T07:47:57+00:00",
+    "linked_from": [
+      "KV cache compression / cross-layer state merging",
+      "KVキャッシュ再利用／圧縮／ネットワーク転送",
+      "KVキャッシュ最適化／適応圧縮"
+    ],
+    "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios"
+  },
+  "processed_at": "2026-11-18T07:47:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

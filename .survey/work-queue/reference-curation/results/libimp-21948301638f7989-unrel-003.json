@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.06324",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.06324",
+    "identity_tokens": [
+      "arXiv:2303.06324"
+    ],
+    "reason": "GPU集合通信の包括的デッドロック防止。分散深層学習訓練の集合通信のデッドロックへの対処。対象は訓練であり、推論ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:34+00:00",
+    "last_checked_at": "2026-11-18T07:47:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md",
+      "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+      "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+    ],
+    "title": "Comprehensive Deadlock Prevention for GPU Collective Communication"
+  },
+  "processed_at": "2026-11-18T07:47:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

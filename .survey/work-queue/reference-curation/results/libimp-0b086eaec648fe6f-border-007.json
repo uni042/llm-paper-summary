@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b086eaec648fe6f-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.36623",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.36623",
+    "identity_tokens": [
+      "arXiv:2610.36623"
+    ],
+    "reason": "神はサイコロを振らない：エージェントカーネル生成におけるバッチ不変性の強制。動的バッチングで同じ要請の数値出力が変わる再現性の問題に対し、カーネル生成エージェントにバッチ不変性を強制する。提供の正しさに関わるが、主題はカーネル生成であり境界。",
+    "first_checked_at": "2026-11-18T07:47:28+00:00",
+    "last_checked_at": "2026-11-18T07:47:28+00:00",
+    "linked_from": [
+      "inference-systems",
+      "kernel-runtime-compilation",
+      "llm-serving-scheduling-disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation"
+  },
+  "processed_at": "2026-11-18T07:47:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b086eaec648",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-014",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34358",
+    "identity_tokens": [
+      "arXiv:2609.34358"
+    ],
+    "reason": "凍結LLMエージェントのための根拠の形最適ルーティングFORGE。APIエンドポイントとして凍結したモデルに対し、与える証拠の形と推論予算の配分という2つの結合した決定を最適化する。推論時の枠組みではあるが、エージェントの入力設計であり境界。",
+    "first_checked_at": "2026-11-18T07:47:55+00:00",
+    "last_checked_at": "2026-11-18T07:47:55+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "LLM routing、hybrid inference、quality-aware model selection"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FORGE: Form-Optimal Routing of Grounded Evidence for Frozen LLM Agents"
+  },
+  "processed_at": "2026-11-18T07:47:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

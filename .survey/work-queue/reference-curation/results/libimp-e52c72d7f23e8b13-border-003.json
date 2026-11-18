@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.05087",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.05087",
+    "identity_tokens": [
+      "arXiv:2603.05087"
+    ],
+    "reason": "プロンプトチューニング向けSLO配慮型弾力システムPromptTuner。プロンプトチューニングをサービスとして提供する際の、SLO充足と資源調達費用の最適化。推論基盤に隣接するが、主題はチューニングサービスの資源管理であり境界。",
+    "first_checked_at": "2026-11-18T07:47:52+00:00",
+    "last_checked_at": "2026-11-18T07:47:52+00:00",
+    "linked_from": [
+      "05-kv-cache-compression-management",
+      "LLM Serving / Scheduling / Disaggregation",
+      "llm-serving-scheduling-disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PromptTuner: SLO-Aware Elastic System for LLM Prompt Tuning"
+  },
+  "processed_at": "2026-11-18T07:47:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.18410",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.18410",
+    "identity_tokens": [
+      "arXiv:2608.18410"
+    ],
+    "reason": "視覚言語行動モデルのための役割条件付きサブトークンルーティング。トークン全体を捨てる剪定が脆い問題に対し、幅を減らすサブトークン圧縮を役割ごとに振り分ける。VLAポリシーの推論効率化であり境界。",
+    "first_checked_at": "2026-11-18T07:47:54+00:00",
+    "last_checked_at": "2026-11-18T07:47:54+00:00",
+    "linked_from": [
+      "KV cache compression / cross-layer state merging",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "疎注意 / KVキャッシュ選択 / 長文脈推論"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies"
+  },
+  "processed_at": "2026-11-18T07:47:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

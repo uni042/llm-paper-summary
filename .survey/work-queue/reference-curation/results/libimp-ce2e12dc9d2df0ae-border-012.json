@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce2e12dc9d2df0ae-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.16214",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.16214",
+    "identity_tokens": [
+      "arXiv:2504.16214"
+    ],
+    "reason": "GPUプログラムのレイアウト合成を自動化するコンパイラHexcute。テンソルレイアウトの手作業指定が高くつく問題に対し、レイアウト合成を自動化するコンパイラ枠組み。推論を含む計算のコンパイラであり境界。",
+    "first_checked_at": "2026-11-18T07:47:50+00:00",
+    "last_checked_at": "2026-11-18T07:47:50+00:00",
+    "linked_from": [
+      "02-hardware-accelerators",
+      "LLM Serving / Scheduling / Disaggregation",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs"
+  },
+  "processed_at": "2026-11-18T07:47:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce2e12dc9d2d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

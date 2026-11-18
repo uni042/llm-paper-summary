@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.05936",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.05936",
+    "identity_tokens": [
+      "arXiv:2503.05936"
+    ],
+    "reason": "注意疎性に基づく大規模マルチモーダルモデルの圧縮CASP。注意行列の疎性がクエリ・キー重みの圧縮誤差を束縛することを示し、極端な圧縮を行う。マルチモーダルモデルの圧縮であり境界。",
+    "first_checked_at": "2026-11-18T07:47:30+00:00",
+    "last_checked_at": "2026-11-18T07:47:30+00:00",
+    "linked_from": [
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "Weight Quantization / Compression",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity"
+  },
+  "processed_at": "2026-11-18T07:47:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

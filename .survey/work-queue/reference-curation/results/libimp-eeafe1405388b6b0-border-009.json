@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eeafe1405388b6b0-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2611.04814",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2611.04814",
+    "identity_tokens": [
+      "arXiv:2611.04814"
+    ],
+    "reason": "局所選好学習による推論圧縮LoCo。推論跡全体ではなく、現在の状態でさらに推論が必要かという局所判断に注目し、過剰思考の状態を検出して選好学習する。推論費用の削減が目的だが、機構の実体は学習であり境界。",
+    "first_checked_at": "2026-11-18T07:48:00+00:00",
+    "last_checked_at": "2026-11-18T07:48:00+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+      "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+      "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+      "papers/inference/99-other-inference-systems/2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression"
+  },
+  "processed_at": "2026-11-18T07:48:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eeafe1405388",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

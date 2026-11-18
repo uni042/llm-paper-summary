@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b086eaec648fe6f-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.34440",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.34440",
+    "identity_tokens": [
+      "arXiv:2610.34440"
+    ],
+    "reason": "MoEモデルのための投機的デコード：専門家バイト、カーネル、ステップ時間モデル。重複除去するエンジンが専門家をパスごとに一度だけ読む性質からステップ時間を書き、投機が速くなる条件を導く分析。投機的デコードの分析であり境界。",
+    "first_checked_at": "2026-11-18T07:47:28+00:00",
+    "last_checked_at": "2026-11-18T07:47:28+00:00",
+    "linked_from": [
+      "Speculative decoding × MoE",
+      "adaptive-expert-computation-compression",
+      "offload-hierarchical-memory"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Speculative Decoding for Mixture-of-Experts Models: Expert Bytes, Kernel Bandwidth and the Best Draft Length"
+  },
+  "processed_at": "2026-11-18T07:47:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b086eaec648",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

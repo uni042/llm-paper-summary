@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eeafe1405388b6b0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.08569",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.08569",
+    "identity_tokens": [
+      "arXiv:2608.08569"
+    ],
+    "reason": "音声LLM向け意味アンカー型時間KVキャッシュ圧縮VoxZip。テキスト中心の圧縮が音声の連続性を壊す問題に対し、音声認識の書き起こしを意味アンカーとする2段階の訓練不要圧縮。KV圧縮ではあるが、音声モデルに特化し境界。",
+    "first_checked_at": "2026-11-18T07:47:59+00:00",
+    "last_checked_at": "2026-11-18T07:47:59+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV-cache compression / attention-based token selection / long-context inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "VoxZip: Semantic-Anchored Temporal KV Cache Compression for Long-Context Audio Inference"
+  },
+  "processed_at": "2026-11-18T07:47:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eeafe1405388",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

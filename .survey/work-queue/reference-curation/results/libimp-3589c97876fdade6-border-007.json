@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3589c97876fdade6-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.01581",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.01581",
+    "identity_tokens": [
+      "arXiv:2510.01581"
+    ],
+    "reason": "適応的で原子的な推論量の学習Think Right。課題の難しさに応じてテスト時計算を配るべきなのに、不足と過剰の両方の不適応がある問題に対処する学習。推論量の制御ではあるが、機構の実体は訓練であり境界。",
+    "first_checked_at": "2026-11-18T07:47:42+00:00",
+    "last_checked_at": "2026-11-18T07:47:42+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.05419-reasoning-models-know-when-they-re-right-probing-hidden-states-for-self-.md",
+      "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
+      "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
+      "papers/inference/99-other-inference-systems/2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Think Right: Learning to Mitigate Under-Over Thinking via Adaptive, Attentive Compression"
+  },
+  "processed_at": "2026-11-18T07:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3589c97876fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

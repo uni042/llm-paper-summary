@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce2e12dc9d2df0ae-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.05678",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.05678",
+    "identity_tokens": [
+      "arXiv:2406.05678"
+    ],
+    "reason": "長文脈のためのSinkLoRA。ずらし疎注意による文脈拡張と対話能力の強化。長文脈推論の効率に関わるが、文脈拡張の手法であり境界。",
+    "first_checked_at": "2026-11-18T07:47:47+00:00",
+    "last_checked_at": "2026-11-18T07:47:47+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ最適化／適応圧縮",
+      "sparse attention / long-context Transformer",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models"
+  },
+  "processed_at": "2026-11-18T07:47:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce2e12dc9d2d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e52c72d7f23e8b13-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.27732",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.27732",
+    "identity_tokens": [
+      "arXiv:2606.27732"
+    ],
+    "reason": "双焦点拡散言語モデル。双方向注意がKVキャッシュと両立せず、因果注意は右側文脈を失うジレンマに対し、非対称な双方向文脈でキャッシュ可能な推論を可能にするアーキテクチャ。推論効率のための設計ではあるが、モデルアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T07:47:53+00:00",
+    "last_checked_at": "2026-11-18T07:47:53+00:00",
+    "linked_from": [
+      "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+      "speculative-parallel-decoding",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation"
+  },
+  "processed_at": "2026-11-18T07:47:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e52c72d7f23e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

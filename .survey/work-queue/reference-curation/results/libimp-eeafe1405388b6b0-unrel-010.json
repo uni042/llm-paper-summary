@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eeafe1405388b6b0-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.20193",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.20193",
+    "identity_tokens": [
+      "arXiv:2605.20193"
+    ],
+    "reason": "質的分析における量子化モデルの性能。面接記録の質的分析課題で量子化水準の影響を調べる応用研究。対象は応用評価であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:48:02+00:00",
+    "last_checked_at": "2026-11-18T07:48:02+00:00",
+    "linked_from": [
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification"
+  },
+  "processed_at": "2026-11-18T07:48:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eeafe1405388",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

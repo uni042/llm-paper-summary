@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T07:37:59+00:00",
-  "record_count": 12786,
+  "updated_at": "2026-11-18T07:48:02+00:00",
+  "record_count": 12814,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -183988,6 +183988,446 @@
         "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
       ],
       "title": "On-Policy Residual Learning for Diffusion Language Models"
+    },
+    "arXiv:2610.11302": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.11302",
+      "identity_tokens": [
+        "arXiv:2610.11302"
+      ],
+      "reason": "相互作用配慮型疎注意による高速動画生成iCATS。拡散Transformerの動画生成を訓練不要の疎注意で高速化する。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:29+00:00",
+      "last_checked_at": "2026-11-18T07:47:29+00:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "inference-systems"
+      ],
+      "title": "iCATS: Fast Video Generation via Interaction-Aware Sparse Attention and Timestep-Adaptive Sparsity"
+    },
+    "arXiv:2104.09393": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.09393",
+      "identity_tokens": [
+        "arXiv:2104.09393"
+      ],
+      "reason": "Conformerとクエリ型によるTransformer-Kernelランキングモデルの改善。文書再ランキングのモデル。対象は検索ランキングであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:34+00:00",
+      "last_checked_at": "2026-11-18T07:47:34+00:00",
+      "linked_from": [
+        "inference-systems",
+        "sparse attention / long-context Transformer"
+      ],
+      "title": "Improving Transformer-Kernel Ranking Model Using Conformer and Query Term Independence"
+    },
+    "arXiv:2303.06324": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.06324",
+      "identity_tokens": [
+        "arXiv:2303.06324"
+      ],
+      "reason": "GPU集合通信の包括的デッドロック防止。分散深層学習訓練の集合通信のデッドロックへの対処。対象は訓練であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:34+00:00",
+      "last_checked_at": "2026-11-18T07:47:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md",
+        "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md",
+        "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+        "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md"
+      ],
+      "title": "Comprehensive Deadlock Prevention for GPU Collective Communication"
+    },
+    "arXiv:2404.11284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.11284",
+      "identity_tokens": [
+        "arXiv:2404.11284"
+      ],
+      "reason": "処理内メモリにおける主記憶ベースの隠れ・サイドチャネル攻撃IMPACT。PiMアーキテクチャの特性を悪用するタイミング攻撃。対象はセキュリティ攻撃であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:35+00:00",
+      "last_checked_at": "2026-11-18T07:47:35+00:00",
+      "linked_from": [
+        "cpu-offload",
+        "inference-systems",
+        "その他システム研究"
+      ],
+      "title": "Revisiting Main Memory-Based Covert and Side Channel Attacks in the Context of Processing-in-Memory"
+    },
+    "arXiv:2505.16723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16723",
+      "identity_tokens": [
+        "arXiv:2505.16723"
+      ],
+      "reason": "意味条件付き透かしによるLLMフィンガープリント。固定クエリへの記憶ではなく、意味領域に統計的透かしを拡散させる指紋手法。対象はモデルの指紋付けであり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:35+00:00",
+      "last_checked_at": "2026-11-18T07:47:35+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "LLM Fingerprinting via Semantically Conditioned Watermarks"
+    },
+    "arXiv:2009.06857": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.06857",
+      "identity_tokens": [
+        "arXiv:2009.06857"
+      ],
+      "reason": "言語モデルの現在の限界：必要なのは検索である。性能と計算のトレードオフを改善する諸アプローチを分類し限界を論じる論考。対象は論考であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:37+00:00",
+      "last_checked_at": "2026-11-18T07:47:37+00:00",
+      "linked_from": [
+        "inference-systems",
+        "sparse attention / long-context Transformer",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "Current Limitations of Language Models: What You Need is Retrieval"
+    },
+    "arXiv:2312.09211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.09211",
+      "identity_tokens": [
+        "arXiv:2312.09211"
+      ],
+      "reason": "低精度微調整における外れ値活性の緩和。低精度の整数微調整で活性の外れ値がスケール因子を歪める問題への対処。対象は微調整であり、推論機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:38+00:00",
+      "last_checked_at": "2026-11-18T07:47:38+00:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Mitigating Outlier Activations in Low-Precision Fine-Tuning of Language Models"
+    },
+    "arXiv:2406.02013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02013",
+      "identity_tokens": [
+        "arXiv:2406.02013"
+      ],
+      "reason": "意思決定者としてのMamba。オフライン強化学習における多規模系列モデリングの探求。対象は強化学習であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:38+00:00",
+      "last_checked_at": "2026-11-18T07:47:38+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Mamba as Decision Maker: Exploring Multi-scale Sequence Modeling in Offline Reinforcement Learning"
+    },
+    "arXiv:2502.02581": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02581",
+      "identity_tokens": [
+        "arXiv:2502.02581"
+      ],
+      "reason": "完全シャード疎データ並列による効率的疎モデル訓練Themis。専門家負荷の偏りによるストラグラーへの対処。対象はMoEの訓練であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:38+00:00",
+      "last_checked_at": "2026-11-18T07:47:38+00:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "その他システム研究",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+      ],
+      "title": "Themis: Efficient Sparse Model Training Through Fully Sharded Sparse Data Parallelism"
+    },
+    "arXiv:2502.03884": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03884",
+      "identity_tokens": [
+        "arXiv:2502.03884"
+      ],
+      "reason": "ランクも重要である：アダプタ専門家の階層構成。LoRAと専門家の混合によるパラメータ効率微調整の研究。対象は微調整であり、推論機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:39+00:00",
+      "last_checked_at": "2026-11-18T07:47:39+00:00",
+      "linked_from": [
+        "Adaptive Expert Computation / Compression",
+        "MoE routing / expert choice / heterogeneous conditional computation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "Rank Also Matters: Hierarchical Configuration for Mixture of Adapter Experts in LLM Fine-Tuning"
+    },
+    "arXiv:2503.20362": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20362",
+      "identity_tokens": [
+        "arXiv:2503.20362"
+      ],
+      "reason": "長尺動画のための大規模視覚言語モデルの自己反射Self-ReS。非線形の時空間サンプリングで重要な動画断片を選ぶ。対象は動画理解であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:39+00:00",
+      "last_checked_at": "2026-11-18T07:47:39+00:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding"
+    },
+    "arXiv:2507.02456": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02456",
+      "identity_tokens": [
+        "arXiv:2507.02456"
+      ],
+      "reason": "LLM訓練のシステム性能と費用のモデリング。分散システムでの訓練のスケーラビリティの課題と対処を論じる。対象は訓練であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:40+00:00",
+      "last_checked_at": "2026-11-18T07:47:40+00:00",
+      "linked_from": [
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "System-performance and cost modeling of Large Language Model training and inference"
+    },
+    "arXiv:2508.18672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18672",
+      "identity_tokens": [
+        "arXiv:2508.18672"
+      ],
+      "reason": "推論課題のためのMoE言語モデルの最適疎性。MoEの疎性が記憶と推論の能力体制にどう影響するかを訓練して調べるスケーリング研究。対象はモデルの訓練研究であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:40+00:00",
+      "last_checked_at": "2026-11-18T07:47:40+00:00",
+      "linked_from": [
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "Optimal Sparsity of Mixture-of-Experts Language Models for Reasoning Tasks"
+    },
+    "arXiv:2506.07919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07919",
+      "identity_tokens": [
+        "arXiv:2506.07919"
+      ],
+      "reason": "系列モデリングにおける非線形性の計算的役割の解明。再帰網の非線形性がいつ計算的に必要かを体系的に解剖する理論研究。対象は理論であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:42+00:00",
+      "last_checked_at": "2026-11-18T07:47:42+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Uncovering the Computational Roles of Nonlinearity in Sequence Modeling Using Almost-Linear RNNs"
+    },
+    "arXiv:2507.18061": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18061",
+      "identity_tokens": [
+        "arXiv:2507.18061"
+      ],
+      "reason": "中国語話し言葉対話のための音声言語モデルベンチマークTELEVAL。音響文脈に基づく対話行動の評価。対象は音声モデルの評価であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:43+00:00",
+      "last_checked_at": "2026-11-18T07:47:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "TELEVAL: A Benchmark Designed for Spoken Language Models in Chinese Interactive Scenarios"
+    },
+    "arXiv:2508.18177": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18177",
+      "identity_tokens": [
+        "arXiv:2508.18177"
+      ],
+      "reason": "視覚障害者のための場面配慮型多エージェント枠組み。視覚言語モデルの計算要求が配備を制限する問題への統合的支援システム。対象は支援技術の応用であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:43+00:00",
+      "last_checked_at": "2026-11-18T07:47:43+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "weight-activation-quantization-outlier-decomposition",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance"
+    },
+    "arXiv:2609.06324": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06324",
+      "identity_tokens": [
+        "arXiv:2609.06324"
+      ],
+      "reason": "周辺分布から結合分布への切符：1ステップ読み出しのための結合雑音蒸留CONDOR。拡散言語モデルが1回の前方計算で一貫したトークンブロックを生成できるかを、ゼロから訓練して探る。対象は拡散モデルの生成手法であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:46+00:00",
+      "last_checked_at": "2026-11-18T07:47:46+00:00",
+      "linked_from": [
+        "Inference / Parallel and Non-Autoregressive Decoding",
+        "Speculative Decoding",
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "投機的復号 / 無損失復号高速化",
+        "拡散型LLM推論 / 近似KVキャッシュ / 並列復号"
+      ],
+      "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models"
+    },
+    "arXiv:2405.00433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.00433",
+      "identity_tokens": [
+        "arXiv:2405.00433"
+      ],
+      "reason": "神経形態言語モデリングにおける重み疎性と活動疎性。スパイキング神経網の言語モデリングでの剪定効果の研究。対象はSNNであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:51+00:00",
+      "last_checked_at": "2026-11-18T07:47:51+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Weight Sparsity Complements Activity Sparsity in Neuromorphic Language Models"
+    },
+    "arXiv:2410.14578": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14578",
+      "identity_tokens": [
+        "arXiv:2410.14578"
+      ],
+      "reason": "LLMは過剰パラメータ化されたテキストエンコーダである。埋め込み課題のために最後の層を剪定して推論時間とメモリを比例的に減らす。対象はテキスト埋め込みであり、生成推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:52+00:00",
+      "last_checked_at": "2026-11-18T07:47:52+00:00",
+      "linked_from": [
+        "03-model-compression-pruning",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "title": "Large Language Models Are Overparameterized Text Encoders"
+    },
+    "arXiv:2407.08330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.08330",
+      "identity_tokens": [
+        "arXiv:2407.08330"
+      ],
+      "reason": "階層文書Transformer HDT。構造化された階層文書向けの疎Transformerアーキテクチャ。対象は文書モデルの設計であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:56+00:00",
+      "last_checked_at": "2026-11-18T07:47:56+00:00",
+      "linked_from": [
+        "inference-systems",
+        "sparse attention / long-context Transformer",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "HDT: Hierarchical Document Transformer"
+    },
+    "arXiv:2605.06185": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06185",
+      "identity_tokens": [
+        "arXiv:2605.06185"
+      ],
+      "reason": "超長尺動画のためのイベント因果RAG。イベント記憶と長距離関係の回復のための検索拡張枠組み。対象は動画理解であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:57+00:00",
+      "last_checked_at": "2026-11-18T07:47:57+00:00",
+      "linked_from": [
+        "KV cache compression / cross-layer state merging",
+        "KVキャッシュ再利用／圧縮／ネットワーク転送",
+        "KVキャッシュ最適化／適応圧縮"
+      ],
+      "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios"
+    },
+    "arXiv:2605.09742": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09742",
+      "identity_tokens": [
+        "arXiv:2605.09742"
+      ],
+      "reason": "選択的状態空間モデルにおける暗黙の時間認識TIDES。不規則な時系列を扱うための選択的SSMの変種。対象は時系列モデリングであり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:57+00:00",
+      "last_checked_at": "2026-11-18T07:47:57+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "TIDES: Implicit Time-Awareness in Selective State Space Models"
+    },
+    "arXiv:2606.30288": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30288",
+      "identity_tokens": [
+        "arXiv:2606.30288"
+      ],
+      "reason": "長文脈動画の細粒度知覚のための潜在視覚反射VisReflect。視覚注意シンクへの対処として潜在空間で反射するLVLMの手法。対象は視覚言語モデルの知覚であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:57+00:00",
+      "last_checked_at": "2026-11-18T07:47:57+00:00",
+      "linked_from": [
+        "Inference / Multimodal Long-Context Memory Compression"
+      ],
+      "title": "VisReflect: Latent Visual Reflection for Fine-Grained Perception in Long Visual Context"
+    },
+    "arXiv:2609.39259": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39259",
+      "identity_tokens": [
+        "arXiv:2609.39259"
+      ],
+      "reason": "有効であることは有用であることではない：条件付き機能的代替可能性。神経網の冗長性を、入力条件付きの動的関係として直接特徴づける理論。対象は神経網の冗長性の理論であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:47:58+00:00",
+      "last_checked_at": "2026-11-18T07:47:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.15033-smarttrim-adaptive-tokens-and-attention-pruning-for-efficient-vision-lan.md"
+      ],
+      "title": "Effective Does Not Mean Useful: Conditional Functional Substitutability for Redundancy and Scaling in Transformers"
+    },
+    "arXiv:2602.22508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.22508",
+      "identity_tokens": [
+        "arXiv:2602.22508"
+      ],
+      "reason": "大規模言語モデルのメタ認知行動チューニング。教師の推論跡にメタ認知行動を挿入して学生を訓練する蒸留の手法。対象は訓練であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:48:00+00:00",
+      "last_checked_at": "2026-11-18T07:48:00+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "title": "Metacognitive Behavioral Tuning of Large Language Models for Multi-Hop Question Answering"
+    },
+    "arXiv:2604.07242": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07242",
+      "identity_tokens": [
+        "arXiv:2604.07242"
+      ],
+      "reason": "深層学習アーキテクチャの代数を形式化する圏論的枠組み。放送や合成を精密に表す数学的枠組み。対象は理論であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:48:01+00:00",
+      "last_checked_at": "2026-11-18T07:48:01+00:00",
+      "linked_from": [
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "title": "Weaves, Wires, and Morphisms: Formalizing and Implementing the Algebra of Deep Learning"
+    },
+    "arXiv:2610.31911": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.31911",
+      "identity_tokens": [
+        "arXiv:2610.31911"
+      ],
+      "reason": "長文訓練を高速化する前方稠密・後方疎注意LazyFlash。注意の訓練が後方計算に支配されることを利用する訓練手法。対象は訓練であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:48:01+00:00",
+      "last_checked_at": "2026-11-18T07:48:01+00:00",
+      "linked_from": [
+        "02-hardware-accelerators",
+        "inference-systems",
+        "疎注意／長文脈学習"
+      ],
+      "title": "LazyFlash: Forward-Dense, Backward-Sparse Attention for Accelerated Long-Context Fine-Tuning"
+    },
+    "arXiv:2605.20193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20193",
+      "identity_tokens": [
+        "arXiv:2605.20193"
+      ],
+      "reason": "質的分析における量子化モデルの性能。面接記録の質的分析課題で量子化水準の影響を調べる応用研究。対象は応用評価であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:48:02+00:00",
+      "last_checked_at": "2026-11-18T07:48:02+00:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification"
     }
   }
 }

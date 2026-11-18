@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-222ff5fabd047c1d-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.20362",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.20362",
+    "identity_tokens": [
+      "arXiv:2503.20362"
+    ],
+    "reason": "長尺動画のための大規模視覚言語モデルの自己反射Self-ReS。非線形の時空間サンプリングで重要な動画断片を選ぶ。対象は動画理解であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:39+00:00",
+    "last_checked_at": "2026-11-18T07:47:39+00:00",
+    "linked_from": [
+      "Inference / Multimodal Long-Context Memory Compression",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "title": "Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding"
+  },
+  "processed_at": "2026-11-18T07:47:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-222ff5fabd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

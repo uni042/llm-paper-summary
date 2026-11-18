@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.11284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.11284",
+    "identity_tokens": [
+      "arXiv:2404.11284"
+    ],
+    "reason": "処理内メモリにおける主記憶ベースの隠れ・サイドチャネル攻撃IMPACT。PiMアーキテクチャの特性を悪用するタイミング攻撃。対象はセキュリティ攻撃であり、推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:35+00:00",
+    "last_checked_at": "2026-11-18T07:47:35+00:00",
+    "linked_from": [
+      "cpu-offload",
+      "inference-systems",
+      "その他システム研究"
+    ],
+    "title": "Revisiting Main Memory-Based Covert and Side Channel Attacks in the Context of Processing-in-Memory"
+  },
+  "processed_at": "2026-11-18T07:47:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

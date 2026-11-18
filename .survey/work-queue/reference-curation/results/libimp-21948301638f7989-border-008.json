@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.12065",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.12065",
+    "identity_tokens": [
+      "arXiv:2505.12065"
+    ],
+    "reason": "LLMベース検索エージェントの効率の解明と強化。正確すぎる検索も近似しすぎる検索も効率を落とすことと、システム設計の非効率を同定する。エージェントの効率の分析であり、推論機構そのものではないため境界。",
+    "first_checked_at": "2026-11-18T07:47:31+00:00",
+    "last_checked_at": "2026-11-18T07:47:31+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "augmented LLM serving / KV cache management / predictive scheduling / vLLM",
+      "kv-cache-offload-recomputation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Demystifying and Enhancing the Efficiency of Large Language Model Based Search Agents"
+  },
+  "processed_at": "2026-11-18T07:47:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

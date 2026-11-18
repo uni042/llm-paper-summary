@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21948301638f7989-border-015",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.18950",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.18950",
+    "identity_tokens": [
+      "arXiv:2511.18950"
+    ],
+    "reason": "効率的VLAのための指示誘導視覚トークン圧縮Compressor-VLA。課題に無関係な剪定が課題criticalな視覚情報を保てない問題に対し、指示で条件づけたハイブリッド圧縮。VLAのトークン圧縮であり境界。",
+    "first_checked_at": "2026-11-18T07:47:33+00:00",
+    "last_checked_at": "2026-11-18T07:47:33+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md",
+      "papers/inference/99-other-inference-systems/2022-2203.14380-pyramid-bert-reducing-complexity-via-successive-core-set-based-token-sel.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation"
+  },
+  "processed_at": "2026-11-18T07:47:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21948301638f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

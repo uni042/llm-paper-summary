@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-222ff5fabd047c1d-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.00305",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.00305",
+    "identity_tokens": [
+      "arXiv:2508.00305"
+    ],
+    "reason": "長文脈言語モデルの最適化技法の系統的評価。剪定、量子化、トークン除去などの最適化を、メモリ・遅延・スループットと生成品質の観点でベンチマークする研究。最適化の評価であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:47:37+00:00",
+    "last_checked_at": "2026-11-18T07:47:37+00:00",
+    "linked_from": [
+      "KV cache quantization / long-context inference / activation compression",
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "Offload / Hierarchical Memory",
+      "inference-systems",
+      "post-training quantization / second-order compression / weight-only LLM inference",
+      "大規模言語モデル重み量子化 / 混合精度 / 疎量子化",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+      "重み専用量子化 / 推論カーネル"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Systematic Evaluation of Optimization Techniques for Long-Context Language Models"
+  },
+  "processed_at": "2026-11-18T07:47:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-222ff5fabd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

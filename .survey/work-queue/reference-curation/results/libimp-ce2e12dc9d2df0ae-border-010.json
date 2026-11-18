@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce2e12dc9d2df0ae-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.00439",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.00439",
+    "identity_tokens": [
+      "arXiv:2502.00439"
+    ],
+    "reason": "事後訓練のためのソフトマックス統一UniAttn。層内・層跨ぎのKV共有を進めても推論時間のオーバーヘッドが残る原因をソフトマックス演算として同定し、統一で対処する。KV機構ではあるが、事後訓練の適応と一体であり境界。",
+    "first_checked_at": "2026-11-18T07:47:49+00:00",
+    "last_checked_at": "2026-11-18T07:47:49+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ・注意アーキテクチャ",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "UniAttn: Reducing Inference Costs via Softmax Unification for Post-Training LLMs"
+  },
+  "processed_at": "2026-11-18T07:47:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce2e12dc9d2d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

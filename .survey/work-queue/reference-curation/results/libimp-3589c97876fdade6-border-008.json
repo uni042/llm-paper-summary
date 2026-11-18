@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3589c97876fdade6-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.13274",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.13274",
+    "identity_tokens": [
+      "arXiv:2511.13274"
+    ],
+    "reason": "多様なAIハードウェア加速器のためのプログラム合成KForge。生成エージェントと性能分析エージェントの協調でカーネルを反復洗練する基盤非依存の枠組み。カーネル最適化のエージェント研究であり境界。",
+    "first_checked_at": "2026-11-18T07:47:42+00:00",
+    "last_checked_at": "2026-11-18T07:47:42+00:00",
+    "linked_from": [
+      "02-hardware-accelerators",
+      "LLM Serving / Scheduling / Disaggregation",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "KForge: Program Synthesis for Diverse AI Hardware Accelerators"
+  },
+  "processed_at": "2026-11-18T07:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3589c97876fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

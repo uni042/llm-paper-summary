@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-222ff5fabd047c1d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.02581",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.02581",
+    "identity_tokens": [
+      "arXiv:2502.02581"
+    ],
+    "reason": "完全シャード疎データ並列による効率的疎モデル訓練Themis。専門家負荷の偏りによるストラグラーへの対処。対象はMoEの訓練であり、推論ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:38+00:00",
+    "last_checked_at": "2026-11-18T07:47:38+00:00",
+    "linked_from": [
+      "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+      "その他システム研究",
+      "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD",
+      "大規模モデル学習／分散学習メモリ最適化／DeepSpeed"
+    ],
+    "title": "Themis: Efficient Sparse Model Training Through Fully Sharded Sparse Data Parallelism"
+  },
+  "processed_at": "2026-11-18T07:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-222ff5fabd04",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

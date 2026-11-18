@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0b086eaec648fe6f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.11302",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.11302",
+    "identity_tokens": [
+      "arXiv:2610.11302"
+    ],
+    "reason": "相互作用配慮型疎注意による高速動画生成iCATS。拡散Transformerの動画生成を訓練不要の疎注意で高速化する。対象は動画生成であり、LLM推論の機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:47:29+00:00",
+    "last_checked_at": "2026-11-18T07:47:29+00:00",
+    "linked_from": [
+      "02-hardware-accelerators",
+      "inference-systems"
+    ],
+    "title": "iCATS: Fast Video Generation via Interaction-Aware Sparse Attention and Timestep-Adaptive Sparsity"
+  },
+  "processed_at": "2026-11-18T07:47:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0b086eaec648",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
