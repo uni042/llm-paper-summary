@@ -1,0 +1,701 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-055269835bf779ca-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-055269835bf7",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.13325",
+    "arXiv:2610.20353",
+    "arXiv:2610.24179",
+    "arXiv:2610.25012",
+    "arXiv:2610.30779",
+    "arXiv:2610.34717",
+    "arXiv:2610.37307",
+    "arXiv:2610.38809",
+    "arXiv:2610.38968",
+    "arXiv:2610.39853"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5583f5a5b6577899f9944618e045b896163b8a90",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:07:13.497958+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.13325",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20353",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24179",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:f74ec522091eb8d3fcd79b13f97328434ef63ecb"
+    },
+    {
+      "requested_id": "arXiv:2610.25012",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2610.30779",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37307",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.38809",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.38968",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39853",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/2026.findings-emnlp.799"
+    }
+  ],
+  "results": [
+    {
+      "title": "Taking Tokenization off the Host for Agentic LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.13325",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workloads resend long contexts that barely change between calls. Prefix caching now skips most of their prefill, yet every request must still be tokenized in full before the cache can even be consulted. Tokenization, a CPU stage long treated as negligible, becomes the largest part of time-to-first-token (TTFT), and a frontend that tokenizes for a whole GPU fleet limits how many GPUs it can feed. We present GraphTok, a GPU tokenizer that runs the entire encoding pipeline, from pre-tokenization through byte-pair encoding (BPE) merging to token-ID assembly, as one replayable CUDA graph. GraphTok reproduces the reference token IDs bit-for-bit on GPT-2, Llama 3, Qwen 2.5, DeepSeek-V3, and Gemma 3, hands short inputs to a CPU engine where the GPU cannot win, and plugs into unmodified vLLM and NVIDIA Dynamo. GraphTok encodes one million GPT-2 tokens in 1.7-3.2 ms including data transfers, and on Llama 3 it is 4.7-6.0x faster than gigatoken, the strongest CPU tokenizer. On TokTier's own single-request benchmark, it is 2.6-3.9x faster than gigatoken and up to 18.1x faster than TokTier. In vLLM with a cached prefix, it lowers mean TTFT by 2.1-2.4x. The largest gain is capacity. Within a 2 s P99 target, one Dynamo frontend with GraphTok sustains 518 requests/s of 121k-token traffic, the busiest-hour load of 56 GPUs, against 296 with gigatoken and 18.5 with the default tokenizer. Across 121k to one million tokens, this is 1.75-2.5x the load gigatoken sustains, with a P99 up to 64x lower where gigatoken's tail breaks.",
+      "identifiers": [
+        "SemanticScholar:faef8a2f4374b00b07148a68bb3d0208ab69f757"
+      ],
+      "semantic_scholar_id": "faef8a2f4374b00b07148a68bb3d0208ab69f757",
+      "canonical_id": "arXiv:2610.13325",
+      "arxiv_id": "2610.13325",
+      "authors": [
+        "Mohammad Siavashi",
+        "Pascal Schwinte",
+        "A. Banaei",
+        "Gerald Q. Maguire",
+        "Marco Chiesa",
+        "Dejan Kostic"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware",
+      "source_url": "https://arxiv.org/abs/2610.34717",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language-action (VLA) models increasingly run on edge devices aboard robots, where inference latency constrains closed-loop robot control. However, it remains unclear how to design VLA models, their inference software and edge hardware so that robots can run VLA inference in real time. Most VLA models report only task success, while prior studies cover limited action-generation strategies, divide inference into at most three stages, and lack comparisons of inference optimizations on the same models. Therefore, we introduce VLA-HWBench, a benchmark that measures 18 open VLA models on NVIDIA Jetson AGX Thor and AMD Ryzen AI Max+ PRO 395, with a seven-stage inference breakdown. Our study reveals three insights. First, action-generation strategy matters more than model size. It dominates 14 of 19 Jetson configurations, latency varies by $82\\times$ on Jetson and $157\\times$ on AMD, and parameter count explains at most 15% of latency variance. Models that generate long action chunks in a few flow-matching steps keep up with control, whereas token-by-token decoding does not. Second, kernel fusion with 4-bit weights helps most, running $\\pi_{0.5}$ and GR00T N1.7 2.6-2.9$\\times$ faster than PyTorch with torch.compile, but it exists for only these two models and only on the Jetson. Optimization also moves the time to the stages it shortens least, as CPU preprocessing grows from 12% to 39% of the GR00T N1.7 call. Third, after optimization, memory bandwidth limits only the stages that process few tokens on the Jetson, such as the denoising steps, whereas software limits all other stages, from unfused kernels to serial preprocessing on the host CPU. Overall, low-latency edge VLAs should use few action-generation iterations, inference software should extend kernel fusion and low-bit weights to more models and platforms, and edge hardware needs high memory bandwidth and a fast host CPU.",
+      "identifiers": [
+        "SemanticScholar:839a5a8188cf0e9a76ac9d38639c9cd98c2a34da"
+      ],
+      "semantic_scholar_id": "839a5a8188cf0e9a76ac9d38639c9cd98c2a34da",
+      "canonical_id": "arXiv:2610.34717",
+      "arxiv_id": "2610.34717",
+      "authors": [
+        "Bo-Rui Xu",
+        "Hong-Shi Tan",
+        "Wen-Qi Jiang",
+        "Bing-Sheng He",
+        "Ming Wu",
+        "Jason Zeng",
+        "Michael Heinrich"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization",
+      "source_url": "https://arxiv.org/abs/2610.20353",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-experts (MoE) language models activate only a few experts per token, yet all expert weights must be stored. Mixed-precision quantization reduces this storage cost by assigning higher bit-widths to sensitive experts and lower bit-widths to resilient ones, but expert rankings alone do not determine how strongly to weight their errors. To address this gap, we propose NatScale, a contrast-calibrated allocation framework for mixed-precision MoE quantization. It uses a model-specific power transformation to calibrate gradient-based expert weights to an information-theoretic contrast target while preserving rankings. We jointly evaluate each expert's gate, up and down configurations to estimate its output error. We then combine these errors and calibrated weights with an existing prior based on weight spectra, variance and precision decay to select configurations under a storage budget. Across three models, NatScale achieves the lowest native-to-quantized KL divergence and the highest top-token agreement in all nine settings against five allocation baselines. It also yields the lowest perplexity in seven settings. These findings highlight the importance of objective-aware precision allocation.",
+      "identifiers": [
+        "SemanticScholar:f9899d78a48ee21a2fd49bbafad19cf6eca26331"
+      ],
+      "semantic_scholar_id": "f9899d78a48ee21a2fd49bbafad19cf6eca26331",
+      "canonical_id": "arXiv:2610.20353",
+      "arxiv_id": "2610.20353",
+      "authors": [
+        "Ren-Jie Xie",
+        "Jun-Cheng Yang",
+        "Ao-Ting Hu",
+        "Ya Liang",
+        "Ming-Xing Zhang",
+        "Zhe-Heng Hong",
+        "Wei Xu",
+        "Yan-Zhi Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ProQuant: Preserving Expert Quality over Quantity in Ultra-Low-Bit Quantization of Mixture-of-Experts Models",
+      "source_url": "https://arxiv.org/abs/2610.30779",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) large language models reduce computation through sparse activation but still incur substantial storage costs. Mixed-precision post-training quantization (PTQ) reduces these costs by quantizing different model components at different bit widths, but existing methods often struggle to preserve generation quality under tight bit budgets. We identify two key challenges: (1) nonlinear quantization errors at extremely low precision are underestimated when cross-layer propagation is ignored; (2) direct router fine-tuning may cause routing drift, and calibration gains may not generalize to downstream tasks. To address these issues, we propose ProQuant, a weight-only PTQ framework for MoE models. Prune-or-Prioritize Mixed-Precision Allocation (PoP) jointly optimizes expert pruning and bit-width assignment. It allows higher-precision experts to substitute for severely degraded ones while improving bit-budget utilization. Routing-Consistent RMSNorm Finetune (RoCo) adapts expert input representations through mathematically equivalent transformations. It compensates for quantization errors to reduce routing drift. Extensive experiments demonstrate that ProQuant outperforms existing methods across diverse generative tasks. Code is available at https://github.com/ThrowBug/ProQuant.git.",
+      "identifiers": [
+        "SemanticScholar:4c510636060750f19524f0836e47a6ebaee8eb6b"
+      ],
+      "semantic_scholar_id": "4c510636060750f19524f0836e47a6ebaee8eb6b",
+      "canonical_id": "arXiv:2610.30779",
+      "arxiv_id": "2610.30779",
+      "authors": [
+        "Jia-Qi Chen",
+        "Xiang-Long Yan",
+        "Cheng-Zhu Bao",
+        "Xie Chen",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EdgePace: Deadline- and Freshness-Aware LLM Scheduling on Unified-Memory Platforms",
+      "source_url": "https://arxiv.org/abs/2610.37307",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) increasingly run on edge devices alongside tasks that continuously process sensor data. In many applications, these foreground tasks prepare observations as inputs to the LLM, whose outputs guide subsequent processing or actions. The observations must be processed by foreground deadlines, and LLM feedback must arrive while its source observations remain useful. Yet the CPU and accelerators share a unified-memory system, so LLM inference can delay foreground processing through memory-bandwidth contention even when compute resources remain available. We present EdgePace, a bandwidth-aware runtime that protects foreground deadlines while sustaining timely LLM feedback. EdgePace creates safe suspension points across prefill and decode, monitors foreground memory demand and stalls at low cost, and schedules inference according to contention risk, deadline slack, and output freshness. We evaluate EdgePace on a OnePlus 13 and three NVIDIA Jetson platforms using multi-camera processing and robotic target tracking. Relative to unmanaged inference, it reduces foreground deadline misses by 24.1%--96.1% while retaining 64.9%--98.5% of LLM throughput. All measured LLM outputs arrive within their task-defined freshness windows. On OnePlus 13, for example, camera deadline misses fall by 91.3% while 90.4% of LLM throughput is retained.",
+      "identifiers": [
+        "SemanticScholar:328060d8828e8414791980230a4f86f02db9aed0"
+      ],
+      "semantic_scholar_id": "328060d8828e8414791980230a4f86f02db9aed0",
+      "canonical_id": "arXiv:2610.37307",
+      "arxiv_id": "2610.37307",
+      "authors": [
+        "Teng Mei",
+        "Cheng-Xuan Pei",
+        "Wei-Jun Wang",
+        "Jie Wu",
+        "Marco Canini",
+        "Yun-Ming Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill",
+      "source_url": "https://arxiv.org/abs/2610.38809",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic AI drives significant productivity gains across diverse domains, but concurrent long-context prefills from multiple agents can saturate GPU compute resources. Although CPUs offer a viable alternative, existing CPU attention kernels fall short in adapting to multi-tier cache hierarchies and lack effective thread scheduling. To address this, we introduce CACPU, a high-performance attention kernel featuring tiered cache blocking and an in-kernel task dispatching mechanism designed for causal full-sequence prefilling. CACPU achieves up to a 2.01x speedup over PyTorch SDPA, FlexAttention, and SGLang attention kernels. Integrated into SGLang, it reduces Time to First Token (TTFT) of Llama-3.1-8B by up to 1.74x while preserving model accuracy.",
+      "identifiers": [
+        "SemanticScholar:9111174c6ecae9090da398d33227de077daa33ba"
+      ],
+      "semantic_scholar_id": "9111174c6ecae9090da398d33227de077daa33ba",
+      "canonical_id": "arXiv:2610.38809",
+      "arxiv_id": "2610.38809",
+      "authors": [
+        "Kwun Fung Lau",
+        "Frost Mitchell",
+        "Kanya Mo",
+        "E. Ashok"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.38968",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding speeds up large language model (LLM) serving only while the GPU has spare compute, so the best draft length, the number of tokens a small drafter guesses per step, shrinks as the batch grows. vLLM lets operators set the draft length for each batch size with a hand-written table, but nothing measures or corrects that table. We present TableTune. Its tuner times the decoding step for every batch size and draft length on vLLM's own serving path and computes, in minutes, the table that maximizes throughput. Its controller, a vLLM plugin, tracks how many guesses are accepted in live traffic and rebuilds the table while serving. We measure TableTune only against other ways to speculate. On an H100, the tuned table delivers at least 94% of the throughput of the best fixed draft length at every load in four of five drafter settings (88% in the fifth) without the operator having to know which length that is. Against reimplementations of TurboSpec- and Nightjar-style control on the same engine, its worst-case loss is never higher than theirs, and with the EAGLE-3 drafter it is 3% against 9% and 12%. On a mixture-of-experts model, vLLM's documented table loses up to 18% and the tuned table at most 3%. Starting from mistuned tables, the controller raises throughput by up to 58% (up to 45% on vLLM's default runner), and after a workload switch with the DFlash drafter it recovers 96% of a stale table's loss. In llm-d's optimized-baseline deployment as shipped, two Qwen3-32B replicas on four GPUs, the tuned table is up to 32% faster than a fixed draft length of 3 and up to 25% faster than vLLM's documented table at high load, and the controller raises the documented table's throughput by up to 29%.",
+      "identifiers": [
+        "SemanticScholar:1255dd03a9af0d92de45f1d7e7b59f3e00a9824f"
+      ],
+      "semantic_scholar_id": "1255dd03a9af0d92de45f1d7e7b59f3e00a9824f",
+      "canonical_id": "arXiv:2610.38968",
+      "arxiv_id": "2610.38968",
+      "authors": [
+        "Abhishek Malvankar",
+        "Paul C. Castro",
+        "N. Mitchell"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.13325",
+      "identity_tokens": [
+        "id:SemanticScholar:faef8a2f4374b00b07148a68bb3d0208ab69f757",
+        "id:arXiv:2610.13325",
+        "title:taking tokenization off the host for agentic llm serving",
+        "url:https://arxiv.org/abs/2610.13325"
+      ],
+      "record": {
+        "title": "Taking Tokenization off the Host for Agentic LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.13325",
+        "year": 2026,
+        "published": "2026-10-09",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic workloads resend long contexts that barely change between calls. Prefix caching now skips most of their prefill, yet every request must still be tokenized in full before the cache can even be consulted. Tokenization, a CPU stage long treated as negligible, becomes the largest part of time-to-first-token (TTFT), and a frontend that tokenizes for a whole GPU fleet limits how many GPUs it can feed. We present GraphTok, a GPU tokenizer that runs the entire encoding pipeline, from pre-tokenization through byte-pair encoding (BPE) merging to token-ID assembly, as one replayable CUDA graph. GraphTok reproduces the reference token IDs bit-for-bit on GPT-2, Llama 3, Qwen 2.5, DeepSeek-V3, and Gemma 3, hands short inputs to a CPU engine where the GPU cannot win, and plugs into unmodified vLLM and NVIDIA Dynamo. GraphTok encodes one million GPT-2 tokens in 1.7-3.2 ms including data transfers, and on Llama 3 it is 4.7-6.0x faster than gigatoken, the strongest CPU tokenizer. On TokTier's own single-request benchmark, it is 2.6-3.9x faster than gigatoken and up to 18.1x faster than TokTier. In vLLM with a cached prefix, it lowers mean TTFT by 2.1-2.4x. The largest gain is capacity. Within a 2 s P99 target, one Dynamo frontend with GraphTok sustains 518 requests/s of 121k-token traffic, the busiest-hour load of 56 GPUs, against 296 with gigatoken and 18.5 with the default tokenizer. Across 121k to one million tokens, this is 1.75-2.5x the load gigatoken sustains, with a P99 up to 64x lower where gigatoken's tail breaks.",
+        "identifiers": [
+          "SemanticScholar:faef8a2f4374b00b07148a68bb3d0208ab69f757"
+        ],
+        "semantic_scholar_id": "faef8a2f4374b00b07148a68bb3d0208ab69f757",
+        "canonical_id": "arXiv:2610.13325",
+        "arxiv_id": "2610.13325",
+        "authors": [
+          "Mohammad Siavashi",
+          "Pascal Schwinte",
+          "A. Banaei",
+          "Gerald Q. Maguire",
+          "Marco Chiesa",
+          "Dejan Kostic"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34717",
+      "identity_tokens": [
+        "id:SemanticScholar:839a5a8188cf0e9a76ac9d38639c9cd98c2a34da",
+        "id:arXiv:2610.34717",
+        "title:vlahwbench where the time goes when vla models run on edge hardware",
+        "url:https://arxiv.org/abs/2610.34717"
+      ],
+      "record": {
+        "title": "VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware",
+        "source_url": "https://arxiv.org/abs/2610.34717",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-language-action (VLA) models increasingly run on edge devices aboard robots, where inference latency constrains closed-loop robot control. However, it remains unclear how to design VLA models, their inference software and edge hardware so that robots can run VLA inference in real time. Most VLA models report only task success, while prior studies cover limited action-generation strategies, divide inference into at most three stages, and lack comparisons of inference optimizations on the same models. Therefore, we introduce VLA-HWBench, a benchmark that measures 18 open VLA models on NVIDIA Jetson AGX Thor and AMD Ryzen AI Max+ PRO 395, with a seven-stage inference breakdown. Our study reveals three insights. First, action-generation strategy matters more than model size. It dominates 14 of 19 Jetson configurations, latency varies by $82\\times$ on Jetson and $157\\times$ on AMD, and parameter count explains at most 15% of latency variance. Models that generate long action chunks in a few flow-matching steps keep up with control, whereas token-by-token decoding does not. Second, kernel fusion with 4-bit weights helps most, running $\\pi_{0.5}$ and GR00T N1.7 2.6-2.9$\\times$ faster than PyTorch with torch.compile, but it exists for only these two models and only on the Jetson. Optimization also moves the time to the stages it shortens least, as CPU preprocessing grows from 12% to 39% of the GR00T N1.7 call. Third, after optimization, memory bandwidth limits only the stages that process few tokens on the Jetson, such as the denoising steps, whereas software limits all other stages, from unfused kernels to serial preprocessing on the host CPU. Overall, low-latency edge VLAs should use few action-generation iterations, inference software should extend kernel fusion and low-bit weights to more models and platforms, and edge hardware needs high memory bandwidth and a fast host CPU.",
+        "identifiers": [
+          "SemanticScholar:839a5a8188cf0e9a76ac9d38639c9cd98c2a34da"
+        ],
+        "semantic_scholar_id": "839a5a8188cf0e9a76ac9d38639c9cd98c2a34da",
+        "canonical_id": "arXiv:2610.34717",
+        "arxiv_id": "2610.34717",
+        "authors": [
+          "Bo-Rui Xu",
+          "Hong-Shi Tan",
+          "Wen-Qi Jiang",
+          "Bing-Sheng He",
+          "Ming Wu",
+          "Jason Zeng",
+          "Michael Heinrich"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.20353",
+      "identity_tokens": [
+        "id:SemanticScholar:f9899d78a48ee21a2fd49bbafad19cf6eca26331",
+        "id:arXiv:2610.20353",
+        "title:beyond expert rankings contrast calibration for mixedprecision moe quantization",
+        "url:https://arxiv.org/abs/2610.20353"
+      ],
+      "record": {
+        "title": "Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization",
+        "source_url": "https://arxiv.org/abs/2610.20353",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-experts (MoE) language models activate only a few experts per token, yet all expert weights must be stored. Mixed-precision quantization reduces this storage cost by assigning higher bit-widths to sensitive experts and lower bit-widths to resilient ones, but expert rankings alone do not determine how strongly to weight their errors. To address this gap, we propose NatScale, a contrast-calibrated allocation framework for mixed-precision MoE quantization. It uses a model-specific power transformation to calibrate gradient-based expert weights to an information-theoretic contrast target while preserving rankings. We jointly evaluate each expert's gate, up and down configurations to estimate its output error. We then combine these errors and calibrated weights with an existing prior based on weight spectra, variance and precision decay to select configurations under a storage budget. Across three models, NatScale achieves the lowest native-to-quantized KL divergence and the highest top-token agreement in all nine settings against five allocation baselines. It also yields the lowest perplexity in seven settings. These findings highlight the importance of objective-aware precision allocation.",
+        "identifiers": [
+          "SemanticScholar:f9899d78a48ee21a2fd49bbafad19cf6eca26331"
+        ],
+        "semantic_scholar_id": "f9899d78a48ee21a2fd49bbafad19cf6eca26331",
+        "canonical_id": "arXiv:2610.20353",
+        "arxiv_id": "2610.20353",
+        "authors": [
+          "Ren-Jie Xie",
+          "Jun-Cheng Yang",
+          "Ao-Ting Hu",
+          "Ya Liang",
+          "Ming-Xing Zhang",
+          "Zhe-Heng Hong",
+          "Wei Xu",
+          "Yan-Zhi Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.30779",
+      "identity_tokens": [
+        "id:SemanticScholar:4c510636060750f19524f0836e47a6ebaee8eb6b",
+        "id:arXiv:2610.30779",
+        "title:proquant preserving expert quality over quantity in ultralowbit quantization of mixtureofexperts models",
+        "url:https://arxiv.org/abs/2610.30779"
+      ],
+      "record": {
+        "title": "ProQuant: Preserving Expert Quality over Quantity in Ultra-Low-Bit Quantization of Mixture-of-Experts Models",
+        "source_url": "https://arxiv.org/abs/2610.30779",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) large language models reduce computation through sparse activation but still incur substantial storage costs. Mixed-precision post-training quantization (PTQ) reduces these costs by quantizing different model components at different bit widths, but existing methods often struggle to preserve generation quality under tight bit budgets. We identify two key challenges: (1) nonlinear quantization errors at extremely low precision are underestimated when cross-layer propagation is ignored; (2) direct router fine-tuning may cause routing drift, and calibration gains may not generalize to downstream tasks. To address these issues, we propose ProQuant, a weight-only PTQ framework for MoE models. Prune-or-Prioritize Mixed-Precision Allocation (PoP) jointly optimizes expert pruning and bit-width assignment. It allows higher-precision experts to substitute for severely degraded ones while improving bit-budget utilization. Routing-Consistent RMSNorm Finetune (RoCo) adapts expert input representations through mathematically equivalent transformations. It compensates for quantization errors to reduce routing drift. Extensive experiments demonstrate that ProQuant outperforms existing methods across diverse generative tasks. Code is available at https://github.com/ThrowBug/ProQuant.git.",
+        "identifiers": [
+          "SemanticScholar:4c510636060750f19524f0836e47a6ebaee8eb6b"
+        ],
+        "semantic_scholar_id": "4c510636060750f19524f0836e47a6ebaee8eb6b",
+        "canonical_id": "arXiv:2610.30779",
+        "arxiv_id": "2610.30779",
+        "authors": [
+          "Jia-Qi Chen",
+          "Xiang-Long Yan",
+          "Cheng-Zhu Bao",
+          "Xie Chen",
+          "Yu-Lun Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37307",
+      "identity_tokens": [
+        "id:SemanticScholar:328060d8828e8414791980230a4f86f02db9aed0",
+        "id:arXiv:2610.37307",
+        "title:edgepace deadline and freshnessaware llm scheduling on unifiedmemory platforms",
+        "url:https://arxiv.org/abs/2610.37307"
+      ],
+      "record": {
+        "title": "EdgePace: Deadline- and Freshness-Aware LLM Scheduling on Unified-Memory Platforms",
+        "source_url": "https://arxiv.org/abs/2610.37307",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) increasingly run on edge devices alongside tasks that continuously process sensor data. In many applications, these foreground tasks prepare observations as inputs to the LLM, whose outputs guide subsequent processing or actions. The observations must be processed by foreground deadlines, and LLM feedback must arrive while its source observations remain useful. Yet the CPU and accelerators share a unified-memory system, so LLM inference can delay foreground processing through memory-bandwidth contention even when compute resources remain available. We present EdgePace, a bandwidth-aware runtime that protects foreground deadlines while sustaining timely LLM feedback. EdgePace creates safe suspension points across prefill and decode, monitors foreground memory demand and stalls at low cost, and schedules inference according to contention risk, deadline slack, and output freshness. We evaluate EdgePace on a OnePlus 13 and three NVIDIA Jetson platforms using multi-camera processing and robotic target tracking. Relative to unmanaged inference, it reduces foreground deadline misses by 24.1%--96.1% while retaining 64.9%--98.5% of LLM throughput. All measured LLM outputs arrive within their task-defined freshness windows. On OnePlus 13, for example, camera deadline misses fall by 91.3% while 90.4% of LLM throughput is retained.",
+        "identifiers": [
+          "SemanticScholar:328060d8828e8414791980230a4f86f02db9aed0"
+        ],
+        "semantic_scholar_id": "328060d8828e8414791980230a4f86f02db9aed0",
+        "canonical_id": "arXiv:2610.37307",
+        "arxiv_id": "2610.37307",
+        "authors": [
+          "Teng Mei",
+          "Cheng-Xuan Pei",
+          "Wei-Jun Wang",
+          "Jie Wu",
+          "Marco Canini",
+          "Yun-Ming Xiao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.38809",
+      "identity_tokens": [
+        "id:SemanticScholar:9111174c6ecae9090da398d33227de077daa33ba",
+        "id:arXiv:2610.38809",
+        "title:causal attention on cpu a cacheaware and loadbalanced scheduling kernel for prefill",
+        "url:https://arxiv.org/abs/2610.38809"
+      ],
+      "record": {
+        "title": "Causal Attention on CPU: A Cache-Aware and Load-Balanced Scheduling Kernel for Prefill",
+        "source_url": "https://arxiv.org/abs/2610.38809",
+        "year": 2026,
+        "published": "2026-10-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic AI drives significant productivity gains across diverse domains, but concurrent long-context prefills from multiple agents can saturate GPU compute resources. Although CPUs offer a viable alternative, existing CPU attention kernels fall short in adapting to multi-tier cache hierarchies and lack effective thread scheduling. To address this, we introduce CACPU, a high-performance attention kernel featuring tiered cache blocking and an in-kernel task dispatching mechanism designed for causal full-sequence prefilling. CACPU achieves up to a 2.01x speedup over PyTorch SDPA, FlexAttention, and SGLang attention kernels. Integrated into SGLang, it reduces Time to First Token (TTFT) of Llama-3.1-8B by up to 1.74x while preserving model accuracy.",
+        "identifiers": [
+          "SemanticScholar:9111174c6ecae9090da398d33227de077daa33ba"
+        ],
+        "semantic_scholar_id": "9111174c6ecae9090da398d33227de077daa33ba",
+        "canonical_id": "arXiv:2610.38809",
+        "arxiv_id": "2610.38809",
+        "authors": [
+          "Kwun Fung Lau",
+          "Frost Mitchell",
+          "Kanya Mo",
+          "E. Ashok"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.38968",
+      "identity_tokens": [
+        "id:SemanticScholar:1255dd03a9af0d92de45f1d7e7b59f3e00a9824f",
+        "id:arXiv:2610.38968",
+        "title:tabletune measured selfcorrecting draftlength tables for dynamic speculative decoding",
+        "url:https://arxiv.org/abs/2610.38968"
+      ],
+      "record": {
+        "title": "TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.38968",
+        "year": 2026,
+        "published": "2026-10-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding speeds up large language model (LLM) serving only while the GPU has spare compute, so the best draft length, the number of tokens a small drafter guesses per step, shrinks as the batch grows. vLLM lets operators set the draft length for each batch size with a hand-written table, but nothing measures or corrects that table. We present TableTune. Its tuner times the decoding step for every batch size and draft length on vLLM's own serving path and computes, in minutes, the table that maximizes throughput. Its controller, a vLLM plugin, tracks how many guesses are accepted in live traffic and rebuilds the table while serving. We measure TableTune only against other ways to speculate. On an H100, the tuned table delivers at least 94% of the throughput of the best fixed draft length at every load in four of five drafter settings (88% in the fifth) without the operator having to know which length that is. Against reimplementations of TurboSpec- and Nightjar-style control on the same engine, its worst-case loss is never higher than theirs, and with the EAGLE-3 drafter it is 3% against 9% and 12%. On a mixture-of-experts model, vLLM's documented table loses up to 18% and the tuned table at most 3%. Starting from mistuned tables, the controller raises throughput by up to 58% (up to 45% on vLLM's default runner), and after a workload switch with the DFlash drafter it recovers 96% of a stale table's loss. In llm-d's optimized-baseline deployment as shipped, two Qwen3-32B replicas on four GPUs, the tuned table is up to 32% faster than a fixed draft length of 3 and up to 25% faster than vLLM's documented table at high load, and the controller raises the documented table's throughput by up to 29%.",
+        "identifiers": [
+          "SemanticScholar:1255dd03a9af0d92de45f1d7e7b59f3e00a9824f"
+        ],
+        "semantic_scholar_id": "1255dd03a9af0d92de45f1d7e7b59f3e00a9824f",
+        "canonical_id": "arXiv:2610.38968",
+        "arxiv_id": "2610.38968",
+        "authors": [
+          "Abhishek Malvankar",
+          "Paul C. Castro",
+          "N. Mitchell"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5d519e941b70a71af50495550ad1ea3d319706329d35596b3fdc00ebb43e27b7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

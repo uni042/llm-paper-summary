@@ -1,0 +1,211 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a4d768e22e125727-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a4d768e22e12",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2312.00960",
+    "arXiv:2501.16376",
+    "arXiv:2504.04060",
+    "arXiv:2506.20480",
+    "arXiv:2509.06174",
+    "arXiv:2604.17068",
+    "arXiv:2605.07443",
+    "arXiv:2606.08891"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5583f5a5b6577899f9944618e045b896163b8a90",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:07:01.112498+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2312.00960",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2312.00960"
+    },
+    {
+      "requested_id": "arXiv:2501.16376",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/v1/2025.findings-emnlp.690"
+    },
+    {
+      "requested_id": "arXiv:2504.04060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.20480",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2506.20480"
+    },
+    {
+      "requested_id": "arXiv:2509.06174",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2509.06174"
+    },
+    {
+      "requested_id": "arXiv:2604.17068",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.17068"
+    },
+    {
+      "requested_id": "arXiv:2605.07443",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/2575-8411.2026.00067"
+    },
+    {
+      "requested_id": "arXiv:2606.08891",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3816440.3818590"
+    }
+  ],
+  "results": [
+    {
+      "title": "VocalNet: Speech LLM with Multi-Token Prediction for Faster and High-Quality Generation",
+      "source_url": "https://arxiv.org/abs/2504.04060",
+      "year": 2025,
+      "published": "2025-04-05",
+      "venue": "arXiv.org",
+      "citation_count": 24,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speech large language models (LLMs) have emerged as a prominent research focus in speech processing. We introduce VocalNet-1B and VocalNet-8B, a series of high-performance, low-latency speech LLMs enabled by a scalable and model-agnostic training framework designed for real-time voice interaction. Central to our contribution is the first application of multi-token prediction (MTP) to speech LLMs. This approach represents a paradigm shift from standard next-token prediction (NTP), offering simultaneous improvements in generation speed and quality. Informed by analysis of MTP's effect on speech generation and experimental comparisons, we designed a straightforward and highly effective MTP implementation. Experiments demonstrate that VocalNet performs on par with mainstream Omni LLMs even with limited training data, and significantly surpasses existing open-source speech LLMs. To foster reproducibility and community advancement, all model weights, inference code, training data, and framework implementations have been made publicly available at https://github.com/SJTU-OmniAgent/VocalNet",
+      "identifiers": [
+        "SemanticScholar:2e4c0d90200677711a7ed3e17fb7671150dd2582"
+      ],
+      "semantic_scholar_id": "2e4c0d90200677711a7ed3e17fb7671150dd2582",
+      "canonical_id": "arXiv:2504.04060",
+      "arxiv_id": "2504.04060",
+      "doi": "10.48550/arXiv.2504.04060",
+      "authors": [
+        "Yu-Hao Wang",
+        "He-Yang Liu",
+        "Zi-Yang Cheng",
+        "Rong-Hua Wu",
+        "Qun-Shan Gu",
+        "Yan-Feng Wang",
+        "Yu Wang"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 24,
+        "citation_count": 24,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 592,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2504.04060",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.04060",
+        "id:SemanticScholar:2e4c0d90200677711a7ed3e17fb7671150dd2582",
+        "id:arXiv:2504.04060",
+        "title:vocalnet speech llm with multitoken prediction for faster and highquality generation",
+        "url:https://arxiv.org/abs/2504.04060"
+      ],
+      "record": {
+        "title": "VocalNet: Speech LLM with Multi-Token Prediction for Faster and High-Quality Generation",
+        "source_url": "https://arxiv.org/abs/2504.04060",
+        "year": 2025,
+        "published": "2025-04-05",
+        "venue": "arXiv.org",
+        "citation_count": 24,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speech large language models (LLMs) have emerged as a prominent research focus in speech processing. We introduce VocalNet-1B and VocalNet-8B, a series of high-performance, low-latency speech LLMs enabled by a scalable and model-agnostic training framework designed for real-time voice interaction. Central to our contribution is the first application of multi-token prediction (MTP) to speech LLMs. This approach represents a paradigm shift from standard next-token prediction (NTP), offering simultaneous improvements in generation speed and quality. Informed by analysis of MTP's effect on speech generation and experimental comparisons, we designed a straightforward and highly effective MTP implementation. Experiments demonstrate that VocalNet performs on par with mainstream Omni LLMs even with limited training data, and significantly surpasses existing open-source speech LLMs. To foster reproducibility and community advancement, all model weights, inference code, training data, and framework implementations have been made publicly available at https://github.com/SJTU-OmniAgent/VocalNet",
+        "identifiers": [
+          "SemanticScholar:2e4c0d90200677711a7ed3e17fb7671150dd2582"
+        ],
+        "semantic_scholar_id": "2e4c0d90200677711a7ed3e17fb7671150dd2582",
+        "canonical_id": "arXiv:2504.04060",
+        "arxiv_id": "2504.04060",
+        "doi": "10.48550/arXiv.2504.04060",
+        "authors": [
+          "Yu-Hao Wang",
+          "He-Yang Liu",
+          "Zi-Yang Cheng",
+          "Rong-Hua Wu",
+          "Qun-Shan Gu",
+          "Yan-Feng Wang",
+          "Yu Wang"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 24,
+          "citation_count": 24,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 592,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6a4fd1a11ecc2a6e99dfdc8b6fbeb1de3c3d8701f49e149724bdb316d4ef21d5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

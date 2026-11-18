@@ -1,0 +1,296 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-35e7d1781419afd3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-35e7d1781419",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/dac63849.2025.11133184",
+    "arXiv:2405.17470",
+    "arXiv:2505.12065",
+    "arXiv:2506.09061",
+    "arXiv:2508.09471",
+    "arXiv:2604.02816",
+    "arXiv:2604.12928",
+    "arXiv:2606.21869",
+    "arXiv:2607.20507"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "5583f5a5b6577899f9944618e045b896163b8a90",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T14:07:00.832487+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/dac63849.2025.11133184",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2405.17470",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2405.17470"
+    },
+    {
+      "requested_id": "arXiv:2505.12065",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.09061",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1109/icmla66185.2025.00119"
+    },
+    {
+      "requested_id": "arXiv:2508.09471",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2508.09471"
+    },
+    {
+      "requested_id": "arXiv:2604.02816",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.02816"
+    },
+    {
+      "requested_id": "arXiv:2604.12928",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.12928"
+    },
+    {
+      "requested_id": "arXiv:2606.21869",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.21869"
+    },
+    {
+      "requested_id": "arXiv:2607.20507",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.18653/2026.emnlp-main.1223"
+    }
+  ],
+  "results": [
+    {
+      "title": "Demystifying and Enhancing the Efficiency of Large Language Model Based Search Agents",
+      "source_url": "https://arxiv.org/abs/2505.12065",
+      "year": 2025,
+      "published": "2025-05-17",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM)-based search agents have shown remarkable capabilities in solving complex tasks by dynamically decomposing problems and addressing them through interleaved reasoning and retrieval. However, this interleaved paradigm introduces substantial efficiency bottlenecks. First, we observe that both highly accurate and overly approximate retrieval methods degrade system efficiency: exact search incurs significant retrieval overhead, while coarse retrieval requires additional reasoning steps during generation. Second, we identify inefficiencies in system design, including improper scheduling and frequent retrieval stalls, which lead to cascading latency -- where even minor delays in retrieval amplify end-to-end inference time. To address these challenges, we introduce SearchAgent-X, a high-efficiency inference framework for LLM-based search agents. SearchAgent-X leverages high-recall approximate retrieval and incorporates two key techniques: priority-aware scheduling and non-stall retrieval. Extensive experiments demonstrate that SearchAgent-X consistently outperforms state-of-the-art systems such as vLLM and HNSW-based retrieval across diverse tasks, achieving up to 3.4$\\times$ higher throughput and 5$\\times$ lower latency, without compromising generation quality. SearchAgent-X is available at https://github.com/tiannuo-yang/SearchAgent-X.",
+      "identifiers": [
+        "SemanticScholar:1c785c94d325575b32cf50beb7f57975bea4388b"
+      ],
+      "semantic_scholar_id": "1c785c94d325575b32cf50beb7f57975bea4388b",
+      "canonical_id": "arXiv:2505.12065",
+      "arxiv_id": "2505.12065",
+      "doi": "10.48550/arXiv.2505.12065",
+      "authors": [
+        "Tian-Nuo Yang",
+        "Ze-Bin Yao",
+        "Bo-Wen Jin",
+        "Li-Xiao Cui",
+        "Yu-Sen Li",
+        "Gang Wang",
+        "Xiao-Guang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 550,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Precon: A Precision-Convertible Architecture for Accelerating Quantized Deep Learning Models across Various Domains Including LLMs",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11133184",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The sensitivity of LLMs to quantization has driven the development of hardware accelerators tailored for specific low-precision configurations such as weight-only quantization and mixed-precision, which can introduce inefficiencies in dedicated hardware architecture. In this work, we propose Precon, a precision-convertible architecture designed to accelerate various quantized deep learning models, particularly LLMs, through a unified processing unit. By enabling on-the-fly switching between half-float (FP16) decoding and integer (INT) decomposition, the design effectively supports INT4-FP16, INT4-INT4, and INT4INT8 arithmetic within shared logic. Precon achieves up to $4.1 \\times$ speedup and 81.4% reduction in energy consumption compared to the baseline across various domains, including the support of both accurate and efficient acceleration of quantized LLMs.",
+      "identifiers": [
+        "SemanticScholar:0e7e0e9daca21599e2be9944f9538472c5088221"
+      ],
+      "semantic_scholar_id": "0e7e0e9daca21599e2be9944f9538472c5088221",
+      "doi": "10.1109/DAC63849.2025.11133184",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11133184",
+      "authors": [
+        "Jongwook Park",
+        "Hyeonseong Kim",
+        "Ji-Yun Han",
+        "Seungkyu Choi"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 514,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2505.12065",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.12065",
+        "id:SemanticScholar:1c785c94d325575b32cf50beb7f57975bea4388b",
+        "id:arXiv:2505.12065",
+        "title:demystifying and enhancing the efficiency of large language model based search agents",
+        "url:https://arxiv.org/abs/2505.12065"
+      ],
+      "record": {
+        "title": "Demystifying and Enhancing the Efficiency of Large Language Model Based Search Agents",
+        "source_url": "https://arxiv.org/abs/2505.12065",
+        "year": 2025,
+        "published": "2025-05-17",
+        "venue": "arXiv.org",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM)-based search agents have shown remarkable capabilities in solving complex tasks by dynamically decomposing problems and addressing them through interleaved reasoning and retrieval. However, this interleaved paradigm introduces substantial efficiency bottlenecks. First, we observe that both highly accurate and overly approximate retrieval methods degrade system efficiency: exact search incurs significant retrieval overhead, while coarse retrieval requires additional reasoning steps during generation. Second, we identify inefficiencies in system design, including improper scheduling and frequent retrieval stalls, which lead to cascading latency -- where even minor delays in retrieval amplify end-to-end inference time. To address these challenges, we introduce SearchAgent-X, a high-efficiency inference framework for LLM-based search agents. SearchAgent-X leverages high-recall approximate retrieval and incorporates two key techniques: priority-aware scheduling and non-stall retrieval. Extensive experiments demonstrate that SearchAgent-X consistently outperforms state-of-the-art systems such as vLLM and HNSW-based retrieval across diverse tasks, achieving up to 3.4$\\times$ higher throughput and 5$\\times$ lower latency, without compromising generation quality. SearchAgent-X is available at https://github.com/tiannuo-yang/SearchAgent-X.",
+        "identifiers": [
+          "SemanticScholar:1c785c94d325575b32cf50beb7f57975bea4388b"
+        ],
+        "semantic_scholar_id": "1c785c94d325575b32cf50beb7f57975bea4388b",
+        "canonical_id": "arXiv:2505.12065",
+        "arxiv_id": "2505.12065",
+        "doi": "10.48550/arXiv.2505.12065",
+        "authors": [
+          "Tian-Nuo Yang",
+          "Ze-Bin Yao",
+          "Bo-Wen Jin",
+          "Li-Xiao Cui",
+          "Yu-Sen Li",
+          "Gang Wang",
+          "Xiao-Guang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 550,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/dac63849.2025.11133184",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11133184",
+        "id:SemanticScholar:0e7e0e9daca21599e2be9944f9538472c5088221",
+        "title:precon a precisionconvertible architecture for accelerating quantized deep learning models across various domains including llms",
+        "url:https://doi.org/10.1109/DAC63849.2025.11133184"
+      ],
+      "record": {
+        "title": "Precon: A Precision-Convertible Architecture for Accelerating Quantized Deep Learning Models across Various Domains Including LLMs",
+        "source_url": "https://doi.org/10.1109/DAC63849.2025.11133184",
+        "year": 2025,
+        "published": "2025-06-22",
+        "venue": "Design Automation Conference",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The sensitivity of LLMs to quantization has driven the development of hardware accelerators tailored for specific low-precision configurations such as weight-only quantization and mixed-precision, which can introduce inefficiencies in dedicated hardware architecture. In this work, we propose Precon, a precision-convertible architecture designed to accelerate various quantized deep learning models, particularly LLMs, through a unified processing unit. By enabling on-the-fly switching between half-float (FP16) decoding and integer (INT) decomposition, the design effectively supports INT4-FP16, INT4-INT4, and INT4INT8 arithmetic within shared logic. Precon achieves up to $4.1 \\times$ speedup and 81.4% reduction in energy consumption compared to the baseline across various domains, including the support of both accurate and efficient acceleration of quantized LLMs.",
+        "identifiers": [
+          "SemanticScholar:0e7e0e9daca21599e2be9944f9538472c5088221"
+        ],
+        "semantic_scholar_id": "0e7e0e9daca21599e2be9944f9538472c5088221",
+        "doi": "10.1109/DAC63849.2025.11133184",
+        "canonical_id": "DOI:10.1109/DAC63849.2025.11133184",
+        "authors": [
+          "Jongwook Park",
+          "Hyeonseong Kim",
+          "Ji-Yun Han",
+          "Seungkyu Choi"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 514,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6256a91f935d4df0eddbe14ab8edaab6cd6054ef8db7de9081f0b2790be76e8a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
