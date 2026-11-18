@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Energy-Efficient and Dequantization-Free Quantization of LLMs: A Spiking Neural Network Approach to Salient Value Mitigation",
+      "source_url": "https://doi.org/10.1145/3774904.3792337",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "The Web Conference",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In the era of large language models (LLMs), weight-activation quantization helps fit models on edge device by reducing memory and compute bit-widths. However, three challenges persist for energy constrained hardware: (1) even after quantization, multiply-accumulate (MAC) operations remain unavoidable and continue to dominate energy consumption; (2) dequantization (or per-tensor/ channel rescaling) introduces extra arithmetic and data movement, increasing latency and energy; (3) uniform parameters bit widths clip salient values—while intra-channel mixed precision is generally impractical on current matrix hardware and memory. In contrast, brain-inspired Spiking Neural Networks (SNNs), owing to their binary spike-based information representation and the Integrate-and-Fire (IF) paradigm, naturally support mixed-precision storage and energy-efficient computation by replacing complex MACs with temporal Accumulate (ACCs). Motivated by this property, we propose SpikeQuant, which selectively applies mixed-precision quantization to activations with salient values and re-encodes them into binary spike counts, thereby enabling dynamic mixed storage of different bitwidths. Furthermore, by embedding the quantization scale into the threshold of the IF mechanism, our approach performs energy-efficient linear transformations on weights and activations while avoiding explicit dequantization. Experimental results demonstrate that SpikeQuant consistently achieves near-FP16 perplexity under W4A4 quantization while reducing energy cost by up to 4.6× compared to existing methods, highlighting its effectiveness for accurate and energy-efficient LLM deployment. Our code is open-sourced at https://github.com/wangchenyu929/SpikeQuant.git",
+      "identifiers": [
+        "SemanticScholar:39bba247761334aef0485710d0060c03c77d5af8"
+      ],
+      "semantic_scholar_id": "39bba247761334aef0485710d0060c03c77d5af8",
+      "doi": "10.1145/3774904.3792337",
+      "canonical_id": "DOI:10.1145/3774904.3792337",
+      "authors": [
+        "Chenyu Wang",
+        "Zhang-Lu Yan",
+        "Zhi Zhou",
+        "Xu Chen",
+        "Weng-Fai Wong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 220,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SpikeQuantは顕著な活性値へ混合精度を割り当て、二値スパイク数へ再符号化し、Integrate-and-Fire閾値へ量子化スケールを埋め込むことで明示的な逆量子化を省く。ACM出版社要旨ではW4A4でFP16に近い困惑度を保ちつつ既存法比で最大4.6倍のエネルギー削減を報告。LLMの低ビット推論効率に直接関連。",
+      "library_body_check": "primary_publisher_abstract_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "MVPruner: Dynamic Token Pruning for Accelerating Multi-view Vision-Language Models in Autonomous Driving",
+      "source_url": "https://arxiv.org/abs/2606.27660",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) improve generalization and interpretability in autonomous driving but suffer from efficiency issues due to long visual token sequences, particularly in standard multi-view settings. Existing token pruning methods employ fixed pruning rate allocation and static importance metrics, ignoring dynamic inter-view importance differences and the evolving information importance during inference. Our analysis reveals that multi-view VLMs inherently encode task-related view priors in deeper layers and exhibit dynamic information requirements. Motivated by these findings, we propose MVPruner, a two-stage adaptive token pruning method that aligns pruning behavior with the model's dynamic information requirements. The first stage allocates pruning budgets based on the information diversity of each view, and retains tokens with consistent contribution across stages, ensuring semantic representational capacity. The second stage allocates budgets and selects tokens guided by instruction text to guarantee task alignment. Experimental results on four benchmarks demonstrate the superior performance of our method. For example, DriveMM equipped with MVPruner achieves 87.3% reduction in FLOPs, 4.97* speedup in prefilling phase while retaining 98.5% accuracy on DriveLM benchmark.",
+      "identifiers": [
+        "SemanticScholar:4c30f0b577f08aad0acddf896d9f52653cad04de"
+      ],
+      "semantic_scholar_id": "4c30f0b577f08aad0acddf896d9f52653cad04de",
+      "canonical_id": "arXiv:2606.27660",
+      "arxiv_id": "2606.27660",
+      "doi": "10.48550/arXiv.2606.27660",
+      "authors": [
+        "Nan Yang",
+        "Zhan-Wen Liu",
+        "Linfeng Zhang",
+        "Shang-Yuan Xie",
+        "Yang Wang",
+        "Wen-Zhuo Zhou",
+        "Xiang-Mo Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数カメラ視点の情報多様性と指示テキストに応じ、視点別・段階別の視覚トークン予算を動的に調整する二段階枝刈り。arXiv一次要旨ではDriveMMでFLOPsを87.3%削減し、prefillを4.97倍高速化しつつDriveLM精度の98.5%を保持。多視点VLM推論の直接的な効率化研究。",
+      "library_body_check": "primary_arxiv_abstract_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "FPGA Acceleration With Hessian-Based Comprehensive Intra-Layer Mixed-Precision Quantization for Transformer Models",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3563196",
+      "year": 2025,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in using FPGAs as co-processors for language model acceleration, particularly for energy efficiency and flexibility, face challenges due to limited memory capacity. This limitation hinders the deployment of transformer-based language models. To address this challenge, we propose a novel software-hardware co-optimization framework that integrates Hessian-based intra-layer mixed-precision quantization with a runtime bit-configurable FPGA accelerator. Our proposed Hessian-based row-wise weight quantization addresses hardware inefficiencies in traditional parameter-wise and channel-wise approaches by enabling mixed-precision weight matrices to be split into two uniform-precision matrices, thereby simplifying hardware requirements. Additionally, our Query-Key coupled attention activation quantization optimally aligns precision within each outer product pair in attention calculations, reducing hardware complexity and memory management overhead. Our concurrent quantization method balances the benefits of row-wise weight quantization and Query-Key coupled activation quantization while maximizing energy efficiency through multi-precision optimization. To support this algorithm, we design a multi-precision FPGA accelerator capable of handling both 2n-based and non-2n mixed-precision operations. It is implemented on a single Xilinx ZCU102 FPGA board, operating at 200MHz with a power consumption of 15.08W during inference on the 110-million-parameter BERT-Base and 345-million-parameter GPT-2 Medium transformer models. Coupled with the proposed algorithm and dataflow optimization, it enables on-chip storage of all necessary parameters, minimizing off-chip memory access. Experimental results demonstrate that our FPGA accelerator significantly outperforms existing solutions, achieving energy efficiency improvements ranging from $2.22\\times $ to $17.23\\times $ over state-of-the-art FPGA accelerators.",
+      "identifiers": [
+        "SemanticScholar:c906d50ae47e38fee1e060cc1cfc66f00b8a5af9"
+      ],
+      "semantic_scholar_id": "c906d50ae47e38fee1e060cc1cfc66f00b8a5af9",
+      "doi": "10.1109/ACCESS.2025.3563196",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3563196",
+      "authors": [
+        "Woohong Byun",
+        "J. Woo",
+        "S. Mukhopadhyay"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Hessian感度に基づく行単位の混合精度重み量子化とQuery-Key対の活性量子化を、200MHzのZCU102 FPGA上のBERT-base/GPT-2 Medium推論へ結合する。一次論文の要旨と公開本文で15.08Wの推論時電力、非2のべき乗の混合精度積和への対応を確認。量子化と推論ハードウェアの共同設計として直接関連する。",
+      "library_body_check": "primary_paper_fulltext_reproduced_by_authors; abstract_and_implementation_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a7e1afc2e162",
+    "round": "libimp-a7e1afc2e16260f1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a7e1afc2e16260f1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a7e1afc2e16260f1-pre01.json",
+    "receipt": "sha256:fed1c6650a3f3b88077284bb80a47a6f74dd1ba40d49936f7618251d917537f2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a7e1afc2e162",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

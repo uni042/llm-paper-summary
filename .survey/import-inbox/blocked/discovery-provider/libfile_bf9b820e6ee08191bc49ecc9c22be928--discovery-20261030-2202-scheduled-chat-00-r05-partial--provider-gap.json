@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-00",
-  "run_key": "20261030-2202-scheduled-chat-00/r05",
+  "run_key": "20261030-2202-scheduled-chat-00/r05::provider-gap",
   "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
-  "record_count": 5,
+  "record_count": 3,
   "partial_round": true,
   "records": [
     {
@@ -30,28 +30,6 @@
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2610.04720",
-      "identity_tokens": [
-        "arXiv:2610.04720"
-      ],
-      "title": "WNet: Discrete Wavelets Transform for Efficient Token Mixing",
-      "reason": "WNetはTransformerエンコーダの自己注意を離散ウェーブレット変換によるトークン混合へ置換し、4,096トークンでトークンゲート型の学習速度2.7倍を報告する。一次要旨の対象はC4のマスク言語モデリングとGLUEのBERT系エンコーダで、自己回帰LLMの生成サービングを直接評価しないためborderline。",
-      "source_url": "https://arxiv.org/abs/2610.04720",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T22:20:00+09:00",
-      "last_checked_at": "2026-10-30T22:20:30+09:00",
-      "linked_from": [
-        "papers/inference/19-inference-evaluation-benchmarking/2026-2605.00292-caracal-causal-architecture-via-spectral-mixing.md",
-        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md",
-        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md",
-        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md",
-        "papers/inference/99-other-inference-systems/2025-2502.18394-spectre-an-fft-based-efficient-drop-in-replacement-to-self-attention-for.md"
-      ],
-      "worklist_rank": 494,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2506.10716",
       "identity_tokens": [
@@ -71,28 +49,6 @@
         "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
       ],
       "worklist_rank": 495,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2510.22588",
-      "identity_tokens": [
-        "arXiv:2510.22588"
-      ],
-      "title": "UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models",
-      "reason": "UltraVoiceは830時間超の音声対話データを作成し、感情・速度・音量・訛り等のスタイル制御を改善する。一次要旨の主な評価はMOSと指示追従率で、生成推論のメモリ・帯域・スケジューリング・速度を最適化する技術ではないためunrelated。",
-      "source_url": "https://arxiv.org/abs/2510.22588",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T22:20:00+09:00",
-      "last_checked_at": "2026-10-30T22:20:30+09:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
-        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
-        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
-        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
-      ],
-      "worklist_rank": 496,
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
@@ -116,5 +72,12 @@
       "worklist_rank": 500,
       "origin": "discovery_worklist_primary_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261030-2202-scheduled-chat-00/r05",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_bf9b820e6ee08191bc49ecc9c22be928--discovery-20261030-2202-scheduled-chat-00-r05-partial.json",
+  "provider_gap_ids": [
+    "arXiv:2506.10716",
+    "arXiv:2608.25583",
+    "arXiv:2610.08678"
   ]
 }

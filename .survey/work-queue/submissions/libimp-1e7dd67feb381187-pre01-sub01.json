@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FuTransformer: FP8 prefill and INT4 decode for Llama-style inference on Hopper",
+      "source_url": "https://arxiv.org/abs/2610.23796",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer prefill reuses weights across tokens and is dominated by matrix multiplication and activation data movement; single-token decode has limited reuse and is dominated by weight and KV-cache reads. We present FUTRANSFORMER, a CUDA implementation of a Llama-style Transformer block for NVIDIA Hopper GPUs. It applies CODA's GEMM-plus-epilogue approach to inference, adding direct KV-cache placement, folding the fixed RMSNorm gain into weights, writing FP8 output directly with delayed scaling, and supporting prefill without padding. Decode uses INT4 projection weights and an INT4 KV-cache copy. Weights and keys follow Tensor Core fragment layouts for direct dequantization into MMA operands without full intermediate tiles. A block-diagonal Hadamard transform reduces cache quantization error from outlier channels. On one H100, prefill is up to 1.48x faster than compiled PyTorch FP8 and reaches 1.29 PFLOP/s. For gate/up projection with SwiGLU at the 8B shape, our BF16 path is 1.13x faster than CODA. Our FP8 path is 2.02-2.18x faster than the evaluated BF16 CODA path. Across 8B and 70B shapes at batches 1-32, INT4 decode is 1.3-2.4x faster than the faster of PyTorch's BF16 and INT4 blocks at each point: 2.1-3.3x faster than compiled, CUDA-graphed BF16 and 1.3-6.3x faster than the same block using PyTorch's INT4 projection kernel, which targets a single query row and loses to BF16 at batch 32. It is also 31-51% faster than our FP8 path. Complete Llama-3.1-8B decode takes 2.8 ms per step at batch one, versus 8.1 ms for the compiled transformers implementation. Decoding every WikiText-2 token through the INT4 weight path raises perplexity from 6.24 to 7.23 with round-to-nearest weights or 6.99 with GPTQ in the same format; the rotated INT4 cache adds 0.20. The kernels match a quantized reference computation within 0.001 perplexity.",
+      "identifiers": [
+        "SemanticScholar:48fb1216f1fa8830ecf3b01528384ae86d9be1b1"
+      ],
+      "semantic_scholar_id": "48fb1216f1fa8830ecf3b01528384ae86d9be1b1",
+      "canonical_id": "arXiv:2610.23796",
+      "arxiv_id": "2610.23796",
+      "authors": [
+        "Wei Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefillをFP8 GEMM、decodeをINT4重み・INT4 KVに分け、RMSNorm gainの重み折込み、直接KV配置、MMA fragment向けdequant、Hadamard変換によるoutlier対策をCUDA blockへ統合する。著者要旨ではH100でprefillがcompiled PyTorch FP8比最大1.48倍、8B/70B形状のdecodeがPyTorch BF16/INT4の速い方より1.3～2.4倍高速。Llama3.1-8Bのbatch1 decodeが2.8ms/step対8.1msと報告するが量子化によるperplexity上昇も記載。実装・カーネル評価が推論に直結するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
+      "source_url": "https://arxiv.org/abs/2610.31479",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Apple Silicon is among the most widely used platforms for local LLM inference, yet nearly all inference optimizations are designed and validated on server-class NVIDIA GPUs under batched serving workloads. Which optimizations retain their benefits when moved to Apple Silicon, and what determines their applicability? We evaluate four optimization families: KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization. Experiments span four Apple machines under a common single-request decode workload, with matched RTX 4090 comparisons where possible. KV-cache pruning can reach up to 1.75 times end-to-end throughput on Apple but can reduce throughput on desktop NVIDIA GPUs. Under the common benchmark, all evaluated speculative decoding methods reduce throughput on Apple, despite reported 2-6 times gains on server GPUs. CUDA kernel designs transfer only partially: public Metal lacks asynchronous copy, and batch-one decode makes several serving-oriented mechanisms inapplicable, although transferable components yield up to 1.20 times decode throughput. Quantization gains vary by machine. Across four families, a reported speedup is not a portable property of a technique alone but a joint function of technique, runtime, hardware contract, and workload regime.",
+      "identifiers": [
+        "SemanticScholar:a11d02206fe4bccb55e2e87ee896e88ec4e7c68c"
+      ],
+      "semantic_scholar_id": "a11d02206fe4bccb55e2e87ee896e88ec4e7c68c",
+      "canonical_id": "arXiv:2610.31479",
+      "arxiv_id": "2610.31479",
+      "authors": [
+        "K. Yemets",
+        "Andrii Yaroshevych",
+        "Viktor Muryn",
+        "Ostap Khomenko",
+        "Pavlo Kryven",
+        "Maksym Kmet",
+        "M. Shamrai",
+        "Mariya Hirna"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Apple Siliconの単一要求decodeを対象に、KV削減、投機復号、GPU kernel移植、事後量子化の4系統を同一条件で比較する。著者要旨ではKV pruningがApple上で最大1.75倍のend-to-end throughputを得る一方、評価した投機復号方式はすべてApple上でthroughputを低下させ、Metalの非同期コピー制約も移植効果を制限した。4台のApple機と可能な範囲のRTX4090比較を含む、ローカル推論最適化の適用条件を明らかにする一次評価としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "DualPace: Decoupled Scheduling and Cooperative GPU--CPU Decoding for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.33501",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving relies on batching to improve inference throughput, but the key-value (KV) cache grows with sequence length and limits GPU-resident concurrency. CPU offloading can expand KV capacity using host memory, yet existing systems remain largely GPU-gated: CPU-resident requests make progress only when the GPU scheduler exposes suitable overlap opportunities. As a result, host memory and CPU compute cannot act as an independent serving resource, leading to bursty CPU-side progress and inflated tail inter-token latency (ITL) under load. We present DualPace, an LLM serving runtime that turns the host into an independently scheduled decode engine. DualPace separates scheduling authority across two engines: the GPU engine executes prefills and GPU-resident decodes, while an AMX-enabled CPU engine independently batches and advances CPU-resident decodes. The engines are decoupled in scheduling but cooperative in execution: the CPU can execute a complete decode iteration locally or selectively invoke GPU Dense Assist for dense stages, while offline profiles guide hardware-specific batching and routing. Our evaluations show that, in decode-oriented scenarios, DualPace improves serving throughput by 6.9--43.2\\% over NEO, a state-of-the-art open-source CPU-offloading system, and by 11.5--90.6\\% over vLLM, a widely used GPU serving system, while maintaining the same level of latency. DualPace also preserves NEO's P99 time-to-first-token (TTFT) advantage over vLLM while sustaining 7.3--50.5\\% higher request rates than NEO at the same level of P99 ITL.",
+      "identifiers": [
+        "SemanticScholar:216f05dc1ecacf6ef1803d2cfc28f2506bdf152a"
+      ],
+      "semantic_scholar_id": "216f05dc1ecacf6ef1803d2cfc28f2506bdf152a",
+      "canonical_id": "arXiv:2610.33501",
+      "arxiv_id": "2610.33501",
+      "authors": [
+        "Yuxuan Lin",
+        "Ke-Qiang Wu",
+        "Kingsum Chow"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVがGPUメモリに収まらない要求のdecodeを、GPU schedulerが空いた時だけCPUで進めるのではなく、AMX対応CPU側に独立のbatch/schedulerを持つdecode engineを設ける。CPUが1 iterationを完結する経路と、dense stageだけGPU支援を使う経路を使い分ける。著者要旨はdecode中心の設定でNEO比throughput6.9～43.2%、vLLM比11.5～90.6%改善、同程度の遅延を維持と報告。CPU/GPU分離実行とKV offloadを組み合わせる推論runtimeとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "T2D: Target-to-Draft Model Pruning&Adaptation for Efficient Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.34103",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding significantly accelerates autoregressive text generation in Large Language Models (LLMs), but its efficacy depends largely on two key factors: the distributional alignment between the draft and the target model, and the draft model's latency during inference. However, existing approaches typically utilize independently pretrained small draft models or seek to prune the target model to a manually chosen architecture, thereby failing to explicitly balance the trade-off between draft model alignment and token generation efficiency. To address this gap, we formulate draft model design as an optimization problem and propose T2D, a framework that constructs draft models directly from the target model using latency-aware structured pruning and knowledge distillation. In this manner, T2D obtains draft models that are jointly optimized for both measured inference latency and cross-entropy loss on the target model's responses, resulting in superlative speculative decoding performance. Through extensive experiments on multi-domain speculative decoding benchmarks and across several target model families of differing scale, we demonstrate how T2D prunes up to 92\\% of the target model to obtain highly performant draft models compared to competitive baselines. Moreover, draft models obtained via T2D can also be utilized by other speculative decoding token-alignment and knowledge distillation methods in a plug-and-play fashion, leading to further gains. Our findings underscore the importance of jointly navigating the draft model architecture-alignment frontier to unlock the full potential of speculative decoding for LLMs.",
+      "identifiers": [
+        "SemanticScholar:54aaf8ec3514d545cf190f569c5226876b16dab4"
+      ],
+      "semantic_scholar_id": "54aaf8ec3514d545cf190f569c5226876b16dab4",
+      "canonical_id": "arXiv:2610.34103",
+      "arxiv_id": "2610.34103",
+      "authors": [
+        "Shahriar Kabir Nahin",
+        "Xiao Ye",
+        "Mu-Hao Chen",
+        "Ben Zhou",
+        "Anshuman Chhabra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機復号のdraftモデルを別途学習する代わりにtargetモデルを構造化剪定し、実測draft推論遅延とtarget応答に対するcross-entropyを同時最適化する。分布整合性とdrafter実行時間のトレードオフを直接設計する方式で、著者要旨ではtargetパラメータを最大92%剪定して競争力のあるdraftを生成し、他のtoken alignment/蒸留方式と併用可能と報告。ただし要旨に具体的なend-to-end速度倍率はない。最終目的が投機復号の実行効率であるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Why Speculative Decoding Works Better Than Predicted on Sparse MoE Models",
+      "source_url": "https://arxiv.org/abs/2610.38981",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates autoregressive inference by leveraging the memory bound nature of decoding, verifying multiple draft tokens in a single forward pass. For mixture-of-experts (MoE) models, prior work predicts a concave speedup-batch size relationship, with gains peaking at intermediate batch sizes due to expert saturation. We evaluate this across 10 sparse MoE models (30B--1T parameters, 8--512 experts) and find recent fine-grained models break this trend, showing higher speedup at low batch size. We find verification cost is governed not only by activated-expert bytes, but also by temporal overlap across draft tokens and GPU execution dynamics. At low batch size, MoE layers in fine-grained models account for a much smaller share of runtime than of weights; on H100, kernel profiling attributes this mainly to higher bandwidth utilization of MoE kernels relative to attention, with L2 absorbing repeated reads of co-routed experts. Across draft tokens, routing overlap further reduces the unique experts activated during verification relative to independence assumptions. We model this effect using a maximum-entropy Iterative Proportional Fitting (IPF) framework that predicts unique expert counts from routing-overlap statistics with less than 4\\% error, and substantially narrows the gap to real-model curves and captures the qualitative low-batch trend from synthetic routing.",
+      "identifiers": [
+        "SemanticScholar:6fdf4b42c5710746c9697afe385425d8a204ef31"
+      ],
+      "semantic_scholar_id": "6fdf4b42c5710746c9697afe385425d8a204ef31",
+      "canonical_id": "arXiv:2610.38981",
+      "arxiv_id": "2610.38981",
+      "authors": [
+        "Ekagra Ranjan",
+        "Komal K. Teru",
+        "Bharat Venkitesh",
+        "Acyr Locatelli"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE投機復号のspeedupを活性化expert総byte数だけから予測すると、低バッチのfine-grained expertモデルの性能を説明できない問題を検証する。30B～1Tの10モデルで、draft token間のexpert共用、L2での再利用、MoE kernelの高い実効帯域を測定し、routing overlapから一意expert数を予測する最大エントロピーIPFモデルを提案する。著者要旨では一意expert数の予測誤差4%未満と報告。MoE投機検証の実測と性能モデルに直接関係するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1e7dd67feb38",
+    "round": "libimp-1e7dd67feb381187-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1e7dd67feb381187-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1e7dd67feb381187-pre01.json",
+    "receipt": "sha256:adf97300bf12380407bf9a215dc1c572937971d2dbf19a267a97fb9d265e1602"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1e7dd67feb38",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

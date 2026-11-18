@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Hardware-Native Joint Sparse-Quantization for Trillion-Scale Mixture-of-Experts",
+      "source_url": "https://arxiv.org/abs/2610.02241",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures allow frontier language models to scale to trillions of parameters, but their deployment is constrained by massive memory footprints and memory-bandwidth limitations. Although modern accelerators provide Sparse Tensor Cores (SpTCs) that reduce weight storage and increase throughput through low-precision semi-structured sparsity, exploiting them for MoEs remains challenging because of substantial model-quality degradation and the lack of grouped sparse GEMM primitives. We present an end-to-end hardware-software co-design framework that compresses expert weights into hardware-native, low-precision sparse representations and accelerates their execution on SpTCs. Algorithmically, our framework relaxes discrete semi-structured support selection through continuous reparameterization, enabling differentiable joint optimization with quantized weights under a router-weighted reconstruction objective and scalable expert-parallel compression. Systemically, we develop a custom grouped sparse GEMM kernel tailored to low-precision sparse MoE inference on SpTCs. Across MoE models ranging from 30 billion to one trillion parameters, our framework improves state-of-the-art joint sparse-quantization accuracy by up to 4.35 percentage points while preserving 96.09% of the original model's performance. On NVIDIA B200 GPUs, our kernel outperforms the vendor baseline by up to $1.65\\times$, increasing serving throughput by $1.18\\times$ and reducing end-to-end latency by up to $4.03\\times$. These results establish hardware-software co-design as a practical path toward scalable and efficient MoE deployment.",
+      "identifiers": [
+        "SemanticScholar:ec2f241aa96918204e290faa372081b36a3e9130"
+      ],
+      "semantic_scholar_id": "ec2f241aa96918204e290faa372081b36a3e9130",
+      "canonical_id": "arXiv:2610.02241",
+      "arxiv_id": "2610.02241",
+      "authors": [
+        "Kwanhee Lee",
+        "Namhoon Lee",
+        "Martin Jaggi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE推論ではexpert重みの容量とメモリ帯域が律速になる一方、低ビット量子化と半構造化疎性を単純に併用すると品質が低下し、疎なexpertをまとめて実行するGPUカーネルも不足する。本論文のmoesqはGumbel-Softmaxによる疎パターンの連続緩和とrouter重み付きexpert出力再構成でNVFP4・paired 4:8に適合する重みを求め、Blackwell Sparse Tensor Core向けのgrouped sparse GEMMで実行する。30B〜1T規模のMoEで精度と推論実行を評価し、NVIDIA B200上でカーネル最大1.65倍、サービングスループット最大1.18倍、INT4 Marlin比のエンドツーエンド遅延最大4.03倍短縮を報告する。推論向け圧縮と実行カーネルの直接的貢献があるためaccept。",
+      "library_body_check": "primary_abstract_checked; paper_HTML_method_and_experiment_sections_partially_read; not_full_research_review",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-859271e3ee65",
+    "round": "libimp-859271e3ee656410-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-859271e3ee656410-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-859271e3ee656410-pre01.json",
+    "receipt": "sha256:882969e25c44035c2b9df86dc536f2e7f28866c9d891579722488f6bfb497a2a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-859271e3ee65",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

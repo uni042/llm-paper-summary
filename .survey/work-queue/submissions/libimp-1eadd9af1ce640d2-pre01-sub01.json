@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Towards ML System Extensibility",
+      "source_url": "https://doi.org/10.1145/3713082.3730392",
+      "year": 2025,
+      "published": "2025-05-14",
+      "venue": "USENIX Workshop on Hot Topics in Operating Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the rise of large language models, distributed execution across multiple accelerators has become commonplace. Current ML systems must adopt complex distributed execution strategies for efficiency, but do so at the cost of extensibility. We believe that it is time to introduce a general-purpose distributed runtime for programming clusters of accelerators that enables: (1) placement flexibility, and (2) interoperability, without sacrificing (3) codesign. We propose using the DAFT API: distributed actors, futures, and tasks. To enable a smooth tradeoff between flexibility vs. performance, we introduce two execution modes: interpreted vs. compiled. We show how current applications in LLM inference and training can be executed as interpreted and compiled DAFT programs and discuss open questions and challenges.",
+      "identifiers": [
+        "SemanticScholar:6dc33387854a34fcd41388921d17edb86fa372d9"
+      ],
+      "semantic_scholar_id": "6dc33387854a34fcd41388921d17edb86fa372d9",
+      "doi": "10.1145/3713082.3730392",
+      "canonical_id": "DOI:10.1145/3713082.3730392",
+      "authors": [
+        "Weixin Deng",
+        "Andy Ruan",
+        "Megan Frisella",
+        "Kai Chen",
+        "S. Cho",
+        "J. Humphries",
+        "Rui Qiao",
+        "Stephanie Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 553,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開のHOTOS 2025原著PDFを確認。LLM推論でTP/PP、KVキャッシュ移動、prefill/decode分離など異なる分散実行形態を容易に構成するため、分散actor・future・task（DAFT）APIとinterpreted/compiled二モードを提案し、Ray上でcompiled実行を試作。原著Figure 2の4台A100 SXM 80GB・Llama 3.1 8B・ShareGPTの実測ではcompiled DAFTはTPでSPMD版vLLMの12%以内のthroughputに接近し、PPではSPMD版より67%高いthroughputを報告。LLM推論基盤の実行制御と効率に直接寄与するためaccept。提案・プロトタイプ段階であり、全面的な実運用保証ではない。",
+      "library_body_check": "primary_author_pdf_abstract_methods_and_evaluation_read; full_body_not_exhaustively_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_pdf_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1eadd9af1ce6",
+    "round": "libimp-1eadd9af1ce640d2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1eadd9af1ce640d2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1eadd9af1ce640d2-pre01.json",
+    "receipt": "sha256:213ad6fdbec758180894564d883acd766edcda13d574b590fbcf9cf8ceb7a29a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1eadd9af1ce6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+      "source_url": "https://arxiv.org/abs/2610.40287",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model serving is limited by facility power. Energy per token determines how many tokens a datacenter can serve, while a latency target bounds how quickly each user receives them. During decode, every weight is read from memory for every generated token. Batching amortizes this read across users but makes no individual user faster. Speculative decoding does: a drafter proposes several future tokens, and the target model verifies them in a single forward pass that reuses the same weight read. Because every drafted token must be verified whether or not it is accepted, the energy speculation saves depends on how many drafted tokens are accepted. This saving is hard to pin down. It varies across target models from different attention families and across drafting schemes, and it depends on the text being served. Every drafter we evaluate accepts fewer tokens on conversation than on code, and every trained drafter accepts fewer on Romansh, a low-resource language, than on English. We measure speculative decoding under production serving conditions (SGLang, CUDA graphs enabled) on H100 and H200 GPUs, at batch sizes up to 64 across 5 corpora. On dense models, verification, not drafting, dominates the energy cost. The saving shrinks as the batch grows, because batching has already shared the weight read that speculation would divide among the accepted tokens. At large batch sizes, block drafters push verification past the balance point between arithmetic and memory traffic into the compute-bound regime, where the saving becomes a loss, and a drafter with low acceptance raises energy per token. Meeting a tighter latency target with speculation then costs additional energy. Larger batches lower energy per token without speculation. Speculation adds to that saving only when acceptance is high, and on the model we tested it leaves little headroom for latency-preserving DVFS.",
+      "identifiers": [
+        "SemanticScholar:02bdc449febf95bc4afbcd37aca99caf473f1357"
+      ],
+      "semantic_scholar_id": "02bdc449febf95bc4afbcd37aca99caf473f1357",
+      "canonical_id": "arXiv:2610.40287",
+      "arxiv_id": "2610.40287",
+      "authors": [
+        "Bo-Le Ma",
+        "Ayesha Afzal",
+        "Jan Eitzinger",
+        "H. Koestler",
+        "G. Wellein"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機復号のエネルギー効率を、draftした総tokenではなくtargetが実際に受理したtokenと検証計算費から評価する。SGLang/CUDA graphsの本番型構成でH100/H200、batch最大64、5コーパスを測定し、batch増大時は重み読込の共有が既に進み投機の省エネ余地が縮むこと、低受理率やcompute-boundなblock drafterでは逆にエネルギー/出力tokenが悪化することを示す。著者要旨は一律の省エネ倍率を主張しないが、LLM推論のレイテンシ制約下の省電力設計・投機長選択に直接関係するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1e7dd67feb38",
+    "round": "libimp-1e7dd67feb381187-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1e7dd67feb381187-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1e7dd67feb381187-pre01.json",
+    "receipt": "sha256:adf97300bf12380407bf9a215dc1c572937971d2dbf19a267a97fb9d265e1602"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1e7dd67feb38",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

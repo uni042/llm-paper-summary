@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Read What Matters: Query-Adaptive Quantization for KV Caches",
+      "source_url": "https://arxiv.org/abs/2610.11245",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache entries are stored before their future queries are known, but each decoding query needs precision in different places. We study this mismatch using separate budgets for retained bits and bits fetched per query. ReadKV stores each key and value in a progressive code whose prefixes support different reconstruction precisions. For each query, it allocates key-channel prefixes using the query, computes attention from the reconstructed keys, and then allocates value-token prefixes using that attention. Stored entries remain unchanged. Each stage optimizes a calibrated distortion objective under a fixed budget; we prove exact allocation under diminishing refinement gains and relate these objectives to attention-output error. We also exhibit a finite-dimensional attention family where query-dependent access strictly outperforms every query-independent reader at the same read budget, even with unrestricted competing encoders and decoders. Across six base models, reading four bits on average from an eight-bit cache increases C4 perplexity by at most 0.66%, using about one quarter of the logical reads and half the retained capacity of a 16-bit cache. It is consistently more accurate than storing and fully reading four bits at the same payload-read budget. Retaining more bits than each query fetches is aimed at long-context decoding, where the cache bytes moved per step, rather than the weights, dominate cost. Long-context question answering and retrieval on two instruction-tuned models provide additional quality evidence. On the tested 8K-token, batch-one, single-layer workload on an NVIDIA A10G, a restricted eight-bit ReadKV reader with a two-bit mean payload-read budget has 39% lower latency than the tested TurboQuant codec.",
+      "identifiers": [
+        "SemanticScholar:11030bad061672ef52b2942bcc49caa0d24ba352"
+      ],
+      "semantic_scholar_id": "11030bad061672ef52b2942bcc49caa0d24ba352",
+      "canonical_id": "arXiv:2610.11245",
+      "arxiv_id": "2610.11245",
+      "authors": [
+        "Siddharth Bhandari",
+        "Lucas Gretta",
+        "K. Balasubramanian",
+        "S. Kasiviswanathan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ReadKVはKVを段階的に復元できるprogressive codeで保存し、decode queryごとにKey channelとValue tokenの取得bit数を注意分布に応じて配分する。保存bit数と実際に読み出すbit数を分離し、減少限界利益の仮定下で最適配分を導出。6モデルで8bit保存・平均4bit取得時のC4 perplexity増加0.66%以下、A10Gの限定単層8K実験ではTurboQuant比39%低遅延を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "TraceQuery: learning what to recompute from full-denoising trajectory in diffusion language models",
+      "source_url": "https://arxiv.org/abs/2610.33008",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) enable flexible generation through iterative masked denoising, but incur substantial inference cost because token representations are repeatedly recomputed across denoising steps. Existing cache-based methods reduce this cost by reusing intermediate results across denoising steps and recomputing only a subset of positions at each step, chosen either on a fixed schedule or by heuristic signals of change. Our trajectory experiments instead point to decoding trajectory as the more relevant quantity. Cached generation remains accurate when it stays close to the full-denoising trajectory, with errors concentrated around unmask-order deviations and reduced as longer reference prefixes are recovered. This suggests a more direct principle: limiting representation error helps, but keeping generation on the full-denoising trajectory is a more direct route to accurate decoding. We therefore formulate efficient dLLM inference as trajectory-guided querying. Rather than broadly repairing representation error, we use full-denoising trajectories to supervise which unresolved positions should receive limited fresh computation. Based on this formulation, we introduce TRACEQUERY, a lightweight sparse decoding framework that predicts a small set of near-future trajectory-relevant positions, queries only those candidates, and lets the backbone select which one to commit from their fresh predictions. TRACEQUERY delivers the strongest quality-computation trade-off among cache-based approaches, sustaining high accuracy with substantially fewer fresh token computations, and generalizes across tasks, model variants, and families. Code: https://github.com/fish1928/tracequery.git",
+      "identifiers": [
+        "SemanticScholar:e5139a59923a1468631b705f8e853ae1a15ccbd6"
+      ],
+      "semantic_scholar_id": "e5139a59923a1468631b705f8e853ae1a15ccbd6",
+      "canonical_id": "arXiv:2610.33008",
+      "arxiv_id": "2610.33008",
+      "authors": [
+        "Yu-Kai Jin",
+        "Zhan-Kai Ye",
+        "Jia-Yu Yang",
+        "Fang-Yi Li",
+        "Shuo-Qiu Li",
+        "Xu Gao",
+        "Shi-Bo Li",
+        "Xin Liu",
+        "Shang-Qian Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TraceQueryは拡散LLMのKV再利用誤差を隠れ表現差分でなく、完全denoising軌跡からの逸脱として捉える。完全軌跡を教師信号にして、次に更新すべき少数の未確定位置を予測し、その位置だけfresh計算してbackboneに確定位置を選ばせる。cache-based方式より高い品質・計算量trade-offと複数モデル系列への汎化を報告。推論時の部分再計算最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "S$^3$R: Fast and Faithful RL Rollouts via Self-Sparse Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.13202",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fast rollout generation for long-context reinforcement learning with verifiable rewards (RLVR) requires reducing KV-cache traffic without changing the response groups used for policy optimization. In our profiled RLVR workloads, attention accounts for 72--76\\% of autoregressive decoding kernel time. Sparse attention reduces these reads, but sampling directly from a sparse policy changes the response groups used for learning. For group-relative optimization, we show that even exact response-wise reweighting does not generally recover the expected dense-policy update because the advantage of each response depends on the rewards of other group members. We propose Self-Sparse Speculative Rollouts (S$^3$R). It uses sparse attention to propose tokens, then generates responses through full-attention verification and exact speculative sampling. Drafting and verification share the same policy parameter, eliminating the need to train or update a separate drafter. The resulting response groups follow the dense-policy distribution. Under S$^3$R, we characterize speedup conditions and the costs of drafting and verification. We found that dense verification still requires the complete historical KV cache. A KV-aware scheduler therefore limits KV-cache repeated offloading and restoration while maintaining rollout parallelism. % OR thrashing In a matched ablation with an aggressive sparse drafting budget, S$^3$R maintains stable training while direct sparse sampling with training-side correction becomes unstable. On long-context mathematical reasoning, S$^3$R achieves $1.39\\times~1.35\\times$ the end-to-end training throughput of autoregressive rollouts on Qwen3 model, with comparable task performance.",
+      "identifiers": [
+        "SemanticScholar:f3c13ab168010baeed7c10d9b93acab7fbfc4373"
+      ],
+      "semantic_scholar_id": "f3c13ab168010baeed7c10d9b93acab7fbfc4373",
+      "canonical_id": "arXiv:2610.13202",
+      "arxiv_id": "2610.13202",
+      "authors": [
+        "Yu-Hang He",
+        "Hong-Yu Ge",
+        "Zi-Han Lin",
+        "Si-Yi Liu",
+        "Yong-Qi Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "S³RはRLVRの長文脈rolloutを疎注意でdraftし、full attentionで厳密検証することでdense policyと同じ応答分布を維持する。group-relative RLでは疎な分布の事後reweightingで学習更新を正しく戻せない点を示し、KVの繰り返しoffloadを抑えるschedulerを併用。Qwen3の長文脈数理推論でautoregressive rollout比end-to-end訓練throughput約1.35～1.39倍と報告。推論実行の高速化が主構成要素のためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "MLAfication: Efficiently Enabling High-Fidelity MLA for Modern LLMs",
+      "source_url": "https://arxiv.org/abs/2610.17202",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-Head Latent Attention (MLA) compresses the KV cache into a latent representation, reducing inference memory and bandwidth. Existing MHA2MLA/TransMLA methods do not support QKNorm and require costly recovery on modern LLMs, especially MoE. We present MLAfication, a QKNorm-compatible, parameter-efficient extension of MHA2MLA. It combines calibrated KNorm, parameter-efficient distillation, contribution-aware Partial-RoPE, and activation-aware joint KV initialization. Across MHA and GQA models, including QKNorm- and MoE-equipped variants, MLAfication preserves performance under substantial KV-cache compression, surpasses the current SOTA on commonsense and long-context benchmarks, and extends MLA conversion to modern architectures. On Qwen3-30B-A3B, MLAfication delivers up to $5.35\\times$ the serving throughput of BF16 GQA and, combined with 4-bit KV quantization, reduces the KV-cache footprint by $94.73\\%$. Our code is available at https://github.com/JT-Ushio/MLAfication.",
+      "identifiers": [
+        "SemanticScholar:db00aa9feb05dcd089951f0e81aed39d69eaf0fb"
+      ],
+      "semantic_scholar_id": "db00aa9feb05dcd089951f0e81aed39d69eaf0fb",
+      "canonical_id": "arXiv:2610.17202",
+      "arxiv_id": "2610.17202",
+      "authors": [
+        "Zi-Le Wang",
+        "Zhi-De Xie",
+        "Tao Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLAficationはQKNorm対応のcalibrated KNorm、少数パラメータ蒸留、寄与度ベースPartial-RoPE、活性化を考慮したKV初期化でGQA/MHAモデルをMLAへ変換する。MoE/QKNormを持つ現代的モデルにも適用し、Qwen3-30B-A3BでBF16 GQA比サービングthroughput最大5.35倍、4bit KV併用時KV容量94.73%削減を報告。推論KV削減のモデル変換手法としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Whose turn is it? Context-guided model routing for stateful agents",
+      "source_url": "https://arxiv.org/abs/2610.19292",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model routing can reduce the cost of LLM applications by assigning simpler requests to cheaper models without sacrificing the quality of the response. However, most routers treat requests as independent. Stateful agents do not operate under this assumption: a user turn may require multiple model and tool calls, its difficulty depends on the state produced by earlier turns, and changing models can sacrifice reuse of the conversational prompt cache. We study zero-shot, cost-aware routing at the user-turn boundary, systematically varying the routing rule, access to session history, candidate models that differ in size, reasoning effort, or model provider, and prompt-cache behavior. We evaluate on multi-turn versions of SheetCopilot and SpreadsheetBench 2, where persistent workbooks and cross-turn dependencies make isolated routing decisions especially brittle. At a matched offloading rate, giving the router session history improves task pass rate over the same router without history, with gains for every model pair; history-aware routing remains within one point of always using the expensive model. We also found that cost depends on execution dynamics rather than token prices alone: the cheaper model's per-task cost advantage narrows from 6.8x to 3.2x on longer sessions. A closed form cache analysis further shows that downward switches (expensive to cheap) recover their cache cost within two LLM calls, whereas upward switches do not break even under the evaluated conditions. Together, these results show that agent routing is a sequential decision problem: effective policies must account for what happened earlier in the session and for the asymmetric cost of switching models.",
+      "identifiers": [
+        "SemanticScholar:d191d8b3bf48ebe9af16f15af63d999671a17e71"
+      ],
+      "semantic_scholar_id": "d191d8b3bf48ebe9af16f15af63d999671a17e71",
+      "canonical_id": "arXiv:2610.19292",
+      "arxiv_id": "2610.19292",
+      "authors": [
+        "Anikesh Parashar",
+        "Avik Dutta",
+        "Vashu Chauhan",
+        "Sumit Gulwani",
+        "Priyanshu Gupta",
+        "Hosein Hasanbeig",
+        "Vu Le",
+        "Ashish Tiwari",
+        "Jack Williams"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ステートフルなエージェントのmodel routingを単発requestでなくuser-turn単位で判断し、セッション履歴、モデル能力差、prompt cache切替コストを考慮する。SheetCopilot/SpreadsheetBench 2の複数ターン評価で、同じ小型モデル委譲率なら履歴参照によりpass率が向上し、高価なモデル固定から1ポイント以内の品質を維持。長いセッションで安価モデルのタスク費用優位が6.8倍から3.2倍へ縮小することも示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-988e8f7af9bd",
+    "round": "libimp-988e8f7af9bd0476-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-988e8f7af9bd0476-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-988e8f7af9bd0476-pre01.json",
+    "receipt": "sha256:16ffbbc2b3e6b92a38c9a5a47b874552c9149bdcbcf2379994ccf36dca1b1eb8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-988e8f7af9bd",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

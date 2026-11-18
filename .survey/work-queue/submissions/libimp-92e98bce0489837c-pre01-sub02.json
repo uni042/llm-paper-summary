@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DyToS: Budget-aware dynamic token scheduling for efficient multi-modal large language models",
+      "source_url": "https://doi.org/10.1016/j.neucom.2026.134181",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "Neurocomputing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:f53034c3862b73452bcb37c9c941888d3581738e"
+      ],
+      "semantic_scholar_id": "f53034c3862b73452bcb37c9c941888d3581738e",
+      "doi": "10.1016/j.neucom.2026.134181",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134181",
+      "authors": [
+        "Yi-Fei Xing",
+        "Yijie Yu",
+        "Rui-Ping Wang",
+        "Wenjun Huang",
+        "Qingfang Zheng",
+        "D. Jiang",
+        "Xiang-Yuan Lan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DyToSはMLLMの視覚トークンを計算予算に応じ段階的に削減する学習型動的トークンスケジューラ。attention依存の重要度判定に縛られず、視覚トークンを大幅に削除しても精度を保つことを狙う。出版社原著要旨では視覚エンコーダまで適用した場合に最大82%のFLOPs削減を報告。",
+      "library_body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_publisher_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-92e98bce0489",
+    "round": "libimp-92e98bce0489837c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-92e98bce0489837c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-92e98bce0489837c-pre01.json",
+    "receipt": "sha256:7e19a7522165fd9af1530325045c3079ac5c020bbb4a53adcc934855465d02d1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-92e98bce0489",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.11184",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture of Experts (MoE) models have achieved great success by significantly improving performance while maintaining computational efficiency through sparse expert activation. However, their enormous parameter sizes and memory demands pose major challenges for deployment in resource-constrained environments. Vector Quantization (VQ) offers a promising approach for ultra-low-bit compression in Large Language Models (LLMs) by leveraging a codebook, where weight vectors are mapped to the most similar discrete codewords. Yet, directly applying VQ to MoEs often leads to substantial performance degradation due to two critical obstacles: (1) redundant representations among experts cause VQ to repeatedly quantize similar representations for each expert, resulting in inefficient use of limited codebook capacity; and (2) cumulative output bias is amplified by expert aggregation in MoE layers, leading to distributional shifts in the quantized outputs. To address these issues, we propose KBVQ-MoE, a novel VQ framework to enhance extremely low-bit quantization for MoE-based LLMs. KBVQ-MoE integrates two techniques: (1) input-driven redundancy elimination, where a Karhunen-Loeve Transform (KLT) guided singular value decomposition (SVD) extracts dominant weight components and shares them across experts; and (2) bias-corrected output stabilization, where vector quantization is applied only to expert-specific (non-redundant) representations and the quantized outputs are corrected via channel-wise affine compensation. Experiments on various MoE LLMs demonstrate that KBVQ-MoE preserves accuracy substantially better than existing quantization methods. For example, 3-bit quantization of Qwen1.5-MoE-A2.7B achieves an average accuracy of 67.99, nearly identical to the FP16 baseline of 68.07, underscoring KBVQ-MoE's potential for efficient deployment on edge devices and other resource-constrained platforms.",
+      "identifiers": [
+        "SemanticScholar:89719405958e7d7fcfa3a10947c313a660a112c9"
+      ],
+      "semantic_scholar_id": "89719405958e7d7fcfa3a10947c313a660a112c9",
+      "canonical_id": "arXiv:2602.11184",
+      "arxiv_id": "2602.11184",
+      "doi": "10.48550/arXiv.2602.11184",
+      "authors": [
+        "Zu-Kang Xu",
+        "Zhi-Xiong Zhao",
+        "Xing Hu",
+        "Zhi-Xuan Chen",
+        "Da-Wei Yang"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "MoEエキスパート間の冗長な重み成分をKLT誘導SVDで共有し、エキスパート固有残差だけをベクトル量子化した上でチャネル別アフィン補正を行う。Qwen1.5-MoE-A2.7Bの3ビット量子化で平均精度67.99、FP16の68.07に近い。推論時の超低ビット圧縮が直接の対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A*-Thought: Efficient Reasoning via Bidirectional Compression for Low-Resource Settings",
+      "source_url": "https://arxiv.org/abs/2505.24550",
+      "year": 2025,
+      "published": "2025-05-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) achieve superior performance by extending the thought length. However, a lengthy thinking trajectory leads to reduced efficiency. Most of the existing methods are stuck in the assumption of overthinking and attempt to reason efficiently by compressing the Chain-of-Thought, but this often leads to performance degradation. To address this problem, we introduce A*-Thought, an efficient tree search-based unified framework designed to identify and isolate the most essential thoughts from the extensive reasoning chains produced by these models. It formulates the reasoning process of LRMs as a search tree, where each node represents a reasoning span in the giant reasoning space. By combining the A* search algorithm with a cost function specific to the reasoning path, it can efficiently compress the chain of thought and determine a reasoning path with high information density and low cost. In addition, we also propose a bidirectional importance estimation mechanism, which further refines this search process and enhances its efficiency beyond uniform sampling. Extensive experiments on several advanced math tasks show that A*-Thought effectively balances performance and efficiency over a huge search space. Specifically, A*-Thought can improve the performance of QwQ-32B by 2.39$\\times$ with low-budget and reduce the length of the output token by nearly 50% with high-budget. The proposed method is also compatible with several other LRMs, demonstrating its generalization capability. The code can be accessed at: https://github.com/AI9Stars/AStar-Thought.",
+      "identifiers": [
+        "SemanticScholar:6a391491a195a8eaa1c311965bbb30db0446ed80"
+      ],
+      "semantic_scholar_id": "6a391491a195a8eaa1c311965bbb30db0446ed80",
+      "canonical_id": "arXiv:2505.24550",
+      "arxiv_id": "2505.24550",
+      "doi": "10.48550/arXiv.2505.24550",
+      "authors": [
+        "Xiao-An Xu",
+        "Shuo Wang",
+        "Xu Han",
+        "Zhenghao Liu",
+        "Hui-Jia Wu",
+        "Pei-Pei Li",
+        "Zhi-Yuan Liu",
+        "Mao-Song Sun",
+        "Zhaofeng He"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 537,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "推論中の思考系列を探索木として表し、A*探索と双方向の重要度推定で情報密度の高い推論経路を選ぶ。QwQ-32Bの低予算条件で性能改善、高予算条件で出力長を約半減と報告しており、テスト時の推論予算制御に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CyFA: Linear Sequence Modeling with Relative-Time-Partitioned Memory",
+      "source_url": "https://arxiv.org/abs/2609.36259",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear RNNs offer linear-time sequence processing and constant-memory decoding, but their fixed-size recurrent states must accommodate all past key--value associations. Existing forgetting mechanisms and Delta Rule updates reduce interference by selectively clearing or correcting the state, yet earlier associations can still become difficult to retrieve. We introduce CyFA (Cyclic Flow Attention), a Linear RNN with relative-time-partitioned memory. At each step, a learned clock controls the cyclic transport applied jointly to the key and value states before the current key--value pair enters the age-zero slot, thereby organizing stored associations across relative-time slots. We further derive an exact change to absolute-clock coordinates that expresses CyFA as two scalar-decay linear attention recurrences and enables efficient chunk-wise training. Across 400M--1.4B pretraining experiments with matched recurrent-state sizes, CyFA improves recall-intensive performance while maintaining competitive language modeling and high computational efficiency. At 400M, CyFA outperforms KDA on FDA (42.60 vs. 26.07) while requiring only 46.7% and 48.3% of KDA's forward and backward core-operator execution times, respectively. Our code is publicly available at \\href{https://github.com/Chyxx/CyclicFlowAttention}{this https URL}.",
+      "identifiers": [
+        "SemanticScholar:a0e0fa6fba648d49783b5bd2562220ad84c9e8fa"
+      ],
+      "semantic_scholar_id": "a0e0fa6fba648d49783b5bd2562220ad84c9e8fa",
+      "canonical_id": "arXiv:2609.36259",
+      "arxiv_id": "2609.36259",
+      "doi": "10.48550/arXiv.2609.36259",
+      "authors": [
+        "Yi-Xiao Chen",
+        "Shuo-Jin Yang",
+        "Shi-Min Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形RNNの固定長状態を相対時間スロットに分け、学習した時計による巡回転送で古い鍵値連想の干渉を抑える。絶対時刻座標では二つのスカラー減衰型線形注意再帰へ変換でき、一定メモリの復号と効率的なチャンク学習を両立する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9eae283d3dda",
+    "round": "libimp-9eae283d3dda4786-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9eae283d3dda4786-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9eae283d3dda4786-pre01.json",
+    "receipt": "sha256:551155403da14e54f60b2c1c63c2da1bc49b9e486a4901c1af0135a8109d81c8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9eae283d3dda",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
