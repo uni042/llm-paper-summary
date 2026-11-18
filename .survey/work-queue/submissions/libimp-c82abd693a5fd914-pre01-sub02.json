@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization",
+      "source_url": "https://doi.org/10.63317/55jabgg3m92d",
+      "year": 2024,
+      "published": "2024-05-01",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Transformers achieved impressive results on various Natural Language Processing tasks over the last few years. The one downside of this success is the size of these models. Huge capacity, which sometimes surpasses billions of parameters, improves generalization abilities, but makes it difficult to employ. Developing field of model compression seeks to reduce the model size and inference latency. This research focuses on one of the compression techniques — Post-Training Quantization. We present a methodology to effectively quantize at least 95% of Transformer weights and corresponding activations to INT8 without any access to task-specific data so the drop in performance does not exceed 0.02%. Furthermore, we provide intriguing observations that reflect cross-domain nature of some of the quantization properties.",
+      "identifiers": [
+        "SemanticScholar:485abda4ff27c752ae533bdfa8d15779e4708d3b"
+      ],
+      "semantic_scholar_id": "485abda4ff27c752ae533bdfa8d15779e4708d3b",
+      "doi": "10.63317/55jabgg3m92d",
+      "canonical_id": "DOI:10.63317/55jabgg3m92d",
+      "authors": [
+        "Nikita Martynov",
+        "A. Goncharov",
+        "Gleb Kumichev",
+        "E. Egorov",
+        "S. Pavlov",
+        "Mikhail Sergeevich Durinov",
+        "Aleksandr Zuev",
+        "Egor Anatolievich Filimonov"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 931,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACL Anthologyの正式会議要旨を確認。タスク固有の校正データなしでTransformerの重み・活性の少なくとも95%をINT8へ量子化し、性能低下を0.02%以内に抑えるPTQ手順を報告する。モデル縮小と推論遅延削減を直接目的とするため推論用量子化に該当する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c82abd693a5f",
+    "round": "libimp-c82abd693a5fd914-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c82abd693a5fd914-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c82abd693a5fd914-pre01.json",
+    "receipt": "sha256:39bfdbef9ccad0fdad5dd8e39ce894cabdb59c7688589cfdf511d677fb71af4c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c82abd693a5f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "QFFT, Question-Free Fine-Tuning for Adaptive Reasoning",
+      "source_url": "https://arxiv.org/abs/2506.12860",
+      "year": 2025,
+      "published": "2025-06-15",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 27,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in Long Chain-of-Thought (CoT) reasoning models have improved performance on complex tasks, but they suffer from overthinking, which generates redundant reasoning steps, especially for simple questions. This paper revisits the reasoning patterns of Long and Short CoT models, observing that the Short CoT patterns offer concise reasoning efficiently, while the Long CoT patterns excel in challenging scenarios where the Short CoT patterns struggle. To enable models to leverage both patterns, we propose Question-Free Fine-Tuning (QFFT), a fine-tuning approach that removes the input question during training and learns exclusively from Long CoT responses. This approach enables the model to adaptively employ both reasoning patterns: it prioritizes the Short CoT patterns and activates the Long CoT patterns only when necessary. Experiments on various mathematical datasets demonstrate that QFFT reduces average response length by more than 50\\%, while achieving performance comparable to Supervised Fine-Tuning (SFT). Additionally, QFFT exhibits superior performance compared to SFT in noisy, out-of-domain, and low-resource scenarios.",
+      "identifiers": [
+        "SemanticScholar:b4f39231109b9fed59a33bc54ef6a2922761bd41"
+      ],
+      "semantic_scholar_id": "b4f39231109b9fed59a33bc54ef6a2922761bd41",
+      "canonical_id": "arXiv:2506.12860",
+      "arxiv_id": "2506.12860",
+      "doi": "10.48550/arXiv.2506.12860",
+      "authors": [
+        "Wanlong Liu",
+        "Jun Xu",
+        "Fei Yu",
+        "Yukang Lin",
+        "Ke Ji",
+        "Wen-Yu Chen",
+        "Li-Feng Shang",
+        "Ya-Sheng Wang",
+        "Yan Xu",
+        "Ben-You Wang"
+      ],
+      "priority": 37,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 27,
+        "citation_count": 27,
+        "total": 37,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 521,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "学習時に質問を除き長いCoT応答だけを使うQFFTで、簡単な問題には短い推論、難問には長い推論を適応的に出すようにする。数学課題で平均応答長を50%超削減しSFTと同程度の品質を維持すると報告。学習手法だが推論時の生成トークン量削減が直接の目的。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1a12e2a10700",
+    "round": "libimp-1a12e2a107002c3e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1a12e2a107002c3e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1a12e2a107002c3e-pre01.json",
+    "receipt": "sha256:2e32a08ea35b7647f72fcad1ab4391f218f1c89f7c1219bfd7f41c32a95ca9e3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1a12e2a10700",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
