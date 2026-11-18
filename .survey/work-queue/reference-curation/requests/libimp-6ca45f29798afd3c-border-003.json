@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6ca45f29798afd3c-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.34006",
+  "reason": "Kubernetes HPAの起動遅延とtenant競合に対し、需要予測、SLO状態、burst処理、優先度別headroomを組み合わせるInferScale。Azure Kubernetes Service上のResNet-50 ONNX（cold start 21秒）でSLO遵守率を47.8%±1.5%から65.3%±9.0%へ改善。対象は画像モデル推論で、LLMのKV cache・長文生成・prefill/decodeに固有の評価はない。一般的な推論autoscaling知見としてborderline。",
+  "title": "InferScale: Kubernetes-Native Predictive Autoscaling for SLO-Aware AI Inference",
+  "identity_tokens": [
+    "arXiv:2610.34006"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.DC/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ca45f29798a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

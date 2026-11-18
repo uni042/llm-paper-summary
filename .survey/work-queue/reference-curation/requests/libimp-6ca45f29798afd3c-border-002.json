@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6ca45f29798afd3c-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.38196",
+  "reason": "serverless ML推論DAGで、各ノードのlibrary・モデル重み・CUDA kernelロードを上流実行のslackへ前倒しし、probabilistic keep-aliveでcold-startとメモリ消費を調整するGearUp。L40S上のAMBER Alert・FINRA-MLワークフローでSMIless比中央値遅延64.5%・75.9%削減を報告するが、要旨の実験対象は汎用ML推論DAGで、LLM serving固有のprefill/decodeやKV最適化ではない。推論ランタイム設計に応用可能だが範囲境界としてborderline。",
+  "title": "GearUp: DAG-aware Acceleration for Serverless Inference Serving via Slack-guided Pre-loading",
+  "identity_tokens": [
+    "arXiv:2610.38196"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.DC/recent"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ca45f29798a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
