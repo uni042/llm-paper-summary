@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T09:08:25+00:00",
-  "record_count": 12847,
+  "updated_at": "2026-11-18T09:29:00+00:00",
+  "record_count": 12855,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181197,7 +181197,7 @@
       ],
       "reason": "対象はWan2.2・HunyuanVideoなど動画拡散Transformerであり、注意ブロックの重心近似と誤差対費用比で選ぶルーティングにより動画生成を高速化する。生成LLMのKV管理・テキスト推論サービングへの直接評価はなく、現行のLLM推論サーベイの対象外。",
       "first_checked_at": "2026-10-30T11:54:47+00:00",
-      "last_checked_at": "2026-10-30T11:54:47+00:00",
+      "last_checked_at": "2026-11-18T09:28:49+00:00",
       "linked_from": [],
       "title": "SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing"
     },
@@ -181262,7 +181262,7 @@
       ],
       "reason": "SSMをテンソル縮約順序最適化と畳み込み的構成で高速化するCentaurusを提案するが、評価は音声キーワード検出・雑音除去・ASRが中心。生成LLM推論の効率化を直接実証していないため対象外。",
       "first_checked_at": "2026-10-30T11:54:57+00:00",
-      "last_checked_at": "2026-10-30T11:54:57+00:00",
+      "last_checked_at": "2026-11-18T09:29:00+00:00",
       "linked_from": [],
       "title": "Let SSMs be ConvNets: State-space Modeling with Optimal Tensor Contractions"
     },
@@ -181629,7 +181629,7 @@
       ],
       "reason": "arXiv一次要旨はランク・精度を実行時予算で選ぶ圧縮とロジットずれの証明を提案するが、主評価はImageNetのResNet-50とViT-B/16であり、LLM生成推論・KV・MoE・サービングへの実装・測定は示されない。現行LLM推論システム系統からは対象外。",
       "first_checked_at": "2026-10-30T17:58:10+00:00",
-      "last_checked_at": "2026-10-30T17:58:10+00:00",
+      "last_checked_at": "2026-11-18T09:29:00+00:00",
       "linked_from": [],
       "title": "T3C: Test-Time Tensor Compression with Consistency Guarantees"
     },
@@ -182051,7 +182051,7 @@
       ],
       "reason": "arXiv一次要旨を確認。Transformer内の情報経路をstochastically subsampled self-attentionで学習時に間引き、training時attentionのメモリ・計算量を4–8倍削減する学習・正則化手法。推論時のLLMデコード・サービング削減を直接検証していない学習専用研究のためunrelated。",
       "first_checked_at": "2026-10-31T02:09:39+00:00",
-      "last_checked_at": "2026-10-31T02:09:39+00:00",
+      "last_checked_at": "2026-11-18T09:28:46+00:00",
       "linked_from": [],
       "title": "The Information Pathways Hypothesis: Transformers are Dynamic Self-Ensembles"
     },
@@ -183562,11 +183562,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2610.32057",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2610.32057",
         "arXiv:2610.32057"
       ],
-      "reason": "学習済み疎注意の長文脈訓練をスケールするHyScale。選択が訓練のボトルネックになる問題への訓練システム。対象は訓練であり、推論ではない。対象外。",
+      "reason": "一次要旨では、HyTopKによる学習時のtop-k選択表の非実体化と、forward時の選択結果を再計算時に再利用するselection replayを提案。GLM-5.1の100万トークン学習を512基のH20 GPUでMegatron-LM比2.07倍高速化したという報告は学習処理であり、推論時の実行・サービング最適化の直接的な評価はない。現行の推論中心スコープではunrelated。",
       "first_checked_at": "2026-11-18T07:27:38+00:00",
-      "last_checked_at": "2026-11-18T07:27:38+00:00",
+      "last_checked_at": "2026-11-18T09:28:59+00:00",
       "linked_from": [
         "13-sparse-attention",
         "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
@@ -184979,6 +184980,122 @@
       "last_checked_at": "2026-11-18T08:47:44+00:00",
       "linked_from": [],
       "title": "Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations"
+    },
+    "arXiv:2610.40932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40932",
+      "identity_tokens": [
+        "arXiv:2610.40932"
+      ],
+      "reason": "SystemVerilogで海馬のDG/EC・CA3・CA1に対応する3段FPGA回路を実装し、64イベント・16コンテキストで時系列の記憶・予測を物理デバイス上で検証する研究。対象は海馬模倣型のハイパーベクトル近傍探索・反復状態予測であり、Transformer/LLMの推論実行、attention/KVキャッシュ、言語モデルの圧縮やサービングへの適用は一次要旨にない。『context-aware sequence prediction』という表題上の類似性はあるがLLM推論サーベイの対象外。",
+      "first_checked_at": "2026-11-18T09:28:48+00:00",
+      "last_checked_at": "2026-11-18T09:28:48+00:00",
+      "linked_from": [],
+      "title": "HippocamFLEX: FPGA Prototyping of Hippocampus-Inspired Architecture for Context-Aware Sequence Prediction"
+    },
+    "arXiv:2610.41369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41369",
+      "identity_tokens": [
+        "arXiv:2610.41369"
+      ],
+      "reason": "二者間MPCの候補frontier結合・top-K選択を秘匿する固定形状online kernelを定式化し、MP-SPDZのshare方式とranking方式6実装を比較。LANでB-QueueがH-Queueより6〜7倍速く通信40倍減と報告するが、対象は暗号プロトコルのMPC演算でありLLM推論kernel・GPU attention・KVやMoEの最適化を扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T09:28:51+00:00",
+      "last_checked_at": "2026-11-18T09:28:51+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.CR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new"
+      ],
+      "title": "BlindStep: A Secure One-Step Kernel for Privacy-Preserving Collaborative Reasoning"
+    },
+    "arXiv:2610.41669": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41669",
+      "identity_tokens": [
+        "arXiv:2610.41669"
+      ],
+      "reason": "knowledge graph similarity queryのcardinalityを推定するSCE-KGを提案し、LLMは学習用query生成器として利用。star/chain queryの95パーセンタイル予測誤差を37〜40倍改善、online overheadはquery実行時間の0.05%未満と報告するが、対象はDB query optimizerでありLLMモデル自体の推論・サービング高速化ではないためunrelated。",
+      "first_checked_at": "2026-11-18T09:28:51+00:00",
+      "last_checked_at": "2026-11-18T09:28:51+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.CR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new"
+      ],
+      "title": "Supervised and LLM-Augmented Cardinality Estimation for Similarity Queries on Knowledge Graphs"
+    },
+    "arXiv:2610.40966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40966",
+      "identity_tokens": [
+        "arXiv:2610.40966"
+      ],
+      "reason": "会話RAGベンチマークの正解文書ラベルが欠落すると、より強いretrieverほど回答可能な文脈を誤って回答不能と判定する評価バイアスを分析。RECORの4 retrieverとQwen3 reader等で、no-gold文脈の28〜72%が回答を含み得ると示す。主要貢献は回答拒否評価ラベルの妥当性であり、LLM推論カーネル・キャッシュ・serving・実行効率の改善技術ではないためunrelated。",
+      "first_checked_at": "2026-11-18T09:28:53+00:00",
+      "last_checked_at": "2026-11-18T09:28:53+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "title": "Better Retrievers, Worse Labels: How Incomplete Relevance Judgments Distort Abstention Evaluation in Conversational RAG"
+    },
+    "arXiv:2610.40917": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40917",
+      "identity_tokens": [
+        "arXiv:2610.40917"
+      ],
+      "reason": "LLM agentのharnessを8つの機能要素へ分解し、実行時にどのモデルと構成を使ったかを記録する移植可能な仕様を提案。harness差による評価スコア変動や攻撃面の記録・監査が目的で、推論スケジューリング、GPU実行、KV、圧縮、モデル呼出しコスト削減の新規技術や実測は一次要旨にないためunrelated。",
+      "first_checked_at": "2026-11-18T09:28:53+00:00",
+      "last_checked_at": "2026-11-18T09:28:53+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "title": "Towards Portable Specification of the Agent Harness"
+    },
+    "arXiv:2610.39040": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.39040",
+      "identity_tokens": [
+        "arXiv:2610.39040"
+      ],
+      "reason": "DNN acceleratorのtensor tile・演算順序・processing-element並列化のmappingを、遺伝的探索と制約違反を修復するoperatorで探索するIMPACT。DeepBenchおよび5種の一般ネットワークを用いたCIM accelerator実験でEDP 66%、latency 47%、energy 18%改善を報告。一次要旨ではLLM/Transformer推論のweight/KVやLLM serving固有の実装・評価を扱わず、一般DNN accelerator mappingに限定されるためunrelated。",
+      "first_checked_at": "2026-11-18T09:28:58+00:00",
+      "last_checked_at": "2026-11-18T09:28:58+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/recent"
+      ],
+      "title": "IMPACT: Constraint-Aware Search for Imperfectly Factorized Accelerator Mappings"
+    },
+    "DOI:10.1109/bigdata66926.2025.11402021": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bigdata66926.2025.11402021",
+      "identity_tokens": [
+        "DOI:10.1109/bigdata66926.2025.11402021"
+      ],
+      "reason": "attentionに対する勾配降下の漸近方向とSVMの関係を理論的に解析し、ロジスティック損失のLipschitz性と学習上の疎性を説明する。推論時の疎注意実装、GPU効率、KVキャッシュ圧縮や生成速度の評価を扱わないため現行推論効率サーベイからは除外。",
+      "first_checked_at": "2026-11-18T09:28:59+00:00",
+      "last_checked_at": "2026-11-18T09:28:59+00:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 274; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "title": "A Theoretical Framework Bridging Attention and SVM Optimization Dynamics and Sparsity"
+    },
+    "DOI:10.1109/access.2026.3737447": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2026.3737447",
+      "identity_tokens": [
+        "DOI:10.1109/access.2026.3737447"
+      ],
+      "reason": "回転型PTQの学習目的と活性化量子化粒度を8種類の視覚モデルで比較。RT-DETR、RF-DETR、Mask R-CNN、DeiT、Swin、ViT、ResNet、MobileNetを評価するが、生成LLMの重み量子化・推論性能は評価していない。IEEE正式要旨の本文確認に基づきunrelated。",
+      "first_checked_at": "2026-11-18T09:28:59+00:00",
+      "last_checked_at": "2026-11-18T09:28:59+00:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 87; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "title": "When and How to Rotate: Loss Design and Activation Granularity for Rotation-Based Vision Model Quantization"
     }
   }
 }

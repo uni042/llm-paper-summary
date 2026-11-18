@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2e5913e4a5d511a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.34146",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.34146",
+    "identity_tokens": [
+      "arXiv:2610.34146"
+    ],
+    "reason": "全文書類から一度semantic hierarchyを作り、queryごとに構造・意味scoreと語彙対応から必要なsource spanと祖先contextを選ぶtraining-free context構成。4 frontier answer model・LongBench 3 taskで全文投入比QA-F1平均+1.72、answer-context長58.55%削減と報告。LLMへ渡すpromptを短縮する間接的な推論負荷削減に関係するが、prefill TTFTやGPU throughputの実測が一次要旨になく、retrieval品質中心のためborderline。",
+    "first_checked_at": "2026-11-18T09:28:57+00:00",
+    "last_checked_at": "2026-11-18T09:28:57+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CL/recent"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Retrieval in the Long-Context Era: Training-Free Semantic Trees for Adaptive Context Construction"
+  },
+  "processed_at": "2026-11-18T09:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

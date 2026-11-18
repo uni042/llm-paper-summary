@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80a31def11425011-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41056",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41056",
+    "identity_tokens": [
+      "arXiv:2610.41056"
+    ],
+    "reason": "LLM agentの長期memory更新において情報更新とprompt injectionによる汚染の両方を扱うmanagerを、evidence-conditioned accuracyで評価。合成episodeでmanagerを一度finetuneすると3 backboneの全categoryで指標が改善し、全体ECAが未調整版の2倍超と報告。agent memoryの管理方式は関連するが主指標は正確性・攻撃耐性で、保存容量・retrieval latency・推論token費用の削減は示さないためborderline。",
+    "first_checked_at": "2026-11-18T09:28:50+00:00",
+    "last_checked_at": "2026-11-18T09:28:50+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AR/new",
+      "https://arxiv.org/list/cs.CR/new",
+      "https://arxiv.org/list/cs.NI/new",
+      "https://arxiv.org/list/cs.PL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents"
+  },
+  "processed_at": "2026-11-18T09:28:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

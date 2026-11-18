@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-853055cb45d17113-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.40966",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.40966",
+    "identity_tokens": [
+      "arXiv:2610.40966"
+    ],
+    "reason": "会話RAGベンチマークの正解文書ラベルが欠落すると、より強いretrieverほど回答可能な文脈を誤って回答不能と判定する評価バイアスを分析。RECORの4 retrieverとQwen3 reader等で、no-gold文脈の28〜72%が回答を含み得ると示す。主要貢献は回答拒否評価ラベルの妥当性であり、LLM推論カーネル・キャッシュ・serving・実行効率の改善技術ではないためunrelated。",
+    "first_checked_at": "2026-11-18T09:28:53+00:00",
+    "last_checked_at": "2026-11-18T09:28:53+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CL/new"
+    ],
+    "title": "Better Retrievers, Worse Labels: How Incomplete Relevance Judgments Distort Abstention Evaluation in Conversational RAG"
+  },
+  "processed_at": "2026-11-18T09:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853055cb45d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

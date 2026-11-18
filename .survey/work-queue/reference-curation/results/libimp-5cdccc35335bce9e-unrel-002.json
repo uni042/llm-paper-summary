@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cdccc35335bce9e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.40932",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.40932",
+    "identity_tokens": [
+      "arXiv:2610.40932"
+    ],
+    "reason": "SystemVerilogで海馬のDG/EC・CA3・CA1に対応する3段FPGA回路を実装し、64イベント・16コンテキストで時系列の記憶・予測を物理デバイス上で検証する研究。対象は海馬模倣型のハイパーベクトル近傍探索・反復状態予測であり、Transformer/LLMの推論実行、attention/KVキャッシュ、言語モデルの圧縮やサービングへの適用は一次要旨にない。『context-aware sequence prediction』という表題上の類似性はあるがLLM推論サーベイの対象外。",
+    "first_checked_at": "2026-11-18T09:28:48+00:00",
+    "last_checked_at": "2026-11-18T09:28:48+00:00",
+    "linked_from": [],
+    "title": "HippocamFLEX: FPGA Prototyping of Hippocampus-Inspired Architecture for Context-Aware Sequence Prediction"
+  },
+  "processed_at": "2026-11-18T09:28:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cdccc35335b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

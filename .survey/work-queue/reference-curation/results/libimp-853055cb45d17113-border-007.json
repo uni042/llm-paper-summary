@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-853055cb45d17113-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.40901",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.40901",
+    "identity_tokens": [
+      "arXiv:2610.40901"
+    ],
+    "reason": "時系列予測の論文再現・ベンチマーク・新手法開発を支援する共有ツールと資源を持つagent workbench。複数のcoding agent基盤との比較で、完了タスク当たりfresh tokensを11〜66%削減し、手法開発の所要時間を9.2〜68.8%削減したと報告。agent実行のトークン効率に定量的関連はあるが、特定分野の研究workflow設計が主眼で、一般的LLM serving実装やdecode効率の直接改善ではないためborderline。",
+    "first_checked_at": "2026-11-18T09:28:52+00:00",
+    "last_checked_at": "2026-11-18T09:28:52+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research"
+  },
+  "processed_at": "2026-11-18T09:28:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-853055cb45d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2e5913e4a5d511a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.32213",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.32213",
+    "identity_tokens": [
+      "arXiv:2610.32213"
+    ],
+    "reason": "固定パラメータ予算下でattention headを少数・幅広にすると、短文脈lossや一般taskをほぼ変えず長文脈retrieval性能が向上することを実験。幅広headでretrieval head割合が高まり、attention projectionを凍結した長文脈継続学習でも改善が残る。モデル設計と長文脈性能には関係するが、推論時のtoken/s、メモリ、cache、kernel最適化は一次要旨で示されないためborderline。",
+    "first_checked_at": "2026-11-18T09:28:57+00:00",
+    "last_checked_at": "2026-11-18T09:28:57+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CL/recent"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Head Dimension Matters in Language Models for Long-Context Retrieval"
+  },
+  "processed_at": "2026-11-18T09:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

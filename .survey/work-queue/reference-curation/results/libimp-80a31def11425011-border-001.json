@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80a31def11425011-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.11748",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.11748",
+    "identity_tokens": [
+      "arXiv:2610.11748"
+    ],
+    "reason": "most-significant-digit-first演算を使い、符号判定で打ち切れるReLU・segmentation headと低位桁省略/枝刈りを組み合わせるINT8 U-Net向けアクセラレータ。BraTSの残差U-Netでdigit cycleを38.38%削減し、DiceはFP基準81.20%に対し80.58%。推論ハードウェアの動的計算削減だが対象は脳腫瘍セグメンテーション専用CNNでLLMではないためborderline。",
+    "first_checked_at": "2026-11-18T09:28:49+00:00",
+    "last_checked_at": "2026-11-18T09:28:49+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AR/new",
+      "https://arxiv.org/list/cs.CR/new",
+      "https://arxiv.org/list/cs.NI/new",
+      "https://arxiv.org/list/cs.PL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DEX: Digit-Level Early Exit for Energy-Efficient MSDF Neural Network Inference"
+  },
+  "processed_at": "2026-11-18T09:28:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

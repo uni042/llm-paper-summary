@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2e5913e4a5d511a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.34180",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.34180",
+    "identity_tokens": [
+      "arXiv:2610.34180"
+    ],
+    "reason": "recurrent-memory modelでtokenを記録するかのgateと、何slotに書くかのallocationを分離するFactorized Write Routing。合成Feature Recallでは常時writeの精度0.472がselective writeの0.337を上回る一方、疎なPasskeyではselective 0.222が常時0.048を上回る。推論時の固定slot記憶には関連するが、評価は合成taskの精度中心でLLM servingのlatency・memory/throughput実測がないためborderline。",
+    "first_checked_at": "2026-11-18T09:28:57+00:00",
+    "last_checked_at": "2026-11-18T09:28:57+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.CL/recent"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Write What Matters: Disentangling Token Selection from Slot Allocation in Recurrent Memory"
+  },
+  "processed_at": "2026-11-18T09:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

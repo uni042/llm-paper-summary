@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c304b817cdd84f64-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.32057",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.32057",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2610.32057",
+      "arXiv:2610.32057"
+    ],
+    "reason": "一次要旨では、HyTopKによる学習時のtop-k選択表の非実体化と、forward時の選択結果を再計算時に再利用するselection replayを提案。GLM-5.1の100万トークン学習を512基のH20 GPUでMegatron-LM比2.07倍高速化したという報告は学習処理であり、推論時の実行・サービング最適化の直接的な評価はない。現行の推論中心スコープではunrelated。",
+    "first_checked_at": "2026-11-18T07:27:38+00:00",
+    "last_checked_at": "2026-11-18T09:28:59+00:00",
+    "linked_from": [
+      "13-sparse-attention",
+      "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+      "inference-systems"
+    ],
+    "title": "HyScale: Scaling Long-Context Training for Learned Sparse Attention"
+  },
+  "processed_at": "2026-11-18T09:28:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c304b817cdd8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80a31def11425011-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41707",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41707",
+    "identity_tokens": [
+      "arXiv:2610.41707"
+    ],
+    "reason": "datacenterのECMPとpacket sprayingの間で、ordered subflowを維持するReactive Subflow Sprayingと1 RTT以内のPrecise Fast Loss Detectionを提案。simulation・AI/HPC workload・DPU prototypeでtail flow completion最大3倍改善、timeout recovery最大99%減、collective/training通信最大35%高速化と報告。分散推論通信に応用可能なnetwork substrateだが評価の主軸は一般datacenter/学習通信でLLM serving特化ではないためborderline。",
+    "first_checked_at": "2026-11-18T09:28:50+00:00",
+    "last_checked_at": "2026-11-18T09:28:50+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AR/new",
+      "https://arxiv.org/list/cs.CR/new",
+      "https://arxiv.org/list/cs.NI/new",
+      "https://arxiv.org/list/cs.PL/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Ordered Chaos: Towards Adaptive Multipath Load Balancing with Precise Fast Loss Detection"
+  },
+  "processed_at": "2026-11-18T09:28:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

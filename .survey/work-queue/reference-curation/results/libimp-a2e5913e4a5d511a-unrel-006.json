@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2e5913e4a5d511a-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.39040",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.39040",
+    "identity_tokens": [
+      "arXiv:2610.39040"
+    ],
+    "reason": "DNN acceleratorのtensor tile・演算順序・processing-element並列化のmappingを、遺伝的探索と制約違反を修復するoperatorで探索するIMPACT。DeepBenchおよび5種の一般ネットワークを用いたCIM accelerator実験でEDP 66%、latency 47%、energy 18%改善を報告。一次要旨ではLLM/Transformer推論のweight/KVやLLM serving固有の実装・評価を扱わず、一般DNN accelerator mappingに限定されるためunrelated。",
+    "first_checked_at": "2026-11-18T09:28:58+00:00",
+    "last_checked_at": "2026-11-18T09:28:58+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AR/recent"
+    ],
+    "title": "IMPACT: Constraint-Aware Search for Imperfectly Factorized Accelerator Mappings"
+  },
+  "processed_at": "2026-11-18T09:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e5913e4a5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

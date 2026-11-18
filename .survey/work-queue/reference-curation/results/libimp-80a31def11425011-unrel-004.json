@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-80a31def11425011-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.41369",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.41369",
+    "identity_tokens": [
+      "arXiv:2610.41369"
+    ],
+    "reason": "二者間MPCの候補frontier結合・top-K選択を秘匿する固定形状online kernelを定式化し、MP-SPDZのshare方式とranking方式6実装を比較。LANでB-QueueがH-Queueより6〜7倍速く通信40倍減と報告するが、対象は暗号プロトコルのMPC演算でありLLM推論kernel・GPU attention・KVやMoEの最適化を扱わないためunrelated。",
+    "first_checked_at": "2026-11-18T09:28:51+00:00",
+    "last_checked_at": "2026-11-18T09:28:51+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AR/new",
+      "https://arxiv.org/list/cs.CR/new",
+      "https://arxiv.org/list/cs.NI/new",
+      "https://arxiv.org/list/cs.PL/new"
+    ],
+    "title": "BlindStep: A Secure One-Step Kernel for Privacy-Preserving Collaborative Reasoning"
+  },
+  "processed_at": "2026-11-18T09:28:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-80a31def1142",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
