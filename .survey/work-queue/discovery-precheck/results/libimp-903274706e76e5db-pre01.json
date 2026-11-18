@@ -1,0 +1,171 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-903274706e76e5db-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-903274706e76",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.11553",
+    "arXiv:2608.30310",
+    "arXiv:2609.38832",
+    "arXiv:2610.09051"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "26a05d1f42b48b576ecf266c98d9ed36aa021e90",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:32:05.314198+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.11553",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2601.11553"
+    },
+    {
+      "requested_id": "arXiv:2608.30310",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.30310"
+    },
+    {
+      "requested_id": "arXiv:2609.38832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09051",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:08e34e7d2661f393dd477c436f348a7a772fa5b9"
+    }
+  ],
+  "results": [
+    {
+      "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+      "source_url": "https://arxiv.org/abs/2609.38832",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling attention parameters can improve language model quality, but retaining full token histories makes additional heads costly at long contexts. Furthermore, since attention retrieves and combines contextual information, parameter scaling should also support longer contexts. We therefore ask whether attention parameter scaling can directly enable efficient and effective context scaling. We introduce NAMOH, an architecture-native sparse attention mechanism that activates $K$ of $H$ heads per token. Each head retains only its assigned tokens and performs causal attention within this subsequence. Head selection thus jointly determines active parameters and available context without scanning the full history. Under balanced assignments, increasing $H$ at fixed $K$ shortens head histories and reduces per-token key-value (KV) access without increasing total KV storage. We further support head-relative rotary position embeddings to shorten positional spans within routed subsequences, aiming to mitigate position-induced attention noise. Experiments show that NAMOH can outperform fully activated models with the same total parameters, while enabling more efficient long-context inference than smaller dense models with matched active parameter counts. It remains compatible with GQA and existing sparse attention mechanisms. We hope this work offers a new path for scaling attention, with parameter scaling directly enabling context scaling.",
+      "identifiers": [
+        "SemanticScholar:922b80e57c91a3afd83f42120ff2c3b68d3769ed"
+      ],
+      "semantic_scholar_id": "922b80e57c91a3afd83f42120ff2c3b68d3769ed",
+      "canonical_id": "arXiv:2609.38832",
+      "arxiv_id": "2609.38832",
+      "doi": "10.48550/arXiv.2609.38832",
+      "authors": [
+        "Zi-Zhuo Fu",
+        "Run-Sheng Wang",
+        "Meng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.38832",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.38832",
+        "id:SemanticScholar:922b80e57c91a3afd83f42120ff2c3b68d3769ed",
+        "id:arXiv:2609.38832",
+        "title:scaling parameter and context in attention native sparse attention from mixtureofhead",
+        "url:https://arxiv.org/abs/2609.38832"
+      ],
+      "record": {
+        "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+        "source_url": "https://arxiv.org/abs/2609.38832",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling attention parameters can improve language model quality, but retaining full token histories makes additional heads costly at long contexts. Furthermore, since attention retrieves and combines contextual information, parameter scaling should also support longer contexts. We therefore ask whether attention parameter scaling can directly enable efficient and effective context scaling. We introduce NAMOH, an architecture-native sparse attention mechanism that activates $K$ of $H$ heads per token. Each head retains only its assigned tokens and performs causal attention within this subsequence. Head selection thus jointly determines active parameters and available context without scanning the full history. Under balanced assignments, increasing $H$ at fixed $K$ shortens head histories and reduces per-token key-value (KV) access without increasing total KV storage. We further support head-relative rotary position embeddings to shorten positional spans within routed subsequences, aiming to mitigate position-induced attention noise. Experiments show that NAMOH can outperform fully activated models with the same total parameters, while enabling more efficient long-context inference than smaller dense models with matched active parameter counts. It remains compatible with GQA and existing sparse attention mechanisms. We hope this work offers a new path for scaling attention, with parameter scaling directly enabling context scaling.",
+        "identifiers": [
+          "SemanticScholar:922b80e57c91a3afd83f42120ff2c3b68d3769ed"
+        ],
+        "semantic_scholar_id": "922b80e57c91a3afd83f42120ff2c3b68d3769ed",
+        "canonical_id": "arXiv:2609.38832",
+        "arxiv_id": "2609.38832",
+        "doi": "10.48550/arXiv.2609.38832",
+        "authors": [
+          "Zi-Zhuo Fu",
+          "Run-Sheng Wang",
+          "Meng Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 49,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c0058b6b70cfcdeec495879e9571d77efc75e0ec7c8a0a866b80f3cbdd5cdd5a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

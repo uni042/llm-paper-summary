@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-109859c050bf02ae-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-109859c050bf",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.14578",
+    "arXiv:2509.06174"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "26a05d1f42b48b576ecf266c98d9ed36aa021e90",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:31:32.362627+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.14578",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.06174",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Large Language Models Are Overparameterized Text Encoders",
+      "source_url": "https://arxiv.org/abs/2410.14578",
+      "year": 2024,
+      "published": "2024-10-18",
+      "venue": "Workshop on Representation Learning for NLP",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) demonstrate strong performance as text embedding models when finetuned with supervised contrastive training. However, their large size balloons inference time and memory requirements. In this paper, we show that by pruning the last $p\\%$ layers of an LLM before supervised training for only 1000 steps, we can achieve a proportional reduction in memory and inference time. We evaluate four different state-of-the-art LLMs on text embedding tasks and find that our method can prune up to 30\\% of layers with negligible impact on performance and up to 80\\% with only a modest drop. With only three lines of code, our method is easily implemented in any pipeline for transforming LLMs to text encoders. We also propose $\\text{L}^3 \\text{Prune}$, a novel layer-pruning strategy based on the model's initial loss that provides two optimal pruning configurations: a large variant with negligible performance loss and a small variant for resource-constrained settings. On average, the large variant prunes 21\\% of the parameters with a $-0.3$ performance drop, and the small variant only suffers from a $-5.1$ decrease while pruning 74\\% of the model. We consider these results strong evidence that LLMs are overparameterized for text embedding tasks, and can be easily pruned.",
+      "identifiers": [
+        "SemanticScholar:84c233641245779dcd1d3b66f89be11e8ea2b3e9"
+      ],
+      "semantic_scholar_id": "84c233641245779dcd1d3b66f89be11e8ea2b3e9",
+      "canonical_id": "arXiv:2410.14578",
+      "arxiv_id": "2410.14578",
+      "doi": "10.48550/arXiv.2410.14578",
+      "authors": [
+        "K. ThennalD",
+        "Tim Fischer",
+        "Chris Biemann"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 761,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Long to Short: LLMs Excel at Trimming Own Reasoning Chains",
+      "source_url": "https://arxiv.org/abs/2509.06174",
+      "year": 2025,
+      "published": "2025-09-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "O1/R1 style large reasoning models (LRMs) signal a substantial leap forward over conventional instruction-following LLMs. By applying test-time scaling to generate extended reasoning paths, they establish many SOTAs across a wide range of complex reasoning tasks. However, recent studies show that LRMs are prone to suffer from overthinking -- the tendency to overcomplicate simple problems, leading to excessive strategy switching and long, convoluted reasoning traces that hinder their interpretability. To mitigate this issue, we conduct a systematic investigation into the reasoning efficiency of a broad set of LRMs and uncover a common dilemma: the difficulty in balancing multiple generation objectives such as correctness and brevity. Based on this discovery, we propose a test-time scaling method, EDIT (Efficient Dynamic Inference Trimming), which efficiently guides LRMs to identify the shortest correct reasoning paths at test time. EDIT employs constraint-guided generation while jointly tracking length and answer distributions under varying constraints, allowing it to select responses that strike an optimal balance between conciseness and correctness. Extensive experiments across diverse models and datasets show that EDIT substantially enhance the reasoning efficiency, producing compact yet informative outputs that improve readability and user experience.",
+      "identifiers": [
+        "SemanticScholar:50a62bbfffdd0873ec8a60a4f64fef76093d3af1"
+      ],
+      "semantic_scholar_id": "50a62bbfffdd0873ec8a60a4f64fef76093d3af1",
+      "canonical_id": "arXiv:2509.06174",
+      "arxiv_id": "2509.06174",
+      "doi": "10.48550/arXiv.2509.06174",
+      "authors": [
+        "Wei Han",
+        "Geng Zhan",
+        "Sicheng Yu",
+        "Chen-Yu Wang",
+        "Bryan Hooi"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 437,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.14578",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.14578",
+        "id:SemanticScholar:84c233641245779dcd1d3b66f89be11e8ea2b3e9",
+        "id:arXiv:2410.14578",
+        "title:large language models are overparameterized text encoders",
+        "url:https://arxiv.org/abs/2410.14578"
+      ],
+      "record": {
+        "title": "Large Language Models Are Overparameterized Text Encoders",
+        "source_url": "https://arxiv.org/abs/2410.14578",
+        "year": 2024,
+        "published": "2024-10-18",
+        "venue": "Workshop on Representation Learning for NLP",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) demonstrate strong performance as text embedding models when finetuned with supervised contrastive training. However, their large size balloons inference time and memory requirements. In this paper, we show that by pruning the last $p\\%$ layers of an LLM before supervised training for only 1000 steps, we can achieve a proportional reduction in memory and inference time. We evaluate four different state-of-the-art LLMs on text embedding tasks and find that our method can prune up to 30\\% of layers with negligible impact on performance and up to 80\\% with only a modest drop. With only three lines of code, our method is easily implemented in any pipeline for transforming LLMs to text encoders. We also propose $\\text{L}^3 \\text{Prune}$, a novel layer-pruning strategy based on the model's initial loss that provides two optimal pruning configurations: a large variant with negligible performance loss and a small variant for resource-constrained settings. On average, the large variant prunes 21\\% of the parameters with a $-0.3$ performance drop, and the small variant only suffers from a $-5.1$ decrease while pruning 74\\% of the model. We consider these results strong evidence that LLMs are overparameterized for text embedding tasks, and can be easily pruned.",
+        "identifiers": [
+          "SemanticScholar:84c233641245779dcd1d3b66f89be11e8ea2b3e9"
+        ],
+        "semantic_scholar_id": "84c233641245779dcd1d3b66f89be11e8ea2b3e9",
+        "canonical_id": "arXiv:2410.14578",
+        "arxiv_id": "2410.14578",
+        "doi": "10.48550/arXiv.2410.14578",
+        "authors": [
+          "K. ThennalD",
+          "Tim Fischer",
+          "Chris Biemann"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 761,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.06174",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.06174",
+        "id:SemanticScholar:50a62bbfffdd0873ec8a60a4f64fef76093d3af1",
+        "id:arXiv:2509.06174",
+        "title:from long to short llms excel at trimming own reasoning chains",
+        "url:https://arxiv.org/abs/2509.06174"
+      ],
+      "record": {
+        "title": "From Long to Short: LLMs Excel at Trimming Own Reasoning Chains",
+        "source_url": "https://arxiv.org/abs/2509.06174",
+        "year": 2025,
+        "published": "2025-09-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "O1/R1 style large reasoning models (LRMs) signal a substantial leap forward over conventional instruction-following LLMs. By applying test-time scaling to generate extended reasoning paths, they establish many SOTAs across a wide range of complex reasoning tasks. However, recent studies show that LRMs are prone to suffer from overthinking -- the tendency to overcomplicate simple problems, leading to excessive strategy switching and long, convoluted reasoning traces that hinder their interpretability. To mitigate this issue, we conduct a systematic investigation into the reasoning efficiency of a broad set of LRMs and uncover a common dilemma: the difficulty in balancing multiple generation objectives such as correctness and brevity. Based on this discovery, we propose a test-time scaling method, EDIT (Efficient Dynamic Inference Trimming), which efficiently guides LRMs to identify the shortest correct reasoning paths at test time. EDIT employs constraint-guided generation while jointly tracking length and answer distributions under varying constraints, allowing it to select responses that strike an optimal balance between conciseness and correctness. Extensive experiments across diverse models and datasets show that EDIT substantially enhance the reasoning efficiency, producing compact yet informative outputs that improve readability and user experience.",
+        "identifiers": [
+          "SemanticScholar:50a62bbfffdd0873ec8a60a4f64fef76093d3af1"
+        ],
+        "semantic_scholar_id": "50a62bbfffdd0873ec8a60a4f64fef76093d3af1",
+        "canonical_id": "arXiv:2509.06174",
+        "arxiv_id": "2509.06174",
+        "doi": "10.48550/arXiv.2509.06174",
+        "authors": [
+          "Wei Han",
+          "Geng Zhan",
+          "Sicheng Yu",
+          "Chen-Yu Wang",
+          "Bryan Hooi"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 437,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:71aa0e329abd8779a7a807742554417658c482139969386dd75a58b2cc54d3a4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

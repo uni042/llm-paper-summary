@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c7de481973e677fd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c7de481973e6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2402.08644"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "26a05d1f42b48b576ecf266c98d9ed36aa021e90",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:32:19.872937+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2402.08644",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tandem Transformers for Inference Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2402.08644",
+      "year": 2024,
+      "published": "2024-02-13",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The autoregressive nature of conventional large language models (LLMs) inherently limits inference speed, as tokens are generated sequentially. While speculative and parallel decoding techniques attempt to mitigate this, they face limitations: either relying on less accurate smaller models for generation or failing to fully leverage the base LLM's representations. We introduce a novel architecture, Tandem transformers, to address these issues. This architecture uniquely combines (1) a small autoregressive model and (2) a large model operating in block mode (processing multiple tokens simultaneously). The small model's predictive accuracy is substantially enhanced by granting it attention to the large model's richer representations. On the PaLM2 pretraining dataset, a tandem of PaLM2-Bison and PaLM2-Gecko demonstrates a 3.3% improvement in next-token prediction accuracy over a standalone PaLM2-Gecko, offering a 1.16x speedup compared to a PaLM2-Otter model with comparable downstream performance. We further incorporate the tandem model within the speculative decoding (SPEED) framework where the large model validates tokens from the small model. This ensures that the Tandem of PaLM2-Bison and PaLM2-Gecko achieves substantial speedup (around 1.14x faster than using vanilla PaLM2-Gecko in SPEED) while maintaining identical downstream task accuracy.",
+      "identifiers": [
+        "SemanticScholar:f5c83f5156904bdf92ff2f169871e320394f7c0a"
+      ],
+      "semantic_scholar_id": "f5c83f5156904bdf92ff2f169871e320394f7c0a",
+      "canonical_id": "arXiv:2402.08644",
+      "arxiv_id": "2402.08644",
+      "doi": "10.48550/arXiv.2402.08644",
+      "authors": [
+        "S. AishwaryaP",
+        "Pranav Ajit Nair",
+        "Yashas Samaga",
+        "Toby Boyd",
+        "Sanjiv Kumar",
+        "Prateek Jain",
+        "Praneeth Netrapalli"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1009,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2402.08644",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2402.08644",
+        "id:SemanticScholar:f5c83f5156904bdf92ff2f169871e320394f7c0a",
+        "id:arXiv:2402.08644",
+        "title:tandem transformers for inference efficient llms",
+        "url:https://arxiv.org/abs/2402.08644"
+      ],
+      "record": {
+        "title": "Tandem Transformers for Inference Efficient LLMs",
+        "source_url": "https://arxiv.org/abs/2402.08644",
+        "year": 2024,
+        "published": "2024-02-13",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The autoregressive nature of conventional large language models (LLMs) inherently limits inference speed, as tokens are generated sequentially. While speculative and parallel decoding techniques attempt to mitigate this, they face limitations: either relying on less accurate smaller models for generation or failing to fully leverage the base LLM's representations. We introduce a novel architecture, Tandem transformers, to address these issues. This architecture uniquely combines (1) a small autoregressive model and (2) a large model operating in block mode (processing multiple tokens simultaneously). The small model's predictive accuracy is substantially enhanced by granting it attention to the large model's richer representations. On the PaLM2 pretraining dataset, a tandem of PaLM2-Bison and PaLM2-Gecko demonstrates a 3.3% improvement in next-token prediction accuracy over a standalone PaLM2-Gecko, offering a 1.16x speedup compared to a PaLM2-Otter model with comparable downstream performance. We further incorporate the tandem model within the speculative decoding (SPEED) framework where the large model validates tokens from the small model. This ensures that the Tandem of PaLM2-Bison and PaLM2-Gecko achieves substantial speedup (around 1.14x faster than using vanilla PaLM2-Gecko in SPEED) while maintaining identical downstream task accuracy.",
+        "identifiers": [
+          "SemanticScholar:f5c83f5156904bdf92ff2f169871e320394f7c0a"
+        ],
+        "semantic_scholar_id": "f5c83f5156904bdf92ff2f169871e320394f7c0a",
+        "canonical_id": "arXiv:2402.08644",
+        "arxiv_id": "2402.08644",
+        "doi": "10.48550/arXiv.2402.08644",
+        "authors": [
+          "S. AishwaryaP",
+          "Pranav Ajit Nair",
+          "Yashas Samaga",
+          "Toby Boyd",
+          "Sanjiv Kumar",
+          "Prateek Jain",
+          "Praneeth Netrapalli"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1009,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:dff3963566d6153130c4a98a545044656018957a5c210005f2e73f2bb56f53af",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

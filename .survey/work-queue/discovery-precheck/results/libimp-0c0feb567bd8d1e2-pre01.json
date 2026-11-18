@@ -1,0 +1,144 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0c0feb567bd8d1e2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0c0feb567bd8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.03430"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "26a05d1f42b48b576ecf266c98d9ed36aa021e90",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:32:00.695797+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.03430",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Jumping the Line: Exploiting Length Predictions in LLM Scheduling",
+      "source_url": "https://arxiv.org/abs/2610.03430",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient request scheduling is increasingly important for reducing completion time in large language model (LLM) serving. Size-based policies such as Shortest Job First prioritize shorter requests, but output lengths are unknown before generation, so practical schedulers rely on predicted lengths. We introduce JIL, an attack on prediction-based LLM schedulers that manipulates the scheduling signal to obtain higher priority and reduce completion time. Using TRAIL as a case study, JIL optimizes an adversarial suffix that causes a lightweight output-length probe to underestimate a request's length. We evaluate JIL on two datasets and four LLMs across varied request profiles and deployment configurations. JIL reduces predicted output lengths by up to 83.4 percent, and adversarial requests complete up to 1.53 times faster on average in end-to-end serving experiments. The reduction in predicted length is substantially larger than the change in actual output length, revealing a mismatch between the scheduler's estimate and the request's realized size. Response utility varies across models and tasks, exposing a trade-off between scheduling advantage and response quality. We also evaluate scheduler-side defenses and find that grouping length predictions into coarse intervals reduces JIL's scheduling advantage and mitigates delays to benign requests.",
+      "identifiers": [
+        "SemanticScholar:758e03bddb79b3c109d63b16dcb74c8ccb0aa4d0"
+      ],
+      "semantic_scholar_id": "758e03bddb79b3c109d63b16dcb74c8ccb0aa4d0",
+      "canonical_id": "arXiv:2610.03430",
+      "arxiv_id": "2610.03430",
+      "authors": [
+        "Yu-Yang Dai",
+        "Rana Shahout",
+        "Mahmood Sharif"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.03430",
+      "identity_tokens": [
+        "id:SemanticScholar:758e03bddb79b3c109d63b16dcb74c8ccb0aa4d0",
+        "id:arXiv:2610.03430",
+        "title:jumping the line exploiting length predictions in llm scheduling",
+        "url:https://arxiv.org/abs/2610.03430"
+      ],
+      "record": {
+        "title": "Jumping the Line: Exploiting Length Predictions in LLM Scheduling",
+        "source_url": "https://arxiv.org/abs/2610.03430",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient request scheduling is increasingly important for reducing completion time in large language model (LLM) serving. Size-based policies such as Shortest Job First prioritize shorter requests, but output lengths are unknown before generation, so practical schedulers rely on predicted lengths. We introduce JIL, an attack on prediction-based LLM schedulers that manipulates the scheduling signal to obtain higher priority and reduce completion time. Using TRAIL as a case study, JIL optimizes an adversarial suffix that causes a lightweight output-length probe to underestimate a request's length. We evaluate JIL on two datasets and four LLMs across varied request profiles and deployment configurations. JIL reduces predicted output lengths by up to 83.4 percent, and adversarial requests complete up to 1.53 times faster on average in end-to-end serving experiments. The reduction in predicted length is substantially larger than the change in actual output length, revealing a mismatch between the scheduler's estimate and the request's realized size. Response utility varies across models and tasks, exposing a trade-off between scheduling advantage and response quality. We also evaluate scheduler-side defenses and find that grouping length predictions into coarse intervals reduces JIL's scheduling advantage and mitigates delays to benign requests.",
+        "identifiers": [
+          "SemanticScholar:758e03bddb79b3c109d63b16dcb74c8ccb0aa4d0"
+        ],
+        "semantic_scholar_id": "758e03bddb79b3c109d63b16dcb74c8ccb0aa4d0",
+        "canonical_id": "arXiv:2610.03430",
+        "arxiv_id": "2610.03430",
+        "authors": [
+          "Yu-Yang Dai",
+          "Rana Shahout",
+          "Mahmood Sharif"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3abca20c870e0f2b4125fed7bc1cd45bfba8ba2f029ab499c2de6a7a932ba031",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
