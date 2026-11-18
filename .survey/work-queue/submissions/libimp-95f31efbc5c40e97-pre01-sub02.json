@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Few Bits, One Law: Toward W2A4KV2",
+      "source_url": "https://arxiv.org/abs/2610.09202",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extreme low-bit LLM compression is most challenging when weights, activations, and KV caches are quantized together: their distributions differ, and quantization errors interact throughout the network. We introduce CanonQ, a unified quantization-aware training framework that addresses these challenges by separating source canonicalization from task-aware adaptation. Fixed rotations and energy normalization map heterogeneous tensor sources to canonical coordinates, enabling frozen Gaussian-reference codebooks to be reused across layers and models. Joint training then adapts the network to the coupled errors of weight, activation, and cache quantization within a common scalar/vector interface. We bound frozen-codebook transfer error and local task loss, and derive an exact normalization-aware straight-through Jacobian that links quantization distortion to gradient bias. The strongest gains arise under joint W2A4KV2 compression: across LLaMA3-1B/3B/8B, CanonQ-Omni achieves up to 14.28x lower WikiText-2 perplexity and up to 57.9% higher mean zero-shot accuracy than prior state-of-the-art and representative quantization baselines. The benefits extend to Qwen3-1.7B, code generation, and mathematical reasoning: on instruction-tuned MobileLLM-Pro-1B at W2A16KV16, CanonQ achieves relative improvements of 41.7% in HumanEval pass@1 and 39.1% in GSM8K exact match over the strongest evaluated quantization baseline.",
+      "identifiers": [
+        "SemanticScholar:a57db6795e4740e1c844024f8ddf0cb585fcdd63"
+      ],
+      "semantic_scholar_id": "a57db6795e4740e1c844024f8ddf0cb585fcdd63",
+      "canonical_id": "arXiv:2610.09202",
+      "arxiv_id": "2610.09202",
+      "authors": [
+        "Kai Yi",
+        "Tarek Elgamal",
+        "Sruthikesh Surineni",
+        "Vignesh Vivekraja",
+        "Soumyadeep Ghosh",
+        "Steven Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 43,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重み・activation・KVを同時に超低ビット化する際の異種分布と相互誤差に対し、回転とenergy正規化でtensorを共通座標へ移し、固定Gaussian codebookを共有してjoint QATで補正するCanonQを提案。一次要旨はLLaMA3 1B/3B/8BのW2A4KV2で既存方式比WikiText-2 perplexity最大14.28倍改善、zero-shot平均精度最大57.9%向上を報告。推論時の重み・活性・KV統合量子化に直接適用するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States",
+      "source_url": "https://arxiv.org/abs/2610.29545",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-attention language models keep their context in a recurrent state of fixed size, where an inference system stores one copy of this state for every sequence it decodes at the same time. Storing the state at lower precision therefore lets more sequences share an accelerator. Existing state quantizers round the state after every generated token and report that four bits lose accuracy unless the bit width is raised or the model is fine-tuned.\\par We introduce PACE, a post-hoc four-bit state quantizer. PACE rounds the state only once every few generated tokens, as chunked kernels already do once per chunk during prefill, and keeps the tokens generated in between in a small buffer. Rounding less often reduces the error that accumulates in the state. Additionally, we find that the large entries of the gated-delta state gather in columns, because some channels of the update written at each token remain large across many tokens. PACE therefore shares each quantization scale within one column. It also keeps the heads that retain rounding error longest at eight bits. On four hybrid models from 4B to 35B parameters, PACE with mixed four- and eight-bit heads is competitive with eight-bit DAMP on the three larger models at about two thirds of its memory, PACE with four-bit heads throughout scores higher than Q-Mamba at equal memory, and rounding every few tokens preserves the decoding speedup of the buffer.",
+      "identifiers": [
+        "SemanticScholar:08a21c66a3b898d9fff359c371edef5f84a9a51a"
+      ],
+      "semantic_scholar_id": "08a21c66a3b898d9fff359c371edef5f84a9a51a",
+      "canonical_id": "arXiv:2610.29545",
+      "arxiv_id": "2610.29545",
+      "authors": [
+        "Patrick Haller",
+        "Filipe Laitenberger",
+        "Alan Akbik"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形attention型LLMがsequenceごとに保持する固定長recurrent stateを、毎tokenでなく数tokenおきに丸め、間のtokenを小bufferへ置くPACEを提案。更新値の大きいchannelに合わせて列単位scaleを共有し、誤差が残るheadのみ8bit保持する。一次要旨は4B～35Bのhybrid modelで4/8bit混合stateが8bit DAMPに近い精度を約2/3のmemoryで維持し、bufferを使ったdecode高速化も保持すると報告。推論stateの容量・速度最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "INTRA: Interleaved Non-contiguous Token spaRse Attention",
+      "source_url": "https://arxiv.org/abs/2610.34056",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers achieve strong performance across modalities but are bottlenecked by the quadratic cost of attention. Sparse attention can reduce this cost, but effective sparsity must preserve useful long-range communication and map well to GPU hardware. We introduce INTRA--Interleaved Non-contiguous Token spaRse Attention--a hardware-aware static sparse attention design based on a relay-communication view under Computational Query Set (CQS) constraints. Rather than directly covering all token-to-token interactions within each sparse layer, INTRA uses complementary sparse groups to provide short mediated communication paths across layers. Scatter forms relay groups that sample broadly across local neighborhoods, while Gather reconnects these groups in subsequent layers. Under a partition model, this structure guides CQS-compatible sparse patterns with global reachability. Our CQS-aware FlashAttention-style kernel computes structured indices at runtime, loads selected non-contiguous tokens, and packs them densely for computation. On an A100, INTRA achieves a $1.53\\times$ speedup in $2K$ FLUX.1-dev generation, with better measured image quality than evaluated CLEAR configurations after LoRA self-distillation. On LLaMA-3.1-8B, it improves long-context prefill efficiency with strong teacher-forced retrieval performance under matched LoRA adaptation. Attention-only benchmarks further show up to $8.4\\times$ and $10.4\\times$ speedups over MoBA and density-constrained NSA, respectively. Code is available at https://github.com/NovTi/INTRA.",
+      "identifiers": [
+        "SemanticScholar:3d2c1215d966570d57040bc8721ea61fc09519d7"
+      ],
+      "semantic_scholar_id": "3d2c1215d966570d57040bc8721ea61fc09519d7",
+      "canonical_id": "arXiv:2610.34056",
+      "arxiv_id": "2610.34056",
+      "authors": [
+        "Yuxuan Xia",
+        "Wenbo Lu",
+        "Shao-Yi Zheng",
+        "Sheng-Jie Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Scatter/Gatherの補完的な非連続token群を複数層で組み合わせ、局所sparse attentionでも長距離情報を中継する静的パターンINTRAを提案。CQS制約に合わせたFlashAttention型kernelが非連続indexを実行時に生成・密にpackする。一次要旨はLLaMA-3.1-8Bの長文脈prefill効率とteacher-forced retrievalの維持を示し、attention microbenchmarkでMoBA比最大8.4倍高速と報告。FLUX画像生成評価も含むがLLM prefill kernelにも直接適用されるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-95f31efbc5c4",
+    "round": "libimp-95f31efbc5c40e97-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-95f31efbc5c40e97-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-95f31efbc5c40e97-pre01.json",
+    "receipt": "sha256:e23e47c9c0b80d844660ff250ea4dfac2d3e95f838df510dbeaaaf21bd98210f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-95f31efbc5c4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

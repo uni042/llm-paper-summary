@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2602.08030",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models enhance problem-solving by scaling test-time compute, yet they face a critical paradox: excessive thinking tokens often degrade performance rather than improve it. We attribute this to a fundamental architectural flaw: standard LLMs operate as\"malloc-only\"engines, continuously accumulating valid and redundant steps alike without a mechanism to prune obsolete information. To break this cycle, we propose Free()LM, a model that introduces an intrinsic self-forgetting capability via the Free-Module, a plug-and-play LoRA adapter. By iteratively switching between reasoning and cleaning modes, Free()LM dynamically identifies and prunes useless context chunks, maintaining a compact and noise-free state. Extensive experiments show that Free()LM provides consistent improvements across all model scales (8B to 685B). It achieves a 3.3% average improvement over top-tier reasoning baselines, even establishing a new SOTA on IMOanswerBench using DeepSeek V3.2-Speciale. Most notably, in long-horizon tasks where the standard Qwen3-235B-A22B model suffers a total collapse (0% accuracy), Free()LM restores performance to 50%. Our findings suggest that sustainable intelligence requires the freedom to forget as much as the power to think.",
+      "identifiers": [
+        "SemanticScholar:4bc97dba841ff291ef59c77dc8b2b053366d79ff"
+      ],
+      "semantic_scholar_id": "4bc97dba841ff291ef59c77dc8b2b053366d79ff",
+      "canonical_id": "arXiv:2602.08030",
+      "arxiv_id": "2602.08030",
+      "doi": "10.48550/arXiv.2602.08030",
+      "authors": [
+        "Yi Zheng",
+        "Dongyang Ma",
+        "Tian Liang",
+        "Jia-Hao Xu",
+        "Xin-Ting Huang",
+        "Li-Hui Chen",
+        "Hai-Tao Mi",
+        "Yan Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論時の冗長な思考チャンクをLoRA型Free-Moduleで識別し、reasoning/cleaningモードを切り替えてコンテキストを削除する。8B〜685Bで検証し、推論文脈長・KV保持を能動制御するモデル方式として関連する。ただし直接的なGPU実測高速化の主張とは区別。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud Rag Under Document Isolation",
+      "source_url": "https://arxiv.org/abs/2606.15179",
+      "year": 2026,
+      "published": "2026-06-13",
+      "venue": "2026 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) has emerged as a pivotal technique for improving language models by incorporating external knowledge at inference time. As devicecloud collaborative inference makes it feasible to deploy small language models on edge devices, a new setting arises in which private documents remain on the device and public knowledge resides in the cloud. Privacy and policy constraints often forbid raw document exchange, creating a document-isolated dual-end RAG setting. However, existing methods rely on frequent remote synchronization and dense evidence transfer, limiting throughput under realistic latency and bandwidth conditions. To address this issue, we propose CONCORD, an asynchronous sparse aggregation framework for dual-end RAG under document isolation. CONCORD treats the cloud as an asynchronously arriving evidence source rather than a continuously synchronized co-generator. Specifically, we introduce waiting debt control to decide whether each decoding step should continue waiting for remote participation based on the observed return of waiting. We also design a certificate-guided minimal supplementation mechanism that requests only the remote evidence needed to determine the current greedy decision. Steps that consult the cloud preserve the same greedy token as dense dual-end aggregation, while the remaining steps commit locally without remote evidence. Experiments on Natural Questions and WikiText-2 show that CONCORD improves end-to-end throughput over baselines by $1.66 \\times$ and $2.15 \\times$, respectively, while reducing pertoken communication by over two orders of magnitude and maintaining comparable answer quality and perplexity.",
+      "identifiers": [
+        "SemanticScholar:4848b6e5f1943e98aacd5ca4a5729b06e7587b74"
+      ],
+      "semantic_scholar_id": "4848b6e5f1943e98aacd5ca4a5729b06e7587b74",
+      "canonical_id": "arXiv:2606.15179",
+      "arxiv_id": "2606.15179",
+      "doi": "10.1109/ICWS72778.2026.00134",
+      "authors": [
+        "Xuedong Hu",
+        "Zhi-Qing Tang",
+        "Zhi-Di Yao",
+        "Tian Wang",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      },
+      "reason": "端末内の非公開文書とクラウドの公開文書を交換せずに統合するdevice-cloud RAGで、待機負債制御と証明書に基づく最小追加証拠取得を提案。クラウド参加ステップのgreedy出力一致を保持しつつ通信量を大幅削減し、推論スループットを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+      "identifiers": [
+        "SemanticScholar:a429cf6f1f9285849ceea67823d8824fe7661719"
+      ],
+      "semantic_scholar_id": "a429cf6f1f9285849ceea67823d8824fe7661719",
+      "canonical_id": "arXiv:2609.19499",
+      "arxiv_id": "2609.19499",
+      "doi": "10.48550/arXiv.2609.19499",
+      "authors": [
+        "Mobina Kashaniyan",
+        "Ali Jannesari"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GSM8Kで候補数N=8を固定して1×8から8×1まで生成呼出分割を比較。A100では8回逐次実行が1回バッチに対しGPUエネルギー4.64〜4.86倍、P95遅延5.77〜6.12倍と報告し、推論時スケジューリング・エネルギー評価に直接関係。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5f9a31f193bf",
+    "round": "libimp-5f9a31f193bf8495-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5f9a31f193bf8495-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5f9a31f193bf8495-pre01.json",
+    "receipt": "sha256:fad3306c4df97f202e577976fd1e83663d59f688f47fef3d47e8d299c81ef43c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5f9a31f193bf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

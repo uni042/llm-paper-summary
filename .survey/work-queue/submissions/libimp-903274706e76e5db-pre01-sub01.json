@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+      "source_url": "https://arxiv.org/abs/2609.38832",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling attention parameters can improve language model quality, but retaining full token histories makes additional heads costly at long contexts. Furthermore, since attention retrieves and combines contextual information, parameter scaling should also support longer contexts. We therefore ask whether attention parameter scaling can directly enable efficient and effective context scaling. We introduce NAMOH, an architecture-native sparse attention mechanism that activates $K$ of $H$ heads per token. Each head retains only its assigned tokens and performs causal attention within this subsequence. Head selection thus jointly determines active parameters and available context without scanning the full history. Under balanced assignments, increasing $H$ at fixed $K$ shortens head histories and reduces per-token key-value (KV) access without increasing total KV storage. We further support head-relative rotary position embeddings to shorten positional spans within routed subsequences, aiming to mitigate position-induced attention noise. Experiments show that NAMOH can outperform fully activated models with the same total parameters, while enabling more efficient long-context inference than smaller dense models with matched active parameter counts. It remains compatible with GQA and existing sparse attention mechanisms. We hope this work offers a new path for scaling attention, with parameter scaling directly enabling context scaling.",
+      "identifiers": [
+        "SemanticScholar:922b80e57c91a3afd83f42120ff2c3b68d3769ed"
+      ],
+      "semantic_scholar_id": "922b80e57c91a3afd83f42120ff2c3b68d3769ed",
+      "canonical_id": "arXiv:2609.38832",
+      "arxiv_id": "2609.38832",
+      "doi": "10.48550/arXiv.2609.38832",
+      "authors": [
+        "Zi-Zhuo Fu",
+        "Run-Sheng Wang",
+        "Meng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NAMOHは各トークンでH個のheadのうちK個を活性化し、各headが割り当てられたトークンのみ保持・因果注意を行う。Hを増やしKを固定することでheadごとのKV履歴アクセスを減らし、head相対RoPEで位置雑音の軽減を狙う。GQAや既存疎注意と互換で、長文脈推論効率を評価。LLMの注意計算とKVアクセス削減に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_via_research_index_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-903274706e76",
+    "round": "libimp-903274706e76e5db-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-903274706e76e5db-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-903274706e76e5db-pre01.json",
+    "receipt": "sha256:c0058b6b70cfcdeec495879e9571d77efc75e0ec7c8a0a866b80f3cbdd5cdd5a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-903274706e76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

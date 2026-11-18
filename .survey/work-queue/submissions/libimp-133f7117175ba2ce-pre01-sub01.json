@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Coda: Exploiting Admission Flexibility for Coding-Agent Serving",
+      "source_url": "https://arxiv.org/abs/2610.03088",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Coding agents powered by large language models (LLMs) repeatedly alternate between model inference and tool calls, creating long-lived sessions with reusable key-value (KV) states and asynchronous request resumptions. Logical readiness, however, does not ensure efficient admission in a shared serving system. Through direct trace analysis and trace-driven replay, we identify two mismatches: reusable KV states reside across storage tiers and incur unequal computational costs for state preparation, while requests with heterogeneous context lengths can decode inefficiently together. Our central insight is that exploiting admission flexibility can improve serving performance while preserving request progress. We present Coda, a coding-agent serving system that realizes this insight through a readiness-informed admission layer incorporating two mechanisms. Tiered-Aging state admission exploits bounded flexibility in admission order to improve admission efficiency and preserve request progress. Compatibility-Aware execution admission exploits flexibility in attention grouping within each model iteration to reduce mixed-context interference and improve shared decoding efficiency. For multi-worker configurations, Coda introduces a separate routing layer that considers KV-state residency, worker load, and request-to-worker context-length compatibility to guide efficient request placement. We evaluate Coda across different models and workloads against state-of-the-art coding-agent serving systems and vLLM. Across the single-worker and multi-worker experiments, Coda improves output-token and SLO-compliant throughput by 20.3% and 70.5% on average, with peak gains of 29.3% and 140.2%.",
+      "identifiers": [
+        "SemanticScholar:36037537e923bfd71078e43f468687ca67ebe680"
+      ],
+      "semantic_scholar_id": "36037537e923bfd71078e43f468687ca67ebe680",
+      "canonical_id": "arXiv:2610.03088",
+      "arxiv_id": "2610.03088",
+      "authors": [
+        "You-He Jiang",
+        "Fang-Cheng Fu",
+        "Bin-Hang Yuan",
+        "Krishna T. Malladi",
+        "E. Ardestani",
+        "Zhan Shu",
+        "Adnan Aziz",
+        "Yi Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "coding-agentのKV状態の階層別配置、context長の混在、workerルーティングを考慮した二段階admission制御。単一/複数worker実験で出力トークンthroughput平均20.3%、SLO準拠throughput平均70.5%改善を著者報告。LLM servingに直接関係。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-133f7117175b",
+    "round": "libimp-133f7117175ba2ce-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-133f7117175ba2ce-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-133f7117175ba2ce-pre01.json",
+    "receipt": "sha256:2f64eaa09dbb5487dfe37c3d39d05eed9e0c40fc004d273e1f22a7d85f8610e3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-133f7117175b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

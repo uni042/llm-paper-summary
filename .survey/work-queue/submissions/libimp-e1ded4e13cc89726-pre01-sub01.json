@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Unlocking Feature Learning in Gated Delta Networks at Scale",
+      "source_url": "https://arxiv.org/abs/2606.04048",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training and scaling Large Language Models demand enormous computational resources, motivating both efficient sub-quadratic architectures and principled hyperparameter tuning methods. While the Maximal Update Parametrization ($\\mu$P) has enabled zero-shot hyperparameter transfer for standard Transformers, its extension to linear models, particularly those with structured state transitions and complicated architectures, remains largely unexplored. By rigorously propagating coordinate-size estimates through the forward pass, gating mechanisms, and recurrent state dynamics, we derive the scaling rules for Gated Delta Network. Experiments on language-model pre-training confirm that our configurations enable stable learning-rate transfer across model widths under both AdamW and SGD, whereas standard parametrization fails to transfer, validating the correctness and practical utility of our analysis.",
+      "identifiers": [
+        "SemanticScholar:9567e4a50e3b3d3ce54127d9e3585cb4141c9247"
+      ],
+      "semantic_scholar_id": "9567e4a50e3b3d3ce54127d9e3585cb4141c9247",
+      "canonical_id": "arXiv:2606.04048",
+      "arxiv_id": "2606.04048",
+      "doi": "10.48550/arXiv.2606.04048",
+      "authors": [
+        "Yi-Feng Liu",
+        "Quanquan Gu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Gated Delta Networkの再帰状態とゲートを含むパラメータスケーリング則を導出し、AdamW・SGDでモデル幅を跨ぐ学習率転移を検証。推論効率型線形再帰アーキテクチャのスケーリング基礎として関連。",
+      "library_body_check": "primary_arxiv_abstract_read; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e1ded4e13cc8",
+    "round": "libimp-e1ded4e13cc89726-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e1ded4e13cc89726-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e1ded4e13cc89726-pre01.json",
+    "receipt": "sha256:81cb50e775b034fba893534e94a85f769fc59fbe86d658771a41662b6671c7fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e1ded4e13cc8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

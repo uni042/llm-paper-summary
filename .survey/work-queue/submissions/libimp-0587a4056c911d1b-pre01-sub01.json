@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2611.02846",
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates large language model inference by reducing the sequential cost of token-by-token generation. Advanced SD methods reduce proposal cost with parallel drafters that predict entire blocks in one forward pass, but overall speedup still depends on acceptance length. On-policy distillation (OPD) can push well-trained drafters beyond acceptance-length plateaus, yet conventional pipelines collect supervision through sequential draft-and-verify rollouts. Our key insight is that on-policy supervision need not inherit these dependencies: a draft block can be supervised using only its reference prefix and draft-sampled history. We propose SpecOPD, a branch-parallel OPD framework that parallelizes draft sampling and target supervision across independent branches drawn from the evolving drafter policy at reference anchors. We pack these branches into proposal trees to share target-prefix computation, using tree masks for full attention, branch-consistent indexer groups for sparse attention, and indexed state replay for linear attention to preserve each branch's history. We train the drafter with an E2E-TV surrogate that directly targets acceptance length. Our study spans 8B full-attention (GQA), 27B full-linear (GQA--GDN), and 125B sparse-linear (QSA--GDN) targets, three parallel draft architectures (DFlash, DSpark, and DFlash V2), and four task domains (dialogue, coding, mathematics, and agentic). SpecOPD achieves up to 41.45% higher mean acceptance length, $16.09\\times$ supervised-token throughput over sequential-rollout OPD under native configurations, and up to $3.56\\times$ generation speedup over autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:ed855ab503027b86c6b8d8df84136c467c16ec7e"
+      ],
+      "semantic_scholar_id": "ed855ab503027b86c6b8d8df84136c467c16ec7e",
+      "canonical_id": "arXiv:2611.02846",
+      "arxiv_id": "2611.02846",
+      "authors": [
+        "Tian-Yu Liu",
+        "Jun Zhang",
+        "Wen-Jie Huang",
+        "Yu-Hao Shen",
+        "Tian-Qi Xu",
+        "Xin-Yue Hao",
+        "Hongyaoxing Gu",
+        "Xu Liu",
+        "Bao-Lin Zhang",
+        "Ya-Ting Zhu",
+        "Shuang Ge",
+        "Jun Dai",
+        "Lei Chen",
+        "Yue Li",
+        "Ming-Cheng Wan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      },
+      "reason": "一次arXiv要旨を確認。投機的復号の並列ドラフタを改善するため、参照prefixから分岐を並列サンプリングし、proposal treeでtarget-prefix計算を共有するon-policy distillationを提案。full/sparse/linear attentionに対応する枝ごとの履歴保持機構を使い、受理長を目的とするE2E-TV surrogateで学習。8B/27B/125Bモデルで受理長と教師トークン処理量、生成高速化を測定しており、LLM推論高速化への直接的な技術貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0587a4056c91",
+    "round": "libimp-0587a4056c911d1b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0587a4056c911d1b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0587a4056c911d1b-pre01.json",
+    "receipt": "sha256:7fcb9f303a69cbb35750f0a76a0a789d1b807da722249cb38a1ddee73ac7b7e2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0587a4056c91",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "VDCores: Resource Decoupled Programming and Execution for Asynchronous GPU",
+      "source_url": "https://arxiv.org/abs/2605.03190",
+      "year": 2026,
+      "published": "2026-05-04",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern GPUs increasingly rely on specialized and asynchronous hardware units to deliver high performance. Yet these units are often underutilized because today's GPU software stacks still organize programming and execution around a monolithic kernel model that mismatches asynchronous hardware. To address this issue, Virtual Decoupled Engines (VDCores) presents a new decoupled programming and execution model for asynchronous GPUs. VDCores abstracts asynchronous hardware execution units as resource isolated virtual cores and represents workloads as dependency-connected micro-operations (micro-ops). this abstraction removes static orchestration from the programmer, enables automatic overlap of memory and compute based on dependency and resource readiness, and thereby improves utilization of asynchronous hardware resources. Realizing such a decoupled abstraction efficiently on today's GPUs is itself challenging, VDCores addresses this through a GPU-specialized programming model and GPU runtime design that preserves the flexibility while minimizing implementation overhead. Across four LLM inference workloads on GH200, H100, and RTX 6000 Pro GPUs, VDCores significantly improves decoding throughput by 24% on average and by up to 77% under dynamic inputs, while reducing kernel programming and specialization effort by 90%. We have open sourced VDCores at https://github.com/vdcores/vdcores.",
+      "identifiers": [
+        "SemanticScholar:b820a6d41e53111764910077a4d9a9215073fcd3"
+      ],
+      "semantic_scholar_id": "b820a6d41e53111764910077a4d9a9215073fcd3",
+      "canonical_id": "arXiv:2605.03190",
+      "arxiv_id": "2605.03190",
+      "doi": "10.48550/arXiv.2605.03190",
+      "authors": [
+        "Zi-Jian He",
+        "Adrian Sampson",
+        "Yi-Ying Zhang",
+        "Zhi-Yuan Guo"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非同期GPU演算資源を仮想コアと依存関係付きmicro-opへ分離し、メモリ・計算の重畳を自動化する。GH200/H100/RTX 6000 Pro上のLLM decode throughputを評価する。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Make Some Noise: Unlocking Language Model Parallel Inference Capability through Noisy Training",
+      "source_url": "https://arxiv.org/abs/2406.17404",
+      "year": 2024,
+      "published": "2024-06-25",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing speculative decoding methods typically require additional model structure and training processes to assist the model for draft token generation. This makes the migration of acceleration methods to the new model more costly and more demanding on device memory. To address this problem, we propose the Make Some Noise (MSN) training framework as a replacement for the supervised fine-tuning stage of the large language model. The training method simply introduces some noise at the input for the model to learn the denoising task. It significantly enhances the parallel decoding capability of the model without affecting the original task capability. In addition, we propose a tree-based retrieval-augmented Jacobi (TR-Jacobi) decoding strategy to further improve the inference speed of MSN models. Experiments in both the general and code domains have shown that MSN can improve inference speed by 2.3-2.7x times without compromising model performance. The MSN model also achieves comparable acceleration ratios to the SOTA model with additional model structure on Spec-Bench.",
+      "identifiers": [
+        "SemanticScholar:a03cb5e9806e532966a13e4fab7cef9c8d81dec5"
+      ],
+      "semantic_scholar_id": "a03cb5e9806e532966a13e4fab7cef9c8d81dec5",
+      "canonical_id": "arXiv:2406.17404",
+      "arxiv_id": "2406.17404",
+      "doi": "10.48550/arXiv.2406.17404",
+      "authors": [
+        "Yixuan Wang",
+        "Xian-Zhen Luo",
+        "Fu-Xuan Wei",
+        "Yi-Jun Liu",
+        "Qing-Fu Zhu",
+        "Xuanyu Zhang",
+        "Qing Yang",
+        "Dongliang Xu",
+        "W. Che"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 876,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ノイズ入力のdenoising学習とTR-Jacobi木検索復号により、追加ドラフトモデルを用いない並列復号を可能にする。汎用・コード生成の推論速度を比較する投機的復号関連研究。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.957",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:16754f216922ae6363a49445f76721eddf26e9dc"
+      ],
+      "semantic_scholar_id": "16754f216922ae6363a49445f76721eddf26e9dc",
+      "doi": "10.18653/v1/2025.findings-emnlp.957",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.957",
+      "authors": [
+        "Le-Wei Jin",
+        "Kui Zhang",
+        "Yongqi Chen",
+        "Yifan Zhuo",
+        "Renjie Li",
+        "Yi Gao",
+        "Bo-Wei Yang",
+        "Zhen-Gong Cai",
+        "Wei Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "MoLinkは民生GPU間のprefill大量通信を分割し、decode要求との送信公平性と分割量を動的に決める。分散LLMサービングのTTFT・TPOT・遅延に直接寄与する。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPARQ: An Accelerator Architecture for Large Language Models with Joint Sparsity and Quantization Techniques",
+      "source_url": "https://doi.org/10.1145/3735452.3735523",
+      "year": 2025,
+      "published": "2025-06-13",
+      "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated unprecedented capabilities in text generation, translation, and summarization tasks. However, their deployment on resource-constrained systems remains challenging due to their large parameter sizes and high computational demands. To address this, we propose SPARQ, a specialized accelerator architecture that leverages both sparsity and quantization to optimize LLM inference. By integrating multiply-accumulate units tailored for quantized operations and a systolic array architecture supporting N:M semi-structured sparsity, SPARQ significantly enhances area and energy efficiency with minimal impact on model quality, as demonstrated in prior work on GPTQ and SparseGPT. Our evaluations demonstrate that SPARQ achieves up to 1.53 times greater area efficiency and 1.58 times better energy efficiency compared to the baseline, particularly for larger models.",
+      "identifiers": [
+        "SemanticScholar:299589217ec43f6edccba534a0e4c7addcf6b405"
+      ],
+      "semantic_scholar_id": "299589217ec43f6edccba534a0e4c7addcf6b405",
+      "doi": "10.1145/3735452.3735523",
+      "canonical_id": "DOI:10.1145/3735452.3735523",
+      "authors": [
+        "Seonggyu Choi",
+        "Hyungmin Cho"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 523,
+        "matched_prestigious_venue": null
+      },
+      "reason": "N:M半構造化疎性を支援するシストリックアレイと量子化MACを組み合わせたLLM推論アクセラレータを提案。面積効率・電力効率を既存方式と比較する。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e268c9eceb76",
+    "round": "libimp-e268c9eceb766c5b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e268c9eceb766c5b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e268c9eceb766c5b-pre01.json",
+    "receipt": "sha256:8b559d60c2093e9fb94e7955fb4eeebcc67f7a93c21a5bb057ab0da5a0afa7d1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e268c9eceb76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

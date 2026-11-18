@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compiler backends are expensive to build and maintain as programming models, workloads, and accelerators evolve. We investigate whether large language models can replace the conventional optimizing and lowering pipeline, a process that we call AI lowering. We study AI lowering from Triton to NVIDIA PTX: an LLM agent translates Triton kernels directly into PTX. We build an environment that evaluates candidate PTX, and an agentic harness in which an LLM translates Triton kernels into PTX. Across twelve common kernels on Ada, Hopper, and Blackwell GPUs and ten kernels from recent ML papers, AI lowering achieves 0.83x-3.34x the performance of autotuned Triton. The largest gains come from transformations that Triton's lowering pipeline does not perform, such as decoding packed binary weights directly into Tensor Core operands (3.34x on BitDelta), assigning each thread a complete softmax row in tensor memory (1.37x on FlashAttention), and reusing overlapping convolution windows (up to 2.23x). These results rely on a robust evaluation harness with comprehensive verification support. We build on Volta, an existing PTX verifier, and substantially extend it to support modern GPU architectures by introducing support for Blackwell's tcgen05 Tensor Core interface. This requires modeling three architectural features: managed tensor memory, descriptor-based operand layouts, and asynchronous execution coordinated through commits, waits, memory barriers, and proxy fences. We discuss the challenges involved in formalizing them, as well as the current limitations. Our results suggest an emerging future in which AI compilers replace custom-written intermediate representations and checkers, reducing the time and engineering effort required to bring up software for new general-purpose and custom chips.",
+      "identifiers": [
+        "SemanticScholar:3fef8e5c34a13cd861a44f7126af8a213ffe3ea1"
+      ],
+      "semantic_scholar_id": "3fef8e5c34a13cd861a44f7126af8a213ffe3ea1",
+      "canonical_id": "arXiv:2609.36800",
+      "arxiv_id": "2609.36800",
+      "doi": "10.48550/arXiv.2609.36800",
+      "authors": [
+        "François Costa",
+        "Charly Castes",
+        "Thomas Bourgeat",
+        "Azalia Mirhoseini"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 50,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMエージェントがTritonカーネルからNVIDIA PTXを直接生成し、組立・数値差分テスト・ベンチマーク・プロファイルを反復するAI lowering。Ada/Hopper/Blackwellの計22カーネルでautotuned Triton比0.83〜3.34倍、FlashAttention例1.37倍を報告。高速化しない例もあり、検証拡張の健全性・完全性は未証明。GPU推論カーネル最適化に直接関連する。",
+      "library_body_check": "primary_author_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Evaluating Context Compaction on the Questions That Come Later",
+      "source_url": "https://arxiv.org/abs/2610.27301",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Language-model agents compact their context for the question at hand, but the compacted context must also serve questions that come later. We evaluate compaction on these later questions, using four corpora that annotate the evidence of several questions per text and recorded agent trajectories, and compare every method with random deletion at the same budget. On MultiRC, keeping the sentences that gpt-6-luna (through the OpenAI Decisions API) judges necessary for the current question raises its accuracy on that question by 11.4 points at 25% of the tokens. On the later questions, however, no method that selects sentences for the current question does detectably better than deleting sentences at random. Deleting words instead of sentences does better: LLMLingua-2, which ignores the question, beats random sentence deletion at the same token count by 12.5 points on the later MultiRC questions. It keeps about twice random deletion's share of the evidence's content words, and at equal content-word retention its gain shrinks to 7.3 points (exploratory). On FEVER, label accuracy can overstate what the kept text supports: the gain of sentence selection is no longer detected when answers are scored against the kept evidence, and the 21.0-point gain of LLMLingua-2 is not shown to rest on the kept text. The ranking also depends on the setting: on Evidence Inference sentence selection beats LLMLingua-2 at a nominal 25% budget, and on $\\tau$-bench trajectories, whose later tool calls need exact identifiers, it beats random deletion while LLMLingua-2 shows no detected gain. Scores on the question a compaction was made for do not reliably show how it serves later ones.",
+      "identifiers": [
+        "SemanticScholar:d7fd571400c92a39d09af73b2bf0e4ac0994d4ac"
+      ],
+      "semantic_scholar_id": "d7fd571400c92a39d09af73b2bf0e4ac0994d4ac",
+      "canonical_id": "arXiv:2610.27301",
+      "arxiv_id": "2610.27301",
+      "authors": [
+        "Jun-Wei Yao",
+        "Yong-Xin Zhou",
+        "Zi-Ke Yang",
+        "Zhijun Wang",
+        "Jia-Nan Liu",
+        "Yan-Xiang Chen",
+        "Wen-Bo Ye"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェントのコンテキスト圧縮を後続質問への回答品質で評価。MultiRCで現質問に必要な文を選ぶ方法は後続質問で同予算のランダム文削除を有意に上回らず、LLMLingua-2の単語削除は後続質問で12.5ポイント上回る。コンテキスト削減と将来の証拠保持のトレードオフを測定するためaccept。",
+      "library_body_check": "primary_author_abstract_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-84aab8f94b6b",
+    "round": "libimp-84aab8f94b6b5a74-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-84aab8f94b6b5a74-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-84aab8f94b6b5a74-pre01.json",
+    "receipt": "sha256:f20d046a1a0ec617a878f03453f56a16fa290cceadb071b94600f7b1d8d0bafd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-84aab8f94b6b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

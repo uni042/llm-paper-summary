@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261115-2302-scheduled-chat-00/r01::provider-gap",
+  "reference_main_sha": "81ab6323b9cd6e93e9fc2e422cea8ee5dc5b7e9f",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.21142",
+      "identity_tokens": [
+        "arxiv:2608.21142"
+      ],
+      "title": "COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models",
+      "reason": "構造化列剪定後の重みを、左右交互の直交回転と特異値再スケーリングで補償する学習不要手法。右回転は縮約Stiefel多様体で最適化し、一般化交差検証で正則化を選択する。校正Gram行列の高エネルギー方向の過度な影響と隣接注意射影の幾何学的不整合も補正する。Llama-3/3.1とQwen2.5の複数剪定率で既存補償よりPPLを全モデルで改善し、zero-shot精度は多くの条件で改善。LLM圧縮・推論効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.21142",
+      "body_check": "indexed_primary_arxiv_abstract_read_via_paper_metadata; full_body_not_read",
+      "first_checked_at": "2026-11-15T23:02:33+09:00",
+      "last_checked_at": "2026-11-15T23:02:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 404
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02341",
+      "identity_tokens": [
+        "arxiv:2608.02341"
+      ],
+      "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
+      "reason": "分散MoE推論の主ノードから専門家ノードへの一対多埋め込み配送をUDPブロードキャストで行い、タイムアウト再送と順不同の結果収集で信頼性を補う。8ノード有線実験ではNCCL/TCP比1.4倍の高速化。無線では802.11の54Mbpsブロードキャスト上限が律速となり、NS-3の1/2/5m条件で最適レートが上限の64/43/32倍と試算。実機有線結果と無線シミュレーションを区別する。エッジMoE通信最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.02341",
+      "body_check": "indexed_primary_arxiv_abstract_read_via_paper_metadata; full_body_not_read",
+      "first_checked_at": "2026-11-15T23:02:33+09:00",
+      "last_checked_at": "2026-11-15T23:02:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 406
+    }
+  ],
+  "parent_run_key": "20261115-2302-scheduled-chat-00/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/file_0000000062b081faab500e1d4d338c09--discovery-20261115-2302-scheduled-chat-00-r01-partial.json",
+  "provider_gap_ids": [
+    "arXiv:2608.02341",
+    "arXiv:2608.21142"
+  ]
+}
