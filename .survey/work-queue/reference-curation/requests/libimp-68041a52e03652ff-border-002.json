@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-68041a52e03652ff-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2606.21947",
+  "reason": "Vision Transformerの入力ごとに浅い層のactivation範囲から深い層の量子化scaleを予測し、実行時校正を避ける動的PTQ方式。ImageNetで精度・効率のトレードオフを評価。量子化scale予測はLLM圧縮へ技術転用可能だが、主な実証対象は画像分類ViTで、LLMの言語生成やサービング評価ではない。",
+  "title": "ScalePredictor: Instance-aware Scale Learning for Accurate Quantization of Vision Transformers",
+  "identity_tokens": [
+    "arXiv:2606.21947"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68041a52e036",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

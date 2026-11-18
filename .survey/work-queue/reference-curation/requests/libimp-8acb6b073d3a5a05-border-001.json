@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-8acb6b073d3a5a05-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.40935",
+  "reason": "自動運転world modelの画像patchをLiDAR/radarの3D点投影に基づいてvision backbone処理前に選別するGATSを提案。25% token予算でdense基準より運転予測指標を改善しつつ総FLOPsを6.6倍削減、10%予算で18倍削減してもnuScenes/NAVSIMで基準を上回ると報告。入力前token pruningのシステム機構はVLM推論に類推できるが、対象は自動運転の専用world modelでLLM生成ではないためborderline。",
+  "title": "Let LiDAR Decide Where to Look: Geometry-Measured Token Selection for Efficient Sparse Latent World Models",
+  "identity_tokens": [
+    "arXiv:2610.40935"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.CV/new",
+    "https://arxiv.org/list/cs.LG/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8acb6b073d3a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-29bac9b8c3a9e3e1-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.41335",
+  "reason": "一次HTML本文のretrieval pipeline・評価・限界節を確認。文書screenshot tileとOCR transcriptionを結合したimage-text表現で検索し、VLM teacherの証拠説明でretrieverを調整してrerankする。MMSearchでQA accuracy 26.0%、PixelRAG比+4.4ポイントと報告。ただし本文はpeak memoryとend-to-end latencyを測定しておらず、fused indexとVLM rerankerはむしろ追加の計算・保存費用を要する。RAG基盤には関連するが推論効率の直接実証がないためborderline。",
+  "title": "Pix2Evidence: A Multimodal RAG System for Text and Visual Evidence",
+  "identity_tokens": [
+    "arXiv:2610.41335"
+  ],
+  "linked_from": [
+    "https://arxiv.org/list/cs.IR/new",
+    "https://arxiv.org/list/cs.AI/new"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29bac9b8c3a9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

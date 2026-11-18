@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1df00bafd66d98f3-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.22175",
+  "reason": "一次要旨はMoEの学習を複数substageへ分割するadaptive pipeline parallelismと、学習中のactivation・一時buffer再利用を中心に説明する。対象はMoE trainingのメモリ・通信効率であり、LLMの推論サービング、decode、推論時expert配置の具体的貢献は要旨から確認できない。現行サーベイの学習専用高速化凍結範囲に該当。",
+  "title": "MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism",
+  "identity_tokens": [
+    "arXiv:2506.22175"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1df00bafd66d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

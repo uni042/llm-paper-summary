@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f15fd6c4e55415f8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.14877",
+  "reason": "arXiv一次要旨は画像生成用のVisual Autoregressiveモデルで、各注意ヘッドの過去スケールへの注意度からKVキャッシュの静的剪定スケジュールを決めるHeatKVを提案。Infinity-2BでKVメモリ割当を従来比2倍圧縮するが、対象は画像生成であり言語LLM推論・サービングへの検証はないため境界的。",
+  "title": "HeatKV: Head-tuned KV-cache Compression for Visual Autoregressive Modeling",
+  "identity_tokens": [
+    "arXiv:2605.14877"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f15fd6c4e554",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

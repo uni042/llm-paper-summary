@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-916b4b0436abc8d4-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.34844",
+  "reason": "Microsoft Bingで運用するHiLOは、GPUを含む各サービスの負荷信号を集約し、事前検証済みのproduct state latticeから負荷に応じた段階的縮退を選択する。LLM向けには低コストモデル切替・モデル層削減・cache有効期限変更等を明示し、Copilot Searchの事例も評価。基準ピークの2倍超負荷下でもOneDCG低下を0.5ポイント未満に抑えたと報告。ただし主目的は検索製品全体の過負荷制御であり、LLM固有のdecode・KV・GPU kernel最適化ではないためborderline。",
+  "title": "HiLO: Towards Product-Level Graceful Degradation with a Quality-Aware, Load-Aware Control Framework",
+  "identity_tokens": [
+    "arXiv:2610.34844"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-916b4b0436ab",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
