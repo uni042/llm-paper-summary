@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.31778",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.31778",
+    "identity_tokens": [
+      "arXiv:2610.31778"
+    ],
+    "reason": "長期agentのコンテキスト圧縮5方式をOpenCodeと3つの長期ベンチマークで比較。100万token文脈の2モデルでは圧縮閾値が課題性能にほぼ影響せず、一部方式は最大20ポイントの性能低下、制約指示が圧縮で脱落する危険を示す。推論文脈メモリ管理の品質評価として参考になるが、KV容量・実行遅延の直接最適化を提案しないためborderline。",
+    "first_checked_at": "2026-11-18T14:10:34+00:00",
+    "last_checked_at": "2026-11-18T14:10:34+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Benchmarks Are Surprisingly Compaction-Friendly"
+  },
+  "processed_at": "2026-11-18T14:10:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

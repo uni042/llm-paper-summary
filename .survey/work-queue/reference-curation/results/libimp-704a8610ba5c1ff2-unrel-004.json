@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-704a8610ba5c1ff2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.03673",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.03673",
+    "identity_tokens": [
+      "arXiv:2512.03673"
+    ],
+    "reason": "ConvRotは画像生成用Diffusion TransformerのW4A4量子化で、FLUX.1-devの画像忠実度・生成速度・メモリを評価する。LLM由来のHadamard回転技術を用いるが、実験は画像拡散生成であり、言語LLM推論・MLLM対話サービングの効率化は示さないため対象外。",
+    "first_checked_at": "2026-11-18T14:10:23+00:00",
+    "last_checked_at": "2026-11-18T14:10:23+00:00",
+    "linked_from": [],
+    "title": "ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers"
+  },
+  "processed_at": "2026-11-18T14:10:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-704a8610ba5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

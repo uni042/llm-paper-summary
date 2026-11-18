@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-704a8610ba5c1ff2-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.04342",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.04342",
+    "identity_tokens": [
+      "arXiv:2406.04342"
+    ],
+    "reason": "画像を1D因果モデルで表現する際の過度な注意集中を緩和するため、学習可能な帯域通過フィルタと訓練時drop pathを用いるDe-focus Attention Networksを提案。評価の中心は視覚表現・密予測・マルチモーダル理解であり、LLMの推論メモリ・速度・サービングを最適化する研究ではない。",
+    "first_checked_at": "2026-11-18T07:16:41+00:00",
+    "last_checked_at": "2026-11-18T14:10:23+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "title": "Learning 1D Causal Visual Representation with De-focus Attention Networks"
+  },
+  "processed_at": "2026-11-18T14:10:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-704a8610ba5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

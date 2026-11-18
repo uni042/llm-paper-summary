@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9aca4ea5822e7687-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2406.05678",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2406.05678",
+    "identity_tokens": [
+      "arXiv:2406.05678",
+      "id:DOI:10.48550/arXiv.2406.05678",
+      "id:arXiv:2406.05678"
+    ],
+    "reason": "LongLoRAのshifted sparse attentionでtoken群とheadの周期shiftが不要な情報交換を生む問題に対し、sink tokenのglobal attentionとhead群の再配置を組み合わせたSF-Attnを提案する。主評価はLongAlpaca-plusによる長文脈SFTで、H2O KV cache圧縮を追加して推論を高速化する。推論効率にも関連するが主貢献は長文脈微調整手法であるためborderline。",
+    "first_checked_at": "2026-11-18T07:47:47+00:00",
+    "last_checked_at": "2026-11-18T14:10:24+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KVキャッシュ最適化／適応圧縮",
+      "sparse attention / long-context Transformer",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models"
+  },
+  "processed_at": "2026-11-18T14:10:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9aca4ea5822e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

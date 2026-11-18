@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-704a8610ba5c1ff2-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.12638",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.12638",
+    "identity_tokens": [
+      "arXiv:2511.12638"
+    ],
+    "reason": "手書き・コンパイラ生成・LLM生成のGPUカーネルについて形式的な等価性を検証するVoltaを提案し、行列積や注意演算を対象とする。LLM推論カーネル最適化の正当性検証に有用だが、主たる研究成果は形式検証手法であり推論速度・メモリの改善自体ではないため境界扱い。",
+    "first_checked_at": "2026-11-18T06:39:34+00:00",
+    "last_checked_at": "2026-11-18T14:10:22+00:00",
+    "linked_from": [
+      "inference-systems",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Equivalence Checking of ML GPU Kernels"
+  },
+  "processed_at": "2026-11-18T14:10:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-704a8610ba5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a12e2a107002c3e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.25954",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.25954",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.25954",
+      "arXiv:2605.25954"
+    ],
+    "reason": "TVM TIRへ決定的に変換可能な中間表現と段階的CoT教師信号を持つ、LLMによるテンソルプログラム最適化の訓練データセットを提案する。コンパイラ最適化への間接的貢献はあるが、要旨でLLM推論エンジンの性能向上を直接実証していない。",
+    "first_checked_at": "2026-11-10T10:47:03+00:00",
+    "last_checked_at": "2026-11-18T14:10:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Step-TP: A Grounded, Step-Level Dataset with Chain-of-Thought Reasoning for LLM-Guided Tensor Program Optimization"
+  },
+  "processed_at": "2026-11-18T14:10:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a12e2a10700",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

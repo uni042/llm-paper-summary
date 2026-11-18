@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c82abd693a5fd914-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.02007",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.02007",
+    "identity_tokens": [
+      "arXiv:2604.02007"
+    ],
+    "reason": "一次要旨では15Bモデルを5領域でRL事後学習し、難度に応じた長さペナルティで推論列を30～50%短縮する。ただし主要貢献は学習レシピ・サンプリングと学習時の長さ制御で、サービング実装や実行時メモリ管理を直接改善する手法ではない。",
+    "first_checked_at": "2026-11-18T14:10:26+00:00",
+    "last_checked_at": "2026-11-18T14:10:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Apriel-Reasoner: RL Post-Training for General-Purpose and Efficient Reasoning"
+  },
+  "processed_at": "2026-11-18T14:10:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c82abd693a5f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

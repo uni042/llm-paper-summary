@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T14:00:21+00:00",
-  "record_count": 12920,
+  "updated_at": "2026-11-18T14:10:35+00:00",
+  "record_count": 12925,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181633,9 +181633,9 @@
       "identity_tokens": [
         "arXiv:2601.01299"
       ],
-      "reason": "arXiv一次要旨はランク・精度を実行時予算で選ぶ圧縮とロジットずれの証明を提案するが、主評価はImageNetのResNet-50とViT-B/16であり、LLM生成推論・KV・MoE・サービングへの実装・測定は示されない。現行LLM推論システム系統からは対象外。",
+      "reason": "arXiv一次要旨を確認。rank/precisionを配備時予算に応じて制御するtensor圧縮だが、実験対象はImageNet-1kのResNet-50とViT-B/16で、生成LLM・言語モデル推論・KVキャッシュの実測はない。一般画像分類器の圧縮が主題で、対象のLLM推論研究からは外れる。",
       "first_checked_at": "2026-10-30T17:58:10+00:00",
-      "last_checked_at": "2026-11-18T09:29:00+00:00",
+      "last_checked_at": "2026-11-18T14:10:30+00:00",
       "linked_from": [],
       "title": "T3C: Test-Time Tensor Compression with Consistency Guarantees"
     },
@@ -182452,21 +182452,6 @@
       ],
       "title": "Cocktail-Talker: Multi-Speaker Dialog Modeling in Noisy Social Environments with Turn Action GRPO"
     },
-    "arXiv:2512.05865": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.05865",
-      "identity_tokens": [
-        "arXiv:2512.05865"
-      ],
-      "reason": "解釈可能性のための疎な注意の学習後形成。疎性正則化で注意接続を約0.4%まで落としても事前学習損失を保てることを示し、回路の単純化を分析する。要旨自身が計算効率目的の疎注意とは異なると述べており、狙いは解釈可能性であって推論効率化の機構ではない。対象外。",
-      "first_checked_at": "2026-11-15T21:43:21+00:00",
-      "last_checked_at": "2026-11-15T21:43:21+00:00",
-      "linked_from": [
-        "sparse attention / long-context Transformer",
-        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
-      ],
-      "title": "Intrinsically Interpretable Attention via Sparse Post-Training"
-    },
     "arXiv:2601.17836": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2601.17836",
@@ -182752,9 +182737,9 @@
       "identity_tokens": [
         "arXiv:2409.03231"
       ],
-      "reason": "力学系のニューラル演算子としての状態空間モデル。物理情報機械学習でMambaを用いて力学系を予測する研究。LLM推論とは無関係。対象外。",
+      "reason": "タイトルが力学系の数値演算子としての状態空間モデルを対象とし、言語モデル推論の実行最適化ではない。",
       "first_checked_at": "2026-11-18T06:12:08+00:00",
-      "last_checked_at": "2026-11-18T06:12:08+00:00",
+      "last_checked_at": "2026-11-18T14:10:15+00:00",
       "linked_from": [
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
       ],
@@ -182994,9 +182979,9 @@
       "identity_tokens": [
         "arXiv:2406.04342"
       ],
-      "reason": "脱焦点注意による1次元因果視覚表現の学習。画像を1次元因果モデリングで表す視覚表現の研究。対象は視覚モデルの表現学習であり、LLM推論の機構ではない。対象外。",
+      "reason": "画像を1D因果モデルで表現する際の過度な注意集中を緩和するため、学習可能な帯域通過フィルタと訓練時drop pathを用いるDe-focus Attention Networksを提案。評価の中心は視覚表現・密予測・マルチモーダル理解であり、LLMの推論メモリ・速度・サービングを最適化する研究ではない。",
       "first_checked_at": "2026-11-18T07:16:41+00:00",
-      "last_checked_at": "2026-11-18T07:16:41+00:00",
+      "last_checked_at": "2026-11-18T14:10:23+00:00",
       "linked_from": [
         "99-other-inference-systems",
         "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
@@ -183074,9 +183059,9 @@
       "identity_tokens": [
         "arXiv:2605.17985"
       ],
-      "reason": "物理基盤モデル向け感度配慮SVD圧縮SAFE-SVD。物理的忠実度を保ちながら物理基盤モデルを圧縮する。対象は科学計算の基盤モデルであり、LLM推論システムの機構ではない。対象外。",
+      "reason": "タイトルと一次要旨が示す主対象は物理基盤モデルの微分・時空間物理量の保存であり、LLM生成推論の計算・メモリ最適化ではない。",
       "first_checked_at": "2026-11-18T07:16:59+00:00",
-      "last_checked_at": "2026-11-18T07:16:59+00:00",
+      "last_checked_at": "2026-11-18T14:10:20+00:00",
       "linked_from": [
         "inference-systems",
         "weight-quantization-compression",
@@ -183163,20 +183148,6 @@
         "疎注意／長文脈学習"
       ],
       "title": "Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search"
-    },
-    "arXiv:2509.19191": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2509.19191",
-      "identity_tokens": [
-        "arXiv:2509.19191"
-      ],
-      "reason": "画像をテキストのように読む視覚言語モデルの逐次画像理解。視覚処理を物体認識と空間知覚に分解して研究する分析。対象はVLMの知覚の分析であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:17:10+00:00",
-      "last_checked_at": "2026-11-18T07:17:10+00:00",
-      "linked_from": [
-        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
-      ],
-      "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models"
     },
     "arXiv:2610.33039": {
       "classification": "unrelated",
@@ -183422,23 +183393,6 @@
         "重み専用量子化 / 推論カーネル"
       ],
       "title": "Signs Beat Floats: Low-Rank Double-Binary Adaptation for On-Device Fine-Tuning"
-    },
-    "arXiv:2604.02007": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2604.02007",
-      "identity_tokens": [
-        "arXiv:2604.02007"
-      ],
-      "reason": "汎用で効率的な推論のための強化学習事後訓練Apriel-Reasoner。検証可能報酬つき強化学習の訓練レシピの報告。対象は訓練であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:37:50+00:00",
-      "last_checked_at": "2026-11-18T07:37:50+00:00",
-      "linked_from": [
-        "papers/inference/04-conditional-computation/2025-2505.13417-adaptthink-reasoning-models-can-learn-when-to-think.md",
-        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
-        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
-        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
-      ],
-      "title": "Apriel-Reasoner: RL Post-Training for General-Purpose and Efficient Reasoning"
     },
     "arXiv:2609.36314": {
       "classification": "unrelated",
@@ -183767,23 +183721,6 @@
         "Inference / Multimodal Long-Context Memory Compression"
       ],
       "title": "VisReflect: Latent Visual Reflection for Fine-Grained Perception in Long Visual Context"
-    },
-    "arXiv:2609.39259": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2609.39259",
-      "identity_tokens": [
-        "arXiv:2609.39259"
-      ],
-      "reason": "有効であることは有用であることではない：条件付き機能的代替可能性。神経網の冗長性を、入力条件付きの動的関係として直接特徴づける理論。対象は神経網の冗長性の理論であり、推論システムの機構ではない。対象外。",
-      "first_checked_at": "2026-11-18T07:47:58+00:00",
-      "last_checked_at": "2026-11-18T07:47:58+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
-        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
-        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2023-2305.15033-smarttrim-adaptive-tokens-and-attention-pruning-for-efficient-vision-lan.md"
-      ],
-      "title": "Effective Does Not Mean Useful: Conditional Functional Substitutability for Redundancy and Scaling in Transformers"
     },
     "arXiv:2602.22508": {
       "classification": "unrelated",
@@ -185882,6 +185819,120 @@
       "last_checked_at": "2026-11-18T14:00:21+00:00",
       "linked_from": [],
       "title": "Functional-level Uncertainty Quantification for Calibrated Fine-tuning on LLMs"
+    },
+    "arXiv:2512.15038": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15038",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.15038",
+        "arXiv:2512.15038"
+      ],
+      "reason": "自動運転の長期時系列融合へ線形クロス注意を導入し、NAVSIMとBench2Driveで計画精度・エッジ遅延を評価する生成モデル。LLMテキスト生成・KVサービングの最適化を対象としておらず、自動運転特化の効率化であるため現行サーベイの対象外。",
+      "first_checked_at": "2026-11-18T14:10:18+00:00",
+      "last_checked_at": "2026-11-18T14:10:18+00:00",
+      "linked_from": [],
+      "title": "LADY: Linear Attention for Autonomous Driving Efficiency without Transformers"
+    },
+    "arXiv:2410.06672": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06672",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.06672",
+        "arXiv:2410.06672"
+      ],
+      "reason": "TransformerとMambaの内部表現をSparse Autoencoderで分離し、誘導回路やOff-by-One motifの機構的類似性を研究する解釈可能性論文。生成LLMの推論速度・メモリ・計算量を削減する手法やサービング実験は一次要旨にない。",
+      "first_checked_at": "2026-11-18T14:10:18+00:00",
+      "last_checked_at": "2026-11-18T14:10:18+00:00",
+      "linked_from": [],
+      "title": "Towards Universality: Studying Mechanistic Similarity Across Language Model Architectures"
+    },
+    "DOI:10.1145/3746252.3761015": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746252.3761015",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761015"
+      ],
+      "reason": "タイトルが明示する対象は推薦システムの長期キャッシュとスケーリング則であり、LLM生成推論のKVキャッシュやサービングではない。",
+      "first_checked_at": "2026-11-18T14:10:20+00:00",
+      "last_checked_at": "2026-11-18T14:10:20+00:00",
+      "linked_from": [],
+      "title": "MARM: Unlocking the Recommendation Cache Scaling-Law through Memory Augmentation and Scalable Complexity"
+    },
+    "arXiv:2604.05366": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05366",
+      "identity_tokens": [
+        "arXiv:2604.05366"
+      ],
+      "reason": "タイトルと一次要旨が示す対象は3DGS、NeRF、DUSt3R等の3D再構成モデル量子化であり、言語モデルの推論最適化ではない。",
+      "first_checked_at": "2026-11-18T14:10:21+00:00",
+      "last_checked_at": "2026-11-18T14:10:21+00:00",
+      "linked_from": [],
+      "title": "3DTurboQuant: Training-Free Near-Optimal Quantization for 3D Reconstruction Models"
+    },
+    "arXiv:2606.06060": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06060",
+      "identity_tokens": [
+        "arXiv:2606.06060"
+      ],
+      "reason": "ReCacheはFLUXやWanなど画像・動画拡散モデルの反復denoisingにおける特徴再計算スケジュールを予算制約下で学習する。LLMのKVキャッシュ・テキスト推論やサービングではなく、画像動画生成の特徴キャッシュであり、用語が似ていても対象外。",
+      "first_checked_at": "2026-11-18T14:10:22+00:00",
+      "last_checked_at": "2026-11-18T14:10:22+00:00",
+      "linked_from": [],
+      "title": "ReCache: Learning Budget-Aware Caching Schedules for Diffusion Models via REINFORCE"
+    },
+    "arXiv:2512.03673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03673",
+      "identity_tokens": [
+        "arXiv:2512.03673"
+      ],
+      "reason": "ConvRotは画像生成用Diffusion TransformerのW4A4量子化で、FLUX.1-devの画像忠実度・生成速度・メモリを評価する。LLM由来のHadamard回転技術を用いるが、実験は画像拡散生成であり、言語LLM推論・MLLM対話サービングの効率化は示さないため対象外。",
+      "first_checked_at": "2026-11-18T14:10:23+00:00",
+      "last_checked_at": "2026-11-18T14:10:23+00:00",
+      "linked_from": [],
+      "title": "ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers"
+    },
+    "arXiv:2411.09425": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.09425",
+      "identity_tokens": [
+        "arXiv:2411.09425"
+      ],
+      "reason": "一次要旨では毎日500億件以上のユーザー標本を扱う推薦システムにおいて、FLOPsの制約を踏まえたキャッシュのスケーリング則とMemory Augmented Recommendation Modelを提案する。言語モデルのKVキャッシュやLLMサービングではなく、推薦モデル固有の推論・学習構造が主対象である。",
+      "first_checked_at": "2026-11-18T14:10:28+00:00",
+      "last_checked_at": "2026-11-18T14:10:28+00:00",
+      "linked_from": [],
+      "title": "MARM: Unlocking the Future of Recommendation Systems through Memory Augmentation and Scalable Complexity"
+    },
+    "arXiv:2610.32581": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32581",
+      "identity_tokens": [
+        "arXiv:2610.32581"
+      ],
+      "reason": "異なる幅・深さのTransformer間でfine-tuning効果をactivation変化のProcrustes整列とridge回帰により転移するAriadneを提案。対象はモデル更新・転移構築時の計算とメモリ削減で、実運用LLM推論の高速化、量子化、サービング、メモリ管理を直接扱わないためunrelated。",
+      "first_checked_at": "2026-11-18T14:10:35+00:00",
+      "last_checked_at": "2026-11-18T14:10:35+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "title": "From Parameter Rebasin to Functional Transfer Across Heterogeneous Transformers"
+    },
+    "arXiv:2610.36849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.36849",
+      "identity_tokens": [
+        "arXiv:2610.36849"
+      ],
+      "reason": "RLVRで全rolloutが失敗したときにexpertデータを方策互換のjoint decodingで学習軌跡へ変換するPICOを提案。目的と評価はRLの学習信号・推論精度向上であり、LLM推論システムの速度・メモリ・スケジューリング最適化は対象外なのでunrelated。",
+      "first_checked_at": "2026-11-18T14:10:35+00:00",
+      "last_checked_at": "2026-11-18T14:10:35+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+      ],
+      "title": "When All Rollouts Fail: Policy-Compatible Joint Decoding for Hard-Problem Reasoning"
     }
   }
 }

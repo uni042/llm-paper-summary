@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.33368",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.33368",
+    "identity_tokens": [
+      "arXiv:2610.33368"
+    ],
+    "reason": "複数の小型LLMが提案する推論ステップを大型LLMとprocess reward modelで検証するGuided Speculative Inferenceを、多重重要度サンプリングの重み付けで拡張する。KL乖離と期待報酬の境界を導出し、単一drafterと同じ総サンプル数でpass-at-Nの競争力を示す。推論時の候補選択だが高速化や計算削減の直接実測がなく、品質・理論が主目的なのでborderline。",
+    "first_checked_at": "2026-11-18T14:10:33+00:00",
+    "last_checked_at": "2026-11-18T14:10:33+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Multiple Importance Sampling for Guided Speculative Inference"
+  },
+  "processed_at": "2026-11-18T14:10:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

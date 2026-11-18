@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9aca4ea5822e7687-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.15413",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.15413",
+    "identity_tokens": [
+      "arXiv:2605.15413",
+      "id:DOI:10.48550/arXiv.2605.15413",
+      "id:arXiv:2605.15413"
+    ],
+    "reason": "7つのarchitecture分類の118 Transformerモデルで、入力長128〜2048tokenのloading時間・memory・throughputを測定し、モデル群による性能・失敗率差を報告する。著者の特定試験環境では2048tokenで全モデルが失敗と記載されるが、これは一般的なLLMの2048token上限を意味せず、hardware・評価条件への依存が強い。新規推論最適化方式ではなく性能評価手法が主題なのでborderline。",
+    "first_checked_at": "2026-11-18T06:12:03+00:00",
+    "last_checked_at": "2026-11-18T14:10:25+00:00",
+    "linked_from": [
+      "sparse attention / long-context Transformer",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models"
+  },
+  "processed_at": "2026-11-18T14:10:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9aca4ea5822e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

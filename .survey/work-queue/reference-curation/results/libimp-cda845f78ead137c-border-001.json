@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cda845f78ead137c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.05865",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.05865",
+    "identity_tokens": [
+      "arXiv:2512.05865"
+    ],
+    "reason": "arXiv一次要旨。制約付き損失でattention接続を約0.4%に疎化し、7BまでのTransformerで事前学習損失を維持しながら解釈可能な回路を抽出する。著者自身が計算効率目的の疎attentionとは異なる構造的事前分布を主目的と明記しており、推論実機の高速化・メモリ削減は要旨で未検証のためborderline。",
+    "first_checked_at": "2026-11-18T14:10:28+00:00",
+    "last_checked_at": "2026-11-18T14:10:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Intrinsically Interpretable Attention via Sparse Post-Training"
+  },
+  "processed_at": "2026-11-18T14:10:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cda845f78ead",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

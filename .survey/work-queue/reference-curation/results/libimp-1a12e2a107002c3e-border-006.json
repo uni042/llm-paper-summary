@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a12e2a107002c3e-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.20293",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.20293",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.20293",
+      "arXiv:2508.20293"
+    ],
+    "reason": "per-channel PTQの量子化格子とスケールを同時に決めるため、手動スケール探索を不要にする一般的な後量子化法。バックプロパゲーションや大規模校正を要さずモデル展開効率に関連するが、一次要旨に生成LLMの具体的な実験が示されず、LLM推論への直接性は要本文確認。",
+    "first_checked_at": "2026-11-18T14:10:17+00:00",
+    "last_checked_at": "2026-11-18T14:10:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beacon: Post-Training Quantization with Integrated Grid Selection"
+  },
+  "processed_at": "2026-11-18T14:10:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a12e2a10700",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

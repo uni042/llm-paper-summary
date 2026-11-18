@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d5b8ba57e4d7f2f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tpami.2026.3723414",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tpami.2026.3723414",
+    "identity_tokens": [
+      "DOI:10.1109/tpami.2026.3723414"
+    ],
+    "reason": "原著の公開要旨を収録したPubMed書誌を確認。極性分解で正負の類似性を扱い、チャネルごとの温度ベクトルを使うPaCS特徴写像で線形注意の鋭さを調整する。ただし主要評価は画像分類・検出・セグメンテーション・超解像・拡散生成・3D新規視点合成で、LLM推論サービングの実測貢献は要旨から確認できないため境界扱い。",
+    "first_checked_at": "2026-11-18T14:10:19+00:00",
+    "last_checked_at": "2026-11-18T14:10:19+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PolaFormer++: Polarity-Aware Linear Attention With Channel-Wise Spikiness"
+  },
+  "processed_at": "2026-11-18T14:10:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d5b8ba57e4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

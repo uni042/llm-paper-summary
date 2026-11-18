@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1a12e2a107002c3e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.10315",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.10315",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2505.10315",
+      "arXiv:2505.10315"
+    ],
+    "reason": "秘密分散計算・準同型暗号などでTransformer推論のデータとモデルの秘匿性を保つ技術を整理し、資源効率とのトレードオフを分類するサーベイ。推論システムの性能に関連するが、主眼はプライバシーと既存手法の整理であり新規LLM高速化手法ではない。",
+    "first_checked_at": "2026-11-18T08:17:54+00:00",
+    "last_checked_at": "2026-11-18T14:10:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md",
+      "papers/inference/99-other-inference-systems/2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Private Transformer Inference in MLaaS: A Survey"
+  },
+  "processed_at": "2026-11-18T14:10:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1a12e2a10700",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

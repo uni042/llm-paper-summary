@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0ff3b0f78d6e4e0-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.32581",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.32581",
+    "identity_tokens": [
+      "arXiv:2610.32581"
+    ],
+    "reason": "異なる幅・深さのTransformer間でfine-tuning効果をactivation変化のProcrustes整列とridge回帰により転移するAriadneを提案。対象はモデル更新・転移構築時の計算とメモリ削減で、実運用LLM推論の高速化、量子化、サービング、メモリ管理を直接扱わないためunrelated。",
+    "first_checked_at": "2026-11-18T14:10:35+00:00",
+    "last_checked_at": "2026-11-18T14:10:35+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.LG/recent?show=2000&skip=0"
+    ],
+    "title": "From Parameter Rebasin to Functional Transfer Across Heterogeneous Transformers"
+  },
+  "processed_at": "2026-11-18T14:10:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0ff3b0f78d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
