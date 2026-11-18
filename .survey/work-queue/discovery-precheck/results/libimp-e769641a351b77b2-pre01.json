@@ -1,0 +1,142 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e769641a351b77b2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e769641a351b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.00815"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "3a79238173cbf6ccc54ad17c513f8e3061b5f120",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T08:52:10.039753+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.00815",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SafeDepth: Safety-Aware Token-Level Adaptive Computation",
+      "source_url": "https://arxiv.org/abs/2610.00815",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent studies suggest that not every token needs to pass through all Transformer layers, motivating token-level adaptive models that selectively skip layers to reduce computation. Our experiments show that these execution choices also affect safety: existing token-level adaptive reasoning models exhibit higher harmful-response rates than their reference backbones. The safety effects depend on which layers are skipped and whether skipping occurs during prompt processing or answer generation. We further find that recognizing harmful requests and producing refusals depend on different layer-wise computations. We introduce SafeDepth, a lightweight, plug-in framework that uses selective layer execution to improve both safety and efficiency. SafeDepth learns to retain computations that support safe responses and bypass those that contribute to unsafe generation. A router selects layer execution based on token representations, layer position, and inference phase, while an adapter supports the skipped paths. We jointly train these modules to reduce computation and harmful responses while preserving performance on benign tasks, targeting a better safety-efficiency trade-off. The pretrained backbone remains frozen throughout, requiring no additional pretraining. Experimental results on Llama-3-8B-Instruct show that SafeDepth reduces computation relative to full-depth inference while largely preserving task performance. Compared with FlexiDepth, it lowers unsafe-response rates across all five harmful-request benchmarks, with the largest absolute decrease on HarmBench-HJ (from 55.44% to 25.25%), while reducing the XSTest false-refusal rate from 12.0% to 4.0%.",
+      "identifiers": [
+        "SemanticScholar:eba46b6180a4918234fcc29a486fbadd1853158f"
+      ],
+      "semantic_scholar_id": "eba46b6180a4918234fcc29a486fbadd1853158f",
+      "canonical_id": "arXiv:2610.00815",
+      "arxiv_id": "2610.00815",
+      "authors": [
+        "Ni-Zhang Li",
+        "Ian G. Harris"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 49,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.00815",
+      "identity_tokens": [
+        "id:SemanticScholar:eba46b6180a4918234fcc29a486fbadd1853158f",
+        "id:arXiv:2610.00815",
+        "title:safedepth safetyaware tokenlevel adaptive computation",
+        "url:https://arxiv.org/abs/2610.00815"
+      ],
+      "record": {
+        "title": "SafeDepth: Safety-Aware Token-Level Adaptive Computation",
+        "source_url": "https://arxiv.org/abs/2610.00815",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent studies suggest that not every token needs to pass through all Transformer layers, motivating token-level adaptive models that selectively skip layers to reduce computation. Our experiments show that these execution choices also affect safety: existing token-level adaptive reasoning models exhibit higher harmful-response rates than their reference backbones. The safety effects depend on which layers are skipped and whether skipping occurs during prompt processing or answer generation. We further find that recognizing harmful requests and producing refusals depend on different layer-wise computations. We introduce SafeDepth, a lightweight, plug-in framework that uses selective layer execution to improve both safety and efficiency. SafeDepth learns to retain computations that support safe responses and bypass those that contribute to unsafe generation. A router selects layer execution based on token representations, layer position, and inference phase, while an adapter supports the skipped paths. We jointly train these modules to reduce computation and harmful responses while preserving performance on benign tasks, targeting a better safety-efficiency trade-off. The pretrained backbone remains frozen throughout, requiring no additional pretraining. Experimental results on Llama-3-8B-Instruct show that SafeDepth reduces computation relative to full-depth inference while largely preserving task performance. Compared with FlexiDepth, it lowers unsafe-response rates across all five harmful-request benchmarks, with the largest absolute decrease on HarmBench-HJ (from 55.44% to 25.25%), while reducing the XSTest false-refusal rate from 12.0% to 4.0%.",
+        "identifiers": [
+          "SemanticScholar:eba46b6180a4918234fcc29a486fbadd1853158f"
+        ],
+        "semantic_scholar_id": "eba46b6180a4918234fcc29a486fbadd1853158f",
+        "canonical_id": "arXiv:2610.00815",
+        "arxiv_id": "2610.00815",
+        "authors": [
+          "Ni-Zhang Li",
+          "Ian G. Harris"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 49,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:aefebcb63f5722252328ac6f0ebf69172c17a525756f998bb175adb3c5414d51",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
