@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1de8409a508eec6f-border-012",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.24968",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.24968",
+    "identity_tokens": [
+      "arXiv:2610.24968"
+    ],
+    "reason": "視覚十分性ランドスケープ。異なる視覚トークン剪定が異なる部分集合を残しながら性能を保つことから、モデル行動を保つ部分集合の豊富さをクエリ条件付きで特性化する分析。剪定の分析であり境界。",
+    "first_checked_at": "2026-11-18T07:27:41+00:00",
+    "last_checked_at": "2026-11-18T07:27:41+00:00",
+    "linked_from": [
+      "multimodal-visual-token-pruning"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Visual Sufficiency Landscapes: Understanding Query-Conditioned Reliability in Visual Token Pruning"
+  },
+  "processed_at": "2026-11-18T07:27:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1de8409a508e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

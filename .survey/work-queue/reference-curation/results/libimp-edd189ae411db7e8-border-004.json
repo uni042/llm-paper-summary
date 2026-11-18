@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edd189ae411db7e8-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.30217",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.30217",
+    "identity_tokens": [
+      "arXiv:2606.30217"
+    ],
+    "reason": "視覚推論の効率化のための事前ルーティング。小型の下書きモデルと大型の目標モデルを組にし、クエリの難しさの信号で振り分ける協調推論。マルチモーダルでの難しさ信号の確立が主題であり境界。",
+    "first_checked_at": "2026-11-18T07:27:53+00:00",
+    "last_checked_at": "2026-11-18T07:27:53+00:00",
+    "linked_from": [
+      "Conditional Computation",
+      "Speculative Decoding",
+      "投機的デコード / 分布保存型デコード高速化",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Before Thinking, Learn to Decide: Proactive Routing for Efficient Visual Reasoning"
+  },
+  "processed_at": "2026-11-18T07:27:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edd189ae411d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

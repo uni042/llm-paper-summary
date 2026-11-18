@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.18865",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.18865",
+    "identity_tokens": [
+      "arXiv:2605.18865"
+    ],
+    "reason": "疎性から単純さへ：注意の逐次置換を可能にする。事前学習済みTransformerの層ごとの疎性パターンの観察から、注意を単純な逐次モジュールへ置き換える道筋を論じる。推論費用の削減が狙いだが、事前学習の分析が中心であり境界。",
+    "first_checked_at": "2026-11-18T07:27:48+00:00",
+    "last_checked_at": "2026-11-18T07:27:48+00:00",
+    "linked_from": [
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV-cache compression / attention-based token selection / long-context inference",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From Sparsity to Simplicity: Enabling Simpler Sequential Replacements via Sparse Attention Distillation"
+  },
+  "processed_at": "2026-11-18T07:27:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

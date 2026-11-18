@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc755780ff130aa-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.32057",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.32057",
+    "identity_tokens": [
+      "arXiv:2610.32057"
+    ],
+    "reason": "学習済み疎注意の長文脈訓練をスケールするHyScale。選択が訓練のボトルネックになる問題への訓練システム。対象は訓練であり、推論ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:27:38+00:00",
+    "last_checked_at": "2026-11-18T07:27:38+00:00",
+    "linked_from": [
+      "13-sparse-attention",
+      "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+      "inference-systems"
+    ],
+    "title": "HyScale: Scaling Long-Context Training for Learned Sparse Attention"
+  },
+  "processed_at": "2026-11-18T07:27:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc755780ff1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

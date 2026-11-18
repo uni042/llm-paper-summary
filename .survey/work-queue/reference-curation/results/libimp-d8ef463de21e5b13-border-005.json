@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.04250",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.04250",
+    "identity_tokens": [
+      "arXiv:2604.04250"
+    ],
+    "reason": "自己回帰言語モデル向け連続音響波ネットワークCAWN。隠れ状態を複素位相子へ射影し、線形時間の位相蓄積で系列混合する注意代替アーキテクチャ。推論効率に関わるが、モデルアーキテクチャの提案であり境界。",
+    "first_checked_at": "2026-11-18T07:27:48+00:00",
+    "last_checked_at": "2026-11-18T07:27:48+00:00",
+    "linked_from": [
+      "inference-systems",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CAWN: Continuous Acoustic Wave Networks for Autoregressive Language Modeling"
+  },
+  "processed_at": "2026-11-18T07:27:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

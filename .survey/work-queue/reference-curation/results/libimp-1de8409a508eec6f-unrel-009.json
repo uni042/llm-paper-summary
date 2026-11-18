@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1de8409a508eec6f-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.26488",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.26488",
+    "identity_tokens": [
+      "arXiv:2609.26488"
+    ],
+    "reason": "声に出して考える音声言語モデル。思考しながら短い進捗発話を並行生成する非同期の枠組み。対象は音声対話モデルであり、LLM推論システムの機構ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:27:42+00:00",
+    "last_checked_at": "2026-11-18T07:27:42+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+      "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+      "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+    ],
+    "title": "Spoken Language Models that Think Aloud"
+  },
+  "processed_at": "2026-11-18T07:27:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1de8409a508e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

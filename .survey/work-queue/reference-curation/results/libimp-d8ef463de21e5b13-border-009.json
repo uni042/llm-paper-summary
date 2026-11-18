@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.08804",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.08804",
+    "identity_tokens": [
+      "arXiv:2606.08804"
+    ],
+    "reason": "キー・バリュー連想を超えるQ-Delta。線形注意の状態進化へクエリ条件付きの読み出しを統合するデルタルール。線形時間推論のための機構ではあるが、系列モデリングのアーキテクチャであり境界。",
+    "first_checked_at": "2026-11-18T07:27:49+00:00",
+    "last_checked_at": "2026-11-18T07:27:49+00:00",
+    "linked_from": [
+      "inference-systems",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Q-Delta: Beyond Key-Value Associative State Evolution"
+  },
+  "processed_at": "2026-11-18T07:27:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

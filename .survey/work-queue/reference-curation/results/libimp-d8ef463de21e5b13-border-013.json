@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.21265",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.21265",
+    "identity_tokens": [
+      "arXiv:2608.21265"
+    ],
+    "reason": "メモリ増強による効率的CoT推論。過去の推論跡から再利用可能な推論メモリを構築し、明示的推論文脈がデコード時生成の一部を代替するという代替法則に基づき、訓練不要でCoTを圧縮する枠組み。推論時の枠組みではあるが、推論跡の圧縮であり境界。",
+    "first_checked_at": "2026-11-18T07:27:51+00:00",
+    "last_checked_at": "2026-11-18T07:27:51+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "Speculative Decoding",
+      "投機的復号 / 無損失復号高速化"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning"
+  },
+  "processed_at": "2026-11-18T07:27:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

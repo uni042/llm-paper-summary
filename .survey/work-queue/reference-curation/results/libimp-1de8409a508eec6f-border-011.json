@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1de8409a508eec6f-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.20641",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.20641",
+    "identity_tokens": [
+      "arXiv:2610.20641"
+    ],
+    "reason": "学習したポーズトークンのKVへ長推論を圧縮するAbridgeKV。生成トークンのKVが増え続ける問題に対し、モデル自身が出力をポーズトークンのKVへ圧縮するよう訓練する。KV圧縮の機構ではあるが、モデルの訓練を要し境界。",
+    "first_checked_at": "2026-11-18T07:27:41+00:00",
+    "last_checked_at": "2026-11-18T07:27:41+00:00",
+    "linked_from": [
+      "KV Cache Optimization / Compression",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens"
+  },
+  "processed_at": "2026-11-18T07:27:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1de8409a508e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

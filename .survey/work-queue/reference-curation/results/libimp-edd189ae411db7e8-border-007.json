@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edd189ae411db7e8-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.23371",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.23371",
+    "identity_tokens": [
+      "arXiv:2609.23371"
+    ],
+    "reason": "機械解釈可能情報MII。文書を正準の固定帯域状態へコンパイルし、エージェント間で受け渡すプロトコル。長文脈推論の費用削減につながるが、主題は知識表現のプロトコルであり境界。",
+    "first_checked_at": "2026-11-18T07:27:54+00:00",
+    "last_checked_at": "2026-11-18T07:27:54+00:00",
+    "linked_from": [
+      "KV cache eviction / heavy hitters / sparse attention / efficient inference",
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "KV cache quantization / long-context inference / activation compression",
+      "KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化",
+      "LLM Serving / Scheduling / Disaggregation",
+      "Weight Quantization / Compression",
+      "inference-systems",
+      "multi-LLM communication / KV-cache semantic transfer",
+      "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States"
+  },
+  "processed_at": "2026-11-18T07:27:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edd189ae411d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

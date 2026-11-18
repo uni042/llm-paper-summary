@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1de8409a508eec6f-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.10871",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.10871",
+    "identity_tokens": [
+      "arXiv:2610.10871"
+    ],
+    "reason": "疎注意は行列近似であり、値の袋からの選択ではない。疎注意が注意行列の大きな要素を残す見方を数学的に誤りとし、構造化行列としての近似として捉え直す理論的論考。注意機構の基盤だが、理論であり境界。",
+    "first_checked_at": "2026-11-18T07:27:41+00:00",
+    "last_checked_at": "2026-11-18T07:27:41+00:00",
+    "linked_from": [
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values"
+  },
+  "processed_at": "2026-11-18T07:27:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1de8409a508e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

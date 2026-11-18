@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc755780ff130aa-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.24993",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.24993",
+    "identity_tokens": [
+      "arXiv:2610.24993"
+    ],
+    "reason": "より良い受理はいつ割に合うか：投機的デコードの統制研究。受理長と実行遅延のトレードオフを、訓練・推論・評価を揃えた比較プロトコルで測り直す研究。投機的デコードの測定であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:27:37+00:00",
+    "last_checked_at": "2026-11-18T07:27:37+00:00",
+    "linked_from": [
+      "投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。",
+      "投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷",
+      "投機的復号 / EAGLE",
+      "投機的復号 / LLMサービング・ベンチマーク"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "When Does Better Acceptance Pay? A Controlled Study of Speculative Decoding"
+  },
+  "processed_at": "2026-11-18T07:27:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc755780ff1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

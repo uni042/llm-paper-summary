@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.18417",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.18417",
+    "identity_tokens": [
+      "arXiv:2603.18417"
+    ],
+    "reason": "自己調整型疎注意。疎注意のハイパーパラメータが層とモデルで大きく変わり手作業の格子探索に依る問題に対し、ベイズ最適化と二分探索を組み合わせて層・ヘッドごとに自動発見する枠組み。推論機構の調整であり、機構そのものではないため境界。",
+    "first_checked_at": "2026-11-18T07:27:48+00:00",
+    "last_checked_at": "2026-11-18T07:27:48+00:00",
+    "linked_from": [
+      "KV cache memory management / streaming inference / attention sinks / length extrapolation",
+      "long-context inference / dynamic sparse attention / prefill acceleration",
+      "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層",
+      "疎注意 / KVキャッシュ選択 / 長文脈推論"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Self-Tuning Sparse Attention: Multi-Fidelity Hyperparameter Optimization for Transformer Acceleration"
+  },
+  "processed_at": "2026-11-18T07:27:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

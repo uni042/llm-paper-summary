@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-unrel-014",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.00791",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.00791",
+    "identity_tokens": [
+      "arXiv:2609.00791"
+    ],
+    "reason": "Instella-MoE技術報告。AMD GPU上でゼロから訓練した完全オープンのMoE言語モデルの報告。対象はモデルの訓練であり、推論システムの機構の提案ではない。対象外。",
+    "first_checked_at": "2026-11-18T07:27:52+00:00",
+    "last_checked_at": "2026-11-18T07:27:52+00:00",
+    "linked_from": [
+      "11-llm-serving-scheduling-disaggregation",
+      "LLM Serving / Scheduling / Disaggregation",
+      "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+    ],
+    "title": "Instella-MoE Technical Report"
+  },
+  "processed_at": "2026-11-18T07:27:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

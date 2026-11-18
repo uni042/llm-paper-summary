@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edd189ae411db7e8-border-010",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34977",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34977",
+    "identity_tokens": [
+      "arXiv:2609.34977"
+    ],
+    "reason": "多層意味トークン剪定と適応部分層スキップSPIDER。MLLMのデータ冗長性と計算冗長性の双方に対し、層間の表現変化まで見て剪定とスキップを行う。MLLM推論の効率化であり境界。",
+    "first_checked_at": "2026-11-18T07:27:55+00:00",
+    "last_checked_at": "2026-11-18T07:27:55+00:00",
+    "linked_from": [
+      "Conditional Computation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models"
+  },
+  "processed_at": "2026-11-18T07:27:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edd189ae411d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

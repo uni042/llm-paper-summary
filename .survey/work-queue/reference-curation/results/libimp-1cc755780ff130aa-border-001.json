@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cc755780ff130aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.22454",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.22454",
+    "identity_tokens": [
+      "arXiv:2610.22454"
+    ],
+    "reason": "プリフィルでの専門家削減がMoEモデルをどこで傷つけるか。プロンプトトークンを少ない専門家で通す節約が何を損なうかを、トークン・層・注意経路への介入で測定する研究。提供の節約の測定であり、機構の提案ではないため境界。",
+    "first_checked_at": "2026-11-18T07:27:37+00:00",
+    "last_checked_at": "2026-11-18T07:27:37+00:00",
+    "linked_from": [
+      "MoE inference acceleration / expert sparsification / expert-set consolidation / output approximation",
+      "adaptive-expert-computation-compression",
+      "inference-systems",
+      "適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Where Prefill Expert Reduction Hurts MoE Models: A Few Prompt Tokens Carry Most of the Short-Answer F1 Loss"
+  },
+  "processed_at": "2026-11-18T07:27:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cc755780ff1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edd189ae411db7e8-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.31430",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.31430",
+    "identity_tokens": [
+      "arXiv:2609.31430"
+    ],
+    "reason": "見るものを圧縮せよ、言うものではなく。ソフトウェア工学エージェントの文脈で、潜在観測と硬い行動の配置と、アンカーつき文脈蒸留の訓練を組み合わせ、行動に重要な情報を保ちながら履歴を圧縮する。文脈圧縮ではあるが、エージェントの訓練手法であり境界。",
+    "first_checked_at": "2026-11-18T07:27:55+00:00",
+    "last_checked_at": "2026-11-18T07:27:55+00:00",
+    "linked_from": [
+      "07-kv-cache-optimization-compression",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Compress What You See, Not What You Say: Anchored Context Distillation for Latent-Observation Software Engineering Agents"
+  },
+  "processed_at": "2026-11-18T07:27:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edd189ae411d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

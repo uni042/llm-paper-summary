@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.07239",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.07239",
+    "identity_tokens": [
+      "arXiv:2505.07239"
+    ],
+    "reason": "予測によるLLM私有推論の高速化Comet。安全な多者計算による推論で、活性の疎性を利用してサーバ間通信のオーバーヘッドを下げる。推論システムではあるが、主題はプライバシー保護であり境界。",
+    "first_checked_at": "2026-11-18T07:27:47+00:00",
+    "last_checked_at": "2026-11-18T07:27:47+00:00",
+    "linked_from": [
+      "99-other-inference-systems",
+      "CPUオフロード / 活性化疎性 / 階層メモリ",
+      "inference-systems"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity"
+  },
+  "processed_at": "2026-11-18T07:27:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

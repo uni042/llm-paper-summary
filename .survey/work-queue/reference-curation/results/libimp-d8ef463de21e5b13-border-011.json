@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ef463de21e5b13-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.20495",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.20495",
+    "identity_tokens": [
+      "arXiv:2607.20495"
+    ],
+    "reason": "マルチエージェントシステム向けワークロード配慮キャッシュ。再計算費用、DAG依存数、呼び出し頻度の3信号で中間結果キャッシュの排除方針を決める。推論基盤に隣接するが、主題はエージェント実行のキャッシュであり境界。",
+    "first_checked_at": "2026-11-18T07:27:50+00:00",
+    "last_checked_at": "2026-11-18T07:27:50+00:00",
+    "linked_from": [
+      "LLM Serving / Scheduling / Disaggregation",
+      "LLMサービング、ワークフロー実行、分散スケジューリング、RAG/エージェント基盤。",
+      "agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling",
+      "agentic serving / workflow-aware scheduling / memory-aware dispatch"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Workload-Aware Caching for Multi-Agent Systems"
+  },
+  "processed_at": "2026-11-18T07:27:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ef463de21e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

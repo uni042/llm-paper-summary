@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-18T07:17:11+00:00",
-  "record_count": 12760,
+  "updated_at": "2026-11-18T07:27:56+00:00",
+  "record_count": 12771,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181857,7 +181857,7 @@
       ],
       "reason": "加算型ベクトル量子化と専用カーネルを画像生成用のLDM-4／ImageNet拡散モデルへ適用し、W2A8・W4A8の生成品質と計算量を評価する。LLM量子化技術を参照しているが、論文の対象は画像拡散モデルの圧縮であり、生成LLMの推論・サービング効率への直接的貢献は確認できない。",
       "first_checked_at": "2026-10-30T19:08:33+00:00",
-      "last_checked_at": "2026-10-30T19:08:33+00:00",
+      "last_checked_at": "2026-11-18T07:27:46+00:00",
       "linked_from": [],
       "title": "AQUATIC-Diff: Additive Quantization for Truly Tiny Compressed Diffusion Models"
     },
@@ -181870,7 +181870,7 @@
       ],
       "reason": "Wikipediaのエンティティ言及を注釈した事前学習コーパス、検索索引、12個のモデルと中間チェックポイントを公開し、事前学習中の知識獲得・忘却・編集可能性を分析する。推論時のメモリ管理・サービング・カーネル・量子化効率の技術的改善を目的としていないため対象外。",
       "first_checked_at": "2026-10-30T19:08:33+00:00",
-      "last_checked_at": "2026-10-30T19:08:33+00:00",
+      "last_checked_at": "2026-11-18T07:27:47+00:00",
       "linked_from": [],
       "title": "LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations"
     },
@@ -183571,6 +183571,181 @@
         "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
       ],
       "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models"
+    },
+    "arXiv:2610.33039": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.33039",
+      "identity_tokens": [
+        "arXiv:2610.33039"
+      ],
+      "reason": "Nemotron 3.5 Bolt技術報告。局所エージェント用途向けに圧縮と2ビット量子化配慮蒸留で作ったハイブリッド視覚言語モデル自体の報告。対象はモデルの提供物であり、推論システムの機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:37+00:00",
+      "last_checked_at": "2026-11-18T07:27:37+00:00",
+      "linked_from": [
+        "inference-systems",
+        "speculative-decoding",
+        "投機的復号 / LLMサービング・ベンチマーク"
+      ],
+      "title": "Nemotron 3.5 Bolt 74B-A9B 24GB: A Hybrid Vision-Language Model for Local AI"
+    },
+    "arXiv:2610.32057": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32057",
+      "identity_tokens": [
+        "arXiv:2610.32057"
+      ],
+      "reason": "学習済み疎注意の長文脈訓練をスケールするHyScale。選択が訓練のボトルネックになる問題への訓練システム。対象は訓練であり、推論ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:38+00:00",
+      "last_checked_at": "2026-11-18T07:27:38+00:00",
+      "linked_from": [
+        "13-sparse-attention",
+        "Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。",
+        "inference-systems"
+      ],
+      "title": "HyScale: Scaling Long-Context Training for Learned Sparse Attention"
+    },
+    "arXiv:2605.16255": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16255",
+      "identity_tokens": [
+        "arXiv:2605.16255"
+      ],
+      "reason": "AI時代のデータセンタ電力供給階層の設計。ラック電力密度の増大に対し、電力の取り残しを避ける供給階層の設計論。対象は施設の電力設計であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:42+00:00",
+      "last_checked_at": "2026-11-18T07:27:42+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "MoE inference systems / expert parallelism / model compression / knowledge distillation",
+        "inference-systems"
+      ],
+      "title": "Designing Datacenter Power Delivery Hierarchies for the AI Era"
+    },
+    "arXiv:2605.26628": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26628",
+      "identity_tokens": [
+        "arXiv:2605.26628"
+      ],
+      "reason": "Wan2.2向け裾配慮HiFloat4のW4A4学習後量子化。テキストから動画生成の低ビット量子化チャレンジへの提出報告。対象は動画生成モデルであり、LLM推論の機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:42+00:00",
+      "last_checked_at": "2026-11-18T07:27:42+00:00",
+      "linked_from": [
+        "post-training quantization / second-order compression / weight-only LLM inference"
+      ],
+      "title": "Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2"
+    },
+    "arXiv:2609.26488": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26488",
+      "identity_tokens": [
+        "arXiv:2609.26488"
+      ],
+      "reason": "声に出して考える音声言語モデル。思考しながら短い進捗発話を並行生成する非同期の枠組み。対象は音声対話モデルであり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:42+00:00",
+      "last_checked_at": "2026-11-18T07:27:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md"
+      ],
+      "title": "Spoken Language Models that Think Aloud"
+    },
+    "arXiv:2610.32604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32604",
+      "identity_tokens": [
+        "arXiv:2610.32604"
+      ],
+      "reason": "競合つき連続拡散言語モデルLLaCO。連続埋め込み空間での非自己回帰生成のモデル設計。対象は生成モデルの構築であり、推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:43+00:00",
+      "last_checked_at": "2026-11-18T07:27:43+00:00",
+      "linked_from": [
+        "diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion",
+        "投機的復号 / EAGLE"
+      ],
+      "title": "LLaCO: Continuous Diffusion for Large Language Models with Competition-Aware Semantic Scheduling"
+    },
+    "arXiv:2610.36153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.36153",
+      "identity_tokens": [
+        "arXiv:2610.36153"
+      ],
+      "reason": "文脈窓を超えるコーディングエージェント向けリポジトリメモリStratum。セッションをまたいで知識を持続させるメモリの設計。対象はエージェントの記憶であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:45+00:00",
+      "last_checked_at": "2026-11-18T07:27:45+00:00",
+      "linked_from": [
+        "10-kv-cache-offload-recomputation",
+        "KV Cache Offload / Recomputation",
+        "Long-context serving / KV cache benchmark"
+      ],
+      "title": "Stratum: Repository Memory for Coding Agents Beyond the Context Window"
+    },
+    "DOI:10.1109/icicse66971.2025.11429888": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icicse66971.2025.11429888",
+      "identity_tokens": [
+        "DOI:10.1109/icicse66971.2025.11429888"
+      ],
+      "reason": "民間航空におけるエッジ知能のパラダイム・技術・応用の概説。圧縮や協調推論を含むエッジAIの総説であり、LLM推論システムの機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:51+00:00",
+      "last_checked_at": "2026-11-18T07:27:51+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Edge Intelligence in Civil Aviation: Paradigms, Techniques, and Applications"
+    },
+    "arXiv:2606.00390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00390",
+      "identity_tokens": [
+        "arXiv:2606.00390"
+      ],
+      "reason": "Zamba2-VL技術報告。Mamba2状態空間層と共有Transformerブロックを混ぜた視覚言語モデルのスイートの報告。対象はモデルの構築であり、推論システムの機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:52+00:00",
+      "last_checked_at": "2026-11-18T07:27:52+00:00",
+      "linked_from": [
+        "99-other-inference-systems",
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "title": "Zamba2-VL Technical Report"
+    },
+    "arXiv:2609.00791": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00791",
+      "identity_tokens": [
+        "arXiv:2609.00791"
+      ],
+      "reason": "Instella-MoE技術報告。AMD GPU上でゼロから訓練した完全オープンのMoE言語モデルの報告。対象はモデルの訓練であり、推論システムの機構の提案ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:52+00:00",
+      "last_checked_at": "2026-11-18T07:27:52+00:00",
+      "linked_from": [
+        "11-llm-serving-scheduling-disaggregation",
+        "LLM Serving / Scheduling / Disaggregation",
+        "正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention"
+      ],
+      "title": "Instella-MoE Technical Report"
+    },
+    "arXiv:2606.25532": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25532",
+      "identity_tokens": [
+        "arXiv:2606.25532"
+      ],
+      "reason": "物理制約つき基盤モデルのエージェント進化。科学的発見を自動化する多エージェントの発見エンジン。対象は科学発見の自動化であり、LLM推論システムの機構ではない。対象外。",
+      "first_checked_at": "2026-11-18T07:27:56+00:00",
+      "last_checked_at": "2026-11-18T07:27:56+00:00",
+      "linked_from": [
+        "KV cache quantization / long-context inference / activation compression",
+        "Quantization × MoE × Offload",
+        "Weight Quantization / Compression",
+        "inference-systems",
+        "post-training quantization / second-order compression / weight-only LLM inference",
+        "重み専用量子化 / 推論カーネル"
+      ],
+      "title": "Agentic evolution of physically constrained foundation models"
     }
   }
 }
