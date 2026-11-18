@@ -1,0 +1,383 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1df00bafd66d98f3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1df00bafd66d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.00030",
+    "arXiv:2410.03766",
+    "arXiv:2502.02790",
+    "arXiv:2508.00305",
+    "arXiv:2604.09595",
+    "arXiv:2606.16825",
+    "arXiv:2606.22175",
+    "arXiv:2607.14557",
+    "arXiv:2609.29875"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4f96d392cc7143f7ec43967f1cc89bc23e95941d",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:32:34.957106+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.00030",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2406.00030"
+    },
+    {
+      "requested_id": "arXiv:2410.03766",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.02790",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2502.02790"
+    },
+    {
+      "requested_id": "arXiv:2508.00305",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.09595",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3805621.3807608"
+    },
+    {
+      "requested_id": "arXiv:2606.16825",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.16825"
+    },
+    {
+      "requested_id": "arXiv:2606.22175",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.14557",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3767308.3836260"
+    },
+    {
+      "requested_id": "arXiv:2609.29875",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.29875"
+    }
+  ],
+  "results": [
+    {
+      "title": "FutureFill: Fast Generation from Convolutional Sequence Models",
+      "source_url": "https://arxiv.org/abs/2410.03766",
+      "year": 2024,
+      "published": "2024-10-02",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We address the challenge of efficient auto-regressive generation in sequence prediction models by introducing FutureFill, a general-purpose fast generation method for any sequence prediction algorithm based on convolutional operators. FutureFill reduces generation time from quadratic to quasilinear in the context length. Moreover, when generating from a prompt, it requires a prefill cache whose size grows only with the number of tokens to be generated, often much smaller than the caches required by standard convolutional or attention based models. We validate our theoretical claims with experiments on synthetic tasks and demonstrate substantial efficiency gains when generating from a deep convolutional sequence prediction model.",
+      "identifiers": [
+        "SemanticScholar:d25924cb4f1b17d9f3a808ee586788866c30faab"
+      ],
+      "semantic_scholar_id": "d25924cb4f1b17d9f3a808ee586788866c30faab",
+      "canonical_id": "arXiv:2410.03766",
+      "arxiv_id": "2410.03766",
+      "doi": "10.48550/arXiv.2410.03766",
+      "authors": [
+        "Naman Agarwal",
+        "Xin-Yi Chen",
+        "Evan Dogariu",
+        "Devan Shah",
+        "Hubert Strauss",
+        "Vladimir Feinberg",
+        "Daniel Suo",
+        "P. Bartlett",
+        "Elad Hazan"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 777,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "StickyInvoc: Rethinking Task Models for High-throughput Workflows in the LLM Era",
+      "source_url": "https://arxiv.org/abs/2606.22175",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The integration of LLMs into high-throughput workflows is creating a new class of workloads on HPC clusters that promises to accelerate advances in scientific discovery with unprecedented generative capabilities. However, the traditional task model imposes a prohibitive overhead in this new domain: each task must create its computational state from scratch and destroy it upon completion. For each LLM inference task, this\"create-destroy\"model forces the repeated and costly transfer of multi-gigabyte model parameters from a long-term, reliable storage to a compute node's local disk, its CPU memory, and finally its GPU memory. This overhead, compounded by the inherently high startup cost of LLM inference, the typical scale of thousands of tasks in high-throughput workflows, and the heterogeneous and preemptible nature of high-throughput resources, presents a significant performance barrier. To overcome this barrier, this paper presents StickyInvoc: a symbiotic relationship between two new task models for high-throughput workflows. Specifically, a\"sticky\"task creates a persistent state on a compute node from a user-provided template, but doesn't execute any goodput computation by itself. Instead, this state is then inherited by subsequent\"invocation\"tasks, which perform the actual computation without incurring the state creation overhead or destroying the state upon exit. StickyInvoc thus allows the decoupling of the creation and destruction of computational states, allowing the computational state of LLM models to be created once per sticky task and its cost amortized over many subsequent invocation tasks. Our evaluation shows that when rewritten in the StickyInvoc paradigm, a claim verification workflow consisting of 150k inferences achieves a 3.6x speedup on a stable testbed with 20 GPUs, and completes in just 784 seconds by incrementally scaling out to 186 otherwise idle GPUs.",
+      "identifiers": [
+        "SemanticScholar:f530a54c7698348b3d5c48b87814bce09d4212b4"
+      ],
+      "semantic_scholar_id": "f530a54c7698348b3d5c48b87814bce09d4212b4",
+      "canonical_id": "arXiv:2606.22175",
+      "arxiv_id": "2606.22175",
+      "doi": "10.48550/arXiv.2606.22175",
+      "authors": [
+        "Thanh Son Phung",
+        "D. Thain"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Systematic Evaluation of Optimization Techniques for Long-Context Language Models",
+      "source_url": "https://arxiv.org/abs/2508.00305",
+      "year": 2025,
+      "published": "2025-08-01",
+      "venue": "IEEE International Conference on Cluster Computing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with long contexts are bottlenecked by parameter memory, KV-cache memory, and decode-time compute. While inference optimizations promise relief, their effectiveness and interactions in long context settings remain underexplored. We first analyze individual optimization methods for two LLM architectures supporting long context and then systematically evaluate combinations of these techniques to assess how this deeper analysis impacts performance metrics. The study spans multiple long-context tasks and includes scaling experiments to characterize how optimization behavior shifts with scale and task regime, revealing when gains compound or diminish. By integrating system-level profiling with task-specific insights, this study helps LLM practitioners and researchers explore and balance efficiency, accuracy, and scalability across tasks and hardware configurations.",
+      "identifiers": [
+        "SemanticScholar:7825f59f1bc101c25adbc2e21ce968d7e25d5b92"
+      ],
+      "semantic_scholar_id": "7825f59f1bc101c25adbc2e21ce968d7e25d5b92",
+      "canonical_id": "arXiv:2508.00305",
+      "arxiv_id": "2508.00305",
+      "doi": "10.1109/CLUSTER68337.2026.00047",
+      "authors": [
+        "Ammar Ahmed",
+        "Sheng Di",
+        "F. Cappello",
+        "Zi-Rui Liu",
+        "Jingoo Han",
+        "Ali Anwar"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 474,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2410.03766",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.03766",
+        "id:SemanticScholar:d25924cb4f1b17d9f3a808ee586788866c30faab",
+        "id:arXiv:2410.03766",
+        "title:futurefill fast generation from convolutional sequence models",
+        "url:https://arxiv.org/abs/2410.03766"
+      ],
+      "record": {
+        "title": "FutureFill: Fast Generation from Convolutional Sequence Models",
+        "source_url": "https://arxiv.org/abs/2410.03766",
+        "year": 2024,
+        "published": "2024-10-02",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We address the challenge of efficient auto-regressive generation in sequence prediction models by introducing FutureFill, a general-purpose fast generation method for any sequence prediction algorithm based on convolutional operators. FutureFill reduces generation time from quadratic to quasilinear in the context length. Moreover, when generating from a prompt, it requires a prefill cache whose size grows only with the number of tokens to be generated, often much smaller than the caches required by standard convolutional or attention based models. We validate our theoretical claims with experiments on synthetic tasks and demonstrate substantial efficiency gains when generating from a deep convolutional sequence prediction model.",
+        "identifiers": [
+          "SemanticScholar:d25924cb4f1b17d9f3a808ee586788866c30faab"
+        ],
+        "semantic_scholar_id": "d25924cb4f1b17d9f3a808ee586788866c30faab",
+        "canonical_id": "arXiv:2410.03766",
+        "arxiv_id": "2410.03766",
+        "doi": "10.48550/arXiv.2410.03766",
+        "authors": [
+          "Naman Agarwal",
+          "Xin-Yi Chen",
+          "Evan Dogariu",
+          "Devan Shah",
+          "Hubert Strauss",
+          "Vladimir Feinberg",
+          "Daniel Suo",
+          "P. Bartlett",
+          "Elad Hazan"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 777,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.22175",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.22175",
+        "id:SemanticScholar:f530a54c7698348b3d5c48b87814bce09d4212b4",
+        "id:arXiv:2606.22175",
+        "title:stickyinvoc rethinking task models for highthroughput workflows in the llm era",
+        "url:https://arxiv.org/abs/2606.22175"
+      ],
+      "record": {
+        "title": "StickyInvoc: Rethinking Task Models for High-throughput Workflows in the LLM Era",
+        "source_url": "https://arxiv.org/abs/2606.22175",
+        "year": 2026,
+        "published": "2026-06-20",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The integration of LLMs into high-throughput workflows is creating a new class of workloads on HPC clusters that promises to accelerate advances in scientific discovery with unprecedented generative capabilities. However, the traditional task model imposes a prohibitive overhead in this new domain: each task must create its computational state from scratch and destroy it upon completion. For each LLM inference task, this\"create-destroy\"model forces the repeated and costly transfer of multi-gigabyte model parameters from a long-term, reliable storage to a compute node's local disk, its CPU memory, and finally its GPU memory. This overhead, compounded by the inherently high startup cost of LLM inference, the typical scale of thousands of tasks in high-throughput workflows, and the heterogeneous and preemptible nature of high-throughput resources, presents a significant performance barrier. To overcome this barrier, this paper presents StickyInvoc: a symbiotic relationship between two new task models for high-throughput workflows. Specifically, a\"sticky\"task creates a persistent state on a compute node from a user-provided template, but doesn't execute any goodput computation by itself. Instead, this state is then inherited by subsequent\"invocation\"tasks, which perform the actual computation without incurring the state creation overhead or destroying the state upon exit. StickyInvoc thus allows the decoupling of the creation and destruction of computational states, allowing the computational state of LLM models to be created once per sticky task and its cost amortized over many subsequent invocation tasks. Our evaluation shows that when rewritten in the StickyInvoc paradigm, a claim verification workflow consisting of 150k inferences achieves a 3.6x speedup on a stable testbed with 20 GPUs, and completes in just 784 seconds by incrementally scaling out to 186 otherwise idle GPUs.",
+        "identifiers": [
+          "SemanticScholar:f530a54c7698348b3d5c48b87814bce09d4212b4"
+        ],
+        "semantic_scholar_id": "f530a54c7698348b3d5c48b87814bce09d4212b4",
+        "canonical_id": "arXiv:2606.22175",
+        "arxiv_id": "2606.22175",
+        "doi": "10.48550/arXiv.2606.22175",
+        "authors": [
+          "Thanh Son Phung",
+          "D. Thain"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.00305",
+      "identity_tokens": [
+        "id:DOI:10.1109/cluster68337.2026.00047",
+        "id:SemanticScholar:7825f59f1bc101c25adbc2e21ce968d7e25d5b92",
+        "id:arXiv:2508.00305",
+        "title:systematic evaluation of optimization techniques for longcontext language models",
+        "url:https://arxiv.org/abs/2508.00305"
+      ],
+      "record": {
+        "title": "Systematic Evaluation of Optimization Techniques for Long-Context Language Models",
+        "source_url": "https://arxiv.org/abs/2508.00305",
+        "year": 2025,
+        "published": "2025-08-01",
+        "venue": "IEEE International Conference on Cluster Computing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) with long contexts are bottlenecked by parameter memory, KV-cache memory, and decode-time compute. While inference optimizations promise relief, their effectiveness and interactions in long context settings remain underexplored. We first analyze individual optimization methods for two LLM architectures supporting long context and then systematically evaluate combinations of these techniques to assess how this deeper analysis impacts performance metrics. The study spans multiple long-context tasks and includes scaling experiments to characterize how optimization behavior shifts with scale and task regime, revealing when gains compound or diminish. By integrating system-level profiling with task-specific insights, this study helps LLM practitioners and researchers explore and balance efficiency, accuracy, and scalability across tasks and hardware configurations.",
+        "identifiers": [
+          "SemanticScholar:7825f59f1bc101c25adbc2e21ce968d7e25d5b92"
+        ],
+        "semantic_scholar_id": "7825f59f1bc101c25adbc2e21ce968d7e25d5b92",
+        "canonical_id": "arXiv:2508.00305",
+        "arxiv_id": "2508.00305",
+        "doi": "10.1109/CLUSTER68337.2026.00047",
+        "authors": [
+          "Ammar Ahmed",
+          "Sheng Di",
+          "F. Cappello",
+          "Zi-Rui Liu",
+          "Jingoo Han",
+          "Ali Anwar"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 474,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2793ff779c669566f15782299720bd8513e092038ef1d42c9ec2ae0ecafe6433",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,303 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-600a72688276cc75-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-600a72688276",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.21352",
+    "arXiv:2510.24605",
+    "arXiv:2603.05454",
+    "arXiv:2603.15954",
+    "arXiv:2603.20275",
+    "arXiv:2604.15464",
+    "arXiv:2605.02821",
+    "arXiv:2608.04132",
+    "arXiv:2609.35394"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4f96d392cc7143f7ec43967f1cc89bc23e95941d",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 7,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 7,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:32:35.241472+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.21352",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2410.21352"
+    },
+    {
+      "requested_id": "arXiv:2510.24605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.05454",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.05454"
+    },
+    {
+      "requested_id": "arXiv:2603.15954",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.15954"
+    },
+    {
+      "requested_id": "arXiv:2603.20275",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.20275"
+    },
+    {
+      "requested_id": "arXiv:2604.15464",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.15464"
+    },
+    {
+      "requested_id": "arXiv:2605.02821",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2605.02821"
+    },
+    {
+      "requested_id": "arXiv:2608.04132",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2608.04132"
+    },
+    {
+      "requested_id": "arXiv:2609.35394",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way",
+      "source_url": "https://arxiv.org/abs/2510.24605",
+      "year": 2025,
+      "published": "2025-10-28",
+      "venue": "arXiv.org",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based large language models (dLLMs) have exhibited substantial potential for parallel text generation, which may enable more efficient generation compared to autoregressive models. However, current dLLMs suffer from fixed generation lengths, which indicates the generation lengths of dLLMs have to be determined before decoding as a hyper-parameter, leading to issues in efficiency and flexibility. To solve these problems, in this work, we propose to train a diffusion LLM with native variable generation lengths, abbreviated as dLLM-Var. Concretely, we aim to train a model to accurately predict the [EOS] token in the generated text, which makes a dLLM be able to natively infer in a block diffusion manner, while still maintaining the ability of global bi-directional (full) attention and high parallelism. Experiments on standard benchmarks demonstrate that our method achieves a 30.1x speedup over traditional dLLM inference paradigms and a 2.4x speedup relative to autoregressive models such as Qwen and Llama. Our method achieves higher accuracy and faster inference, elevating dLLMs beyond mere academic novelty and supporting their practical use in real-world applications. Codes and models have been released.",
+      "identifiers": [
+        "SemanticScholar:96d7f31d69f4dd16ff186730c43fc2a0a855164b"
+      ],
+      "semantic_scholar_id": "96d7f31d69f4dd16ff186730c43fc2a0a855164b",
+      "canonical_id": "arXiv:2510.24605",
+      "arxiv_id": "2510.24605",
+      "doi": "10.48550/arXiv.2510.24605",
+      "authors": [
+        "Yicun Yang",
+        "Cong Wang",
+        "Shao-Bo Wang",
+        "Zichen Wen",
+        "Biqing Qi",
+        "Hanlin Xu",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 26,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 26,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 386,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline",
+      "source_url": "https://arxiv.org/abs/2609.35394",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video Large Language Models (Video LLMs) have achieved remarkable progress in video understanding, but their inference efficiency is constrained by the large number of visual tokens produced by long videos. Recent video token compression methods increasingly introduce sophisticated strategies for token selection, pruning, and merging. This raises a fundamental question: how much of compression performance can be obtained by simply preserving the structure encoded in the visual representations? We investigate this question with SimpleCluster, a simple and training-free baseline that performs position-aware cross-frame clustering in the visual feature space and represents each cluster using the mean of its original visual features. Extensive experiments across four video understanding benchmarks and three representative Video LLMs show that SimpleCluster achieves competitive or superior performance over recent compression methods across a wide range of token retention ratios, with particularly strong robustness under extremely low retention rates (e.g., 1%). To understand this behavior, we analyze the feature space preserved by different compression methods in terms of local approximation fidelity and global coverage. The results show that stronger downstream performance is consistently associated with better preservation of the original visual feature distribution, especially its global coverage. These findings highlight feature-space preservation as an important consideration for video token compression under highly constrained token budgets. Our code is available at https://github.com/xiaozhang79/SimpleCluster.",
+      "identifiers": [
+        "SemanticScholar:9939eec1c8e45d86662b875b9f158132781a18da"
+      ],
+      "semantic_scholar_id": "9939eec1c8e45d86662b875b9f158132781a18da",
+      "canonical_id": "arXiv:2609.35394",
+      "arxiv_id": "2609.35394",
+      "doi": "10.48550/arXiv.2609.35394",
+      "authors": [
+        "Xiao Zhang",
+        "Wang Zeng",
+        "Sheng Jin",
+        "Wen-Tao Liu",
+        "Chen Qian",
+        "Shi-Chao Kan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.24605",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.24605",
+        "id:SemanticScholar:96d7f31d69f4dd16ff186730c43fc2a0a855164b",
+        "id:arXiv:2510.24605",
+        "title:diffusion llm with native variable generation lengths let eos lead the way",
+        "url:https://arxiv.org/abs/2510.24605"
+      ],
+      "record": {
+        "title": "Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way",
+        "source_url": "https://arxiv.org/abs/2510.24605",
+        "year": 2025,
+        "published": "2025-10-28",
+        "venue": "arXiv.org",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based large language models (dLLMs) have exhibited substantial potential for parallel text generation, which may enable more efficient generation compared to autoregressive models. However, current dLLMs suffer from fixed generation lengths, which indicates the generation lengths of dLLMs have to be determined before decoding as a hyper-parameter, leading to issues in efficiency and flexibility. To solve these problems, in this work, we propose to train a diffusion LLM with native variable generation lengths, abbreviated as dLLM-Var. Concretely, we aim to train a model to accurately predict the [EOS] token in the generated text, which makes a dLLM be able to natively infer in a block diffusion manner, while still maintaining the ability of global bi-directional (full) attention and high parallelism. Experiments on standard benchmarks demonstrate that our method achieves a 30.1x speedup over traditional dLLM inference paradigms and a 2.4x speedup relative to autoregressive models such as Qwen and Llama. Our method achieves higher accuracy and faster inference, elevating dLLMs beyond mere academic novelty and supporting their practical use in real-world applications. Codes and models have been released.",
+        "identifiers": [
+          "SemanticScholar:96d7f31d69f4dd16ff186730c43fc2a0a855164b"
+        ],
+        "semantic_scholar_id": "96d7f31d69f4dd16ff186730c43fc2a0a855164b",
+        "canonical_id": "arXiv:2510.24605",
+        "arxiv_id": "2510.24605",
+        "doi": "10.48550/arXiv.2510.24605",
+        "authors": [
+          "Yicun Yang",
+          "Cong Wang",
+          "Shao-Bo Wang",
+          "Zichen Wen",
+          "Biqing Qi",
+          "Hanlin Xu",
+          "Lin-Feng Zhang"
+        ],
+        "priority": 26,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 26,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 386,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35394",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.35394",
+        "id:SemanticScholar:9939eec1c8e45d86662b875b9f158132781a18da",
+        "id:arXiv:2609.35394",
+        "title:rethinking visual token compression for video large language models a simple yet strong baseline",
+        "url:https://arxiv.org/abs/2609.35394"
+      ],
+      "record": {
+        "title": "Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline",
+        "source_url": "https://arxiv.org/abs/2609.35394",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video Large Language Models (Video LLMs) have achieved remarkable progress in video understanding, but their inference efficiency is constrained by the large number of visual tokens produced by long videos. Recent video token compression methods increasingly introduce sophisticated strategies for token selection, pruning, and merging. This raises a fundamental question: how much of compression performance can be obtained by simply preserving the structure encoded in the visual representations? We investigate this question with SimpleCluster, a simple and training-free baseline that performs position-aware cross-frame clustering in the visual feature space and represents each cluster using the mean of its original visual features. Extensive experiments across four video understanding benchmarks and three representative Video LLMs show that SimpleCluster achieves competitive or superior performance over recent compression methods across a wide range of token retention ratios, with particularly strong robustness under extremely low retention rates (e.g., 1%). To understand this behavior, we analyze the feature space preserved by different compression methods in terms of local approximation fidelity and global coverage. The results show that stronger downstream performance is consistently associated with better preservation of the original visual feature distribution, especially its global coverage. These findings highlight feature-space preservation as an important consideration for video token compression under highly constrained token budgets. Our code is available at https://github.com/xiaozhang79/SimpleCluster.",
+        "identifiers": [
+          "SemanticScholar:9939eec1c8e45d86662b875b9f158132781a18da"
+        ],
+        "semantic_scholar_id": "9939eec1c8e45d86662b875b9f158132781a18da",
+        "canonical_id": "arXiv:2609.35394",
+        "arxiv_id": "2609.35394",
+        "doi": "10.48550/arXiv.2609.35394",
+        "authors": [
+          "Xiao Zhang",
+          "Wang Zeng",
+          "Sheng Jin",
+          "Wen-Tao Liu",
+          "Chen Qian",
+          "Shi-Chao Kan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9aa21e4cb2f5258a285fff61523093ce31f5bcece40f0d9574359b07644d5759",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

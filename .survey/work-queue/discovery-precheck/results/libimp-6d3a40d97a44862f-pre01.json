@@ -1,0 +1,301 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-6d3a40d97a44862f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-6d3a40d97a44",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.22731",
+    "arXiv:2610.40943",
+    "arXiv:2610.41112",
+    "arXiv:2610.41160",
+    "arXiv:2610.41291",
+    "arXiv:2610.41508",
+    "arXiv:2610.41825",
+    "arXiv:2610.41919"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4f96d392cc7143f7ec43967f1cc89bc23e95941d",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 6,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 6,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:32:41.562451+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.22731",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.40943",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:670e69c8f4f66ed97b87598f004849f0ab19e739"
+    },
+    {
+      "requested_id": "arXiv:2610.41112",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.41160",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3789240.3828750"
+    },
+    {
+      "requested_id": "arXiv:2610.41291",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:7bfe7a9fb64a6f5249d0a31157cdf2a09d073dcf"
+    },
+    {
+      "requested_id": "arXiv:2610.41508",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:282671cce9668cae22039050040b27522d615847"
+    },
+    {
+      "requested_id": "arXiv:2610.41825",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:e6ebb9a5e1642d1b42b0f73062eff1953af03848"
+    },
+    {
+      "requested_id": "arXiv:2610.41919",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:65ca912cb87ecb963295f1e39f2abbe6a97cb77c"
+    }
+  ],
+  "results": [
+    {
+      "title": "Accelerated Dataflow: scaling inference in streaming data analytics with efficiency",
+      "source_url": "https://arxiv.org/abs/2610.22731",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming data analytics helps businesses identify opportunities and spot risks in a timely fashion. As large language model (LLM) usage grows, people are exploring incorporating agents or LLMs in streaming data pipelines to help find patterns in datasets without supervision or interpret natural languages for content moderation. However, most streaming systems are currently optimized for data movement and perform poorly on GPU intensive workloads such as performing inference with LLMs. We introduce a system on Google Cloud Dataflow designed to tackle hybrid streaming machine learning workloads with co-designed autoscaling on heterogeneous worker pools and prefix-aware batching. This increases throughput 1.5x to 2x for streaming pipelines using LLMs while maintaining similar latency with up to 75% peak resource savings and 84% lower peak tail latency compared with existing streaming data processing systems.",
+      "identifiers": [
+        "SemanticScholar:121847def36596fdb3e8d4dff9e1435df65b5f62"
+      ],
+      "semantic_scholar_id": "121847def36596fdb3e8d4dff9e1435df65b5f62",
+      "canonical_id": "arXiv:2610.22731",
+      "arxiv_id": "2610.22731",
+      "authors": [
+        "RuiLong Jiang",
+        "Dustin Rhodes",
+        "Danny McCormick",
+        "Yuta Labur",
+        "R. Rokni"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Calibration of Large Model Quantization based on HiFloat4 Format",
+      "source_url": "https://arxiv.org/abs/2610.41112",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization of Large Language Models (LLMs) has become increasingly important for reducing the computational costs and resource requirements for practical deployment. Growing interest in this area has motivated the community to move beyond 8-bit quantization towards 4-bit precision, leading to the development of customized 4-bit formats such as MXFP4 and NVFP4. Recently, HiFloat4 (HiF4) has emerged as a competitive alternative which adopts a Block Floating-Point (BFP) format with a three-level scaling hierarchy, thereby achieving a significantly larger dynamic range. While quantization can substantially reduce memory usage and accelerate inference, it frequently introduces accuracy degradation. Calibration is therefore essential for narrowing the performance gap between low-precision quantized models and their full-precision counterparts. Nevertheless, existing calibration methods are mainly designed and validated using integer-precision formats, such as INT4, lacking support for HiF4 due to its hierarchical BFP structure. In this paper, we investigate three calibration approaches, namely HiGPTQ, HiAutoRound, and HiFlatQuant, to further enhance model quantization based on the HiF4 format. Extensive experiment s demonstrate that all three proposed approaches improve inference accuracy compared with direct HiF4 conversion, reducing the gap between HiF4 and BF16 to less than 1% and outperforming the state-of-the-art NVFP4 format across various models and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:26762ad39f75de4c9c425802a77bc3cd9c630d16"
+      ],
+      "semantic_scholar_id": "26762ad39f75de4c9c425802a77bc3cd9c630d16",
+      "canonical_id": "arXiv:2610.41112",
+      "arxiv_id": "2610.41112",
+      "authors": [
+        "Jing Huang",
+        "Yu Cheng",
+        "Zi-Wei Yu",
+        "Lan Zhao",
+        "Sian Li",
+        "Guang-Xiu Yao",
+        "Xin Wang",
+        "Yuan-Yong Luo",
+        "Heng-Yi Liang",
+        "Ting-Yu Li",
+        "Bo-Ling Liu",
+        "Hu Liu",
+        "Michael Bi Mi",
+        "Heng Liao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.22731",
+      "identity_tokens": [
+        "id:SemanticScholar:121847def36596fdb3e8d4dff9e1435df65b5f62",
+        "id:arXiv:2610.22731",
+        "title:accelerated dataflow scaling inference in streaming data analytics with efficiency",
+        "url:https://arxiv.org/abs/2610.22731"
+      ],
+      "record": {
+        "title": "Accelerated Dataflow: scaling inference in streaming data analytics with efficiency",
+        "source_url": "https://arxiv.org/abs/2610.22731",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Streaming data analytics helps businesses identify opportunities and spot risks in a timely fashion. As large language model (LLM) usage grows, people are exploring incorporating agents or LLMs in streaming data pipelines to help find patterns in datasets without supervision or interpret natural languages for content moderation. However, most streaming systems are currently optimized for data movement and perform poorly on GPU intensive workloads such as performing inference with LLMs. We introduce a system on Google Cloud Dataflow designed to tackle hybrid streaming machine learning workloads with co-designed autoscaling on heterogeneous worker pools and prefix-aware batching. This increases throughput 1.5x to 2x for streaming pipelines using LLMs while maintaining similar latency with up to 75% peak resource savings and 84% lower peak tail latency compared with existing streaming data processing systems.",
+        "identifiers": [
+          "SemanticScholar:121847def36596fdb3e8d4dff9e1435df65b5f62"
+        ],
+        "semantic_scholar_id": "121847def36596fdb3e8d4dff9e1435df65b5f62",
+        "canonical_id": "arXiv:2610.22731",
+        "arxiv_id": "2610.22731",
+        "authors": [
+          "RuiLong Jiang",
+          "Dustin Rhodes",
+          "Danny McCormick",
+          "Yuta Labur",
+          "R. Rokni"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.41112",
+      "identity_tokens": [
+        "id:SemanticScholar:26762ad39f75de4c9c425802a77bc3cd9c630d16",
+        "id:arXiv:2610.41112",
+        "title:calibration of large model quantization based on hifloat4 format",
+        "url:https://arxiv.org/abs/2610.41112"
+      ],
+      "record": {
+        "title": "Calibration of Large Model Quantization based on HiFloat4 Format",
+        "source_url": "https://arxiv.org/abs/2610.41112",
+        "year": 2026,
+        "published": "2026-10-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization of Large Language Models (LLMs) has become increasingly important for reducing the computational costs and resource requirements for practical deployment. Growing interest in this area has motivated the community to move beyond 8-bit quantization towards 4-bit precision, leading to the development of customized 4-bit formats such as MXFP4 and NVFP4. Recently, HiFloat4 (HiF4) has emerged as a competitive alternative which adopts a Block Floating-Point (BFP) format with a three-level scaling hierarchy, thereby achieving a significantly larger dynamic range. While quantization can substantially reduce memory usage and accelerate inference, it frequently introduces accuracy degradation. Calibration is therefore essential for narrowing the performance gap between low-precision quantized models and their full-precision counterparts. Nevertheless, existing calibration methods are mainly designed and validated using integer-precision formats, such as INT4, lacking support for HiF4 due to its hierarchical BFP structure. In this paper, we investigate three calibration approaches, namely HiGPTQ, HiAutoRound, and HiFlatQuant, to further enhance model quantization based on the HiF4 format. Extensive experiment s demonstrate that all three proposed approaches improve inference accuracy compared with direct HiF4 conversion, reducing the gap between HiF4 and BF16 to less than 1% and outperforming the state-of-the-art NVFP4 format across various models and downstream tasks.",
+        "identifiers": [
+          "SemanticScholar:26762ad39f75de4c9c425802a77bc3cd9c630d16"
+        ],
+        "semantic_scholar_id": "26762ad39f75de4c9c425802a77bc3cd9c630d16",
+        "canonical_id": "arXiv:2610.41112",
+        "arxiv_id": "2610.41112",
+        "authors": [
+          "Jing Huang",
+          "Yu Cheng",
+          "Zi-Wei Yu",
+          "Lan Zhao",
+          "Sian Li",
+          "Guang-Xiu Yao",
+          "Xin Wang",
+          "Yuan-Yong Luo",
+          "Heng-Yi Liang",
+          "Ting-Yu Li",
+          "Bo-Ling Liu",
+          "Hu Liu",
+          "Michael Bi Mi",
+          "Heng Liao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ccf7cd9ac6c288b5a09735751a3ea17f92fd8e68bf5e1f09cf0f0c77c8ad2b60",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

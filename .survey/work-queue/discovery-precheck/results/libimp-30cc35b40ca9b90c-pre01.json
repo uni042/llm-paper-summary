@@ -1,0 +1,696 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-30cc35b40ca9b90c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-30cc35b40ca9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.31574",
+    "arXiv:2610.31897",
+    "arXiv:2610.32784",
+    "arXiv:2610.33215",
+    "arXiv:2610.36671",
+    "arXiv:2610.36940",
+    "arXiv:2610.36986"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4f96d392cc7143f7ec43967f1cc89bc23e95941d",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T11:33:05.287102+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.31574",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.31897",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.32784",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.33215",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36671",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36940",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36986",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Rethinking Sequence Compression with Test-time Regression",
+      "source_url": "https://arxiv.org/abs/2610.31574",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sequence compression is a fundamental operation and a critical information bottleneck in efficient language and multimodal models, and yet prevailing approaches based on pooling or learned projections remain underperforming. We revisit sequence compression through the lens of test-time regression: input tokens define a regression problem whose fitted coefficients form the compressed representation. Importantly, the regression problem is learned end-to-end via backpropagation, while its coefficients are computed efficiently in closed form during the forward pass. This leads to TTR-Compressor, a general alternative to conventional pooling and projection-based compression. We evaluate TTR-Compressor as the compressor for block-wise sparse attention and the visual token merger for multimodal large language models. On block-wise sparse attention, TTR-Compressor improves RULER performance over attention-based compressors by a large margin. For visual token merging, it consistently outperforms the standard MLP merger and matches its performance with 55.6% fewer visual tokens. These results establish test-time regression as an effective primitive for sequence compression in efficient language and multimodal models.",
+      "identifiers": [
+        "SemanticScholar:bec840935543215054ba5524aee41daa51d61774"
+      ],
+      "semantic_scholar_id": "bec840935543215054ba5524aee41daa51d61774",
+      "canonical_id": "arXiv:2610.31574",
+      "arxiv_id": "2610.31574",
+      "authors": [
+        "Sihan Yang",
+        "Jie Huang",
+        "Han-Xuan Li",
+        "Yi-Fan Guo",
+        "Wei-Gao Sun",
+        "Yi-Ran Zhong",
+        "Wei-Yang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Learning Structured Sparsity for Large Models: Bridging Model Compressibility and Efficient Inference",
+      "source_url": "https://arxiv.org/abs/2610.31897",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling laws continue to reward increases in model scale, while the resulting computational and memory demands drive greater reliance on cloud infrastructure for inference. Yet unreliable network connectivity, communication delays, and privacy requirements can make such reliance impractical, motivating local execution on edge devices. Local deployment requires models to fit within limited memory and execute efficiently with the available computational resources. Recent work has shown that learning sparse-plus-low-rank representations enables elastic compression of a single checkpoint to multiple memory budgets. However, fewer parameters do not necessarily translate into faster inference. Indexing overhead and irregular memory access in unstructured sparse components can offset computational savings. To address this critical deployment barrier, we introduce S-SALAAD, a unified framework that jointly learns the model weights and their low-rank and structured sparse components during training. The framework supports a family of hardware-compatible structured sparsity patterns. It couples this structure learning with budget-aware compression and dedicated CPU and GPU kernels that exploit the learned structure for acceleration, enabling efficient inference from a single checkpoint across memory budgets. Experiments on Llama2 and Qwen3 models, covering both pretraining and distillation, show that S-SALAAD advances the empirical Pareto frontier in perplexity, memory, and inference latency across multiple hardware platforms relative to the evaluated baselines. These results show that structured learning can translate elastic compressibility into reduced memory requirements and lower inference latency, enabling practical deployment of large models on edge devices.",
+      "identifiers": [
+        "SemanticScholar:3baaff41b3a316c33ff565fd34edd7eb388c46e2"
+      ],
+      "semantic_scholar_id": "3baaff41b3a316c33ff565fd34edd7eb388c46e2",
+      "canonical_id": "arXiv:2610.31897",
+      "arxiv_id": "2610.31897",
+      "authors": [
+        "Tian-Xiang Xia",
+        "Li-On Kai",
+        "Niao He",
+        "Michael Muehlebach",
+        "M. Zeilinger",
+        "Hao Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Video-MemComp: Taylor-Guided Sensitivity-Aware Memory Management for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2610.32784",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of video data has created an urgent need for efficient video understanding systems that can handle long and continuous visual inputs, posing significant challenges for Multimodal Large Language Models (MLLMs) due to severe memory bottlenecks. Moreover, existing compression methods often overlook the explosive accumulation of approximation errors. To address this issue, we propose Video-MemComp, a training-free and sensitivity-aware context management framework for memory-constrained streaming video understanding. Our method theoretically decomposes compression error into orthogonal local approximation error and layer-wise structural sensitivity via a first-order Taylor expansion. To minimize local approximation error, we perform token aggregation in a pre-RoPE safe zone with an attention-conserving logit bias, mitigating geometric distortions caused by RoPE rotations. To manage layer-wise structural sensitivity, we dynamically allocate the KV cache budget based on offline gradient priors and online context entropy, prioritizing high-sensitivity layers. Video-MemComp outperforms or achieves performance comparable to full-cache and state-of-the-art compression methods on benchmarks including MLVU, VideoMME, and EgoSchema. Notably, it improves the overall accuracy of Qwen2.5-VL-3B from 62.3% to 64.1% while reducing the KV cache to an equivalent of 6,000 tokens per layer, saving over 90% of KV memory. Code: https://github.com/hhnk666/VideoMemComp.",
+      "identifiers": [
+        "SemanticScholar:d9673b7f96ec7bbe74c8a59a08819486ecb66f6c"
+      ],
+      "semantic_scholar_id": "d9673b7f96ec7bbe74c8a59a08819486ecb66f6c",
+      "canonical_id": "arXiv:2610.32784",
+      "arxiv_id": "2610.32784",
+      "doi": "10.1145/3767308.3835474",
+      "authors": [
+        "Yong-Hui Niu",
+        "Yu-Hao Ji",
+        "Chang Nie",
+        "Jiao Zhang",
+        "Yi-Long Li",
+        "Jun-Lan Feng",
+        "Ran He",
+        "Caifeng Shan",
+        "Chaoyou Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Vision Token Pruning via Query-Vision Interaction Decomposition",
+      "source_url": "https://arxiv.org/abs/2610.33215",
+      "year": 2026,
+      "published": "2026-10-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (VLMs), which process both visual inputs and text queries, incur high inference costs due to the large number of visual tokens, making visual token pruning a natural approach for improving efficiency. Recent work has leveraged query information to guide token selection, often through heuristics derived from attention patterns or token dynamics. However, these approaches do not explicitly exploit the underlying structure of query-vision interactions. We address this gap by observing that the query-vision interaction matrix, naturally induced by the query and key projections already present in transformer attention, is effectively low-rank, with a small number of dominant latent interaction modes capturing query-relevant semantics. Motivated by this observation, we propose Query-Vision Decomposition (QViD), a novel training-free query-aware visual token pruning method that exploits this structure. Extensive experiments on both image and video understanding benchmarks show that QViD consistently improves performance under matched token budgets, with the largest gains appearing under aggressive compression regimes.",
+      "identifiers": [
+        "SemanticScholar:1ba7adf2f92934afc88339b3ffacbef7eb1d4550"
+      ],
+      "semantic_scholar_id": "1ba7adf2f92934afc88339b3ffacbef7eb1d4550",
+      "canonical_id": "arXiv:2610.33215",
+      "arxiv_id": "2610.33215",
+      "authors": [
+        "Harshithanjani Athi",
+        "Sravan Kumar Ankireddy",
+        "J. Zhang",
+        "Hyeji Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs",
+      "source_url": "https://arxiv.org/abs/2610.36671",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion vision-language models (DVLMs) process their entire input at every denoising step. Since visual tokens make up 89-97% of this input on the benchmarks we study, most of the decoding computation is spent repeatedly processing the same image. Visual token pruning methods partially relieve this burden by removing part of the visual tokens, but they lose the removed information and still process the remaining image at every step. To measure how often the image is actually needed, we compare LLaDA-V's predictions with and without the image at every decoding step and find that removing the image changes a token being unmasked at only 22.8% of steps on average and at as few as 7.9%. We therefore propose LOWN, a decoding method that decides at every step whether to process the image and how many tokens to unmask. LOWN predicts the masked tokens without the image and processes the image only when this prediction disagrees with the last image-conditioned prediction. Agreement certifies the earlier prediction for reuse, and the number of certified tokens sets how many are unmasked in that step. We further observe that the need for the image differs across benchmarks, so LOWN's adaptive decision is needed rather than a fixed schedule. Without training or a tuned threshold, LOWN retains 99.6% of LLaDA-V's score on ten benchmarks at 35.3% of the decoding FLOPs on average. LOWN also generalizes across LLaDA-based DVLMs, composes orthogonally with visual token pruning, and runs under key-value caching for further efficiency gains. Code and project page are available at https://hyeon9698.github.io/LOWN/",
+      "identifiers": [
+        "SemanticScholar:a45a084375ffca1107b891327e346aa841d0d52f"
+      ],
+      "semantic_scholar_id": "a45a084375ffca1107b891327e346aa841d0d52f",
+      "canonical_id": "arXiv:2610.36671",
+      "arxiv_id": "2610.36671",
+      "authors": [
+        "Donghyeon Cho",
+        "Joowon Kim",
+        "Seung-Ho Shin",
+        "Eunho Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TDLM: Adaptive Temporal Integration for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.36940",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion language models repeatedly compute representations for unresolved tokens, but conventional denoisers do not explicitly retain these representations for reuse across steps. We introduce Temporal Self-Conditioning Diffusion Language Model (TDLM), which lets each unresolved position attend to its own history of hidden representations within a frozen denoiser. This gives later predictions access to computation already performed. Training uses self-generated trajectories and a simple cross-entropy objective for tokens revealed between consecutively sampled decoding steps, while causal temporal attention permits parallel evaluation during training. On LLaDA, the temporal modules add only approximately 0.84% trainable parameters. Across LLaDA and Dream, the main comparison shows up to 7.15$\\times$ faster generation than the corresponding original diffusion language model, with competitive answer quality on the evaluated tasks. These results motivate temporal memory as a practical way to make more effective use of repeated denoising computation.",
+      "identifiers": [
+        "SemanticScholar:49d735f88aeb0a414c4157f47ca5c835c5f0aa6a"
+      ],
+      "semantic_scholar_id": "49d735f88aeb0a414c4157f47ca5c835c5f0aa6a",
+      "canonical_id": "arXiv:2610.36940",
+      "arxiv_id": "2610.36940",
+      "authors": [
+        "Bo-Han Sun",
+        "Max Zhu",
+        "Francesco Caso",
+        "Christopher Irwin",
+        "Jia-Lin Yu",
+        "P. Lio'"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LearnPrunerV2: Learnable Progressive Token Pruning for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.36986",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable multimodal capabilities but suffer from prohibitive computational overhead due to the massive number of visual tokens. While token pruning is a promising solution, existing methods still suffer from two major drawbacks: 1) unreliable pruning criteria that fail to accurately localize task-specific regions due to inherent attention biases or query-agnostic designs, and 2) suboptimal pruning strategies that employ rigid, non-adaptive schedules, overlooking the dynamic evolution of token redundancy across different model depths. To address these challenges, we propose LearnPrunerV2, which extends the previous two-stage heuristic framework (LearnPruner) into a fully learnable architecture. Specifically, we integrate lightweight learnable modules into every layer of the VLM backbone, which estimate token importance by fusing intrinsic visual saliency with extrinsic query relevance captured via a shadow token. By uncovering a consistent staircase redundancy pattern across VLM layers, we further introduce Budget-Deterministic Pruning (BDP) to establish a hardware-friendly schedule with fixed per-layer budgets. Extensive experimental results across various benchmarks and VLMs demonstrate that LearnPrunerV2 consistently outperform previous state-of-the-art methods. Notably, LearnPrunerV2 preserves 99.8% of the original performance when pruning 77.8% of visual tokens on LLaVA-v1.5, achieving a superior accuracy-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:c46bf84b65046ae676b97c103ab88ebf4d266e00"
+      ],
+      "semantic_scholar_id": "c46bf84b65046ae676b97c103ab88ebf4d266e00",
+      "canonical_id": "arXiv:2610.36986",
+      "arxiv_id": "2610.36986",
+      "doi": "10.1145/3767308.3836571",
+      "authors": [
+        "Rinyoichi Takezoe",
+        "Ya-Qian Li",
+        "Wei-Ren Wang",
+        "Zi-Hao Bo",
+        "Huihong Shi",
+        "An-Zhou Hou",
+        "Mo Guang",
+        "Jia-Le Yan",
+        "Kai-Wen Long"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.31574",
+      "identity_tokens": [
+        "id:SemanticScholar:bec840935543215054ba5524aee41daa51d61774",
+        "id:arXiv:2610.31574",
+        "title:rethinking sequence compression with testtime regression",
+        "url:https://arxiv.org/abs/2610.31574"
+      ],
+      "record": {
+        "title": "Rethinking Sequence Compression with Test-time Regression",
+        "source_url": "https://arxiv.org/abs/2610.31574",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sequence compression is a fundamental operation and a critical information bottleneck in efficient language and multimodal models, and yet prevailing approaches based on pooling or learned projections remain underperforming. We revisit sequence compression through the lens of test-time regression: input tokens define a regression problem whose fitted coefficients form the compressed representation. Importantly, the regression problem is learned end-to-end via backpropagation, while its coefficients are computed efficiently in closed form during the forward pass. This leads to TTR-Compressor, a general alternative to conventional pooling and projection-based compression. We evaluate TTR-Compressor as the compressor for block-wise sparse attention and the visual token merger for multimodal large language models. On block-wise sparse attention, TTR-Compressor improves RULER performance over attention-based compressors by a large margin. For visual token merging, it consistently outperforms the standard MLP merger and matches its performance with 55.6% fewer visual tokens. These results establish test-time regression as an effective primitive for sequence compression in efficient language and multimodal models.",
+        "identifiers": [
+          "SemanticScholar:bec840935543215054ba5524aee41daa51d61774"
+        ],
+        "semantic_scholar_id": "bec840935543215054ba5524aee41daa51d61774",
+        "canonical_id": "arXiv:2610.31574",
+        "arxiv_id": "2610.31574",
+        "authors": [
+          "Sihan Yang",
+          "Jie Huang",
+          "Han-Xuan Li",
+          "Yi-Fan Guo",
+          "Wei-Gao Sun",
+          "Yi-Ran Zhong",
+          "Wei-Yang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.31897",
+      "identity_tokens": [
+        "id:SemanticScholar:3baaff41b3a316c33ff565fd34edd7eb388c46e2",
+        "id:arXiv:2610.31897",
+        "title:learning structured sparsity for large models bridging model compressibility and efficient inference",
+        "url:https://arxiv.org/abs/2610.31897"
+      ],
+      "record": {
+        "title": "Learning Structured Sparsity for Large Models: Bridging Model Compressibility and Efficient Inference",
+        "source_url": "https://arxiv.org/abs/2610.31897",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Scaling laws continue to reward increases in model scale, while the resulting computational and memory demands drive greater reliance on cloud infrastructure for inference. Yet unreliable network connectivity, communication delays, and privacy requirements can make such reliance impractical, motivating local execution on edge devices. Local deployment requires models to fit within limited memory and execute efficiently with the available computational resources. Recent work has shown that learning sparse-plus-low-rank representations enables elastic compression of a single checkpoint to multiple memory budgets. However, fewer parameters do not necessarily translate into faster inference. Indexing overhead and irregular memory access in unstructured sparse components can offset computational savings. To address this critical deployment barrier, we introduce S-SALAAD, a unified framework that jointly learns the model weights and their low-rank and structured sparse components during training. The framework supports a family of hardware-compatible structured sparsity patterns. It couples this structure learning with budget-aware compression and dedicated CPU and GPU kernels that exploit the learned structure for acceleration, enabling efficient inference from a single checkpoint across memory budgets. Experiments on Llama2 and Qwen3 models, covering both pretraining and distillation, show that S-SALAAD advances the empirical Pareto frontier in perplexity, memory, and inference latency across multiple hardware platforms relative to the evaluated baselines. These results show that structured learning can translate elastic compressibility into reduced memory requirements and lower inference latency, enabling practical deployment of large models on edge devices.",
+        "identifiers": [
+          "SemanticScholar:3baaff41b3a316c33ff565fd34edd7eb388c46e2"
+        ],
+        "semantic_scholar_id": "3baaff41b3a316c33ff565fd34edd7eb388c46e2",
+        "canonical_id": "arXiv:2610.31897",
+        "arxiv_id": "2610.31897",
+        "authors": [
+          "Tian-Xiang Xia",
+          "Li-On Kai",
+          "Niao He",
+          "Michael Muehlebach",
+          "M. Zeilinger",
+          "Hao Ma"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.32784",
+      "identity_tokens": [
+        "id:DOI:10.1145/3767308.3835474",
+        "id:SemanticScholar:d9673b7f96ec7bbe74c8a59a08819486ecb66f6c",
+        "id:arXiv:2610.32784",
+        "title:videomemcomp taylorguided sensitivityaware memory management for streaming video understanding",
+        "url:https://arxiv.org/abs/2610.32784"
+      ],
+      "record": {
+        "title": "Video-MemComp: Taylor-Guided Sensitivity-Aware Memory Management for Streaming Video Understanding",
+        "source_url": "https://arxiv.org/abs/2610.32784",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid growth of video data has created an urgent need for efficient video understanding systems that can handle long and continuous visual inputs, posing significant challenges for Multimodal Large Language Models (MLLMs) due to severe memory bottlenecks. Moreover, existing compression methods often overlook the explosive accumulation of approximation errors. To address this issue, we propose Video-MemComp, a training-free and sensitivity-aware context management framework for memory-constrained streaming video understanding. Our method theoretically decomposes compression error into orthogonal local approximation error and layer-wise structural sensitivity via a first-order Taylor expansion. To minimize local approximation error, we perform token aggregation in a pre-RoPE safe zone with an attention-conserving logit bias, mitigating geometric distortions caused by RoPE rotations. To manage layer-wise structural sensitivity, we dynamically allocate the KV cache budget based on offline gradient priors and online context entropy, prioritizing high-sensitivity layers. Video-MemComp outperforms or achieves performance comparable to full-cache and state-of-the-art compression methods on benchmarks including MLVU, VideoMME, and EgoSchema. Notably, it improves the overall accuracy of Qwen2.5-VL-3B from 62.3% to 64.1% while reducing the KV cache to an equivalent of 6,000 tokens per layer, saving over 90% of KV memory. Code: https://github.com/hhnk666/VideoMemComp.",
+        "identifiers": [
+          "SemanticScholar:d9673b7f96ec7bbe74c8a59a08819486ecb66f6c"
+        ],
+        "semantic_scholar_id": "d9673b7f96ec7bbe74c8a59a08819486ecb66f6c",
+        "canonical_id": "arXiv:2610.32784",
+        "arxiv_id": "2610.32784",
+        "doi": "10.1145/3767308.3835474",
+        "authors": [
+          "Yong-Hui Niu",
+          "Yu-Hao Ji",
+          "Chang Nie",
+          "Jiao Zhang",
+          "Yi-Long Li",
+          "Jun-Lan Feng",
+          "Ran He",
+          "Caifeng Shan",
+          "Chaoyou Fu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.33215",
+      "identity_tokens": [
+        "id:SemanticScholar:1ba7adf2f92934afc88339b3ffacbef7eb1d4550",
+        "id:arXiv:2610.33215",
+        "title:vision token pruning via queryvision interaction decomposition",
+        "url:https://arxiv.org/abs/2610.33215"
+      ],
+      "record": {
+        "title": "Vision Token Pruning via Query-Vision Interaction Decomposition",
+        "source_url": "https://arxiv.org/abs/2610.33215",
+        "year": 2026,
+        "published": "2026-10-23",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models (VLMs), which process both visual inputs and text queries, incur high inference costs due to the large number of visual tokens, making visual token pruning a natural approach for improving efficiency. Recent work has leveraged query information to guide token selection, often through heuristics derived from attention patterns or token dynamics. However, these approaches do not explicitly exploit the underlying structure of query-vision interactions. We address this gap by observing that the query-vision interaction matrix, naturally induced by the query and key projections already present in transformer attention, is effectively low-rank, with a small number of dominant latent interaction modes capturing query-relevant semantics. Motivated by this observation, we propose Query-Vision Decomposition (QViD), a novel training-free query-aware visual token pruning method that exploits this structure. Extensive experiments on both image and video understanding benchmarks show that QViD consistently improves performance under matched token budgets, with the largest gains appearing under aggressive compression regimes.",
+        "identifiers": [
+          "SemanticScholar:1ba7adf2f92934afc88339b3ffacbef7eb1d4550"
+        ],
+        "semantic_scholar_id": "1ba7adf2f92934afc88339b3ffacbef7eb1d4550",
+        "canonical_id": "arXiv:2610.33215",
+        "arxiv_id": "2610.33215",
+        "authors": [
+          "Harshithanjani Athi",
+          "Sravan Kumar Ankireddy",
+          "J. Zhang",
+          "Hyeji Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36671",
+      "identity_tokens": [
+        "id:SemanticScholar:a45a084375ffca1107b891327e346aa841d0d52f",
+        "id:arXiv:2610.36671",
+        "title:look only when needed certificateguided visual routing for efficient diffusion vlms",
+        "url:https://arxiv.org/abs/2610.36671"
+      ],
+      "record": {
+        "title": "Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs",
+        "source_url": "https://arxiv.org/abs/2610.36671",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion vision-language models (DVLMs) process their entire input at every denoising step. Since visual tokens make up 89-97% of this input on the benchmarks we study, most of the decoding computation is spent repeatedly processing the same image. Visual token pruning methods partially relieve this burden by removing part of the visual tokens, but they lose the removed information and still process the remaining image at every step. To measure how often the image is actually needed, we compare LLaDA-V's predictions with and without the image at every decoding step and find that removing the image changes a token being unmasked at only 22.8% of steps on average and at as few as 7.9%. We therefore propose LOWN, a decoding method that decides at every step whether to process the image and how many tokens to unmask. LOWN predicts the masked tokens without the image and processes the image only when this prediction disagrees with the last image-conditioned prediction. Agreement certifies the earlier prediction for reuse, and the number of certified tokens sets how many are unmasked in that step. We further observe that the need for the image differs across benchmarks, so LOWN's adaptive decision is needed rather than a fixed schedule. Without training or a tuned threshold, LOWN retains 99.6% of LLaDA-V's score on ten benchmarks at 35.3% of the decoding FLOPs on average. LOWN also generalizes across LLaDA-based DVLMs, composes orthogonally with visual token pruning, and runs under key-value caching for further efficiency gains. Code and project page are available at https://hyeon9698.github.io/LOWN/",
+        "identifiers": [
+          "SemanticScholar:a45a084375ffca1107b891327e346aa841d0d52f"
+        ],
+        "semantic_scholar_id": "a45a084375ffca1107b891327e346aa841d0d52f",
+        "canonical_id": "arXiv:2610.36671",
+        "arxiv_id": "2610.36671",
+        "authors": [
+          "Donghyeon Cho",
+          "Joowon Kim",
+          "Seung-Ho Shin",
+          "Eunho Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36940",
+      "identity_tokens": [
+        "id:SemanticScholar:49d735f88aeb0a414c4157f47ca5c835c5f0aa6a",
+        "id:arXiv:2610.36940",
+        "title:tdlm adaptive temporal integration for diffusion language models",
+        "url:https://arxiv.org/abs/2610.36940"
+      ],
+      "record": {
+        "title": "TDLM: Adaptive Temporal Integration for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.36940",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion language models repeatedly compute representations for unresolved tokens, but conventional denoisers do not explicitly retain these representations for reuse across steps. We introduce Temporal Self-Conditioning Diffusion Language Model (TDLM), which lets each unresolved position attend to its own history of hidden representations within a frozen denoiser. This gives later predictions access to computation already performed. Training uses self-generated trajectories and a simple cross-entropy objective for tokens revealed between consecutively sampled decoding steps, while causal temporal attention permits parallel evaluation during training. On LLaDA, the temporal modules add only approximately 0.84% trainable parameters. Across LLaDA and Dream, the main comparison shows up to 7.15$\\times$ faster generation than the corresponding original diffusion language model, with competitive answer quality on the evaluated tasks. These results motivate temporal memory as a practical way to make more effective use of repeated denoising computation.",
+        "identifiers": [
+          "SemanticScholar:49d735f88aeb0a414c4157f47ca5c835c5f0aa6a"
+        ],
+        "semantic_scholar_id": "49d735f88aeb0a414c4157f47ca5c835c5f0aa6a",
+        "canonical_id": "arXiv:2610.36940",
+        "arxiv_id": "2610.36940",
+        "authors": [
+          "Bo-Han Sun",
+          "Max Zhu",
+          "Francesco Caso",
+          "Christopher Irwin",
+          "Jia-Lin Yu",
+          "P. Lio'"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36986",
+      "identity_tokens": [
+        "id:DOI:10.1145/3767308.3836571",
+        "id:SemanticScholar:c46bf84b65046ae676b97c103ab88ebf4d266e00",
+        "id:arXiv:2610.36986",
+        "title:learnprunerv2 learnable progressive token pruning for visionlanguage models",
+        "url:https://arxiv.org/abs/2610.36986"
+      ],
+      "record": {
+        "title": "LearnPrunerV2: Learnable Progressive Token Pruning for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2610.36986",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have demonstrated remarkable multimodal capabilities but suffer from prohibitive computational overhead due to the massive number of visual tokens. While token pruning is a promising solution, existing methods still suffer from two major drawbacks: 1) unreliable pruning criteria that fail to accurately localize task-specific regions due to inherent attention biases or query-agnostic designs, and 2) suboptimal pruning strategies that employ rigid, non-adaptive schedules, overlooking the dynamic evolution of token redundancy across different model depths. To address these challenges, we propose LearnPrunerV2, which extends the previous two-stage heuristic framework (LearnPruner) into a fully learnable architecture. Specifically, we integrate lightweight learnable modules into every layer of the VLM backbone, which estimate token importance by fusing intrinsic visual saliency with extrinsic query relevance captured via a shadow token. By uncovering a consistent staircase redundancy pattern across VLM layers, we further introduce Budget-Deterministic Pruning (BDP) to establish a hardware-friendly schedule with fixed per-layer budgets. Extensive experimental results across various benchmarks and VLMs demonstrate that LearnPrunerV2 consistently outperform previous state-of-the-art methods. Notably, LearnPrunerV2 preserves 99.8% of the original performance when pruning 77.8% of visual tokens on LLaVA-v1.5, achieving a superior accuracy-efficiency trade-off.",
+        "identifiers": [
+          "SemanticScholar:c46bf84b65046ae676b97c103ab88ebf4d266e00"
+        ],
+        "semantic_scholar_id": "c46bf84b65046ae676b97c103ab88ebf4d266e00",
+        "canonical_id": "arXiv:2610.36986",
+        "arxiv_id": "2610.36986",
+        "doi": "10.1145/3767308.3836571",
+        "authors": [
+          "Rinyoichi Takezoe",
+          "Ya-Qian Li",
+          "Wei-Ren Wang",
+          "Zi-Hao Bo",
+          "Huihong Shi",
+          "An-Zhou Hou",
+          "Mo Guang",
+          "Jia-Le Yan",
+          "Kai-Wen Long"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:93a50d5b94d9b8d7b714f7d0f4c94de142f8af753d305d9693405ebd3f0e035d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
