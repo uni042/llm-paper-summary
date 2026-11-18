@@ -1,0 +1,295 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f7b96d773b6de6a2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f7b96d773b6d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1093/nsr/nwaf551",
+    "DOI:10.2139/ssrn.6698538",
+    "DOI:10.24963/ijcai.2026/176",
+    "arXiv:2606.24165",
+    "arXiv:2608.27128"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8d907b980327c34d18100bc06299a1725dc3fe",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 1,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T09:55:40.701994+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1093/nsr/nwaf551",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.2139/ssrn.6698538",
+      "status": "provider_error",
+      "lookup_route": "semantic_scholar_single",
+      "error": "explicit identifier lookup failed: HTTP Error 429: "
+    },
+    {
+      "requested_id": "DOI:10.24963/ijcai.2026/176",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.24963/ijcai.2026/176"
+    },
+    {
+      "requested_id": "arXiv:2606.24165",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.24165"
+    },
+    {
+      "requested_id": "arXiv:2608.27128",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Neuromorphic spike-based large language model",
+      "source_url": "https://doi.org/10.1093/nsr/nwaf551",
+      "year": 2025,
+      "published": "2025-12-04",
+      "venue": "National Science Review",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "ABSTRACT This work proposes a unified neuromorphic spike-based large-language-model (NSLLM) framework to simultaneously address the challenges of high energy consumption and low interpretability in LLMs. Our framework transforms LLMs into efficient NSLLMs by converting their behaviors into neural dynamics—such as spike trains—through rigorous mathematical modeling and complemented by advanced techniques including quantization and sparsification. This transformation also enables the analysis of information encoding processes using computational neuroscience tools, thereby offering a novel neuroscientific perspective that conceptualizes LLMs as neural populations to enhance their interpretability. Leveraging a hardware-algorithm co-design paradigm, an NSLLM can completely eliminate matrix multiplication (MatMul) while maintaining high performance. We designed a custom MatMul-free hardware core on the VCK190 field-programmable gate array to validate the 1.5-billion-parameter NSLLM, achieving a dynamic power consumption of only 13.849 W and an inference throughput of 161.8 tokens per second. Compared with the A800 GPU, this implementation improves energy efficiency, memory usage and inference throughput by 19.8\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{upgreek} \\usepackage{mathrsfs} \\setlength{\\oddsidemargin}{-69pt} \\begin{document} $\\times$\\end{document}, 21.3\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{upgreek} \\usepackage{mathrsfs} \\setlength{\\oddsidemargin}{-69pt} \\begin{document} $\\times$\\end{document} and 2.2\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{upgreek} \\usepackage{mathrsfs} \\setlength{\\oddsidemargin}{-69pt} \\begin{document} $\\times$\\end{document}, respectively. This work provides a novel perspective within a unified framework to enhance both the energy efficiency and interpretability of LLMs, offering valuable insights for future neuromorphic chip designs tailored for large models.",
+      "identifiers": [
+        "SemanticScholar:de4e84093f052d3f90b63456cfe5ad7464451a9a"
+      ],
+      "semantic_scholar_id": "de4e84093f052d3f90b63456cfe5ad7464451a9a",
+      "doi": "10.1093/nsr/nwaf551",
+      "canonical_id": "DOI:10.1093/nsr/nwaf551",
+      "authors": [
+        "Han Xu",
+        "Xue-Rui Qiu",
+        "Yunhui Xu",
+        "Mohammed E. Elbtity",
+        "Peng Zhou",
+        "Yang Tian",
+        "Rui-Jie Zhu",
+        "Jia-Hong Zhang",
+        "Shao-Wei Gu",
+        "Yu-Qi Pan",
+        "Yu-Hong Chou",
+        "Qinghao Wen",
+        "Man Yao",
+        "Jiang-Bo Qian",
+        "Yong-Hong Tian",
+        "Lei Ma",
+        "Tie-Jun Huang",
+        "J. Eshraghian",
+        "Bo-Xing Xu",
+        "Guo-Qi Li"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 349,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Small Frequency Corrections Can Change What Survives KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2608.27128",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressing a key-value cache before its next question is known requires choosing what to retain without knowing which evidence will matter. Value energy measures entry strength but does not distinguish isolated keys from those with many similar neighbors. We introduce TwinKV, a training-free method that discounts value energy by nonlocal post-RoPE key frequency. Prefix attention allocates head capacities, while retained entries preserve their original keys and values under an exact storage budget. Across four language models, TwinKV exceeds five evaluated compressed baselines in mean score on LongBench, LooGLE, and RULER at 50\\% KV removal. Component controls isolate the frequency contribution. On Llama-3.2-1B RULER at 75\\% removal, normalized frequency weights average 0.95, yet change 7\\% of nonprotected retained positions and improve value-only retention by about 5.5 points under both uniform and adapted capacities. Permuting the weights within heads weakens this gain. These results show that modest frequency corrections can change retention and answering outcomes, with effects that depend on the model and task.",
+      "identifiers": [
+        "SemanticScholar:a4fa4fdd5e56d642a63a6b154ea4b4655acf95b1"
+      ],
+      "semantic_scholar_id": "a4fa4fdd5e56d642a63a6b154ea4b4655acf95b1",
+      "canonical_id": "arXiv:2608.27128",
+      "arxiv_id": "2608.27128",
+      "authors": [
+        "Hong Chen",
+        "Yuan Zeng",
+        "Yong-Wei Huang",
+        "Zu-Hao Ouyang",
+        "Dong-Nan Zheng",
+        "Jun-Yan Zhang",
+        "Yu-Bo Gao",
+        "Xu-Ming Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1093/nsr/nwaf551",
+      "identity_tokens": [
+        "id:DOI:10.1093/nsr/nwaf551",
+        "id:SemanticScholar:de4e84093f052d3f90b63456cfe5ad7464451a9a",
+        "title:neuromorphic spikebased large language model",
+        "url:https://doi.org/10.1093/nsr/nwaf551"
+      ],
+      "record": {
+        "title": "Neuromorphic spike-based large language model",
+        "source_url": "https://doi.org/10.1093/nsr/nwaf551",
+        "year": 2025,
+        "published": "2025-12-04",
+        "venue": "National Science Review",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "ABSTRACT This work proposes a unified neuromorphic spike-based large-language-model (NSLLM) framework to simultaneously address the challenges of high energy consumption and low interpretability in LLMs. Our framework transforms LLMs into efficient NSLLMs by converting their behaviors into neural dynamics—such as spike trains—through rigorous mathematical modeling and complemented by advanced techniques including quantization and sparsification. This transformation also enables the analysis of information encoding processes using computational neuroscience tools, thereby offering a novel neuroscientific perspective that conceptualizes LLMs as neural populations to enhance their interpretability. Leveraging a hardware-algorithm co-design paradigm, an NSLLM can completely eliminate matrix multiplication (MatMul) while maintaining high performance. We designed a custom MatMul-free hardware core on the VCK190 field-programmable gate array to validate the 1.5-billion-parameter NSLLM, achieving a dynamic power consumption of only 13.849 W and an inference throughput of 161.8 tokens per second. Compared with the A800 GPU, this implementation improves energy efficiency, memory usage and inference throughput by 19.8\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{upgreek} \\usepackage{mathrsfs} \\setlength{\\oddsidemargin}{-69pt} \\begin{document} $\\times$\\end{document}, 21.3\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{upgreek} \\usepackage{mathrsfs} \\setlength{\\oddsidemargin}{-69pt} \\begin{document} $\\times$\\end{document} and 2.2\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{upgreek} \\usepackage{mathrsfs} \\setlength{\\oddsidemargin}{-69pt} \\begin{document} $\\times$\\end{document}, respectively. This work provides a novel perspective within a unified framework to enhance both the energy efficiency and interpretability of LLMs, offering valuable insights for future neuromorphic chip designs tailored for large models.",
+        "identifiers": [
+          "SemanticScholar:de4e84093f052d3f90b63456cfe5ad7464451a9a"
+        ],
+        "semantic_scholar_id": "de4e84093f052d3f90b63456cfe5ad7464451a9a",
+        "doi": "10.1093/nsr/nwaf551",
+        "canonical_id": "DOI:10.1093/nsr/nwaf551",
+        "authors": [
+          "Han Xu",
+          "Xue-Rui Qiu",
+          "Yunhui Xu",
+          "Mohammed E. Elbtity",
+          "Peng Zhou",
+          "Yang Tian",
+          "Rui-Jie Zhu",
+          "Jia-Hong Zhang",
+          "Shao-Wei Gu",
+          "Yu-Qi Pan",
+          "Yu-Hong Chou",
+          "Qinghao Wen",
+          "Man Yao",
+          "Jiang-Bo Qian",
+          "Yong-Hong Tian",
+          "Lei Ma",
+          "Tie-Jun Huang",
+          "J. Eshraghian",
+          "Bo-Xing Xu",
+          "Guo-Qi Li"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 349,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27128",
+      "identity_tokens": [
+        "id:SemanticScholar:a4fa4fdd5e56d642a63a6b154ea4b4655acf95b1",
+        "id:arXiv:2608.27128",
+        "title:small frequency corrections can change what survives kv cache compression",
+        "url:https://arxiv.org/abs/2608.27128"
+      ],
+      "record": {
+        "title": "Small Frequency Corrections Can Change What Survives KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2608.27128",
+        "year": 2026,
+        "published": "2026-08-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compressing a key-value cache before its next question is known requires choosing what to retain without knowing which evidence will matter. Value energy measures entry strength but does not distinguish isolated keys from those with many similar neighbors. We introduce TwinKV, a training-free method that discounts value energy by nonlocal post-RoPE key frequency. Prefix attention allocates head capacities, while retained entries preserve their original keys and values under an exact storage budget. Across four language models, TwinKV exceeds five evaluated compressed baselines in mean score on LongBench, LooGLE, and RULER at 50\\% KV removal. Component controls isolate the frequency contribution. On Llama-3.2-1B RULER at 75\\% removal, normalized frequency weights average 0.95, yet change 7\\% of nonprotected retained positions and improve value-only retention by about 5.5 points under both uniform and adapted capacities. Permuting the weights within heads weakens this gain. These results show that modest frequency corrections can change retention and answering outcomes, with effects that depend on the model and task.",
+        "identifiers": [
+          "SemanticScholar:a4fa4fdd5e56d642a63a6b154ea4b4655acf95b1"
+        ],
+        "semantic_scholar_id": "a4fa4fdd5e56d642a63a6b154ea4b4655acf95b1",
+        "canonical_id": "arXiv:2608.27128",
+        "arxiv_id": "2608.27128",
+        "authors": [
+          "Hong Chen",
+          "Yuan Zeng",
+          "Yong-Wei Huang",
+          "Zu-Hao Ouyang",
+          "Dong-Nan Zheng",
+          "Jun-Yan Zhang",
+          "Yu-Bo Gao",
+          "Xu-Ming Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5d8f05bb5bede31db6fba5452ae0b589da190ad9962c66c60e9dffeebb99c862",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

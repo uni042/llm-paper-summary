@@ -1,0 +1,311 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8efb0133c8e28028-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8efb0133c8e2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.06571",
+    "arXiv:2408.07802",
+    "arXiv:2505.21661",
+    "arXiv:2511.01197",
+    "arXiv:2512.13586",
+    "arXiv:2603.02737",
+    "arXiv:2603.10030",
+    "arXiv:2604.15188",
+    "arXiv:2609.36800",
+    "arXiv:2609.39334"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8d907b980327c34d18100bc06299a1725dc3fe",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 8,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 8,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-18T09:55:10.220102+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.06571",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2406.06571"
+    },
+    {
+      "requested_id": "arXiv:2408.07802",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2408.07802"
+    },
+    {
+      "requested_id": "arXiv:2505.21661",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.01197",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.13586",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2512.13586"
+    },
+    {
+      "requested_id": "arXiv:2603.02737",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.1145/3779212.3790197"
+    },
+    {
+      "requested_id": "arXiv:2603.10030",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2603.10030"
+    },
+    {
+      "requested_id": "arXiv:2604.15188",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2604.15188"
+    },
+    {
+      "requested_id": "arXiv:2609.36800",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.36800"
+    },
+    {
+      "requested_id": "arXiv:2609.39334",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2609.39334"
+    }
+  ],
+  "results": [
+    {
+      "title": "CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing",
+      "source_url": "https://arxiv.org/abs/2511.01197",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Private large language model (LLM) inference based on cryptographic primitives offers a promising path towards privacy-preserving deep learning. However, existing frameworks only support dense LLMs like LLaMA-1 and struggle to scale to mixture-of-experts (MoE) architectures. The key challenge comes from securely evaluating the dynamic routing mechanism in MoE layers, which may reveal sensitive input information if not fully protected. In this paper, we propose CryptoMoE, the first framework that enables private, efficient, and accurate inference for MoE-based models. CryptoMoE balances expert loads to protect expert routing information and proposes novel protocols for secure expert dispatch and combine. CryptoMoE also develops a confidence-aware token selection strategy and a batch matrix multiplication protocol to improve accuracy and efficiency further. Extensive experiments on DeepSeekMoE-16.4B, OLMoE-6.9B, and QWenMoE-14.3B show that CryptoMoE achieves $2.8\\sim3.5\\times$ end-to-end latency reduction and $2.9\\sim4.3\\times$ communication reduction over a dense baseline with minimum accuracy loss. We also adapt CipherPrune (ICLR'25) for MoE inference and demonstrate CryptoMoE can reduce the communication by up to $4.3 \\times$. Code is available at: https://github.com/PKU-SEC-Lab/CryptoMoE.",
+      "identifiers": [
+        "SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779"
+      ],
+      "semantic_scholar_id": "11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+      "canonical_id": "arXiv:2511.01197",
+      "arxiv_id": "2511.01197",
+      "doi": "10.48550/arXiv.2511.01197",
+      "authors": [
+        "Yi-Fan Zhou",
+        "Tian-Shi Xu",
+        "Jue Hong",
+        "Ye Wu",
+        "Meng Li"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 380,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+      "source_url": "https://arxiv.org/abs/2505.21661",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we propose KPerfIR, a novel multilevel compiler-centric infrastructure to enable the development of customizable, extendable, and portable profiling tools tailored for modern artificial intelligence (AI) workloads on modern GPUs. Our approach integrates profiling capabilities directly into the compiler workflow, allowing profiling functionalities to be implemented as compiler passes, offering a programmable and reusable framework for performance analysis. This design bridges the gap between compilers and profilers, enabling fine-grained insights into complex optimization challenges such as overlapping the execution of fine-grained function units on GPUs. KPerfIR is integrated into the Triton infrastructure to highlight the power of a compiler-centric approach to advance performance analysis and optimization in the ever-evolving landscape of AI compilers. Our evaluation shows that our tool incurs low overhead (8.2%), provides accurate measurements (2% relative error), and delivers actionable insights into complicated GPU intra-kernel optimizations.",
+      "identifiers": [
+        "SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f"
+      ],
+      "semantic_scholar_id": "eeaa2d668c87354c75e5165df187775cd63bd66f",
+      "canonical_id": "arXiv:2505.21661",
+      "arxiv_id": "2505.21661",
+      "doi": "10.48550/arXiv.2505.21661",
+      "authors": [
+        "Yue Guan",
+        "Yuan-Wei Fang",
+        "Keren Zhou",
+        "Corbin Robeck",
+        "Manman Ren",
+        "Zhong-Kai Yu",
+        "Yufei Ding",
+        "Adnan Aziz"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 540,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.01197",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.01197",
+        "id:SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+        "id:arXiv:2511.01197",
+        "title:cryptomoe privacypreserving and scalable mixture of experts inference via balanced expert routing",
+        "url:https://arxiv.org/abs/2511.01197"
+      ],
+      "record": {
+        "title": "CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing",
+        "source_url": "https://arxiv.org/abs/2511.01197",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Private large language model (LLM) inference based on cryptographic primitives offers a promising path towards privacy-preserving deep learning. However, existing frameworks only support dense LLMs like LLaMA-1 and struggle to scale to mixture-of-experts (MoE) architectures. The key challenge comes from securely evaluating the dynamic routing mechanism in MoE layers, which may reveal sensitive input information if not fully protected. In this paper, we propose CryptoMoE, the first framework that enables private, efficient, and accurate inference for MoE-based models. CryptoMoE balances expert loads to protect expert routing information and proposes novel protocols for secure expert dispatch and combine. CryptoMoE also develops a confidence-aware token selection strategy and a batch matrix multiplication protocol to improve accuracy and efficiency further. Extensive experiments on DeepSeekMoE-16.4B, OLMoE-6.9B, and QWenMoE-14.3B show that CryptoMoE achieves $2.8\\sim3.5\\times$ end-to-end latency reduction and $2.9\\sim4.3\\times$ communication reduction over a dense baseline with minimum accuracy loss. We also adapt CipherPrune (ICLR'25) for MoE inference and demonstrate CryptoMoE can reduce the communication by up to $4.3 \\times$. Code is available at: https://github.com/PKU-SEC-Lab/CryptoMoE.",
+        "identifiers": [
+          "SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779"
+        ],
+        "semantic_scholar_id": "11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+        "canonical_id": "arXiv:2511.01197",
+        "arxiv_id": "2511.01197",
+        "doi": "10.48550/arXiv.2511.01197",
+        "authors": [
+          "Yi-Fan Zhou",
+          "Tian-Shi Xu",
+          "Jue Hong",
+          "Ye Wu",
+          "Meng Li"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 380,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.21661",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.21661",
+        "id:SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f",
+        "id:arXiv:2505.21661",
+        "title:kperfir towards an open and compilercentric ecosystem for gpu kernel performance tooling on modern ai workloads",
+        "url:https://arxiv.org/abs/2505.21661"
+      ],
+      "record": {
+        "title": "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+        "source_url": "https://arxiv.org/abs/2505.21661",
+        "year": 2025,
+        "published": "2025-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this work, we propose KPerfIR, a novel multilevel compiler-centric infrastructure to enable the development of customizable, extendable, and portable profiling tools tailored for modern artificial intelligence (AI) workloads on modern GPUs. Our approach integrates profiling capabilities directly into the compiler workflow, allowing profiling functionalities to be implemented as compiler passes, offering a programmable and reusable framework for performance analysis. This design bridges the gap between compilers and profilers, enabling fine-grained insights into complex optimization challenges such as overlapping the execution of fine-grained function units on GPUs. KPerfIR is integrated into the Triton infrastructure to highlight the power of a compiler-centric approach to advance performance analysis and optimization in the ever-evolving landscape of AI compilers. Our evaluation shows that our tool incurs low overhead (8.2%), provides accurate measurements (2% relative error), and delivers actionable insights into complicated GPU intra-kernel optimizations.",
+        "identifiers": [
+          "SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f"
+        ],
+        "semantic_scholar_id": "eeaa2d668c87354c75e5165df187775cd63bd66f",
+        "canonical_id": "arXiv:2505.21661",
+        "arxiv_id": "2505.21661",
+        "doi": "10.48550/arXiv.2505.21661",
+        "authors": [
+          "Yue Guan",
+          "Yuan-Wei Fang",
+          "Keren Zhou",
+          "Corbin Robeck",
+          "Manman Ren",
+          "Zhong-Kai Yu",
+          "Yufei Ding",
+          "Adnan Aziz"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 540,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f8a5fda909320e8dccbbba2a9a730b150b0dc151bca950fd69add6177c6e3e44",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
