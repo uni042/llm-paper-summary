@@ -1,7 +1,7 @@
 ---
-canonical_id: "DOI:10.1109/IISWC66894.2025.00019"
+canonical_id: DOI:10.1109/IISWC66894.2025.00019
 arxiv_id: null
-doi: "10.1109/iiswc66894.2025.00019"
+doi: 10.1109/iiswc66894.2025.00019
 openreview_id: null
 arxiv_categories:
   primary: null
@@ -9,99 +9,90 @@ arxiv_categories:
 last_audited: null
 audit_version: 0
 quality_self_review_passed: true
-quality_self_review_version: "2026-10-07-v1"
+quality_self_review_version: 2026-10-07-v1
 quality_body_chars: 9395
 quality_method_chars: 3500
 quality_evaluation_chars: 2370
 quality_limitation_chars: 455
 storage_targets:
-  - '解析的性能モデルOptimusへFlashAttentionとMoEとトポロジ別集団通信を組み込み、並列化空間を5次元へ拡張した'
-  - '性能予測とチップレット製造コストモデルを1つの枠組みへ統合し、性能とコストの交換関係を設計初期に探索できるようにした'
+- 解析的性能モデルOptimusへFlashAttentionとMoEとトポロジ別集団通信を組み込み、並列化空間を5次元へ拡張した
+- 性能予測とチップレット製造コストモデルを1つの枠組みへ統合し、性能とコストの交換関係を設計初期に探索できるようにした
 bottlenecks:
-  - 'モデル規模の伸びが計算容量・メモリ帯域・ネットワーク性能・コスト効率の伸びを上回り、分散システムでの拡張が律速される'
-  - '注意計算はメモリ帯域律速であり、MoEは全対全通信、並列化は集団通信のオーバーヘッドを生む'
+- モデル規模の伸びが計算容量・メモリ帯域・ネットワーク性能・コスト効率の伸びを上回り、分散システムでの拡張が律速される
+- 注意計算はメモリ帯域律速であり、MoEは全対全通信、並列化は集団通信のオーバーヘッドを生む
 hardware_details: '解析モデルによる予測研究（実機新規測定なし）。検証は公表済み実機データとの照合: FlashAttention検証は8台のA100-40GB（NVLink第3世代）、MoE検証はSummitのV100（ノード内50GB/s、ノード間25GB/s）、ネットワーク検証はV100 16台・NVLink 150GB/s'
-quality_effect: '近似なし（性能・コストの解析モデル）。品質指標ではなく予測精度が評価対象であり、FlashAttention検証では予測誤差が8パーセント以内、MoE検証では予測が公表値の2つの上下限の間に収まった'
+quality_effect: 近似なし（性能・コストの解析モデル）。品質指標ではなく予測精度が評価対象であり、FlashAttention検証では予測誤差が8パーセント以内、MoE検証では予測が公表値の2つの上下限の間に収まった
 evidence_locations:
-  - 'arXiv:2507.02456v1 要旨と第1節（課題設定、4つの技術要素、貢献）'
-  - 'arXiv:2507.02456v1 第3節と図1（枠組み全体、FlashAttention・MoE・ネットワーク・コストの各モデルと式1から式5）'
-  - 'arXiv:2507.02456v1 第4節と図2から図4（FlashAttention・MoE・ネットワークの検証条件と結果）'
-  - 'arXiv:2507.02456v1 第5節と図5から図7・表1（事例研究: バッチ・GPU世代・並列化・帯域・性能コスト交換）'
-  - 'arXiv:2507.02456v1 第6節（まとめと限界: FlashAttention第1版とDeepSpeed TED基礎実装への限定、コストはチップレット範囲）'
-  - 'Crossref登録メタデータ（正式題名、著者7名、IISWC 2025、116から126ページ、発行2025-10-12）'
+- arXiv:2507.02456v1 要旨と第1節（課題設定、4つの技術要素、貢献）
+- arXiv:2507.02456v1 第3節と図1（枠組み全体、FlashAttention・MoE・ネットワーク・コストの各モデルと式1から式5）
+- arXiv:2507.02456v1 第4節と図2から図4（FlashAttention・MoE・ネットワークの検証条件と結果）
+- 'arXiv:2507.02456v1 第5節と図5から図7・表1（事例研究: バッチ・GPU世代・並列化・帯域・性能コスト交換）'
+- 'arXiv:2507.02456v1 第6節（まとめと限界: FlashAttention第1版とDeepSpeed TED基礎実装への限定、コストはチップレット範囲）'
+- Crossref登録メタデータ（正式題名、著者7名、IISWC 2025、116から126ページ、発行2025-10-12）
 references:
-  - canonical_id: arXiv:1706.03762
-  - canonical_id: arXiv:2001.08361
-  - canonical_id: arXiv:2006.16668
-  - canonical_id: arXiv:2201.05596
-  - canonical_id: arXiv:2205.14135
-  - canonical_id: arXiv:2307.08691
-  - canonical_id: arXiv:2407.14645
-  - canonical_id: DOI:10.1038/s41586-021-03819-2
-  - canonical_id: DOI:10.52202/079017-2193
-  - canonical_id: DOI:10.1109/dac56929.2023.10247947
-  - canonical_id: DOI:10.1109/eptc62800.2024.10909776
-  - canonical_id: DOI:10.1109/hpca57654.2024.00058
-  - canonical_id: DOI:10.1109/iccad.2017.8203849
-  - canonical_id: DOI:10.1109/iiswc63097.2024.00015
-  - canonical_id: DOI:10.1109/isca45697.2020.00047
-  - canonical_id: DOI:10.1109/ispass48437.2020.00018
-  - canonical_id: DOI:10.1109/ispass57527.2023.00035
-  - canonical_id: DOI:10.1109/ispass57527.2023.00037
-  - canonical_id: DOI:10.1109/mm.2024.3373763
-  - canonical_id: DOI:10.1109/scw63240.2024.00179
-  - canonical_id: DOI:10.1109/tvlsi.2025.3527976
-  - canonical_id: DOI:10.1109/5.775417
-  - canonical_id: DOI:10.1145/2830772.2830780
-  - canonical_id: DOI:10.1145/2966986.2980095
-  - canonical_id: DOI:10.1145/3466752.3480100
-  - canonical_id: DOI:10.1145/3489517.3530428
-  - canonical_id: DOI:10.1145/3577193.3593704
-  - canonical_id: DOI:10.1145/3581784.3607102
-  - canonical_id: DOI:10.1145/3635867
-  - canonical_id: DOI:10.1177/1094342005051521
-references_checked_at: "2026-11-18"
-references_source: primary-reference-section
+- canonical_id: arXiv:2401.00096
+  arxiv_id: '2401.00096'
+- canonical_id: arXiv:2001.08361
+  arxiv_id: '2001.08361'
+- canonical_id: arXiv:2104.04473
+- canonical_id: arXiv:2201.05596
+- canonical_id: arXiv:2207.00032
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2307.08691
+  arxiv_id: '2307.08691'
+- canonical_id: arXiv:2112.06905
+- canonical_id: arXiv:2411.13676
+  arxiv_id: '2411.13676'
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2310.03003
+- canonical_id: arXiv:2006.16668
+  openreview_id: qrwe7XKzJR
+- canonical_id: arXiv:1805.02867
+  arxiv_id: '1805.02867'
+- canonical_id: arXiv:2308.02885
+  arxiv_id: '2308.02885'
+references_checked_at: '2026-11-18'
+references_source: arxiv-html-reference-section
 references_total: 65
-title: "Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling"
-summary: "大規模言語モデルの規模の伸びは計算・メモリ帯域・ネットワーク・コスト効率の伸びを上回り、新しい加速器を実際に作って測る設計探索は高くつく。本論文は、分散LLM向けの解析的性能モデルOptimusを土台に、FlashAttentionの実行時間モデル、専門家の並列化を含むMoEのモデル、トポロジごとに最適な集団通信アルゴリズムを選ぶネットワークモデルを組み込み、並列化の設計空間を従来の4次元から5次元へ広げ、さらにチップレットの製造コストモデルを同じ枠組みへ統合した性能・コスト同時モデル化の方法論である。検証ではFlashAttentionの高速化予測が実測比1.3から1.7倍の範囲で誤差8パーセント以内に収まり、事例研究ではMoE化で同等規模のMegatronモデル比約6.1倍、FlashAttention併用で約6.5倍の高速化が予測され、A100型加速器ではHBMスタック増設が学習より推論で費用対効果が高いことが示された。"
-list_summary: "分散LLMの解析的性能モデルへFlashAttention・MoE・トポロジ別通信を組み込んで並列化空間を5次元化し、チップレットの製造コストモデルまで統合することで、実機を作らずに性能とコストの交換関係を設計初期に探索できるようにしたモデル化方法論。"
+title: 'Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling'
+summary: 大規模言語モデルの規模の伸びは計算・メモリ帯域・ネットワーク・コスト効率の伸びを上回り、新しい加速器を実際に作って測る設計探索は高くつく。本論文は、分散LLM向けの解析的性能モデルOptimusを土台に、FlashAttentionの実行時間モデル、専門家の並列化を含むMoEのモデル、トポロジごとに最適な集団通信アルゴリズムを選ぶネットワークモデルを組み込み、並列化の設計空間を従来の4次元から5次元へ広げ、さらにチップレットの製造コストモデルを同じ枠組みへ統合した性能・コスト同時モデル化の方法論である。検証ではFlashAttentionの高速化予測が実測比1.3から1.7倍の範囲で誤差8パーセント以内に収まり、事例研究ではMoE化で同等規模のMegatronモデル比約6.1倍、FlashAttention併用で約6.5倍の高速化が予測され、A100型加速器ではHBMスタック増設が学習より推論で費用対効果が高いことが示された。
+list_summary: 分散LLMの解析的性能モデルへFlashAttention・MoE・トポロジ別通信を組み込んで並列化空間を5次元化し、チップレットの製造コストモデルまで統合することで、実機を作らずに性能とコストの交換関係を設計初期に探索できるようにしたモデル化方法論。
 authors:
-  - Wenzhe Guo
-  - Joyjit Kundu
-  - Uras Tos
-  - Weijiang Kong
-  - Giuliano Sisto
-  - Timon Evenblij
-  - Manu Perumkunnil
-authors_affiliations: "全員がベルギー・ルーヴェンのInteruniversity Microelectronics Centre（IMEC）所属。第1著者と第2著者は対等貢献でアルファベット順"
-published: "2025-10-12"
-publication: "2025 IEEE International Symposium on Workload Characterization (IISWC)"
-publication_type: "Conference"
+- Wenzhe Guo
+- Joyjit Kundu
+- Uras Tos
+- Weijiang Kong
+- Giuliano Sisto
+- Timon Evenblij
+- Manu Perumkunnil
+authors_affiliations: 全員がベルギー・ルーヴェンのInteruniversity Microelectronics Centre（IMEC）所属。第1著者と第2著者は対等貢献でアルファベット順
+published: '2025-10-12'
+publication: 2025 IEEE International Symposium on Workload Characterization (IISWC)
+publication_type: Conference
 publication_status: Published
-lineage: "同一著者陣による分散LLM性能モデルOptimus（IISWC 2024）の拡張であり、土台の階層ルーフラインと4次元並列化へ、FlashAttention・MoE・トポロジ別通信のモデル化と、Graeningらのチップレットコストモデルの統合を加えた系譜"
+lineage: 同一著者陣による分散LLM性能モデルOptimus（IISWC 2024）の拡張であり、土台の階層ルーフラインと4次元並列化へ、FlashAttention・MoE・トポロジ別通信のモデル化と、Graeningらのチップレットコストモデルの統合を加えた系譜
 topics:
-  - performance modeling
-  - analytical model
-  - cost modeling
-  - flash attention
-  - mixture of experts
-  - parallelization
-  - chiplet
-importance: "性能だけ、あるいはコストだけを見る従来のモデル化に対し、計算・メモリ・通信・製造コストを1つの自動化された枠組みで同時に回し、5次元並列化を含む設計空間を実機なしで探索できる形にした点が重要である。推論がメモリ律速であるためHBM増設が費用対効果を持つ、といった用途依存の設計判断を定量的に示している"
-hardware_evaluation: "解析モデルによる予測研究であり、新規の実機測定は行っていない。検証は公表済みの実機データ（FlashAttention論文、DeepSpeed-TED、ASTRA-sim検証条件）との照合による"
-source: "https://doi.org/10.1109/IISWC66894.2025.00019"
+- performance modeling
+- analytical model
+- cost modeling
+- flash attention
+- mixture of experts
+- parallelization
+- chiplet
+importance: 性能だけ、あるいはコストだけを見る従来のモデル化に対し、計算・メモリ・通信・製造コストを1つの自動化された枠組みで同時に回し、5次元並列化を含む設計空間を実機なしで探索できる形にした点が重要である。推論がメモリ律速であるためHBM増設が費用対効果を持つ、といった用途依存の設計判断を定量的に示している
+hardware_evaluation: 解析モデルによる予測研究であり、新規の実機測定は行っていない。検証は公表済みの実機データ（FlashAttention論文、DeepSpeed-TED、ASTRA-sim検証条件）との照合による
+source: https://doi.org/10.1109/IISWC66894.2025.00019
 sources:
-  - "https://doi.org/10.1109/IISWC66894.2025.00019"
-  - "https://arxiv.org/abs/2507.02456"
-  - "https://arxiv.org/html/2507.02456v1"
+- https://doi.org/10.1109/IISWC66894.2025.00019
+- https://arxiv.org/abs/2507.02456
+- https://arxiv.org/html/2507.02456v1
 code: null
-implementation: "著者らによる公式実装の公開先は論文中に記載されていない（2026-11-18確認）。土台のOptimusと、統合したチップレットコストモデル（Graeningら）はいずれも先行研究として引用されている"
-last_checked: "2026-11-18"
+implementation: 著者らによる公式実装の公開先は論文中に記載されていない（2026-11-18確認）。土台のOptimusと、統合したチップレットコストモデル（Graeningら）はいずれも先行研究として引用されている
+last_checked: '2026-11-18'
 worker_id: muse
-worker_run_key: "20261118-0735-muse-x01"
-worker_completed_at: "2026-11-18T07:55:09+09:00"
-reference_main_sha: "6ec75e51713dfd12786530f51be456d1b6884673"
+worker_run_key: 20261118-0735-muse-x01
+worker_completed_at: '2026-11-18T07:55:09+09:00'
+reference_main_sha: 6ec75e51713dfd12786530f51be456d1b6884673
 ---
 
 # Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling
