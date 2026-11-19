@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-19 18:10:21 JST**
+> 自動生成: **2026-11-19 18:23:57 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,10 +11,10 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1918** |
-| 未claim Research job | **1918** |
-| 直近24hのResearch処理完了 | **120** |
-| 最終Research処理完了 | **11-19 13:25:39 JST** |
+| 収録候補論文数 | **1913** |
+| 未claim Research job | **1913** |
+| 直近24hのResearch処理完了 | **123** |
+| 最終Research処理完了 | **11-19 18:04:56 JST** |
 | 最終Discovery探索完了 | **11-19 08:41:00 JST** |
 | 整合性異常 | **0** |
 
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1918** |
+| canonical_id確認済みの一意な候補論文 | **1913** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1918** |
+| 非終端Research job合計 | **1913** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -51,11 +51,11 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **151251** |
+| 探索候補総数 | **151257** |
 | 処理済み | **24078** |
-| 未処理Discovery候補 | **127173** |
-| 収録済み | **3965** |
-| Research / Audit候補へ昇格済み | **1091** |
+| 未処理Discovery候補 | **127179** |
+| 収録済み | **3970** |
+| Research / Audit候補へ昇格済み | **1086** |
 | 無関係として除外 | **12824** |
 | 微妙として除外 | **6198** |
 
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **127173** |
+| 未処理候補（フィルタ前） | **127179** |
 | 機械規則による暫定隔離 | **2200** |
 | 拡張機械規則による追加隔離 | **1407** |
-| 機械規則通過後 | **123566** |
-| 系統内前方引用スコアによる選抜保留 | **117387** |
-| 暫定隔離合計 | **120994** |
+| 機械規則通過後 | **123572** |
+| 系統内前方引用スコアによる選抜保留 | **117393** |
+| 暫定隔離合計 | **121000** |
 | **読解可能候補（隔離後）** | **6179** |
 | 前方引用が同一系統で2本以上の候補 | **10336** |
 | 前方引用が同一系統で3本以上の候補 | **2595** |
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **15.9%**
-- 現在の生在庫: 後方references **59502件** / 前方引用 **69948件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128671件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **59514件** / 前方引用 **69948件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128672件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-19 09:16:28 JST（8時間53分前）** |
+| 最終maintenance完了 | **11-19 09:16:28 JST（9時間7分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -139,13 +139,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 直近6hのResearch完了 | **46** |
 | 直近6hのDiscovery run | **0** |
 | 直近6hのDiscovery本文確認・分類 | **0** |
-| 最終Research完了 | **11-19 13:25:39 JST** |
+| 最終Research完了 | **11-19 18:04:56 JST** |
 | 最終Discovery完了 | **11-19 08:41:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-19 13:25:39 JST** / worker — / run muse-20261119-cont2-research-2512.09010 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json
+- Research: **11-19 18:04:56 JST** / worker — / run muse-20261119-cont3-research-2602.01744 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.json
 - Discovery: **11-19 08:41:00 JST** / worker muse / run muse-discovery-20261119-r02::chunk-0001-of-0003
   - 本文確認・分類 **20件** / accept **4件** / unrelated+borderline **16件**
   - evidence: .survey/import-inbox/results/discovery/discovery-20261119-0900-muse-r02--chunk-0001-of-0003.json
@@ -288,7 +288,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1918** |
+| ready | **1913** |
 
 ### 候補の重複・識別情報欠損
 
@@ -308,7 +308,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **3972** |
+| inference/training/survey配下の論文Markdown実体 | **3977** |
 
 ### immutable submissionの未照合
 
