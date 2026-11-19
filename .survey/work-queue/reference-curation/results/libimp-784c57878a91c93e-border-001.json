@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-784c57878a91c93e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.37826",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.37826",
+    "identity_tokens": [
+      "arXiv:2610.37826"
+    ],
+    "reason": "全文読解の結果、主目的は多段QAの精度向上（質問分解・QA表・判定モデルによる誤り種別削減）であり、推論システム機構への直接貢献は薄い。効率面の言及は入力トークン削減（1,569/問 vs Self-Ask 6,140）とQAキャッシュ再利用によるLLM呼び出し12.9%削減にとどまり、精度向上策の副産物として提示されているため borderline と判定した。",
+    "first_checked_at": "2026-11-19T23:04:55+00:00",
+    "last_checked_at": "2026-11-19T23:04:55+00:00",
+    "linked_from": [
+      "worker-worklist research_audit (20261120 pool index 24)"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-questions"
+  },
+  "processed_at": "2026-11-19T23:04:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-784c57878a91",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

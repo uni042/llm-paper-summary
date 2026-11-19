@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-19T22:33:45+00:00",
-  "record_count": 6420,
+  "updated_at": "2026-11-19T23:04:56+00:00",
+  "record_count": 6422,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -100019,6 +100019,36 @@
       ],
       "borderline_recheck_count": 0,
       "title": "PathoJev: Efficient Pathology Decisions from Shared Visual Context"
+    },
+    "arXiv:2610.37826": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.37826",
+      "identity_tokens": [
+        "arXiv:2610.37826"
+      ],
+      "reason": "全文読解の結果、主目的は多段QAの精度向上（質問分解・QA表・判定モデルによる誤り種別削減）であり、推論システム機構への直接貢献は薄い。効率面の言及は入力トークン削減（1,569/問 vs Self-Ask 6,140）とQAキャッシュ再利用によるLLM呼び出し12.9%削減にとどまり、精度向上策の副産物として提示されているため borderline と判定した。",
+      "first_checked_at": "2026-11-19T23:04:55+00:00",
+      "last_checked_at": "2026-11-19T23:04:55+00:00",
+      "linked_from": [
+        "worker-worklist research_audit (20261120 pool index 24)"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-questions"
+    },
+    "arXiv:2610.35509": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.35509",
+      "identity_tokens": [
+        "arXiv:2610.35509"
+      ],
+      "reason": "全文読解の結果、主貢献は企業向けガバナンス（OPAによるポリシー、組織連動のモデル制限、支出スコープ、DLP、監査、段階的ロールアウト）であり、推論実行そのものの機構は変えていない。推論システム寄りの要素はEnvoy上でのストリーミング翻訳・トークン計量・プロンプトキャッシュ整形とゲートウェイ追加オーバーヘッド測定（中央値4ms、p99 11ms）にとどまる運用・統治層の報告であるため borderline と判定した。",
+      "first_checked_at": "2026-11-19T23:04:55+00:00",
+      "last_checked_at": "2026-11-19T23:04:55+00:00",
+      "linked_from": [
+        "worker-worklist research_audit (20261120 pool index 33)"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Governing Enterprise AI Traffic at Scale: Design and Operational Experience"
     }
   }
 }

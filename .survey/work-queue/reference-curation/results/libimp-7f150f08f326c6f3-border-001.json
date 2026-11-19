@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f150f08f326c6f3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.35509",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.35509",
+    "identity_tokens": [
+      "arXiv:2610.35509"
+    ],
+    "reason": "全文読解の結果、主貢献は企業向けガバナンス（OPAによるポリシー、組織連動のモデル制限、支出スコープ、DLP、監査、段階的ロールアウト）であり、推論実行そのものの機構は変えていない。推論システム寄りの要素はEnvoy上でのストリーミング翻訳・トークン計量・プロンプトキャッシュ整形とゲートウェイ追加オーバーヘッド測定（中央値4ms、p99 11ms）にとどまる運用・統治層の報告であるため borderline と判定した。",
+    "first_checked_at": "2026-11-19T23:04:55+00:00",
+    "last_checked_at": "2026-11-19T23:04:55+00:00",
+    "linked_from": [
+      "worker-worklist research_audit (20261120 pool index 33)"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Governing Enterprise AI Traffic at Scale: Design and Operational Experience"
+  },
+  "processed_at": "2026-11-19T23:04:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f150f08f326",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
