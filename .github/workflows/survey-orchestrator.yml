@@ -1,11 +1,13 @@
 name: Survey orchestrator
 
 on:
-  # GitHub scheduled events are best-effort. Run off-minute and provide six
-  # independent chances per hour; the Library handoff push below is the durable
-  # event-driven fallback when scheduled delivery is delayed or dropped.
+  # GitHub scheduled events are best-effort. Run off-minute once per hour;
+  # the Library handoff push below is the durable event-driven path, and this
+  # cron is only a missed-event recovery (thinned from every ten minutes to
+  # hourly on 2026-11-20, redesign Phase 0 item B1; the scheduler watchdog
+  # that used to drive ten-minute ticks is disabled).
   schedule:
-    - cron: '7/10 * * * *'
+    - cron: '7 * * * *'
   push:
     branches: [main]
     paths:
@@ -82,7 +84,7 @@ jobs:
           # The import processor is comparatively heavy (checkout, Python setup,
           # validation and bounded processing). Do not start it when its durable
           # inbox is empty. A Library handoff push triggers this orchestrator
-          # immediately; the ten-minute schedule is only a missed-event recovery.
+          # immediately; the hourly schedule is only a missed-event recovery.
           research_pending="$(count_dir .survey/import-inbox/pending/research)"
           discovery_pending="$(count_dir .survey/import-inbox/pending/discovery)"
           discovery_waiting="$(count_dir .survey/import-inbox/waiting/discovery)"
@@ -132,6 +134,10 @@ jobs:
           fi
 
           metadata_max_age_seconds=3000
+          # Forward-citation coverage is refreshed daily since 2026-11-20
+          # (redesign Phase 0 item B2); candidate priority keeps the hourly
+          # freshness gate above.
+          citation_max_age_seconds=82800
           force_metadata=0
           # An inbox handoff should dispatch import, not force unrelated metadata
           # refreshes for every new paper. Only explicit kick/configuration pushes
@@ -144,7 +150,7 @@ jobs:
             force_metadata=1
           fi
 
-          if [ "$force_metadata" -eq 1 ] || path_is_stale ".survey/work-queue/forward-citation-sweep.json" "$metadata_max_age_seconds"; then
+          if [ "$force_metadata" -eq 1 ] || path_is_stale ".survey/work-queue/forward-citation-sweep.json" "$citation_max_age_seconds"; then
             echo 'Forward-citation state is due by durable wall-clock age.'
             dispatch_if_idle forward-citation-sweep.yml
           else
