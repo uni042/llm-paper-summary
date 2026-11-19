@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（224本）
+## 自動生成の論文一覧（225本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -33,7 +33,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：24  
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
@@ -381,6 +381,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Screening Is Enough](2026-2604.01178-screening-is-enough.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、通常のソフトマックス注意（softmax 注意機構）が各問い合わせについて全鍵の重みを合計1に正規化するため、「どの鍵も十分に関連しない」という状態を直接表現しにくい点に着目する。パラメータ規模に関する近似的な学習曲線からは、同等の検証損失に必要なパラメータが約30%少ないと推定する。
+
+- **2026-04 · [Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU](2026-2604.15464-ragged-paged-attention-a-high-performance-and-flexible-llm-inference-ker.md)**  
+  実装：[✓](https://github.com/vllm-project/tpu-inference/blob/main/tpu_inference/kernels/ragged_paged_attention/v3/kernel.py) ・ リポジトリ内被引用：0  
+  細粒度タイル化、KV更新と注意計算の融合パイプライン、負荷分布ごとの専用コンパイルでTPUの不揃い実行を扱う注意カーネルで、帯域利用率86パーセントと演算利用率73パーセントを実測した。
 
 - **2026-04 · [LP-GEMM: Integrating Layout Propagation into GEMM Operations](2026-2604.04599-lp-gemm-integrating-layout-propagation-into-gemm-operations.md)**  
   実装：[✓](https://github.com/czariv/simple_attention) ・ リポジトリ内被引用：0  
@@ -857,7 +861,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：530  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：531  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

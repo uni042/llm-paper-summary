@@ -35,10 +35,15 @@
   "selection_reason": "表現一貫性プルーナRCP。LLM内在の注意から累積マスクを予測する交差注意プルーナで層をまたいで単調に視覚トークンを減らし、不可逆な除去による分布ずれを遅延修復アダプタで補う。LVLM推論コスト削減の機構そのもの。",
   "semantic_scholar_id": "08bef870440ad5323a79e178df04255d9ef56912",
   "source_url": "https://arxiv.org/abs/2604.04972",
-  "status": "ready",
+  "status": "superseded",
   "title": "RCP: Representation Consistency Pruner for Mitigating Distribution Shift in Large Vision-Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:44:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.04972-rcp-representation-consistency-pruner-for-mitigating-distribution-shift-.md",
+  "represented_canonical_id": "arXiv:2604.04972",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

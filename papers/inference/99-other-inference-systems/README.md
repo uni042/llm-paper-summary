@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（903本）
+## 自動生成の論文一覧（907本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -100,6 +100,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   DORAは、大規模言語モデル（Large Language モデル; LLM）の強化学習（Reinforcement Learning; RL）による後学習を、生成する応答の長さが大きく偏る状況でも効率よく進めるシステムである。
 
+- **2026-03 · [EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs](2026-2603.03681-evoprune-early-stage-visual-token-pruning-for-efficient-mllms.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  多くの既存削減方式は、視覚符号化器が全トークンを処理した後に削減を行うため、後段の言語モデルの事前入力処理は軽くできても、視覚符号化器がすでに使った演算量は取り戻せない。
+
 - **2026-03 · [AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models](2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md)**  
   実装：[✓](https://github.com/cvsp-lab/AgilePruner) ・ リポジトリ内被引用：3  
   従来の注意重視方式は画像符号化器のクラス・トークンが強く注目する領域を残す。LLaVA-1.5-7B、TextVQA、RTX 4090の単一GPU評価で、64個を残す設定は576個を残す基準に対して推論計算量3.14→0.48兆FLOPs、1画像遅延172→115 ms、GPUメモリ13.60→13.30 GBとなった。
@@ -159,10 +163,6 @@
 - **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：2  
   重みと活性値を低ビット化すればメモリ使用量を抑えられるが、量子化誤差の影響は画像と文章という二つのモダリティの間だけでなく、同じモダリティ内の各トークンや層によっても異なる。著者はこれを1.60%の改善と説明するが、表の数値としては1.60ポイントの上昇である。
-
-- **2026-03 · [EvoPrune: Early-Stage Visual Token Pruning for Efficient MLLMs](2026-2603.03681-evoprune-early-stage-visual-token-pruning-for-efficient-mllms.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  多くの既存削減方式は、視覚符号化器が全トークンを処理した後に削減を行うため、後段の言語モデルの事前入力処理は軽くできても、視覚符号化器がすでに使った演算量は取り戻せない。
 
 - **2026-02 · [Out of the Memory Barrier: A Highly Memory Efficient Training System for LLMs with Million-Token Contexts](2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md)**  
   実装：[✓](https://github.com/wenhaoli-xmu/OOMB) ・ リポジトリ内被引用：2  
@@ -1378,6 +1378,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   難しい質問には段階的な思考連鎖（Chain-of-Thought、CoT）が有効だが、簡単な質問にも毎回長い思考を生成すると、回答に至るまでの生成トークン数と推論費用が増える。ただし最初の並列生成は無料ではなく、バッチやGPU配置を含む実システム全体で同じ節約率になるとは限らない。
 
+- **2026-04 · [RCP: Representation Consistency Pruner for Mitigating Distribution Shift in Large Vision-Language Models](2026-2604.04972-rcp-representation-consistency-pruner-for-mitigating-distribution-shift-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  累積マスクの枝刈りと、捨てたトークンの要約による遅延修復と統計一致の修復損失を組み合わせ、視覚トークン88.9パーセント削減とFLOPs 85.7パーセント削減を精度低下約5パーセントで達成した。
+
 - **2026-04 · [R2-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction](2026-2604.18995-r2-dllm-accelerating-diffusion-large-language-models-via-spatio-temporal.md)**  
   実装：[✓](https://github.com/GATECH-EIC/R2-dLLM) ・ リポジトリ内被引用：0  
   拡散型モデルの復号に残る空間と時間の冗長さを、塊ごとの一括確定と安定トークンの早期確定、さらに冗長さの小さい軌跡での微調整で削り、歩数を最大88パーセント減らした。
@@ -1526,9 +1530,17 @@
   実装：[✓](https://github.com/acalabys/SERQ) ・ リポジトリ内被引用：0  
   SERQ（Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization）は、LLMの線形層で重みと活性値をともに低ビット化した際の誤差を、小さな追加行列で補う後学習量子化（PTQ）手法である。
 
+- **2026-03 · [SeGPruner: Semantic-Geometric Visual Token Pruner for 3D Question Answering](2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answeri.md)**  
+  実装：[✓](https://github.com/intcomp/SegPruner) ・ リポジトリ内被引用：0  
+  顕著性で物体の証拠を確保し、3次元幾何の多様性で空間の広がりを補う二段の視覚トークン削減で、トークン予算91パーセント削減と遅延86パーセント削減を3次元質問応答の精度を保ちながら達成した。
+
 - **2026-03 · [Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints](2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   バッチ全体の割当てを整数線形計画で解いて費用と容量を直接守る経路選択の枠組みで、敵対的なバッチ構成では問い単位の方式より最大24パーセント高い精度を示した。
+
+- **2026-03 · [ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models](2026-2603.21105-resprune-text-conditioned-subspace-reconstruction-for-visual-token-pruni.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  選んだ視覚トークンの部分空間で説明できない残差が最大のトークンを貪欲に足し、指示文の名詞との類似度で重み付けする学習不要の枝刈りで、トークンの77.8パーセント削減でも性能の99.3パーセントを保持した。
 
 - **2026-03 · [Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification](2026-2603.01399-quasar-quantized-self-speculative-acceleration-for-rapid-inference-via-m.md)**  
   実装：[✓](https://github.com/Tom-HG/Quasar) ・ リポジトリ内被引用：0  
@@ -1689,6 +1701,10 @@
 - **2026-02 · [SimpleTool: Parallel Decoding for Real-Time LLM Function Calling](2026-2603.00030-simpletool-parallel-decoding-for-real-time-llm-function-calling.md)**  
   実装：[✓](https://github.com/HaxxorCialtion/SimpleTool) ・ リポジトリ内被引用：0  
   SimpleToolは、大規模言語モデルによる関数呼出し（function calling）の待ち時間を減らすために、出力表現の圧縮と並列復号（parallel デコード）を一緒に設計した手法である。
+
+- **2026-02 · [Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models](2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffus.md)**  
+  実装：[✓](https://github.com/duterscmy/SOAR) ・ リポジトリ内被引用：0  
+  拡散言語モデルのマスク解除順序を位置空間で探索し、信頼度が高いステップでは並列確定へ畳む切替型復号で、正解率を貪欲復号より上げながら1.4から1.6倍の高速化を両立した。
 
 - **2026-02 · [SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference](2026-2602.00942-salaad-sparse-and-low-rank-adaptation-via-admm-for-large-language-model-.md)**  
   実装：[✓](https://github.com/HaoMAFRLu/salaad) ・ リポジトリ内被引用：0  
@@ -2025,7 +2041,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：97  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：98  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  

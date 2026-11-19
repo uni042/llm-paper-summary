@@ -35,10 +35,15 @@
   "selection_reason": "多視点画像から3D QAを行うVLMで、Saliency-aware Token Selectorが質問に関係する物体の重要視覚トークンを保持し、Geometry-aware Token Diversifierが3D幾何距離を使って空間的に分散したトークンを補完する。ScanQA/OpenEQAの一次要旨は視覚トークン予算91%減、推論遅延86%減と報告。入力トークン圧縮がLLM推論時の計算・遅延を直接削減するためaccept。3D QAの多視点設定に限定した報告であり一般的なLLM推論全体への倍率ではない。",
   "semantic_scholar_id": "d2e142812095e451be2aa6add94d9beffbd6723b",
   "source_url": "https://arxiv.org/abs/2603.29437",
-  "status": "ready",
+  "status": "superseded",
   "title": "SeGPruner: Semantic-Geometric Visual Token Pruner for 3D Question Answering",
   "type": "research",
   "venue": "IEEE transactions on multimedia",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:44:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.29437-segpruner-semantic-geometric-visual-token-pruner-for-3d-question-answeri.md",
+  "represented_canonical_id": "arXiv:2603.29437",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

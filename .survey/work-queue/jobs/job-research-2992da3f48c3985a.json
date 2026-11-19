@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデル向け学習不要デコードSOAR。信頼度が低い局面では非マスク化の代替決定を短く探索して早まった確定を避け、高い局面では探索を畳んで多数位置を並列に確定する、信頼度切替型の位置ビーム探索。拡散デコードの推論機構そのもの。",
   "semantic_scholar_id": "930f348f5b96bff52314a3fc76a4102f3177318e",
   "source_url": "https://arxiv.org/abs/2602.10953",
-  "status": "ready",
+  "status": "superseded",
   "title": "Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:44:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.10953-search-or-accelerate-confidence-switched-position-beam-search-for-diffus.md",
+  "represented_canonical_id": "arXiv:2602.10953",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

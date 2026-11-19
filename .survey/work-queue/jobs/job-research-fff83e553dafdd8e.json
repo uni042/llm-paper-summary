@@ -35,10 +35,15 @@
   "selection_reason": "テキスト条件付き部分空間再構成による視覚トークン剪定ResPrune。残差エネルギーで貪欲に部分空間を広げて幾何構造を保ちつつ、テキスト関連度で選択を条件付けて指示に関連するトークンを残す学習不要の剪定。LVLM推論の視覚トークン削減機構そのもの。",
   "semantic_scholar_id": "d8d6855727d59b8f55efe9cade6191b073037d6a",
   "source_url": "https://arxiv.org/abs/2603.21105",
-  "status": "ready",
+  "status": "superseded",
   "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
   "type": "research",
   "venue": "IEEE transactions on circuits and systems for video technology (Print)",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:44:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.21105-resprune-text-conditioned-subspace-reconstruction-for-visual-token-pruni.md",
+  "represented_canonical_id": "arXiv:2603.21105",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
