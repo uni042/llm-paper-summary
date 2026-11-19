@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデル推論向けNPU設計。双方向注意、ブロック単位のKVキャッシュ更新、ステップ間再利用、非GEMM中心のサンプリングというdLLM固有の推論パターンが既存NPUと合わない問題に対し、ISAとメモリ階層を新設する初のアーキテクチャ提案。推論ハードウェアそのもの。",
   "semantic_scholar_id": "6e3001d2aa0d51b77b977dcac725abddfe46f503",
   "source_url": "https://arxiv.org/abs/2601.20706",
-  "status": "ready",
+  "status": "superseded",
   "title": "NPU Design for Diffusion Language Model Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:30:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.20706-npu-design-for-diffusion-language-model-inference.md",
+  "represented_canonical_id": "arXiv:2601.20706",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

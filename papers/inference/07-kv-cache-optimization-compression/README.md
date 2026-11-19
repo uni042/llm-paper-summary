@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（453本）
+## 自動生成の論文一覧（454本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1075,6 +1075,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/BradySteele/kv-cache-compression-limits) ・ リポジトリ内被引用：0  
   しかし、TinyLlama-1.1B-Chat-v1.0、最大2048トークンの評価では、5乱数種・4保持率・3課題のいずれでも、SIPは単純な基準方式に対する統計的に有意な優位を示さなかった。
 
+- **2026-01 · [NPU Design for Diffusion Language Model Inference](2026-2601.20706-npu-design-for-diffusion-language-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  双方向注意の全系列計算、ブロック更新型の鍵値キャッシュ、縮約中心のサンプリングに専用命令と分離メモリで対応する拡散言語モデル専用NPUで、GPU比で最大4.91倍の速度と23.3倍の電力効率を得た。
+
 - **2026-01 · [Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions](2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、複数の大規模言語モデル（LLM）要求を限られたGPUで処理するとき、過去に計算した鍵・値（KV）キャッシュをどこに保存し、いつGPUへ戻すべきかを扱う。推論の事前充填（プリフィル）段階では入力トークンから注意機構のKVを計算する。
@@ -1106,7 +1110,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：100  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：101  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  

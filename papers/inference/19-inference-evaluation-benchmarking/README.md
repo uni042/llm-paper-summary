@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（121本）
+## 自動生成の論文一覧（122本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -294,6 +294,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   同じ80億パラメータモデルを半精度から13形式へ変換し、五つの下流課題と困惑度と速度を統一条件で比べ、5ビットと調整のよい4ビットが容量を約3分の2減らしても品質をほぼ保ち、最も強い3ビットだけが推論課題で大きく崩れることを示した実務指針。
 
+- **2026-01 · [Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference](2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模モデルの応答全体ではなく先頭の接頭辞だけをヒントとして買い、小規模モデルに最終応答を書かせる費用配分で、目標精度を保ちながら推論費用を33から65パーセント削減した。
+
 - **2026-01 · [L³: Large Lookup Layers](2026-2601.21461-l-large-lookup-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   このため、CPUに退避した専門家をGPUへ移す場合は、選択後の転送が計算の待ち時間になりやすい。推論速度はL³の配置に依存し、2.6B稼働モデルで最初のL³を第5層後に置くと、原著表2のバッチ1速度は密モデル776に対して772トークン/秒/系列だった。
@@ -360,13 +364,13 @@
   実装：✓ ・ リポジトリ内被引用：3  
   1T トークンをk=1で事前学習したcheckpointから、各方式でさらに80B トークンを継続学習する。
 
+- **2025-06 · [Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques](2025-2506.06579-towards-efficient-multi-llm-inference-characterization-and-analysis-of-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  このサーベイは、複数の独立した大規模言語モデル（LLM）を一つのサービスで使い分ける際、どの要求をどのモデルへ送り、どの条件で上位モデルへ再実行するかを推論システムの最適化問題として整理する。本文中の最大98%費用削減などの値は引用した個別研究の結果であり、このサーベイの独立した再現実験ではない。
+
 - **2025-11 · [Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications](2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。
-
-- **2025-06 · [Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques](2025-2506.06579-towards-efficient-multi-llm-inference-characterization-and-analysis-of-l.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  このサーベイは、複数の独立した大規模言語モデル（LLM）を一つのサービスで使い分ける際、どの要求をどのモデルへ送り、どの条件で上位モデルへ再実行するかを推論システムの最適化問題として整理する。本文中の最大98%費用削減などの値は引用した個別研究の結果であり、このサーベイの独立した再現実験ではない。
 
 - **2024-12 · [A Survey of RWKV](2024-2412.14847-a-survey-of-rwkv.md)**  
   実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：2  

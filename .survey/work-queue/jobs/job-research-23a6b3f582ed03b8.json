@@ -35,10 +35,15 @@
   "selection_reason": "相互情報量に基づくLLMブロック剪定MI-PRUN。隠れ状態の遷移における相互情報量で冗長なブロックを特定し、データ処理不等式で連続ブロックと個別ブロックの重要度の関係を与え、高速なブロック選択アルゴリズムで大域的に剪定する。推論加速のためのモデル圧縮機構そのもの。",
   "semantic_scholar_id": "51123810b81be9dbf03e1db312478c532adc90b5",
   "source_url": "https://arxiv.org/abs/2601.07212",
-  "status": "ready",
+  "status": "superseded",
   "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
   "type": "research",
   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:30:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.07212-mi-prun-optimize-large-language-model-pruning-via-mutual-information.md",
+  "represented_canonical_id": "arXiv:2601.07212",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

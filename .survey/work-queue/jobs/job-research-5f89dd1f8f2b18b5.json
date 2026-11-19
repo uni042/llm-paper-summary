@@ -35,10 +35,15 @@
   "selection_reason": "大型LLMの全回答ではなく短いprefixヒントだけを小型モデルへ与え、必要性とトークン長を二段階で予測。GSM8K等の推論・コード生成でLLM単独比42～94%の費用削減を著者報告。",
   "semantic_scholar_id": "ed8903f29e424e4a96582bc1de47d675b8fda3b4",
   "source_url": "https://arxiv.org/abs/2601.22132",
-  "status": "ready",
+  "status": "superseded",
   "title": "Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:30:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2601.22132-pay-for-hints-not-answers-llm-shepherding-for-cost-efficient-inference.md",
+  "represented_canonical_id": "arXiv:2601.22132",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

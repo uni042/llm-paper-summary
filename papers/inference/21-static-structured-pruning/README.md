@@ -37,7 +37,9 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
-該当なし。
+- **2026-01 · [Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration](2026-2601.02674-iterative-structured-pruning-for-large-language-models-with-multi-domain.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本論文は大規模言語モデル（LLM）の構造化枝刈り（structured 枝刈り）で、削除すべきチャネルの選択をより正確にするため、多領域の較正データと反復的な重要度の再計算を組み合わせる。Qwen2.5-32Bを50%構造化枝刈りした6課題ゼロショット評価では、FLAPの平均36.59点に対して提案法は46.65点となる。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -56,10 +58,6 @@
 - **2026-02 · [FlattenGPT: Depth Compression for Transformer with Layer Flattening](2026-2602.08858-flattengpt-depth-compression-for-transformer-with-layer-flattening.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FlattenGPTは、変換器（Transformer）の隣接層が似た隠れ状態を受け取ることに着目し、層全体を削除するのではなく、隣接2層を幅の広い1層へ平坦化し、その内部の冗長な注意頭と多層パーセプトロン（MLP）チャネルを削る方式である。
-
-- **2026-01 · [Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration](2026-2601.02674-iterative-structured-pruning-for-large-language-models-with-multi-domain.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本論文は大規模言語モデル（LLM）の構造化枝刈り（structured 枝刈り）で、削除すべきチャネルの選択をより正確にするため、多領域の較正データと反復的な重要度の再計算を組み合わせる。Qwen2.5-32Bを50%構造化枝刈りした6課題ゼロショット評価では、FLAPの平均36.59点に対して提案法は46.65点となる。
 
 - **2025-12 · [SAP: Syntactic Attention Pruning for Transformer-based Language Models](2025-2512.19125-sap-syntactic-attention-pruning-for-transformer-based-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -86,7 +84,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：88  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：89  
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
 
 - **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
