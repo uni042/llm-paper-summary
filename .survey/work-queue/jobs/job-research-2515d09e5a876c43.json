@@ -35,10 +35,15 @@
   "selection_reason": "異なるLLM間で互換性のないKVキャッシュを、対象モデル各層に対応する線形写像で変換するKV-Lingo。元モデルのKVと対象モデルの本来のKVでの予測分布の差を蒸留で小さくする。モデル切替時に対象モデルのprefillをやり直す代わりに変換と1回のdecodeで済ませ、著者らはQwen同士の64-token文脈で切替後TTFTを9.6倍、H100の32K文脈で最大29倍短縮と報告。これはモデル切替後のTTFTであり全リクエスト速度ではない。LLM推論時のcross-model KV再利用に直接寄与するためaccept。",
   "semantic_scholar_id": "3479923a304be061633520ca3d15c780dcb2a394",
   "source_url": "https://arxiv.org/abs/2609.32610",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV-Lingo: Learning KV-Cache Translators with Distillation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:57:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.md",
+  "represented_canonical_id": "arXiv:2609.32610",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

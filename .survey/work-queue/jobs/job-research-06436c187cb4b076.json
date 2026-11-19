@@ -35,10 +35,15 @@
   "selection_reason": "出力ヘッド量子化のためのソフトマックス再パラメータ化。大きな語彙で出力ヘッドが推論費用の無視できない部分になる問題に対し、機能的に等価な出力ヘッドの族を探索してから量子化することで、検証KLで選んだ係数によりW4の歪みを大幅に減らす学習後手法。推論量子化機構そのもの。",
   "semantic_scholar_id": "dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68",
   "source_url": "https://arxiv.org/abs/2609.31291",
-  "status": "ready",
+  "status": "superseded",
   "title": "Softmax Reparameterization for Output-Head Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:57:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2609.31291-softmax-reparameterization-for-output-head-quantization.md",
+  "represented_canonical_id": "arXiv:2609.31291",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "ハイブリッド言語モデルの固定長recurrent stateを、observability Gramian由来の減衰重みと正規化state rangeで混合精度量子化する学習・較正不要の手法。著者は平均4bitでexcess NLLを7 baseline中最良比3.3〜27.9倍縮小、6bitではFP32 stateとの差0.005 nats未満と報告。状態メモリ圧縮に直接関連。",
   "semantic_scholar_id": "624f9b4ca00c304a0aa10d60ec550d06cb363229",
   "source_url": "https://arxiv.org/abs/2609.30950",
-  "status": "ready",
+  "status": "superseded",
   "title": "Low-Bit Recurrent States in Hybrid Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:57:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.md",
+  "represented_canonical_id": "arXiv:2609.30950",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "完全な状態へ書き込み、コンパクトなスケッチから読むSketchSSM。ハイブリッド注意で循環状態の読みがボトルネックになる問題に対し、状態更新は完全なまま、読み出しだけを低ランクの状態重みつきクエリ近似で置き換え、近似の基底をオフラインで固定する。推論メモリ機構そのもの。",
   "semantic_scholar_id": "07b3d0c344271483e89ec6f7832636d7a8432162",
   "source_url": "https://arxiv.org/abs/2609.33051",
-  "status": "ready",
+  "status": "superseded",
   "title": "SketchSSM: Write to the Full State, Read from a Compact Sketch",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:57:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.33051-sketchssm-write-to-the-full-state-read-from-a-compact-sketch.md",
+  "represented_canonical_id": "arXiv:2609.33051",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

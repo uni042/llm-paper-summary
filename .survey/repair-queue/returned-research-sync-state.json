@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0a9663460bb9df013b41e0389cb32effa82dbd28",
+  "base_commit": "560011c263c993bcd295a2fee581718e30c822e3",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -353,7 +353,12 @@
     "2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.json",
     "2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-context-compression.json",
     "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json",
+    "2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.json",
+    "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json",
+    "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
+    "2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal-models.json",
+    "2026-2609.33051-sketchssm-write-to-the-full-state-read-from-a-compact-sketch.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
@@ -41036,6 +41041,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.30950": {
+      "order": [
+        "2026-11-19T23:53:32+00:00",
+        "2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.31291": {
+      "order": [
+        "2026-11-19T23:54:17+00:00",
+        "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.32610": {
+      "order": [
+        "2026-11-19T23:55:02+00:00",
+        "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.32831": {
+      "order": [
+        "2026-11-19T23:55:46+00:00",
+        "2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.33051": {
+      "order": [
+        "2026-11-19T23:56:31+00:00",
+        "2026-2609.33051-sketchssm-write-to-the-full-state-read-from-a-compact-sketch.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50637,6 +50687,21 @@
     "arxiv:2609.30820": [
       "papers/inference/99-other-inference-systems/2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindne.md",
       "papers/inference/99-other-inference-systems/2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindne.md"
+    ],
+    "arxiv:2609.30950": [
+      "papers/inference/99-other-inference-systems/2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.md"
+    ],
+    "arxiv:2609.31291": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.31291-softmax-reparameterization-for-output-head-quantization.md"
+    ],
+    "arxiv:2609.32610": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.md"
+    ],
+    "arxiv:2609.32831": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal.md"
+    ],
+    "arxiv:2609.33051": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.33051-sketchssm-write-to-the-full-state-read-from-a-compact-sketch.md"
     ]
   }
 }
