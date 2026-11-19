@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（933本）
+## 自動生成の論文一覧（938本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1754,6 +1754,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   モデル圧縮では重みの絶対値、活性値、曲率や再構成誤差を基準に枝刈り・量子化の強さを選ぶ。従来のWanda重要度とのスピアマン順位相関は−0.054だったものの、ヘッド除去によるパープレキシティ悪化との相関は有意でなく、50%保持ではCGC-Lのパープレキシティ27.87が均一枝刈り27.57より悪化した。
 
+- **2026-03 · [Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model](2026-2603.04162-bielik-q2-sharp-a-comparative-study-of-extreme-2-bit-quantization-method.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ポーランド語十一ビーモデルへ六つの二ビット量子化を共通ヘッセ行列で比較し、クイップシャープが既存のコミュニティ量子化と互角、キューティップがビット当たり最良、回転系は生成で崩壊し、四流派が似た精度へ収束して手法に依らない天井を示唆した。
+
 - **2026-03 · [Bielik-Minitron-7B: Compressing Large Language Models via Structured Pruning and Knowledge Distillation for the Polish Language](2026-2603.11881-bielik-minitron-7b-compressing-large-language-models-via-structured-prun.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重み容量と計算費用を下げる方法には、数値精度を落とす量子化と、モデル構造自体を小さくする枝刈りがある。パラメータ削減率は33.4%である。
@@ -1786,6 +1790,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   TraceNASは、事前学習済み大規模言語モデル（Large Language モデル、LLM）から層と内部チャネルを削除する構造的枝刈り（structured 枝刈り）において、候補構造を逐一学習させずに選ぶための探索方式である。
 
+- **2026-02 · [Token Management in Multi-Tenant AI Inference Platforms](2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論容量をトークン処理量、鍵値キャッシュ、同時実行数の三単位の利用権利として定式化し、等級と借金に基づく優先度で受け入れを制御することで、過負荷時も保護対象の遅延を一・二秒未満に保ち、弾力的な作業間で公平な配分へ収束させた。
+
 - **2026-02 · [Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching](2026-2602.22871-test-time-scaling-with-diffusion-language-models-via-reward-guided-stitc.md)**  
   実装：[✓](https://github.com/roymiles/diffusion-stitching) ・ リポジトリ内被引用：0  
   本論文はこの無駄に着目し、拡散言語モデルの安価な並列探索から中間ステップを再利用する仕組みを提案する。さらにピークメモリはQwen PRM構成で約42.8GB、比較AR単体の約14.4GBより大きい。
@@ -1805,6 +1813,10 @@
 - **2026-02 · [SPQ: An Ensemble Technique for Large Language Model Compression](2026-2602.18420-spq-an-ensemble-technique-for-large-language-model-compression.md)**  
   実装：[✓](https://github.com/JiaminYao/spq-compression) ・ リポジトリ内被引用：0  
   SPQ（SVD–枝刈り–量子化）は、大規模言語モデル（LLM）の重みメモリを削減する際、単一の圧縮手段をすべての層に一律に適用するのではなく、注意層には特異値分解（Singular Value Decomposition; SVD）による低ランク近似、フィードフォワード層（MLP）には活性統計に基づく構造的剪定…
+
+- **2026-02 · [Softmax Linear Attention: Reclaiming Global Competition](2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  正規化による競争をトークン軸からヘッド軸へ移し、読み取りと書き込みの二重の門で線形注意へ勝者総取りを取り戻す枠組みで、GLAの検索平均を19.17%から26.88%へ上げ、UUID検索の8K条件ではGated DeltaNetを5.9%から37.4%へ改善した。
 
 - **2026-02 · [SimpleTool: Parallel Decoding for Real-Time LLM Function Calling](2026-2603.00030-simpletool-parallel-decoding-for-real-time-llm-function-calling.md)**  
   実装：[✓](https://github.com/HaxxorCialtion/SimpleTool) ・ リポジトリ内被引用：0  
@@ -1837,6 +1849,10 @@
 - **2026-02 · [POP: Prefill-Only Pruning for Efficient Large Model Inference](2026-2602.03295-pop-prefill-only-pruning-for-efficient-large-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィルでのみ深い層を飛ばしデコードでは全層を使う段階別枝刈りで、生成精度をほぼ保ったままプリフィルを最大1.37倍高速化した。
+
+- **2026-02 · [POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models](2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-found.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  入力処理でチャネルを保持・候補・削除へ三分割し、生成中は候補の中だけでマスクを作り直す学習なしの動的構造枝刈りで、Llama2-7Bを密比1.14倍（削減20%）から1.38倍（削減40%）へ速くし、追加計算は全結合の2.85%、事前準備はゼロを実現した。
 
 - **2026-02 · [Phase transitions in large language model compression](2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md)**  
   実装：[✓](https://github.com/whucs21Mzy/Model-Phase-Transitions) ・ リポジトリ内被引用：0  
@@ -1877,6 +1893,10 @@
 - **2026-02 · [Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models](2026-2602.01428-improving-the-trade-off-between-watermark-strength-and-speculative-sampl.md)**  
   実装：[✓](https://github.com/hwq0726/watermark-tradeoff) ・ リポジトリ内被引用：0  
   一方、投機的サンプリングは小型のドラフトモデルが先読みした複数トークンを大型ターゲットモデルがまとめて検証し、受理できたトークンの分だけ逐次的な大型モデル呼び出しを減らす。ELI5とC4、LlamaおよびGemmaの二組のモデルで、1検証ステップ当たりの受理トークン数が通常投機的サンプリングとほぼ同じで、検出性能も改善することを確認した。
+
+- **2026-02 · [HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction](2026-2602.06527-hyper-bridging-exploration-and-exploitation-for-scalable-llm-reasoning-w.md)**  
+  実装：[✓](https://github.com/ShengxuanQiu/HyPER) ・ リポジトリ内被引用：0  
+  経路プールの信頼度と多様さを64トークンごとに観測して分岐・短区間拡張・1トークン精錬を使い分ける学習なしの制御と、長さと信頼度による最終投票で、Qwen3-NextのAIME24正解率を自己整合の90.7%から97.3%へ上げ、トークン費用を正規化値0.61まで下げた。
 
 - **2026-02 · [HyLRA: Hybrid Layer Reuse Attention for Efficient Long-Context Inference](2026-2602.00777-hylra-hybrid-layer-reuse-attention-for-efficient-long-context-inference.md)**  
   実装：[✓](https://anonymous.4open.science/r/unified-cache-management-CF80/) ・ リポジトリ内被引用：0  
@@ -2316,6 +2336,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   MoE-GPSは、複数GPUに専門家を分散配置するMixture-of-Experts（MoE）モデルで、負荷分散のために人気専門家を複製するとき、どの程度細かくルーティング先を予測すべきかを選択する性能分析フレームワークである。MoE-GPSはこの交換条件をGPU計算・通信・予測費用へ分解し、システム全体の遅延が最小になる選択を示す。
 
+- **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  μ-MoEは、モデルをあらかじめ一度だけ枝刈りするのではなく、実際に与えられたプロンプトをその場の校正データとして使い、線形層の重みのうち重要なものだけを有効化する方式である。
+
 - **2025-04 · [Activated LoRA: Fine-tuned LLMs for Intrinsics](2025-2504.12397-activated-lora-fine-tuned-llms-for-intrinsics.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：3  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
@@ -2327,6 +2351,10 @@
 - **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   長文脈の大規模言語モデルで問題になるキー・バリュー（KV）キャッシュの容量を減らす方式を、どの軸の冗長性を削るかという視点で整理する。したがって表4の2.87倍と1.86倍を並べて前者が後者より優れた方式と結論付けることはできない。
+
+- **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
+  実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：3  
+  ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
 
 - **2024-12 · [WebLLM: A High-Performance In-Browser LLM Inference Engine](2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md)**  
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：3  
@@ -2356,10 +2384,6 @@
   実装：✓ ・ リポジトリ内被引用：2  
   Beagle（Budget EAGLE）は、投機的復号の小型下書きモデルに単層のcross-注意機構 Transformerを採用し、EAGLE-v2のようなself-注意機構型下書きに近い速度を、単純な構造と少ないメモリで得る方式である。
 
-- **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  μ-MoEは、モデルをあらかじめ一度だけ枝刈りするのではなく、実際に与えられたプロンプトをその場の校正データとして使い、線形層の重みのうち重要なものだけを有効化する方式である。
-
 - **2025-04 · [Hawkeye: Model Collaboration for Efficient Reasoning](2025-2504.00424-hawkeye-model-collaboration-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Hawkeyeは、推論用の大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を出力し続けることによる生成遅延と課金額を削減する研究である。重要なのは、二段階のモデル連携を推論時だけでなく事後学習の報酬設計にも組み込んでいることである。
@@ -2379,10 +2403,6 @@
 - **2025-02 · [Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs](2025-2502.06766-exploiting-sparsity-for-long-context-inference-million-token-contexts-on.md)**  
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：2  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
-
-- **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：2  
-  ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
 
 - **2025-11 · [Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer](2025-2502.15779-rotate-clip-and-partition-towards-w2a4kv4-quantization-by-integrating-ro.md)**  
   実装：[✓](https://github.com/songsm921/RCP) ・ リポジトリ内被引用：1  
@@ -3015,11 +3035,11 @@
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：83  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：84  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：81  
+  実装：✓ ・ リポジトリ内被引用：82  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
@@ -3453,7 +3473,7 @@
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：25  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  

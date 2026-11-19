@@ -35,10 +35,15 @@
   "selection_reason": "マルチテナント推論基盤のトークンプール。専用エンドポイントの容量遊休と、リクエスト費用の異質性を無視するレート制限の間に対し、推論固有の単位（トークンスループット・KVキャッシュ・同時実行）で容量を権利として表し、受理と自動スケーリングを同じ容量モデルから認可する制御面の抽象化。推論基盤そのもの。",
   "semantic_scholar_id": "f9a9dd25aa7a6dbabb593dac964cb089996921ee",
   "source_url": "https://arxiv.org/abs/2603.00356",
-  "status": "ready",
+  "status": "superseded",
   "title": "Token Management in Multi-Tenant AI Inference Platforms",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T09:23:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.md",
+  "represented_canonical_id": "arXiv:2603.00356",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

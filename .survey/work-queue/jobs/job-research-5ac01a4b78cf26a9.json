@@ -35,10 +35,15 @@
   "selection_reason": "固定の構造枝刈りではトークン生成中に変わる活性パターンへ追従できない問題を扱う。prefillで保持・候補・削除の粗いチャネル領域を決め、decodeでは候補領域だけ文脈依存の細粒度マスクを更新するPOPを提案。追加校正・再学習なしでLLM/MoE/VLMの推論演算削減と遅延改善を狙う直接的なオンライン剪定方式。",
   "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
   "source_url": "https://arxiv.org/abs/2602.06822",
-  "status": "ready",
+  "status": "superseded",
   "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T09:23:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.06822-pop-online-structural-pruning-enables-efficient-inference-of-large-found.md",
+  "represented_canonical_id": "arXiv:2602.06822",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

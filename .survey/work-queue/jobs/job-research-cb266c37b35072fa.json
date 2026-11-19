@@ -35,10 +35,15 @@
   "selection_reason": "線形注意がsoftmax正規化を省くことで長文脈の選択性を失う問題に対し、トークン単位でなく注意ヘッド単位の競合ゲートを導入するSoftmax Linear Attentionを提案。RetNet・GLA・GDN等の線形基準に対し、線形計算量を維持しながら検索耐性を改善する。新しい低計算量注意アーキテクチャとして関連。",
   "semantic_scholar_id": "ed091b29e1efc522c2a8a1844b5a0a56943ec237",
   "source_url": "https://arxiv.org/abs/2602.01744",
-  "status": "ready",
+  "status": "superseded",
   "title": "Softmax Linear Attention: Reclaiming Global Competition",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T09:23:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.01744-softmax-linear-attention-reclaiming-global-competition.md",
+  "represented_canonical_id": "arXiv:2602.01744",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

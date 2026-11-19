@@ -45,6 +45,10 @@
   実装：[✓](https://github.com/open-lm-engine/lm-engine) ・ リポジトリ内被引用：1  
   線形注意やMamba-2、Gated DeltaNetなどの再帰型方式は固定サイズの状態へ過去を畳み込み、生成時のメモリを一定に保ちやすい。
 
+- **2026-01 · [MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head](2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md)**  
+  実装：[✓](https://github.com/DAGroup-PKU/MHLA) ・ リポジトリ内被引用：1  
+  MHLA（Multi-Head Linear 注意機構）は、系列長に対して計算量が線形に増える注意機構を維持しながら、従来の線形注意（linear 注意機構）で失われるトークン間の選択性を回復する構造である。DeiT-TのImageNet-1K正答率は通常の線形注意69.8%からMHLA75.8%へ、通常のソフトマックス注意72.2%も上回った。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-09 · [Switching Linear Attention](2026-2609.39034-switching-linear-attention.md)**  
@@ -87,10 +91,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
 
-- **2026-01 · [MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head](2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md)**  
-  実装：[✓](https://github.com/DAGroup-PKU/MHLA) ・ リポジトリ内被引用：0  
-  MHLA（Multi-Head Linear 注意機構）は、系列長に対して計算量が線形に増える注意機構を維持しながら、従来の線形注意（linear 注意機構）で失われるトークン間の選択性を回復する構造である。DeiT-TのImageNet-1K正答率は通常の線形注意69.8%からMHLA75.8%へ、通常のソフトマックス注意72.2%も上回った。
-
 - **2026-01 · [Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths](2026-2601.06463-gecko-an-efficient-neural-architecture-inherently-processing-sequences-w.md)**  
   実装：[✓](https://github.com/XuezheMax/gecko-llm) ・ リポジトリ内被引用：0  
   Geckoは、従来のTransformerで長い系列を扱う際の二乗注意計算と、固定窓に分割する方式で過去の情報が失われる問題を、モデル構造そのものから扱う研究である。
@@ -98,7 +98,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
-  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：117  
+  実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：118  
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
 
 - **2025-11 · [DiffuMamba: High-Throughput Diffusion LMs with Mamba Backbone](2025-2511.15927-diffumamba-high-throughput-diffusion-lms-with-mamba-backbone.md)**  
@@ -132,7 +132,7 @@
   また再帰式を素朴にGPUへ実装すると、逐次依存や高帯域メモリへの状態書き込みが律速となる。著者らは二つの仕組みを提案する。
 
 - **2024-02 · [Simple linear attention language models balance the recall-throughput tradeoff](2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md)**  
-  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/HazyResearch/based) ・ リポジトリ内被引用：52  
   通常のソフトマックス注意（softmax 注意機構）は、入力文脈に含まれる特定の情報を後から正確に参照する再取得（recall）に強い。モデル規模360M～1.3B、最大50Bトークンの学習、単一NVIDIA H100での実行測定を行い、1.3B・バッチ128・1024トークン生成でFlashAttention-2比最大24倍の処理量を報告する。
 
 - **2024-02 · [Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models](2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md)**  
@@ -178,7 +178,7 @@
   RWKVの大きな特徴は、単に注意を近似して軽量化することではなく、同じ重みと演算を訓練時の並列形式と推論時の再帰形式の双方で扱うことである。論文自身も長文脈評価の一部で弱点を示し、指示の順序を変えるだけで下流評価が大きく改善する例を報告している。
 
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：122  
+  実装：✓ ・ リポジトリ内被引用：123  
   RetNetは、指数減衰付き保持演算を並列・再帰・チャンク再帰の三形式で同じ重みのまま実行する。6.7Bモデルの8K入力ではTransformerのKVキャッシュ方式に対し復号8.4倍、メモリ約70%削減を報告し、学習の並列性と固定状態復号を両立する。
 
 - **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  

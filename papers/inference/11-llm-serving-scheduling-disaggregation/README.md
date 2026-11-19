@@ -1236,6 +1236,10 @@
   実装：✓ ・ リポジトリ内被引用：19  
   画像処理・画像符号化とテキスト生成を独立プールへ分離し、モダリティ別ルーティングと自動拡縮でLMMの末尾遅延とGPU費用を削減する。
 
+- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：19  
+  複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
+
 - **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
   実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：19  
   一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
@@ -1247,10 +1251,6 @@
 - **2025-01 · [DeepServe: Serverless Large Language Model Serving at Scale](2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
   要求・ジョブ・タスク抽象、NPU中心FlowServe、KV局所性とPD構成を統合した分散スケジューラ、NPU-fork等の高速スケールを組み合わせたHuawei Cloud本番サーバーレスLLM基盤。
-
-- **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：18  
-  複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
 
 - **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
   実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：17  
@@ -1612,6 +1612,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   単にCPUへ処理を移すだけではCPUメモリー走査が遅くなるため、バッチ方向の並列化、履歴の増分更新、頻出語彙への確率質量集中を組み合わせ、GPUが次の計算を行う時間へ抽出を重ねる。提案方式の実機評価では、比較対象のvLLMに対して生成スループットが最大96%増加し、出力トークン時間の95パーセンタイル（P95）が20〜65%短縮したと報告する。
 
+- **2025-11 · [Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling](2025-2511.09345-seer-self-consistency-advance-budget-estimation-for-adaptive-test-time-s.md)**  
+  実装：[✓](https://github.com/noforit/SeerSC) ・ リポジトリ内被引用：1  
+  複数の推論経路を生成して最頻回答を選ぶ自己整合（自己整合性; SC）は、数学問題などで単一路線の思考連鎖より正解率を上げられる。各問題へ一律に $N$ 経路を割り当てると、容易な問題へも大量のトークンを使う。
+
 - **2025-11 · [Safety-Preserving PTQ via Contrastive Alignment Loss](2025-2511.07842-safety-preserving-ptq-via-contrastive-alignment-loss.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、大規模言語モデル（Large Language モデル、LLM）の学習後量子化（Post-学習 量子化、PTQ）における目的関数の不足を扱う。LLaMA3.1-8B-Instructの重み4ビット・活性値4ビット（W4A4）条件で、安全性評価SafetyBenchは比較方式OSTQuantの57.5からCAQの60.1へ2.6ポイント改善した。
@@ -1671,10 +1675,6 @@
 - **2025-02 · [Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization](2025-2502.15763-hybrid-offline-online-scheduling-method-for-large-language-model-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLaMA-65B、GSM8Kの1319要求、8基のAscend計算ユニットで、ベースラインの総完了時間201.00秒・利用率80.2%を、全方式併用で190.58秒・89.06%へ改善した（原著§V、図6–9）。
-
-- **2025-11 · [Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling](2025-2511.09345-seer-self-consistency-advance-budget-estimation-for-adaptive-test-time-s.md)**  
-  実装：[✓](https://github.com/noforit/SeerSC) ・ リポジトリ内被引用：0  
-  複数の推論経路を生成して最頻回答を選ぶ自己整合（自己整合性; SC）は、数学問題などで単一路線の思考連鎖より正解率を上げられる。各問題へ一律に $N$ 経路を割り当てると、容易な問題へも大量のトークンを使う。
 
 - **2025-11 · [Parallel Vision Token Scheduling for Fast and Accurate Multimodal LMMs Inference](2025-2511.18875-parallel-vision-token-scheduling-for-fast-and-accurate-multimodal-lmms-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -264,6 +264,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
 
+- **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
+
 - **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Federated 注意機構（FedAttn）は、この協調推論を注意機構の段階で分散する方式として提案された。
@@ -283,10 +287,6 @@
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、GPUメモリが限られた端末でMixture-of-Experts（MoE）モデルを実行する際の二つの問題を同時に扱う。第一に、重みだけでなく活性値も整数8ビットへ量子化すると、少数の極端な活性値が量子化範囲を支配し、精度が悪化し得る。
-
-- **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
 
 - **2025-05 · [CE-LSLM: Efficient Large-Small Language Model Inference and Communication via Cloud-Edge Collaboration](2025-2505.14085-ce-lslm-efficient-large-small-language-model-inference-and-communication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
