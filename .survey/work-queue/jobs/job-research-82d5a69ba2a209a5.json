@@ -35,10 +35,15 @@
   "selection_reason": "学習不要の視覚トークン枝刈り。画像を領域に分けて空間被覆を保証し、Laplacian variationで領域別予算を配分、初期decoder blockの表現変化から残すトークンを選択。Qwen2.5-VL-7Bで576中32トークンでも元性能の79.3%を維持したと報告。",
   "semantic_scholar_id": "613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72",
   "source_url": "https://arxiv.org/abs/2609.01224",
-  "status": "ready",
+  "status": "superseded",
   "title": "S2Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:27:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.01224-s-2-prune-spatially-structured-visual-token-pruning-for-multimodal-large.md",
+  "represented_canonical_id": "arXiv:2609.01224",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

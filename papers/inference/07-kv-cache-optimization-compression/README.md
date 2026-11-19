@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（469本）
+## 自動生成の論文一覧（471本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -297,6 +297,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   本研究は、系列全体を固定長状態へ圧縮する再帰型ニューラルネットワーク（Recurrent Neural Network; RNN）と、過去の各トークンを個別に保持する自己注意（Self-注意機構）を、単に交互に積むのではなく相補的な二つの記憶として組み合わせる。
 
+- **2026-02 · [ST-Lite: Training-Free KV Cache Compression with Spatio-Trajectory Guidance for Long-Horizon GUI Agents](2026-2603.00188-st-lite-training-free-kv-cache-compression-with-spatio-trajectory-guidan.md)**  
+  実装：[✓](https://github.com/94wen94/ST-Lite) ・ リポジトリ内被引用：2  
+  GUI画面の冗長な履歴を類似度で落とし、小さなUI要素の境界を近傍の不一致で守る学習不要のKVキャッシュ圧縮で、5分の1の予算でも全キャッシュ並みの精度と最大2.35倍のデコード高速化を得た。
+
 - **2026-02 · [IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning](2026-2602.03060-ivc-prune-revealing-the-implicit-visual-coordinates-in-lvlms-for-vision-.md)**  
   実装：[✓](https://github.com/FireRedTeam/IVC-Prune) ・ リポジトリ内被引用：2  
   回転位置埋め込みが生む座標役の視覚トークンと意味的に重要な前景トークンを両方残す学習不要の枝刈りで、視覚トークンを約半分にしながら空間推論の精度をほぼ落とさない方式である。
@@ -401,6 +405,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/Infini-AI-Lab/vortex_torch) ・ リポジトリ内被引用：1  
   ページ化KVを抽象化するvFlow/vTensorと最適化バックエンドで、動的疎注意を数行のPython表現からSGLang実運用へ落とし込み、全注意比最大3.60倍のスループットを実現する。
 
+- **2026-06 · [STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models](2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-i.md)**  
+  実装：[✓](https://github.com/kawhiiiileo/STaR-KV) ・ リポジトリ内被引用：1  
+  注意の部分空間ごとの空間特化、履歴の時間的安定度、点数分布のエントロピーという三軸でキャッシュの点数を較正する学習不要の圧縮で、同予算の比較方式中最も高い精度と約4割のメモリ削減を両立させた。
+
 - **2026-06 · [RoPE-Aware Bit Allocation for KV-Cache Quantization](2026-2606.24033-rope-aware-bit-allocation-for-kv-cache-quantization.md)**  
   実装：[✓](https://github.com/JIA-Lab-research/blockgtq) ・ リポジトリ内被引用：1  
   回転位置埋め込みの周波数ブロックごとのエネルギーに応じて鍵キャッシュのビット幅を配分し、圧縮した鍵・値を直接読む融合注意計算で長文脈推論の容量とメモリ帯域を同時に削減する。
@@ -456,10 +464,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-03 · [EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction](2026-2603.22910-echokv-efficient-kv-cache-compression-via-similarity-based-reconstructio.md)**  
   実装：[✓](https://github.com/noforit/EchoKV) ・ リポジトリ内被引用：1  
   圧縮方式の一つである低ランク分解は、重み行列を変形して保存すべきKVの次元を減らすが、変形後のモデルを短文・長文の負荷に応じて元の通常推論へ戻すことが難しい。これらは圧縮率50%で精度が常に完全維持されるという結果ではなく、課題ごとの悪化もある。
-
-- **2026-02 · [ST-Lite: Training-Free KV Cache Compression with Spatio-Trajectory Guidance for Long-Horizon GUI Agents](2026-2603.00188-st-lite-training-free-kv-cache-compression-with-spatio-trajectory-guidan.md)**  
-  実装：[✓](https://github.com/94wen94/ST-Lite) ・ リポジトリ内被引用：1  
-  GUI画面の冗長な履歴を類似度で落とし、小さなUI要素の境界を近傍の不一致で守る学習不要のKVキャッシュ圧縮で、5分の1の予算でも全キャッシュ並みの精度と最大2.35倍のデコード高速化を得た。
 
 - **2026-02 · [ARKV: Adaptive and Resource-Efficient KV Cache Management under Limited Memory Budget for Long-Context Inference in LLMs](2026-2603.08727-arkv-adaptive-and-resource-efficient-kv-cache-management-under-limited-m.md)**  
   実装：[✓](https://github.com/Large-scale-Sustainable-Computing-LSC/ARKV) ・ リポジトリ内被引用：1  
@@ -534,6 +538,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Unified AI Gateway: A Framework for Joint Model Routing and KV Cache Management](2026-2609.06940-unified-ai-gateway-a-framework-for-joint-model-routing-and-kv-cache-mana.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Unified AI Gatewayは、複数の大規模言語モデルを使い分ける推論サービスにおいて、モデルを切り替えるたびに鍵値キャッシュ（KVキャッシュ）が使えなくなり、長い入力を最初から処理し直す問題を扱う。モデル切替確率を変えた条件で、初回トークン時間の代理指標は1.25〜13.28倍、入力費用は1.20〜6.16倍改善する余地があると報告する。
+
+- **2026-09 · [TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents](2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-g.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キャッシュ再利用下の視覚枝刈りを不可逆な受入れと捉え、レイアウト事前分布・指示関連度・特徴新規性を入れ子順序へ統合し、被覆修復と単調なKV縮約を組み合わせて、厳しい予算でもGUIエージェントの精度と初回応答を両立した。
 
 - **2026-09 · [To Keep or Not to Keep: Learning KV Cache Retention in Disaggregated LLM Serving Systems](2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md)**  
   実装：[✓](https://github.com/FastLM/KVLearn) ・ リポジトリ内被引用：0  
@@ -630,6 +638,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Jacap: Robust KV Cache Eviction via Jacobian-Based Nonlinear Information Capacity Preservation](2026-2609.08131-jacap.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Jacapは、将来クエリへの注意出力感度と値方向の重複を測り、重要度だけでなく情報の多様性を持つKV集合を選んで、高圧縮時の出力情報欠落を減らす。
+
+- **2026-09 · [Intra-Prompt Parallel Decoding for Common-Context Question Answering](2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.md)**  
+  実装：[✓](https://github.com/networkslab/IPPD) ・ リポジトリ内被引用：0  
+  共通文脈と複数質問を一つのプロンプトへ積み重ね、仮想位置とマスクで分離したまま全質問の次トークンを並行生成する推論方式で、品質を保ったまま標準バッチ推論の最大7倍級のスループットを得た。
 
 - **2026-09 · [HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models](2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -898,10 +910,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-06 · [Unified KV Pooling to Accelerate Long-Context LLM Serving](2026-2606.14779-unified-kv-pooling-to-accelerate-long-context-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数RAM/SSDを帯域幅比例の単一KVプールとして並列利用し、SPDK直アクセスでファイルシステムを迂回して長文脈KV再取得を高速化する。
-
-- **2026-06 · [STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models](2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-i.md)**  
-  実装：[✓](https://github.com/kawhiiiileo/STaR-KV) ・ リポジトリ内被引用：0  
-  注意の部分空間ごとの空間特化、履歴の時間的安定度、点数分布のエントロピーという三軸でキャッシュの点数を較正する学習不要の圧縮で、同予算の比較方式中最も高い精度と約4割のメモリ削減を両立させた。
 
 - **2026-06 · [Rethinking LoRA Memory Through the Lens of KV Cache Compression](2026-2606.05698-rethinking-lora-memory-through-the-lens-of-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1409,6 +1417,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/alibaba/vllm_xformers_prefetch) ・ リポジトリ内被引用：5  
   本研究は、大規模言語モデルの自己回帰復号において、鍵値キャッシュ（KV キャッシュ）を高帯域メモリ（HBM）から読み込む間にGPUの実行単位が待たされる問題を対象とする。鍵値を削除・量子化・オフロードして保存容量を減らすのではなく、現在の鍵値ブロックを使った注意演算と、次に必要なブロックのHBMから二次キャッシュ（L2 キャッシュ）への転送を重ねる。
 
+- **2025-10 · [GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness](2025-2510.00536-gui-kv-efficient-gui-agents-via-kv-cache-with-spatio-temporal-awareness.md)**  
+  実装：[✓](https://github.com/SalesforceAIResearch/GUI-KV) ・ リポジトリ内被引用：4  
+  論文はUI-TARS-1.5-7Bについて、5画面・最大50段階の条件でGPUメモリ消費が80GBを超え得ると説明し、単なる計算高速化ではなく、履歴を保持するためのメモリ節約を主課題とする。GUI-KVは、自然画像用の圧縮方式をそのまま転用せず、画面固有の二種類の冗長性を利用する。
+
 - **2025-08 · [KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache](2025-2509.00579-kvcomp-a-high-performance-llm-aware-lossy-compression-framework-for-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KVCompは、大規模言語モデルの長文脈推論において、過去トークンの鍵・値（KV）キャッシュがGPUメモリを占有し、処理可能な文脈長や同時実行数を制限する問題に取り組む。既存の低ビット量子化だけでは整数符号に残る統計的偏りを使い切れず、一般的な可逆圧縮を追加すると毎トークン必要な復号が遅くなる。
@@ -1432,10 +1444,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-11 · [FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference](2025-2511.05534-flowmm-cross-modal-information-flow-guided-kv-cache-merging-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   FlowMMは画像と文章が混在する多模態大規模言語モデル（MLLM）の推論時に、注意のキー・値キャッシュ（KVキャッシュ）を破棄ではなく結合によって圧縮する方式である。KV保持予算20%では、InternVL2.5-8Bの平均指標が全KV保持の27.97から27.85へと0.12ポイントの低下にとどまる。
-
-- **2025-10 · [GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness](2025-2510.00536-gui-kv-efficient-gui-agents-via-kv-cache-with-spatio-temporal-awareness.md)**  
-  実装：[✓](https://github.com/SalesforceAIResearch/GUI-KV) ・ リポジトリ内被引用：3  
-  論文はUI-TARS-1.5-7Bについて、5画面・最大50段階の条件でGPUメモリ消費が80GBを超え得ると説明し、単なる計算高速化ではなく、履歴を保持するためのメモリ節約を主課題とする。GUI-KVは、自然画像用の圧縮方式をそのまま転用せず、画面固有の二種類の冗長性を利用する。
 
 - **2025-08 · [SmallKV: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference](2025-2508.02751-smallkv-small-model-assisted-compensation-of-kv-cache-compression-for-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

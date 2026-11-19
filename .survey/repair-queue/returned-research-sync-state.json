@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "73cad0b6e7f330a773ddb460b253ec393f22e745",
+  "base_commit": "68c03c068ab179b2c27e4afe0f312f8a09bac7e4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -337,6 +337,11 @@
     "2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.json",
     "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json",
     "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json",
+    "2026-2609.01224-s2prune-spatially-structured-visual-token-pruning-for-multimodal-large-language-models.json",
+    "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json",
+    "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
+    "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
+    "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
@@ -40886,6 +40891,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.01224": {
+      "order": [
+        "2026-11-19T23:22:09+00:00",
+        "2026-2609.01224-s2prune-spatially-structured-visual-token-pruning-for-multimodal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.01925": {
+      "order": [
+        "2026-11-19T23:23:03+00:00",
+        "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.05707": {
+      "order": [
+        "2026-11-19T23:23:57+00:00",
+        "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.05916": {
+      "order": [
+        "2026-11-19T23:24:51+00:00",
+        "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.10297": {
+      "order": [
+        "2026-11-19T23:25:45+00:00",
+        "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50427,6 +50477,21 @@
     "arxiv:2609.01004": [
       "papers/inference/99-other-inference-systems/2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-.md",
       "papers/inference/99-other-inference-systems/2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-.md"
+    ],
+    "arxiv:2609.01224": [
+      "papers/inference/99-other-inference-systems/2026-2609.01224-s-2-prune-spatially-structured-visual-token-pruning-for-multimodal-large.md"
+    ],
+    "arxiv:2609.01925": [
+      "papers/inference/13-sparse-attention/2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-.md"
+    ],
+    "arxiv:2609.05707": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.md"
+    ],
+    "arxiv:2609.05916": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement.md"
+    ],
+    "arxiv:2609.10297": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-g.md"
     ]
   }
 }

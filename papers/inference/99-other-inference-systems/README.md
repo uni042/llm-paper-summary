@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1029本）
+## 自動生成の論文一覧（1030本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -372,6 +372,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、金融時系列、センサ、ログのようにデータが継続的に追加され、利用者からの質問がときどき到着する用途に対し、質問の到着を待たずにデータを処理する状態保持型（Stateful）LLM推論を提案する。
 
+- **2026-05 · [AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees](2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  画面の情報密度に合わせて四分木で割り、各葉に代表トークンを一つ残す学習なしの削減を提案し、320億級モデルでトークン29.52パーセント減と性能の99.06パーセント保持、最大13.22パーセントの高速化を示した。
+
 - **2026-04 · [VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation](2026-2604.12798-vfa-relieving-vector-operations-in-flash-attention-with-global-maximum-p.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   FlashAttentionは、巨大な注意行列をGPUの高帯域メモリへ書き出さず、クエリ・キー・値を小さなブロックに分割してオンチップメモリで処理する。VFA（Vector Relieved Flash 注意機構）はこの残った部分に焦点を当てる。要旨ではC16V32という計算器構成を基準にC8V32、C4V32、C4V16で約2倍の高速化を報告する。
@@ -721,6 +725,10 @@
 - **2026-09 · [SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans](2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   異種CUDA/NCCL–CANN/HCCL境界で消費者が必要とする観測結果を型付き契約へコンパイルし、不要な全logit転送をトークン投影へ縮約して結果通信を99.97%以上削減する通信計画器。
+
+- **2026-09 · [S$^2$Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models](2026-2609.01224-s-2-prune-spatially-structured-visual-token-pruning-for-multimodal-large.md)**  
+  実装：[✓](https://github.com/yuanyuanjia71-spec/S2Prune) ・ リポジトリ内被引用：0  
+  各画像領域への最低保証で空間被覆を固定し、残り予算を局所構造の豊かな領域へ配って代表トークンを選ぶ学習不要の視覚トークン枝刈りで、576個中32個でも元性能の79.3パーセントを保持した。
 
 - **2026-09 · [Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference](2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1545,10 +1553,6 @@
 - **2026-05 · [Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers](2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低帯域・分散オンチップ記憶のMT-3000向けに演算子、融合注意、三段パイプライン、混合並列を共同設計し、大規模LLM推論を実現。
-
-- **2026-05 · [AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees](2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  画面の情報密度に合わせて四分木で割り、各葉に代表トークンを一つ残す学習なしの削減を提案し、320億級モデルでトークン29.52パーセント減と性能の99.06パーセント保持、最大13.22パーセントの高速化を示した。
 
 - **2026-05 · [AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices](2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md)**  
   実装：[✓](https://github.com/brave-experiments/AgentStop) ・ リポジトリ内被引用：0  
@@ -2568,6 +2572,10 @@
   実装：[✓](https://github.com/intcomp/attention-bias) ・ リポジトリ内被引用：2  
   多くの視覚トークンが冗長なので、言語モデルの初期層で重要度の低いトークンを捨てれば、以後の注意機構やKV保持の負荷を下げられる。
 
+- **2025-08 · [AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance](2025-2508.06084-adaptinfer-adaptive-token-pruning-for-vision-language-model-inference-vi.md)**  
+  実装：[✓](https://github.com/weiczh02/AdaptInfer-base) ・ リポジトリ内被引用：2  
+  AdaptInferは、質問文のうち画像のどの部分を見るべきかを決める文章トークンが、Transformerの深さに応じて変わることを利用し、各枝刈り層で文章の重要度を再計算して画像トークンを選ぶ方式である。
+
 - **2025-05 · [Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models](2025-2505.11271-semantic-caching-of-contextual-summaries-for-efficient-question-answerin.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本研究は、文書検索とLLM呼出しを組み合わせる質問応答で、回答そのものでもKVキャッシュでもなく、質問に合わせて生成した中間の文書要約をキャッシュする方法を扱う。文書を検索した後に要約し、その要約と質問を使って回答する複数段階のワークフローでは、同じ文書に対して似た質問が繰り返される。
@@ -2695,10 +2703,6 @@
 - **2025-08 · [DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers](2025-2509.00925-dtrnet-dynamic-token-routing-network-to-reduce-quadratic-costs-in-transf.md)**  
   実装：[✓](https://github.com/Aman26Sharma/DTRNet) ・ リポジトリ内被引用：1  
   各層で学習済みルーティングがトークンごとにfull 注意機構経路と軽量な自己投影経路を選ぶ。FineWeb-Eduで事前学習した360Mモデルでは、DTRNet-BiLayerがdense SmolLM比FLOPs 0.84倍で平均ゼロショット精度44.36%、denseの44.23%とほぼ同等だった。
-
-- **2025-08 · [AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance](2025-2508.06084-adaptinfer-adaptive-token-pruning-for-vision-language-model-inference-vi.md)**  
-  実装：[✓](https://github.com/weiczh02/AdaptInfer-base) ・ リポジトリ内被引用：1  
-  AdaptInferは、質問文のうち画像のどの部分を見るべきかを決める文章トークンが、Transformerの深さに応じて変わることを利用し、各枝刈り層で文章の重要度を再計算して画像トークンを選ぶ方式である。
 
 - **2025-07 · [Squeeze10-LLM: Squeezing LLMs’ Weights by 10 Times via a Staged Mixed-Precision Quantization Method](2025-2507.18073-squeeze10-llm-squeezing-llms-weights-by-10-times-via-a-staged-mixed-prec.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -3430,6 +3434,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   本研究は、端末側で短い草稿を作り、クラウド側で草稿中のトークンをまとめて検証することで、品質と計算費用の間の連続的な選択肢を作る。GSM8KではLlama-2-7B単独の正答率21.68%、70B単独53.07%に対し、対数閾値−0.5の協調方式は52.24%を達成した。
 
+- **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
+
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   枝刈り、量子化、知識蒸留、低ランク近似、パラメータ共有、効率的構造設計の六系統を、圧縮後の性能だけでなく、圧縮を実行するための学習・較正費用から比較するサーベイ。
@@ -3445,10 +3453,6 @@
 - **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   論文はTransformer圧縮を、構造を保つ圧縮（量子化・知識蒸留）と、構造を変える圧縮（枝刈り・効率的なモデル構造）という二つの上位観点で整理する。
-
-- **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
 
 - **2024-06 · [DeciMamba: Exploring the Length Extrapolation Potential of Mamba](2024-2406.14528-decimamba-exploring-the-length-extrapolation-potential-of-mamba.md)**  
   実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：6  
@@ -4085,7 +4089,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：267  
+  実装：✓ ・ リポジトリ内被引用：268  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  

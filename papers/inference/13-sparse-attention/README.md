@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（172本）
+## 自動生成の論文一覧（173本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -245,6 +245,10 @@
 - **2026-09 · [Efficient Agentic LLM Serving over SSD-based Sparse KV Storage](2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去の履歴を再計算しないためには鍵・値キャッシュを保持する必要があるが、全履歴を計算装置の高帯域メモリに置くと容量が不足する。後で正確な選択結果が得られた時点で予測漏れを補正するため、予測を外したトークンを黙って捨てる近似手法ではない。
+
+- **2026-09 · [CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing](2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  先頭と直近に集まる注意の重みでヘッドの経路を直接判定し、残りの平均を雑音の床として信号ブロックだけを選ぶことで、検索精度を最大二十八・〇ポイントポイント回復し、五十一万二千トークンで注意を五・三〇倍速くした疎な入力処理の方式。
 
 - **2026-09 · [CoWindow Attention: Full Causal Coverage Is a Collective Property](2026-2609.32704-cowindow-attention-full-causal-coverage-is-a-collective-property.md)**  
   実装：[✓](https://github.com/HKUSTDial/flash-sparse-attention) ・ リポジトリ内被引用：0  
@@ -583,7 +587,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：306  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：307  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -627,7 +631,7 @@
   系列が長くなるほど鍵値キャッシュは線形に増えるため、1トークンずつ生成する復号では演算より高帯域メモリからの読出しが律速になりやすい。論文の例ではLLaMA-2-7Bを半精度、128K文脈で使うと鍵値キャッシュだけで64GBになる。疎注意（sparse 注意機構）は全過去トークンの一部だけを注意計算へ入れることで、この読出し量を減らす。
 
 - **2024-06 · [Mixture of Attention Spans: Optimizing LLM Inference Efficiency with Heterogeneous Sliding-Window Lengths](2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md)**  
-  実装：[✓](https://github.com/thu-nics/MoA) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/thu-nics/MoA) ・ リポジトリ内被引用：17  
   ヘッドごとの局所性と入力長への伸び方を勾配で測り、異種sliding-ウィンドウ規則を自動探索して静的KV マスクへ落とすMoA。
 
 - **2024-10 · [HSR-Enhanced Sparse Attention Acceleration](2024-2410.10165-hsr-enhanced-sparse-attention-acceleration.md)**  
@@ -701,7 +705,7 @@
   既存の効率的注意には、ハッシュや局所窓で計算する組合せを制限する方式と、注意関数自体を近似する線形注意がある。
 
 - **2021-10 · [Transformer Acceleration with Dynamic Sparse Attention](2021-2110.11299-transformer-acceleration-with-dynamic-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   DSAは、入力ごとに異なる重要な注意位置を安価に予測し、残した位置に限り通常の注意計算を行うことで、密な注意の表現力を可能な限り維持しつつ計算を減らす。90%の注意重みを除く設定で、最初から学習したDSAの三課題平均精度は57.48%、同条件の密なTransformerは56.79%だった。
 
 - **2021-10 · [Scatterbrain: Unifying Sparse and Low-rank Attention Approximation](2021-2110.15343-scatterbrain-unifying-sparse-and-low-rank-attention-approximation.md)**  

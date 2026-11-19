@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（138本）
+## 自動生成の論文一覧（139本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -81,6 +81,10 @@
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。
+
+- **2026-09 · [STAR-Pro: Stage-Wise Token Adaptive Reduction with Progressive Refinement for Efficient Large Vision-Language Models](2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement.md)**  
+  実装：[✓](https://github.com/EasonAI-5589/starpro) ・ リポジトリ内被引用：0  
+  融合前はピボット付きQRで特徴被覆を保つ候補プールを作り、デコーダ内では深さで変わる注意に合わせて段階的に絞る2段階の視覚トークン削減で、90.5パーセント削減でも性能の92.7パーセント保持と2.24倍高速化を両立した。
 
 - **2026-09 · [SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops](2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md)**  
   実装：[✓](https://github.com/WindChimeRan/SiliconBench) ・ リポジトリ内被引用：0  
