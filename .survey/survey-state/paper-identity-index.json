@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 3987,
+  "active_count": 3992,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -5649,6 +5649,13 @@
         "arXiv:2404.14469"
       ],
       "source_hash": "da74513069b5bba1e4eb8375af4a25e8ecf624fb61fcae4e5477d2206c1cb2a0"
+    },
+    "arXiv:2404.15420": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.md",
+      "identifiers": [
+        "arXiv:2404.15420"
+      ],
+      "source_hash": "ba210997789ef5d271d62aaca65ae1772b7b9c6bc460062bdeafac804c145fba"
     },
     "arXiv:2405.03917": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
@@ -20463,6 +20470,20 @@
       ],
       "source_hash": "d2508ffac36201a2b7edb0dcb51b68689f817f0d41380c9b49391376045f91bb"
     },
+    "arXiv:2410.21352": {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-de.md",
+      "identifiers": [
+        "arXiv:2410.21352"
+      ],
+      "source_hash": "50df11c2ba6de5ec4c19bc1b78d0dbd3478b2564e82234e31e89d5c6d5880792"
+    },
+    "arXiv:2411.02327": {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.md",
+      "identifiers": [
+        "arXiv:2411.02327"
+      ],
+      "source_hash": "a13a4f41c55e9359fe64ad191d09425acb34762aa0ed815fb0ebbe467dd9d4f5"
+    },
     "arXiv:2411.08982": {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md",
       "identifiers": [
@@ -22904,6 +22925,13 @@
       ],
       "source_hash": "6b0e326981d9526c201f900482e130b453b4ffade0481deb65dc06f414a03fb9"
     },
+    "arXiv:2406.11477": {
+      "path": "papers/inference/99-other-inference-systems/2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-targ.md",
+      "identifiers": [
+        "arXiv:2406.11477"
+      ],
+      "source_hash": "f3596537be2dc59b4766e13163fa2346f465c9cd9269335141e042d21965bdfb"
+    },
     "arXiv:2406.11823": {
       "path": "papers/inference/99-other-inference-systems/2024-2406.11823-on-efficient-language-and-vision-assistants-for-visually-situated-natura.md",
       "identifiers": [
@@ -22924,6 +22952,13 @@
         "arXiv:2406.16299"
       ],
       "source_hash": "fa59ca0d3ef15490c4119a2392c4510cd267f41e6299ff3e8f361eaab3b358d7"
+    },
+    "arXiv:2406.17415": {
+      "path": "papers/inference/99-other-inference-systems/2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-.md",
+      "identifiers": [
+        "arXiv:2406.17415"
+      ],
+      "source_hash": "51df1e85c2e2e9621dd59dcecbac58e09bae1e3c42959ebf0c89396eee61205f"
     },
     "arXiv:2407.00467": {
       "path": "papers/inference/99-other-inference-systems/2024-2407.00467-vcllm-video-codecs-are-secretly-tensor-codecs.md",
@@ -29922,6 +29957,7 @@
     "arXiv:2404.04793": "arXiv:2404.04793",
     "DOI:10.52202/079017-0722": "arXiv:2404.14469",
     "arXiv:2404.14469": "arXiv:2404.14469",
+    "arXiv:2404.15420": "arXiv:2404.15420",
     "arXiv:2405.03917": "arXiv:2405.03917",
     "DOI:10.48550/arxiv.2405.04434": "DOI:10.48550/arxiv.2405.04434",
     "arXiv:2405.04434": "DOI:10.48550/arxiv.2405.04434",
@@ -32543,6 +32579,8 @@
     "arXiv:2403.17887": "arXiv:2403.17887",
     "arXiv:2404.02852": "arXiv:2404.02852",
     "arXiv:2409.11650": "arXiv:2409.11650",
+    "arXiv:2410.21352": "arXiv:2410.21352",
+    "arXiv:2411.02327": "arXiv:2411.02327",
     "arXiv:2411.08982": "arXiv:2411.08982",
     "arXiv:2412.14847": "arXiv:2412.14847",
     "DOI:10.1145/3701716.3715490": "arXiv:2412.15605",
@@ -32932,9 +32970,11 @@
     "arXiv:2406.05276": "arXiv:2406.05276",
     "arXiv:2406.06110": "arXiv:2406.06110",
     "arXiv:2406.07017": "arXiv:2406.07017",
+    "arXiv:2406.11477": "arXiv:2406.11477",
     "arXiv:2406.11823": "arXiv:2406.11823",
     "arXiv:2406.14528": "arXiv:2406.14528",
     "arXiv:2406.16299": "arXiv:2406.16299",
+    "arXiv:2406.17415": "arXiv:2406.17415",
     "arXiv:2407.00467": "arXiv:2407.00467",
     "arXiv:2407.04620": "arXiv:2407.04620",
     "arXiv:2407.06204": "arXiv:2407.06204",

@@ -35,10 +35,15 @@
   "selection_reason": "一次要旨では英語中心のトークナイザが非英語生成でトークン数と推論ステップを増やす問題を対象とし、対象言語30,000文（約0.01GB）から語彙拡張・埋め込み初期化・継続事前学習を比較する。少資源言語でも生成ステップ削減による推論高速化と性能維持を目的とし、推論効率に直接つながる。",
   "semantic_scholar_id": "c76a0746402af9a7cf237de24b196ea9597895e8",
   "source_url": "https://arxiv.org/abs/2406.11477",
-  "status": "ready",
+  "status": "superseded",
   "title": "How Can We Effectively Expand the Vocabulary of LLMs with 0.01GB of Target Language Text?",
   "type": "research",
   "venue": "Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T11:03:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2406.11477-how-can-we-effectively-expand-the-vocabulary-of-llms-with-0-01gb-of-targ.md",
+  "represented_canonical_id": "arXiv:2406.11477",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
