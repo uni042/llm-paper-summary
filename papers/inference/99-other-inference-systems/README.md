@@ -2208,13 +2208,13 @@
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：30  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
 
+- **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
+  実装：✓ ・ リポジトリ内被引用：28  
+  C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
+
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
   CoT-Valveは、推論モデルが簡単な問題にも長い思考連鎖（Chain of Thought、CoT）を生成してしまう無駄を減らし、同じ重みを基盤とするモデルで思考列の長さを柔軟に変える手法である。
-
-- **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
-  C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
 
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：26  
@@ -2300,6 +2300,10 @@
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
   この論文は、GPUの単独実行（Singletasking）から多重実行（Multitasking）への移行を主張する設計論・立場論文（Position Paper）である。本文の「10%まで下がる利用率」やGPU世代間の成長率は背景の参考値であり、提案法がGPU使用率を何ポイント改善したという実験結果ではない。
 
+- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
+
 - **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
@@ -2307,10 +2311,6 @@
 - **2025-11 · [A Comprehensive Study on Visual Token Redundancy for Discrete Diffusion-based Multimodal Large Language Models](2025-2511.15098-a-comprehensive-study-on-visual-token-redundancy-for-discrete-diffusion-.md)**  
   実装：[✓](https://github.com/Yrdal3910/dMLLM-Visual-Token-Redundancy-Analysis) ・ リポジトリ内被引用：4  
   本論文は、画像・動画を扱う離散拡散型マルチモーダル大規模言語モデル（discrete diffusion-based Multimodal Large Language Models、dMLLM）に、自己回帰型の視覚トークン枝刈りをそのまま移植しても期待通り高速化しない理由を実験的に分析する。
-
-- **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
 
 - **2024-12 · [Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference](2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -2559,6 +2559,10 @@
 - **2025-01 · [RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs](2025-2501.19036-redundancylens-revealing-and-exploiting-visual-token-processing-redundan.md)**  
   実装：[✓](https://github.com/L-Hugh/RedundancyLens) ・ リポジトリ内被引用：1  
   この構成は実装が単純で精度も高い一方、画像由来のトークン数が増えると、LLMのself-注意機構とFFNの両方で大量の演算が発生する。約半数の層へ演算削減を適用すると、FLOPs比が約71〜72%に下がり、元モデルに近い品質を維持する。
+
+- **2025-01 · [DReSS: Data-driven Regularized Structured Streamlining for Large Language Models](2025-2501.17905-dress-data-driven-regularized-structured-streamlining-for-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  しかし従来の「重要度を測ってチャネルを直接削除し、その後に回復微調整する」方式では、削除予定チャネルに残っていた有用な情報まで失われる。
 
 - **2025-01 · [DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory](2025-2501.06417-discquant-a-quantization-method-for-neural-networks-inspired-by-discrepa.md)**  
   実装：[✓](https://github.com/jerry-chee/DiscQuant) ・ リポジトリ内被引用：1  
@@ -3068,10 +3072,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
 
-- **2025-01 · [DReSS: Data-driven Regularized Structured Streamlining for Large Language Models](2025-2501.17905-dress-data-driven-regularized-structured-streamlining-for-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  しかし従来の「重要度を測ってチャネルを直接削除し、その後に回復微調整する」方式では、削除予定チャネルに残っていた有用な情報まで失われる。
-
 - **2025-01 · [CURing Large Models: Compression via CUR Decomposition](2025-2501.04211-curing-large-models-compression-via-cur-decomposition.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重みを圧縮する場合、ニューロンや層を削除する構造化剪定はパラメータ数を減らせるが、ネットワーク構造と残差経路の整合性を変更する必要がある。原著はLlama3.1-8Bで10層をrank 256で分解し、8.03Bパラメータを7.32Bに削減する処理を129.45秒で実行した。
@@ -3565,7 +3565,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：264  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：265  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3581,7 +3581,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：74  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：75  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
@@ -3608,13 +3608,13 @@
   実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：21  
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
+- **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
+
 - **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
   実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：17  
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
-
-- **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
   実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：15  
