@@ -548,13 +548,13 @@
   実装：[✓](https://github.com/NVlabs/Minitron) ・ リポジトリ内被引用：28  
   15Bを学習した後に8B・4Bを別々にゼロから学習する代わりに、Nemotron-4 15Bから注意ヘッド、MLP中間次元、埋め込み幅、必要に応じて層を構造枝刈りし、元15Bのロジットを教師にして短期間だけ知識蒸留（Knowledge Distillation; KD）する。
 
+- **2024-03 · [IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact](2024-2403.01241-intactkv-improving-large-language-model-quantization-by-keeping-pivot-to.md)**  
+  実装：[✓](https://github.com/ruikangliu/IntactKV) ・ リポジトリ内被引用：23  
+  IntactKVは、低ビット量子化した大規模言語モデル（LLM）において、入力の最初に置かれる少数の支点トークン（pivot トークン）の鍵・値キャッシュ（KV キャッシュ）だけを高精度モデルから生成して保存する方式である。
+
 - **2024-01 · [LLM-FP4: 4-Bit Floating-Point Quantized Transformers](2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：23  
   4ビット浮動小数点（floating point; FP）の指数部構成とクリップ範囲を層ごとに探索し、活性値の大きなチャネル間分散はチャネル別指数バイアスを重みへ事前吸収して処理する。LLaMA-13Bの埋め込み・重み・活性値を4/4/4ビットにして、6つの常識推論タスク平均63.1を維持する。
-
-- **2024-03 · [IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact](2024-2403.01241-intactkv-improving-large-language-model-quantization-by-keeping-pivot-to.md)**  
-  実装：[✓](https://github.com/ruikangliu/IntactKV) ・ リポジトリ内被引用：22  
-  IntactKVは、低ビット量子化した大規模言語モデル（LLM）において、入力の最初に置かれる少数の支点トークン（pivot トークン）の鍵・値キャッシュ（KV キャッシュ）だけを高精度モデルから生成して保存する方式である。
 
 - **2024-02 · [DB-LLM: Accurate Dual-Binarization for Efficient LLMs](2024-2402.11960-db-llm-accurate-dual-binarization-for-efficient-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
@@ -631,7 +631,7 @@
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：277  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：278  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
@@ -717,7 +717,7 @@
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：547  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：549  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  

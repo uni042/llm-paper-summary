@@ -2041,7 +2041,7 @@
   拡散型LLM（dLLM）の反復的な雑音除去（denoising）・並列トークン確定・更新され続けるKVをモジュール化し、デコーダ/KV管理とGPU実行系を同時最適化するdInfer。
 
 - **2024-12 · [ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction](2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md)**  
-  実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：17  
   大規模言語モデル（Large Language モデル; LLM）が長い文章を扱うと、注意機構の鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）は入力文脈の長さと同時処理要求数に比例して増える。
 
 - **2025-10 · [DeepSeek-OCR: Contexts Optical Compression](2025-2510.18234-deepseek-ocr-contexts-optical-compression.md)**  
@@ -2068,6 +2068,10 @@
   実装：[✓](https://github.com/MiniMax-AI/MiniMax-M1) ・ リポジトリ内被引用：7  
   MiniMax-M1は、推論時に長い思考過程を生成する大規模言語モデルで、生成トークンが増えるほど従来のSoftmax注意の計算・記憶費用が膨らむ問題に対処する。モデル全体は4560億パラメータ、トークンごとの活性化は459億パラメータの混合専門家モデル（Mixture of エキスパート、MoE）である。
 
+- **2025-05 · [Let LRMs Break Free from Overthinking via Self-Braking Tuning](2025-2505.14604-let-lrms-break-free-from-overthinking-via-self-braking-tuning.md)**  
+  実装：[✓](https://github.com/ZJU-REAL/Self-Braking-Tuning) ・ リポジトリ内被引用：7  
+  従来の出力トークン予算や推論時の外部停止判定では、問題の難しさと必要な推論深度を一律に扱ったり、追加の判定機構が必要になったりする。
+
 - **2025-04 · [PLD+: Accelerating LLM Inference by Leveraging Language Model Artifacts](2025-1e04c2f7fc65-pld-accelerating-llm-inference-by-leveraging-language-model-artifacts.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   PLD+（プロンプト Lookup Decoding+）は、入力文脈の一部がそのまま出力にも現れる場合に、過去の入力トークン列を将来の出力候補として再利用する投機的復号法である。例えばコード編集で改行やインデント、識別子が何度も現れると、従来のPLDが最長の局所的な文字列一致だけで候補を選ぶと、同じ記号が出る別の場所を誤選択し、検証に失敗する。
@@ -2075,10 +2079,6 @@
 - **2025-09 · [Learning to Parallel: Accelerating Diffusion Large Language Models via Learnable Parallel Decoding](2025-2509.25188-learning-to-parallel-accelerating-diffusion-large-language-models-via-le.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   これに対してマスク型拡散言語モデルは、あるブロック内の複数トークンを一度に予測し、まだ不確かな位置だけを再びマスクして次の反復で更新する。
-
-- **2025-05 · [Let LRMs Break Free from Overthinking via Self-Braking Tuning](2025-2505.14604-let-lrms-break-free-from-overthinking-via-self-braking-tuning.md)**  
-  実装：[✓](https://github.com/ZJU-REAL/Self-Braking-Tuning) ・ リポジトリ内被引用：6  
-  従来の出力トークン予算や推論時の外部停止判定では、問題の難しさと必要な推論深度を一律に扱ったり、追加の判定機構が必要になったりする。
 
 - **2025-05 · [GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment](2025-2505.12215-gmsa-enhancing-context-compression-via-group-merging-and-layer-semantic-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -2831,7 +2831,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
-  実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：86  
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -3237,7 +3237,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：252  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：253  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3403,7 +3403,7 @@
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
 
 - **2022-05 · [A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation](2022-219d2c1fa7a8-a-simple-hash-based-early-exiting-approach-for-language-understanding-an.md)**  
