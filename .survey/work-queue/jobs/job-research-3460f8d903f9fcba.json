@@ -35,10 +35,15 @@
   "selection_reason": "近似中間状態による訓練不要FFN活性疎性Prox。FFNが推論のメモリトラフィックと計算を支配する一方、訓練不要の疎化は高疎性で品質が落ちる問題に対し、SwiGLU中間状態の近似でチャネル選択信号を得る2段階の枠組み。推論高速化機構そのもの。",
   "semantic_scholar_id": "444deb2112acc6802700ab2452a30591c46e5fea",
   "source_url": "https://arxiv.org/abs/2607.27591",
-  "status": "ready",
+  "status": "superseded",
   "title": "Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:14:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2607.27591-prox-training-free-ffn-activation-sparsity-via-approximate-intermediate-.md",
+  "represented_canonical_id": "arXiv:2607.27591",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

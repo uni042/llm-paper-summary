@@ -421,6 +421,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：1  
   既存の追い出し手法は、過去のトークンが受けた注意重みを平均・集計し、その値の大きな位置を残すことが多い。NVIDIA H100 80GBでのLlama-3.1-8B、128K文脈、同保持予算の効率測定では、完全キャッシュ比で復号のトークン当たり遅延が2.3倍改善し、最大メモリは63.3GBから約47.5GBへ低下した。
 
+- **2026-05 · [OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models](2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimod.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  固定した時間区切りをフレームと音声の対応に合わせて作り替えてから、映像と音声をそれぞれの冗長構造に合う方式で協調圧縮し、保持率44パーセントで全トークン並みの正解率を保った学習不要の圧縮方式。
+
 - **2026-05 · [OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization](2026-2605.21226-octopus-optimized-kv-cache-for-transformers-via-octahedral-parametrizati.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   OCTOPUSは、Transformerの長文脈推論で肥大化するKVキャッシュを、回転前処理と3座標単位の幾何学的量子化によって縮小する研究である。一方、H200で測った単一クエリの融合デコードはbf16 SDPAより8.9倍遅い条件がある。
@@ -950,10 +954,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Polynomial Context-Truncation Sensitivity in Autoregressive Language Models: Sequential Wyner-Ziv Bounds for KV Cache Compression](2026-2605.25085-polynomial-context-truncation-sensitivity-in-autoregressive-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   逐次Wyner–Ziv符号化としてKVキャッシュ圧縮を定式化し、末尾窓だけを保持する方式の必要窓長が、追加の両側リスク条件下で許容分布誤差εに対してΘ(ε^{-1/α})となることを示す。
-
-- **2026-05 · [OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models](2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimod.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  固定した時間区切りをフレームと音声の対応に合わせて作り替えてから、映像と音声をそれぞれの冗長構造に合う方式で協調圧縮し、保持率44パーセントで全トークン並みの正解率を保った学習不要の圧縮方式。
 
 - **2026-05 · [NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference](2026-96229b44d7f2-nika-optimal-kv-cache-transfer-for-minimizing-the-latency-of-disaggregat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

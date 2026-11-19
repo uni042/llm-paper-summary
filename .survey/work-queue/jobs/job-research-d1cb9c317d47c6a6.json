@@ -35,10 +35,15 @@
   "selection_reason": "類似度誘導のTop-K再利用ReTopK。疎注意でも全KVへのスコア計算と大域Top-K選択が残り選択器費用が文脈長に比例する問題に対し、似たクエリは重なる支持集合へ注意するという観察から、過去の検索判断を再利用する学習不要の方法で動的Top-K注意を高速化する。推論の注意機構そのもの。",
   "semantic_scholar_id": "63a1befeca97b96118c7dfa3fe64685a77f23d4f",
   "source_url": "https://arxiv.org/abs/2607.27692",
-  "status": "ready",
+  "status": "superseded",
   "title": "Recall Before You Rank: Similarity-Guided Top-K Reuse for Efficient Long-Context Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:14:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-.md",
+  "represented_canonical_id": "arXiv:2607.27692",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

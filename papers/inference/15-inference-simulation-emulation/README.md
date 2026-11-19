@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（82本）
+## 自動生成の論文一覧（83本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -161,6 +161,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-07 · [Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving](2026-2607.16488-auto-scaling-heterogeneous-neural-processing-units-for-energy-and-cost-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NeuScaleは、世代ごとに計算性能、メモリ帯域、メモリ容量、チップ間通信性能が異なるニューラル処理装置（NPU）を、LLM推論サービスに効率よく割り当てる制御方式である。複数モデルと複数要求系列にわたる均質構成の従来型自動伸縮方式との比較で、平均エネルギー効率1.13倍、金銭的費用効率1.43倍、サービス水準目標（SLO）達成率1.36倍を報告する。
+
+- **2026-07 · [A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference](2026-2607.24148-a-motion-aware-vector-quantization-framework-with-centroid-reuse-for-eff.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  動作の大きさでベクトル量子化の精度を切り替え、重心の重複を列内の入力集約と列間の結果再利用で演算削減に変える協調設計により、成功率の低下を平均2.5%に抑えて重み取得を79.4%減らし、A100比6.5倍の高速化を示した。
 
 - **2026-06 · [LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge](2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

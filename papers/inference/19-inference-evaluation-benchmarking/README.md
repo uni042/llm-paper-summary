@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（133本）
+## 自動生成の論文一覧（134本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -161,6 +161,10 @@
 - **2026-08 · [Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference](2026-2608.00077-beyond-accuracy-auditing-spatial-provenance-in-visual-token-pruning-for-.md)**  
   実装：[✓](https://github.com/SouthWinter/spatial-provenance-audit) ・ リポジトリ内被引用：0  
   視覚トークンを間引けば言語モデル側の事前計算（プリフィル）とその作業用メモリを削減できるが、単に「保持率30%で正答率がほぼ同じ」という評価には穴がある。さらにトークンを統合する手法については、統合出力の出自集合と、代表位置で局所的に追跡できる範囲を区別する。
+
+- **2026-07 · [WaveZip: Wavelet-Driven Space-Time Decoupling for Video Token Condensation](2026-2607.23265-wavezip-wavelet-driven-space-time-decoupling-for-video-token-condensatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ウェーブレット変換で時間の傾向と空間の細部を周波数で分離し、場面変化で関連度の揺れを整え、質問に合う高周波だけを強めてから予算配分する学習不要の動画トークン圧縮で、10倍圧縮でも全入力の99.6パーセントの性能を保った。
 
 - **2026-07 · [Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation](2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
