@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では、メモリ律速となった計算集約型演算列を高水準タイル式とDAG解析で融合し、解析的性能モデルとヒューリスティック探索でチューニングするMCFuserを提案。A100・RTX3080でAnsor等に対しカーネル最大5.9倍高速化、探索時間70倍超短縮を報告。LLM専用ではないがGPU推論カーネル融合・メモリ帯域最適化に直接応用可能な汎用基盤技術。",
   "semantic_scholar_id": "8d53493eb42229f0c92a18a93d3a1237cd8fc15d",
   "source_url": "https://arxiv.org/abs/2506.22169",
-  "status": "ready",
+  "status": "superseded",
   "title": "MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators",
   "type": "research",
   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T13:17:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md",
+  "represented_canonical_id": "arXiv:2506.22169",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

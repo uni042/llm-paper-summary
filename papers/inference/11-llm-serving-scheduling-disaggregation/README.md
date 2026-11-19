@@ -68,6 +68,10 @@
   実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：6  
   fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
 
+- **2026-04 · [Cascadia: An Efficient Cascade Serving System for Large Language Models](2025-2506.04203-cascadia-cascade-serving-routing-deployment.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。
+
 - **2026-02 · [Predicting LLM Output Length via Entropy-Guided Representations](2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   生成長を事前に予測して近い長さの要求をまとめればこの無駄を減らせるが、既存法はDistilBERTのような補助モデルを別途動かすため、追加遅延とGPUメモリを消費する。
@@ -91,10 +95,6 @@
 - **2026-05 · [SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters](2026-2605.00528-saga.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   エージェントの全ワークフローを単位にKV保持・セッション親和性・公平性を共同制御し、64基A100でタスク完了時間を幾何平均1.64倍短縮する。
-
-- **2026-04 · [Cascadia: An Efficient Cascade Serving System for Large Language Models](2025-2506.04203-cascadia-cascade-serving-routing-deployment.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。
 
 - **2026-03 · [Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving](2026-2603.13358-ppd-disaggregation-multiturn-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1336,6 +1336,10 @@
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：11  
   固定した最大周波数でGPUを動かすと低負荷時に余分な電力を使うが、単純に周波数を下げると同時要求数やKVキャッシュ量が増えたとき遅延が悪化する。著者らは、要求の生成長を予測し、将来の各復号反復におけるバッチサイズとKVキャッシュ使用量を推定する。
 
+- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：11  
+  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
+
 - **2025-02 · [ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments](2025-2502.09334-thunderserve-high-performance-and-cost-efficient-llm-serving-in-cloud-en.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   ThunderServeは、同種の高性能GPUを大量に確保できない環境で、大規模言語モデル（LLM）の推論を低コストかつ高いサービス水準で提供する分散サービング方式である。
@@ -1351,10 +1355,6 @@
 - **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
-
-- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
-  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
 
 - **2025-02 · [EcoServe: Designing Carbon-Aware AI Inference Systems](2025-2502.05043-ecoserve-carbon-aware-ai-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
@@ -1480,6 +1480,10 @@
   実装：[✓](https://github.com/KevinLee1110/dynamic-batching) ・ リポジトリ内被引用：5  
   ただし各要求の入力長・生成長に応じてKVキャッシュが増えるため、バッチを大きくし過ぎるとメモリ不足（OOM）、KV退避、再計算が発生する。飽和要求負荷での実験では、静的バッチ上限に比べて生成処理量が6.5〜28.2%改善した。
 
+- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
+  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：5  
+  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
+
 - **2024-12 · [METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation](2024-2412.10543-metis-fast-quality-aware-rag-systems-with-configuration-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   検索数を増やすと根拠が集まりやすい反面、入力長が増え、最初のトークン生成までの処理やGPUメモリ占有が大きくなる。METISは、質問ごとに必要な検索件数、文章片の統合方法、中間要約長を変えることと、同時にGPUで処理する要求を選ぶことを、一つの制御器で行う。
@@ -1515,10 +1519,6 @@
 - **2025-04 · [Compass: SLO-aware Query Planner for Compound AI Serving at Scale](2025-2504.16397-compass-slo-aware-query-planner-for-compound-ai-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   各演算器にはモデル規模やサンプリング率の選択肢があり、端末、近傍エッジ、クラウドのどこで実行するか、どれだけGPUを割り当てるかで、品質・遅延・費用が変わる。原著の評価は5種類の複合AI応用を対象とし、強化した既存計画器と比べて、同じ計画期限でSLOを満たす要求数を2.4〜5.1倍、全要求を処理するための配備費を3.8〜4.5分の1に改善したと報告する。
-
-- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
-  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：4  
-  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
 
 - **2024-12 · [GreenLLM: Disaggregating Large Language Model Serving on Heterogeneous GPUs for Lower Carbon Emissions](2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

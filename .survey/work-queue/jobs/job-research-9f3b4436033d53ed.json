@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨を確認。ASCoTは推論過程の冗長ステップをsemantic pruningで圧縮し、後半の高リスクstepをadaptive verification managerで選択して自己修正する。GSM8K/MATH-500のLLaMA-3.1-8Bでtoken使用量を21–30%削減し精度低下を1.8%未満に抑えたと報告。推論時token予算の直接最適化のためaccept。",
   "semantic_scholar_id": "6f2aac686793c0f66619b6881ed08247d49f748a",
   "source_url": "https://arxiv.org/abs/2508.05282",
-  "status": "ready",
+  "status": "superseded",
   "title": "Not All Errors Are Created Equal: ASCoT Addresses Late-Stage Fragility in Efficient LLM Reasoning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T13:17:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in.md",
+  "represented_canonical_id": "arXiv:2508.05282",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（973本）
+## 自動生成の論文一覧（977本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2177,7 +2177,7 @@
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
-  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：42  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
@@ -2188,17 +2188,17 @@
   実装：✓ ・ リポジトリ内被引用：40  
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
-- **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
-  実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：33  
-  離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
-
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：35  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：35  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
+
+- **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
+  実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：33  
+  離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
   実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：30  
@@ -2225,7 +2225,7 @@
   大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
 
 - **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
@@ -2716,6 +2716,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Pyramid Token Pruning（PTP）は、追加学習なしで、画像全体に対するタイルの重要度、タイル内部のパッチ重要度、ユーザーの指示文に対するパッチ関連度を三段階で組み合わせる方式である。
 
+- **2025-09 · [IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs](2025-2509.06274-ipr-intelligent-prompt-routing-with-user-controlled-quality-cost-trade-o.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  入力文だけから各候補モデルの応答品質を連続値で予測し、利用者が許容度で決める閾値以上の候補から最も安いものを選ぶ振り分けで、クロード系列で最強モデルと品質同等を保ちながら費用を四十三・九パーセント削減し、新モデル追加も凍結した符号器への軽い適合だけで済むようにしたと報告した。
+
 - **2025-09 · [HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs](2025-2509.23967-hipo-hybrid-policy-optimization-for-dynamic-reasoning-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HiPO（Hybrid Policy Optimization）は、各入力に対して詳細推論を行うThink-onと直接回答するThink-offを選ぶ能力をモデル自体に学習させる方式である。
@@ -2756,6 +2760,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、事前学習済みの言語モデルをそのまま極端な低ビット形式へ変換すると知識が破壊される問題に対し、BinaryLLMという段階的な一ビット化方式を提案する。原著はSmolLM、LLaMA3、LLaMA2などで評価し、三十億パラメータ規模ではゼロショット七課題平均57.0%を得た。
 
+- **2025-08 · [Not All Errors Are Created Equal: ASCoT Addresses Late-Stage Fragility in Efficient LLM Reasoning](2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  誤り注入の実験で終盤の段の誤りほど最終答えを壊すことを示し、意味の薄いトークンの間引きと、位置で重み付けした危険度が高い段だけの二経路修正を組み合わせ、八十億規模モデルで生成トークンを約二割減らしつつ正解率の低下を一・一ポイントに抑えたと報告した。
+
 - **2025-08 · [GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model](2025-2508.16700-gpt-oss-20b-a-comprehensive-deployment-centric-analysis-of-openai-s-open.md)**  
   実装：[✓](https://github.com/deepdik/GPT-OSS-20B-analysis) ・ リポジトリ内被引用：0  
   MoEは全重みの一部だけを各トークンで活性化するため、演算量はDenseの同規模モデルより小さくなり得る。しかし、未活性のエキスパート重みがメモリから消えるわけではなく、ルーティング、メモリアクセス、KV保持、プリフィルの費用も発生する。GPUのCUDA allocatorピークメモリはそれぞれ43,461MB、63,650MB、66,459MB。
@@ -2767,6 +2775,10 @@
 - **2025-08 · [Fast weight programming and linear transformers: from machine learning to neurobiology](2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   主要な根拠は原著の式(13)、(23)～(24)、表1、表2、および関連研究の分析であり、著者が新しいサービングシステムを実装して速度を測定した論文ではない。
+
+- **2025-08 · [Breaking the Layer Barrier: Remodeling Private Transformer Inference with Hybrid CKKS and MPC](2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層を演算子へ分解して隣り合う線形演算を境界を越えて融合し、近似数向け準同型暗号の安全な変換と回転の少ない行列積を組み合わせることで、秘匿推論の通信をボルト比で最大21倍、遅延を画像処理装置利用時13倍まで削減した。
 
 - **2025-07 · [SpeLLM: Character-Level Multi-Head Decoding](2025-2507.16323-spellm-character-level-multi-head-decoding.md)**  
   実装：[✓](https://github.com/schwartz-lab-NLP/SpeLLM) ・ リポジトリ内被引用：0  
@@ -2803,6 +2815,10 @@
 - **2025-07 · [Assigning Distinct Roles to Quantized and Low-Rank Matrices Toward Optimal Weight Decomposition](2025-2506.02077-assigning-distinct-roles-to-quantized-and-low-rank-matrices-toward-optim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CALDERAなどの方式はWを量子化行列Qと低ランク行列積LRの和、すなわちW ≈ Q + LRで近似し、Qの量子化とLRの更新を交互に行う。一方、同じ条件のARC-Easy正答率は66.35%から65.49%へ下がり、すべての下流タスクを改善するわけではない。
+
+- **2025-07 · [Activation Steering for Chain-of-Thought Compression](2025-2507.04742-activation-steering-for-chain-of-thought-compression.md)**  
+  実装：[✓](https://github.com/ArminAzizi98/ASC) ・ リポジトリ内被引用：0  
+  冗長な推論と簡潔な推論の活性の平均差を操舵ベクトルとして中間層へ注入し、分布のずれを距離予算で抑えながら思考連鎖を最大六七・四三パーセント短縮し、正解率を保って二・七三倍速くした。
 
 - **2025-07 · [Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance in Adaptation](2025-2407.17029-accurate-and-efficient-fine-tuning-of-quantized-large-language-models-th.md)**  
   実装：[✓](https://github.com/xiaocaigou/qbaraqahira) ・ リポジトリ内被引用：0  
@@ -3581,7 +3597,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：75  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：76  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
@@ -3641,7 +3657,7 @@
   複数の大規模言語モデルエージェントを協調させる方式では、担当する役割や通信順序を固定すると、問題によっては不得意なエージェントの発言が増え、余計なモデル呼出しと品質低下を招く。原著のHumanEvalコード生成評価では、単一実行の正答率73.2%に対してDyLANは82.9%、平均モデルAPI呼出し数は16.85回だった。
 
 - **2023-07 · [PUMA: Secure Inference of LLaMA-7B in Five Minutes](2023-2307.12533-puma-secure-inference-of-llama-7b-in-five-minutes.md)**  
-  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/secretflow/spu/tree/main/examples/python/ml/flax_llama7b) ・ リポジトリ内被引用：8  
   従来の高速化方式が必要としたモデルの再学習や構造変更を避け、既存の学習済み重みをほぼそのまま秘密計算へ持ち込むことを狙う。
 
 - **2023-10 · [Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM](2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md)**  

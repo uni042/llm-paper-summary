@@ -35,10 +35,15 @@
   "selection_reason": "BLBは暗号化Transformer推論で線形層をHE、非線形層をMPCへ切り替える際の通信負荷を減らすため、層を細粒度演算へ分解し隣接線形演算を融合する。CKKSとMPC間の安全な変換、融合行列積プロトコルを導入し、BERT/GPT2のGPU評価でBOLT比通信21倍削減・遅延13倍短縮を報告する推論実行系の直接最適化。",
   "semantic_scholar_id": "b0f3f2b1a59c9f78d2150ad2ea81ab32838a38e1",
   "source_url": "https://arxiv.org/abs/2508.19525",
-  "status": "ready",
+  "status": "superseded",
   "title": "Breaking the Layer Barrier: Remodeling Private Transformer Inference with Hybrid CKKS and MPC",
   "type": "research",
   "venue": "IACR Cryptology ePrint Archive",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T13:17:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2508.19525-breaking-the-layer-barrier-remodeling-private-transformer-inference-with.md",
+  "represented_canonical_id": "arXiv:2508.19525",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

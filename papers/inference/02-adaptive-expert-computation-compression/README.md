@@ -382,6 +382,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：1  
   専門家を4分割してtop-k動作点を4倍に増やし、予算別バッチングと分割CUDAグラフで要求ごとの計算予算をvLLM上で効率的に実行する。
 
+- **2025-09 · [Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression](2025-2510.02345-dynamic-expert-clustering-structured-compression.md)**  
+  実装：[✓](https://github.com/szdtzpj/Breaking_the_moe_trilemma) ・ リポジトリ内被引用：1  
+  パラメータ＋活性類似度で専門家を動的再編し、共有基底＋低ランク残差、階層ルーティング、INT4残差、NVMeオフロードを共同設計するMoE構造圧縮。
+
 - **2025-11 · [AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert](2025-2511.18314-anyexperts-on-demand-expert-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   トークン重要度から実専門家と仮想専門家の可変スロットを割り当て、固定Top-Kより細粒度にマルチモーダルMoEの計算予算を配分する。
@@ -405,10 +409,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-09 · [Dynamic Experts Search: Enhancing Reasoning in Mixture-of-Experts LLMs at Test Time](2025-2509.22572-dynamic-experts-search.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEの活性化エキスパート数をTTSの探索軸に加え、推論軌跡ごとに構成を継承して同程度の計算量で推論多様性と正解率を高める。
-
-- **2025-09 · [Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression](2025-2510.02345-dynamic-expert-clustering-structured-compression.md)**  
-  実装：[✓](https://github.com/szdtzpj/Breaking_the_moe_trilemma) ・ リポジトリ内被引用：0  
-  パラメータ＋活性類似度で専門家を動的再編し、共有基底＋低ランク残差、階層ルーティング、INT4残差、NVMeオフロードを共同設計するMoE構造圧縮。
 
 - **2025-07 · [Accelerating Dense LLMs via L0-regularized Mixture-of-Experts](2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
