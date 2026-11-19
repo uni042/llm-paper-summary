@@ -35,10 +35,15 @@
   "selection_reason": "生成推薦向け分散推論システムRcLLM。前方一致に限られる接頭辞キャッシュでは再利用が非連続な推薦ワークロードに効かない問題に対し、プロンプトを再利用可能なブロックへ分解し、利用者履歴とアイテムのキャッシュを階層化した分散配置で保持する、接頭辞を超えるKVキャッシュ。推論システムそのもの。",
   "semantic_scholar_id": "b2ccd3cfd917d54bae47265ab7d19ecbc1c43139",
   "source_url": "https://arxiv.org/abs/2605.07443",
-  "status": "ready",
+  "status": "superseded",
   "title": "RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching",
   "type": "research",
   "venue": "IEEE International Conference on Distributed Computing Systems",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T06:17:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-cachin.md",
+  "represented_canonical_id": "arXiv:2605.07443",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

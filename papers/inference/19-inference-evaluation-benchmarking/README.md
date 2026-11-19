@@ -48,6 +48,10 @@
   実装：[✓](https://github.com/luisbalru/MoEITS) ・ リポジトリ内被引用：1  
   一方、推論時に毎回使わないエキスパートも重みとして保持する必要があり、GPUやホスト側のメモリ容量、モデル配備コスト、エネルギー消費が大きくなる。方式は単純な利用頻度ベースの削除ではない。
 
+- **2026-04 · [KiToke: Distribution-Aware Token Compression for Video Large Language Models](2026-2604.03414-kitoke-distribution-aware-token-compression-for-video-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  特に保持率1%など極端な条件では、複雑な既存手法が一様ランダム抽出より低い精度になることもある。
+
 - **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   既存の手法はフレーム内の空間圧縮とフレーム間の時間圧縮を順番に適用するものが多いが、保持率を5%以下まで下げると、先に決めた各段階の予算配分が適切でなくなり、質問に必要な短い出来事や小さな物体を落としやすい。
@@ -234,10 +238,6 @@
   実装：[✓](https://github.com/zinichakraborty/Diffusion-LLM-Quantization-Robustness) ・ リポジトリ内被引用：0  
   推論用重みを低ビットで表す学習後量子化（post-学習 量子化; PTQ）はこの費用を減らす有力な方法だが、自己回帰型で得られた量子化の知見を拡散型へそのまま適用できるとは限らない。重要な留保として、混合精度実験は量子化を模擬しても重みを浮動小数点形式で保存する方式であり、低ビットの実物理容量削減を実測した結果ではない。
 
-- **2026-04 · [KiToke: Distribution-Aware Token Compression for Video Large Language Models](2026-2604.03414-kitoke-distribution-aware-token-compression-for-video-large-language-mod.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  特に保持率1%など極端な条件では、複雑な既存手法が一様ランダム抽出より低い精度になることもある。
-
 - **2026-04 · [IWP: Token Pruning as Implicit Weight Pruning in Large Vision Language Models](2026-2604.00757-iwp-token-pruning-as-implicit-weight-pruning-in-large-vision-language-mo.md)**  
   実装：[✓](https://github.com/jhtwosun/IWP) ・ リポジトリ内被引用：0  
   視覚トークンを削る従来方式は、注意重みの大きいトークンを残す、埋込み表現が似たトークンをまとめるなどの経験的基準を使うことが多い。LLaVA-OneVision-7Bの88.9%削減条件では、全トークン時1.37秒から0.64秒へ実測レイテンシを短縮する一方、品質指標は95.9%から89.5%へ下がる。
@@ -312,13 +312,13 @@
 
 ### 2年前（2024-12〜2025-11）
 
+- **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
+  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：29  
+  本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
+
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
   実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：28  
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
-
-- **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：28  
-  本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
   実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：27  

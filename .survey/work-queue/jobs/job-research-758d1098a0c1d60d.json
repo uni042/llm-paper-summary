@@ -35,10 +35,15 @@
   "selection_reason": "マルチモーダルMoE推論で視覚トークン偏重が専門家並列の負荷不均衡を招く問題に対し、ランクごとに専門家の計算精度を動的に変えてFP4テンソルコアを活かすReaLBで、スケジューリング負荷なしに最大1.32倍の高速化を示す。MoE推論の負荷均衡機構への直接貢献である。",
   "semantic_scholar_id": "d98fd81c5e11bae0a7ed87508f4035c7ae92d724",
   "source_url": "https://arxiv.org/abs/2604.19503",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReaLB: Real-Time Load Balancing for Multimodal MoE Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T06:17:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.md",
+  "represented_canonical_id": "arXiv:2604.19503",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

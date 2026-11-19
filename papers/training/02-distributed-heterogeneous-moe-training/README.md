@@ -57,7 +57,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 4年前（2022-12〜2023-11）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   この疎な計算は理論上、パラメータを増やしても一トークン当たりの演算量を抑えられるが、複数のGPUに専門家を分散した学習ではトークンの偏りが大きな問題になる。FlexMoEはモデル側のトークン選択を変えず、同じ専門家の複製を複数GPUに配置し、実際の負荷に合わせて複製数と配置を調整する。
 
 ### 6年前（2020-12〜2021-11）
