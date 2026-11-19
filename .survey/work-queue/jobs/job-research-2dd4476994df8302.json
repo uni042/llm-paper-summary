@@ -35,10 +35,15 @@
   "selection_reason": "量子化配慮型の視覚トークン剪定QAPruner。学習後量子化したMLLMへ意味ベース剪定をそのまま適用すると数値安定に要る活性外れ値を捨てて量子化誤差が悪化する結合問題に対し、模擬量子化誤差と外れ値強度を合わせた感度指標で剪定する。推論圧縮機構そのもの。",
   "semantic_scholar_id": "c85dc53a7258caaf5e6b40dc643cdb4b81985452",
   "source_url": "https://arxiv.org/abs/2604.02816",
-  "status": "ready",
+  "status": "superseded",
   "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T05:52:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.02816-qapruner-quantization-aware-vision-token-pruning-for-multimodal-large-la.md",
+  "represented_canonical_id": "arXiv:2604.02816",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "回転型PTQで全層共通の回転行列は表現力が不足し、層別回転はオンライン演算負荷が大きい問題に対し、残差部分空間の回転と基底対応によりオフライン融合を可能にする。W4A4・W3A3量子化でグローバル回転方式より精度を改善し、層別方式と同程度の精度を低い推論負荷で達成したと著者は報告。LLM低ビット量子化の直接関連研究。",
   "semantic_scholar_id": "ab97e5e7b48ac3bc02e676d9a4b58d697db6c5c8",
   "source_url": "https://arxiv.org/abs/2604.11080",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReSpinQuant: Efficient Layer-Wise LLM Quantization via Subspace Residual Rotation Approximation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T05:52:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.11080-respinquant-efficient-layer-wise-llm-quantization-via-subspace-residual-.md",
+  "represented_canonical_id": "arXiv:2604.11080",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

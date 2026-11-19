@@ -35,10 +35,15 @@
   "selection_reason": "層間KV圧縮YOCOの強化YOCO++。中間層のKVを上半分の層と共有するYOCOに対し、下半分各層のKVと最下層のKVの間に重み付き残差接続を入れることで、訓練と推論の効率を保ったまま容量を増やす。50%のKV圧縮率で層間圧縮手法の最良性能を示す推論メモリ機構。",
   "semantic_scholar_id": "81a95fd396080960c74197b25805a289e19cf279",
   "source_url": "https://arxiv.org/abs/2604.13556",
-  "status": "ready",
+  "status": "superseded",
   "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T05:52:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.13556-yoco-enhancing-yoco-with-kv-residual-connections-for-efficient-llm-infer.md",
+  "represented_canonical_id": "arXiv:2604.13556",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "VideoLLM向け階層トークン剪定HieraVid。動画の区間・フレーム構造とLLM内の単方向な情報伝播を利用し、区間水準・フレーム水準など3階層で視覚冗長性を段階的・動的に減らす。動画推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "32f6799dd5ecf56d2e2ea37ca8f4baeee04ceeec",
   "source_url": "https://arxiv.org/abs/2604.01881",
-  "status": "ready",
+  "status": "superseded",
   "title": "HieraVid: Hierarchical Token Pruning for Fast Video Large Language Models",
   "type": "research",
   "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T05:52:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.01881-hieravid-hierarchical-token-pruning-for-fast-video-large-language-models.md",
+  "represented_canonical_id": "arXiv:2604.01881",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
