@@ -35,10 +35,15 @@
   "selection_reason": "ピクセル水準の適応的視覚トークン削減PixelPrune。文書・GUI画像ではパッチの22〜71%しかピクセル一意でない冗長性を使い、予測符号化に基づく圧縮でViTエンコーダの前段で重複パッチを落とす。エンコーダとLLMの両方を速くする学習不要の推論パイプライン機構。",
   "semantic_scholar_id": "d830315b2a6a2d6a5f32a697bc4e8252ce00a796",
   "source_url": "https://arxiv.org/abs/2604.00886",
-  "status": "ready",
+  "status": "superseded",
   "title": "PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:16:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-co.md",
+  "represented_canonical_id": "arXiv:2604.00886",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

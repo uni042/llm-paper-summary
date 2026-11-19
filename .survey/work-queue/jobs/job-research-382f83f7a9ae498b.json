@@ -35,10 +35,15 @@
   "selection_reason": "LLM agentの長期tool実行で小型モデルの低費用と大型モデルの推論堅牢性を両立するため、自己反省信号から進捗停滞を検出して強いreasoning tierへ制御を移し、失敗履歴に応じて累積的に追加計算を配分する。小型/大型2層モデル構成で複数agent benchmarkのaccuracy-efficiency Pareto frontier改善を報告。推論呼出しのモデル選択とtest-time compute配分を直接扱うためaccept。",
   "semantic_scholar_id": "da1ac1cd107e020f9d673aa756dbe62994833de8",
   "source_url": "https://arxiv.org/abs/2603.26034",
-  "status": "ready",
+  "status": "superseded",
   "title": "AgentCollab: A Self-Evaluation-Driven Collaboration Paradigm for Efficient LLM Agents",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:16:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficien.md",
+  "represented_canonical_id": "arXiv:2603.26034",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

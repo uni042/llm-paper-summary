@@ -1161,7 +1161,7 @@
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
-  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：33  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
@@ -1356,6 +1356,10 @@
   実装：[✓](https://github.com/NetX-lab/Ayo) ・ リポジトリ内被引用：9  
   LLMアプリをプリミティブ依存グラフへ分解し、モジュール横断の並列化・パイプライン化とトポロジ認識バッチングでエンドツーエンド遅延を短縮する。
 
+- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
+
 - **2025-01 · [Mell: Memory-Efficient Large Language Model Serving via Multi-GPU KV Cache Management](2025-2501.06709-mell-multi-gpu-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   複数GPUでLLMを提供すると、要求ごとの出力長の違いでKVキャッシュが一方のGPUだけに膨らみ、空きGPUを使えない。Mellは実行中要求をGPU間で移し、通信余力があればKV本体を転送し、演算余力があればトークンだけを送り移行先で再プリフィルして偏りを抑える。
@@ -1379,10 +1383,6 @@
 - **2025-03 · [Niyama: Breaking the Silos of LLM Inference Serving](2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md)**  
   実装：[✓](https://github.com/microsoft/sarathi-serve/tree/niyama_asplos2026) ・ リポジトリ内被引用：8  
   対話・コード補完・要約などを「対話型」「バッチ型」の別GPU群へ固定せず、要求ごとの細かなサービス品質（Quality of Service; QoS）期限を同じGPUプールで扱う配信系。Niyamaはデコード要求の締切余裕を見ながらプリフィルの分割サイズを動的に変え、期限優先と残り仕事量優先を混ぜ、過負荷時には少数要求だけを低優先度へ降格する。
-
-- **2025-02 · [Universal Model Routing for Efficient LLM Inference](2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  新LLMを代表プロンプト群へのクラスタ別誤差ベクトルで表現し、ルータ再学習なしで動的モデルプールへ追加するUniRouteが、30超の未観測LLMを含む評価でK-NN/ZeroRouterを上回る。
 
 - **2025-02 · [TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval](2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md)**  
   実装：[✓](https://github.com/uw-syfi/TeleRAG) ・ リポジトリ内被引用：8  

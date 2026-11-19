@@ -603,7 +603,7 @@
   ヘッドごとの局所性と入力長への伸び方を勾配で測り、異種sliding-ウィンドウ規則を自動探索して静的KV マスクへ落とすMoA。
 
 - **2024-10 · [ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity](2024-2410.08584-zipvl-accelerating-vision-language-models-through-dynamic-token-sparsity.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   入力全体を処理するプリフィル段階では注意計算が長い系列に対して重くなり、続くデコード段階では生成トークンが過去のKey/Value（KV）を繰り返し読み出すためメモリ帯域が問題になる。ただし、前者はバッチ1の最初のトークンまでの時間、後者は各方式が単一GPUで収容できる最大バッチを使った生成処理率であり、同じ測定条件の速度指標ではない。
 
 - **2024-10 · [HSR-Enhanced Sparse Attention Acceleration](2024-2410.10165-hsr-enhanced-sparse-attention-acceleration.md)**  

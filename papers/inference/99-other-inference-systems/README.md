@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（889本）
+## 自動生成の論文一覧（894本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1346,6 +1346,10 @@
   実装：[✓](https://anakin-skywalker-joseph.github.io/POINTS-Long-Webpage) ・ リポジトリ内被引用：0  
   WangらはPOINTS-Longを提案し、高精細な視覚情報を使うFocusモードと、圧縮された視覚情報だけを使うStandbyモードを同じモデルに持たせる。64フレームの動画では、Standbyが1フレーム8〜32トークン、合計512〜2,048トークンだけを使い、原著Table 1の相対平均97.7〜99.7%を維持する。
 
+- **2026-04 · [PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding](2026-2604.00886-pixelprune-pixel-level-adaptive-visual-token-reduction-via-predictive-co.md)**  
+  実装：[✓](https://github.com/OPPO-Mente-Lab/PixelPrune) ・ リポジトリ内被引用：0  
+  画素の重複を予測符号化で検出し、視覚符号器へ入れる前に重複ブロックを落とす学習不要の方式で、文書では精度をほぼ保ちながら推論を最大4.2倍速くした。
+
 - **2026-04 · [Optimal Decay Spectra for Linear Recurrences](2026-2604.07658-optimal-decay-spectra-for-linear-recurrences.md)**  
   実装：[✓](https://github.com/SiLifen/PoST) ・ リポジトリ内被引用：0  
   MambaやRWKV、線形注意を使う系列モデルは、過去の情報を固定次元の状態へまとめて保存することで、生成時に全トークンのキー・値キャッシュを保持する通常の注意機構より、系列長に対する状態メモリの増加を抑えられる。
@@ -1474,6 +1478,10 @@
   実装：[✓](https://github.com/acalabys/SERQ) ・ リポジトリ内被引用：0  
   SERQ（Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization）は、LLMの線形層で重みと活性値をともに低ビット化した際の誤差を、小さな追加行列で補う後学習量子化（PTQ）手法である。
 
+- **2026-03 · [Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints](2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-an.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  バッチ全体の割当てを整数線形計画で解いて費用と容量を直接守る経路選択の枠組みで、敵対的なバッチ構成では問い単位の方式より最大24パーセント高い精度を示した。
+
 - **2026-03 · [Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification](2026-2603.01399-quasar-quantized-self-speculative-acceleration-for-rapid-inference-via-m.md)**  
   実装：[✓](https://github.com/Tom-HG/Quasar) ・ リポジトリ内被引用：0  
   Quasar（量子化 自己投機的 Acceleration for Rapid Inference）は、投機的復号（投機的復号）の下書き側ではなく、目標モデルによる検証側を8ビット量子化する方式である。検証がメモリ帯域に制限される条件では、下書き側だけを改善しても総生成時間の短縮に限界がある。
@@ -1510,6 +1518,10 @@
   実装：[✓](https://github.com/IBM/coherent-diffusion-local-autoregression) ・ リポジトリ内被引用：0  
   マスク拡散型の言語モデル（DLM）は、未確定トークンを一度に複数予測して反復的に確定できる。Dream-Coder-Instruct-7BとQwen3-0.6Bの組合せでは、HumanEvalのコード抽出失敗率が、1反復に8トークン確定する条件で基準DLMの70%からCoDiLAの16%へ低下した。
 
+- **2026-03 · [Large Language Model as Token Compressor and Decompressor](2026-2603.25340-large-language-model-as-token-compressor-and-decompressor.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既成の言語モデルをLoRAで適応させ、長文を離散・可変長のZトークンへ圧縮して復号も行う自動符号化で、内容に応じた配分により長文脈のメモリと遅延を大きく削った。
+
 - **2026-03 · [KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging](2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md)**  
   実装：[✓](https://github.com/lianjunl13-sudo/KVSlimmer) ・ リポジトリ内被引用：0  
   古いトークンを単に捨てる方式は将来必要になる情報を回復できないため、近接したトークンの表現を統合して残す方法が検討されている。A100上ではAsymKV比で平均実行時間28%削減、チャンク512のピークGPUメモリ約29%削減を報告する。
@@ -1541,6 +1553,10 @@
 - **2026-03 · [Frequency-Modulated Visual Restoration for Matryoshka Large Multimodal Models](2026-2603.11220-frequency-modulated-visual-restoration-for-matryoshka-large-multimodal-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FMVR（Frequency-Modulated Visual Restoration）は、削減済み視覚表現の平均値からの残差と最大値からの残差をそれぞれ学習可能な係数で変調し、目立つ特徴と埋もれた特徴の両方を補強する方式である。原著表3では36トークン時に初期入力処理時間が58.1から18.0ミリ秒へ短縮し、総メモリが21.6から13.8GBへ減少する。
+
+- **2026-03 · [ForestPrune: High-ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling](2026-2603.22911-forestprune-high-ratio-visual-token-compression-for-video-multimodal-lar.md)**  
+  実装：[✓](https://github.com/luminousllsa/ForestPrune) ・ リポジトリ内被引用：0  
+  全フレームの視覚トークンを意味・位置・時刻で木に結び、深い木の根と幹を残して葉から削る学習不要の方式で、トークン90パーセント削減でも平均精度の95.8パーセントを保持した。
 
 - **2026-03 · [ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models](2026-2603.25766-eta-vla-efficient-token-adaptation-via-temporal-fusion-and-intra-llm-spa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1585,6 +1601,10 @@
 - **2026-03 · [Attention-Based Sampler for Diffusion Language Models](2026-2604.08564-attention-based-sampler-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、マスク拡散型大規模言語モデル（dLLM）の生成時に、どの位置のマスクを先に確定するかを注意行列から決める学習不要の復号法Attn-Samplerを提案する。
+
+- **2026-03 · [AgentCollab: A Self-Evaluation-Driven Collaboration Paradigm for Efficient LLM Agents](2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficien.md)**  
+  実装：[✓](https://github.com/SparkEngineAI/AgentFlashInfer) ・ リポジトリ内被引用：0  
+  ステップごとにモデル自身が進捗を自己評価し、停滞時だけ大きいモデルへ一時的に制御を移す協調方式で、エージェントの正解率を大きいモデル並みに近づけつつ1.3から2.4倍の高速化を得た。
 
 - **2026-03 · [3BASiL: An Algorithmic Framework for Sparse plus Low-Rank Compression of LLMs](2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-.md)**  
   実装：[✓](https://github.com/mazumder-lab/3BASiL) ・ リポジトリ内被引用：0  
