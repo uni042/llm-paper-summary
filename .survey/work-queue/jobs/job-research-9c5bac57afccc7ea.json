@@ -35,10 +35,15 @@
   "selection_reason": "LMEdgeは異種edgeクラスタ上でモデルfamily・サイズ・量子化精度・配置先を問い合わせごとに選択するQoS-aware推論オーケストレーション。応答遅延、精度、メモリ、ネットワークの制約をBILPと軽量近似法で扱い、59,000超の構成測定データと57インスタンスのKubernetesテストベッドで評価。比較2方式より遅延・resource利用・serving ratioが改善と報告するがabstractには統一倍率がない。LLM推論運用の直接最適化としてaccept。",
   "semantic_scholar_id": "2305c67f83e9be891efa7c84b13b715cbfbf68fe",
   "source_url": "https://arxiv.org/abs/2607.17175",
-  "status": "ready",
+  "status": "superseded",
   "title": "LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T08:52:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.md",
+  "represented_canonical_id": "arXiv:2607.17175",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

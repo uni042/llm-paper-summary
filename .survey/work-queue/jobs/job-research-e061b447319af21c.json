@@ -35,10 +35,15 @@
   "selection_reason": "拡散MLLMの冗長パディング除去Seer。固定長生成で最大長まで埋められたEOS後続が無駄な計算になる問題に対し、初回デノイズステップのMLP活性化疎性の変化から有効な意味境界を検出し、冗長サフィックスを一括で切り捨てる学習不要の方式。バッチサービング向け混在実行も備え、スループット最大約31倍。推論機構そのもの。",
   "semantic_scholar_id": "030a0d9963382da0f8eaa5e3b79b6cf6b405fbad",
   "source_url": "https://arxiv.org/abs/2607.14557",
-  "status": "ready",
+  "status": "superseded",
   "title": "Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation",
   "type": "research",
   "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T08:52:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsit.md",
+  "represented_canonical_id": "arXiv:2607.14557",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（85本）
+## 自動生成の論文一覧（86本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -194,6 +194,10 @@
 - **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
+
+- **2026-07 · [The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI](2026-2607.06906-the-harness-effect-how-orchestration-design-sets-the-token-economics-of-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  課題とモデルを固定して編成層だけを入れ替える対照実験で、接頭辞の安定化や履歴圧縮などの6機構を持つ編成基盤が、品質を保ったまま費用を41パーセント、トークンを38パーセント減らすことを示し、編成層がモデル選択より大きな費用の決定要因になり得ると明らかにした。
 
 - **2026-07 · [Scalable LLM Agent Tool Access in the Cloud](2026-2607.15593-scalable-llm-agent-tool-access-in-the-cloud.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
