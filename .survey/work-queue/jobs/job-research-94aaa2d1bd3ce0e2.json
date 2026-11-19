@@ -35,10 +35,15 @@
   "selection_reason": "Transformer層の逐次実行という遅延ボトルネックに対し、層間隠れ状態遷移を非線形残差方程式とみなし、ヤコビアンの安価な代替動力学による構造化Newton補正で層並列に解くSNLPを提案し、0.5Bモデルで最大2.58倍の高速化と自己投機的デコードのドラフタ利用を示す。層並列推論機構への直接貢献である。",
   "semantic_scholar_id": "767351320e68f4eb61957e767daad9ca4175ef0d",
   "source_url": "https://arxiv.org/abs/2605.17842",
-  "status": "ready",
+  "status": "superseded",
   "title": "SNLP: Layer-Parallel Inference via Structured Newton Corrections",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T04:18:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2605.17842-snlp-layer-parallel-inference-via-structured-newton-corrections.md",
+  "represented_canonical_id": "arXiv:2605.17842",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

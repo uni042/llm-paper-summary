@@ -35,10 +35,15 @@
   "selection_reason": "ストリーミングVLM向けコアセット型KV圧縮CoRDS。KVキャッシュ圧縮を、トークンを個別に採点する問題でなく蓄積した視覚キャッシュの幾何を覆う代表部分集合の選択問題として定式化し、鍵と値の共同表現で二基準目的を解く。推論メモリ機構そのもの。",
   "semantic_scholar_id": "a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5",
   "source_url": "https://arxiv.org/abs/2605.14310",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T04:18:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.14310-cords-coreset-based-representative-and-diverse-selection-for-streaming-v.md",
+  "represented_canonical_id": "arXiv:2605.14310",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
