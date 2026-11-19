@@ -86,15 +86,35 @@ class StatusReauditQueueTests(unittest.TestCase):
         )
 
 
-    def test_library_import_renders_status_after_publishing_reaudit_queue(self):
+    def test_library_import_no_longer_renders_status_or_refreshes_reaudit_queue(self):
         workflow = (ROOT / ".github/workflows/library-import.yml").read_text(
             encoding="utf-8"
         )
-        queue_push = workflow.index("git commit -m 'library-import: refresh under-16KB re-audit queue'")
-        final_status = workflow.index("git commit -m 'library-import: sync STATUS after re-audit refresh'")
-        self.assertLess(queue_push, final_status)
-        self.assertIn("status_after_reaudit_ok=0", workflow)
-        self.assertIn("Post-re-audit STATUS push race", workflow)
+        # The under-16KB re-audit queue refresh and the STATUS rendering
+        # were split off from the intake lane (2026-11-20): survey-maintenance
+        # republishes the queue from the latest main, and status-dashboard
+        # refreshes STATUS on this workflow's completion (workflow_run).
+        # The intake lane must not regrow either per-run fixed cost.
+        self.assertNotIn("refresh under-16KB re-audit queue", workflow)
+        self.assertNotIn("sync STATUS after re-audit refresh", workflow)
+        self.assertNotIn(
+            "python .survey/scripts/render_status_dashboard.py", workflow
+        )
+        self.assertNotIn(
+            "python .survey/scripts/refresh_under16kb_reaudit_queue.py",
+            workflow,
+        )
+        maintenance = (ROOT / ".github/workflows/maintenance.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(
+            "python .survey/scripts/refresh_under16kb_reaudit_queue.py",
+            maintenance,
+        )
+        dashboard = (ROOT / ".github/workflows/status-dashboard.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("workflow_run", dashboard)
 
 
 if __name__ == "__main__":
