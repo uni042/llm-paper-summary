@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（965本）
+## 自動生成の論文一覧（968本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2892,6 +2892,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
 
+- **2025-05 · [QStore: Quantization-Aware Compressed Model Storage](2025-2505.04081-qstore-quantization-aware-compressed-model-storage.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低精度モデルと復元用の条件付き情報だけを保持する無損失の統合保管形式で、量子化関数と量子化後の値による二重のグループ化で条件付き情報を圧縮し、六つのモデルで保管量を最大で無圧縮の二・二分の一、読み込みを最大で一・八倍速くしたと報告した。
+
 - **2025-05 · [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](2025-2505.17639-premoe-proactive-inference-for-efficient-mixture-of-experts.md)**  
   実装：[✓](https://github.com/JarvisPei/PreMoe) ・ リポジトリ内被引用：0  
   Mixture-of-Experts（MoE）は1トークン当たり一部の専門家（専門家）だけを実行するが、通常のサービングでは全専門家の重みをGPU/NPUメモリに常駐させる必要がある。PreMoEは、利用する領域をあらかじめ決められるなら、その領域で重要な専門家だけを残した小型MoEを、元モデルのルータlogitから再学習なしで事前構築する方式である。
@@ -2907,6 +2911,10 @@
 - **2025-05 · [Hierarchical Document Refinement for Long-context Retrieval-augmented Generation](2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-ge.md)**  
   実装：[✓](https://github.com/ignorejjj/LongRefiner) ・ リポジトリ内被引用：0  
   検索文書を階層木へ起こし直し、問いの情報範囲に応じた局所得点と全域得点で節点を選ぶ精錬器で、全文投入より約十分の一のトークンで七課題すべて最高精度を達成した。
+
+- **2025-05 · [Grouped Sequency-arranged Rotation: Optimizing Rotation Transformation for Quantization for Free](2025-2505.03810-grouped-sequency-arranged-rotation-optimizing-rotation-transformation-fo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アダマール行列の行を符号反転回数の順に並べ替えたウォルシュ行列を、量子化グループ単位のブロック対角回転として使う学習なしの方式で、二ビット重み量子化の困惑度を通常回転の二十点二九から十一・五九へ下げ、学習型方式に迫る水準とゼロショット平均精度四十二・四四パーセントを報告した。
 
 - **2025-05 · [Exploring Federated Pruning for Large Language Models](2025-2505.13547-exploring-federated-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/Pengxin-Guo/FedPrLLM) ・ リポジトリ内被引用：0  
@@ -2963,6 +2971,10 @@
 - **2025-04 · [An Empirical Study on Prompt Compression for Large Language Models](2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md)**  
   実装：[✓](https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression) ・ リポジトリ内被引用：0  
   本論文は、長いプロンプトを事前に短縮してLLMへ渡すテキスト入力の圧縮について、6種類の方式を同一の評価枠組みで比較する実証研究である。また、単一A6000 GPU上の圧縮器処理時間はSCRLの67ms/入力からKiSの2410ms/入力まで大きく異なる。
+
+- **2025-04 · [Achieving Binary Weight and Activation for LLMs Using Post-Training Quantization](2025-2504.05352-achieving-binary-weight-and-activation-for-llms-using-post-training-quan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みに所属ビットを足して四つの自由な代表値を持たせ期待値最大化法で決め、活性値の四ビットを四つの一ビットへ分解して内積を論理演算で計算する学習後量子化で、実質二ビット・四ビット設定の困惑度を七十億モデルで八・五八まで抑え、行列積カーネルで従来カーネルの約三倍の高速化を報告した。
 
 - **2025-03 · [Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size](2025-2503.04704-universality-of-layer-level-entropy-weighted-quantization-beyond-model-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

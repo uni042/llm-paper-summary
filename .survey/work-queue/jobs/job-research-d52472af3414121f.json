@@ -35,10 +35,15 @@
   "selection_reason": "量子化配慮型の圧縮モデル保存QStore。複数精度のモデルを別ファイルで持つ保存費用の無駄に対し、高精度モデルが低精度を情報として含む性質を使って保存を圧縮する。推論配備の保存システムそのもの。",
   "semantic_scholar_id": "572a42c3118dd72a481d47367c96fb56b2c5d717",
   "source_url": "https://arxiv.org/abs/2505.04081",
-  "status": "ready",
+  "status": "superseded",
   "title": "QStore: Quantization-Aware Compressed Model Storage",
   "type": "research",
   "venue": "Proceedings of the VLDB Endowment",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T12:41:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2505.04081-qstore-quantization-aware-compressed-model-storage.md",
+  "represented_canonical_id": "arXiv:2505.04081",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "低精度計算向けタイルレベルGPGPU言語Tilus。LLM提供の低精度カーネル生成が2の冪のビット幅に限られ、高水準抽象で細粒度のレジスタ管理やメモリアクセス最適化ができない問題に対し、タイルレベルの言語で低精度カーネルを書けるようにする。推論カーネル基盤そのもの。",
   "semantic_scholar_id": "dcb25e0ebfe080947075252c7f75bf92296afe04",
   "source_url": "https://arxiv.org/abs/2504.12984",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
   "type": "research",
   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T12:41:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computat.md",
+  "represented_canonical_id": "arXiv:2504.12984",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
