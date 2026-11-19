@@ -26,7 +26,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
-  実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：28  
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
@@ -1150,7 +1150,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：107  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
@@ -1161,20 +1161,20 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/TreeAI-Lab/Awesome-KV-Cache-Management) ・ リポジトリ内被引用：76  
   キャッシュを減らせば容量は空くが、注意品質の低下、検索・量子化の追加計算、CPU/SSD転送、再計算など別の費用が発生する。
 
+- **2025-05 · [dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching](2025-2506.06295-dllm-cache-adaptive-caching.md)**  
+  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：62  
+  プロンプトの長間隔キャッシュとV類似度による応答トークン選択更新で、拡散LLM推論の再計算を学習なしに削減する。
+
 - **2025-05 · [KVzip: Query-Agnostic KV Cache Compression with Context Reconstruction](2025-2505.23416-kvzip.md)**  
   実装：[✓](https://github.com/snu-mllab/KVzip) ・ リポジトリ内被引用：61  
   元文脈の再構成時に使われるKVを重要とみなし、将来クエリを知らずに再利用可能な長文脈KVキャッシュを3〜4倍圧縮する。
-
-- **2025-05 · [dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching](2025-2506.06295-dllm-cache-adaptive-caching.md)**  
-  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：61  
-  プロンプトの長間隔キャッシュとV類似度による応答トークン選択更新で、拡散LLM推論の再計算を学習なしに削減する。
 
 - **2025-10 · [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution](2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md)**  
   実装：[✓](https://github.com/NVIDIA/kvpress) ・ リポジトリ内被引用：54  
   Expected 注意機構は、大規模言語モデルの推論で増大する鍵・値キャッシュ（KV キャッシュ）を、追加学習なしに選択削除する方法である。Qwen3-8BのRULER 16Kでは、キャッシュ50%削除でも無圧縮92.9に対し92.7を維持する。
 
 - **2025-05 · [dKV-Cache: The Cache for Diffusion Language Models](2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/horseee/dKV-Cache) ・ リポジトリ内被引用：53  
+  実装：[✓](https://github.com/horseee/dKV-Cache) ・ リポジトリ内被引用：54  
   DLMの復号済みトークンK/Vを1ステップ遅延して再利用し、未確定位置だけを再計算することで、学習なしに2〜10倍級の推論高速化を実現する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
@@ -1197,13 +1197,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：31  
   注意重みではなくキーの幾何学的多様性を重要度代理として使う学習不要KV削除法で、ブロック長文処理でも厳密な容量上限を守りつつ、8K予算で約23%削減・LongBench差0.04%以下、既存削除法比で遅延最大30%短縮を示す。
 
+- **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
+  実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：29  
+  FlashDLMは拡散言語モデル（Diffusion Language モデル; DLM）の遅さを、1回のノイズ除去で再計算し過ぎる問題と、何回ノイズ除去を繰り返すかという問題に分ける。FreeCacheは前者を、Guided Diffusionは後者を削り、二つを組み合わせて大きな端末間高速化を得る。
+
 - **2024-12 · [DynamicKV: Task-Aware Adaptive KV Cache Compression for Long Context LLMs](2024-2412.14838-dynamickv-task-aware-adaptive-kv-cache-compression-for-long-context-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：29  
   KVを一律の長さで削る方式は簡単だが、要約、文書質問応答、コード補完などでは、重要な情報が残る層とトークン位置が異なる。
-
-- **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
-  実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：28  
-  FlashDLMは拡散言語モデル（Diffusion Language モデル; DLM）の遅さを、1回のノイズ除去で再計算し過ぎる問題と、何回ノイズ除去を繰り返すかという問題に分ける。FreeCacheは前者を、Guided Diffusionは後者を削り、二つを組み合わせて大きな端末間高速化を得る。
 
 - **2025-01 · [RotateKV: Accurate and Robust 2-Bit KV Cache Quantization for LLMs via Outlier-Aware Adaptive Rotations](2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md)**  
   実装：[✓](https://github.com/ZunhaiSu/RotateKV) ・ リポジトリ内被引用：28  
@@ -1604,7 +1604,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：481  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：484  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -1843,6 +1843,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/jeffwillette/cascading_kv_cache) ・ リポジトリ内被引用：1  
   固定長の滑動窓（sliding window）を使えばメモリを抑えられるが、窓から出た過去のトークンは消え、長距離の依存関係を復元できない。StreamingLLMは冒頭の注意シンク（注意機構 sinks）を残して安定性を高めるものの、冒頭以外の過去トークンは一定の年齢になると削除する。
 
+- **2024-06 · [CaR: An Efficient KV Cache Reuse System for Large Language Model Inference](2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  破棄されていた履歴の鍵値キャッシュをHBMとCXLメモリの二層に残し、スケジューラと協調した先読み・退避・層別疎化で要求をまたいで再利用し、最初のトークンまでの時間を約30パーセント、長い文脈では60パーセント超短くした多層キャッシュ基盤。
+
 - **2024-04 · [XC-Cache: Cross-Attending to Cached Context for Efficient LLM Inference](2024-2404.15420-xc-cache-cross-attending-to-cached-context-for-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   文脈を符号器の最終表現だけでキャッシュし交差注意で読む形へ復号器を作り替え、KVキャッシュを約30分の1にしながらプロンプト方式より高い質問応答精度を出した方式。
@@ -1855,10 +1859,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/zhenyuhe00/PIE) ・ リポジトリ内被引用：0  
   本研究は、開発者が既存コードの途中に行を挿入・削除した直後に、コード補完用の大規模言語モデル（LLM）が次の行を予測し直す場面を対象とする。
 
-- **2024-06 · [CaR: An Efficient KV Cache Reuse System for Large Language Model Inference](2024-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inferenc.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  破棄されていた履歴の鍵値キャッシュをHBMとCXLメモリの二層に残し、スケジューラと協調した先読み・退避・層別疎化で要求をまたいで再利用し、最初のトークンまでの時間を約30パーセント、長い文脈では60パーセント超短くした多層キャッシュ基盤。
-
 - **2024-03 · [Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage](2024-60b566817f9b-hierarchical-and-dynamic-prompt-compression-for-efficient-zero-shot-api-.md)**  
   実装：[✓](https://github.com/jiangycTarheel/HD-Gist) ・ リポジトリ内被引用：0  
   従来のgist トークン方式は文書を固定個数の特殊トークンの隠れ状態へ圧縮できるが、API呼出しのように細かい引数名・値の正確さが必要なタスクでは情報が失われ、圧縮前より大きく精度が低下する。
@@ -1866,11 +1866,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：725  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：726  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：682  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：684  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  

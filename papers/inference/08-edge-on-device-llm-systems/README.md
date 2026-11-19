@@ -36,6 +36,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   巨大MoEのCPU計算・DRAM帯域律速に対し、入力処理は必要重みをGPUへ細粒度転送し、生成はCPU専門家計算とGPU注意を重ねて元精度を保つ方式。
 
+- **2026-05 · [Agent-X: Full Pipeline Acceleration of On-device AI Agents](2026-2605.10380-agent-x-full-pipeline-acceleration-of-on-device-ai-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Agent-Xは、端末内で実行する大規模言語モデル（LLM）エージェントの遅延を、入力事前充填（プリフィル）と逐次生成（デコード）の両段階から削減する方式である。原著はTinyAgent-7BとMac mini M4 Proの実機を用い、エージェント全体で平均1.61倍の高速化を示す。
+
 - **2026-04 · [Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs](2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   NPUMoEは、Apple NPUで動的な専門家選択を固定容量のグループと共有計算グラフへ変換し、頻出群を常駐させて小粒度実行とCPU同期を減らす方式。
@@ -165,10 +169,6 @@
 - **2026-05 · [CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration](2026-2605.11186-cats-cascaded-adaptive-tree-speculation-for-memory-limited-llm-inference-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の投機的デコード（投機的復号）は、小さなドラフトモデルが候補トークンを先に作り、大きな対象モデルが複数候補を一括検証することで、対象モデルの重み読み出しを複数トークンへ償却する。
-
-- **2026-05 · [Agent-X: Full Pipeline Acceleration of On-device AI Agents](2026-2605.10380-agent-x-full-pipeline-acceleration-of-on-device-ai-agents.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Agent-Xは、端末内で実行する大規模言語モデル（LLM）エージェントの遅延を、入力事前充填（プリフィル）と逐次生成（デコード）の両段階から削減する方式である。原著はTinyAgent-7BとMac mini M4 Proの実機を用い、エージェント全体で平均1.61倍の高速化を示す。
 
 - **2026-04 · [SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs](2026-2604.07396-shield-segmented-hierarchical-memory-edge-npu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

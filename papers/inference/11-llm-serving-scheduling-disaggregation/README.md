@@ -1368,6 +1368,10 @@
   実装：✓ ・ リポジトリ内被引用：9  
   通常の投機的復号（投機的復号）は、小型モデルが複数候補を提案し、大型モデルが一回の前向き計算で受理・棄却を判定する。
 
+- **2025-04 · [Taming the Titans: A Survey of Efficient LLM Inference Serving](2025-2504.19720-taming-the-titans-a-survey-of-efficient-llm-inference-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  本論文は、これらを個別の高速化手法として列挙するだけでなく、単一インスタンス・クラスタ・新興用途・補助領域の四層に配置する。
+
 - **2025-04 · [SLO-Aware Scheduling for Large Language Model Inferences](2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   チャットとコード生成のように異なるサービス品質目標（Service Level Objective; SLO）を持つ要求を一つの先着順で処理せず、入力長・予想出力長・要求ごとのSLOから「どの順序・どのバッチなら何件が期限内に終わるか」を推定し、焼きなまし法（シミュレーション Annealing）で優先順を探索する。
@@ -1395,10 +1399,6 @@
 - **2025-09 · [VoltanaLLM: Feedback-Driven Frequency Control and State-Space Routing for Energy-Efficient LLM Serving](2025-2509.04827-voltanallm-feedback-driven-frequency-control-and-state-space-routing-for-energy-efficient-llm-serving.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/VoltanaLLM) ・ リポジトリ内被引用：8  
   P/D分離配信で周波数制御・遅延予測・状態空間ルーティングを連動し、SLOを保ちながら最大36.3%省エネするVoltanaLLM。
-
-- **2025-04 · [Taming the Titans: A Survey of Efficient LLM Inference Serving](2025-2504.19720-taming-the-titans-a-survey-of-efficient-llm-inference-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  本論文は、これらを個別の高速化手法として列挙するだけでなく、単一インスタンス・クラスタ・新興用途・補助領域の四層に配置する。
 
 - **2025-04 · [Efficient LLM Serving on Hybrid Real-time and Best-effort Requests](2025-2504.09590-bros-hybrid-real-time-best-effort-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -2065,7 +2065,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1561  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1563  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2115,7 +2115,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：632  
+  実装：✓ ・ リポジトリ内被引用：633  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  
