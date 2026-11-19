@@ -35,10 +35,15 @@
   "selection_reason": "MLLM向け段階的視覚トークン選択。独立スコアの上位固定数保持という前提をやめ、ポインタ型の選択機構で既選択トークンに条件付けながら逐次選び、学習した終了動作で保持数自体も決める。推論コストを支配する視覚接頭辞の削減機構そのもの。",
   "semantic_scholar_id": "e237f075693caca814f4638fc5ff2d0219f30e75",
   "source_url": "https://arxiv.org/abs/2606.16067",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stepwise Token Selection for Efficient Multimodal Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:10:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.md",
+  "represented_canonical_id": "arXiv:2606.16067",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

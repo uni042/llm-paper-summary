@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（120本）
+## 自動生成の論文一覧（121本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -189,6 +189,10 @@
 - **2026-06 · [AVIS: Adaptive Test-Time Scaling for Vision-Language Models](2026-2606.11576-avis-adaptive-test-time-scaling-for-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンを減らして浮いた計算を、難しい問いの追加推論へ回せれば、計算を減らしつつ精度を維持・改善できる可能性がある。推論探索量を制御するVisual Reasoning Scaling（VRS）では、視覚埋め込みから問題の解答可能性を予測し、自己整合性多数決の試行数Kを1、3、5、7から選ぶ。
+
+- **2026-06 · [Agentic Chain-of-Thought Steering for Efficient and Controllable LLM Reasoning](2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-rea.md)**  
+  実装：[✓](https://github.com/Andree-9/ACTS) ・ リポジトリ内被引用：0  
+  凍結した推論モデルの思考を、別に学習した制御エージェントが戦略と誘導句でステップごとに操舵する方式で、正解率を保ちながら思考トークンを3割から6割削り、予算による制御も可能にした。
 
 - **2026-06 · [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md)**  
   実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  

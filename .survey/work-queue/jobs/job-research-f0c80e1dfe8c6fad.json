@@ -35,10 +35,15 @@
   "selection_reason": "事前分布補正つき視覚トークン削減PriorTR。指示なしでも特定領域へ寄るモデル由来の注意事前分布を推定して差し引くことで、指示条件付き注意が埋もれて重要トークンが落ちる問題を解く学習不要の削減法。MLLM推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "b9ad1771a1be5d31cec9fd6017dc4284d9a825bc",
   "source_url": "https://arxiv.org/abs/2606.24156",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accelerating Multimodal Large Language Models with Prior-Corrected Token Reduction",
   "type": "research",
   "venue": "European Conference on Computer Vision",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:10:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.24156-accelerating-multimodal-large-language-models-with-prior-corrected-token.md",
+  "represented_canonical_id": "arXiv:2606.24156",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

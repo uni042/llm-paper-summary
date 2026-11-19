@@ -35,10 +35,15 @@
   "selection_reason": "固定予算ストリーミング向けKVキャッシュ退避Nexus Sampling。逐次直接注意スコアと決定的top-Kでは一度切り捨てた重要トークンが不可逆に失われる問題に対し、直接注意上の反復ウォークで橋渡しトークンを拾うNexusスコアと、包含確率で保持する重み付きリザーバサンプリングを組み合わせる。80%退避でLongBenchの密注意から1%以内の劣化に抑えるKV管理機構そのもの。",
   "semantic_scholar_id": "ffcd70216357af991a7e1691bbb576215b003f6b",
   "source_url": "https://arxiv.org/abs/2606.23961",
-  "status": "ready",
+  "status": "superseded",
   "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:10:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2606.23961-forget-without-compromise-nexus-sampling-for-streaming-kv-cache-eviction.md",
+  "represented_canonical_id": "arXiv:2606.23961",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
