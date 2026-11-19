@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-19 18:39:09 JST**
+> 自動生成: **2026-11-19 18:51:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **1908** |
 | 未claim Research job | **1908** |
-| 直近24hのResearch処理完了 | **129** |
-| 最終Research処理完了 | **11-19 18:28:00 JST** |
+| 直近24hのResearch処理完了 | **130** |
+| 最終Research処理完了 | **11-19 18:44:00 JST** |
 | 最終Discovery探索完了 | **11-19 08:41:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-19 09:16:28 JST（9時間22分前）** |
+| 最終maintenance完了 | **11-19 09:16:28 JST（9時間34分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **50** |
+| 直近6hのResearch完了 | **32** |
 | 直近6hのDiscovery run | **0** |
 | 直近6hのDiscovery本文確認・分類 | **0** |
-| 最終Research完了 | **11-19 18:28:00 JST** |
+| 最終Research完了 | **11-19 18:44:00 JST** |
 | 最終Discovery完了 | **11-19 08:41:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-19 18:28:00 JST** / worker — / run muse-20261119-cont3-research-2603.04162 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/2026-2603.04162-bielik-q2-sharp-a-comparative-study-of-extreme-2-bit-quantization-methods-for-a-polish-11b-language-model.json
+- Research: **11-19 18:44:00 JST** / worker — / run muse-20261119-cont3-research-2603.00356 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.json
 - Discovery: **11-19 08:41:00 JST** / worker muse / run muse-discovery-20261119-r02::chunk-0001-of-0003
   - 本文確認・分類 **20件** / accept **4件** / unrelated+borderline **16件**
   - evidence: .survey/import-inbox/results/discovery/discovery-20261119-0900-muse-r02--chunk-0001-of-0003.json
