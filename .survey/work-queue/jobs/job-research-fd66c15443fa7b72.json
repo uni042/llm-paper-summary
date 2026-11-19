@@ -35,10 +35,15 @@
   "selection_reason": "オンラインビデオ理解向け視覚トークン剪定StreamingAssistant。空間隣接トークンとの最大類似度という冗長性指標と、互いに隣接しないトークンだけを落とすマスク剪定、時間方向の冗長性除去を組み合わせ、剪定遅延1ms未満で精度を最大4%上げる。ストリーミングMLLM推論の文脈削減機構そのもの。",
   "semantic_scholar_id": "8b6173d187a791c50c2923e1021344da98cb4c91",
   "source_url": "https://arxiv.org/abs/2512.12560",
-  "status": "ready",
+  "status": "superseded",
   "title": "StreamingAssistant: Efficient Visual Token Pruning for Accelerating Online Video Understanding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T01:03:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-onlin.md",
+  "represented_canonical_id": "arXiv:2512.12560",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（527本）
+## 自動生成の論文一覧（528本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1114,6 +1114,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   クラウド間で要求を均等に割り当てても、生成長が偏れば処理終了までの時間に差が生じる。3クラウド・200要求・バッチサイズ3の代表条件では、要求数ベースの固定バッチ方式と比べて累積KVキャッシュ長が44.89%減り、システム全体の要求処理スループットが1.79倍となる。
 
+- **2026-01 · [FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection](2026-2601.03928-focusui-efficient-ui-grounding-via-position-preserving-visual-token-sele.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  指示に合うパッチだけを顕著性で残し、落とした区間を末尾の標識でつなぐ位置保存型の視覚トークン選択で、保持率30パーセントでもUI位置特定の精度低下を3.2ポイントに抑え、推論を1.44倍速くした。
+
 - **2025-12 · [xGR: Efficient Generative Recommendation Serving at Scale](2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の対話型LLMとは異なり、入力は数百〜数千トークンと長い一方、出力は商品を表す数個のトークンに限られる。著者は注意演算子xAttention、探索アルゴリズムxBeam、実行管理xScheduleの三つをxLLM上に統合する。
@@ -1775,7 +1779,7 @@
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：477  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：478  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2045,11 +2049,11 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1528  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1529  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：514  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：515  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

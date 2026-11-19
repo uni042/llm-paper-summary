@@ -35,10 +35,15 @@
   "selection_reason": "既に生成済みのKV cacheを軽量表現として再利用し、hidden stateの別途保存・再計算なしにChain-of-Embedding自己評価とfast/slow reasoning切替を行う。Qwen3-8BやDeepSeek-R1-Distil-Qwen-14Bで、著者らは精度低下を抑えながら生成token数を最大5.7倍削減と報告。推論時の追加生成・メモリ費用を直接削減する手法としてaccept。ただし5.7倍はtoken削減でありend-to-end latency倍率ではない。",
   "semantic_scholar_id": "7e44a8bd039c011cfda18c078f0bfb3583ee2de3",
   "source_url": "https://arxiv.org/abs/2601.20326",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Speedup - Utilizing KV Cache for Sampling and Reasoning",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T01:03:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.20326-beyond-speedup-utilizing-kv-cache-for-sampling-and-reasoning.md",
+  "represented_canonical_id": "arXiv:2601.20326",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -489,7 +489,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：176  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：177  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -620,6 +620,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   MBOK（Multiple Boolean Kernels）の基本表現は、通常の実数重み行列を複数の符号行列とチャネル別スケールの和で近似するものである。各カーネルの重みは1-bitで、入力側・出力側の実数スケールを別途持つ。元のFP重みから順に近似成分を抽出し、残差へ同じ分解を繰り返すため、単一の符号行列より表現力が高い。
 
+- **2025-04 · [GPU Performance Portability needs Autotuning](2025-2505.03780-gpu-performance-portability-needs-autotuning.md)**  
+  実装：[✓](https://github.com/foundation-model-stack/vllm-triton-backend) ・ リポジトリ内被引用：1  
+  行列のタイル寸法、warp数、パイプライン段数、共有メモリ、レジスタ割当てをあるGPUへ手作業で合わせると、別のGPUでは速度が落ち、カーネルを移植するたびにCUDA/HIPの実装と検証を繰り返す必要がある。モデル全体の学習やサービングスケジューラを新しくする研究ではない。
+
 - **2025-03 · [Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores](2025-2503.10725-samoyeds-accelerating-moe-models-with-structured-sparsity-leveraging-spa.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   全専門家を毎回動かさないことで計算量を抑えられるが、実装上はトークンを専門家ごとに並べ替える入力転置、専門家の行列積、出力の再結合、GPUメモリの読み書きが必要になる。従来の高速化では、重みの構造化枝刈りによる疎性と、トークンが選択された専門家にだけ存在するという活性側の疎性を別々に扱うことが多かった。
@@ -716,10 +720,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   ParallelFlowは、線形注意機構や行列値状態空間モデル（SSM）の逐次更新を、制御微分方程式（CDE）の区間フローとして表現する理論・アルゴリズム研究である。
 
-- **2025-04 · [GPU Performance Portability needs Autotuning](2025-2505.03780-gpu-performance-portability-needs-autotuning.md)**  
-  実装：[✓](https://github.com/foundation-model-stack/vllm-triton-backend) ・ リポジトリ内被引用：0  
-  行列のタイル寸法、warp数、パイプライン段数、共有メモリ、レジスタ割当てをあるGPUへ手作業で合わせると、別のGPUでは速度が落ち、カーネルを移植するたびにCUDA/HIPの実装と検証を繰り返す必要がある。モデル全体の学習やサービングスケジューラを新しくする研究ではない。
-
 - **2025-02 · [AdaSplash: Adaptive Sparse Flash Attention](2025-2502.12082-adasplash-adaptive-sparse-flash-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常のsoftmax注意では、注意スコアが有限であれば全トークンへ正の確率が割り当てられる。合成8192要素の閾値計算ではTorch二分法36.67msに対しHalley-bisection2.38ms、約15倍の改善を報告する。
@@ -731,7 +731,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：166  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：167  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  

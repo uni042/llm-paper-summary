@@ -35,10 +35,15 @@
   "selection_reason": "推論スタック向けGPU性能予測PipeWeave。カーネルの異種命令パイプライン需要を解析モデルで定量化し、その特徴を機械学習モデルへ渡してパイプライン間相互作用まで予測する統合性能モデル。11種のGPUと2つのサービングシステムでカーネル単位6.1%の平均誤差を示し、推論基盤の計測・性能モデリングに直接属する。",
   "semantic_scholar_id": "a409a89806fb62f74ac27d17c4e60bc42bed0571",
   "source_url": "https://arxiv.org/abs/2601.14910",
-  "status": "ready",
+  "status": "superseded",
   "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
   "type": "research",
   "venue": "International Symposium on Computer Architecture",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T01:03:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.md",
+  "represented_canonical_id": "arXiv:2601.14910",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
