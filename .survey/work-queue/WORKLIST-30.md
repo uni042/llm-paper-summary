@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-19T17:31:28+00:00`
+Generated: `2026-11-19T21:08:46+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -601,10 +601,10 @@ ready総数: **972** / 未claim総数: **972** / このworker向け: **324**
 | 250 | 110 | 3 | 6 | arXiv:2604.12231 | Thought-Retriever: Don't Just Retrieve Raw Data, Retrieve Thoughts for Memory-Augmented Agentic Systems | 2026-04-14 | Trans. Mach. Learn. Res. | 10 | 6 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2604.12231) |
 | 251 | 104 | 3 | 6 | arXiv:2608.15962 | SEER: Long-Context Reasoning via Selective Visual-Text Compression | 2026-08-16 | arXiv.org | 4 | 6 |  | [source](https://arxiv.org/abs/2608.15962) |
 | 252 | 101 | 3 | 6 | arXiv:2605.17659 | Bug or Feature2: Weight Drift, Activation Sparsity and Spikes | 2026-05-17 | arXiv.org | 1 | 6 | CPUオフロード / 活性化疎性 / 階層メモリ, Conditional Computation, inference-systems | [source](https://arxiv.org/abs/2605.17659) |
-| 253 | 17 | 3 | 6 | arXiv:2510.11345 | Part II: ROLL Flash - Accelerating RLVR and Agentic Training with Asynchrony | 2025-10-13 | arXiv.org | 17 | 6 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2510.11345) |
-| 254 | 14 | 3 | 6 | arXiv:2205.14014 | What Dense Graph Do You Need for Self-Attention? | 2022-05-27 | International Conference on Machine Learning | 4 | 6 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2205.14014) |
-| 255 | 14 | 3 | 6 | arXiv:2411.03493 | LASER: Attention with Exponential Transformation | 2024-11-05 | International Conference on Machine Learning | 4 | 6 | distributed attention / sequence parallelism / blockwise attention / long-context transformers, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2411.03493) |
-| 256 | 10 | 3 | 6 | arXiv:2607.11312 | SLVMBench: Skill Learning from Video Memory | 2026-07-13 | arXiv.org | 0 | 6 | Inference / Multimodal Long-Context Memory Compression, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2607.11312) |
+| 253 | 25 | 3 | 6 | arXiv:2406.05816 | Attention as a Hypernetwork | 2024-06-09 | International Conference on Learning Representations | 15 | 6 | linear-attention / efficient-transformer | [source](https://arxiv.org/abs/2406.05816) |
+| 254 | 14 | 3 | 6 | DOI:10.24963/ijcai.2023/230 | Probabilistic Masked Attention Networks for Explainable Sequential Recommendation | 2023-08-01 | International Joint Conference on Artificial Intelligence | 14 | 6 | sparse attention / long-context Transformer | [source](https://doi.org/10.24963/ijcai.2023/230) |
+| 255 | 14 | 3 | 6 | arXiv:2410.12982 | Flash Inference: Near Linear Time Inference for Long Convolution Sequence Models and Beyond | 2024-10-16 | International Conference on Learning Representations | 4 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2410.12982) |
+| 256 | 12 | 3 | 6 | arXiv:2509.17486 | AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation | 2025-09-22 | Conference on Empirical Methods in Natural Language Processing | 2 | 6 | KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2509.17486) |
 | 257 | 8 | 3 | 6 | arXiv:2502.14854 | CLIPPER: Compression enables long-context synthetic data generation | 2025-02-20 | arXiv.org | 8 | 6 | distributed attention / sequence parallelism / blockwise attention / long-context transformers, training-memory-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2502.14854) |
 | 258 | 5 | 3 | 6 | arXiv:2507.15428 | EgoPrune: Efficient Token Pruning for Egomotion Video Reasoning in Embodied Agent | 2025-07-21 | arXiv.org | 5 | 7 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2507.15428) |
 | 259 | 3 | 3 | 6 | arXiv:2411.14345 | Layer Pruning With Consensus: A Triple-Win Solution | 2024-11-21 | IEEE Access | 3 | 6 |  | [source](https://arxiv.org/abs/2411.14345) |
