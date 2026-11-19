@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1030本）
+## 自動生成の論文一覧（1032本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -248,6 +248,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   長文脈RLで投機的復号のドラフトを方策と同時更新するため、分岐注意を文脈並列リングへ統合し、中間特徴をパイプライン外のTapChannelで輸送して、最大122B規模で学習品質を保ちつつ最大1.88倍の全体高速化を得る。
 
+- **2026-08 · [SoftWater: Class-Aware Rate Allocation for Softmax Quantization](2026-2608.12026-softwater-class-aware-rate-allocation-for-softmax-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  通常の事後量子化では中間の線形層を2〜4ビットにしても、この最終出力層だけを16ビットで残すことが多い。例えばLlama-3.2-1Bの出力層は約2.63億パラメータ、モデル全体の21.3%であり、本体を低ビット化すると出力層の相対的な容量負担がさらに増える。
+
 - **2026-08 · [H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference](2026-2608.28113-h-scale-hessian-guided-scale-refinement-for-nvfp4-sub-byte-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   H-Scaleは、NVIDIA Blackwell世代のGPUが直接扱える4ビット浮動小数点量子化形式（NVFP4）に対して、重みをどの4ビット値へ丸めるかではなく、16個の重みに共通して掛ける尺度をどう選ぶかに着目した学習後量子化（Post-学習 量子化; PTQ）の後処理である。
@@ -263,6 +267,10 @@
 - **2026-07 · [WISERouter: LLM Routing with Workload Budget Constraint](2026-2607.23765-wiserouter-llm-routing-with-workload-budget-constraint.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   常に最高性能のモデルを呼ぶと料金が膨らむ一方、全問い合わせに固定額を課すと、容易な問い合わせで節約した予算を難しい問い合わせへ振り向けられない。過去のモデル応答をすべて持つWR-Offlineと、限られた応答だけを逐次観測するWR-Onlineの二方式がある。
+
+- **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ループ型Transformerは、同じTransformerブロックを何度も適用することで、モデルの深さに相当する反復計算を少ない重みで実現する。Ouro-1.4Bを用いた同一キャッシュ容量比較では、4倍圧縮のLLAはGSM8K厳密正解率0.800を記録し、教師の0.794とほぼ同等だった。
 
 - **2026-07 · [Back from the Future: Key-Value Cache Management by Counter-Causal Surprise](2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md)**  
   実装：[✓](https://github.com/metacognitionai/counter_causal) ・ リポジトリ内被引用：1  
@@ -682,6 +690,10 @@
   実装：[✓](https://github.com/momentslab/awesome-efficient-videollm) ・ リポジトリ内被引用：0  
   動画言語モデルの高費用を、フレーム選択・符号器・接続部・言語モデル実行の4段階のどこで削るかで125件の効率化機構を分類し、条件のそろった比較だけを集約して、保持率25パーセント前後が精度維持の目安になることと、音声側と評価規約の空白を明らかにしたサーベイ。
 
+- **2026-09 · [WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians](2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quanti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  両側GPTQの格子スケールを行列両側のウォーターフィリングで配分し、クロネッカー近似の歪み倍率を最小化するフリップフロップ反復でヘッセ近似を選ぶことで、2ビット量子化の品質を従来の近似選択より一貫して改善した。
+
 - **2026-09 · [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)**  
   実装：[✓](https://github.com/ifm-ai/uno) ・ リポジトリ内被引用：0  
   元の自己回帰モデル分布を保ったまま追加した離散拡散重みで複数トークンを並列提案し、専用サンプラで正しく補正して、逐次デコードの重み読出し回数を減らす。
@@ -818,6 +830,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   VIP-Routerは画像と質問ごとにFastV、VisionZip、PruMerge+、DART、無圧縮Fullから最適なvisual-トークン 枝刈り方針を選ぶ軽量ルータ。枝刈り-sensitiveなVTC-Bench Group Aでは5保持率平均accuracy 40.35%→51.19%、utility 30.88→37.68。
 
+- **2026-09 · [A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality](2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect.md)**  
+  実装：[✓](https://github.com/jerrykaplan/Calibrated-Instrument) ・ リポジトリ内被引用：0  
+  判定器の偏りと雑音を帰無条件で較正し、同等性境界プラスマイナス0.3点の単一の物差しで量子化と早期終了と投機的復号の品質費用を分野別に比べ、費用が分野とモデルで大きく変わることを示した。
+
 - **2026-08 · [VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction](2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   VoiceMemは、音声対話システムの過去会話記憶を、応答を遅らせずに少数の関連記憶へ絞るための索引・更新・検索方式である。
@@ -849,10 +865,6 @@
 - **2026-08 · [Speculative Probing: LLM Monitoring at Speculative-Decoding Cost](2026-2608.28099-speculative-probing-llm-monitoring-at-speculative-decoding-cost.md)**  
   実装：[✓](https://github.com/collinzrj/SpeculativeProbing) ・ リポジトリ内被引用：0  
   大規模言語モデルの推論サービスでは、回答を生成するだけでなく、危険な入力、指示の矛盾、推論の反復、品質の低下を実行中に検知したい場合がある。別の大規模分類モデルを動かせば高い精度が得られる可能性はあるが、モデルを追加で常駐させ、入力全体をもう一度処理する費用が発生する。ただしすべての条件でMULTIMAXより正確なわけではない。
-
-- **2026-08 · [SoftWater: Class-Aware Rate Allocation for Softmax Quantization](2026-2608.12026-softwater-class-aware-rate-allocation-for-softmax-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  通常の事後量子化では中間の線形層を2〜4ビットにしても、この最終出力層だけを16ビットで残すことが多い。例えばLlama-3.2-1Bの出力層は約2.63億パラメータ、モデル全体の21.3%であり、本体を低ビット化すると出力層の相対的な容量負担がさらに増える。
 
 - **2026-08 · [S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching](2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1021,10 +1033,6 @@
 - **2026-07 · [OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs](2026-2607.25669-omnidelta-skill-driven-budget-allocation-for-token-compression-in-omnill.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   総保持量を変えずに、質問と技能プールの類似度で音声と映像の間の予算を移し、複雑さと冗長さで時刻方向の予算を組み替える階層的配分により、全モダリティモデルのトークン圧縮の精度と効率の釣り合いを改善した研究である。
-
-- **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ループ型Transformerは、同じTransformerブロックを何度も適用することで、モデルの深さに相当する反復計算を少ない重みで実現する。Ouro-1.4Bを用いた同一キャッシュ容量比較では、4倍圧縮のLLAはGSM8K厳密正解率0.800を記録し、教師の0.794とほぼ同等だった。
 
 - **2026-07 · [LaCo: Layer-wise Compensation for Pruned Large Language Models](2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3355,7 +3363,7 @@
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：56  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
@@ -3833,7 +3841,7 @@
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
-  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：22  
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  

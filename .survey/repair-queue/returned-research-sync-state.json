@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5d07a5a193dc401af2ff18ae79ad7c576d2d3c7e",
+  "base_commit": "c390a85ef071f6e273d4ddabb329385c469c2f37",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -343,6 +343,11 @@
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
     "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
+    "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
+    "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
+    "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
+    "2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-language-models.json",
+    "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
@@ -40936,6 +40941,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.14706": {
+      "order": [
+        "2026-11-19T23:29:38+00:00",
+        "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.18005": {
+      "order": [
+        "2026-11-19T23:30:59+00:00",
+        "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.18916": {
+      "order": [
+        "2026-11-19T23:32:20+00:00",
+        "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.23033": {
+      "order": [
+        "2026-11-19T23:33:41+00:00",
+        "2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.24847": {
+      "order": [
+        "2026-11-19T23:35:02+00:00",
+        "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50497,6 +50547,21 @@
     "arxiv:2609.10297": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-g.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-g.md"
+    ],
+    "arxiv:2609.14706": [
+      "papers/inference/99-other-inference-systems/2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quanti.md"
+    ],
+    "arxiv:2609.18005": [
+      "papers/inference/99-other-inference-systems/2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect.md"
+    ],
+    "arxiv:2609.18916": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.md"
+    ],
+    "arxiv:2609.23033": [
+      "papers/inference/05-speculative-decoding-moe/2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-lan.md"
+    ],
+    "arxiv:2609.24847": [
+      "papers/inference/05-speculative-decoding-moe/2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfig.md"
     ]
   }
 }

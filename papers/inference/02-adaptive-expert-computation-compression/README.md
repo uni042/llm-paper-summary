@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（126本）
+## 自動生成の論文一覧（127本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -50,6 +50,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
 
+- **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
+  実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：3  
+  本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
+
 - **2026-05 · [ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference](2026-2605.27081-remoe-router-finetuning-expert-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ReMoEはルータだけを追加学習し、直前トークンで使った専門家へ確率を寄せて再利用を増やし、端末MoEのキャッシュミスと低速階層からの重み再読込を減らす。
@@ -77,10 +81,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [Sticky Routing: Training MoE Models for Memory-Efficient Inference](2026-2607.08780-sticky-routing-memory-efficient-inference.md)**  
   実装：[✓](https://github.com/alikayyam/sticky_moe) ・ リポジトリ内被引用：2  
   混合専門家モデルの隣接トークンで専門家が頻繁に切り替わる問題を、学習時の経路一貫性損失で直接抑え、最大59%の切替削減と最大3.92倍のキャッシュミス削減を示した研究である。
-
-- **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
-  実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：2  
-  本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
 
 - **2026-05 · [SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training](2026-2605.08738-slimqwen-pruning-distillation.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -188,6 +188,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：0  
   MoEPの重要点は「層全体を専門家化すれば、FFNだけを専門家化するMoEよりさらに計算を省ける」という単純な主張ではない。自己注意まで含む低次元Transformer経路をトークンごとに選ぶことで固定パラメータ予算内の表現多様性を増やせる一方、注意の系列依存性によって未選択経路の計算を物理的に省きにくくなり、1B規模では密モデルより遅く・大きくなる。
 
+- **2026-09 · [Higher-order pruning of experts in mixture-of-experts language models](2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.md)**  
+  実装：[✓](https://github.com/awslabs/HOPE) ・ リポジトリ内被引用：0  
+  エキスパート対の協調を相互作用行列で記録し、削除誤差の上限を2次計画で最小化して消すエキスパートを決める枝刈り方式で、50パーセント削除時に既存手法中最高の平均順位1.58を得た。
+
 - **2026-09 · [GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models](2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md)**  
   実装：[✓](https://github.com/caichaoxiang/GeMoE) ・ リポジトリ内被引用：0  
   ゲート分布のエントロピーを不確実性指標として各トークンの専門家数を予測し、固定Top-kに近い品質を保ちながら専門家活性化と実測推論時間を削減する動的MoEルーティング。
@@ -279,7 +283,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
-  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：32  
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-09 · [LongCat-Flash Technical Report](2025-2509.01322-longcat-flash-zero-computation-experts.md)**  
@@ -291,7 +295,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   機能類似度クラスタリングと共有部分空間SVDでMoE専門家を整列し、活性頻度重み付きV統合でパラメータ衝突を抑える学習不要の専門家統合。
 
 - **2025-04 · [Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations](2025-2504.05586-finding-fantastic-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   MoEエキスパート重要度を4視点・16指標で比較し、反復再評価＋軽量微調整なら50%以上削減でも性能を保ちやすく、指示追従能力の回復が鍵と示す。
 
 - **2025-09 · [DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning](2025-2509.16105-diep-differentiable-expert-pruning.md)**  
@@ -299,7 +303,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   層ごとに異なるエキスパート冗長性を微分可能な探索で学習し、重要度に応じた非一様プルーニングでMoEの推論コストを削減する。
 
 - **2025-04 · [Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md)**  
-  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：15  
   少数のドメイン内例だけで、その領域で繰り返し使われる専門家集合を同定し、ゲート値だけでなく専門家出力の大きさとトークン表現の変化量まで使って枝刈りするEASY-EP。DeepSeek-R1で256専門家のうち128個だけを残し、平均性能67.20→66.55を保ちながら、同一メモリ予算で2.99倍のスループットを報告する。
 
 - **2025-11 · [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](2025-2511.15690-modes-dynamic-expert-skipping.md)**  

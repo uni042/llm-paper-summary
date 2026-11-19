@@ -249,13 +249,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：3  
   共活性化する専門家を同一GPUへ集約し、再索引付き疎行列積と協調剪定でトークン複製を減らすことで、MoEの全対全通信を削減し学習・推論を1.5倍超高速化する。
 
+- **2025-05 · [FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models](2025-2505.20225-flame-moe-a-transparent-end-to-end-research-platform-for-mixture-of-expe.md)**  
+  実装：[✓](https://github.com/cmu-flame/FLAME-MoE) ・ リポジトリ内被引用：3  
+  FLAME-MoEは、Mixture-of-Experts（MoE）言語モデルの学習再現性と専門家ルーティングの分析を目的とする公開研究基盤である。MoEはトークンごとに少数の専門家ネットワークを選ぶため、全パラメータ数を大きくしても活性化するパラメータを限定できる。
+
 - **2025-08 · [HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference](2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   入力処理では多数トークンをまとめて計算するため通信量と演算量が大きいが、復号では1トークンずつ進むため重み読出しと専門家間の負荷不均衡が目立つ。各候補の遅延を演算・通信の実測から予測し、GPUメモリに収まる組合せだけを残す。
-
-- **2025-05 · [FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models](2025-2505.20225-flame-moe-a-transparent-end-to-end-research-platform-for-mixture-of-expe.md)**  
-  実装：[✓](https://github.com/cmu-flame/FLAME-MoE) ・ リポジトリ内被引用：2  
-  FLAME-MoEは、Mixture-of-Experts（MoE）言語モデルの学習再現性と専門家ルーティングの分析を目的とする公開研究基盤である。MoEはトークンごとに少数の専門家ネットワークを選ぶため、全パラメータ数を大きくしても活性化するパラメータを限定できる。
 
 - **2024-12 · [IFMoE: An Inference Framework Design for Fine-grained MoE](2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
