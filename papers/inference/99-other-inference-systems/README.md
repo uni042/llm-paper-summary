@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（961本）
+## 自動生成の論文一覧（965本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2876,6 +2876,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは、この方式の利点を単純な注意の疎化として説明できるかを検証し、負の寄与による表現力、注意頭部の冗長性低下、学習時の安定性という三つの要因を分析した。Llama-3.2-3Bの11課題平均は60.2から64.2へ4.0ポイント改善し、針検索の平均正答率は66.9%から78.3%へ11.4ポイント改善した。
 
+- **2025-05 · [SwiftPrune: Hessian-Free Weight Pruning for Large Language Models](2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ヘッセ行列を寄与指標の近似で置き換え、指数加重移動平均で行ごとの並べ替えも省くことで、七十億級モデルの枝刈りを七・七三秒で終え、従来方式の平均十二・二九倍の高速化と疎性五十パーセントでの性能維持を両立したと報告した。
+
 - **2025-05 · [STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference](2025-2505.12359-star-stage-wise-attention-guided-token-reduction-for-efficient-large-vis.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   STAR（Stage-Wise 注意機構-Guided Token Reduction）は、画像とテキストを扱う大規模Vision-Language モデル（LVLM）の推論で、視覚トークンを視覚エンコーダ直後とLLMデコーダ中間層の二段階で削る学習不要の手法である。
@@ -2939,6 +2943,10 @@
 - **2025-04 · [Multi-Branch Self-Drafting for LLM Inference Acceleration](2025-2224e69b745c-multi-branch-self-drafting-for-llm-inference-acceleration.md)**  
   実装：[✓](https://github.com/ZipECHO/Self-Draft) ・ リポジトリ内被引用：0  
   重みをメモリから読み出す費用が大きい状況では、1回の順伝播で得られるトークン数を増やすことが有効である。コーパスから固定的なn-gram候補を検索する方式も、実際の対話・コード生成との分布ずれに弱い。
+
+- **2025-04 · [LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi](2025-2504.02118-llmpi-optimizing-llms-for-high-throughput-on-raspberry-pi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ラズベリーパイ五の実機で、二ビットから八ビットの学習後量子化と三値の学習済みモデルを速度・電力効率・意味品質で比べ、最小モデルは二ビットで三・八八倍速く四・三倍効率化する一方、八十億級は七十一倍速くなっても対話の下限に届かず、二ビットでは意味品質が急落することを示した。
 
 - **2025-04 · [Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs](2025-2504.13989-gradual-binary-search-and-dimension-expansion-a-general-method-for-activ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3474,6 +3482,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LongVQは、SSMの構造化長期記憶とベクトル量子化されたKeyによる固定長の注意を組み合わせ、系列長に対して線形時間で動作するハイブリッドモデルである。
 
+- **2024-04 · [CQIL: Inference Latency Optimization with Concurrent Computation of Quasi-Independent Layers](2024-2404.06709-cqil-inference-latency-optimization-with-concurrent-computation-of-quasi.md)**  
+  実装：[✓](https://github.com/Photooon/CQIL) ・ リポジトリ内被引用：0  
+  隣接層の入力が似ていることを使い、中間の層の群に入力を共有させて複数計算機で同時計算し、注意出力を群内で回すバイパスで損失を補う方式で、三百三十億パラメータのモデルの遅延を最大四十八・三パーセント削減し、課題の平均得点の低下を約二ポイントに抑えたと報告した。
+
 - **2024-03 · [QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning](2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   整数のビット幅を小さくすると、重みと活性を低精度で表現でき、メモリや演算資源を節約できる可能性がある。しかし通常の対称一様量子化では、一部の極端に大きい活性値に量子化の最大範囲を合わせると、同じビット数で表現する刻み幅が粗くなる。
@@ -3481,6 +3493,10 @@
 - **2024-03 · [Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA](2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md)**  
   実装：[✓](https://github.com/chiyotsai/MoEfication-with-LoRA) ・ リポジトリ内被引用：0  
   重要な結果は、モデル規模によって高速化の符号が逆転することである。著者の表4では、単一の画像処理用計算機ではなく、エヌビディアのRTX 3090で測った相対推論時間が、小型のT5-smallでは元の135.1%、T5-baseでは101.4%、T5-largeでは88.9%、T5-3Bでは71.1%となった。
+
+- **2024-03 · [IM-Unpack: Training and Inference with Arbitrarily Low Precision Integers](2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  整数化自体は無害で低ビットへの制限だけが外れ値で壊れることを切り分け、大きな整数を行や列の桁分解で低ビット化して元の行列積と厳密に一致させ、七十億級モデルの線形層で膨張率約一・二七倍に抑えたと報告した。
 
 - **2024-03 · [Efficient Encoder-Decoder Transformer Decoding for Decomposable Tasks](2024-2403.13112-efficient-encoder-decoder-transformer-decoding-for-decomposable-tasks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3855,7 +3871,7 @@
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：86  
+  実装：✓ ・ リポジトリ内被引用：87  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  

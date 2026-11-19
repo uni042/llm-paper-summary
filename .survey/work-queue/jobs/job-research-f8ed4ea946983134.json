@@ -35,10 +35,15 @@
   "selection_reason": "交差注意型視覚特徴の刈り込みによるLLaMA-3.2-Visionの効率化。画像トークンのKVキャッシュが計算のボトルネックであることに対し、交差注意マップの疎性を利用して冗長な視覚特徴を選択的に刈り、追加訓練なしでKV需要を下げる。推論メモリ機構そのもの。",
   "semantic_scholar_id": "f26cdcfa41d4b8ade4686da862945c7124b52539",
   "source_url": "https://arxiv.org/abs/2504.00557",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T12:18:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.md",
+  "represented_canonical_id": "arXiv:2504.00557",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

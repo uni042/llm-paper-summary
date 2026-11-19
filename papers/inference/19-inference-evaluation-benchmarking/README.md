@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（128本）
+## 自動生成の論文一覧（129本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -447,6 +447,10 @@
 - **2025-05 · [ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads](2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md)**  
   実装：[✓](https://github.com/ZeroNLP/ResDecode) ・ リポジトリ内被引用：0  
   投機的復号では軽いドラフト側が複数の未来トークンを先読みし、対象の大きな言語モデルが候補をまとめて検証する。対象モデルの検証を通った候補だけを採用するため、単にドラフトを高速化するだけでなく、候補の採択長と検証費用の均衡が重要になる。
+
+- **2025-04 · [Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features](2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  交差注意の重みが一部の画像特徴へ偏り層間でも変わらない観測に基づき、最初の層で注意頭ごとの上位特徴の和集合だけを残して残り層のキャッシュと計算を減らす追加学習なしの方式で、特徴を約半分にしても性能同等を保ちバッチ三二の遅延を二六パーセント減らした。
 
 - **2025-02 · [KVCrush: Key value cache size-reduction using similarity in head-behaviour](2025-2503.00022-kvcrush-key-value-cache-size-reduction-using-similarity-in-head-behaviou.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

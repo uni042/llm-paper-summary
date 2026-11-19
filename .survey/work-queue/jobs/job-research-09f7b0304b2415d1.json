@@ -35,10 +35,15 @@
   "selection_reason": "一次arXiv要旨。Transformer等のGEMMにおける大きな整数要素を低bit表現可能な拡大行列へunpackし、低bit整数GEMMだけで元の積を厳密再現する方法。追加演算は多くのモデルで小さいと報告し、学習・推論双方の低精度カーネルに直接関連。ただし要旨にはLLM単独のend-to-end高速化の定量値はない。",
   "semantic_scholar_id": "de29959e3eaade5fb871920ef07895c153753285",
   "source_url": "https://arxiv.org/abs/2403.07339",
-  "status": "ready",
+  "status": "superseded",
   "title": "IM-Unpack: Training and Inference with Arbitrarily Low Precision Integers",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T12:18:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2403.07339-im-unpack-training-and-inference-with-arbitrarily-low-precision-integers.md",
+  "represented_canonical_id": "arXiv:2403.07339",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
