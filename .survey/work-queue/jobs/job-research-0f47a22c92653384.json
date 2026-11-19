@@ -35,10 +35,15 @@
   "selection_reason": "bit-sliceの反復性を使うGEMM演算省略、上位bit-slice疎性を利用した重みアクセス削減、段階的bit予測によるKV読出し削減を統合するLLM向けアクセラレータ。26ベンチマークでA100比9.43倍高速・31.1倍エネルギー効率を報告。ただし専用ハードウェア対汎用GPUの比較であり同一GPU上のランタイム最適化とは異なる。演算・重み・KVの3ボトルネックを直接削減するためaccept。",
   "semantic_scholar_id": "b499db00e6b1a3c64f43dccc6c8291297d9bf8a8",
   "source_url": "https://arxiv.org/abs/2509.10372",
-  "status": "ready",
+  "status": "superseded",
   "title": "MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness",
   "type": "research",
   "venue": "Micro",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T13:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md",
+  "represented_canonical_id": "arXiv:2509.10372",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

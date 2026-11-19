@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（977本）
+## 自動生成の論文一覧（981本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -523,6 +523,10 @@
 - **2026-02 · [CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging](2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md)**  
   実装：[✓](https://github.com/DCDmllm/CoMoL) ・ リポジトリ内被引用：1  
   本論文は、低ランク適応（LoRA）を複数の専門家へ拡張する際に、専門家の数に比例して増える学習パラメータと計算量を抑えつつ、トークン単位の細かな経路選択を維持するCoMoLを提案する。
+
+- **2026-02 · [ATTS: Asynchronous Test-Time Scaling via Conformal Prediction](2026-2509.15148-atts-asynchronous-test-time-scaling-via-conformal-prediction.md)**  
+  実装：[✓](https://github.com/menik1126/Asynchronous-Test-Time-Scaling) ・ リポジトリ内被引用：1  
+  下書きと対象モデルの検証を適合予測の検定として組み直して非同期化し、拡大推論を最大五六・七倍速く、処理量を四・一四倍にし、精度の損失なく棄却率を制御したと報告した。
 
 - **2026-01 · [Towards Compute-Aware In-Switch Computing for LLMs Tensor-Parallelism on Multi-GPU Systems](2026-161bea97e0de-towards-compute-aware-in-switch-computing-for-llms-tensor-parallelism-on-multi-gpu-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2165,7 +2169,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：103  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -2364,6 +2368,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   長い動画の質問応答では、最初に少数のフレームを見て全体を把握し、必要な時間区間を細かく調べる「フレームを見ながら考える」方式が使われる。原著の観測では、動画トークンに対する注意スコアの90%以上が 10^-3 未満で、密に読み込んだフレームには冗長な情報が多い。
 
+- **2025-10 · [StreamingTOM: Streaming Token Compression for Efficient Video Understanding](2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
+
 - **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
   実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：2  
   通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
@@ -2452,6 +2460,10 @@
   実装：[✓](https://github.com/spbob0418/RegCache) ・ リポジトリ内被引用：1  
   しかし、CLIPやSigLIPなどの視覚Transformerでは、一部トークンの活性値が他より極端に大きくなり、活性値の量子化範囲を押し広げて精度を損なう。
 
+- **2025-09 · [Ultra-Fast Language Generation via Discrete Diffusion Divergence Instruct](2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruc.md)**  
+  実装：[✓](https://github.com/haoyangzheng-ai/didi-instruct) ・ リポジトリ内被引用：1  
+  拡散言語モデルの全雑音水準の分布を教師へ一致させる蒸留で少数ステップ生成を実現し、16回の評価で1024回の教師のパープレキシティを上回った方式。
+
 - **2025-09 · [SpikingBrain: Spiking Brain-inspired Large Models](2025-2509.05276-spikingbrain-spiking-brain-inspired-large-models.md)**  
   実装：[✓](https://github.com/BICLab/SpikingBrain-7B) ・ リポジトリ内被引用：1  
   SpikingBrainは、標準Transformerの長文脈計算・KVキャッシュ負荷と、非NVIDIA GPUでの大規模学習の難しさを同時に扱う研究である。成果は一つの高速注意機構カーネルにとどまらない。
@@ -2535,6 +2547,10 @@
 - **2025-03 · [Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer](2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md)**  
   実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
   本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
+
+- **2025-03 · [QUAD: Quantization and Parameter-Efficient Tuning of LLM with Activation Decomposition](2025-2503.19353-quad-quantization-and-parameter-efficient-tuning-of-llm-with-activation-.md)**  
+  実装：[✓](https://github.com/hyx1999/Quad) ・ リポジトリ内被引用：1  
+  重みと活性をともに4bitへ量子化する方式は、GPUの低精度行列積を利用できる可能性がある。
 
 - **2025-03 · [PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference](2025-2503.23274-promptdistill-query-based-selective-token-retention-in-intermediate-laye.md)**  
   実装：[✓](https://github.com/declare-lab/PromptDistill) ・ リポジトリ内被引用：1  
@@ -2671,6 +2687,10 @@
 - **2025-10 · [Deconstructing Attention: Investigating Design Principles for Effective Language Modeling](2025-2510.11602-deconstructing-attention-investigating-design-principles-for-effective-l.md)**  
   実装：[✓](https://github.com/HUIYINXUE/DeconAttn) ・ リポジトリ内被引用：0  
   標準Transformerの注意機構は、現在のトークンが過去のトークンから情報を集めるために、現在層のhidden stateからQ・K・Vを生成し、QK内積をsoftmaxで正規化してVを混合する。
+
+- **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
 
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
@@ -3031,10 +3051,6 @@
 - **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
   実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
   Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
-
-- **2025-03 · [QUAD: Quantization and Parameter-Efficient Tuning of LLM with Activation Decomposition](2025-2503.19353-quad-quantization-and-parameter-efficient-tuning-of-llm-with-activation-.md)**  
-  実装：[✓](https://github.com/hyx1999/Quad) ・ リポジトリ内被引用：0  
-  重みと活性をともに4bitへ量子化する方式は、GPUの低精度行列積を利用できる可能性がある。
 
 - **2025-03 · [Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning](2025-2503.23959-local-information-matters-inference-acceleration-for-grounded-conversati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1177,7 +1177,7 @@
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
-  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：41  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
@@ -1552,6 +1552,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   利用者QoSとGPU効率を別カウンタで追い、MoPEで未知の実行コストを予測して統一公平性スコア順に要求を組むEquinox。
 
+- **2025-07 · [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md)**  
+  実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：3  
+  StreamVLNは、視覚・言語・行動を連続して扱うロボット誘導システムにおいて、動画言語モデルの文脈長と鍵・値キャッシュ（KVキャッシュ）が際限なく増える問題を解決しようとする。
+
 - **2025-06 · [Efficient Serving of LLM Applications with Probabilistic Demand Modeling](2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Hermesは、一回のLLM生成要求ではなく、複数の生成、検索、コード実行、画像処理が連鎖するアプリケーション全体の終了時間を最適化する。既存のvLLMの要求単位の先着順や、アプリ単位でも処理量を推定しない先着順では、短いアプリが長いアプリの後ろに並ぶ。推定した分布からGittins指標でアプリの優先度を決め、次のバックエンドの事前準備を行う。
@@ -1587,10 +1591,6 @@
 - **2025-11 · [Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems](2025-2511.22880-loraserve-heterogeneous-adapter-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
-
-- **2025-07 · [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md)**  
-  実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：2  
-  StreamVLNは、視覚・言語・行動を連続して扱うロボット誘導システムにおいて、動画言語モデルの文脈長と鍵・値キャッシュ（KVキャッシュ）が際限なく増える問題を解決しようとする。
 
 - **2025-07 · [LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems](2025-2507.21276-lemix-unified-training-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1855,7 +1855,7 @@
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
-  実装：✓ ・ リポジトリ内被引用：61  
+  実装：✓ ・ リポジトリ内被引用：62  
   注意計算とKVを系列方向に分散し、クラスタ全体のGPUメモリを共有して最大200万トークンを処理し、提供スループットを1.35〜3.4倍改善する。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  

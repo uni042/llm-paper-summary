@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論時スケーリングの同期・メモリ負担を削減する直接的な効率化研究。ICLR 2026公式一次要旨では、オンライン較正と仮説検定に基づく非同期の3段階rejection samplingで並列・逐次両軸のtest-time scalingを扱い、MATH/AMC23/AIME24/AIME25等で最大56.7倍のtest-time scaling高速化と4.14倍のthroughput改善を報告。比較基準・モデル条件を限定した最大値であり、通常の単一要求の推論速度を56.7倍にするとの意味ではない。WORKLISTのA1は改題前タイトルで、ICLR 2026ではATTSとして掲載。",
   "semantic_scholar_id": "b6da88d81547cfa2fcc8cbd8d361546a9c0b8132",
   "source_url": "https://arxiv.org/abs/2509.15148",
-  "status": "ready",
+  "status": "superseded",
   "title": "ATTS: Asynchronous Test-Time Scaling via Conformal Prediction",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T13:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2509.15148-atts-asynchronous-test-time-scaling-via-conformal-prediction.md",
+  "represented_canonical_id": "arXiv:2509.15148",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

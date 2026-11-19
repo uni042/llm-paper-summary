@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（129本）
+## 自動生成の論文一覧（130本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -427,6 +427,10 @@
 - **2025-09 · [Motivating Next-Gen Accelerators with Flexible N:M Activation Sparsity via Benchmarking Lightweight Post-Training Sparsification Approaches](2025-2509.22166-motivating-next-gen-accelerators-with-flexible-n-m-activation-sparsity-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   半構造化N:M疎性は、各M要素のうちN要素を残す制約を設ける。2:4、4:8、8:16、16:32はいずれも50%の要素をゼロ化するが、ブロックが大きいほど、どの要素を残すかの組合せが増える。したがって本研究は「半構造化活性疎性が現時点で実用上安全」と結論するより、将来ハードウェアの設計選択を促す精度とコストの基礎ベンチマークとして読むべきである。
+
+- **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
 
 - **2025-09 · [Efficient Fine-Grained GPU Performance Modeling for Distributed Deep Learning of LLM](2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

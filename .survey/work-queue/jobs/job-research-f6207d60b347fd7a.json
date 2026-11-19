@@ -35,10 +35,15 @@
   "selection_reason": "ストリーミングVLMの視覚トークン増大に対し、隣接フレーム差と顕著性でプリフィル入力を減らす因果的トークン選択と、4ビットのオンライン記憶・関連グループ復元を組み合わせる。KVキャッシュ15.7倍圧縮、LiveVLM比TTFT2倍高速化を報告し、動画推論の継続メモリ管理が主題。",
   "semantic_scholar_id": "d3094c64d4111f945fd721671f594d02a9651845",
   "source_url": "https://arxiv.org/abs/2510.18269",
-  "status": "ready",
+  "status": "superseded",
   "title": "StreamingTOM: Streaming Token Compression for Efficient Video Understanding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T13:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understandi.md",
+  "represented_canonical_id": "arXiv:2510.18269",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

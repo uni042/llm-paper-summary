@@ -35,10 +35,15 @@
   "selection_reason": "事後学習型の補正アダプタと群単位の残差ベクトル量子化を組み合わせ、LLaMA、Qwen、PhiなどのLLM埋め込み層を約1.6ビットまで圧縮する。埋め込み重みの記憶量とメモリ帯域を直接削減し、4ビット記憶を扱う機器でも実装可能とする推論メモリ最適化。",
   "semantic_scholar_id": "5f933d8135454e1b753de200ec75d9c26135439c",
   "source_url": "https://arxiv.org/abs/2510.12721",
-  "status": "ready",
+  "status": "superseded",
   "title": "CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T13:39:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md",
+  "represented_canonical_id": "arXiv:2510.12721",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
