@@ -35,10 +35,15 @@
   "selection_reason": "動画MLLMでフレーム間差分と驚き度を用いてトークン圧縮方針を強化学習するSCORE。軽量ポリシーネットワークで動画トークンを動的選択し、10%保持時に元の性能99.5%を維持しつつprefill最大16倍高速化と報告。動画入力の推論計算削減に直接寄与する。",
   "semantic_scholar_id": "aaaa661ff9a0b2efa2de3c98c423b4e6eea7ba56",
   "source_url": "https://arxiv.org/abs/2603.26365",
-  "status": "ready",
+  "status": "superseded",
   "title": "Dynamic Token Compression for Efficient Video Understanding through Reinforcement Learning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T04:57:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.26365-dynamic-token-compression-for-efficient-video-understanding-through-rein.md",
+  "represented_canonical_id": "arXiv:2603.26365",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

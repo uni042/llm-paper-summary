@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（911本）
+## 自動生成の論文一覧（916本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -491,6 +491,10 @@
 - **2026-01 · [Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference](2026-2601.07667-adaptive-layer-selection-for-layer-wise-token-pruning-in-llm-inference.md)**  
   実装：[✓](https://github.com/TANIGUCHIREI/ASL) ・ リポジトリ内被引用：1  
   ASL（適応的選別層）は、長い入力を処理するTransformerのどの層でトークンを間引くべきかを、実行時の注意分布から判断する方式である。
+
+- **2025-12 · [Towards Lossless Ultimate Vision Token Compression for VLMs](2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  視覚符号器では空間軸に沿う反復統合で、言語モデル側では周波数の低域通過で視覚トークンを最終層まで段階的に消す学習不要の圧縮により、約2倍の高速化とほぼ無劣化の精度を両立した。
 
 - **2025-12 · [Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models](2025-2512.01949-script-graph-structured-and-query-conditioned-semantic-token-pruning-for.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1630,6 +1634,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ESP（Embedding-Space Probing）は、通常は次トークンだけを学習した自己回帰LLMから、重みを変更せずに複数の将来トークン候補を取り出すための推論時手法である。
 
+- **2026-03 · [Dynamic Token Compression for Efficient Video Understanding through Reinforcement Learning](2026-2603.26365-dynamic-token-compression-for-efficient-video-understanding-through-rein.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  フレーム間残差を驚きの信号として使う軽量な方策網に、品質と疎さの報酬による強化学習と疑似動画から実動画への段階的学習でトークンの残し方を学ばせ、強い圧縮でも無圧縮並み以上の品質と16倍の入力処理高速化を得た。
+
+- **2026-03 · [Diagnosing FP4 Inference: A Layer-Wise and Block-Wise Sensitivity Analysis of NVFP4 and MXFP4](2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FP4の感度を射影の種類とブロックの深さで切り分けた診断研究で、MLPの上向き・下向き射影が全規模・両形式で最も敏感であり、感度は最終ブロックだけに集中しないことを示した。
+
 - **2026-03 · [Deterministic Differentiable Structured Pruning for Large Language Models](2026-2603.08065-deterministic-differentiable-structured-pruning-for-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みを凍結してマスクだけを学ぶ構造化枝刈りで、確率的な緩和を決定的なゲートと焼きなましの代理写像へ置き換え、二値化の損失と拡張ラグランジュ法で目標の削減率を正確に満たしながら、従来方式を大きく上回る品質と実測の高速化を得た。
@@ -1673,6 +1685,10 @@
 - **2026-03 · [AgentCollab: A Self-Evaluation-Driven Collaboration Paradigm for Efficient LLM Agents](2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficien.md)**  
   実装：[✓](https://github.com/SparkEngineAI/AgentFlashInfer) ・ リポジトリ内被引用：0  
   ステップごとにモデル自身が進捗を自己評価し、停滞時だけ大きいモデルへ一時的に制御を移す協調方式で、エージェントの正解率を大きいモデル並みに近づけつつ1.3から2.4倍の高速化を得た。
+
+- **2026-03 · [Adapting Methods for Domain-Specific Japanese Small LMs: Scale, Architecture, and Quantization](2026-2603.18037-adapting-methods-for-domain-specific-japanese-small-lms-scale-architectu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  日本語の専門分野向け小規模モデルの適応を、訓練規模の最適点、土台モデルの選択、適応後の量子化の安全性の三段階で検証し、最適規模は4千件、日本語の継続事前学習が決定的に効き、量子化の可否は注意の構造で決まることを示した。
 
 - **2026-03 · [3BASiL: An Algorithmic Framework for Sparse plus Low-Rank Compression of LLMs](2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-.md)**  
   実装：[✓](https://github.com/mazumder-lab/3BASiL) ・ リポジトリ内被引用：0  
@@ -1977,6 +1993,10 @@
 - **2025-12 · [StreamingAssistant: Efficient Visual Token Pruning for Accelerating Online Video Understanding](2025-2512.12560-streamingassistant-efficient-visual-token-pruning-for-accelerating-onlin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   隣接トークンとの類似度で空間冗長性を測り、市松マスクで安全に並列枝刈りする動画向けトークン削減方式で、9割超のトークンを落としても精度をほぼ保った。
+
+- **2025-12 · [SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping](2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同一入力の行列で低ランク射影を共有し、射影の先頭ブロックを再構成側へ吸収して省略することで、同じ圧縮率で保持できる有効ランクを増やし、学習なし低ランク圧縮の精度低下を既存法の半分以下に抑えた。
 
 - **2025-12 · [SASQ: Static Activation Scaling for Quantization-Aware Training in Large Language Models](2025-2512.14481-sasq-static-activation-scaling-for-quantization-aware-training-in-large-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3329,7 +3349,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：253  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：254  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  

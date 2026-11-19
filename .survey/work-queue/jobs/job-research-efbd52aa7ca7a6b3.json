@@ -35,10 +35,15 @@
   "selection_reason": "VLM向け無損失に近い視覚トークン圧縮。注意や類似度ベースの圧縮が位置バイアスや浅い層への非一般化で精度を落とす問題に対し、視覚エンコーダ側の直交方向の反復マージと、LLM側のスペクトル剪定ユニットで全体を高速化する。推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "9a4f0df352f74758fae707628e146fa9bfd1c344",
   "source_url": "https://arxiv.org/abs/2512.09010",
-  "status": "ready",
+  "status": "superseded",
   "title": "Towards Lossless Ultimate Vision Token Compression for VLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T04:57:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.md",
+  "represented_canonical_id": "arXiv:2512.09010",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

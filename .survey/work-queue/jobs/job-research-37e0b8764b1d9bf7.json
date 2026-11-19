@@ -35,10 +35,15 @@
   "selection_reason": "ランク最大化型の低ランク圧縮SkipCat。素朴な低ランク圧縮では効率利得に半分以上のランク削減が要り性能が崩れる問題に対し、ランクを保ちながら圧縮効果を得る方式で、エッジ配置向けに計算とメモリの両コストを下げる。LLM圧縮機構そのもの。",
   "semantic_scholar_id": "4c315e01a7df1be48a223bcbfbd3b30447956e87",
   "source_url": "https://arxiv.org/abs/2512.13494",
-  "status": "ready",
+  "status": "superseded",
   "title": "SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T04:57:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via.md",
+  "represented_canonical_id": "arXiv:2512.13494",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
