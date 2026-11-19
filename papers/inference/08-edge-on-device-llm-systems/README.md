@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（84本）
+## 自動生成の論文一覧（85本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -189,6 +189,10 @@
 - **2026-03 · [Trust-Aware Routing for Distributed Generative AI Inference at the Edge](2026-2603.28622-trust-aware-routing-for-distributed-generative-ai-inference-at-the-edge.md)**  
   実装：[✓](https://github.com/anonymous-123qh/g-trac/tree/main/deployment) ・ リポジトリ内被引用：0  
   G-TRAC（Generative Trust-Aware Routing and 適応的 Chaining）は、単一ノードでは実行できない生成AIモデルを複数の異種エッジ端末へ分割配置する際、どの端末の列を通して推論を進めるかを決める協調制御方式である。
+
+- **2026-03 · [MobileLLM-Flash: Latency-Guided On-Device LLM Design for Industry Scale Deployment](2026-2603.15954-mobilellm-flash-latency-guided-on-device-llm-design-for-industry-scale-d.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  携帯電話の実測遅延を探索へ直接組み込む枝刈り型の構造探索で、浅く広く注意を間引いた端末向けモデル族を作り、入力処理1.8倍・生成1.6倍の高速化と品質向上を両立した。
 
 - **2026-03 · [FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation](2026-2603.09046-flexserve-secure-mobile-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

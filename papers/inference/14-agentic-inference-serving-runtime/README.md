@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（83本）
+## 自動生成の論文一覧（84本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -266,6 +266,10 @@
 - **2026-02 · [LatentMem: Customizing Latent Memory for Multi-Agent Systems](2026-2602.03036-latentmem-customizing-latent-memory-for-multi-agent-systems.md)**  
   実装：[✓](https://github.com/KANABOON1/LatentMem) ・ リポジトリ内被引用：0  
   しかし全エージェントへ同じ履歴や要約を渡すと、役割に無関係な情報が増え、似た指示を共有することで同じ誤りを繰り返す危険がある。これらは同一実験内の比較であり、別のエージェント基盤やGPUで同じ改善が得られる保証ではない。
+
+- **2026-02 · [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybr.md)**  
+  実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：0  
+  大規模モデルの最初の1トークンの隠れ状態で関数検索と小規模モデルの生成を誘導し、固定構文はテンプレート注入で済ませる方式で、BFCL精度80.1パーセントと最速の0.828秒を両立した。
 
 - **2026-02 · [ClawMobile: Rethinking Smartphone-Native Agentic Systems](2026-2602.22942-clawmobile-rethinking-smartphone-native-agentic-systems.md)**  
   実装：[✓](https://github.com/ClawMobile/ClawMobile) ・ リポジトリ内被引用：0  
