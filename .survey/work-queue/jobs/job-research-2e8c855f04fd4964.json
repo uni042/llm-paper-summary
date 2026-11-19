@@ -35,10 +35,15 @@
   "selection_reason": "2段階正則化によるLLM構造化剪定TRSP。各層の出力に学習可能な重みを掛け、そのL1ノルムを正則化として段階的に学習することで、知識喪失と大規模な再訓練を避けながら構造化剪定する。推論圧縮機構そのもの。",
   "semantic_scholar_id": "1bf5936280129f8a2d1799f1ddbe90f4447f3c40",
   "source_url": "https://arxiv.org/abs/2505.18232",
-  "status": "ready",
+  "status": "superseded",
   "title": "Two-Stage Regularization-Based Structured Pruning for LLMs",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T12:59:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.md",
+  "represented_canonical_id": "arXiv:2505.18232",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "ReCUTは推論過程の段階的探索と長短切替サンプリングで好み比較ペアを作り、正答重視・短い推論重視モデルを学習後にパラメータ補間する。数学推論で精度を維持または改善しながらCoT長を約30〜50%削減と報告。生成トークン削減によるLLM推論効率に直接関連。",
   "semantic_scholar_id": "d1ca06c8f609ea16690dada536354e875a9ff4df",
   "source_url": "https://arxiv.org/abs/2506.10822",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReCUT: Balancing Reasoning Length and Accuracy in LLMs via Stepwise Trails and Preference Optimization",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T12:59:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trail.md",
+  "represented_canonical_id": "arXiv:2506.10822",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

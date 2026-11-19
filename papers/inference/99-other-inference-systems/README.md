@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（968本）
+## 自動生成の論文一覧（973本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2176,28 +2176,28 @@
   実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：50  
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
-- **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：40  
-  長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
-
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
-  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：41  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：40  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
+
+- **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
+  実装：✓ ・ リポジトリ内被引用：40  
+  長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
   実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：33  
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：33  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：33  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
@@ -2205,8 +2205,12 @@
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
-  実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：30  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
+
+- **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
+  実装：✓ ・ リポジトリ内被引用：27  
+  CoT-Valveは、推論モデルが簡単な問題にも長い思考連鎖（Chain of Thought、CoT）を生成してしまう無駄を減らし、同じ重みを基盤とするモデルで思考列の長さを柔軟に変える手法である。
 
 - **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
   実装：✓ ・ リポジトリ内被引用：27  
@@ -2215,10 +2219,6 @@
 - **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：26  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
-
-- **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
-  CoT-Valveは、推論モデルが簡単な問題にも長い思考連鎖（Chain of Thought、CoT）を生成してしまう無駄を減らし、同じ重みを基盤とするモデルで思考列の長さを柔軟に変える手法である。
 
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：25  
@@ -2824,9 +2824,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは115Mから10B総パラメータまでの構成、Mamba、Mamba2、Gated DeltaNet、注意機構とのハイブリッドであるSambaを評価する。
 
+- **2025-06 · [ReCUT: Balancing Reasoning Length and Accuracy in LLMs via Stepwise Trails and Preference Optimization](2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trail.md)**  
+  実装：[✓](https://github.com/NEUIR/ReCUT) ・ リポジトリ内被引用：0  
+  段階ごとに長い続きと短い続きを試し報酬で一歩ずつ選ぶ探索で選好データを作り、正確さ重視と短さ重視の二モデルをパラメータ補間で統合することで、数学推論の平均トークンを約四二パーセント減らしながら正解率を四三・九から四五・七パーセントへ上げた。
+
 - **2025-06 · [Principled SVD-based Delta Compression via Quantization Error Minimization](2025-2506.11087-principled-svd-based-delta-compression-via-quantization-error-minimizati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PRINMIXは、同じ基盤LLMから多数の微調整済みモデルを提供する場面を想定し、各モデルに固有の差分重みΔWだけを圧縮する方式である。
+
+- **2025-06 · [Near-Optimal Online Deployment and Routing for Streaming LLMs](2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  流入するモデル群から同時稼働数の上限内で段階ごとに配備集合を楽観的に選び、段階内では予算と処理上限を満たす線形計画で問合せを振り分ける二層の方式で、後悔が問合せ数の三分の二乗の水準という理論の下限と一致する近最適性を示した。
 
 - **2025-06 · [MoTE: Mixture of Ternary Experts for Memory-efficient Large Multimodal Models](2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2836,6 +2844,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Hopscotchは、Transformerの注意ブロックを丸ごと除去しながら、残る層の出力を少数のスカラーで再調整する構造圧縮法である。Llama-3.1-8B-InstructとQwen2.5-7B-Instructで検証し、Llamaでは四つの注意ブロックを削除しても平均性能保持率98.65%、七つ削除した場合も97.08%と報告する。
 
+- **2025-06 · [GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching](2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitchin.md)**  
+  実装：[✓](https://github.com/Guinan-Su/auto-merge-llm) ・ リポジトリ内被引用：0  
+  単一モデルではなく同族の微調整モデルの層を除去・選択・統合する切り貼りを零次最適化で探索する枝刈りで、一百三十億級モデルの約二十五パーセント除去時に能力の九十七・三パーセント、七十億級で九十二・二パーセントを後訓練なしで保った。
+
 - **2025-06 · [FREE: Fast and Robust Vision Language Models with Early Exits](2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.md)**  
   実装：[✓](https://github.com/Div290/FREE) ・ リポジトリ内被引用：0  
   視覚言語モデルの途中層に、最終層の分類器を共有し敵対的学習で最終層の表現をまねる早期終了口を付け、簡単なトークンを浅い層で確定させることで、NoCapsで品質を保ったまま1.51倍の高速化を示した。
@@ -2843,6 +2855,10 @@
 - **2025-06 · [Fine-grained Token Allocation Via Operation Pruning for Efficient MLLMs](2025-2507.02909-fine-grained-token-allocation-via-operation-pruning-for-efficient-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の視覚トークン枝刈りは、重要と判定した少数のトークンを残すが、どの層・どのモジュールも同じ数の視覚トークンを処理しがちである。LLaVA-NeXT-7Bの実験では、視覚トークンを一律に減らす比較方式より同一演算予算で精度を保ち、特定の強圧縮条件ではTFLOPs86%削減とプリフィル CUDA遅延83%削減を平均性能約1%低下で報告する。
+
+- **2025-06 · [Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty](2025-2506.10446-fast-on-the-easy-deep-on-the-hard-efficient-reasoning-via-powered-length.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  正解報酬へ長さのべき乗に反比例する項を加え、短い応答ほど長さ差が効き長い応答では効かない報酬にすることで、易しい問題のトークンを最大で約九割減らしつつ難しい問題の精度を保った。
 
 - **2025-06 · [Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models](2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2875,6 +2891,10 @@
 - **2025-05 · [Understanding Differential Transformer Unchains Pretrained Self-Attentions](2025-2505.16333-understanding-differential-transformer-unchains-pretrained-self-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは、この方式の利点を単純な注意の疎化として説明できるかを検証し、負の寄与による表現力、注意頭部の冗長性低下、学習時の安定性という三つの要因を分析した。Llama-3.2-3Bの11課題平均は60.2から64.2へ4.0ポイント改善し、針検索の平均正答率は66.9%から78.3%へ11.4ポイント改善した。
+
+- **2025-05 · [Two-Stage Regularization-Based Structured Pruning for LLMs](2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.md)**  
+  実装：[✓](https://github.com/fmk345/TRSP) ・ リポジトリ内被引用：0  
+  削除前に層重みを貪欲に学習して候補を決め、候補層の入出力差への正則化で知識を残存層へ移してから層を削除する再学習不要の枝刈りで、七十億級モデルの二十五パーセント削除時に困惑度を次点より約二十パーセント下げ平均正解率六十・五七パーセントを保った。
 
 - **2025-05 · [SwiftPrune: Hessian-Free Weight Pruning for Large Language Models](2025-2501.16376-swiftprune-hessian-free-weight-pruning-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3099,7 +3119,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：83  
+  実装：✓ ・ リポジトリ内被引用：84  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
