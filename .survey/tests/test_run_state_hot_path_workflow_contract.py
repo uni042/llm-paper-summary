@@ -63,7 +63,7 @@ class RunStateHotPathWorkflowContractTests(unittest.TestCase):
         text = (WORKFLOWS / "survey-orchestrator.yml").read_text(encoding="utf-8")
         claim = (WORKFLOWS / "survey-claim-fast.yml").read_text(encoding="utf-8")
         self.assertIn("group: survey-orchestrator-main", text)
-        self.assertIn("cron: '7/10 * * * *'", text)
+        self.assertIn("cron: '7 * * * *'", text)
         self.assertIn(".survey/scheduler/library-import-kick.json", text)
         self.assertIn("dispatch_if_idle library-import.yml", text)
         self.assertNotIn("schedule:", self._trigger("survey-claim-fast.yml"))

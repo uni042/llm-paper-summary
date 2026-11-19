@@ -13,7 +13,7 @@ class RunLivenessPolicyTests(unittest.TestCase):
 
     def test_central_scheduler_periodically_dispatches_library_first_lanes(self):
         scheduler = (WORKFLOWS / "survey-orchestrator.yml").read_text(encoding="utf-8")
-        self.assertIn("cron: '7/10 * * * *'", scheduler)
+        self.assertIn("cron: '7 * * * *'", scheduler)
         self.assertIn(".survey/scheduler/library-import-kick.json", scheduler)
         for workflow in (
             "library-import.yml",
@@ -30,11 +30,14 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn('if [ "$GITHUB_EVENT_NAME" = "push" ] && jq -e', scheduler)
 
         watchdog = (WORKFLOWS / "survey-scheduler-watchdog.yml").read_text(encoding="utf-8")
-        self.assertIn("cron: '13,43 * * * *'", watchdog)
-        self.assertIn("survey-orchestrator.yml/dispatches", watchdog)
-        self.assertIn("survey-scheduler-watchdog.yml/dispatches", watchdog)
-        self.assertIn("sleep 600", watchdog)
-        self.assertIn("group: survey-scheduler-watchdog-main", watchdog)
+        watchdog_trigger = watchdog.split("permissions:", 1)[0]
+        self.assertIn("workflow_dispatch:", watchdog_trigger)
+        self.assertNotIn("schedule:", watchdog_trigger)
+        self.assertNotIn("push:", watchdog_trigger)
+        self.assertNotIn("survey-orchestrator.yml/dispatches", watchdog)
+        self.assertNotIn("survey-scheduler-watchdog.yml/dispatches", watchdog)
+        self.assertNotIn("sleep 600", watchdog)
+        self.assertNotIn("group: survey-scheduler-watchdog-main", watchdog)
 
         retired_auto = (
             "survey-claim-fast.yml",
@@ -80,7 +83,8 @@ class RunLivenessPolicyTests(unittest.TestCase):
         workflow = (WORKFLOWS / "library-import.yml").read_text(encoding="utf-8")
         self.assertIn("citation_backfill_due", workflow)
         self.assertIn("citation-coverage-latest.json", workflow)
-        self.assertIn("citation_graph.load_records", workflow)
+        self.assertIn("paper-identity-index.json", workflow)
+        self.assertIn("active_count", workflow)
         self.assertIn("gh workflow run citation-graph-backfill.yml", workflow)
         self.assertIn("active_citation_runs", workflow)
 
@@ -92,16 +96,16 @@ class RunLivenessPolicyTests(unittest.TestCase):
         self.assertIn("papers/**/*.md", pull_block)
 
     def test_event_driven_fallbacks_are_freshness_gated(self):
-        for workflow_name, state_path in (
-            ("forward-citation-sweep.yml", ".survey/work-queue/forward-citation-sweep.json"),
-            ("candidate-priority-refresh.yml", ".survey/work-queue/candidate-priority-cache.json"),
+        for workflow_name, state_path, max_age_seconds in (
+            ("forward-citation-sweep.yml", ".survey/work-queue/forward-citation-sweep.json", "82800"),
+            ("candidate-priority-refresh.yml", ".survey/work-queue/candidate-priority-cache.json", "3000"),
         ):
             with self.subTest(workflow=workflow_name):
                 text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
                 self.assertNotIn("- 'STATUS.md'", text)
                 self.assertIn(".survey/scripts/refresh_due.py", text)
                 self.assertIn(state_path, text)
-                self.assertIn("--max-age-seconds 3000", text)
+                self.assertIn(f"--max-age-seconds {max_age_seconds}", text)
                 self.assertIn("steps.due.outputs.run == 'true'", text)
 
     def test_scheduled_task_is_not_disabled_by_worker_failure(self):

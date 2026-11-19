@@ -102,7 +102,7 @@ class RetryableSubmissionRecoveryTests(unittest.TestCase):
         self.assertNotIn("schedule:", text)
         self.assertIn("list_unsettled_immutable_submissions.py", text)
         self.assertIn("Immutable submission failure result was persisted to main.", text)
-        self.assertIn("cron: '7/10 * * * *'", scheduler)
+        self.assertIn("cron: '7 * * * *'", scheduler)
         self.assertIn("dispatch_if_idle library-import.yml", scheduler)
         self.assertNotIn("survey-submission-fast.yml", scheduler)
 
