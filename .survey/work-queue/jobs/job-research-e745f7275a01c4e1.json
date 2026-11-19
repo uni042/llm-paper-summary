@@ -35,10 +35,15 @@
   "selection_reason": "適応2段階トークン除去ERASE。画像水準の冗長性除去と指示依存のトークン剪定を分離し、第1段階は軽量な原画像統計から画像依存の保持率を決め、第2段階で段階的に剪定する。VLM推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "86a0f7b63f606ffc55770acb48b9dc76b10fa9c3",
   "source_url": "https://arxiv.org/abs/2605.09982",
-  "status": "ready",
+  "status": "superseded",
   "title": "ERASE: Eliminating Redundant Visual Tokens via Adaptive Two-Stage Token Pruning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.09982-erase-eliminating-redundant-visual-tokens-via-adaptive-two-stage-token-p.md",
+  "represented_canonical_id": "arXiv:2605.09982",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

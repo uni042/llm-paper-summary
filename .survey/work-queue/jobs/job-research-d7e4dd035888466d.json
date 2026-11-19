@@ -35,10 +35,15 @@
   "selection_reason": "エッジの複数要求下で推論途中終了の固定閾値が品質とSLOの両立を妨げる問題に対し、負荷依存の早期終了閾値と難度・負荷依存の思考予算配分を統合するLASERを提案。二つの推論モデルと4ベンチマークで平均遅延17〜38%減、SLO達成率3〜6%改善を報告。",
   "semantic_scholar_id": "2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
   "source_url": "https://arxiv.org/abs/2606.31580",
-  "status": "ready",
+  "status": "superseded",
   "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.md",
+  "represented_canonical_id": "arXiv:2606.31580",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

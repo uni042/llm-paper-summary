@@ -35,10 +35,15 @@
   "selection_reason": "連続バッチ処理が使えない直列型LLM推論バックエンドで、短い要求が長い生成の後ろで待つ行列先頭ブロッキングを、応答長予測に基づく最短ジョブ優先の受付制御Clairvoyantで緩和する。エッジやローカルのサービング機構そのもので、直接貢献が確認できる。",
   "semantic_scholar_id": "fbcd5d568bb32574bd8a1ccad599113f195f12b2",
   "source_url": "https://arxiv.org/abs/2606.07248",
-  "status": "ready",
+  "status": "superseded",
   "title": "Clairvoyant: Predictive Shortest-Job-First Admission for Serial LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-infer.md",
+  "represented_canonical_id": "arXiv:2606.07248",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "混合精度量子化の被覆モデル。層集合を量子化したときの損失が、個別層の感度から再構成できるという前提を4ビット重み・活性の条件で検証し、分散の85〜93%が層単独効果で説明できることと、飽和で誤差が加法的になる構造を示す。量子化の計測・分析そのもの。",
   "semantic_scholar_id": "e4811ff7d6d06cc551a173159f18988b36e8d5d9",
   "source_url": "https://arxiv.org/abs/2607.12266",
-  "status": "ready",
+  "status": "superseded",
   "title": "Saturation Makes Quantization Error Additive: A Coverage Model with a Certificate",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.12266-saturation-makes-quantization-error-additive-a-coverage-model-with-a-cer.md",
+  "represented_canonical_id": "arXiv:2607.12266",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

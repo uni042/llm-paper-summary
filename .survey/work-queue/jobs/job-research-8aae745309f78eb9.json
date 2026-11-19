@@ -35,10 +35,15 @@
   "selection_reason": "Apple Siliconでfp16より速いint4 KVキャッシュ。統一メモリ上では帯域節約が量子化カーネルのオーバーヘッドを上回ることを、符号ランダム化FFT等を融合した単一Metalカーネルで示し、3倍の永続メモリ圧縮と品質維持を両立させる。推論メモリ機構そのもの。",
   "semantic_scholar_id": "06ac06a648b9f5accd03247abf69de808ee28775",
   "source_url": "https://arxiv.org/abs/2605.05699",
-  "status": "ready",
+  "status": "superseded",
   "title": "When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.05699-when-quantization-is-free-an-int4-kv-cache-that-outruns-fp16-on-apple-si.md",
+  "represented_canonical_id": "arXiv:2605.05699",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

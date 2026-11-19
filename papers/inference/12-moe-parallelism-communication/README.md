@@ -45,13 +45,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：4  
   大規模言語モデルの混合専門家（MoE）層では、ルータが各トークンを担当する専門家へ割り当て、専門家計算の後に結果を元の順序へ集約する。一方、実際にvLLMへ組み込んでQwen3-30B-A3Bを実行した場合は、DeepEPより出力トークン処理量が7〜10%低く、トークン間遅延も7〜9%長かった。
 
+- **2025-12 · [Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens](2025-2512.09277-efficient-moe-serving-in-the-memory-bound-regime-balance-activated-exper.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
+
 - **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/LeastLoadedEP) ・ リポジトリ内被引用：3  
   標準的な専門家並列（専門家 Parallelism、EP）では専門家の重みを複数GPUへ固定配置し、選択された専門家を所有するGPUへトークンを送る。論文の層単体評価では、8台のH200上で極端な専門家偏りに対し最大6.11倍の速度改善とピークメモリの大幅削減を報告する。
-
-- **2025-12 · [Efficient MoE Serving in the Memory-Bound Regime: Balance Activated Experts, Not Tokens](2025-2512.09277-efficient-moe-serving-in-the-memory-bound-regime-balance-activated-exper.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
 
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -80,6 +80,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-04 · [Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns](2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル時の専門家活性から似た要求を小バッチ化し、要求群で共発火する専門家を同じノードへ置くことで、マルチノードMoEの全対全通信を削減する。
+
+- **2026-04 · [ReaLB: Real-Time Load Balancing for Multimodal MoE Inference](2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  予測で専門家を動かす代わりに、現在の経路で過負荷かつ視覚偏重なランクの計算だけをその場で低精度化し、変換費用を通信へ隠すことで、多モダルMoEの遅延を1.10倍から1.32倍速くした実時間負荷調整方式。
 
 - **2026-04 · [DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72](2026-2604.01621-dwdp-distributed-weight-data-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -167,10 +171,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：0  
   MoE推論の通信・計算・重畳・総所有コストを横断モデル化し、高価なスケールアップ網より3Dフルメッシュ等のスイッチレス網と適度な帯域の方が単位費用当たり性能で優れる条件を体系化した研究。
 
-- **2026-04 · [ReaLB: Real-Time Load Balancing for Multimodal MoE Inference](2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  予測で専門家を動かす代わりに、現在の経路で過負荷かつ視覚偏重なランクの計算だけをその場で低精度化し、変換費用を通信へ隠すことで、多モダルMoEの遅延を1.10倍から1.32倍速くした実時間負荷調整方式。
-
 - **2026-03 · [A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network](2026-2603.28239-scin-switch-centric-in-network-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SCINはスイッチ内アクセラレータがGPUメモリを直接読みAll-Reduceを集約・書戻しし、GPU往復を減らす。INT8値と尺度も対応付け、テンソル並列の通信同期を短縮する。
@@ -229,13 +229,13 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：5  
   活性化頻度とエントロピーに基づく専門家配置と費用認識型移行により、異種エッジMoE推論の遠隔通信と遅延を削減する。
 
+- **2025-10 · [Patterns behind Chaos：大規模MoEのデータ移動予測](2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  その知見を将来のウェハ級GPU設計へ適用すると四モデル平均6.6倍、既存GPU向けプリフィル認識型専門家配置ではMoE計算を最大1.25倍高速化した。
+
 - **2025-09 · [HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing](2025-2509.09420-hd-moe-hybrid-and-dynamic-parallelism-for-mixture-of-expert-llms-with-3d.md)**  
   実装：[✓](https://github.com/angerybob/HD-MoE) ・ リポジトリ内被引用：4  
   推論時には直近の専門家選択を用いて次層の負荷を予測し、過負荷になりそうな専門家を限られた時間内に事前配信し、追加通信を増やさない範囲でトークンを空いた節点へ振り分ける。
-
-- **2025-10 · [Patterns behind Chaos：大規模MoEのデータ移動予測](2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  その知見を将来のウェハ級GPU設計へ適用すると四モデル平均6.6倍、既存GPU向けプリフィル認識型専門家配置ではMoE計算を最大1.25倍高速化した。
 
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -310,6 +310,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 6年前（2020-12〜2021-11）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：291  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：292  
   論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->

@@ -35,10 +35,15 @@
   "selection_reason": "再学習なしで長文脈prefillを疎化するBFLA。決定的なブロック索引、クエリタイル共有、長さ適応のRatio-K選択とblock-sparse実行を組み合わせ、vLLMへ統合しdecodeは通常経路を保持する。Gemma/Qwen系列の長文脈評価でTTFT最大約4倍、要求全体最大3.72倍の高速化を報告する直接的なサービング最適化。",
   "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
   "source_url": "https://arxiv.org/abs/2605.12193",
-  "status": "ready",
+  "status": "superseded",
   "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.md",
+  "represented_canonical_id": "arXiv:2605.12193",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

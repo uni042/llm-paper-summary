@@ -35,10 +35,15 @@
   "selection_reason": "FPGA上で整数・浮動小数点・混合精度の積和演算を共通の整数仮数積と符号・指数処理へ分解し、動的オペランドパッキングとDSP資源共有を実現する。AMD Xilinx U55c評価で計算密度1.4～2.0倍、演算当たりLUT/FF/DSP消費27～51%減、LLM混合精度ワークロードで最大1.2倍高速化を著者報告。低精度LLM推論のハードウェア効率化に直接関連。",
   "semantic_scholar_id": "a9ae08282ac3d1aa68641098fcaf46bbadcebb54",
   "source_url": "https://arxiv.org/abs/2605.06052",
-  "status": "ready",
+  "status": "superseded",
   "title": "XtraMAC: An Efficient MAC Architecture for Mixed-Precision LLM Inference on FPGA",
   "type": "research",
   "venue": "International Symposium on Computer Architecture",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.06052-xtramac-an-efficient-mac-architecture-for-mixed-precision-llm-inference-.md",
+  "represented_canonical_id": "arXiv:2605.06052",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

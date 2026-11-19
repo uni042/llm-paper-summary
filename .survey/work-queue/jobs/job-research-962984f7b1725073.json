@@ -35,10 +35,15 @@
   "selection_reason": "ブラックボックスLLM推論のクライアント側スケジューリング。出力トークン数の事前予測が得られる前提で、配分（適応DRR）・順序付け（実現可能集合スコアリング）・過負荷制御（費用梯子での受理・延期・拒否）を分離し、粗い大きさの事前情報が制御の実用閾値であることを示す。推論基盤のスケジューリングそのもの。",
   "semantic_scholar_id": "ee5bb226b122467071bdfc854a81f5061470c26a",
   "source_url": "https://arxiv.org/abs/2604.06970",
-  "status": "ready",
+  "status": "superseded",
   "title": "Scheduling the Unschedulable: Taming Black-Box LLM Inference at Scale",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.06970-scheduling-the-unschedulable-taming-black-box-llm-inference-at-scale.md",
+  "represented_canonical_id": "arXiv:2604.06970",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

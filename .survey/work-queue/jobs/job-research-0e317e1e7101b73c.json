@@ -35,10 +35,15 @@
   "selection_reason": "GPU中心のdecode attentionがmemory-boundとなる問題に対し、GPU計算dieをHBM近傍処理cubeへ置き換え、logic-dieのdecode用マイクロアーキテクチャ、二段hybrid parallelism、die間collective順序の最適化を組み合わせるmulti-chiplet AMMAを提案。100万token級contextでH100比attention latency15.5倍低減、エネルギー6.9倍削減と報告。長文LLM推論attentionの専用memory-centric hardware設計としてaccept。",
   "semantic_scholar_id": "f8f77994029527055c0055e456641777a3460ac5",
   "source_url": "https://arxiv.org/abs/2604.26103",
-  "status": "ready",
+  "status": "superseded",
   "title": "AMMA: A Multi-Chiplet Memory-Centric Architecture for Low-Latency 1M Context Attention Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/17-pim-near-data-acceleration/2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-cont.md",
+  "represented_canonical_id": "arXiv:2604.26103",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

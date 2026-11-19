@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨。長文脈のlayer-wise KV memoryに対し専用memory layerが保持対象を選び、生成中の特殊memory tokenで必要に応じてrefreshするPreserve and Refresh Memoryを提案。学習にはPhase-Separated Refresh Trainingを用いるが、最終的には32K文脈・16倍/32倍圧縮下の推論時KV利用と品質を評価し、動的KV圧縮に直接関係する。",
   "semantic_scholar_id": "0e64fa83649d8c72d65fafa4a24e06f8b3872ead",
   "source_url": "https://arxiv.org/abs/2607.14327",
-  "status": "ready",
+  "status": "superseded",
   "title": "PReM: Learning What to Preserve and When to Refresh for Context Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.14327-prem-learning-what-to-preserve-and-when-to-refresh-for-context-compressi.md",
+  "represented_canonical_id": "arXiv:2607.14327",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（80本）
+## 自動生成の論文一覧（82本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -79,6 +79,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-02 · [Asynchronous Verified Semantic Caching for Tiered LLM Architectures](2026-2602.13165-asynchronous-verified-semantic-caching-for-tiered-llm-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   著者は、事前に人手や大規模モデルで検証した回答を持つ静的キャッシュと、通常の要求を処理しながら生成回答を保存する動的キャッシュを分離する構成を前提とする。原著のトレース駆動シミュレーションでは、会話要求における静的由来回答の割合が8.2%から19.4%、検索要求では2.2%から8.6%へ増えた。
+
+- **2026-01 · [QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design](2026-2601.14549-qmc-efficient-slm-edge-inference-via-outlier-aware-quantization-and-emer.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -158,6 +162,14 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   NeuScaleは、世代ごとに計算性能、メモリ帯域、メモリ容量、チップ間通信性能が異なるニューラル処理装置（NPU）を、LLM推論サービスに効率よく割り当てる制御方式である。複数モデルと複数要求系列にわたる均質構成の従来型自動伸縮方式との比較で、平均エネルギー効率1.13倍、金銭的費用効率1.43倍、サービス水準目標（SLO）達成率1.36倍を報告する。
 
+- **2026-06 · [LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge](2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論モデルの早期終了を固定しきい値から負荷連動へ変え、難易度と負荷で推論予算の上限も割り当てることで、平均遅延を17から38パーセント減らし期限内完了率を3から6ポイント上げた（正解率は平均約1ポイント低下）。
+
+- **2026-05 · [Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference](2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation.md)**  
+  実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  
+  重みを高精度へ戻さず、活性値を粗い成分と残差成分へ分解して低精度行列積を二回行うことで逆量子化を外し、整数八ビットでは有効約十六ビット、四ビット浮動小数点では有効約六・六ビットを理論と数値実験で示し、注意のキー・値転送は最大二・五倍減というモデルを示した。
+
 - **2026-05 · [MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems](2026-2605.05888-moe-hub-taming-software-complexity-for-seamless-moe-overlap-with-hardwar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案方式は、ルータが決めた論理宛先だけでトークン行を送信できるst.rowsp命令と、受信側で実際の格納行を割り当てるアドレス割当装置（Address Allocation Unit; AAU）を導入する。
@@ -217,10 +229,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-01 · [SynPerf: A Hybrid Analytical-ML Framework for GPU Performance Prediction](2026-2601.14910-synperf-a-hybrid-analytical-ml-framework-for-gpu-performance-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   カーネルをタスクへ分解し命令パイプラインごとの需要を解析してから学習モデルで実行時間を予測するGPU性能モデルで、11種のGPUでカーネル誤差6.1パーセントまで下げ、性能上限の診断で融合MoEを最大1.7倍速くした。
-
-- **2026-01 · [QMC: Efficient SLM Edge Inference via Outlier-Aware Quantization and Emergent Memories Co-Design](2026-2601.14549-qmc-efficient-slm-edge-inference-via-outlier-aware-quantization-and-emer.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 - **2026-01 · [Mugi: Value Level Parallelism For Efficient LLMs](2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md)**  
   実装：[✓](https://zenodo.org/records/18063514) ・ リポジトリ内被引用：0  

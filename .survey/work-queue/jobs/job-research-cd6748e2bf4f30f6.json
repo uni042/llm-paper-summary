@@ -35,10 +35,15 @@
   "selection_reason": "仮想テンソルによるDNNコンパイルVTC。レイアウト変換や演算子融合が一部の演算子しか対象にせずデータ移動の削減機会を逃す問題に対し、索引写像でデータ移動を追う仮想テンソルで全範囲のデータ移動演算子を対象にし、不要な移動を排除する。LLMを含む推論コンパイルそのもの。",
   "semantic_scholar_id": "d1441360ffd79b03428a8ee0e194fcfa8046d442",
   "source_url": "https://arxiv.org/abs/2604.09558",
-  "status": "ready",
+  "status": "superseded",
   "title": "VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination",
   "type": "research",
   "venue": "USENIX Symposium on Operating Systems Design and Implementation",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.md",
+  "represented_canonical_id": "arXiv:2604.09558",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

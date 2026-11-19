@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（132本）
+## 自動生成の論文一覧（133本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -186,6 +186,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   原著はサービス指標の比較研究であり、GPU内部の暗号化処理、PCIe転送、HBM帯域、スケジューラのどれが何%の原因かまで分解したマイクロアーキテクチャ解析ではない。
 
+- **2026-06 · [The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference](2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一二二言語で推論エネルギーを実機計測し、トークン当たりで最大八・三倍、応答当たり総量で英語比一七九倍の言語間格差があること、その主因が低資源言語でのトークン単価上昇と出力トークン数膨張の掛け算であり、格差がモデル・ハードウェア・課題を変えても残ることを明らかにした。
+
 - **2026-06 · [Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models](2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-mod.md)**  
   実装：[✓](https://github.com/zjubinchen/CLSE) ・ リポジトリ内被引用：0  
   層をまたぐ周波数成分の変化量を重要度にして視覚トークンを第2層の前に落とす学習不要の枝刈りで、88.9パーセント削減でも全トークン性能の94.8パーセントを保持した。
@@ -357,7 +361,7 @@
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
-  実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：15  
   著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
 
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  

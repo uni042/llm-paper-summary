@@ -35,10 +35,15 @@
   "selection_reason": "一次arXiv論文の本文・要旨を確認。層間で累積する量子化誤差を再帰的に補償し、有限標本の特徴統計整合を併用する極低ビットLLM量子化。Qwen2.5-1.5Bの1.125-bitでFP16比perplexity比9.56±0.15、logit distillationの14.09±0.53より改善。推論用重み圧縮に直接関連するためaccept。",
   "semantic_scholar_id": "ecb2f24b57fa50bfbd381ba72d6489587c5bb3af",
   "source_url": "https://arxiv.org/abs/2607.14630",
-  "status": "ready",
+  "status": "superseded",
   "title": "Cross-Layer Error Compensation and Finite-Sample Feature-Statistics Matching for Extreme Low-Bit Quantization of Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matc.md",
+  "represented_canonical_id": "arXiv:2607.14630",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Visual-Skipは高解像度画像の視覚token同士のattentionが深い層で飽和する一方FFNは必要との観察から、tokenを消さず視覚attentionブロックを層ごとに飛ばす。few-shot校正で課題別の疎性経路を選び、各種MLLMで元性能の94.16〜100.31%を維持したと報告。推論時のattention計算削減を直接狙う。",
   "semantic_scholar_id": "82f91241eb23cb7f011afe30d69768f178700210",
   "source_url": "https://arxiv.org/abs/2606.08511",
-  "status": "ready",
+  "status": "superseded",
   "title": "Look Less, Reason More: Block-wise Attention Skipping for Efficient Multimodal LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.08511-look-less-reason-more-block-wise-attention-skipping-for-efficient-multim.md",
+  "represented_canonical_id": "arXiv:2606.08511",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

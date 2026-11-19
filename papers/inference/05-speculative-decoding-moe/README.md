@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（346本）
+## 自動生成の論文一覧（347本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -612,6 +612,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号では安価なドラフトが複数トークンを先に提案し、完全なモデルが一括検証する。論文はSWIFT、下書き & Verify、LayerSkip、DEL、Kangarooを比較し、層スキップ方式のHumanEvalにおける通常生成比高速化が1.04〜1.48倍に留まる一方、早期終了方式は平均1.49〜2.67倍を達成したと報告する。
 
+- **2026-07 · [CacheSpec: Finding the Sweet Spot for Small Models in Large Language Models](2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-mode.md)**  
+  実装：[✓](https://github.com/chenjqQAQ/CacheSpec) ・ リポジトリ内被引用：0  
+  毎回生成していた推論プログラムを引数化して再利用できる形に変え、小さいモデルに変数抽出と投機的下書きだけを担わせることで、金融式課題でプログラム生成方式と同水準の正解率を保ちつつ遅延を約三・一倍短縮した再利用基盤。
+
 - **2026-07 · [Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding](2026-2607.27269-beyond-kv-reconstruction-functional-reconstruction-for-mla-draft-models-.md)**  
   実装：[✓](https://github.com/swyhahaha/FunctionalMLA) ・ リポジトリ内被引用：0  
   本論文は、多頭注意（Multi-Head 注意機構; MHA）またはグループ化クエリ注意（Grouped-Query 注意機構; GQA）で事前学習した小型言語モデルを、多頭潜在注意（Multi-head Latent 注意機構; MLA）へ変換して投機的復号（投機的復号）のドラフトモデルとして使う際の受理率低下を扱う。
@@ -1141,7 +1145,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：449  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：450  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
@@ -1359,7 +1363,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：476  
+  実装：✓ ・ リポジトリ内被引用：477  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
@@ -1401,7 +1405,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：654  
+  実装：✓ ・ リポジトリ内被引用：655  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  

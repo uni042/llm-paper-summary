@@ -35,10 +35,15 @@
   "selection_reason": "モダルLLMのピークメモリ削減。視覚トークンのKV圧縮が全入力処理の後にしか適用されずプリフィル段階のピークメモリが高い問題に対し、処理の途中で圧縮を進めてピークを下げる。推論メモリ機構そのもの。",
   "semantic_scholar_id": "8b6e0c1553449c9d5191ab4c3cf1252a77cd4653",
   "source_url": "https://arxiv.org/abs/2604.16734",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.16734-reducing-peak-memory-usage-for-modern-multimodal-large-language-model-pi.md",
+  "represented_canonical_id": "arXiv:2604.16734",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

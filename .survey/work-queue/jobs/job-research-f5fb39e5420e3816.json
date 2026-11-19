@@ -35,10 +35,15 @@
   "selection_reason": "ユーザー別LoRA/ReFTを全トークンへ適用すると多アダプタdecodeが遅くなる問題に対し、アダプタをprefill時だけ適用しdecodeでは外すPreFTを提案。vLLM実装でLlama 3.1 70B・512アダプタ時に従来PEFTの1.9倍の処理量を報告。学習方式を含むが主目的は多アダプタ推論の実スループット改善。",
   "semantic_scholar_id": "81b03ecdb8139339f5882e55433d78610934b5fe",
   "source_url": "https://arxiv.org/abs/2605.14217",
-  "status": "ready",
+  "status": "superseded",
   "title": "PreFT: Prefill-only finetuning for efficient inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.14217-preft-prefill-only-finetuning-for-inference-efficiency.md",
+  "represented_canonical_id": "arXiv:2605.14217",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

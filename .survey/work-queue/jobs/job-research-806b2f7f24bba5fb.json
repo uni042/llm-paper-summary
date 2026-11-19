@@ -35,10 +35,15 @@
   "selection_reason": "圧縮LLMの次元不整合の分析とGPU整合圧縮GAC。学習後圧縮で不規則なテンソル次元が生じ、パラメータが減っても推論が速くならない現象を、フレームワーク・ライブラリ・ハードウェアの3水準で分析し、任意の次元削減圧縮を包むGPU整合の枠組みを提案する。推論基盤の計測と機構そのもの。",
   "semantic_scholar_id": "2691e870cd28cb2dc069044f463390dc9e9896fe",
   "source_url": "https://arxiv.org/abs/2604.09595",
-  "status": "ready",
+  "status": "superseded",
   "title": "Why Smaller Is Slower? Dimensional Misalignment in Compressed LLMs",
   "type": "research",
   "venue": "EuroMLSys@EuroSys",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.md",
+  "represented_canonical_id": "arXiv:2604.09595",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

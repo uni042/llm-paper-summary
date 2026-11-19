@@ -35,10 +35,15 @@
   "selection_reason": "多言語LLM推論のGPU消費電力量を実測し、言語間で出力トークン当たり最大8.3倍、固定リクエスト総量で最大179倍の差を報告。低資源言語のトークン増大と単位トークン消費電力が重なり、サービングの効率・公平性評価に直結する。",
   "semantic_scholar_id": "f6fcb807f6b2010b6366c707a357ea56aceced85",
   "source_url": "https://arxiv.org/abs/2606.21869",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T17:15:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-in.md",
+  "represented_canonical_id": "arXiv:2606.21869",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
