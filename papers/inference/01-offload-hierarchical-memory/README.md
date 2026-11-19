@@ -365,7 +365,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   CXL 2.0スイッチでGPU/CPUから共有KVメモリを直接ロード／ストア可能にし、細粒度KV転送・共有メモリRPC・局所性不要の配置をvLLMへ統合してRDMA型プールのコピーと同期を削減する。
 
 - **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
-  実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：13  
   専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
 
 - **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
