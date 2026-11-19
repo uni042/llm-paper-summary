@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデル向け軌跡水準の投機的デコード。低信頼で単一トークン生成へ崩れる問題に対し、デノイズ軌跡そのものを投機対象として、信頼度で層化した木探索で下書き軌跡を作り、ブロック並列に検証する枠組みと、ブロック間投機を提案する。拡散デコード機構そのもの。",
   "semantic_scholar_id": "dd7e939d7b5719682ab870794a025072cf39e506",
   "source_url": "https://arxiv.org/abs/2608.27514",
-  "status": "ready",
+  "status": "superseded",
   "title": "Trajectory-Level Speculative Decoding for Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:03:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2608.27514",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

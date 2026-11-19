@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1026本）
+## 自動生成の論文一覧（1028本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -878,6 +878,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   435M規模、学習43.52Bトークン、最大系列長2048という制御された比較で、最良のQ/P分離パラメータ、整合損失重みλ=1は、通常の局所窓Transformerに対してFineWeb-Edu検証のビット/バイト（BPB）を0.7413から0.7251へ低下させ、下流精度平均を54.1から56.4へ改善した。
 
+- **2026-08 · [Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting](2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  再順位付けと生成の間で律速が移動することを実測し、限界証拠被覆による証拠前倒しと待ち行列圧力に応じた予算削減を組み合わせ、HotpotQAでは半分の再順位付け件数で最終再現率を41.13から62.38へ上げた。
+
 - **2026-08 · [Learning What to Remember: Test-Time Training via Context Distillation](2026-2608.01672-learning-what-to-remember-test-time-training-via-context-distillation.md)**  
   実装：[✓](https://github.com/dangxingyu/ttcd) ・ リポジトリ内被引用：0  
   通常の全注意（full 注意機構）は長い履歴の情報を参照できる一方、長さに応じて注意計算と鍵・値（KV）キャッシュの費用が増える。760Mパラメータをゼロから学習したモデルのRULER針検索（6課題平均）では、32KトークンでIP-TTTの9.29%に対しIP-TTCDは21.96%。
@@ -933,6 +937,10 @@
 - **2026-08 · [Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory](2026-2608.07169-agent-memory-distillation-empowering-small-llm-agents-with-hierarchical-.md)**  
   実装：[✓](https://github.com/taeilkim2465/agentic_memory_distillation) ・ リポジトリ内被引用：0  
   提案手法AMD（Agent メモリ Distillation）は、教師が成功した道具呼び出し軌跡から、作業全体の戦略を示す作業手順記憶（Workflow メモリ）、実際の道具呼び出し列を示す部分作業記憶（Subtask メモリ）、個別関数の呼び方を示す関数記憶（Function メモリ）を別々に構築する。
+
+- **2026-08 · [A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models](2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-qual.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化の情報保持をSQNRで、速度利得をルーフライン型の解析予測で測り、重み付きで統合する層重要度指標を提案し、再実行なしの速度予測が平均誤差約3.4パーセントで実測と合うことを示した。
 
 - **2026-07 · [What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents](2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2341,7 +2349,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：108  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -2437,7 +2445,7 @@
   xDeepServe（XDS）は、Huawei Cloudが大規模Mixture-of-Experts（MoE）モデルを提供するためのモデル-as-a-Service（MaaS）配信システムである。
 
 - **2025-09 · [Learning to Parallel: Accelerating Diffusion Large Language Models via Learnable Parallel Decoding](2025-2509.25188-learning-to-parallel-accelerating-diffusion-large-language-models-via-le.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   これに対してマスク型拡散言語モデルは、あるブロック内の複数トークンを一度に予測し、まだ不確かな位置だけを再びマスクして次の反復で更新する。
 
 - **2025-06 · [MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents](2025-2506.15841-mem1-learning-to-synergize-memory-and-reasoning-for-efficient-long-horiz.md)**  
@@ -2627,6 +2635,10 @@
 - **2025-10 · [Key and Value Weights Are Probably All You Need: On the Necessity of the Query, Key, Value weight Triplet in Self-Attention Transformers](2025-2510.23912-key-and-value-weights-are-probably-all-you-need-on-the-necessity-of-the-.md)**  
   実装：[✓](https://github.com/MarkoKarbevski/Wqkv_necessity) ・ リポジトリ内被引用：1  
   各射影が表現力に独立して必要なのかは、モデルのパラメータ数・学習時の最適化・推論時のメモリ使用量を考えるうえで重要である。理論の出発点は、注意機構が元の入力Xを直接見るのではなく、XWQ、XWK、XWVという射影後の値に依存する点である。これは非埋込パラメータ約8.3%削減であり、総モデルパラメータが25%減るわけではない。
+
+- **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
 
 - **2025-10 · [AsyncSpade: Efficient Test-Time Scaling with Asynchronous Sparse Decoding](2025-2510.07486-asyncspade-efficient-test-time-scaling-with-asynchronous-sparse-decoding.md)**  
   実装：[✓](https://github.com/UNITES-Lab/AsyncSpade) ・ リポジトリ内被引用：1  
@@ -2883,10 +2895,6 @@
 - **2025-10 · [Deconstructing Attention: Investigating Design Principles for Effective Language Modeling](2025-2510.11602-deconstructing-attention-investigating-design-principles-for-effective-l.md)**  
   実装：[✓](https://github.com/HUIYINXUE/DeconAttn) ・ リポジトリ内被引用：0  
   標準Transformerの注意機構は、現在のトークンが過去のトークンから情報を集めるために、現在層のhidden stateからQ・K・Vを生成し、QK内積をsoftmaxで正規化してVを混合する。
-
-- **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
 
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
@@ -3828,6 +3836,10 @@
   実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：17  
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
 
+- **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
+  実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：15  
+  Xu、Shi、ChoiによるRECOMPは、検索拡張言語モデル（Retrieval-Augmented Language モデル、RALM）の推論時に、検索した文書をそのままモデルの文脈へ連結する方式を改める。原著は文脈トークン数を主要な効率指標とするため、文書量が5%になったという数値をGPU実行時間が20倍速くなったと読み替えてはならない。
+
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
   実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：15  
   従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
@@ -3835,10 +3847,6 @@
 - **2023-05 · [Tabi: An Efficient Multi-Level Inference System for Large Language Models](2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   Tabiは、大型の言語モデルを用いた分類・回帰サービスで、すべての要求に同じ大きなモデルを実行する無駄を削減する推論システムである。サービスが例えば分類正答率95%以上という精度下限を指定すると、従来の推論基盤は平均精度が下限を超える単一モデルを選び、簡単な入力にも難しい入力にも同じ計算を行う。
-
-- **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
-  実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：14  
-  Xu、Shi、ChoiによるRECOMPは、検索拡張言語モデル（Retrieval-Augmented Language モデル、RALM）の推論時に、検索した文書をそのままモデルの文脈へ連結する方式を改める。原著は文脈トークン数を主要な効率指標とするため、文書量が5%になったという数値をGPU実行時間が20倍速くなったと読み替えてはならない。
 
 - **2023-10 · [MatFormer: Nested Transformer for Elastic Inference](2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md)**  
   実装：[✓](https://github.com/devvrit/matformer) ・ リポジトリ内被引用：12  

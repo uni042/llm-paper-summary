@@ -35,10 +35,15 @@
   "selection_reason": "RAGで再ランキングとLLM生成のボトルネックが負荷で移る点を測り、証拠網羅率を優先する候補並べ替えと動的再ランキング予算PACEを提案。高負荷でp95遅延を削減し、証拠recallを改善する。",
   "semantic_scholar_id": "32d6f5766d70595e661eb15b2354d84d923e8d48",
   "source_url": "https://arxiv.org/abs/2608.25115",
-  "status": "ready",
+  "status": "superseded",
   "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:03:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and.md",
+  "represented_canonical_id": "arXiv:2608.25115",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

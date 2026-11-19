@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e4e5bcd56ea42c98e55ef850552921f9d2bfc601",
+  "base_commit": "7979b7205fd2b8294ab464a05c15fcbd2363c6b5",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -326,6 +326,11 @@
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
     "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
+    "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json",
+    "2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-language-model-inference.json",
+    "2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-quality-trade-off-in-autoregressive-models.json",
+    "2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.json",
+    "2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
@@ -40786,6 +40791,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.25115": {
+      "order": [
+        "2026-11-19T22:55:50+00:00",
+        "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.26574": {
+      "order": [
+        "2026-11-19T22:57:07+00:00",
+        "2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-language-model-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.26926": {
+      "order": [
+        "2026-11-19T22:58:25+00:00",
+        "2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-quality-trade-off-in-autoregressive-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.27514": {
+      "order": [
+        "2026-11-19T22:59:42+00:00",
+        "2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.27875": {
+      "order": [
+        "2026-11-19T23:00:59+00:00",
+        "2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50287,6 +50337,21 @@
     "arxiv:2608.23253": [
       "papers/inference/99-other-inference-systems/2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-prunin.md",
       "papers/inference/99-other-inference-systems/2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-prunin.md"
+    ],
+    "arxiv:2608.25115": [
+      "papers/inference/99-other-inference-systems/2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and.md"
+    ],
+    "arxiv:2608.26574": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md"
+    ],
+    "arxiv:2608.26926": [
+      "papers/inference/99-other-inference-systems/2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-qual.md"
+    ],
+    "arxiv:2608.27514": [
+      "papers/inference/05-speculative-decoding-moe/2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.md"
+    ],
+    "arxiv:2608.27875": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.md"
     ]
   }
 }

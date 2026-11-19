@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（137本）
+## 自動生成の論文一覧（138本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -161,6 +161,10 @@
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
   スケジューリング・入力処理・生成・KVキャッシュの各ボトルネックを実機測定で独立確認し、四要素すべてに複数の証拠を残す小さなLLMサービング再生用トレースを選ぶ。
+
+- **2026-08 · [Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference](2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  復号済みトークンを候補と確定へ分け、候補を信頼度の高い文脈だけで検証して検証文脈の汚染を断つ取消可能復号で、Saber比2.71倍の高速化と品質改善を両立した。
 
 - **2026-08 · [Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models](2026-2608.14797-beyond-tokens-a-survey-on-decoding-methods-for-large-language-and-vision.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -380,13 +384,13 @@
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：15  
   著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
 
+- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
+
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
   実装：[✓](https://github.com/Gen-Verse/LatentMAS) ・ リポジトリ内被引用：12  
   LatentMASはこの境界を変え、エージェントが最終層の隠れ状態を連続表現のまま自己回帰生成し、層ごとの鍵・値キャッシュ（KVキャッシュ）を共有作業メモリとして次のエージェントへ渡す。著者は既存モデルを追加学習しない訓練不要方式として設計し、入力埋め込みと最終層隠れ状態の分布の違いを補正する線形写像を組み込む。
-
-- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
 - **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
   実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：11  

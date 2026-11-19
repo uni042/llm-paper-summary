@@ -43,7 +43,7 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
   依存推定は拡散モデルの1回の前向き計算で得た状態を利用し、正確な依存行列を作るためにマスク位置ごとに追加推論する方式を避ける。
 
 - **2026-03 · [DAPD: Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs](2026-2603.12996-dapd-dependency-aware-parallel-decoding-via-attention-for-diffusion-llms.md)**  
-  実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：4  
   またLLaDAの主表では比較方式とDAPDのブロック構成が異なるため、速度差の全てを位置選択アルゴリズム単独の効果とみなせない。
 
 - **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
