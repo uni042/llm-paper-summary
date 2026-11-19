@@ -35,10 +35,15 @@
   "selection_reason": "長文脈RAG向け階層文書洗練LongRefiner。冗長な長文入力が高い推論費用と性能低下を招く問題に対し、二水準のクエリ分析、階層的な文書構造化、適応的洗練を1つの基盤モデルで行う差し込み可能な洗練器で、計算費用と遅延を最良比較対象の約10分の1にする。推論基盤の機構そのもの。",
   "semantic_scholar_id": "a71c99d3836007721e8e6194f9c52f17ca77187d",
   "source_url": "https://arxiv.org/abs/2505.10413",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T11:25:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2505.10413-hierarchical-document-refinement-for-long-context-retrieval-augmented-ge.md",
+  "represented_canonical_id": "arXiv:2505.10413",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
