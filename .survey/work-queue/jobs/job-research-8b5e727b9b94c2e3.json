@@ -35,10 +35,15 @@
   "selection_reason": "arXiv原著の要旨・公開本文を確認。Triton拡張TLXはwarp group単位のMulti-Instruction Multi-Warpモデルで、異なるwarp群の役割分担、ローカルメモリ管理、非同期データ移動、クラスタ制御を明示する。生産環境の学習・推論カーネルでの導入と既存最適実装との競争力を報告。LLM固有の単一モデル改善ではないが、推論カーネル実装・GPUランタイムに直接関わる基盤技術。",
   "semantic_scholar_id": "bf9b8beb279b7f77a726a8e1a5c6a0f2440e412c",
   "source_url": "https://arxiv.org/abs/2605.10905",
-  "status": "ready",
+  "status": "superseded",
   "title": "TLX: Hardware-Native, Evolvable MIMW GPU Compiler for Large-scale Production Environments",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:59:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.10905-tlx-hardware-native-evolvable-mimw-gpu-compiler-for-large-scale-producti.md",
+  "represented_canonical_id": "arXiv:2605.10905",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

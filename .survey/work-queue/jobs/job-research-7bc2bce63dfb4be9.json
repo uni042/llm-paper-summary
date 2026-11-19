@@ -35,10 +35,15 @@
   "selection_reason": "TwinQuantは低rank成分と残差成分の量子化後誤差を同時に最適化するためStiefel/一般線形多様体上の変換を学習。dual-componentのfused kernelがon-chipで低rank計算をpipeline化し、global memoryへの中間出力を避ける。LLaMA3/Qwen3でFP16に近い精度を保ちFP16 baseline比最大1.8倍end-to-end高速化と報告。",
   "semantic_scholar_id": "9d9b71f35a2a1be66baa1128057488c957d1d785",
   "source_url": "https://arxiv.org/abs/2606.01556",
-  "status": "ready",
+  "status": "superseded",
   "title": "TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:59:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.md",
+  "represented_canonical_id": "arXiv:2606.01556",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（343本）
+## 自動生成の論文一覧（344本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -321,6 +321,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding](2026-2605.15609-psd-pushing-the-pareto-frontier-of-diffusion-llms-via-parallel-speculati.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   PSD（Parallel 投機的復号）は、離散拡散型言語モデル（diffusion large language モデル; dLLM）がマスク位置を段階的に確定する処理を、空間方向と時間方向の二軸で短縮する推論方式である。
+
+- **2026-05 · [Fast Byte Latent Transformer](2026-2605.08044-fast-byte-latent-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  BLTの局所復号器にブロック拡散を学習させて複数バイトを並列生成し、自己投機と検証付き拡散の2拡張と合わせて、推定メモリ帯域を50パーセント超から最大92パーセントまで削減した。
 
 - **2026-05 · [DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution](2026-2605.28678-dream-r-multimodal-speculative-reasoning-with-rl-based-refined-drafting-.md)**  
   実装：[✓](https://github.com/HuYunhai-Alex/DREAM-R) ・ リポジトリ内被引用：1  

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨はByte Latent Transformerの1バイト逐次生成を改善するBLT-D（ブロック単位拡散）、BLT-S（局所デコーダによる自己投機）、BLT-DV（拡散後の自己回帰検証）を提案。複数バイトの並列生成でforward回数を減らし、生成メモリ帯域費用をBLT比50%以上削減し得ると見積もる。",
   "semantic_scholar_id": "a662b8d7e294424e97f1732d254bd971221621f3",
   "source_url": "https://arxiv.org/abs/2605.08044",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fast Byte Latent Transformer",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:59:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2605.08044-fast-byte-latent-transformer.md",
+  "represented_canonical_id": "arXiv:2605.08044",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

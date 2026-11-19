@@ -35,10 +35,15 @@
   "selection_reason": "KV削除時に残存トークンと削除トークンの注意出力方向がほぼ直交し、削除注意質量が小さくても出力誤差が増幅する問題を解析する。MomentKVは削除済みキー・値の個数、平均、値とキーの共分散を固定容量で保持し、削除判断と復号時の一次近似補正に利用する。LongBench・RULERでLLaMA-3.1-8B-InstructとQwen3-4B-Instructを評価し、著者らは複数キャッシュ予算で比較方式を上回ると報告。KVメモリ削減と推論品質維持に直接寄与するためaccept。要旨にはend-to-end速度改善倍率の記載はなく推測しない。",
   "semantic_scholar_id": "5a8a52bbf06d90106669a5e0c7dd0da9361ec4db",
   "source_url": "https://arxiv.org/abs/2606.01563",
-  "status": "ready",
+  "status": "superseded",
   "title": "MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T03:59:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-conte.md",
+  "represented_canonical_id": "arXiv:2606.01563",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

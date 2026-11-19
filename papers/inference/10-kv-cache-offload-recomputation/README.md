@@ -489,7 +489,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   GPUから追い出した会話状態を、巨大なKVキャッシュそのものでも元トークン列でもなく中間活性として保存し、I/Oと再計算を重ねて高速にKVへ復元する状態再利用方式。
 
 - **2024-10 · [Compute Or Load KV Cache? Why Not Both?](2024-2410.03065-cake-compute-or-load-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   Cakeは保存済み接頭辞KVの先頭をGPUで再計算し末尾をストレージから逆順読込みし、両方をチャンク並行化してTTFTを支配する計算・I/O待ちを減らす方式。
 
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  

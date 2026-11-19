@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（225本）
+## 自動生成の論文一覧（227本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -33,7 +33,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：25  
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
@@ -83,6 +83,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md)**  
   実装：[✓](https://github.com/LAMDA-Model-Reuse/SaveRouter) ・ リポジトリ内被引用：1  
   LLMの品質と推論単価はモデルごとに異なるため、容易な問い合わせを小型・安価なモデルへ送り、難しい問い合わせを高性能モデルへ送れば総費用を下げられる。しかし、どの問い合わせにどのモデルが適するかを学習するには、通常は大量の過去問い合わせに複数モデルを実行し、品質の教師信号を取得する必要がある。従来方式で最も早い損益分岐は11,500件である。
+
+- **2026-06 · [TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization](2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  低ランク成分と残差成分の両方を量子化しやすい分布へ学習で作り替える4ビット量子化により、FP16に近い精度を保ちながら最大1.8倍の高速化を得た。
 
 - **2026-06 · [Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models](2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md)**  
   実装：[✓](https://github.com/menik1126/Prefilling-dLLM) ・ リポジトリ内被引用：1  
@@ -322,6 +326,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート; MoE）の分散推論では、入力トークンに応じて選択される専門家（専門家）が偏る。専門家並列（専門家 parallelism; EP）では各GPUが担当する専門家を処理した後に同期するため、あるGPUの処理が遅いと層全体が待たされる。したがってトークン数が等しくても実行時間は等しくならない。
 
+- **2026-05 · [TLX: Hardware-Native, Evolvable MIMW GPU Compiler for Large-scale Production Environments](2026-2605.10905-tlx-hardware-native-evolvable-mimw-gpu-compiler-for-large-scale-producti.md)**  
+  実装：[✓](https://github.com/facebookexperimental/triton) ・ リポジトリ内被引用：0  
+  ワープグループ単位で役割と依存を明示する実行モデルをTritonの拡張として実装し、行列積で約200行の記述のまま最先端実装と同等の性能と、異なるベンダーへの移植を両立した。
+
 - **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
   実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：0  
   Blackwell世代のGPUは4ビット浮動小数点（FP4）の行列積を高速に処理できるため、注意計算を16ビット浮動小数点（FP16）からFP4へ落とせば演算とメモリ転送を軽くできる。ThriftAttentionは、全ての問い合わせ・鍵の組を捨てず、重要なブロックだけFP16へ戻す方式である。
@@ -513,7 +521,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
-  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：19  
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
@@ -759,7 +767,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
 - **2024-06 · [FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion](2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：22  
   テンソル並列では、行列の列や行をGPUごとに分割して計算する。各GPUが自分の部分を処理しても、次の行列積が必要とする入力を集める全収集（AllGather）、あるいは計算結果を加算して分散する縮約散布（ReduceScatter）が必要になる。通信の完了を待ってから次の行列積を始めると、GPUが計算できない待機時間が生じる。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
@@ -783,7 +791,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   大規模言語モデルの推論では、特にバッチの小さい復号段階で重みを主記憶やGPUメモリから読み出す帯域が律速になりやすい。従来の二値化手法は、重要な重みを別扱いにしたり残差を追加したりして精度を回復するものの、重み当たり約1ビットの表現からさらに削る余地が残る。
 
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
-  実装：[✓](https://github.com/HazyResearch/ThunderKittens) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/HazyResearch/ThunderKittens) ・ リポジトリ内被引用：17  
   各演算ごとに大量のCUDA制御コードを書く代わりに、タイル演算と「ロード・計算・保存・終了」の4段階を指定し、共有メモリの配置や同期の多くを共通部品に任せる。さらに、行列積の段数を1から4へ増やすと260→760 TFLOPS、L2再利用を意識したブロック順序では805対392 TFLOPSという差があり、性能改善の機構を個別に検証している。
 
 - **2023-12 · [An LLM Compiler for Parallel Function Calling](2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md)**  
@@ -861,7 +869,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：533  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：534  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -937,7 +945,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-12〜2019-11）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：170  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：171  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
