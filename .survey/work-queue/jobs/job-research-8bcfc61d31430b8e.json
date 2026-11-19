@@ -35,10 +35,15 @@
   "selection_reason": "ストリーミングビデオQA向け多粒度KVキャッシュ圧縮MuKV。パッチ・フレーム・セグメントの3粒度で視覚表現を保持し、自己注意と周波数の二重信号でトークンを圧縮、オンライン側は半階層検索で必要な詳細を引く。長時間ストリームのKVメモリ削減機構そのもの。",
   "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
   "source_url": "https://arxiv.org/abs/2605.22269",
-  "status": "ready",
+  "status": "superseded",
   "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:54:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.22269-mukv-multi-grained-kv-cache-compression-for-long-streaming-video-questio.md",
+  "represented_canonical_id": "arXiv:2605.22269",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

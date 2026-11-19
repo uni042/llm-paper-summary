@@ -35,10 +35,15 @@
   "selection_reason": "ストリーミング動画理解向け分離型KVキャッシュ構築DSCache。無限に続く動画流に対し、蓄積する過去KVキャッシュを保ちながら新しいキャッシュを構築する学習不要の仕組みで、オフライン学習済みモデルをストリーミング設定へ適応させる。推論メモリ機構そのもの。",
   "semantic_scholar_id": "7e69d8f02a6de4732c4f42fb8f2edb1bdccd2fe1",
   "source_url": "https://arxiv.org/abs/2605.01858",
-  "status": "ready",
+  "status": "superseded",
   "title": "Decouple and Cache: KV Cache Construction for Streaming Video Understanding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:54:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.01858-decouple-and-cache-kv-cache-construction-for-streaming-video-understandi.md",
+  "represented_canonical_id": "arXiv:2605.01858",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "文書画像の背景・質問無関連領域を除去する学習不要の段階的視覚トークン剪定。モデルの理解段階に応じて剪定開始層を選ぶ。M3DocRAGでencoder throughput 3.0倍、decoder 3.3倍、F1 +1.0を報告。文書VLM推論効率化に直接関連。",
   "semantic_scholar_id": "b41e5cd1b1400a8a9a89e97607ade22236ef6f30",
   "source_url": "https://arxiv.org/abs/2604.22281",
-  "status": "ready",
+  "status": "superseded",
   "title": "DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:54:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.22281-docprune-efficient-document-question-answering-via-background-question-a.md",
+  "represented_canonical_id": "arXiv:2604.22281",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
