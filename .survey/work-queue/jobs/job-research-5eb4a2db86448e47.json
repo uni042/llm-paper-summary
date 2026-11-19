@@ -35,10 +35,15 @@
   "selection_reason": "Qwen3.5の4Bから9Bへ、KVだけでなくGated DeltaNetの再帰状態・畳み込み状態を移すことで、受け手の過去文脈prefillをゼロにするcross-model handoff。64 PG19文書でGDN状態追加によりteacher-forced NLLが0.747 nats/token改善。4K continuation・一方向・単一の同系統モデル組だけの検証で、自由生成の同等性は未実証。推論時の状態転送・再計算回避へ直接寄与。",
   "semantic_scholar_id": "4232e5d59b174c4a014648da60afb80d4a70e9e5",
   "source_url": "https://arxiv.org/abs/2609.25053",
-  "status": "ready",
+  "status": "superseded",
   "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:51:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-h.md",
+  "represented_canonical_id": "arXiv:2609.25053",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

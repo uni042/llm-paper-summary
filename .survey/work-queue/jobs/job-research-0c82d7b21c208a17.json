@@ -35,10 +35,15 @@
   "selection_reason": "VLMの言語バックボーンを対象とする重みのみの超低ビット量子化。8次元重みを符号・半径・正方向へ分解し、外れ値の影響を半径の高精度表現で抑える。共有メモリ内で小型方向コードブックを参照するGEMVカーネルも設計し、著者要旨ではRTX A6000でQTIPよりdecode throughputが30.3%高い。画像認識のみではなく自回帰VLM推論の圧縮・カーネルに直接適用されるためaccept。",
   "semantic_scholar_id": "08b576ca6ee83cab76cd26afda90e5cb047b8627",
   "source_url": "https://arxiv.org/abs/2609.24875",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPHQuant: Efficient extreme low bit weight quantization for Vision-Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:51:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-langua.md",
+  "represented_canonical_id": "arXiv:2609.24875",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

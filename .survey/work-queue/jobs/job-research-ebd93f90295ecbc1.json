@@ -35,10 +35,15 @@
   "selection_reason": "ループ型Transformerの推論効率化FlashLoop。再帰が進むと状態変化が一部のトークンへ集中し、注意出力差も疎で安定したキー列に支配される冗長性を使い、遅延更新と疎なKV保持でループ深度に伴う推論FLOPsとKVメモリの増大を断つ。推論機構そのもの。",
   "semantic_scholar_id": "97415bd104fa65efa04311bef0cae046f5d79849",
   "source_url": "https://arxiv.org/abs/2609.29812",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:51:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md",
+  "represented_canonical_id": "arXiv:2609.29812",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

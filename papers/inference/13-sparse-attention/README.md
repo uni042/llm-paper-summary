@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（173本）
+## 自動生成の論文一覧（174本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -241,6 +241,10 @@
 - **2026-09 · [HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing](2026-2609.26368-hysparse2-hybrid-sparse-attention-with-two-level-kv-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この負荷は、長い入力を一度だけ読んで長い回答を生成する通常のチャットとは異なる。HySparse2は、先行HySparseの「全注意層が後続の疎注意層へKVと選択索引を供給する」設計を拡張し、YOCO型のself-decoderとcross-decoderの間にもKVを橋渡しする。
+
+- **2026-09 · [FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates](2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md)**  
+  実装：[✓](https://github.com/Superone77/FlashLoop) ・ リポジトリ内被引用：0  
+  ループ型Transformerで、変化の大きいトークンと注意列だけを再計算し、ループ間のKV残差を量子化する学習不要の推論基盤で、精度をほぼ保ち高速化1.64倍とメモリ6分の1を達成した。
 
 - **2026-09 · [Efficient Agentic LLM Serving over SSD-based Sparse KV Storage](2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -587,7 +591,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：307  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：308  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  

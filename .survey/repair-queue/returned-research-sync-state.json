@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "dc0829574e09c978399f8b80d53efe0a3c14c805",
+  "base_commit": "fbc7ba9087a9650978e93f475c3a63e45c169951",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -348,6 +348,11 @@
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
     "2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-language-models.json",
     "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json",
+    "2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-language-models.json",
+    "2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-hybrid-language-models-a-4b-to-9b-hybrid-state-ha.json",
+    "2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.json",
+    "2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-context-compression.json",
+    "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
@@ -40986,6 +40991,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.24875": {
+      "order": [
+        "2026-11-19T23:46:31+00:00",
+        "2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.25053": {
+      "order": [
+        "2026-11-19T23:47:24+00:00",
+        "2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-hybrid-language-models-a-4b-to-9b-hybrid-state-ha.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.29812": {
+      "order": [
+        "2026-11-19T23:48:18+00:00",
+        "2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.29875": {
+      "order": [
+        "2026-11-19T23:49:11+00:00",
+        "2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-context-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.30820": {
+      "order": [
+        "2026-11-19T23:50:04+00:00",
+        "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50567,6 +50617,21 @@
     "arxiv:2609.24847": [
       "papers/inference/05-speculative-decoding-moe/2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfig.md",
       "papers/inference/05-speculative-decoding-moe/2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfig.md"
+    ],
+    "arxiv:2609.24875": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-langua.md"
+    ],
+    "arxiv:2609.25053": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-h.md"
+    ],
+    "arxiv:2609.29812": [
+      "papers/inference/13-sparse-attention/2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.md"
+    ],
+    "arxiv:2609.29875": [
+      "papers/inference/99-other-inference-systems/2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-conte.md"
+    ],
+    "arxiv:2609.30820": [
+      "papers/inference/99-other-inference-systems/2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindne.md"
     ]
   }
 }

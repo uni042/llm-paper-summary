@@ -336,6 +336,10 @@
   実装：[✓](https://github.com/asu-idi/toktier) ・ リポジトリ内被引用：1  
   長いエージェント会話の追記境界だけを安全検証付きで再トークン化し、再利用不能な大規模入力は厳密GPU経路へ送る方式。参照トークン列との一致を保ちつつ、vLLM統合で中央値TTFTを16〜34%削減する。
 
+- **2026-08 · [Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs](2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ハイブリッドモデルの接頭辞キャッシュで、線形注意の再帰状態チェックポイントを廃し、命中時に接頭辞の直近5から10パーセントだけを再生して状態を近似再構成することで、任意のトークン境界での再利用と最大14.3倍の初回応答短縮を両立した。
+
 - **2026-08 · [Routing LLM Inference to the Cleanest Grid in Real Time](2026-2608.06188-carbon-aware-realtime-inference-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本番の負荷圧力ルータへ絶対MOER由来の可逆な配置補正を重ね、実機二地域で配送失敗なく負荷を移動できることを確認し、19地域・1年再生では仮定依存ながら約23〜51%のGPU運用排出削減余地を示す。
@@ -705,10 +709,6 @@
 - **2026-08 · [TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure](2026-2608.06007-tensorcast-tensor-as-a-service.md)**  
   実装：[✓](https://github.com/tensorcast-ai/tensorcast) ・ リポジトリ内被引用：0  
   モデル重み・KV・チェックポイントをArtifact/Operation/Planとして統一管理し、配置・移動・変換・実体化を実行エンジンから分離することで、個別専用基盤に近い性能と横断的な状態管理方針の合成を両立する分散テンソル基盤。
-
-- **2026-08 · [Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs](2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ハイブリッドモデルの接頭辞キャッシュで、線形注意の再帰状態チェックポイントを廃し、命中時に接頭辞の直近5から10パーセントだけを再生して状態を近似再構成することで、任意のトークン境界での再利用と最大14.3倍の初回応答短縮を両立した。
 
 - **2026-08 · [Squeezing the Cache, Preserving the Truth: Monotonic Equipotential Allocation with Geodesia-KV](2026-2608.23599-squeezing-the-cache-preserving-the-truth-monotonic-equipotential-allocat.md)**  
   実装：[✓](https://github.com/geodesia-ai/geodesia-kv) ・ リポジトリ内被引用：0  
@@ -1205,7 +1205,7 @@
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
-  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：47  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-05 · [Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving](2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md)**  
@@ -1584,6 +1584,10 @@
   実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：3  
   StreamVLNは、視覚・言語・行動を連続して扱うロボット誘導システムにおいて、動画言語モデルの文脈長と鍵・値キャッシュ（KVキャッシュ）が際限なく増える問題を解決しようとする。
 
+- **2025-06 · [PCDVQ: Enhancing Vector Quantization for Large Language Models via Polar Coordinate Decoupling](2025-2506.05432-pcdvq-enhancing-vector-quantization-for-large-language-models-via-polar-.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  PCDVQは、大規模言語モデルの重みを2ビット前後まで圧縮する重み専用のベクトル量子化を扱う。著者らの観測では、LLaMA-2-7Bの重みベクトルを方向と長さへ分けて片方ずつ量子化した際、方向の量子化によるゼロショット課題の正答率低下は46.5%、長さの量子化では2.3%だった。
+
 - **2025-06 · [Efficient Serving of LLM Applications with Probabilistic Demand Modeling](2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Hermesは、一回のLLM生成要求ではなく、複数の生成、検索、コード実行、画像処理が連鎖するアプリケーション全体の終了時間を最適化する。既存のvLLMの要求単位の先着順や、アプリ単位でも処理量を推定しない先着順では、短いアプリが長いアプリの後ろに並ぶ。推定した分布からGittins指標でアプリの優先度を決め、次のバックエンドの事前準備を行う。
@@ -1627,10 +1631,6 @@
 - **2025-07 · [LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems](2025-2507.21276-lemix-unified-training-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。
-
-- **2025-06 · [PCDVQ: Enhancing Vector Quantization for Large Language Models via Polar Coordinate Decoupling](2025-2506.05432-pcdvq-enhancing-vector-quantization-for-large-language-models-via-polar-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  PCDVQは、大規模言語モデルの重みを2ビット前後まで圧縮する重み専用のベクトル量子化を扱う。著者らの観測では、LLaMA-2-7Bの重みベクトルを方向と長さへ分けて片方ずつ量子化した際、方向の量子化によるゼロショット課題の正答率低下は46.5%、長さの量子化では2.3%だった。
 
 - **2025-05 · [ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs](2025-2505.14468-serverlesslora-latency-cost-lora-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1943,7 +1943,7 @@
   P/D-Serveは、事前充填と復号を別インスタンス群へ分け、シナリオごとにP/D比を調整し、混雑ノードを待たず要求を再送し、KV転送をまとめることで数万NPUクラスタの待ち行列と通信固定費を減らす商用基盤。
 
 - **2024-11 · [Marconi: Prefix Caching for the Era of Hybrid LLMs](2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md)**  
-  実装：[✓](https://github.com/ruipeterpan/marconi) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/ruipeterpan/marconi) ・ リポジトリ内被引用：28  
   言語モデルの接頭辞キャッシュ（Prefix Caching）は、複数要求が共有するシステム指示や会話履歴の前半部分について、過去に計算した内部状態を再利用して初回トークン生成までの時間を短縮する。主要評価では、拡張vLLMに対するトークン命中率がLMSysで平均4.5倍、ShareGPTで7.3倍、SWEBenchで34.4倍となる。
 
 - **2024-09 · [No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha](2024-2409.17264-no-request-left-behind-tackling-heterogeneity-in-long-context-llm-infere.md)**  
