@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では、VLMの中間層にTransformerと分類器からなる早期終了器を置き、敵対的学習で最終層に近い表現を作るFREEを提案。入力ごとに推論深度を短縮し、同等程度の性能を維持して推論速度1.51倍超を報告する。推論時の条件付き計算量削減を直接扱う。",
   "semantic_scholar_id": "a6c82665a9ede17cd95656f736867f793da08232",
   "source_url": "https://arxiv.org/abs/2506.06884",
-  "status": "ready",
+  "status": "superseded",
   "title": "FREE: Fast and Robust Vision Language Models with Early Exits",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T11:43:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.md",
+  "represented_canonical_id": "arXiv:2506.06884",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

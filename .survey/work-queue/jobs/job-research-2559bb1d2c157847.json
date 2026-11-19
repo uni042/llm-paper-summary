@@ -35,10 +35,15 @@
   "selection_reason": "バイアスつき注意の高速計算FlashBias。事前知識を加法バイアスとして入れる注意が、FlashAttentionの融合したメモリ・計算パイプラインを壊して高費用になる問題に対し、バイアスつき注意に特化した効率最適化を行う。推論の注意機構そのもの。",
   "semantic_scholar_id": "efdfef40962d20d8f5a591002dab7448da69e4a9",
   "source_url": "https://arxiv.org/abs/2505.12044",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashBias: Fast Computation of Attention with Bias",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T11:43:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.md",
+  "represented_canonical_id": "arXiv:2505.12044",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
