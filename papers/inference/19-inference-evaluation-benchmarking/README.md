@@ -64,6 +64,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   特に保持率1%など極端な条件では、複雑な既存手法が一様ランダム抽出より低い精度になることもある。
 
+- **2026-03 · [Wattchmen: Watching the Wattchers -- High Fidelity, Flexible GPU Energy Modeling](2026-2603.26435-wattchmen-watching-the-wattchers-high-fidelity-flexible-gpu-energy-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  一方、従来の細粒度モデルは一部の命令だけを対象にするか、別のGPU・冷却条件への移植性が不足していた。これはLLM専用推論の速度を改善する方式ではなく、GPUを使う学習・推論・科学計算のエネルギーを分析し最適化箇所を見つける基盤である。
+
 - **2026-03 · [Token Reduction via Local and Global Contexts Optimization for Efficient Video Large Language Models](2026-2603.01400-token-reduction-via-local-and-global-contexts-optimization-for-efficient.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AOT（local-global Anchor Optimal Transport）は、動画対応の大規模言語モデル（Video LLM）の入力に含まれる視覚トークンを、追加学習なしで削減する方式である。LLaVA-OneVision-7Bの無圧縮平均58.4に対し、視覚トークン10%保持のAOTは平均57.0で、元性能の97.6%を維持した。
@@ -306,10 +310,6 @@
   実装：[✓](https://github.com/sqs-ustc/tool-reasoning-framework-PTE) ・ リポジトリ内被引用：0  
   本論文は、推論と外部ツール利用を交互に行うツール統合推論（tool-integrated reasoning; TIR）の計算費用の測り方を提案する。
 
-- **2026-03 · [Wattchmen: Watching the Wattchers -- High Fidelity, Flexible GPU Energy Modeling](2026-2603.26435-wattchmen-watching-the-wattchers-high-fidelity-flexible-gpu-energy-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  一方、従来の細粒度モデルは一部の命令だけを対象にするか、別のGPU・冷却条件への移植性が不足していた。これはLLM専用推論の速度を改善する方式ではなく、GPUを使う学習・推論・科学計算のエネルギーを分析し最適化箇所を見つける基盤である。
-
 - **2026-03 · [Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies](2026-2603.27960-towards-efficient-large-vision-language-models-a-comprehensive-survey-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Surendra PathakとBo Hanによる本サーベイは、大規模視覚言語モデル（LVLM）の推論を高速化・省メモリ化する既存研究を、①視覚トークン圧縮、②KVキャッシュ管理とサービング、③モデル構造と注意計算の最適化、④高度な復号戦略という四つの層に整理する。
@@ -545,7 +545,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：30  
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  

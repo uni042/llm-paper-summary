@@ -35,10 +35,15 @@
   "selection_reason": "NVFP4量子化向け外れ値伴侶グルーピングOCGQuant。NVFP4のブロック内で大きな活性がブロック尺度を支配して残りの値の誤差を増やす問題に対し、チャネルグルーピングの観点で削減可能な誤差を定義して対処する。混合精度や回転のような追加計算を入れない点が固有。推論量子化機構そのもの。",
   "semantic_scholar_id": "1ad7a4e9ab489b700e1f8d039fcaac943dbe4e07",
   "source_url": "https://arxiv.org/abs/2609.00066",
-  "status": "ready",
+  "status": "superseded",
   "title": "OCGQuant: Outlier-Companion Grouping for NVFP4 Quantization",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:20:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.md",
+  "represented_canonical_id": "arXiv:2609.00066",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

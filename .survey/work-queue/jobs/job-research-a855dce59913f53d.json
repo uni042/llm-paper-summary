@@ -35,10 +35,15 @@
   "selection_reason": "ハイブリッドLLM向け接頭辞キャッシュTail-Replay。全注意層のKVはトークン単位で扱えるが線形注意層の循環状態は任意の接頭辞境界へ戻せない問題に対し、チェックポイントに縛られないトークン水準の接頭辞再利用を可能にする機構。推論のキャッシュ機構そのもの。",
   "semantic_scholar_id": "e07dc96badfcab6876ec4e4d4a467e7fcb3ea771",
   "source_url": "https://arxiv.org/abs/2608.30310",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:20:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for.md",
+  "represented_canonical_id": "arXiv:2608.30310",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

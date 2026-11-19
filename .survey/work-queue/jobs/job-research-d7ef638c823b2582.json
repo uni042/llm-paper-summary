@@ -35,10 +35,15 @@
   "selection_reason": "NVIDIA H100/H200上のdense/MoEモデルを対象にprefill固定費とdecode限界費用を分解してrequest全体とtoken単位のエネルギーを測定。H200上のLlama-3.2-1B、batch16、context4Kでは出力10から512tokenへの増加でtoken energyが7.46から0.72 J/tokenへ減る一方、総エネルギーは1.19から5.93 kJへ増える。GPU推論servingのエネルギー評価とスケジューリングに直接関係。",
   "semantic_scholar_id": "aaf46dc87740c49088dedc2036ecaa4814de3791",
   "source_url": "https://arxiv.org/abs/2608.28044",
-  "status": "ready",
+  "status": "superseded",
   "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
   "type": "research",
   "venue": "IEEE International Symposium on Workload Characterization",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T23:20:07+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference-wor.md",
+  "represented_canonical_id": "arXiv:2608.28044",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "00b7521fff88ec4f86ef29f9167bdd1ea3834505",
+  "base_commit": "3594b2a3bbbe7d41ad17387a362ac17ce6114719",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -332,6 +332,11 @@
     "2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.json",
     "2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
+    "2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference.json",
+    "2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for-hybrid-llms.json",
+    "2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.json",
+    "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json",
+    "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
@@ -40836,6 +40841,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.28044": {
+      "order": [
+        "2026-11-19T23:13:31+00:00",
+        "2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.30310": {
+      "order": [
+        "2026-11-19T23:14:41+00:00",
+        "2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for-hybrid-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.00066": {
+      "order": [
+        "2026-11-19T23:15:50+00:00",
+        "2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.00224": {
+      "order": [
+        "2026-11-19T23:17:01+00:00",
+        "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.01004": {
+      "order": [
+        "2026-11-19T23:18:10+00:00",
+        "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50357,6 +50407,21 @@
     "arxiv:2608.27875": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.md"
+    ],
+    "arxiv:2608.28044": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference-wor.md"
+    ],
+    "arxiv:2608.30310": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for.md"
+    ],
+    "arxiv:2609.00066": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.md"
+    ],
+    "arxiv:2609.00224": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-opti.md"
+    ],
+    "arxiv:2609.01004": [
+      "papers/inference/99-other-inference-systems/2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-.md"
     ]
   }
 }
