@@ -35,10 +35,15 @@
   "selection_reason": "トークン水準動的幅剪定WIDE。微分可能なルータがトークンごとにGQA整列したクエリヘッド群とGPUタイル整列したFFNチャネル群を選び、プリフィルとデコードの両方でGPUカーネルと協調設計する、端から端まで微分可能な動的構造化剪定。推論の計算配分機構そのもの。",
   "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
   "source_url": "https://arxiv.org/abs/2607.28418",
-  "status": "ready",
+  "status": "superseded",
   "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:21:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruni.md",
+  "represented_canonical_id": "arXiv:2607.28418",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

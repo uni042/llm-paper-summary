@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6089f3ca8ab656280d3a3aca4f374344a2782480",
+  "base_commit": "8155a6ae82b58429df1d3262f8038bc9b596990a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -305,6 +305,11 @@
     "2026-2607.25669-omnidelta-skill-driven-budget-allocation-for-token-compression-in-omni-llms.json",
     "2026-2607.27591-prox-training-free-ffn-activation-sparsity-via-approximate-intermediate-channel-salience-in-llms.json",
     "2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-context-attention.json",
+    "2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruning.json",
+    "2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.json",
+    "2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-question-answering.json",
+    "2026-2608.00914-augmented-backpressure-for-decentralized-management-of-agentic-networks.json",
+    "2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded-language-flows.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
@@ -40586,6 +40591,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.28418": {
+      "order": [
+        "2026-11-19T21:16:00+00:00",
+        "2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.29575": {
+      "order": [
+        "2026-11-19T21:16:55+00:00",
+        "2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.00311": {
+      "order": [
+        "2026-11-19T21:17:49+00:00",
+        "2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-question-answering.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.00914": {
+      "order": [
+        "2026-11-19T21:18:43+00:00",
+        "2026-2608.00914-augmented-backpressure-for-decentralized-management-of-agentic-networks.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.01240": {
+      "order": [
+        "2026-11-19T21:19:37+00:00",
+        "2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded-language-flows.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50007,6 +50057,21 @@
     "arxiv:2607.27692": [
       "papers/inference/13-sparse-attention/2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-.md",
       "papers/inference/13-sparse-attention/2026-2607.27692-recall-before-you-rank-similarity-guided-top-k-reuse-for-efficient-long-.md"
+    ],
+    "arxiv:2607.28418": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruni.md"
+    ],
+    "arxiv:2607.29575": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.md"
+    ],
+    "arxiv:2608.00311": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-.md"
+    ],
+    "arxiv:2608.00914": [
+      "papers/inference/15-inference-simulation-emulation/2026-2608.00914-augmented-backpressure-for-decentralized-management-of-agentic-networks.md"
+    ],
+    "arxiv:2608.01240": [
+      "papers/inference/99-other-inference-systems/2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded.md"
     ]
   }
 }

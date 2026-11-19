@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（134本）
+## 自動生成の論文一覧（135本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -169,6 +169,10 @@
 - **2026-07 · [Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation](2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散型マルチモーダルモデルの初回ステップでMLP活性の疎さから応答の終わりを検出して冗長な末尾を一括切り捨てる学習不要の方式で、精度を保ちながらスループットを最大約31倍にした。
+
+- **2026-07 · [SeDeM: Selective Decompression of Hidden-State Memories for Long-Context Question Answering](2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文脈を隠れ状態メモリに圧縮保存し、質問に合う区間だけを復元してデコーダ中間層へ注入する選択的復元方式で、圧縮手法群を上回り3Bでは全長処理の参照も3データセットで超えた。
 
 - **2026-07 · [Rethinking the Generation Order of Block Diffusion Language Models](2026-2607.24306-rethinking-the-generation-order-of-block-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

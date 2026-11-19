@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（239本）
+## 自動生成の論文一覧（240本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -33,7 +33,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：29  
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
@@ -285,6 +285,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-07 · [X-Stage: Modeling Post-Issue Backpressure in GPU Communication–Computation Fusion](2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   遠隔書き込みの発行後区間を排出率と有限容量でモデル化し、バースト間隔から背圧の蓄積と回復を予測してスケジュールを直すことで、専門並列で最大1.62倍、テンソル並列で最大1.75倍、系列並列で最大1.43倍の高速化を実測した。
+
+- **2026-07 · [WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning](2026-2607.28418-wide-boosting-adaptive-llm-inference-via-token-level-dynamic-width-pruni.md)**  
+  実装：[✓](https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE) ・ リポジトリ内被引用：0  
+  トークンごとに注意ヘッド群とFFNチャネル群の実行可否をルータが決め、マスク並べ替えで不規則な選択をタイル単位の規則性へ変換してブロックごと飛ばす動的幅枝刈りで、削減率50パーセントでも品質を保ちながらプリフィル1.68倍の高速化を得た。
 
 - **2026-07 · [VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination](2026-2604.09558-vtc-dnn-compilation-with-virtual-tensors-for-data-movement-elimination.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

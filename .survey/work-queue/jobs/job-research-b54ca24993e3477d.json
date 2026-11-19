@@ -35,10 +35,15 @@
   "selection_reason": "連続潜在表現を反復的にdenoiseする言語生成モデルELFの非因果full attentionを、noise-adaptiveな双方向Gated Delta Networkへ置換する推論計算最適化。層間で走査方向を交替するDeltaFlow-Aと各層で双方向走査を併合するDeltaFlow-Pを設計し、Temporal State Consistencyでノイズ水準間の状態を安定化。arXiv一次要旨ではOpenWebTextの32-step SDE生成でPPL 24.218→21.228、16k長のdenoiser-only benchmarkで2.72倍のthroughputを報告。推論速度への直接的な技術貢献があるためaccept。2.72倍はend-to-end生成速度ではない。",
   "semantic_scholar_id": "5110c7f72bde2031eb7b66c2013134eb28c4bcda",
   "source_url": "https://arxiv.org/abs/2608.01240",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeltaFlow: Noise-Adaptive Bidirectional Gated Delta Networks for Embedded Language Flows",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:21:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.01240-deltaflow-noise-adaptive-bidirectional-gated-delta-networks-for-embedded.md",
+  "represented_canonical_id": "arXiv:2608.01240",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

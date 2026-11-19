@@ -35,10 +35,15 @@
   "selection_reason": "長文脈質問応答向け隠れ状態メモリの選択的解凍SeDeM。文脈をコンパクトな隠れ状態メモリブロックとして保持し、クエリに関連するブロックだけを選んで解凍してデコーダ条件付けに使うことで、全⽂脈処理も高圧縮スロットからの直接生成も避ける。TTFT 1.74〜2.46倍低下とデコードスループット向上を実測した推論メモリ機構。",
   "semantic_scholar_id": "5d20a64cd25b3c13e65c446bebe8dd01aa454b5d",
   "source_url": "https://arxiv.org/abs/2608.00311",
-  "status": "ready",
+  "status": "superseded",
   "title": "SeDeM: Selective Decompression of Hidden-State Memories for Long-Context Question Answering",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:21:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.00311-sedem-selective-decompression-of-hidden-state-memories-for-long-context-.md",
+  "represented_canonical_id": "arXiv:2608.00311",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

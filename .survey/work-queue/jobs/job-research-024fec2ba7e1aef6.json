@@ -35,10 +35,15 @@
   "selection_reason": "飽和配慮型の提供性能モデリングSLIM。バッチ拡大でスループットが頭打ちになる原因が帯域制限という概念的説明にとどまっていた問題を、ハードウェアプロファイリングでデコード段階の注意カーネルに由来することを示し、軽量な性能モデルを作る。推論基盤の計測・モデリングそのもの。",
   "semantic_scholar_id": "8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
   "source_url": "https://arxiv.org/abs/2607.29575",
-  "status": "ready",
+  "status": "superseded",
   "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:21:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.29575-slim-saturation-aware-lightweight-performance-modeling-for-llm-serving.md",
+  "represented_canonical_id": "arXiv:2607.29575",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
