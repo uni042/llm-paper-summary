@@ -38,13 +38,13 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
+- **2026-03 · [DAPD: Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs](2026-2603.12996-dapd-dependency-aware-parallel-decoding-via-attention-for-diffusion-llms.md)**  
+  実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：5  
+  またLLaDAの主表では比較方式とDAPDのブロック構成が異なるため、速度差の全てを位置選択アルゴリズム単独の効果とみなせない。
+
 - **2026-04 · [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](2026-2604.02560-dependency-guided-parallel-decoding-in-discrete-diffusion-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   依存推定は拡散モデルの1回の前向き計算で得た状態を利用し、正確な依存行列を作るためにマスク位置ごとに追加推論する方式を避ける。
-
-- **2026-03 · [DAPD: Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs](2026-2603.12996-dapd-dependency-aware-parallel-decoding-via-attention-for-diffusion-llms.md)**  
-  実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：4  
-  またLLaDAの主表では比較方式とDAPDのブロック構成が異なるため、速度差の全てを位置選択アルゴリズム単独の効果とみなせない。
 
 - **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：3  
@@ -75,7 +75,7 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 ### 2年前（2024-12〜2025-11）
 
 - **2025-06 · [Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles](2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md)**  
-  実装：[✓](https://github.com/LiangrunFlora/Slow-Fast-Sampling) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/LiangrunFlora/Slow-Fast-Sampling) ・ リポジトリ内被引用：20  
   単独の信頼度閾値だけではなく、連続区間の終端が最近の複数反復で安定したかを検査し、探索段階（Slow）から高速段階（Fast）へ切り替える。原著図2のGPQA・8-shot・生成長1024という特定条件では、LLaDAの通常復号が1.60トークン/秒、SlowFast単独が25.00トークン/秒で15.63倍となる。
 
 - **2025-11 · [From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models](2025-2511.21103-from-bits-to-rounds-parallel-decoding-with-exploration-for-diffusion-lan.md)**  
