@@ -169,6 +169,7 @@ jobs:
               'library-import: checkpoint bounded intake' \
               .survey/import-inbox \
               .survey/repair-queue/returned-research.json \
+              .survey/repair-queue/returned-research-sync-state.json \
               .survey/work-queue/discovery-precheck \
               .survey/work-queue/reference-curation \
               .survey/work-queue/jobs \
@@ -233,6 +234,7 @@ jobs:
               'library-import: settle bounded work' \
               .survey/import-inbox \
               .survey/repair-queue/returned-research.json \
+              .survey/repair-queue/returned-research-sync-state.json \
               .survey/work-queue \
               .survey/survey-state \
               papers \
