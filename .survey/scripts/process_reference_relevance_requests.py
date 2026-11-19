@@ -199,10 +199,24 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
     unrelated_path = repo_root / UNRELATED_LEDGER
     borderline_path = repo_root / BORDERLINE_LEDGER
     with reference_relevance_ledger.ledger_mutation_lock(unrelated_path, borderline_path):
-        return _process_request_locked(repo_root, request_path)
+        outcome, _deferred = _process_request_locked(repo_root, request_path)
+        return outcome
 
 
-def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, Any]:
+def _process_request_locked(
+    repo_root: Path,
+    request_path: Path,
+    batch: reference_relevance_ledger.LedgerBatch | None = None,
+) -> tuple[dict[str, Any], tuple[Path, dict[str, Any]] | None]:
+    """Process one request while the shared ledger lock is held.
+
+    Returns (outcome, deferred_result_write). When a LedgerBatch is supplied,
+    mark operations are applied to the batch's in-memory ledgers and the
+    result-file write is deferred to the caller, which must flush the batch
+    before writing the deferred results so a committed result never precedes
+    its ledger update. Without a batch, behavior is the original immediate
+    per-request load/mark/write cycle.
+    """
     request_id = request_path.stem
     result_path = repo_root / RESULT_DIR / f"{request_id}.json"
     request_bytes = request_path.read_bytes()
@@ -223,7 +237,7 @@ def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, An
             "status": "already_processed",
             "ok": bool(existing.get("ok")) if isinstance(existing, dict) else False,
             "result_path": str(result_path.relative_to(repo_root)),
-        }
+        }, None
     try:
         raw = json.loads(request_bytes.decode("utf-8"))
         request = _validate_request(request_path, raw, repo_root)
@@ -235,11 +249,18 @@ def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, An
             "status": "invalid_request",
             "ok": False,
             "result_path": str(result_path.relative_to(repo_root)),
-        }
+        }, None
 
     unrelated_path = repo_root / UNRELATED_LEDGER
     borderline_path = repo_root / BORDERLINE_LEDGER
     if request["operation"] == CLEAR_OPERATION:
+        if batch is not None:
+            # The clear transaction reads and writes the ledger files
+            # directly. Persist pending batched marks first (preserving the
+            # sequential order) and drop the cached payloads so later marks
+            # reload the post-clear state.
+            batch.flush()
+            batch.discard()
         cleared = reference_relevance_ledger.clear_relevance(
             unrelated_path,
             borderline_path,
@@ -303,7 +324,7 @@ def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, An
             "canonical_id": cleared["canonical_id"],
             "removed_row_count": len(cleared["removed_rows"]),
             "result_path": str(result_path.relative_to(repo_root)),
-        }
+        }, None
 
     kwargs = {
         "canonical_id": request["canonical_id"],
@@ -312,7 +333,21 @@ def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, An
         "identity_tokens": request["identity_tokens"],
         "linked_from": request["linked_from"],
     }
-    if request["operation"] == "mark_unrelated":
+    if batch is not None:
+        if request["operation"] == "mark_unrelated":
+            row = batch.mark_unrelated(
+                unrelated_path,
+                **kwargs,
+                borderline_path=borderline_path,
+            )
+        else:
+            row = batch.mark_borderline(
+                borderline_path,
+                **kwargs,
+                unrelated_path=unrelated_path,
+                reconsidered_from_borderline=request["reconsidered_from_borderline"],
+            )
+    elif request["operation"] == "mark_unrelated":
         row = reference_relevance_ledger.mark_unrelated(
             unrelated_path,
             **kwargs,
@@ -349,8 +384,7 @@ def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, An
             "round; do not re-evaluate or submit this classified candidate."
         ),
     }
-    _write_json(result_path, result)
-    return {
+    outcome = {
         "request_id": request_id,
         "status": "processed",
         "ok": True,
@@ -358,11 +392,35 @@ def _process_request_locked(repo_root: Path, request_path: Path) -> dict[str, An
         "canonical_id": result["canonical_id"],
         "result_path": str(result_path.relative_to(repo_root)),
     }
+    if batch is not None:
+        # The caller flushes the batch (persisting the ledger update) before
+        # writing this deferred result, keeping the ledger-before-result
+        # durability order of the immediate path.
+        return outcome, (result_path, result)
+    _write_json(result_path, result)
+    return outcome, None
 
 
 def process_pending(repo_root: Path, max_requests: int | None = None) -> dict[str, Any]:
     request_dir = repo_root / REQUEST_DIR
     request_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        return _process_pending_batched(repo_root, max_requests)
+    except Exception:
+        # Journal recovery runs when the shared ledger lock is acquired and
+        # fails closed (e.g. a request file no longer matches an interrupted
+        # clear_relevance transaction). The batched run cannot start in that
+        # state; fall back to the original per-request path so the failure
+        # surfaces as per-request retryable errors exactly as before. Any
+        # marks the batched attempt already flushed are idempotently
+        # re-applied by the fallback, and deferred results were only written
+        # after a successful flush, so no state is lost or duplicated.
+        return _process_pending_per_request(repo_root, max_requests)
+
+
+def _process_pending_per_request(repo_root: Path, max_requests: int | None = None) -> dict[str, Any]:
+    """Original per-request processing path (one lock + ledger cycle each)."""
+    request_dir = repo_root / REQUEST_DIR
     outcomes: list[dict[str, Any]] = []
     retryable_errors: list[dict[str, str]] = []
 
@@ -388,6 +446,67 @@ def process_pending(repo_root: Path, max_requests: int | None = None) -> dict[st
                     "error": f"{type(exc).__name__}: {exc}",
                 }
             )
+
+    return {
+        "request_count": len(outcomes) + len(retryable_errors),
+        "processed_count": sum(1 for outcome in outcomes if outcome["status"] == "processed"),
+        "already_processed_count": sum(
+            1 for outcome in outcomes if outcome["status"] == "already_processed"
+        ),
+        "invalid_request_count": sum(
+            1 for outcome in outcomes if outcome["status"] == "invalid_request"
+        ),
+        "retryable_error_count": len(retryable_errors),
+        "retryable_errors": retryable_errors,
+        "ok": all(outcome["ok"] for outcome in outcomes) and not retryable_errors,
+        "outcomes": outcomes,
+    }
+
+
+def _process_pending_batched(repo_root: Path, max_requests: int | None = None) -> dict[str, Any]:
+    request_dir = repo_root / REQUEST_DIR
+    outcomes: list[dict[str, Any]] = []
+    retryable_errors: list[dict[str, str]] = []
+    deferred_results: list[tuple[Path, dict[str, Any]]] = []
+
+    # Hold the shared ledger lock for the whole run and apply every mark
+    # through one LedgerBatch: each ledger is loaded once and written once
+    # per run instead of once per request. Deferred mark results are written
+    # only after the batch flush, so the ledger update is always durable
+    # before its result file, exactly as in the per-request path.
+    unrelated_path = repo_root / UNRELATED_LEDGER
+    borderline_path = repo_root / BORDERLINE_LEDGER
+    processed_requests = 0
+    with reference_relevance_ledger.ledger_mutation_lock(unrelated_path, borderline_path):
+        batch = reference_relevance_ledger.LedgerBatch()
+        for request_path in sorted(request_dir.glob("*.json")):
+            # Existing immutable results are already terminal. They must not consume
+            # the bounded processing budget, otherwise a stable alphabetical prefix
+            # can starve every unsettled request behind it forever.
+            result_path = repo_root / RESULT_DIR / f"{request_path.stem}.json"
+            if result_path.exists():
+                outcome, _deferred = _process_request_locked(repo_root, request_path, batch=batch)
+                outcomes.append(outcome)
+                continue
+
+            if max_requests is not None and processed_requests >= max(0, max_requests):
+                break
+            processed_requests += 1
+            try:
+                outcome, deferred = _process_request_locked(repo_root, request_path, batch=batch)
+                outcomes.append(outcome)
+                if deferred is not None:
+                    deferred_results.append(deferred)
+            except Exception as exc:
+                retryable_errors.append(
+                    {
+                        "request_id": request_path.stem,
+                        "error": f"{type(exc).__name__}: {exc}",
+                    }
+                )
+        batch.flush()
+        for result_path, result in deferred_results:
+            _write_json(result_path, result)
 
     return {
         "ok": not retryable_errors,

@@ -591,51 +591,67 @@ def _write(path: Path, payload: dict[str, Any]) -> None:
     tmp.replace(path)
 
 
+def _remove_token_set(key: str, row: Any) -> set[str]:
+    """Identity tokens a ledger row matches for opposite-ledger removal."""
+    row_tokens = {str(key)}
+    if isinstance(row, dict):
+        row_tokens.update(str(v) for v in (row.get("identity_tokens") or []) if str(v))
+        row_tokens.update(citation_graph.normalized_identifiers(row))
+    return row_tokens
+
+
+def _mark_token_set(key: str, row: Any) -> set[str] | None:
+    """Identity tokens a ledger row matches for same-ledger mark lookup.
+
+    Returns None for non-dict rows, which the mark lookup skips.
+    """
+    if not isinstance(row, dict):
+        return None
+    return set(row.get("identity_tokens") or []) | {str(key)}
+
+
+def _remove_matching_from_payload(payload: dict[str, Any], *, tokens: set[str]) -> bool:
+    records = payload["records"]
+    removed = False
+    for key, row in list(records.items()):
+        if tokens.intersection(_remove_token_set(key, row)):
+            records.pop(key, None)
+            removed = True
+    return removed
+
+
 def _remove_matching(path: Path, *, classification: str, tokens: set[str]) -> bool:
     if not path.exists():
         return False
     payload = _load(path, classification=classification)
-    records = payload["records"]
-    removed = False
-    for key, row in list(records.items()):
-        row_tokens = {str(key)}
-        if isinstance(row, dict):
-            row_tokens.update(str(v) for v in (row.get("identity_tokens") or []) if str(v))
-            row_tokens.update(citation_graph.normalized_identifiers(row))
-        if tokens.intersection(row_tokens):
-            records.pop(key, None)
-            removed = True
-    if removed:
+    if _remove_matching_from_payload(payload, tokens=tokens):
         _write(path, payload)
-    return removed
+        return True
+    return False
 
 
-def _mark_locked(
-    path: Path,
+def _find_existing_key(records: dict[str, Any], tokens: set[str]) -> str | None:
+    """First record key (in ledger order) whose identity tokens intersect."""
+    for key, row in records.items():
+        token_set = _mark_token_set(key, row)
+        if token_set is not None and tokens.intersection(token_set):
+            return key
+    return None
+
+
+def _prepare_mark_row(
+    records: dict[str, Any],
     *,
     classification: str,
-    canonical_id: str,
-    title: str | None = None,
+    canonical: str,
+    tokens: set[str],
+    title: str | None,
     reason: str,
-    identity_tokens: list[str] | None = None,
-    linked_from: list[str] | None = None,
-    opposite_path: Path | None = None,
-    opposite_classification: str | None = None,
-    reconsidered_from_borderline: bool = False,
+    linked_from: list[str] | None,
+    reconsidered_from_borderline: bool,
+    existing_key: str,
 ) -> dict[str, Any]:
-    canonical, tokens = _identity_set(canonical_id, identity_tokens)
-    payload = _load(path, classification=classification)
-    records = payload["records"]
-
-    existing_key = next(
-        (
-            key
-            for key, row in records.items()
-            if isinstance(row, dict)
-            and tokens.intersection(set(row.get("identity_tokens") or []) | {str(key)})
-        ),
-        canonical,
-    )
+    """Build the replacement row for a mark, merging the superseded row."""
     old = records.get(existing_key) if isinstance(records.get(existing_key), dict) else {}
     first_checked = old.get("first_checked_at") or _now()
     source_paths = set(old.get("linked_from") or [])
@@ -664,6 +680,40 @@ def _mark_locked(
             row["last_reconsidered_at"] = old["last_reconsidered_at"]
     if title or old.get("title"):
         row["title"] = str(title or old.get("title")).strip()
+    return row
+
+
+def _mark_locked(
+    path: Path,
+    *,
+    classification: str,
+    canonical_id: str,
+    title: str | None = None,
+    reason: str,
+    identity_tokens: list[str] | None = None,
+    linked_from: list[str] | None = None,
+    opposite_path: Path | None = None,
+    opposite_classification: str | None = None,
+    reconsidered_from_borderline: bool = False,
+) -> dict[str, Any]:
+    canonical, tokens = _identity_set(canonical_id, identity_tokens)
+    payload = _load(path, classification=classification)
+    records = payload["records"]
+
+    existing_key = _find_existing_key(records, tokens)
+    if existing_key is None:
+        existing_key = canonical
+    row = _prepare_mark_row(
+        records,
+        classification=classification,
+        canonical=canonical,
+        tokens=tokens,
+        title=title,
+        reason=reason,
+        linked_from=linked_from,
+        reconsidered_from_borderline=reconsidered_from_borderline,
+        existing_key=existing_key,
+    )
 
     if existing_key != canonical:
         records.pop(existing_key, None)
@@ -679,6 +729,178 @@ def _mark_locked(
             tokens=set(row["identity_tokens"]),
         )
     return row
+
+
+class _BatchLedger:
+    """One relevance-ledger payload held in memory with memoized token sets."""
+
+    def __init__(self, path: Path, classification: str) -> None:
+        self.path = path
+        self.payload = _load(path, classification=classification)
+        self.mark_tokens: dict[str, set[str] | None] = {}
+        self.remove_tokens: dict[str, set[str]] = {}
+        for key, row in self.payload["records"].items():
+            self.mark_tokens[key] = _mark_token_set(key, row)
+            self.remove_tokens[key] = _remove_token_set(key, row)
+
+    @property
+    def records(self) -> dict[str, Any]:
+        return self.payload["records"]
+
+    def find_existing_key(self, tokens: set[str]) -> str | None:
+        for key in self.records:
+            token_set = self.mark_tokens.get(key)
+            if token_set is not None and tokens.intersection(token_set):
+                return key
+        return None
+
+    def store(self, key: str, row: dict[str, Any]) -> None:
+        self.records[key] = row
+        self.mark_tokens[key] = _mark_token_set(key, row)
+        self.remove_tokens[key] = _remove_token_set(key, row)
+
+    def pop(self, key: str) -> None:
+        self.records.pop(key, None)
+        self.mark_tokens.pop(key, None)
+        self.remove_tokens.pop(key, None)
+
+    def remove_matching(self, tokens: set[str]) -> bool:
+        removed = False
+        for key in list(self.records):
+            if tokens.intersection(self.remove_tokens.get(key, {str(key)})):
+                self.pop(key)
+                removed = True
+        return removed
+
+
+class LedgerBatch:
+    """Apply many relevance marks while loading each ledger only once.
+
+    The caller must hold ledger_mutation_lock(...) covering every ledger the
+    batch touches, for the whole batch. Marks are applied to in-memory
+    payloads and flush() writes each changed ledger exactly once, so a run of
+    N marks costs one load and one write per ledger instead of N full
+    parse/scan/write cycles. discard() drops the cached payloads without
+    writing; it is required before another code path (e.g. a clear_relevance
+    transaction) reads or writes the ledger files directly, and after such a
+    path ran, so later marks reload the on-disk state.
+    """
+
+    def __init__(self) -> None:
+        self._ledgers: dict[Path, _BatchLedger] = {}
+        self._dirty: set[Path] = set()
+
+    def _ledger(self, path: Path, classification: str) -> _BatchLedger:
+        ledger = self._ledgers.get(path)
+        if ledger is None:
+            ledger = _BatchLedger(path, classification)
+            self._ledgers[path] = ledger
+        return ledger
+
+    def mark(
+        self,
+        path: Path,
+        *,
+        classification: str,
+        canonical_id: str,
+        title: str | None = None,
+        reason: str,
+        identity_tokens: list[str] | None = None,
+        linked_from: list[str] | None = None,
+        opposite_path: Path | None = None,
+        opposite_classification: str | None = None,
+        reconsidered_from_borderline: bool = False,
+    ) -> dict[str, Any]:
+        canonical, tokens = _identity_set(canonical_id, identity_tokens)
+        ledger = self._ledger(path, classification)
+        records = ledger.records
+
+        existing_key = ledger.find_existing_key(tokens)
+        if existing_key is None:
+            existing_key = canonical
+        row = _prepare_mark_row(
+            records,
+            classification=classification,
+            canonical=canonical,
+            tokens=tokens,
+            title=title,
+            reason=reason,
+            linked_from=linked_from,
+            reconsidered_from_borderline=reconsidered_from_borderline,
+            existing_key=existing_key,
+        )
+
+        if existing_key != canonical:
+            ledger.pop(existing_key)
+        ledger.store(canonical, row)
+        ledger.payload["classification"] = classification
+        ledger.payload["purpose"] = _purpose(classification)
+        self._dirty.add(path)
+
+        if opposite_path is not None and opposite_classification is not None:
+            opposite = self._ledger(opposite_path, opposite_classification)
+            if opposite.remove_matching(set(row["identity_tokens"])):
+                self._dirty.add(opposite_path)
+        return row
+
+    def mark_unrelated(
+        self,
+        path: Path,
+        *,
+        canonical_id: str,
+        title: str | None = None,
+        reason: str = "outside survey scope",
+        identity_tokens: list[str] | None = None,
+        linked_from: list[str] | None = None,
+        borderline_path: Path | None = None,
+    ) -> dict[str, Any]:
+        return self.mark(
+            path,
+            classification="unrelated",
+            canonical_id=canonical_id,
+            title=title,
+            reason=reason,
+            identity_tokens=identity_tokens,
+            linked_from=linked_from,
+            opposite_path=borderline_path,
+            opposite_classification="borderline" if borderline_path is not None else None,
+        )
+
+    def mark_borderline(
+        self,
+        path: Path,
+        *,
+        canonical_id: str,
+        title: str | None = None,
+        reason: str = "borderline relevance or expected survey value",
+        identity_tokens: list[str] | None = None,
+        linked_from: list[str] | None = None,
+        unrelated_path: Path | None = None,
+        reconsidered_from_borderline: bool = False,
+    ) -> dict[str, Any]:
+        return self.mark(
+            path,
+            classification="borderline",
+            canonical_id=canonical_id,
+            title=title,
+            reason=reason,
+            identity_tokens=identity_tokens,
+            linked_from=linked_from,
+            opposite_path=unrelated_path,
+            opposite_classification="unrelated" if unrelated_path is not None else None,
+            reconsidered_from_borderline=reconsidered_from_borderline,
+        )
+
+    def flush(self) -> None:
+        """Write every ledger changed since the last flush, exactly once."""
+        for path in sorted(self._dirty, key=str):
+            _write(path, self._ledgers[path].payload)
+        self._dirty.clear()
+
+    def discard(self) -> None:
+        """Drop cached payloads without writing (external mutation happened)."""
+        self._ledgers.clear()
+        self._dirty.clear()
 
 
 def mark(
