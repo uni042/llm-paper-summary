@@ -23,6 +23,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -77,6 +78,7 @@ RESULT_DISCOVERY = INBOX / "results/discovery"
 
 REPAIR_QUEUE_ROOT = Path(".survey/repair-queue")
 RETURNED_RESEARCH_QUEUE = REPAIR_QUEUE_ROOT / "returned-research.json"
+RETURNED_RESEARCH_SYNC_STATE = REPAIR_QUEUE_ROOT / "returned-research-sync-state.json"
 REPAIR_WORKERS = ("scheduled-chat-00", "scheduled-chat-30", "scheduled-chat-45")
 
 PRECHECK_REQUESTS = Path(".survey/work-queue/discovery-precheck/requests")
@@ -646,55 +648,187 @@ def _proven_existing_duplicate(repo_root: Path, canonical_id: str, failures: lis
     return False
 
 
-def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
-    """Rebuild the durable returned-Research queue from import receipts.
+def _apply_receipt(
+    identities: dict[str, Any],
+    imported_paths: dict[str, list[str]],
+    result: dict[str, Any],
+    filename: str,
+) -> None:
+    """Fold one import receipt into the returned-queue aggregates.
 
-    The newest terminal Research receipt for each canonical identity wins.
-    Only identities whose newest relevant receipt is blocked_quality remain
-    in the queue. A later imported or already_represented receipt removes the
-    identity automatically.
+    Mirrors the legacy full-scan filter exactly: only blocked_quality,
+    imported, and already_represented receipts contribute; the newest
+    receipt per canonical identity (by processed_at, then filename) wins.
     """
-    results_root = repo_root / RESULT_RESEARCH
-    latest: dict[str, tuple[tuple[str, str], dict[str, Any], Path]] = {}
-    return_counts: dict[str, int] = {}
-    imported_receipts: dict[str, list[dict[str, Any]]] = {}
+    canonical_id = str(result.get("canonical_id") or "").strip()
+    status = str(result.get("status") or "").strip()
+    if not canonical_id or status not in {
+        "blocked_quality",
+        "imported",
+        "already_represented",
+    }:
+        return
+    slot = identities.setdefault(
+        canonical_id,
+        {"order": None, "status": None, "result": None, "return_count": 0},
+    )
+    if status == "blocked_quality":
+        slot["return_count"] = int(slot.get("return_count") or 0) + 1
+    elif status == "imported":
+        imported_paths.setdefault(canonical_id.casefold(), []).append(
+            str(result.get("paper_path") or "").strip()
+        )
+    order_key = (str(result.get("processed_at") or ""), filename)
+    if slot.get("order") is None or order_key > tuple(slot["order"]):
+        slot["order"] = list(order_key)
+        slot["status"] = status
+        slot["result"] = result if status == "blocked_quality" else None
 
+
+def _scan_all_receipts(
+    results_root: Path,
+) -> tuple[dict[str, Any], dict[str, list[str]]]:
+    identities: dict[str, Any] = {}
+    imported_paths: dict[str, list[str]] = {}
     if results_root.is_dir():
         for result_path in sorted(results_root.glob("*.json")):
             try:
                 result = read_json(result_path)
             except Exception:
                 continue
-            canonical_id = str(result.get("canonical_id") or "").strip()
-            status = str(result.get("status") or "").strip()
-            if not canonical_id or status not in {
-                "blocked_quality",
-                "imported",
-                "already_represented",
-            }:
-                continue
-            if status == "blocked_quality":
-                return_counts[canonical_id] = return_counts.get(canonical_id, 0) + 1
-            elif status == "imported":
-                imported_receipts.setdefault(canonical_id.casefold(), []).append(result)
-            processed_at = str(result.get("processed_at") or "")
-            order_key = (processed_at, result_path.name)
-            previous = latest.get(canonical_id)
-            if previous is None or order_key > previous[0]:
-                latest[canonical_id] = (order_key, result, result_path)
+            _apply_receipt(identities, imported_paths, result, result_path.name)
+    return identities, imported_paths
 
+
+def _git_stdout(repo_root: Path, args: list[str]) -> str | None:
+    try:
+        proc = subprocess.run(
+            ["git", *args], cwd=repo_root, capture_output=True, timeout=180
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if proc.returncode != 0:
+        return None
+    try:
+        return proc.stdout.decode("utf-8")
+    except UnicodeDecodeError:
+        return None
+
+
+def _changed_receipt_names(repo_root: Path, base: str, head: str) -> set[str] | None:
+    """Receipt filenames changed between two commits, or None if the diff
+    cannot be trusted (base is not an ancestor of head, git failure, ...)."""
+    try:
+        proc = subprocess.run(
+            ["git", "merge-base", "--is-ancestor", base, head],
+            cwd=repo_root,
+            capture_output=True,
+            timeout=60,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if proc.returncode != 0:
+        return None
+    out = _git_stdout(
+        repo_root,
+        ["diff", "--name-only", base, head, "--", RESULT_RESEARCH.as_posix()],
+    )
+    if out is None:
+        return None
+    return {Path(line).name for line in out.splitlines() if line.strip()}
+
+
+def _returned_sync_state_fresh(state: dict[str, Any]) -> bool:
+    raw = state.get("last_full_scan_at")
+    if not isinstance(raw, str) or not raw:
+        return False
+    try:
+        scanned_at = datetime.fromisoformat(raw)
+    except ValueError:
+        return False
+    if scanned_at.tzinfo is None:
+        return False
+    age = datetime.now(timezone.utc) - scanned_at
+    return age.total_seconds() < 7 * 24 * 3600
+
+
+def _load_returned_sync_aggregates(
+    repo_root: Path, results_root: Path, listing: list[str]
+) -> tuple[dict[str, Any], dict[str, list[str]], dict[str, Any] | None, str | None, bool]:
+    """Return (identities, imported_paths, previous_state, head, full_scan).
+
+    Incremental path: reuse the aggregates persisted by the previous sync
+    and re-read only receipts that are new in the working tree (including
+    the ones process_research just wrote, still uncommitted) or changed in
+    git since the recorded base commit. Any doubt — missing/corrupt state,
+    a deleted receipt, a non-ancestor base (history rewrite), a state older
+    than a week, or git being unavailable — falls back to a full scan.
+    """
+    head_out = _git_stdout(repo_root, ["rev-parse", "HEAD"])
+    head = head_out.splitlines()[0].strip() if head_out and head_out.splitlines() else None
+
+    state: dict[str, Any] | None = None
+    try:
+        loaded = read_json(repo_root / RETURNED_RESEARCH_SYNC_STATE)
+        if (
+            loaded.get("schema_version") == 1
+            and isinstance(loaded.get("identities"), dict)
+            and isinstance(loaded.get("imported_paper_paths"), dict)
+            and isinstance(loaded.get("known_files"), list)
+        ):
+            state = loaded
+    except Exception:
+        state = None
+
+    if state is not None and head is not None:
+        known = {str(name) for name in state["known_files"]}
+        listing_set = set(listing)
+        base = state.get("base_commit")
+        changed: set[str] | None = None
+        if (
+            isinstance(base, str)
+            and base
+            and not (known - listing_set)
+            and _returned_sync_state_fresh(state)
+        ):
+            changed = set() if base == head else _changed_receipt_names(repo_root, base, head)
+        if changed is not None:
+            identities = state["identities"]
+            imported_paths = {
+                str(key): [str(v) for v in values]
+                for key, values in state["imported_paper_paths"].items()
+                if isinstance(values, list)
+            }
+            candidates = (listing_set - known) | (changed & listing_set)
+            for name in sorted(candidates):
+                try:
+                    result = read_json(results_root / name)
+                except Exception:
+                    continue
+                _apply_receipt(identities, imported_paths, result, name)
+            return identities, imported_paths, state, head, False
+
+    identities, imported_paths = _scan_all_receipts(results_root)
+    return identities, imported_paths, state, head, True
+
+
+def _returned_queue_entries(
+    repo_root: Path,
+    identities: dict[str, Any],
+    imported_paths: dict[str, list[str]],
+) -> list[dict[str, Any]]:
     entries: list[dict[str, Any]] = []
-    for canonical_id, (_, result, result_path) in latest.items():
-        if result.get("status") != "blocked_quality":
+    for canonical_id, slot in identities.items():
+        if slot.get("status") != "blocked_quality":
             continue
+        result = slot.get("result") or {}
         if _proven_existing_duplicate(repo_root, canonical_id, list(result.get("failures") or [])):
             continue
         # An older successful import can still win over a later failed duplicate
         # submission. Require BOTH an imported receipt and the same canonical
         # paper still present on main; identity alone or a stale receipt is unsafe.
         already_imported = False
-        for accepted in imported_receipts.get(canonical_id.casefold(), []):
-            raw_path = str(accepted.get("paper_path") or "").strip()
+        for raw_path in imported_paths.get(canonical_id.casefold(), []):
             if not raw_path.startswith(("papers/inference/", "papers/training/", "papers/survey/")):
                 continue
             published = (repo_root / raw_path).resolve()
@@ -737,13 +871,13 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
                 "title": title,
                 "source_url": source_url,
                 "returned_at": result.get("processed_at"),
-                "return_count": return_counts.get(canonical_id, 1),
+                "return_count": int(slot.get("return_count") or 1),
                 "assigned_worker": repair_owner(canonical_id),
                 "reason": "blocked_quality",
                 "failures": list(result.get("failures") or []),
                 "quality_metrics": result.get("quality_metrics"),
                 "blocked_path": blocked_path,
-                "import_result_path": result_path.relative_to(repo_root).as_posix(),
+                "import_result_path": (RESULT_RESEARCH / str(slot["order"][1])).as_posix(),
                 "worker_run_key": result.get("worker_run_key"),
             }
         )
@@ -754,12 +888,52 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
             str(row.get("canonical_id") or ""),
         )
     )
+    return entries
+
+
+def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
+    """Rebuild the durable returned-Research queue from import receipts.
+
+    The newest terminal Research receipt for each canonical identity wins.
+    Only identities whose newest relevant receipt is blocked_quality remain
+    in the queue. A later imported or already_represented receipt removes
+    the identity automatically.
+
+    Receipt aggregates are persisted in a sync-state file so steady-state
+    runs re-read only new or git-changed receipts instead of parsing every
+    receipt twice per workflow run; a full scan still runs whenever the
+    state cannot be trusted and at least weekly (see
+    _load_returned_sync_aggregates). The produced queue is unchanged.
+    """
+    results_root = repo_root / RESULT_RESEARCH
+    listing = (
+        sorted(p.name for p in results_root.glob("*.json"))
+        if results_root.is_dir()
+        else []
+    )
+    identities, imported_paths, previous_state, head, full_scan = (
+        _load_returned_sync_aggregates(repo_root, results_root, listing)
+    )
+    entries = _returned_queue_entries(repo_root, identities, imported_paths)
+
     policy = {
         "priority": "before normal Research/Discovery work",
         "assignment": "sha256(canonical_id)[0] mod 3",
         "workers": list(REPAIR_WORKERS),
         "completion": "removed after a later imported/already_represented receipt, or an earlier imported receipt verified against a published paper of the same canonical_id",
     }
+
+    new_state = {
+        "schema_version": 1,
+        "base_commit": head,
+        "last_full_scan_at": now() if full_scan else previous_state.get("last_full_scan_at"),
+        "known_files": listing,
+        "identities": identities,
+        "imported_paper_paths": imported_paths,
+    }
+    if new_state != previous_state:
+        replace_json(repo_root / RETURNED_RESEARCH_SYNC_STATE, new_state)
+
     queue_path = repo_root / RETURNED_RESEARCH_QUEUE
     if queue_path.is_file():
         try:
