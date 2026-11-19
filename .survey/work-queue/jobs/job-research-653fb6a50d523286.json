@@ -35,10 +35,15 @@
   "selection_reason": "エージェントワークフロー向け細粒度制御VineLM。段階ごとのモデル選択を静的なワークフロー計画に固定せず、実行が進むにつれてリクエスト水準の目的（費用・遅延予算下の精度）の下で各段階呼出のモデルを選ぶ、トライ表現とチェックポイントを使うワークフローマネージャ。推論基盤のルーティング機構そのもの。",
   "semantic_scholar_id": "ffc0bf7a0bcd955590873e302ff9825e86195dc8",
   "source_url": "https://arxiv.org/abs/2605.23914",
-  "status": "ready",
+  "status": "superseded",
   "title": "VineLM: Trie-Based Fine-Grained Control for Agentic Workflows",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T06:56:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2605.23914-vinelm-trie-based-fine-grained-control-for-agentic-workflows.md",
+  "represented_canonical_id": "arXiv:2605.23914",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

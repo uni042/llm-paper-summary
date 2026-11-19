@@ -35,10 +35,15 @@
   "selection_reason": "推論モデルの極低ビット推論の失敗様式分析。2ビット量子化がトークン単価を下げても、生成過程の不安定化で総トークン数が膨らみ端から端までの高速化が得られないことを、推論軌跡の分析で示し、FP16プランニングなどの軽量な制御で対処する。量子化推論の計測と制御そのもの。",
   "semantic_scholar_id": "83ea264ff248b1c8ae6af4dac34d77b15b6117ea",
   "source_url": "https://arxiv.org/abs/2606.02011",
-  "status": "ready",
+  "status": "superseded",
   "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T06:56:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted.md",
+  "represented_canonical_id": "arXiv:2606.02011",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "chunk-wise線形注意の下三角行列逆行列計算を、逐次的な前進代入から、打切りNeumann級数・構造的mask・並列残差補正を用いた行列乗算へ置換する。低ビットINT時のダイナミックレンジ拡大にも対処し、chunk長に応じ近似次数を調整。Qwen3.5系の評価でカーネル最大5倍、デコード層オーバーヘッド20%削減を要旨で報告する。NPU向け推論カーネル最適化に直結。",
   "semantic_scholar_id": "92fc5b7d64606528ff5d71d5266e3ebdcfd7dd82",
   "source_url": "https://arxiv.org/abs/2606.06034",
-  "status": "ready",
+  "status": "superseded",
   "title": "When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T06:56:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approxi.md",
+  "represented_canonical_id": "arXiv:2606.06034",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
