@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-19T23:12:33+00:00`
+Generated: `2026-11-19T23:20:37+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -333,8 +333,8 @@ ready総数: **939** / 未claim総数: **939** / このworker向け: **313**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128181** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121952** / 監査再投入 **0** / 機械規則適用後 **124561** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128189** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121960** / 監査再投入 **0** / 機械規則適用後 **124569** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -422,11 +422,11 @@ ready総数: **939** / 未claim総数: **939** / このworker向け: **313**
 | 82 | 101 | 3 | 8 | arXiv:2602.21652 | Sparsity Induction for Accurate Post-Training Pruning of Large Language Models | 2026-02-25 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 1 | 8 |  | [source](https://arxiv.org/abs/2602.21652) |
 | 83 | 50 | 3 | 8 | arXiv:2211.03495 | How Much Does Attention Actually Attend? Questioning the Importance of Attention in Pretrained Transformers | 2022-11-07 | Conference on Empirical Methods in Natural Language Processing | 40 | 8 |  | [source](https://arxiv.org/abs/2211.03495) |
 | 84 | 17 | 3 | 8 | arXiv:2310.00576 | GrowLength: Accelerating LLMs Pretraining by Progressively Growing Training Length | 2023-10-01 | arXiv.org | 17 | 8 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2310.00576) |
-| 85 | 10 | 3 | 8 | arXiv:2605.18331 | Prune, Update and Trim: Robust Structured Pruning for Large Language Models | 2026-05-18 | arXiv.org | 0 | 8 | 07-kv-cache-optimization-compression, inference-systems | [source](https://arxiv.org/abs/2605.18331) |
-| 86 | 10 | 3 | 8 | arXiv:2609.40247 | Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling | 2026-09-30 | arXiv.org | 0 | 9 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, cloud LLM serving / KV offloading / attention offloading / cost optimization, llm-serving-scheduling-disaggregation, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.40247) |
-| 87 | 2 | 3 | 8 | arXiv:2501.15665 | StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel | 2025-01-26 | arXiv.org | 2 | 8 | Speculative Decoding, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2501.15665) |
-| 88 | 0 | 3 | 8 | DOI:10.48550/arXiv.2311.18735 | Dimension Mixer: A Generalized Method for Structured Sparsity in Deep Neural Networks | 2023-11-30 | arXiv.org | 0 | 8 | sparse attention / long-context Transformer, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.48550/arXiv.2311.18735) |
-| 89 | 0 | 3 | 8 | arXiv:2505.19342 | ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference | 2025-05-25 |  | 0 | 8 | KV cache quantization / long-context inference / activation compression, KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2505.19342) |
+| 85 | 10 | 3 | 8 | arXiv:2603.04514 | Progressive Refinement Regulation for Accelerating Diffusion Language Model Decoding | 2026-03-04 | arXiv.org | 0 | 9 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 投機的デコード / 分布保存型デコード高速化, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2603.04514) |
+| 86 | 10 | 3 | 8 | arXiv:2607.14618 | PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference | 2026-07-16 | arXiv.org | 0 | 8 | Weight Quantization / Compression, on-device LLM / heterogeneous inference / NPU offloading, post-training quantization / second-order compression / weight-only LLM inference, survey-edge-llm, オフロード／階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2607.14618) |
+| 87 | 7 | 3 | 8 | arXiv:2507.23632 | On the Expressiveness of Softmax Attention: A Recurrent Neural Network Perspective | 2025-07-31 | Trans. Mach. Learn. Res. | 7 | 8 | 構造化状態空間モデル（S4系）→ 選択的SSM（Mamba／S6）→ SSD／Mamba-2 | [source](https://arxiv.org/abs/2507.23632) |
+| 88 | 1 | 3 | 8 | DOI:10.1109/OJSSCS.2024.3524359 | A Fully Integrated Energy-Scalable Transformer Accelerator for Language Understanding on Edge Devices | 2025 | IEEE Open Journal of the Solid-State Circuits Society | 1 | 8 | 99-other-inference-systems, Sparse Attention, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/OJSSCS.2024.3524359) |
+| 89 | 0 | 3 | 8 | arXiv:2406.06773 | Evaluating Zero-Shot Long-Context LLM Compression | 2024-06-10 | arXiv.org | 0 | 8 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2406.06773) |
 | 90 | 2 | 3 | 8 | SemanticScholar:a761c80382d1f4e379e88e06ef4ee993d6b20a9f | SWAA: Sliding Window Attention Adaptation for Efficient Long-Context LLMs Without Pretraining |  |  | 2 | 8 | KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://www.semanticscholar.org/paper/a761c80382d1f4e379e88e06ef4ee993d6b20a9f) |
 | 91 | 101 | 3 | 8 | arXiv:2602.15521 | ExpertWeaver: Unlocking the Inherent MoE in Dense LLMs with GLU Activation Patterns | 2026-02-17 | arXiv.org | 1 | 8 | dense-to-MoE conversion / conditional FFN computation / expert routing, dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE | [source](https://arxiv.org/abs/2602.15521) |
 | 92 | 10 | 3 | 8 | arXiv:2608.30439 | Event-Driven Language Models with Sparse Neural Activity for Neuromorphic Hardware | 2026-08-31 |  | 0 | 8 | Conditional Computation, inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2608.30439) |

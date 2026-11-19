@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-19T23:12:33+00:00`
+Generated: `2026-11-19T23:20:37+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -333,8 +333,8 @@ ready総数: **939** / 未claim総数: **939** / このworker向け: **313**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128181** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121952** / 監査再投入 **0** / 機械規則適用後 **124561** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128189** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121960** / 監査再投入 **0** / 機械規則適用後 **124569** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -422,12 +422,12 @@ ready総数: **939** / 未claim総数: **939** / このworker向け: **313**
 | 82 | 112 | 3 | 8 | arXiv:2604.26209 | Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction | 2026-04-29 | Annual Meeting of the Association for Computational Linguistics | 2 | 8 | 07-kv-cache-optimization-compression, Speculative Decoding, inference-systems, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2604.26209) |
 | 83 | 101 | 3 | 8 | arXiv:2605.03110 | Cascade Token Selection for Transformer Attention Acceleration | 2026-05-04 | arXiv.org | 1 | 8 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.03110) |
 | 84 | 48 | 3 | 8 | DOI:10.52202/068431-1028 | Deep Compression of Pre-trained Transformer Models | 2022 | Neural Information Processing Systems | 38 | 8 |  | [source](https://doi.org/10.52202/068431-1028) |
-| 85 | 10 | 3 | 8 | DOI:10.23919/DATE69613.2026.11539140 | Scrooge: Accelerating Attention Inference in LLMs via Early Termination Mechanism | 2026-04-20 | Design, Automation and Test in Europe | 0 | 8 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, Sparse Attention, sparse attention / long-context Transformer, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://doi.org/10.23919/DATE69613.2026.11539140) |
-| 86 | 10 | 3 | 8 | arXiv:2607.04819 | Layer-Parallel Inference Reduces Encrypted Nonlinear Depth in Transformers | 2026-07-06 | arXiv.org | 0 | 8 | LLM Serving / Scheduling / Disaggregation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 非線形方程式を並列に解く反復法と、深さ方向の並列化を試みる先行研究の系譜に、構造由来の代用ヤコビ行列と対応学習を持ち込んだ研究 | [source](https://arxiv.org/abs/2607.04819) |
-| 87 | 7 | 3 | 8 | arXiv:2505.08516 | Learning Advanced Self-Attention for Linear Transformers in the Singular Value Domain | 2025-05-13 | International Joint Conference on Artificial Intelligence | 7 | 8 | sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2505.08516) |
-| 88 | 2 | 3 | 8 | arXiv:2502.11832 | HAAN: A Holistic Approach for Accelerating Normalization Operations in Large Language Models | 2025-02-17 | Design, Automation and Test in Europe | 2 | 8 | Sparse Attention, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2502.11832) |
-| 89 | 0 | 3 | 8 | arXiv:2305.09028 | SKI to go Faster: Accelerating Toeplitz Neural Networks via Asymmetric Kernels | 2023-05-15 | arXiv.org | 0 | 8 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2305.09028) |
-| 90 | 12 | 3 | 8 | arXiv:2510.07782 | RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model | 2025-10-09 | International Conference on Learning Representations | 2 | 1 | 学習不要の構造化枝刈りのうち、列選択（Wanda-sp、FLAP）とは分離した補償側の研究。片側回転と全体再調整で最先端だったRCPUを、両側回転とモード別再調整へ拡張した位置づけで、選択規則に依存しない差し込み部品として設計されている | [source](https://arxiv.org/abs/2510.07782) |
+| 85 | 12 | 3 | 8 | arXiv:2510.07782 | RCPU: Rotation-Constrained Error Compensation for Structured Pruning of a Large Language Model | 2025-10-09 | International Conference on Learning Representations | 2 | 9 | inference-systems | [source](https://arxiv.org/abs/2510.07782) |
+| 86 | 10 | 3 | 8 | arXiv:2605.18331 | Prune, Update and Trim: Robust Structured Pruning for Large Language Models | 2026-05-18 | arXiv.org | 0 | 8 | 07-kv-cache-optimization-compression, inference-systems | [source](https://arxiv.org/abs/2605.18331) |
+| 87 | 10 | 3 | 8 | arXiv:2609.40247 | Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling | 2026-09-30 | arXiv.org | 0 | 9 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, cloud LLM serving / KV offloading / attention offloading / cost optimization, llm-serving-scheduling-disaggregation, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.40247) |
+| 88 | 2 | 3 | 8 | arXiv:2501.15665 | StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel | 2025-01-26 | arXiv.org | 2 | 8 | Speculative Decoding, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2501.15665) |
+| 89 | 0 | 3 | 8 | DOI:10.48550/arXiv.2311.18735 | Dimension Mixer: A Generalized Method for Structured Sparsity in Deep Neural Networks | 2023-11-30 | arXiv.org | 0 | 8 | sparse attention / long-context Transformer, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.48550/arXiv.2311.18735) |
+| 90 | 0 | 3 | 8 | arXiv:2505.19342 | ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference | 2025-05-25 |  | 0 | 8 | KV cache quantization / long-context inference / activation compression, KVキャッシュ再利用／圧縮／ネットワーク転送 | [source](https://arxiv.org/abs/2505.19342) |
 | 91 | 1 | 3 | 8 | DOI:10.1109/IWQoS65803.2025.11143255 | Deploy Efficient Large Language Model Distributed Inference Pipeline for Heterogeneous GPUs | 2025-07-02 | International Workshop on Quality of Service | 1 | 8 | LLM Serving / Scheduling / Disaggregation, Transformer inference runtime and variable-length request batching, inference-systems | [source](https://doi.org/10.1109/IWQoS65803.2025.11143255) |
 | 92 | 20 | 3 | 8 | DOI:10.1145/3821725.3821806 | ParallelPrefill: Efficient LLM Prefill on Mobile NPU via 2D Task Decomposition on Hexagon DSP | 2026-04-10 | Proceedings of the 2026 International Conference on Machine Learning and Neural Networks | 0 | 8 | Edge／on-device MoE, LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1145/3821725.3821806) |
 | 93 | 10 | 3 | 8 | arXiv:2610.20818 | Intern Lumina U2: A Multi-Codebook Diffusion Large Language Model for Omni-Visual Understanding and Image Generation | 2026-10-14 |  | 0 | 8 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.20818) |
