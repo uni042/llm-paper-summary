@@ -35,10 +35,15 @@
   "selection_reason": "層間トークン剪定SwiftVLM。浅い層で不要とされた視覚トークンが深い層で再び重要になる問題に対し、選ばれなかったトークンを捨てず後段の剪定段階へ送るバイパス型の新しい剪定パラダイムで、不可逆な情報損失を避ける。VLM推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "265ae9e70cf6f22be4974aa37a846d47db9cb71b",
   "source_url": "https://arxiv.org/abs/2602.03134",
-  "status": "ready",
+  "status": "superseded",
   "title": "SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T04:35:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.03134-swiftvlm-efficient-vision-language-model-inference-via-cross-layer-token.md",
+  "represented_canonical_id": "arXiv:2602.03134",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

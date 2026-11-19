@@ -35,10 +35,15 @@
   "selection_reason": "生成内モデル切替RelayGen。1つの生成の中でも難易度が変わる性質を使い、トークン確率マージンのオフライン分析で決めた粗粒度の区間単位で、学習不要に実行時モデル切替を行う。推論時の計算配分機構そのもの。",
   "semantic_scholar_id": "a5c80bad3b95f238137b81231eb5705980d8fb62",
   "source_url": "https://arxiv.org/abs/2602.06454",
-  "status": "ready",
+  "status": "superseded",
   "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T04:35:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2602.06454-relaygen-intra-generation-model-switching-for-efficient-reasoning.md",
+  "represented_canonical_id": "arXiv:2602.06454",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
