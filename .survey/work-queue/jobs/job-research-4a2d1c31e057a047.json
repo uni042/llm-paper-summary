@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨はKV削除でPPLを維持しても下流タスクに必要な情報を落とすinformation neglectを指摘し、命令に応じた注意選好を取り込むチャンク単位状態削除CItruSを提案。長文脈LLMのKVメモリ削減と品質維持に直接関連。",
   "semantic_scholar_id": "50c1ac57e25b82387898c9d7ce25e6a6e181d6c5",
   "source_url": "https://arxiv.org/abs/2406.12018",
-  "status": "ready",
+  "status": "superseded",
   "title": "CItruS: Chunked Instruction-aware State Eviction for Long Sequence Modeling",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T11:56:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeli.md",
+  "represented_canonical_id": "arXiv:2406.12018",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

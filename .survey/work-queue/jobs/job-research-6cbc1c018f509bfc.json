@@ -35,10 +35,15 @@
   "selection_reason": "領域特化時に層ごとの専門化が生じる観測を利用し、層を段階的に除去してモデル深度を削減する。医療・法律・金融のデータセットで、50～60%のモデル圧縮率において精度を維持しつつ、著者は消費者向けGPUで2.1～5.7倍、A100で最大3.1倍の推論高速化を報告。専用量子化カーネルに依存しない構造的圧縮として直接関連。",
   "semantic_scholar_id": "73c001565de2c7bc9a3b49202e6902493065ce21",
   "source_url": "https://arxiv.org/abs/2412.11242",
-  "status": "ready",
+  "status": "superseded",
   "title": "TrimLLM: Progressive Layer Dropping for Domain-Specific LLMs",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T11:56:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.md",
+  "represented_canonical_id": "arXiv:2412.11242",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

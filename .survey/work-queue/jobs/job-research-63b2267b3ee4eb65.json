@@ -35,10 +35,15 @@
   "selection_reason": "arXiv最新版の題名は「Structural Pruning LLMs via Global Sparsity Distribution Optimization」でworklistの旧題と表記が異なるが同一arXiv identity。層間依存を考慮したsupernet構築と漸進的探索でLLM全体の枝刈り率を配分し、Llama-3.1-70Bのパラメータ50%削除時に密モデル性能97%維持を報告。推論用モデル圧縮に直接該当。",
   "semantic_scholar_id": "4990d126876c4b14b51963622630788f752c6d94",
   "source_url": "https://arxiv.org/abs/2503.09657",
-  "status": "ready",
+  "status": "superseded",
   "title": "Týr-the-Pruner: Unlocking Accurate 50% Structural Pruning for LLMs via Global Sparsity Distribution Optimization",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T11:56:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md",
+  "represented_canonical_id": "arXiv:2503.09657",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

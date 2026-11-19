@@ -35,10 +35,15 @@
   "selection_reason": "Transformer層内並列構造によりtensor parallelismのcollective通信と計算を重ね、GPU利用率とTTFTを改善する。著者はTensorRT-LLMを使った複数GPU評価でTTFT平均35.6%高速化を報告。分散LLM推論効率に直接関係する。",
   "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
   "source_url": "https://arxiv.org/abs/2408.07802",
-  "status": "ready",
+  "status": "superseded",
   "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T11:56:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-infer.md",
+  "represented_canonical_id": "arXiv:2408.07802",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
