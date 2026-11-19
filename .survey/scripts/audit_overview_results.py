@@ -159,18 +159,33 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--markdown-out")
     parser.add_argument("--json-out")
     parser.add_argument("--no-fail-exit", action="store_true")
+    parser.add_argument(
+        "--paths-file",
+        default=None,
+        help="Optional file with repo-relative paper paths (one per line) "
+        "restricting the audit to that subset (maintenance differential mode).",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve()
+    only: set[str] | None = None
+    if args.paths_file:
+        only = {
+            line.strip()
+            for line in Path(args.paths_file).read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
     results: list[FileAudit] = []
     for family in PAPER_FAMILIES:
         root = repo_root / "papers" / family
         if not root.exists():
             continue
         for path in sorted(root.rglob("*.md")):
+            if only is not None and path.relative_to(repo_root).as_posix() not in only:
+                continue
             text = path.read_text(encoding="utf-8", errors="ignore")
             body = _body_without_frontmatter(text)
             if is_paper(path, body):

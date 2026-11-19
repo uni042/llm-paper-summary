@@ -661,9 +661,23 @@ def main() -> int:
         type=Path,
         help="Optional JSON cache for fetched arXiv metadata across publish retries.",
     )
+    parser.add_argument(
+        "--paths-file",
+        type=Path,
+        default=None,
+        help="Optional file with repo-relative paper paths (one per line) "
+        "restricting the backfill to that subset (maintenance differential mode).",
+    )
     args = parser.parse_args()
     root = Path(args.repo_root).resolve()
     paths = paper_paths(root)
+    if args.paths_file:
+        only = {
+            line.strip()
+            for line in args.paths_file.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
+        paths = [path for path in paths if path.relative_to(root).as_posix() in only]
     if args.missing_only:
         paths = [
             path

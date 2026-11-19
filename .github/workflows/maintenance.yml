@@ -26,7 +26,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          # One tip commit; full main ancestry is restored without historical
+          # blob bodies by the next step (same pattern as library-import).
+          # full_gc.py / maintenance_health.py only need commit dates from
+          # git log, which the restored ancestry provides.
+          fetch-depth: 1
+
+      - name: Restore main ancestry for git log checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Maintenance requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
 
       - name: Sync latest main before maintenance
         shell: bash
@@ -61,6 +75,18 @@ jobs:
         if: steps.pending.outputs.run == 'true'
         run: python -m pip install --disable-pip-version-check -r .survey/scripts/requirements.txt
 
+      - name: Select differential maintenance subset
+        if: steps.pending.outputs.run == 'true'
+        run: |
+          # Redesign Phase 1 item B4 (2026-11-20): backfill/normalize/audits
+          # below process only papers changed since the last committed
+          # quality report plus a daily rotation slice (full coverage once
+          # per rotation period), instead of every paper every day.
+          python .survey/scripts/select_maintenance_audit_paths.py \
+            --repo-root . \
+            --out /tmp/maintenance-audit-paths.txt \
+            --changed-out /tmp/maintenance-changed-paths.txt
+
       - name: Compact settled worker transport
         if: steps.pending.outputs.run == 'true'
         continue-on-error: true
@@ -86,15 +112,16 @@ jobs:
           python .survey/scripts/backfill_paper_metadata.py \
             --repo-root . \
             --missing-only \
+            --paths-file /tmp/maintenance-audit-paths.txt \
             --metadata-cache /tmp/arxiv-metadata-cache.json
 
       - name: Normalize nullable canonical metadata keys
         if: steps.pending.outputs.run == 'true'
-        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply
+        run: python .survey/scripts/normalize_paper_metadata.py --root . --apply --paths-file /tmp/maintenance-audit-paths.txt
 
       - name: Normalize Japanese terminology in legacy quality failures
         if: steps.pending.outputs.run == 'true'
-        run: python .survey/scripts/normalize_paper_japanese_terms.py --root . --apply
+        run: python .survey/scripts/normalize_paper_japanese_terms.py --root . --apply --paths-file /tmp/maintenance-audit-paths.txt
 
       - name: Rebuild derived paper indexes
         if: steps.pending.outputs.run == 'true'
@@ -114,21 +141,50 @@ jobs:
         run: |
           # Prevent a malformed Git blob hash from propagating to durable queues.
           python -m unittest discover -s .survey/tests -p 'test_under16kb_reaudit.py'
+          # Differential audits (redesign Phase 1 item B4, 2026-11-20):
+          # re-select the subset now so papers changed by the normalize steps
+          # above are included, audit only that subset, then merge each
+          # partial report with the previous durable report. Entries for
+          # papers neither re-audited nor changed are carried forward, so the
+          # committed reports keep full-coverage latest-known state and the
+          # health check's regression comparison stays exact.
+          python .survey/scripts/select_maintenance_audit_paths.py \
+            --repo-root . \
+            --out /tmp/maintenance-audit-paths.txt \
+            --changed-out /tmp/maintenance-changed-paths.txt
           python .survey/scripts/audit_paper_quality.py \
             --no-fail-exit \
+            --paths-file /tmp/maintenance-audit-paths.txt \
             --markdown-out /tmp/paper-quality-audit.md \
-            --json-out .survey/reports/paper-quality-latest.json
+            --json-out /tmp/paper-quality-partial.json
+          python .survey/scripts/merge_audit_reports.py \
+            --partial /tmp/paper-quality-partial.json \
+            --previous .survey/reports/paper-quality-latest.json \
+            --changed-file /tmp/maintenance-changed-paths.txt \
+            --out .survey/reports/paper-quality-latest.json
           python .survey/scripts/refresh_under16kb_reaudit_queue.py \
             --repo-root . \
             --apply
           python .survey/scripts/audit_list_summary_quality.py \
             --no-fail-exit \
+            --paths-file /tmp/maintenance-audit-paths.txt \
             --markdown-out /tmp/list-summary-quality-audit.md \
-            --json-out .survey/reports/list-summary-quality-latest.json
+            --json-out /tmp/list-summary-partial.json
+          python .survey/scripts/merge_audit_reports.py \
+            --partial /tmp/list-summary-partial.json \
+            --previous .survey/reports/list-summary-quality-latest.json \
+            --changed-file /tmp/maintenance-changed-paths.txt \
+            --out .survey/reports/list-summary-quality-latest.json
           python .survey/scripts/audit_overview_results.py \
             --no-fail-exit \
+            --paths-file /tmp/maintenance-audit-paths.txt \
             --markdown-out /tmp/overview-result-quality-audit.md \
-            --json-out .survey/reports/overview-result-quality-latest.json
+            --json-out /tmp/overview-partial.json
+          python .survey/scripts/merge_audit_reports.py \
+            --partial /tmp/overview-partial.json \
+            --previous .survey/reports/overview-result-quality-latest.json \
+            --changed-file /tmp/maintenance-changed-paths.txt \
+            --out .survey/reports/overview-result-quality-latest.json
 
       - name: Refresh citation coverage from current paper metadata
         if: steps.pending.outputs.run == 'true'

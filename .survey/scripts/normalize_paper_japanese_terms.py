@@ -435,11 +435,27 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument(
+        "--paths-file",
+        type=Path,
+        default=None,
+        help="Optional file with repo-relative paper paths (one per line) "
+        "restricting normalization to that subset (maintenance differential mode).",
+    )
     args = ap.parse_args()
     root = Path(args.root).resolve()
+    only: set[str] | None = None
+    if args.paths_file:
+        only = {
+            line.strip()
+            for line in args.paths_file.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
     changed: list[str] = []
     list_changed: list[str] = []
     for path in iter_papers(root):
+        if only is not None and path.relative_to(root).as_posix() not in only:
+            continue
         did_change, did_list = normalize_file(path, root, args.apply)
         if did_change:
             rel = path.relative_to(root).as_posix()

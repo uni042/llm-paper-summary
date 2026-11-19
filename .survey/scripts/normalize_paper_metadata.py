@@ -45,8 +45,22 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument(
+        "--paths-file",
+        type=Path,
+        default=None,
+        help="Optional file with repo-relative paper paths (one per line) "
+        "restricting normalization to that subset (maintenance differential mode).",
+    )
     args = ap.parse_args()
     root = Path(args.root).resolve()
+    only: set[str] | None = None
+    if args.paths_file:
+        only = {
+            line.strip()
+            for line in args.paths_file.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
     changed = []
     for family in PAPER_FAMILIES:
         paper_root = root / "papers" / family
@@ -54,6 +68,8 @@ def main() -> int:
             continue
         for path in sorted(paper_root.rglob("*.md")):
             if path.name in {"README.md", "comparison.md"}:
+                continue
+            if only is not None and path.relative_to(root).as_posix() not in only:
                 continue
             if normalize_file(path, args.apply):
                 changed.append(path.relative_to(root).as_posix())

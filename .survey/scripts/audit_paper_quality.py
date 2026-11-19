@@ -466,14 +466,24 @@ def audit_file(path: Path, repo_root: Path, args: argparse.Namespace | None = No
     )
 
 
-def iter_papers(repo_root: Path) -> Iterable[Path]:
+def iter_papers(repo_root: Path, only: set[str] | None = None) -> Iterable[Path]:
     for root in ("papers/inference", "papers/training", "papers/survey"):
         base = repo_root / root
         if not base.exists():
             continue
         for path in sorted(base.rglob("*.md")):
+            if only is not None and path.relative_to(repo_root).as_posix() not in only:
+                continue
             if is_paper_summary(path):
                 yield path
+
+
+def load_paths_file(path: Path) -> set[str]:
+    return {
+        line.strip()
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    }
 
 
 def markdown_report(results: list[PaperResult]) -> str:
@@ -513,6 +523,13 @@ def main() -> int:
     ap.add_argument("--markdown-out", type=Path)
     ap.add_argument("--json-out", type=Path)
     ap.add_argument("--no-fail-exit", action="store_true")
+    ap.add_argument(
+        "--paths-file",
+        type=Path,
+        default=None,
+        help="Optional file with repo-relative paper paths (one per line) "
+        "restricting the audit to that subset (maintenance differential mode).",
+    )
     # Retired options are accepted for invocation compatibility and ignored.
     for flag in (
         "--min-bytes", "--min-prose-chars", "--min-paragraphs",
@@ -523,7 +540,8 @@ def main() -> int:
     args = ap.parse_args()
     args.enforce_explanation_floor = False
     repo_root = args.repo_root.resolve()
-    results = [audit_file(path, repo_root, args) for path in iter_papers(repo_root)]
+    only = load_paths_file(args.paths_file) if args.paths_file else None
+    results = [audit_file(path, repo_root, args) for path in iter_papers(repo_root, only)]
 
     report = markdown_report(results)
     if args.markdown_out:
