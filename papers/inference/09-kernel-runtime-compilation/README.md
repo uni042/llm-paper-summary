@@ -874,13 +874,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/shawntan/scattermoe) ・ リポジトリ内被引用：6  
   特にバッチが大きい学習や複数要求の推論では、中間のトークン表現を何度も高帯域メモリへ書き戻すことが問題になる。ScatterMoEは専門家へ割り当てたトークンを実体の配列として並べ替える代わりに、専門家順の索引を並べ替え、カーネルが入力の必要な位置を直接読み込む。
 
+- **2024-06 · [ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization](2024-2406.05981-shiftaddllm-accelerating-pretrained-llms-via-post-training-multiplicatio.md)**  
+  実装：[✓](https://github.com/GATECH-EIC/ShiftAddLLM) ・ リポジトリ内被引用：5  
+  大規模言語モデルの重みを低ビット化すればGPUメモリの占有を減らせる。しかし、通常の重み量子化では、低ビット整数を推論時に浮動小数点へ復元して乗算する場合があり、保存容量の削減がそのまま計算演算の削減を意味しない。OPT-66Bの重みメモリはFP16の122 GBから３ビット時23 GB、２ビット時16 GBへ減少した。
+
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：4  
   IntelのxFasterTransformerに、CPU向けSlimAttention、トークン・ヘッド単位のINT8 KVキャッシュ、oneCCLによる分散推論とゼロコピー通信を組み込む。Xeon 8563C環境でLlama2-70Bの次トークン遅延を2ソケット249.7msから8ソケット87.7msへ短縮した。
-
-- **2024-06 · [ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization](2024-2406.05981-shiftaddllm-accelerating-pretrained-llms-via-post-training-multiplicatio.md)**  
-  実装：[✓](https://github.com/GATECH-EIC/ShiftAddLLM) ・ リポジトリ内被引用：4  
-  大規模言語モデルの重みを低ビット化すればGPUメモリの占有を減らせる。しかし、通常の重み量子化では、低ビット整数を推論時に浮動小数点へ復元して乗算する場合があり、保存容量の削減がそのまま計算演算の削減を意味しない。OPT-66Bの重みメモリはFP16の122 GBから３ビット時23 GB、２ビット時16 GBへ減少した。
 
 - **2024-02 · [QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference](2024-2402.10076-quick-quantization-aware-interleaving-and-conflict-free-kernel-for-effic.md)**  
   実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：3  
@@ -917,11 +917,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：559  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：560  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：117  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：118  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
@@ -955,7 +955,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：783  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：784  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -997,7 +997,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-12〜2019-11）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：176  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：177  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

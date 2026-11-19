@@ -1412,6 +1412,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   多数LoRA提供で生じるアダプタ転送競合と要求時間のばらつきを、動的GPUアダプタキャッシュとサイズ認識型複数キュースケジューリングの協調で抑え、高負荷時のP99初回トークン時間を80.7%削減する。
 
+- **2025-10 · [MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving](2025-2510.14557-mx-pushing-the-limits-of-microscaling-formats-for-efficient-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  しかし4ビットの浮動小数点形式では、活性の一部に現れる極端に大きな値が量子化尺度を押し上げ、他の値がゼロへ丸められることがある。
+
 - **2025-10 · [FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters](2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   断片化したserverless GPU上でパイプライン 段を実行中に細分化・統合し、KV整合性を保ちながら負荷変動へ追随するFlexPipe。
@@ -1435,10 +1439,6 @@
 - **2025-02 · [TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval](2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md)**  
   実装：[✓](https://github.com/uw-syfi/TeleRAG) ・ リポジトリ内被引用：8  
   RAGの前段生成から次のIVF検索クラスタを予測し、LLM生成とCPU→GPU先読みを重ねつつ外れクラスタをCPU検索で補完して、大規模索引をGPU常駐せず検索待ちを隠す。
-
-- **2025-10 · [MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving](2025-2510.14557-mx-pushing-the-limits-of-microscaling-formats-for-efficient-large-langua.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  しかし4ビットの浮動小数点形式では、活性の一部に現れる極端に大きな値が量子化尺度を押し上げ、他の値がゼロへ丸められることがある。
 
 - **2025-10 · [FairBatching: Fairness-Aware Batch Formation for LLM Inference](2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

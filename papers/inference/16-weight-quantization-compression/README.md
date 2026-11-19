@@ -492,13 +492,13 @@
   実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：125  
   QServeは、クラウド型の大規模言語モデル（LLM）サービングにおいて、重みを4ビットへ量子化してもGPU上の実行速度が期待ほど上がらない問題を、量子化アルゴリズムと推論カーネルの協調設計によって解く研究である。論文はこの量子化解除の費用が20〜90%に達する条件を示し、ビット数を減らすだけではサービング処理率を改善できないことを説明する。
 
+- **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
+  実装：[✓](https://github.com/microsoft/TransformerCompression) ・ リポジトリ内被引用：115  
+  SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
+
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
   実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：115  
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
-
-- **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
-  実装：[✓](https://github.com/microsoft/TransformerCompression) ・ リポジトリ内被引用：114  
-  SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
   実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：81  
@@ -635,7 +635,7 @@
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：300  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：301  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
@@ -663,7 +663,7 @@
   外れ値チャネルだけ高精度に残して重み・活性・KVキャッシュを低ビット化し、再配置と融合カーネルで4ビットGPU演算器を直接使ってLLM配信を高速化する。
 
 - **2023-06 · [OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models](2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md)**  
-  実装：[✓](https://github.com/xvyaward/owq) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/xvyaward/owq) ・ リポジトリ内被引用：85  
   大規模言語モデルの重みを3ビット級へ圧縮すると、モデル容量と重み読出し量は減るが、わずかな量子化誤差が特定の特徴次元で増幅され、出力品質が大きく悪化することがある。
 
 - **2022-12 · [The case for 4-bit precision: k-bit Inference Scaling Laws](2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md)**  
@@ -675,7 +675,7 @@
   重みを一律1ビット化するのではなく、ヘッセ行列で選んだ少数の顕著重みを高精度で残し、それ以外だけを±1へ二値化する。LLaMA-7Bでは顕著重み30%を残す量子化対応学習版が7つのゼロショット常識推論で平均66.9を達成し、10%まで減らしても60.6を保つ。
 
 - **2023-06 · [OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization](2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md)**  
-  実装：[✓](https://github.com/clevercool/ANT-Quantization) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/clevercool/ANT-Quantization) ・ リポジトリ内被引用：49  
   外れ値を別の疎データ構造へ逃がすのではなく、隣接する低重要度の通常値を「犠牲値（victim）」として使い、外れ値を同じ固定幅ペアの中へ埋め込む。これにより外れ値対応量子化で問題になる座標リストと別演算経路をなくし、4ビットの整列アクセスをテンソルコアやシストリック配列へ直接載せる。
 
 - **2023-04 · [Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling](2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md)**  

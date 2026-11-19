@@ -440,13 +440,13 @@
   実装：✓ ・ リポジトリ内被引用：22  
   すべての過去トークンを見る密注意は安定した品質を持つが、長い入力を処理すると計算量とGPUメモリ帯域の双方が制約になる。第一に、元モデルの問い合わせ・鍵・値射影をそのまま共有し、短い系列では密注意、長い系列では疎注意へ切り替える。
 
+- **2025-02 · [RocketKV: Accelerating Long-Context LLM Inference via Two-Stage KV Cache Compression](2025-2502.14051-rocketkv-accelerating-long-context-llm-inference-via-two-stage-kv-cache-.md)**  
+  実装：[✓](https://github.com/NVlabs/RocketKV) ・ リポジトリ内被引用：19  
+  大規模言語モデルの復号では、過去トークンの鍵・値（KV）を保存することで、同じ過去文脈の線形層を繰り返し計算することを避けられる。論文はLlama3.1-70B-Instruct、バッチ32、32K文脈のFP16 KVが約320 GBに達する例を挙げる。
+
 - **2025-06 · [SeerAttention-R: Sparse Attention Adaptation for Long Reasoning](2025-2506.08889-seerattention-r-sparse-attention-adaptation-for-long-reasoning.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：18  
   思考連鎖が1万トークンを超える推論モデルでは、1トークン生成するたび全過去KVを読む注意が重くなる。SeerAttention-Rは、元モデルを変えずに小さなゲートだけを学習し、「今回のクエリが見るべきKVブロック」を予測してデコード注意を疎化する。
-
-- **2025-02 · [RocketKV: Accelerating Long-Context LLM Inference via Two-Stage KV Cache Compression](2025-2502.14051-rocketkv-accelerating-long-context-llm-inference-via-two-stage-kv-cache-.md)**  
-  実装：[✓](https://github.com/NVlabs/RocketKV) ・ リポジトリ内被引用：18  
-  大規模言語モデルの復号では、過去トークンの鍵・値（KV）を保存することで、同じ過去文脈の線形層を繰り返し計算することを避けられる。論文はLlama3.1-70B-Instruct、バッチ32、32K文脈のFP16 KVが約320 GBに達する例を挙げる。
 
 - **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
   実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：12  
@@ -579,27 +579,27 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：305  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：306  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：204  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：205  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
+
+- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：81  
+  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：80  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
-- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：80  
-  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
-
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
-  実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：53  
+  実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：54  
   キーの低ランク性を使い、低次元スコアで候補KVを選んでから全次元注意を計算し、品質を保ちながら注意計算を最大約45%短縮する疎注意法。
 
 - **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：28  
   中心的な前提：入力の大部分が、複数リクエスト間で変化しない固定文書・指示・例示である。前処理で固定文脈の鍵をクラスタ化し、オンラインの問い合わせに関連する元の鍵・値だけを読出す。
 
 - **2024-08 · [Post-Training Sparse Attention with Double Sparsity](2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md)**  
