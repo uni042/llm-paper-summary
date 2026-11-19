@@ -38,7 +38,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          # One tip commit; full main ancestry is restored without historical
+          # blob bodies by the next step (same pattern as library-import).
+          fetch-depth: 1
+      - name: Restore main ancestry for publish rebases
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Candidate priority refresh requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
