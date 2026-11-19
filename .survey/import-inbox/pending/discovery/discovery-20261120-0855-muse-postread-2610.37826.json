@@ -1,0 +1,23 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261120-b2-postread-2610.37826",
+ "reference_main_sha": "919ca362450b262b9cc01b92be92ab5a1a5a903b",
+ "record_count": 1,
+ "origin": "research_postread_relevance",
+ "records": [
+  {
+   "classification": "borderline",
+   "canonical_id": "arXiv:2610.37826",
+   "identity_tokens": ["arXiv:2610.37826", "https://arxiv.org/abs/2610.37826"],
+   "title": "DeFT-RAG: Decomposing Multi-Hop Questions into Self-Contained Sub-questions",
+   "reason": "全文読解の結果、主目的は多段QAの精度向上（質問分解・QA表・判定モデルによる誤り種別削減）であり、推論システム機構への直接貢献は薄い。効率面の言及は入力トークン削減（1,569/問 vs Self-Ask 6,140）とQAキャッシュ再利用によるLLM呼び出し12.9%削減にとどまり、精度向上策の副産物として提示されているため borderline と判定した。",
+   "source_url": "https://arxiv.org/abs/2610.37826",
+   "body_check": "research_fulltext_relevance_review: arXiv HTML全文を通読して関連性を再判定した",
+   "first_checked_at": "2026-11-20T08:57:00+09:00",
+   "last_checked_at": "2026-11-20T08:57:00+09:00",
+   "linked_from": ["worker-worklist research_audit (20261120 pool index 24)"]
+  }
+ ]
+}
