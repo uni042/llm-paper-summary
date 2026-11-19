@@ -35,10 +35,15 @@
   "selection_reason": "長い推論出力のKVキャッシュを対象に、推論過程を要約した粗粒度キーを索引として保持し、復号時のqueryに応じて必要な詳細KVのみを選択する階層的検索方式。数学・推論課題で比較対象と競争力のある性能を維持しつつ推論メモリ要件を4倍超削減したと著者要旨で報告。LLMの長出力推論とKVメモリ削減に直接関連する。",
   "semantic_scholar_id": "3a02142b1d20bd0fe6cb605be4ad8c83e22a7e82",
   "source_url": "https://arxiv.org/abs/2604.10898",
-  "status": "ready",
+  "status": "superseded",
   "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T00:08:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.10898-zoomr-memory-efficient-reasoning-through-multi-granularity-key-value-ret.md",
+  "represented_canonical_id": "arXiv:2604.10898",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

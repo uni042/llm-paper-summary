@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（33本）
+## 自動生成の論文一覧（34本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -82,6 +82,10 @@
 - **2026-07 · [D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation](2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   RAGのベクトル検索を三次元NAND配列内の二重境界検出へ変換し、候補埋め込みの外部読出しを避けてCPU比最大41.7倍高速化する。
+
+- **2026-06 · [COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices](2026-2606.30553-cosm-a-cooperative-scheduling-framework-for-concurrent-pim-and-cpu-execu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CPUとメモリを共有するPIMで、CPUの空き時間窓を推定してその中だけにPIMの仕事を差し込む協調スケジューリングにより、CPU性能の低下2.0パーセントでPIMスループットをCPU優先方式の2.8倍にした。
 
 - **2026-05 · [NASiC: 3D NAND-based CAM-Selected Multibit CIM Architecture for Efficient On-Device Mixture-of-Experts LLM Inference](2026-2605.23294-nasic-3d-nand-based-cam-selected-multibit-cim-architecture-for-efficient-on-device-mixture-of-experts-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

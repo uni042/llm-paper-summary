@@ -35,10 +35,15 @@
   "selection_reason": "推論モデル向け安定性配慮型早期終了SABER。中間推論状態の周りに意味的摂動の敵対分岐を作り、完全なロールアウトなしに最終結果の見込みを軽量に探って、結果が分岐間で一致すれば早期終了する学習不要の枠組み。推論トークンを30.2〜39.8%削減する推論時の機構。",
   "semantic_scholar_id": "99adcbc414d03a7cf4cccdf685affe86314dee76",
   "source_url": "https://arxiv.org/abs/2608.27963",
-  "status": "ready",
+  "status": "superseded",
   "title": "SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T00:08:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branc.md",
+  "represented_canonical_id": "arXiv:2608.27963",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

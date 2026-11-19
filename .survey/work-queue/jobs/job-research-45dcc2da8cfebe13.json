@@ -35,10 +35,15 @@
   "selection_reason": "エージェントの大規模batch推論における投機デコードの棄却とtoken予算浪費を、構造を分離したdraftと冗長性を考慮した予算割当で改善。5 workloadと4モデルで評価。",
   "semantic_scholar_id": "bd40b2f9e84a8c2205977865417884b96febd2b7",
   "source_url": "https://arxiv.org/abs/2608.24004",
-  "status": "ready",
+  "status": "superseded",
   "title": "AgentSpec: Speculative Decoding for Batch Inference of LLM Agents",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T00:08:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.md",
+  "represented_canonical_id": "arXiv:2608.24004",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

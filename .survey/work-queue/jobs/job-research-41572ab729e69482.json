@@ -35,10 +35,15 @@
   "selection_reason": "マルチモーダルLLM向けKVキャッシュ退避RetentiveKV。視覚トークンの遅延重要性と空間連続性を踏まえ、退避を離散的な切捨てから状態空間モデルによる連続的なメモリ進化へ作り替え、エントロピーで低注意トークンの情報量を測って状態へ統合し必要時に再活性化する。KVキャッシュ管理機構そのもの。",
   "semantic_scholar_id": "3357daa37c5e5b414f57e4ac20699866a7cd0d06",
   "source_url": "https://arxiv.org/abs/2605.04075",
-  "status": "ready",
+  "status": "superseded",
   "title": "RetentiveKV: State-Space Memory for Uncertainty-Aware Multimodal KV Cache Eviction",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T00:08:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.04075-retentivekv-state-space-memory-for-uncertainty-aware-multimodal-kv-cache.md",
+  "represented_canonical_id": "arXiv:2605.04075",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
