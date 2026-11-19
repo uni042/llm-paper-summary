@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（82本）
+## 自動生成の論文一覧（83本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -278,6 +278,10 @@
 - **2026-01 · [Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents](2026-2601.01885-agentic-memory-learning-unified-long-term-and-short-term-memory-manageme.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長時間動作するLLMエージェントには、会話や作業をまたいで残す長期記憶（Long-Term メモリ; LTM）と、現在のプロンプト内で参照する短期記憶（Short-Term メモリ; STM）がある。従来は、長期記憶の追加・更新を外部の記憶管理器に任せ、短期文脈の検索・要約は一定間隔や文脈長しきい値で動かすことが多かった。
+
+- **2026-01 · [A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization](2026-2601.12698-a-two-stage-gpu-kernel-tuner-combining-semantic-refactoring-and-search-b.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  カーネルを意味を保つテンプレートへ書き換えてから資源制約下でパラメータ探索を行う二段階方式で、SGLangの実カーネルを最大3.55倍まで高速化した。
 
 - **2025-12 · [Transcending Cost-Quality Tradeoff in Agent Serving via Session-Awareness](2025-d84a0fae3606-transcending-cost-quality-tradeoff-in-agent-serving-via-session-awarenes.md)**  
   実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：0  

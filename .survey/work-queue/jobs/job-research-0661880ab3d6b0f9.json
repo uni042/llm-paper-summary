@@ -35,10 +35,15 @@
   "selection_reason": "KVキャッシュ削除を過去attentionスコアのヒューリスティックではなく、将来復号での有用性を順位付けする強化学習問題として定式化する。KV Policy（KVP）はヘッドごとの軽量エージェントを事前生成トレースから学習し、キー・値ベクトルだけで任意の保持予算に対する削除順位を決める。RULERとOASST2-4kで既存方式を上回り、LongBench等へのzero-shot転移も報告する。既存LLMの再学習・追加推論を必要としないKV削除方式としてaccept。要旨には確定した速度倍率がないため記載しない。",
   "semantic_scholar_id": "85d2768efec4831346827a3e106eaf67567d3035",
   "source_url": "https://arxiv.org/abs/2602.10238",
-  "status": "ready",
+  "status": "superseded",
   "title": "Learning to Evict from Key-Value Cache",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T01:24:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.10238-learning-to-evict-from-key-value-cache.md",
+  "represented_canonical_id": "arXiv:2602.10238",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

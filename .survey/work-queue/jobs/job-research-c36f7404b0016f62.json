@@ -35,10 +35,15 @@
   "selection_reason": "長距離のKV表現間に類似性があることを利用し、過去トークンの参照表現と差分残差に分解してKVを圧縮する。本文ではResidualKVの名称も用い、Sparse-vLLMに疎・不規則KV配置を扱うメモリ管理とカーネルを実装する。著者らはLongBench・SCBench・AIMEで品質をほぼ維持しながらKV容量を元の29%に減らし、長文脈でvLLM比最大2倍のthroughputを報告。容量と実行速度を同時に改善するLLM推論システムとしてaccept。",
   "semantic_scholar_id": "97f566521a12dc788e64fa104dbec0e99935248e",
   "source_url": "https://arxiv.org/abs/2602.08005",
-  "status": "ready",
+  "status": "superseded",
   "title": "ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T01:24:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-contex.md",
+  "represented_canonical_id": "arXiv:2602.08005",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
