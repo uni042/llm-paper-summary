@@ -209,11 +209,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   HeteroInferは、携帯端末のシステムオンチップ（システム-on-Chip; SoC）に同居するGPUとニューラル処理装置（Neural Processing Unit; NPU）を同時利用し、大規模言語モデル（LLM）の前処理と自己回帰復号を高速化する推論基盤である。
 
 - **2025-06 · [Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference](2025-2412.00099-mixture-of-cache-conditional-experts-for-efficient-mobile-device-inferen.md)**  
@@ -319,7 +319,7 @@
   本論文は、LLM向けの移動体エッジ知能をMEI4LLMと呼び、その設計空間を通信・計算・記憶の三資源で整理する。
 
 - **2024-03 · [MELTing point: Mobile Evaluation of Language Transformers](2024-2403.12844-melting-point-mobile-evaluation-of-language-transformers.md)**  
-  実装：[✓](https://github.com/brave-experiments/MELT-public) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/brave-experiments/MELT-public) ・ リポジトリ内被引用：10  
   モデル読込み中の操作不能、端末の発熱、連続実行での動作周波数低下、バッテリー消費、量子化による回答品質の劣化も重要である。原著の評価条件では4ビットモデルの生成スループットが3ビットモデルより平均24.77%高かった。
 
 - **2024-01 · [BlockFFN: Towards End-Side Acceleration-Friendly Mixture-of-Experts with Chunk-Level Activation Sparsity](2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md)**  
@@ -337,7 +337,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices](2023-2308.14352-edgemoe.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：59  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：60  
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
 
 - **2023-09 · [LLMCad: Fast and Scalable On-device Large Language Model Inference](2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md)**  
