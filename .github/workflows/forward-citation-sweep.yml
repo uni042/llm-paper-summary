@@ -13,8 +13,10 @@ on:
       - '.survey/tests/test_forward_citation_sweep.py'
       - '.survey/tests/test_discovery_provider_adapter.py'
   schedule:
-    # Redundant low-frequency fallback for GitHub scheduler delivery issues.
-    - cron: '23 * * * *'
+    # Daily fallback (04:23 JST). Forward-citation coverage only needs daily
+    # freshness since 2026-11-20 (redesign Phase 0 item B2); the orchestrator
+    # also dispatches this lane when the durable state is more than ~23h old.
+    - cron: '23 19 * * *'
   workflow_dispatch:
 
 permissions:
@@ -33,7 +35,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          # One tip commit; full main ancestry is restored without historical
+          # blob bodies by the next step (same pattern as library-import).
+          fetch-depth: 1
+      - name: Restore main ancestry for publish rebases
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Forward citation sweep requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -48,7 +61,7 @@ jobs:
           else
             due=$(python .survey/scripts/refresh_due.py \
               --state .survey/work-queue/forward-citation-sweep.json \
-              --max-age-seconds 3000)
+              --max-age-seconds 82800)
           fi
           echo "run=${due}" >> "$GITHUB_OUTPUT"
           echo "forward_citation_refresh_due=${due}"

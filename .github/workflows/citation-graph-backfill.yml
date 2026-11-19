@@ -5,10 +5,15 @@ name: Citation graph backfill
 # maintenance trigger: 2026-10-05T06:34JST TransPIM citation coverage repair
 
 on:
+  # Since 2026-11-20 (redesign Phase 0 item B2) this lane runs daily instead
+  # of on every papers/** push: citation coverage freshness of up to one day
+  # is acceptable because no processing decision consumes it. Pushes to the
+  # workflow/scripts below still trigger a run so code changes are validated.
+  schedule:
+    - cron: '37 20 * * *'
   push:
     branches: [main]
     paths:
-      - 'papers/**/*.md'
       - '.github/workflows/citation-graph-backfill.yml'
       - '.survey/scripts/citation_graph.py'
       - '.survey/scripts/backfill_citations.py'
@@ -43,7 +48,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          # One tip commit; full main ancestry is restored without historical
+          # blob bodies by the next step (same pattern as library-import).
+          fetch-depth: 1
+
+      - name: Restore main ancestry for publish rebases
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Citation backfill requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
