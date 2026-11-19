@@ -35,10 +35,15 @@
   "selection_reason": "マルチエージェント潜在リレーのKV圧縮Orthogonal BackFill。エージェント間でKVキャッシュごと渡す潜在リレーにKV退避を適用し、捨てる状態の低ランク残差を保持側へ直交成分として埋め戻す。プロンプトKVの9.9〜20.2%保持で帯域4.7倍減とGPUメモリ8%減を実測した推論時メモリ機構。",
   "semantic_scholar_id": "1e7ae20af25c9992951223a15f71fb4ee18d339b",
   "source_url": "https://arxiv.org/abs/2604.13349",
-  "status": "ready",
+  "status": "superseded",
   "title": "When Less Latent Leads to Better Relay: Information-Preserving Compression for Latent Multi-Agent LLM Collaboration",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:37:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.13349-when-less-latent-leads-to-better-relay-information-preserving-compressio.md",
+  "represented_canonical_id": "arXiv:2604.13349",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

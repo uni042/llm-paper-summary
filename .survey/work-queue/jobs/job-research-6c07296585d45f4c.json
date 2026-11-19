@@ -35,10 +35,15 @@
   "selection_reason": "時空間安定性誘導デコードSTDec。拡散LLMのデコードで、新規トークンが復号済み近傍の近くに現れ予測IDがステップ間で安定するという性質を使い、近傍の復号状態からトークン適応閾値を動的に作る空間認識と、時間一貫性を使う時間認識の両面で確定を制御する。拡散デコード機構そのもの。",
   "semantic_scholar_id": "a5a42292c18ac7a0ab82dfaa0f98c3bbd22271c9",
   "source_url": "https://arxiv.org/abs/2604.06330",
-  "status": "ready",
+  "status": "superseded",
   "title": "STDec: Spatio-Temporal Stability Guided Decoding for dLLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:37:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.06330-stdec-spatio-temporal-stability-guided-decoding-for-dllms.md",
+  "represented_canonical_id": "arXiv:2604.06330",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

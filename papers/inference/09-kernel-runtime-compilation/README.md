@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（222本）
+## 自動生成の論文一覧（223本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -405,6 +405,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs](2026-2604.23466-evaluating-cuda-tile-for-ai-workloads-on-hopper-and-blackwell-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、NVIDIAのタイル単位GPUプログラミング基盤CUDA Tile（CuTile）を採用すべき条件を、性能と開発工数の両面から実測した比較研究である。CuTileは行列積や注意計算をタイル演算として記述し、スレッド束、共有メモリ配置、レジスタ割当の一部をコンパイラへ任せる。主要結果は二面的である。
+
+- **2026-04 · [EncFormer: Secure and Efficient Transformer Inference Over Encrypted Data](2026-2604.09975-encformer-secure-and-efficient-transformer-inference-over-encrypted-data.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  暗号文の詰め方を段階間で互換に保ち、境界の費用を最小変換基準で判定し、複素変換で転送を半分にする混合方式で、暗号化したままの推論の通信を最大30.4倍分、遅延を最大9.8倍分減らした。
 
 - **2026-04 · [Continuous Semantic Caching for Low-Cost LLM Serving](2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

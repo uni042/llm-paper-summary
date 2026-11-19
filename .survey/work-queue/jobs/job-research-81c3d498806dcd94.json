@@ -35,10 +35,15 @@
   "selection_reason": "FHEとMPCを併用する暗号化Transformer推論において、Stage Compatible Patternsで暗号カーネル間の再梱包と方式変換を抑え、複素CKKS-MPC変換と非線形演算の通信を削減。GPT/BERT系の比較でオンラインMPC通信1.4〜30.4倍削減、エンドツーエンド遅延1.3〜9.8倍改善と報告。秘匿推論の実行効率化に直接該当。",
   "semantic_scholar_id": "3109aa69aa5a496d609a3f5c1d3c5e515be91c21",
   "source_url": "https://arxiv.org/abs/2604.09975",
-  "status": "ready",
+  "status": "superseded",
   "title": "EncFormer: Secure and Efficient Transformer Inference Over Encrypted Data",
   "type": "research",
   "venue": "IEEE Transactions on Dependable and Secure Computing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T02:37:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.09975-encformer-secure-and-efficient-transformer-inference-over-encrypted-data.md",
+  "represented_canonical_id": "arXiv:2604.09975",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
