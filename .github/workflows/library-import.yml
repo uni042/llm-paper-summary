@@ -269,14 +269,21 @@ jobs:
           sync_main
           citation_backfill_due="$(python - <<'PY'
           import json
-          import sys
           from pathlib import Path
 
-          sys.path.insert(0, str(Path('.survey/scripts').resolve()))
-          import citation_graph
-
           root = Path('.').resolve()
-          paper_count = len(citation_graph.load_records(root))
+          # O(1) inventory count: the identity index's active_count is the
+          # number of active papers and equals the citation audit's record
+          # count, so reading this one small JSON replaces parsing every
+          # paper's front matter on every import run. Any doubt fails safe
+          # toward dispatching the backfill, like a missing report below.
+          index_path = root / '.survey/survey-state/paper-identity-index.json'
+          try:
+              index = json.loads(index_path.read_text(encoding='utf-8'))
+              paper_count = int(index['active_count'])
+          except (FileNotFoundError, json.JSONDecodeError, KeyError, TypeError, ValueError):
+              print('true')
+              raise SystemExit(0)
           report_path = root / '.survey/reports/citation-coverage-latest.json'
           try:
               report = json.loads(report_path.read_text(encoding='utf-8'))
