@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "7b445e7992c84ed1426b775159a871eb9d635552",
+  "base_commit": "919ca362450b262b9cc01b92be92ab5a1a5a903b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -315,6 +315,11 @@
     "2026-2608.01847-focus-fp4-optimization-via-coupled-relaxation-and-dual-granularity-scaling.json",
     "2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus-retrieval-via-o-1-ssm-state-injection.json",
     "2026-2608.02947-atflash-per-rope-wavelength-attention-windows-for-compute-memory-efficient-llm-inference.json",
+    "2026-2608.03812-omnipack-unified-token-compression-for-efficient-omni-modal-large-language-models.json",
+    "2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.json",
+    "2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.json",
+    "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json",
+    "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
@@ -40686,6 +40691,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.03812": {
+      "order": [
+        "2026-11-19T22:34:51+00:00",
+        "2026-2608.03812-omnipack-unified-token-compression-for-efficient-omni-modal-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.04132": {
+      "order": [
+        "2026-11-19T22:36:08+00:00",
+        "2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.06146": {
+      "order": [
+        "2026-11-19T22:37:25+00:00",
+        "2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.08506": {
+      "order": [
+        "2026-11-19T22:38:43+00:00",
+        "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.08730": {
+      "order": [
+        "2026-11-19T22:40:00+00:00",
+        "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50147,6 +50197,21 @@
     "arxiv:2608.02947": [
       "papers/inference/13-sparse-attention/2026-2608.02947-atflash-per-rope-wavelength-attention-windows-for-compute-memory-efficie.md",
       "papers/inference/13-sparse-attention/2026-2608.02947-atflash-per-rope-wavelength-attention-windows-for-compute-memory-efficie.md"
+    ],
+    "arxiv:2608.03812": [
+      "papers/inference/99-other-inference-systems/2026-2608.03812-omnipack-unified-token-compression-for-efficient-omni-modal-large-langua.md"
+    ],
+    "arxiv:2608.04132": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.md"
+    ],
+    "arxiv:2608.06146": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.md"
+    ],
+    "arxiv:2608.08506": [
+      "papers/inference/99-other-inference-systems/2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-f.md"
+    ],
+    "arxiv:2608.08730": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-singl.md"
     ]
   }
 }

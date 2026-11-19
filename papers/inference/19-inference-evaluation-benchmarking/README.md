@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（135本）
+## 自動生成の論文一覧（137本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -141,6 +141,14 @@
 - **2026-08 · [SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing](2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branc.md)**  
   実装：[✓](https://github.com/Bl1nding/SABER) ・ リポジトリ内被引用：0  
   推論の途中で「前の推論は間違い」と揺さぶる短い分岐を伸ばし、答えが揺らがなければ収束したとみなして早期終了する方式で、推論トークンを3から4割削りながら正解率を保った。
+
+- **2026-08 · [RUTA: Principled Visual Token Allocation via Rate-Utility Optimization](2026-2608.04132-ruta-principled-visual-token-allocation-via-rate-utility-optimization.md)**  
+  実装：[✓](https://github.com/Multimedia-Analytics-Laboratory/RUTA) ・ リポジトリ内被引用：0  
+  視覚トークンの削減を率と効用の最適化として定式化し、質問に合わせて候補を絞り、保持確率の合計への罰則で入力ごとに個数を学ばせ、落とした分の情報を錨へ吸収させることで、全トークンの数パーセントで性能の9割前後を保つ削減方式。
+
+- **2026-08 · [PaDoc: Layout-Grounded Parallel Decoding for Document Parsing](2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.md)**  
+  実装：[✓](https://github.com/Longin-Yu/Padoc) ・ リポジトリ内被引用：0  
+  配置を枝分かれ構造とみなし、ページ画像を共有したまま領域ごとの内容生成を同時に進める因数分解で、逐次生成の深さを最長の配置と内容の経路まで縮め、品質を保ったまま処理量を最大2倍超にした文書解析方式。
 
 - **2026-08 · [LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression](2026-2608.26389-lowrankarena-a-standardized-evaluation-platform-for-svd-based-llm-compre.md)**  
   実装：[✓](https://github.com/Zishan-Shao/lowrankarena) ・ リポジトリ内被引用：0  

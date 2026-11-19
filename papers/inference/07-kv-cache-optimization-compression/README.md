@@ -261,6 +261,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/an-yongqi/rest-kv) ・ リポジトリ内被引用：2  
   自己回帰生成では、過去トークンのキーとバリューを各層・各ヘッドに保存する。入力文脈が伸びるとキャッシュの占有量と復号時の読み出しが増え、長文脈の同時提供でメモリ容量・帯域の制約が強くなる。従来のH2OやSnapKVなどは注意重みの累積・観測窓内の集約を重視するが、トークンを削除するとソフトマックスの分母が変わり、残されたトークンへの注意が再分配される。
 
+- **2026-05 · [OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models](2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimod.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  固定した時間区切りをフレームと音声の対応に合わせて作り替えてから、映像と音声をそれぞれの冗長構造に合う方式で協調圧縮し、保持率44パーセントで全トークン並みの正解率を保った学習不要の圧縮方式。
+
 - **2026-05 · [KARA: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression](2026-2607.01237-kara-sliding-window-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   KARAは、新しく増えたKV区間だけを一度ずつ圧縮し、重要トークンを可変長チャンクへ広げ、周期発動で再圧縮費を抑えて長い推論の同時実行数を保つ。
@@ -420,10 +424,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Reformulating KV Cache Eviction Problem for Long-Context LLM Inference](2026-2605.07234-reformulating-kv-cache-eviction-problem-for-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   既存の追い出し手法は、過去のトークンが受けた注意重みを平均・集計し、その値の大きな位置を残すことが多い。NVIDIA H100 80GBでのLlama-3.1-8B、128K文脈、同保持予算の効率測定では、完全キャッシュ比で復号のトークン当たり遅延が2.3倍改善し、最大メモリは63.3GBから約47.5GBへ低下した。
-
-- **2026-05 · [OmniRefine: Alignment-Aware Cooperative Compression for Efficient Omnimodal Large Language Models](2026-2605.12056-omnirefine-alignment-aware-cooperative-compression-for-efficient-omnimod.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  固定した時間区切りをフレームと音声の対応に合わせて作り替えてから、映像と音声をそれぞれの冗長構造に合う方式で協調圧縮し、保持率44パーセントで全トークン並みの正解率を保った学習不要の圧縮方式。
 
 - **2026-05 · [OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization](2026-2605.21226-octopus-optimized-kv-cache-for-transformers-via-octahedral-parametrizati.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

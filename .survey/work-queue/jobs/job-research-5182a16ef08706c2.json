@@ -35,10 +35,15 @@
   "selection_reason": "arXiv v3要旨はバッチ1・単一ストリームのWebGPU推論で、同期を混同しない逐次ディスパッチ計測と融合実験により演算器性能よりディスパッチ回数がボトルネックと示す。ブラウザ・エッジのLLM推論エンジンでディスパッチ削減を優先すべきとの直接的な実測知見。",
   "semantic_scholar_id": "bc5ffa38aa24d8bc8da7bfe155f9771884cdc49a",
   "source_url": "https://arxiv.org/abs/2608.08730",
-  "status": "ready",
+  "status": "superseded",
   "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T22:42:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-singl.md",
+  "represented_canonical_id": "arXiv:2608.08730",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

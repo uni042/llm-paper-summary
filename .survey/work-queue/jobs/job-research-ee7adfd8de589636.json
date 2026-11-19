@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨はMLLM文書解析をページレイアウトと領域別内容の分岐として並列生成するPaDocを提案。vLLMで共通prefixのKVを再利用し、A800の384ページ評価で逐次SFT比valid-pageスループット67.4〜118%改善、P95遅延39.2〜54.9%削減。MLLM推論の並列デコードへ直接寄与。",
   "semantic_scholar_id": "385ad89b1980dfdc85ab494120bca1635d4131cb",
   "source_url": "https://arxiv.org/abs/2608.06146",
-  "status": "ready",
+  "status": "superseded",
   "title": "PaDoc: Layout-Grounded Parallel Decoding for Document Parsing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T22:42:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.md",
+  "represented_canonical_id": "arXiv:2608.06146",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
