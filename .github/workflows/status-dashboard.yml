@@ -56,9 +56,10 @@ on:
   # Paper-only repair also refreshes without waiting for cron.
   # Never treat an updated STATUS.md as proof that the worker worklists are current.
   # Regeneration is idempotent: unchanged worklists keep their generated_at.
-  # The schedule is a backstop for missed push events, not the primary trigger.
-  schedule:
-    - cron: '17 * * * *'
+  # The former hourly cron backstop was removed on 2026-11-20 (redesign
+  # Phase 0 item B3): push and workflow_run triggers cover every durable
+  # state change, and a missed refresh is detected by the next morning's
+  # reflection check instead of being polled for hourly.
   # GitHub Actions commits made with GITHUB_TOKEN don't start a new push workflow.
   # Workflow completion events do, so refresh from the latest main after intake.
   workflow_run:
@@ -99,7 +100,6 @@ jobs:
     if: >-
       github.event_name == 'push' ||
       github.event_name == 'workflow_run' ||
-      github.event_name == 'schedule' ||
       github.event_name == 'workflow_dispatch'
     needs: validate
     runs-on: ubuntu-latest
@@ -107,7 +107,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          # One tip commit; full main ancestry is restored without historical
+          # blob bodies by the next step (same pattern as library-import).
+          fetch-depth: 1
+      - name: Restore main ancestry for publish rebases
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -c protocol.version=2 fetch --unshallow --filter=blob:none --no-tags origin main
+          if [ "$(git rev-parse --is-shallow-repository)" != false ]; then
+            echo 'Status dashboard requires full main ancestry; refusing shallow history.' >&2
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
