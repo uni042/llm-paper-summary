@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨は音声・動画を処理するOmniLLMで、クエリ関連性を各モダリティ独立に見積もり、音声と動画の情報密度の違いを尊重する学習不要トークン圧縮OmniFocusを提案。Qwen2.5-Omniの4ベンチマークで保持率25%でも高い性能を維持。多モーダル推論時の入力トークン削減に直接関連。",
   "semantic_scholar_id": "67f7e36c119d082eeb17ac3ca4003ab644ddc9ab",
   "source_url": "https://arxiv.org/abs/2607.03050",
-  "status": "ready",
+  "status": "superseded",
   "title": "OmniFocus: Query-Guided Modality-Balanced Token Compression for Omni-Modal Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T08:29:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.03050-omnifocus-query-guided-modality-balanced-token-compression-for-omni-moda.md",
+  "represented_canonical_id": "arXiv:2607.03050",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

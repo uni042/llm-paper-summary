@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨を確認。複数エージェントが生成した推論時KVキャッシュを統合する際の連結順序依存を、キーの平均ノルムに基づくCanonicalMergeで決定的順序へ変換し、内容アドレス付き断片集合の和集合によって重複配信を吸収するCvRDT状態として扱う。Qwen3-1.7B/4BのKV状態で順序入替後のバイト一致を確認し、HotpotQA等で品質を評価。分散エージェント推論の実行時キャッシュ統合・重複排除に直接寄与するためaccept。ただしwall-clock推論高速化の実測が一次要旨にあるとは扱わない。",
   "semantic_scholar_id": "0af67064afccf99a3180167e230c858d9291f1df",
   "source_url": "https://arxiv.org/abs/2607.01308",
-  "status": "ready",
+  "status": "superseded",
   "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T08:29:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01308-cache-merging-as-a-convergent-replicated-state-for-multi-agent-latent-re.md",
+  "represented_canonical_id": "arXiv:2607.01308",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

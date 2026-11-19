@@ -35,10 +35,15 @@
   "selection_reason": "Ascend NPU上でFlashAttentionのQK積とPV積をHIF4 4bit Cube GEMMへ落とし、softmax状態はFP16で維持するHiFA4。RoPE後のQ/K静的スケーリングとPV量子化に整合した正規化を組み合わせ、Qwen3-8B等で低精度による正解率低下を抑える。LLM推論注意カーネルの直接的な最適化。",
   "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
   "source_url": "https://arxiv.org/abs/2607.04302",
-  "status": "ready",
+  "status": "superseded",
   "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T08:29:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inf.md",
+  "represented_canonical_id": "arXiv:2607.04302",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

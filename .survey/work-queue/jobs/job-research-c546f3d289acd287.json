@@ -35,10 +35,15 @@
   "selection_reason": "モバイルLLM推論のCPU/GPU/NPUを5種のフレームワーク・3種のbackendで計測し、PowerBenchでスループットとbackend別エネルギーを分析。NPUはprefillに強くCPUはmemory-bound decodeで優位、NPUフレームワーク間に最大10倍の性能差を報告。推論実装とエネルギー最適化に直接関連。",
   "semantic_scholar_id": "70ea82273ae258725936011cf4ed651f71ed7b5b",
   "source_url": "https://arxiv.org/abs/2607.05475",
-  "status": "ready",
+  "status": "superseded",
   "title": "Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T08:29:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-.md",
+  "represented_canonical_id": "arXiv:2607.05475",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
