@@ -35,10 +35,15 @@
   "selection_reason": "軽量索引つき垂直・斜線疎注意VSPrefill。プリフィルの二次計算量に対し、注意分布の垂直列と斜線の構造パターンを、RoPEで拡張したKV表現から文脈配慮の重要度を予測する小型索引モジュールで捉え、線形複雑度で疎マスクを作る。層ごとに疎性予算を適応配分する推論機構そのもの。",
   "semantic_scholar_id": "9ec50e3ccb89283ab553710e2f767cab154ab93d",
   "source_url": "https://arxiv.org/abs/2603.04460",
-  "status": "ready",
+  "status": "superseded",
   "title": "VSPrefill: Vertical-Slash Sparse Attention with Lightweight Indexing for Long-Context Prefilling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T14:50:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2603.04460-vsprefill-vertical-slash-sparse-attention-with-lightweight-indexing-for-.md",
+  "represented_canonical_id": "arXiv:2603.04460",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

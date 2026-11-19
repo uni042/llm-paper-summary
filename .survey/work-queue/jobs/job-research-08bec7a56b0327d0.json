@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデル向け最長安定接頭辞スケジューラ。散発的な受理がKVキャッシュを断片化し局所性を壊す問題に対し、単調な接頭辞吸収に基づく学習不要・モデル非依存の推論パラダイムで、各デノイズステップで安定した連続接頭辞を同定する。拡散デコード機構そのもの。",
   "semantic_scholar_id": "3eb02a5ac1a87f0692e15333c8b1b1b6c69392bd",
   "source_url": "https://arxiv.org/abs/2603.05454",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Scattered Acceptance: Fast and Coherent Inference for DLMs via Longest Stable Prefixes",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T14:50:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.05454-beyond-scattered-acceptance-fast-and-coherent-inference-for-dlms-via-lon.md",
+  "represented_canonical_id": "arXiv:2603.05454",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

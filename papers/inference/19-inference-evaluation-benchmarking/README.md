@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（130本）
+## 自動生成の論文一覧（132本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -306,6 +306,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長くすることで最頻回答が正解になる問題は増えるが、その正解周辺に個々の標本が集中しなくなるため、単発回答の成功率が下がり得る。
 
+- **2026-02 · [Architecture-Aware LLM Inference Optimization on AMD Instinct GPUs: A Comprehensive Benchmark and Deployment Study](2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-com.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MI325X 8台で2350億から1兆パラメータの4モデルを実測し、注意機構ごとにブロック大きさ・カーネル・KV方針・並列度を変える必要があること、テキストでは密モデル毎秒15,944トークンと活性37億の専門家混合モデル毎秒15,343トークンがほぼ並ぶこと、全モデルが同時約500件で帯域律速に飽和することを示した。
+
 - **2026-01 · [Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct](2026-2601.14277-which-quantization-should-i-use-a-unified-evaluation-of-llama-cpp-quanti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同じ80億パラメータモデルを半精度から13形式へ変換し、五つの下流課題と困惑度と速度を統一条件で比べ、5ビットと調整のよい4ビットが容量を約3分の2減らしても品質をほぼ保ち、最も強い3ビットだけが推論課題で大きく崩れることを示した実務指針。
@@ -321,6 +325,10 @@
 - **2026-01 · [FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning](2026-2601.19001-frost-filtering-reasoning-outliers-with-attention-for-efficient-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意関数をSoftmax1へ替えて寄与の小さい推論文を生成されにくくする微調整方式で、トークンを約7割削りながら正解率を平均で改善した。
+
+- **2025-12 · [Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models](2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
 
 ### 2年前（2024-12〜2025-11）
 
@@ -357,7 +365,7 @@
   LatentMASはこの境界を変え、エージェントが最終層の隠れ状態を連続表現のまま自己回帰生成し、層ごとの鍵・値キャッシュ（KVキャッシュ）を共有作業メモリとして次のエージェントへ渡す。著者は既存モデルを追加学習しない訓練不要方式として設計し、入力埋め込みと最終層隠れ状態の分布の違いを補正する線形写像を組み込む。
 
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  

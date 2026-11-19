@@ -35,10 +35,15 @@
   "selection_reason": "注意駆動の自己圧縮ADSC。視覚トークンをLLMの全層で処理する費用に対し、重要でないトークンを探すのでなくLLM自体を圧縮の案内役とし、深い層が視覚からテキストへ情報を移す性質を使って注意機構だけで段階的に視覚トークンを減らす。FlashAttentionと両立する点も固有。推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "d9c75a3516464a30d87691f77bdb83523927423b",
   "source_url": "https://arxiv.org/abs/2602.12618",
-  "status": "ready",
+  "status": "superseded",
   "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
   "type": "research",
   "venue": "BigData Congress [Services Society]",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T14:50:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2602.12618-vision-token-reduction-via-attention-driven-self-compression-for-efficie.md",
+  "represented_canonical_id": "arXiv:2602.12618",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

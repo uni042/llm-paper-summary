@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（167本）
+## 自動生成の論文一覧（168本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -362,6 +362,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerのsoftmax注意は、長さnの系列に対してトークン対をほぼ全て評価するため、長文では演算量とメモリアクセスが二次的に増える。GPT-2 124MのPG-19では、全注意を微調整した場合のPPL31.4に対しFocusは30.3で改善する。
 
+- **2026-03 · [VSPrefill: Vertical-Slash Sparse Attention with Lightweight Indexing for Long-Context Prefilling](2026-2603.04460-vsprefill-vertical-slash-sparse-attention-with-lightweight-indexing-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の縦線と斜線の構造を使い、キーとバリューから疎パターンを線形費用で予測する小さな索引器を本体凍結の蒸留で学習し、文脈長十二万八千で全注意の精度の九十八点三五パーセントを保ちながら平均四点九五倍高速化した。
+
 - **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
   実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：0  
   トークン Sparse 注意機構は、長文脈のプリフィルで注意計算の対象トークンを減らすが、元の系列からトークンを永久に捨てない方式である。LLaMA-3.1-8B-InstructのRULERでは、FlashAttentionの128K注意処理を基準とする速度が1.00倍から1.36倍となり、平均正答率は87.01%から87.02%とほぼ不変だった。
@@ -570,13 +574,13 @@
   実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：201  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
+- **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
+  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：80  
+  Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
+
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
   実装：✓ ・ リポジトリ内被引用：80  
   RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
-
-- **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
-  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：79  
-  Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
   実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：53  
