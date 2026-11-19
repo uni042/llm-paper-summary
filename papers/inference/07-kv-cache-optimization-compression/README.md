@@ -1457,6 +1457,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈LLMでは、過去トークンのKeyとValueをKVキャッシュに保存することで自己回帰生成時の再計算を避ける。単一NVIDIA A6000上でArkvaleと比較したエンドツーエンド遅延の最大高速化は、長入力・短出力1.9倍、短入力・長出力2.9倍、長入力・長出力4.7倍である。
 
+- **2025-10 · [Improving Model Representation and Reducing KV Cache via Skip Connections with First Value Heads](2025-2510.16807-improving-model-representation-and-reducing-kv-cache-via-skip-connection.md)**  
+  実装：[✓](https://github.com/Zhoutong-Wu/SkipV1Former) ・ リポジトリ内被引用：2  
+  このKVキャッシュは系列長、層数、ヘッド数、同時要求数に比例して増えるため、長文脈推論ではモデル重みと並ぶGPUメモリの制約になる。反対に、残差経路を増やして浅い情報を深い層へ伝える方式は、品質を改善してもKVキャッシュを減らさないことが多い。
+
 - **2025-10 · [GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness](2025-2510.00536-gui-kv-efficient-gui-agents-via-kv-cache-with-spatio-temporal-awareness.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/GUI-KV) ・ リポジトリ内被引用：2  
   論文はUI-TARS-1.5-7Bについて、5画面・最大50段階の条件でGPUメモリ消費が80GBを超え得ると説明し、単なる計算高速化ではなく、履歴を保持するためのメモリ節約を主課題とする。GUI-KVは、自然画像用の圧縮方式をそのまま転用せず、画面固有の二種類の冗長性を利用する。
@@ -1496,10 +1500,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-11 · [Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach](2025-2511.16786-revisiting-multimodal-kv-cache-compression-a-frequency-domain-guided-out.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   FlashCacheは、画像・動画を扱う視覚言語モデルの長文入力で膨らむ鍵・値キャッシュ（KVキャッシュ）を、注意スコアを再計算せずに削減する方式である。著者は単一NVIDIA H200 141GBで、KV保持率20%の長文復号において最大1.69倍の速度を報告する。
-
-- **2025-10 · [Improving Model Representation and Reducing KV Cache via Skip Connections with First Value Heads](2025-2510.16807-improving-model-representation-and-reducing-kv-cache-via-skip-connection.md)**  
-  実装：[✓](https://github.com/Zhoutong-Wu/SkipV1Former) ・ リポジトリ内被引用：1  
-  このKVキャッシュは系列長、層数、ヘッド数、同時要求数に比例して増えるため、長文脈推論ではモデル重みと並ぶGPUメモリの制約になる。反対に、残差経路を増やして浅い情報を深い層へ伝える方式は、品質を改善してもKVキャッシュを減らさないことが多い。
 
 - **2025-10 · [Breadcrumbs Reasoning: Memory-Efficient Reasoning with Compression Beacons](2025-2510.13797-breadcrumbs-reasoning-memory-efficient-reasoning-with-compression-beacon.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1648,11 +1648,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   文脈が長くなるほどKVキャッシュは大きくなり、GPUメモリへ収まらない場合にはCPUメモリへの退避と転送が必要になる。Llama-3.1-8Bの128K文脈を用いたInfiniteBenchでは、過去トークンの1/10だけを選択する条件で平均スコア46.80を報告し、比較方式に対する改善は+4.60%である。
 
 - **2024-05 · [You Only Cache Once: Decoder-Decoder Architectures for Language Models](2024-2405.05254-yoco.md)**  
-  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：61  
+  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：62  
   自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。
 
 - **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：61  
+  実装：✓ ・ リポジトリ内被引用：62  
   MQA/GQAのKV共有を層方向へ拡張し、隣接層でKV活性を再利用してKVキャッシュを追加で約2倍削減する注意アーキテクチャ。
 
 - **2024-05 · [PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference](2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md)**  
@@ -1842,11 +1842,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：714  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：715  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：672  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：673  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
