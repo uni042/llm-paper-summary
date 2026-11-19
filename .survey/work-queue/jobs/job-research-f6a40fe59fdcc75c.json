@@ -35,10 +35,15 @@
   "selection_reason": "SSM向け事前計算文脈注入PRECOG。固定サイズで位置に依らない循環隠れ状態が読んだ内容の完全な要約である性質を使い、文書コーパスをオフラインでSSM状態として符号化し、クエリ時に最適な状態を直接注入してプリフィルを定数時間化する。エッジ推論の文脈処理機構そのもの。",
   "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
   "source_url": "https://arxiv.org/abs/2608.02560",
-  "status": "ready",
+  "status": "superseded",
   "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:27:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.02560-structured-memory-for-edge-language-models-persistent-context-and-corpus.md",
+  "represented_canonical_id": "arXiv:2608.02560",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

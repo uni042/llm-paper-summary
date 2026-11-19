@@ -35,10 +35,15 @@
   "selection_reason": "LLM提供向け堅牢な意味キャッシュLaCache。意味的に似たクエリへの応答再利用が、敵対的クエリ注入によるキャッシュ汚染に弱い問題に対し、完全性検査をクエリ側から応答側へ移し、攻撃への証明可能な防御を与える再設計。推論基盤のキャッシュ機構そのもの。",
   "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
   "source_url": "https://arxiv.org/abs/2608.01718",
-  "status": "ready",
+  "status": "superseded",
   "title": "LaCache: Robust Semantic Caching for LLM Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:27:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.01718-lacache-robust-semantic-caching-for-llm-serving.md",
+  "represented_canonical_id": "arXiv:2608.01718",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨は音声と動画の注意スコアを一括ランキングすると音声に予算が偏る問題に対し、モダリティ別予算配分後に各内部でトークンを選ぶMacerを提案。Qwen2.5-Omni-7Bの25%保持で元性能98.7%を維持し、OmniZipの45%保持と同等の品質をより低FLOPsで達成。マルチモーダル推論入力圧縮に直接該当。",
   "semantic_scholar_id": "fb4863fd660b1bda468a813d006a2a2119c6a95b",
   "source_url": "https://arxiv.org/abs/2608.01665",
-  "status": "ready",
+  "status": "superseded",
   "title": "Allocation Before Ranking: Decoupled Token Compression for OmniLLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T21:27:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.01665-allocation-before-ranking-decoupled-token-compression-for-omnillms.md",
+  "represented_canonical_id": "arXiv:2608.01665",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（347本）
+## 自動生成の論文一覧（348本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -547,6 +547,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-08 · [LibraSpec: Dynamic Diffusion-Based Speculative Decoding via Marginal-Gain-Driven Optimization](2026-2608.08721-libraspec-dynamic-diffusion-based-speculative-decoding-via-marginal-gain.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の動的投機長制御は「何トークン受理されそうか」を予測して長さを決めることが多い。LibraSpecはこの費用構造の違いに着目し、期待受理長だけでなく検証時間を分母に含む期待高速化率を最大化する。
+
+- **2026-08 · [LaCache: Robust Semantic Caching for LLM Serving](2026-2608.01718-lacache-robust-semantic-caching-for-llm-serving.md)**  
+  実装：[✓](https://github.com/JACKPURCELL/LaCache) ・ リポジトリ内被引用：0  
+  問い合わせの近さだけでなく、その場で生成した応答先頭20トークンと保存済み応答の先頭との近さも照合する二段階の意味キャッシュで、衝突攻撃の命中率をほぼゼロにしながら良性の再利用の9割前後を保った。
 
 - **2026-08 · [Is Multimodal Speculative Decoding Ready for Diffusion-Based Parallel Drafting? A Survey and Empirical Diagnosis](2026-2608.20743-is-multimodal-speculative-decoding-ready-for-diffusion-based-parallel-dr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
