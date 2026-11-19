@@ -35,10 +35,15 @@
   "selection_reason": "モバイル端末上のRAG推論で、類似クエリとQKVキャッシュを段階的に照合する階層キャッシュ、将来の質問予測による先行充填、負荷に応じた構成調整を組み合わせる。著者は市販スマートフォン、5データセット、2種類のLLMアーキテクチャで、最良比較方式に対しエンドツーエンド遅延を最大63.5%削減し、回答品質は同程度と報告。オンデバイスLLMのKV再利用と推論効率に直接関係する。",
   "semantic_scholar_id": "20d68aed5f4814c1b39df4481d580ba89ed4d733",
   "source_url": "https://arxiv.org/abs/2601.11553",
-  "status": "ready",
+  "status": "superseded",
   "title": "PerCache: Predictive Hierarchical Cache for RAG Applications on Mobile Devices",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T14:34:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2601.11553-percache-predictive-hierarchical-cache-for-rag-applications-on-mobile-de.md",
+  "represented_canonical_id": "arXiv:2601.11553",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

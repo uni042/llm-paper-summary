@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（85本）
+## 自動生成の論文一覧（86本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-05 · [An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)](2024-2403.11805-llm-as-a-system-service-on-mobile-devices.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   アプリを切り替えるたびに履歴全体を再計算するか、ディスクへ退避したKVを読み戻すと、次の生成開始までの待ち時間が長くなる。正式出版版の実機評価では、一律8ビット圧縮を伴うチャンク退避方式に対し、コンテキスト切替遅延を最大20倍、平均9.7倍削減した。
 
 - **2026-04 · [MemExplorer: Navigating the Heterogeneous Memory Design Space for Agentic Inference NPUs](2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md)**  
@@ -202,6 +202,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   端末側の計算能力・電池・通信帯域には制約があるため、端末側モデルを量子化して計算負荷を減らすことが有効である。実機はJetson AGX Orin 64GBとRTX 3090を2枚備えたサーバを無線LANで接続した構成で、遅延制約が強いと高周波数、エネルギー制約が強いと低周波数が有利になることを確認する。
 
+- **2025-12 · [PerCache: Predictive Hierarchical Cache for RAG Applications on Mobile Devices](2025-2601.11553-percache-predictive-hierarchical-cache-for-rag-applications-on-mobile-de.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  質問と回答の組と知識断片の中間テンソルを2層に貯め、空き時間に将来の質問を予測して先回りで満たす携帯向け階層キャッシュで、PerLTQAの平均遅延を最も強い比較対象の64.94秒から23.73秒へ63.5%削減した。
+
 - **2025-12 · [LOIP: Collaborative LLM Inference with Offloading-based Pipeline Parallelism on Edge Devices](2025-2512.21835-loip-collaborative-llm-inference-with-offloading-based-pipeline-parallel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LOIPは、端末ごとのメモリ容量・演算性能が異なる複数のNVIDIA Jetsonを連携させ、モデルのパラメータを量子化・枝刈りせずに推論するための実行基盤である。
@@ -228,6 +232,10 @@
   実装：[✓](https://github.com/alibaba/MNN) ・ リポジトリ内被引用：7  
   DRAMとFlashの階層利用、役割別量子化、CPU/GPU別データ配置と負荷分散を統合し、スマートフォン上のLLM推論を高速・省メモリ化する。
 
+- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  端末内で一つの大規模言語モデルを複数アプリから共用する場合、画面操作エージェント、チャット、バックグラウンド要約は、それぞれ異なる遅延目標を要求する。ElastiLMは、この二つの調整軸を同じ要求制御に統合する。これは生成速度が10.45%増えたという意味ではなく、指定された遅延制約を守った要求の正答率の絶対差である。
+
 - **2025-08 · [ShadowNPU: System and Algorithm Co-design for NPU-Centric On-Device LLM Inference](2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   NPUで重要トークン位置だけを近似推定し、高精度疎注意をCPU/GPUへ限定してパイプライン化することで、モバイルLLMの注意フォールバックを削減する。
@@ -235,10 +243,6 @@
 - **2025-07 · [DSSD: Efficient Edge-Device LLM Deployment and Collaborative Inference via Distributed Split Speculative Decoding](2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md)**  
   実装：[✓](https://github.com/JasonNing96/DSSD-Efficient-Edge-Computing) ・ リポジトリ内被引用：6  
   端末で大規模言語モデルを動かすにはメモリ、演算能力、電力が不足しやすい。基地局やエッジサーバに大型モデルを置けば演算資源は確保できるが、ネットワーク往復時間と帯域が生成遅延へ加わる。ただしモデル対やドラフト長によっては通常の大型モデル推論より遅い条件があり、通信を減らせば無条件に高速化するわけではない。
-
-- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  端末内で一つの大規模言語モデルを複数アプリから共用する場合、画面操作エージェント、チャット、バックグラウンド要約は、それぞれ異なる遅延目標を要求する。ElastiLMは、この二つの調整軸を同じ要求制御に統合する。これは生成速度が10.45%増えたという意味ではなく、指定された遅延制約を守った要求の正答率の絶対差である。
 
 - **2025-10 · [Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding](2025-2510.11331-heterogeneous-edge-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -307,7 +311,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：64  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  

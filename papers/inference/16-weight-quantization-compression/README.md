@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（178本）
+## 自動生成の論文一覧（179本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -323,6 +323,10 @@
 - **2026-01 · [Post-Training Probability Manifold Correction via Structured SVD Pruning and Self-Referential Distillation](2026-2602.00372-post-training-probability-manifold-correction-via-structured-svd-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Sparse Knowledge Distillation（SparseKD）は、すでに学習を終えた自己回帰言語モデルのMLP重みを構造的に低ランク化し、その変換によって崩れた出力確率分布を、元モデル自身を教師とする蒸留で修復する手法である。
+
+- **2026-01 · [Enhancing Post-Training Quantization via Future Activation Awareness](2026-2602.02538-enhancing-post-training-quantization-via-future-activation-awareness.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  後続三層の活性を平均した予告信号を現在の活性へ重み〇・八五で融合して量子化の倍率を作ることで、三ビット量子化で八十億級モデルの困惑度を一一・六九から一一・五一へ下げ、五億級モデルでは二九・一三から二五・九六へ大きく改善し、校正データ量を変えてもばらつきが約三分の一になった。
 
 - **2026-01 · [D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs](2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md)**  
   実装：[✓](https://github.com/XIANGLONGYAN/D2Quant) ・ リポジトリ内被引用：0  
@@ -626,13 +630,13 @@
 
 ### 4年前（2022-12〜2023-11）
 
+- **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：299  
+  活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
+
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
   実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：298  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
-
-- **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：297  
-  活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
   実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：242  
@@ -713,7 +717,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：628  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：629  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
@@ -725,7 +729,7 @@
   特徴次元の外れ値を16-bitへ分離し、残る99.9%以上をベクトル単位INT8で計算する。175B級モデルの品質とほぼ半減の重み容量を両立する一方、小さい行列では量子化費用が速度改善を打ち消す。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：195  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：196  
   大規模言語モデルの量子化では、重みを16ビットから8ビットへ減らすだけでメモリ転送量は小さくなる。INT8では追加の学習や校正なしでBERT・GPT系の品質をほぼ保ち、NVIDIA A100上のBERT-baseで最大5.19倍、GPT-3 350Mで4.16倍の速度向上を示した。
 
 ### 6年前（2020-12〜2021-11）

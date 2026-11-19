@@ -437,7 +437,7 @@
   近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
 
 - **2025-02 · [Tactic: Adaptive Sparse Attention with Clustering and Distribution Fitting for Long-Context LLMs](2025-2502.12216-tactic-adaptive-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   既存の疎注意は重要なトークンだけを読むが、各注意ヘッドに同数のトークンを割り当てると、注意が集中するヘッドでは読み過ぎ、広く分散するヘッドでは読み足りない。
 
 - **2025-07 · [RefreshKV: Updating Small KV Cache During Long-form Generation](2025-a2b748353aae-refreshkv-updating-small-kv-cache-during-long-form-generation.md)**  
@@ -516,6 +516,10 @@
   実装：[✓](https://github.com/jacky-leng/length-generalizable-sparse-attention) ・ リポジトリ内被引用：1  
   長いコンテキストを扱うTransformerは、過去トークンの全KVを参照できる一方、文脈長の増加とともに注意計算・メモリ参照の費用が大きくなる。Sliding Window 注意機構（SWA）は局所窓へ制限することで負荷を抑えるが、窓の外にある事実を直接検索できない。
 
+- **2025-10 · [DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning](2025-2510.09883-delta-dynamic-layer-aware-token-attention-for-efficient-long-context-rea.md)**  
+  実装：[✓](https://github.com/hoenza/DELTA) ・ リポジトリ内被引用：1  
+  推論特化のLLMは数学・科学問題で長いChain-of-Thoughtを生成する。古いKVを削除する方式は容量と計算の両方を減らせるが、思考過程の後半で以前の中間結論が再び重要になったとき、削除済みのKVを取り戻せない。DS-Qwen-1.5Bの合成18kデコードでは403秒から261秒へ短縮し、スループット2921から4517 トークン/sへ増加する。
+
 - **2025-10 · [Alleviating Forgetfulness of Linear Attention by Hybrid Sparse Attention and Contextualized Learnable Token Eviction](2025-2510.20787-alleviating-forgetfulness-of-linear-attention-by-hybrid-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   線形注意（linear 注意機構）やGated DeltaNetのような再帰的トークン混合器は、過去の全履歴を固定サイズの状態へ畳み込むことで、復号1ステップあたりの時間と記憶量を入力長に依存させない。
@@ -540,10 +544,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意やRNN、SSMは履歴を固定サイズの状態へ圧縮するため、長い履歴を一定のメモリで処理できる一方、任意の過去トークンを厳密に検索する能力に制約が生じる。
 
-- **2025-10 · [DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning](2025-2510.09883-delta-dynamic-layer-aware-token-attention-for-efficient-long-context-rea.md)**  
-  実装：[✓](https://github.com/hoenza/DELTA) ・ リポジトリ内被引用：0  
-  推論特化のLLMは数学・科学問題で長いChain-of-Thoughtを生成する。古いKVを削除する方式は容量と計算の両方を減らせるが、思考過程の後半で以前の中間結論が再び重要になったとき、削除済みのKVを取り戻せない。DS-Qwen-1.5Bの合成18kデコードでは403秒から261秒へ短縮し、スループット2921から4517 トークン/sへ増加する。
-
 - **2025-10 · [Adamas: Hadamard Sparse Attention for Efficient Long-Context Inference](2025-2510.18413-adamas-hadamard-sparse-attention-for-efficient-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Adamasは、長文脈LLMの復号時に、過去のすべてのKey/Value（KV）を読み込んで正確な注意を計算する代わりに、現在のQueryに関連する過去トークンだけを選択する疎注意方式である。
@@ -563,20 +563,20 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：302  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：303  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
   実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：201  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
+- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：80  
+  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
+
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：79  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
-
-- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：79  
-  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
   実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：53  
@@ -633,7 +633,7 @@
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
-  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：44  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：45  
   目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  

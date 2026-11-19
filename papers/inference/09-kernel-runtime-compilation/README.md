@@ -648,6 +648,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
 
+- **2025-05 · [Low-Cost FlashAttention with Fused Exponential and Multiplication Hardware Operators](2025-2505.14314-low-cost-flashattention-with-fused-exponential-and-multiplication-hardwa.md)**  
+  実装：[✓](https://github.com/ic-lab-duth/Fused-ExpMul) ・ リポジトリ内被引用：1  
+  本論文は、FlashAttention-2の計算アルゴリズムを変えるのではなく、オンラインsoftmaxに必要な指数関数とValueベクトル乗算をASIC上の一つの演算器へまとめるハードウェア最適化を提案する。
+
 - **2025-05 · [Highly Efficient and Effective LLMs with Multi-Boolean Architectures](2025-2505.22811-highly-efficient-and-effective-llms-with-multi-boolean-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MBOK（Multiple Boolean Kernels）の基本表現は、通常の実数重み行列を複数の符号行列とチャネル別スケールの和で近似するものである。各カーネルの重みは1-bitで、入力側・出力側の実数スケールを別途持つ。元のFP重みから順に近似成分を抽出し、残差へ同じ分解を繰り返すため、単一の符号行列より表現力が高い。
@@ -744,10 +748,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/RochelleChoenni/M-Wanda) ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の重みを一部ゼロにする枝刈り（枝刈り）は、保存する非ゼロ重みを減らすための圧縮方法である。50%の非構造化疎化率で、Llama3-8BのFlores平均パープレキシティ（perplexity、低いほど次トークン予測が良好）はWandaの19.59からM-Wandaの18.57へ下がった。
 
-- **2025-05 · [Low-Cost FlashAttention with Fused Exponential and Multiplication Hardware Operators](2025-2505.14314-low-cost-flashattention-with-fused-exponential-and-multiplication-hardwa.md)**  
-  実装：[✓](https://github.com/ic-lab-duth/Fused-ExpMul) ・ リポジトリ内被引用：0  
-  本論文は、FlashAttention-2の計算アルゴリズムを変えるのではなく、オンラインsoftmaxに必要な指数関数とValueベクトル乗算をASIC上の一つの演算器へまとめるハードウェア最適化を提案する。
-
 - **2025-05 · [HybridServe: Efficient Serving of Large AI Models with Confidence-Based Cascade Routing](2025-2505.12566-hybridserve-efficient-serving-of-large-ai-models-with-confidence-based-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小型モデルへ置き換える蒸留・量子化は電力を削減できるが、難しい要求で品質を落としやすい。論文は最大19.8倍の省電力と記載するが、丸め済み表の値から計算すると115/6=19.17倍である。
@@ -790,6 +790,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：25  
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
+- **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
+  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：22  
+  一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
+
 - **2024-06 · [FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion](2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md)**  
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：22  
   テンソル並列では、行列の列や行をGPUごとに分割して計算する。各GPUが自分の部分を処理しても、次の行列積が必要とする入力を集める全収集（AllGather）、あるいは計算結果を加算して分散する縮約散布（ReduceScatter）が必要になる。通信の完了を待ってから次の行列積を始めると、GPUが計算できない待機時間が生じる。
@@ -797,10 +801,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
   実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：22  
   Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
-
-- **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：21  
-  一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
   実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：21  

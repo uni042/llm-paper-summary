@@ -1632,7 +1632,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意ヘッドごとの集中度に応じて同一層内のKV保持予算を再配分し、既存Top-k圧縮の総容量を変えずに追い出し損失を下げる手法。
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
-  実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：149  
+  実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：150  
   デコード時には過去のKVを読み出すため遅延も長くなり、プリフィルでは注意計算が系列長の二乗に増える。DuoAttentionは、全ての注意ヘッドが遠距離の情報を必要とするわけではないという観測に基づき、ヘッドごとに全履歴を残すか、固定長の履歴だけ残すかを切り替える方式である。
 
 - **2024-03 · [GEAR: An Efficient KV Cache Compression Recipe for Near-Lossless Generative Inference of LLM](2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md)**  
@@ -1723,6 +1723,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：44  
   既存のKV圧縮は、量子化で各要素のビット数を減らす、注意重要度の低いトークンを削除する、複数トークンを一つへ統合する、という三系統に分けられる。
 
+- **2024-02 · [ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition](2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md)**  
+  実装：[✓](https://github.com/microsoft/chunk-attention) ・ リポジトリ内被引用：43  
+  ChunkAttentionは、同じ言語モデルを複数の利用者・アプリケーションへ提供する際に、要求の先頭で共有されるシステム指示や少数例を計算と記憶の両面で再利用する推論用注意機構である。
+
 - **2024-08 · [Eigen Attention: Attention in Low-Rank Space for KV Cache Compression](2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md)**  
   実装：[✓](https://github.com/UtkarshSaxena1/EigenAttn) ・ リポジトリ内被引用：42  
   長い文脈を処理する言語モデルでは、生成時に過去のトークンの鍵と値を保存するKVキャッシュが、モデル重みと同程度かそれ以上のメモリを占めることがある。Eigen 注意機構は、保存するトークン数や一要素のビット幅を減らすのではなく、各トークンの鍵・値ベクトルの特徴次元を低ランク空間へ縮める。
@@ -1734,10 +1738,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-02 · [WKVQuant: Quantizing Weight and Key/Value Cache for Large Language Models Gains More](2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：42  
   WKVQuantは、大規模言語モデルの推論時に使うメモリを、モデル重み、鍵・値キャッシュ、一時活性化の三種類に分け、容量を長く占有する重みと鍵・値キャッシュだけを低ビット化する事後量子化（post-学習 量子化; PTQ）方式である。重みのみの量子化は比較的精度を維持しやすいが、長文脈・大バッチで増える鍵・値キャッシュを圧縮しない。
-
-- **2024-02 · [ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition](2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md)**  
-  実装：[✓](https://github.com/microsoft/chunk-attention) ・ リポジトリ内被引用：42  
-  ChunkAttentionは、同じ言語モデルを複数の利用者・アプリケーションへ提供する際に、要求の先頭で共有されるシステム指示や少数例を計算と記憶の両面で再利用する推論用注意機構である。
 
 - **2024-03 · [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md)**  
   実装：✓ ・ リポジトリ内被引用：40  
@@ -1816,7 +1816,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Locretは、長文脈LLMの推論で大きくなるキー・バリューキャッシュ（KVキャッシュ）を、必要な情報だけ残して逐次削除する方式である。原著は、Phi-3-mini-128Kで最大20倍超、Llama-3.1-8B-instructで8倍超のKV圧縮を報告する。
 
 - **2024-09 · [Small Language Models: Survey, Measurements, and Insights](2024-2409.15790-small-language-models-survey-measurements-and-insights.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/SLM_Survey) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/UbiquitousLearning/SLM_Survey) ・ リポジトリ内被引用：12  
   推論を高速化する新しいアルゴリズムを提案する論文ではない。同程度のパラメータ数でもQwen2-0.5Bの初回トークン時間はQwen1.5-0.5Bの1.46倍であり、Qwen1.5-0.5Bはパラメータが25.4%多いにもかかわらずJetson上では31.9%速い。
 
 - **2024-09 · [Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU](2024-2409.09086-inf-mllm-efficient-streaming-inference.md)**  
@@ -1866,7 +1866,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：724  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：725  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨は量子化行列積後のsoftmaxが帯域・指数演算の律速になる問題に対し、HiF8とブロック別精度再スケーリングを用いるBAPSを提案。行列演算出力を8ビットへ抑え帯域を半減し、EXP2の面積も削減。LLM推論向け注意カーネル・ハードウェア協調設計に直接関連。",
   "semantic_scholar_id": "120a22cf3c0cf76a157b8bac8575100c1137df4c",
   "source_url": "https://arxiv.org/abs/2602.02071",
-  "status": "ready",
+  "status": "superseded",
   "title": "BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T14:34:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-bl.md",
+  "represented_canonical_id": "arXiv:2602.02071",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

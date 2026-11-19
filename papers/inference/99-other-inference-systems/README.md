@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（984本）
+## 自動生成の論文一覧（987本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1934,6 +1934,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   そこで本論文は、モデルの確率分布に「適切な時点で終了する」兆候がすでに含まれているのかを調べ、その情報を取り出す生成方式と学習方式を設計する。
 
+- **2026-02 · [BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling](2026-2602.02071-baps-a-fine-grained-low-precision-scheme-for-softmax-in-attention-via-bl.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  近似した行最大値での引き算を専用コア側へ寄せて注意スコアの差を八ビットのまま転送し、外れたブロックだけ高精度でやり直すことで、長文脈の単語抽出で高精度構成の六十四・八パーセントに対し六十四・〇パーセントを保ち、単純な八ビット化の五十四・〇パーセントへの崩れを防いだ。
+
 - **2026-02 · [AttnPO: Attention-Guided Process Supervision for Efficient Reasoning](2026-2602.09953-attnpo-attention-guided-process-supervision-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   AttnPO（注意機構-guided Policy Optimization）は、モデルが最終回答を生成するときに過去の思考のどの部分へ注意しているかを、思考段階ごとの重要性の代理指標として使う。
@@ -1977,6 +1981,10 @@
 - **2026-01 · [SimMerge: Learning to Select Merge Operators from Similarity Signals](2026-2601.09473-simmerge-learning-to-select-merge-operators-from-similarity-signals.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の重みを一つのモデルへ統合するモデル結合（モデル merging）は、複数モデルを同時常駐させずに能力をまとめる方法だが、どの結合演算子を使うか、どのチェックポイントを選ぶか、どの順番で結合するかによって結果が大きく変わる。
+
+- **2026-01 · [S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference](2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キーとクエリの射影を疎な自動符号化器で離散特徴へ変えて中央処理装置上に転置索引を作りキャッシュを捨てることで画像処理装置のメモリを一定に保ち、統一評価で八十億級モデルの平均得点二四・八七、全文脈二五・〇一に対する保持率九九・四パーセントを語彙照合との融合で達成した。
 
 - **2026-01 · [RPIQ: Residual-Projected Multi-Collaboration Closed-Loop and Single Instance Quantization for Visually Impaired Assistance](2026-2601.02888-rpiq-residual-projected-multi-collaboration-closed-loop-and-single-insta.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2045,6 +2053,10 @@
 - **2026-01 · [Fast Forward: Accelerating LLM Prefill with Predictive FFN Sparsity](2026-2602.00397-fast-forward-accelerating-llm-prefill-with-predictive-ffn-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FastForwardは、大規模言語モデル（Large Language モデル; LLM）の入力一括処理（プリフィル）におけるフィードフォワード網（Feed-順伝播 Network; FFN）の演算を、入力文脈に応じてブロック単位で省く方式である。
+
+- **2026-01 · [FAQ: Mitigating Quantization Error via Regenerating Calibration Data with Family-Aware Quantization](2026-2601.11200-faq-mitigating-quantization-error-via-regenerating-calibration-data-with.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同系統の大モデルに較正文を書き直させ、競合選択と正規化で整えた較正データで通常の量子化を行うことで、八十億級モデルで全精度との精度差を最大二八・五パーセント縮めたと報告した。
 
 - **2026-01 · [Elastic Spectral State Space Models for Train-Once Budgeted Inference](2026-2601.22488-elastic-spectral-state-space-models-for-train-once-budgeted-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2388,6 +2400,10 @@
   実装：[✓](https://github.com/intcomp/attention-bias) ・ リポジトリ内被引用：2  
   多くの視覚トークンが冗長なので、言語モデルの初期層で重要度の低いトークンを捨てれば、以後の注意機構やKV保持の負荷を下げられる。
 
+- **2025-05 · [Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models](2025-2505.11271-semantic-caching-of-contextual-summaries-for-efficient-question-answerin.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  本研究は、文書検索とLLM呼出しを組み合わせる質問応答で、回答そのものでもKVキャッシュでもなく、質問に合わせて生成した中間の文書要約をキャッシュする方法を扱う。文書を検索した後に要約し、その要約と質問を使って回答する複数段階のワークフローでは、同じ文書に対して似た質問が繰り返される。
+
 - **2025-05 · [Radio: Rate–Distortion Optimization for Large Language Model Compression](2025-2505.03031-radio-rate-distortion-optimization-for-large-language-model-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
@@ -2528,10 +2544,6 @@
   実装：[✓](https://github.com/CSU-ModelCompression/BAQ) ・ リポジトリ内被引用：1  
   BAQ（Bit Allocation Quantization）は、大規模言語モデルの事後量子化で各列に同じビット数を割り当てることの非効率を、逆ヘッセ行列に基づく感度係数から計算した列別ビット幅で改善する手法である。
 
-- **2025-05 · [Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models](2025-2505.11271-semantic-caching-of-contextual-summaries-for-efficient-question-answerin.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  本研究は、文書検索とLLM呼出しを組み合わせる質問応答で、回答そのものでもKVキャッシュでもなく、質問に合わせて生成した中間の文書要約をキャッシュする方法を扱う。文書を検索した後に要約し、その要約と質問を使って回答する複数段階のワークフローでは、同じ文書に対して似た質問が繰り返される。
-
 - **2025-05 · [Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning](2025-2505.15154-prolonged-reasoning-is-not-all-you-need-certainty-based-adaptive-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   まず短い答えを出してその困惑度を正誤二つの分布と比べ、危うい問だけ長い推論へ回す振り分けで、全推論より正解率を上げながらトークンを大幅に減らした。
@@ -2567,6 +2579,10 @@
 - **2025-02 · [M2R2: Mixture of Multi-Rate Residuals for Efficient Transformer Inference](2025-2502.02040-m2r2-mixture-of-multi-rate-residuals-for-efficient-transformer-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   M2R2は、言語モデルの中間残差表現が最終層の残差表現へどれだけ早く近づくかを、追加の軽量な計算経路で制御する方式である。
+
+- **2025-02 · [LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning](2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md)**  
+  実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：1  
+  LIFT（Long Input 微調整）は、長い文書をそのままLLMの入力コンテキストへ入れる代わりに、文書から生成した質問・回答（QA）で短文脈モデルをテスト時に微調整し、文書の情報をモデルのパラメータへ内在化させる方式である。
 
 - **2025-02 · [GATEKEEPER: Improving Model Cascades Through Confidence Tuning](2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -3079,10 +3095,6 @@
 - **2025-02 · [Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference](2025-2502.15294-round-attention-a-novel-round-level-attention-mechanism-to-accelerate-ll.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対話型LLMを長期間利用すると、過去の質問・回答を含むKVキャッシュが増え、GPUメモリ容量とCPUからの転送帯域が推論の制約になる。通常のトークン単位KV圧縮や選択は、注意スコアを層ごとに評価したり、小さなKV片を何度も転送したりする費用を生む。
-
-- **2025-02 · [LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning](2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md)**  
-  実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：0  
-  LIFT（Long Input 微調整）は、長い文書をそのままLLMの入力コンテキストへ入れる代わりに、文書から生成した質問・回答（QA）で短文脈モデルをテスト時に微調整し、文書の情報をモデルのパラメータへ内在化させる方式である。
 
 - **2025-02 · [FastCoder: Accelerating Repository-level Code Generation via Efficient Retrieval and Verification](2025-2502.17139-fastcoder-accelerating-repository-level-code-generation-via-efficient-re.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

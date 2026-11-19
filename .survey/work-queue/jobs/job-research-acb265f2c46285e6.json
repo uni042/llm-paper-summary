@@ -35,10 +35,15 @@
   "selection_reason": "メモリ境界つき推論のS3-Attention。KVキャッシュが文脈長に比例して伸びる問題と、外部検索の因果的無関係さに対し、疎自己符号化器で鍵とクエリを疎特徴へ写し、CPU上の転置索引で内生的に検索することでKVキャッシュ自体を捨てられる設計にする。推論メモリ機構そのもの。",
   "semantic_scholar_id": "37daca792f2c2c6e335d92dfe3fc4d333d4bb95c",
   "source_url": "https://arxiv.org/abs/2601.17702",
-  "status": "ready",
+  "status": "superseded",
   "title": "S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T14:34:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.17702-s3-attention-attention-aligned-endogenous-retrieval-for-memory-bounded-l.md",
+  "represented_canonical_id": "arXiv:2601.17702",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1867,7 +1867,7 @@
   Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
-  実装：✓ ・ リポジトリ内被引用：57  
+  実装：✓ ・ リポジトリ内被引用：58  
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
 
 - **2024-02 · [INFERCEPT: Efficient Intercept Support for Augmented Large Language Model Inference](2024-2402.01869-infercept-intercept-aware-llm-inference.md)**  
@@ -1939,7 +1939,7 @@
   SLO予測付きトークン調整・層単位プリエンプション・増分KV退避で、オンライン遅延を守りながら遊休GPUをオフライン推論へ回す共同サービング方式。
 
 - **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
 
 - **2024-10 · [GraphRouter: A Graph-based Router for LLM Selections](2024-2410.03834-graphrouter-a-graph-based-router-for-llm-selections.md)**  
@@ -1974,6 +1974,10 @@
   実装：✓ ・ リポジトリ内被引用：11  
   RPSとGPU周波数からp95/p99遅延を予測し、25生成反復ごとにSLOを満たす最低周波数へDVFSする方式。GPT-J-6B＋A100/A30の実機配信で、最大周波数運用比22.8〜45.5%のエネルギー削減を示す。
 
+- **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
+  実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：11  
+  検索拡張生成（Retrieval-Augmented Generation、RAG）では、生成開始前に一度だけ外部情報を検索する方式に加え、生成文が伸びる途中でも検索を繰り返す方式がある。1024トークン生成の端から端の遅延では、同等以上の困惑度を維持しながらRETRO比最大2.6倍の短縮を示す。
+
 - **2024-03 · [Optimizing LLM Queries in Relational Data Analytics Workloads](2024-2403.05821-optimizing-llm-queries-in-relational-data-analytics-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   理論上の最適解を探す最適接頭辞ヒット再帰（Optimal Prefix Hit Recursion、OPHR）は組合せ爆発を起こすため、実用方式として貪欲群再帰（Greedy Group Recursion、GGR）を設計する。
@@ -1989,10 +1993,6 @@
 - **2024-05 · [Aladdin: Joint Placement and Scaling for SLO-Aware LLM Serving](2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   Aladdinは、複数GPUで大規模言語モデルの推論要求を処理するとき、各要求をどのワーカーへ配置するかと、ワーカーを何台・何GPU構成で用意するかを共同で決めるクラスタスケジューラである。
-
-- **2024-03 · [PipeRAG: Fast Retrieval-Augmented Generation via Algorithm-System Co-design](2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md)**  
-  実装：[✓](https://github.com/amazon-science/piperag) ・ リポジトリ内被引用：10  
-  検索拡張生成（Retrieval-Augmented Generation、RAG）では、生成開始前に一度だけ外部情報を検索する方式に加え、生成文が伸びる途中でも検索を繰り返す方式がある。1024トークン生成の端から端の遅延では、同等以上の困惑度を維持しながらRETRO比最大2.6倍の短縮を示す。
 
 - **2024-02 · [FlexLLM: Token-Level Co-Serving of LLM Inference and Finetuning with SLO Guarantees](2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md)**  
   実装：[✓](https://github.com/FlexLLM/artifact) ・ リポジトリ内被引用：9  

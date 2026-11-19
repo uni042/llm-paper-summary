@@ -154,13 +154,13 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/Xnhyacinth/HyCo2) ・ リポジトリ内被引用：1  
   HyCo2（Hybrid Context Compression）は、長文脈の検索拡張生成（Retrieval-Augmented Generation; RAG）で、必要な情報を保持しながら入力トークン数を減らす圧縮方式である。デフォルトでは16個の潜在クエリと、原文トークンの上位10%を保持する設定である。
 
+- **2025-02 · [Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing](2025-2502.12962-infinite-retrieval-attention-enhanced-llms-in-long-context-processing.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  単純な窓移動では古い区間を忘れ、KVキャッシュ圧縮では過去情報の一部を固定された埋め込み表現として保存するため、質問に必要な文を失うことがある。
+
 - **2025-09 · [EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression](2025-2509.12159-efficientuicoder-efficient-mllm-based-ui-code-generation-via-input-and-o.md)**  
   実装：[✓](https://github.com/WebPAI/EfficientUICoder) ・ リポジトリ内被引用：0  
   本研究は、ウェブ画面の画像を入力してHTMLとCSSを生成するUI-to-コードの推論費用を、画像側とコード側の両方から削減する方式である。
-
-- **2025-02 · [Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing](2025-2502.12962-infinite-retrieval-attention-enhanced-llms-in-long-context-processing.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  単純な窓移動では古い区間を忘れ、KVキャッシュ圧縮では過去情報の一部を固定された埋め込み表現として保存するため、質問に必要な文を失うことがある。
 
 ### 3年前（2023-12〜2024-11）
 

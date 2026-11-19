@@ -347,11 +347,11 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
-  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：47  
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
 
 - **2025-04 · [OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs](2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md)**  
@@ -465,7 +465,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：107  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：108  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
