@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75a1d72806da5c3a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.41521",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.41521",
+    "identity_tokens": [
+      "arXiv:2610.41521"
+    ],
+    "reason": "全文読解の結果、主題はLLMエージェントの長期会話メモリにおける索引統治と検索の決定手続きであり、評価もLoCoMoやLongMemEval-Sの回答精度と読解文脈量が中心である。推論実行・サービング・KVキャッシュ・量子化など推論システムの機構への直接の技術的貢献は確認できず、対象範囲外と判定した。",
+    "first_checked_at": "2026-11-19T12:31:42+00:00",
+    "last_checked_at": "2026-11-19T12:31:42+00:00",
+    "linked_from": [
+      "worker-worklist research_audit (cont4 pool index)"
+    ],
+    "title": "KITE: Retrieval as a Decision Procedure for Long-Term Conversational Memory"
+  },
+  "processed_at": "2026-11-19T12:31:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75a1d72806da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
