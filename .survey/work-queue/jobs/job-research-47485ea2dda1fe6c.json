@@ -35,10 +35,15 @@
   "selection_reason": "複数要求・入力チャンクの類似KVブロックを共有表現へjoint encodingし、標準キャッシュ構造を維持しながら容量を削減する方式。Poisson到着モデルのrate-distortion解析を行い、著者らは最大4.38倍のKV圧縮と、単一マシンのvLLM実験で約40%のtoken throughput改善を報告。長文脈・多要求のサービングに直接適用するKV管理最適化でありaccept。数値は一次要旨の著者報告で、本文の比較条件は今回未監査。",
   "semantic_scholar_id": "2f983c75a0ce25cea06a0ba52d226c1cbe7556cb",
   "source_url": "https://arxiv.org/abs/2601.03067",
-  "status": "ready",
+  "status": "superseded",
   "title": "Joint Encoding of KV-Cache Blocks for Scalable LLM Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T14:02:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.03067-joint-encoding-of-kv-cache-blocks-for-scalable-llm-serving.md",
+  "represented_canonical_id": "arXiv:2601.03067",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

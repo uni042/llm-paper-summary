@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨はスライディング注意窓で重要度が低いトークンのKV更新を一時停止し、全履歴をGPU外に保持して必要時に復元する可逆的なfreeze方式を提案。LLaMA-3 8Bで活動KVを55〜67%削減しneedle-in-haystack検索を維持した予備実験を報告。LLM推論時のメモリ管理に直接該当。",
   "semantic_scholar_id": "6507ed02af010a9422b8c1d2bf66e5a8b3e75d1a",
   "source_url": "https://arxiv.org/abs/2512.11221",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T14:02:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/17-pim-near-data-acceleration/2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-m.md",
+  "represented_canonical_id": "arXiv:2512.11221",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

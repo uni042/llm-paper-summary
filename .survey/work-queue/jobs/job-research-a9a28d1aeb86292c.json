@@ -35,10 +35,15 @@
   "selection_reason": "メッセージの再順序付き参照を許すグローバルKVキャッシュを用い、並列LLM呼出しと重複prefill削減を実現。TTFT 2.0〜6.2倍、特定ワークフローでE2E 2.2倍超と報告。",
   "semantic_scholar_id": "24726cf89e6fb62a04452b705b39cf05741053fa",
   "source_url": "https://arxiv.org/abs/2512.23049",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accelerating Language Model Workflows with Prompt Choreography",
   "type": "research",
   "venue": "Transactions of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T14:02:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.23049-accelerating-language-model-workflows-with-prompt-choreography.md",
+  "represented_canonical_id": "arXiv:2512.23049",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

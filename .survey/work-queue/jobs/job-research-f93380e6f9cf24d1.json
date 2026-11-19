@@ -35,10 +35,15 @@
   "selection_reason": "信頼度誘導の段階的モデルルーティング。訓練したルータが領域移動に弱く、高価なラベル合成を要する問題に対し、信頼度に基づく段階的な振り分けで、易しいクエリを小型モデルへ、難しいクエリを大型モデルへ回して推論費用を下げる。推論基盤のルーティング機構そのもの。",
   "semantic_scholar_id": "a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77",
   "source_url": "https://arxiv.org/abs/2511.06190",
-  "status": "ready",
+  "status": "superseded",
   "title": "Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-19T14:02:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.md",
+  "represented_canonical_id": "arXiv:2511.06190",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
