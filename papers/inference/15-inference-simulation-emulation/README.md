@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（79本）
+## 自動生成の論文一覧（80本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -347,6 +347,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2023-10 · [Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling](2023-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md)**  
   実装：[✓](https://github.com/siasosp23/artifacts) ・ リポジトリ内被引用：4  
   Siaは、GPUの種類が混在する深層学習訓練クラスタで、各ジョブへ割り当てるGPUの種類・台数・バッチサイズを同時に決めるスケジューラである。原著は、44GPUの実機クラスタで既存のPolluxより平均ジョブ完了時間を約35〜50%、Gavelより約50%短縮したと報告する。
+
+- **2023-05 · [Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator](2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-p.md)**  
+  実装：[✓](https://github.com/zhuhanqing/Lightening-Transformer) ・ リポジトリ内被引用：0  
+  両辺とも動的な行列積を光の干渉で一括計算する動的フォトニックテンソルコアと光配信による入力共有で、従来の光加速器比でエネルギー2.6倍以上・遅延12倍以上の改善をシミュレーションで示したTransformer向け光加速器。
 
 ### 7年前（2019-12〜2020-11）
 
