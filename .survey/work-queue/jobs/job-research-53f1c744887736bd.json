@@ -35,10 +35,15 @@
   "selection_reason": "超大規模Transformerの次水準学習後量子化。学習不要のPTQが注意モジュール内の層間依存を考えられない限界に対し、精度と効率のバランスを取る新しいPTQアルゴリズムで、頻繁なモデル更新や調整がある実務の費用を下げる。推論量子化機構そのもの。",
   "semantic_scholar_id": "ac98a2b6a2eff37f3d3ba880013c8134cd871e07",
   "source_url": "https://arxiv.org/abs/2402.08958",
-  "status": "ready",
+  "status": "superseded",
   "title": "Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-11-19T10:48:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformer.md",
+  "represented_canonical_id": "arXiv:2402.08958",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

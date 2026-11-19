@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（230本）
+## 自動生成の論文一覧（231本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -912,6 +912,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/IST-DASLab/QIGen) ・ リポジトリ内被引用：0  
   QIGenは、量子化済みの大規模言語モデルをCPUで逐次生成するときの行列ベクトル積（GEMV）カーネルを自動生成する研究である。比率は約2.68倍だが、原著は最大約2.6倍と表現する。
 
+- **2023-02 · [The Framework Tax: Disparities Between Inference Efficiency in NLP Research and Deployment](2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-nlp-resear.md)**  
+  実装：[✓](https://github.com/JaredFern/Framework-Tax) ・ リポジトリ内被引用：0  
+  小さなバッチでは基盤のカーネル起動などの固定費が推論遅延を支配し演算量が予測指標にならないことを実測で示し、静的コンパイル型の実行環境がバッチ一で即時実行型より平均七一・三八パーセント速いことと、幅は無償で増やせる一方で深さは遅延を増やすことを明らかにした。
+
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
@@ -961,7 +965,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：41  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-12〜2018-11）

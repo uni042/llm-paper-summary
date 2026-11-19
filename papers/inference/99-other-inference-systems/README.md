@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（942本）
+## 自動生成の論文一覧（946本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3434,6 +3434,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   標準Transformerの自己注意は、系列内の各トークンが過去の各トークンを参照するため、長い入力のプリフィルではトークン数の二乗に比例する注意計算を必要とする。生成時には過去のKey/ValueをKVキャッシュへ保持するため、文脈長とともにメモリ容量も増える。本論文は、線形注意を潜在変数を介した確率分布として解釈する。
 
+- **2024-02 · [Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers](2024-2402.08958-towards-next-level-post-training-quantization-of-hyper-scale-transformer.md)**  
+  実装：[✓](https://github.com/SamsungLabs/aespa) ・ リポジトリ内被引用：0  
+  量子化は層ごとに実行しながら誤差の物差しを注意全体の再構成に置き、目的関数を事前計算可能な形へ変形することで、二ビットでも崩壊せず、ブロック型より桁違いに速い学習後量子化を実現した。
+
 - **2024-02 · [RepQuant: Towards Accurate Post-Training Quantization of Large Transformer Models via Scale Reparameterization](2024-2402.05628-repquant-towards-accurate-post-training-quantization-of-large-transforme.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これらへ単一の量子化尺度や単純な2進対数量子化を直接適用すると、4ビット付近では重要な情報が失われやすい。
@@ -3441,6 +3445,10 @@
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
   従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
+
+- **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
+  実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：0  
+  枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
 
 - **2023-12 · [A Performance Evaluation of a Quantized Large Language Model on Various Smartphones](2023-2312.12472-a-performance-evaluation-of-a-quantized-large-language-model-on-various-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3481,7 +3489,7 @@
   従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
 
 - **2023-06 · [MiniLLM: On-Policy Distillation of Large Language Models](2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md)**  
-  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：44  
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
@@ -3560,6 +3568,10 @@
   実装：[✓](https://github.com/MohammadrezaBanaei/auto-encoder-based-transformer-compression) ・ リポジトリ内被引用：1  
   本研究は、既に学習されたTransformerの重み行列を、事前学習モデル全体の再訓練や蒸留を行わずに小さくする「オフライン圧縮」を対象とする。
 
+- **2023-10 · [NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models](2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-e.md)**  
+  実装：[✓](https://github.com/jongwooko/NASH-Pruning-Official) ・ リポジトリ内被引用：0  
+  復号器は層を均等に間引いて浅くし、符号化器は幅を低い疎さで徐々に狭める非対称な枝刈りで、T5-baseの要約で品質をほぼ保ちながら実時間2.5倍から4.2倍の高速化を示した。
+
 - **2023-07 · [Scaling In-Context Demonstrations with Structured Attention](2023-2307.02690-scaling-in-context-demonstrations-with-structured-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   例示数を増やせば精度が改善する可能性があるが、全ての例示を連結して密な自己注意を実行すると、系列長の二乗に比例する演算量とメモリが必要になる。SAICL（Structured 注意機構 for In-Context Learning）は、例示どうしの直接注意を取り除き、テスト入力を情報集約のハブにする。
@@ -3575,6 +3587,10 @@
 - **2023-07 · [CA-LoRA: Adapting Existing LoRA for Compressed LLMs to Enable Efficient Multi-Tasking on Personal Devices](2023-2307.07705-ca-lora-adapting-existing-lora-for-compressed-llms-to-enable-efficient-m.md)**  
   実装：[✓](https://github.com/thunlp/CA-LoRA) ・ リポジトリ内被引用：0  
   CA-LoRAは非圧縮LLM上で学習済みのLoRAを圧縮モデルへ移植する際、元LoRAを初期値として継承し、非線形低ランクの回復モジュールを加え、非圧縮モデル＋LoRAを教師として蒸留する。T5-3Bを量子化・枝刈り・MoEficationで5.61GBから0.94GBへ圧縮した実験では、RTEが通常LoRAの82.9%からCA-LoRAの84.3%へ改善。
+
+- **2023-06 · [Binary and Ternary Natural Language Generation](2023-2306.01841-binary-and-ternary-natural-language-generation.md)**  
+  実装：[✓](https://github.com/facebookresearch/Ternary_Binary_Transformer) ・ リポジトリ内被引用：0  
+  重みの統計的量子化と活性値の学習的量子化を組み合わせ、要約と翻訳で初めて全三値・全二値の生成モデルを成立させ、三値では全精度に数点差まで迫る品質を示した。
 
 - **2023-06 · [A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys](2023-dc4a5089a5f8-a-probabilistic-framework-for-pruning-transformers-via-a-finite-admixtur.md)**  
   実装：[✓](https://github.com/Fsoft-AIC/FiAKFormer) ・ リポジトリ内被引用：0  
@@ -3611,7 +3627,7 @@
   ソフトマックス注意の最大値、指数和、値の重み付き和を逐次更新し、全注意行列を実体化せず同じ数学的出力を得る。理論上の省メモリ算法と、TPU向けのチャンク並列実装、再計算を使った微分を示す。
 
 - **2022-07 · [FNet: Mixing Tokens with Fourier Transforms](2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/f_net) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/f_net) ・ リポジトリ内被引用：23  
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
@@ -3677,7 +3693,7 @@
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
-  実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：17  
   教師と生徒の注意頭数を揃える制約を外し、Query・Key・Valueのトークン間関係を共通の「関係頭」で比較する。推論速度の改善は蒸留後の小型モデルによるもので、実行時に教師を参照する方式ではない。
 
 - **2021-03 · [Softermax: Hardware/Software Co-Design of an Efficient Softmax for Transformers](2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md)**  
@@ -3799,6 +3815,6 @@
 ### 11年前（2015-12〜2016-11）
 
 - **2016-06 · [Compression of Neural Machine Translation Models via Pruning](2016-1606.09274-compression-of-neural-machine-translation-models-via-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   この論文は、注意機構付きの長短期記憶（LSTM）を使うニューラル機械翻訳器について、どの重みを消せば翻訳品質を損なわずに保存パラメータを減らせるかを実験した2016年の研究である。種類非依存枝刈りでは、40%の重みを消しても再学習前の品質劣化は小さく、さらに80%を消した後に残存重みだけを4エポック再学習すると20.91 BLEUまで回復した。
 <!-- survey:auto:end -->
