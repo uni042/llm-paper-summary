@@ -14,13 +14,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
+- **2026-04 · [REAM: Merging Improves Pruning of Experts in LLMs](2026-2604.04356-ream-router-weighted-expert-merging.md)**  
+  実装：[✓](https://github.com/SamsungSAILMontreal/ream) ・ リポジトリ内被引用：8  
+  重要専門家を代表として保護し、低重要度専門家をルータ・活性依存の類似度で統合するMoE圧縮。校正データ構成による選択式／生成性能のトレードオフも分析する。
+
 - **2026-07 · [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference](2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/PuzzleMoE) ・ リポジトリ内被引用：7  
   混合専門家モデルの重みを要素ごとに共有・固有成分へ分け、復元用のマスクと符号をBF16指数部へ格納することで、圧縮容量の節約をGPUでの実行速度へ結び付ける。
-
-- **2026-04 · [REAM: Merging Improves Pruning of Experts in LLMs](2026-2604.04356-ream-router-weighted-expert-merging.md)**  
-  実装：[✓](https://github.com/SamsungSAILMontreal/ream) ・ リポジトリ内被引用：7  
-  重要専門家を代表として保護し、低重要度専門家をルータ・活性依存の類似度で統合するMoE圧縮。校正データ構成による選択式／生成性能のトレードオフも分析する。
 
 - **2025-12 · [MoE Pathfinder: Trajectory-driven Expert Pruning](2025-2512.18425-moe-pathfinder-trajectory-pruning.md)**  
   実装：[✓](https://github.com/xicyang/MoE-Pruning) ・ リポジトリ内被引用：7  
@@ -125,6 +125,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs](2026-2606.09886-shape-coalition-aware-expert-pruning.md)**  
   実装：[✓](https://github.com/Alizen-1009/Shapley-Moe) ・ リポジトリ内被引用：1  
   Top-kで同時起動する専門家集合を協力ゲームとして評価し、Shapley風の貢献度と層別品質カバレッジで再学習なしの専門家枝刈りを行う。
+
+- **2026-06 · [Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference](2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本研究は、混合専門家（Mixture of エキスパート、MoE）言語モデルの推論で、ルータが選んだ専門家をすべて実行することが、ハードウェアの費用対効果という観点では最適とは限らない問題を扱う。一方、ルータが割り当てた重みが小さい専門家であっても、転送するパラメータ量は他の専門家とほぼ変わらない。
 
 - **2026-05 · [HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts](2026-2605.13997-hodgecover-topological-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -256,10 +260,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen3.6-35B-A3Bを実測し、MoE専門家削減は全層一律ではなく後段、とくに35-39層へ集中させる方が品質を保てることを500件の保持検証まで示す。
 
-- **2026-06 · [Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference](2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究は、混合専門家（Mixture of エキスパート、MoE）言語モデルの推論で、ルータが選んだ専門家をすべて実行することが、ハードウェアの費用対効果という観点では最適とは限らない問題を扱う。一方、ルータが割り当てた重みが小さい専門家であっても、転送するパラメータ量は他の専門家とほぼ変わらない。
-
 - **2026-05 · [Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution](2026-2605.08575-intra-expert-activation-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存MoEのエキスパート内活性値 sparsityをvLLMへ統合し、再学習なしでMoE 層最大2.5倍・エンドツーエンド最大1.2倍を実現する。
@@ -279,7 +279,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
-  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：31  
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-09 · [LongCat-Flash Technical Report](2025-2509.01322-longcat-flash-zero-computation-experts.md)**  

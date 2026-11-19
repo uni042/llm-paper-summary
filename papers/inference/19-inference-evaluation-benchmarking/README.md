@@ -526,6 +526,10 @@
   実装：[✓](https://github.com/maufadel/EnergyMeter) ・ リポジトリ内被引用：8  
   著者らは推論をモデルパラメータ数だけで比較する慣習にも疑問を投げかけ、層の深さ、注意・フィードフォワードの並列化、バッチ数、量子化形式の実行実装を分けて検証した。
 
+- **2024-10 · [LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment](2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-de.md)**  
+  実装：[✓](https://github.com/AboveParadise/LLMCBench) ・ リポジトリ内被引用：1  
+  圧縮性能から信頼性までの6軸で疎化と量子化の代表7手法を統一測定し、量子化が性能保持で優れること、重みのみ量子化が汎化で安定すること、疎化は学習が軽いが配布基盤の対応が未熟なことを明らかにした。
+
 - **2024-09 · [Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview](2024-2409.11650-art-and-science-of-quantizing-large-scale-models-a-comprehensive-overvie.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、大規模モデルの量子化（量子化）を、重みと活性値の数値表現、学習後量子化（post-学習 量子化; PTQ）、量子化認識学習（量子化-aware 学習; QAT）、知識蒸留（knowledge distillation）、鍵・値キャッシュ（key-value キャッシュ; KV キャッシュ）の圧縮という複数の切り口から整理した概説論文である。
@@ -533,10 +537,6 @@
 - **2024-11 · [PPLLaVA: Varied Video Sequence Understanding With Prompt Guidance](2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   指示文と各視覚トークンの関連度を重みに使う三次元畳み込み型プーリングで動画トークンを十八倍まで圧縮し、大規模動画ベンチマークで元モデルを上回る正解率と約三分の一の処理時間を両立した。テキスト符号器の文脈拡張が長い指示への対応を担う。
-
-- **2024-10 · [LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment](2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-de.md)**  
-  実装：[✓](https://github.com/AboveParadise/LLMCBench) ・ リポジトリ内被引用：0  
-  圧縮性能から信頼性までの6軸で疎化と量子化の代表7手法を統一測定し、量子化が性能保持で優れること、重みのみ量子化が汎化で安定すること、疎化は学習が軽いが配布基盤の対応が未熟なことを明らかにした。
 
 ### 4年前（2022-12〜2023-11）
 

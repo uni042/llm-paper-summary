@@ -35,10 +35,15 @@
   "selection_reason": "メイクスパン配慮型の専門家並列負荷分散TEMPO。各層が最も遅いGPUに同期する専門家並列提供で、トークン数や専門家数に比例するという前提が実測と合わない問題に対し、重みストリーミング律速とタイル丸めの両レジームを捉える最大アフィン型の時間プロファイルで配置を決める。MoE提供の機構そのもの。",
   "semantic_scholar_id": "dd04958aa4150df9c347a89274b037a2cefb8172",
   "source_url": "https://arxiv.org/abs/2608.13057",
-  "status": "ready",
+  "status": "superseded",
   "title": "TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T22:53:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-co.md",
+  "represented_canonical_id": "arXiv:2608.13057",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

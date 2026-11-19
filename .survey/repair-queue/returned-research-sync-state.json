@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0ac32963071fa034a93629feb4966988be6bac64",
+  "base_commit": "05a558b3ece360866c6f2822e44afa334fd89763",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -320,6 +320,11 @@
     "2026-2608.06146-padoc-layout-grounded-parallel-decoding-for-document-parsing.json",
     "2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-free-low-rank-compression-for-llms.json",
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
+    "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
+    "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
+    "2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruning-of-large-language-models.json",
+    "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
+    "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
@@ -40736,6 +40741,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.11235": {
+      "order": [
+        "2026-11-19T22:46:12+00:00",
+        "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.13057": {
+      "order": [
+        "2026-11-19T22:47:28+00:00",
+        "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.21142": {
+      "order": [
+        "2026-11-19T22:48:44+00:00",
+        "2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruning-of-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.21693": {
+      "order": [
+        "2026-11-19T22:50:01+00:00",
+        "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.23253": {
+      "order": [
+        "2026-11-19T22:51:18+00:00",
+        "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50217,6 +50267,21 @@
     "arxiv:2608.08730": [
       "papers/inference/09-kernel-runtime-compilation/2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-singl.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-singl.md"
+    ],
+    "arxiv:2608.11235": [
+      "papers/inference/99-other-inference-systems/2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusio.md"
+    ],
+    "arxiv:2608.13057": [
+      "papers/inference/12-moe-parallelism-communication/2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-co.md"
+    ],
+    "arxiv:2608.21142": [
+      "papers/inference/99-other-inference-systems/2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruni.md"
+    ],
+    "arxiv:2608.21693": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llm.md"
+    ],
+    "arxiv:2608.23253": [
+      "papers/inference/99-other-inference-systems/2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-prunin.md"
     ]
   }
 }

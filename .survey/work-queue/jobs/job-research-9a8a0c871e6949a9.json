@@ -35,10 +35,15 @@
   "selection_reason": "構造化剪定向け較正直交等価補償COEC。重み列の削除で生じる出力誤差を、保持した重みの左右両側への直交回転の交互適用で補償する学習不要の枠組み。入力側の特異フレームまで変えられる点が、出力側だけの従来補償と異なる。推論圧縮機構そのもの。",
   "semantic_scholar_id": "8022ebe2ac0fe0f8687513c475d251914383a454",
   "source_url": "https://arxiv.org/abs/2608.21142",
-  "status": "ready",
+  "status": "superseded",
   "title": "COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T22:53:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruni.md",
+  "represented_canonical_id": "arXiv:2608.21142",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
