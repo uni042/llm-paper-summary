@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（989本）
+## 自動生成の論文一覧（993本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1618,6 +1618,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデルでは、生成済み履歴を鍵値キャッシュ（KV キャッシュ）へ蓄積すると、復号のたびに参照する過去位置が増える。この方式は推論時学習（test-time 学習）と長文脈推論の接点にある。
 
+- **2026-03 · [Understanding Pruning Regimes in Vision-Language Models Through Domain-Aware Layer Selection](2026-2603.20275-understanding-pruning-regimes-in-vision-language-models-through-domain-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各層の入出力の活性の類似度を数学と非数学の探査で別々に測って冗長な層を順位付けする領域配慮の削除を提案し、削除率が小さい様相では層の選択が最も効くこと、率が上がると方式が収束し、高い率では削除の間隔という構造が支配すること、そして絶対精度の低下自体は一割削除でも大きいことを二モデル・七評価で示した。
+
 - **2026-03 · [TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference](2026-2603.21365-tide-token-informed-depth-execution-for-per-token-early-exit-in-llm-infe.md)**  
   実装：[✓](https://github.com/RightNow-AI/TIDE) ・ リポジトリ内被引用：0  
   TIDE（Token-Informed Depth Execution）は、学習済み大規模言語モデル（LLM）の中間層における隠れ状態が最終層の表現へ近づいたかを、後付けの小規模な二値分類器で判定する方式である。元の言語モデルの重みを変更せず、約2,000件のWikiText-103文による較正をA100上で約170秒で実行できる点が実装上の特徴である。
@@ -1645,6 +1649,14 @@
 - **2026-03 · [Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints](2026-2603.26796-robust-batch-level-query-routing-for-large-language-models-under-cost-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   バッチ全体の割当てを整数線形計画で解いて費用と容量を直接守る経路選択の枠組みで、敵対的なバッチ構成では問い単位の方式より最大24パーセント高い精度を示した。
+
+- **2026-03 · [ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs](2026-2603.24680-rediprune-relevance-diversity-pre-projection-token-pruning-for-efficient.md)**  
+  実装：[✓](https://github.com/UA-CVML/ReDiPrune) ・ リポジトリ内被引用：0  
+  射影の前の視覚特徴の上で、質問への関連と最大最小の多様性を組み合わせた得点でトークンを貪欲に選ぶ学習なしの間引きにより、動画では保持率一五パーセントで未間引きを二・〇ポイント上回る精度を保ちながら計算量を約六分の一へ減らし、画像でも保持率一〇パーセントで最良級の精度を維持した。
+
+- **2026-03 · [RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference](2026-2603.17891-ramp-reinforcement-adaptive-mixed-precision-quantization-for-efficient-o.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層の十一項目の特徴だけを見てビット幅を逐次決める強化学習の方策により、七十億級モデルで困惑度五・五四を三・六八ギガバイトで達成して一様四ビットの代表方式を大きさと品質の両方で上回り、一つのモデルで学んだ方策が別系統・別規模のモデルへ再学習なしで移って直接学習と同等以上になることを示した。
 
 - **2026-03 · [Prompt Compression in Production Task Orchestration: A Pre-Registered Randomized Trial](2026-2603.23525-prompt-compression-in-production-task-orchestration-a-pre-registered-ran.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1773,6 +1785,10 @@
 - **2026-03 · [Beyond Scattered Acceptance: Fast and Coherent Inference for DLMs via Longest Stable Prefixes](2026-2603.05454-beyond-scattered-acceptance-fast-and-coherent-inference-for-dlms-via-lon.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルで飛び飛びの確定をやめ、候補の差で測った安定さが続く最長の連続接頭辞だけを区切りへ吸着させて一度に確定する方式で、最大三・四倍の高速化と成績の維持を両立したと報告した。
+
+- **2026-03 · [Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs](2026-2603.14892-balancing-saliency-and-coverage-semantic-prominence-aware-budgeting-for-.md)**  
+  実装：[✓](https://github.com/jayaylee/PromPrune) ・ リポジトリ内被引用：0  
+  特異値のスペクトルエントロピーで画像ごとの意味の広がりを測り、固定予算を顕著さと被覆へ振り分けて二段で選ぶことで、エルラバネクスト七ビーで計算量八十八パーセント削減と入力処理二十二パーセント高速化をしながら元の精度の九十七点五パーセントを保った。
 
 - **2026-03 · [Attention-Based Sampler for Diffusion Language Models](2026-2604.08564-attention-based-sampler-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2193,15 +2209,15 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：104  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：105  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：87  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：88  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：51  
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
@@ -3629,7 +3645,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：265  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：266  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3861,7 +3877,7 @@
   本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
 
 - **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
-  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：20  
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  

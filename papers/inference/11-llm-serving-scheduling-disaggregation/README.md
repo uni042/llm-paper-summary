@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（532本）
+## 自動生成の論文一覧（533本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1097,6 +1097,10 @@
 - **2026-02 · [QuRL: Efficient Reinforcement Learning with Quantized Rollout](2026-2602.13953-qurl-efficient-reinforcement-learning-with-quantized-rollout.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い思考系列では前者が学習時間の最大約70%を占める。生成用モデルだけを8ビットに量子化すれば行列積を高速化できるが、生成したトークンの確率分布が学習更新に使う高精度モデルと一致しなくなり、単純な置換は学習を不安定にする。INT8とFP8で検証し、量子化推論の要求処理量はモデル・GPUに応じて改善する。
+
+- **2026-02 · [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-dif.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  マスク拡散の除去段階は中間が最も容量に敏感で両端は置き換えに強いことを全探索と分布距離で示し、段階の25%を軽い4層モデルへ置く挟み込み型配置で計算量を16.7%減らし、生成困惑度の悪化を42.85から44.31（3.41%）に抑えた。
 
 - **2026-02 · [Multi-Layer Scheduling for MoE-Based LLM Reasoning](2026-2602.21626-multi-layer-scheduling-moe-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

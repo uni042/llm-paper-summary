@@ -35,10 +35,15 @@
   "selection_reason": "射影前トークン剪定ReDiPrune。視覚言語射影の後では表現が圧縮されて細部が落ちる問題に対し、視覚エンコーダ出力の段階で、テキスト条件つき関連性と最大最小多様性を合わせた軽量規則でトークンを選ぶ学習不要の剪定。MLLM推論の削減機構そのもの。",
   "semantic_scholar_id": "b7a76407c50ac51fe240ffbb8f4e764434e544fd",
   "source_url": "https://arxiv.org/abs/2603.24680",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T15:17:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.24680-rediprune-relevance-diversity-pre-projection-token-pruning-for-efficient.md",
+  "represented_canonical_id": "arXiv:2603.24680",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Masked diffusion LMのdenoising段階ごとに小型モデルへの置換耐性が異なる点を利用し、初期と終盤に小型モデルを割り当てる。OpenWebTextとLM1Bで生成perplexityの小幅な悪化と引き換えに最大17%のFLOPs削減を著者が報告。拡散型言語モデルの推論効率に直接関連する。",
   "semantic_scholar_id": "405380c8b650ed4e6e5a0cc5a2813f1b46303862",
   "source_url": "https://arxiv.org/abs/2604.02340",
-  "status": "ready",
+  "status": "superseded",
   "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T15:17:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.02340-not-all-denoising-steps-are-equal-model-scheduling-for-faster-masked-dif.md",
+  "represented_canonical_id": "arXiv:2604.02340",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
