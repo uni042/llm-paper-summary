@@ -91,9 +91,15 @@ jobs:
         run: python -m unittest discover -s .survey/tests -p 'test_status*.py'
       - name: Paper/job reconciliation regression tests
         run: python -m unittest discover -s .survey/tests -p 'test_research_job_reconciliation.py'
+      # The publish job re-renders from the same inputs on push/workflow_run,
+      # so the check-mode renders only add signal on pull requests, where no
+      # publish follows. Skipping them elsewhere removes a full duplicate
+      # render (all papers + worklists) from every validate run.
       - name: Render dashboard in check mode
+        if: github.event_name == 'pull_request'
         run: python .survey/scripts/render_status_dashboard.py --output /tmp/STATUS.md
       - name: Render dedicated worker worklists in check mode
+        if: github.event_name == 'pull_request'
         run: python .survey/scripts/build_worker_worklist.py --repo-root . --output-dir /tmp/survey-worklists
 
   publish:
