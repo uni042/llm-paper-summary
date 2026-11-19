@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9b3d6d60e18ae576-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.40752",
+  "reason": "全文読解の結果、主目的は病理スライド判定の精度向上であり、評価もWSIベンチマークの判定精度が中心の医療応用である。高速化（SlideChat比9.1倍、共有文脈による複数質問の6.9-11.2倍）は病理の構造化質問に特化した型付き確率読み出しとスライド文脈共有というタスク固有インターフェース設計の副次効果で、汎用のLLM推論システム機構への直接の技術的貢献は薄く、即Researchの根拠が弱いため borderline と判定した。",
+  "title": "PathoJev: Efficient Pathology Decisions from Shared Visual Context",
+  "identity_tokens": [
+    "arXiv:2610.40752",
+    "https://arxiv.org/abs/2610.40752"
+  ],
+  "linked_from": [
+    "worker-worklist research_audit (20261120 pool index 3)"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b3d6d60e18a",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
