@@ -272,6 +272,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
 
+- **2025-06 · [Semantic Scheduling for LLM Inference](2025-2506.12204-semantic-scheduling-for-llm-inference.md)**  
+  実装：[✓](https://github.com/Wenyueh/latency_optimization_with_priority_constraints) ・ リポジトリ内被引用：1  
+  本論文は、LLMのオンライン推論に到着する要求を単なる先着順や予測実行時間順ではなく、要求文面から推定される緊急度を第一の優先基準として実行するスケジューラを提案する。実データ条件で最も緊急な要求の正規化待ち時間がFCFS比最大167.3倍短縮した条件がある。
+
 - **2025-04 · [MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference](2025-2504.09775-mist-a-co-design-framework-for-heterogeneous-multi-stage-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービングの性能は、モデルのプリフィルとデコードだけでなく、RAGの検索、KVキャッシュの再利用、ネットワーク転送、スケジューリング、異なるモデルを使う複数クライアントなどの組合せで決まる。しかし異なるベンダーを跨いだプリフィル/デコード（PD）分離を、実際の統一サービングスタックで検証できないことが多い。
@@ -299,10 +303,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-07 · [Temporal-Aware GPU Resource Allocation for Distributed LLM Inference via Reinforcement Learning](2025-2507.10259-temporal-aware-gpu-resource-allocation-for-distributed-llm-inference-via.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の地域に分散したGPUサーバーへ推論要求を割り当てるとき、現在の空き容量だけを見て最も速そうなサーバーを選ぶと、需要の増加に遅れて起動するサーバーや、短時間で頻繁に移動する要求が生まれる。
-
-- **2025-06 · [Semantic Scheduling for LLM Inference](2025-2506.12204-semantic-scheduling-for-llm-inference.md)**  
-  実装：[✓](https://github.com/Wenyueh/latency_optimization_with_priority_constraints) ・ リポジトリ内被引用：0  
-  本論文は、LLMのオンライン推論に到着する要求を単なる先着順や予測実行時間順ではなく、要求文面から推定される緊急度を第一の優先基準として実行するスケジューラを提案する。実データ条件で最も緊急な要求の正規化待ち時間がFCFS比最大167.3倍短縮した条件がある。
 
 - **2025-05 · [Serve Programs, Not Prompts](2025-2510.25412-serve-programs-not-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

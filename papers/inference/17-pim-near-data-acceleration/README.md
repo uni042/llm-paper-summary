@@ -114,7 +114,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
 
 - **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
@@ -163,13 +163,13 @@
   実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：31  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
+- **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
+
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
-
-- **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
 
 - **2024-10 · [A Survey: Collaborative Hardware and Software Design in the Era of Large Language Models](2024-2410.07265-a-survey-collaborative-hardware-and-software-design-in-the-era-of-large-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -184,6 +184,6 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   高帯域メモリ（High Bandwidth メモリ、HBM）の近くへ演算を移すメモリ内処理（Processing-in-メモリ、PIM）やメモリ近傍計算（Near-メモリ Computing、NMC）は有力だが、従来の方式をそのままTransformerへ適用しても層間のデータ再配置や注意機構の削減演算が律速になる。
 <!-- survey:auto:end -->
