@@ -1,25 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "muse-fwllm-20261119",
+  "attempt_id": "muse-fwllm-20261120",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "llm-releases/gemini.md",
-    "llm-releases/microsoft-mai.md",
-    "framework-updates/inference-engines/tensorrt-llm/README.md",
-    "framework-updates/inference-engines/vllm-omni/README.md",
-    "framework-updates/README.md",
-    "llm-releases/README.md"
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/training-frameworks/megatron-core/README.md",
+    "framework-updates/README.md"
   ],
-  "created_paths": [
-    "llm-releases/microsoft-mai.md"
-  ],
+  "created_paths": [],
   "updated_existing_paths": [
-    "llm-releases/gemini.md",
-    "framework-updates/inference-engines/tensorrt-llm/README.md",
-    "framework-updates/inference-engines/vllm-omni/README.md",
-    "framework-updates/README.md",
-    "llm-releases/README.md"
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/training-frameworks/megatron-core/README.md",
+    "framework-updates/README.md"
   ],
-  "summary": "2026-11-18〜11-19: Gemini 4 Neon (2026-11-18), Microsoft MAI 7 models at Ignite 2026 (2026-11-17, new page), TensorRT-LLM v1.4.0rc4 (2026-11-18), vLLM-Omni v0.34.0rc1 (2026-11-18); index dates refreshed to 2026-11-19."
+  "summary": "2026-11-19〜11-20: llama.cpp b12528-b12553 dev builds (VoxCPM2 TTS support b12531, Vulkan stream-k MUL_MAT b12535, Metal CONV_2D tensor API b12543), Megatron-Core v0.20.1 (2026-11-19, Mixture-of-Kittens MoE backend backport etc.); LLM series: no important updates in window. Direct-apply per skill §9 (Phase 1)."
 }

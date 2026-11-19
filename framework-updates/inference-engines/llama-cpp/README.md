@@ -100,6 +100,17 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-19〜11-20 — llama.cpp b12528〜b12553（開発ビルド）
+
+b12483の続き。対象期間の開発ビルドはb12528（2026-11-19）からb12553（2026-11-20）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。
+
+- **b12531: VoxCPM2の音声生成（TTS）に対応**（mtmd、PR #32443）。speech runtimeへ新しい音声モデル系列を追加した。元のモデル実装の全モードを置き換えるものではなく、一部モードは未対応。一般のtext生成速度の改善ではない。
+- **b12535: Vulkanにstream-k方式のMUL_MATを実装**（PR #28528）。行列積の作業量を全SMへ均等に割り振る方式で、現在はcoopmat2経路でのみ有効化される。対象はVulkan backendであり、CUDA経路の高速化を意味しない。公式のend-to-end速度倍率は未提示。
+- **b12543: MetalのCONV_2Dへtensor API kernelを追加し、split-Kを全chipへ拡張**（PR #32542）。tensor API対応device（M5等）で畳み込みのreductionを分割し、threadgroup不足によるGPUの遊休を減らす。Apple Silicon向けの変更。
+- その他はbackend別の正確性・互換性修正が中心である: recurrent stateのsticky NaN修正（b12529）、WASM Relaxed SIMDとq3_K / q6_K対応（b12530）、OpenCLのdecomposed Flash AttentionでのKV padding調整（b12532）、Vulkanのstorage-only FP16 zero修正（b12534）、IQ2量子化作成のcacheによる高速化（b12541、量子化作成時の処理であり推論速度ではない）、Qwen3-VLのEAGLE-3向け入力設定（b12542）、WebGPUのPOOL_2D対応（b12547）、Inkling 2のattention mask修正（b12549）、CUDAのbatched tensor write向けscatter kernel（b12551）、OpenVINO backendの修正・最適化（b12552）等。一般的な生成速度倍率は公表されていない。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12531 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12535 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12543 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12553
+
 ## 2026-10-29〜11-18 — llama.cpp b11963〜b12483（開発ビルド）と v1.0.0（正式版）
 
 b11936の続き。対象期間の開発ビルドはb11963（2026-10-29）からb12483（2026-11-18）まで。重要変更だけを拾う。

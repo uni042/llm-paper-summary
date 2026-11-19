@@ -94,6 +94,14 @@ optimizer stateとmaster weightの正本をCPU pinned memoryへ置き、GPUへ�
 
 GPUに同時常駐するoptimizer stateを上限付きにできるためpeak VRAMを抑えられる。代わりにPCIe / NVLink-C2C等のhost-device bandwidthが性能へ効く。[PR #6244](https://github.com/NVIDIA/Megatron-LM/pull/6244)
 
+### 2026-11-19 — Core 0.20.1（released、0.20系へのbackport patch）
+
+- **Mixture-of-Kittens（MoK）MoE backendを追加**（PR #8210のbackport）。MoE expert計算のbackend選択肢を増やす。
+- あわせてTHD attention graphs、DeepSeek-V4のFLOPs計算、fused MLA KV RoPEのMXFP8量子化（PR #8144）、MFSDP v2のexpert parallelism checkpoint対応を0.20系へbackportした。TransformerEngineは2.20から2.21へ更新。その他のbug fixを含む。
+- **patch releaseであり、新規開発分ではなく0.20系ブランチへのbackport集約**である。公式release noteに速度倍率等のbenchmarkは示されていない。なお前版Core 0.20.0（2026-10-29）は本ページ未収録である。
+
+[release](https://github.com/NVIDIA/Megatron-LM/releases/tag/core_v0.20.1)
+
 ## 注視すべきPR
 
 - **#5745（Open、2026-09-07確認）**: inference-only DeepEP v2 dispatcher。通常decode用とchunked prefill用に別サイズのElasticBufferを初期化時に確保し、step中の再allocationを避ける。固定layoutにすることでCUDA Graph capture可能なMoE token dispatchを目指す。[PR #5745](https://github.com/NVIDIA/Megatron-LM/pull/5745)
