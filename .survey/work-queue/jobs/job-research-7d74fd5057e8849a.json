@@ -35,10 +35,15 @@
   "selection_reason": "ColBERT型multi-vector retrievalのMaxSim fused GPU kernelで、query/document形状によりmemory-boundからcompute-boundへ遷移するroofline境界を測定。H100 FP16 ridge 295.4 FLOP/byte、DRAM traffic model誤差0.003%を確認。PQ圧縮で転送bytesを15.9倍削減しても依存gatherが65億回残り、tensor core FP16比3倍遅くなる条件を示す。28形状で3 kernelを比較しFP32参照と照合。RAG検索kernelの実装・メモリ帯域と依存アクセスのボトルネックを直接評価するためaccept。",
   "semantic_scholar_id": "360c5f0919fb09bee4dab8772ab09a04740971a2",
   "source_url": "https://arxiv.org/abs/2606.26439",
-  "status": "ready",
+  "status": "superseded",
   "title": "TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T07:58:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md",
+  "represented_canonical_id": "arXiv:2606.26439",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

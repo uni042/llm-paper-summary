@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（926本）
+## 自動生成の論文一覧（930本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -60,6 +60,10 @@
   実装：[✓](https://github.com/MedHK23/AutoSelect) ・ リポジトリ内被引用：4  
   重要度の低いトークンを削除する既存手法は、注意重み、類似度、固定削減比などの代理指標を使うことが多く、最終回答に必要な情報を最適に残せるとは限らない。LLaVA-1.5-7Bの576視覚トークンを64個へ削減した条件で、10ベンチマークの平均性能維持率96.5%を報告する。
 
+- **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
+  実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：4  
+  動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
+
 - **2026-02 · [Is Retraining-Free Enough? The Necessity of Router Calibration for Efficient MoE Compression](2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
@@ -88,6 +92,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   DiffPruneは、視覚言語モデル（Vision-Language モデル、VLM）の入力画像を多数の視覚トークンへ展開した後、どのトークンだけを言語モデルへ渡すかを学習する方式である。一次論文のLLaVA-1.5-7B評価では、576個の視覚トークンから64個だけを保持する88.9%削減時、10課題の正規化平均性能が元モデルの96.5%となった。
 
+- **2026-04 · [MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction](2026-2604.27393-minicpm-o-4-5-towards-real-time-full-duplex-omni-modal-interaction.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  従来の対話方式では、利用者の発話が終わってからモデルが考え、応答が終わるまで次の入力を十分反映できない。著者のRTX 4090測定では、vLLMのINT4条件で毎秒212.3トークン、初回トークン遅延0.58秒、使用メモリ11GBを報告する。
+
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   LLaVA-v1.5では1画像576トークン、LLaVA-NeXTの高解像度入力では最大2,880トークンとなり、画像の背景や類似領域にも長い系列を割り当てる。LLaVA-v1.5-7Bの8課題では、視覚トークンを平均576個から32個へ削減しても、元モデルを100%とした平均相対性能94.8%を維持した。
@@ -115,10 +123,6 @@
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
-
-- **2026-02 · [OmniSIFT: Modality-Asymmetric Token Compression for Efficient Omni-modal Large Language Models](2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md)**  
-  実装：[✓](https://github.com/dingyue772/OmniSIFT) ・ リポジトリ内被引用：3  
-  動画と音声を同時に受け取る統合マルチモーダル大規模言語モデルでは、視覚エンコーダと音声エンコーダが生成したトークンを時間順に並べ、言語モデルへ渡す。著者らは20秒のクリップでも2万を超える入力トークンが生じ得ることを問題設定に挙げる。
 
 - **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -155,10 +159,6 @@
 - **2026-06 · [Less is MoE: Trimming Experts in Domain-Specialist Language Models](2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md)**  
   実装：[✓](https://github.com/HectorHHZ/Less-is-MoE) ・ リポジトリ内被引用：2  
   Less is MoEは、混合専門家モデル（Mixture of エキスパート、MoE）を圧縮する際に専門家を丸ごと削ると、一般常識の選択式問題では性能が残っても数学推論やコード生成が崩壊する原因を分析し、専門家内部の順伝播ネットワーク（FFN）中間次元を削るFisher-MoEを提案する研究である。
-
-- **2026-04 · [MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction](2026-2604.27393-minicpm-o-4-5-towards-real-time-full-duplex-omni-modal-interaction.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  従来の対話方式では、利用者の発話が終わってからモデルが考え、応答が終わるまで次の入力を十分反映できない。著者のRTX 4090測定では、vLLMのINT4条件で毎秒212.3トークン、初回トークン遅延0.58秒、使用メモリ11GBを報告する。
 
 - **2026-04 · [GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling](2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md)**  
   実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：2  
@@ -958,6 +958,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は新しい復号器の提案ではなく、既存の復号方式を同じ条件で比較するための評価方法論の研究である。結果は、少し異なるテンプレートを使うだけで方式間の優劣が逆転し、単一テンプレートで測った「品質を維持した高速化」が再現しない場合があるというものだった。
 
+- **2026-06 · [Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling](2026-2606.24187-towards-fast-and-effective-long-video-understanding-of-multimodal-large-.md)**  
+  実装：[✓](https://github.com/Zkayovo-xmu/AdaQ) ・ リポジトリ内被引用：0  
+  類似度の分散で準ガウス分布の3シグマ区間を質問ごとに広げたり狭めたりしてフレームを柔らかく抽出する学習不要の方式で、少ないフレームで長編動画理解の正解率を上げた。
+
 - **2026-06 · [TGV-KV: Text-Grounded KV Eviction for Vision-Language Models](2026-2606.03075-tgv-kv-text-grounded-kv-eviction-for-vision-language-models.md)**  
   実装：[✓](https://github.com/Danielement321/TGV-KV) ・ リポジトリ内被引用：0  
   TGV-KVは、画像と文章を同時に入力する視覚言語モデル（Vision-Language モデル; VLM）の鍵・値キャッシュ（Key-Value Cache; KVキャッシュ）を、文章の意味を優先して削減する手法である。
@@ -1058,6 +1062,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   重みの低ビット化とKVの低ビット化は別々の手法が発展してきたが、ビット幅を固定した符号化では、量子化後の符号分布が偏っていても同じ長さの符号を全要素へ割り当てるため、統計的な冗長性が残る。
 
+- **2026-06 · [Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs](2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-.md)**  
+  実装：[✓](https://github.com/Junzhou-Chen/ST_Merge) ・ リポジトリ内被引用：0  
+  視覚符号化器の浅い層で、時刻と位置を意識した多キュー照合により冗長な視覚トークンを統合し、重心で位置符号を直すことで、ロボット向け視覚言語モデルの推論を動画で約2倍、行動方策の高解像度入力で8.3倍速くした。
+
 - **2026-06 · [Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery](2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted.md)**  
   実装：[✓](https://github.com/brain-lab-research/quantized-reasoning) ・ リポジトリ内被引用：0  
   2ビット推論の失敗を推論過程の崩れとして診断し、半精度の計画と繰り返し救済を崩れた領域だけへ入れることで、MATH-500の正解率を8Bで17.2から74.2パーセントへ、32Bで65.0から87.2パーセントへ回復させた。
@@ -1069,6 +1077,10 @@
 - **2026-06 · [End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference](2026-2606.27743-end-to-end-dynamic-sparsity-for-resource-adaptive-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常のLLM推論は、入力が簡単か難しいか、サーバーのメモリや締切が変動するかにかかわらず、同じTransformer層と注意ヘッドを実行する。従来の動的スキップも入力のエントロピーなどから難易度を推測する方式が多く、現在のサービス側の予算を直接条件にしていない。
+
+- **2026-06 · [Efficient and Trainable Language Model Test-Time Scaling via Local Branch Routing](2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branc.md)**  
+  実装：[✓](https://github.com/roger-yt/Local-Branch-Routing) ・ リポジトリ内被引用：0  
+  各トークンの確定前に候補を小さな先読み木として実際に前方計算し、候補後の隠れ状態を振り分け器が比べて1枝だけ残す局所分岐方式で、数学推論のPass@1とPass@32を離散生成・通常の強化学習・軟トークン分岐の全てより高めた。
 
 - **2026-06 · [Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding](2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1109,6 +1121,10 @@
 - **2026-06 · [BatchGen: An Architecture for Scalable and Efficient Batch Inference](2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md)**  
   実装：[✓](https://github.com/batchgen-project/batchgen) ・ リポジトリ内被引用：0  
   系列をイベント駆動コルーチン化して停止・結合・分割・移動を可能にし、MoEバッチ形成と長尾負荷分散を動的化して最大2.3倍の大規模高速化を示す。
+
+- **2026-06 · [AVOC: Enhancing Hour-Level Audio-Video Understanding in Omni-Modal LLMs via Retrieval-Inspired Token Compression](2026-2606.24286-avoc-enhancing-hour-level-audio-video-understanding-in-omni-modal-llms-v.md)**  
+  実装：[✓](https://github.com/YJCX330/AVOC) ・ リポジトリ内被引用：0  
+  圧縮を検索問題として捉え、関連性・重要性・多様性の3基準でトークンを選ぶ学習型モジュールにより、長尺音声映像の正解率で次点を4.9から5.5ポイント上回った。
 
 - **2026-06 · [Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression](2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md)**  
   実装：[✓](https://github.com/yifu-ding/MoE-Slimming) ・ リポジトリ内被引用：0  
@@ -2149,7 +2165,7 @@
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：30  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
@@ -2181,7 +2197,7 @@
   本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
 
 - **2025-10 · [dInfer: An Efficient Inference Framework for Diffusion Language Models](2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md)**  
@@ -2991,7 +3007,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：79  
+  実装：✓ ・ リポジトリ内被引用：80  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  

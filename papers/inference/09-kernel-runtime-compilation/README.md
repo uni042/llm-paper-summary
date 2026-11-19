@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（229本）
+## 自動生成の論文一覧（230本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -301,6 +301,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet](2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approxi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   三角行列の逆行列を低次のノイマン級数と対角マスクと乗算のみの残差補正で近似し、逐次依存を消して神経処理装置の行列演算へ載せ、カーネルで最大5.2倍、層全体で最大24.6パーセントの削減を得た。
+
+- **2026-06 · [TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring](2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md)**  
+  実装：[✓](https://github.com/ashutoshuiuc/tilemaxsim) ・ リポジトリ内被引用：0  
+  融合した最大類似度スコア計算が帯域律速から計算律速へ切り替わる境界を閉形式と実測で示し、転送量を15.9倍減らす積量子化の融合が従属的な表引き65億回のために3.0倍遅くなることを明らかにした分析研究。
 
 - **2026-06 · [Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference](2026-2606.02823-qift-shift-friendly-no-zero-w2-post-training-quantization-for-rotated-w2.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -588,6 +592,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/amai-gsu/LM-Meter) ・ リポジトリ内被引用：2  
   さらにモバイルGPUではドライバが非公開で、カーネル単位の実行時間、キュー待機、ホスト側の発行遅延をアプリケーションから直接見ることが難しい。また量子化Gemma-2-2B-itの短い復号ではGPUの遊休時間が21%を超え、行列積カーネル群が実行時間の60%超を占める。
 
+- **2025-10 · [Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums](2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  Insumは、疎演算を間接インデックス付きEinsum（indirect Einsum）へ変換することで、疎テンソルの値と座標情報を、通常のdense テンソル演算へ写像する。
+
 - **2025-09 · [LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving](2025-2509.01229-liquidgemm-hardware-efficient-w4a8-gemm-kernel-for-high-performance-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LiquidGEMM は、重みを4ビット、活性を8ビットに量子化するW4A8構成の一般行列積（General Matrix Multiplication; GEMM）を高速化するGPUカーネルである。
@@ -619,10 +627,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-11 · [HipKittens: Fast and Furious AMD Kernels](2025-2511.08083-hipkittens-fast-and-furious-amd-kernels.md)**  
   実装：[✓](https://github.com/HazyResearch/HipKittens) ・ リポジトリ内被引用：1  
   HipKittens（HK）は、AMDのCDNA3およびCDNA4世代のGPU上で、行列積と注意計算を効率よく記述するためのC++組込み型の領域特化言語である。従来の高性能AMDカーネルは、AITERなどの手書きアセンブリに強く依存していた。HKはタイルという小行列単位の操作を開発者へ公開し、性能に効く低水準制御を再利用可能な部品へまとめる。
-
-- **2025-10 · [Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums](2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  Insumは、疎演算を間接インデックス付きEinsum（indirect Einsum）へ変換することで、疎テンソルの値と座標情報を、通常のdense テンソル演算へ写像する。
 
 - **2025-10 · [Compressed Convolutional Attention: Efficient Attention in a Compressed Latent Space](2025-2510.04476-compressed-convolutional-attention-efficient-attention-in-a-compressed-l.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -877,7 +881,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：540  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：541  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

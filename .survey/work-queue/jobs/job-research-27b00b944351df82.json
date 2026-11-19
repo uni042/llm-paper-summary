@@ -35,10 +35,15 @@
   "selection_reason": "低遅延ロボット制御向け時空間視覚トークン融合ST-Merge。動画と高解像度画像の視覚トークン数が推論遅延を膨らませる問題に対し、3次元時空間座標を明示構築し、複数キューの並列マッチングと重みつき集約でフレーム間の冗長トークンを幾何一貫に融合する、学習不要で差し込み可能な枠組み。推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "906e059d371f275a6ca9da3a92cd26047bf4d536",
   "source_url": "https://arxiv.org/abs/2606.29350",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T07:58:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-.md",
+  "represented_canonical_id": "arXiv:2606.29350",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

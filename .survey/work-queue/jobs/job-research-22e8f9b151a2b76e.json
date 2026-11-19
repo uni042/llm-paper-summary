@@ -35,10 +35,15 @@
   "selection_reason": "LBRは次トークン選択時に小規模な先読み木を展開し、候補枝の隠れ状態をrouterが評価して深さ1の部分木を確定する。prune-shift-grow操作と木の軌跡尤度を定義し、検証可能報酬による強化学習で基盤モデルとrouterを共同最適化する。通常の逐次CoTと全解探索の中間にある推論時の分岐計算・探索効率を扱い、数学推論でPass@1/32を比較する。",
   "semantic_scholar_id": "83be76299e061c8611ec467a9f436d0e812c93ae",
   "source_url": "https://arxiv.org/abs/2606.25354",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient and Trainable Language Model Test-Time Scaling via Local Branch Routing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T07:58:39+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branc.md",
+  "represented_canonical_id": "arXiv:2606.25354",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
