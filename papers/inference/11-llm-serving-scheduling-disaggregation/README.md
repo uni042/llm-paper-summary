@@ -1612,6 +1612,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
 
+- **2025-10 · [Preserving LLM Capabilities through Calibration Data Curation: From Analysis to Optimization](2025-2510.10618-preserving-llm-capabilities-through-calibration-data-curation-from-analy.md)**  
+  実装：[✓](https://github.com/BokwaiHo/COLA) ・ リポジトリ内被引用：2  
+  量子化・剪定はLLMの重み容量や演算量を減らすが、圧縮前の校正データの選び方で、残る能力の種類が変わる。LLaMA3-8B-InstructのSparseGPT 50%剪定では、WikiTextのランダム校正による常識推論41.85%に対しCOLAは44.23%を報告する。
+
 - **2025-07 · [LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems](2025-2507.21276-lemix-unified-training-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。
@@ -1659,10 +1663,6 @@
 - **2025-11 · [FailSafe: High-performance Resilient Serving](2025-2511.14116-failsafe-resilient-tensor-parallel-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPU障害後も任意数のGPUでテンソル並列推論を継続し、KVキャッシュ配置・注意計算・要求割当を均衡化しながら状態復旧を高速化する。
-
-- **2025-10 · [Preserving LLM Capabilities through Calibration Data Curation: From Analysis to Optimization](2025-2510.10618-preserving-llm-capabilities-through-calibration-data-curation-from-analy.md)**  
-  実装：[✓](https://github.com/BokwaiHo/COLA) ・ リポジトリ内被引用：1  
-  量子化・剪定はLLMの重み容量や演算量を減らすが、圧縮前の校正データの選び方で、残る能力の種類が変わる。LLaMA3-8B-InstructのSparseGPT 50%剪定では、WikiTextのランダム校正による常識推論41.85%に対しCOLAは44.23%を報告する。
 
 - **2025-10 · [From Tokens to Layers: Redefining Stall-Free Scheduling for MoE Serving with Layered Prefill](2025-2510.08055-layered-prefill-stall-free-moe-serving.md)**  
   実装：[✓](https://github.com/scale-snu/layered-prefill) ・ リポジトリ内被引用：1  
@@ -2085,7 +2085,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1582  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1584  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

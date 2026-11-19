@@ -16,6 +16,10 @@
   実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：6  
   映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
 
+- **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  既存の手法はフレーム内の空間圧縮とフレーム間の時間圧縮を順番に適用するものが多いが、保持率を5%以下まで下げると、先に決めた各段階の予算配分が適切でなくなり、質問に必要な短い出来事や小さな物体を落としやすい。
+
 - **2026-03 · [QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression](2026-2603.21232-qmop-query-guided-mixture-of-projector-for-efficient-visual-token-compre.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   QMoP（Query Guided Mixture-of-Projector）は、マルチモーダル大規模言語モデル（Multimodal Large Language モデル、MLLM）の画像トークン数を減らす際に、一つの固定圧縮法では画像と質問の組合せによって必要な情報を失うという問題を扱う。
@@ -31,10 +35,6 @@
 - **2026-04 · [Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures](2026-2604.09048-watt-counts-energy-aware-benchmark-for-sustainable-llm-inference-on-hete.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   逆に常時待機する低負荷サーバでは、ピーク処理能力よりアイドル時の消費電力が支配的になり、別のGPUが有利になり得る。Watt Countsは、こうしたモデル、GPU、運用負荷の三者の相互作用を比較するための公開データセットと測定基盤を提案する。
-
-- **2026-03 · [Unified Spatiotemporal Token Compression for Video-LLMs at Ultra-Low Retention](2026-2603.21957-unified-spatiotemporal-token-compression-for-video-llms-at-ultra-low-ret.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  既存の手法はフレーム内の空間圧縮とフレーム間の時間圧縮を順番に適用するものが多いが、保持率を5%以下まで下げると、先に決めた各段階の予算配分が適切でなくなり、質問に必要な短い出来事や小さな物体を落としやすい。
 
 - **2026-07 · [HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference](2026-2607.04302-hifa4-training-free-4-bit-flashattention-on-ascend-hif4-npus-for-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -361,7 +361,7 @@
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：28  
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
@@ -388,13 +388,13 @@
   実装：✓ ・ リポジトリ内被引用：12  
   LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
+- **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：11  
+  初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
+
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
   実装：[✓](https://github.com/nanomaoli/llm_reproducibility) ・ リポジトリ内被引用：11  
   「温度0の貪欲復号なら同じモデルは同じ答えを返す」という前提が、GPU数・GPU種類・バッチサイズによる浮動小数点演算順序の変化だけでも崩れることを系統的に示し、重みの保存精度と計算精度を分離するLayerCastで再現性を改善する研究。
-
-- **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：10  
-  初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
 
 - **2025-07 · [Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges](2025-2507.16731-collaborative-inference-and-learning-between-edge-slms-and-cloud-llms-a-.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

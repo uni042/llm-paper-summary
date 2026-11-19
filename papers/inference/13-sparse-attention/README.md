@@ -618,13 +618,13 @@
   実装：[✓](https://github.com/TemporaryLoRA/Block-Attention) ・ リポジトリ内被引用：18  
   検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した各文書を互いに独立した注意ブロックとして事前計算し、同じ文書が別質問で再利用されたらKVキャッシュを再計算しない。
 
+- **2024-10 · [ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity](2024-2410.08584-zipvl-accelerating-vision-language-models-through-dynamic-token-sparsity.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  入力全体を処理するプリフィル段階では注意計算が長い系列に対して重くなり、続くデコード段階では生成トークンが過去のKey/Value（KV）を繰り返し読み出すためメモリ帯域が問題になる。ただし、前者はバッチ1の最初のトークンまでの時間、後者は各方式が単一GPUで収容できる最大バッチを使った生成処理率であり、同じ測定条件の速度指標ではない。
+
 - **2024-10 · [TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention](2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md)**  
   実装：[✓](https://github.com/DerrickYLJ/TidalDecode) ・ リポジトリ内被引用：17  
   系列が長くなるほど鍵値キャッシュは線形に増えるため、1トークンずつ生成する復号では演算より高帯域メモリからの読出しが律速になりやすい。論文の例ではLLaMA-2-7Bを半精度、128K文脈で使うと鍵値キャッシュだけで64GBになる。疎注意（sparse 注意機構）は全過去トークンの一部だけを注意計算へ入れることで、この読出し量を減らす。
-
-- **2024-10 · [ZipVL: Accelerating Vision-Language Models Through Dynamic Token Sparsity](2024-2410.08584-zipvl-accelerating-vision-language-models-through-dynamic-token-sparsity.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  入力全体を処理するプリフィル段階では注意計算が長い系列に対して重くなり、続くデコード段階では生成トークンが過去のKey/Value（KV）を繰り返し読み出すためメモリ帯域が問題になる。ただし、前者はバッチ1の最初のトークンまでの時間、後者は各方式が単一GPUで収容できる最大バッチを使った生成処理率であり、同じ測定条件の速度指標ではない。
 
 - **2024-06 · [Mixture of Attention Spans: Optimizing LLM Inference Efficiency with Heterogeneous Sliding-Window Lengths](2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md)**  
   実装：[✓](https://github.com/thu-nics/MoA) ・ リポジトリ内被引用：16  

@@ -92,6 +92,10 @@
   実装：[✓](https://github.com/waybarrios/vllm-mlx) ・ リポジトリ内被引用：4  
   Apple SiliconはCPUとGPUが同じ物理メモリを利用する統合メモリ構成を持つため、一般的な独立GPU環境とはモデル重みや中間状態の管理条件が異なる。
 
+- **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
+  実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：4  
+  端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
+
 - **2026-07 · [LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference](2026-2607.27704-lightrot-a-light-weighted-rotation-scheme-and-architecture-for-accurate-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   低ビットLLM推論では重みだけでなく、推論時に生成される入力活性（IA）とKVキャッシュを4ビットへ量子化したい。
@@ -159,10 +163,6 @@
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
-
-- **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
-  実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：3  
-  端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
 
 - **2025-12 · [Trellis: Learning to Compress Key-Value Memory in Attention Models](2025-2512.23852-trellis-learning-to-compress-key-value-memory-in-attention-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2560,6 +2560,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   Hawkeyeは、推論用の大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を出力し続けることによる生成遅延と課金額を削減する研究である。重要なのは、二段階のモデル連携を推論時だけでなく事後学習の報酬設計にも組み込んでいることである。
 
+- **2025-03 · [Týr-the-Pruner: Structural Pruning LLMs via Global Sparsity Distribution Optimization](2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md)**  
+  実装：[✓](https://github.com/AMD-AGI/Tyr-the-Pruner) ・ リポジトリ内被引用：2  
+  各層を複数の疎率で切った複製の束から全体の疎率配分を進化的探索で選ぶ全体枝刈りで、七百億級モデルを半分切っても下流の平均正解率を元の九十七パーセントに保ち、八十億級の三十七・五パーセント枝刈りでは従来の最良手法より困惑度が三・四五低く正解率が十・二六ポイント高かったと報告した。
+
 - **2025-03 · [RSQ: Learning from Important Tokens Leads to Better Quantized LLMs](2025-2503.01820-rsq-learning-from-important-tokens-leads-to-better-quantized-llms.md)**  
   実装：[✓](https://github.com/ylsung/rsq) ・ リポジトリ内被引用：2  
   GPTQなどの事後量子化（Post-学習 量子化; PTQ）は、元の重みを低ビットへ丸めるとき、少数の校正データで量子化前後の層出力を比較して誤差を補償する。2bit条件ではQuaRotの平均35.3%に対しRSQは40.6%となる。
@@ -2715,10 +2719,6 @@
 - **2025-03 · [Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer](2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md)**  
   実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
   本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
-
-- **2025-03 · [Týr-the-Pruner: Structural Pruning LLMs via Global Sparsity Distribution Optimization](2025-2503.09657-t-r-the-pruner-structural-pruning-llms-via-global-sparsity-distribution-.md)**  
-  実装：[✓](https://github.com/AMD-AGI/Tyr-the-Pruner) ・ リポジトリ内被引用：1  
-  各層を複数の疎率で切った複製の束から全体の疎率配分を進化的探索で選ぶ全体枝刈りで、七百億級モデルを半分切っても下流の平均正解率を元の九十七パーセントに保ち、八十億級の三十七・五パーセント枝刈りでは従来の最良手法より困惑度が三・四五低く正解率が十・二六ポイント高かったと報告した。
 
 - **2025-03 · [QUAD: Quantization and Parameter-Efficient Tuning of LLM with Activation Decomposition](2025-2503.19353-quad-quantization-and-parameter-efficient-tuning-of-llm-with-activation-.md)**  
   実装：[✓](https://github.com/hyx1999/Quad) ・ リポジトリ内被引用：1  
@@ -3363,7 +3363,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：18  
   線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
@@ -3801,7 +3801,7 @@
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：28  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
@@ -4065,7 +4065,7 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：74  
+  実装：✓ ・ リポジトリ内被引用：75  
   Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
