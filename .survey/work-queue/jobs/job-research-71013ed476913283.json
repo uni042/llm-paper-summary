@@ -35,10 +35,15 @@
   "selection_reason": "層間スペクトル進化に基づく視覚トークン剪定。単一層の注意や類似度でなく、トークン表現が層をまたいで高周波の構造詳細から低周波の意味抽象へ変わる進化を周波数領域で測り、重要度の位置バイアスを避ける学習不要の剪定。MLLM推論のトークン削減機構そのもの。",
   "semantic_scholar_id": "d6df4fd5c5d7a940bc470807c99dab2c0628e701",
   "source_url": "https://arxiv.org/abs/2606.24165",
-  "status": "ready",
+  "status": "superseded",
   "title": "Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models",
   "type": "research",
   "venue": "European Conference on Computer Vision",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T07:26:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-mod.md",
+  "represented_canonical_id": "arXiv:2606.24165",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

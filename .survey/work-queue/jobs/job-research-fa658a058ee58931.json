@@ -35,10 +35,15 @@
   "selection_reason": "離散拡散言語モデル向け平均場並列デコード。限界信頼度だけで独立に選ぶと互いに両立しない同時確定が起きる問題に対し、予測分布由来のペアワイズ相互作用でコミットスコアを固定点更新し、競合する同時確定を抑える学習不要のデコード枠組み。拡散デコード機構そのもの。",
   "semantic_scholar_id": "bdca28105aecba6b9e2238eb2929a7cb02c28b17",
   "source_url": "https://arxiv.org/abs/2606.15805",
-  "status": "ready",
+  "status": "superseded",
   "title": "Mean-Field Parallel Decoding for Discrete Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T07:26:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.15805-mean-field-parallel-decoding-for-discrete-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2606.15805",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

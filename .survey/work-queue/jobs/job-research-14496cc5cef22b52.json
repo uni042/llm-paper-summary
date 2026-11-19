@@ -35,10 +35,15 @@
   "selection_reason": "動画・画像を含むMLLMのKV削減で観測窓平均注意だけでは少数の重要証拠が消える問題を扱う。最終クエリ注意を補助信号として用い、層内一貫性と層間持続性でノイズを抑えるBACONを提案。厳しい保持予算で平均7.5%、最大30.9%の性能改善を報告する、マルチモーダルKVキャッシュの直接的な選択手法。",
   "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
   "source_url": "https://arxiv.org/abs/2606.14782",
-  "status": "ready",
+  "status": "superseded",
   "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-19T07:26:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2606.14782-last-but-not-least-boundary-attention-calibration-for-multimodal-kv-cach.md",
+  "represented_canonical_id": "arXiv:2606.14782",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
