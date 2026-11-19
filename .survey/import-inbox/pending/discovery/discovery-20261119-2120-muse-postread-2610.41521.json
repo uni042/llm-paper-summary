@@ -1,0 +1,28 @@
+{
+ "schema_version": 2,
+ "artifact_type": "discovery_run",
+ "worker_id": "muse",
+ "run_key": "muse-20261119-cont4-postread-2610.41521",
+ "reference_main_sha": "219fab384b67a1095b8bfd71bb2d075e9aec9c15",
+ "record_count": 1,
+ "origin": "research_postread_relevance",
+ "records": [
+  {
+   "classification": "unrelated",
+   "canonical_id": "arXiv:2610.41521",
+   "identity_tokens": [
+    "arXiv:2610.41521",
+    "https://arxiv.org/abs/2610.41521"
+   ],
+   "title": "KITE: Retrieval as a Decision Procedure for Long-Term Conversational Memory",
+   "reason": "全文読解の結果、主題はLLMエージェントの長期会話メモリにおける索引統治と検索の決定手続きであり、評価もLoCoMoやLongMemEval-Sの回答精度と読解文脈量が中心である。推論実行・サービング・KVキャッシュ・量子化など推論システムの機構への直接の技術的貢献は確認できず、対象範囲外と判定した。",
+   "source_url": "https://arxiv.org/abs/2610.41521",
+   "body_check": "research_fulltext_relevance_review: arXiv HTML/PDF全文を通読して関連性を再判定した",
+   "first_checked_at": "2026-11-19T21:20:00+09:00",
+   "last_checked_at": "2026-11-19T21:20:00+09:00",
+   "linked_from": [
+    "worker-worklist research_audit (cont4 pool index)"
+   ]
+  }
+ ]
+}
