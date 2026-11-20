@@ -38,7 +38,7 @@
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
 
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
-  実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：13  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
 
 - **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
@@ -116,6 +116,10 @@
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ドラフトモデルが隔離環境でツール操作列を先行実行し、権威モデルが先頭操作を確認したマクロだけ後続操作と観測をまとめて確定して、大型モデル呼出しとツール待ちを減らす。
+
+- **2026-09 · [Attuner: Recomputation-Free Agentic Context KV Reuse](2026-2609.36722-attuner-recomputation-free-agentic-context-kv-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エージェントがスキルの説明、検索した文書、過去の記憶をリクエストごとに組み立てると、同じ資料を何度もプリフィルすることになる。再計算を減らす代わりに、複数資料から正しい証拠を選ぶ能力が落ちる問題がある。学習済みQuery更新を投影重みに統合するため、推論時にFull teacherや保存済み資料KVの再計算は不要である。
 
 - **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -210,10 +214,6 @@
 - **2026-09 · [BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents](2026-2609.08566-bio-memart-biometric-aware-kv-cache-memory-for-multi-user-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有KVキャッシュ記憶を意味類似度だけで検索せず、生体認証で所有者候補を先に絞ってからMemArtの検索・KV再利用を行う物理ユーザー認可層。
-
-- **2026-09 · [Attuner: Recomputation-Free Agentic Context KV Reuse](2026-2609.36722-attuner-recomputation-free-agentic-context-kv-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  エージェントがスキルの説明、検索した文書、過去の記憶をリクエストごとに組み立てると、同じ資料を何度もプリフィルすることになる。再計算を減らす代わりに、複数資料から正しい証拠を選ぶ能力が落ちる問題がある。学習済みQuery更新を投影重みに統合するため、推論時にFull teacherや保存済み資料KVの再計算は不要である。
 
 - **2026-08 · [TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling](2026-2608.10402-tiderl-boosting-agentic-rl-goodput-with-readiness-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -326,7 +326,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：61  
+  実装：✓ ・ リポジトリ内被引用：62  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
