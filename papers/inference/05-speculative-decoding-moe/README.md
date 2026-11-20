@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（351本）
+## 自動生成の論文一覧（353本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -258,6 +258,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：1  
   木型投機的復号（tree-based 投機的復号）は、小型ドラフトモデルが複数の候補トークン列を木として用意し、大型ターゲットモデルがその木をまとめて検証することで、自己回帰復号の一段ずつの待機を減らす。
 
+- **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
+  実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：1  
+  ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
+
 - **2026-09 · [Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding](2026-2609.36173-draft-in-parallel-condition-through-depth-adjacent-causal-injection-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は、軽量な下書き器が候補トークン列を提案し、対象LLMが一括検証する。Qwen3-8Bの7課題、温度0での平均受理長は、DFlashの3.77トークン/回からDSpineの4.82トークン/回へ増加し、相対改善率は27.8%となる。
@@ -444,6 +448,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号では軽量ドラフトモデルが候補を生成し、大型ターゲットモデルが候補を並列検証する。多くの高速化研究はドラフト側の候補品質・候補木・生成速度を改善するが、ターゲット側は元の全層を実行することを前提とする。TSSは、翻訳・要約・QA・RAG・MMLUなどのドメインごとにターゲットのスキップ層集合をオフラインで探索する。
 
+- **2026-09 · [Spexis: Speculative and Lookahead Scheduling for LLM Inference](2026-2609.34370-spexis-speculative-and-lookahead-scheduling-for-llm-inference.md)**  
+  実装：[✓](https://github.com/mlsys-seo/spexis) ・ リポジトリ内被引用：0  
+  投機実行を検証と並行させる新しい並列軸と、投機の質とメモリ圧迫を予測する先読み制御により、複数装置推論で最適な並列の組み合わせ比で最大34パーセント高速化し、復号スループットは最大54パーセント改善した。
+
 - **2026-09 · [SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture](2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfig.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号の各段で変わる演算強度に合わせ、タイル内では処理要素配列の実行形態を、タイル間では分割軸と通信方式をカーネルごとに切り替える再構成可能タイル型加速器で、固定方式比で最大2.09倍にさらに1.25倍を上乗せした。
@@ -451,6 +459,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [SpecQuant: Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference](2026-2609.21704-specquant-speculative-decoding-with-multi-parent-quantization-for-adapti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単独の高精度モデルで全要求を生成すると、短い事実質問も長い推論問題も同じ重み精度・同じ自己回帰生成経路を使う。一方、低ビット量子化だけでは出力品質が変化し、通常の投機的復号では別途草稿モデルを用意する必要がある。
+
+- **2026-09 · [Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers](2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculation-for-lo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  クエリとキーは浅い再帰で成熟するがバリューは遅れるという非対称性を使い、浅い下書きが検証済み接頭辞の全深さ表現を読む方式と持ち越し並列精錬で、ループ型モデルの生成を4.00から6.96倍高速化した研究である。
 
 - **2026-09 · [SEED: Self-Speculative Decoding via Implicit Encoder-Decoder](2026-2609.36590-seed-self-speculative-decoding-via-implicit-encoder-decoder.md)**  
   実装：[✓](https://github.com/lhk2004/SEED) ・ リポジトリ内被引用：0  
@@ -467,10 +479,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [NebulaSD: Many-for-Many Speculative Decoding](2026-2609.29364-nebulasd.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NebulaSDは、投機的復号（投機的復号）のドラフト生成と対象モデル検証を固定した一対一の組から切り離し、M個のドラフトワーカーとN個の対象ワーカーを独立した共有資源プールとして運用する推論システムである。物理分離方式比で50.4%、同居方式比で72.6%高く、時間重み付きストリーミングマルチプロセッサ活動率も約29〜30%から47.3%へ上昇した。
-
-- **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
-  実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：0  
-  ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
 
 - **2026-09 · [LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter](2026-2609.37029-longspark-efficient-speculative-decoding-with-a-fixed-cost-parallel-draf.md)**  
   実装：[✓](https://github.com/Hao-Yuan-He/LongSpark) ・ リポジトリ内被引用：0  
@@ -1173,7 +1181,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLE-2は、既存のEAGLEで用いる小型の下書きモデルをそのまま使いながら、投機的復号（投機的復号）で検証する候補木の形を入力文脈に応じて変える手法である。代表的な温度0のVicuna 7B・MT-benchでは通常生成比3.62倍、既存EAGLEは2.90倍であり、平均受理長はそれぞれ4.98と3.94トークンである。
 
 - **2024-02 · [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](2024-2402.02057-lookahead-decoding.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/LookaheadDecoding) ・ リポジトリ内被引用：183  
+  実装：[✓](https://github.com/hao-ai-lab/LookaheadDecoding) ・ リポジトリ内被引用：184  
   先読みデコードは、対象LLMを未来位置へ並列反復して途中の正しい短いトークン列を蓄積し、現在接頭辞に合う候補を一括検証して、追加モデルなしに逐次ステップとメモリ帯域待ちを減らす。
 
 - **2024-07 · [Online Speculative Decoding](2023-2310.07177-online-speculative-decoding.md)**  
@@ -1379,7 +1387,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：482  
+  実装：✓ ・ リポジトリ内被引用：483  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

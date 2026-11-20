@@ -46,6 +46,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：8  
   大小モデル間でKVを内容空間のヘッド単位線形写像へ変換し、受信モデルの長文再プリフィルを省く方式。対応層を選びRoPEを付け直して形状差による誤差を抑える。
 
+- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
+  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：6  
+  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
+
 - **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：6  
   SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
@@ -61,10 +65,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-04 · [TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing](2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   全収集型マルチエージェントの共有文脈をラウンド単位で一括再利用し、兄弟KVキャッシュを1本のマスターと疎な差分だけで保存する。A100実機で同時エージェント数をvLLM比最大2.7倍、KV保存量を最大17.5倍圧縮する。
-
-- **2026-04 · [KV Packet: Recomputation-Free Context-Independent KV Caching for LLMs](2026-2604.13226-kv-packet-recomputation-free-context-independent-kv-caching-for-llms.md)**  
-  実装：[✓](https://github.com/ChuangtaoChen-TUM/KVPacket) ・ リポジトリ内被引用：5  
-  KV Packetは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ文書が異なる問い合わせや異なる文書順序で繰り返し現れる状況に向けた、鍵・値キャッシュ（Key–Value Cache; KVキャッシュ）の再利用方式である。
 
 - **2026-02 · [Agent Memory Below the Prompt: Persistent Q4 KV Cache for Multi-Agent LLM Inference on Edge Devices](2026-2603.04428-persistent-q4-agent-kv-cache.md)**  
   実装：[✓](https://github.com/yshk-mxim/agent-memory) ・ リポジトリ内被引用：5  
@@ -142,6 +142,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：3  
   ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
 
+- **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  ハイブリッドLLMの位置非依存キャッシュで、複数の再帰状態を厳密合成せず単一チャンク状態から再計算する方式。Mamba-2ではEPIC併用時の完全プリフィル比品質を46.6%から86.8%へ改善し、合成処理の追加遅延も避ける。
+
 - **2026-07 · [Learning Agent Execution for KV-Cache Management in Agentic Serving](2026-2608.14624-cachescout.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   CacheScoutはエージェント遷移をオンライン学習し、次に呼ばれそうな固定プレフィックスKVをGPUへ残し、空き時間に先読みして再プリフィルと追い出しを減らす方式。
@@ -173,10 +177,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-08 · [Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention](2026-2608.03555-karat-pnm-retrieval-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   KARATはKVと索引をLPDDR搭載の汎用処理近傍メモリへ移し、GPUを重み計算へ専念させ、検索型疎注意をマイクロバッチ化して大容量KVの転送とGPU容量制約を減らす方式。
-
-- **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  ハイブリッドLLMの位置非依存キャッシュで、複数の再帰状態を厳密合成せず単一チャンク状態から再計算する方式。Mamba-2ではEPIC併用時の完全プリフィル比品質を46.6%から86.8%へ改善し、合成処理の追加遅延も避ける。
 
 - **2026-06 · [SwiftCache: Efficient LLM Serving for Multi-turn Conversations with Heterogeneous KV Cache Sharing](2026-2606.16135-swiftcache-heterogeneous-kv-cache-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -343,11 +343,11 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：139  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：140  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
-  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/UCSB-NLP-Chang/KVLink) ・ リポジトリ内被引用：49  
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
@@ -359,7 +359,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   OmniKVは、長文脈の大規模言語モデルで、鍵・値キャッシュ（KVキャッシュ）をGPUにすべて置くと容量不足になる一方、CPUに退避した全量を各層で読み直すと転送が律速になる問題を扱う。単一A100 80GB、128K文脈で退避なしの復号は毎秒21.0トークン、完全注意比1.68倍である。
 
 - **2025-03 · [KVShare: An LLM Service System with Efficient and Effective Multi-Tenant KV Cache Reuse](2025-2503.16525-kvshare.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   要求間KV再利用を可変長断片・DHD再計算・ヒット率別バッチングで安全に広げ、TTFT最大9.39倍短縮と平均1.2倍のスループット向上を示す。
 
 - **2025-10 · [TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications](2025-2510.18586-tokencake-agent-kv-cache-serving.md)**  
@@ -387,7 +387,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   後半層の入力トークン計算を省き中間層出力からKVだけを生成する軽量蒸留方式で、プリフィル計算を25〜50%削減し処理量を最大2倍にする。
 
 - **2025-09 · [SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving](2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   動的疎注意で未使用KVをDRAMへ逃がし、断片化転送・HBM競合・長文プリフィルを専用機構で抑えることで、vLLM比で初回トークン時間を最大9.26倍短縮し生成スループットを最大3.14倍高めた長文LLMサービング基盤。
 
 - **2025-08 · [TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving](2025-2508.17219-tokenlake-segment-prefix-cache-pool.md)**  
@@ -422,6 +422,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：4  
   KV容量は系列長・バッチ数にほぼ比例し、GPUのメモリを超えるとCPUメモリやSSDへ退避せざるを得ない。論文はRTX 4090を用いた単一PC上で平均3.46倍、バッチ8で最大5.47倍の推論遅延改善を報告するが、比較対象は特定のH2O類似・先読み類似のオフロード実装であり、通常のvLLMやllama.cppの全ての設定を上回るとの主張ではない。
 
+- **2025-11 · [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  LiteCacheはクエリ類似度で再利用価値の高いKVヘッドを選び、CPUの索引処理をGPU中心の一括取得へ置き換えて、細粒度管理・同期・カーネル起動のオーバーヘッドを減らす方式。
+
 - **2025-09 · [ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching](2025-2509.16857-shadowserve-smartnic-kv-fetching.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ShadowServeは遠隔圧縮KVの展開・逆量子化をSmartNICへ移し、GPUを推論計算に専念させて、KV取得時のGPU競合とCPU処理待ちを減らす方式。
@@ -433,10 +437,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-06 · [APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs](2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   APEXはCPU担当要求とGPU担当要求の線形計算を一つのGPUバッチにまとめ、注意結果の同期を必要直前まで遅らせてCPU計算をGPU処理の裏へ隠す方式。
-
-- **2025-11 · [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  LiteCacheはクエリ類似度で再利用価値の高いKVヘッドを選び、CPUの索引処理をGPU中心の一括取得へ置き換えて、細粒度管理・同期・カーネル起動のオーバーヘッドを減らす方式。
 
 - **2025-09 · [TRACE: Unlocking Effective CXL Bandwidth via Lossless Compression and Precision Scaling](2025-2509.03377-cxl-ndp-transparent-near-data-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -461,7 +461,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：168  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：169  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -473,7 +473,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   オンラインの大規模言語モデル推論では、要求をまとめて実行することでGPUの行列積を効率化できる。MLSys 2025正式論文は、同一ホストのCPUを使う条件で、GPUのみの実行と比べてT4で最大7.5倍、A10Gで最大26%、H100で最大14%の処理率改善を報告する。
 
 - **2024-10 · [EPIC: Efficient Position-Independent Caching for Serving Large Language Models](2024-2410.15332-epic-position-independent-caching.md)**  
-  実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/DerekHJH/epic) ・ リポジトリ内被引用：50  
   独立事前計算した文書チャンクを位置に依存せず再利用し、連結時は各チャンク先頭の少数トークンだけを再計算して注意シンクを修正することで、CacheBlend比で最大8倍の初回トークン時間短縮と7倍のスループットを得る。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  
@@ -519,6 +519,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：135  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：136  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 <!-- survey:auto:end -->

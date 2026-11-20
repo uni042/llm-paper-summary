@@ -35,10 +35,15 @@
   "selection_reason": "KVキャッシュオフロード向け高速化ベクトル化疎ギャザーAVSG。動的疎注意でも全KVへのアクセスが必要で提供がメモリ律速になる問題と、ホストメモリへのオフロードで転送がデコードのクリティカルパスに乗る問題に対し、デコードステップ間で選ばれるKVの重なりをデバイス常駐の再利用として活かす演算子。推論メモリ機構そのもの。",
   "semantic_scholar_id": "8e552f5c548e5e246ee0aa0774cf62f4f7d9919e",
   "source_url": "https://arxiv.org/abs/2609.37538",
-  "status": "ready",
+  "status": "superseded",
   "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:10:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md",
+  "represented_canonical_id": "arXiv:2609.37538",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

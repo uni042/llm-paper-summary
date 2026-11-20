@@ -35,10 +35,15 @@
   "selection_reason": "接頭辞キャッシュSuffixReplay。ハイブリッドLLMで線形注意層の循環状態が任意の接頭辞境界へ戻せない問題に対し、線形状態に遠い過去を忘れさせることで、チェックポイントを実体化せずに全てのページ境界で接頭辞再利用を可能にする初の方式。推論のキャッシュ機構そのもの。",
   "semantic_scholar_id": "f6fbfd531227293a9febf58313526d8d1f6380b7",
   "source_url": "https://arxiv.org/abs/2609.33477",
-  "status": "ready",
+  "status": "superseded",
   "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:10:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix.md",
+  "represented_canonical_id": "arXiv:2609.33477",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

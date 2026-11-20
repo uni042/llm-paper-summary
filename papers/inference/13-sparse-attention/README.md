@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（174本）
+## 自動生成の論文一覧（176本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -33,7 +33,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：50  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：51  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
@@ -41,7 +41,7 @@
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   各層で繰り返す疎注意のトークン選択を一部の層だけで計算し、後続層に再利用する。30B DSAモデルの200K文脈でインデクサ計算を75%削減し、プリフィルを1.82倍、デコードを1.48倍高速化した。
 
 - **2026-03 · [HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention](2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md)**  
@@ -180,6 +180,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   通常の推論評価では精度、応答遅延、トークン毎秒、GPU利用率、モデル浮動小数点演算利用率（モデル FLOPs Utilization、MFU）を測る。KVキャッシュ圧縮、量子化、疎注意、ルーティング、バッチ化、スケジューリングなどは、トークン当たりの計算量と消費エネルギーを減らすことで、この上限を引き上げる介入として位置づけられる。
 
+- **2026-05 · [BFLA: Block-Filtered Long-Context Attention Mechanism](2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.md)**  
+  実装：[✓](https://github.com/Alicewithrabbit/BFLA) ・ リポジトリ内被引用：1  
+  学習なしの決定的ブロック索引、クエリタイルでの選択共有、長さ適応の保持予算を組み合わせた疎プリフィルで、密な比較対象に対して最初のトークンまでの時間を最大約4倍、要求全体を最大3.72倍速くし、長文脈の品質は同等以上を保った。
+
 - **2026-05 · [AB-Sparse: Sparse Attention with Adaptive Block Size for Accurate and Efficient Long-Context Inference](2026-2605.12110-ab-sparse-sparse-attention-with-adaptive-block-size-for-accurate-and-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ブロック疎注意（block sparse 注意機構）は、過去トークンを一定長のブロックへ区切り、各ブロックの代表ベクトルと現在の問い合わせの類似度から重要なブロックだけを読み込む。Llama-3.1-8B、Qwen3-8B、Qwen3-32BのRULERとLongBenchで、Quest・ArkValeを同じKV予算4%、平均ブロック長32の条件で比較した。
@@ -230,6 +234,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   動的疎注意の前層経路IDを監視候補付きで再利用し、変化した行だけ再ルーティングして経路スコア計算を約38～52%へ削減するが、現CPU実装は未融合処理で逆に低速。
 
+- **2026-09 · [RelaxKV: Recomputation Guided by the Query with Sparse Context Attention for Efficient KV Cache Reuse](2026-2609.33503-relaxkv-recomputation-guided-by-the-query-with-sparse-context-attention-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層ごとのクエリ注意で修復するトークンを層別に選び、再計算時に読む文脈もその選択の和集合へ絞ることで、位置非依存キャッシュの修復費用を下げつつ長文脈品質を保つ方式で、4モデル全てで先行方式の集計品質を上回った。
+
 - **2026-09 · [RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models](2026-2609.20971-rbs-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   RBS-注意機構は、長い入力文を処理して最初の出力トークンを返すまでの事前入力処理（プリフィル）を高速化する方式である。
@@ -273,6 +281,10 @@
 - **2026-09 · [Block Sparse Attention with Log-Linear Complexity](2026-2609.31093-block-sparse-attention-with-log-linear-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の注意計算を高速化する際、過去のすべての鍵・値に注意を計算する代わりに、重要と判断した鍵ブロックだけを参照するブロック疎注意（block-sparse 注意機構）が用いられる。Tritonによる選択処理単体の実験では、256KトークンでBSAの312.96ミリ秒に対しPISAの31.44ミリ秒で、約9.95倍高速だった。
+
+- **2026-09 · [AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving](2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md)**  
+  実装：[✓](https://gitcode.com/cann/cann-recipes-infer) ・ リポジトリ内被引用：0  
+  疎注意で選ばれたKV項目を、ベクトル化ハッシュ照合で装置側バッファと突き合わせ、不在分だけを全コアへ均等に転送する退避高速化演算子で、的中率94.83パーセントと出力遅延39パーセント削減を実要求で示した。
 
 - **2026-09 · [Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models](2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md)**  
   実装：[✓](https://github.com/tbn5pj/WISE_code) ・ リポジトリ内被引用：0  
@@ -354,10 +366,6 @@
   実装：[✓](https://github.com/jiwonsong-dev/CompactAttention) ・ リポジトリ内被引用：0  
   CompactAttentionは、長文脈の大規模言語モデル（LLM）の分割入力処理（chunked プリフィル）を高速化するため、疎注意（sparse 注意機構）の「どのKVブロックを選ぶか」と「選んだKVをどのカーネルで計算するか」を切り離す方式である。
 
-- **2026-05 · [BFLA: Block-Filtered Long-Context Attention Mechanism](2026-2605.12193-bfla-block-filtered-long-context-attention-mechanism.md)**  
-  実装：[✓](https://github.com/Alicewithrabbit/BFLA) ・ リポジトリ内被引用：0  
-  学習なしの決定的ブロック索引、クエリタイルでの選択共有、長さ適応の保持予算を組み合わせた疎プリフィルで、密な比較対象に対して最初のトークンまでの時間を最大約4倍、要求全体を最大3.72倍速くし、長文脈の品質は同等以上を保った。
-
 - **2026-04 · [SpikingBrain2.0: Brain-Inspired Foundation Models for Efficient Long-Context and Cross-Platform Inference](2026-2604.22575-spikingbrain2-0-brain-inspired-foundation-models-for-efficient-long-cont.md)**  
   実装：[✓](https://github.com/BICLab/SpikingBrain2.0) ・ リポジトリ内被引用：0  
   長い文章を扱う大規模言語モデルでは、全注意（Full 注意機構; FA）を用いると、事前充填（プリフィル）時の注意計算が系列長に対して二次的に増える。
@@ -421,11 +429,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：155  
+  実装：✓ ・ リポジトリ内被引用：156  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：103  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -449,7 +457,7 @@
   疎注意（sparse 注意機構）は参照対象を重要トークンへ限定して帯域を節約するが、従来の多くの方式は選択数を固定した上位k件（top-k）方式である。
 
 - **2025-09 · [InfLLM-V2: Dense-Sparse Switchable Attention for Seamless Short-to-Long Adaptation](2025-2509.24663-infllm-v2-dense-sparse-switchable-attention-for-seamless-short-to-long-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   すべての過去トークンを見る密注意は安定した品質を持つが、長い入力を処理すると計算量とGPUメモリ帯域の双方が制約になる。第一に、元モデルの問い合わせ・鍵・値射影をそのまま共有し、短い系列では密注意、長い系列では疎注意へ切り替える。
 
 - **2025-02 · [RocketKV: Accelerating Long-Context LLM Inference via Two-Stage KV Cache Compression](2025-2502.14051-rocketkv-accelerating-long-context-llm-inference-via-two-stage-kv-cache-.md)**  
@@ -591,11 +599,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：308  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：309  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：209  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：210  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

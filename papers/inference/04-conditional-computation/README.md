@@ -26,6 +26,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：1  
   視覚言語モデル（Vision-Language モデル; VLM）では、画像エンコーダが数百〜数千の視覚トークンを生成する。言語モデルへ渡す視覚トークンを減らせば事前処理（プリフィル）の計算量と遅延を削減できるが、「どのトークンを残すか」を学習する段階で問題が生じる。この演算子不一致が重要度学習を不安定にする。
 
+- **2026-08 · [Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching](2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  論文はCDBを端から端まで実装し、深度が不揃いになる鍵値キャッシュ（KV キャッシュ）、CPU側スケジューラとGPU側反復の同期、前段・後段をどの頻度で実行するかまで扱う。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-09 · [FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference](2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md)**  
@@ -35,10 +39,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-09 · [Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference](2026-2609.08189-hero-history-aware-routing-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   各層の局所状態だけでなく過去のゲート選択と残差変化を線形注意メモリへ蓄積し、Llama 3.1-8Bで26.87%のパラメータ計算を回避しつつ密モデル比100.24%の性能を保つ動的FFNルーティング。
-
-- **2026-08 · [Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching](2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  論文はCDBを端から端まで実装し、深度が不揃いになる鍵値キャッシュ（KV キャッシュ）、CPU側スケジューラとGPU側反復の同期、前段・後段をどの頻度で実行するかまで扱う。
 
 - **2026-05 · [VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding](2026-2605.05848-videorouter-query-adaptive-dual-routing-for-efficient-long-video-underst.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

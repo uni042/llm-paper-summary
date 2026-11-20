@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論向け投機的先読みスケジューリングSpexis。投機的デコードをトークン生成の高速化だけでなく並列の軸として使い、パイプライン並列とテンソル並列と並行に投機を実行し、先読みスケジューリングで無駄な投機とKV排除を減らす、vLLM上の多GPU枠組み。推論基盤機構そのもの。",
   "semantic_scholar_id": "b9b330490ffd9d816d8c8e878ddfcaba48daee53",
   "source_url": "https://arxiv.org/abs/2609.34370",
-  "status": "ready",
+  "status": "superseded",
   "title": "Spexis: Speculative Lookahead Scheduling for LLM Inference",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:10:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.34370-spexis-speculative-and-lookahead-scheduling-for-llm-inference.md",
+  "represented_canonical_id": "arXiv:2609.34370",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
