@@ -35,10 +35,15 @@
   "selection_reason": "AttentionとFFNを別GPU群に置くAFDサービングの配置・GPU動作周波数・電力制限を、パイプライン段階のエネルギー事前モデルとGaussian process残差補正を組み合わせて共同探索する。著者の一次要旨はA6000/A100、Qwen/DeepSeekの16条件で、固定した構成を別リクエストで評価し、既定構成比平均40.5%のエネルギー削減と20.7%の出力token率増加を報告。SLOを制約とする実推論サービング構成探索でありaccept。",
   "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
   "source_url": "https://arxiv.org/abs/2610.08373",
-  "status": "ready",
+  "status": "superseded",
   "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:16:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.08373-eco-energy-oriented-configuration-optimization-for-attention-ffn-disaggr.md",
+  "represented_canonical_id": "arXiv:2610.08373",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

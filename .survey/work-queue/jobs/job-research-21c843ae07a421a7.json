@@ -35,10 +35,15 @@
   "selection_reason": "端末ごとにLLMのedge/cloud分割位置が異なると、cloud側のmodel層深度が一致せずbatch化できない問題に対し、resident shardの範囲実行と、異なる要求を最深の共通suffixへ進めてbatch化するdepth-synchronized batchingを提案する。KVは各実行側に保持する。著者要旨は平均8同時要求でFIFO比throughput275%、同一splitだけのbatch比48%改善を報告。edge/cloud協調推論runtimeとしてaccept。",
   "semantic_scholar_id": "53885a50c60ced27e27a7de8b19356402dac8373",
   "source_url": "https://arxiv.org/abs/2610.08268",
-  "status": "ready",
+  "status": "superseded",
   "title": "DySCo: Dynamic Sharding for Collaborative Edge-Cloud LLM Inference with Depth-Synchronized Batching",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:16:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-d.md",
+  "represented_canonical_id": "arXiv:2610.08268",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

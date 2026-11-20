@@ -35,10 +35,15 @@
   "selection_reason": "MLLMのtraining-free視覚token削減で浅い層のsaliencyが深層で重要となるtokenを隠す問題に対し、task loss歪みの上界から層内静的saliencyと層間semantic evolutionをrankで統合するDIPruneを提案。一次要旨はLLaVA/Qwen-VLで既存方式を上回る性能と報告。具体的推論時token pruningとしてaccept。ただし要旨にend-to-end速度の数値はない。",
   "semantic_scholar_id": "0a47f69e303d946104d9938b40ced7b2827a92c2",
   "source_url": "https://arxiv.org/abs/2610.08341",
-  "status": "ready",
+  "status": "superseded",
   "title": "DIPrune: Task-Aware Token Pruning with Dual Importance for Efficient Multimodal Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:16:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.08341-diprune-task-aware-token-pruning-with-dual-importance-for-efficient-mult.md",
+  "represented_canonical_id": "arXiv:2610.08341",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

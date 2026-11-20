@@ -35,10 +35,15 @@
   "selection_reason": "長文脈疎注意の索引器が全KVキャッシュを毎decode step走査する負荷を、履歴に基づく軽量な重要KV block予測、ランダム探索、層別miss率に応じた予算配分で削減。vLLM servingでoutput throughput最大13.9%増、median inter-token latency最大13.6%減を報告。",
   "semantic_scholar_id": "7e7b80e3695b50b0bb06278abb1073fed7691d4a",
   "source_url": "https://arxiv.org/abs/2610.09025",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPIN: Shadow Predictive Indexer for Sparse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:16:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md",
+  "represented_canonical_id": "arXiv:2610.09025",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

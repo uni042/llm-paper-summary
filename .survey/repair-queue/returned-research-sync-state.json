@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "842d764a31269a6a2ecf21821f947f57621b3e24",
+  "base_commit": "a51e6d3654933460bb422d9f9e5680a26b70298f",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -576,7 +576,12 @@
     "2026-2610.07822-nucleus-speculative-decoding-plausibility-aware-verification-beyond-exact-distribution.json",
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
     "2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp4-quantization.json",
+    "2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-depth-synchronized-batching.json",
+    "2026-2610.08341-diprune-task-aware-token-pruning-with-dual-importance-for-efficient-multimodal-language-models.json",
+    "2026-2610.08373-eco-energy-oriented-configuration-optimization-for-attention-ffn-disaggregated-llm-serving.json",
     "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
+    "2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.json",
+    "2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.json",
     "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json",
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
@@ -44095,6 +44100,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.08268": {
+      "order": [
+        "2026-11-20T10:11:38+00:00",
+        "2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-depth-synchronized-batching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.08341": {
+      "order": [
+        "2026-11-20T10:12:26+00:00",
+        "2026-2610.08341-diprune-task-aware-token-pruning-with-dual-importance-for-efficient-multimodal-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.08373": {
+      "order": [
+        "2026-11-20T10:13:14+00:00",
+        "2026-2610.08373-eco-energy-oriented-configuration-optimization-for-attention-ffn-disaggregated-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.08463": {
+      "order": [
+        "2026-11-20T10:14:01+00:00",
+        "2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.09025": {
+      "order": [
+        "2026-11-20T10:14:49+00:00",
+        "2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54874,6 +54924,21 @@
     "arxiv:2610.08231": [
       "papers/inference/99-other-inference-systems/2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp.md",
       "papers/inference/99-other-inference-systems/2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp.md"
+    ],
+    "arxiv:2610.08268": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.08268-dysco-dynamic-sharding-for-collaborative-edge-cloud-llm-inference-with-d.md"
+    ],
+    "arxiv:2610.08341": [
+      "papers/inference/99-other-inference-systems/2026-2610.08341-diprune-task-aware-token-pruning-with-dual-importance-for-efficient-mult.md"
+    ],
+    "arxiv:2610.08373": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.08373-eco-energy-oriented-configuration-optimization-for-attention-ffn-disaggr.md"
+    ],
+    "arxiv:2610.08463": [
+      "papers/inference/99-other-inference-systems/2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.md"
+    ],
+    "arxiv:2610.09025": [
+      "papers/inference/13-sparse-attention/2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md"
     ]
   }
 }

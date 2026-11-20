@@ -579,7 +579,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoEの不均衡とGPU容量不足を、訓練時のElastic MoE＋2D先読みと、推論時のCPU/GPU ring型section実行で処理し、DeepSpeed比で訓練33%・推論13%のスループット向上を報告する。
 
 - **2022-09 · [Petals: Collaborative Inference and Fine-tuning of Large Models](2022-2209.01188-petals-collaborative-inference-and-fine-tuning-of-large-models.md)**  
-  実装：[✓](https://petals.ml) ・ リポジトリ内被引用：18  
+  実装：[✓](https://petals.ml) ・ リポジトリ内被引用：19  
   Petalsは、単一の利用者が巨大言語モデル全体を保持できなくても、複数の参加者がそれぞれ一部のTransformer層をGPUに置くことで、モデル全体を分散実行できるようにするシステムである。
 
 ### 6年前（2020-12〜2021-11）
