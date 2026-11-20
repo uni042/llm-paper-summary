@@ -35,10 +35,15 @@
   "selection_reason": "prefillをFP8 GEMM、decodeをINT4重み・INT4 KVに分け、RMSNorm gainの重み折込み、直接KV配置、MMA fragment向けdequant、Hadamard変換によるoutlier対策をCUDA blockへ統合する。著者要旨ではH100でprefillがcompiled PyTorch FP8比最大1.48倍、8B/70B形状のdecodeがPyTorch BF16/INT4の速い方より1.3～2.4倍高速。Llama3.1-8Bのbatch1 decodeが2.8ms/step対8.1msと報告するが量子化によるperplexity上昇も記載。実装・カーネル評価が推論に直結するためaccept。",
   "semantic_scholar_id": "48fb1216f1fa8830ecf3b01528384ae86d9be1b1",
   "source_url": "https://arxiv.org/abs/2610.23796",
-  "status": "ready",
+  "status": "superseded",
   "title": "FuTransformer: FP8 prefill and INT4 decode for Llama-style inference on Hopper",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:31:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-h.md",
+  "represented_canonical_id": "arXiv:2610.23796",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

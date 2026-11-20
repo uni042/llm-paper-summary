@@ -35,10 +35,15 @@
   "selection_reason": "ViTを持たず画像patchを直接token化するnative MLLM向けに、空間の縦横軸ごとにattention重要度を推定し、Multimodal-RoPEと整合する視覚token削減を行うPACEを提案。保持性能・推論効率・空間網羅性のPareto最適化で層とtoken保持率を選ぶ。NeurIPS 2026採択版の一次要旨では視覚tokenを25〜50%保持して性能を概ね維持し、FLOPsを2倍超削減と報告。推論token数と計算量の直接改善なのでaccept。",
   "semantic_scholar_id": "5ed96d650a4d12de6b3a3065b169bb9f9d91a96b",
   "source_url": "https://arxiv.org/abs/2610.24005",
-  "status": "ready",
+  "status": "superseded",
   "title": "PACE: Pareto-Adaptive Compression for Efficient Native MLLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:31:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md",
+  "represented_canonical_id": "arXiv:2610.24005",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

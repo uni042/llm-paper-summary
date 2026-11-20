@@ -35,10 +35,15 @@
   "selection_reason": "高解像度LVLMのthumbnailと多数cropから生じる視覚tokenを、LLM block実行前にsample/crop/tokenの3階層でquery条件付き選択するtraining-free方式。画像複雑度で総予算を決め、cropごとの文・画像類似度とtokenのcross-modal alignmentを局所・大域saliencyと統合する。一次要旨はLLaVA-NeXT-7Bで25% token保持時に性能98.0%維持、推論throughput 2倍を報告。マルチモーダルLLMのprefill計算削減としてaccept。",
   "semantic_scholar_id": "ac2a2aaaa39ca83482e0129de7f1c5fd1089eb64",
   "source_url": "https://arxiv.org/abs/2610.24102",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hierarchical and Query-Aware Visual Token Pruning for High-Resolution LVLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:31:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.24102-hierarchical-and-query-aware-visual-token-pruning-for-high-resolution-lv.md",
+  "represented_canonical_id": "arXiv:2610.24102",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

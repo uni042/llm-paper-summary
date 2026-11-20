@@ -35,10 +35,15 @@
   "selection_reason": "異種GPUと複数クラウドにまたがるLLM推論fleetのアクセラレータ、並列化方式、レプリカ数、配置を共同最適化するKoiを提案。RLMによる仮説生成を、KV容量圧迫・通信負荷・遅延などの因果グラフと決定論的評価器で制約し、実際の配備から計画を自己較正する。異種クラスタで最強比較対象比goodput 1.18倍、token当たり費用20%削減を報告し、サービング配置の直接的なシステム貢献としてaccept。",
   "semantic_scholar_id": "2cb18c5f532dc1496caf26cc847e6ea7e629362f",
   "source_url": "https://arxiv.org/abs/2610.24355",
-  "status": "ready",
+  "status": "superseded",
   "title": "Koi: Evidence-Guided, Self-Calibrating Planning for Multi-Cloud, Heterogeneous LLM Inference Fleets",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:31:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogene.md",
+  "represented_canonical_id": "arXiv:2610.24355",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

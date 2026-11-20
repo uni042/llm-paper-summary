@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e25ece2e297f21f5176f24adcd15da029b09e6c2",
+  "base_commit": "a4755b3418597ac75ce4be5947744073b29a0ad9",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -430,6 +430,11 @@
     "2026-2610.23503-hbfsim-a-simulator-for-exploring-hbf-in-memory-hierarchies-for-llms.json",
     "2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-service.json",
     "2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.json",
+    "2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-hopper.json",
+    "2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.json",
+    "2026-2610.24102-hierarchical-and-query-aware-visual-token-pruning-for-high-resolution-lvlms.json",
+    "2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-llm-serving.json",
+    "2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogeneous-llm-inference-fleets.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41786,6 +41791,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.23796": {
+      "order": [
+        "2026-11-20T02:27:10+00:00",
+        "2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-hopper.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24005": {
+      "order": [
+        "2026-11-20T02:27:52+00:00",
+        "2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24102": {
+      "order": [
+        "2026-11-20T02:28:34+00:00",
+        "2026-2610.24102-hierarchical-and-query-aware-visual-token-pruning-for-high-resolution-lvlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24179": {
+      "order": [
+        "2026-11-20T02:29:15+00:00",
+        "2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24355": {
+      "order": [
+        "2026-11-20T02:29:56+00:00",
+        "2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogeneous-llm-inference-fleets.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51687,6 +51737,21 @@
     "arxiv:2610.23787": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.md"
+    ],
+    "arxiv:2610.23796": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.23796-futransformer-fp8-prefill-and-int4-decode-for-llama-style-inference-on-h.md"
+    ],
+    "arxiv:2610.24005": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md"
+    ],
+    "arxiv:2610.24102": [
+      "papers/inference/99-other-inference-systems/2026-2610.24102-hierarchical-and-query-aware-visual-token-pruning-for-high-resolution-lv.md"
+    ],
+    "arxiv:2610.24179": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-l.md"
+    ],
+    "arxiv:2610.24355": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogene.md"
     ]
   }
 }

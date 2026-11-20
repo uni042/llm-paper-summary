@@ -35,10 +35,15 @@
   "selection_reason": "KVCompassは地域をまたぐLLM prefix KVの保有者が変動するため、通常のキーから配置が決まるDHTとは異なる発見問題を解く。prefix identityと配置を分離し、edgeで定数時間のローカル表参照を行ってKV再利用、負荷、地理的距離を両立させるworkerを選ぶ。64 workerシミュレーションと3大陸14 worker実機でP99 TTFTを基準方式比1.3～14倍短縮、throughput最大4.7倍を報告。",
   "semantic_scholar_id": "f74ec522091eb8d3fcd79b13f97328434ef63ecb",
   "source_url": "https://arxiv.org/abs/2610.24179",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVCompass: A Discovery Plane for Internet-Scale Prefix Cache Sharing in LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:31:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-l.md",
+  "represented_canonical_id": "arXiv:2610.24179",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
