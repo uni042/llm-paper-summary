@@ -35,10 +35,15 @@
   "selection_reason": "限られたGPU上で複数LoRAサービスを動かすとLoRA演算の競合とbatch schedulerの硬直性がSLO違反を生む。HALOはGPU SMを分割してbaseとLoRA計算を重ね、要求ごとの残りslackに応じて緊急要求を優先し余剰予算でtraffic shapingする。著者要旨は既存方式よりthroughputを上げSLO違反を抑えると報告するが具体的改善率は未記載。複数LoRAのオンプレサービング方式としてaccept。",
   "semantic_scholar_id": "a8bd7ed5366e3c46603d11138f2434179d669979",
   "source_url": "https://arxiv.org/abs/2610.04956",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Overloaded to Guaranteed: High-Throughput Multi-SLO Enforcement for LoRA-Assisted On-Premise LLM Deployment",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:35:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-.md",
+  "represented_canonical_id": "arXiv:2610.04956",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

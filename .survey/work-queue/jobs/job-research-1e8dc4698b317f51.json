@@ -35,10 +35,15 @@
   "selection_reason": "SVD成分をまずpruneし残存成分を量子化する二段階法の最適化不足に対し、成分別bit幅を微分可能に学習し0-bitを削除とみなすことでrankとprecisionを同時に割り当てる。一次要旨は平均1.61bit相当の極端な圧縮でも二段階baselineより性能が良いと報告。LLM推論向け重み容量削減を目的とする圧縮方式でありaccept。ただし実機decode速度は要旨で未確認。",
   "semantic_scholar_id": "af79a3d9bbdf91f196c6f91f6ff86055d206262f",
   "source_url": "https://arxiv.org/abs/2610.06026",
-  "status": "ready",
+  "status": "superseded",
   "title": "Differentiable Bit-Widths: Co-optimizing Pruning and Quantization via SVD for Ultra-Efficient LLM Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:35:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.06026-differentiable-bit-widths-co-optimizing-pruning-and-quantization-via-svd.md",
+  "represented_canonical_id": "arXiv:2610.06026",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

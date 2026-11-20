@@ -35,10 +35,15 @@
   "selection_reason": "LLM serving replicaのGPUメモリに残る余剰領域をPEFTと共有し、推論要求が増えたらtraining backward用の保存activation単位で安全に回収して必要時再計算する。CPU/GPU非同期とtensor parallelでもin-flight利用中のメモリを回収しない制御を設計。著者要旨はH100/B200・24B～70Bの4構成で推論SLO達成率99.7%以上を維持しつつdiscard型共有比fine-tuning作業1.9～3.3倍を報告。推論メモリ管理の直接的システム貢献としてaccept。",
   "semantic_scholar_id": "e5753be7ed1372290d5014d2c099ab6faf50c1be",
   "source_url": "https://arxiv.org/abs/2610.05748",
-  "status": "ready",
+  "status": "superseded",
   "title": "MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:35:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-oppor.md",
+  "represented_canonical_id": "arXiv:2610.05748",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

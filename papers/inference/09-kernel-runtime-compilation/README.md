@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（248本）
+## 自動生成の論文一覧（251本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -194,9 +194,21 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/snkrbhr/SARATHI) ・ リポジトリ内被引用：0  
   ニューロン選択を校正データなしの非負行列分解の残差探査に分離し、補償を層ごとの局所再構成に限定することで、除去率40パーセントで他法がメモリ不足や崩壊に陥る条件でも完走し、OPT-2.7Bの困惑度を補正なし2082から18.98へ戻した。
 
+- **2026-10 · [MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning](2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-oppor.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論レプリカの遊休メモリを、実行中PEFTステップの保存済み活性値1個単位で推論へ引き渡し、ステップを捨てずに逆伝播の再計算で取り戻す細粒度GPUメモリ共有方式。
+
+- **2026-10 · [HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines](2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matri.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパート重みを標準レイアウトのまま残し、変換は小さい中間行列側へ融合し、ページのインターリーブ配置に合わせたタスク分割で遠隔参照を消すことで、フレームワーク無改変でCPU側の混合専門家計算を高速化する演算子ライブラリ。
+
 - **2026-10 · [gKSM: GPU Memory Deduplication at Driver Layer for Serverless LLM Inference](2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ドライバ層で重複した重みページを検出して物理ページを共有し、転送前の重複除去と書き込み時コピーで分離を保つことで、フレームワークを改変せずに同居インスタンスのメモリ重複を最大59.8パーセント削減する方式。
+
+- **2026-10 · [From Overloaded to Guaranteed: High-Throughput Multi-SLO Enforcement for LoRA-Assisted On-Premise LLM Deployment](2026-2610.04956-from-overloaded-to-guaranteed-high-throughput-multi-slo-enforcement-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  オンプレミスの複数LoRAサービングで、ベース層とLoRA層へのSM分割による同時実行と、リクエスト単位スラックに基づくプリフィル・デコード統合スケジューリングにより、異種SLO違反を減らしながらスループットを上げる方式。
 
 - **2026-10 · [CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking](2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-at.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -577,7 +589,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：190  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：191  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -839,7 +851,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：48  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
