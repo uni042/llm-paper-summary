@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（89本）
+## 自動生成の論文一覧（90本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -311,6 +311,10 @@
 - **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
   実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：0  
   Mosaicは、事前学習済み大規模言語モデルを限られたメモリの装置へ配置するため、Transformerの各線形射影に異なる削減率を割り当てる方式である。通常の非構造化枝刈りは重みを零化するため品質を比較的保てるが、重み行列の寸法を縮めない限り汎用の密行列演算ではメモリや時間の削減に結びつきにくい。
+
+- **2025-02 · [CoSMoEs: Compact Sparse Mixture of Experts](2025-2503.00245-cosmoes-compact-sparse-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末規模で計算量と総パラメータを揃えた公平な比較によりMoEが密モデルを上回ることを示し、重み分解エキスパートと、入れ替えを6倍減らすブロック単位選択損失でオフロード推論を1.5倍高速化した研究。
 
 - **2025-01 · [Lightweight and Post-Training Structured Pruning for On-Device Large Lanaguage Models](2025-2501.15255-lightweight-and-post-training-structured-pruning-for-on-device-large-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "超非対称量子化の効率的データフローのためのSIMTマイクロアーキテクチャPacQ。重みのみ量子化で、GEMM前に重みを浮動小数へ戻す展開と逆量子化が性能利得を制限する問題に対し、データフローを効率化するマイクロアーキテクチャ。推論ハードウェアそのもの。",
   "semantic_scholar_id": "0fdad43469669767e9ce55b9eddab6620d989f0b",
   "source_url": "https://arxiv.org/abs/2502.18627",
-  "status": "ready",
+  "status": "superseded",
   "title": "PacQ: A SIMT Microarchitecture for Efficient Dataflow in Hyper-asymmetric GEMMs",
   "type": "research",
   "venue": "Design Automation Conference",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:25:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2502.18627-pacq-a-simt-microarchitecture-for-efficient-dataflow-in-hyper-asymmetric.md",
+  "represented_canonical_id": "arXiv:2502.18627",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

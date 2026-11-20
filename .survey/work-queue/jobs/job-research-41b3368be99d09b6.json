@@ -35,10 +35,15 @@
   "selection_reason": "LLM重みをチャネルごとにK-meansでクラスタ化して代表ベクトルを共有し、復元誤差を低ランクSVDで補償する圧縮。著者公開arXiv前刷りではLlama-2-7Bの注意Q/K射影のみをWikiText-2で評価し、平均2 bitのQ射影でperplexity 7.297、K射影で7.148、Q&Kで10.886と報告。モデル全層の速度改善や生成品質の実運用保証ではなく、主として保存量削減の研究。会議版の著者追加・題名変更があり、同一性はimport inboxで最終照合。",
   "semantic_scholar_id": "5e384f0c8c2f27afac8683458e789eb847c70dad",
   "source_url": "https://arxiv.org/abs/2501.08631",
-  "status": "ready",
+  "status": "superseded",
   "title": "SWSC: Shared Weight for Similar Channel in LLM",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:25:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2501.08631-swsc-shared-weight-for-similar-channel-in-llm.md",
+  "represented_canonical_id": "arXiv:2501.08631",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

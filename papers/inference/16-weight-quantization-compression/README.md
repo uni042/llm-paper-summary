@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（189本）
+## 自動生成の論文一覧（190本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -510,6 +510,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット重み量子化では、整数、浮動小数点、非一様コードブック、ブロック単位のスケーリング、外れ値の高精度保持など、数値表現の選択肢が多数ある。
 
+- **2025-02 · [PacQ: A SIMT Microarchitecture for Efficient Dataflow in Hyper-asymmetric GEMMs](2025-2502.18627-pacq-a-simt-microarchitecture-for-efficient-dataflow-in-hyper-asymmetric.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みを詰めたまま行列積まで処理する超非対称行列積のために、詰め方向とデータフローと専用乗算器を一体設計したハードウェア研究。レジスタアクセスとエネルギー遅延積を大きく減らした。
+
 - **2025-01 · [FBQuant: FeedBack Quantization for Large Language Models](2025-2501.16385-fbquant-feedback-quantization-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FBQuantは、LLMの重みのみを3/4ビットへ量子化するときに生じる誤差を、LoRA型の低ランク副枝で補償する方式である。FBQuantは主枝の復元・行列積と副枝のup投影を一つのCUDAカーネルに融合し、追加レイテンシの約60%を削減する。
@@ -537,7 +541,7 @@
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
-  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：85  
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
@@ -695,7 +699,7 @@
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：179  
+  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：180  
   LLM-QATは、学習後量子化（Post-学習 量子化: PTQ）では精度が大きく低下する低ビット領域に対し、量子化誤差を学習中に経験させる量子化対応学習（Quantization-Aware 学習: QAT）を大規模言語モデルへ適用する研究である。
 
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
@@ -757,7 +761,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：688  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：690  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  

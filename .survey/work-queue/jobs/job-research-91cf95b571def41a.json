@@ -35,10 +35,15 @@
   "selection_reason": "小規模スパースMoEをオンデバイス推論へ載せるCoSMoEsで、重み分解専門家による品質改善に加え、モデルオフロードの効率を大きく改善して推論遅延を下げるとする。オンデバイスMoE推論への直接貢献が確認できる。",
   "semantic_scholar_id": "81441dcc138ff358cfecbf87d3d69b7a9cd53dbf",
   "source_url": "https://arxiv.org/abs/2503.00245",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoSMoEs: Compact Sparse Mixture of Experts",
   "type": "research",
   "venue": "Proceedings of the 4th Workshop on Advances in Language and Vision Research (ALVR)",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:25:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2025-2503.00245-cosmoes-compact-sparse-mixture-of-experts.md",
+  "represented_canonical_id": "arXiv:2503.00245",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

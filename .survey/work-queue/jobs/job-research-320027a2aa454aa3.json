@@ -35,10 +35,15 @@
   "selection_reason": "FlashAttentionを基にonline pseudo-average shiftingとglobal recoveringを導入し、半精度attention計算のオーバーフローを抑える。Qwen2-7BとStable-Video-Diffusionで入力バイアスやQ/K共鳴による数値不安定を分析し、RMSEおよび生成結果を検証。Ascend NPUなどメモリ制約下の低精度推論カーネルに直接関連。",
   "semantic_scholar_id": "4ab82054ff238ea993e7be78951c964ae731a7af",
   "source_url": "https://arxiv.org/abs/2503.01873",
-  "status": "ready",
+  "status": "superseded",
   "title": "Online Pseudo-average Shifting Attention(PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:25:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.01873-online-pseudo-average-shifting-attention-pasa-for-robust-low-precision-l.md",
+  "represented_canonical_id": "arXiv:2503.01873",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
