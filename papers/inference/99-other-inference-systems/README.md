@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1120本）
+## 自動生成の論文一覧（1122本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
-  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：18  
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
@@ -264,6 +264,10 @@
   実装：[✓](https://github.com/mint-vu/IO-SVD) ・ リポジトリ内被引用：2  
   特異値分解（Singular Value Decomposition; SVD）による学習後圧縮は、密な線形層の重み行列を低階数の二つの因子に分け、保存量と乗算量を減らす手法である。
 
+- **2026-05 · [AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices](2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md)**  
+  実装：[✓](https://github.com/brave-experiments/AgentStop) ・ リポジトリ内被引用：2  
+  LLMエージェントは通常の一問一答と異なり、推論、検索、コード実行、失敗後の再試行を何度も繰り返す。これをクラウドではなく利用者の端末で動かすと、ネットワーク依存や外部へのデータ送信を減らせる一方、長時間のGPU稼働、発熱、電池消費が利用者に直接影響する。特に失敗する実行が長く続いた場合、最終的な課題成功に結び付かない電力が大量に消費される。
+
 - **2026-04 · [Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling](2026-2604.18103-stability-implies-redundancy-delta-attention-selective-halting-for-effic.md)**  
   実装：[✓](https://github.com/verach3n/DASH) ・ リポジトリ内被引用：2  
   FlashAttentionは注意行列を外部メモリへ展開しないことで転送量を削減するが、入力トークンが多ければ必要な計算量自体は残る。DASH（Delta 注意機構 Selective Halting）は、各トークンの表現が層を進むにつれて更新されなくなる「意味的固定点」に着目する。
@@ -511,10 +515,6 @@
 - **2026-05 · [AQuaUI: Visual Token Reduction for GUI Agents with Adaptive Quadtrees](2026-2605.19260-aquaui-visual-token-reduction-for-gui-agents-with-adaptive-quadtrees.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   画面の情報密度に合わせて四分木で割り、各葉に代表トークンを一つ残す学習なしの削減を提案し、320億級モデルでトークン29.52パーセント減と性能の99.06パーセント保持、最大13.22パーセントの高速化を示した。
-
-- **2026-05 · [AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices](2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md)**  
-  実装：[✓](https://github.com/brave-experiments/AgentStop) ・ リポジトリ内被引用：1  
-  LLMエージェントは通常の一問一答と異なり、推論、検索、コード実行、失敗後の再試行を何度も繰り返す。これをクラウドではなく利用者の端末で動かすと、ネットワーク依存や外部へのデータ送信を減らせる一方、長時間のGPU稼働、発熱、電池消費が利用者に直接影響する。特に失敗する実行が長く続いた場合、最終的な課題成功に結び付かない電力が大量に消費される。
 
 - **2026-04 · [When to Commit? Towards Variable-Size Self-Contained Blocks for Discrete Diffusion Language Models](2026-2604.23994-when-to-commit-towards-variable-size-self-contained-blocks-for-discrete-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -886,6 +886,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   枝刈りの規則を固定したまま圧縮状態で事後学習することで精度低下の大半を回復できることを示し、回復の内訳を分解したうえで、どの段階でトークンを削るべきかという共同圧縮の配分指針を実測で与える研究。
 
+- **2026-10 · [ResCom: Activation Residual Compensation for Large Language Model Quantization](2026-2610.35955-rescom-activation-residual-compensation-for-large-language-model-quantiz.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化で捨てられる丸め残差そのものを補正の入力にし、校正済みモデルを凍結したまま閉形式で低ランク枝を後付けして、4ビット量子化の精度を回復する修復法。
+
 - **2026-10 · [Rehearse Everything, Remember Nothing: Attic-KV Rehearses What Will Be Read](2026-2610.12133-rehearse-everything-remember-nothing-attic-kv-rehearses-what-will-be-rea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Attic-KV（Attic）は、長い文書を一度だけプリフィルしてKVキャッシュを保存し、将来の多数の質問に使い回す環境で、質問がまだ分からない段階でKVを圧縮する方式である。最終的なKV位置の重要度は再読時の注意機構・出力寄与から決め、保持率3～5%という厳しい条件でも事実を残しやすくする。
@@ -961,6 +965,10 @@
 - **2026-10 · [Decoupled Contrastive Decoding via Expert-Aligned Drafting](2026-2608.12913-decoupled-contrastive-decoding-via-expert-aligned-drafting.md)**  
   実装：[✓](https://github.com/chadlzx/dcd) ・ リポジトリ内被引用：0  
   重要なのは「対比分布を軽量器で近似すること」ではなく、ドラフト器を検証の正しさから分離することにある。
+
+- **2026-10 · [Continue or Restart? The Limits of Early Failure Prediction in Coding Agents](2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  147,002件の軌跡で、早期接頭辞は同一課題の試行を偶然並みにしか分けられないこと、学習型再起動の利得は試行選択ではなく課題間配分から来ること、予算内では継続が再起動を支配することを示した。
 
 - **2026-10 · [Content-Aware Adaptive Token Pruning for Video-Language Models](2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3683,7 +3691,7 @@
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：94  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：95  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  

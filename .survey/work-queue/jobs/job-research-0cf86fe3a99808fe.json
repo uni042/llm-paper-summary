@@ -35,10 +35,15 @@
   "selection_reason": "端末/サーバ協調投機復号では正確な棄却サンプリングのため語彙全体の確率分布を転送する通信が重い。DISCOはサーバ側にもdraft小型モデルの複製を置いてdraft分布を再現し、端末との通信をdraft token indexとスカラー確率に限定してtarget分布を厳密保持する。著者要旨は複数データセットで従来分散投機復号より高速、特に低帯域で有利と報告。端末/クラウド推論の通信最適化としてaccept。",
   "semantic_scholar_id": "3e2e17d57d08096f198b4222d31a38a47eb76d4c",
   "source_url": "https://arxiv.org/abs/2610.35957",
-  "status": "ready",
+  "status": "superseded",
   "title": "Distributed LLM Inference via Communication-Efficient Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:50:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.35957-distributed-llm-inference-via-communication-efficient-speculative-decodi.md",
+  "represented_canonical_id": "arXiv:2610.35957",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

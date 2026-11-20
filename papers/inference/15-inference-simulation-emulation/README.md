@@ -60,6 +60,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://doi.org/10.5281/zenodo.22133686) ・ リポジトリ内被引用：2  
   さらに既存のLLMサービングシミュレータVidurを拡張したVidur-Agentへトレースを入力し、GPU配分、接頭辞キャッシュ（prefix キャッシュ）、事前充填と復号の分離、要求の処理順を変えてタスク完了時間を比較する。
 
+- **2026-05 · [BAGEN: Are LLM Agents Budget-Aware?](2026-2606.00198-bagen-are-llm-agents-budget-aware.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  通常の評価では、タスクの成否と終了後の消費トークン数を記録するが、実行途中のエージェント自身が残りの必要予算を理解していたかは別問題である。BAGEN（Budget-Aware Agent）は、残予算の自己推定を独立した能力として定義し、途中状態ごとに「完了に必要な資源の下限・上限」または「完了不可能」を回答させる評価枠組みを提案する。
+
 - **2026-03 · [DyQ-VLA: Dynamic Quantization and Compensation for VLA models with Runtime Error Awareness](2026-2603.07904-dyq-vla-temporal-dynamic-aware-quantization-for-embodied-vision-language.md)**  
   実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：2  
   DyQ-VLAの2026年10月4日公開の第3版は、量子化によって変わる実行時の行動と誤差の相関を明示的に測り、並進と回転で異なる制御を行う。LIBEROおよびRoboTwin 2.0の評価では、BF16に対する推論単位の速度改善が1.74〜1.81倍、成功した実行全体にわたるモデル推論時間の改善が1.88〜1.93倍となった。
@@ -68,6 +72,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：1  
   著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
 
+- **2026-05 · [MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems](2026-2605.05888-moe-hub-taming-software-complexity-for-seamless-moe-overlap-with-hardwar.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  提案方式は、ルータが決めた論理宛先だけでトークン行を送信できるst.rowsp命令と、受信側で実際の格納行を割り当てるアドレス割当装置（Address Allocation Unit; AAU）を導入する。
+
 - **2026-05 · [LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling](2026-2605.00616-llm-emu-native-runtime-emulation.md)**  
   実装：[✓](https://github.com/AKafakA/llm-emu) ・ リポジトリ内被引用：1  
   vLLMの本番HTTP・スケジューラ・KV管理を実コードのまま動かし、GPU順伝播だけを二次元遅延プロファイルからの標本化へ置換して、実GPU比の出力トークン当たり時間・反復時間を4.8%、エンドツーエンド遅延を5.3%、出力スループットを1.9%以内で再現する（初回トークン時間は最大10.41%ずれる）実時間エミュレータ。
@@ -75,10 +83,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-05 · [EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture](2026-2605.24144-eva-accelerating-llm-decoding-via-an-efficient-vector-quantization-archi.md)**  
   実装：[✓](https://github.com/dbw6/Eva) ・ リポジトリ内被引用：1  
   ベクトル量子化は複数重みを一つの索引にまとめるため2ビット級の圧縮品質に優れる一方、従来の実装では重み索引から符号帳の値を不規則に読み出す。
-
-- **2026-05 · [BAGEN: Are LLM Agents Budget-Aware?](2026-2606.00198-bagen-are-llm-agents-budget-aware.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  通常の評価では、タスクの成否と終了後の消費トークン数を記録するが、実行途中のエージェント自身が残りの必要予算を理解していたかは別問題である。BAGEN（Budget-Aware Agent）は、残予算の自己推定を独立した能力として定義し、途中状態ごとに「完了に必要な資源の下限・上限」または「完了不可能」を回答させる評価枠組みを提案する。
 
 - **2026-04 · [CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts](2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoot.md)**  
   実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：1  
@@ -193,10 +197,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-05 · [Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference](2026-2605.13915-multi-scale-dequant-eliminating-dequantization-bottleneck-via-activation.md)**  
   実装：[✓](https://gitcode.com/cann/ops-transformer) ・ リポジトリ内被引用：0  
   重みを高精度へ戻さず、活性値を粗い成分と残差成分へ分解して低精度行列積を二回行うことで逆量子化を外し、整数八ビットでは有効約十六ビット、四ビット浮動小数点では有効約六・六ビットを理論と数値実験で示し、注意のキー・値転送は最大二・五倍減というモデルを示した。
-
-- **2026-05 · [MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems](2026-2605.05888-moe-hub-taming-software-complexity-for-seamless-moe-overlap-with-hardwar.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  提案方式は、ルータが決めた論理宛先だけでトークン行を送信できるst.rowsp命令と、受信側で実際の格納行を割り当てるアドレス割当装置（Address Allocation Unit; AAU）を導入する。
 
 - **2026-05 · [GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference](2026-334dba8993b3-gaps-global-aware-prediction-driven-scheduling-for-large-scale-llm-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

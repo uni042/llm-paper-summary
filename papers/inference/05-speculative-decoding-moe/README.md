@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（402本）
+## 自動生成の論文一覧（403本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -627,6 +627,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [DLite: History-free Speculative Decoding for Agentic AI](2026-2610.23787-dlite-history-free-speculative-decoding-for-agentic-ai.md)**  
   実装：[✓](https://github.com/SJTU-DAI-Sys/DLite) ・ リポジトリ内被引用：0  
   下書き側の履歴KVを廃し、対象モデルの隠れ状態と局所予測だけで投機する履歴なしの下書き方式で、エージェント課題の受理長を既存最良比で最大70パーセント改善した。
+
+- **2026-10 · [Distributed LLM Inference via Communication-Efficient Speculative Decoding](2026-2610.35957-distributed-llm-inference-via-communication-efficient-speculative-decodi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  サーバ側にも下書きモデルの複製を置いて再サンプリングをサーバ内で完結させ、語彙規模の分布転送を消すことで、細い回線でも投機的デコードの高速化を保つ分散推論の枠組み。
 
 - **2026-10 · [D-Loop: Looped Diffusion Drafting for Speculative Decoding](2026-2610.06011-d-loop-looped-diffusion-drafting-for-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

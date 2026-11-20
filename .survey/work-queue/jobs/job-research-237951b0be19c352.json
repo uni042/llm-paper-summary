@@ -35,10 +35,15 @@
   "selection_reason": "coding agentの早期失敗予測による計算削減を147002 traceで検証した負の結果。20k token時点の同一task内識別AUCは約0.50で、restart判断の改善は主にtask難易度間の配分による。75k token capの全4設定および224設定中216で、restartせず継続する方が高いsolve rateかつ低い平均token costだったと報告。安易な早期停止の効率上の限界を示す直接的研究。",
   "semantic_scholar_id": "becae12be601723116db4a002478c27700c99df0",
   "source_url": "https://arxiv.org/abs/2610.35971",
-  "status": "ready",
+  "status": "superseded",
   "title": "Continue or Restart? The Limits of Early Failure Prediction in Coding Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:50:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md",
+  "represented_canonical_id": "arXiv:2610.35971",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

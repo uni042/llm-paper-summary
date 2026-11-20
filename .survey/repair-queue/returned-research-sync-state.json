@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "f5a3bc63f1920c703f9144661e4cd22f3d135494",
+  "base_commit": "e609421eefdb15f86ed3dc8e7c78e0ebf136fa83",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -768,6 +768,11 @@
     "2026-2610.35023-bellowskv-one-latent-for-many-layers-expanded-on-demand.json",
     "2026-2610.35230-context-is-not-free-carbon-aware-llm-routing-for-multi-turn-llm-web-services-across-geo-distributed-data-centers.json",
     "2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimodal-llms-on-edge-socs.json",
+    "2026-2610.35955-rescom-activation-residual-compensation-for-large-language-model-quantization.json",
+    "2026-2610.35957-distributed-llm-inference-via-communication-efficient-speculative-decoding.json",
+    "2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-agents.json",
+    "2026-2610.36339-inc-moe-overlapping-in-network-collectives-and-expert-computation-for-expert-parallel-mixture-of-experts-inference.json",
+    "2026-2610.36355-wakman-workload-aware-kvcache-manager.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45245,6 +45250,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.35955": {
+      "order": [
+        "2026-11-20T13:45:27+00:00",
+        "2026-2610.35955-rescom-activation-residual-compensation-for-large-language-model-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.35957": {
+      "order": [
+        "2026-11-20T13:46:25+00:00",
+        "2026-2610.35957-distributed-llm-inference-via-communication-efficient-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.35971": {
+      "order": [
+        "2026-11-20T13:47:23+00:00",
+        "2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36339": {
+      "order": [
+        "2026-11-20T13:48:21+00:00",
+        "2026-2610.36339-inc-moe-overlapping-in-network-collectives-and-expert-computation-for-expert-parallel-mixture-of-experts-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36355": {
+      "order": [
+        "2026-11-20T13:49:19+00:00",
+        "2026-2610.36355-wakman-workload-aware-kvcache-manager.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56484,6 +56534,21 @@
     "arxiv:2610.35309": [
       "papers/inference/08-edge-on-device-llm-systems/2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimo.md",
       "papers/inference/08-edge-on-device-llm-systems/2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimo.md"
+    ],
+    "arxiv:2610.35955": [
+      "papers/inference/99-other-inference-systems/2026-2610.35955-rescom-activation-residual-compensation-for-large-language-model-quantiz.md"
+    ],
+    "arxiv:2610.35957": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.35957-distributed-llm-inference-via-communication-efficient-speculative-decodi.md"
+    ],
+    "arxiv:2610.35971": [
+      "papers/inference/99-other-inference-systems/2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md"
+    ],
+    "arxiv:2610.36339": [
+      "papers/inference/12-moe-parallelism-communication/2026-2610.36339-inc-moe-overlapping-in-network-collectives-and-expert-computation-for-ex.md"
+    ],
+    "arxiv:2610.36355": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.36355-wakman-workload-aware-kvcache-manager.md"
     ]
   }
 }
