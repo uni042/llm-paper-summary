@@ -35,10 +35,15 @@
   "selection_reason": "動画言語モデルで全フレーム埋め込みがプリフィル・KVキャッシュ・生成の全てを重くする問題に対し、映像条件付け計算の一部を重みへの一時的な低ランク更新へ移すWIREで視覚列を3.5倍に圧縮し、プリフィルを最大4.14倍高速化する。マルチモーダルLLM推論機構への直接貢献である。",
   "semantic_scholar_id": "4dcee4965b77d9b37972a096a9da2a2df1b8464a",
   "source_url": "https://arxiv.org/abs/2610.17355",
-  "status": "ready",
+  "status": "superseded",
   "title": "WIRE: Weight Space Implicit Representation Encoding of Frozen Video LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17355-wire-weight-space-implicit-representation-encoding-of-frozen-video-llms.md",
+  "represented_canonical_id": "arXiv:2610.17355",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

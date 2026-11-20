@@ -35,10 +35,15 @@
   "selection_reason": "Batch-Pacedは離散拡散LLMの複数要求に対し、固定のdecode計算予算を要求間で動的配分してbatch全体の品質を高める学習不要方式。2種類のbackbone・5ベンチマークと混合負荷で同一予算下の品質を改善し、batchが大きいほど効果が高まる傾向を報告。低信頼要求の確定token信頼度を上げる効果が主要因で、decode時間も競争的とする。",
   "semantic_scholar_id": "1a4cc811fb4f7896e7255d7839a9daf657c28464",
   "source_url": "https://arxiv.org/abs/2610.17917",
-  "status": "ready",
+  "status": "superseded",
   "title": "Batch-Paced: Fixed-Budget Batch Decoding in Discrete Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17917-batch-paced-fixed-budget-batch-decoding-in-discrete-diffusion-language-m.md",
+  "represented_canonical_id": "arXiv:2610.17917",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

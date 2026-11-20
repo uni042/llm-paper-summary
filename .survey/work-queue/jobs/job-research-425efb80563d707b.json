@@ -35,10 +35,15 @@
   "selection_reason": "スマートフォン上のtool-calling LLMの逐次decodeを、tool schemaの制約から複数tokenを同一passで生成するschema-guided parallel decodingへ変換する。モデル再学習や重み変更を必要としない。一次要旨は複数のmobile SoCとLLM familyで従来手法比tool-call latency最大3.9倍短縮を報告。帯域制約の強い端末内LLM復号を直接高速化するためaccept。",
   "semantic_scholar_id": "f30f2d257338b7ced9f97195fd9d529585e9d717",
   "source_url": "https://arxiv.org/abs/2610.17436",
-  "status": "ready",
+  "status": "superseded",
   "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.17436-schemaweaver-accelerating-on-device-mobile-agentic-ai-via-schema-guided-.md",
+  "represented_canonical_id": "arXiv:2610.17436",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "MLAficationはQKNorm対応のcalibrated KNorm、少数パラメータ蒸留、寄与度ベースPartial-RoPE、活性化を考慮したKV初期化でGQA/MHAモデルをMLAへ変換する。MoE/QKNormを持つ現代的モデルにも適用し、Qwen3-30B-A3BでBF16 GQA比サービングthroughput最大5.35倍、4bit KV併用時KV容量94.73%削減を報告。推論KV削減のモデル変換手法としてaccept。",
   "semantic_scholar_id": "db00aa9feb05dcd089951f0e81aed39d69eaf0fb",
   "source_url": "https://arxiv.org/abs/2610.17202",
-  "status": "ready",
+  "status": "superseded",
   "title": "MLAfication: Efficiently Enabling High-Fidelity MLA for Modern LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17202-mlafication-efficiently-enabling-high-fidelity-mla-for-modern-llms.md",
+  "represented_canonical_id": "arXiv:2610.17202",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

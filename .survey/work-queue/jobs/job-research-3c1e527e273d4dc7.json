@@ -35,10 +35,15 @@
   "selection_reason": "VHAはKV group内のqueryに近単位変換を加えるQ Premixと、低ランク残差I+ABᵀによるLinear Postmixでvirtual head多様性を回復する。非線形操作を含まないため推論時に前後の線形射影へ折り畳め、GQA-2の既存推論カーネルを利用できる。GQA-8比でKV容量を4分の1にし、10B-A1B MoEのRULER平均は8K～128Kで84.4対GQAの73.0を報告。推論KV削減とモデル設計の直接的な貢献としてaccept。",
   "semantic_scholar_id": "7d456a23127c75219ffa94538e54f5667ae190ce",
   "source_url": "https://arxiv.org/abs/2610.17959",
-  "status": "ready",
+  "status": "superseded",
   "title": "Virtual Head Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17959-virtual-head-attention.md",
+  "represented_canonical_id": "arXiv:2610.17959",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

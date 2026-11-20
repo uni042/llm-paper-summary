@@ -35,10 +35,15 @@
   "selection_reason": "SparPRは消費者向け単一GPUのKV容量・転送帯域不足に対し、query依存のKey block選択、転送と再計算のコスト比較に基づく動的保持予算、連続span単位の部分再計算を組み合わせる。FlexGen/FlexLLMGenへ実装しRTX 3070 Ti 8GBで1K/2K/4K promptのend-to-end遅延を31/52/63%短縮、throughput1.4～2.7倍を報告。学習不要の実行時KV復元方式としてaccept。",
   "semantic_scholar_id": "efaf86496032cfe43bc740f898da5e68d399d6d3",
   "source_url": "https://arxiv.org/abs/2610.18140",
-  "status": "ready",
+  "status": "superseded",
   "title": "SparPR: Runtime KV-Cache Recovery for Resource-Constrained LLM Inference on Consumer Hardware",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2610.18140-sparpr-runtime-kv-cache-recovery-for-resource-constrained-llm-inference-.md",
+  "represented_canonical_id": "arXiv:2610.18140",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

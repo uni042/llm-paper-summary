@@ -35,10 +35,15 @@
   "selection_reason": "MoE expert FFNのHBMからのweight読込を削減するため、各SM内のRotor Generation Unitで少量のseed/rotorパラメータからweight tileを生成するhardware方式。著者要旨は5モデルでFFN層30%置換の推計として同GPU数のsystem throughput1.3～2.8倍、短文脈latency1.10～1.15倍改善、KV容量1.2～2.6倍増を報告する一方、精度低下を明記する。SystemVerilog実装/検証済みだがシステム改善値は推計である点を区別してaccept。",
   "semantic_scholar_id": "48caa67d37d6d639d538b8ea4642fdc81352d5be",
   "source_url": "https://arxiv.org/abs/2610.16890",
-  "status": "ready",
+  "status": "superseded",
   "title": "FORGE: Procedural Weight Generation for Sparse MoE Inference",
   "type": "research",
   "venue": "Proceedings of the 32nd ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.16890-forge-procedural-weight-generation-for-sparse-moe-inference.md",
+  "represented_canonical_id": "arXiv:2610.16890",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

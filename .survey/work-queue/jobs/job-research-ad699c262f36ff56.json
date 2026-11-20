@@ -35,10 +35,15 @@
   "selection_reason": "PURは個人履歴の意味的に集中したcore情報をoffline PEFTへ、分散したperipheral情報をRAGへ振り分け、online時はcore queryでRAGを省略する。複数user/taskの比較で最良対照より推論遅延14.4〜46.6%減と生成品質改善を報告。パーソナライズ用途に限定されるが、オンライン検索の選択的省略による推論runtimeの直接最適化としてaccept。",
   "semantic_scholar_id": "7982826505cbf4a4936861ea68980e21ad18beab",
   "source_url": "https://arxiv.org/abs/2610.15921",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fast and Accurate: Improving Personalized LLM Performance by Semantic Concentration Inspired Workload Split between RAG and Fine-Tuning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.15921-fast-and-accurate-improving-personalized-llm-performance-by-semantic-con.md",
+  "represented_canonical_id": "arXiv:2610.15921",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

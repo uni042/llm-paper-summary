@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（121本）
+## 自動生成の論文一覧（122本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -256,6 +256,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-10 · [SparPR: Runtime KV-Cache Recovery for Resource-Constrained LLM Inference on Consumer Hardware](2026-2610.18140-sparpr-runtime-kv-cache-recovery-for-resource-constrained-llm-inference-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  消費者向けGPUのオフロード推論で、クエリとの関連で履歴ブロックを選び、コピーと再計算の費用で保持量と回復方式を実行時に決めることで、KVキャッシュ回復の遅延を大きく下げる実行時機構。
+
 - **2026-09 · [UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents](2026-2609.09643-unison-agent-session-kv-residency.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェントのツール待ち間隔と終了しやすさからセッション単位のKV再利用順位を作り、追い出しとSRAM/HBM間移動を同じ近メモリ制御器で決めることで、再プリフィルと階層アクセス遅延を減らす方式。
@@ -410,6 +414,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：5  
   aLoRAの起動前KVを基盤モデル・別aLoRA間で共有できるようvLLMのブロックハッシュと実行時マスクを改修し、長文の多アダプタ処理で再プリフィルを避け、65K文脈で標準LoRA比E2E最大58倍・TTFT 100倍超を報告する。
 
+- **2025-06 · [Breaking the Boundaries of Long-Context LLM Inference: Adaptive KV Management on a Single Commodity GPU](2025-2506.20187-breaking-the-boundaries-of-long-context-llm-inference-adaptive-kv-manage.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  KV容量は系列長・バッチ数にほぼ比例し、GPUのメモリを超えるとCPUメモリやSSDへ退避せざるを得ない。論文はRTX 4090を用いた単一PC上で平均3.46倍、バッチ8で最大5.47倍の推論遅延改善を報告するが、比較対象は特定のH2O類似・先読み類似のオフロード実装であり、通常のvLLMやllama.cppの全ての設定を上回るとの主張ではない。
+
 - **2025-11 · [LiteCache: A Query Similarity-Driven, GPU-Centric KVCache Subsystem for Efficient LLM Inference](2025-2511.14510-litecache-gpu-centric-kv-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   LiteCacheはクエリ類似度で再利用価値の高いKVヘッドを選び、CPUの索引処理をGPU中心の一括取得へ置き換えて、細粒度管理・同期・カーネル起動のオーバーヘッドを減らす方式。
@@ -425,10 +433,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-06 · [StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices](2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md)**  
   実装：[✓](https://github.com/StoreLLM/StoreLLM/) ・ リポジトリ内被引用：4  
   語彙トークンの注意行列を先に計算してSSDへ蓄え、頻出分だけDRAMへ置き、要求ごとに遅延を守りながら読出しか再計算かを選ぶ方式である。
-
-- **2025-06 · [Breaking the Boundaries of Long-Context LLM Inference: Adaptive KV Management on a Single Commodity GPU](2025-2506.20187-breaking-the-boundaries-of-long-context-llm-inference-adaptive-kv-manage.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  KV容量は系列長・バッチ数にほぼ比例し、GPUのメモリを超えるとCPUメモリやSSDへ退避せざるを得ない。論文はRTX 4090を用いた単一PC上で平均3.46倍、バッチ8で最大5.47倍の推論遅延改善を報告するが、比較対象は特定のH2O類似・先読み類似のオフロード実装であり、通常のvLLMやllama.cppの全ての設定を上回るとの主張ではない。
 
 - **2025-09 · [ShadowServe: Interference-Free KV Cache Fetching for Distributed Prefix Caching](2025-2509.16857-shadowserve-smartnic-kv-fetching.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

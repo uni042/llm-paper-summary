@@ -35,10 +35,15 @@
   "selection_reason": "WebGPUのブラウザ/端末間でkernel性能が変わる問題に対し、GEMM、GEMV、flash attentionの実装指定・実行・autotuningと、過去の形状・デバイス別測定DBを組み合わせる。著者要旨ではLlama/Qwen形状でONNX Runtime比7.0倍、llama.cpp WebGPU kernel比1.41倍の幾何平均GEMM性能、llama.cppのchat prefillで1.48倍のend-to-end改善を報告。端末内LLM推論kernel最適化としてaccept。",
   "semantic_scholar_id": "48ec13f683bb27cd973e77ed79e47a7cdc1c7311",
   "source_url": "https://arxiv.org/abs/2610.17321",
-  "status": "ready",
+  "status": "superseded",
   "title": "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.17321-gpu-goldmines-tunable-webgpu-kernels-for-edge-llm-inference.md",
+  "represented_canonical_id": "arXiv:2610.17321",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

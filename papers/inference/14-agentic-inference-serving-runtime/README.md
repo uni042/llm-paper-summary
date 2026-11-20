@@ -133,6 +133,10 @@
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  
   分類段階をQwen3-4B、重い段階をQwen3-8Bへ割り当てた異種構成は、単一Qwen3-8Bの比較対象に対し壁時計時間38%、平均完了時間60%、推定推論費用35%を削減した。
 
+- **2026-02 · [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybr.md)**  
+  実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：1  
+  大規模モデルの最初の1トークンの隠れ状態で関数検索と小規模モデルの生成を誘導し、固定構文はテンプレート注入で済ませる方式で、BFCL精度80.1パーセントと最速の0.828秒を両立した。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-10 · [Taking Tokenization off the Host for Agentic LLM Serving](2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.md)**  
@@ -286,10 +290,6 @@
 - **2026-02 · [LatentMem: Customizing Latent Memory for Multi-Agent Systems](2026-2602.03036-latentmem-customizing-latent-memory-for-multi-agent-systems.md)**  
   実装：[✓](https://github.com/KANABOON1/LatentMem) ・ リポジトリ内被引用：0  
   しかし全エージェントへ同じ履歴や要約を渡すと、役割に無関係な情報が増え、似た指示を共有することで同じ誤りを繰り返す危険がある。これらは同一実験内の比較であり、別のエージェント基盤やGPUで同じ改善が得られる保証ではない。
-
-- **2026-02 · [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybr.md)**  
-  実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：0  
-  大規模モデルの最初の1トークンの隠れ状態で関数検索と小規模モデルの生成を誘導し、固定構文はテンプレート注入で済ませる方式で、BFCL精度80.1パーセントと最速の0.828秒を両立した。
 
 - **2026-02 · [ClawMobile: Rethinking Smartphone-Native Agentic Systems](2026-2602.22942-clawmobile-rethinking-smartphone-native-agentic-systems.md)**  
   実装：[✓](https://github.com/ClawMobile/ClawMobile) ・ リポジトリ内被引用：0  

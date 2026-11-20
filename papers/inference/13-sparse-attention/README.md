@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（194本）
+## 自動生成の論文一覧（195本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -37,7 +37,7 @@
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：56  
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
@@ -249,6 +249,10 @@
 - **2026-10 · [HHR: Hierarchical Hash Retrieval for Efficient LLM Generation](2026-2610.01230-hhr-hierarchical-hash-retrieval-for-efficient-llm-generation.md)**  
   実装：[✓](https://github.com/lianjunl13-sudo/HHR) ・ リポジトリ内被引用：0  
   品質ではLongBenchのLlama-3.1-8B平均が密注意47.51、HHR46.96と僅かに低下する一方、ハッシュ型の比較方式HATA45.86より高い。
+
+- **2026-10 · [FreeSolo: Linear-time Sparse Attention with Zero-Shot Length Extrapolation](2026-2610.17191-freesolo-linear-time-sparse-attention-with-zero-shot-length-extrapolatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  局所窓とセル単位の遠距離検索を組み合わせた疎な注意機構で、平均キーとキーのノルムという単純な統計だけで履歴を検索可能・間引き可能・階層化可能にし、学習長の64倍までのゼロショットの長さ外挿を実現する手法。
 
 - **2026-10 · [Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy](2026-2610.13708-adaptive-dhisparse-speculative-decoding-over-a-load-adaptive-kv-hierarch.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -600,6 +604,10 @@
   実装：[✓](https://github.com/howardhou/RWKV-X) ・ リポジトリ内被引用：3  
   RWKV-Xは、RWKV-7の線形再帰モデルに、長距離の証拠を選択して参照するTop-k Chunk Sparse 注意機構を周期的に挿入するハイブリッド言語モデルである。128K プリフィルではFlashAttention-3を使う密なTransformerとの比較で1.37倍の速度改善を報告する。
 
+- **2025-04 · [Hardware-aligned Hierarchical Sparse Attention for Efficient Long-term Memory Access](2025-2504.16795-hardware-aligned-hierarchical-sparse-attention-for-efficient-long-term-m.md)**  
+  実装：[✓](https://github.com/ant-research/long-context-modeling) ・ リポジトリ内被引用：3  
+  再帰型ニューラルネットワーク（Recurrent Neural Network; RNN）や状態空間モデル（State Space モデル; SSM）は、過去を固定次元の状態に圧縮するため、文脈が伸びても注意機構のような二乗計算や増大するKVキャッシュを必要としない。
+
 - **2025-10 · [Long-Context Modeling with Dynamic Hierarchical Sparse Attention for Memory-Constrained LLM Inference](2025-2510.24606-long-context-modeling-with-dynamic-hierarchical-sparse-attention-for-mem.md)**  
   実装：[✓](https://github.com/xiongsiheng/DHSA) ・ リポジトリ内被引用：2  
   動的 Hierarchical Sparse 注意機構（DHSA）は、長い入力に対する自己注意の計算を削減するため、注意行列のどこを残すかを入力内容に応じて予測する方式である。128K文脈で最大10.66倍という値はFlashAttention-2と比較した注意カーネル単体の速度である。
@@ -607,10 +615,6 @@
 - **2025-05 · [AnchorAttention: Difference-Aware Sparse Attention with Stripe Granularity](2025-2505.23520-anchorattention-difference-aware-sparse-attention-with-stripe-granularit.md)**  
   実装：[✓](https://github.com/yuzhouzhang9/Anchor-Attention) ・ リポジトリ内被引用：2  
   疎注意（sparse 注意機構）は重要な位置だけを選べるが、従来の動的方式は重要位置の探索自体に時間がかかり、128×128などの粗いブロック単位で残すと重要でない列まで計算する。
-
-- **2025-04 · [Hardware-aligned Hierarchical Sparse Attention for Efficient Long-term Memory Access](2025-2504.16795-hardware-aligned-hierarchical-sparse-attention-for-efficient-long-term-m.md)**  
-  実装：[✓](https://github.com/ant-research/long-context-modeling) ・ リポジトリ内被引用：2  
-  再帰型ニューラルネットワーク（Recurrent Neural Network; RNN）や状態空間モデル（State Space モデル; SSM）は、過去を固定次元の状態に圧縮するため、文脈が伸びても注意機構のような二乗計算や増大するKVキャッシュを必要としない。
 
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：2  
@@ -741,7 +745,7 @@
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
-  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：47  
   目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
@@ -773,7 +777,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2020-12 · [SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning](2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：80  
+  実装：✓ ・ リポジトリ内被引用：81  
   累積注意確率とヘッド出力から重要トークン・ヘッドを動的にカスケード枝刈りし、確率分布に応じた段階的量子化と専用top-k回路で注意の計算・DRAM転送を同時に削減する。
 
 - **2021-10 · [Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture](2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md)**  

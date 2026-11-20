@@ -35,10 +35,15 @@
   "selection_reason": "固定長recurrent stateの記憶容量とfull attentionの二次計算を両立するため、短距離sliding-window branchと長距離keypoint-cell選択branchを持つFreeSoloを提案。FS-Lは短いcontinued pretrainingでprefixを事前pruneしてquery依存選択し、FS-Bはbalanced treeを探索する。一次要旨は長文脈fine-tuningなしで既存法よりzero-shot length extrapolationが良いと報告。LLM長文脈sparse attentionの推論計算削減としてaccept（実測decode速度は要旨未報告）。",
   "semantic_scholar_id": "27114cce572b9563757ae1f863015cdec88cc484",
   "source_url": "https://arxiv.org/abs/2610.17191",
-  "status": "ready",
+  "status": "superseded",
   "title": "FreeSolo: Linear-time Sparse Attention with Zero-Shot Length Extrapolation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:47:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.17191-freesolo-linear-time-sparse-attention-with-zero-shot-length-extrapolatio.md",
+  "represented_canonical_id": "arXiv:2610.17191",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

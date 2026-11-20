@@ -52,6 +52,10 @@
   実装：[✓](https://github.com/enochliu98/Awesome-Latent-Communication) ・ リポジトリ内被引用：1  
   2026年7月15日を調査打切りとして、2024～2026年の代表的な18研究を選び、送る情報の種類（WHAT）、送受信間の表現・層の整合（WHICH）、受信モデルへの統合方法（HOW）という3軸で比較する。
 
+- **2026-05 · [When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference](2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inf.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  携帯端末でニューラル処理装置が常に速いわけではないことを段階別に実測し、入力処理では中央処理装置が最大1.6倍速く、逐次生成の実効加速も1.05から1.20倍にとどまり、全面任せでは電力が最大51パーセント増えることを示した。
+
 - **2026-04 · [Reasoning Language Model Inference Serving Unveiled: An Empirical Study](2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md)**  
   実装：[✓](https://github.com/lqinfdim/RLMServing) ・ リポジトリ内被引用：1  
   推論大規模言語モデルは通常の言語モデルと異なり、キャッシュ使用量が大きく変動し、少数の遅い要求が処理全体を引き延ばす。著者らは評価枠組みASUとベンチマークASU-Perfを導入し、複数のサービング最適化がモデル規模や負荷によって効いたり逆効果になったりすることを、実機評価と到着負荷の再現で示す。
@@ -298,10 +302,6 @@
   実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  
   本研究は、長期にわたり複数のセッションをまたいで稼働する大規模言語モデル（LLM）エージェントの「記憶」を、回答品質を高める機能としてだけでなく、計算・メモリ・入出力・スケジューリングの対象となる実行時システムとして捉え直す。後者は前者の約26.5倍である。
 
-- **2026-05 · [When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference](2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inf.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  携帯端末でニューラル処理装置が常に速いわけではないことを段階別に実測し、入力処理では中央処理装置が最大1.6倍速く、逐次生成の実効加速も1.05から1.20倍にとどまり、全面任せでは電力が最大51パーセント増えることを示した。
-
 - **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
   実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：0  
   PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
@@ -420,29 +420,29 @@
   実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：30  
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
+- **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
+  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：30  
+  画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
+
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
   実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：29  
   この研究は、推論時の計算量を思考連鎖（chain-of-thought; CoT）の出力トークン数ではなく、モデル内部の反復深さで増やす。入力を処理するprelude、共有されるrecurrent core、出力を作るcodaにTransformerを分け、coreを推論時に何回でも反復する。
 
-- **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：29  
-  画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
-
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：22  
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  
   実装：✓ ・ リポジトリ内被引用：19  
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
 
+- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
+
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
   実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：16  
   著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
-
-- **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
 
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
   実装：[✓](https://github.com/Gen-Verse/LatentMAS) ・ リポジトリ内被引用：12  
@@ -633,6 +633,6 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：122  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：123  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->
