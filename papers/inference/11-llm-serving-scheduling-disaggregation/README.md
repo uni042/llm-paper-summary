@@ -376,6 +376,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   ここで$d$は隠れ次元であり、KVの生成自体を省く方式ではない。NVIDIA GH200 120GBで8B・4096トークンの採点は172.0ミリ秒から4.6ミリ秒へ短縮した。
 
+- **2026-07 · [Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models](2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  原文を送らず、端末にKV認可・軽量投機・低次元出力層を残し、クラウドの重いデコーダと協調する分割推論。H20＋3種端末で素朴な分割推論比の遅延最大46.1%、下り通信最大67.4%削減を報告する。
+
 - **2026-07 · [BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving](2026-2607.08930-blockserve-diffusion-llm-continuous-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   拡散型LLMの要求ごとの収束速度差を、ブロック境界での即時追い出し・異なる拡散状態の混在実行・トークン予算補充で吸収する連続バッチング。Dream/LLaDAでFast-dLLM比1.9〜10.6倍のスループットを報告。
@@ -861,10 +865,6 @@
 - **2026-07 · [Full-Pipeline Inference Optimization for MiMo-V2.5 Series: Pushing Hybrid SWA Efficiency to the Limit](2026-2607.13095-mimo-hybrid-swa-full-pipeline-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Hybrid SWAの理論的KV削減を本番へ落とすため、Full/SWA二重KVプール、層単位先読み、分散GCache、KV親和ルーティング、プリフィル・デコード・マルチモーダル処理を一体最適化する。
-
-- **2026-07 · [Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models](2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  原文を送らず、端末にKV認可・軽量投機・低次元出力層を残し、クラウドの重いデコーダと協調する分割推論。H20＋3種端末で素朴な分割推論比の遅延最大46.1%、下り通信最大67.4%削減を報告する。
 
 - **2026-07 · [DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs](2026-2607.28848-deltaserve-inference-finetuning-coserving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1871,7 +1871,7 @@
   異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：80  
+  実装：✓ ・ リポジトリ内被引用：81  
   プリフィルとデコードを別実行単位へ分ける推論提供で、GPU / CPU上のKVキャッシュを実行単位横断で検索・共有・転送できる共通メモリプールを作り、過去接頭部の再利用と処理段階間KV移動を同じ仕組みで扱うシステム。
 
 - **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
@@ -1919,7 +1919,7 @@
   QLMは、対話型の低遅延要求と、数分から数時間待てる一括処理要求を、複数の言語モデルが稼働するGPU群で混在させるための待ち行列管理システムである。ShareGPTの入出力長分布を使った実験では、到着率や比較方式によって期限達成率が40～90%改善し、単一モデルでは要求処理能力が約20%、複数モデルでは最大数倍改善したと報告する。
 
 - **2024-06 · [TurboSpec: Closed-loop Speculation Control System for Optimizing LLM Serving Goodput](2024-2406.14066-turbospec-closed-loop-speculation-control-system-for-optimizing-llm-serv.md)**  
-  実装：✓ ・ リポジトリ内被引用：40  
+  実装：✓ ・ リポジトリ内被引用：41  
   TurboSpecは、大規模言語モデル（LLM）の複数要求をまとめる連続バッチ処理と、単一要求内で複数候補を先読みする投機的復号（投機的復号）を、現在の負荷に応じて切り替える制御システムである。
 
 - **2024-04 · [MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving](2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md)**  

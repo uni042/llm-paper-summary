@@ -35,10 +35,15 @@
   "selection_reason": "言語モデルを三値へ変換する役割整合スケールRoleQ。4ビット未満の量子化が困惑度の見かけに反して事実知識を損なう問題に対し、Transformerユニットの機能的役割でスケールを配置する構造的規則で、探索も較正もなしに三値化する。推論量子化機構そのもの。",
   "semantic_scholar_id": "836d2198eb090b4982018d0fc012f05ba0b31353",
   "source_url": "https://arxiv.org/abs/2610.21808",
-  "status": "ready",
+  "status": "superseded",
   "title": "RoleQ: Role-Aligned Scales for Converting Language Models to Ternary",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:51:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.md",
+  "represented_canonical_id": "arXiv:2610.21808",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

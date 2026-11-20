@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "762468320b4570095e19a10243f4db744c68d039",
+  "base_commit": "029afcb165b269fc47b27fe4280df7dbeccf1d38",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -410,6 +410,11 @@
     "2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multiplier-free-llm-inference.json",
     "2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.json",
     "2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-multi-agent-systems.json",
+    "2026-2610.21436-hyco-hybrid-drafting-for-cost-efficient-mobile-cloud-speculative-decoding.json",
+    "2026-2610.21463-trajectory-level-speculation-with-semantic-verification-for-tool-using-agents.json",
+    "2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-context-parallel-prefill.json",
+    "2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-models.json",
+    "2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41586,6 +41591,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.21436": {
+      "order": [
+        "2026-11-20T01:44:16+00:00",
+        "2026-2610.21436-hyco-hybrid-drafting-for-cost-efficient-mobile-cloud-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21463": {
+      "order": [
+        "2026-11-20T01:45:33+00:00",
+        "2026-2610.21463-trajectory-level-speculation-with-semantic-verification-for-tool-using-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21500": {
+      "order": [
+        "2026-11-20T01:46:51+00:00",
+        "2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-context-parallel-prefill.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21594": {
+      "order": [
+        "2026-11-20T01:48:09+00:00",
+        "2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21808": {
+      "order": [
+        "2026-11-20T01:49:26+00:00",
+        "2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51407,6 +51457,21 @@
     "arxiv:2610.21390": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-mu.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-mu.md"
+    ],
+    "arxiv:2610.21436": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.21436-hyco-hybrid-drafting-for-cost-efficient-mobile-cloud-speculative-decodin.md"
+    ],
+    "arxiv:2610.21463": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.21463-trajectory-level-speculation-with-semantic-verification-for-tool-using-a.md"
+    ],
+    "arxiv:2610.21500": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-con.md"
+    ],
+    "arxiv:2610.21594": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-model.md"
+    ],
+    "arxiv:2610.21808": [
+      "papers/inference/16-weight-quantization-compression/2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.md"
     ]
   }
 }

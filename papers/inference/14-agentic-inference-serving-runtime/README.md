@@ -50,7 +50,7 @@
   エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
 - **2025-12 · [Optimizing Agentic Language Model Inference via Speculative Tool Calls](2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   ツール呼出しを「LLMが確定してから実行する」直列経路から外し、小型モデルが次の呼出しを先読みして外部処理を本体生成と重ねる。クライアント側だけでも6〜21%の時間短縮を報告し、ツールが短い条件では推論エンジン統合がさらに2〜3%を削る。
 
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
@@ -349,6 +349,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   LLMワークフローをDAG演算子へ分解し、完全一致の重複排除・実行互換バッチ化・異種GPU配置・無状態ワーカーを一体化して、金銭コスト1.8〜3.8倍、エネルギー1.3〜2.0倍の改善を示す。
 
+- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
+  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：6  
+  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
+
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
   実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：6  
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
@@ -356,10 +360,6 @@
 - **2025-09 · [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](2025-2509.25140-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory.md)**  
   実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：5  
   長期間にわたってウェブ操作やソフトウェア修正を行う大規模言語モデル（LLM）エージェントは、過去に成功した手順を別の課題で再発見したり、既に失敗した操作を繰り返したりする。過去の実行軌跡を丸ごと検索する方式では、現在の課題に関係ない画面遷移や局所的な操作が混ざる。
-
-- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
-  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：5  
-  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
 
 - **2025-11 · [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md)**  
   実装：✓ ・ リポジトリ内被引用：4  

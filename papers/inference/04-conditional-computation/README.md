@@ -15,7 +15,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-08 · [Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching](2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   論文はCDBを端から端まで実装し、深度が不揃いになる鍵値キャッシュ（KV キャッシュ）、CPU側スケジューラとGPU側反復の同期、前段・後段をどの頻度で実行するかまで扱う。
 
 - **2026-09 · [LayerRoute: Adaptive Layer-Skipping with LoRA-Preserved Quality for Efficient LLM Inference](2026-2609.13682-layerroute-adaptive-layer-skipping-with-lora-preserved-quality-for-effic.md)**  

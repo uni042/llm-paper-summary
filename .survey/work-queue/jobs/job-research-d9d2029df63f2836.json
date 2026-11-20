@@ -35,10 +35,15 @@
   "selection_reason": "8xB300上のGLM-5.3/MLA/PCP8で遠隔KV tierのhitが再計算より遅くなり得る問題を測定する。著者要旨では16K promptのp99 TTFTが3.96→17.3秒へ悪化し、hit当たりの固定費用と帯域の損益分岐を定式化。PCP rank別KV分割、非同期転送、client stall修正によりhit-heavy traceのp99を83.32→0.67秒へ改善し、prefill throughputを14%増と報告。遠隔KVの実装/性能境界を直接扱うためaccept。",
   "semantic_scholar_id": "3a26d4c055ba0566a7e7f0c69d890050c81a2cb5",
   "source_url": "https://arxiv.org/abs/2610.21500",
-  "status": "ready",
+  "status": "superseded",
   "title": "When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:51:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-con.md",
+  "represented_canonical_id": "arXiv:2610.21500",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

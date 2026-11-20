@@ -35,10 +35,15 @@
   "selection_reason": "共有Transformer層を反復するLoopLMの投機復号で、早いloopの特徴から軽量drafterが複数将来tokenを予測し、深いloopのfeedbackで誤ったbranchを早期停止し、full-depth modelが最終確定するLoopAheadを提案。一次要旨はtarget分布を保持しつつ通常自回帰decode比最大7.82倍の高速化を報告。LoopLM専用speculative decodingとしてaccept。",
   "semantic_scholar_id": "e0cdfa1ee16bdfb1bad129a5ce97b3003c7df751",
   "source_url": "https://arxiv.org/abs/2610.21594",
-  "status": "ready",
+  "status": "superseded",
   "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:51:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-model.md",
+  "represented_canonical_id": "arXiv:2610.21594",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

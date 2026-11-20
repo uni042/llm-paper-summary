@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（492本）
+## 自動生成の論文一覧（493本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -30,7 +30,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   密モデルと混合専門家モデルを含むGemma 4の技術報告。局所・大域注意の配置、キー・値キャッシュ共有、キーの値への再利用、部分回転位置符号化、量子化対応学習、複数トークン予測ドラフタ、12Bの符号化器不要構成を組み合わせ、推論時の重み容量・KV容量・復号費用をそれぞれ減らす。数値はモデル系列・量子化形式・文脈長ごとに区別して読む必要がある。
 
 - **2026-01 · [KVzap: Fast, Adaptive, and Faithful KV Cache Pruning](2026-2601.07891-kvzap-fast-adaptive-and-faithful-kv-cache-pruning.md)**  
@@ -518,6 +518,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-11 · [OPSERVE: Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems](2026-de7f1d0908f4-opserve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-.md)**  
   実装：[✓](https://github.com/sc26-submission/aionhpc-26-adsubmission) ・ リポジトリ内被引用：0  
   HPCで一時的に遊ぶGPU断片の上に過渡ワーカーを起動し、プリフィルとデコードの遅延比率に応じてワーカーの役割を動的に配り直し、完了済みプリフィルのKV状態を共有層で回収後も生かすことで、固定配分比で95パーセンタイル遅延を最大15.4倍短くした機会的推論基盤。
+
+- **2026-10 · [When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill](2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-con.md)**  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：0  
+  遠隔KVティアが再計算より遅くなる条件を帯域下限と固定費の2項モデルで示し、MLA KVストアのランク間シャーディングと遠隔ティアのランク分割で帯域を6.3倍にして、ヒット過多時のp99を83.32秒から0.67秒へ戻した実運用の分析と対策。
 
 - **2026-10 · [Tailoring the Quantization Space for 1-Bit KV Cache Compression](2026-2610.03027-tailoring-the-quantization-space-for-1-bit-kv-cache-compression.md)**  
   実装：[✓](https://github.com/mscheong01/tasq) ・ リポジトリ内被引用：0  
@@ -1724,7 +1728,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：355  
+  実装：✓ ・ リポジトリ内被引用：356  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  

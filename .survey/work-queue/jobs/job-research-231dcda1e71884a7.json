@@ -35,10 +35,15 @@
   "selection_reason": "SpecAgentは弱いモデルが読み取り専用ツールを実行しながら複数stepを先行生成し、環境変更を伴う最初の操作は保留する。強いモデルはその軌跡を1回のprefillで意味検証し、妥当な最長prefixを確定して最初の拒否stepを修復する。τ²-Benchで強モデルの成功率から1ポイント以内に迫り、メモリトラフィックと所要時間を概ね半減。エージェント推論の実行プロトコル・高速化としてaccept。",
   "semantic_scholar_id": "0c9a91fbbffd9aa16504f9de09e065a86f4e7e8d",
   "source_url": "https://arxiv.org/abs/2610.21463",
-  "status": "ready",
+  "status": "superseded",
   "title": "Trajectory-Level Speculation with Semantic Verification for Tool-Using Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:51:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.21463-trajectory-level-speculation-with-semantic-verification-for-tool-using-a.md",
+  "represented_canonical_id": "arXiv:2610.21463",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

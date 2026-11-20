@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（182本）
+## 自動生成の論文一覧（183本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -46,6 +46,14 @@
   実装：✓ ・ リポジトリ内被引用：4  
   BF16重みの指数を固定長ビットマップへ無損失符号化し、圧縮データをレジスタ上で復元してテンソル Coreへ直送することで、重み帯域と中間展開の読み書きを減らす。
 
+- **2026-08 · [Attend to Your Own Thoughts: Breaking the Barrier for Post-Training Quantization of Reasoning LLMs through the Lens of 1.58-Bit Quantization](2026-2608.01078-attend-to-your-own-thoughts-breaking-the-barrier-for-post-training-quant.md)**  
+  実装：[✓](https://github.com/IntelChina-AI/BitTern) ・ リポジトリ内被引用：3  
+  大規模言語モデルの推論では重みの転送量と記憶容量が実行費用を決める重要な要因である。16ビットの重みを4ビットへ圧縮すれば容量を減らせるが、さらに1.58ビット相当の三値表現へ落とすと、数学の途中計算やコード生成など、複数段階の推論を必要とする課題の精度が大きく失われる。
+
+- **2026-05 · [HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization](2026-2605.29843-harp-hadamard-preconditioned-adaptive-rotation-processor-for-extreme-llm.md)**  
+  実装：[✓](https://github.com/brain-lab-research/HARP) ・ リポジトリ内被引用：3  
+  重みを2～4ビットへ圧縮する事後量子化（Post-学習 量子化; PTQ）では、少数の大きな外れ値や入力方向ごとに異なる誤差感度のため、単純な丸めが深刻な品質劣化を招く。
+
 - **2026-04 · [Rethinking Residual Errors in Compensation-based LLM Quantization](2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md)**  
   実装：[✓](https://github.com/list0830/ResComp) ・ リポジトリ内被引用：3  
   GPTQなどの学習後量子化（Post-学習 量子化; PTQ）は、線形層の重みを一列ずつ低ビット化し、量子化によって失われる出力を残りの未量子化重みの更新で補償する。Llama3.1-8B-InstructのGPTAQではゼロショット6課題平均70.3%→72.3%となった。
@@ -54,17 +62,9 @@
   実装：[✓](https://github.com/cau-hai-lab/SSDi8) ・ リポジトリ内被引用：2  
   Mamba-2の構造化状態空間双対の内部状態をINT8のまま受け渡すため、再帰計算の式を並べ替え、異なる軸の分布に合わせて量子化する方式を示す。
 
-- **2026-08 · [Attend to Your Own Thoughts: Breaking the Barrier for Post-Training Quantization of Reasoning LLMs through the Lens of 1.58-Bit Quantization](2026-2608.01078-attend-to-your-own-thoughts-breaking-the-barrier-for-post-training-quant.md)**  
-  実装：[✓](https://github.com/IntelChina-AI/BitTern) ・ リポジトリ内被引用：2  
-  大規模言語モデルの推論では重みの転送量と記憶容量が実行費用を決める重要な要因である。16ビットの重みを4ビットへ圧縮すれば容量を減らせるが、さらに1.58ビット相当の三値表現へ落とすと、数学の途中計算やコード生成など、複数段階の推論を必要とする課題の精度が大きく失われる。
-
 - **2026-05 · [OSAQ: Outlier Self-Absorption for Accurate Low-bit LLM Quantization](2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本論文は、大規模言語モデル（Large Language モデル, LLM）の学習後量子化（Post-学習 量子化, PTQ）で、重みの少数の外れ値が量子化刻みを粗くする問題を扱う。これは約42.4%のPPL低下だが、元のFP16モデルのPPL5.47には遠い。
-
-- **2026-05 · [HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization](2026-2605.29843-harp-hadamard-preconditioned-adaptive-rotation-processor-for-extreme-llm.md)**  
-  実装：[✓](https://github.com/brain-lab-research/HARP) ・ リポジトリ内被引用：2  
-  重みを2～4ビットへ圧縮する事後量子化（Post-学習 量子化; PTQ）では、少数の大きな外れ値や入力方向ごとに異なる誤差感度のため、単純な丸めが深刻な品質劣化を招く。
 
 - **2026-05 · [ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models](2026-2605.11222-admm-q-an-improved-hessian-based-weight-quantizer-for-post-training-quan.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -118,7 +118,15 @@
   実装：[✓](https://github.com/hestia2026/Hestia) ・ リポジトリ内被引用：1  
   重みを{-1,0,+1}の三値に制限する1.58ビット級の量子化は、重み保存量や乗算器への要求を減らせる可能性がある。
 
+- **2026-01 · [D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs](2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md)**  
+  実装：[✓](https://github.com/XIANGLONGYAN/D2Quant) ・ リポジトリ内被引用：1  
+  D²Quantは、大規模言語モデルの重みのみを4ビット未満へ圧縮するときの精度劣化を対象とする、学習後量子化（post-学習 量子化; PTQ）の研究である。実験においてQwen3-8Bの2ビット重み量子化はWikiText2でパープレキシティ14.10、C4で25.96、MMLUで49.94%、7課題の平均正答率57.22%となった。
+
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [RoleQ: Role-Aligned Scales for Converting Language Models to Ternary](2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化スケールを残差ストリームへの読み取り・書き込みという機能的役割で割り当てる規則と、数GPU時間の三値変換パイプラインにより、学習後三値変換でパープレキシティとMMLUを従来手法から大きく改善し、感度の高いユニットへの疎な第2プレーンで知識の損失を追加ビットで回復した。
 
 - **2026-10 · [RapidMoE: Exploiting Cross-Asymmetry via Adaptive Residual Offloading for Large-Scale MoE Inference](2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -340,10 +348,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   後続三層の活性を平均した予告信号を現在の活性へ重み〇・八五で融合して量子化の倍率を作ることで、三ビット量子化で八十億級モデルの困惑度を一一・六九から一一・五一へ下げ、五億級モデルでは二九・一三から二五・九六へ大きく改善し、校正データ量を変えてもばらつきが約三分の一になった。
 
-- **2026-01 · [D2Quant: Accurate Low-bit Post-Training Weight Quantization for LLMs](2026-2602.02546-d2quant-accurate-low-bit-post-training-weight-quantization-for-llms.md)**  
-  実装：[✓](https://github.com/XIANGLONGYAN/D2Quant) ・ リポジトリ内被引用：0  
-  D²Quantは、大規模言語モデルの重みのみを4ビット未満へ圧縮するときの精度劣化を対象とする、学習後量子化（post-学習 量子化; PTQ）の研究である。実験においてQwen3-8Bの2ビット重み量子化はWikiText2でパープレキシティ14.10、C4で25.96、MMLUで49.94%、7課題の平均正答率57.22%となった。
-
 - **2026-01 · [Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation](2026-2601.22716-breaking-the-blocks-continuous-low-rank-decomposed-scaling-for-unified-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LoRDS（Low-Rank Decomposed Scaling）は、重みを低ビット整数に変換するときのスケール因子の表現を変える方式である。
@@ -390,13 +394,13 @@
   実装：✓ ・ リポジトリ内被引用：7  
   Huff-LLMは、言語モデルの重みを数値を一切変えずに圧縮し、保存先から推論演算器の直前まで圧縮状態を維持する方式である。Llama、Qwen、OPT、Vicunaの重みで容量削減を測定し、専用推論回路のモデル化で最大約32%の重み容量削減、最大約31%の推論遅延短縮、最大約26%のエネルギー削減を報告する。
 
+- **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  PTQTPは、学習済み重みを2枚の三値平面（trit-plane）と連続尺度へ分解し、約1.58ビット級の超低ビット表現を事後量子化（Post-学習 量子化; PTQ）だけで作る。二値PTQより表現力を増やしつつ、混合精度の例外経路を使わず一様な三値演算へ落とすのが狙いである。
+
 - **2025-05 · [DLP: Dynamic Layerwise Pruning in Large Language Models](2025-2505.23807-dlp-dynamic-layerwise-pruning-in-large-language-models.md)**  
   実装：[✓](https://github.com/ironartisan/DLP) ・ リポジトリ内被引用：6  
   DLP（動的 Layerwise 枝刈り、動的層別刈り込み）は、重みのどれを削るかだけでなく、各層に何割の重みを残すかを決めるためのモデル圧縮方式である。ただし同じ70%の疎化率でも、重要な層を一律に70%削ると、あまり重要でない層を多く削る場合より予測品質が大きく損なわれる。
-
-- **2025-09 · [PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models](2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  PTQTPは、学習済み重みを2枚の三値平面（trit-plane）と連続尺度へ分解し、約1.58ビット級の超低ビット表現を事後量子化（Post-学習 量子化; PTQ）だけで作る。二値PTQより表現力を増やしつつ、混合精度の例外経路を使わず一様な三値演算へ落とすのが狙いである。
 
 - **2025-04 · [OAC: Output-adaptive Calibration for Accurate Post-training Quantization](2025-2405.15025-oac-output-adaptive-calibration-for-accurate-post-training-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -516,13 +520,13 @@
   実装：[✓](https://github.com/Hsu1023/DuQuant) ・ リポジトリ内被引用：82  
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
+- **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
+  実装：✓ ・ リポジトリ内被引用：72  
+  狙いは、学習済みFP16/BF16モデルを後から近似する事後学習量子化ではなく、モデル自体を極低bit表現へ適応させ、品質を維持したまま重み転送・行列積・メモリ容量の支配項を小さくすることにある。
+
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
   実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：72  
   活性値認識型特異値分解（活性値-aware Singular Value Decomposition、ASVD）は、大規模言語モデル（LLM）の線形重みを追加学習なしで低ランク行列へ置き換える圧縮方式である。LLaMA-7BとLLaMA-2-7B/13Bで重み容量を10～30%削減する実験を行い、活性値を考慮しないSVDより大幅に良い困惑度を報告する。
-
-- **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
-  実装：✓ ・ リポジトリ内被引用：71  
-  狙いは、学習済みFP16/BF16モデルを後から近似する事後学習量子化ではなく、モデル自体を極低bit表現へ適応させ、品質を維持したまま重み転送・行列積・メモリ容量の支配項を小さくすることにある。
 
 - **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
   実装：[✓](https://github.com/ruikangliu/FlatQuant) ・ リポジトリ内被引用：70  

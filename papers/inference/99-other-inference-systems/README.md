@@ -528,6 +528,10 @@
   実装：[✓](https://github.com/OpenBMB/ArcLight) ・ リポジトリ内被引用：1  
   NUMAごとのメモリ配置、動的スレッド群、Scatter/Gather型テンソル並列を一体化し、多数コアCPUの遠隔メモリアクセス壁を避けて、192コアARM環境でllama.cpp比最大46%高い推論スループットを示す軽量CPU推論基盤。
 
+- **2026-03 · [AgentCollab: A Self-Evaluation-Driven Collaboration Paradigm for Efficient LLM Agents](2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficien.md)**  
+  実装：[✓](https://github.com/SparkEngineAI/AgentFlashInfer) ・ リポジトリ内被引用：1  
+  ステップごとにモデル自身が進捗を自己評価し、停滞時だけ大きいモデルへ一時的に制御を移す協調方式で、エージェントの正解率を大きいモデル並みに近づけつつ1.3から2.4倍の高速化を得た。
+
 - **2026-02 · [ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces](2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   思考ステップごとにモデルの確信度を見て、低確信なら離散トークン、高確信なら潜在空間の柔らかい埋め込みへ振り分ける学習不要の方式で、正解率を最大19.70ポイント上げながら生成長も削った。
@@ -2005,10 +2009,6 @@
 - **2026-03 · [Attention-Based Sampler for Diffusion Language Models](2026-2604.08564-attention-based-sampler-for-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、マスク拡散型大規模言語モデル（dLLM）の生成時に、どの位置のマスクを先に確定するかを注意行列から決める学習不要の復号法Attn-Samplerを提案する。
-
-- **2026-03 · [AgentCollab: A Self-Evaluation-Driven Collaboration Paradigm for Efficient LLM Agents](2026-2603.26034-agentcollab-a-self-evaluation-driven-collaboration-paradigm-for-efficien.md)**  
-  実装：[✓](https://github.com/SparkEngineAI/AgentFlashInfer) ・ リポジトリ内被引用：0  
-  ステップごとにモデル自身が進捗を自己評価し、停滞時だけ大きいモデルへ一時的に制御を移す協調方式で、エージェントの正解率を大きいモデル並みに近づけつつ1.3から2.4倍の高速化を得た。
 
 - **2026-03 · [Adapting Methods for Domain-Specific Japanese Small LMs: Scale, Architecture, and Quantization](2026-2603.18037-adapting-methods-for-domain-specific-japanese-small-lms-scale-architectu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3849,7 +3849,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：107  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：108  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -3857,7 +3857,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：81  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：82  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
