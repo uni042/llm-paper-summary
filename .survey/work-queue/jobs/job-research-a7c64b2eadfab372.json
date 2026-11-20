@@ -35,10 +35,15 @@
   "selection_reason": "低ビット量子化の精度劣化に対し、ホストRAMやSSDから追加精度を選択的にストリーミングして計算と重ね、デコードステップ間で再利用するStrataFluxで、2ビット重みと2〜3ビットKVキャッシュのメモリ・速度利点を保ったまま精度を回復する。階層メモリ型推論への直接貢献である。",
   "semantic_scholar_id": "e245140b27e80990d365f22fc3a1494c17404ac6",
   "source_url": "https://arxiv.org/abs/2611.08363",
-  "status": "ready",
+  "status": "superseded",
   "title": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T23:10:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2611.08363-strataflux-memory-hierarchy-native-low-bit-llm-inference.md",
+  "represented_canonical_id": "arXiv:2611.08363",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

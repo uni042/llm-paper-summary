@@ -35,10 +35,15 @@
   "selection_reason": "複数エージェントのKVキャッシュが同時常駐するメモリ逼迫に対し、局所的な注意誤差 bound から感度をオンライン推定し、共有メモリ予算の下でエージェント・層を横断してビット幅を共同配分するCoMixKVを提案する。KVキャッシュ量子化機構への直接貢献である。",
   "semantic_scholar_id": "30290688d8a1b538fa11e58aa016608c6b6311ff",
   "source_url": "https://arxiv.org/abs/2611.10096",
-  "status": "ready",
+  "status": "superseded",
   "title": "Coordinated Mixed-Precision KV Cache Quantization for Efficient LLM-based Multi-agent Systems",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T23:10:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.10096-coordinated-mixed-precision-kv-cache-quantization-for-efficient-llm-base.md",
+  "represented_canonical_id": "arXiv:2611.10096",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
