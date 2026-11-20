@@ -121,6 +121,10 @@
   実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：1  
   通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
 
+- **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
+  実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：1  
+  MARSは、複数の大規模言語モデル（LLM）エージェントが同じホストで稼働する際、モデル推論のGPU時間だけでなく、ツール呼び出しで消費されるCPU時間と鍵・値キャッシュ（KV キャッシュ）の保持費用まで同時に制御するサービング方式である。
+
 - **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
   実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：1  
   本研究は、画像を一度だけ入力して答える通常の視覚言語モデルではなく、画像の拡大、切り出し、追加観察などの視覚ツールを複数回呼び出すエージェント型マルチモーダル大規模言語モデルの応答遅延を対象とする。提案方式SpecEyesは、ツールを必要としない質問を早期に見つけ、軽量な視覚言語モデルの回答をそのまま返す。
@@ -254,10 +258,6 @@
 - **2026-04 · [Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey](2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、エージェント型人工知能（Agentic AI）の推論時エネルギーを、単一のLLM呼び出しではなく、知覚・推論・行動（Perception–Reasoning–Action）の循環と、端末・エッジ・クラウド間の通信まで含めて分析するサーベイである。著者は計算・メモリ・通信を別々に数え、これらを跨いだ共同設計の必要性を論じる。
-
-- **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
-  実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：0  
-  MARSは、複数の大規模言語モデル（LLM）エージェントが同じホストで稼働する際、モデル推論のGPU時間だけでなく、ツール呼び出しで消費されるCPU時間と鍵・値キャッシュ（KV キャッシュ）の保持費用まで同時に制御するサービング方式である。
 
 - **2026-04 · [Hive: A Multi-Agent Infrastructure for Algorithm- and Task-Level Scaling](2026-2604.17353-hive-a-multi-agent-infrastructure-for-algorithm-and-task-level-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
