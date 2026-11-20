@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（151本）
+## 自動生成の論文一覧（152本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -97,6 +97,10 @@
 - **2026-10 · [Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference](2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みのみ量子化10構成のエネルギー・速度・精度・メモリを5モデル・4タスク・4種のGPUで統一実測し、融合カーネル型の8ビット量子化が最大約4倍省エネルギーであることと、長入力・短出力で利得が最大になり実行時間がエネルギーの代理指標になることを明らかにした評価論文。
+
+- **2026-10 · [Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing](2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ベンチマークの実行順序・再起動・ウォームアップ・間隔を統制する順次分離プロトコルで、推論測定のrun間変動係数を15.2パーセントから2.2パーセントへ下げ、回帰テストに使える再現性を得る方法と実測。
 
 - **2026-10 · [PACE: Pareto-Adaptive Compression for Efficient Native MLLMs](2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -424,13 +428,13 @@
   実装：✓ ・ リポジトリ内被引用：18  
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
 
+- **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
+  実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：16  
+  著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
+
 - **2025-07 · [LIMINAL: Exploring The Frontiers of LLM Decode Performance](2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   LIMINALは、自己回帰デコードの上限を、モデル側の演算・重み・キー・バリュー（Key-Value; KV）キャッシュ需要と、加速器側の演算性能・メモリ容量・帯域・集合通信性能へ分解する解析性能モデルである。
-
-- **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
-  実装：[✓](https://github.com/hhhuang/CAG) ・ リポジトリ内被引用：15  
-  著者らはキャッシュ拡張生成（Cache-Augmented Generation、CAG）を提案する。Llama 3.1 8BをV100×8で評価した結果、SQuADとHotPotQAの多くの知識集合でCAGの回答品質は疎検索・密検索を用いるRAGと同等以上である。
 
 - **2025-11 · [Latent Collaboration in Multi-Agent Systems](2025-2511.20639-latent-collaboration-in-multi-agent-systems.md)**  
   実装：[✓](https://github.com/Gen-Verse/LatentMAS) ・ リポジトリ内被引用：12  

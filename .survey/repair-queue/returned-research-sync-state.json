@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5b760db4bab803f22bd43868e10fe22a3f45eeb2",
+  "base_commit": "6e50ef0fc3a410700f94de534def106477362724",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -582,9 +582,14 @@
     "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
     "2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.json",
     "2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.json",
+    "2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inference.json",
+    "2026-2610.09202-few-bits-one-law-toward-w2a4kv2.json",
     "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json",
+    "2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.json",
+    "2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-for-regression-testing.json",
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
+    "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json",
     "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
     "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
     "2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inference.json",
@@ -44145,6 +44150,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.09139": {
+      "order": [
+        "2026-11-20T10:18:14+00:00",
+        "2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.09202": {
+      "order": [
+        "2026-11-20T10:19:02+00:00",
+        "2026-2610.09202-few-bits-one-law-toward-w2a4kv2.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.09424": {
+      "order": [
+        "2026-11-20T10:19:50+00:00",
+        "2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.09778": {
+      "order": [
+        "2026-11-20T10:20:38+00:00",
+        "2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-for-regression-testing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.10845": {
+      "order": [
+        "2026-11-20T10:21:25+00:00",
+        "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54944,6 +54994,21 @@
     "arxiv:2610.09025": [
       "papers/inference/13-sparse-attention/2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md",
       "papers/inference/13-sparse-attention/2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md"
+    ],
+    "arxiv:2610.09139": [
+      "papers/inference/99-other-inference-systems/2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inferen.md"
+    ],
+    "arxiv:2610.09202": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.09202-few-bits-one-law-toward-w2a4kv2.md"
+    ],
+    "arxiv:2610.09424": [
+      "papers/inference/12-moe-parallelism-communication/2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.md"
+    ],
+    "arxiv:2610.09778": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md"
+    ],
+    "arxiv:2610.10845": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-an.md"
     ]
   }
 }

@@ -449,7 +449,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。
 
 - **2024-10 · [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
+  実装：✓ ・ リポジトリ内被引用：27  
   一方、GPUメモリに置く重みの総量は大きく、単一GPUでは容量不足になりやすい。使わない専門家をCPU主記憶に退避し、必要なものだけGPUへ移す方式は容量問題を緩和するが、どの専門家が選ばれるかは入力トークンと各層のルータに依存する。
 
 - **2024-10 · [MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts](2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md)**  

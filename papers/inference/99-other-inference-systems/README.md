@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1101本）
+## 自動生成の論文一覧（1102本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -849,6 +849,10 @@
 - **2026-10 · [Content-Aware Adaptive Token Pruning for Video-Language Models](2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンの相関の固有値の減衰率から動画ごとの冗長度を測って保持率を動画ごとに決める学習不要の枝刈りで、平均保持率10パーセントでも固定保持率より動画説明の正解率を7.48ポイント高く保ち、言語モデルの演算量を約95.5パーセント減らす。
+
+- **2026-10 · [Breaking the Space Barrier and its Application to Language Model Inference](2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  制約付き復号の経路一意性という理論結果から、強制テキストの無償化と表なしマスクと並列検証を持つ推論エンジンを構成し、ノートPCで構造化出力を高速化する研究。
 
 - **2026-10 · [Bifocal: Training-Free Mixed Granularity Visual Token Pruning for Multimodal LLMs](2026-2610.18399-bifocal-training-free-mixed-granularity-visual-token-pruning-for-multimo.md)**  
   実装：[✓](https://github.com/EIT-NLP/Bifocal) ・ リポジトリ内被引用：0  
@@ -3786,6 +3790,10 @@
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：3  
   大規模言語モデルの圧縮では、重みを0にする枝刈りや、浮動小数点数を整数へ変換する量子化が、生成文をどの時点から変えてしまうかを把握する必要がある。この指標を使って行列ごとの枝刈り率を配分すると、Llama-2-13Bを全体75%疎化したとき、同じ平均疎化率の一様な大きさ基準の枝刈りより、WikiText2のPPLを13.512から8.101へ抑えられる。
 
+- **2024-03 · [SynCode: LLM Generation with Grammar Augmentation](2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md)**  
+  実装：[✓](https://github.com/structuredllm/syncode) ・ リポジトリ内被引用：3  
+  SynCodeは、言語モデルがJSON、SQL、Python、Goなどの形式言語を生成する際に、文脈自由文法（CFG）を満たすトークンだけを次の候補として残す制約付き復号方式である。
+
 - **2024-01 · [Fast and Effective Weight Update for Pruned Large Language Models](2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md)**  
   実装：[✓](https://github.com/fmfi-compbio/admm-pruning) ・ リポジトリ内被引用：3  
   大規模言語モデルの重みを事後的に枝刈りする際には、重要度の低い重みをゼロにするだけでは、各層の出力が元モデルからずれてしまう。LLaMA-7Bの60%疎性ではWikiText2困惑度がSparseGPTの10.51に対して提案方式の9.22へ改善する。
@@ -3809,10 +3817,6 @@
 - **2024-05 · [STAT: Shrinking Transformers After Training](2024-2406.00061-stat-shrinking-transformers-after-training.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   STATは、学習済みTransformerを再学習せずに小さくするため、フィードフォワードネットワーク（FFN）のニューロンと自己注意ヘッドを構造ごと除去する事後剪定手法である。いずれもA6000 48GBを1枚使った剪定計算が約2時間半で、これはモデル圧縮の処理時間である。
-
-- **2024-03 · [SynCode: LLM Generation with Grammar Augmentation](2024-2403.01632-syncode-llm-generation-with-grammar-augmentation.md)**  
-  実装：[✓](https://github.com/structuredllm/syncode) ・ リポジトリ内被引用：2  
-  SynCodeは、言語モデルがJSON、SQL、Python、Goなどの形式言語を生成する際に、文脈自由文法（CFG）を満たすトークンだけを次の候補として残す制約付き復号方式である。
 
 - **2024-03 · [Repoformer: Selective Retrieval for Repository-Level Code Completion](2024-2403.10059-repoformer-selective-retrieval-for-repository-level-code-completion.md)**  
   実装：[✓](https://github.com/amazon-science/Repoformer) ・ リポジトリ内被引用：2  
@@ -4085,7 +4089,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：85  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
@@ -4116,13 +4120,13 @@
   実装：✓ ・ リポジトリ内被引用：19  
   本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
 
+- **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
+  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：18  
+  従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
+
 - **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
   実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：17  
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
-
-- **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
-  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：17  
-  従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
 
 - **2023-10 · [RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation](2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md)**  
   実装：[✓](https://github.com/carriex/recomp) ・ リポジトリ内被引用：16  
@@ -4231,7 +4235,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：292  
+  実装：✓ ・ リポジトリ内被引用：293  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "LLM serving性能の繰返し計測でsystem stateと並列度によるばらつきを分離するSequential Isolation Methodologyを提案。A100/vLLM 0.9.1、3 LLM、6文脈長、8同時実行数で5回ずつ計測し、一次要旨はTTFT P50の反復CVを15.2%から2.2%へ低減、144設定中113でCV3%未満を報告。推論サービングbenchmarkの再現性向上としてaccept。",
   "semantic_scholar_id": "d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57",
   "source_url": "https://arxiv.org/abs/2610.09778",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:22:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.09778-reproducible-llm-inference-benchmarking-a-sequential-isolation-protocol-.md",
+  "represented_canonical_id": "arXiv:2610.09778",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

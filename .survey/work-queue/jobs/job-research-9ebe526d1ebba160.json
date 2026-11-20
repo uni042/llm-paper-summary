@@ -35,10 +35,15 @@
   "selection_reason": "vLLMのKV状態を約16K token block単位で暗号化NVMeへ保存し、再利用時にbit-exactで復元するgalahad-kvを50M tokenの公開テキストで検証する。著者要旨はH100/Gemma4 12B・31Bで100/100のblock復元、再計算比2.8～4.3倍高速、GPU energy8.8～12.3倍削減と報告。ただし50M tokenの一括attention窓を実現する方式ではなく、blockを順次復元する持続KVストアである。推論状態のSSD再利用技術としてaccept。",
   "semantic_scholar_id": "8a20d171fc616c06a8c3ee9f64b943963e5706b0",
   "source_url": "https://arxiv.org/abs/2610.10845",
-  "status": "ready",
+  "status": "superseded",
   "title": "Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:22:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-an.md",
+  "represented_canonical_id": "arXiv:2610.10845",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

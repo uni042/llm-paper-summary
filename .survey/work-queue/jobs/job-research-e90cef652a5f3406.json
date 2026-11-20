@@ -35,10 +35,15 @@
   "selection_reason": "NVLinkやP2P転送を持たない民生GPU複数台のMoE expert parallelismを対象とする。ホストをルーティングハブとして共有tokenを一度だけホストへ書き込むmulticast dispatchと、ホストステージングを使ったtoken単位のcombineを提案し、転送重複と全体同期を抑える。著者のarXiv登録要旨ではRTX 5090上で推論スループット最大1.46倍、A800/NVLink相当の性能にハードウェア費用23.4%で接近したと報告。MoE推論通信の直接的なシステム研究としてaccept。",
   "semantic_scholar_id": "6aa10b9034e99787dfb481dbf040f8561bdf6d29",
   "source_url": "https://arxiv.org/abs/2610.09424",
-  "status": "ready",
+  "status": "superseded",
   "title": "Democratizing MoE inference on commodity GPUs with CoMoE",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:22:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2610.09424-democratizing-moe-inference-on-commodity-gpus-with-comoe.md",
+  "represented_canonical_id": "arXiv:2610.09424",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

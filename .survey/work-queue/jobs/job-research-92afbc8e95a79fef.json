@@ -35,10 +35,15 @@
   "selection_reason": "重み・activation・KVを同時に超低ビット化する際の異種分布と相互誤差に対し、回転とenergy正規化でtensorを共通座標へ移し、固定Gaussian codebookを共有してjoint QATで補正するCanonQを提案。一次要旨はLLaMA3 1B/3B/8BのW2A4KV2で既存方式比WikiText-2 perplexity最大14.28倍改善、zero-shot平均精度最大57.9%向上を報告。推論時の重み・活性・KV統合量子化に直接適用するためaccept。",
   "semantic_scholar_id": "a57db6795e4740e1c844024f8ddf0cb585fcdd63",
   "source_url": "https://arxiv.org/abs/2610.09202",
-  "status": "ready",
+  "status": "superseded",
   "title": "Few Bits, One Law: Toward W2A4KV2",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:22:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.09202-few-bits-one-law-toward-w2a4kv2.md",
+  "represented_canonical_id": "arXiv:2610.09202",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
