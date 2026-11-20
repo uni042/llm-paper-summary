@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（538本）
+## 自動生成の論文一覧（539本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1837,6 +1837,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   Unifying Mixture of エキスパート and Multi-Head Latent 注意機構 for Efficient Language Modelsは、小型言語モデルの計算量とKVキャッシュ量を同時に抑えるため、Mixture-of-Experts（MoE）、Multi-head Latent 注意機構（MLA）…
 
+- **2025-06 · [VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator](2025-2507.00797-veda-efficient-llm-generation-through-voting-based-kv-cache-eviction-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各トークンの適応しきい値による投票でKVキャッシュを追い出し、内積・外積切替可能なデータフローと要素直列スケジューリングで生成フェーズを高速化するエッジ向けアクセラレータ。エビクションで注意が最大10倍高速になる。
+
 - **2025-05 · [Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques](2025-26c8fc4003ac-addressing-activation-outliers-in-llms-a-systematic-review-of-post-train.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   活性値の外れ値に絞った学習後量子化の系統的レビュー。PRISMAで選んだ52件を等価変換・混合精度・細粒度化・非線形データ型の4群へ分類し、どのビット幅でどの対策が要るかを困惑度の横断比較で示した。
@@ -2158,7 +2162,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：766  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：767  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

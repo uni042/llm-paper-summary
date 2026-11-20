@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（88本）
+## 自動生成の論文一覧（89本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -323,6 +323,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-07 · [Temporal-Aware GPU Resource Allocation for Distributed LLM Inference via Reinforcement Learning](2025-2507.10259-temporal-aware-gpu-resource-allocation-for-distributed-llm-inference-via.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の地域に分散したGPUサーバーへ推論要求を割り当てるとき、現在の空き容量だけを見て最も速そうなサーバーを選ぶと、需要の増加に遅れて起動するサーバーや、短時間で頻繁に移動する要求が生まれる。
+
+- **2025-07 · [Hybrid Systolic Array Accelerator with Optimized Dataflow for Edge Large Language Model Inference](2025-2507.09010-hybrid-systolic-array-accelerator-with-optimized-dataflow-for-edge-large.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルとデコードで動作形態を切り替えるハイブリッドシストリックアレイと、シフト型MXINT4量子化による外部メモリアクセス削減を組み合わせたエッジ向け推論アクセラレータ。面積効率で先行方式比2.45倍以上を配置配線後シミュレーションで示した。
 
 - **2025-05 · [Serve Programs, Not Prompts](2025-2510.25412-serve-programs-not-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

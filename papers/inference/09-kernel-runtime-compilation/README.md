@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（261本）
+## 自動生成の論文一覧（262本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -832,6 +832,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   重みを2の冪で表す量子化のスケールを、重みだけのグリッド探索と少量較正での残差学習の2段で決め、ビット操作の逆量子化で推論も速くする学習後量子化。3.25ビットで一様量子化の最先端を上回り、逆量子化は最大3.67倍高速。
 
+- **2025-06 · [Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models](2025-2506.23025-spectra-1-1-scaling-laws-and-efficient-inference-for-ternary-language-mo.md)**  
+  実装：[✓](https://github.com/NolanoOrg/TriRun) ・ リポジトリ内被引用：0  
+  三値言語モデルのスケーリング則と推論高速化を一体で示す研究。パラメータより学習トークンの拡大が効くことを示し、重みを1.6ビットと2ビットへ詰める方式とGPUカーネルTriRunで70Bモデルを4.9倍高速化した。
+
 - **2025-06 · [MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators](2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   削減次元が小さく帯域律速へ転じた計算集約演算子の連鎖を、タイル式の完全な探索空間とグラフ解析による冗長転送の除去、解析的性能模型による高速な探索で融合し、カーネルを最大五・九倍速くし調整時間を七十倍以上短縮した。
@@ -1091,6 +1095,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-12〜2018-11）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：64  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：65  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->

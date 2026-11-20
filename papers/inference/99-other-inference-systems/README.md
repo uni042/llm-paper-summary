@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1076本）
+## 自動生成の論文一覧（1078本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3172,6 +3172,10 @@
   実装：[✓](https://github.com/SongtaoLiu0823/HARP) ・ リポジトリ内被引用：0  
   下位層と上位層で同じ割合の注意を削ると、表現形成の早い段階にある重要なトークン間依存まで失われ、特に生成・推論課題で品質が大幅に悪化する。HARP（High-層 注意機構 枝刈り with Rescaling）は、高い層ほどトークン表現が類似し、注意によるトークンの識別が弱くなるという仮説を設計の出発点にする。
 
+- **2025-07 · [GeLaCo: An Evolutionary Approach to Layer Compression](2025-2507.10059-gelaco-an-evolutionary-approach-to-layer-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層崩壊の融合案を進化的に探索する圧縮手法。残差寄与の類似度とKLを適応度に、融合係数まで含めて最適化し、圧縮率と品質のパレート前線も推定する。Llama系で比較対象をほぼ一貫して上回る。
+
 - **2025-07 · [CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs](2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い推論を生成する言語モデルは、複雑な数学問題で有用な中間計算を積み重ねる一方、同じ検算や方針の見直しを繰り返し、答えが得られないまま出力を延ばす場合がある。正誤ラベルを集めて判定器を追加学習する方式ではなく、モデルが生成中に持つ隠れ状態を利用する。
@@ -3199,6 +3203,10 @@
 - **2025-07 · [A Comprehensive Evaluation on Quantization Techniques for Large Language Models](2025-2507.17417-a-comprehensive-evaluation-on-quantization-techniques-for-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの量子化方式は、重み・活性値の精度だけでなく、外れ値をならす前処理、量子化後の誤差補償、対称・非対称、チャネル・グループ粒度、スケールの表現形式などを組み合わせている。さらにRTX 4090のINT4はプリフィルを約2倍高速化するが、バッチ1のデコードはBF16より遅い。
+
+- **2025-06 · [UltraSketchLLM: Sub-1-Bit LLM Compression via Sketch and Hardware-Friendly Operators](2025-2506.17255-ultrasketchllm-sub-1-bit-llm-compression-via-sketch-and-hardware-friendl.md)**  
+  実装：[✓](https://github.com/suenar/UltraSketchLLM) ・ リポジトリ内被引用：0  
+  索引なしのスケッチで重み表現を共有し、1重み当たり0.5ビットまで圧縮する手法。過小評価型のスケッチ設計と行列演算への写像で、品質劣化と推論オーバーヘッドを同時に抑える。
 
 - **2025-06 · [Task-Related Token Compression in Multimodal Large Language Models from an Explainability Perspective](2025-2506.01097-task-related-token-compression-in-multimodal-large-language-models-from-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3598,6 +3606,10 @@
   実装：✓ ・ リポジトリ内被引用：8  
   本研究は、端末側で短い草稿を作り、クラウド側で草稿中のトークンをまとめて検証することで、品質と計算費用の間の連続的な選択肢を作る。GSM8KではLlama-2-7B単独の正答率21.68%、70B単独53.07%に対し、対数閾値−0.5の協調方式は52.24%を達成した。
 
+- **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
+
 - **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
@@ -3609,10 +3621,6 @@
 - **2023-12 · [Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference](2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md)**  
   実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：8  
   大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
-
-- **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  AI向け計算器の演算性能が急速に増える一方、DRAMやデバイス間通信の帯域は同じ速度で増えない。低バッチの自己回帰生成では重みの再読出しが支配的になり、FLOPsだけで推論性能を評価すると誤る。
 
 - **2024-02 · [A Survey on Transformer Compression](2024-2402.05964-a-survey-on-transformer-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -4001,7 +4009,7 @@
   従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
 
 - **2023-06 · [MiniLLM: On-Policy Distillation of Large Language Models](2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md)**  
-  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：48  
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
