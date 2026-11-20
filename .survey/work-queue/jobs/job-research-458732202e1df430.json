@@ -35,10 +35,15 @@
   "selection_reason": "LLMのNVFP4量子化で対角smoothingとblock scaleを別々に選ぶのでなく、量子化行列積の誤差を最小化するよう共同最適化する。round-to-nearestとGPTQ式逐次補正の両方を考慮し、multiplicative-dither FP4の解析を利用する。著者要旨は評価した量子化方式で最高の平均精度を保ち、vendor NVFP4のprefill throughputの約94～97%を維持すると報告。推論FP4の品質/性能tradeoffを直接扱うためaccept。",
   "semantic_scholar_id": "b58e5fe4d11b64f8ea0c4d49556d02fa27454a7d",
   "source_url": "https://arxiv.org/abs/2610.08231",
-  "status": "ready",
+  "status": "superseded",
   "title": "OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:09:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp.md",
+  "represented_canonical_id": "arXiv:2610.08231",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

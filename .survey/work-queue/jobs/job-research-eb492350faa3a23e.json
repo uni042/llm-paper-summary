@@ -35,10 +35,15 @@
   "selection_reason": "LLMのFlashAttention/FlashDecoding型kernelで代数変形とGPU schedulingを同時探索すると空間が巨大になるため、symbolic shapeのgraph superoptimizationと具体shapeのtile schedulingを分離するCleave compilerを提案。複数reductionを持つgraphをiterative tilingとhorizontal fusionで統合する。一次要旨はLLM subgraphで最良baseline比平均1.6倍kernel高速化、Mirage比compile時間平均5.9倍短縮、実serving traceでFlashInfer FA2/FA3比1.4/1.7倍を報告。LLM推論kernel compilationとしてaccept。",
   "semantic_scholar_id": "1deb184e99692bb3c42b1b58f98ffbcd208baace",
   "source_url": "https://arxiv.org/abs/2610.07742",
-  "status": "ready",
+  "status": "superseded",
   "title": "Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:09:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.07742-cleave-scaling-tensor-program-optimization-via-decoupled-algebraic-searc.md",
+  "represented_canonical_id": "arXiv:2610.07742",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

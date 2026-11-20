@@ -35,10 +35,15 @@
   "selection_reason": "投機復号のdraft方式とdraft長を固定せず、requestごとにEAGLE-3、n-gram、独立draftモデルを選び、検証blockごとに受理履歴・推論費用を使ってdepthを調整する。受理長を打ち切り観測として学習し、位置別棄却hazardと無駄token費用を推定する。vLLM/Qwen3-8Bで著者要旨は通常AR比最大5.24倍、集計APEX-S 4.27倍、APEX-B 3.27倍と報告。runtimeの動的投機制御としてaccept。",
   "semantic_scholar_id": "27571e8c62ea951d1e49653b29983d2182464956",
   "source_url": "https://arxiv.org/abs/2610.07780",
-  "status": "ready",
+  "status": "superseded",
   "title": "APEX: Speculate smarter, not deeper",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:09:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.07780-apex-speculate-smarter-not-deeper.md",
+  "represented_canonical_id": "arXiv:2610.07780",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
