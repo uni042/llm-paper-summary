@@ -75,7 +75,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 6年前（2020-12〜2021-11）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：68  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：69  
   ZeRO-Infinityは、ゼロ冗長最適化器（Zero Redundancy Optimizer、ZeRO）の第3段階で全モデル状態をデータ並列プロセス間に分割する設計を、GPUの高帯域メモリだけでなくCPUの主記憶、さらに不揮発性メモリ接続のSSD（NVMe SSD）へ拡張する。
 
 ### 7年前（2019-12〜2020-11）
