@@ -35,10 +35,15 @@
   "selection_reason": "MHAのK射影からVを事前変換で再構成し、V-cache保存を不要にする数学的等価な注意実装。KVメモリを2倍削減し、長文脈decodeで最大2倍、Whisper等のencoder-decoderでさらに大きなキャッシュ削減を報告する。GQA/MQAへの一般化は別途検討が必要。",
   "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
   "source_url": "https://arxiv.org/abs/2503.05840",
-  "status": "ready",
+  "status": "superseded",
   "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:31:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-a.md",
+  "represented_canonical_id": "arXiv:2503.05840",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1068本）
+## 自動生成の論文一覧（1070本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3368,6 +3368,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重みを学習後に削減する際、既存のMagnitude、SparseGPT、Wandaなどは、重みを残す重要度の測り方を工夫してきた。その後、各層の疎度を遺伝的アルゴリズムに似た進化的探索で調整する。代表例はLLaMA-13B、WikiText、75%削減、ブロック幅M=4のWandaである。
 
+- **2025-03 · [STADE: Standard Deviation as a Pruning Metric](2025-2503.22451-stade-standard-deviation-as-a-pruning-metric.md)**  
+  実装：[✓](https://github.com/Coello-dev/STADE) ・ リポジトリ内被引用：0  
+  枝刈り問題の理論解析から、入力が中心化されていない層ではWandaではなく活性の標準偏差を使う指標が最適になることを導いた研究。層ごとに指標を切り替えるSTADE-Wまで含め、理論の予測どおりに優劣が入れ替わることを実測で確認した。
+
 - **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
   実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
   Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
@@ -3375,6 +3379,10 @@
 - **2025-03 · [RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm](2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algo.md)**  
   実装：[✓](https://github.com/FFTYYY/RaanA) ・ リポジトリ内被引用：0  
   層の最終出力への感度からビット配分を整数計画で最適化し、アダマール変換で高速化したベクトル量子化で重みを圧縮する学習後量子化。較正は5件か合成文1件で足り、70Bでも約55分で量子化できる。
+
+- **2025-03 · [Large Language Model Compression via the Nested Activation-Aware Decomposition](2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decompo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  活性考慮型の特異値分解に元の重みへの近似を担う第2段を入れ子に重ね、較正分布と異なる言語やタスクでも劣化しにくい低ランク圧縮。圧縮率30から50パーセントで平均13から18パーセントのパープレキシティ削減。
 
 - **2025-03 · [ClusComp: A Simple Paradigm for Model Compression and Efficient Finetuning](2025-2503.13089-cluscomp-a-simple-paradigm-for-model-compression-and-efficient-finetunin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4297,7 +4305,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：332  
+  実装：✓ ・ リポジトリ内被引用：333  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

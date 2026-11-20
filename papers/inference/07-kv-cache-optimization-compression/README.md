@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（537本）
+## 自動生成の論文一覧（538本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1852,6 +1852,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-03 · [Time and Memory Trade-off of KV-Cache Compression in Tensor Transformer Decoding](2025-2503.11108-time-and-memory-trade-off-of-kv-cache-compression-in-tensor-transformer-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ところが、複数のキー・値を組み合わせる高次のテンソル 注意機構では、元のキー・値を保持するか、組み合わせたキー・値を事前展開して保持するかで、より極端な時間と記憶量の交換条件が現れる。
+
+- **2025-03 · [Slim attention: cut your context memory in half without loss – K-cache is all you need for MHA](2025-2503.05840-slim-attention-cut-your-context-memory-in-half-without-loss-k-cache-is-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  値射影をキー射影の逆行列で変換し、値をキーキャッシュから等価に復元して文脈メモリを半分にする無損失狙いの注意機構。長文脈の生成を最大2倍速くする。
 
 - **2025-03 · [LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation](2025-2503.19950-logquant-log-distributed-2-bit-quantization-of-kv-cache-with-superior-ac.md)**  
   実装：[✓](https://github.com/Concyclics/LogQuantKV) ・ リポジトリ内被引用：0  

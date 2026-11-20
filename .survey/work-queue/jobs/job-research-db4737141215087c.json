@@ -35,10 +35,15 @@
   "selection_reason": "QLLMはMoEのexpert単位で低優先要求をプリエンプトし、iteration境界に縛られず高優先リクエストを先行実行する。A100でlatency-sensitive要求のTTFTを平均65.5倍改善し、最大7 requests/sでSLOを満たすと報告。head-of-line blockingを減らす直接的な推論スケジューリング。",
   "semantic_scholar_id": "15d03d5ebcc6c8f2340c49796457c064aec55d53",
   "source_url": "https://arxiv.org/abs/2503.09304",
-  "status": "ready",
+  "status": "superseded",
   "title": "Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference",
   "type": "research",
   "venue": "EuroMLSys",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:31:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe.md",
+  "represented_canonical_id": "arXiv:2503.09304",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

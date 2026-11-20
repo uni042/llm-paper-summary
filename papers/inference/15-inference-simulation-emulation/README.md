@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（87本）
+## 自動生成の論文一覧（88本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -327,6 +327,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-05 · [Serve Programs, Not Prompts](2025-2510.25412-serve-programs-not-prompts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、LLMサービングの基本単位を「プロンプトを受け取ってトークン列を返すリクエスト」から、LLM推論プログラム（LLM Inference Program, LIP）へ変えるというシステム設計を提案する。
+
+- **2025-03 · [Fake Runs, Real Fixes - Analyzing xPU Performance Through Simulation](2025-2503.14781-fake-runs-real-fixes-analyzing-xpu-performance-through-simulation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本番実行の機械語トレースをハードウェア設計用シミュレータで再生し、DMAの待ちやメモリ断片化を命令単位で解析して最適化を自動提案する性能解析手法。再コンパイル不要で本番設定のまま使える。
 
 ### 3年前（2023-12〜2024-11）
 

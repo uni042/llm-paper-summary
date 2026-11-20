@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（563本）
+## 自動生成の論文一覧（564本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1892,6 +1892,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Harmoniaは開発者のPythonワークフローからコンポーネント依存関係を抽出し、CPU/GPUとメモリを配置して、実行中の負荷や分岐頻度に応じて再配分する。
 
+- **2025-03 · [Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference](2025-2503.09304-priority-aware-preemptive-scheduling-for-mixed-priority-workloads-in-moe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エキスパート単位でベストエフォートジョブを横取りするMoE向け優先度スケジューラ。遅延敏感ジョブの初トークン遅延を平均65.5倍下げ、スループットは維持する。
+
 - **2025-03 · [Alchemist: Towards the Design of Efficient Online Continual Learning System](2025-2503.01066-alchemist-towards-the-design-of-efficient-online-continual-learning-syst.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Alchemistは、LLMのサービングとオンライン継続学習を別々のGPUやプロセスで実行すると、サービングのプリフィルで既に計算した中間活性を学習側が再計算してしまうことに着目したシステムである。著者らの分析では、この重複した順伝播計算がオンライン学習時間の30～42%を占める。
@@ -2119,7 +2123,7 @@
   LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
 
 - **2024-11 · [FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving](2024-2411.18424-fastswitch-optimizing-context-switching-efficiency-in-fairness-aware-lar.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   初回トークンまでの時間（time to first トークン; TTFT）や連続するトークン間隔（time between トークン; TBT）について利用者ごとのサービス水準目標（service-level objective; SLO）を満たすには、実行中の要求の優先度を調整し、低優先度の要求を一時停止して高優先度の要求へGPUメモリを譲る必要がある。
 
 - **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
@@ -2189,7 +2193,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1670  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1671  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2205,7 +2209,7 @@
   複数モデルへ届くリクエスト数が時間ごとに偏る環境で、モデルを複数GPUへ分割して置き、空いているGPUをモデル間で共有しやすくすることで、特定モデルだけ待ち行列が伸びるのを抑えるサービング配置手法。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
-  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：150  
+  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：151  
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  

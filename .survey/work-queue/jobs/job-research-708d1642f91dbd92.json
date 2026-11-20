@@ -35,10 +35,15 @@
   "selection_reason": "NSVDは重み行列を活性化分布に応じて変換して外れ値を吸収し、再学習不要の低ランク分解精度を改善する。6モデル・3系列・8データセットで中高圧縮率や多言語タスクにおける精度を検証。推論展開向けのLLM重み圧縮技術に直接関連するが、一次要旨にはサービング実測はない。",
   "semantic_scholar_id": "5a3061fd78dcdcfc2fb3f663670c863e3c293b6b",
   "source_url": "https://arxiv.org/abs/2503.17101",
-  "status": "ready",
+  "status": "superseded",
   "title": "Large Language Model Compression via the Nested Activation-Aware Decomposition",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:31:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.17101-large-language-model-compression-via-the-nested-activation-aware-decompo.md",
+  "represented_canonical_id": "arXiv:2503.17101",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
