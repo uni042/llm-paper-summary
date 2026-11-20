@@ -364,6 +364,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   長文脈RLで投機的復号のドラフトを方策と同時更新するため、分岐注意を文脈並列リングへ統合し、中間特徴をパイプライン外のTapChannelで輸送して、最大122B規模で学習品質を保ちつつ最大1.88倍の全体高速化を得る。
 
+- **2026-09 · [Low-Bit Recurrent States in Hybrid Language Models](2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  再帰状態の量子化誤差が減衰率に応じて蓄積する点に着目し、グラミアン由来の持続重みと正規化範囲でビット幅を混合配分することで、較正なしに平均4ビットで過剰な負の対数尤度を最良の比較対象比3.3から27.9倍削減した。
+
 - **2026-08 · [Understanding Calibration and Truncation Error Propagation in Training-Free Low-Rank Compression for LLMs](2026-2608.08506-understanding-calibration-and-truncation-error-propagation-in-training-f.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   圧縮済み層を通した活性値で後段を較正し直し、圧縮後に測り直した層重要度で保持率を反復的に直す二つの補正により、学習なし低ランク圧縮のゼロショット正解率を最大で約1から2.5ポイント改善した分析と手法の論文である。
@@ -1105,10 +1109,6 @@
 - **2026-09 · [Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents](2026-2609.39982-mid-harness-scaling-actions-between-model-and-harness-for-terminal-agent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   端末エージェントは、言語モデルが提案したコマンドやファイル変更を実行環境へ送る。単一候補を実行する基準のPass@1は50.00%。
-
-- **2026-09 · [Low-Bit Recurrent States in Hybrid Language Models](2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  再帰状態の量子化誤差が減衰率に応じて蓄積する点に着目し、グラミアン由来の持続重みと正規化範囲でビット幅を混合配分することで、較正なしに平均4ビットで過剰な負の対数尤度を最良の比較対象比3.3から27.9倍削減した。
 
 - **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

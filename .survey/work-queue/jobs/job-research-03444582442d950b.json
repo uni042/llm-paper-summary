@@ -35,10 +35,15 @@
   "selection_reason": "hybrid attentionモデルのprompt KVを再利用・転送する際の保存容量を削減するため、変換・量子化・entropy modelを凍結した生成モデルの出力品質と符号長に対してend-to-end学習するcodecを提案。Qwen3.5-2Bでbf16比55倍超圧縮時に長文脈3評価の低下最大1.8ポイント、100倍超で最大3.6ポイントと報告。圧縮率はKV部分の値であり、モデル全体メモリの削減率ではない。KV転送・保存の効率に直接関係するためaccept。",
   "semantic_scholar_id": "e3021d1f5f43f0f5865cca94ae1410c675a333ae",
   "source_url": "https://arxiv.org/abs/2610.36950",
-  "status": "ready",
+  "status": "superseded",
   "title": "DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:04:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.36950-dckv-learned-transform-coding-of-the-prompt-kv-cache-in-hybrid-language-.md",
+  "represented_canonical_id": "arXiv:2610.36950",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

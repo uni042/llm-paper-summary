@@ -34,20 +34,20 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System](2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md)**  
-  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：26  
   エージェントの推論・ツール実行を独立要求ではなく永続プログラムとして追跡し、KVキャッシュの一時停止・復帰、GPU間移動、ツール環境の先行準備と回収を協調させ、配信スループットを最大3.58倍改善する。
 
 - **2026-06 · [CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents](2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md)**  
   実装：[✓](https://github.com/cachewise-project/cachewise-coding-traces) ・ リポジトリ内被引用：12  
   実コーディングエージェントの接頭辞局所性とツール待ち時間を利用し、接頭辞優先スケジューリングと予測型KV追い出しでセッション完了を最大3.5倍改善。
 
+- **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
+  実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：12  
+  エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
+
 - **2026-05 · [Idleness is Relative: Exploiting Tool-Call Idle Windows for Offloading in Agentic Systems with MORI](2026-2606.00866-mori.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   MORIはエージェントの直近の推論・ツール待機時間から相対アイドル度を求め、KVキャッシュをGPUとCPU DRAMへ容量適応的に配置して、高負荷時のスループットと応答性を改善する。
-
-- **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
-  実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：11  
-  エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
 
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -61,6 +61,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   ReAct型エージェントを追跡し、高い文脈再利用により実行がデコード支配となる一方、長寿命KV状態・再入場・ツール失敗が主要なシステム負荷になることを実測した研究。
 
+- **2026-04 · [KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving](2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
+
 - **2026-05 · [Leyline: KV Cache Directives for Agentic Inference](2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   従来のKVキャッシュ管理は、プロンプト到着後は末尾へトークンが追加され続けるチャット型負荷を暗黙に前提とする。そのため完全一致する接頭辞を再利用する接頭辞キャッシュや、古いKVを前から追い出す方式が成立する。
@@ -68,10 +72,6 @@
 - **2026-05 · [Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving](2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
-
-- **2026-04 · [KAIROS: Stateful, Context-Aware Power-Efficient Agentic Inference Serving](2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  エージェントの文脈成長を見てGPU周波数・同時実行数・配置を共同制御し、スラッシングを避けながら単一インスタンス平均27%、複数インスタンス46.3%の電力を削減する。
 
 - **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -96,6 +96,10 @@
 - **2026-04 · [Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines](2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md)**  
   実装：[✓](https://github.com/anon/Scepsy) ・ リポジトリ内被引用：2  
   LLMごとの安定した相対負荷を集約パイプライン化し、GPU分数・テンソル並列・複製数・配置を共同探索して任意の複数LLMエージェント処理を効率化する。
+
+- **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
+  実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：2  
+  MARSは、複数の大規模言語モデル（LLM）エージェントが同じホストで稼働する際、モデル推論のGPU時間だけでなく、ツール呼び出しで消費されるCPU時間と鍵・値キャッシュ（KV キャッシュ）の保持費用まで同時に制御するサービング方式である。
 
 - **2026-03 · [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](2026-2603.23483-speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception.md)**  
   実装：[✓](https://github.com/MAC-AutoML/SpecEyes) ・ リポジトリ内被引用：2  
@@ -132,10 +136,6 @@
 - **2026-04 · [Recursive Multi-Agent Systems](2026-2604.25917-recursive-multi-agent-systems.md)**  
   実装：[✓](https://github.com/RecursiveMAS/RecursiveMAS) ・ リポジトリ内被引用：1  
   通常の複数エージェントシステムでは、計画役が文章を生成し、批評役がその文章を読み、解答役が批評を受け取る。文章媒介型の同じ再帰的協調構造（Recursive-TextMAS）に対し、再帰1、2、3ラウンドで平均推論実行時間の相対改善が1.2、1.9、2.4倍へ広がり、外部トークン使用量は34.6%、65.5%、75.6%少なくなると報告する。
-
-- **2026-04 · [MARS: Efficient, Adaptive Co-Scheduling for Heterogeneous Agentic Systems](2026-2604.26963-mars-efficient-adaptive-co-scheduling-for-heterogeneous-agentic-systems.md)**  
-  実装：[✓](https://github.com/Afterglow231/MARS_preview) ・ リポジトリ内被引用：1  
-  MARSは、複数の大規模言語モデル（LLM）エージェントが同じホストで稼働する際、モデル推論のGPU時間だけでなく、ツール呼び出しで消費されるCPU時間と鍵・値キャッシュ（KV キャッシュ）の保持費用まで同時に制御するサービング方式である。
 
 - **2026-03 · [Orla: A Library for Serving LLM-Based Multi-Agent Systems](2026-2603.13605-orla-a-library-for-serving-llm-based-multi-agent-systems.md)**  
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  

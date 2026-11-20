@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5e482449e80d1ccd295e3d9821b4e35e1ce6c156",
+  "base_commit": "15b9cd981949c697fe9d0cac23ca1bce18b37455",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -778,6 +778,11 @@
     "2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.json",
     "2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state-compression.json",
     "2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.json",
+    "2026-2610.36950-dckv-learned-transform-coding-of-the-prompt-kv-cache-in-hybrid-language-models.json",
+    "2026-2610.36986-learnprunerv2-learnable-progressive-token-pruning-for-vision-language-models.json",
+    "2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memory-context-selection-in-llm-rag-pipeline.json",
+    "2026-2610.37230-tao-tool-aware-joint-scheduling-for-llm-based-agentic-serving.json",
+    "2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-platforms.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45345,6 +45350,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.36950": {
+      "order": [
+        "2026-11-20T13:59:33+00:00",
+        "2026-2610.36950-dckv-learned-transform-coding-of-the-prompt-kv-cache-in-hybrid-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36986": {
+      "order": [
+        "2026-11-20T14:00:22+00:00",
+        "2026-2610.36986-learnprunerv2-learnable-progressive-token-pruning-for-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37033": {
+      "order": [
+        "2026-11-20T14:01:11+00:00",
+        "2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memory-context-selection-in-llm-rag-pipeline.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37230": {
+      "order": [
+        "2026-11-20T14:01:59+00:00",
+        "2026-2610.37230-tao-tool-aware-joint-scheduling-for-llm-based-agentic-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37307": {
+      "order": [
+        "2026-11-20T14:02:48+00:00",
+        "2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-platforms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56624,6 +56674,21 @@
     "arxiv:2610.36940": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.md"
+    ],
+    "arxiv:2610.36950": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.36950-dckv-learned-transform-coding-of-the-prompt-kv-cache-in-hybrid-language-.md"
+    ],
+    "arxiv:2610.36986": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.36986-learnprunerv2-learnable-progressive-token-pruning-for-vision-language-mo.md"
+    ],
+    "arxiv:2610.37033": [
+      "papers/inference/17-pim-near-data-acceleration/2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memor.md"
+    ],
+    "arxiv:2610.37230": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.37230-tao-tool-aware-joint-scheduling-for-llm-based-agentic-serving.md"
+    ],
+    "arxiv:2610.37307": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-p.md"
     ]
   }
 }

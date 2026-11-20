@@ -35,10 +35,15 @@
   "selection_reason": "各VLM層の軽量学習モジュールが視覚saliencyとshadow token由来のquery関連度を統合して重要度を推定。層ごとの冗長性の階段状変化に合わせ、Budget-Deterministic Pruningで固定token予算を設定し実行しやすくする。LLaVA-v1.5で視覚tokenを77.8%削り元性能の99.8%を保持と報告。訓練を要し、実測生成速度は要旨にない。",
   "semantic_scholar_id": "c46bf84b65046ae676b97c103ab88ebf4d266e00",
   "source_url": "https://arxiv.org/abs/2610.36986",
-  "status": "ready",
+  "status": "superseded",
   "title": "LearnPrunerV2: Learnable Progressive Token Pruning for Vision-Language Models",
   "type": "research",
   "venue": "Proceedings of the 34th ACM International Conference on Multimedia",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:04:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.36986-learnprunerv2-learnable-progressive-token-pruning-for-vision-language-mo.md",
+  "represented_canonical_id": "arXiv:2610.36986",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

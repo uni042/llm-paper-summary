@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（37本）
+## 自動生成の論文一覧（38本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -54,6 +54,10 @@
   視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM RAG Pipeline](2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memor.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RAGの証拠選択を二次最適化として定式化し、試作したSRAMメモリ内計算チップで係数構築からアニーリングまで実行する方式で、選択エネルギーを言語モデル型選択より6桁以上下げ、クエリ全体でも67パーセント削減した。
 
 - **2026-09 · [LLM Inference in a Flash!](2026-2609.16161-llm-inference-in-a-flash.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

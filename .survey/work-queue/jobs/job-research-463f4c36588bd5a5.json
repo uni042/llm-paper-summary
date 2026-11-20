@@ -35,10 +35,15 @@
   "selection_reason": "統合メモリのエッジ端末ではLLM推論がセンサ処理と帯域を競合し、観測処理のdeadlineとLLM応答のfreshnessが損なわれる。EdgePaceはprefill/decode中に安全な中断点を置き、前景処理の帯域需要・deadline余裕・出力鮮度を見て推論を調停する。OnePlus 13と3種類のJetsonでdeadline missを24.1～96.1%削減しつつLLM throughputの64.9～98.5%を維持したためaccept。",
   "semantic_scholar_id": "328060d8828e8414791980230a4f86f02db9aed0",
   "source_url": "https://arxiv.org/abs/2610.37307",
-  "status": "ready",
+  "status": "superseded",
   "title": "EdgePace: Deadline- and Freshness-Aware LLM Scheduling on Unified-Memory Platforms",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:04:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-p.md",
+  "represented_canonical_id": "arXiv:2610.37307",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

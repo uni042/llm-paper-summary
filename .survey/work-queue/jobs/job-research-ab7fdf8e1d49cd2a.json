@@ -35,10 +35,15 @@
   "selection_reason": "RAGでLLM rerankerを繰り返す証拠集合選択をQUBOとして定式化し、28nm試作SRAMデジタルcompute-in-memory Ising回路で類似度計算とannealingを実行。0.16mm²・0.41mWのmacroを示し、選択エネルギー推定がLLM baseline比6桁超低く、評価対象のquery総エネルギー67%削減を報告。LLM生成kernelそのものではないが、RAG推論pipelineの選択段階をnear-memory hardwareで高速・省電力化する直接的システム研究としてaccept。",
   "semantic_scholar_id": "a5740d38a141cce56dade5e3920f5426d64e43f4",
   "source_url": "https://arxiv.org/abs/2610.37033",
-  "status": "ready",
+  "status": "superseded",
   "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:04:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/17-pim-near-data-acceleration/2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memor.md",
+  "represented_canonical_id": "arXiv:2610.37033",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
