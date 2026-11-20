@@ -70,6 +70,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：3  
   MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
 
+- **2026-01 · [KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models](2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  MoEの重みから入力統計に基づく共有成分を抜いて全精度で残し、固有成分だけをベクトル量子化して出力の偏りを補正することで、3ビットでも全精度並みの正解率を保った量子化方式。
+
 - **2026-08 · [ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration](2026-2608.24938-exfold-training-free-expert-folding.md)**  
   実装：[✓](https://github.com/Time-Rune/ExFold-MoE) ・ リポジトリ内被引用：2  
   除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のエキスパート Folding。
@@ -109,10 +113,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [Certain Head, Uncertain Tail: Expert-Sample for Test-Time Scaling in Fine-Grained MoE](2026-2602.02443-expert-sample-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
-
-- **2026-01 · [KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models](2026-2602.11184-kbvq-moe-klt-guided-svd-with-bias-corrected-vector-quantization-for-moe-.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  MoEの重みから入力統計に基づく共有成分を抜いて全精度で残し、固有成分だけをベクトル量子化して出力の偏りを補正することで、3ビットでも全精度並みの正解率を保った量子化方式。
 
 - **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
