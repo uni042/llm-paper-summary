@@ -1,0 +1,956 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-502d037745a5239f-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-502d037745a5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.18173",
+    "arXiv:2503.06184",
+    "arXiv:2508.16680",
+    "arXiv:2510.00841",
+    "arXiv:2512.20861",
+    "arXiv:2604.09377",
+    "arXiv:2605.01058",
+    "arXiv:2607.14427",
+    "arXiv:2608.17616",
+    "arXiv:2610.00267"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:43.697127+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.18173",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.06184",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.16680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.00841",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.20861",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.09377",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.01058",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.14427",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.17616",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00267",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios",
+      "source_url": "https://arxiv.org/abs/2604.09377",
+      "year": 2026,
+      "published": "2026-04-10",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) exhibit substantial variability in performance and computational cost across tasks and queries, motivating routing systems that select models to meet user-specific cost-performance trade-offs. However, existing routers generalize poorly in cold-start scenarios where in-domain training data is unavailable. We address this limitation with a multi-level task-profile-guided data synthesis framework that constructs a hierarchical task taxonomy and produces diverse question-answer pairs to approximate the test-time query distribution. Building on this, we introduce TRouter, a task-type-aware router approach that models query-conditioned cost and performance via latent task-type variables, with prior regularization derived from the synthesized task taxonomy. This design enhances TRouter's routing utility under both cold-start and in-domain settings. Across multiple benchmarks, we show that our synthesis framework alleviates cold-start issues and that TRouter delivers effective LLM routing.",
+      "identifiers": [
+        "SemanticScholar:fc88671237ad7504856155d3475c926746947518"
+      ],
+      "semantic_scholar_id": "fc88671237ad7504856155d3475c926746947518",
+      "canonical_id": "arXiv:2604.09377",
+      "arxiv_id": "2604.09377",
+      "doi": "10.48550/arXiv.2604.09377",
+      "authors": [
+        "Hui Liu",
+        "Bing-Ruei Zou",
+        "Ke Chen",
+        "Jie Liu",
+        "Wen-Ya Wang",
+        "Hao-Liang Li"
+      ],
+      "priority": 119,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 119,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers",
+      "source_url": "https://arxiv.org/abs/2607.14427",
+      "year": 2026,
+      "published": "2026-07-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A depth-recurrent transformer applies a weight-tied core a variable number of times, and prior work has shown that training with a randomized recursion count yields one checkpoint usable across a range of inference depths. We ask what such a model actually computes per token, and measure it directly. On a 135M-class model trained on FineWeb-Edu, the recurrent state converges to a per-token fixed point: mean successive-output KL divergence falls from 3.9e-1 at the second loop to 8.5e-6 by the sixteenth, and per-token state change decays in step. Crucially, this convergence is not uniform across tokens. The median token converges by loop six, while approximately 10 percent of tokens continue to update at the training-mean depth of eight, and mean convergence depth is ordered by token type (whitespace shallowest, content words deepest). This per-token variation is the central object of the paper. We show it is directly readable and that reading it outperforms learning to predict it: a training-free rule that halts each token once its output stabilizes attains uniform depth-8 quality at 4.94 average loops (a 38 percent reduction in average depth) and matches uniform depth across the average-depth range, whereas a linear router trained on convergence labels harvested from the same model requires nearly full depth and yields no reduction. The elasticity that makes this possible reproduces here as background (validation loss decreases monotonically from 3.80 at one loop to 3.20 at eight and remains stable to 32 loops). We report average depth as a FLOP proxy with a three-point wall-clock bracket rather than a realized speedup, make no FLOP-matched parity claim, and note that the allocation results are established at a single scale and seed. The complete study runs on a single RTX 4090 in approximately 100 GPU-hours.",
+      "identifiers": [
+        "SemanticScholar:42a101d26544828fa5657cd8a1f1b334dbb1f916"
+      ],
+      "semantic_scholar_id": "42a101d26544828fa5657cd8a1f1b334dbb1f916",
+      "canonical_id": "arXiv:2607.14427",
+      "arxiv_id": "2607.14427",
+      "doi": "10.48550/arXiv.2607.14427",
+      "authors": [
+        "Joe Logan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 128,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs",
+      "source_url": "https://arxiv.org/abs/2512.20861",
+      "year": 2025,
+      "published": "2025-12-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in transformer-based foundation models have made them the default choice for many tasks, but their rapidly growing size makes fitting a full model on a single GPU increasingly difficult and their computational cost prohibitive. Block low-rank (BLR) compression techniques address this challenge by learning compact representations of weight matrices. While traditional low-rank (LR) methods often incur sharp accuracy drops, BLR approaches such as Monarch and BLAST can better capture the underlying structure, thus preserving accuracy while reducing computations and memory footprints. In this work, we use roofline analysis to show that, although BLR methods achieve theoretical savings and practical speedups for single-token inference, multi-token inference often becomes memory-bound in practice, increasing latency despite compiler-level optimizations in PyTorch. To address this, we introduce custom Triton kernels with partial fusion and memory layout optimizations for both Monarch and BLAST. On memory-constrained NVIDIA GPUs such as Jetson Orin Nano and A40, our kernels deliver up to $3.76\\times$ speedups and $3\\times$ model size compression over PyTorch dense baselines using CUDA backend and compiler-level optimizations, while supporting various models including Llama-7/1B, GPT2-S, DiT-XL/2, and ViT-B. Our code is available at https://github.com/pabillam/mem-efficient-blr.",
+      "identifiers": [
+        "SemanticScholar:e8e332efb03eae69c917db5c495d418567c357ac"
+      ],
+      "semantic_scholar_id": "e8e332efb03eae69c917db5c495d418567c357ac",
+      "canonical_id": "arXiv:2512.20861",
+      "arxiv_id": "2512.20861",
+      "doi": "10.48550/arXiv.2512.20861",
+      "authors": [
+        "Pierre Abillama",
+        "Changwoo Lee",
+        "Juechu Dong",
+        "D. Blaauw",
+        "D. Sylvester",
+        "Hun-Seok Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 331,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2605.01058",
+      "year": 2026,
+      "published": "2026-05-01",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer-aligned distillation and convergence-based early exit represent two predominant computational efficiency paradigms for transformer inference; yet we establish that they exhibit systematic incompatibility under standard deployment conditions for convergence-based early exit. Distillation objectives that align intermediate student layers to teacher representations suppress the representational convergence that early-exit mechanisms exploit, rendering such mechanisms ineffective on distilled models. We introduce LEAP (Layer-wise Exit-Aware Pretraining), an auxiliary training objective that reconciles this incompatibility. LEAP requires no architectural modifications; it augments standard distillation with a single constraint ensuring intermediate layers approximate final-layer representations. LEAP-MiniLM achieves 1.61$\\times$ measured wall-clock speedup (batch=1, NVIDIA L4) at $\\theta$=0.95, with 91.9% of samples exiting by layer 7 and 1.80$\\times$ theoretical layer reduction, where standard distilled models achieve zero effective speedup. We validate across sentence similarity (STS-B: 0.760 $\\pm$ 0.006) and retrieval benchmarks (BEIR), providing operational guidance including latency measurements, decision thresholds, and deployment criteria.",
+      "identifiers": [
+        "SemanticScholar:47ea499e134ac76feef14f134814ff6c8190d355"
+      ],
+      "semantic_scholar_id": "47ea499e134ac76feef14f134814ff6c8190d355",
+      "canonical_id": "arXiv:2605.01058",
+      "arxiv_id": "2605.01058",
+      "doi": "10.18653/v1/2026.acl-industry.52",
+      "authors": [
+        "Shashank Kapadia",
+        "Deep Naryan Mishra",
+        "Sujal Reddy Alugubelli",
+        "Hao-An Wang",
+        "Saipraveen Vabbilisetty",
+        "R. Bhatia",
+        "Anupriya Sharma"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "MoNe: Modular Neural Memory for Efficient Long Context Inference",
+      "source_url": "https://arxiv.org/abs/2608.17616",
+      "year": 2026,
+      "published": "2026-08-18",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present MoNe, a lightweight modular neural memory that attaches to any frozen pretrained Transformer to enable long-context inference without retraining. MoNe reads context in fixed-size segments via test-time learning of fast-weight neural memory networks with layer-localized gradient updates; at inference, the memory generates keys and values from the query tokens alone, with no context tokens re-read. This two-phase design decouples inference cost from context length, achieving $O(N)$ preprocessing and $O(1)$ query cost with peak GPU memory that does not grow with $N$. At 128K tokens, MoNe reduces both compute and peak GPU memory by approximately 80% compared to ICL with only 6.4% parameter overhead. MoNe generalizes to context lengths far beyond the backbone's native window, achieving strong performance on needle-in-a-haystack and word extraction benchmarks from RULER, where ICL degrades sharply.",
+      "identifiers": [
+        "SemanticScholar:ac0d7e0bfceafc8236d2f411d0091a900b1d89d9"
+      ],
+      "semantic_scholar_id": "ac0d7e0bfceafc8236d2f411d0091a900b1d89d9",
+      "canonical_id": "arXiv:2608.17616",
+      "arxiv_id": "2608.17616",
+      "doi": "10.48550/arXiv.2608.17616",
+      "authors": [
+        "Won-Yong Cho",
+        "Kyubyung Chae",
+        "Tribhuvanesh Orekondy",
+        "Sunghyun Park",
+        "Hyoungwoo Park",
+        "Jeongho Kim",
+        "Arash Behboodi",
+        "Kyuwoong Hwang",
+        "Sungrack Yun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ThermE: Predictive Management of Shared Thermal Headroom for Sustained LLM Inference on Thermally Constrained Edge SoCs",
+      "source_url": "https://arxiv.org/abs/2610.00267",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compact edge system-on-chip (SoC) platforms increasingly run sustained LLM inference under thermal constraints, while their CPU, GPU, and RAM share a cooling path. Prefill and decode therefore consume shared, time-varying thermal headroom, yet vendor governors react only near hardware throttling thresholds without knowledge of request state or upcoming work. A control decision that improves current performance can thus consume headroom too quickly and degrade subsequent service. In this paper, we present ThermE, a runtime system that predicts and jointly manages shared thermal headroom for sustained LLM inference on edge SoCs. Its Fast LLM-to-Heat Compiler maps the model, requests, runtime state, and candidate actions to domain heats without executing LLMs. A partial differential equation (PDE)-constrained Headroom Predictor uses ThermPINN for offline thermal identification and a Reduced Headroom Predictor (RHP) for low-overhead online uncertainty-calibrated headroom forecasts. An Uncertainty-Aware Action Scheduler then selects actions that balance serving quality and future headroom. We implement ThermE atop vLLM and evaluate it across four LLM inference workloads. The results show that ThermE reduces TTFT and TPOT by 40.55% and 12.17%, respectively, relative to vLLM. It achieves a 5.70% SLO violation rate, compared with 12.30% for the strongest baseline, while its predictor obtains a 1.94 $^\\circ$C MAE with 11.50 ms overhead.",
+      "identifiers": [
+        "SemanticScholar:3f7df7f9a13c035a4abf1d35a09a18152c8c261c"
+      ],
+      "semantic_scholar_id": "3f7df7f9a13c035a4abf1d35a09a18152c8c261c",
+      "canonical_id": "arXiv:2610.00267",
+      "arxiv_id": "2610.00267",
+      "authors": [
+        "Rui Lu",
+        "Yu-Heng Wang",
+        "Bo-Zheng-Hong-Fan Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 57,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM Routing with Dueling Feedback",
+      "source_url": "https://arxiv.org/abs/2510.00841",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study LLM routing, the problem of selecting the best model for each query while balancing user satisfaction, model expertise, and inference cost. We formulate routing as contextual dueling bandits, learning from pairwise preference feedback rather than absolute scores, thereby yielding label-efficient and dynamic adaptation. Building on this formulation, we introduce Category-Calibrated Fine-Tuning (CCFT), a representation-learning method that derives model embeddings from offline data using contrastive fine-tuning with categorical weighting. These embeddings enable the practical instantiation of Feel-Good Thompson Sampling for Contextual Dueling Bandits (FGTS.CDB), a theoretically grounded posterior-sampling algorithm. We propose four variants of the categorical weighting that explicitly integrate model quality and cost, and we empirically evaluate the proposed methods on the RouterBench and MixInstruct datasets. Across both benchmarks, our methods achieve lower cumulative regret and faster convergence, with better robustness and performance-cost balance than strong baselines built with a general-purpose OpenAI embedding model.",
+      "identifiers": [
+        "SemanticScholar:0925c414c59353a4b50796a24fa366167e3e1dac"
+      ],
+      "semantic_scholar_id": "0925c414c59353a4b50796a24fa366167e3e1dac",
+      "canonical_id": "arXiv:2510.00841",
+      "arxiv_id": "2510.00841",
+      "doi": "10.48550/arXiv.2510.00841",
+      "authors": [
+        "Chao-Kai Chiang",
+        "Takashi Ishida",
+        "Masashi Sugiyama"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 415,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sample-aware Adaptive Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2503.06184",
+      "year": 2025,
+      "published": "2025-03-08",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have achieved outstanding performance in natural language processing, but enormous model sizes and high computational costs limit their practical deployment. Structured pruning can effectively reduce the resource demands for deployment by removing redundant model parameters. However, the randomly selected calibration data and fixed single importance estimation metrics in existing structured pruning methods lead to degraded performance of pruned models. This study introduces AdaPruner, a sample-aware adaptive structured pruning framework for LLMs, aiming to optimize the calibration data and importance estimation metrics in the structured pruning process. Specifically, AdaPruner effectively removes redundant parameters from LLMs by constructing a structured pruning solution space and then employing Bayesian optimization to adaptively search for the optimal calibration data and importance estimation metrics. Experimental results show that the AdaPruner outperforms existing structured pruning methods on a family of LLMs with varying pruning ratios, demonstrating its applicability and robustness. Remarkably, at a 20% pruning ratio, the model pruned with AdaPruner maintains 97% of the performance of the unpruned model.",
+      "identifiers": [
+        "SemanticScholar:c87917c6e59e02d0dfe944cb36c803e1e30212c4"
+      ],
+      "semantic_scholar_id": "c87917c6e59e02d0dfe944cb36c803e1e30212c4",
+      "canonical_id": "arXiv:2503.06184",
+      "arxiv_id": "2503.06184",
+      "doi": "10.48550/arXiv.2503.06184",
+      "authors": [
+        "Jun Kong",
+        "Xinge Ma",
+        "Jin Wang",
+        "Xuejie Zhang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 622,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs",
+      "source_url": "https://arxiv.org/abs/2406.18173",
+      "year": 2024,
+      "published": "2024-06-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Managing long texts is challenging for large language models (LLMs) due to limited context window sizes. This study introduces UIO-LLMs, an unbiased incremental optimization approach for memory-enhanced transformers under long-context settings. We initially conceptualize the process as a streamlined encoder-decoder framework where the weights-shared encoder and decoder respectively encapsulate a context segment into memories and leverage these memories to predict outputs of the subsequent segment. Subsequently, by treating our memory-enhanced transformers as fully-connected recurrent neural networks (RNNs), we refine the training process using the Truncated Backpropagation Through Time (TBPTT) algorithm, which incorporates innovative incremental optimization techniques. These techniques not only diminish time complexity but also address the bias in gradient computation through an unbiased optimization process. UIO-LLMs successfully handle long context, such as extending the context window of Llama2-7b-chat from 4K to 100K tokens with minimal 2% additional parameters, while keeping the inference cost nearly linear as context length increases.",
+      "identifiers": [
+        "SemanticScholar:ca4af827ad051f392a8ce42a6205237f999e86b9"
+      ],
+      "semantic_scholar_id": "ca4af827ad051f392a8ce42a6205237f999e86b9",
+      "canonical_id": "arXiv:2406.18173",
+      "arxiv_id": "2406.18173",
+      "doi": "10.48550/arXiv.2406.18173",
+      "authors": [
+        "Wen-Hao Li",
+        "Mingbao Lin",
+        "Yunshan Zhong",
+        "Shuicheng Yan",
+        "Rongrong Ji"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 877,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CALR: Corrective Adaptive Low-Rank Decomposition for Efficient Large Language Model Layer Compression",
+      "source_url": "https://arxiv.org/abs/2508.16680",
+      "year": 2025,
+      "published": "2025-08-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) present significant deployment challenges due to their immense size and computational requirements. Model compression techniques are essential for making these models practical for resource-constrained environments. A prominent compression strategy is low-rank factorization via Singular Value Decomposition (SVD) to reduce model parameters by approximating weight matrices. However, standard SVD focuses on minimizing matrix reconstruction error, often leading to a substantial loss of the model's functional performance. This performance degradation occurs because existing methods do not adequately correct for the functional information lost during compression. To address this gap, we introduce Corrective Adaptive Low-Rank Decomposition (CALR), a two-component compression approach. CALR combines a primary path of SVD-compressed layers with a parallel, learnable, low-rank corrective module that is explicitly trained to recover the functional residual error. Our experimental evaluation on SmolLM2-135M, Qwen3-0.6B, and Llama-3.2-1B, demonstrates that CALR can reduce parameter counts by 26.93% to 51.77% while retaining 59.45% to 90.42% of the original model's performance, consistently outperforming LaCo, ShortGPT, and LoSparse. CALR's success shows that treating functional information loss as a learnable signal is a highly effective compression paradigm. This approach enables the creation of significantly smaller, more efficient LLMs, advancing their accessibility and practical deployment in real-world applications.",
+      "identifiers": [
+        "SemanticScholar:df43e2986475868bda9a154ff3d520405e9946b0"
+      ],
+      "semantic_scholar_id": "df43e2986475868bda9a154ff3d520405e9946b0",
+      "canonical_id": "arXiv:2508.16680",
+      "arxiv_id": "2508.16680",
+      "doi": "10.48550/arXiv.2508.16680",
+      "authors": [
+        "Muchammad Daniyal Kautsar",
+        "Afra Majida Hariono",
+        "Widyawan",
+        "Syukron Abu Ishaq Alfarozi",
+        "K. Woraratpanya"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 456,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.09377",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.09377",
+        "id:SemanticScholar:fc88671237ad7504856155d3475c926746947518",
+        "id:arXiv:2604.09377",
+        "title:taskaware llm routing with multilevel taskprofileguided data synthesis for coldstart scenarios",
+        "url:https://arxiv.org/abs/2604.09377"
+      ],
+      "record": {
+        "title": "Task-Aware LLM Routing with Multi-Level Task-Profile-Guided Data Synthesis for Cold-Start Scenarios",
+        "source_url": "https://arxiv.org/abs/2604.09377",
+        "year": 2026,
+        "published": "2026-04-10",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) exhibit substantial variability in performance and computational cost across tasks and queries, motivating routing systems that select models to meet user-specific cost-performance trade-offs. However, existing routers generalize poorly in cold-start scenarios where in-domain training data is unavailable. We address this limitation with a multi-level task-profile-guided data synthesis framework that constructs a hierarchical task taxonomy and produces diverse question-answer pairs to approximate the test-time query distribution. Building on this, we introduce TRouter, a task-type-aware router approach that models query-conditioned cost and performance via latent task-type variables, with prior regularization derived from the synthesized task taxonomy. This design enhances TRouter's routing utility under both cold-start and in-domain settings. Across multiple benchmarks, we show that our synthesis framework alleviates cold-start issues and that TRouter delivers effective LLM routing.",
+        "identifiers": [
+          "SemanticScholar:fc88671237ad7504856155d3475c926746947518"
+        ],
+        "semantic_scholar_id": "fc88671237ad7504856155d3475c926746947518",
+        "canonical_id": "arXiv:2604.09377",
+        "arxiv_id": "2604.09377",
+        "doi": "10.48550/arXiv.2604.09377",
+        "authors": [
+          "Hui Liu",
+          "Bing-Ruei Zou",
+          "Ke Chen",
+          "Jie Liu",
+          "Wen-Ya Wang",
+          "Hao-Liang Li"
+        ],
+        "priority": 119,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 119,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14427",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.14427",
+        "id:SemanticScholar:42a101d26544828fa5657cd8a1f1b334dbb1f916",
+        "id:arXiv:2607.14427",
+        "title:pertoken fixedpoint convergence in depthrecurrent transformers",
+        "url:https://arxiv.org/abs/2607.14427"
+      ],
+      "record": {
+        "title": "Per-Token Fixed-Point Convergence in Depth-Recurrent Transformers",
+        "source_url": "https://arxiv.org/abs/2607.14427",
+        "year": 2026,
+        "published": "2026-07-15",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A depth-recurrent transformer applies a weight-tied core a variable number of times, and prior work has shown that training with a randomized recursion count yields one checkpoint usable across a range of inference depths. We ask what such a model actually computes per token, and measure it directly. On a 135M-class model trained on FineWeb-Edu, the recurrent state converges to a per-token fixed point: mean successive-output KL divergence falls from 3.9e-1 at the second loop to 8.5e-6 by the sixteenth, and per-token state change decays in step. Crucially, this convergence is not uniform across tokens. The median token converges by loop six, while approximately 10 percent of tokens continue to update at the training-mean depth of eight, and mean convergence depth is ordered by token type (whitespace shallowest, content words deepest). This per-token variation is the central object of the paper. We show it is directly readable and that reading it outperforms learning to predict it: a training-free rule that halts each token once its output stabilizes attains uniform depth-8 quality at 4.94 average loops (a 38 percent reduction in average depth) and matches uniform depth across the average-depth range, whereas a linear router trained on convergence labels harvested from the same model requires nearly full depth and yields no reduction. The elasticity that makes this possible reproduces here as background (validation loss decreases monotonically from 3.80 at one loop to 3.20 at eight and remains stable to 32 loops). We report average depth as a FLOP proxy with a three-point wall-clock bracket rather than a realized speedup, make no FLOP-matched parity claim, and note that the allocation results are established at a single scale and seed. The complete study runs on a single RTX 4090 in approximately 100 GPU-hours.",
+        "identifiers": [
+          "SemanticScholar:42a101d26544828fa5657cd8a1f1b334dbb1f916"
+        ],
+        "semantic_scholar_id": "42a101d26544828fa5657cd8a1f1b334dbb1f916",
+        "canonical_id": "arXiv:2607.14427",
+        "arxiv_id": "2607.14427",
+        "doi": "10.48550/arXiv.2607.14427",
+        "authors": [
+          "Joe Logan"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 128,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.20861",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.20861",
+        "id:SemanticScholar:e8e332efb03eae69c917db5c495d418567c357ac",
+        "id:arXiv:2512.20861",
+        "title:memoryefficient acceleration of block lowrank foundation models on resource constrained gpus",
+        "url:https://arxiv.org/abs/2512.20861"
+      ],
+      "record": {
+        "title": "Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs",
+        "source_url": "https://arxiv.org/abs/2512.20861",
+        "year": 2025,
+        "published": "2025-12-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in transformer-based foundation models have made them the default choice for many tasks, but their rapidly growing size makes fitting a full model on a single GPU increasingly difficult and their computational cost prohibitive. Block low-rank (BLR) compression techniques address this challenge by learning compact representations of weight matrices. While traditional low-rank (LR) methods often incur sharp accuracy drops, BLR approaches such as Monarch and BLAST can better capture the underlying structure, thus preserving accuracy while reducing computations and memory footprints. In this work, we use roofline analysis to show that, although BLR methods achieve theoretical savings and practical speedups for single-token inference, multi-token inference often becomes memory-bound in practice, increasing latency despite compiler-level optimizations in PyTorch. To address this, we introduce custom Triton kernels with partial fusion and memory layout optimizations for both Monarch and BLAST. On memory-constrained NVIDIA GPUs such as Jetson Orin Nano and A40, our kernels deliver up to $3.76\\times$ speedups and $3\\times$ model size compression over PyTorch dense baselines using CUDA backend and compiler-level optimizations, while supporting various models including Llama-7/1B, GPT2-S, DiT-XL/2, and ViT-B. Our code is available at https://github.com/pabillam/mem-efficient-blr.",
+        "identifiers": [
+          "SemanticScholar:e8e332efb03eae69c917db5c495d418567c357ac"
+        ],
+        "semantic_scholar_id": "e8e332efb03eae69c917db5c495d418567c357ac",
+        "canonical_id": "arXiv:2512.20861",
+        "arxiv_id": "2512.20861",
+        "doi": "10.48550/arXiv.2512.20861",
+        "authors": [
+          "Pierre Abillama",
+          "Changwoo Lee",
+          "Juechu Dong",
+          "D. Blaauw",
+          "D. Sylvester",
+          "Hun-Seok Kim"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 331,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.01058",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-industry.52",
+        "id:SemanticScholar:47ea499e134ac76feef14f134814ff6c8190d355",
+        "id:arXiv:2605.01058",
+        "title:leap layerwise exitaware pretraining for efficient transformer inference",
+        "url:https://arxiv.org/abs/2605.01058"
+      ],
+      "record": {
+        "title": "LEAP: Layer-wise Exit-Aware Pretraining for Efficient Transformer Inference",
+        "source_url": "https://arxiv.org/abs/2605.01058",
+        "year": 2026,
+        "published": "2026-05-01",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Layer-aligned distillation and convergence-based early exit represent two predominant computational efficiency paradigms for transformer inference; yet we establish that they exhibit systematic incompatibility under standard deployment conditions for convergence-based early exit. Distillation objectives that align intermediate student layers to teacher representations suppress the representational convergence that early-exit mechanisms exploit, rendering such mechanisms ineffective on distilled models. We introduce LEAP (Layer-wise Exit-Aware Pretraining), an auxiliary training objective that reconciles this incompatibility. LEAP requires no architectural modifications; it augments standard distillation with a single constraint ensuring intermediate layers approximate final-layer representations. LEAP-MiniLM achieves 1.61$\\times$ measured wall-clock speedup (batch=1, NVIDIA L4) at $\\theta$=0.95, with 91.9% of samples exiting by layer 7 and 1.80$\\times$ theoretical layer reduction, where standard distilled models achieve zero effective speedup. We validate across sentence similarity (STS-B: 0.760 $\\pm$ 0.006) and retrieval benchmarks (BEIR), providing operational guidance including latency measurements, decision thresholds, and deployment criteria.",
+        "identifiers": [
+          "SemanticScholar:47ea499e134ac76feef14f134814ff6c8190d355"
+        ],
+        "semantic_scholar_id": "47ea499e134ac76feef14f134814ff6c8190d355",
+        "canonical_id": "arXiv:2605.01058",
+        "arxiv_id": "2605.01058",
+        "doi": "10.18653/v1/2026.acl-industry.52",
+        "authors": [
+          "Shashank Kapadia",
+          "Deep Naryan Mishra",
+          "Sujal Reddy Alugubelli",
+          "Hao-An Wang",
+          "Saipraveen Vabbilisetty",
+          "R. Bhatia",
+          "Anupriya Sharma"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 203,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.17616",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.17616",
+        "id:SemanticScholar:ac0d7e0bfceafc8236d2f411d0091a900b1d89d9",
+        "id:arXiv:2608.17616",
+        "title:mone modular neural memory for efficient long context inference",
+        "url:https://arxiv.org/abs/2608.17616"
+      ],
+      "record": {
+        "title": "MoNe: Modular Neural Memory for Efficient Long Context Inference",
+        "source_url": "https://arxiv.org/abs/2608.17616",
+        "year": 2026,
+        "published": "2026-08-18",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present MoNe, a lightweight modular neural memory that attaches to any frozen pretrained Transformer to enable long-context inference without retraining. MoNe reads context in fixed-size segments via test-time learning of fast-weight neural memory networks with layer-localized gradient updates; at inference, the memory generates keys and values from the query tokens alone, with no context tokens re-read. This two-phase design decouples inference cost from context length, achieving $O(N)$ preprocessing and $O(1)$ query cost with peak GPU memory that does not grow with $N$. At 128K tokens, MoNe reduces both compute and peak GPU memory by approximately 80% compared to ICL with only 6.4% parameter overhead. MoNe generalizes to context lengths far beyond the backbone's native window, achieving strong performance on needle-in-a-haystack and word extraction benchmarks from RULER, where ICL degrades sharply.",
+        "identifiers": [
+          "SemanticScholar:ac0d7e0bfceafc8236d2f411d0091a900b1d89d9"
+        ],
+        "semantic_scholar_id": "ac0d7e0bfceafc8236d2f411d0091a900b1d89d9",
+        "canonical_id": "arXiv:2608.17616",
+        "arxiv_id": "2608.17616",
+        "doi": "10.48550/arXiv.2608.17616",
+        "authors": [
+          "Won-Yong Cho",
+          "Kyubyung Chae",
+          "Tribhuvanesh Orekondy",
+          "Sunghyun Park",
+          "Hyoungwoo Park",
+          "Jeongho Kim",
+          "Arash Behboodi",
+          "Kyuwoong Hwang",
+          "Sungrack Yun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 94,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00267",
+      "identity_tokens": [
+        "id:SemanticScholar:3f7df7f9a13c035a4abf1d35a09a18152c8c261c",
+        "id:arXiv:2610.00267",
+        "title:therme predictive management of shared thermal headroom for sustained llm inference on thermally constrained edge socs",
+        "url:https://arxiv.org/abs/2610.00267"
+      ],
+      "record": {
+        "title": "ThermE: Predictive Management of Shared Thermal Headroom for Sustained LLM Inference on Thermally Constrained Edge SoCs",
+        "source_url": "https://arxiv.org/abs/2610.00267",
+        "year": 2026,
+        "published": "2026-09-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compact edge system-on-chip (SoC) platforms increasingly run sustained LLM inference under thermal constraints, while their CPU, GPU, and RAM share a cooling path. Prefill and decode therefore consume shared, time-varying thermal headroom, yet vendor governors react only near hardware throttling thresholds without knowledge of request state or upcoming work. A control decision that improves current performance can thus consume headroom too quickly and degrade subsequent service. In this paper, we present ThermE, a runtime system that predicts and jointly manages shared thermal headroom for sustained LLM inference on edge SoCs. Its Fast LLM-to-Heat Compiler maps the model, requests, runtime state, and candidate actions to domain heats without executing LLMs. A partial differential equation (PDE)-constrained Headroom Predictor uses ThermPINN for offline thermal identification and a Reduced Headroom Predictor (RHP) for low-overhead online uncertainty-calibrated headroom forecasts. An Uncertainty-Aware Action Scheduler then selects actions that balance serving quality and future headroom. We implement ThermE atop vLLM and evaluate it across four LLM inference workloads. The results show that ThermE reduces TTFT and TPOT by 40.55% and 12.17%, respectively, relative to vLLM. It achieves a 5.70% SLO violation rate, compared with 12.30% for the strongest baseline, while its predictor obtains a 1.94 $^\\circ$C MAE with 11.50 ms overhead.",
+        "identifiers": [
+          "SemanticScholar:3f7df7f9a13c035a4abf1d35a09a18152c8c261c"
+        ],
+        "semantic_scholar_id": "3f7df7f9a13c035a4abf1d35a09a18152c8c261c",
+        "canonical_id": "arXiv:2610.00267",
+        "arxiv_id": "2610.00267",
+        "authors": [
+          "Rui Lu",
+          "Yu-Heng Wang",
+          "Bo-Zheng-Hong-Fan Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 57,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.00841",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.00841",
+        "id:SemanticScholar:0925c414c59353a4b50796a24fa366167e3e1dac",
+        "id:arXiv:2510.00841",
+        "title:llm routing with dueling feedback",
+        "url:https://arxiv.org/abs/2510.00841"
+      ],
+      "record": {
+        "title": "LLM Routing with Dueling Feedback",
+        "source_url": "https://arxiv.org/abs/2510.00841",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We study LLM routing, the problem of selecting the best model for each query while balancing user satisfaction, model expertise, and inference cost. We formulate routing as contextual dueling bandits, learning from pairwise preference feedback rather than absolute scores, thereby yielding label-efficient and dynamic adaptation. Building on this formulation, we introduce Category-Calibrated Fine-Tuning (CCFT), a representation-learning method that derives model embeddings from offline data using contrastive fine-tuning with categorical weighting. These embeddings enable the practical instantiation of Feel-Good Thompson Sampling for Contextual Dueling Bandits (FGTS.CDB), a theoretically grounded posterior-sampling algorithm. We propose four variants of the categorical weighting that explicitly integrate model quality and cost, and we empirically evaluate the proposed methods on the RouterBench and MixInstruct datasets. Across both benchmarks, our methods achieve lower cumulative regret and faster convergence, with better robustness and performance-cost balance than strong baselines built with a general-purpose OpenAI embedding model.",
+        "identifiers": [
+          "SemanticScholar:0925c414c59353a4b50796a24fa366167e3e1dac"
+        ],
+        "semantic_scholar_id": "0925c414c59353a4b50796a24fa366167e3e1dac",
+        "canonical_id": "arXiv:2510.00841",
+        "arxiv_id": "2510.00841",
+        "doi": "10.48550/arXiv.2510.00841",
+        "authors": [
+          "Chao-Kai Chiang",
+          "Takashi Ishida",
+          "Masashi Sugiyama"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 415,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.06184",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.06184",
+        "id:SemanticScholar:c87917c6e59e02d0dfe944cb36c803e1e30212c4",
+        "id:arXiv:2503.06184",
+        "title:sampleaware adaptive structured pruning for large language models",
+        "url:https://arxiv.org/abs/2503.06184"
+      ],
+      "record": {
+        "title": "Sample-aware Adaptive Structured Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2503.06184",
+        "year": 2025,
+        "published": "2025-03-08",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have achieved outstanding performance in natural language processing, but enormous model sizes and high computational costs limit their practical deployment. Structured pruning can effectively reduce the resource demands for deployment by removing redundant model parameters. However, the randomly selected calibration data and fixed single importance estimation metrics in existing structured pruning methods lead to degraded performance of pruned models. This study introduces AdaPruner, a sample-aware adaptive structured pruning framework for LLMs, aiming to optimize the calibration data and importance estimation metrics in the structured pruning process. Specifically, AdaPruner effectively removes redundant parameters from LLMs by constructing a structured pruning solution space and then employing Bayesian optimization to adaptively search for the optimal calibration data and importance estimation metrics. Experimental results show that the AdaPruner outperforms existing structured pruning methods on a family of LLMs with varying pruning ratios, demonstrating its applicability and robustness. Remarkably, at a 20% pruning ratio, the model pruned with AdaPruner maintains 97% of the performance of the unpruned model.",
+        "identifiers": [
+          "SemanticScholar:c87917c6e59e02d0dfe944cb36c803e1e30212c4"
+        ],
+        "semantic_scholar_id": "c87917c6e59e02d0dfe944cb36c803e1e30212c4",
+        "canonical_id": "arXiv:2503.06184",
+        "arxiv_id": "2503.06184",
+        "doi": "10.48550/arXiv.2503.06184",
+        "authors": [
+          "Jun Kong",
+          "Xinge Ma",
+          "Jin Wang",
+          "Xuejie Zhang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 622,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.18173",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.18173",
+        "id:SemanticScholar:ca4af827ad051f392a8ce42a6205237f999e86b9",
+        "id:arXiv:2406.18173",
+        "title:uiollms unbiased incremental optimization for longcontext llms",
+        "url:https://arxiv.org/abs/2406.18173"
+      ],
+      "record": {
+        "title": "UIO-LLMs: Unbiased Incremental Optimization for Long-Context LLMs",
+        "source_url": "https://arxiv.org/abs/2406.18173",
+        "year": 2024,
+        "published": "2024-06-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Managing long texts is challenging for large language models (LLMs) due to limited context window sizes. This study introduces UIO-LLMs, an unbiased incremental optimization approach for memory-enhanced transformers under long-context settings. We initially conceptualize the process as a streamlined encoder-decoder framework where the weights-shared encoder and decoder respectively encapsulate a context segment into memories and leverage these memories to predict outputs of the subsequent segment. Subsequently, by treating our memory-enhanced transformers as fully-connected recurrent neural networks (RNNs), we refine the training process using the Truncated Backpropagation Through Time (TBPTT) algorithm, which incorporates innovative incremental optimization techniques. These techniques not only diminish time complexity but also address the bias in gradient computation through an unbiased optimization process. UIO-LLMs successfully handle long context, such as extending the context window of Llama2-7b-chat from 4K to 100K tokens with minimal 2% additional parameters, while keeping the inference cost nearly linear as context length increases.",
+        "identifiers": [
+          "SemanticScholar:ca4af827ad051f392a8ce42a6205237f999e86b9"
+        ],
+        "semantic_scholar_id": "ca4af827ad051f392a8ce42a6205237f999e86b9",
+        "canonical_id": "arXiv:2406.18173",
+        "arxiv_id": "2406.18173",
+        "doi": "10.48550/arXiv.2406.18173",
+        "authors": [
+          "Wen-Hao Li",
+          "Mingbao Lin",
+          "Yunshan Zhong",
+          "Shuicheng Yan",
+          "Rongrong Ji"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 877,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.16680",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.16680",
+        "id:SemanticScholar:df43e2986475868bda9a154ff3d520405e9946b0",
+        "id:arXiv:2508.16680",
+        "title:calr corrective adaptive lowrank decomposition for efficient large language model layer compression",
+        "url:https://arxiv.org/abs/2508.16680"
+      ],
+      "record": {
+        "title": "CALR: Corrective Adaptive Low-Rank Decomposition for Efficient Large Language Model Layer Compression",
+        "source_url": "https://arxiv.org/abs/2508.16680",
+        "year": 2025,
+        "published": "2025-08-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) present significant deployment challenges due to their immense size and computational requirements. Model compression techniques are essential for making these models practical for resource-constrained environments. A prominent compression strategy is low-rank factorization via Singular Value Decomposition (SVD) to reduce model parameters by approximating weight matrices. However, standard SVD focuses on minimizing matrix reconstruction error, often leading to a substantial loss of the model's functional performance. This performance degradation occurs because existing methods do not adequately correct for the functional information lost during compression. To address this gap, we introduce Corrective Adaptive Low-Rank Decomposition (CALR), a two-component compression approach. CALR combines a primary path of SVD-compressed layers with a parallel, learnable, low-rank corrective module that is explicitly trained to recover the functional residual error. Our experimental evaluation on SmolLM2-135M, Qwen3-0.6B, and Llama-3.2-1B, demonstrates that CALR can reduce parameter counts by 26.93% to 51.77% while retaining 59.45% to 90.42% of the original model's performance, consistently outperforming LaCo, ShortGPT, and LoSparse. CALR's success shows that treating functional information loss as a learnable signal is a highly effective compression paradigm. This approach enables the creation of significantly smaller, more efficient LLMs, advancing their accessibility and practical deployment in real-world applications.",
+        "identifiers": [
+          "SemanticScholar:df43e2986475868bda9a154ff3d520405e9946b0"
+        ],
+        "semantic_scholar_id": "df43e2986475868bda9a154ff3d520405e9946b0",
+        "canonical_id": "arXiv:2508.16680",
+        "arxiv_id": "2508.16680",
+        "doi": "10.48550/arXiv.2508.16680",
+        "authors": [
+          "Muchammad Daniyal Kautsar",
+          "Afra Majida Hariono",
+          "Widyawan",
+          "Syukron Abu Ishaq Alfarozi",
+          "K. Woraratpanya"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 456,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cd0f81bbad1110f7d9f81468e1a07b770c1e0d1f8173bb710bf00c0fb7b797fc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

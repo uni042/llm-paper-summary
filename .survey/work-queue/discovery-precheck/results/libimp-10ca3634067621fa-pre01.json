@@ -1,0 +1,599 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-10ca3634067621fa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-10ca36340676",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.02249",
+    "arXiv:2602.02711",
+    "arXiv:2602.08798",
+    "arXiv:2609.32900",
+    "arXiv:2609.34340",
+    "arXiv:2610.10058"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:43.676577+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.02249",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.02711",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08798",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32900",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10058",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse",
+      "source_url": "https://arxiv.org/abs/2602.08798",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widespread deployment of cloud-hosted generative models raises a fundamental challenge: enabling efficient autoregressive generation while preserving the privacy of both user prompts and model parameters in untrusted environments. We address this challenge in a client-server setting where an untrusted server hosts an autoregressive Transformer and the client requires cryptographic protection for both inputs and inference. We present CryptoGen, the first system to enable scalable privacy-preserving neural generation with persistent encrypted key-value (KV) cache reuse. Discriminative-task secure inference systems incur quadratic latency and memory growth when adapted to autoregressive decoding due to the lack of native encrypted KV-cache support. In contrast, CryptoGen achieves near-linear scaling by securely reusing and updating encrypted KV caches throughout generation. CryptoGen integrates homomorphic encryption and secret sharing to support both prefilling and generation. Key techniques include a unified encrypted KV-cache framework, heterogeneous SIMD encodings for different phases, optimized cipher-cipher matrix-matrix and matrix-vector operations, and efficient noise refresh and ciphertext concatenation mechanisms. Evaluation on generative Transformer models trained on WikiText-2, PTB, and LAMBADA shows that for input lengths of 128-512 tokens, CryptoGen achieves 4.4x-7.6x lower per-token latency than state-of-the-art discriminative secure inference systems, while maintaining near-linear latency and memory scaling, with advantages increasing for longer sequences. CryptoGen is released as an open-source library.",
+      "identifiers": [
+        "SemanticScholar:4dbcdc2bfd98661bdef404b7d59275b032b70852"
+      ],
+      "semantic_scholar_id": "4dbcdc2bfd98661bdef404b7d59275b032b70852",
+      "canonical_id": "arXiv:2602.08798",
+      "arxiv_id": "2602.08798",
+      "doi": "10.48550/arXiv.2602.08798",
+      "authors": [
+        "He-Dong Zhang",
+        "Neusha Javidnia",
+        "Shweta Pardeshi",
+        "Qian Lou",
+        "F. Koushanfar"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Mixed-Precision Routing for Efficient Multi-step LLM Interaction",
+      "source_url": "https://arxiv.org/abs/2602.02711",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve strong performance in long-horizon agentic tasks through multi-step interaction and reasoning at test time. However, repeatedly invoking these models incurs substantial inference cost over an episode. Post-training quantization (PTQ) reduces this cost, but using a fixed low precision throughout an episode can sharply lower task success. We observe that interaction steps differ sharply in their sensitivity to quantization: given the same context, decoding a step at low precision turns a success into a failure at only about 1% of the steps, which we call critical steps. Based on this observation, we propose Dynamic Mixed-Precision Routing (DMR), a framework that adaptively selects between high-precision and low-precision versions of the same LLM at each decision step. Leveraging an entire-space factorization to jointly predict a step's divergence and its effect on the outcome, DMR learns to recognize these critical steps by training only a lightweight router on the model's hidden state. By reusing a shared high-precision KV cache and the hidden states, DMR avoids redundant context prefill and a separate text encoder, enabling precision switching with less than 1 ms of overhead per step and adding less than 0.11% to step latency for routing. This mixed-precision design also enables nested quantization, reducing the memory footprint by 39% on average compared with FP16. Across three long-horizon agentic benchmarks with nested quantization, DMR achieves an average 2.44x decode speedup over FP16 at comparable task success rates, without fine-tuning the underlying model. On ALFWorld with GPTQ, DMR achieves a 1.71x decode speedup with 86.9% success, compared with 87.2% for FP16.",
+      "identifiers": [
+        "SemanticScholar:097f80430f1b84851c37fe24af7ef7359257a91a"
+      ],
+      "semantic_scholar_id": "097f80430f1b84851c37fe24af7ef7359257a91a",
+      "canonical_id": "arXiv:2602.02711",
+      "arxiv_id": "2602.02711",
+      "authors": [
+        "Yuan-Zhe Li",
+        "Jia-Ning Deng",
+        "Jing-Tong Hu",
+        "Tian-Long Chen",
+        "Song Wang",
+        "Huan Yang"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.32900",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (dLLMs) predict masked positions in arbitrary order, but their exact constrained decoders still encode constraints as sequential languages, whose state must track every unresolved dependency between positions. For relational constraints this encoding grows exponentially: for same-order copy, every finite automaton needs $4^k$ states, deterministic or nondeterministic, and every context-free grammar has size $2^{\\Omega(k)}$, while the factor graph of the same relation has size $O(k)$ and a 16-entry peak table. We introduce FactorDLM, a training-free decoder that represents finite-domain relations as a factor graph and, at each denoising step, conditions the model's mean-field prediction on that graph exactly by variable elimination. Decoding cost then grows exponentially with the induced width of the constraint graph, which replaces automaton size as the governing parameter. Because a finite automaton is a chain-shaped factor graph, one compiler enforces syntax and nonlocal relations together: on JSON records with cross-field references, a schema automaton alone leaves references dangling, relational factors alone produce malformed JSON, and the combined plan is valid on both counts, including on records of variable length. Across nine relational benchmarks and three backbones, every output satisfies every declared constraint at 0.4-6.9% projection overhead, where unconstrained decoding is 0-79% valid, and compiled projection answers repeated queries 13.6x faster than CP-SAT with eight parallel workers. Because model-free rules solve three of five standard benchmarks, we construct benchmarks with exact chance and fixed-template floors, on which selecting among exact constrained samples beats greedy projection. Which encoding is cheaper, sequential state or direct factors, depends on the constraint and is computable before decoding begins.",
+      "identifiers": [
+        "SemanticScholar:15de44f5cfe045861e18a7ed99eb92872d12cf02"
+      ],
+      "semantic_scholar_id": "15de44f5cfe045861e18a7ed99eb92872d12cf02",
+      "canonical_id": "arXiv:2609.32900",
+      "arxiv_id": "2609.32900",
+      "doi": "10.48550/arXiv.2609.32900",
+      "authors": [
+        "Jian-Chang Su",
+        "Wei Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VarioPath: Workload-Aware All-to-All Communication for PCIe GPU Clusters",
+      "source_url": "https://arxiv.org/abs/2609.34340",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AlltoAllv communication is a critical primitive in distributed large-model inference, particularly for mixture-of-experts (MoE) models. The growing adoption of PCIe GPU systems for cost-efficient inference makes AlltoAllv performance on these systems increasingly important. Without a dedicated scale-up interconnect (e.g., NVLink or Infinity Fabric), PCIe GPU systems carry both intra-node and inter-node traffic through the PCIe hierarchy, where concurrent transfers can contend for PCIe link bandwidth. This link contention, compounded by skewed traffic distributions and dynamic traffic demand, makes efficient AlltoAllv scheduling challenging. Existing approaches are either poorly suited to PCIe GPU systems or incur substantial schedule synthesis overhead that reduces their practicality in real-world deployments. We present VarioPath, an efficient AlltoAllv scheduling framework for PCIe GPU systems. It combines an offline topology-aware analyzer with an online demand-aware scheduler. The analyzer records contention-free transfer patterns as AlltoAllv channels and exploits topology symmetry to build a compact catalog for efficient search. The online scheduler decomposes each AlltoAllv invocation's demand across a sequence of channels, adapting to rapidly changing and skewed traffic while incurring low planning overhead. Evaluation on four platforms (up to 256 GPUs) shows average AlltoAllv speedups of 5.88x over FAST and 1.72x over DeepEP. End-to-end experiments show that VarioPath reduces Qwen3 inference latency by up to 27.2% and Wan2.1 generation latency by 6.1%.",
+      "identifiers": [
+        "SemanticScholar:edf7350836d60d012ce94e2e098196ab211ab60d"
+      ],
+      "semantic_scholar_id": "edf7350836d60d012ce94e2e098196ab211ab60d",
+      "canonical_id": "arXiv:2609.34340",
+      "arxiv_id": "2609.34340",
+      "doi": "10.48550/arXiv.2609.34340",
+      "authors": [
+        "Yao Fei",
+        "Jin Fang",
+        "Si-Ze Zheng",
+        "Gong-Ming Zhao",
+        "Hong-Li Xu",
+        "Jia-Cheng Zhu",
+        "Zhi-Jing Xin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cache the Encoder Within:Compact, Reusable Memory across LLM Queries",
+      "source_url": "https://arxiv.org/abs/2610.10058",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Repeated queries over shared documents incur redundant encoding, while caching model states introduces persistent storage costs. Building on CoMem's intermediate-state interface, EncBank treats a pretrained LLM's lower layers as a reusable document encoder and compactly stores their outputs for an adapted upper-layer reader. A self-distilled suffix adapter is shared across storage precisions within each backbone, without quantization-specific retraining. Across five benchmark suites on three Qwen backbones spanning different sizes and full-attention and hybrid architectures, 4-bit storage keeps each reported benchmark aggregate within one score point of native-precision EncBank. In a fixed Qwen3-8B workload, it retains 28.1% of the native-precision persistent GPU store. Separate native-precision controls yield a 1.40x selected-pack prefill speedup over same-evidence, same-adapter text replay, at a 3.12-point RULER accuracy cost. A native-precision Qwen3.8-27B configuration also passes 70 of 89 Terminal-Bench 2.1 tasks. EncBank thus combines reusable computation with compact memory, while task fidelity and end-to-end benefits remain dependent on the workload, preparation costs, and reuse frequency.",
+      "identifiers": [
+        "SemanticScholar:8b2aab08ed6ae363f52fc28cb8dd2a7e9f4883f9"
+      ],
+      "semantic_scholar_id": "8b2aab08ed6ae363f52fc28cb8dd2a7e9f4883f9",
+      "canonical_id": "arXiv:2610.10058",
+      "arxiv_id": "2610.10058",
+      "authors": [
+        "Han-Lin Liu",
+        "Chun-Yu Liu",
+        "Chao-Fan Lin",
+        "Alex Lamb",
+        "Ming-Yu Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Explore Briefly, Then Decide: Mitigating LLM Overthinking via Cumulative Entropy Regulation",
+      "source_url": "https://arxiv.org/abs/2510.02249",
+      "year": 2025,
+      "published": "2025-10-02",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable reasoning abilities on complex problems using long Chain-of-Thought (CoT) reasoning. However, they often suffer from overthinking, meaning generating unnecessarily lengthy reasoning steps for simpler problems. This issue may degrade the efficiency of the models and make them difficult to adapt the reasoning depth to the complexity of problems. To address this, we introduce a novel metric Token Entropy Cumulative Average (TECA), which measures the extent of exploration throughout the reasoning process. We further propose a novel reasoning paradigm named\"Explore Briefly, Then Decide\", with an associated Cumulative Entropy Regulation (CER) mechanism. This paradigm leverages TECA to help the model dynamically determine the optimal point to conclude its thought process and provide a final answer, thus achieving efficient reasoning. Experimental results across diverse mathematical benchmarks show that our approach substantially mitigates overthinking without sacrificing problem solving ability. With our thinking paradigm, the average response length decreases by up to 71% on simpler datasets, demonstrating the effectiveness of our method in creating a more efficient and adaptive reasoning process.",
+      "identifiers": [
+        "SemanticScholar:1a9c1ec7e03fbebbae9a8d261049d6bd1cb57d47"
+      ],
+      "semantic_scholar_id": "1a9c1ec7e03fbebbae9a8d261049d6bd1cb57d47",
+      "canonical_id": "arXiv:2510.02249",
+      "arxiv_id": "2510.02249",
+      "doi": "10.48550/arXiv.2510.02249",
+      "authors": [
+        "Tian-Yi Jiang",
+        "Yi Bin",
+        "Yu-Juan Ding",
+        "Kai Zhu",
+        "Fei Ma",
+        "Jing-Kuan Song",
+        "Heng-Tao Shen"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 414,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.08798",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08798",
+        "id:SemanticScholar:4dbcdc2bfd98661bdef404b7d59275b032b70852",
+        "id:arXiv:2602.08798",
+        "title:cryptogen secure transformer generation with encrypted kvcache reuse",
+        "url:https://arxiv.org/abs/2602.08798"
+      ],
+      "record": {
+        "title": "CryptoGen: Secure Transformer Generation with Encrypted KV-Cache Reuse",
+        "source_url": "https://arxiv.org/abs/2602.08798",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The widespread deployment of cloud-hosted generative models raises a fundamental challenge: enabling efficient autoregressive generation while preserving the privacy of both user prompts and model parameters in untrusted environments. We address this challenge in a client-server setting where an untrusted server hosts an autoregressive Transformer and the client requires cryptographic protection for both inputs and inference. We present CryptoGen, the first system to enable scalable privacy-preserving neural generation with persistent encrypted key-value (KV) cache reuse. Discriminative-task secure inference systems incur quadratic latency and memory growth when adapted to autoregressive decoding due to the lack of native encrypted KV-cache support. In contrast, CryptoGen achieves near-linear scaling by securely reusing and updating encrypted KV caches throughout generation. CryptoGen integrates homomorphic encryption and secret sharing to support both prefilling and generation. Key techniques include a unified encrypted KV-cache framework, heterogeneous SIMD encodings for different phases, optimized cipher-cipher matrix-matrix and matrix-vector operations, and efficient noise refresh and ciphertext concatenation mechanisms. Evaluation on generative Transformer models trained on WikiText-2, PTB, and LAMBADA shows that for input lengths of 128-512 tokens, CryptoGen achieves 4.4x-7.6x lower per-token latency than state-of-the-art discriminative secure inference systems, while maintaining near-linear latency and memory scaling, with advantages increasing for longer sequences. CryptoGen is released as an open-source library.",
+        "identifiers": [
+          "SemanticScholar:4dbcdc2bfd98661bdef404b7d59275b032b70852"
+        ],
+        "semantic_scholar_id": "4dbcdc2bfd98661bdef404b7d59275b032b70852",
+        "canonical_id": "arXiv:2602.08798",
+        "arxiv_id": "2602.08798",
+        "doi": "10.48550/arXiv.2602.08798",
+        "authors": [
+          "He-Dong Zhang",
+          "Neusha Javidnia",
+          "Shweta Pardeshi",
+          "Qian Lou",
+          "F. Koushanfar"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 284,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.02711",
+      "identity_tokens": [
+        "id:SemanticScholar:097f80430f1b84851c37fe24af7ef7359257a91a",
+        "id:arXiv:2602.02711",
+        "title:dynamic mixedprecision routing for efficient multistep llm interaction",
+        "url:https://arxiv.org/abs/2602.02711"
+      ],
+      "record": {
+        "title": "Dynamic Mixed-Precision Routing for Efficient Multi-step LLM Interaction",
+        "source_url": "https://arxiv.org/abs/2602.02711",
+        "year": 2026,
+        "published": "2026-02-02",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve strong performance in long-horizon agentic tasks through multi-step interaction and reasoning at test time. However, repeatedly invoking these models incurs substantial inference cost over an episode. Post-training quantization (PTQ) reduces this cost, but using a fixed low precision throughout an episode can sharply lower task success. We observe that interaction steps differ sharply in their sensitivity to quantization: given the same context, decoding a step at low precision turns a success into a failure at only about 1% of the steps, which we call critical steps. Based on this observation, we propose Dynamic Mixed-Precision Routing (DMR), a framework that adaptively selects between high-precision and low-precision versions of the same LLM at each decision step. Leveraging an entire-space factorization to jointly predict a step's divergence and its effect on the outcome, DMR learns to recognize these critical steps by training only a lightweight router on the model's hidden state. By reusing a shared high-precision KV cache and the hidden states, DMR avoids redundant context prefill and a separate text encoder, enabling precision switching with less than 1 ms of overhead per step and adding less than 0.11% to step latency for routing. This mixed-precision design also enables nested quantization, reducing the memory footprint by 39% on average compared with FP16. Across three long-horizon agentic benchmarks with nested quantization, DMR achieves an average 2.44x decode speedup over FP16 at comparable task success rates, without fine-tuning the underlying model. On ALFWorld with GPTQ, DMR achieves a 1.71x decode speedup with 86.9% success, compared with 87.2% for FP16.",
+        "identifiers": [
+          "SemanticScholar:097f80430f1b84851c37fe24af7ef7359257a91a"
+        ],
+        "semantic_scholar_id": "097f80430f1b84851c37fe24af7ef7359257a91a",
+        "canonical_id": "arXiv:2602.02711",
+        "arxiv_id": "2602.02711",
+        "authors": [
+          "Yuan-Zhe Li",
+          "Jia-Ning Deng",
+          "Jing-Tong Hu",
+          "Tian-Long Chen",
+          "Song Wang",
+          "Huan Yang"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32900",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.32900",
+        "id:SemanticScholar:15de44f5cfe045861e18a7ed99eb92872d12cf02",
+        "id:arXiv:2609.32900",
+        "title:constraints are graphs not chains exact decoding for diffusion language models",
+        "url:https://arxiv.org/abs/2609.32900"
+      ],
+      "record": {
+        "title": "Constraints Are Graphs, Not Chains: Exact Decoding for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2609.32900",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (dLLMs) predict masked positions in arbitrary order, but their exact constrained decoders still encode constraints as sequential languages, whose state must track every unresolved dependency between positions. For relational constraints this encoding grows exponentially: for same-order copy, every finite automaton needs $4^k$ states, deterministic or nondeterministic, and every context-free grammar has size $2^{\\Omega(k)}$, while the factor graph of the same relation has size $O(k)$ and a 16-entry peak table. We introduce FactorDLM, a training-free decoder that represents finite-domain relations as a factor graph and, at each denoising step, conditions the model's mean-field prediction on that graph exactly by variable elimination. Decoding cost then grows exponentially with the induced width of the constraint graph, which replaces automaton size as the governing parameter. Because a finite automaton is a chain-shaped factor graph, one compiler enforces syntax and nonlocal relations together: on JSON records with cross-field references, a schema automaton alone leaves references dangling, relational factors alone produce malformed JSON, and the combined plan is valid on both counts, including on records of variable length. Across nine relational benchmarks and three backbones, every output satisfies every declared constraint at 0.4-6.9% projection overhead, where unconstrained decoding is 0-79% valid, and compiled projection answers repeated queries 13.6x faster than CP-SAT with eight parallel workers. Because model-free rules solve three of five standard benchmarks, we construct benchmarks with exact chance and fixed-template floors, on which selecting among exact constrained samples beats greedy projection. Which encoding is cheaper, sequential state or direct factors, depends on the constraint and is computable before decoding begins.",
+        "identifiers": [
+          "SemanticScholar:15de44f5cfe045861e18a7ed99eb92872d12cf02"
+        ],
+        "semantic_scholar_id": "15de44f5cfe045861e18a7ed99eb92872d12cf02",
+        "canonical_id": "arXiv:2609.32900",
+        "arxiv_id": "2609.32900",
+        "doi": "10.48550/arXiv.2609.32900",
+        "authors": [
+          "Jian-Chang Su",
+          "Wei Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 55,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.34340",
+        "id:SemanticScholar:edf7350836d60d012ce94e2e098196ab211ab60d",
+        "id:arXiv:2609.34340",
+        "title:variopath workloadaware alltoall communication for pcie gpu clusters",
+        "url:https://arxiv.org/abs/2609.34340"
+      ],
+      "record": {
+        "title": "VarioPath: Workload-Aware All-to-All Communication for PCIe GPU Clusters",
+        "source_url": "https://arxiv.org/abs/2609.34340",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AlltoAllv communication is a critical primitive in distributed large-model inference, particularly for mixture-of-experts (MoE) models. The growing adoption of PCIe GPU systems for cost-efficient inference makes AlltoAllv performance on these systems increasingly important. Without a dedicated scale-up interconnect (e.g., NVLink or Infinity Fabric), PCIe GPU systems carry both intra-node and inter-node traffic through the PCIe hierarchy, where concurrent transfers can contend for PCIe link bandwidth. This link contention, compounded by skewed traffic distributions and dynamic traffic demand, makes efficient AlltoAllv scheduling challenging. Existing approaches are either poorly suited to PCIe GPU systems or incur substantial schedule synthesis overhead that reduces their practicality in real-world deployments. We present VarioPath, an efficient AlltoAllv scheduling framework for PCIe GPU systems. It combines an offline topology-aware analyzer with an online demand-aware scheduler. The analyzer records contention-free transfer patterns as AlltoAllv channels and exploits topology symmetry to build a compact catalog for efficient search. The online scheduler decomposes each AlltoAllv invocation's demand across a sequence of channels, adapting to rapidly changing and skewed traffic while incurring low planning overhead. Evaluation on four platforms (up to 256 GPUs) shows average AlltoAllv speedups of 5.88x over FAST and 1.72x over DeepEP. End-to-end experiments show that VarioPath reduces Qwen3 inference latency by up to 27.2% and Wan2.1 generation latency by 6.1%.",
+        "identifiers": [
+          "SemanticScholar:edf7350836d60d012ce94e2e098196ab211ab60d"
+        ],
+        "semantic_scholar_id": "edf7350836d60d012ce94e2e098196ab211ab60d",
+        "canonical_id": "arXiv:2609.34340",
+        "arxiv_id": "2609.34340",
+        "doi": "10.48550/arXiv.2609.34340",
+        "authors": [
+          "Yao Fei",
+          "Jin Fang",
+          "Si-Ze Zheng",
+          "Gong-Ming Zhao",
+          "Hong-Li Xu",
+          "Jia-Cheng Zhu",
+          "Zhi-Jing Xin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.10058",
+      "identity_tokens": [
+        "id:SemanticScholar:8b2aab08ed6ae363f52fc28cb8dd2a7e9f4883f9",
+        "id:arXiv:2610.10058",
+        "title:cache the encoder withincompact reusable memory across llm queries",
+        "url:https://arxiv.org/abs/2610.10058"
+      ],
+      "record": {
+        "title": "Cache the Encoder Within:Compact, Reusable Memory across LLM Queries",
+        "source_url": "https://arxiv.org/abs/2610.10058",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Repeated queries over shared documents incur redundant encoding, while caching model states introduces persistent storage costs. Building on CoMem's intermediate-state interface, EncBank treats a pretrained LLM's lower layers as a reusable document encoder and compactly stores their outputs for an adapted upper-layer reader. A self-distilled suffix adapter is shared across storage precisions within each backbone, without quantization-specific retraining. Across five benchmark suites on three Qwen backbones spanning different sizes and full-attention and hybrid architectures, 4-bit storage keeps each reported benchmark aggregate within one score point of native-precision EncBank. In a fixed Qwen3-8B workload, it retains 28.1% of the native-precision persistent GPU store. Separate native-precision controls yield a 1.40x selected-pack prefill speedup over same-evidence, same-adapter text replay, at a 3.12-point RULER accuracy cost. A native-precision Qwen3.8-27B configuration also passes 70 of 89 Terminal-Bench 2.1 tasks. EncBank thus combines reusable computation with compact memory, while task fidelity and end-to-end benefits remain dependent on the workload, preparation costs, and reuse frequency.",
+        "identifiers": [
+          "SemanticScholar:8b2aab08ed6ae363f52fc28cb8dd2a7e9f4883f9"
+        ],
+        "semantic_scholar_id": "8b2aab08ed6ae363f52fc28cb8dd2a7e9f4883f9",
+        "canonical_id": "arXiv:2610.10058",
+        "arxiv_id": "2610.10058",
+        "authors": [
+          "Han-Lin Liu",
+          "Chun-Yu Liu",
+          "Chao-Fan Lin",
+          "Alex Lamb",
+          "Ming-Yu Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.02249",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.02249",
+        "id:SemanticScholar:1a9c1ec7e03fbebbae9a8d261049d6bd1cb57d47",
+        "id:arXiv:2510.02249",
+        "title:explore briefly then decide mitigating llm overthinking via cumulative entropy regulation",
+        "url:https://arxiv.org/abs/2510.02249"
+      ],
+      "record": {
+        "title": "Explore Briefly, Then Decide: Mitigating LLM Overthinking via Cumulative Entropy Regulation",
+        "source_url": "https://arxiv.org/abs/2510.02249",
+        "year": 2025,
+        "published": "2025-10-02",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable reasoning abilities on complex problems using long Chain-of-Thought (CoT) reasoning. However, they often suffer from overthinking, meaning generating unnecessarily lengthy reasoning steps for simpler problems. This issue may degrade the efficiency of the models and make them difficult to adapt the reasoning depth to the complexity of problems. To address this, we introduce a novel metric Token Entropy Cumulative Average (TECA), which measures the extent of exploration throughout the reasoning process. We further propose a novel reasoning paradigm named\"Explore Briefly, Then Decide\", with an associated Cumulative Entropy Regulation (CER) mechanism. This paradigm leverages TECA to help the model dynamically determine the optimal point to conclude its thought process and provide a final answer, thus achieving efficient reasoning. Experimental results across diverse mathematical benchmarks show that our approach substantially mitigates overthinking without sacrificing problem solving ability. With our thinking paradigm, the average response length decreases by up to 71% on simpler datasets, demonstrating the effectiveness of our method in creating a more efficient and adaptive reasoning process.",
+        "identifiers": [
+          "SemanticScholar:1a9c1ec7e03fbebbae9a8d261049d6bd1cb57d47"
+        ],
+        "semantic_scholar_id": "1a9c1ec7e03fbebbae9a8d261049d6bd1cb57d47",
+        "canonical_id": "arXiv:2510.02249",
+        "arxiv_id": "2510.02249",
+        "doi": "10.48550/arXiv.2510.02249",
+        "authors": [
+          "Tian-Yi Jiang",
+          "Yi Bin",
+          "Yu-Juan Ding",
+          "Kai Zhu",
+          "Fei Ma",
+          "Jing-Kuan Song",
+          "Heng-Tao Shen"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 414,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c22f9e59b91c52ed148a4495ec42eff9f1796095ecde0896885f20ccd85f8e8a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,1170 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-96ce94148b743c52-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-96ce94148b74",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2409.14595",
+    "arXiv:2504.04024",
+    "arXiv:2507.03340",
+    "arXiv:2509.13201",
+    "arXiv:2601.23182",
+    "arXiv:2602.09555",
+    "arXiv:2602.15563",
+    "arXiv:2603.02872",
+    "arXiv:2607.17486",
+    "arXiv:2609.04947",
+    "arXiv:2609.37924",
+    "arXiv:2610.14804"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 12,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 12,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 12,
+  "provider_progress": {
+    "requested_count": 12,
+    "status_counts": {
+      "allowed": 12,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:44.124870+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2409.14595",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.04024",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.03340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.13201",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.23182",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.09555",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.15563",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.02872",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.17486",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.04947",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37924",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14804",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Adaptive Test-Time Compute Allocation for Block Diffusion Language Models in Complex Reasoning",
+      "source_url": "https://arxiv.org/abs/2602.09555",
+      "year": 2026,
+      "published": "2026-02-10",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in block diffusion language models have demonstrated competitive performance and strong scalability on reasoning tasks. However, their test-time compute allocation remains largely unexplored, leaving a critical speed-effectiveness trade-off unresolved in long Chain-of-Thought reasoning. To address this, we propose a unified test-time compute allocation framework that introduces adaptivity in both step-wise decoding and blockwise generation. At the decoding level, we propose Bounded Adaptive Confidence Decoding (BACD), a difficulty-aware sampling strategy that dynamically adjusts denoising based on model confidence, accelerating inference while controlling error accumulation. Beyond step-wise adaptivity, we introduce the Think Coarse, Critic Fine (TCCF) paradigm that allocates large block sizes for exploratory thinking and smaller block sizes for precise refinement. To stabilize training under varying block configurations, we adopt Progressive Block Size Extension, which mitigates quality degradation when scaling up block sizes. Extensive evaluations on six benchmarks show that our TDAR-8B model with BACD and TCCF achieves a 2.38$\\times$ speedup and +3.4% average accuracy over the strong TraDo-8B baseline, unlocking the potential of block diffusion in complex reasoning.",
+      "identifiers": [
+        "SemanticScholar:3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59"
+      ],
+      "semantic_scholar_id": "3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59",
+      "canonical_id": "arXiv:2602.09555",
+      "arxiv_id": "2602.09555",
+      "doi": "10.18653/2026.findings-emnlp.1774",
+      "authors": [
+        "Yi Lu",
+        "De-Yang Kong",
+        "Jia-Ning Wang",
+        "Linsen Guo",
+        "Xue Wang",
+        "Qi Guo",
+        "Tao Gui",
+        "Xuan-Jing Huang",
+        "Wei Ye",
+        "Shi-Kun Zhang",
+        "Wei Wang"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 283,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Think-as-You-See: Streaming Chain-of-Thought Reasoning for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2603.02872",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision Language Models (LVLMs) exhibit strong Chain-of-Thought (CoT) capabilities, yet most existing paradigms assume full-video availability before inference, a batch-style process misaligned with real-world video streams where information arrives sequentially. Motivated by the streaming nature of video data, we investigate two streaming reasoning paradigms for LVLMs. The first, an interleaved paradigm, alternates between receiving frames and producing partial reasoning but remains constrained by strictly ordered cache updates. To better match streaming inputs, we propose \\textbf{Think-as-You-See (TaYS)}, a unified framework enabling true concurrent reasoning. TaYS integrates parallelized CoT generation, stream-constrained training, and stream-parallel inference. It further employs temporally aligned reasoning units, streaming attention masks and positional encodings, and a dual KV-cache that decouples visual encoding from textual reasoning. We evaluate all paradigms on the Qwen2.5-VL family across representative video CoT tasks, including event dynamics analysis, causal reasoning, and thematic understanding. Experiments show that TaYS consistently outperforms both batch and interleaved baselines, improving reasoning performance while substantially reducing time-to-first-token (TTFT) and overall reasoning delay. These results demonstrate the effectiveness of data-aligned streaming reasoning in enabling efficient and responsive video understanding for LVLMs. We release our code at https://github.com/EIT-NLP/StreamingLLM/tree/main/TaYS",
+      "identifiers": [
+        "SemanticScholar:29f31880bf3c2c566889ea5ba3ccecfc308256d3"
+      ],
+      "semantic_scholar_id": "29f31880bf3c2c566889ea5ba3ccecfc308256d3",
+      "canonical_id": "arXiv:2603.02872",
+      "arxiv_id": "2603.02872",
+      "doi": "10.48550/arXiv.2603.02872",
+      "authors": [
+        "Jia-Liang Zhang",
+        "Jun-Long Tong",
+        "Jun-Yang Lin",
+        "Hao Wu",
+        "Yi-Rong Sun",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 110,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 110,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "1-Bit Wonder: Improving QAT Performance in the Low-Bit Regime through K-Means Quantization",
+      "source_url": "https://arxiv.org/abs/2602.15563",
+      "year": 2026,
+      "published": "2026-02-17",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization-aware training (QAT) is an effective method to drastically reduce the memory footprint of LLMs while keeping performance degradation at an acceptable level. However, the optimal choice of quantization format and bit-width presents a challenge in practice. The full design space of quantization is not fully explored in the context of QAT, and the precise trade-off between quantization and downstream performance is poorly understood, as comparisons often rely solely on perplexity-based evaluations. In this work, we address these shortcomings with an empirical study of QAT in the low-bit regime. We show that k-means based weight quantization outperforms integer formats and can be implemented efficiently on standard hardware. Furthermore, we find that, under a fixed inference memory budget, the best performance on generative downstream tasks is achieved with $1$-bit quantized weights.",
+      "identifiers": [
+        "SemanticScholar:9cfd8aebe45d95f1ab6cb11703fc90994c3c661a"
+      ],
+      "semantic_scholar_id": "9cfd8aebe45d95f1ab6cb11703fc90994c3c661a",
+      "canonical_id": "arXiv:2602.15563",
+      "arxiv_id": "2602.15563",
+      "doi": "10.48550/arXiv.2602.15563",
+      "authors": [
+        "Sohir Maskey",
+        "Constantin Eichenberg",
+        "Johannes Messner",
+        "Douglas Orr"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 276,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FourierSampler: Unlocking Non-Autoregressive Potential in Diffusion Language Models via Frequency-Guided Generation",
+      "source_url": "https://arxiv.org/abs/2601.23182",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the non-autoregressive potential of diffusion language models (dLLMs), existing decoding strategies demonstrate positional bias, failing to fully unlock the potential of arbitrary generation. In this work, we delve into the inherent spectral characteristics of dLLMs and present the first frequency-domain analysis showing that low-frequency components in hidden states primarily encode global structural information and long-range dependencies, while high-frequency components are responsible for characterizing local details. Based on this observation, we propose FourierSampler, which leverages a frequency-domain sliding window mechanism to dynamically guide the model to achieve a\"structure-to-detail\"generation. FourierSampler outperforms other inference enhancement strategies on LLADA and SDAR, achieving relative improvements of 20.4% on LLaDA1.5-8B and 16.0% on LLaDA-8B-Instruct. It notably surpasses similarly sized autoregressive models like Llama3.1-8B-Instruct.",
+      "identifiers": [
+        "SemanticScholar:446a6dea6c25ac7b4708442679a42564b3c22089"
+      ],
+      "semantic_scholar_id": "446a6dea6c25ac7b4708442679a42564b3c22089",
+      "canonical_id": "arXiv:2601.23182",
+      "arxiv_id": "2601.23182",
+      "doi": "10.48550/arXiv.2601.23182",
+      "authors": [
+        "Si-Yang He",
+        "Qi-Qi Wang",
+        "Xiaoran Liu",
+        "Hongnan Ma",
+        "Yiwei Shi",
+        "Yue-Rong Song",
+        "Ying Zhu",
+        "Tianyi Liang",
+        "Zeng-Feng Huang",
+        "Zi-Wei He",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 294,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "SALT: Salience-Aware Lexical Trie for Long-Context Compression",
+      "source_url": "https://arxiv.org/abs/2607.17486",
+      "year": 2026,
+      "published": "2026-07-20",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) process increasingly longer prompts, computation and KV-cache memory costs have emerged as major bottlenecks in inference systems. Existing input-level prompt compression methods address this, but rank each sentence by a scalar relevance score, treating the document as an unstructured pool of words and sentences. Under tight budgets, this causes theme collapse, where the dominant theme(s) of a document consumes the budget, discarding less-frequent yet task-relevant themes. Preserving thematic coverage instead requires allocating the budget across recurring themes rather than scoring sentences in isolation. To this end, we propose SALT, a model-agnostic extractive framework that organizes per-sentence keywords into a trie ordered by sentence frequency (SF), a lightweight, reusable proxy for document thematic structure. This trie-based organization smooths memory allocation and prevents dominant themes from monopolizing the budget. Multi-anchor retrieval activates trie nodes labeled by query keywords at any depth, and the trie persists across dialogue turns, supporting multi-turn use without re-encoding the document. By preserving document themes, SALT reduces the prefill computation and memory cost of long-context prompts while remaining composable with KV-cache methods that target decoding-time latency and memory.",
+      "identifiers": [
+        "SemanticScholar:cc9d7843699a61f73314d0e6ddd019854c390197"
+      ],
+      "semantic_scholar_id": "cc9d7843699a61f73314d0e6ddd019854c390197",
+      "canonical_id": "arXiv:2607.17486",
+      "arxiv_id": "2607.17486",
+      "doi": "10.18653/v1/2026.emnlp-main.1723",
+      "authors": [
+        "Oteo Mamo",
+        "Hyunji Yi",
+        "Joydhriti Choudhury",
+        "Shang-Qian Gao",
+        "Wei-Kuan Yu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Degrees of Freedom for Linear Attention: Distilling Softmax Attention with Optimal Feature Efficiency",
+      "source_url": "https://arxiv.org/abs/2507.03340",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention has attracted interest as a computationally efficient approximation to softmax attention, especially for long sequences. Recent studies have explored distilling softmax attention in pre-trained Transformers into linear attention. However, a critical challenge remains: how to choose the feature dimension that governs the approximation quality. Existing methods fix this dimension uniformly across all attention layers, overlooking the diverse roles and complexities of them. In this paper, we propose a principled method to automatically determine the feature dimension in linear attention using the concept of statistical degrees of freedom, which represent the effective dimensionality of the inputs. We provide a theoretical bound on the approximation error and show that the dimension chosen by our method achieves smaller error under a fixed computational budget. Furthermore, we introduce an efficient layerwise training strategy to learn nonlinear features tailored to each layer. Experiments on multiple pre-trained transformers demonstrate that our method improves the performance of distilled models compared to baselines without increasing the inference cost. Our findings also provide insight into how the complexity of the attention mechanism evolves across layers.",
+      "identifiers": [
+        "SemanticScholar:dfabdaaf06a67a958045f79be14c2aea557fbdd0"
+      ],
+      "semantic_scholar_id": "dfabdaaf06a67a958045f79be14c2aea557fbdd0",
+      "canonical_id": "arXiv:2507.03340",
+      "arxiv_id": "2507.03340",
+      "doi": "10.48550/arXiv.2507.03340",
+      "authors": [
+        "Naoki Nishikawa",
+        "Rei Higuchi",
+        "Taiji Suzuki"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "MCPO: Modality-Contrastive Preference Optimization for Multimodal Chain-of-Thought Compression",
+      "source_url": "https://arxiv.org/abs/2609.04947",
+      "year": 2026,
+      "published": "2026-09-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, multimodal large-scale reasoning models have demonstrated remarkable capabilities in solving complex tasks through long Chains-of-Thought (M-CoT). However, excessively long reasoning trajectories incur substantial computational costs and significant KV-cache pressure. Existing CoT compression and alignment paradigms mainly rely on static rules or single-dimensional preferences, lacking fine-grained cross-modal constraints; as a result, they are prone to inducing visual laziness and hallucinatory reasoning. To address these issues, we propose Modality-Contrastive Preference Optimization (MCPO), a highly sample-efficient two-stage length-compression method that requires fewer than 900 training samples. In the compression stage, we introduce a step-level Normalized Cross-Modal Mutual Information (NCMI) pruning algorithm, which automatically identifies and removes visual-independent reasoning steps by comparing the reasoning discrepancies between with-image and no-image contexts. This significantly reduces redundancy and hallucinatory content in the reasoning chains. In the alignment stage, the model first undergoes supervised fine-tuning to achieve domain-adaptive initialization, followed by optimization using an asymmetric multimodal length-controlled preference loss. This objective adopts a highly nonlinear odds-ratio formulation that provides steep gradients in the with-image context to reinforce length constraints for preferred trajectories, while applying a scaled, flat-gradient linear difference in the no-image context to maintain modality consistency, thereby achieving stable cross-modal preference alignment. Extensive experiments on mainstream base models such as Qwen3-VL-Thinking show that our method can reduce CoT length by up to 69.5% and achieve up to 3.34x end-to-end inference speedup while preserving original accuracy.",
+      "identifiers": [
+        "SemanticScholar:5c2cd79f5f85bab413723e5af877609ecf25ac17"
+      ],
+      "semantic_scholar_id": "5c2cd79f5f85bab413723e5af877609ecf25ac17",
+      "canonical_id": "arXiv:2609.04947",
+      "arxiv_id": "2609.04947",
+      "doi": "10.48550/arXiv.2609.04947",
+      "authors": [
+        "Guang-Heng Yang",
+        "Zhen-Liang Ni",
+        "Zhen-Kai Wu",
+        "Han Shu",
+        "Juan Feng",
+        "Wen-Ming Yang",
+        "Jie Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 77,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Time-Anchored Diffusion Language Models: Latent-Space Caching for Fast Generation",
+      "source_url": "https://arxiv.org/abs/2609.37924",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on anchored diffusion language models improves denoising by shaping an intermediate latent space with supervised important-token targets. In this work, we introduce time-based (self-supervised) anchoring, which learns and reuses latent anchors without requiring such targets. Our key observation is that anchors encode persistent properties of the clean sequence, such as its semantic intent, global structure, or intermediate plan. Although their hidden representations become stale as the token canvas evolves, their semantic content remains useful across nearby diffusion times. This is implemented through a two-stage architecture consisting of a relatively expensive anchor network that generates the latent cache state and a lightweight denoising network that intelligently combines the cached latent state with the current state at each reverse step using a fusion module. This gives anchoring a latent-space caching interpretation: the anchor network is evaluated periodically, while its cached representation is reused across multiple reverse steps. We instantiate this framework as TADM:Post-train, which time-anchorizes pretrained DLMs, and TADM:Pretraining, which learns time-based anchors during pretraining. Applied to DiffusionGemma-26B, TADM:Post-train improves throughput by approximately 49% to 79% on several math, code, and STEM benchmarks (GSM8K, AIME26, GPQA-Diamond, LiveCodeBench-v6, HumanEval, MMLU-Pro). TADM:Pretraining reduces Transformer-layer computation by up to 38% relative to a standard single-stage DLM, achieves up to 73% higher measured throughput than ADLM.",
+      "identifiers": [
+        "SemanticScholar:d52df0314a0dd201f3fb9092d8888ce6a19eeac6"
+      ],
+      "semantic_scholar_id": "d52df0314a0dd201f3fb9092d8888ce6a19eeac6",
+      "canonical_id": "arXiv:2609.37924",
+      "arxiv_id": "2609.37924",
+      "doi": "10.48550/arXiv.2609.37924",
+      "authors": [
+        "J. Paul",
+        "Litu Rout",
+        "Aditya Akella",
+        "S. Shakkottai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 52,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AgentWeave: Efficient Distributed Agent Serving via Flow Decomposition",
+      "source_url": "https://arxiv.org/abs/2610.14804",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent applications are evolving into workflows composed of large language model (LLM) calls and tool invocations, termed modules. Existing distributed agent systems typically adopt a disaggregated architecture, deploying different modules on separate devices. While this enables pipeline parallelism, imbalanced module latencies introduce severe pipeline bubbles that limit throughput. A natural alternative is an aggregated architecture that co-deploys all modules across all devices, eliminating bubbles by keeping every device continuously active. However, this introduces request blocking: short requests are forced to progress in lockstep with longer ones in the same batch, and newly arriving requests must wait until the entire ongoing batch completes the full workflow. To address this, we propose AgentWeave, an efficient distributed serving system for agent applications built on the aggregated architecture. Its core mechanism, flow decomposition, decomposes long agent requests into fine-grained execution units while preserving agent semantics, allowing short and newly arriving requests to proceed without being stalled by long-running ones. Complementing this, a flow-adaptive scheduler dynamically balances the throughput gains of decomposition against its scheduling overhead. Experiments across four representative agent applications demonstrate that AgentWeave improves throughput by 1.28-1.81x, reduces average latency by 2.08-2.45x, and reduces P90 latency by 1.56-2.04x over state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:e61a8145478c0677e27841df11a69824dda6ed31"
+      ],
+      "semantic_scholar_id": "e61a8145478c0677e27841df11a69824dda6ed31",
+      "canonical_id": "arXiv:2610.14804",
+      "arxiv_id": "2610.14804",
+      "authors": [
+        "Kai-Bin Guo",
+        "Peng-Tu Li",
+        "Zi-Cong Hong",
+        "Zhi-Yuan Fang",
+        "Wu-Hui Chen",
+        "R. Guerraoui",
+        "A. Kermarrec"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Window Token Concatenation for Efficient Visual Large Language Models",
+      "source_url": "https://arxiv.org/abs/2504.04024",
+      "year": 2025,
+      "published": "2025-04-05",
+      "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To effectively reduce the visual tokens in Visual Large Language Models (VLLMs), we propose a novel approach called Wi ndow Token Co ncatenation (WiCo). Specifically, we employ a sliding window to concatenate spatially adjacent visual tokens. However, directly concatenating these tokens may group diverse tokens into one, and thus obscure some fine details. To address this challenge, we propose fine-tuning the last few layers of the vision encoder to adaptively adjust the visual tokens, encouraging that those within the same window exhibit similar features. To further enhance the performance on fine-grained visual understanding tasks, we introduce WiCo+, which decomposes the visual tokens in later layers of the LLM. Such a design enjoys the merits of the large perception field of the LLM for fine-grained visual understanding while keeping a small number of visual tokens for efficient inference. We perform extensive experiments on both coarse- and finegrained visual understanding tasks based on LLaVA-1.5 and Shikra, showing better performance compared with existing token reduction projectors. The code is available: https://github.com/JackYFL/WiCo.",
+      "identifiers": [
+        "SemanticScholar:e3c21821e1ae738da253b043298b067e3792298a"
+      ],
+      "semantic_scholar_id": "e3c21821e1ae738da253b043298b067e3792298a",
+      "canonical_id": "arXiv:2504.04024",
+      "arxiv_id": "2504.04024",
+      "doi": "10.1109/CVPRW67362.2025.00301",
+      "authors": [
+        "Yi-Fan Li",
+        "Wentao Bao",
+        "Bo-Tao Ye",
+        "Zhen Tan",
+        "Tian-Long Chen",
+        "Huan Liu",
+        "Yu Kong"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 594,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models",
+      "source_url": "https://arxiv.org/abs/2409.14595",
+      "year": 2024,
+      "published": "2024-09-22",
+      "venue": "ENLSP",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs), with their increasing depth and number of parameters, have demonstrated outstanding performance across a variety of natural language processing tasks. However, this growth in scale leads to increased computational demands, particularly during inference and fine-tuning. To address these challenges, we introduce EchoAtt, a novel framework aimed at optimizing transformer-based models by analyzing and leveraging the similarity of attention patterns across layers. Our analysis reveals that many inner layers in LLMs, especially larger ones, exhibit highly similar attention matrices. By exploiting this similarity, EchoAtt enables the sharing of attention matrices in less critical layers, significantly reducing computational requirements without compromising performance. We incorporate this approach within a knowledge distillation setup, where a pre-trained teacher model guides the training of a smaller student model. The student model selectively shares attention matrices in layers with high similarity while inheriting key parameters from the teacher. Our best results with TinyLLaMA-1.1B demonstrate that EchoAtt improves inference speed by 15\\%, training speed by 25\\%, and reduces the number of parameters by approximately 4\\%, all while improving zero-shot performance. These findings highlight the potential of attention matrix sharing to enhance the efficiency of LLMs, making them more practical for real-time and resource-limited applications.",
+      "identifiers": [
+        "SemanticScholar:5270d556608d58aba6557b5f994db0b30f31287a"
+      ],
+      "semantic_scholar_id": "5270d556608d58aba6557b5f994db0b30f31287a",
+      "canonical_id": "arXiv:2409.14595",
+      "arxiv_id": "2409.14595",
+      "doi": "10.48550/arXiv.2409.14595",
+      "authors": [
+        "Hossein Rajabzadeh",
+        "A. Jafari",
+        "Aman Sharma",
+        "Benyamin Jami",
+        "Hyock Ju Kwon",
+        "Ali Ghodsi",
+        "Boxing Chen",
+        "Mehdi Rezagholizadeh"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 789,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scaling Up Throughput-oriented LLM Inference Applications on Heterogeneous Opportunistic GPU Clusters with Pervasive Context Management",
+      "source_url": "https://arxiv.org/abs/2509.13201",
+      "year": 2025,
+      "published": "2025-09-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widespread growth in LLM developments increasingly demands more computational power from clusters than what they can supply. Traditional LLM applications inherently require huge static resource allocations, which force users to either wait in a long job queue and accept progress delay, or buy expensive hardware to fulfill their needs and exacerbate the demand-supply problem. However, not all LLM applications are latency-sensitive and can instead be executed in a throughput-oriented way. This throughput orientation allows a dynamic allocation that opportunistically pools available resources over time, avoiding both the long queue and expensive GPU purchases. Effectively utilizing opportunistic resources brings numerous challenges nevertheless. Our solution, pervasive context management, exploits the common computational context in LLM applications and provides mechanisms and policies that allow seamless context reuse on opportunistic resources. Our evaluation shows an LLM application with pervasive context management on opportunistic resources reduces its execution time by 98.1%.",
+      "identifiers": [
+        "SemanticScholar:83b43af6e58f7d3a23ebb6153ef6df3b02881518"
+      ],
+      "semantic_scholar_id": "83b43af6e58f7d3a23ebb6153ef6df3b02881518",
+      "canonical_id": "arXiv:2509.13201",
+      "arxiv_id": "2509.13201",
+      "doi": "10.48550/arXiv.2509.13201",
+      "authors": [
+        "Thanh Son Phung",
+        "D. Thain"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 430,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.09555",
+      "identity_tokens": [
+        "id:DOI:10.18653/2026.findings-emnlp.1774",
+        "id:SemanticScholar:3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59",
+        "id:arXiv:2602.09555",
+        "title:adaptive testtime compute allocation for block diffusion language models in complex reasoning",
+        "url:https://arxiv.org/abs/2602.09555"
+      ],
+      "record": {
+        "title": "Adaptive Test-Time Compute Allocation for Block Diffusion Language Models in Complex Reasoning",
+        "source_url": "https://arxiv.org/abs/2602.09555",
+        "year": 2026,
+        "published": "2026-02-10",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in block diffusion language models have demonstrated competitive performance and strong scalability on reasoning tasks. However, their test-time compute allocation remains largely unexplored, leaving a critical speed-effectiveness trade-off unresolved in long Chain-of-Thought reasoning. To address this, we propose a unified test-time compute allocation framework that introduces adaptivity in both step-wise decoding and blockwise generation. At the decoding level, we propose Bounded Adaptive Confidence Decoding (BACD), a difficulty-aware sampling strategy that dynamically adjusts denoising based on model confidence, accelerating inference while controlling error accumulation. Beyond step-wise adaptivity, we introduce the Think Coarse, Critic Fine (TCCF) paradigm that allocates large block sizes for exploratory thinking and smaller block sizes for precise refinement. To stabilize training under varying block configurations, we adopt Progressive Block Size Extension, which mitigates quality degradation when scaling up block sizes. Extensive evaluations on six benchmarks show that our TDAR-8B model with BACD and TCCF achieves a 2.38$\\times$ speedup and +3.4% average accuracy over the strong TraDo-8B baseline, unlocking the potential of block diffusion in complex reasoning.",
+        "identifiers": [
+          "SemanticScholar:3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59"
+        ],
+        "semantic_scholar_id": "3aad7aa2f97dabaa2c06bbd4f36bf5c0b9065b59",
+        "canonical_id": "arXiv:2602.09555",
+        "arxiv_id": "2602.09555",
+        "doi": "10.18653/2026.findings-emnlp.1774",
+        "authors": [
+          "Yi Lu",
+          "De-Yang Kong",
+          "Jia-Ning Wang",
+          "Linsen Guo",
+          "Xue Wang",
+          "Qi Guo",
+          "Tao Gui",
+          "Xuan-Jing Huang",
+          "Wei Ye",
+          "Shi-Kun Zhang",
+          "Wei Wang"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 283,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.02872",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.02872",
+        "id:SemanticScholar:29f31880bf3c2c566889ea5ba3ccecfc308256d3",
+        "id:arXiv:2603.02872",
+        "title:thinkasyousee streaming chainofthought reasoning for large visionlanguage models",
+        "url:https://arxiv.org/abs/2603.02872"
+      ],
+      "record": {
+        "title": "Think-as-You-See: Streaming Chain-of-Thought Reasoning for Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2603.02872",
+        "year": 2026,
+        "published": "2026-03-03",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision Language Models (LVLMs) exhibit strong Chain-of-Thought (CoT) capabilities, yet most existing paradigms assume full-video availability before inference, a batch-style process misaligned with real-world video streams where information arrives sequentially. Motivated by the streaming nature of video data, we investigate two streaming reasoning paradigms for LVLMs. The first, an interleaved paradigm, alternates between receiving frames and producing partial reasoning but remains constrained by strictly ordered cache updates. To better match streaming inputs, we propose \\textbf{Think-as-You-See (TaYS)}, a unified framework enabling true concurrent reasoning. TaYS integrates parallelized CoT generation, stream-constrained training, and stream-parallel inference. It further employs temporally aligned reasoning units, streaming attention masks and positional encodings, and a dual KV-cache that decouples visual encoding from textual reasoning. We evaluate all paradigms on the Qwen2.5-VL family across representative video CoT tasks, including event dynamics analysis, causal reasoning, and thematic understanding. Experiments show that TaYS consistently outperforms both batch and interleaved baselines, improving reasoning performance while substantially reducing time-to-first-token (TTFT) and overall reasoning delay. These results demonstrate the effectiveness of data-aligned streaming reasoning in enabling efficient and responsive video understanding for LVLMs. We release our code at https://github.com/EIT-NLP/StreamingLLM/tree/main/TaYS",
+        "identifiers": [
+          "SemanticScholar:29f31880bf3c2c566889ea5ba3ccecfc308256d3"
+        ],
+        "semantic_scholar_id": "29f31880bf3c2c566889ea5ba3ccecfc308256d3",
+        "canonical_id": "arXiv:2603.02872",
+        "arxiv_id": "2603.02872",
+        "doi": "10.48550/arXiv.2603.02872",
+        "authors": [
+          "Jia-Liang Zhang",
+          "Jun-Long Tong",
+          "Jun-Yang Lin",
+          "Hao Wu",
+          "Yi-Rong Sun",
+          "Yun-Pu Ma",
+          "Xiao-Yu Shen"
+        ],
+        "priority": 110,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 110,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 262,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.15563",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.15563",
+        "id:SemanticScholar:9cfd8aebe45d95f1ab6cb11703fc90994c3c661a",
+        "id:arXiv:2602.15563",
+        "title:1bit wonder improving qat performance in the lowbit regime through kmeans quantization",
+        "url:https://arxiv.org/abs/2602.15563"
+      ],
+      "record": {
+        "title": "1-Bit Wonder: Improving QAT Performance in the Low-Bit Regime through K-Means Quantization",
+        "source_url": "https://arxiv.org/abs/2602.15563",
+        "year": 2026,
+        "published": "2026-02-17",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization-aware training (QAT) is an effective method to drastically reduce the memory footprint of LLMs while keeping performance degradation at an acceptable level. However, the optimal choice of quantization format and bit-width presents a challenge in practice. The full design space of quantization is not fully explored in the context of QAT, and the precise trade-off between quantization and downstream performance is poorly understood, as comparisons often rely solely on perplexity-based evaluations. In this work, we address these shortcomings with an empirical study of QAT in the low-bit regime. We show that k-means based weight quantization outperforms integer formats and can be implemented efficiently on standard hardware. Furthermore, we find that, under a fixed inference memory budget, the best performance on generative downstream tasks is achieved with $1$-bit quantized weights.",
+        "identifiers": [
+          "SemanticScholar:9cfd8aebe45d95f1ab6cb11703fc90994c3c661a"
+        ],
+        "semantic_scholar_id": "9cfd8aebe45d95f1ab6cb11703fc90994c3c661a",
+        "canonical_id": "arXiv:2602.15563",
+        "arxiv_id": "2602.15563",
+        "doi": "10.48550/arXiv.2602.15563",
+        "authors": [
+          "Sohir Maskey",
+          "Constantin Eichenberg",
+          "Johannes Messner",
+          "Douglas Orr"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 276,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.23182",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.23182",
+        "id:SemanticScholar:446a6dea6c25ac7b4708442679a42564b3c22089",
+        "id:arXiv:2601.23182",
+        "title:fouriersampler unlocking nonautoregressive potential in diffusion language models via frequencyguided generation",
+        "url:https://arxiv.org/abs/2601.23182"
+      ],
+      "record": {
+        "title": "FourierSampler: Unlocking Non-Autoregressive Potential in Diffusion Language Models via Frequency-Guided Generation",
+        "source_url": "https://arxiv.org/abs/2601.23182",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite the non-autoregressive potential of diffusion language models (dLLMs), existing decoding strategies demonstrate positional bias, failing to fully unlock the potential of arbitrary generation. In this work, we delve into the inherent spectral characteristics of dLLMs and present the first frequency-domain analysis showing that low-frequency components in hidden states primarily encode global structural information and long-range dependencies, while high-frequency components are responsible for characterizing local details. Based on this observation, we propose FourierSampler, which leverages a frequency-domain sliding window mechanism to dynamically guide the model to achieve a\"structure-to-detail\"generation. FourierSampler outperforms other inference enhancement strategies on LLADA and SDAR, achieving relative improvements of 20.4% on LLaDA1.5-8B and 16.0% on LLaDA-8B-Instruct. It notably surpasses similarly sized autoregressive models like Llama3.1-8B-Instruct.",
+        "identifiers": [
+          "SemanticScholar:446a6dea6c25ac7b4708442679a42564b3c22089"
+        ],
+        "semantic_scholar_id": "446a6dea6c25ac7b4708442679a42564b3c22089",
+        "canonical_id": "arXiv:2601.23182",
+        "arxiv_id": "2601.23182",
+        "doi": "10.48550/arXiv.2601.23182",
+        "authors": [
+          "Si-Yang He",
+          "Qi-Qi Wang",
+          "Xiaoran Liu",
+          "Hongnan Ma",
+          "Yiwei Shi",
+          "Yue-Rong Song",
+          "Ying Zhu",
+          "Tianyi Liang",
+          "Zeng-Feng Huang",
+          "Zi-Wei He",
+          "Xi-Peng Qiu"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 294,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.17486",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.emnlp-main.1723",
+        "id:SemanticScholar:cc9d7843699a61f73314d0e6ddd019854c390197",
+        "id:arXiv:2607.17486",
+        "title:salt salienceaware lexical trie for longcontext compression",
+        "url:https://arxiv.org/abs/2607.17486"
+      ],
+      "record": {
+        "title": "SALT: Salience-Aware Lexical Trie for Long-Context Compression",
+        "source_url": "https://arxiv.org/abs/2607.17486",
+        "year": 2026,
+        "published": "2026-07-20",
+        "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) process increasingly longer prompts, computation and KV-cache memory costs have emerged as major bottlenecks in inference systems. Existing input-level prompt compression methods address this, but rank each sentence by a scalar relevance score, treating the document as an unstructured pool of words and sentences. Under tight budgets, this causes theme collapse, where the dominant theme(s) of a document consumes the budget, discarding less-frequent yet task-relevant themes. Preserving thematic coverage instead requires allocating the budget across recurring themes rather than scoring sentences in isolation. To this end, we propose SALT, a model-agnostic extractive framework that organizes per-sentence keywords into a trie ordered by sentence frequency (SF), a lightweight, reusable proxy for document thematic structure. This trie-based organization smooths memory allocation and prevents dominant themes from monopolizing the budget. Multi-anchor retrieval activates trie nodes labeled by query keywords at any depth, and the trie persists across dialogue turns, supporting multi-turn use without re-encoding the document. By preserving document themes, SALT reduces the prefill computation and memory cost of long-context prompts while remaining composable with KV-cache methods that target decoding-time latency and memory.",
+        "identifiers": [
+          "SemanticScholar:cc9d7843699a61f73314d0e6ddd019854c390197"
+        ],
+        "semantic_scholar_id": "cc9d7843699a61f73314d0e6ddd019854c390197",
+        "canonical_id": "arXiv:2607.17486",
+        "arxiv_id": "2607.17486",
+        "doi": "10.18653/v1/2026.emnlp-main.1723",
+        "authors": [
+          "Oteo Mamo",
+          "Hyunji Yi",
+          "Joydhriti Choudhury",
+          "Shang-Qian Gao",
+          "Wei-Kuan Yu"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 123,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.03340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.03340",
+        "id:SemanticScholar:dfabdaaf06a67a958045f79be14c2aea557fbdd0",
+        "id:arXiv:2507.03340",
+        "title:degrees of freedom for linear attention distilling softmax attention with optimal feature efficiency",
+        "url:https://arxiv.org/abs/2507.03340"
+      ],
+      "record": {
+        "title": "Degrees of Freedom for Linear Attention: Distilling Softmax Attention with Optimal Feature Efficiency",
+        "source_url": "https://arxiv.org/abs/2507.03340",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention has attracted interest as a computationally efficient approximation to softmax attention, especially for long sequences. Recent studies have explored distilling softmax attention in pre-trained Transformers into linear attention. However, a critical challenge remains: how to choose the feature dimension that governs the approximation quality. Existing methods fix this dimension uniformly across all attention layers, overlooking the diverse roles and complexities of them. In this paper, we propose a principled method to automatically determine the feature dimension in linear attention using the concept of statistical degrees of freedom, which represent the effective dimensionality of the inputs. We provide a theoretical bound on the approximation error and show that the dimension chosen by our method achieves smaller error under a fixed computational budget. Furthermore, we introduce an efficient layerwise training strategy to learn nonlinear features tailored to each layer. Experiments on multiple pre-trained transformers demonstrate that our method improves the performance of distilled models compared to baselines without increasing the inference cost. Our findings also provide insight into how the complexity of the attention mechanism evolves across layers.",
+        "identifiers": [
+          "SemanticScholar:dfabdaaf06a67a958045f79be14c2aea557fbdd0"
+        ],
+        "semantic_scholar_id": "dfabdaaf06a67a958045f79be14c2aea557fbdd0",
+        "canonical_id": "arXiv:2507.03340",
+        "arxiv_id": "2507.03340",
+        "doi": "10.48550/arXiv.2507.03340",
+        "authors": [
+          "Naoki Nishikawa",
+          "Rei Higuchi",
+          "Taiji Suzuki"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.04947",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.04947",
+        "id:SemanticScholar:5c2cd79f5f85bab413723e5af877609ecf25ac17",
+        "id:arXiv:2609.04947",
+        "title:mcpo modalitycontrastive preference optimization for multimodal chainofthought compression",
+        "url:https://arxiv.org/abs/2609.04947"
+      ],
+      "record": {
+        "title": "MCPO: Modality-Contrastive Preference Optimization for Multimodal Chain-of-Thought Compression",
+        "source_url": "https://arxiv.org/abs/2609.04947",
+        "year": 2026,
+        "published": "2026-09-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, multimodal large-scale reasoning models have demonstrated remarkable capabilities in solving complex tasks through long Chains-of-Thought (M-CoT). However, excessively long reasoning trajectories incur substantial computational costs and significant KV-cache pressure. Existing CoT compression and alignment paradigms mainly rely on static rules or single-dimensional preferences, lacking fine-grained cross-modal constraints; as a result, they are prone to inducing visual laziness and hallucinatory reasoning. To address these issues, we propose Modality-Contrastive Preference Optimization (MCPO), a highly sample-efficient two-stage length-compression method that requires fewer than 900 training samples. In the compression stage, we introduce a step-level Normalized Cross-Modal Mutual Information (NCMI) pruning algorithm, which automatically identifies and removes visual-independent reasoning steps by comparing the reasoning discrepancies between with-image and no-image contexts. This significantly reduces redundancy and hallucinatory content in the reasoning chains. In the alignment stage, the model first undergoes supervised fine-tuning to achieve domain-adaptive initialization, followed by optimization using an asymmetric multimodal length-controlled preference loss. This objective adopts a highly nonlinear odds-ratio formulation that provides steep gradients in the with-image context to reinforce length constraints for preferred trajectories, while applying a scaled, flat-gradient linear difference in the no-image context to maintain modality consistency, thereby achieving stable cross-modal preference alignment. Extensive experiments on mainstream base models such as Qwen3-VL-Thinking show that our method can reduce CoT length by up to 69.5% and achieve up to 3.34x end-to-end inference speedup while preserving original accuracy.",
+        "identifiers": [
+          "SemanticScholar:5c2cd79f5f85bab413723e5af877609ecf25ac17"
+        ],
+        "semantic_scholar_id": "5c2cd79f5f85bab413723e5af877609ecf25ac17",
+        "canonical_id": "arXiv:2609.04947",
+        "arxiv_id": "2609.04947",
+        "doi": "10.48550/arXiv.2609.04947",
+        "authors": [
+          "Guang-Heng Yang",
+          "Zhen-Liang Ni",
+          "Zhen-Kai Wu",
+          "Han Shu",
+          "Juan Feng",
+          "Wen-Ming Yang",
+          "Jie Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 77,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37924",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.37924",
+        "id:SemanticScholar:d52df0314a0dd201f3fb9092d8888ce6a19eeac6",
+        "id:arXiv:2609.37924",
+        "title:timeanchored diffusion language models latentspace caching for fast generation",
+        "url:https://arxiv.org/abs/2609.37924"
+      ],
+      "record": {
+        "title": "Time-Anchored Diffusion Language Models: Latent-Space Caching for Fast Generation",
+        "source_url": "https://arxiv.org/abs/2609.37924",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work on anchored diffusion language models improves denoising by shaping an intermediate latent space with supervised important-token targets. In this work, we introduce time-based (self-supervised) anchoring, which learns and reuses latent anchors without requiring such targets. Our key observation is that anchors encode persistent properties of the clean sequence, such as its semantic intent, global structure, or intermediate plan. Although their hidden representations become stale as the token canvas evolves, their semantic content remains useful across nearby diffusion times. This is implemented through a two-stage architecture consisting of a relatively expensive anchor network that generates the latent cache state and a lightweight denoising network that intelligently combines the cached latent state with the current state at each reverse step using a fusion module. This gives anchoring a latent-space caching interpretation: the anchor network is evaluated periodically, while its cached representation is reused across multiple reverse steps. We instantiate this framework as TADM:Post-train, which time-anchorizes pretrained DLMs, and TADM:Pretraining, which learns time-based anchors during pretraining. Applied to DiffusionGemma-26B, TADM:Post-train improves throughput by approximately 49% to 79% on several math, code, and STEM benchmarks (GSM8K, AIME26, GPQA-Diamond, LiveCodeBench-v6, HumanEval, MMLU-Pro). TADM:Pretraining reduces Transformer-layer computation by up to 38% relative to a standard single-stage DLM, achieves up to 73% higher measured throughput than ADLM.",
+        "identifiers": [
+          "SemanticScholar:d52df0314a0dd201f3fb9092d8888ce6a19eeac6"
+        ],
+        "semantic_scholar_id": "d52df0314a0dd201f3fb9092d8888ce6a19eeac6",
+        "canonical_id": "arXiv:2609.37924",
+        "arxiv_id": "2609.37924",
+        "doi": "10.48550/arXiv.2609.37924",
+        "authors": [
+          "J. Paul",
+          "Litu Rout",
+          "Aditya Akella",
+          "S. Shakkottai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 52,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14804",
+      "identity_tokens": [
+        "id:SemanticScholar:e61a8145478c0677e27841df11a69824dda6ed31",
+        "id:arXiv:2610.14804",
+        "title:agentweave efficient distributed agent serving via flow decomposition",
+        "url:https://arxiv.org/abs/2610.14804"
+      ],
+      "record": {
+        "title": "AgentWeave: Efficient Distributed Agent Serving via Flow Decomposition",
+        "source_url": "https://arxiv.org/abs/2610.14804",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agent applications are evolving into workflows composed of large language model (LLM) calls and tool invocations, termed modules. Existing distributed agent systems typically adopt a disaggregated architecture, deploying different modules on separate devices. While this enables pipeline parallelism, imbalanced module latencies introduce severe pipeline bubbles that limit throughput. A natural alternative is an aggregated architecture that co-deploys all modules across all devices, eliminating bubbles by keeping every device continuously active. However, this introduces request blocking: short requests are forced to progress in lockstep with longer ones in the same batch, and newly arriving requests must wait until the entire ongoing batch completes the full workflow. To address this, we propose AgentWeave, an efficient distributed serving system for agent applications built on the aggregated architecture. Its core mechanism, flow decomposition, decomposes long agent requests into fine-grained execution units while preserving agent semantics, allowing short and newly arriving requests to proceed without being stalled by long-running ones. Complementing this, a flow-adaptive scheduler dynamically balances the throughput gains of decomposition against its scheduling overhead. Experiments across four representative agent applications demonstrate that AgentWeave improves throughput by 1.28-1.81x, reduces average latency by 2.08-2.45x, and reduces P90 latency by 1.56-2.04x over state-of-the-art baselines.",
+        "identifiers": [
+          "SemanticScholar:e61a8145478c0677e27841df11a69824dda6ed31"
+        ],
+        "semantic_scholar_id": "e61a8145478c0677e27841df11a69824dda6ed31",
+        "canonical_id": "arXiv:2610.14804",
+        "arxiv_id": "2610.14804",
+        "authors": [
+          "Kai-Bin Guo",
+          "Peng-Tu Li",
+          "Zi-Cong Hong",
+          "Zhi-Yuan Fang",
+          "Wu-Hui Chen",
+          "R. Guerraoui",
+          "A. Kermarrec"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.04024",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprw67362.2025.00301",
+        "id:SemanticScholar:e3c21821e1ae738da253b043298b067e3792298a",
+        "id:arXiv:2504.04024",
+        "title:window token concatenation for efficient visual large language models",
+        "url:https://arxiv.org/abs/2504.04024"
+      ],
+      "record": {
+        "title": "Window Token Concatenation for Efficient Visual Large Language Models",
+        "source_url": "https://arxiv.org/abs/2504.04024",
+        "year": 2025,
+        "published": "2025-04-05",
+        "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To effectively reduce the visual tokens in Visual Large Language Models (VLLMs), we propose a novel approach called Wi ndow Token Co ncatenation (WiCo). Specifically, we employ a sliding window to concatenate spatially adjacent visual tokens. However, directly concatenating these tokens may group diverse tokens into one, and thus obscure some fine details. To address this challenge, we propose fine-tuning the last few layers of the vision encoder to adaptively adjust the visual tokens, encouraging that those within the same window exhibit similar features. To further enhance the performance on fine-grained visual understanding tasks, we introduce WiCo+, which decomposes the visual tokens in later layers of the LLM. Such a design enjoys the merits of the large perception field of the LLM for fine-grained visual understanding while keeping a small number of visual tokens for efficient inference. We perform extensive experiments on both coarse- and finegrained visual understanding tasks based on LLaVA-1.5 and Shikra, showing better performance compared with existing token reduction projectors. The code is available: https://github.com/JackYFL/WiCo.",
+        "identifiers": [
+          "SemanticScholar:e3c21821e1ae738da253b043298b067e3792298a"
+        ],
+        "semantic_scholar_id": "e3c21821e1ae738da253b043298b067e3792298a",
+        "canonical_id": "arXiv:2504.04024",
+        "arxiv_id": "2504.04024",
+        "doi": "10.1109/CVPRW67362.2025.00301",
+        "authors": [
+          "Yi-Fan Li",
+          "Wentao Bao",
+          "Bo-Tao Ye",
+          "Zhen Tan",
+          "Tian-Long Chen",
+          "Huan Liu",
+          "Yu Kong"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 594,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2409.14595",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2409.14595",
+        "id:SemanticScholar:5270d556608d58aba6557b5f994db0b30f31287a",
+        "id:arXiv:2409.14595",
+        "title:echoatt attend copy then adjust for more efficient large language models",
+        "url:https://arxiv.org/abs/2409.14595"
+      ],
+      "record": {
+        "title": "EchoAtt: Attend, Copy, then Adjust for More Efficient Large Language Models",
+        "source_url": "https://arxiv.org/abs/2409.14595",
+        "year": 2024,
+        "published": "2024-09-22",
+        "venue": "ENLSP",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs), with their increasing depth and number of parameters, have demonstrated outstanding performance across a variety of natural language processing tasks. However, this growth in scale leads to increased computational demands, particularly during inference and fine-tuning. To address these challenges, we introduce EchoAtt, a novel framework aimed at optimizing transformer-based models by analyzing and leveraging the similarity of attention patterns across layers. Our analysis reveals that many inner layers in LLMs, especially larger ones, exhibit highly similar attention matrices. By exploiting this similarity, EchoAtt enables the sharing of attention matrices in less critical layers, significantly reducing computational requirements without compromising performance. We incorporate this approach within a knowledge distillation setup, where a pre-trained teacher model guides the training of a smaller student model. The student model selectively shares attention matrices in layers with high similarity while inheriting key parameters from the teacher. Our best results with TinyLLaMA-1.1B demonstrate that EchoAtt improves inference speed by 15\\%, training speed by 25\\%, and reduces the number of parameters by approximately 4\\%, all while improving zero-shot performance. These findings highlight the potential of attention matrix sharing to enhance the efficiency of LLMs, making them more practical for real-time and resource-limited applications.",
+        "identifiers": [
+          "SemanticScholar:5270d556608d58aba6557b5f994db0b30f31287a"
+        ],
+        "semantic_scholar_id": "5270d556608d58aba6557b5f994db0b30f31287a",
+        "canonical_id": "arXiv:2409.14595",
+        "arxiv_id": "2409.14595",
+        "doi": "10.48550/arXiv.2409.14595",
+        "authors": [
+          "Hossein Rajabzadeh",
+          "A. Jafari",
+          "Aman Sharma",
+          "Benyamin Jami",
+          "Hyock Ju Kwon",
+          "Ali Ghodsi",
+          "Boxing Chen",
+          "Mehdi Rezagholizadeh"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 789,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.13201",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.13201",
+        "id:SemanticScholar:83b43af6e58f7d3a23ebb6153ef6df3b02881518",
+        "id:arXiv:2509.13201",
+        "title:scaling up throughputoriented llm inference applications on heterogeneous opportunistic gpu clusters with pervasive context management",
+        "url:https://arxiv.org/abs/2509.13201"
+      ],
+      "record": {
+        "title": "Scaling Up Throughput-oriented LLM Inference Applications on Heterogeneous Opportunistic GPU Clusters with Pervasive Context Management",
+        "source_url": "https://arxiv.org/abs/2509.13201",
+        "year": 2025,
+        "published": "2025-09-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The widespread growth in LLM developments increasingly demands more computational power from clusters than what they can supply. Traditional LLM applications inherently require huge static resource allocations, which force users to either wait in a long job queue and accept progress delay, or buy expensive hardware to fulfill their needs and exacerbate the demand-supply problem. However, not all LLM applications are latency-sensitive and can instead be executed in a throughput-oriented way. This throughput orientation allows a dynamic allocation that opportunistically pools available resources over time, avoiding both the long queue and expensive GPU purchases. Effectively utilizing opportunistic resources brings numerous challenges nevertheless. Our solution, pervasive context management, exploits the common computational context in LLM applications and provides mechanisms and policies that allow seamless context reuse on opportunistic resources. Our evaluation shows an LLM application with pervasive context management on opportunistic resources reduces its execution time by 98.1%.",
+        "identifiers": [
+          "SemanticScholar:83b43af6e58f7d3a23ebb6153ef6df3b02881518"
+        ],
+        "semantic_scholar_id": "83b43af6e58f7d3a23ebb6153ef6df3b02881518",
+        "canonical_id": "arXiv:2509.13201",
+        "arxiv_id": "2509.13201",
+        "doi": "10.48550/arXiv.2509.13201",
+        "authors": [
+          "Thanh Son Phung",
+          "D. Thain"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 430,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0e4d15c71ca9f2adf325d8b87010aad6cbadce928ea9524b578d622cb55a3129",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

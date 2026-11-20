@@ -1,0 +1,700 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e628667b72d1fa69-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e628667b72d1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2403.02920",
+    "arXiv:2412.05225",
+    "arXiv:2501.15665",
+    "arXiv:2505.19342",
+    "arXiv:2603.04514",
+    "arXiv:2604.11128",
+    "arXiv:2609.40247"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:46.565705+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2403.02920",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.05225",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.15665",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19342",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04514",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.11128",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.40247",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "TaylorShift: Shifting the Complexity of Self-Attention from Squared to Linear (and Back) using Taylor-Softmax",
+      "source_url": "https://arxiv.org/abs/2403.02920",
+      "year": 2024,
+      "published": "2024-03-05",
+      "venue": "International Conference on Pattern Recognition",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic complexity of the attention mechanism represents one of the biggest hurdles for processing long sequences using Transformers. Current methods, relying on sparse representations or stateful recurrence, sacrifice token-to-token interactions, which ultimately leads to compromises in performance. This paper introduces TaylorShift, a novel reformulation of the Taylor softmax that enables computing full token-to-token interactions in linear time and space. We analytically determine the crossover points where employing TaylorShift becomes more efficient than traditional attention, aligning closely with empirical measurements. Specifically, our findings demonstrate that TaylorShift enhances memory efficiency for sequences as short as 800 tokens and accelerates inference for inputs of approximately 1700 tokens and beyond. For shorter sequences, TaylorShift scales comparably with the vanilla attention. Furthermore, a classification benchmark across five tasks involving long sequences reveals no degradation in accuracy when employing Transformers equipped with TaylorShift. For reproducibility, we provide access to our code under https://github.com/tobna/TaylorShift.",
+      "identifiers": [
+        "SemanticScholar:e87fda91c2cbf881c5388048f98098792c7f62ce"
+      ],
+      "semantic_scholar_id": "e87fda91c2cbf881c5388048f98098792c7f62ce",
+      "canonical_id": "arXiv:2403.02920",
+      "arxiv_id": "2403.02920",
+      "doi": "10.1007/978-3-031-78172-8_1",
+      "authors": [
+        "T. Nauen",
+        "Sebastian Palacio",
+        "A. Dengel"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 990,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Progressive Refinement Regulation for Accelerating Diffusion Language Model Decoding",
+      "source_url": "https://arxiv.org/abs/2603.04514",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models generate text through iterative denoising under a uniform refinement rule applied to all tokens. However, tokens stabilize at different rates in practice, leading to substantial redundant refinement and motivating refinement control over the denoising process. Existing approaches typically assess refinement necessity from instantaneous, step-level signals under a fixed decoding process. In contrast, whether a token has converged is defined by how its prediction changes along its future refinement trajectory. Moreover, changing the refinement rule reshapes future refinement trajectories, which in turn determine how refinement rules should be formulated, making refinement control inherently dynamic. We propose \\emph{Progressive Refinement Regulation} (PRR), a progressive, trajectory-grounded refinement control framework that derives a token-level notion of empirical convergence progress from full decoding rollouts. Based on this signal, PRR learns a lightweight token-wise controller to regulate refinement via temperature-based distribution shaping under a progressive self-evolving training scheme. Experiments show that PRR substantially accelerates diffusion language model decoding while preserving generation quality.",
+      "identifiers": [
+        "SemanticScholar:d8bdeb95806e9413c7c7e5f159a3527dc1554cb2"
+      ],
+      "semantic_scholar_id": "d8bdeb95806e9413c7c7e5f159a3527dc1554cb2",
+      "canonical_id": "arXiv:2603.04514",
+      "arxiv_id": "2603.04514",
+      "doi": "10.48550/arXiv.2603.04514",
+      "authors": [
+        "Li-Peng Wan",
+        "Jian Gu",
+        "Jun-Jie Ma",
+        "Jian-Guo Huang",
+        "Shiguang Sun",
+        "Siyuan Li",
+        "Xu-Guang Lan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 261,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Technology solutions targeting the performance of gen-AI inference in resource constrained platforms",
+      "source_url": "https://arxiv.org/abs/2604.11128",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "International Conference on IC Design & Technology",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of generative AI workloads, particularly language model inference, is intensifying on/off-chip memory pressure. Multimodal inputs such as video streams or images and downstream applications like Question Answering (QA) and analysis over large documents incur long context lengths, requiring caching of massive Key and Value states of the previous tokens. Even a low degree of concurrent inference serving on resource-constrained devices, like mobiles, can further add to memory capacity pressure and runtime memory management complexity. In this paper, we evaluate the performance implications of two emerging technology solutions to alleviate the memory pressure in terms of both capacity and bandwidth using a hierarchical roofline-based analytical performance model. For large models (e.g., 13B parameters) and context lengths, we investigate the performance implications of High Bandwidth Storage (HBS) and outline bandwidth/latency requirements to achieve an acceptable throughput for interactivity. For small models (e.g., 1B parameters), we evaluate the merit of a bonded global buffer memory chiplet and propose how to best utilize it.",
+      "identifiers": [
+        "SemanticScholar:c8d85afdb6e78e3b339aecc02d65bb28a296d3ab"
+      ],
+      "semantic_scholar_id": "c8d85afdb6e78e3b339aecc02d65bb28a296d3ab",
+      "canonical_id": "arXiv:2604.11128",
+      "arxiv_id": "2604.11128",
+      "doi": "10.1109/ICICDT69693.2026.11669195",
+      "authors": [
+        "Joyjit Kundu",
+        "J. Klein",
+        "Aakash Patel",
+        "D. Biswas"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 221,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling",
+      "source_url": "https://arxiv.org/abs/2609.40247",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model-as-a-service platforms call for continuous optimization as complex serving conditions expose inefficiencies missed before deployment. Detailed always-on profiling can incur substantial overhead, while lightweight collection omits information needed for diagnosis. We present Herschel, a continuous optimization system for production large language model (LLM) inference. Our key insight is that adaptive, on-demand profiling can provide rich full-stack evidence without continuous collection. Herschel safely attaches to and detaches from selected running processes without engine changes or restarts, and adapts coverage as investigations reveal missing evidence. Herschel reconstructs operator executions and cross-process dependencies to identify inefficiency mechanisms and suggest solutions using applicable reference fixes. AI agents implement and test engine and kernel changes under controlled conditions that preserve the triggering workload and dependencies, with expert review before deployment. Controlled tests show active-collection overhead below 0.5% for time to first token and 7% for time per output token. Bounded windows, typically 30 s, avoid the continuous cost of always-on tracing. Over six months, Herschel collected approximately 17,000 traces across over 120 model variants and more than 10 accelerator types, identifying inefficiency patterns in 23% of the traces. Representative findings guide widely deployed optimizations, including restructured synchronization, removal of unused computation, and improved operator implementations.",
+      "identifiers": [
+        "SemanticScholar:dd404f03fee491a001149963ff19159c2bef4302"
+      ],
+      "semantic_scholar_id": "dd404f03fee491a001149963ff19159c2bef4302",
+      "canonical_id": "arXiv:2609.40247",
+      "arxiv_id": "2609.40247",
+      "doi": "10.48550/arXiv.2609.40247",
+      "authors": [
+        "Lu-Ping Wang",
+        "Wei-Gao Chen",
+        "Yi-Fei Wu",
+        "Yong-He Zhang",
+        "Rui Zhang",
+        "Wen-Chao Wu",
+        "Ji-Yu Luo",
+        "Hao-Ran Geng",
+        "Xin Yang",
+        "Cheng Cao",
+        "Yue-Min Wu",
+        "Cheng-Ling Huang",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BEExformer: A Fast Inferencing Binarized Transformer With Early Exits",
+      "source_url": "https://arxiv.org/abs/2412.05225",
+      "year": 2024,
+      "published": "2024-12-06",
+      "venue": "IEEE Transactions on Sustainable Computing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) based on transformers achieve cutting-edge results on a variety of applications. However, their enormous size and processing requirements hinder deployment on constrained resources. To enhance efficiency, binarization and Early Exit (EE) have proved to be effective solutions. However, binarization may lead to performance loss as reduced precision affects gradient estimation and parameter updates. Besides, research on EE mechanisms is still in its early stages. To address these challenges, we introduce Binarized Early Exit Transformer (BEExformer), a first-of-its-kind selective learning-based transformer integrating Binarization-Aware Training (BAT) with EE for efficient and fast textual inference. Each transformer block has an integrated Selective-Learn Forget Network (SLFN) to enhance contextual retention while eliminating irrelevant information. The BAT employs a differentiable second-order approximation to the sign function, enabling gradient computation that captures both the sign and magnitude of the weights. This aids in 21.30 × reduction in model size. The EE mechanism hinges on fractional reduction in entropy among intermediate transformer blocks with soft-routing loss estimation. This accelerates inference by reducing FLOPs by 52.27% and even improves accuracy by 3.22% by resolving the “overthinking” problem inherent in deep networks. Extensive evaluation through comparison with the SOTA methods and various ablations across nine datasets covering multiple NLP tasks demonstrates its Pareto-optimal performance-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:16db0c6e4bb9e5cc1c803591b0e610c723688bbc"
+      ],
+      "semantic_scholar_id": "16db0c6e4bb9e5cc1c803591b0e610c723688bbc",
+      "canonical_id": "arXiv:2412.05225",
+      "arxiv_id": "2412.05225",
+      "doi": "10.1109/TSUSC.2026.3666456",
+      "authors": [
+        "Wazib Ansar",
+        "Saptarsi Goswami",
+        "Amlan Chakrabarti"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 714,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel",
+      "source_url": "https://arxiv.org/abs/2501.15665",
+      "year": 2025,
+      "published": "2025-01-26",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decoding in a Transformer based language model is inherently sequential as a token's embedding needs to pass through all the layers in the network before the generation of the next token can begin. In this work, we propose a new architecture StagFormer (Staggered Transformer), which staggers execution along the sequence axis and thereby enables parallelizing the decoding process along the depth of the model. We achieve this by breaking the dependency of the token representation at time step $i$ in layer $l$ upon the representations of tokens until time step $i$ from layer $l-1$. Instead, we stagger the execution and only allow a dependency on token representations until time step $i-1$. The later sections of the Transformer still get access to the\"rich\"representations from the prior section but only from those token positions which are one time step behind. StagFormer allows for different sections of the model to be executed in parallel yielding a potential speedup in decoding while being quality neutral in our simulations. We also explore many natural extensions of this idea. We present how weight-sharing across the different sections being staggered can be more practical in settings with limited memory. We explore the efficacy of using a bounded window attention to pass information from one section to another which helps drive further latency gains for some applications. We also explore the scalability of the staggering idea over more than 2 sections of the Transformer. Finally, we show how one can approximate a recurrent model during inference using weight-sharing. This variant can lead to substantial gains in quality for short generations while being neutral in its latency impact.",
+      "identifiers": [
+        "SemanticScholar:af95790d2145b29194825ac563351bef67787e9c"
+      ],
+      "semantic_scholar_id": "af95790d2145b29194825ac563351bef67787e9c",
+      "canonical_id": "arXiv:2501.15665",
+      "arxiv_id": "2501.15665",
+      "doi": "10.48550/arXiv.2501.15665",
+      "authors": [
+        "Dylan J. Cutler",
+        "Arun Kandoor",
+        "Nishanth Dikkala",
+        "Nikunj Saunshi",
+        "Xin Wang",
+        "R. Panigrahy"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 663,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference",
+      "source_url": "https://arxiv.org/abs/2505.19342",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-device inference can reduce Transformer latency by parallelizing computation. However, existing methods require high inter-device bandwidth, making them impractical for bandwidth-constrained environments. We present ASTRA, a communication-efficient framework that integrates sequence parallelism with mixed-precision attention, where non-local token embeddings are transmitted as low-bit vector-quantized codes while local attention remains full precision. To preserve accuracy under aggressive compression, ASTRA introduces Noise-Augmented Quantization and Distributed Class Tokens. Across vision and language models (e.g., ViT and GPT2), ASTRA achieves up to 2.64$\\times$ speedup over single-device inference and up to 15.25$\\times$ over prior multi-device baselines while operating at bandwidths as low as 10 Mbps. ASTRA remains robust on large models (e.g., Llama-3-8B) even under non-ideal network conditions such as packet loss and dynamic networks.",
+      "identifiers": [
+        "SemanticScholar:7bc54480cb28ac0f78d7ae51f5f6a67007c3b438"
+      ],
+      "semantic_scholar_id": "7bc54480cb28ac0f78d7ae51f5f6a67007c3b438",
+      "canonical_id": "arXiv:2505.19342",
+      "arxiv_id": "2505.19342",
+      "authors": [
+        "Xiao Liu",
+        "Li-Jun Zhang",
+        "D. Ganesan",
+        "Hui Guan"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 544,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2403.02920",
+      "identity_tokens": [
+        "id:DOI:10.1007/978-3-031-78172-8_1",
+        "id:SemanticScholar:e87fda91c2cbf881c5388048f98098792c7f62ce",
+        "id:arXiv:2403.02920",
+        "title:taylorshift shifting the complexity of selfattention from squared to linear and back using taylorsoftmax",
+        "url:https://arxiv.org/abs/2403.02920"
+      ],
+      "record": {
+        "title": "TaylorShift: Shifting the Complexity of Self-Attention from Squared to Linear (and Back) using Taylor-Softmax",
+        "source_url": "https://arxiv.org/abs/2403.02920",
+        "year": 2024,
+        "published": "2024-03-05",
+        "venue": "International Conference on Pattern Recognition",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The quadratic complexity of the attention mechanism represents one of the biggest hurdles for processing long sequences using Transformers. Current methods, relying on sparse representations or stateful recurrence, sacrifice token-to-token interactions, which ultimately leads to compromises in performance. This paper introduces TaylorShift, a novel reformulation of the Taylor softmax that enables computing full token-to-token interactions in linear time and space. We analytically determine the crossover points where employing TaylorShift becomes more efficient than traditional attention, aligning closely with empirical measurements. Specifically, our findings demonstrate that TaylorShift enhances memory efficiency for sequences as short as 800 tokens and accelerates inference for inputs of approximately 1700 tokens and beyond. For shorter sequences, TaylorShift scales comparably with the vanilla attention. Furthermore, a classification benchmark across five tasks involving long sequences reveals no degradation in accuracy when employing Transformers equipped with TaylorShift. For reproducibility, we provide access to our code under https://github.com/tobna/TaylorShift.",
+        "identifiers": [
+          "SemanticScholar:e87fda91c2cbf881c5388048f98098792c7f62ce"
+        ],
+        "semantic_scholar_id": "e87fda91c2cbf881c5388048f98098792c7f62ce",
+        "canonical_id": "arXiv:2403.02920",
+        "arxiv_id": "2403.02920",
+        "doi": "10.1007/978-3-031-78172-8_1",
+        "authors": [
+          "T. Nauen",
+          "Sebastian Palacio",
+          "A. Dengel"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 990,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04514",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04514",
+        "id:SemanticScholar:d8bdeb95806e9413c7c7e5f159a3527dc1554cb2",
+        "id:arXiv:2603.04514",
+        "title:progressive refinement regulation for accelerating diffusion language model decoding",
+        "url:https://arxiv.org/abs/2603.04514"
+      ],
+      "record": {
+        "title": "Progressive Refinement Regulation for Accelerating Diffusion Language Model Decoding",
+        "source_url": "https://arxiv.org/abs/2603.04514",
+        "year": 2026,
+        "published": "2026-03-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models generate text through iterative denoising under a uniform refinement rule applied to all tokens. However, tokens stabilize at different rates in practice, leading to substantial redundant refinement and motivating refinement control over the denoising process. Existing approaches typically assess refinement necessity from instantaneous, step-level signals under a fixed decoding process. In contrast, whether a token has converged is defined by how its prediction changes along its future refinement trajectory. Moreover, changing the refinement rule reshapes future refinement trajectories, which in turn determine how refinement rules should be formulated, making refinement control inherently dynamic. We propose \\emph{Progressive Refinement Regulation} (PRR), a progressive, trajectory-grounded refinement control framework that derives a token-level notion of empirical convergence progress from full decoding rollouts. Based on this signal, PRR learns a lightweight token-wise controller to regulate refinement via temperature-based distribution shaping under a progressive self-evolving training scheme. Experiments show that PRR substantially accelerates diffusion language model decoding while preserving generation quality.",
+        "identifiers": [
+          "SemanticScholar:d8bdeb95806e9413c7c7e5f159a3527dc1554cb2"
+        ],
+        "semantic_scholar_id": "d8bdeb95806e9413c7c7e5f159a3527dc1554cb2",
+        "canonical_id": "arXiv:2603.04514",
+        "arxiv_id": "2603.04514",
+        "doi": "10.48550/arXiv.2603.04514",
+        "authors": [
+          "Li-Peng Wan",
+          "Jian Gu",
+          "Jun-Jie Ma",
+          "Jian-Guo Huang",
+          "Shiguang Sun",
+          "Siyuan Li",
+          "Xu-Guang Lan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 261,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.11128",
+      "identity_tokens": [
+        "id:DOI:10.1109/icicdt69693.2026.11669195",
+        "id:SemanticScholar:c8d85afdb6e78e3b339aecc02d65bb28a296d3ab",
+        "id:arXiv:2604.11128",
+        "title:technology solutions targeting the performance of genai inference in resource constrained platforms",
+        "url:https://arxiv.org/abs/2604.11128"
+      ],
+      "record": {
+        "title": "Technology solutions targeting the performance of gen-AI inference in resource constrained platforms",
+        "source_url": "https://arxiv.org/abs/2604.11128",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "International Conference on IC Design & Technology",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rise of generative AI workloads, particularly language model inference, is intensifying on/off-chip memory pressure. Multimodal inputs such as video streams or images and downstream applications like Question Answering (QA) and analysis over large documents incur long context lengths, requiring caching of massive Key and Value states of the previous tokens. Even a low degree of concurrent inference serving on resource-constrained devices, like mobiles, can further add to memory capacity pressure and runtime memory management complexity. In this paper, we evaluate the performance implications of two emerging technology solutions to alleviate the memory pressure in terms of both capacity and bandwidth using a hierarchical roofline-based analytical performance model. For large models (e.g., 13B parameters) and context lengths, we investigate the performance implications of High Bandwidth Storage (HBS) and outline bandwidth/latency requirements to achieve an acceptable throughput for interactivity. For small models (e.g., 1B parameters), we evaluate the merit of a bonded global buffer memory chiplet and propose how to best utilize it.",
+        "identifiers": [
+          "SemanticScholar:c8d85afdb6e78e3b339aecc02d65bb28a296d3ab"
+        ],
+        "semantic_scholar_id": "c8d85afdb6e78e3b339aecc02d65bb28a296d3ab",
+        "canonical_id": "arXiv:2604.11128",
+        "arxiv_id": "2604.11128",
+        "doi": "10.1109/ICICDT69693.2026.11669195",
+        "authors": [
+          "Joyjit Kundu",
+          "J. Klein",
+          "Aakash Patel",
+          "D. Biswas"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 221,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40247",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.40247",
+        "id:SemanticScholar:dd404f03fee491a001149963ff19159c2bef4302",
+        "id:arXiv:2609.40247",
+        "title:herschel continuous optimization of production llm inference through ondemand profiling",
+        "url:https://arxiv.org/abs/2609.40247"
+      ],
+      "record": {
+        "title": "Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling",
+        "source_url": "https://arxiv.org/abs/2609.40247",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model-as-a-service platforms call for continuous optimization as complex serving conditions expose inefficiencies missed before deployment. Detailed always-on profiling can incur substantial overhead, while lightweight collection omits information needed for diagnosis. We present Herschel, a continuous optimization system for production large language model (LLM) inference. Our key insight is that adaptive, on-demand profiling can provide rich full-stack evidence without continuous collection. Herschel safely attaches to and detaches from selected running processes without engine changes or restarts, and adapts coverage as investigations reveal missing evidence. Herschel reconstructs operator executions and cross-process dependencies to identify inefficiency mechanisms and suggest solutions using applicable reference fixes. AI agents implement and test engine and kernel changes under controlled conditions that preserve the triggering workload and dependencies, with expert review before deployment. Controlled tests show active-collection overhead below 0.5% for time to first token and 7% for time per output token. Bounded windows, typically 30 s, avoid the continuous cost of always-on tracing. Over six months, Herschel collected approximately 17,000 traces across over 120 model variants and more than 10 accelerator types, identifying inefficiency patterns in 23% of the traces. Representative findings guide widely deployed optimizations, including restructured synchronization, removal of unused computation, and improved operator implementations.",
+        "identifiers": [
+          "SemanticScholar:dd404f03fee491a001149963ff19159c2bef4302"
+        ],
+        "semantic_scholar_id": "dd404f03fee491a001149963ff19159c2bef4302",
+        "canonical_id": "arXiv:2609.40247",
+        "arxiv_id": "2609.40247",
+        "doi": "10.48550/arXiv.2609.40247",
+        "authors": [
+          "Lu-Ping Wang",
+          "Wei-Gao Chen",
+          "Yi-Fei Wu",
+          "Yong-He Zhang",
+          "Rui Zhang",
+          "Wen-Chao Wu",
+          "Ji-Yu Luo",
+          "Hao-Ran Geng",
+          "Xin Yang",
+          "Cheng Cao",
+          "Yue-Min Wu",
+          "Cheng-Ling Huang",
+          "Guo-Dong Yang",
+          "Li-Ping Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 51,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.05225",
+      "identity_tokens": [
+        "id:DOI:10.1109/tsusc.2026.3666456",
+        "id:SemanticScholar:16db0c6e4bb9e5cc1c803591b0e610c723688bbc",
+        "id:arXiv:2412.05225",
+        "title:beexformer a fast inferencing binarized transformer with early exits",
+        "url:https://arxiv.org/abs/2412.05225"
+      ],
+      "record": {
+        "title": "BEExformer: A Fast Inferencing Binarized Transformer With Early Exits",
+        "source_url": "https://arxiv.org/abs/2412.05225",
+        "year": 2024,
+        "published": "2024-12-06",
+        "venue": "IEEE Transactions on Sustainable Computing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) based on transformers achieve cutting-edge results on a variety of applications. However, their enormous size and processing requirements hinder deployment on constrained resources. To enhance efficiency, binarization and Early Exit (EE) have proved to be effective solutions. However, binarization may lead to performance loss as reduced precision affects gradient estimation and parameter updates. Besides, research on EE mechanisms is still in its early stages. To address these challenges, we introduce Binarized Early Exit Transformer (BEExformer), a first-of-its-kind selective learning-based transformer integrating Binarization-Aware Training (BAT) with EE for efficient and fast textual inference. Each transformer block has an integrated Selective-Learn Forget Network (SLFN) to enhance contextual retention while eliminating irrelevant information. The BAT employs a differentiable second-order approximation to the sign function, enabling gradient computation that captures both the sign and magnitude of the weights. This aids in 21.30 × reduction in model size. The EE mechanism hinges on fractional reduction in entropy among intermediate transformer blocks with soft-routing loss estimation. This accelerates inference by reducing FLOPs by 52.27% and even improves accuracy by 3.22% by resolving the “overthinking” problem inherent in deep networks. Extensive evaluation through comparison with the SOTA methods and various ablations across nine datasets covering multiple NLP tasks demonstrates its Pareto-optimal performance-efficiency trade-off.",
+        "identifiers": [
+          "SemanticScholar:16db0c6e4bb9e5cc1c803591b0e610c723688bbc"
+        ],
+        "semantic_scholar_id": "16db0c6e4bb9e5cc1c803591b0e610c723688bbc",
+        "canonical_id": "arXiv:2412.05225",
+        "arxiv_id": "2412.05225",
+        "doi": "10.1109/TSUSC.2026.3666456",
+        "authors": [
+          "Wazib Ansar",
+          "Saptarsi Goswami",
+          "Amlan Chakrabarti"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 714,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.15665",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2501.15665",
+        "id:SemanticScholar:af95790d2145b29194825ac563351bef67787e9c",
+        "id:arXiv:2501.15665",
+        "title:stagformer time staggering transformer decoding for runninglayers in parallel",
+        "url:https://arxiv.org/abs/2501.15665"
+      ],
+      "record": {
+        "title": "StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel",
+        "source_url": "https://arxiv.org/abs/2501.15665",
+        "year": 2025,
+        "published": "2025-01-26",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Decoding in a Transformer based language model is inherently sequential as a token's embedding needs to pass through all the layers in the network before the generation of the next token can begin. In this work, we propose a new architecture StagFormer (Staggered Transformer), which staggers execution along the sequence axis and thereby enables parallelizing the decoding process along the depth of the model. We achieve this by breaking the dependency of the token representation at time step $i$ in layer $l$ upon the representations of tokens until time step $i$ from layer $l-1$. Instead, we stagger the execution and only allow a dependency on token representations until time step $i-1$. The later sections of the Transformer still get access to the\"rich\"representations from the prior section but only from those token positions which are one time step behind. StagFormer allows for different sections of the model to be executed in parallel yielding a potential speedup in decoding while being quality neutral in our simulations. We also explore many natural extensions of this idea. We present how weight-sharing across the different sections being staggered can be more practical in settings with limited memory. We explore the efficacy of using a bounded window attention to pass information from one section to another which helps drive further latency gains for some applications. We also explore the scalability of the staggering idea over more than 2 sections of the Transformer. Finally, we show how one can approximate a recurrent model during inference using weight-sharing. This variant can lead to substantial gains in quality for short generations while being neutral in its latency impact.",
+        "identifiers": [
+          "SemanticScholar:af95790d2145b29194825ac563351bef67787e9c"
+        ],
+        "semantic_scholar_id": "af95790d2145b29194825ac563351bef67787e9c",
+        "canonical_id": "arXiv:2501.15665",
+        "arxiv_id": "2501.15665",
+        "doi": "10.48550/arXiv.2501.15665",
+        "authors": [
+          "Dylan J. Cutler",
+          "Arun Kandoor",
+          "Nishanth Dikkala",
+          "Nikunj Saunshi",
+          "Xin Wang",
+          "R. Panigrahy"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 663,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19342",
+      "identity_tokens": [
+        "id:SemanticScholar:7bc54480cb28ac0f78d7ae51f5f6a67007c3b438",
+        "id:arXiv:2505.19342",
+        "title:astra communicationefficient acceleration for multidevice transformer inference",
+        "url:https://arxiv.org/abs/2505.19342"
+      ],
+      "record": {
+        "title": "ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference",
+        "source_url": "https://arxiv.org/abs/2505.19342",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-device inference can reduce Transformer latency by parallelizing computation. However, existing methods require high inter-device bandwidth, making them impractical for bandwidth-constrained environments. We present ASTRA, a communication-efficient framework that integrates sequence parallelism with mixed-precision attention, where non-local token embeddings are transmitted as low-bit vector-quantized codes while local attention remains full precision. To preserve accuracy under aggressive compression, ASTRA introduces Noise-Augmented Quantization and Distributed Class Tokens. Across vision and language models (e.g., ViT and GPT2), ASTRA achieves up to 2.64$\\times$ speedup over single-device inference and up to 15.25$\\times$ over prior multi-device baselines while operating at bandwidths as low as 10 Mbps. ASTRA remains robust on large models (e.g., Llama-3-8B) even under non-ideal network conditions such as packet loss and dynamic networks.",
+        "identifiers": [
+          "SemanticScholar:7bc54480cb28ac0f78d7ae51f5f6a67007c3b438"
+        ],
+        "semantic_scholar_id": "7bc54480cb28ac0f78d7ae51f5f6a67007c3b438",
+        "canonical_id": "arXiv:2505.19342",
+        "arxiv_id": "2505.19342",
+        "authors": [
+          "Xiao Liu",
+          "Li-Jun Zhang",
+          "D. Ganesan",
+          "Hui Guan"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 544,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:934d7602a3b60791e56af8d1613b8c42a94be14ebce2a4f96337e6ec0611ee3b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

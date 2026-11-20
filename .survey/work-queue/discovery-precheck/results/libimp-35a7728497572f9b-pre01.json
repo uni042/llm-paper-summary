@@ -1,0 +1,585 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-35a7728497572f9b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-35a772849757",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.14444",
+    "arXiv:2511.03983",
+    "arXiv:2603.09215",
+    "arXiv:2604.10567",
+    "arXiv:2608.12123",
+    "arXiv:2609.35579"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:57.929802+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.14444",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.03983",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.09215",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.10567",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.12123",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35579",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Early Decisions Matter: Proximity Bias and Initial Trajectory Shaping in Non-Autoregressive Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2604.10567",
+      "year": 2026,
+      "published": "2026-04-12",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion-based language models (dLLMs) have emerged as a promising alternative to autoregressive language models, offering the potential for parallel token generation and bidirectional context modeling. However, harnessing this flexibility for fully non-autoregressive decoding remains an open question, particularly for reasoning and planning tasks. In this work, we investigate non-autoregressive decoding in dLLMs by systematically analyzing its inference dynamics along the temporal axis. Specifically, we uncover an inherent failure mode in confidence-based non-autoregressive generation stemming from a strong proximity bias-the tendency for the denoising order to concentrate on spatially adjacent tokens. This local dependency leads to spatial error propagation, rendering the entire trajectory critically contingent on the initial unmasking position. Leveraging this insight, we present a minimal-intervention approach that guides early token selection, employing a lightweight planner and end-of-sequence temperature annealing. We thoroughly evaluate our method on various reasoning and planning tasks and observe substantial overall improvement over existing heuristic baselines without significant computational overhead.",
+      "identifiers": [
+        "SemanticScholar:0d4d21a484b6bbf3c342ab851222e47ed98414f3"
+      ],
+      "semantic_scholar_id": "0d4d21a484b6bbf3c342ab851222e47ed98414f3",
+      "canonical_id": "arXiv:2604.10567",
+      "arxiv_id": "2604.10567",
+      "doi": "10.48550/arXiv.2604.10567",
+      "authors": [
+        "Jiyeon Kim",
+        "Sungik Choi",
+        "Yongrae Jo",
+        "Moontae Lee",
+        "Minjoon Seo"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 222,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPAR-K: Scheduled Periodic Alternating Early Exit for Spoken Language Models",
+      "source_url": "https://arxiv.org/abs/2603.09215",
+      "year": 2026,
+      "published": "2026-03-10",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Interleaved spoken language models (SLMs) alternately generate text and speech tokens, but decoding at full transformer depth for every step becomes costly, especially due to long speech sequences. We propose SPAR-K, a modality-aware early exit framework designed to accelerate interleaved SLM inference while preserving perceptual quality. SPAR-K introduces a speech alternating-depth schedule: most speech positions exit at a fixed intermediate layer, while periodic full-depth\"refresh\"steps mitigate distribution shift due to early exit. We evaluate our framework using Step-Audio-2-mini and GLM-4-Voice across four datasets spanning reasoning, factual QA, and dialogue tasks, measuring performance in terms of ASR transcription accuracy and perceptual quality. Experimental results demonstrate that SPAR-K largely preserves question-answering accuracy with a maximum accuracy drop of 0.82\\% while reducing average speech decoding depth by up to 11\\% on Step-Audio-2-mini and 5\\% on GLM-4-Voice, both with negligible changes in MOS and WER and no auxiliary computation overhead. We further demonstrate that confidence-based early exit strategies, widely used in text LLMs, are suboptimal for SLMs, highlighting that the unique statistical nature of speech tokens necessitates a specialized early exit design.",
+      "identifiers": [
+        "SemanticScholar:50205bd771f74e990ed30f0578e3e649a30fa209"
+      ],
+      "semantic_scholar_id": "50205bd771f74e990ed30f0578e3e649a30fa209",
+      "canonical_id": "arXiv:2603.09215",
+      "arxiv_id": "2603.09215",
+      "doi": "10.48550/arXiv.2603.09215",
+      "authors": [
+        "Hsiao-Ying Huang",
+        "Cheng-Han Chiang",
+        "Hung-Yi Lee"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 255,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control",
+      "source_url": "https://arxiv.org/abs/2608.12123",
+      "year": 2026,
+      "published": "2026-08-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce a mechanism that improves LLM-agent execution: keeping four-byte, GPU-computed control-path routing decisions on-device, avoiding a round-trip to host memory for redispatch. It is faster than host-dispatch in all 36 placements x mechanisms settings in our benchmark across four named GPUs with row-median speedup of 1.19x-2.39x, and outputs are correct, matching an independent host implementation, for all 14,557,440 calls in all configurations, in both tested mechanisms. Agent control paths can be deterministic. Their transitions between LLM calls and external tool calls can be GPU-accelerated by batching across agents and time. We define a cohort of transitions with launch times in a window, and study four shares of GPU-active time: a fixed-partition baseline F, an optimal P*, an upper bound U, and an online result A. Under assumptions of uniform relative launch deadlines, infinite capacity, and zero service times, we compute P* with a custom dynamic program and validate our simulator against it. We replay an anonymized 851-session trace, shown in full as a panel, stationary-ized with a Poisson process. With 100,000 target active agents and a launch deadline of 50 ms, where the headline results have K=256, we find F=30.19%, P*=43.00%, U=45.85%; our method for computing P* reveals that 81.83% of this opportunity is recoverable from cohort packing at fixed window ends. Our method for U relies on a novel notion of route-key, used only as a proxy (via conditional statistics) and does not purport to establish route-equivalence. We find a nested graph that retains some host-side decisions slower in all 60 configurations (five placements).",
+      "identifiers": [
+        "SemanticScholar:feb042989973490636d9141cf0ee3d7f785ea670"
+      ],
+      "semantic_scholar_id": "feb042989973490636d9141cf0ee3d7f785ea670",
+      "canonical_id": "arXiv:2608.12123",
+      "arxiv_id": "2608.12123",
+      "doi": "10.48550/arXiv.2608.12123",
+      "authors": [
+        "J. Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 100,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Output-aware Residual Stream Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.35579",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Residual stream pruning methods reduce inference cost by shrinking the model's hidden dimension, but existing approaches typically choose these dimensions by minimizing activation reconstruction error. This criterion implicitly treats all perturbation directions as equally important, ignoring the sensitivity of downstream layers. We introduce a sensitivity-aware approach to residual-stream pruning that directly accounts for this direction-dependent sensitivity. Using a second-order approximation to the output KL divergence, we characterize the effect of a residual-stream perturbation through both its activation covariance and the local sensitivity of the model output. The resulting subspace selection objective couples these two quantities, but is difficult to optimize directly. We derive a tractable spectral upper bound that reduces subspace selection to an eigendecomposition of a sensitivity-weighted covariance matrix, retaining the efficiency and structural simplicity of rotation-based pruning methods. Across several instruction-tuned language model families, our method consistently reduces calibration KL divergence relative to activation-only pruning and improves perplexity and downstream task performance over a range of compression levels. Our results show that preserving activation energy alone is insufficient for residual-stream pruning, and that explicitly accounting for how perturbations propagate to the model output provides a more effective criterion for selecting dimensions to remove.",
+      "identifiers": [
+        "SemanticScholar:bb1853b8037343a2411b3b0a7ec25694aa1964a7"
+      ],
+      "semantic_scholar_id": "bb1853b8037343a2411b3b0a7ec25694aa1964a7",
+      "canonical_id": "arXiv:2609.35579",
+      "arxiv_id": "2609.35579",
+      "doi": "10.48550/arXiv.2609.35579",
+      "authors": [
+        "Chayne Thrash",
+        "Ke Chen",
+        "Soheil Kolouri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Free Lunch in LLM Compression: Revisiting Retraining after Pruning",
+      "source_url": "https://arxiv.org/abs/2510.14444",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training pruning can substantially reduce LLM inference costs, but it often degrades quality unless the remaining weights are adapted. Since global retraining is expensive at LLM scale, recent work has largely focused on increasingly sophisticated pruning criteria that aim to select better sparsity patterns without adaptation. We revisit this trade-off through local reconstruction: after pruning, we adapt one subset of the model parameters at a time on a calibration set, training it to match the corresponding intermediate activations of the dense model. We evaluate local reconstruction across model families and scales, up to 72B parameters, and establish three main findings. First, local reconstruction is an effective adaptation mechanism for LLMs: it matches post-pruning retraining while using over an order of magnitude less data and compute, even when using PEFT techniques. Second, reconstruction exhibits a broad\"free-lunch\"regime in granularity, i.e., the reconstruction parameter window: as long as the reconstructed region contains at least a nonlinear submodule, final quality is largely insensitive to the window size, allowing granularity to be chosen primarily based on memory constraints. In contrast, reconstructing individual matrices, despite being the natural approach often proposed in the literature, consistently underperforms, as small matrix-level errors accumulate into larger activation drift. Lastly, reconstruction reduces the relative importance of the pruning criterion: performance gaps between sophisticated criteria and simple baselines shrink with model scale, making simple methods competitive again. Overall, our results challenge the prevailing view that post-pruning adaptation is impractical for LLMs.",
+      "identifiers": [
+        "SemanticScholar:1c8f4c8e0a91b07bb17f1f67b7f3c4a9bb147924"
+      ],
+      "semantic_scholar_id": "1c8f4c8e0a91b07bb17f1f67b7f3c4a9bb147924",
+      "canonical_id": "arXiv:2510.14444",
+      "arxiv_id": "2510.14444",
+      "doi": "10.48550/arXiv.2510.14444",
+      "authors": [
+        "Moritz Wagner",
+        "Christophe Roux",
+        "Max Zimmer",
+        "Sebastian Pokutta"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TwIST: Rigging the Lottery in Transformers with Independent Subnetwork Training",
+      "source_url": "https://arxiv.org/abs/2511.03983",
+      "year": 2025,
+      "published": "2025-11-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce TwIST, a distributed training framework for efficient large language model (LLM) sparsification. TwIST trains multiple subnetworks in parallel, periodically aggregates their parameters, and resamples new subnetworks during training. This process identifies high-quality subnetworks (\"golden tickets\") without requiring post-training procedures such as calibration or Hessian-based recovery. As a result, TwIST enables zero-cost pruning at deployment time while achieving perplexity competitive with state-of-the-art post-training sparsification methods. The benefits are most pronounced under aggressive sparsity (e.g., 50%+), where TwIST significantly outperforms baseline methods; for example, reaching 23.14 PPL compared to 31.64 for the closest prior approach. Unlike unstructured pruning, TwIST produces structured, dense matrices that offer practical inference speedups and memory reductions on commodity hardware (e.g., CPUs) that do not support efficient sparse computation. TwIST provides an efficient training-time path to deployable sparse LLMs without additional fine-tuning or recovery overhead.",
+      "identifiers": [
+        "SemanticScholar:263de879b0556efe39fa97376e521cd58639dc10"
+      ],
+      "semantic_scholar_id": "263de879b0556efe39fa97376e521cd58639dc10",
+      "canonical_id": "arXiv:2511.03983",
+      "arxiv_id": "2511.03983",
+      "doi": "10.48550/arXiv.2511.03983",
+      "authors": [
+        "Michael Menezes",
+        "Barbara Su",
+        "Xin-Ze Feng",
+        "Yehya Farhat",
+        "Hamza ElMokhtar Shili",
+        "Anastasios Kyrillidis"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 379,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.10567",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.10567",
+        "id:SemanticScholar:0d4d21a484b6bbf3c342ab851222e47ed98414f3",
+        "id:arXiv:2604.10567",
+        "title:early decisions matter proximity bias and initial trajectory shaping in nonautoregressive diffusion language models",
+        "url:https://arxiv.org/abs/2604.10567"
+      ],
+      "record": {
+        "title": "Early Decisions Matter: Proximity Bias and Initial Trajectory Shaping in Non-Autoregressive Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2604.10567",
+        "year": 2026,
+        "published": "2026-04-12",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion-based language models (dLLMs) have emerged as a promising alternative to autoregressive language models, offering the potential for parallel token generation and bidirectional context modeling. However, harnessing this flexibility for fully non-autoregressive decoding remains an open question, particularly for reasoning and planning tasks. In this work, we investigate non-autoregressive decoding in dLLMs by systematically analyzing its inference dynamics along the temporal axis. Specifically, we uncover an inherent failure mode in confidence-based non-autoregressive generation stemming from a strong proximity bias-the tendency for the denoising order to concentrate on spatially adjacent tokens. This local dependency leads to spatial error propagation, rendering the entire trajectory critically contingent on the initial unmasking position. Leveraging this insight, we present a minimal-intervention approach that guides early token selection, employing a lightweight planner and end-of-sequence temperature annealing. We thoroughly evaluate our method on various reasoning and planning tasks and observe substantial overall improvement over existing heuristic baselines without significant computational overhead.",
+        "identifiers": [
+          "SemanticScholar:0d4d21a484b6bbf3c342ab851222e47ed98414f3"
+        ],
+        "semantic_scholar_id": "0d4d21a484b6bbf3c342ab851222e47ed98414f3",
+        "canonical_id": "arXiv:2604.10567",
+        "arxiv_id": "2604.10567",
+        "doi": "10.48550/arXiv.2604.10567",
+        "authors": [
+          "Jiyeon Kim",
+          "Sungik Choi",
+          "Yongrae Jo",
+          "Moontae Lee",
+          "Minjoon Seo"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 222,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.09215",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.09215",
+        "id:SemanticScholar:50205bd771f74e990ed30f0578e3e649a30fa209",
+        "id:arXiv:2603.09215",
+        "title:spark scheduled periodic alternating early exit for spoken language models",
+        "url:https://arxiv.org/abs/2603.09215"
+      ],
+      "record": {
+        "title": "SPAR-K: Scheduled Periodic Alternating Early Exit for Spoken Language Models",
+        "source_url": "https://arxiv.org/abs/2603.09215",
+        "year": 2026,
+        "published": "2026-03-10",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Interleaved spoken language models (SLMs) alternately generate text and speech tokens, but decoding at full transformer depth for every step becomes costly, especially due to long speech sequences. We propose SPAR-K, a modality-aware early exit framework designed to accelerate interleaved SLM inference while preserving perceptual quality. SPAR-K introduces a speech alternating-depth schedule: most speech positions exit at a fixed intermediate layer, while periodic full-depth\"refresh\"steps mitigate distribution shift due to early exit. We evaluate our framework using Step-Audio-2-mini and GLM-4-Voice across four datasets spanning reasoning, factual QA, and dialogue tasks, measuring performance in terms of ASR transcription accuracy and perceptual quality. Experimental results demonstrate that SPAR-K largely preserves question-answering accuracy with a maximum accuracy drop of 0.82\\% while reducing average speech decoding depth by up to 11\\% on Step-Audio-2-mini and 5\\% on GLM-4-Voice, both with negligible changes in MOS and WER and no auxiliary computation overhead. We further demonstrate that confidence-based early exit strategies, widely used in text LLMs, are suboptimal for SLMs, highlighting that the unique statistical nature of speech tokens necessitates a specialized early exit design.",
+        "identifiers": [
+          "SemanticScholar:50205bd771f74e990ed30f0578e3e649a30fa209"
+        ],
+        "semantic_scholar_id": "50205bd771f74e990ed30f0578e3e649a30fa209",
+        "canonical_id": "arXiv:2603.09215",
+        "arxiv_id": "2603.09215",
+        "doi": "10.48550/arXiv.2603.09215",
+        "authors": [
+          "Hsiao-Ying Huang",
+          "Cheng-Han Chiang",
+          "Hung-Yi Lee"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 255,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.12123",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2608.12123",
+        "id:SemanticScholar:feb042989973490636d9141cf0ee3d7f785ea670",
+        "id:arXiv:2608.12123",
+        "title:ready cohorts bounding gpu opportunity and avoiding host round trips in llmagent control",
+        "url:https://arxiv.org/abs/2608.12123"
+      ],
+      "record": {
+        "title": "Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control",
+        "source_url": "https://arxiv.org/abs/2608.12123",
+        "year": 2026,
+        "published": "2026-08-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce a mechanism that improves LLM-agent execution: keeping four-byte, GPU-computed control-path routing decisions on-device, avoiding a round-trip to host memory for redispatch. It is faster than host-dispatch in all 36 placements x mechanisms settings in our benchmark across four named GPUs with row-median speedup of 1.19x-2.39x, and outputs are correct, matching an independent host implementation, for all 14,557,440 calls in all configurations, in both tested mechanisms. Agent control paths can be deterministic. Their transitions between LLM calls and external tool calls can be GPU-accelerated by batching across agents and time. We define a cohort of transitions with launch times in a window, and study four shares of GPU-active time: a fixed-partition baseline F, an optimal P*, an upper bound U, and an online result A. Under assumptions of uniform relative launch deadlines, infinite capacity, and zero service times, we compute P* with a custom dynamic program and validate our simulator against it. We replay an anonymized 851-session trace, shown in full as a panel, stationary-ized with a Poisson process. With 100,000 target active agents and a launch deadline of 50 ms, where the headline results have K=256, we find F=30.19%, P*=43.00%, U=45.85%; our method for computing P* reveals that 81.83% of this opportunity is recoverable from cohort packing at fixed window ends. Our method for U relies on a novel notion of route-key, used only as a proxy (via conditional statistics) and does not purport to establish route-equivalence. We find a nested graph that retains some host-side decisions slower in all 60 configurations (five placements).",
+        "identifiers": [
+          "SemanticScholar:feb042989973490636d9141cf0ee3d7f785ea670"
+        ],
+        "semantic_scholar_id": "feb042989973490636d9141cf0ee3d7f785ea670",
+        "canonical_id": "arXiv:2608.12123",
+        "arxiv_id": "2608.12123",
+        "doi": "10.48550/arXiv.2608.12123",
+        "authors": [
+          "J. Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 100,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35579",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.35579",
+        "id:SemanticScholar:bb1853b8037343a2411b3b0a7ec25694aa1964a7",
+        "id:arXiv:2609.35579",
+        "title:outputaware residual stream pruning for large language models",
+        "url:https://arxiv.org/abs/2609.35579"
+      ],
+      "record": {
+        "title": "Output-aware Residual Stream Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.35579",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Residual stream pruning methods reduce inference cost by shrinking the model's hidden dimension, but existing approaches typically choose these dimensions by minimizing activation reconstruction error. This criterion implicitly treats all perturbation directions as equally important, ignoring the sensitivity of downstream layers. We introduce a sensitivity-aware approach to residual-stream pruning that directly accounts for this direction-dependent sensitivity. Using a second-order approximation to the output KL divergence, we characterize the effect of a residual-stream perturbation through both its activation covariance and the local sensitivity of the model output. The resulting subspace selection objective couples these two quantities, but is difficult to optimize directly. We derive a tractable spectral upper bound that reduces subspace selection to an eigendecomposition of a sensitivity-weighted covariance matrix, retaining the efficiency and structural simplicity of rotation-based pruning methods. Across several instruction-tuned language model families, our method consistently reduces calibration KL divergence relative to activation-only pruning and improves perplexity and downstream task performance over a range of compression levels. Our results show that preserving activation energy alone is insufficient for residual-stream pruning, and that explicitly accounting for how perturbations propagate to the model output provides a more effective criterion for selecting dimensions to remove.",
+        "identifiers": [
+          "SemanticScholar:bb1853b8037343a2411b3b0a7ec25694aa1964a7"
+        ],
+        "semantic_scholar_id": "bb1853b8037343a2411b3b0a7ec25694aa1964a7",
+        "canonical_id": "arXiv:2609.35579",
+        "arxiv_id": "2609.35579",
+        "doi": "10.48550/arXiv.2609.35579",
+        "authors": [
+          "Chayne Thrash",
+          "Ke Chen",
+          "Soheil Kolouri"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14444",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14444",
+        "id:SemanticScholar:1c8f4c8e0a91b07bb17f1f67b7f3c4a9bb147924",
+        "id:arXiv:2510.14444",
+        "title:a free lunch in llm compression revisiting retraining after pruning",
+        "url:https://arxiv.org/abs/2510.14444"
+      ],
+      "record": {
+        "title": "A Free Lunch in LLM Compression: Revisiting Retraining after Pruning",
+        "source_url": "https://arxiv.org/abs/2510.14444",
+        "year": 2025,
+        "published": "2025-10-16",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training pruning can substantially reduce LLM inference costs, but it often degrades quality unless the remaining weights are adapted. Since global retraining is expensive at LLM scale, recent work has largely focused on increasingly sophisticated pruning criteria that aim to select better sparsity patterns without adaptation. We revisit this trade-off through local reconstruction: after pruning, we adapt one subset of the model parameters at a time on a calibration set, training it to match the corresponding intermediate activations of the dense model. We evaluate local reconstruction across model families and scales, up to 72B parameters, and establish three main findings. First, local reconstruction is an effective adaptation mechanism for LLMs: it matches post-pruning retraining while using over an order of magnitude less data and compute, even when using PEFT techniques. Second, reconstruction exhibits a broad\"free-lunch\"regime in granularity, i.e., the reconstruction parameter window: as long as the reconstructed region contains at least a nonlinear submodule, final quality is largely insensitive to the window size, allowing granularity to be chosen primarily based on memory constraints. In contrast, reconstructing individual matrices, despite being the natural approach often proposed in the literature, consistently underperforms, as small matrix-level errors accumulate into larger activation drift. Lastly, reconstruction reduces the relative importance of the pruning criterion: performance gaps between sophisticated criteria and simple baselines shrink with model scale, making simple methods competitive again. Overall, our results challenge the prevailing view that post-pruning adaptation is impractical for LLMs.",
+        "identifiers": [
+          "SemanticScholar:1c8f4c8e0a91b07bb17f1f67b7f3c4a9bb147924"
+        ],
+        "semantic_scholar_id": "1c8f4c8e0a91b07bb17f1f67b7f3c4a9bb147924",
+        "canonical_id": "arXiv:2510.14444",
+        "arxiv_id": "2510.14444",
+        "doi": "10.48550/arXiv.2510.14444",
+        "authors": [
+          "Moritz Wagner",
+          "Christophe Roux",
+          "Max Zimmer",
+          "Sebastian Pokutta"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.03983",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.03983",
+        "id:SemanticScholar:263de879b0556efe39fa97376e521cd58639dc10",
+        "id:arXiv:2511.03983",
+        "title:twist rigging the lottery in transformers with independent subnetwork training",
+        "url:https://arxiv.org/abs/2511.03983"
+      ],
+      "record": {
+        "title": "TwIST: Rigging the Lottery in Transformers with Independent Subnetwork Training",
+        "source_url": "https://arxiv.org/abs/2511.03983",
+        "year": 2025,
+        "published": "2025-11-06",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce TwIST, a distributed training framework for efficient large language model (LLM) sparsification. TwIST trains multiple subnetworks in parallel, periodically aggregates their parameters, and resamples new subnetworks during training. This process identifies high-quality subnetworks (\"golden tickets\") without requiring post-training procedures such as calibration or Hessian-based recovery. As a result, TwIST enables zero-cost pruning at deployment time while achieving perplexity competitive with state-of-the-art post-training sparsification methods. The benefits are most pronounced under aggressive sparsity (e.g., 50%+), where TwIST significantly outperforms baseline methods; for example, reaching 23.14 PPL compared to 31.64 for the closest prior approach. Unlike unstructured pruning, TwIST produces structured, dense matrices that offer practical inference speedups and memory reductions on commodity hardware (e.g., CPUs) that do not support efficient sparse computation. TwIST provides an efficient training-time path to deployable sparse LLMs without additional fine-tuning or recovery overhead.",
+        "identifiers": [
+          "SemanticScholar:263de879b0556efe39fa97376e521cd58639dc10"
+        ],
+        "semantic_scholar_id": "263de879b0556efe39fa97376e521cd58639dc10",
+        "canonical_id": "arXiv:2511.03983",
+        "arxiv_id": "2511.03983",
+        "doi": "10.48550/arXiv.2511.03983",
+        "authors": [
+          "Michael Menezes",
+          "Barbara Su",
+          "Xin-Ze Feng",
+          "Yehya Farhat",
+          "Hamza ElMokhtar Shili",
+          "Anastasios Kyrillidis"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 379,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2dee2feb3a4bda5b8c6f04f500e9dcd83fe2f49828320a26ca38fc209bf8daa3",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

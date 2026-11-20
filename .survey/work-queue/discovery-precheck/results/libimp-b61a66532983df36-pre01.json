@@ -1,0 +1,598 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b61a66532983df36-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b61a66532983",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2411.17847",
+    "arXiv:2510.14853",
+    "arXiv:2511.02130",
+    "arXiv:2605.06116",
+    "arXiv:2609.35569",
+    "arXiv:2610.15095"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:44.514893+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2411.17847",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.14853",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.02130",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06116",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35569",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.15095",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Swarm Telepathy: Prefill-Free KV-Cache Transfer Across Families",
+      "source_url": "https://arxiv.org/abs/2610.15095",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM multi-agent systems split work across agents that communicate through text. An agent summarizes its findings, another agent receives the text. This constrains communication to discrete tokens and costs redundant compute, limiting bandwidth and capabilities of multi-agent systems. Recent works demonstrate KV-cache transfer between LLMs but they either require the LLMs to be within the same family or cannot function across context, thus requiring the receiver to prefill text. We present SwaT (Swarm Telepathy), the first cross-family KV-cache transfer method that allows prefill-free communication in multi-family multi-agent systems. In an agent-to-agent communication setting, combining SwaT with recent advances in KV-cache compaction beats text-to-text communication in both accuracy and speed, with a mean of $40\\%$ higher accuracy and a mean of $4\\times$ faster wall-clock time. Experiments show SwaT achieves high performance on 17 benchmarks across 12 LLMs and 6 families. Additionally, given a sender Vision-Language Model (VLM), SwaT is able to transfer the vision capabilities to a text-only receiver LLM exceeding text-to-text communication despite SwaT being trained on text-only data. SwaT keeps both sender and receiver models frozen without fine-tuning and only requires $<50M$ tokens and $<1$ GPU-day to train.",
+      "identifiers": [
+        "SemanticScholar:fb3a2ae41aecd9e1fbd1fed48d5279e6400b78c3"
+      ],
+      "semantic_scholar_id": "fb3a2ae41aecd9e1fbd1fed48d5279e6400b78c3",
+      "canonical_id": "arXiv:2610.15095",
+      "arxiv_id": "2610.15095",
+      "authors": [
+        "Abdulrahman Alabdulkareem",
+        "Irene Tenison",
+        "Yang Zhang",
+        "Ya-Da Zhu",
+        "B. Katz",
+        "D. Gutfreund"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 41,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Policy-Guided Stepwise Model Routing for Cost-Effective Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.06116",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time computation has greatly enhanced the performance of large language models (LLMs) on challenging reasoning tasks, but this strategy can incur high inference costs. One solution is to route intermediate chain-of-thought (CoT) states to language models of different sizes; however, existing approaches rely on handcrafted routing strategies that limit performance, or on training large process reward models that may be infeasible in many applications. We formulate stepwise model routing as a constrained decision-making problem, which we solve by training a small control policy using reinforcement learning in conjunction with threshold calibration to tune the performance-efficiency tradeoff. We validate our method on three math benchmarks (GSM8K, MATH500, and OmniMath) on both open and closed models. Our method consistently improves the accuracy-cost tradeoff compared to handcrafted approaches, while achieving a comparable tradeoff to methods that require training large process reward models.",
+      "identifiers": [
+        "SemanticScholar:488cb87b04bbe68dea5d207355fbe70fbcb0323f"
+      ],
+      "semantic_scholar_id": "488cb87b04bbe68dea5d207355fbe70fbcb0323f",
+      "canonical_id": "arXiv:2605.06116",
+      "arxiv_id": "2605.06116",
+      "doi": "10.48550/arXiv.2605.06116",
+      "authors": [
+        "Wen-Wen Si",
+        "Insup Lee",
+        "Osbert Bastani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Energy: When Sustainability Dimensions Reshape LLM Serving Decisions",
+      "source_url": "https://arxiv.org/abs/2609.35569",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving has environmental impacts across energy consumption, carbon emission, water consumption, and biodiversity loss. Yet these dimensions are largely evaluated in isolation, leaving it unclear when and how they lead to different optimization decisions. We present PRISM, a unified framework for characterizing and optimizing LLM serving across energy, carbon, water, and biodiversity impacts. Our analysis reveals a fundamental distinction: computing configurations determine energy consumption, whereas where and when LLM serving is deployed determine its carbon, water, and biodiversity impacts. Under a fixed deployment choice and operational-only accounting, all dimensions preserve the same energy-based configuration ranking. Deployment rankings can diverge across dimensions, while embodied impacts can break configuration invariance when they exceed a lifecycle crossover boundary. PRISM identifies these conditions, quantifies cross-dimensional regrets, and balances the four dimensions. In regional-routing experiments, PRISM reduces median worst-case regret by 50.2% relative to the strongest baseline.",
+      "identifiers": [
+        "SemanticScholar:fd5ada53b8893d9f750414111d5f472777ffabf4"
+      ],
+      "semantic_scholar_id": "fd5ada53b8893d9f750414111d5f472777ffabf4",
+      "canonical_id": "arXiv:2609.35569",
+      "arxiv_id": "2609.35569",
+      "doi": "10.48550/arXiv.2609.35569",
+      "authors": [
+        "Tian-Yao Shi",
+        "Xi-Peng Shen",
+        "Yi Ding"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 53,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SoftmAP: Software-Hardware Co-Design for Integer-Only Softmax on Associative Processors",
+      "source_url": "https://arxiv.org/abs/2411.17847",
+      "year": 2024,
+      "published": "2024-11-26",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent research efforts focus on reducing the computational and memory overheads of Large Language Models (LLMs) to make them feasible on resource-constrained devices. Despite advancements in compression techniques, nonlinear operators like Softmax and Layernorm remain bottlenecks due to their sensitivity to quantization. We propose SoftmAP, a software-hardware co-design methodology that implements an integer-only low-precision Softmax using In-Memory Compute (IMC) hardware. Our method achieves up to three orders of magnitude improvement in the energy-delay product compared to A100 and RTX3090 GPUs, making LLMs more deployable without compromising performance.",
+      "identifiers": [
+        "SemanticScholar:2884ccb1da414651cb908959e5591cbb14e6bd08"
+      ],
+      "semantic_scholar_id": "2884ccb1da414651cb908959e5591cbb14e6bd08",
+      "canonical_id": "arXiv:2411.17847",
+      "arxiv_id": "2411.17847",
+      "doi": "10.23919/DATE64628.2025.10992862",
+      "authors": [
+        "Mariam Rakka",
+        "Jin-Hao Li",
+        "Guo-Hao Dai",
+        "A. Eltawil",
+        "M. Fouda",
+        "Fadi J. Kurdahi"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 724,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Re-FORC: Adaptive Reward Prediction for Efficient Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.02130",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Re-FORC, an adaptive reward prediction method that, given a query, enables prediction of the expected future rewards as a function of the number of future thinking tokens. Re-FORC trains a lightweight adapter on reasoning models, demonstrating improved prediction with longer reasoning and larger models. Re-FORC enables: 1) early stopping of unpromising reasoning chains, reducing compute by up to 26\\% compared to fixed-budget cutoffs, while maintaining accuracy, 2) optimized model and thinking length selection that outperforms the largest model alone--- reaching 1.7 percentage points higher peak accuracy while needing up to 12\\% less compute to match the largest model's accuracy, 3) adaptive test-time scaling, which increases accuracy by 9.9 percentage points (on average at maximum compute) over confidence-based baselines. Re-FORC allows dynamic reasoning with length control via cost-per-token thresholds while estimating computation time upfront.",
+      "identifiers": [
+        "SemanticScholar:d4f61e7c53677ace2e6c54ac12ed6ffe3e29a5b5"
+      ],
+      "semantic_scholar_id": "d4f61e7c53677ace2e6c54ac12ed6ffe3e29a5b5",
+      "canonical_id": "arXiv:2511.02130",
+      "arxiv_id": "2511.02130",
+      "doi": "10.48550/arXiv.2511.02130",
+      "authors": [
+        "Renos Zabounidis",
+        "Aditya Golatkar",
+        "Michael Kleinman",
+        "Alessandro Achille",
+        "Wei Xia",
+        "Stefano Soatto"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in Mixture-of-Expert models",
+      "source_url": "https://arxiv.org/abs/2510.14853",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) models achieve efficient scaling through sparse expert activation, but often suffer from suboptimal routing decisions due to distribution shifts in deployment. While existing test-time adaptation methods could potentially address these issues, they primarily focus on dense models and require access to external data, limiting their practical applicability to MoE architectures. However, we find that, instead of relying on reference data, we can optimize MoE expert selection on-the-fly based only on input context. As such, we propose \\textit{a data-free, online test-time framework} that continuously adapts MoE routing decisions during text generation without external supervision or data. Our method cycles between two phases: During the prefill stage, and later in regular intervals, we optimize the routing decisions of the model using self-supervision based on the already generated sequence. Then, we generate text as normal, maintaining the modified router until the next adaption. We implement this through lightweight additive vectors that only update router logits in selected layers, maintaining computational efficiency while preventing over-adaptation. The experimental results show consistent performance gains on challenging reasoning tasks while maintaining robustness to context shifts. For example, our method achieves a 5.5\\% improvement on HumanEval with OLMoE. Furthermore, owing to its plug-and-play property, our method naturally complements existing test-time scaling techniques, e.g., achieving 6\\% average gains when incorporated with self-consistency on DeepSeek-V2-Lite.",
+      "identifiers": [
+        "SemanticScholar:7e6eeed28fc2f0d411c69647d0a91075335ad40a"
+      ],
+      "semantic_scholar_id": "7e6eeed28fc2f0d411c69647d0a91075335ad40a",
+      "canonical_id": "arXiv:2510.14853",
+      "arxiv_id": "2510.14853",
+      "doi": "10.48550/arXiv.2510.14853",
+      "authors": [
+        "Gui-Nan Su",
+        "Yan-Wu Yang",
+        "Li Shen",
+        "Lu Yin",
+        "Shi-Wei Liu",
+        "Jonas Geiping"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 400,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.15095",
+      "identity_tokens": [
+        "id:SemanticScholar:fb3a2ae41aecd9e1fbd1fed48d5279e6400b78c3",
+        "id:arXiv:2610.15095",
+        "title:swarm telepathy prefillfree kvcache transfer across families",
+        "url:https://arxiv.org/abs/2610.15095"
+      ],
+      "record": {
+        "title": "Swarm Telepathy: Prefill-Free KV-Cache Transfer Across Families",
+        "source_url": "https://arxiv.org/abs/2610.15095",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM multi-agent systems split work across agents that communicate through text. An agent summarizes its findings, another agent receives the text. This constrains communication to discrete tokens and costs redundant compute, limiting bandwidth and capabilities of multi-agent systems. Recent works demonstrate KV-cache transfer between LLMs but they either require the LLMs to be within the same family or cannot function across context, thus requiring the receiver to prefill text. We present SwaT (Swarm Telepathy), the first cross-family KV-cache transfer method that allows prefill-free communication in multi-family multi-agent systems. In an agent-to-agent communication setting, combining SwaT with recent advances in KV-cache compaction beats text-to-text communication in both accuracy and speed, with a mean of $40\\%$ higher accuracy and a mean of $4\\times$ faster wall-clock time. Experiments show SwaT achieves high performance on 17 benchmarks across 12 LLMs and 6 families. Additionally, given a sender Vision-Language Model (VLM), SwaT is able to transfer the vision capabilities to a text-only receiver LLM exceeding text-to-text communication despite SwaT being trained on text-only data. SwaT keeps both sender and receiver models frozen without fine-tuning and only requires $<50M$ tokens and $<1$ GPU-day to train.",
+        "identifiers": [
+          "SemanticScholar:fb3a2ae41aecd9e1fbd1fed48d5279e6400b78c3"
+        ],
+        "semantic_scholar_id": "fb3a2ae41aecd9e1fbd1fed48d5279e6400b78c3",
+        "canonical_id": "arXiv:2610.15095",
+        "arxiv_id": "2610.15095",
+        "authors": [
+          "Abdulrahman Alabdulkareem",
+          "Irene Tenison",
+          "Yang Zhang",
+          "Ya-Da Zhu",
+          "B. Katz",
+          "D. Gutfreund"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 41,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06116",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06116",
+        "id:SemanticScholar:488cb87b04bbe68dea5d207355fbe70fbcb0323f",
+        "id:arXiv:2605.06116",
+        "title:policyguided stepwise model routing for costeffective reasoning",
+        "url:https://arxiv.org/abs/2605.06116"
+      ],
+      "record": {
+        "title": "Policy-Guided Stepwise Model Routing for Cost-Effective Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.06116",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Inference-time computation has greatly enhanced the performance of large language models (LLMs) on challenging reasoning tasks, but this strategy can incur high inference costs. One solution is to route intermediate chain-of-thought (CoT) states to language models of different sizes; however, existing approaches rely on handcrafted routing strategies that limit performance, or on training large process reward models that may be infeasible in many applications. We formulate stepwise model routing as a constrained decision-making problem, which we solve by training a small control policy using reinforcement learning in conjunction with threshold calibration to tune the performance-efficiency tradeoff. We validate our method on three math benchmarks (GSM8K, MATH500, and OmniMath) on both open and closed models. Our method consistently improves the accuracy-cost tradeoff compared to handcrafted approaches, while achieving a comparable tradeoff to methods that require training large process reward models.",
+        "identifiers": [
+          "SemanticScholar:488cb87b04bbe68dea5d207355fbe70fbcb0323f"
+        ],
+        "semantic_scholar_id": "488cb87b04bbe68dea5d207355fbe70fbcb0323f",
+        "canonical_id": "arXiv:2605.06116",
+        "arxiv_id": "2605.06116",
+        "doi": "10.48550/arXiv.2605.06116",
+        "authors": [
+          "Wen-Wen Si",
+          "Insup Lee",
+          "Osbert Bastani"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35569",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.35569",
+        "id:SemanticScholar:fd5ada53b8893d9f750414111d5f472777ffabf4",
+        "id:arXiv:2609.35569",
+        "title:beyond energy when sustainability dimensions reshape llm serving decisions",
+        "url:https://arxiv.org/abs/2609.35569"
+      ],
+      "record": {
+        "title": "Beyond Energy: When Sustainability Dimensions Reshape LLM Serving Decisions",
+        "source_url": "https://arxiv.org/abs/2609.35569",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving has environmental impacts across energy consumption, carbon emission, water consumption, and biodiversity loss. Yet these dimensions are largely evaluated in isolation, leaving it unclear when and how they lead to different optimization decisions. We present PRISM, a unified framework for characterizing and optimizing LLM serving across energy, carbon, water, and biodiversity impacts. Our analysis reveals a fundamental distinction: computing configurations determine energy consumption, whereas where and when LLM serving is deployed determine its carbon, water, and biodiversity impacts. Under a fixed deployment choice and operational-only accounting, all dimensions preserve the same energy-based configuration ranking. Deployment rankings can diverge across dimensions, while embodied impacts can break configuration invariance when they exceed a lifecycle crossover boundary. PRISM identifies these conditions, quantifies cross-dimensional regrets, and balances the four dimensions. In regional-routing experiments, PRISM reduces median worst-case regret by 50.2% relative to the strongest baseline.",
+        "identifiers": [
+          "SemanticScholar:fd5ada53b8893d9f750414111d5f472777ffabf4"
+        ],
+        "semantic_scholar_id": "fd5ada53b8893d9f750414111d5f472777ffabf4",
+        "canonical_id": "arXiv:2609.35569",
+        "arxiv_id": "2609.35569",
+        "doi": "10.48550/arXiv.2609.35569",
+        "authors": [
+          "Tian-Yao Shi",
+          "Xi-Peng Shen",
+          "Yi Ding"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 53,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.17847",
+      "identity_tokens": [
+        "id:DOI:10.23919/date64628.2025.10992862",
+        "id:SemanticScholar:2884ccb1da414651cb908959e5591cbb14e6bd08",
+        "id:arXiv:2411.17847",
+        "title:softmap softwarehardware codesign for integeronly softmax on associative processors",
+        "url:https://arxiv.org/abs/2411.17847"
+      ],
+      "record": {
+        "title": "SoftmAP: Software-Hardware Co-Design for Integer-Only Softmax on Associative Processors",
+        "source_url": "https://arxiv.org/abs/2411.17847",
+        "year": 2024,
+        "published": "2024-11-26",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent research efforts focus on reducing the computational and memory overheads of Large Language Models (LLMs) to make them feasible on resource-constrained devices. Despite advancements in compression techniques, nonlinear operators like Softmax and Layernorm remain bottlenecks due to their sensitivity to quantization. We propose SoftmAP, a software-hardware co-design methodology that implements an integer-only low-precision Softmax using In-Memory Compute (IMC) hardware. Our method achieves up to three orders of magnitude improvement in the energy-delay product compared to A100 and RTX3090 GPUs, making LLMs more deployable without compromising performance.",
+        "identifiers": [
+          "SemanticScholar:2884ccb1da414651cb908959e5591cbb14e6bd08"
+        ],
+        "semantic_scholar_id": "2884ccb1da414651cb908959e5591cbb14e6bd08",
+        "canonical_id": "arXiv:2411.17847",
+        "arxiv_id": "2411.17847",
+        "doi": "10.23919/DATE64628.2025.10992862",
+        "authors": [
+          "Mariam Rakka",
+          "Jin-Hao Li",
+          "Guo-Hao Dai",
+          "A. Eltawil",
+          "M. Fouda",
+          "Fadi J. Kurdahi"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 724,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.02130",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.02130",
+        "id:SemanticScholar:d4f61e7c53677ace2e6c54ac12ed6ffe3e29a5b5",
+        "id:arXiv:2511.02130",
+        "title:reforc adaptive reward prediction for efficient chainofthought reasoning",
+        "url:https://arxiv.org/abs/2511.02130"
+      ],
+      "record": {
+        "title": "Re-FORC: Adaptive Reward Prediction for Efficient Chain-of-Thought Reasoning",
+        "source_url": "https://arxiv.org/abs/2511.02130",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Re-FORC, an adaptive reward prediction method that, given a query, enables prediction of the expected future rewards as a function of the number of future thinking tokens. Re-FORC trains a lightweight adapter on reasoning models, demonstrating improved prediction with longer reasoning and larger models. Re-FORC enables: 1) early stopping of unpromising reasoning chains, reducing compute by up to 26\\% compared to fixed-budget cutoffs, while maintaining accuracy, 2) optimized model and thinking length selection that outperforms the largest model alone--- reaching 1.7 percentage points higher peak accuracy while needing up to 12\\% less compute to match the largest model's accuracy, 3) adaptive test-time scaling, which increases accuracy by 9.9 percentage points (on average at maximum compute) over confidence-based baselines. Re-FORC allows dynamic reasoning with length control via cost-per-token thresholds while estimating computation time upfront.",
+        "identifiers": [
+          "SemanticScholar:d4f61e7c53677ace2e6c54ac12ed6ffe3e29a5b5"
+        ],
+        "semantic_scholar_id": "d4f61e7c53677ace2e6c54ac12ed6ffe3e29a5b5",
+        "canonical_id": "arXiv:2511.02130",
+        "arxiv_id": "2511.02130",
+        "doi": "10.48550/arXiv.2511.02130",
+        "authors": [
+          "Renos Zabounidis",
+          "Aditya Golatkar",
+          "Michael Kleinman",
+          "Alessandro Achille",
+          "Wei Xia",
+          "Stefano Soatto"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 382,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14853",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14853",
+        "id:SemanticScholar:7e6eeed28fc2f0d411c69647d0a91075335ad40a",
+        "id:arXiv:2510.14853",
+        "title:rewiring experts on the flycontinuous rerouting for better online adaptation in mixtureofexpert models",
+        "url:https://arxiv.org/abs/2510.14853"
+      ],
+      "record": {
+        "title": "Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in Mixture-of-Expert models",
+        "source_url": "https://arxiv.org/abs/2510.14853",
+        "year": 2025,
+        "published": "2025-10-16",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) models achieve efficient scaling through sparse expert activation, but often suffer from suboptimal routing decisions due to distribution shifts in deployment. While existing test-time adaptation methods could potentially address these issues, they primarily focus on dense models and require access to external data, limiting their practical applicability to MoE architectures. However, we find that, instead of relying on reference data, we can optimize MoE expert selection on-the-fly based only on input context. As such, we propose \\textit{a data-free, online test-time framework} that continuously adapts MoE routing decisions during text generation without external supervision or data. Our method cycles between two phases: During the prefill stage, and later in regular intervals, we optimize the routing decisions of the model using self-supervision based on the already generated sequence. Then, we generate text as normal, maintaining the modified router until the next adaption. We implement this through lightweight additive vectors that only update router logits in selected layers, maintaining computational efficiency while preventing over-adaptation. The experimental results show consistent performance gains on challenging reasoning tasks while maintaining robustness to context shifts. For example, our method achieves a 5.5\\% improvement on HumanEval with OLMoE. Furthermore, owing to its plug-and-play property, our method naturally complements existing test-time scaling techniques, e.g., achieving 6\\% average gains when incorporated with self-consistency on DeepSeek-V2-Lite.",
+        "identifiers": [
+          "SemanticScholar:7e6eeed28fc2f0d411c69647d0a91075335ad40a"
+        ],
+        "semantic_scholar_id": "7e6eeed28fc2f0d411c69647d0a91075335ad40a",
+        "canonical_id": "arXiv:2510.14853",
+        "arxiv_id": "2510.14853",
+        "doi": "10.48550/arXiv.2510.14853",
+        "authors": [
+          "Gui-Nan Su",
+          "Yan-Wu Yang",
+          "Li Shen",
+          "Lu Yin",
+          "Shi-Wei Liu",
+          "Jonas Geiping"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 400,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1d325e1b2d439da5bd8a050feb2785a88c49de4b7714d31fcc21e49c50455925",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

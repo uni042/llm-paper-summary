@@ -1,0 +1,237 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-624a483e94e3e752-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-624a483e94e3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.16743",
+    "arXiv:2510.05090"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "568741609c287fa405145d501b447d974cd04b1a",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-20T22:34:43.679225+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.16743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.05090",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Finish First, Perfect Later: Test-Time Token-Level Cross-Validation for Diffusion Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.05090",
+      "year": 2025,
+      "published": "2025-10-06",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) models, offering advantages such as accelerated parallel decoding and bidirectional context modeling. However, the vanilla decoding strategy in discrete dLLMs suffers from a critical limitation: once a token is accepted, it can no longer be revised in subsequent steps. As a result, early mistakes persist across iterations, harming both intermediate predictions and final output quality. To address this issue, we propose Tolerator (Token-Level Cross-Validation Refinement), a training-free decoding strategy that leverages cross-validation among predicted tokens. Unlike existing methods that follow a single progressive unmasking procedure, Tolerator introduces a two-stage process: (i) sequence fill-up and (ii) iterative refinement by remasking and decoding a subset of tokens while treating the remaining as context. This design enables previously accepted tokens to be reconsidered and corrected when necessary, leading to more reliable diffusion decoding outputs. We evaluate Tolerator on five standard benchmarks covering language understanding, code generation, and mathematics. Experiments show that our method achieves consistent improvements over the baselines under the same computational budget. These findings suggest that decoding algorithms are crucial to realizing the full potential of diffusion large language models. Code and data are publicly available.",
+      "identifiers": [
+        "SemanticScholar:804570620a120f0c168753b067dc9efa7480d9a0"
+      ],
+      "semantic_scholar_id": "804570620a120f0c168753b067dc9efa7480d9a0",
+      "canonical_id": "arXiv:2510.05090",
+      "arxiv_id": "2510.05090",
+      "doi": "10.48550/arXiv.2510.05090",
+      "authors": [
+        "Run-Chu Tian",
+        "Jun-Xia Cui",
+        "Xue-Qiang Xu",
+        "Feng Yao",
+        "Jing-Bo Shang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 410,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TRIM: Achieving Extreme Sparsity with Targeted Row-wise Iterative Metric-driven Pruning",
+      "source_url": "https://arxiv.org/abs/2505.16743",
+      "year": 2025,
+      "published": "2025-05-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) present significant computational and memory challenges due to their extensive size, making pruning essential for their efficient deployment. Existing one-shot pruning methods often apply uniform sparsity constraints across layers or within each layer, resulting in suboptimal performance, especially at high sparsity ratios. This work introduces TRIM (Targeted Row-wise Iterative Metric-driven pruning), a novel approach that applies varying sparsity ratios to individual output dimensions (rows) within each layer. TRIM employs an iterative adjustment process guided by quality metrics to optimize dimension-wise sparsity allocation, focusing on reducing variance in quality retention across outputs to preserve critical information. TRIM can be seamlessly integrated with existing layer-wise pruning strategies. Our evaluations on perplexity and zero-shot tasks across diverse LLM families (Qwen2.5, LLaMA-2, and OPT) and sparsity levels demonstrate that TRIM achieves new state-of-the-art results and enhances stability. For instance, at 80% sparsity, TRIM reduces perplexity by 48% for Qwen2.5-14B and over 90% for OPT-13B compared to baseline methods. We conclude that fine-grained, dimension-wise sparsity adaptation is crucial for pushing the limits of extreme LLM compression. Code available at: https://github.com/flobk/TRIM",
+      "identifiers": [
+        "SemanticScholar:927653a0487eaf65b02704af63a04a4cc6a6638c"
+      ],
+      "semantic_scholar_id": "927653a0487eaf65b02704af63a04a4cc6a6638c",
+      "canonical_id": "arXiv:2505.16743",
+      "arxiv_id": "2505.16743",
+      "doi": "10.48550/arXiv.2505.16743",
+      "authors": [
+        "Florentin Beck",
+        "William Rudman",
+        "Carsten Eickhoff"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 547,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2510.05090",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.05090",
+        "id:SemanticScholar:804570620a120f0c168753b067dc9efa7480d9a0",
+        "id:arXiv:2510.05090",
+        "title:finish first perfect later testtime tokenlevel crossvalidation for diffusion large language models",
+        "url:https://arxiv.org/abs/2510.05090"
+      ],
+      "record": {
+        "title": "Finish First, Perfect Later: Test-Time Token-Level Cross-Validation for Diffusion Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.05090",
+        "year": 2025,
+        "published": "2025-10-06",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) models, offering advantages such as accelerated parallel decoding and bidirectional context modeling. However, the vanilla decoding strategy in discrete dLLMs suffers from a critical limitation: once a token is accepted, it can no longer be revised in subsequent steps. As a result, early mistakes persist across iterations, harming both intermediate predictions and final output quality. To address this issue, we propose Tolerator (Token-Level Cross-Validation Refinement), a training-free decoding strategy that leverages cross-validation among predicted tokens. Unlike existing methods that follow a single progressive unmasking procedure, Tolerator introduces a two-stage process: (i) sequence fill-up and (ii) iterative refinement by remasking and decoding a subset of tokens while treating the remaining as context. This design enables previously accepted tokens to be reconsidered and corrected when necessary, leading to more reliable diffusion decoding outputs. We evaluate Tolerator on five standard benchmarks covering language understanding, code generation, and mathematics. Experiments show that our method achieves consistent improvements over the baselines under the same computational budget. These findings suggest that decoding algorithms are crucial to realizing the full potential of diffusion large language models. Code and data are publicly available.",
+        "identifiers": [
+          "SemanticScholar:804570620a120f0c168753b067dc9efa7480d9a0"
+        ],
+        "semantic_scholar_id": "804570620a120f0c168753b067dc9efa7480d9a0",
+        "canonical_id": "arXiv:2510.05090",
+        "arxiv_id": "2510.05090",
+        "doi": "10.48550/arXiv.2510.05090",
+        "authors": [
+          "Run-Chu Tian",
+          "Jun-Xia Cui",
+          "Xue-Qiang Xu",
+          "Feng Yao",
+          "Jing-Bo Shang"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 410,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.16743",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.16743",
+        "id:SemanticScholar:927653a0487eaf65b02704af63a04a4cc6a6638c",
+        "id:arXiv:2505.16743",
+        "title:trim achieving extreme sparsity with targeted rowwise iterative metricdriven pruning",
+        "url:https://arxiv.org/abs/2505.16743"
+      ],
+      "record": {
+        "title": "TRIM: Achieving Extreme Sparsity with Targeted Row-wise Iterative Metric-driven Pruning",
+        "source_url": "https://arxiv.org/abs/2505.16743",
+        "year": 2025,
+        "published": "2025-05-22",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) present significant computational and memory challenges due to their extensive size, making pruning essential for their efficient deployment. Existing one-shot pruning methods often apply uniform sparsity constraints across layers or within each layer, resulting in suboptimal performance, especially at high sparsity ratios. This work introduces TRIM (Targeted Row-wise Iterative Metric-driven pruning), a novel approach that applies varying sparsity ratios to individual output dimensions (rows) within each layer. TRIM employs an iterative adjustment process guided by quality metrics to optimize dimension-wise sparsity allocation, focusing on reducing variance in quality retention across outputs to preserve critical information. TRIM can be seamlessly integrated with existing layer-wise pruning strategies. Our evaluations on perplexity and zero-shot tasks across diverse LLM families (Qwen2.5, LLaMA-2, and OPT) and sparsity levels demonstrate that TRIM achieves new state-of-the-art results and enhances stability. For instance, at 80% sparsity, TRIM reduces perplexity by 48% for Qwen2.5-14B and over 90% for OPT-13B compared to baseline methods. We conclude that fine-grained, dimension-wise sparsity adaptation is crucial for pushing the limits of extreme LLM compression. Code available at: https://github.com/flobk/TRIM",
+        "identifiers": [
+          "SemanticScholar:927653a0487eaf65b02704af63a04a4cc6a6638c"
+        ],
+        "semantic_scholar_id": "927653a0487eaf65b02704af63a04a4cc6a6638c",
+        "canonical_id": "arXiv:2505.16743",
+        "arxiv_id": "2505.16743",
+        "doi": "10.48550/arXiv.2505.16743",
+        "authors": [
+          "Florentin Beck",
+          "William Rudman",
+          "Carsten Eickhoff"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 547,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:49d627be8f452a302f83a93b584ce571f9e7e2f8aa181e30e2ee5af3edee10af",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
