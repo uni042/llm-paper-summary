@@ -35,10 +35,15 @@
   "selection_reason": "Apple Siliconの単一要求decodeを対象に、KV削減、投機復号、GPU kernel移植、事後量子化の4系統を同一条件で比較する。著者要旨ではKV pruningがApple上で最大1.75倍のend-to-end throughputを得る一方、評価した投機復号方式はすべてApple上でthroughputを低下させ、Metalの非同期コピー制約も移植効果を制限した。4台のApple機と可能な範囲のRTX4090比較を含む、ローカル推論最適化の適用条件を明らかにする一次評価としてaccept。",
   "semantic_scholar_id": "a11d02206fe4bccb55e2e87ee896e88ec4e7c68c",
   "source_url": "https://arxiv.org/abs/2610.31479",
-  "status": "ready",
+  "status": "superseded",
   "title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:54:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.31479-evaluating-the-applicability-of-llm-inference-optimizations-on-apple-sil.md",
+  "represented_canonical_id": "arXiv:2610.31479",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Gemma4 E4Bの大きなper-layer embeddingを、tokenごとに1つの量子化code tupleを保持し各層のaffine decoderで復元するOPTICで圧縮する。元vectorの再構成でなくoutput pathの誤差に合わせて符号を学習する。著者要旨は約100倍のPLE圧縮で元モデル性能97.8%を保持し、推論GPUメモリ29.7%削減、速度低下0.40%以内と報告。LLM重み/embedding容量削減の直接的方式としてaccept。",
   "semantic_scholar_id": "20f4835e1b142e964bebb99d36c38dc478e05fab",
   "source_url": "https://arxiv.org/abs/2610.31309",
-  "status": "ready",
+  "status": "superseded",
   "title": "Extreme Compression of Per-Layer Embeddings via Cross-Layer Latent Vector Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:54:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.31309-extreme-compression-of-per-layer-embeddings-via-cross-layer-latent-vecto.md",
+  "represented_canonical_id": "arXiv:2610.31309",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

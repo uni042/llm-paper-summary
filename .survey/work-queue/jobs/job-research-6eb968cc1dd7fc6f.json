@@ -35,10 +35,15 @@
   "selection_reason": "ValuSpecはretrievalベースtree speculative decodingの低品質branchをtarget verification前に選別する。targetのgreedy trajectoryから閾値を較正し、出力一致の検証規則を保持。HumanEval/GSM8K/Dolly/SpecBenchでretrieval tree設定最大2.38倍、EAGLE-3動的treeへ組込時最大2.78倍のend-to-end高速化を報告。",
   "semantic_scholar_id": "193f33797c27a1a27acec4b80947ebf4426a8271",
   "source_url": "https://arxiv.org/abs/2610.31338",
-  "status": "ready",
+  "status": "superseded",
   "title": "ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:54:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.31338-valuspec-plug-and-play-candidate-valuation-before-target-verification-fo.md",
+  "represented_canonical_id": "arXiv:2610.31338",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

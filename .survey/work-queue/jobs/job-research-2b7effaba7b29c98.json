@@ -35,10 +35,15 @@
   "selection_reason": "永続性配慮型KVキャッシュSARIA。多ターンエージェントが長い接頭辞を再利用する一方、全ブロックをSSDへ書くと書き込み量と寿命が問題になり、読み戻し帯域も限られる問題に対し、選択的な受付と読み戻しを協調させるKVキャッシュシステム。推論基盤の保存機構そのもの。",
   "semantic_scholar_id": "e0bf5cee7005db9d0ab48c231fe7862ae5de29a6",
   "source_url": "https://arxiv.org/abs/2610.31169",
-  "status": "ready",
+  "status": "superseded",
   "title": "SARIA: Persistence-Aware KV Caching with Coordinated DRAM--SSD Reload for LLM Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:54:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.31169-saria-persistence-aware-kv-caching-with-coordinated-dram-ssd-reload-for-.md",
+  "represented_canonical_id": "arXiv:2610.31169",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
