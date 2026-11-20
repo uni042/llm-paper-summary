@@ -35,10 +35,15 @@
   "selection_reason": "KV接頭部の細粒度再利用がstorage object数に比例するlookup、I/O発行、GPU搬送等の制御費用を生む問題に対し、Range ticketとbyte stripe、GPU transfer bankで物理バッチ処理量にのみ費用が比例するよう設計する。vLLM/LMCacheへ組込み、著者要旨は6GiB復元でobject数32倍変化に対しTTFTを1.79～1.80秒へ維持、従来LMCacheは2.12→3.01秒と報告。KV offloadとSSD階層の直接的実装研究としてaccept。",
   "semantic_scholar_id": "b37533fcbbf221b51e9fb257cfc128c2f342bb17",
   "source_url": "https://arxiv.org/abs/2610.21241",
-  "status": "ready",
+  "status": "superseded",
   "title": "Range: Decoupling KV-Cache Reuse Granularity from Storage Work",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:41:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.md",
+  "represented_canonical_id": "arXiv:2610.21241",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

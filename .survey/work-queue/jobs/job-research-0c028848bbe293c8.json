@@ -35,10 +35,15 @@
   "selection_reason": "MoE expertごとに固定bit幅を使う代わりに、SharedScale AnyBCQのprefix復号可能なweight chunkとoffline残差profileを使い、runtime router gate scoreに応じて各expertへchunk予算を配分する。再訓練/再符号化なしに有効精度を変更できる。著者要旨はQwen3-30B-A3BとDeepSeekMoE-16Bで同予算の均等割当よりKL/精度が改善し、prototypeの定常throughput負担は小さいと報告。MoE推論の動的精度制御としてaccept。",
   "semantic_scholar_id": "7525a7eba6ea646f76bf4f5929d89124a98ea8ec",
   "source_url": "https://arxiv.org/abs/2610.21378",
-  "status": "ready",
+  "status": "superseded",
   "title": "DPA-MoE: A Runtime Precision Control Framework for MoE Inference",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:41:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md",
+  "represented_canonical_id": "arXiv:2610.21378",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "hybrid linear attention LLMのrecurrent stateをdraft位置別の追加contextとして読み出し、low-rank state readとfused operatorでI/O負荷を抑えるReaDyを提案。DSpark型parallel backboneに位置別query readerを加え、軽量な2段階適応でdraftを改善する。一次要旨はQwen3.8-27B/B200単体で平均3.16倍のdecode speedup、DSpark比throughput7.97%・受理長8.50%増を報告。hybrid LLMの投機復号高速化としてaccept。",
   "semantic_scholar_id": "d728a44420cdc27a3e6a791ca9296ed80d49261f",
   "source_url": "https://arxiv.org/abs/2610.20503",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:41:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hy.md",
+  "represented_canonical_id": "arXiv:2610.20503",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

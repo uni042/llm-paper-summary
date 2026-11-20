@@ -35,10 +35,15 @@
   "selection_reason": "Edgeのmulti-agent LLMで前段agentのKVを次のagentへ渡す際、無線リンクの損失とTTFT締切のため全KV転送が間に合わない問題を扱う。重要度の高いKV blockを先に送るutility-aware streamと、受信feedbackに基づき期限までにrepair packetを配置するStreaming FECを統合するPriorityFECを提案。Qwen2.5-7BとLlama-3.1-8Bの分散edge serving試作で、厳しい期限下ほど既存転送方式よりタスク品質が良いと報告。KV再利用とネットワーク転送の直接最適化なのでaccept。",
   "semantic_scholar_id": "2d638cd582795e19c842be2cce9dab7119e27782",
   "source_url": "https://arxiv.org/abs/2610.21390",
-  "status": "ready",
+  "status": "superseded",
   "title": "PriorityFEC: Deadline-Aware Streaming FEC for KV-Cache Handoff in Edge Multi-Agent Systems",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:41:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-mu.md",
+  "represented_canonical_id": "arXiv:2610.21390",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

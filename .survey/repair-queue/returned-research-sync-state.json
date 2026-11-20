@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "24c56b43b9c81f2346b4b4a7958149aabfdb0686",
+  "base_commit": "ee47e0504eb62058e993a3af50a10904dfbe1b60",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -405,6 +405,11 @@
     "2026-2610.18399-bifocal-training-free-mixed-granularity-visual-token-pruning-for-multimodal-llms.json",
     "2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.json",
     "2026-2610.19605-pn-mix-pair-norm-guided-mixed-precision-key-cache-quantization-for-efficient-long-output-llm-inference.json",
+    "2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hybrid-linear-attention-large-language-models.json",
+    "2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.json",
+    "2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multiplier-free-llm-inference.json",
+    "2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.json",
+    "2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-multi-agent-systems.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41536,6 +41541,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.20503": {
+      "order": [
+        "2026-11-20T01:37:35+00:00",
+        "2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hybrid-linear-attention-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21241": {
+      "order": [
+        "2026-11-20T01:38:20+00:00",
+        "2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21257": {
+      "order": [
+        "2026-11-20T01:39:05+00:00",
+        "2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multiplier-free-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21378": {
+      "order": [
+        "2026-11-20T01:39:50+00:00",
+        "2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.21390": {
+      "order": [
+        "2026-11-20T01:40:35+00:00",
+        "2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-multi-agent-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51337,6 +51387,21 @@
     "arxiv:2610.19605": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.19605-pn-mix-pair-norm-guided-mixed-precision-key-cache-quantization-for-effic.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.19605-pn-mix-pair-norm-guided-mixed-precision-key-cache-quantization-for-effic.md"
+    ],
+    "arxiv:2610.20503": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hy.md"
+    ],
+    "arxiv:2610.21241": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.md"
+    ],
+    "arxiv:2610.21257": [
+      "papers/inference/99-other-inference-systems/2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md"
+    ],
+    "arxiv:2610.21378": [
+      "papers/inference/99-other-inference-systems/2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md"
+    ],
+    "arxiv:2610.21390": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.21390-priorityfec-deadline-aware-streaming-fec-for-kv-cache-handoff-in-edge-mu.md"
     ]
   }
 }

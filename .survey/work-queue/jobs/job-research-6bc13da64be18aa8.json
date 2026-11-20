@@ -35,10 +35,15 @@
   "selection_reason": "base-√2の4bit重み量子化格子と整数activationを組み合わせ、静的channel scaleへ校正時補正を吸収し、1加算器による√2近似で整数shift-add演算を実現するFPoTを提案。一次要旨はLlama-3-8BのW4A4で通常PoT比zero-shot commonsense scoreを8.72%改善、uniform integer baseline比低下0.4ポイントと報告。専用PEのゲート削減を狙うLLM低bit推論のhardware/software co-designとしてaccept。",
   "semantic_scholar_id": "674784b26dfb366d34e247716deb1ab9d3b8f117",
   "source_url": "https://arxiv.org/abs/2610.21257",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:41:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md",
+  "represented_canonical_id": "arXiv:2610.21257",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

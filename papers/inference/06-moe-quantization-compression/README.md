@@ -83,7 +83,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   DynaMoは、混合専門家モデル（Mixture-of-Experts; MoE）の量子化を、固定された1種類の較正データに最適化するのではなく、複数のデータ集合にわたる専門家の重要度変動と、入力分布の変化に応じて調整する手法である。
 
 - **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
-  実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：3  
   DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
 
 - **2025-11 · [Exploiting the Experts: Unauthorized Compression in MoE-LLMs](2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md)**  

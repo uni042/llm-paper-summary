@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1040本）
+## 自動生成の論文一覧（1042本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -705,6 +705,14 @@
 - **2026-10 · [LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers](2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-t.md)**  
   実装：[✓](https://github.com/Kishon-zzx/LoopQuant) ・ リポジトリ内被引用：0  
   ループ型言語モデル専用の学習後量子化として、共有変換による分布の正準化、感度と相互作用に基づくループ別ビット配分、再帰軌跡に沿った較正を組み合わせ、4ビット量子化でも8ビット従来法を上回る精度と1.5から1.7倍の復号高速化を得た。
+
+- **2026-10 · [Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference](2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みの格子を半オクターブの分数冪へ細かくし、活性値は一様整数のまま、ルート2倍を加算器1個で近似して誤差を較正で吸収することで、乗算器なしのシフト加算実行を保ったまま4ビットで一様整数に近い精度を得る量子化。
+
+- **2026-10 · [DPA-MoE: A Runtime Precision Control Framework for MoE Inference](2026-2610.21378-dpa-moe-a-runtime-precision-control-framework-for-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ルータが選んだ専門家への重み断片の配分を、ゲートスコアと事前計測した再構成残差から実行時に決め直すことで、同じ平均断片数の一律配分より出力分布のずれを最大4.5倍小さくし、同等の忠実度を22から44ギガバイト少ない重み量で達成した。
 
 - **2026-10 · [Decoupled Contrastive Decoding via Expert-Aligned Drafting](2026-2608.12913-decoupled-contrastive-decoding-via-expert-aligned-drafting.md)**  
   実装：[✓](https://github.com/chadlzx/dcd) ・ リポジトリ内被引用：0  
