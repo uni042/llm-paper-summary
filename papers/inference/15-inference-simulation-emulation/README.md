@@ -355,7 +355,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   DeeR-VLA（動的 Early-Exit for Robotic Multimodal Large Language Models）は、画像と自然言語の指示からロボットの行動を決める視覚・言語・行動モデルに、複数の中間出口（early exit）を設ける推論時の計算資源配分方式である。
 
 - **2024-11 · [Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format](2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   AndaはこのFP-INT行列積を対象に、活性値の格納形式、各演算モジュールへ割り当てる精度、専用回路の三つを共同最適化する研究である。
 
 - **2024-11 · [MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices](2024-2411.17720-mas-attention-memory-aware-stream-processing-for-attention-acceleration-.md)**  

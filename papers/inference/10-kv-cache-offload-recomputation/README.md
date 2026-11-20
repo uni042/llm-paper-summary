@@ -379,7 +379,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   問い合わせごとに補助モデルの注意から再計算する文書位置を選び、連結したKVキャッシュのチャンク間情報を回復するRAGプリフィル方式。L20上の16K入力では全注意比3.33倍速く、品質との調整に再計算率を使う。
 
 - **2025-02 · [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md)**  
-  実装：[✓](https://github.com/wdlctc/headinfer) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/wdlctc/headinfer) ・ リポジトリ内被引用：12  
   HeadInferはKVをヘッド単位でCPU DRAMからGPUへ読み、次ヘッドの転送を現在ヘッドの注意計算へ重ねることで、層単位転送より必要VRAMと長文容量を抑える方式。
 
 - **2025-11 · [SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation](2025-swiftkv.md)**  
@@ -461,7 +461,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：177  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：178  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -515,10 +515,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
-  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：157  
+  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：159  
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：141  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：143  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 <!-- survey:auto:end -->

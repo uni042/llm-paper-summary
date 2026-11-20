@@ -377,7 +377,7 @@
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
-  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：30  
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
@@ -523,7 +523,7 @@
   この観測を使い、優先度別の二段階電力制御を行うPOLCAを提案する。著者らは本番トレースから生成した合成負荷を用いた離散事象シミュレーションで、既存の電力予算のままサーバーを30%多く配置しても、設定した遅延SLOを満たし、通常条件で電力ブレーキを起こさない結果を示した。
 
 - **2024-02 · [A Comprehensive Evaluation of Quantization Strategies for Large Language Models](2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md)**  
-  実装：[✓](https://github.com/cordercorder/quant_eval) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/cordercorder/quant_eval) ・ リポジトリ内被引用：18  
   本論文は、新しい量子化器を提案するものではなく、既存の量子化方式をモデル能力、指示追従・整合性、推論効率という異なる観点で測り直す比較実験である。論文のSpQR実装は低ビットの値域を模擬しながら高精度形式で重みを保持しており、品質の比較には使えても実メモリ削減を実証しない。
 
 - **2024-11 · [Lynx: Enabling Efficient MoE Inference through Dynamic Batch-Aware Expert Selection](2024-2411.08982-lynx-enabling-efficient-moe-inference-through-dynamic-batch-aware-expert.md)**  
