@@ -35,10 +35,15 @@
   "selection_reason": "SpecScaleは推論時の複数推論経路の投機実行に伴う探索空間増大と細粒度検証負荷に対し、低品質経路の早期枝刈り、重複計算の除去、検証遅延を組み合わせるLLMサービング方式。MATHとOlympiadで非投機・既存投機方式とスループット、遅延を比較。LLMサービングとtest-time scalingに直接関連する。要旨に定量的倍率はないため捏造しない。",
   "semantic_scholar_id": "64cc6645122436c28af6dd66c5d574f103bf089a",
   "source_url": "https://arxiv.org/abs/2609.39334",
-  "status": "ready",
+  "status": "superseded",
   "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:04:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.39334-taming-speculative-search-for-test-time-scaling-in-llm-serving.md",
+  "represented_canonical_id": "arXiv:2609.39334",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

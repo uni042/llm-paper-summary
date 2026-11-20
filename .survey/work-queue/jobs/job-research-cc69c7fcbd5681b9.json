@@ -35,10 +35,15 @@
   "selection_reason": "PCIe接続のコンシューマGPU向け専門家並列通信。専門家並列の通信が全てCPUメモリを経由するPCIe構成で推論時間の大きな割合を占めるのに、既存の通信ライブラリが直接GPU間アクセスを前提とする問題に対処する。推論基盤の通信機構そのもの。",
   "semantic_scholar_id": "f86fb8eeecad5954dcc75950b25e8b580f3e15ef",
   "source_url": "https://arxiv.org/abs/2609.40093",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:04:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/12-moe-parallelism-communication/2026-2609.40093-efficient-expert-parallel-communication-on-pcie-connected-consumer-gpus.md",
+  "represented_canonical_id": "arXiv:2609.40093",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

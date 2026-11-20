@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（554本）
+## 自動生成の論文一覧（555本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2026-04 · [SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference](2026-2505.24095-skywalker-cross-region-load-balancer.md)**  
@@ -613,6 +613,10 @@
 - **2026-09 · [Token Latency Fairness: Performance Isolation for Multi-Tenant LLM Serving](2026-2609.18112-fairinference-token-latency-fairness-multitenant.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離実行比δ以内のトークン遅延を保証するdeadline スケジューラとKV予約を統合し、高需要テナント下のp99 遅延 isolationを実現する。
+
+- **2026-09 · [Taming Speculative Search for Test-Time Scaling in LLM Serving](2026-2609.39334-taming-speculative-search-for-test-time-scaling-in-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  テスト時スケーリングの投機的探索を、早期枝刈り・計算の重複排除・遅延検証で効率化し、精度を保ったまま素朴な投機方式の2.18倍のスループットを出すサービング手法。
 
 - **2026-09 · [SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving](2026-2609.37626-splash-switching-parallel-layouts-of-attention-with-seamless-handoff-for.md)**  
   実装：[✓](https://github.com/ict-agent/SPLASH-sglang) ・ リポジトリ内被引用：0  
