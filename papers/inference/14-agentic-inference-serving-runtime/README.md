@@ -73,6 +73,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
 
+- **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  AVOは進化的プログラム探索の変異演算子を固定的なLLM生成呼出しから、過去の実装、ハードウェア資料、実行・性能測定へ自律的にアクセスしてコードの修正・検証を反復するエージェントへ置き換える。NVIDIA B200上のBF16注意カーネルを7日間自律改善し、40の成功版を記録。
+
 - **2026-01 · [Nalar: Workflow-Aware Management of Agentic Applications](2026-2601.05109-nalar-workflow-aware-management-of-agentic-applications.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   複数の言語モデルエージェントが計画、検索、コード生成、試験などを繰り返す処理では、一つの利用者要求が多段階の作業へ分かれ、途中結果によって分岐や再試行が発生する。個々の言語モデルの生成速度だけを改善しても、外部ツールの待機、複数エージェントの依存関係、GPUメモリに残る鍵・値キャッシュ、資源の偏りによって、要求全体の終了時間が長くなる。
@@ -84,10 +88,6 @@
 - **2026-07 · [Rethinking AI Cloud Infrastructure for Agentic Serving Systems with the Aries Experimentation Framework](2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md)**  
   実装：[✓](https://github.com/hyscale-lab/aries) ・ リポジトリ内被引用：3  
   AriesはLLM推論、ハーネス、状態付きツールを一つのエージェント軌跡として計測し、ツール待ち、長期文脈、サンドボックスの瞬間的な資源需要を同じタスク進捗へ結び付ける実験基盤である。
-
-- **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  AVOは進化的プログラム探索の変異演算子を固定的なLLM生成呼出しから、過去の実装、ハードウェア資料、実行・性能測定へ自律的にアクセスしてコードの修正・検証を反復するエージェントへ置き換える。NVIDIA B200上のBF16注意カーネルを7日間自律改善し、40の成功版を記録。
 
 - **2026-05 · [GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving](2026-2605.22566-graphflow-agent-workflow-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -144,6 +144,10 @@
 - **2026-03 · [Orla: A Library for Serving LLM-Based Multi-Agent Systems](2026-2603.13605-orla-a-library-for-serving-llm-based-multi-agent-systems.md)**  
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  
   分類段階をQwen3-4B、重い段階をQwen3-8Bへ割り当てた異種構成は、単一Qwen3-8Bの比較対象に対し壁時計時間38%、平均完了時間60%、推定推論費用35%を削減した。
+
+- **2026-03 · [CUCo: An Agentic Framework for Compute and Communication Co-design](2026-2603.02376-cuco-an-agentic-framework-for-compute-and-communication-co-design.md)**  
+  実装：[✓](https://anonymous.4open.science/r/CUCo-06EC/) ・ リポジトリ内被引用：1  
+  既存の分散処理では、行列積や注意計算を高速化する担当と、NCCL通信を高速化する担当が分離されやすい。続いて性能探索の低速経路（slow-path）で、コンパイル・数値照合・実機ベンチマークを通した候補だけを残し、進化的な探索で転送と計算の重なり方を改善する。
 
 - **2026-02 · [HyFunc: Accelerating LLM-based Function Calls for Agentic AI through Hybrid-Model Cascade and Dynamic Templating](2026-2602.13665-hyfunc-accelerating-llm-based-function-calls-for-agentic-ai-through-hybr.md)**  
   実装：[✓](https://github.com/MrBlankness/HyFunc) ・ リポジトリ内被引用：1  
@@ -291,10 +295,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、問い合わせを小型LLMから大型LLMへ段階的に委譲するカスケード（cascade）に、必要なときだけ複数エージェントの討論（multi-agent deliberation）を挿入するCascadeDebateを提案する。Llama-3.2のMedQAでは標準カスケード68.20%に対し提案法86.44%を報告する。
 
-- **2026-03 · [CUCo: An Agentic Framework for Compute and Communication Co-design](2026-2603.02376-cuco-an-agentic-framework-for-compute-and-communication-co-design.md)**  
-  実装：[✓](https://anonymous.4open.science/r/CUCo-06EC/) ・ リポジトリ内被引用：0  
-  既存の分散処理では、行列積や注意計算を高速化する担当と、NCCL通信を高速化する担当が分離されやすい。続いて性能探索の低速経路（slow-path）で、コンパイル・数値照合・実機ベンチマークを通した候補だけを残し、進化的な探索で転送と計算の重なり方を改善する。
-
 - **2026-02 · [Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization](2026-2602.22675-search-more-think-less-rethinking-long-horizon-agentic-search-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重要なのはモデル内部の注意計算を高速化することではなく、モデルが外部情報を収集するための逐次対話回数と検索の依存鎖を減らす点にある。Qwen3-30B-A3B-Instruct-2507を基盤として学習したSMTL-300は、BrowseComp 48.6%、GAIA 75.7%、XBench-DeepSearch 82.0%を報告する。
@@ -326,7 +326,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
-  実装：✓ ・ リポジトリ内被引用：62  
+  実装：✓ ・ リポジトリ内被引用：63  
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-02 · [A-Mem: Agentic Memory for LLM Agents](2025-2502.12110-a-mem-agentic-memory-for-llm-agents.md)**  
@@ -345,6 +345,10 @@
   実装：✓ ・ リポジトリ内被引用：16  
   この構造は能力を上げる一方、通常の単一ターン推論を前提に設計されたGPUサービングでは、長い逐次依存、外部ツール待ち、繰り返しプリフィル、可変長生成を生み、平均利用率だけでは実コストを捉えにくい。代表結果では、HotpotQAやMATHのCPU・外部ツール待ちが実行時間の最大54.5%を占める条件があり、LLM実行中も復号がGPU時間の74.1%を占める。
 
+- **2025-05 · [HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
+  実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：11  
+  本研究は、一つの利用者問い合わせが約20回の大規模言語モデル（LLM）呼び出しを誘発するエージェント型Text-to-SQL処理に対し、問い合わせ全体の応答期限を守る推論スケジューラを設計する。
+
 - **2025-10 · [Speculative Actions: A Lossless Framework for Faster Agentic Systems](2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md)**  
   実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：10  
   本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
@@ -356,10 +360,6 @@
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
   実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：10  
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
-
-- **2025-05 · [HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
-  実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：10  
-  本研究は、一つの利用者問い合わせが約20回の大規模言語モデル（LLM）呼び出しを誘発するエージェント型Text-to-SQL処理に対し、問い合わせ全体の応答期限を守る推論スケジューラを設計する。
 
 - **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

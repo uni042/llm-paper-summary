@@ -515,7 +515,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
-  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：44  
   HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
 
 - **2024-11 · [MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)**  
@@ -543,7 +543,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  
-  実装：[✓](https://yuzhenmao.github.io/IceFormer/) ・ リポジトリ内被引用：7  
+  実装：[✓](https://yuzhenmao.github.io/IceFormer/) ・ リポジトリ内被引用：8  
   一般keyを最近傍探索可能な空間へ写像し、重要な注意先だけをPrioritized DCIで選んで、再学習なしにCPU長文注意を高速化する方式。
 
 - **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
@@ -569,7 +569,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：532  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：534  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-12〜2022-11）
@@ -579,7 +579,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoEの不均衡とGPU容量不足を、訓練時のElastic MoE＋2D先読みと、推論時のCPU/GPU ring型section実行で処理し、DeepSpeed比で訓練33%・推論13%のスループット向上を報告する。
 
 - **2022-09 · [Petals: Collaborative Inference and Fine-tuning of Large Models](2022-2209.01188-petals-collaborative-inference-and-fine-tuning-of-large-models.md)**  
-  実装：[✓](https://petals.ml) ・ リポジトリ内被引用：19  
+  実装：[✓](https://petals.ml) ・ リポジトリ内被引用：20  
   Petalsは、単一の利用者が巨大言語モデル全体を保持できなくても、複数の参加者がそれぞれ一部のTransformer層をGPUに置くことで、モデル全体を分散実行できるようにするシステムである。
 
 ### 6年前（2020-12〜2021-11）
