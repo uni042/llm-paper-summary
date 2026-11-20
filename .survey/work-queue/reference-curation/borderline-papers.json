@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-20T05:54:19+00:00",
-  "record_count": 6424,
+  "updated_at": "2026-11-20T06:10:34+00:00",
+  "record_count": 6425,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -100080,6 +100080,25 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding"
+    },
+    "arXiv:2508.17291": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.17291",
+      "identity_tokens": [
+        "arXiv:2508.17291",
+        "large reasoning models",
+        "meta-r1",
+        "metacognition",
+        "satisficing termination"
+      ],
+      "reason": "Meta-R1は小型の指示モデルをメタレベルとして推論モデルを監視・制御し、トークン消費を15.7から32.7パーセントへ削減するが、主眼は数学推論の正解率と推論過程の制御であり、サービング基盤やメモリ・カーネルといった推論システム機構への直接の貢献は薄いためborderlineとした。",
+      "first_checked_at": "2026-11-20T06:10:34+00:00",
+      "last_checked_at": "2026-11-20T06:10:34+00:00",
+      "linked_from": [
+        "research worker batch c2b3 (arXiv:2508.17291)"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Meta-R1: Empowering Large Reasoning Models with Metacognition"
     }
   }
 }
