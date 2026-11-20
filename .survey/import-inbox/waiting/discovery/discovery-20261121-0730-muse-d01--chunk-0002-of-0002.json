@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d01::chunk-0002-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16684",
+      "identity_tokens": [
+        "arXiv:2502.16684",
+        "https://arxiv.org/abs/2502.16684"
+      ],
+      "title": "WildLong: Synthesizing Realistic Long-Context Instruction Data at Scale",
+      "reason": "WildLongは実ユーザクエリのメタ情報とグラフ共起から長コンテキスト指示データを大規模合成しファインチューニング用データセットを構築する研究で、対象は学習データ生成であり推論時の計算やメモリ機構への貢献が要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2502.16684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.09684",
+      "identity_tokens": [
+        "arXiv:2208.09684",
+        "https://arxiv.org/abs/2208.09684"
+      ],
+      "title": "Combining Compressions for Multiplicative Size Scaling on Natural Language Tasks",
+      "reason": "量子化・知識蒸留・枝刈りの8通りの組合せをBERT系モデルとGLUEで比較しモデルサイズと精度のトレードオフを測った圧縮研究で、推論加速に触れるものの小規模分類モデルのサイズ削減が主題でありLLM推論システムへの直接適用は薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2208.09684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.24033",
+      "identity_tokens": [
+        "arXiv:2505.24033",
+        "https://arxiv.org/abs/2505.24033"
+      ],
+      "title": "Studying the Soupability of Documents in State Space Models",
+      "reason": "文書ごとに独立エンコードしたSSM隠れ状態を平均等で統合するドキュメントスーピングは再処理なしの再利用で推論コストを大きく下げうるが、微調整済みMamba2という特定アーキテクチャの文書QA手法であり汎用LLM推論基盤の機構とは言い切れないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2505.24033",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.26266",
+      "identity_tokens": [
+        "arXiv:2605.26266",
+        "https://arxiv.org/abs/2605.26266"
+      ],
+      "title": "Quantized Keys Steal Attention: Bias Correction for KV-Cache Compression in Video Diffusion",
+      "reason": "動画拡散モデルのKVキャッシュをINT2量子化する際のJensenバイアスを量子化ステップ幅とクエリノルムから補正する手法で、KVキャッシュ圧縮の機構自体は推論関連だが適用対象がチャンク自己回帰の動画生成でありLLM推論ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.26266",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23926",
+      "identity_tokens": [
+        "arXiv:2505.23926",
+        "https://arxiv.org/abs/2505.23926"
+      ],
+      "title": "Point-MoE: Large-Scale Multi-Dataset Training with Mixture-of-Experts for 3D Semantic Segmentation",
+      "reason": "Point-MoEは3D点群セマンティックセグメンテーションの複数データセット統合学習向けにスパース活性化専門家と軽量ルータを導入したモデルであり、対象分野が3D知覚でLLM推論システムへの適用が要旨に一切ないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2505.23926",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06997",
+      "identity_tokens": [
+        "arXiv:2605.06997",
+        "https://arxiv.org/abs/2605.06997"
+      ],
+      "title": "Echo: KV-Cache-Free Associative Recall with Spectral Koopman Operators",
+      "reason": "EchoはスペクトルKoopman注意でキー・バリュー履歴を定数メモリの統計量へ蓄積しKVキャッシュなしの連想想起を実現するが、学習を要する新規アーキテクチャであり50M規模の想起ベンチマーク検証に留まり既存LLMサービングへの直接適用ではないため境界とする。",
+      "source_url": "https://arxiv.org/abs/2605.06997",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.22996",
+      "identity_tokens": [
+        "arXiv:2503.22996",
+        "https://arxiv.org/abs/2503.22996"
+      ],
+      "title": "Rethinking Sparse Mixture of Experts from a Unified Perspective",
+      "reason": "USMoEはToken ChoiceとExpert Choiceを線形計画法で統一し柔軟な専門家選択予算で推論コスト削減を掲げるスパースMoE枠組みだが、評価はテキスト・視覚を含むモデル品質全般が中心で推論システムとしての実行機構や serving 測定が要旨で薄いため境界とする。",
+      "source_url": "https://arxiv.org/abs/2503.22996",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24930",
+      "identity_tokens": [
+        "arXiv:2605.24930",
+        "https://arxiv.org/abs/2605.24930"
+      ],
+      "title": "H2MT: Semantic Hierarchy-Aware Hierarchical Memory Transformer",
+      "reason": "H2MTは意味階層をオフライン構築し各ノードのメモリ埋め込みを推論時に粗から細へ辿って無関係な枝を早期に剪定する長コンテキスト推論機構で、ピークGPUメモリとTTFTを圧縮・RAG系ベースラインより下げる効果が要旨で具体的に示されているため採用とする。",
+      "source_url": "https://arxiv.org/abs/2605.24930",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.02311",
+      "identity_tokens": [
+        "arXiv:2601.02311",
+        "https://arxiv.org/abs/2601.02311"
+      ],
+      "title": "Placement Semantics for Distributed Deep Learning: A Systematic Framework for Analyzing Parallelism Strategies",
+      "reason": "配置セマンティクスはデータ・テンソル・パイプライン並列やZeRO等の学習時並列化戦略をパラメータ等の配置で統一的に解析しメモリと通信量を予測する枠組みで、対象がLLM学習の分散戦略であり推論の分散実行への適用が要旨にないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2601.02311",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.03495",
+      "identity_tokens": [
+        "arXiv:2211.03495",
+        "https://arxiv.org/abs/2211.03495"
+      ],
+      "title": "How Much Does Attention Actually Attend? Questioning the Importance of Attention in Pretrained Transformers",
+      "reason": "PAPAは入力依存の注意行列を入力平均の定数行列へ置き換えるプロービングで事前学習Transformerにおける注意の重要度を分析した研究であり、新しい推論機構の提案ではなく能力・機構分析に留まるためLLM推論システムへの直接貢献はないものとして対象外とする。",
+      "source_url": "https://arxiv.org/abs/2211.03495",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 82
+    }
+  ],
+  "parent_run_key": "muse-20261121-d01",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}

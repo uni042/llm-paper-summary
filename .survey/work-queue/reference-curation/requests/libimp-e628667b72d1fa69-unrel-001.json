@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e628667b72d1fa69-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2310.00576",
+  "reason": "訓練長を128から4096へ段階的に伸ばすGrowLengthは事前学習の収束高速化のみを目的とし、推論・デコーディング・サービングへの適用や評価が要旨に一切ないため対象外である。",
+  "title": "GrowLength: Accelerating LLMs Pretraining by Progressively Growing Training Length",
+  "identity_tokens": [
+    "arXiv:2310.00576",
+    "https://arxiv.org/abs/2310.00576"
+  ],
+  "linked_from": [
+    "worker-worklist discovery_review"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e628667b72d1",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

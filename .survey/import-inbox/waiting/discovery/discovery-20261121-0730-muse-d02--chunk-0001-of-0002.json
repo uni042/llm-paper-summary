@@ -1,0 +1,375 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d02::chunk-0001-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 20,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.00576",
+      "identity_tokens": [
+        "arXiv:2310.00576",
+        "https://arxiv.org/abs/2310.00576"
+      ],
+      "title": "GrowLength: Accelerating LLMs Pretraining by Progressively Growing Training Length",
+      "reason": "訓練長を128から4096へ段階的に伸ばすGrowLengthは事前学習の収束高速化のみを目的とし、推論・デコーディング・サービングへの適用や評価が要旨に一切ないため対象外である。",
+      "source_url": "https://arxiv.org/abs/2310.00576",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 83
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.04514",
+      "identity_tokens": [
+        "arXiv:2603.04514",
+        "https://arxiv.org/abs/2603.04514"
+      ],
+      "title": "Progressive Refinement Regulation for Accelerating Diffusion Language Model Decoding",
+      "reason": "拡散言語モデルのデコーディングで全トークン一様な反復デノイジングの冗長性を、軌跡に基づく収束進捗で学習した軽量コントローラが温度整形で制御し、生成品質を保ちつつデコーディングを高速化する直接の推論技術である。",
+      "source_url": "https://arxiv.org/abs/2603.04514",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 84
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.40247",
+      "identity_tokens": [
+        "arXiv:2609.40247",
+        "https://arxiv.org/abs/2609.40247"
+      ],
+      "title": "Herschel: Continuous Optimization of Production LLM Inference through On-Demand Profiling",
+      "reason": "本番LLM推論へオンデマンドでプロファイラを着脱し演算子実行とプロセス間依存を再構成して非効率機構を特定し、カーネルや同期構造の修正へつなげるHerschelは、実サービングの継続的最適化基盤そのものである。",
+      "source_url": "https://arxiv.org/abs/2609.40247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 85
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.15665",
+      "identity_tokens": [
+        "arXiv:2501.15665",
+        "https://arxiv.org/abs/2501.15665"
+      ],
+      "title": "StagFormer: Time Staggering Transformer Decoding for RunningLayers In Parallel",
+      "reason": "トークン表現の層間依存を1時刻ずらすStagFormerは、Transformerの逐次デコーディングをモデル深度方向に並列実行できるようにし、品質を保ちながらデコーディング速度向上を狙うアーキテクチャである。",
+      "source_url": "https://arxiv.org/abs/2501.15665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 86
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.19342",
+      "identity_tokens": [
+        "arXiv:2505.19342",
+        "https://arxiv.org/abs/2505.19342"
+      ],
+      "title": "ASTRA: Communication-Efficient Acceleration for Multi-Device Transformer Inference",
+      "reason": "ASTRAは系列並列と混合精度アテンションを統合し、非局所トークン埋め込みを低ビットベクトル量子化コードで送ることで10Mbps級の低帯域でもマルチデバイスTransformer推論を最大2.64倍高速化する通信効率化技術である。",
+      "source_url": "https://arxiv.org/abs/2505.19342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 88
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.20818",
+      "identity_tokens": [
+        "arXiv:2610.20818",
+        "https://arxiv.org/abs/2610.20818"
+      ],
+      "title": "Intern Lumina U2: A Multi-Codebook Diffusion Large Language Model for Omni-Visual Understanding and Image Generation",
+      "reason": "マルチコードブック視覚トークンを持つ拡散言語モデルIntern Lumina U2は画像理解・生成モデルの提案が主体で、推論面は安定性配慮サンプリングによる画像生成4.45倍高速化に触れるのみで推論システムへの貢献は副次的である。",
+      "source_url": "https://arxiv.org/abs/2610.20818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.11128",
+      "identity_tokens": [
+        "arXiv:2604.11128",
+        "https://arxiv.org/abs/2604.11128"
+      ],
+      "title": "Technology solutions targeting the performance of gen-AI inference in resource constrained platforms",
+      "reason": "長コンテキスト時のKV状態によるメモリ容量・帯域圧迫を階層ルーフライン解析モデルで評価し、13B級ではHigh Bandwidth Storage、1B級では接着型グローバルバッファチップレットの要件を示す、資源制約下の生成AI推論基盤の計測・設計研究である。",
+      "source_url": "https://arxiv.org/abs/2604.11128",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.04241",
+      "identity_tokens": [
+        "arXiv:2305.04241",
+        "https://arxiv.org/abs/2305.04241"
+      ],
+      "title": "Vcc: Scaling Transformers to 128K Tokens or More by Prioritizing Important Tokens",
+      "reason": "VIPトークン中心圧縮Vccは各層で系列を圧縮し128Kトークンまでの長系列処理を効率化するが、対象は書籍QAや要約など長系列Transformer処理一般であり、LLMのデコーディングやサービング機構としての評価は要旨で不明瞭である。",
+      "source_url": "https://arxiv.org/abs/2305.04241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25771",
+      "identity_tokens": [
+        "arXiv:2510.25771",
+        "https://arxiv.org/abs/2510.25771"
+      ],
+      "title": "Gaperon: A Peppered English-French Generative Language Model Suite",
+      "reason": "Gaperonは英仏コード対応言語モデルの学習データ選別・汚染・チェックポイント公開に関するモデルスイートの報告であり、推論効率やサービング機構への技術的貢献は要旨に示されていない。",
+      "source_url": "https://arxiv.org/abs/2510.25771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.08281",
+      "identity_tokens": [
+        "arXiv:2403.08281",
+        "https://arxiv.org/abs/2403.08281"
+      ],
+      "title": "Mastering Text, Code and Math Simultaneously via Fusing Highly Specialized Language Models",
+      "reason": "UltraFuserは言語・コード・数学の専門家モデルをトークンレベルゲーティングで融合し教師あり学習で能力を同時獲得させる学習手法であり、MoE推論やサービングの効率化を目的とした機構ではない。",
+      "source_url": "https://arxiv.org/abs/2403.08281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.05225",
+      "identity_tokens": [
+        "arXiv:2412.05225",
+        "https://arxiv.org/abs/2412.05225"
+      ],
+      "title": "BEExformer: A Fast Inferencing Binarized Transformer With Early Exits",
+      "reason": "BEExformerは二値化対応学習による21.30倍のモデル小型化と、中間ブロックのエントロピー低下に基づく早期終了でFLOPsを52.27%削減する仕組みを組み合わせ、テキスト推論の高速化を直接狙う量子化・推論技術である。",
+      "source_url": "https://arxiv.org/abs/2412.05225",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22149",
+      "identity_tokens": [
+        "arXiv:2512.22149",
+        "https://arxiv.org/abs/2512.22149"
+      ],
+      "title": "Adaptive GPU Resource Allocation for Multi-Agent Collaborative Reasoning in Serverless Environments",
+      "reason": "サーバーレスGPU上でマルチエージェントLLMの異種ワークロードへ適応的にGPUを割り当てる枠組みはサービングのスケジューリングに関連するが、評価は4エージェントのシミュレーションのみで実推論エンジン上の機構は薄い。",
+      "source_url": "https://arxiv.org/abs/2512.22149",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 98
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33848",
+      "identity_tokens": [
+        "arXiv:2609.33848",
+        "https://arxiv.org/abs/2609.33848"
+      ],
+      "title": "QwenGyre: An Elastic Reinforcement Learning Framework for Training xLong-Horizon Agents",
+      "reason": "QwenGyreは超長ホライズンエージェントのオンライン強化学習でロールアウトと学習の間でGPUを弾力的に再配分し学習スループットを上げる訓練フレームワークであり、最終目的は推論ではなくRL訓練の効率化である。",
+      "source_url": "https://arxiv.org/abs/2609.33848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 99
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14925",
+      "identity_tokens": [
+        "arXiv:2604.14925",
+        "https://arxiv.org/abs/2604.14925"
+      ],
+      "title": "Improving Sparse Autoencoder with Dynamic Attention",
+      "reason": "動的アテンション改善の対象は基盤モデル解釈のためのスパースオートエンコーダであり、sparsemaxで潜在特徴のスパース度を決める機構はLLM推論のアテンション計算やサービング効率とは無関係である。",
+      "source_url": "https://arxiv.org/abs/2604.14925",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 100
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.02920",
+      "identity_tokens": [
+        "arXiv:2403.02920",
+        "https://arxiv.org/abs/2403.02920"
+      ],
+      "title": "TaylorShift: Shifting the Complexity of Self-Attention from Squared to Linear (and Back) using Taylor-Softmax",
+      "reason": "TaylorShiftはTaylor-softmaxの再定式化で全トークン間相互作用を線形時間・空間で計算し、約1700トークン以上の入力で推論を高速化し800トークンからメモリ効率が改善すると示す、アテンション計算そのものの効率化技術である。",
+      "source_url": "https://arxiv.org/abs/2403.02920",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.11914",
+      "identity_tokens": [
+        "arXiv:2509.11914",
+        "https://arxiv.org/abs/2509.11914"
+      ],
+      "title": "EgoMem: Lifelong Memory Agent for Full-duplex Omnimodal Models",
+      "reason": "EgoMemは全二重オムニモーダル対話で顔・声から利用者を識別し長期記憶を検索・更新する生涯記憶エージェントの応用研究であり、ここでのメモリは利用者知識の記憶であってKVキャッシュ等の推論システム機構ではない。",
+      "source_url": "https://arxiv.org/abs/2509.11914",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08960",
+      "identity_tokens": [
+        "arXiv:2608.08960",
+        "https://arxiv.org/abs/2608.08960"
+      ],
+      "title": "Reading is not Reasoning: Bridging the Agentic Policy Gap in Vision-Text Compression",
+      "reason": "CAPSはエージェント履歴を画像化する視覚テキスト圧縮で文脈コストを最大63.3%下げる一方、主貢献はテキスト方策から視覚方策への自己蒸留による能力差の解消であり、推論システム機構よりエージェント学習が主体である。",
+      "source_url": "https://arxiv.org/abs/2608.08960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.13564",
+      "identity_tokens": [
+        "arXiv:2506.13564",
+        "https://arxiv.org/abs/2506.13564"
+      ],
+      "title": "State-Space Hierarchical Compression with Gated Attention and Learnable Sampling for Hour-Long Video Understanding in Large Multimodal Models",
+      "reason": "状態空間モデルと学習可能プーリングで1時間動画のフレーム特徴を階層圧縮し大規模マルチモーダルモデルへのトークン爆発を抑える点は推論入力の削減に関連するが、主目的は動画理解タスクの性能維持であり応用主体のためボーダーラインとする。",
+      "source_url": "https://arxiv.org/abs/2506.13564",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10662",
+      "identity_tokens": [
+        "arXiv:2606.10662",
+        "https://arxiv.org/abs/2606.10662"
+      ],
+      "title": "Decentralized Multi-Agent Systems with Shared Context",
+      "reason": "DeLMは共有文脈とタスクキューで複数コーディングエージェントの待ち時間と重複作業を減らすエージェント実行ハーネスの提案であり、モデル推論の計算・メモリ・サービング機構を扱うものではない。",
+      "source_url": "https://arxiv.org/abs/2606.10662",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05365",
+      "identity_tokens": [
+        "arXiv:2605.05365",
+        "https://arxiv.org/abs/2605.05365"
+      ],
+      "title": "ZAYA1-8B Technical Report",
+      "reason": "ZAYA1-8Bは推論特化MoEモデルの事前学習からRLまでの技術報告が主体であり、テスト時計算のMarkovian RSAが有界長の推論尾部だけを引き継ぐ点は推論時手法に触れるものの、推論システムとしての効率評価は中心ではない。",
+      "source_url": "https://arxiv.org/abs/2605.05365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T07:30:00+09:00",
+      "last_checked_at": "2026-11-21T07:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 108
+    }
+  ],
+  "parent_run_key": "muse-20261121-d02",
+  "chunk_index": 1,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
