@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1054本）
+## 自動生成の論文一覧（1055本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1053,6 +1053,10 @@
 - **2026-08 · [Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration](2026-2608.24664-maia-200-a-software-defined-dataflow-system-for-large-scale-ai-accelerat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Maia 200はTSMC 3nmで製造した1400億超のトランジスタを持つSoCで、750Wの熱設計電力（TDP）の下、FP4で10,145 TFLOP/s、FP8で5,072 TFLOP/s、HBM3e帯域7 TiB/sを公称する。
+
+- **2026-08 · [Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression](2026-2609.26177-magnitude-profile-pruning-calibration-free-structured-attention-head-rem.md)**  
+  実装：[✓](https://github.com/Kasun-Dewage/Magnitude-Profile-Pruning-2026) ・ リポジトリ内被引用：0  
+  重みの行ノルムが統計的な外れ値であるヘッドだけを残し、通常の大きさのヘッドを先に削る較正不要の枝刈り基準を作り、グループ化クエリ注意への配分も加えたことで、大規模デコーダで較正を使う比較対象をパープレキシティで上回った。
 
 - **2026-08 · [Maglev: Sliding Recurrent Memory](2026-2608.02870-maglev-sliding-recurrent-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3434,13 +3438,13 @@
 
 ### 3年前（2023-12〜2024-11）
 
+- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
+  実装：✓ ・ リポジトリ内被引用：88  
+  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
+
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
   実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：87  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
-
-- **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：87  
-  本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：87  

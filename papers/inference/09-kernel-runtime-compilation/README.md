@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（252本）
+## 自動生成の論文一覧（253本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -83,6 +83,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [WaterSIC: Information-Theoretically (Near) Optimal Linear Layer Quantization](2026-2603.04956-watersic-information-theoretically-near-optimal-linear-layer-quantizatio.md)**  
   実装：[✓](https://github.com/egorlifar/watersic) ・ リポジトリ内被引用：2  
   WaterSICは、大規模言語モデルの線形層を学習後量子化（post-学習 量子化）するとき、入力チャネルごとに異なる格子幅を与えることで、同じ圧縮容量でも出力のずれを小さくする手法である。ただし論文が評価する主軸は品質対圧縮率であり、llama.cppなどの推論器に載せたトークン/秒、展開カーネルの速度、メモリ帯域削減の実測ではない。
+
+- **2026-01 · [Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use](2026-2601.22362-understanding-efficiency-quantization-batching-and-serving-strategies-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  大規模言語モデル（Large Language モデル; LLM）の推論電力量は、モデルのパラメータ数や重みのビット幅だけでは決まらない。同じモデルを同じGPUで実行しても、事前充填（プリフィル）と逐次復号（デコード）では計算律速かメモリ律速かが異なり、要求を逐次処理するか連続バッチ化するかによってGPUの待機時間が大きく変わる。重要な結論は三つある。
 
 - **2026-01 · [TIRx: A Unified Tile Primitive ML Compiler Across Heterogeneous Backends](2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -176,10 +180,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   SwiGLU前半を単一CUDAカーネルへ深く融合して中間活性のHBM往復を削減し、事前プロファイルでGPU・バッチ別のタイル方式を選んでSGLangのデコードを最大13.2%高速化する。
 
-- **2026-01 · [Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use](2026-2601.22362-understanding-efficiency-quantization-batching-and-serving-strategies-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  大規模言語モデル（Large Language モデル; LLM）の推論電力量は、モデルのパラメータ数や重みのビット幅だけでは決まらない。同じモデルを同じGPUで実行しても、事前充填（プリフィル）と逐次復号（デコード）では計算律速かメモリ律速かが異なり、要求を逐次処理するか連続バッチ化するかによってGPUの待機時間が大きく変わる。重要な結論は三つある。
-
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-10 · [SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference](2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md)**  
@@ -269,6 +269,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Empowering Hybrid Attention Models on NPUs](2026-2609.32114-empowering-hybrid-attention-models-on-npus.md)**  
   実装：[✓](https://github.com/yinyuanzhang/HA-NPU) ・ リポジトリ内被引用：0  
   線形注意の仕事をヘッド単位に割り当てて依存演算子を同一コアへ融合し、中間テンソルの寿命に合わせた実行順の並べ替えと、得な場合だけ変換するレイアウト計画で、エッジNPU上のハイブリッド注意モデルのプリフィルを支配するグローバルメモリ往復を消す実行方式。
+
+- **2026-09 · [EFQ-Softmax: Exp-Free Quantization for Softmax](2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の確率生成から高精度な指数関数と事後量子化を外し、ずらしたスコアをブロック単位スケール付きのE2M1コードへアフィン規則で直接変換して、分子と分母で共有する低ビット確率生成法。
 
 - **2026-09 · [Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving](2026-2609.33536-does-execution-require-target-kv-fidelity-a-mixed-fidelity-kv-runtime-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -863,7 +867,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
 - **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：26  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  

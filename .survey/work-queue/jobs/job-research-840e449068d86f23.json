@@ -35,10 +35,15 @@
   "selection_reason": "EFQ-Softmaxは低bit attentionのSoftmax確率生成で高精度expを計算してからFP4へ量子化する経路を置換する。各microscaling blockの最大値から指数スケールを選び、scoreを正規化してE2M1確率符号を直接生成し、PV分子とP1分母に共通使用する。A5ベクトル演算器で16K〜128Kのkernel vector-stage遅延平均40.33%削減を報告し、低bit推論カーネルに直接関連する。",
   "semantic_scholar_id": "4e09a92da580c19dfd0518905f0d5549a52bfc66",
   "source_url": "https://arxiv.org/abs/2609.09721",
-  "status": "ready",
+  "status": "superseded",
   "title": "EFQ-Softmax: Exp-Free Quantization for Softmax",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:48:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.md",
+  "represented_canonical_id": "arXiv:2609.09721",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "GSM8Kで候補数N=8を固定して1×8から8×1まで生成呼出分割を比較。A100では8回逐次実行が1回バッチに対しGPUエネルギー4.64〜4.86倍、P95遅延5.77〜6.12倍と報告し、推論時スケジューリング・エネルギー評価に直接関係。",
   "semantic_scholar_id": "a429cf6f1f9285849ceea67823d8824fe7661719",
   "source_url": "https://arxiv.org/abs/2609.19499",
-  "status": "ready",
+  "status": "superseded",
   "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:48:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-ener.md",
+  "represented_canonical_id": "arXiv:2609.19499",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "NVIDIA A10Gの単一要求360件を対象に、2-token MTPと通常autoregressive decodeをNsight等で計測。MTPの出力throughputは1.91〜2.19倍、最初の出力までの時間は10.0〜14.2%減。個々のGEMMがGEMVより速いのではなく、生成token当たりCUDA Graph繰返しが56.4〜78.1%減る償却効果を示す。推論実行のボトルネック実測であり直接関連。",
   "semantic_scholar_id": "d7f682fc94c1a0340d45583297220df52f8b286d",
   "source_url": "https://arxiv.org/abs/2609.35188",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:48:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-predic.md",
+  "represented_canonical_id": "arXiv:2609.35188",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

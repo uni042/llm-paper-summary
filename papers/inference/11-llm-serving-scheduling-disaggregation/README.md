@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（551本）
+## 自動生成の論文一覧（552本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -621,6 +621,10 @@
 - **2026-09 · [SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving](2026-2609.34117-slimwise-decoupling-expert-pruning-across-prefill-and-decode-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンに対して全エキスパートのうち少数だけを実行することで、モデル全体のパラメータ規模に比べた演算量を抑える。
+
+- **2026-09 · [Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling](2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-ener.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  同じ8件の候補でも、1回のバッチ生成と8回の逐次生成では総エネルギーが4.64倍から4.86倍も違うことをA100の実測で示し、候補数だけではテスト時スケーリングの費用を表せないと明らかにした研究。
 
 - **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1628,6 +1632,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
 
+- **2025-11 · [FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs](2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md)**  
+  実装：[✓](https://github.com/AndrewFangZequan/LLM_Serving_FREESH) ・ リポジトリ内被引用：3  
+  地域別炭素強度と異種GPU特性を使った30分単位の資源配置、1秒単位の動的周波数制御、要求単位の最小余裕時間優先を組み合わせ、エネルギー28.6%・炭素排出45.45%を削減する分散LLMサービング方式。
+
 - **2025-11 · [Cauchy: A Cost-Efficient LLM Serving System through Adaptive Heterogeneous Deployment](2025-6987e5a4e5ec-cauchy-a-cost-efficient-llm-serving-system-through-adaptive-heterogeneou.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   前者は行列積が多く演算性能に依存しやすい一方、後者はモデル重みと鍵値キャッシュ（Key-Value キャッシュ; KVキャッシュ）の読み出しが支配的になり、メモリ帯域に依存しやすい。Cauchyは、計算能力とメモリ帯域が異なるGPUを、プリフィルとデコードへ適切に割り当てる大規模言語モデル配信基盤である。
@@ -1675,10 +1683,6 @@
 - **2025-01 · [HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location](2025-2501.14808-hygen-efficient-llm-serving-via-elastic-online-offline-request-co-locati.md)**  
   実装：[✓](https://github.com/UIUC-MLSys/HyGen) ・ リポジトリ内被引用：3  
   本研究は、オンライン要求を先にバッチへ配置し、そのバッチが消費しない遅延・トークン・KVキャッシュメモリの予算内でオフライン要求を追加する二段階スケジューラを設計した。原著の主要実機評価では、純オンラインのSarathi比で総処理量最大3.87倍、SLOを考慮してオフライン到着率を制御するHyGen比でオフライン処理量最大5.84倍を報告する。
-
-- **2025-11 · [FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs](2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md)**  
-  実装：[✓](https://github.com/AndrewFangZequan/LLM_Serving_FREESH) ・ リポジトリ内被引用：2  
-  地域別炭素強度と異種GPU特性を使った30分単位の資源配置、1秒単位の動的周波数制御、要求単位の最小余裕時間優先を組み合わせ、エネルギー28.6%・炭素排出45.45%を削減する分散LLMサービング方式。
 
 - **2025-10 · [Preserving LLM Capabilities through Calibration Data Curation: From Analysis to Optimization](2025-2510.10618-preserving-llm-capabilities-through-calibration-data-curation-from-analy.md)**  
   実装：[✓](https://github.com/BokwaiHo/COLA) ・ リポジトリ内被引用：2  
@@ -1998,13 +2002,13 @@
   実装：✓ ・ リポジトリ内被引用：27  
   これはオペレーティングシステムでいう隊列詰まり（convoy effect）に相当し、GPUが高い総計算量を処理していても利用者の初回応答待ち時間が極端に悪化する。非割込みの長文推論配信基盤と比べて、ある混合負荷ではスループット5.7倍、初回トークン遅延の中央値30分の1、上位側の遅延174分の1という大きな差を報告する。
 
+- **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：24  
+  最も速い設定を常用すると、利用者の遅延制約に余裕がある時間帯でも電力を浪費する可能性がある。新しいGPUカーネルや省電力推論アルゴリズムを提案する論文ではなく、既存基盤の運用設定が作る性能・エネルギーの交換条件を定量化する研究である。
+
 - **2024-07 · [LLM Inference Serving: Survey of Recent Advances and Opportunities](2024-2407.12391-llm-inference-serving-survey-of-recent-advances-and-opportunities.md)**  
   実装：✓ ・ リポジトリ内被引用：23  
   本論文は、大規模言語モデル（Large Language モデル、LLM）の推論サービスを効率化するシステム研究を整理した総説である。
-
-- **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
-  最も速い設定を常用すると、利用者の遅延制約に余裕がある時間帯でも電力を浪費する可能性がある。新しいGPUカーネルや省電力推論アルゴリズムを提案する論文ではなく、既存基盤の運用設定が作る性能・エネルギーの交換条件を定量化する研究である。
 
 - **2024-03 · [DéjàVu：KVキャッシュ・ストリーミングによる高速・耐障害LLM配信](2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md)**  
   実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：22  
@@ -2074,13 +2078,13 @@
   実装：[✓](https://github.com/FlexLLM/artifact) ・ リポジトリ内被引用：10  
   推論要求を優先しながら、パラメータ効率微調整（PEFT）の順伝播と逆伝播をトークン窓へ分解し、同じ基盤モデルを使うGPU反復へ混載する。推論の遅延制約を満たす範囲で学習トークン数を動的に選び、分離クラスタ方式より学習処理量を増やすシステムである。
 
+- **2024-05 · [PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services](2024-2405.14636-perllm-personalized-inference-scheduling-with-edge-cloud-collaboration-f.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
+
 - **2024-11 · [FastSwitch: Optimizing Context Switching Efficiency in Fairness-aware Large Language Model Serving](2024-2411.18424-fastswitch-optimizing-context-switching-efficiency-in-fairness-aware-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   初回トークンまでの時間（time to first トークン; TTFT）や連続するトークン間隔（time between トークン; TBT）について利用者ごとのサービス水準目標（service-level objective; SLO）を満たすには、実行中の要求の優先度を調整し、低優先度の要求を一時停止して高優先度の要求へGPUメモリを譲る必要がある。
-
-- **2024-05 · [PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services](2024-2405.14636-perllm-personalized-inference-scheduling-with-edge-cloud-collaboration-f.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
 
 - **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

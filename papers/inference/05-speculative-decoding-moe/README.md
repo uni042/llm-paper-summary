@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（375本）
+## 自動生成の論文一覧（376本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -639,6 +639,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [BV Loss: Block Verification-Aware Loss for Block Diffusion Speculative Decoding](2026-2609.34832-bv-loss-block-verification-aware-loss-for-block-diffusion-speculative-de.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号では小さな下書き器が複数の候補トークンを提案し、対象モデル（対象モデル）が一括検証する。Qwen3-4B/8Bを対象モデルにした5層DFlash・DSparkで、7課題平均の検証1回当たり保持トークン数は、CE学習と比較して13.0～21.0%改善した。
+
+- **2026-09 · [Beneath the Tokens: A Performance Engineering Study of Multi-Token Prediction in GPU-Accelerated LLM Inference](2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-predic.md)**  
+  実装：[✓](https://github.com/suwesh/performance-engineering-series/tree/main/speculative-decoding-gpu-profiling) ・ リポジトリ内被引用：0  
+  2トークンMTPの高速化を、受理長・CUDAグラフ実行回数・ランタイム階層の3層で実測し、支配的カーネルは速くなっておらず、繰り返し実行の回数削減による償却が利得の正体であることを示した性能分析。
 
 - **2026-09 · [Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference](2026-2609.24698-adapting-tree-structured-speculative-decoding-to-deepseek-v4-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1277,7 +1281,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：99  
+  実装：✓ ・ リポジトリ内被引用：100  
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
 - **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "異なるLLMを抱える推論poolで、各質問の正解・遅延・電力・GPUエネルギーをoffline tournamentで測り、SFTとGRPOで質問別のモデル選択routerを学習。7 benchmarkでaccuracyとenergyのトレードオフを評価し、高性能モデルを全要求へ使う無駄を削減する。要旨には普遍的な省エネ倍率がないため定量倍率は主張しない。推論時の実行先選択・エネルギー最適化に直接関連。",
   "semantic_scholar_id": "7b3f399f69df290b68a0082d7a9bb4cf67e12772",
   "source_url": "https://arxiv.org/abs/2609.23085",
-  "status": "ready",
+  "status": "superseded",
   "title": "Measured Joules, Learned Routes: Learning to Route for Energy-Efficient LLM Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:48:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-ll.md",
+  "represented_canonical_id": "arXiv:2609.23085",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

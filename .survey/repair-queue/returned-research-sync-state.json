@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "5eae9cc3000309520a2fe55e9c68954e127bd5df",
+  "base_commit": "f86e3f167d3e7ee1bd6d6786d75b51e0c0e1794a",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -356,17 +356,21 @@
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
     "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
+    "2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.json",
     "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
+    "2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-energy-and-performance-of-llm-test-time-scaling.json",
     "2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-language-models.json",
     "2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-agentic-programs.json",
+    "2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-llm-serving.json",
     "2026-2609.23314-valuediff-value-geometric-kv-cache-eviction-for-sink-suppressed-llms.json",
     "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json",
     "2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-language-models.json",
     "2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-hybrid-language-models-a-4b-to-9b-hybrid-state-ha.json",
+    "2026-2609.26177-magnitude-profile-pruning-calibration-free-structured-attention-head-removal-for-transformer-compression.json",
     "2026-2609.29812-flashloop-fast-and-memory-efficient-looped-transformers-via-lazy-updates.json",
     "2026-2609.29875-when-can-agents-forget-their-reasoning-iclr-for-long-horizon-agent-context-compression.json",
     "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json",
@@ -389,6 +393,7 @@
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
     "2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterogeneous-pim-architectures.json",
     "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json",
+    "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
@@ -42436,6 +42441,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.09721": {
+      "order": [
+        "2026-11-20T04:41:00+00:00",
+        "2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.19499": {
+      "order": [
+        "2026-11-20T04:42:21+00:00",
+        "2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-energy-and-performance-of-llm-test-time-scaling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.23085": {
+      "order": [
+        "2026-11-20T04:43:41+00:00",
+        "2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.26177": {
+      "order": [
+        "2026-11-20T04:45:02+00:00",
+        "2026-2609.26177-magnitude-profile-pruning-calibration-free-structured-attention-head-removal-for-transformer-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.35188": {
+      "order": [
+        "2026-11-20T04:46:22+00:00",
+        "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52597,6 +52647,21 @@
     "arxiv:2609.08345": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.md"
+    ],
+    "arxiv:2609.09721": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.md"
+    ],
+    "arxiv:2609.19499": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-ener.md"
+    ],
+    "arxiv:2609.23085": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.23085-measured-joules-learned-routes-learning-to-route-for-energy-efficient-ll.md"
+    ],
+    "arxiv:2609.26177": [
+      "papers/inference/99-other-inference-systems/2026-2609.26177-magnitude-profile-pruning-calibration-free-structured-attention-head-rem.md"
+    ],
+    "arxiv:2609.35188": [
+      "papers/inference/05-speculative-decoding-moe/2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-predic.md"
     ]
   }
 }
