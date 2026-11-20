@@ -35,10 +35,15 @@
   "selection_reason": "実行時メタデータで決まる複雑なattention maskを、MaskSpec DSLで記述し、オフライン解析でmask専用preprocess kernelを生成するCompileMaskを提案。オンラインではbatch metadataから小さなExecution Descriptorを作り、attention kernelが境界値比較だけで可視性を判定する。従来のpredicate方式の前処理負荷と固定区間方式の表現力制約を両立し、最大3.8倍高速化を報告するためaccept。",
   "semantic_scholar_id": "c231f840ea0ff7d4d95165f2e1cd8b1aa7c12bac",
   "source_url": "https://arxiv.org/abs/2610.13474",
-  "status": "ready",
+  "status": "superseded",
   "title": "CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:11:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-at.md",
+  "represented_canonical_id": "arXiv:2610.13474",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

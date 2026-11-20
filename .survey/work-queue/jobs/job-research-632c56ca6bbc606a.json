@@ -35,10 +35,15 @@
   "selection_reason": "KVキャッシュの保持ノードと要求実行ノードを分離し、待ち行列負荷・prefix再利用・KV転送費用を同時に最適化する。実運用エージェント負荷でスループット14.0%改善、平均TTFT57.8%削減を報告。",
   "semantic_scholar_id": "813bb84aa254e8f8c44475faef8fce2f28ead93a",
   "source_url": "https://arxiv.org/abs/2610.14686",
-  "status": "ready",
+  "status": "superseded",
   "title": "Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:11:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.md",
+  "represented_canonical_id": "arXiv:2610.14686",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

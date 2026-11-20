@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "eb7b07d41b66bbdb023f04ef667436693c34bfc4",
+  "base_commit": "e9699ccd4863cf9abc2c39566e5c45f9c5beffcb",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -393,8 +393,13 @@
     "2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.json",
     "2026-2610.13060-kv-repurpose-a-testbed-for-evaluating-non-prefix-kv-cache-reuse.json",
     "2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.json",
+    "2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-serving.json",
+    "2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-attention-masking.json",
     "2026-2610.13990-dosa-dots-sparse-attention.json",
+    "2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.json",
+    "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
+    "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
     "2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-structured-llm-pruning.json",
     "2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-transformers.json",
@@ -41986,6 +41991,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.13328": {
+      "order": [
+        "2026-11-20T03:03:58+00:00",
+        "2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.13474": {
+      "order": [
+        "2026-11-20T03:05:18+00:00",
+        "2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-attention-masking.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14571": {
+      "order": [
+        "2026-11-20T03:06:37+00:00",
+        "2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14686": {
+      "order": [
+        "2026-11-20T03:07:56+00:00",
+        "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.14745": {
+      "order": [
+        "2026-11-20T03:09:16+00:00",
+        "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51967,6 +52017,21 @@
     "arxiv:2610.17795": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md"
+    ],
+    "arxiv:2610.13328": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-.md"
+    ],
+    "arxiv:2610.13474": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.13474-compilemask-bridging-the-gap-between-expressiveness-and-efficiency-in-at.md"
+    ],
+    "arxiv:2610.14571": [
+      "papers/inference/15-inference-simulation-emulation/2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.md"
+    ],
+    "arxiv:2610.14686": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.md"
+    ],
+    "arxiv:2610.14745": [
+      "papers/inference/16-weight-quantization-compression/2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.md"
     ]
   }
 }

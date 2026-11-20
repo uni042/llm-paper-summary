@@ -35,10 +35,15 @@
   "selection_reason": "MoE向け専門家ごとの2レート精度配分DuoRate。常駐フットプリントとデコード時トラフィックが異なるレート汎関数であるのに、既存の配分器は前者しか制約しない保存・読み取りギャップを同定し、一度保存してワークロードごとに読む配分を行う。推論提供の量子化機構そのもの。",
   "semantic_scholar_id": "f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294",
   "source_url": "https://arxiv.org/abs/2610.13328",
-  "status": "ready",
+  "status": "superseded",
   "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:11:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-.md",
+  "represented_canonical_id": "arXiv:2610.13328",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "地理分散LLMサービングで炭素強度の低い拠点へ要求を振り分ける際、連続バッチ処理と待ち行列がTTFT/TPOTのSLOを制約する問題を扱う。実GPUの電力・遅延測定で較正したシミュレータ上でgreedy、ILP、反復ILP、facility MILPのスケジューラを比較。著者要旨では3モデル・MLPerf SLOの条件でMILPがround-robin比最大60%排出削減、平均SLO違反3%と報告。省エネとサービングSLOの直接的なスケジューリング研究としてaccept。ただし実拠点運用での削減実績ではない。",
   "semantic_scholar_id": "dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1",
   "source_url": "https://arxiv.org/abs/2610.14571",
-  "status": "ready",
+  "status": "superseded",
   "title": "Dissecting the Carbon-SLO Tension in Geo-Distributed LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:11:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.14571",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

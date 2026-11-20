@@ -35,10 +35,15 @@
   "selection_reason": "重みの2bit vector quantizationで感度の高いchannelを保護するEnergy-Stratified Groupingと、matrix別に方向codebook/半径精度へbit予算を割り当てるAdaptive Bit Splitを提案。一次要旨はQwen3-30B-A3BでBF16平均scoreの95.3%を維持し、専用CUDA kernelでFP16比最大2.55倍の非streaming end-to-end高速化を報告。MoEを含むLLMの実用低bit推論としてaccept。",
   "semantic_scholar_id": "35cb4ea371bbbee56901c59b276af051ea50a837",
   "source_url": "https://arxiv.org/abs/2610.14745",
-  "status": "ready",
+  "status": "superseded",
   "title": "SAGE: Pushing 2-Bit Vector-Quantized LLMs toward Real-World Usability",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:11:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.md",
+  "represented_canonical_id": "arXiv:2610.14745",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
