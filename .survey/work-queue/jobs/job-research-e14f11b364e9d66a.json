@@ -35,10 +35,15 @@
   "selection_reason": "LatentRemedyは異なるタスクのagent間でnon-prefix KVを直接再利用すると品質が最大90%低下する問題に対し、targetのprefix最終hidden stateから少数のtask条件付きlatent tokenを生成し、再利用KVの後ろへ挿入する。full-prefill蒸留で小型MLPを学習し、共有blockを再計算せずに従来補正法より品質を回復し、TTFTは直接再利用に近いと報告。",
   "semantic_scholar_id": "69379625a6922262ba920206480400d596390ca0",
   "source_url": "https://arxiv.org/abs/2610.18014",
-  "status": "ready",
+  "status": "superseded",
   "title": "LatentRemedy: Efficient Remedy For Non-Prefix KV Cache Reuse in Multi-Agent Systems",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:35:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18014-latentremedy-efficient-remedy-for-non-prefix-kv-cache-reuse-in-multi-age.md",
+  "represented_canonical_id": "arXiv:2610.18014",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

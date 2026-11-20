@@ -35,10 +35,15 @@
   "selection_reason": "1GiB memoryと通話中latency/熱制約下で韓国語1.2B sLMをNPU推論へ移植する。通話頻度でvocabularyとembedding/LM headを縮小し、speech tokenizationを再適合、activation感度に基づくmodule別mixed precisionを用いる。一次要旨は803MiBモデル、CPU比通話energy23%、cloud LLMのtask-weighted品質94%を報告し、Qualcomm/Apple NPUでproduction展開したとする。実端末でのSLM圧縮・推論システムとしてaccept。",
   "semantic_scholar_id": "d92eaa38105d1f1eaaf370d4b3e569bfa05ffe17",
   "source_url": "https://arxiv.org/abs/2610.19382",
-  "status": "ready",
+  "status": "superseded",
   "title": "ixi-sLM: On-Device sLM for AI Call Agent Service",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:35:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.md",
+  "represented_canonical_id": "arXiv:2610.19382",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

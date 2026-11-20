@@ -35,10 +35,15 @@
   "selection_reason": "prefix共有するhybrid linear-attention LLMでは、recurrent stateの生成待ちconsumerがschedulerのwaiting scanを止め、独立requestのbatch slotまで空く問題を扱う。RadixFlowはprefix一致とstate ready判定を分離し、未準備consumerだけを次roundへ送り独立requestを継続投入する。一次要旨は5 hybrid modelで平均latency3～24%削減、worker round11～44%削減を報告。LLM serving schedulerのhead-of-line blocking解消としてaccept。",
   "semantic_scholar_id": "8c79cfb1892914e97379cdab87d58e5cae3d9efd",
   "source_url": "https://arxiv.org/abs/2610.18143",
-  "status": "ready",
+  "status": "superseded",
   "title": "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:35:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.18143",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（139本）
+## 自動生成の論文一覧（140本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -81,6 +81,10 @@
   多数派の答えが途中で既に確定していても、最後まで生成する方式では長い少数経路の完了待ちと総生成トークンが残る。論文の表1では、Qwen3-0.6Bの数学3ベンチマーク平均で、固定64経路の多数決に比べ正答率22.8%から23.3%へ変化しつつ、逐次トークン31.6千個から20.3千個、総トークン945.7千個から735.3千個へ減少した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [ixi-sLM: On-Device sLM for AI Call Agent Service](2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通話ドメインへの語彙削減とトークナイザー再適合、実通話校正の混合精度量子化で、1.2ビーモデルを803メガバイトに収めてモバイルエヌピーユーで動かし、クラウド級品質の94パーセントを保った実サービス報告。
 
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
