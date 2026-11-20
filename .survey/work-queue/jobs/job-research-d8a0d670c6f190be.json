@@ -35,10 +35,15 @@
   "selection_reason": "異種GPU上のLLM microbatch pipelineで均質GPipe公式がmakespanを過大推定する問題に対し、stage service timeと通信遅延のcritical pathを解析する。非blocking通信では通信が定数項に入り、blocking通信では遅いstageの定常傾きへ加わる条件を導く。一次要旨はRTX5090/3090/GTX1070混成を含む11構成・16万点fuzzで解析式を検証。異種GPU推論pipelineの性能モデルとしてaccept。",
   "semantic_scholar_id": "1c26318566bf2cc01977d1842e9aae5ce479e5a3",
   "source_url": "https://arxiv.org/abs/2610.21815",
-  "status": "ready",
+  "status": "superseded",
   "title": "Exact Makespan Bounds and the GPipe Homogeneity Bias for Heterogeneous LLM Inference Pipelines",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:59:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.21815-exact-makespan-bounds-and-the-gpipe-homogeneity-bias-for-heterogeneous-l.md",
+  "represented_canonical_id": "arXiv:2610.21815",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

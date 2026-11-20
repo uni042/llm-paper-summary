@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（541本）
+## 自動生成の論文一覧（542本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -545,6 +545,10 @@
 - **2026-10 · [RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving](2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混成モデルの接頭辞再利用で、状態待ちの分岐だけを次ラウンドへ回して走査を続けることでバッチの泡を埋め、再利用率を保ったまま遅延を最大24パーセント、ラウンド数を最大44パーセント削減した。
+
+- **2026-10 · [Exact Makespan Bounds and the GPipe Homogeneity Bias for Heterogeneous LLM Inference Pipelines](2026-2610.21815-exact-makespan-bounds-and-the-gpipe-homogeneity-bias-for-heterogeneous-l.md)**  
+  実装：[✓](https://github.com/ytidb6688/heteropipe) ・ リポジトリ内被引用：0  
+  異種GPU推論パイプラインのメイクスパンを3つの通信体制で厳密に閉形式化し、GPipe同種式の誤差がマイクロバッチ数によらない定数の偏りであることと、通信がスループット律速へ転じる条件を明らかにしたスケジューリング理論。
 
 - **2026-09 · [Unlocking Software-defined GPU Fabric Scheduling in the LLM Era](2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1855,7 +1859,7 @@
   要求種別ごとのプールと階層制御でGPU数・並列度・周波数を動的最適化し、SLO維持下で推論クラスタのエネルギーを約52%削減する。
 
 - **2024-01 · [DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference](2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed-MII) ・ リポジトリ内被引用：107  
   長いプリフィルを小さく分割し、短いプロンプト・プリフィル 分割片・デコード トークンを毎回ほぼ同じ総トークン数になるよう混ぜることで、長いプリフィルがデコードを止める時間を抑えつつGPUを効率よく使うLLM 提供処理 システム。
 
 - **2024-05 · [Parrot: Efficient Serving of LLM-based Applications with Semantic Variable](2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md)**  
@@ -2078,13 +2082,13 @@
   実装：✓ ・ リポジトリ内被引用：3  
   提案方式は、層ごとの端末推論時間、端末からサーバーへの上り転送時間、サーバーから端末への下り転送時間、サーバー資源消費量を測定し、モデルの順方向の依存関係を守りながら配置する。
 
+- **2024-02 · [Efficient Prompt Caching via Embedding Similarity](2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  本論文は、言語モデルの生成済み応答そのものを再利用するプロンプトキャッシュの判定精度を改善する研究である。以前の質問に対する回答がキャッシュにあれば、新しい質問を言語モデルへ送らず、その回答を返すことができる。ただし、質問文の意味が近いことと、同じ回答で両方の質問に正しく答えられることは一致しない。
+
 - **2024-01 · [Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models](2024-2401.08294-inferflow-an-efficient-and-highly-configurable-inference-engine-for-larg.md)**  
   実装：[✓](https://github.com/inferflow/inferflow) ・ リポジトリ内被引用：3  
   Inferflowは、言語モデルの構造が頻繁に変化する状況で、モデルごとに推論エンジンのソースコードを書き足す負担を減らすことを主目的とした推論基盤である。この拡張性に加え、低ビット量子化と複数GPU分割による実行効率を追求する。
-
-- **2024-02 · [Efficient Prompt Caching via Embedding Similarity](2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  本論文は、言語モデルの生成済み応答そのものを再利用するプロンプトキャッシュの判定精度を改善する研究である。以前の質問に対する回答がキャッシュにあれば、新しい質問を言語モデルへ送らず、その回答を返すことができる。ただし、質問文の意味が近いことと、同じ回答で両方の質問に正しく答えられることは一致しない。
 
 - **2024-04 · [Performance Characterization of Expert Router for Scalable LLM Inference](2024-2404.15153-performance-characterization-of-expert-router-for-scalable-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

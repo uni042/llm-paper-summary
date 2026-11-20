@@ -35,10 +35,15 @@
   "selection_reason": "端末内RAGで事前計算KVをSSDからGPUへ運ぶI/O壁に対し、SSD NAND channel別acceleratorでattention処理をstorage側へ移すMemLLMを提案。疎更新用fused recomputation-query kernelとfilterでNAND読出しを削減し、SRAM reduction engineでDRAM-less処理とPCIe転送量の定数化を狙う。一次要旨は8 RAG dataset・6端末内LLMでGPU baseline比平均4.06倍のend-to-end高速化を報告。SSD内計算によるLLM推論高速化としてaccept。",
   "semantic_scholar_id": "b0f09a47b3c472bfc29be392373707a25e0224df",
   "source_url": "https://arxiv.org/abs/2610.22579",
-  "status": "ready",
+  "status": "superseded",
   "title": "MemLLM: End-to-end In-Storage Acceleration of On-device Retrieval-Augmented Generation using Precomputed KV Caches",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:59:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augment.md",
+  "represented_canonical_id": "arXiv:2610.22579",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

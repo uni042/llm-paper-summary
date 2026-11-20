@@ -35,10 +35,15 @@
   "selection_reason": "残差・出力摂動の分離によるKV排除DropKV。出力摂動最小化がNP困難な組合せ問題になる問題を、共同の排除判断をトークンごとの独立したスコアへ分離することで回避し、カーネル化しやすい原理的な排除枠組みにする。推論メモリ機構そのもの。",
   "semantic_scholar_id": "a7867dbf84bf50cac69b1d056f3e12508caaa63f",
   "source_url": "https://arxiv.org/abs/2610.22130",
-  "status": "ready",
+  "status": "superseded",
   "title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:59:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.22130-dropkv-decoupling-residual-output-perturbation-for-near-optimal-kv-cache.md",
+  "represented_canonical_id": "arXiv:2610.22130",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

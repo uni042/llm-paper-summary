@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a2966ee4fc64175c6b86005148394f2b48f809d6",
+  "base_commit": "47b80c02d9c2d864125a3b19d0b97524398a1838",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -415,6 +415,11 @@
     "2026-2610.21500-when-the-kv-cache-is-slower-than-the-gpu-scaling-remote-kv-tiers-for-context-parallel-prefill.json",
     "2026-2610.21594-loopahead-speculating-ahead-for-faster-decoding-in-looped-language-models.json",
     "2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.json",
+    "2026-2610.21815-exact-makespan-bounds-and-the-gpipe-homogeneity-bias-for-heterogeneous-llm-inference-pipelines.json",
+    "2026-2610.22099-tips-a-tiny-inference-time-policy-for-scaling-in-diffusion-language-models.json",
+    "2026-2610.22130-dropkv-decoupling-residual-output-perturbation-for-near-optimal-kv-cache-eviction.json",
+    "2026-2610.22543-on-the-spot-enhancing-speculative-decoding-for-diffusion-language-models-via-commit-order-prediction.json",
+    "2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augmented-generation-using-precomputed-kv-caches.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41636,6 +41641,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.21815": {
+      "order": [
+        "2026-11-20T01:53:43+00:00",
+        "2026-2610.21815-exact-makespan-bounds-and-the-gpipe-homogeneity-bias-for-heterogeneous-llm-inference-pipelines.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22099": {
+      "order": [
+        "2026-11-20T01:54:46+00:00",
+        "2026-2610.22099-tips-a-tiny-inference-time-policy-for-scaling-in-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22130": {
+      "order": [
+        "2026-11-20T01:55:47+00:00",
+        "2026-2610.22130-dropkv-decoupling-residual-output-perturbation-for-near-optimal-kv-cache-eviction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22543": {
+      "order": [
+        "2026-11-20T01:56:50+00:00",
+        "2026-2610.22543-on-the-spot-enhancing-speculative-decoding-for-diffusion-language-models-via-commit-order-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22579": {
+      "order": [
+        "2026-11-20T01:57:52+00:00",
+        "2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augmented-generation-using-precomputed-kv-caches.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51477,6 +51527,21 @@
     "arxiv:2610.21808": [
       "papers/inference/16-weight-quantization-compression/2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.md",
       "papers/inference/16-weight-quantization-compression/2026-2610.21808-roleq-role-aligned-scales-for-converting-language-models-to-ternary.md"
+    ],
+    "arxiv:2610.21815": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.21815-exact-makespan-bounds-and-the-gpipe-homogeneity-bias-for-heterogeneous-l.md"
+    ],
+    "arxiv:2610.22099": [
+      "papers/inference/99-other-inference-systems/2026-2610.22099-tips-a-tiny-inference-time-policy-for-scaling-in-diffusion-language-mode.md"
+    ],
+    "arxiv:2610.22130": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.22130-dropkv-decoupling-residual-output-perturbation-for-near-optimal-kv-cache.md"
+    ],
+    "arxiv:2610.22543": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.22543-on-the-spot-enhancing-speculative-decoding-for-diffusion-language-models.md"
+    ],
+    "arxiv:2610.22579": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augment.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMの各denoising passで可視化・再maskする位置を、約600Kパラメータのcontrollerがconfidence特徴から決定するTIPSを提案。LLM本体を固定し、supervised warmupと最終正解報酬のRLでpolicyを学習する。一次要旨はLLaDA-8B-Instruct、32回のdecoder評価予算でGSM8K/MATH-500のmicro平均精度58.46/57.97%を報告。推論時計算予算と品質の制御を直接扱うためaccept。",
   "semantic_scholar_id": "97da40b9ab8e1260e79da6ded9f45d80e474a82f",
   "source_url": "https://arxiv.org/abs/2610.22099",
-  "status": "ready",
+  "status": "superseded",
   "title": "TIPS: A Tiny Inference-time Policy for Scaling in Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:59:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.22099-tips-a-tiny-inference-time-policy-for-scaling-in-diffusion-language-mode.md",
+  "represented_canonical_id": "arXiv:2610.22099",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
