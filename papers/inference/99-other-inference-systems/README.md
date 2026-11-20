@@ -620,6 +620,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   SyncThinkは、思考過程を明示的に生成する推論特化言語モデルに対し、追加学習なしで推論を早期終了させる復号制御方式である。
 
+- **2026-01 · [Speculative Sampling with Reinforcement Learning](2026-2601.12212-speculative-sampling-with-reinforcement-learning.md)**  
+  実装：[✓](https://github.com/wmd3i/ReSpS) ・ リポジトリ内被引用：1  
+  Re-SpS（Reinforcement Learning for 投機的 Sampling）は、投機的復号（投機的復号）における草稿木（下書き木）の全体トークン上限、深さ、分岐展開数を、文脈に応じて強化学習で切り替える方式である。
+
 - **2026-01 · [LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers](2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LOOKATは、自己回帰Transformerの注意得点計算を、ベクトル検索における内積類似度検索として扱い、キーを圧縮したまま注意得点を計算する方式である。GPT-2の第1注意層で、64次元のキーを2個の1バイト符号へ圧縮すると、キー表現は128バイトから2バイトへ減り、キー単体の表現上の圧縮率は64倍となる。
@@ -659,6 +663,10 @@
 - **2025-12 · [Rethinking Chain-of-Thought Reasoning for Videos](2025-2512.09616-rethinking-chain-of-thought-reasoning-for-videos.md)**  
   実装：[✓](https://github.com/LaVi-Lab/Rethink_CoT_Video) ・ リポジトリ内被引用：1  
   本論文は、長い人間風の思考列が動画理解に必須かを疑い、短い推論文、視覚トークン圧縮、強化学習による事後学習を組み合わせる代替構成を検証する。
+
+- **2025-12 · [OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization](2025-2512.24124-optrot-mitigating-weight-outliers-via-data-free-rotations-for-post-train.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  GPTQによる低ビット重み量子化では、極端に大きい重みが量子化スケールを押し広げ、通常の重みの再現精度を損なう。
 
 - **2025-12 · [MatKV: Trading Compute for Flash Storage in LLM Inference](2025-2512.22195-matkv-trading-compute-for-flash-storage-in-llm-inference.md)**  
   実装：[✓](https://github.com/kunwooshin/MatKV) ・ リポジトリ内被引用：1  
@@ -2210,10 +2218,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMの標準的なcausal self-注意機構は、系列長をLとするとプリフィル・学習時の注意計算が概ねO(L²)、1トークンの逐次デコードでも過去L個のKVを読むためO(L)となる。
 
-- **2026-01 · [Speculative Sampling with Reinforcement Learning](2026-2601.12212-speculative-sampling-with-reinforcement-learning.md)**  
-  実装：[✓](https://github.com/wmd3i/ReSpS) ・ リポジトリ内被引用：0  
-  Re-SpS（Reinforcement Learning for 投機的 Sampling）は、投機的復号（投機的復号）における草稿木（下書き木）の全体トークン上限、深さ、分岐展開数を、文脈に応じて強化学習で切り替える方式である。
-
 - **2026-01 · [SimMerge: Learning to Select Merge Operators from Similarity Signals](2026-2601.09473-simmerge-learning-to-select-merge-operators-from-similarity-signals.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数の重みを一つのモデルへ統合するモデル結合（モデル merging）は、複数モデルを同時常駐させずに能力をまとめる方法だが、どの結合演算子を使うか、どのチェックポイントを選ぶか、どの順番で結合するかによって結果が大きく変わる。
@@ -2354,10 +2358,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Parallel Decoder Transformer（PDT）は、モデル自身に三つの持続的な自己回帰生成前線を持たせる構造を提案する。重要な品質境界：本稿が確認した2026年7月18日改訂v3は、設計、実装、学習計画、評価プロトコルを記した研究であり、学習済みモデルの品質改善や実機速度向上を報告していない。
 
-- **2025-12 · [OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization](2025-2512.24124-optrot-mitigating-weight-outliers-via-data-free-rotations-for-post-train.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  GPTQによる低ビット重み量子化では、極端に大きい重みが量子化スケールを押し広げ、通常の重みの再現精度を損なう。
-
 - **2025-12 · [Multiscale Aggregated Hierarchical Attention (MAHA): A Game-Theoretic and Optimization-Driven Approach to Efficient Contextual Modeling in Large Language Models](2025-2512.14925-multiscale-aggregated-hierarchical-attention-maha-a-game-theoretic-and-o.md)**  
   実装：[✓](https://github.com/canererden/MAHA-Project) ・ リポジトリ内被引用：0  
   MAHA（Multiscale Aggregated Hierarchical 注意機構）は、入力トークンを複数の解像度へ縮約し、それぞれの尺度で注意を計算した後、尺度ごとの出力を凸最適化またはゲーム理論に基づく重みで統合する注意機構である。
@@ -2413,7 +2413,7 @@
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：90  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：93  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -2640,6 +2640,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
 
+- **2025-05 · [NeUQI: Near-Optimal Uniform Quantization Parameter Initialization for Low-Bit LLMs](2025-2505.17595-neuqi-near-optimal-uniform-quantization-parameter-initialization-for-low.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
+
 - **2025-05 · [Cross-Attention Speculative Decoding](2025-2505.24544-cross-attention-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Beagle（Budget EAGLE）は、投機的復号の小型下書きモデルに単層のcross-注意機構 Transformerを採用し、EAGLE-v2のようなself-注意機構型下書きに近い速度を、単純な構造と少ないメモリで得る方式である。
@@ -2796,9 +2800,9 @@
   実装：✓ ・ リポジトリ内被引用：1  
   まず短い答えを出してその困惑度を正誤二つの分布と比べ、危うい問だけ長い推論へ回す振り分けで、全推論より正解率を上げながらトークンを大幅に減らした。
 
-- **2025-05 · [NeUQI: Near-Optimal Uniform Quantization Parameter Initialization for Low-Bit LLMs](2025-2505.17595-neuqi-near-optimal-uniform-quantization-parameter-initialization-for-low.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
+- **2025-04 · [Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression](2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md)**  
+  実装：[✓](https://github.com/The-Inscrutable-X/TACQ) ・ リポジトリ内被引用：1  
+  Task-Circuit Quantization（TACQ）は、学習済みLLMを2〜3ビットへ圧縮した際の性能崩壊を抑えるため、全ての重みを同じ精度で丸めるのではなく、タスクにとって重要で、かつ実際の量子化で大きな損失を引き起こしそうな重みだけを16ビットのまま残す学習後量子化方式である。
 
 - **2025-04 · [Entropy-Based Block Pruning for Efficient Large Language Models](2025-2504.03794-entropy-based-block-pruning-for-efficient-large-language-models.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/EntroDrop) ・ リポジトリ内被引用：1  
@@ -3252,10 +3256,6 @@
   実装：[✓](https://github.com/vectozavr/thanos) ・ リポジトリ内被引用：0  
   Thanosは、大規模言語モデル（LLM）の学習済み重みを、少数の校正データだけで剪定するpost-学習 枝刈り手法である。原著Table 2では、LLaMA-3 8Bを30%構造化剪定したWikiText-2困惑度（PPL）がSparseGPTの82.19、Thanos（外れ値行保護α=0.1）の36.61となる。
 
-- **2025-04 · [Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression](2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md)**  
-  実装：[✓](https://github.com/The-Inscrutable-X/TACQ) ・ リポジトリ内被引用：0  
-  Task-Circuit Quantization（TACQ）は、学習済みLLMを2〜3ビットへ圧縮した際の性能崩壊を抑えるため、全ての重みを同じ精度で丸めるのではなく、タスクにとって重要で、かつ実際の量子化で大きな損失を引き起こしそうな重みだけを16ビットのまま残す学習後量子化方式である。
-
 - **2025-04 · [Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding](2025-2504.01281-scaling-test-time-inference-with-policy-optimized-dynamic-retrieval-augm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、外部文書を参照する検索拡張生成（RAG）を、検索タイミング、検索結果への忠実性、推論時のメモリ消費の三つの観点から改善する。提案は、方策最適化PORAG、選択的検索ATLAS、KV圧縮CRITICという異なる段階の機構を接続するものである。
@@ -3427,11 +3427,11 @@
   全パラメータ数を大きくしても活性化する部分を限定できるが、実機では選択された専門家へのトークン転送、専門家ごとの負荷の偏り、GPU間の全対全通信、巨大な専門家重みの配置・退避が新たな律速になる。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：31  
+  実装：✓ ・ リポジトリ内被引用：32  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
-  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：30  
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
@@ -3670,6 +3670,10 @@
   実装：[✓](https://github.com/TemporaryLoRA/Temp-LoRA) ・ リポジトリ内被引用：1  
   本論文が扱うのは、数十万トークン規模の小説生成や長編翻訳を、短い注意窓しか持たない言語モデルで継続するときに発生する「古い情報の消失」と「長い鍵・値キャッシュ（KVキャッシュ）の費用」の両立問題である。近い文脈は通常の注意機構で直接読み、古い情報は一時的に変化した重みを介して利用する。
 
+- **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
+  実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：1  
+  枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
+
 - **2024-11 · [The Evolution of RWKV: Advancements in Efficient Language Modeling](2024-2411.02795-the-evolution-of-rwkv-advancements-in-efficient-language-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、RWKV（Receptance Weighted Key Value）系列の設計原理と、2024年までの派生研究を整理した単著のレビューである。
@@ -3834,10 +3838,6 @@
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
   従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
 
-- **2023-12 · [The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models](2023-2312.00960-the-cost-of-compression-investigating-the-impact-of-compression-on-param.md)**  
-  実装：[✓](https://github.com/NamburiSrinath/LLMCompression) ・ リポジトリ内被引用：0  
-  枝刈りと量子化が重みに蓄えた事実知識へ与える影響を三系統のモデルで系統測定し、全体の同時枝刈りが最も有害で五割超の枝刈りで知識が急落すること、注意の量子化は比較的安全で最終層の構造的枝刈りが特に危険であることを示した。
-
 - **2023-12 · [A Performance Evaluation of a Quantized Large Language Model on Various Smartphones](2023-2312.12472-a-performance-evaluation-of-a-quantized-large-language-model-on-various-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対象はiPhone 14、14 Pro、14 Pro Max、15、15 Pro Maxの五機種で、llama.cppとGGUFを利用し、orcaminiv37Bを3bit small K-S量子化した約2.95GiBのモデルを使用する。
@@ -3885,7 +3885,7 @@
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
-  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：23  
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
@@ -3999,11 +3999,11 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：280  
+  実装：✓ ・ リポジトリ内被引用：281  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：183  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：184  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
@@ -4065,7 +4065,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：87  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -4175,15 +4175,15 @@
 ### 9年前（2017-12〜2018-11）
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：134  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：135  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：92  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：93  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：87  
+  実装：✓ ・ リポジトリ内被引用：88  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
