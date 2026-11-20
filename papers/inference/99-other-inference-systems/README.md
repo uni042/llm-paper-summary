@@ -336,6 +336,10 @@
   実装：[✓](https://github.com/sxp11/Training-Inference-Consistent-Segmented-Execution) ・ リポジトリ内被引用：1  
   長文脈の大規模言語モデル（LLM）は、通常の全注意力（full self-注意機構）を使うと、入力が長くなるにつれて注意演算と中間状態の記憶費用が増大する。16K/32K事前充填でのGPUピークメモリは18.56/19.06GBで、全注意力の23.61/34.67GBより小さい。
 
+- **2026-05 · [TileQ: Efficient Low-Rank Quantization of Mixture-of-Experts with 2D Tiling](2026-2605.09281-tileq-efficient-low-rank-quantization-of-mixture-of-experts-with-2d-tili.md)**  
+  実装：[✓](https://anonymous.4open.science/r/TileQ-BE20) ・ リポジトリ内被引用：1  
+  TileQは、混合専門家モデル（Mixture-of-Experts; MoE）の推論用重みを低ビット量子化する際、量子化誤差を修復する低ランク行列そのものが大量の専門家ごとに増殖する問題を扱う。
+
 - **2026-05 · [The Path Matters: Learning a Token-Commitment Policy for Diffusion Language Models](2026-2605.24697-the-path-matters-learning-a-token-commitment-policy-for-diffusion-langua.md)**  
   実装：[✓](https://github.com/BobSun98/TraceLock) ・ リポジトリ内被引用：1  
   LLaDAのGSM8Kでは生成長256・窓64で最終正答率80.0%、HumanEvalのPass@1は37.2%で、信頼度方式の79.8%、36.0%をわずかに上回る。
@@ -483,6 +487,10 @@
 - **2026-04 · [A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression](2026-2604.19572-a-self-evolving-framework-for-efficient-terminal-agents-via-observationa.md)**  
   実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：1  
   TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
+
+- **2026-04 · [A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models](2026-2604.13440-a-kl-lens-on-quantization-fast-forward-only-sensitivity-for-mixed-precis.md)**  
+  実装：[✓](https://github.com/jasonkongie/kl-ssm-quant) ・ リポジトリ内被引用：1  
+  層を一つずつ量子化して順伝播だけで出力分布のずれを測り、学生から教師へのカルバック・ライブラー距離の順位が困惑度悪化の順位と六モデル平均で相関〇・七九と最もよく一致することを示し、その順位で高精度に残す層を選ぶ混合精度が実機で困惑度を保ったまま大きさと遅延を大きく減らした。
 
 - **2026-03 · [The Missing Memory Hierarchy: Demand Paging for LLM Context Windows](2026-2603.09023-pichay-demand-paging-context-windows.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1426,10 +1434,6 @@
   実装：[✓](https://github.com/leonardodalinky/B3D-RWKV) ・ リポジトリ内被引用：0  
   この論文は、片方向にしか情報が流れない再帰型言語モデルを、内部構造を変更せずに双方向の拡散型生成へ転換する方法を扱う。自己回帰型Transformerは生成位置を順番に確定するため、1回の復号で出せるトークン数が限られる。離散拡散型言語モデルは複数位置を並列に修正できるが、通常はブロック内の未マスク位置を左右両方向から参照する。
 
-- **2026-05 · [TileQ: Efficient Low-Rank Quantization of Mixture-of-Experts with 2D Tiling](2026-2605.09281-tileq-efficient-low-rank-quantization-of-mixture-of-experts-with-2d-tili.md)**  
-  実装：[✓](https://anonymous.4open.science/r/TileQ-BE20) ・ リポジトリ内被引用：0  
-  TileQは、混合専門家モデル（Mixture-of-Experts; MoE）の推論用重みを低ビット量子化する際、量子化誤差を修復する低ランク行列そのものが大量の専門家ごとに増殖する問題を扱う。
-
 - **2026-05 · [Thinking as Compression: Your Reasoning Model is Secretly a Context Compressor](2026-2605.28713-thinking-as-compression-your-reasoning-model-is-secretly-a-context-compr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の文脈圧縮は、入力文から重要そうなトークン・文書片を選ぶか、別のモデルで固定長の潜在表現へ符号化する。主要実験では、Qwen3-8Bの回答系で4倍圧縮制約下の平均F1が65.12、完全一致率（EM）が51.17、8倍ではF1 65.42・EM 51.79である。
@@ -1869,10 +1873,6 @@
 - **2026-04 · [Absorber LLM: Harnessing Causal Synchronization for Test-Time Training](2026-2604.20915-absorber-llm-harnessing-causal-synchronization-for-test-time-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデルでは、生成済み履歴を鍵値キャッシュ（KV キャッシュ）へ蓄積すると、復号のたびに参照する過去位置が増える。この方式は推論時学習（test-time 学習）と長文脈推論の接点にある。
-
-- **2026-04 · [A KL Lens on Quantization: Fast, Forward-Only Sensitivity for Mixed-Precision SSM-Transformer Models](2026-2604.13440-a-kl-lens-on-quantization-fast-forward-only-sensitivity-for-mixed-precis.md)**  
-  実装：[✓](https://github.com/jasonkongie/kl-ssm-quant) ・ リポジトリ内被引用：0  
-  層を一つずつ量子化して順伝播だけで出力分布のずれを測り、学生から教師へのカルバック・ライブラー距離の順位が困惑度悪化の順位と六モデル平均で相関〇・七九と最もよく一致することを示し、その順位で高精度に残す層を選ぶ混合精度が実機で困惑度を保ったまま大きさと遅延を大きく減らした。
 
 - **2026-03 · [Why Smaller Is Slower? Dimensional Misalignment in Compressed LLMs](2026-2604.09595-why-smaller-is-slower-dimensional-misalignment-in-compressed-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4011,7 +4011,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：186  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
