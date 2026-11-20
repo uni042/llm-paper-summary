@@ -35,10 +35,15 @@
   "selection_reason": "Microsoft M365の実運用エージェントワークロード4種・1億2,100万回超のモデル呼出しを特性解析し、KVキャッシュの保持・追い出し・配置が再計算率へ与える影響を定量化した計測研究。1時間のアイドル上限で保持量上限を3.6倍削減できること、多解像度保持（MRR）が再計算率を63%（LRU）から13.6%へ下げること等を示し、サービング基盤のKV管理への直接の知見がある。",
   "semantic_scholar_id": "ca841e0e0b933dcedafb7b118e02c04cc5832696",
   "source_url": "https://arxiv.org/abs/2610.22863",
-  "status": "ready",
+  "status": "superseded",
   "title": "Understanding KV Residency in Production-Scale Agentic LLM Workloads",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:06:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.md",
+  "represented_canonical_id": "arXiv:2610.22863",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

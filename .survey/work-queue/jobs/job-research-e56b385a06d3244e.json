@@ -35,10 +35,15 @@
   "selection_reason": "Google Cloud Dataflow上のLLMを含むstreaming ML推論を、異種worker poolの協調autoscalingとprefix-aware batchingで実行する設計。データ移動中心の従来streaming基盤がGPU推論で非効率になる問題に対し、LLMを使うpipelineでthroughput 1.5〜2倍、最大75%のpeak resource削減、最大84%のpeak tail latency削減を報告。LLMを組み込む実行基盤の直接的な性能改善なのでaccept。",
   "semantic_scholar_id": "121847def36596fdb3e8d4dff9e1435df65b5f62",
   "source_url": "https://arxiv.org/abs/2610.22731",
-  "status": "ready",
+  "status": "superseded",
   "title": "Accelerated Dataflow: scaling inference in streaming data analytics with efficiency",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:06:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-.md",
+  "represented_canonical_id": "arXiv:2610.22731",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

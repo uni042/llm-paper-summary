@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "2ba69d2857ee57b4617267cada6fa9bb58facd7a",
+  "base_commit": "5329b6468d40346ff221632152d14065bc63a88d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -420,6 +420,11 @@
     "2026-2610.22130-dropkv-decoupling-residual-output-perturbation-for-near-optimal-kv-cache-eviction.json",
     "2026-2610.22543-on-the-spot-enhancing-speculative-decoding-for-diffusion-language-models-via-commit-order-prediction.json",
     "2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augmented-generation-using-precomputed-kv-caches.json",
+    "2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-efficiency.json",
+    "2026-2610.22788-next-token-or-vector-learning-how-far-to-decode.json",
+    "2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.json",
+    "2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut-driven-mixed-precision-acceleration.json",
+    "2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-llms-inference.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41686,6 +41691,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.22731": {
+      "order": [
+        "2026-11-20T02:01:28+00:00",
+        "2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-efficiency.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22788": {
+      "order": [
+        "2026-11-20T02:02:21+00:00",
+        "2026-2610.22788-next-token-or-vector-learning-how-far-to-decode.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22863": {
+      "order": [
+        "2026-11-20T02:03:14+00:00",
+        "2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22877": {
+      "order": [
+        "2026-11-20T02:04:06+00:00",
+        "2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut-driven-mixed-precision-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.22985": {
+      "order": [
+        "2026-11-20T02:04:58+00:00",
+        "2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-llms-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51547,6 +51597,21 @@
     "arxiv:2610.22579": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augment.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.22579-memllm-end-to-end-in-storage-acceleration-of-on-device-retrieval-augment.md"
+    ],
+    "arxiv:2610.22731": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.22731-accelerated-dataflow-scaling-inference-in-streaming-data-analytics-with-.md"
+    ],
+    "arxiv:2610.22788": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.22788-next-token-or-vector-learning-how-far-to-decode.md"
+    ],
+    "arxiv:2610.22863": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.md"
+    ],
+    "arxiv:2610.22877": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut.md"
+    ],
+    "arxiv:2610.22985": [
+      "papers/inference/13-sparse-attention/2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-l.md"
     ]
   }
 }

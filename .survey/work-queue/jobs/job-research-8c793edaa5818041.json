@@ -35,10 +35,15 @@
   "selection_reason": "別draftモデルを持たずBFP target重みとKVの上位bitだけを部分読出しして複数精度のdraftを構成する。ワークロード別に最適な重み/KV精度を較正し、LUTを使う可変精度BFPアクセラレータでdraftとtargetを実行する。著者要旨は通常AR decode比最大1.9倍、比較対象のbit-sharing self-speculative方式より平均67.2%高いspeedupを報告。投機復号と専用hardwareの共同最適化としてaccept。",
   "semantic_scholar_id": "be34331c193ea67c6b772539fb2d189d796e6393",
   "source_url": "https://arxiv.org/abs/2610.22877",
-  "status": "ready",
+  "status": "superseded",
   "title": "BS-Spec: BFP-Based Bit-Sharing for Self-Speculative LLM Decoding with LUT-Driven Mixed-Precision Acceleration",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:06:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.22877-bs-spec-bfp-based-bit-sharing-for-self-speculative-llm-decoding-with-lut.md",
+  "represented_canonical_id": "arXiv:2610.22877",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
