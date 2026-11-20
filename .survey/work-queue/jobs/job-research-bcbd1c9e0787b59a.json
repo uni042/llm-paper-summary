@@ -35,10 +35,15 @@
   "selection_reason": "Hybrid Latent Attentionは層をT回再利用するlooped LLMのKVがT倍になる問題に対し、直近W tokenは正確なKV、古いtokenは各loopから直接参照できる共有latentとして保持する。Ouro 1.4B/2.6B・T=4でcache/token10.7倍削減、同時sequence数4.0～8.8倍、16K文脈のdecode throughput最大7.4倍、元の精度97%以上を報告。",
   "semantic_scholar_id": "7f7015123417412c0c9d5e98f34e560da19282d4",
   "source_url": "https://arxiv.org/abs/2610.07940",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hybrid Latent Attention for Looped Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:46:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07940-hybrid-latent-attention-for-looped-language-models.md",
+  "represented_canonical_id": "arXiv:2610.07940",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

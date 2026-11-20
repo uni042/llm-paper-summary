@@ -35,10 +35,15 @@
   "selection_reason": "協調agentへ長文脈を分割するとcallごとのKV working setを小さくできる一方、persistent reasoning traceの追加効果は測定条件に依存することを検証。一次要旨は単一pass/RAGのpeak KV 35.5/35.3MiBに対し分割agentが14.3MiB、persistent tierはKVを0.368MiB増やし正解率の有意改善を示さなかったと報告。LLM agent推論のKV memoryと評価設計に直接関係する負の結果としてaccept。",
   "semantic_scholar_id": "6085f30247c7db70bf119bb42c37fcfd01f0a8bb",
   "source_url": "https://arxiv.org/abs/2610.07782",
-  "status": "ready",
+  "status": "superseded",
   "title": "Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:46:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buy.md",
+  "represented_canonical_id": "arXiv:2610.07782",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

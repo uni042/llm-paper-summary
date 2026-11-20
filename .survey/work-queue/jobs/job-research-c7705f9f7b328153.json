@@ -35,10 +35,15 @@
   "selection_reason": "1つのMoEモデルで1B～4B活性パラメータの複数運用点を実現するため、contextと目標効率に条件づけたelastic nested subnetworkとsparse expert routingを組み合わせる。著者要旨は知識集約benchmarkで同規模denseより2～5%精度改善、静的方式と同等のlatencyを報告し、共有重みにより端末disk容量も節約する。端末推論時の計算予算可変化を直接扱うためaccept。",
   "semantic_scholar_id": "f7d5efdda3e02f3e0ef86b1a154505d09a3a7f2f",
   "source_url": "https://arxiv.org/abs/2610.07348",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:46:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md",
+  "represented_canonical_id": "arXiv:2610.07348",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "be36dba2ad112a69b9369e6ec8ef6042215f5925",
+  "base_commit": "e05848133d41d5ada92278a4c5760321ae4c4bb5",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -380,6 +380,11 @@
     "2026-2610.05265-loopy-low-bit-quantization-framework-for-looped-language-models.json",
     "2026-2610.06479-behavior-preserving-kv-cache-compression.json",
     "2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-decoding.json",
+    "2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.json",
+    "2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buys-and-when-you-can-tell.json",
+    "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
+    "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json",
+    "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41286,6 +41291,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.07348": {
+      "order": [
+        "2026-11-20T00:39:11+00:00",
+        "2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07782": {
+      "order": [
+        "2026-11-20T00:40:29+00:00",
+        "2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buys-and-when-you-can-tell.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07940": {
+      "order": [
+        "2026-11-20T00:41:46+00:00",
+        "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.08378": {
+      "order": [
+        "2026-11-20T00:43:03+00:00",
+        "2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-and-high-bandwidth-flash.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.09342": {
+      "order": [
+        "2026-11-20T00:44:21+00:00",
+        "2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50987,6 +51037,21 @@
     "arxiv:2610.07086": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-deco.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-deco.md"
+    ],
+    "arxiv:2610.07348": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md"
+    ],
+    "arxiv:2610.07782": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buy.md"
+    ],
+    "arxiv:2610.07940": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.07940-hybrid-latent-attention-for-looped-language-models.md"
+    ],
+    "arxiv:2610.08378": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-.md"
+    ],
+    "arxiv:2610.09342": [
+      "papers/inference/99-other-inference-systems/2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-com.md"
     ]
   }
 }

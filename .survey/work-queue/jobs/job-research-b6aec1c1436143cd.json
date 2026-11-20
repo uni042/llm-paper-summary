@@ -35,10 +35,15 @@
   "selection_reason": "寿命配慮型KVキャッシュ配置Lachesis。エージェント提供で溜まるKVキャッシュを、容量が大きく読み帯域も高いが高書込み耐久に限りのある高帯域フラッシュとHBMの間で、キャッシュの寿命に応じて配置し、短命データでHBMに書込みを吸収させる。推論メモリ機構そのもの。",
   "semantic_scholar_id": "62dc863f1ee3ed5315715d2dc23c0d6232423c95",
   "source_url": "https://arxiv.org/abs/2610.08378",
-  "status": "ready",
+  "status": "superseded",
   "title": "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:46:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.08378-lachesis-lifetime-aware-kv-cache-placement-for-agent-serving-across-hbm-.md",
+  "represented_canonical_id": "arXiv:2610.08378",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
