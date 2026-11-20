@@ -35,10 +35,15 @@
   "selection_reason": "対称性配慮型の層跨ぎ値キャッシュ圧縮VFold。層間のキャッシュ類似性を利用する際のアーキテクチャ変更やオーバーヘッドを避け、対称性に配慮した値キャッシュの統合でデコード中のメモリを減らす。推論メモリ機構そのもの。",
   "semantic_scholar_id": "2bf552cca9eac56f5f498efb6f5469aa330724b8",
   "source_url": "https://arxiv.org/abs/2610.12338",
-  "status": "ready",
+  "status": "superseded",
   "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:30:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.md",
+  "represented_canonical_id": "arXiv:2610.12338",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

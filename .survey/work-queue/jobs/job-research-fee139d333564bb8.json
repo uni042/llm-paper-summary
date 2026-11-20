@@ -35,10 +35,15 @@
   "selection_reason": "生成tokenごとに異なるLLMへ処理を振り分ける際、既存の単一LLM前提runtimeでstep同期とbatch admissionが遅れる問題に対し、request-centricなAPIとモデルごとの非同期subserverを分離する。subserverのdelayed batchingパラメータはthroughputモデルから決める。著者要旨は複数routing方式とモデル組合せで既存方式比decode throughput2.01～64.15倍と報告。複数LLMの細粒度routing実装としてaccept。",
   "semantic_scholar_id": "5cb7652ea29dd7a4a82c940ad8b154277828e308",
   "source_url": "https://arxiv.org/abs/2610.12242",
-  "status": "ready",
+  "status": "superseded",
   "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:30:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.12242-tokenrouter-efficient-serving-system-for-token-level-llm-routing.md",
+  "represented_canonical_id": "arXiv:2610.12242",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

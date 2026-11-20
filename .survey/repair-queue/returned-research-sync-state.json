@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "8eafd03955a0baf27940d0b31f8362e2ebd5b6e5",
+  "base_commit": "ffb41d0ad2a80798ea536d2da6c0c47fd2f0c8f6",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -590,9 +590,14 @@
     "2026-2610.10381-residualquant-kv-cache-quantization-for-looped-transformers-with-2-bit-residuals.json",
     "2026-2610.10411-training-parallel-speculative-draft-models-by-directly-minimizing-expected-decoding-rounds.json",
     "2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-and-cheaper-than-recompute.json",
+    "2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.json",
     "2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.json",
+    "2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.json",
+    "2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.json",
     "2026-2610.11358-rarecache-bridging-the-gap-in-cross-model-kv-cache-reuse.json",
+    "2026-2610.12242-tokenrouter-efficient-serving-system-for-token-level-llm-routing.json",
     "2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inference.json",
+    "2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.json",
     "2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.json",
     "2026-2610.13060-kv-repurpose-a-testbed-for-evaluating-non-prefix-kv-cache-reuse.json",
     "2026-2610.13325-taking-tokenization-off-the-host-for-agentic-llm-serving.json",
@@ -44195,6 +44200,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.11134": {
+      "order": [
+        "2026-11-20T10:24:45+00:00",
+        "2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.11245": {
+      "order": [
+        "2026-11-20T10:25:44+00:00",
+        "2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.11284": {
+      "order": [
+        "2026-11-20T10:26:42+00:00",
+        "2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.12242": {
+      "order": [
+        "2026-11-20T10:27:40+00:00",
+        "2026-2610.12242-tokenrouter-efficient-serving-system-for-token-level-llm-routing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.12338": {
+      "order": [
+        "2026-11-20T10:28:37+00:00",
+        "2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55014,6 +55064,21 @@
     "arxiv:2610.10845": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-an.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.10845-real-long-term-memory-for-ai-a-50-million-token-window-that-is-faster-an.md"
+    ],
+    "arxiv:2610.11134": [
+      "papers/inference/13-sparse-attention/2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.md"
+    ],
+    "arxiv:2610.11245": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.md"
+    ],
+    "arxiv:2610.11284": [
+      "papers/inference/15-inference-simulation-emulation/2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.md"
+    ],
+    "arxiv:2610.12242": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.12242-tokenrouter-efficient-serving-system-for-token-level-llm-routing.md"
+    ],
+    "arxiv:2610.12338": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.12338-vfold-symmetry-aware-cross-layer-value-cache-compression.md"
     ]
   }
 }

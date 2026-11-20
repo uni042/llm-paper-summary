@@ -35,10 +35,15 @@
   "selection_reason": "ReadKVはKVを段階的に復元できるprogressive codeで保存し、decode queryごとにKey channelとValue tokenの取得bit数を注意分布に応じて配分する。保存bit数と実際に読み出すbit数を分離し、減少限界利益の仮定下で最適配分を導出。6モデルで8bit保存・平均4bit取得時のC4 perplexity増加0.66%以下、A10Gの限定単層8K実験ではTurboQuant比39%低遅延を報告。",
   "semantic_scholar_id": "11030bad061672ef52b2942bcc49caa0d24ba352",
   "source_url": "https://arxiv.org/abs/2610.11245",
-  "status": "ready",
+  "status": "superseded",
   "title": "Read What Matters: Query-Adaptive Quantization for KV Caches",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:30:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.11245-read-what-matters-query-adaptive-quantization-for-kv-caches.md",
+  "represented_canonical_id": "arXiv:2610.11245",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

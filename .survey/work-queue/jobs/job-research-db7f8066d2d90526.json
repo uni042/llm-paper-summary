@@ -35,10 +35,15 @@
   "selection_reason": "近接query間で重なるKV参照を共有し、SCSDで不規則集合操作をGPU向け並列演算に変換する疎注意prefill kernel。GLM-5.3/DeepSeek-3.2のLongBenchでkernel遅延最大55.1%、TTFT最大36.8%削減と報告。",
   "semantic_scholar_id": "0683788412136a4a0f57cd663abf1a66bb2eb999",
   "source_url": "https://arxiv.org/abs/2610.11134",
-  "status": "ready",
+  "status": "superseded",
   "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:30:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.md",
+  "represented_canonical_id": "arXiv:2610.11134",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

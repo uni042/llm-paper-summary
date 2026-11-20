@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（90本）
+## 自動生成の論文一覧（91本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -93,6 +93,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMサービングの電力を単純に減らすのではなく、事前に契約した時間単位の電力量へ実消費を近づける。要求ごとのサービス期限を予測し、レプリカ数とGPUクロックをオンラインで調整する。
+
+- **2026-10 · [DynaTE: Accelerating Diffusion LLMs via Dynamic Token Execution](2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  拡散型LLMの反復デコードで、低効用トークンの計算省略、局所依存の反復内直列精緻化、ロジットのストリーミング処理を、次元再構成可能な演算アレイで支えるハードウェア・ソフトウェア協調設計。
 
 - **2026-10 · [Dissecting the Carbon–SLO Tension in Geo-Distributed LLM Serving](2026-2610.14571-dissecting-the-carbon-slo-tension-in-geo-distributed-llm-serving.md)**  
   実装：[✓](https://github.com/topcuburak/carbon-slo-at-geoscale) ・ リポジトリ内被引用：0  
@@ -280,13 +284,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：5  
   本研究は、一つの大規模言語モデル（LLM）を高速化するのではなく、複数のモデル推論・外部検索・ツール実行を含むエージェント全体を、異なる計算特性を持つ装置へ配置することを目的とする。音声対話エージェントを例にすると、音声認識、文脈検索、LLMによる応答生成、検索API、音声合成は互いに依存するが、同じGPUを使う必要はない。
 
+- **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
+  実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：4  
+  大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
+
 - **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
   実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：3  
   大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
-
-- **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
-  実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：3  
-  大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
 
 - **2025-03 · [Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation](2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md)**  
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  

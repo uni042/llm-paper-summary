@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMの反復decodeで更新価値の低いtoken計算を省き、稼働token数に合わせてPE arrayを再構成するhardware/software co-design。局所依存tokenの更新をFLDDで絞り、Merge-Split-Merge dataflowとstreaming vocabulary engineで不規則実行を吸収する。一次要旨は2種類のdLLMで既存accelerator比2.05～2.78倍高速・2.99～3.93倍energy効率と報告。拡散LLM推論acceleratorとしてaccept。",
   "semantic_scholar_id": "2e5de7a367457df412471e5fba656879ed40abba",
   "source_url": "https://arxiv.org/abs/2610.11284",
-  "status": "ready",
+  "status": "superseded",
   "title": "DynaTE: Accelerating Diffusion LLMs via Dynamic Token Execution",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T10:30:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2610.11284-dynate-accelerating-diffusion-llms-via-dynamic-token-execution.md",
+  "represented_canonical_id": "arXiv:2610.11284",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
