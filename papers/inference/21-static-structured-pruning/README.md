@@ -88,7 +88,7 @@
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
 
 - **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
-  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：41  
   FLAP（FLuctuation-based 適応的 Structured Pruning）は、大規模言語モデル（LLM）の重みを再学習せずに構造化枝刈りする手法である。
 
 - **2024-09 · [CFSP: An Efficient Structured Pruning Framework for LLMs with Coarse-to-Fine Activation Information](2024-2409.13199-cfsp-an-efficient-structured-pruning-framework-for-llms-with-coarse-to-f.md)**  
@@ -96,13 +96,13 @@
   CFSPは、大規模言語モデル（LLM）から推論に不要な重み構造を除去する構造化枝刈り（structured 枝刈り）の手法である。50%という論文上の枝刈り設定では、LLaMA3-8Bのパラメータ数が8.03Bから5.21B、表記メモリ量が16.06GBから10.42GB、積和演算量（MAC）が3.64Tから2.19Tに減少した。
 
 - **2024-08 · [Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations](2024-2407.05690-pruning-large-language-models-to-intra-module-low-rank-architecture-with.md)**  
-  実装：[✓](https://github.com/sbwww/TransAct-pruning) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/sbwww/TransAct-pruning) ・ リポジトリ内被引用：3  
   本論文の対象は、大規模言語モデル（LLM）を端末に配置する際に必要となる重みの格納容量、推論中の計算量、そして鍵・値キャッシュ（KV キャッシュ）のメモリ使用量である。重みだけを低ビット化しても、注意機構の過去トークンの鍵・値を保持する領域は高精度のまま残る。
 
 ### 4年前（2022-12〜2023-11）
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：253  
+  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：255  
   LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
 
 - **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
@@ -128,7 +128,7 @@
   一方、あらかじめ小型の学生モデルを定めて知識蒸留する方式は、推論しやすい構造を得られるが、大量の未ラベル文章で一般蒸留を行う費用が大きい。MNLIの約95%剪定条件ではBERT-base比12.1倍の推論高速化と精度80.6を報告し、QNLIでも12.1倍・86.1を報告する。
 
 - **2022-04 · [A Fast Post-Training Pruning Framework for Transformers](2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md)**  
-  実装：[✓](https://github.com/WoosukKwon/retraining-free-pruning) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/WoosukKwon/retraining-free-pruning) ・ リポジトリ内被引用：36  
   Transformerの計算量と推論遅延を減らすために、不要な注意頭や順伝播層のフィルタを削る構造化枝刈りが使われる。品質低下を1%以内に抑えながら、BERT Baseでは元の演算量の60〜70%程度まで、DistilBERTでは条件により50%まで減らした。
 
 ### 7年前（2019-12〜2020-11）
