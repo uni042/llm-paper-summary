@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（260本）
+## 自動生成の論文一覧（261本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -851,6 +851,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [FlashBias: Fast Computation of Attention with Bias](2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.md)**  
   実装：[✓](https://github.com/thuml/FlashBias) ・ リポジトリ内被引用：0  
   注意バイアスを低ランク分解してクエリとキーへ埋め込み、二乗のメモリ読み込みを消すことでバイアス付き注意を無損失から近似まで含めて高速化した方式。
+
+- **2025-05 · [FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration](2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みINT4・活性FP8の混合精度カーネルとRoPE配慮の外れ値平滑化、3段パイプラインの注意カーネルを共同設計した量子化推論手法。FFNでQServe比1.68倍、プリフィルで1.26倍を精度を保って達成。
 
 - **2025-04 · [Pruning Laws for Large Language Models](2025-2504.04342-pruning-laws-for-large-language-models.md)**  
   実装：[✓](https://github.com/parmanu-lcs2/pruning_laws) ・ リポジトリ内被引用：0  

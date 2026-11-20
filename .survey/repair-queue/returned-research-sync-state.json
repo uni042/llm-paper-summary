@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4103baf058f4f5e3b517a9a1d36dfc68f23046bd",
+  "base_commit": "2e6a6001b587a3fbfcc2dbe815e4c3e6a3b7f1cc",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -119,10 +119,15 @@
     "2025-2505.18232-two-stage-regularization-based-structured-pruning-for-llms.json",
     "2025-2505.19812-efficient-multi-modal-long-context-learning-for-training-free-adaptation.json",
     "2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.json",
+    "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json",
+    "2025-2505.22425-scaling-reasoning-without-attention.json",
     "2025-2506.02847-clone-customizing-llms-for-efficient-latency-aware-inference-at-the-edge.json",
+    "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json",
     "2025-2506.06884-free-fast-and-robust-vision-language-models-with-early-exits.json",
+    "2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.json",
     "2025-2506.10446-fast-on-the-easy-deep-on-the-hard-efficient-reasoning-via-powered-length-penalty.json",
     "2025-2506.10822-recut-balancing-reasoning-length-and-accuracy-in-llms-via-stepwise-trails-and-preference-optimization.json",
+    "2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-models.json",
     "2025-2506.17254-near-optimal-online-deployment-and-routing-for-streaming-llms.json",
     "2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitching.json",
     "2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intensive-operators.json",
@@ -43406,6 +43411,78 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2505.20839": {
+      "order": [
+        "2026-11-20T07:44:07+00:00",
+        "2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2505.22425": {
+      "order": [
+        "2026-11-20T07:45:28+00:00",
+        "2025-2505.22425-scaling-reasoning-without-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.05300": {
+      "order": [
+        "2026-11-20T07:46:50+00:00",
+        "2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2506.10205": {
+      "order": [
+        "2026-11-20T07:46:54+00:00",
+        "2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "9d21fe3a872076acfc5b5f49d2eb818b2bd11bfb6315006e820cda8e2021f5f1",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2025-2506.10205-awp-activation-aware-weight-pruning-and-quantization-with-projected-gradient-descent.md",
+        "canonical_id": "arXiv:2506.10205",
+        "worker_completed_at": "2026-11-20T15:12:00+09:00",
+        "worker_run_key": "2026-11-20-muse-c2b4",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3352,
+          "body_paragraphs": 20,
+          "method_chars": 1158,
+          "method_paragraphs": 4,
+          "evaluation_chars": 447,
+          "limitation_chars": 189,
+          "insufficiency_flags": [
+            "評価説明量 447 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 447 < 500"
+        ],
+        "processed_at": "2026-11-20T07:46:54+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2506.11120": {
+      "order": [
+        "2026-11-20T07:48:15+00:00",
+        "2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53910,6 +53987,18 @@
     "arxiv:2505.20112": [
       "papers/inference/99-other-inference-systems/2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md",
       "papers/inference/99-other-inference-systems/2025-2505.20112-erc-svd-error-controlled-svd-for-large-language-model-compression.md"
+    ],
+    "arxiv:2505.20839": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference.md"
+    ],
+    "arxiv:2505.22425": [
+      "papers/inference/99-other-inference-systems/2025-2505.22425-scaling-reasoning-without-attention.md"
+    ],
+    "arxiv:2506.05300": [
+      "papers/inference/99-other-inference-systems/2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.md"
+    ],
+    "arxiv:2506.11120": [
+      "papers/inference/99-other-inference-systems/2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-mode.md"
     ]
   }
 }

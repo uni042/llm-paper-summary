@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨。one-hot教師ラベルによる勾配情報不足を補うため、枝刈り段階で元モデルの出力分布を用いる自己蒸留損失を導入し、注意層より低感度とするMLP部分を重点的に枝刈りする。生成LLMのパラメータ圧縮と推論配置コスト削減を直接狙い、zero-shot品質を比較するため、推論向け構造化圧縮の収録対象とする。",
   "semantic_scholar_id": "03b2a63b6365a4920e8652ac8f8522fe3745de81",
   "source_url": "https://arxiv.org/abs/2506.11120",
-  "status": "ready",
+  "status": "superseded",
   "title": "SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:50:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-mode.md",
+  "represented_canonical_id": "arXiv:2506.11120",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

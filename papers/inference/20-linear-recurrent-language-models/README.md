@@ -124,7 +124,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：287  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：288  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2023-12 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
@@ -174,11 +174,11 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-05 · [RWKV: Reinventing RNNs for the Transformer Era](2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md)**  
-  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：141  
+  実装：[✓](https://github.com/BlinkDL/RWKV-LM) ・ リポジトリ内被引用：142  
   RWKVの大きな特徴は、単に注意を近似して軽量化することではなく、同じ重みと演算を訓練時の並列形式と推論時の再帰形式の双方で扱うことである。論文自身も長文脈評価の一部で弱点を示し、指示の順序を変えるだけで下流評価が大きく改善する例を報告している。
 
 - **2023-07 · [Retentive Network: A Successor to Transformer for Large Language Models](2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：129  
+  実装：✓ ・ リポジトリ内被引用：130  
   RetNetは、指数減衰付き保持演算を並列・再帰・チャンク再帰の三形式で同じ重みのまま実行する。6.7Bモデルの8K入力ではTransformerのKVキャッシュ方式に対し復号8.4倍、メモリ約70%削減を報告し、学習の並列性と固定状態復号を両立する。
 
 - **2022-12 · [Hungry Hungry Hippos: Towards Language Modeling with State Space Models](2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md)**  
@@ -202,7 +202,7 @@
   基本の着想は、過去の鍵ベクトルを学習可能なコードブックの少数の代表ベクトルへ量子化すると、異なるトークン位置でも同じコードを持つ鍵は同じ注意得点になる、という性質にある。TPU v3での訓練処理率は同規模の二次注意モデルと比べ、系列長8192で3倍超、32768で12倍超となり、131072トークンまで大きな処理率低下なく動作した。
 
 - **2023-11 · [Linear Log-Normal Attention with Unbiased Concentration](2023-2311.13541-linear-log-normal-attention-with-unbiased-concentration.md)**  
-  実装：[✓](https://github.com/ynahshan/linear-lognormal-attention) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/ynahshan/linear-lognormal-attention) ・ リポジトリ内被引用：3  
   本研究が扱う問題は、系列長が伸びると通常の自己注意（self-注意機構）のスコア行列が二次的に増大する一方、その行列を単に線形化した方式では言語理解の精度が落ちやすいことである。系列長4096での学習反復時間は標準方式6.8秒に対しLLN単独3.2秒、メモリは32.1GBに対し7.5GBだった。
 
 - **2023-06 · [Block-State Transformers](2023-2306.09539-block-state-transformers.md)**  

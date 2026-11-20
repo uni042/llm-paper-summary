@@ -114,7 +114,7 @@
   LoRAPruneは、事前学習済み大規模言語モデルを配備しやすい小型の密モデルへ変えるために、低ランク適応（Low-Rank Adaptation、LoRA）と構造化枝刈り（structured 枝刈り）を一体化する方式である。
 
 - **2023-10 · [Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models](2023-2310.05015-compresso-structured-pruning-with-collaborative-prompting-learns-compact.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   Compressoは、大規模言語モデルの注意ヘッド、中間層のチャネル、隠れ次元をまとめて削除する構造化枝刈りの手法である。評価の中心はモデル規模と正答率であり、実機のトークン毎秒や消費電力の改善倍率は示されていない。
 
 - **2023-09 · [Pruning Large Language Models via Accuracy Predictor](2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md)**  

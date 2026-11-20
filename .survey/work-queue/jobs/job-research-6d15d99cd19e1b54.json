@@ -35,10 +35,15 @@
   "selection_reason": "SiftAttentionは注意スコアの上位quantileが生成ステップに沿ってべき乗則に従う観察を利用し、top-kを要しない動的閾値でVベクトルのHBM読出しを減らす。LLM推論のメモリ帯域削減と品質維持を直接評価する近似注意手法。",
   "semantic_scholar_id": "d8a51cd1d8dff440d4e6054e0b82ddb6d299d7b8",
   "source_url": "https://arxiv.org/abs/2506.05300",
-  "status": "ready",
+  "status": "superseded",
   "title": "Power Law Guided Dynamic Sifting for Efficient Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:50:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.md",
+  "represented_canonical_id": "arXiv:2506.05300",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

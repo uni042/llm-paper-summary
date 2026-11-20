@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1073本）
+## 自動生成の論文一覧（1076本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3204,6 +3204,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   この研究は、画像や動画を扱うマルチモーダル大規模言語モデル（MLLM）で、ユーザーの指示に関係しない視覚トークンをLLM入力段階で取り除くための方式を提案する。
 
+- **2025-06 · [SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models](2025-2506.11120-sdmprune-self-distillation-mlp-pruning-for-efficient-large-language-mode.md)**  
+  実装：[✓](https://github.com/visresearch/SDMPrune) ・ リポジトリ内被引用：0  
+  枝刈りの重要度測定へ自己蒸留損失を組み込み、元のモデルの予測分布を保ちながらMLPの中間ニューロンだけを構造的に刈る手法。ラベルだけの勾配より正確に感度の低いニューロンを選べる。
+
 - **2025-06 · [S4C: Speculative Sampling with Syntactic and Semantic Coherence for Efficient Inference of Large Language Models](2025-2506.14158-s4c-speculative-sampling-with-syntactic-and-semantic-coherence-for-effic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   S4C（投機的 Sampling with Syntactic and Semantic Coherence）は、自己回帰型大規模言語モデルの逐次生成を高速化する投機的復号方式である。軽量なドラフト側で複数の将来トークンを予測し、元の大規模モデルがまとめて検証するという基本構造を維持しながら、ドラフト系列の作り方と検証時の候補木を変更する。
@@ -3219,6 +3223,10 @@
 - **2025-06 · [Principled SVD-based Delta Compression via Quantization Error Minimization](2025-2506.11087-principled-svd-based-delta-compression-via-quantization-error-minimizati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PRINMIXは、同じ基盤LLMから多数の微調整済みモデルを提供する場面を想定し、各モデルに固有の差分重みΔWだけを圧縮する方式である。
+
+- **2025-06 · [Power Law Guided Dynamic Sifting for Efficient Attention](2025-2506.05300-power-law-guided-dynamic-sifting-for-efficient-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意スコアの分位点が冪乗則で減衰する性質を使い、ウォームアップで当てはめた曲線からしきい値を予測して注意を間引く手法。上位k件の選択を要素ごとの比較へ置き換え、値ベクトルの転送量を31パーセント削減した。
 
 - **2025-06 · [MoTE: Mixture of Ternary Experts for Memory-efficient Large Multimodal Models](2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3295,6 +3303,10 @@
 - **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
+
+- **2025-05 · [Scaling Reasoning without Attention](2025-2505.22425-scaling-reasoning-without-attention.md)**  
+  実装：[✓](https://github.com/inclusionAI/PromptCoT) ・ リポジトリ内被引用：0  
+  KVキャッシュを持たないMamba-2の状態空間双対層だけで推論モデルを構成し、PromptCoTの合成データによる2段階カリキュラムで鍛えた研究。7Bで27B級の推論性能と、メモリ制限下で最大3.66倍のスループットを示した。
 
 - **2025-05 · [QStore: Quantization-Aware Compressed Model Storage](2025-2505.04081-qstore-quantization-aware-compressed-model-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

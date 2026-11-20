@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論のための高速INT4-FP8カーネルとRoPE配慮量子化FireQ。メモリ帯域が推論スループットを律速する問題に対し、重みとKVをINT4、活性とクエリをFP8に量子化する学習後量子化と行列積カーネルを共同設計し、プリフィルの3段パイプラインで初回トークン時間も下げる。推論量子化機構そのもの。",
   "semantic_scholar_id": "0f8efd9f5967b1ad4f42e7c96948caf84325a816",
   "source_url": "https://arxiv.org/abs/2505.20839",
-  "status": "ready",
+  "status": "superseded",
   "title": "FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T07:50:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference.md",
+  "represented_canonical_id": "arXiv:2505.20839",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

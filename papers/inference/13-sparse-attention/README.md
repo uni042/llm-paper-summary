@@ -588,6 +588,10 @@
   実装：[✓](https://github.com/ant-research/long-context-modeling) ・ リポジトリ内被引用：2  
   再帰型ニューラルネットワーク（Recurrent Neural Network; RNN）や状態空間モデル（State Space モデル; SSM）は、過去を固定次元の状態に圧縮するため、文脈が伸びても注意機構のような二乗計算や増大するKVキャッシュを必要としない。
 
+- **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
+  実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：2  
+  Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとの上位k選択（top-k）を避けて注意計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1程度まで減らす条件を示す一方、強い疎化や実装条件によって品質・実速度の利得が変わる。
+
 - **2025-02 · [InfiniteHiP: Extending Language Model Context Up to 3 Million Tokens on a Single GPU](2025-2502.08910-infinitehip-extending-language-model-context-up-to-3-million-tokens-on-a.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈の大規模言語モデル推論には三つの問題がある。第一に、注意機構が参照する過去トークンが増えると演算量とメモリアクセスが増える。原著は単一L40S 48GBで最大約300万トークンの文脈を扱えるとし、同条件でSGLangの比較対象に対して復号処理量が約7.25倍と報告する。
@@ -615,10 +619,6 @@
 - **2025-08 · [Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention](2025-483ca98d7491-efficient-attention-methods-hardware-efficient-sparse-compact-and-linear.md)**  
   実装：[✓](https://github.com/attention-survey/Efficient_Attention_Survey) ・ リポジトリ内被引用：1  
   原著は20ページで、注意計算の数式、GPUの演算性能とメモリ帯域、事前入力処理と復号の律速差を説明したうえで、ハードウェア効率化、コンパクト注意（Compact 注意機構）、疎注意（Sparse 注意機構）、線形注意（Linear 注意機構）の四系統を共通の記法で比較する。
-
-- **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
-  実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：1  
-  Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとの上位k選択（top-k）を避けて注意計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1程度まで減らす条件を示す一方、強い疎化や実装条件によって品質・実速度の利得が変わる。
 
 - **2025-11 · [OmniSparse: Training-Aware Fine-Grained Sparse Attention for Long-Video MLLMs](2025-2511.12201-omnisparse-training-aware-fine-grained-sparse-attention-for-long-video-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -757,7 +757,7 @@
   Sangerは、Transformerの注意演算に含まれる重要度の低い接続を入力ごとに選別し、専用ハードウェア上で実際に計算を省くための協調設計である。
 
 - **2021-06 · [Memory-efficient Transformers via Top-k Attention](2021-2106.06899-top-k-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
+  実装：✓ ・ リポジトリ内被引用：17  
   通常注意は系列長をLとするとL×Lのスコア行列を作るため、長系列ではメモリ使用量が二次的に増える。Top-k 注意機構は、各クエリについて全キーとのスコアから上位k個だけを残し、クエリをチャンク単位で処理することでピークメモリを系列長に対して線形へ近づける。
 
 - **2021-11 · [Memory-efficient Transformers via Top-k Attention](2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md)**  
