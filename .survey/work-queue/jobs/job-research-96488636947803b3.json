@@ -35,10 +35,15 @@
   "selection_reason": "F-CoTは入力から推論に必要な情報を構造化して抽出し、その簡潔な文脈だけを使って推論させる学習不要の方式。算術文章題でzero-shot CoTと同程度の精度を保ちながら生成トークンを2〜3分の1に削減と一次要旨で報告。LLM推論時のトークン費用と遅延削減に直接関連する。",
   "semantic_scholar_id": "dbd60d5071f1709a06a5dde63fe98539c6d85320",
   "source_url": "https://arxiv.org/abs/2511.22176",
-  "status": "ready",
+  "status": "superseded",
   "title": "Focused Chain-of-Thought: Efficient LLM Reasoning via Structured Input Information",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:31:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2511.22176-focused-chain-of-thought-efficient-llm-reasoning-via-structured-input-in.md",
+  "represented_canonical_id": "arXiv:2511.22176",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv原著の要旨・本文を確認。IrisはPython/Triton内に対称メモリとタイル単位のGPU間通信を実装し、GEMMとAll-Scatterを単一ソースで重畳可能にする。8 GPU環境の通信マイクロベンチマークと複合GEMM通信でPyTorch/RCCL比最大1.79倍の高速化を報告。複数GPUでのLLM推論・エキスパート並列にも適用しうるGPU通信実行基盤だが、当該1.79倍はLLM全体の速度向上ではない。",
   "semantic_scholar_id": "178d3a530cbe51e53646e41b640cd0f3fc5533c7",
   "source_url": "https://arxiv.org/abs/2511.12500",
-  "status": "ready",
+  "status": "superseded",
   "title": "Iris: First-Class Multi-GPU Programming Experience in Triton",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:31:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.12500-iris-first-class-multi-gpu-programming-experience-in-triton.md",
+  "represented_canonical_id": "arXiv:2511.12500",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

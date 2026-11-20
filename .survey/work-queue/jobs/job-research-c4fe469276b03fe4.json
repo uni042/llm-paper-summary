@@ -35,10 +35,15 @@
   "selection_reason": "オートエンコーダとKV再利用によるKVキャッシュ圧縮KV-CAR。KVキャッシュがモデル自体より大きくなりバッチと文脈を制限する問題に対し、軽量なオートエンコーダによる圧縮と再利用を統一した、アーキテクチャ非依存の枠組み。推論メモリ機構そのもの。",
   "semantic_scholar_id": "78a7d0994ab6fb4ccafdfb87d9e8fc2f171558ef",
   "source_url": "https://arxiv.org/abs/2512.06727",
-  "status": "ready",
+  "status": "superseded",
   "title": "KV-CAR: KV Cache Compression using Autoencoders and KV Reuse in Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:31:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2512.06727-kv-car-kv-cache-compression-using-autoencoders-and-kv-reuse-in-large-lan.md",
+  "represented_canonical_id": "arXiv:2512.06727",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

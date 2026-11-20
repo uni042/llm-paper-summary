@@ -35,10 +35,15 @@
   "selection_reason": "FermiGradは離散的rank切捨てを連続Fermi gateに置換して全layerのrank配分を微分最適化する。Targeted Compressorは対象タスクへ容量を配分し、PivGaは低rank因子のgauge自由度を使って追加のlossless圧縮を行う。Llama3.3-70Bを50% parameter densityへ圧縮と報告。推論実行速度は要旨で実測されていない。",
   "semantic_scholar_id": "c722fd04e90bb2777b49e507241fd26375be3c33",
   "source_url": "https://arxiv.org/abs/2512.03062",
-  "status": "ready",
+  "status": "superseded",
   "title": "FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:31:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.03062-fermigrad-svd-an-llm-compression-pipeline-with-global-rank-selection-and.md",
+  "represented_canonical_id": "arXiv:2512.03062",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
