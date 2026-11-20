@@ -624,6 +624,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   視覚符号器では空間軸に沿う反復統合で、言語モデル側では周波数の低域通過で視覚トークンを最終層まで段階的に消す学習不要の圧縮により、約2倍の高速化とほぼ無劣化の精度を両立した。
 
+- **2025-12 · [SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping](2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  同一入力の行列で低ランク射影を共有し、射影の先頭ブロックを再構成側へ吸収して省略することで、同じ圧縮率で保持できる有効ランクを増やし、学習なし低ランク圧縮の精度低下を既存法の半分以下に抑えた。
+
 - **2025-12 · [Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models](2025-2512.01949-script-graph-structured-and-query-conditioned-semantic-token-pruning-for.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   手法は、余弦類似度の二部グラフを用いて冗長な視覚トークンを削るグラフ構造化枝刈り（Graph-Structured Pruning; GSP）と、質問との関連性に加えて特徴の多様性を考慮する質問条件付き意味枝刈り（Query-Conditioned Semantic Pruning; QCSP）から成る。
@@ -2306,10 +2310,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   隣接トークンとの類似度で空間冗長性を測り、市松マスクで安全に並列枝刈りする動画向けトークン削減方式で、9割超のトークンを落としても精度をほぼ保った。
 
-- **2025-12 · [SkipCat: Rank-Maximized Low-Rank Compression of Large Language Models via Shared Projection and Block Skipping](2025-2512.13494-skipcat-rank-maximized-low-rank-compression-of-large-language-models-via.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  同一入力の行列で低ランク射影を共有し、射影の先頭ブロックを再構成側へ吸収して省略することで、同じ圧縮率で保持できる有効ランクを増やし、学習なし低ランク圧縮の精度低下を既存法の半分以下に抑えた。
-
 - **2025-12 · [SASQ: Static Activation Scaling for Quantization-Aware Training in Large Language Models](2025-2512.14481-sasq-static-activation-scaling-for-quantization-aware-training-in-large-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット量子化はモデルのメモリ容量や演算費用を減らすが、推論時に活性値の最大値を観測してスケールを更新する動的量子化では、毎回のスケール計算やデータ変換が発生する。
@@ -3825,7 +3825,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：270  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：271  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3861,7 +3861,7 @@
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：31  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
@@ -4045,7 +4045,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：86  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -4177,7 +4177,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：323  
+  実装：✓ ・ リポジトリ内被引用：324  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）
