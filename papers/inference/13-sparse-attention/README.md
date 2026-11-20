@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（187本）
+## 自動生成の論文一覧（188本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -414,6 +414,10 @@
   実装：[✓](https://github.com/jiwonsong-dev/CompactAttention) ・ リポジトリ内被引用：0  
   CompactAttentionは、長文脈の大規模言語モデル（LLM）の分割入力処理（chunked プリフィル）を高速化するため、疎注意（sparse 注意機構）の「どのKVブロックを選ぶか」と「選んだKVをどのカーネルで計算するか」を切り離す方式である。
 
+- **2026-04 · [Stream-CQSA: Exact Out-of-Memory Recovery for Attention](2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  メモリ不足で失敗する注意計算を、トークン対を重複なく覆う部分問題へ再帰分解して厳密に再合成する回復機構。速くする手法ではなく、容量の境界を超えても計算を完走させるための仕組み。
+
 - **2026-04 · [SpikingBrain2.0: Brain-Inspired Foundation Models for Efficient Long-Context and Cross-Platform Inference](2026-2604.22575-spikingbrain2-0-brain-inspired-foundation-models-for-efficient-long-cont.md)**  
   実装：[✓](https://github.com/BICLab/SpikingBrain2.0) ・ リポジトリ内被引用：0  
   長い文章を扱う大規模言語モデルでは、全注意（Full 注意機構; FA）を用いると、事前充填（プリフィル）時の注意計算が系列長に対して二次的に増える。
@@ -709,7 +713,7 @@
   LM-Infiniteは、短い系列で学習した大規模言語モデルを追加学習なしで長文脈へ外挿するため、推論時の注意範囲と位置距離の扱いだけを変更する方式である。論文は元の完全注意に対してデコードを約2.7倍高速化し、GPUメモリを最大7.5倍削減したと報告する。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
-  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：46  
+  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：47  
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
@@ -783,7 +787,7 @@
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：191  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：192  
   第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  

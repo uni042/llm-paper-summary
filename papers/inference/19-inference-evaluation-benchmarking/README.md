@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（146本）
+## 自動生成の論文一覧（147本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -317,6 +317,10 @@
 - **2026-04 · [On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks](2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-be.md)**  
   実装：[✓](https://github.com/zinichakraborty/Diffusion-LLM-Quantization-Robustness) ・ リポジトリ内被引用：0  
   推論用重みを低ビットで表す学習後量子化（post-学習 量子化; PTQ）はこの費用を減らす有力な方法だが、自己回帰型で得られた量子化の知見を拡散型へそのまま適用できるとは限らない。重要な留保として、混合精度実験は量子化を模擬しても重みを浮動小数点形式で保存する方式であり、低ビットの実物理容量削減を実測した結果ではない。
+
+- **2026-04 · [LayerBoost: Layer-Aware Attention Reduction for Efficient LLMs](2026-2604.22050-layerboost-layer-aware-attention-reduction-for-efficient-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層ごとの感度測定に基づいて注意を残す層・窓注意にする層・外す層を決め、軽い蒸留で回復する注意削減手法。一律線形化より性能低下を小さく抑え、高同時実行で大きく速くなる。
 
 - **2026-04 · [IWP: Token Pruning as Implicit Weight Pruning in Large Vision Language Models](2026-2604.00757-iwp-token-pruning-as-implicit-weight-pruning-in-large-vision-language-mo.md)**  
   実装：[✓](https://github.com/jhtwosun/IWP) ・ リポジトリ内被引用：0  

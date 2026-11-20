@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（86本）
+## 自動生成の論文一覧（87本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -201,6 +201,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization](2026-2604.23577-routenlp-closed-loop-llm-routing-with-conformal-cascading-and-distillati.md)**  
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
+
+- **2026-04 · [FusionCIM: Accelerating LLM Inference with Fusion-Driven Computing-in-Memory Architecture](2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-mem.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意の2つの行列積を内積型と外積型のCIMマクロへ振り分け、クエリと出力を固定するデータフローと対角起点のオンラインソフトマックスで融合したアクセラレータ。シミュレーションで従来CIM比1.98倍の高速化と3.85倍の省エネルギーを示した。
 
 - **2026-04 · [DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference](2026-2604.04750-deepstack-facilitating-co-design-exploration-of-3d-dram-stacked-accelera.md)**  
   実装：[✓](https://github.com/tile-ai/DeepStack/tree/ae) ・ リポジトリ内被引用：0  

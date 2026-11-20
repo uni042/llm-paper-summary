@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "63fb00c71b7b638774e618fdcc421a3bc35d0923",
+  "base_commit": "ce7ab6e9257a4c059768fd1559868a0f396ee964",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -198,6 +198,7 @@
     "2026-2604.02816-qapruner-quantization-aware-vision-token-pruning-for-multimodal-large-language-models.json",
     "2026-2604.02945-msao-adaptive-modality-sparsity-aware-offloading-with-edge-cloud-collaboration-for-efficient-multimodal-llm-inference.json",
     "2026-2604.03950-diagonal-tiled-mixed-precision-attention-for-efficient-low-bit-mxfp-inference.json",
+    "2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-models.json",
     "2026-2604.04930-early-stopping-for-large-reasoning-models-via-confidence-dynamics.json",
     "2026-2604.04972-rcp-representation-consistency-pruner-for-mitigating-distribution-shift-in-large-vision-language-models.json",
     "2026-2604.05887-hybridkv-hybrid-kv-cache-compression-for-efficient-multimodal-large-language-model-inference.json",
@@ -222,9 +223,13 @@
     "2026-2604.18995-r2-dllm-accelerating-diffusion-large-language-models-via-spatio-temporal-redundancy-reduction.json",
     "2026-2604.19145-st-prune-training-free-spatio-temporal-token-pruning-for-vision-language-models-in-autonomous-driving.json",
     "2026-2604.19503-realb-real-time-load-balancing-for-multimodal-moe-inference.json",
+    "2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.json",
+    "2026-2604.22050-layerboost-layer-aware-attention-reduction-for-efficient-llms.json",
     "2026-2604.22281-docprune-efficient-document-question-answering-via-background-question-and-comprehension-aware-token-pruning.json",
     "2026-2604.22577-quantclaw-precision-where-it-matters-for-openclaw.json",
     "2026-2604.23994-when-to-commit-towards-variable-size-self-contained-blocks-for-discrete-diffusion-language-models.json",
+    "2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-memory-architecture.json",
+    "2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.json",
     "2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-context-attention-serving.json",
     "2026-2604.26378-coquant-joint-weight-activation-subspace-projection-for-mixed-precision-llms.json",
     "2026-2605.01858-decouple-and-cache-kv-cache-construction-for-streaming-video-understanding.json",
@@ -42886,6 +42891,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2604.04493": {
+      "order": [
+        "2026-11-20T06:07:43+00:00",
+        "2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.20819": {
+      "order": [
+        "2026-11-20T06:08:39+00:00",
+        "2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.22050": {
+      "order": [
+        "2026-11-20T06:09:35+00:00",
+        "2026-2604.22050-layerboost-layer-aware-attention-reduction-for-efficient-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.25317": {
+      "order": [
+        "2026-11-20T06:10:30+00:00",
+        "2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-memory-architecture.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2604.26039": {
+      "order": [
+        "2026-11-20T06:11:26+00:00",
+        "2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53227,6 +53277,21 @@
     "arxiv:2604.02945": [
       "papers/inference/05-speculative-decoding-moe/2026-2604.02945-msao-adaptive-modality-sparsity-aware-offloading-with-edge-cloud-collabo.md",
       "papers/inference/05-speculative-decoding-moe/2026-2604.02945-msao-adaptive-modality-sparsity-aware-offloading-with-edge-cloud-collabo.md"
+    ],
+    "arxiv:2604.04493": [
+      "papers/inference/99-other-inference-systems/2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-mo.md"
+    ],
+    "arxiv:2604.20819": [
+      "papers/inference/13-sparse-attention/2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.md"
+    ],
+    "arxiv:2604.22050": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2604.22050-layerboost-layer-aware-attention-reduction-for-efficient-llms.md"
+    ],
+    "arxiv:2604.25317": [
+      "papers/inference/15-inference-simulation-emulation/2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-mem.md"
+    ],
+    "arxiv:2604.26039": [
+      "papers/inference/12-moe-parallelism-communication/2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.md"
     ]
   }
 }

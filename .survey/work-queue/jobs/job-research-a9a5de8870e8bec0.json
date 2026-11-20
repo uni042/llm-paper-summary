@@ -35,10 +35,15 @@
   "selection_reason": "arXiv著者要旨を確認。Cyclic Quorum Sets由来のCQS Divideで厳密attentionを独立した部分計算へ分解・再合成し、GPUメモリ予算に応じてstreaming実行する。数学的に元のattentionと等価で近似誤差を導入せず、単一GPUで10億token系列のexact attention実行可能性を報告。ただしLLM全体のend-to-end遅延・実サービス性能は要旨から未確認。",
   "semantic_scholar_id": "37a12370f1013fda19e2b0fbba20441e6a15a713",
   "source_url": "https://arxiv.org/abs/2604.20819",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stream-CQSA: Exact Out-of-Memory Recovery for Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T06:12:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2604.20819-stream-cqsa-exact-out-of-memory-recovery-for-attention.md",
+  "represented_canonical_id": "arXiv:2604.20819",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

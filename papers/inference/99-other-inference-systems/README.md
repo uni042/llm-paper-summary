@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1057本）
+## 自動生成の論文一覧（1058本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1774,6 +1774,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   連合LLM投機的復号で上位K確率だけを送信し、2種の確率再構成と誤差上界により通信量を削減する方式。
 
+- **2026-04 · [SLaB: Sparse-Lowrank-Binary Decomposition for Efficient Large Language Models](2026-2604.04493-slab-sparse-lowrank-binary-decomposition-for-efficient-large-language-mo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みを疎行列とランク1低ランク掛ける二値行列の補償へ分解する、再学習不要のワンショット圧縮手法。高圧縮率でも枝刈りの品質低下を大きく抑える。
+
 - **2026-04 · [Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs](2026-2604.20937-sink-token-aware-pruning-for-fine-grained-video-understanding-in-efficie.md)**  
   実装：[✓](https://github.com/rlqja1107/SToP) ・ リポジトリ内被引用：0  
   従来の枝刈りは視覚符号化器の注意重みを重要度の代用として使うが、注意が高い位置に意味情報が多いとは限らない。
@@ -2676,6 +2680,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
 
+- **2025-09 · [SpikingBrain: Spiking Brain-inspired Large Models](2025-2509.05276-spikingbrain-spiking-brain-inspired-large-models.md)**  
+  実装：[✓](https://github.com/BICLab/SpikingBrain-7B) ・ リポジトリ内被引用：2  
+  SpikingBrainは、標準Transformerの長文脈計算・KVキャッシュ負荷と、非NVIDIA GPUでの大規模学習の難しさを同時に扱う研究である。成果は一つの高速注意機構カーネルにとどまらない。
+
 - **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
   実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：2  
   通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
@@ -2799,10 +2807,6 @@
 - **2025-09 · [Ultra-Fast Language Generation via Discrete Diffusion Divergence Instruct](2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruc.md)**  
   実装：[✓](https://github.com/haoyangzheng-ai/didi-instruct) ・ リポジトリ内被引用：1  
   拡散言語モデルの全雑音水準の分布を教師へ一致させる蒸留で少数ステップ生成を実現し、16回の評価で1024回の教師のパープレキシティを上回った方式。
-
-- **2025-09 · [SpikingBrain: Spiking Brain-inspired Large Models](2025-2509.05276-spikingbrain-spiking-brain-inspired-large-models.md)**  
-  実装：[✓](https://github.com/BICLab/SpikingBrain-7B) ・ リポジトリ内被引用：1  
-  SpikingBrainは、標準Transformerの長文脈計算・KVキャッシュ負荷と、非NVIDIA GPUでの大規模学習の難しさを同時に扱う研究である。成果は一つの高速注意機構カーネルにとどまらない。
 
 - **2025-09 · [PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation](2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md)**  
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  
@@ -3446,13 +3450,13 @@
 
 ### 3年前（2023-12〜2024-11）
 
+- **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：88  
+  混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
+
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
   実装：✓ ・ リポジトリ内被引用：88  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
-
-- **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：87  
-  混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：87  
@@ -3901,7 +3905,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：280  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：281  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -4067,7 +4071,7 @@
   ST-MoEは専門家混合（Mixture-of-Experts、MoE）モデルを単に巨大化するのではなく、学習の発散を防ぎ、下流の多様な自然言語課題で密モデルを上回るための設計を検討する研究である。ただしこれはモデル全体をGPUメモリ12GBで動かせるという意味ではなく、専門家の重み配置と分散通信を含めた大規模学習システムの研究である。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/memory_efficient_attention) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/memory_efficient_attention) ・ リポジトリ内被引用：35  
   ソフトマックス注意の最大値、指数和、値の重み付き和を逐次更新し、全注意行列を実体化せず同じ数学的出力を得る。理論上の省メモリ算法と、TPU向けのチャンク並列実装、再計算を使った微分を示す。
 
 - **2022-07 · [FNet: Mixing Tokens with Fourier Transforms](2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md)**  
@@ -4193,7 +4197,7 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：342  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：343  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

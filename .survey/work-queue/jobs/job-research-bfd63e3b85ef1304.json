@@ -35,10 +35,15 @@
   "selection_reason": "FusionCIMはLLM attentionのQK転置積とPV集約を異なるCIM演算様式へ割り当て、QO-stationary dataflowでKV再読出しを抑制し、online softmaxの再スケーリングも削減するハードウェア協調設計。LLaMA-3で従来CIMアクセラレータ比最大1.98倍高速・3.86倍の省エネルギー、システム29.4 TOPS/Wを一次abstractが報告。専用CIM設計の比較値であり既存GPUにソフトウェアだけで適用できる高速化ではない。LLM推論のデータ移動・計算最適化に直接該当。",
   "semantic_scholar_id": "5aff7fa5d472523f5cd50dcf0dc0fd78f47f5a0b",
   "source_url": "https://arxiv.org/abs/2604.25317",
-  "status": "ready",
+  "status": "superseded",
   "title": "FusionCIM: Accelerating LLM Inference with Fusion-Driven Computing-in-Memory Architecture",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T06:12:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2604.25317-fusioncim-accelerating-llm-inference-with-fusion-driven-computing-in-mem.md",
+  "represented_canonical_id": "arXiv:2604.25317",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
