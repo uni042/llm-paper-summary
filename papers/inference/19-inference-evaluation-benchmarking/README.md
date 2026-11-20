@@ -80,6 +80,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   AOT（local-global Anchor Optimal Transport）は、動画対応の大規模言語モデル（Video LLM）の入力に含まれる視覚トークンを、追加学習なしで削減する方式である。LLaVA-OneVision-7Bの無圧縮平均58.4に対し、視覚トークン10%保持のAOTは平均57.0で、元性能の97.6%を維持した。
 
+- **2026-03 · [DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention](2026-2603.08026-dyllm-efficient-diffusion-llm-inference-via-saliency-based-token-selecti.md)**  
+  実装：[✓](https://github.com/scale-snu/DyLLM) ・ リポジトリ内被引用：1  
+  マスク拡散型の言語モデルは、応答系列をマスクから始め、複数トークンを並列に埋めながら反復的に復号する。salient位置ではFFNを再計算し、注意も正確に更新する。DyLLMは速度だけでなく品質を維持する運用点を探す方式である。
+
 - **2026-02 · [Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing](2026-2602.03845-parallel-probe-towards-efficient-parallel-thinking-via-2d-probing.md)**  
   実装：[✓](https://github.com/zhengkid/Parallel-Probe) ・ リポジトリ内被引用：1  
   多数派の答えが途中で既に確定していても、最後まで生成する方式では長い少数経路の完了待ちと総生成トークンが残る。論文の表1では、Qwen3-0.6Bの数学3ベンチマーク平均で、固定64経路の多数決に比べ正答率22.8%から23.3%へ変化しつつ、逐次トークン31.6千個から20.3千個、総トークン945.7千個から735.3千個へ減少した。
@@ -353,10 +357,6 @@
 - **2026-03 · [Spend Less, Reason Better: Budget-Aware Value Tree Search for LLM Agents](2026-2603.12634-spend-less-reason-better-budget-aware-value-tree-search-for-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実サービスではツール呼び出し回数、生成トークン数、API料金に上限があるため、単に推論を長くする方式は適さない。原著はgpt-oss-20bとQwen3-30B-A3B-Instruct-2507を用い、HotpotQA、2WikiMultihopQA、MuSiQue、Bamboogleで評価した。
-
-- **2026-03 · [DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention](2026-2603.08026-dyllm-efficient-diffusion-llm-inference-via-saliency-based-token-selecti.md)**  
-  実装：[✓](https://github.com/scale-snu/DyLLM) ・ リポジトリ内被引用：0  
-  マスク拡散型の言語モデルは、応答系列をマスクから始め、複数トークンを並列に埋めながら反復的に復号する。salient位置ではFFNを再計算し、注意も正確に更新する。DyLLMは速度だけでなく品質を維持する運用点を探す方式である。
 
 - **2026-02 · [On the Optimal Reasoning Length for RL-Trained Language Models](2026-2602.09591-on-the-optimal-reasoning-length-for-rl-trained-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

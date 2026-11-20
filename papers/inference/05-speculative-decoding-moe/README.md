@@ -238,6 +238,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：2  
   提案の中心は新しいGPUカーネルや推論基盤ではなく、比較対象を明確に分けた解析的な性能・容量の境界条件である。分散方式の論文がcloud ARとの比較で高速化を示していても、同じ下書きモデルをクラウドへ置けるなら同居型SDの方が速い場合がある。
 
+- **2026-06 · [SimSD: Simple Speculative Decoding in Diffusion Language Models](2026-2606.02544-simsd-simple-speculative-decoding-in-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/airevo2/SimSD-release) ・ リポジトリ内被引用：2  
+  自己回帰言語モデルの投機的復号では、小型モデルが先に複数トークンを提案し、大型モデルが一度の前向き計算で各提案の確率を評価する。2枚のRTX PRO 6000 Blackwell、バッチ1、KVキャッシュ有効の条件で、基本のVanilla TP2比最大7.46倍のデコード処理量を報告する。
+
 - **2026-06 · [PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding](2026-2607.22634-presto-prefix-aligned-tree-drafting-for-diffusion-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号（投機的復号）は、軽量な草稿モデル（下書きモデル）で将来のトークン候補を生成し、大きな対象モデル（対象モデル）でまとめて検証することで、対象モデルの出力品質を維持しながら生成速度を上げる技術である。
@@ -345,10 +349,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-06 · [Teaching Diffusion to Speculate Left-to-Right](2026-2606.11552-teaching-diffusion-to-speculate-left-to-right.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は、軽い生成器が複数の候補トークンを先に出し、大きな対象モデルが候補列を一度の並列計算で検証することで、対象モデルを逐次実行する回数を減らす。
-
-- **2026-06 · [SimSD: Simple Speculative Decoding in Diffusion Language Models](2026-2606.02544-simsd-simple-speculative-decoding-in-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/airevo2/SimSD-release) ・ リポジトリ内被引用：1  
-  自己回帰言語モデルの投機的復号では、小型モデルが先に複数トークンを提案し、大型モデルが一度の前向き計算で各提案の確率を評価する。2枚のRTX PRO 6000 Blackwell、バッチ1、KVキャッシュ有効の条件で、基本のVanilla TP2比最大7.46倍のデコード処理量を報告する。
 
 - **2026-06 · [AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding](2026-2606.05742-adapld-adaptive-retrieval-and-reuse-for-efficient-model-free-speculative.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -907,7 +907,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   PARDは、高精度な小型自己回帰モデルを、1回の順伝播で複数の候補トークンを出す並列下書きモデルへ低コストで適応し、同一モデル系列の複数の対象モデルへ再利用できるようにする投機的復号（投機的復号）方式である。
 
 - **2025-01 · [Reward-Guided Speculative Decoding for Efficient LLM Reasoning](2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md)**  
-  実装：[✓](https://github.com/BaohaoLiao/RSD) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/BaohaoLiao/RSD) ・ リポジトリ内被引用：26  
   複雑な数学問題に大規模言語モデルを使うと、最終回答に至るまで何十もの途中式や判断を順番に生成する。高性能な大型モデルだけに全段階を担当させると、簡単な計算の確認にも高価なモデルの演算を費やす。一方、小型モデルだけでは途中の誤りが連鎖して最終回答を損なう。報酬が閾値以上なら草稿を採用し、低ければ草稿を棄却して目標モデルに同じ文脈から次段階を生成させる。
 
 - **2025-07 · [Your LLM Knows the Future: Uncovering Its Multi-Token Prediction Potential](2025-2507.11851-your-llm-knows-the-future-uncovering-its-multi-token-prediction-potentia.md)**  
@@ -938,13 +938,13 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/ddInference/Dovetail) ・ リポジトリ内被引用：14  
   ターゲットLLMをCPU、深くした小型ドラフトをGPUへ分離し、候補数削減・動的ゲート融合・複数Transformerブロックで低VRAM環境の投機的デコードを高速化する。
 
+- **2025-10 · [Self Speculative Decoding for Diffusion Large Language Models](2025-2510.04147-self-speculative-decoding-for-diffusion-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  別のモデル重みを載せず、複数位置の候補を一度に予測し、その候補を階層的な検証木としてまとめて実行する。原著はLLaDA系列3モデル、Dream系列2モデルを単一NVIDIA A100 80GBで評価した。
+
 - **2025-10 · [SP-MoE: Speculative Decoding and Prefetching for Accelerating MoE-based Model Inference](2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   本論文は、混合専門家（Mixture-of-Experts、MoE）モデルの重みを中央処理装置メモリへ退避する環境で、投機的復号（投機的復号）を併用すると検証段階に多数の専門家が必要となり、中央処理装置から画像処理装置への重み転送が競合する問題を扱う。
-
-- **2025-10 · [Self Speculative Decoding for Diffusion Large Language Models](2025-2510.04147-self-speculative-decoding-for-diffusion-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  別のモデル重みを載せず、複数位置の候補を一度に予測し、その候補を階層的な検証木としてまとめて実行する。原著はLLaDA系列3モデル、Dream系列2モデルを単一NVIDIA A100 80GBで評価した。
 
 - **2025-02 · [GRIFFIN: Effective Token Alignment for Faster Speculative Decoding](2025-2502.11018-griffin-effective-token-alignment-for-faster-speculative-decoding.md)**  
   実装：[✓](https://github.com/hsj576/GRIFFIN) ・ リポジトリ内被引用：12  

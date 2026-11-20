@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1e87d76d610e60d9e60446fc9445ee794af271ae",
+  "base_commit": "0284365336d989cf882f1d3fd6a34b7d90971275",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -394,9 +394,14 @@
     "2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterogeneous-pim-architectures.json",
     "2026-2609.34866-from-attention-sensitivity-to-layer-role-revisiting-mixed-precision-quantization-of-transformers.json",
     "2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-prediction-in-gpu-accelerated-llm-inference.json",
+    "2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.json",
+    "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json",
+    "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json",
+    "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
     "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
     "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
+    "2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generalization-limits.json",
     "2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.json",
     "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json",
     "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json",
@@ -42486,6 +42491,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.35465": {
+      "order": [
+        "2026-11-20T04:51:02+00:00",
+        "2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.36202": {
+      "order": [
+        "2026-11-20T04:52:21+00:00",
+        "2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.36954": {
+      "order": [
+        "2026-11-20T04:53:41+00:00",
+        "2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.37062": {
+      "order": [
+        "2026-11-20T04:55:01+00:00",
+        "2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.38386": {
+      "order": [
+        "2026-11-20T04:56:20+00:00",
+        "2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generalization-limits.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52667,6 +52717,21 @@
     "arxiv:2609.35188": [
       "papers/inference/05-speculative-decoding-moe/2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-predic.md",
       "papers/inference/05-speculative-decoding-moe/2026-2609.35188-beneath-the-tokens-a-performance-engineering-study-of-multi-token-predic.md"
+    ],
+    "arxiv:2609.35465": [
+      "papers/inference/16-weight-quantization-compression/2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.md"
+    ],
+    "arxiv:2609.36202": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.36202-fastguide-accelerating-reward-guidance-for-diffusion-large-language-mode.md"
+    ],
+    "arxiv:2609.36954": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.md"
+    ],
+    "arxiv:2609.37062": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.md"
+    ],
+    "arxiv:2609.38386": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generali.md"
     ]
   }
 }

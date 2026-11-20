@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（552本）
+## 自動生成の論文一覧（554本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -224,6 +224,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   LoRA要求の時系列から次に必要なアダプタを先読みし、重みを2MB固定ページへ分割して異種rankの断片化を抑えることで、1000アダプタ時にS-LoRA比1.52倍のスループットと高負荷TTFT 35%短縮を達成する。
 
+- **2026-09 · [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  デコード要求の次トークン期限から残り時間を求め、期限内に入る最大プリフィル塊を反復ごとに二分探索して、固定分割の起動費と一括処理のデコード停止を減らす。
+
 - **2026-08 · [TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving](2026-2608.25523-topas-workflow-aware-prefix-state-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   エージェント接頭辞KVの常駐と要求投入を共有GPUメモリ下で共同決定し、DAGの残存クリティカルパス、将来再利用、移動・プリエンプト費用を比較してタスク完了時間を短縮する。
@@ -263,6 +267,10 @@
 - **2026-06 · [Geometry-Aware Online Scheduling for LLM Serving: From Theoretical Bound to System Practice](2026-2606.22327-geometry-aware-online-scheduling.md)**  
   実装：[✓](https://github.com/Aurora-Kl/Geometry-Aware-Online-Scheduling) ・ リポジトリ内被引用：2  
   出力長とプロンプト長からKVメモリ占有の時間積分を見積もり、小さいメモリ時間体積の要求を先に実行するSVFを比較して、SJFが無視するKV容量起因の先頭待ちを減らす。
+
+- **2026-06 · [Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving](2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md)**  
+  実装：[✓](https://github.com/Charmstok/Chunked_Prefill_Serving) ・ リポジトリ内被引用：2  
+  待ち時間と残りプリフィル量で処理順を更新し、遅延予測でチャンク量を目標時間へ合わせ、同時プリフィル数も制限することで、分割プリフィル配信の公平性と裾遅延を改善する。
 
 - **2026-06 · [CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation](2026-2606.24506-crosspool-cold-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -352,10 +360,6 @@
   実装：[✓](https://github.com/Janus2026/Janus) ・ リポジトリ内被引用：1  
   単一モデルの推論エンジンを速くしても、多数の異なるLLMを同時提供するサービスでは設備効率と応答期限の両立が難しい。Janusはサービス層（Service）と推論エンジン層（Engine）を協調設計した、多モデル向けサービングシステムである。
 
-- **2026-09 · [Deadline-Aware Adaptive Prefill Chunking for Efficient Large Language Model Serving](2026-2609.07883-deadline-aware-adaptive-prefill-chunking.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  デコード要求の次トークン期限から残り時間を求め、期限内に入る最大プリフィル塊を反復ごとに二分探索して、固定分割の起動費と一括処理のデコード停止を減らす。
-
 - **2026-09 · [Cascadia: A Control-Plane-Free Alternative to Hyperconverged AI Infrastructure](2026-2609.38697-cascadia-a-control-plane-free-alternative-to-hyperconverged-ai-infrastru.md)**  
   実装：[✓](https://github.com/labscommunity/cascadia-architecture-paper) ・ リポジトリ内被引用：1  
   設計の核心は、要求ごとの専用ルータを不要にすることと、単一ノードに収まるモデルの複製と、収まらないモデルの層分割を同じ認証済みネットワーク上で扱うことである。
@@ -439,10 +443,6 @@
 - **2026-06 · [HBM Is Not All You Need: Efficient Disaggregated LLM Serving across Memory-heterogeneous Accelerators](2026-2606.29986-hma-serve-memory-heterogeneous-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   計算律速のプリフィルを安価なGDDR搭載アクセラレータ、メモリ律速のデコードをHBM GPUへ分担し、低精度KVの層別転送と遅延復元で異ベンダー間の形式差と通信待ちを隠す分離配信方式。
-
-- **2026-06 · [Fairness-Aware and Latency-Controllable Scheduling for Chunked-Prefill LLM Serving](2026-2606.09061-fairness-latency-chunked-prefill-scheduling.md)**  
-  実装：[✓](https://github.com/Charmstok/Chunked_Prefill_Serving) ・ リポジトリ内被引用：1  
-  待ち時間と残りプリフィル量で処理順を更新し、遅延予測でチャンク量を目標時間へ合わせ、同時プリフィル数も制限することで、分割プリフィル配信の公平性と裾遅延を改善する。
 
 - **2026-06 · [Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs](2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -573,6 +573,10 @@
 - **2026-10 · [Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving](2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md)**  
   実装：[✓](https://github.com/Julianjiuxi/qba-llm-serving) ・ リポジトリ内被引用：0  
   短優先の受付に、短い受付を一定数こなすごとに滞留した長いリクエストを1件だけ昇格させる割当と昇格権の保持を組み合わせ、平均遅延の利得を保ちながら長いリクエストの尾部膨張を抑えるスケジューリング方針。
+
+- **2026-10 · [Purlin: Separating Orchestration from the Datapath of Collectives](2026-2609.36954-purlin-separating-orchestration-from-the-datapath-of-collectives.md)**  
+  実装：[✓](https://github.com/purlin-project/purlin) ・ リポジトリ内被引用：0  
+  集団通信をレイアウトによる意味の指定、仕様から協調を導く調整手続きSNAC、コピーとリダクションだけを担うハードウェア固有のAtomへ分離し、調整を再利用したまま転送機構を世代ごとに差し替えられる通信基盤。
 
 - **2026-10 · [LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models](2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -733,6 +737,10 @@
 - **2026-09 · [Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows](2026-2609.10964-decoupling-readiness-from-release-tail-aware-agentic-llm-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント型LLMワークフローで準備完了ターンの即時投入をやめ、尾部リスク/推定仕事量による優先度と適応投入予算でP95完了時間を最大3.50倍改善するスケジューリング方式。
+
+- **2026-09 · [Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits](2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generali.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  デコードと重なるプリフィルだけを、観測した反復間隔による比例フィードバックでチャンク調整するモデル不要の制御器。小さいモデルではP99トークン間隔が平均27.7パーセント下がるが、大きいモデルと複数GPUでは失敗し、その境界までを報告する研究。
 
 - **2026-09 · [Crossflow: Prefill-Decode Elasticity for Agentic LLM Serving](2026-2609.27085-crossflow-prefill-decode-elasticity-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1871,11 +1879,11 @@
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：656  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：657  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：508  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：509  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2145,7 +2153,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1642  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1645  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
@@ -2153,7 +2161,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：194  
+  実装：✓ ・ リポジトリ内被引用：195  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -2169,7 +2177,7 @@
   一覧用要約：スポットGPUの回収・獲得に合わせて並列構成を再最適化し、既存の重みとKVキャッシュを最大限再利用する配置・移行と、トークン単位の状態付き途中再開によって分散LLMの長尾遅延と運用費を抑える。
 
 - **2023-10 · [Punica: Multi-Tenant LoRA Serving](2023-2310.18547-punica-multitenant-lora-serving.md)**  
-  実装：[✓](https://github.com/punica-ai/punica) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/punica-ai/punica) ・ リポジトリ内被引用：53  
   異なるLoRAアダプタの要求をSGMVカーネルで同一バッチ処理し、基盤LLMを共有したまま多テナント推論を集約するサービング基盤。固定GPU資源で最大12倍のスループットを報告。
 
 - **2023-05 · [Response Length Perception and Sequence Scheduling: An LLM-Empowered LLM Inference Pipeline](2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md)**  

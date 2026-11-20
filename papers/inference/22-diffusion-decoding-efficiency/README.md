@@ -39,7 +39,7 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [DAPD: Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs](2026-2603.12996-dapd-dependency-aware-parallel-decoding-via-attention-for-diffusion-llms.md)**  
-  実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：7  
   またLLaDAの主表では比較方式とDAPDのブロック構成が異なるため、速度差の全てを位置選択アルゴリズム単独の効果とみなせない。
 
 - **2026-04 · [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](2026-2604.02560-dependency-guided-parallel-decoding-in-discrete-diffusion-language-model.md)**  

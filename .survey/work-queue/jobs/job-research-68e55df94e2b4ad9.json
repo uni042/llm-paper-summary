@@ -35,10 +35,15 @@
   "selection_reason": "トークンごとの動的レイヤースキップをSGLangのcontinuous batching、paged KV、captured decode graphと両立させる仮想化実行層。route別にトークンをまとめ、採算が合う場合のみスキップ経路を実行する。FlexiDepthチェックポイントとupstream SGLangを同条件比較し、負荷曲線のkneeで平均E2E遅延GSM8K 36.8%、BBH 13.6%減、飽和時throughput 11.3%、7.4%増と著者報告。LLM servingの直接的な改善。",
   "semantic_scholar_id": "639ef2217fa2ef14d2d9bc77749392d27d60b927",
   "source_url": "https://arxiv.org/abs/2609.37062",
-  "status": "ready",
+  "status": "superseded",
   "title": "vSkipper: Translating Dynamic Layer Skipping into LLM Serving Gains",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:58:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.37062-vskipper-translating-dynamic-layer-skipping-into-llm-serving-gains.md",
+  "represented_canonical_id": "arXiv:2609.37062",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

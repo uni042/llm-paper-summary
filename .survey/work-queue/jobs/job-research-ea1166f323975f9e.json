@@ -35,10 +35,15 @@
   "selection_reason": "vLLMのプリフィル分割長を、同時デコード中に観測したトークン間遅延でフィードバック制御するDLFP。A100上のQwen3-0.6BではP99トークン間遅延を平均27.7%減らす一方、TTFTのP99は34.8%増加し、8B・32Bや2GPUには一般化しないという負の結果も報告。",
   "semantic_scholar_id": "4819aec328da16cb1394b0d8e31c06cd8354409e",
   "source_url": "https://arxiv.org/abs/2609.38386",
-  "status": "ready",
+  "status": "superseded",
   "title": "Decode-Latency Feedback Prefill: A Model-Free Controller and Its Generalization Limits",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:58:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.38386-decode-latency-feedback-prefill-a-model-free-controller-and-its-generali.md",
+  "represented_canonical_id": "arXiv:2609.38386",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

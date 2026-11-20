@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（184本）
+## 自動生成の論文一覧（185本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -50,6 +50,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   BF16重みの指数を固定長ビットマップへ無損失符号化し、圧縮データをレジスタ上で復元してテンソル Coreへ直送することで、重み帯域と中間展開の読み書きを減らす。
 
+- **2026-07 · [KronQ: LLM Quantization via Kronecker-Factored Hessian](2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md)**  
+  実装：[✓](https://github.com/Intelligent-Computing-Lab-Panda/KronQ) ・ リポジトリ内被引用：3  
+  大規模言語モデル（large language モデル; LLM）の重みを16ビットから4ビット、3ビット、2ビットへ縮小すると、メモリ占有と重み読出し帯域を削減できる。一方、単純な丸めでは、重要なチャネルの誤差が後段へ蓄積し、特に2ビット量子化で生成品質が崩れる。
+
 - **2026-05 · [HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization](2026-2605.29843-harp-hadamard-preconditioned-adaptive-rotation-processor-for-extreme-llm.md)**  
   実装：[✓](https://github.com/brain-lab-research/HARP) ・ リポジトリ内被引用：3  
   重みを2～4ビットへ圧縮する事後量子化（Post-学習 量子化; PTQ）では、少数の大きな外れ値や入力方向ごとに異なる誤差感度のため、単純な丸めが深刻な品質劣化を招く。
@@ -62,9 +66,9 @@
   実装：[✓](https://github.com/cau-hai-lab/SSDi8) ・ リポジトリ内被引用：2  
   Mamba-2の構造化状態空間双対の内部状態をINT8のまま受け渡すため、再帰計算の式を並べ替え、異なる軸の分布に合わせて量子化する方式を示す。
 
-- **2026-07 · [KronQ: LLM Quantization via Kronecker-Factored Hessian](2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md)**  
-  実装：[✓](https://github.com/Intelligent-Computing-Lab-Panda/KronQ) ・ リポジトリ内被引用：2  
-  大規模言語モデル（large language モデル; LLM）の重みを16ビットから4ビット、3ビット、2ビットへ縮小すると、メモリ占有と重み読出し帯域を削減できる。一方、単純な丸めでは、重要なチャネルの誤差が後段へ蓄積し、特に2ビット量子化で生成品質が崩れる。
+- **2026-06 · [LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection](2026-2606.04050-liftquant-continuous-bit-width-llm-via-dimensional-lifting-and-projectio.md)**  
+  実装：[✓](https://github.com/Heliulu/LiftQuant) ・ リポジトリ内被引用：2  
+  LLMの重み量子化はGPUメモリ消費を減らす有力な方法だが、多くの方式は2ビット、3ビット、4ビットといった整数の量子化幅を単位にする。たとえば70Bモデルの3ビット版が24GBのGPUへ収まらず、2ビット版なら大きな余裕が残る場合、空いた容量を精度向上へ使いにくい。
 
 - **2026-05 · [OSAQ: Outlier Self-Absorption for Accurate Low-bit LLM Quantization](2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -109,10 +113,6 @@
 - **2026-06 · [MosaicQuant: Inlier–Outlier Disaggregation for Unified 4-Bit LLM Quantization](2026-2606.15652-mosaicquant-inlier-outlier-disaggregation-for-unified-4-bit-llm-quantiza.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデルの行列演算を高速化するため、重みと活性値を低ビット化するとメモリ転送量と演算費用を減らせる。従来の混合精度方式は外れ値のあるチャネルや低ランク成分を8～16ビットで保持するが、別精度の行列演算や変換・転送が発生し、低ビットの演算器を一貫して使う利点が減る。
-
-- **2026-06 · [LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection](2026-2606.04050-liftquant-continuous-bit-width-llm-via-dimensional-lifting-and-projectio.md)**  
-  実装：[✓](https://github.com/Heliulu/LiftQuant) ・ リポジトリ内被引用：1  
-  LLMの重み量子化はGPUメモリ消費を減らす有力な方法だが、多くの方式は2ビット、3ビット、4ビットといった整数の量子化幅を単位にする。たとえば70Bモデルの3ビット版が24GBのGPUへ収まらず、2ビット版なら大きな余裕が残る場合、空いた容量を精度向上へ使いにくい。
 
 - **2026-06 · [GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation](2026-2606.23419-grinqh-graded-input-based-quantization-hierarchy-for-efficient-llm-gener.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -159,6 +159,10 @@
 - **2026-09 · [VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models](2026-2609.25376-vlaquantbench.md)**  
   実装：[✓](https://github.com/jiuyixu25/VLAQuantBench) ・ リポジトリ内被引用：0  
   VLAQuantBenchは、視覚・言語・行動モデル（Vision-Language-Action モデル、VLA）の学習後量子化（Post-学習 量子化、PTQ）を、重みの再構成誤差だけでなく、ロボットが環境を動かし続けた結果のタスク成功率で検証する評価基盤である。
+
+- **2026-09 · [Tetra: Serving Leech-Lattice Quantized LLMs at 2.7 Bits per Parameter](2026-2609.35465-tetra-serving-leech-lattice-quantized-llms-at-2-7-bits-per-parameter.md)**  
+  実装：[✓](https://github.com/pjmalandrino/llvq) ・ リポジトリ内被引用：0  
+  Leech格子の符号帳を3区間のトレリスと共有16KiB表で再構成し、展開なしに積の中で復号して重みあたり2.150ビットだけを読む2ビット級量子化カーネルと、約2.7ビット毎パラメータの完全モデル化レシピ。
 
 - **2026-09 · [Structured Transforms for Low-Overhead Quantization of Language Models](2026-2609.11687-structured-transforms-for-low-overhead-quantization-of-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -501,11 +505,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
-  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：279  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：280  
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
-  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：200  
+  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：201  
   QuIP#は、学習済みの大規模言語モデルを再学習せずに2〜4ビット/重みへ圧縮する事後学習量子化（Post-学習 量子化、PTQ）である。試作推論実装はRTX 4090上で70Bの2ビット重みを32.74トークン/秒で生成し、実効メモリ帯域利用率56.84%を記録した（表5）。
 
 - **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
@@ -517,7 +521,7 @@
   SliceGPTは、学習済みTransformerの埋め込み次元を減らす学習後圧縮である。代表的なLLaMA-2 70Bの25%削減では、A100 40GBで1トークン生成時間が125ミリ秒から110ミリ秒へ、必要GPUが4台から3台へ減った。
 
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
-  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：120  
+  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：121  
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2024-06 · [DuQuant: Distributing Outliers via Dual Transformation Makes Stronger Quantized LLMs](2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md)**  
@@ -541,7 +545,7 @@
   ヘッセ感度で重要列を選び二値残差近似し、残りのベル形重み分布を最適分割して別々に二値化することで、再学習なしにLLM重みを約1.1ビットまで圧縮する。
 
 - **2024-06 · [QTIP: Quantization with Trellises and Incoherence Processing](2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md)**  
-  実装：[✓](https://github.com/Cornell-RelaxML/qtip) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/Cornell-RelaxML/qtip) ・ リポジトリ内被引用：59  
   ベクトル量子化（Vector Quantization, VQ）は複数重みをまとめて符号化するほど量子化効率が上がる一方、通常の符号帳は次元に対して指数的に巨大化する。QTIPは、符号帳を列挙せず有限状態の「トレリス」を使うことで、この次元の壁を外し、2bit級でも256次元の高次元量子化を実用的な復号コストで実現する。
 
 - **2024-02 · [OneBit: Towards Extremely Low-bit Large Language Models](2024-2402.11295-onebit-towards-extremely-low-bit-large-language-models.md)**  
@@ -651,7 +655,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：314  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：315  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
@@ -663,7 +667,7 @@
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
-  実装：✓ ・ リポジトリ内被引用：224  
+  実装：✓ ・ リポジトリ内被引用：225  
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md)**  
@@ -737,7 +741,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：672  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：673  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
