@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38c7350daa77ca43-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.08077",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.08077",
+    "identity_tokens": [
+      "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "arXiv:2604.08077"
+    ],
+    "reason": "ビデオ言語モデル向けの適応的スパース化であり、FLOPs削減は示すが推論システムとしての遅延・スループット・KVキャッシュ・サービング評価がなく、評価は動画理解の精度中心のため、推論システム収録の直接対象としては境界的である。",
+    "first_checked_at": "2026-11-20T05:54:18+00:00",
+    "last_checked_at": "2026-11-20T05:54:18+00:00",
+    "linked_from": [
+      "research worker batch c2b2 (arXiv:2604.08077)"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding"
+  },
+  "processed_at": "2026-11-20T05:54:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38c7350daa77",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

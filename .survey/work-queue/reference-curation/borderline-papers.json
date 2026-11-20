@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-20T04:05:59+00:00",
-  "record_count": 6423,
+  "updated_at": "2026-11-20T05:54:19+00:00",
+  "record_count": 6424,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -100064,6 +100064,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Don’t Send What You Don’t Need: Question-Guided Token Pruning as a Privacy Defense for Vision-Language Models"
+    },
+    "arXiv:2604.08077": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.08077",
+      "identity_tokens": [
+        "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+        "arXiv:2604.08077"
+      ],
+      "reason": "ビデオ言語モデル向けの適応的スパース化であり、FLOPs削減は示すが推論システムとしての遅延・スループット・KVキャッシュ・サービング評価がなく、評価は動画理解の精度中心のため、推論システム収録の直接対象としては境界的である。",
+      "first_checked_at": "2026-11-20T05:54:18+00:00",
+      "last_checked_at": "2026-11-20T05:54:18+00:00",
+      "linked_from": [
+        "research worker batch c2b2 (arXiv:2604.08077)"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding"
     }
   }
 }
