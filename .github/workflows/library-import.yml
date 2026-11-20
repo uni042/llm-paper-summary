@@ -156,7 +156,7 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --skip-discovery \
-              --max-research 10 \
+              --max-research 5 \
               --max-reaudit "$reaudit_quota" \
               --defer-reaudit-queue-refresh \
               --max-discovery-records 240
