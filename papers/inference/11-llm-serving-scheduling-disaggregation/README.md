@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（567本）
+## 自動生成の論文一覧（568本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1053,6 +1053,10 @@
 - **2026-05 · [Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption](2026-2605.19593-multi-model-offloading-preemption-schedulers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   限られたGPUで複数モデルを切り替える推論について、GPUに置く層の割合を連続掃引し、KV退避・モデル解放・重み再読込・KV復元の費用を分解して、オフロード感度と切替ボトルネックを測定した研究。
+
+- **2026-05 · [Threshold-Based Exclusive Batching for LLM Inference](2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.md)**  
+  実装：[✓](https://github.com/weifang231/eb-vllm) ・ リポジトリ内被引用：0  
+  プリフィルとデコードを混ぜるか分けるかの優劣はメモリ帯域で反転することを実測と理論で示し、交差条件としきい値を閉形式で与えた研究。帯域制約のある加速器で最大41.9パーセントのスループット改善、切替型は非定常条件でも最大36.4パーセント上回った。
 
 - **2026-05 · [RW-TTT: Batched Serving for Request-Owned Test-Time Training State](2026-2605.28053-rw-ttt-batched-serving-for-request-owned-test-time-training-state.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

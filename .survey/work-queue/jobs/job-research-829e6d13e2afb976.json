@@ -35,10 +35,15 @@
   "selection_reason": "量子化LLM推論向け亜精度活性表現SPARQLe。重みは4ビットまで攻められるのに活性が8ビットを要してデータパスが高精度になる問題に対し、ゼロ付近に集中する活性の統計性質を使い、より低い精度で表す。推論量子化機構そのもの。",
   "semantic_scholar_id": "3e0b0112ad64f7a80dff92d9df3cd528fd5f219d",
   "source_url": "https://arxiv.org/abs/2606.00365",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:23:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-infere.md",
+  "represented_canonical_id": "arXiv:2606.00365",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

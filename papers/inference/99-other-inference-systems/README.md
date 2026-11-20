@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1093本）
+## 自動生成の論文一覧（1095本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -323,6 +323,10 @@
 - **2026-07 · [Back from the Future: Key-Value Cache Management by Counter-Causal Surprise](2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md)**  
   実装：[✓](https://github.com/metacognitionai/counter_causal) ・ リポジトリ内被引用：1  
   従来のスライディングウィンドウは古いトークンを機械的に捨て、H2Oなどのheavy-hitter方式は過去に多く注意されたトークンを残す。Qwen2.5-7B、RTX4090のキャッシュ更新1回では、KV長512で54msから7.9ms、4096で496msから52.6msとなり、更新処理単体で7～9倍速くなる。
+
+- **2026-06 · [STaR-Quant: State-Time Consistent Post-Training Quantization for Diffusion Large Language Models](2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusio.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  拡散型言語モデルの量子化で、マスク状態ごとに活性変換を分け、注意出力へブロック単位の補償を入れて誤差の蓄積を抑える学習後量子化。4ビット条件で比較対象を上回り、最大1.69倍の高速化と3.14倍のメモリ削減を示した。
 
 - **2026-06 · [Multi-Token Residual Prediction](2026-2605.18817-multi-token-residual-prediction.md)**  
   実装：[✓](https://github.com/heavyball-research/multi-token-residual-prediction) ・ リポジトリ内被引用：1  
@@ -1437,6 +1441,10 @@
 - **2026-06 · [Depth Exploration for LLM Decoding](2026-2606.29223-depth-exploration-for-llm-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この一択の難しさを著者らは「選択ボトルネック」と捉える。各深度区間を別のGPUへ割り当て、候補トークンとその先の計算を分岐させておき、最終深度の予測を基準に正しいトークンを確定する。提案は中間出口の予測精度を無条件に信じるのではなく、最終モデルの確定結果だけを外部へ出すため、通常の自己回帰生成との同一性を維持する設計である。
+
+- **2026-06 · [CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search](2026-2606.01544-crepe-convolution-aware-relative-importance-in-post-training-pruning-wit.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  相対重要度へ二次元近傍の項と適応係数を加えた学習後枝刈り。係数探索はジニ係数の代理指標で約11時間から約20分へ短縮し、多モデルで従来スコアより低いパープレキシティを一貫して示した。
 
 - **2026-06 · [Communication-Efficient Verifiable Attention for LLM Inference](2026-2606.16352-communication-efficient-verifiable-attention-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3718,6 +3726,10 @@
   実装：[✓](https://github.com/ContextualAI/gritlm) ・ リポジトリ内被引用：5  
   GRIT（Generative Representational Instruction Tuning）は、文章生成と文章埋込みを一つの大規模言語モデルで処理するための指示調整方式である。7BモデルのGritLM-7Bは、56データ集合からなるMTEBの平均66.8を示し、同じ基盤モデルから表現専用で訓練した比較版の66.8と同等だった。
 
+- **2024-10 · [TesseraQ: Ultra Low-Bit LLM Post-Training Quantization with Block Reconstruction](2024-2410.19103-tesseraq-ultra-low-bit-llm-post-training-quantization-with-block-reconst.md)**  
+  実装：[✓](https://github.com/Intelligent-Computing-Lab-Yale/TesseraQ) ・ リポジトリ内被引用：4  
+  大規模言語モデルを2〜4bitに事後量子化すると、重みの容量を大幅に減らせるが、2bit付近では量子化誤差が大きくなり、困惑度や下流タスク精度が崩れやすい。Table 2では5つの常識推論タスクの平均正答率が50.52%から59.27%へ上がる。
+
 - **2024-10 · [BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments](2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md)**  
   実装：[✓](https://github.com/xinghaow99/BitStack) ・ リポジトリ内被引用：4  
   BitStackは、LLMの重みを固定の2bit、3bit、4bitなどへ一度だけ量子化する代わりに、複数の小さな残差ブロックへ分解して優先順位を付け、使えるメモリ量に応じて必要なブロックだけを読み込む学習不要の圧縮方式である。
@@ -3733,10 +3745,6 @@
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：3  
   近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
-
-- **2024-10 · [TesseraQ: Ultra Low-Bit LLM Post-Training Quantization with Block Reconstruction](2024-2410.19103-tesseraq-ultra-low-bit-llm-post-training-quantization-with-block-reconst.md)**  
-  実装：[✓](https://github.com/Intelligent-Computing-Lab-Yale/TesseraQ) ・ リポジトリ内被引用：3  
-  大規模言語モデルを2〜4bitに事後量子化すると、重みの容量を大幅に減らせるが、2bit付近では量子化誤差が大きくなり、困惑度や下流タスク精度が崩れやすい。Table 2では5つの常識推論タスクの平均正答率が50.52%から59.27%へ上がる。
 
 - **2024-10 · [Scaling Laws for Mixed Quantization](2024-2410.06722-scaling-laws-for-mixed-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

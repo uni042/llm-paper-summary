@@ -35,10 +35,15 @@
   "selection_reason": "著者一次要旨ではprefill/decode混合バッチと排他的バッチの損益分岐をGPUメモリ帯域・モデル規模・トークン構成から導出する。H200ではdecode比80%超、RTX PRO 6000では20%超で混合の限界が現れ、EB+が負荷変動に応じ方式を切替える。推論サービングのスケジューリングへ直接寄与する。",
   "semantic_scholar_id": "68237fd9025258f83d589b4ba2c7459dbd32a05e",
   "source_url": "https://arxiv.org/abs/2606.00516",
-  "status": "ready",
+  "status": "superseded",
   "title": "Threshold-Based Exclusive Batching for LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:23:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.md",
+  "represented_canonical_id": "arXiv:2606.00516",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

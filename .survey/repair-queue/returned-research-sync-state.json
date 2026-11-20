@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a08c97e7b692bca6f1f313542cc4508abc6c424f",
+  "base_commit": "0908271c7183551e880fb58da7543defdb17fa3b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -343,12 +343,16 @@
     "2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-safe-to-reuse-an-answer.json",
     "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json",
     "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json",
+    "2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-inference.json",
+    "2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.json",
+    "2026-2606.01544-crepe-convolution-aware-relative-importance-in-post-training-pruning-with-efficient-search.json",
     "2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.json",
     "2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-context-inference.json",
     "2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-in-gui-vision-language-models.json",
     "2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted-recovery.json",
     "2026-2606.03965-agentic-chain-of-thought-steering-for-efficient-and-controllable-llm-reasoning.json",
     "2026-2606.04594-ekka-automated-diagnosis-of-silent-errors-in-llm-inference.json",
+    "2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusion-large-language-models.json",
     "2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approximation-for-quantized-gated-deltanet.json",
     "2026-2606.07248-clairvoyant-predictive-shortest-job-first-admission-for-serial-llm-inference.json",
     "2026-2606.07362-breaking-the-ice-analyzing-cold-start-latency-in-vllm.json",
@@ -391,6 +395,7 @@
     "2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-in-mobile-llm-inference.json",
     "2026-2607.06202-ubep-re-architecting-expert-parallelism-communication-library-for-production-superpods.json",
     "2026-2607.06906-the-harness-effect-how-orchestration-design-sets-the-token-economics-of-enterprise-agentic-ai.json",
+    "2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-empowered-edge-intelligence.json",
     "2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.json",
     "2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-language-models.json",
     "2026-2607.11368-decomposing-runtime-kernel-and-quantization-speedups-via-a-matched-fp16-intermediate-a-hardware-conditioned-case-study-o.json",
@@ -43845,6 +43850,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.00365": {
+      "order": [
+        "2026-11-20T09:15:35+00:00",
+        "2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.00516": {
+      "order": [
+        "2026-11-20T09:16:56+00:00",
+        "2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.01544": {
+      "order": [
+        "2026-11-20T09:18:17+00:00",
+        "2026-2606.01544-crepe-convolution-aware-relative-importance-in-post-training-pruning-with-efficient-search.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.04945": {
+      "order": [
+        "2026-11-20T09:19:38+00:00",
+        "2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusion-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.07046": {
+      "order": [
+        "2026-11-20T09:21:00+00:00",
+        "2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-empowered-edge-intelligence.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54524,6 +54574,21 @@
     "arxiv:2605.30574": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.md"
+    ],
+    "arxiv:2606.00365": [
+      "papers/inference/16-weight-quantization-compression/2026-2606.00365-sparqle-sub-precision-activation-representation-for-quantized-llm-infere.md"
+    ],
+    "arxiv:2606.00516": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.00516-threshold-based-exclusive-batching-for-llm-inference.md"
+    ],
+    "arxiv:2606.01544": [
+      "papers/inference/99-other-inference-systems/2026-2606.01544-crepe-convolution-aware-relative-importance-in-post-training-pruning-wit.md"
+    ],
+    "arxiv:2606.04945": [
+      "papers/inference/99-other-inference-systems/2026-2606.04945-star-quant-state-time-consistent-post-training-quantization-for-diffusio.md"
+    ],
+    "arxiv:2607.07046": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-emp.md"
     ]
   }
 }

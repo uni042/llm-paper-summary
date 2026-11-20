@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（90本）
+## 自動生成の論文一覧（91本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -117,6 +117,10 @@
 - **2026-08 · [Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference](2026-2608.02341-broadcast-rate-limits-in-wi-fi-a-forgotten-bottleneck-for-collaborative-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分散MoEの一対多配信をUDPブロードキャスト化して有線で1.4倍高速化し、無線ではWi-Fiのブロードキャスト54Mbps上限が真の律速であることを実機とシミュレーションで示した研究。
+
+- **2026-07 · [Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence](2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-emp.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  近くの複数デバイスを束ね、層ごとの並列方式と精度を環境に合わせて計画し、実行中の変動にも伸縮して応じるエッジ向けLLM推論枠組み。品質目標を守りながら単一デバイスより最大16.5パーセント高い精度を達成。
 
 - **2026-07 · [Transition-Aware Backend Dispatch for Edge LLM Inference](2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md)**  
   実装：[✓](https://anonymous.4open.science/r/power_aware_edge_inference_public-3B71/README.md) ・ リポジトリ内被引用：0  
