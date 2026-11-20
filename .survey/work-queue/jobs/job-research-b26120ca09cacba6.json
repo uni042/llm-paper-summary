@@ -35,10 +35,15 @@
   "selection_reason": "FAD-KVは長い推論出力に対して、dictionaryによる疎なKV表現のiterative codingコストと、生成中の分布変化に対する静的辞書の不一致を解く。one-shot Top-n候補選択と軽量係数更新でcodingを高速化し、未使用atomの再利用で辞書サイズを固定する。長文脈・reasoningベンチで品質とメモリ・計算量の均衡を報告。",
   "semantic_scholar_id": "fd5291fd8cef2a50fe57bb9e9be88eb3cbc9bd15",
   "source_url": "https://arxiv.org/abs/2610.37921",
-  "status": "ready",
+  "status": "superseded",
   "title": "FAD-KV: Adaptive Dictionary KV Caching for Efficient Reasoning Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:28:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.37921-fad-kv-adaptive-dictionary-kv-caching-for-efficient-reasoning-decoding.md",
+  "represented_canonical_id": "arXiv:2610.37921",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

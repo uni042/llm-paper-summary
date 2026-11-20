@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（91本）
+## 自動生成の論文一覧（92本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -101,6 +101,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving](2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-infe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルとデコードの較正済み遅延面と待ち行列の再帰をモンテカルロで解き、平均ではなくTTFTとTBTの分布と持続可能なリクエスト率を、未配備の構成についても予測する解析型の容量計画シミュレータ。
 
 - **2026-10 · [Exploiting the Flexibility of LLM Inference for Frequency Regulation Service](2026-2610.23532-exploiting-the-flexibility-of-llm-inference-for-frequency-regulation-ser.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -347,7 +351,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：72  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  

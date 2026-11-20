@@ -35,10 +35,15 @@
   "selection_reason": "prefillとdecodeの異なる処理時間、continuous batching、確率的到着、待ち行列を組み合わせ、TTFT/TBTの分布と持続可能な到着率を予測するサービング性能モデルを提案する。フェーズ別の較正遅延曲面、Lindley再帰によるqueueing、ensemble Monte-Carloを用い、単一トレース再生では過小評価しやすいtail latencyと未配備構成の容量計画を扱う。一次要旨に数値の実測精度・速度向上は記載されないが、LLMサービング容量設計・SLO予測の直接的手法としてaccept。",
   "semantic_scholar_id": "0171f8a62e15d943e424eedf99d6d0adb8413d22",
   "source_url": "https://arxiv.org/abs/2610.37989",
-  "status": "ready",
+  "status": "superseded",
   "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:28:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-infe.md",
+  "represented_canonical_id": "arXiv:2610.37989",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

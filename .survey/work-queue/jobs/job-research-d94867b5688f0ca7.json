@@ -35,10 +35,15 @@
   "selection_reason": "BF16 KVの指数分布の冗長性を利用し、channelごとに較正したbase-plus-offset符号をgroup単位で可変長選択してKV値をbit-exactに圧縮する。fused attention kernelがKV tileを逐次復元し、全キャッシュの展開を回避する。著者要旨は5モデルでBF16 KVを1.405～1.407倍に可逆圧縮、DGX Sparkの64K contextでdecode attention1.19～1.27倍、サービング集約throughput13～29%改善を報告。個人向けGPUのKVメモリと帯域削減の直接的な実装研究としてaccept。",
   "semantic_scholar_id": "b23a996a3fa94769ae25e158dd419ca31c1efc81",
   "source_url": "https://arxiv.org/abs/2610.38210",
-  "status": "ready",
+  "status": "superseded",
   "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:28:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-pe.md",
+  "represented_canonical_id": "arXiv:2610.38210",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

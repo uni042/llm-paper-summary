@@ -66,6 +66,10 @@
   実装：[✓](https://github.com/cau-hai-lab/SSDi8) ・ リポジトリ内被引用：2  
   Mamba-2の構造化状態空間双対の内部状態をINT8のまま受け渡すため、再帰計算の式を並べ替え、異なる軸の分布に合わせて量子化する方式を示す。
 
+- **2026-08 · [QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization](2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-opti.md)**  
+  実装：[✓](https://github.com/Intelligent-Microsystems-Lab/QTEA) ・ リポジトリ内被引用：2  
+  全重み三値化に列単位の疎残差補償と再スケール改良、誤差減衰を組み合わせた2ビット未満の学習後量子化で、実効1.7ビットでも精度を大きく保ちFP16比7.2倍に高速化した。
+
 - **2026-06 · [LiftQuant: Continuous Bit-Width LLM via Dimensional Lifting and Projection](2026-2606.04050-liftquant-continuous-bit-width-llm-via-dimensional-lifting-and-projectio.md)**  
   実装：[✓](https://github.com/Heliulu/LiftQuant) ・ リポジトリ内被引用：2  
   LLMの重み量子化はGPUメモリ消費を減らす有力な方法だが、多くの方式は2ビット、3ビット、4ビットといった整数の量子化幅を単位にする。たとえば70Bモデルの3ビット版が24GBのGPUへ収まらず、2ビット版なら大きな余裕が残る場合、空いた容量を精度向上へ使いにくい。
@@ -105,10 +109,6 @@
 - **2026-08 · [Recurrent Residual Quantization: A Progressive Multi-Precision Representation for LLMs](2026-2608.04048-recurrent-residual-quantization-a-progressive-multi-precision-representa.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   回帰残差量子化（Recurrent Residual Quantization、RRQ）は、大規模言語モデルの重みを、低ビットの基底表現と複数の量子化残差へ分解することで、単一の保存パッケージから複数の実効精度を選べる後学習量子化（Post-学習 量子化、PTQ）の方式である。
-
-- **2026-08 · [QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization](2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-opti.md)**  
-  実装：[✓](https://github.com/Intelligent-Microsystems-Lab/QTEA) ・ リポジトリ内被引用：1  
-  全重み三値化に列単位の疎残差補償と再スケール改良、誤差減衰を組み合わせた2ビット未満の学習後量子化で、実効1.7ビットでも精度を大きく保ちFP16比7.2倍に高速化した。
 
 - **2026-08 · [ARCHead: Activation-Metric Residual Correction for Large Language Model Output Heads](2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md)**  
   実装：[✓](https://github.com/suayptalha/archead) ・ リポジトリ内被引用：1  
@@ -777,7 +777,7 @@
 ### 5年前（2021-12〜2022-11）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：736  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：737  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "LLMマルチエージェント間の推論状態受渡しを直接最適化する2方式。SelectKVは継承済み文脈のKVを保護し、新規生成区間の関連度とKV新規性で送信位置を選択して論理KV payloadを9.7〜9.9%削減。ただしHumanEval+精度は89%から83%に低下し、通信量は実ネットワーク転送の実測値ではない。HyLaMASはQwen3.5のfull-attention KVとGated DeltaNetの再帰・畳込み状態を共有workspaceで引き継ぎ、テキスト交換型MAS比で出力トークン53〜80%削減、実行時間1.16〜2.78倍高速化を報告。LLM推論時の状態転送・再計算削減に具体的寄与があるためaccept。",
   "semantic_scholar_id": "416566b22a9b57980136b26cf4e800ed26d6dac8",
   "source_url": "https://arxiv.org/abs/2610.37779",
-  "status": "ready",
+  "status": "superseded",
   "title": "Selective and Hybrid-State Communication for Latent Multi-Agent Systems",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:28:43+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.37779-selective-and-hybrid-state-communication-for-latent-multi-agent-systems.md",
+  "represented_canonical_id": "arXiv:2610.37779",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

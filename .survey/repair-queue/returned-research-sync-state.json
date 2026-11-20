@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4370000f18ac73764702724a9bd5fa3903150c3b",
+  "base_commit": "f6e690b6641b9fe5f00743fac9082d59740de5d6",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -788,6 +788,11 @@
     "2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on-edge-servers.json",
     "2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.json",
     "2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.json",
+    "2026-2610.37779-selective-and-hybrid-state-communication-for-latent-multi-agent-systems.json",
+    "2026-2610.37810-confluxserve-reconciling-resource-utilization-and-parallelism-efficiency-across-prefill-and-decode-in-llm-serving.json",
+    "2026-2610.37921-fad-kv-adaptive-dictionary-kv-caching-for-efficient-reasoning-decoding.json",
+    "2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-inference-serving.json",
+    "2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-personal-devices.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45445,6 +45450,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.37779": {
+      "order": [
+        "2026-11-20T14:20:53+00:00",
+        "2026-2610.37779-selective-and-hybrid-state-communication-for-latent-multi-agent-systems.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37810": {
+      "order": [
+        "2026-11-20T14:22:17+00:00",
+        "2026-2610.37810-confluxserve-reconciling-resource-utilization-and-parallelism-efficiency-across-prefill-and-decode-in-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37921": {
+      "order": [
+        "2026-11-20T14:23:41+00:00",
+        "2026-2610.37921-fad-kv-adaptive-dictionary-kv-caching-for-efficient-reasoning-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37989": {
+      "order": [
+        "2026-11-20T14:25:04+00:00",
+        "2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-inference-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.38210": {
+      "order": [
+        "2026-11-20T14:26:28+00:00",
+        "2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-personal-devices.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56764,6 +56814,21 @@
     "arxiv:2610.37732": [
       "papers/inference/99-other-inference-systems/2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.md",
       "papers/inference/99-other-inference-systems/2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.md"
+    ],
+    "arxiv:2610.37779": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.37779-selective-and-hybrid-state-communication-for-latent-multi-agent-systems.md"
+    ],
+    "arxiv:2610.37810": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37810-confluxserve-reconciling-resource-utilization-and-parallelism-efficiency.md"
+    ],
+    "arxiv:2610.37921": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.37921-fad-kv-adaptive-dictionary-kv-caching-for-efficient-reasoning-decoding.md"
+    ],
+    "arxiv:2610.37989": [
+      "papers/inference/15-inference-simulation-emulation/2026-2610.37989-gauss-a-workload-aware-analytical-and-monte-carlo-simulator-for-llm-infe.md"
+    ],
+    "arxiv:2610.38210": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.38210-gaac-lossless-kv-compression-for-bandwidth-efficient-llm-inference-on-pe.md"
     ]
   }
 }
