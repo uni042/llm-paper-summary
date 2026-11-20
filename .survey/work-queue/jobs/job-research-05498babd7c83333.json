@@ -35,10 +35,15 @@
   "selection_reason": "Packed-SSはARとdiffusionの両モードを持つモデルで、現在draftの検証と次draft生成を単一callに統合する。投機幅に線形な入力長を維持しtarget分布を保存。NemotronとSetDLMでgreedy復号のスループット向上を報告。",
   "semantic_scholar_id": "d9ddfc16cbe1b5e86c945d5a19942e3c2b6c6f1e",
   "source_url": "https://arxiv.org/abs/2610.33379",
-  "status": "ready",
+  "status": "superseded",
   "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.33379-one-call-ahead-packed-self-speculative-decoding-with-diffusion-drafting.md",
+  "represented_canonical_id": "arXiv:2610.33379",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

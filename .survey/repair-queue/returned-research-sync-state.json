@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d6019da4f9c7d6b63f472a41764fb0712d66d466",
+  "base_commit": "df9dde3e21bc4af045c3e0598668c6c608ec6cb8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -753,6 +753,11 @@
     "2026-2610.33006-linear-time-context-compression-with-state-space-encoding.json",
     "2026-2610.33076-double-kv-cache-optimization-on-apple-silicon-block-fp4-radial-quantization-and-fused-metal-kernels.json",
     "2026-2610.33215-vision-token-pruning-via-query-vision-interaction-decomposition.json",
+    "2026-2610.33379-one-call-ahead-packed-self-speculative-decoding-with-diffusion-drafting.json",
+    "2026-2610.33501-dualpace-decoupled-scheduling-and-cooperative-gpu-cpu-decoding-for-llm-serving.json",
+    "2026-2610.33688-rescuing-your-pruning-rethinking-visual-token-pruning-and-post-training-recovery-in-mllms.json",
+    "2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-llm-decoding.json",
+    "2026-2610.33923-queuing-for-inference-dynamic-memory-footprints-and-costly-preemption.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45095,6 +45100,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.33379": {
+      "order": [
+        "2026-11-20T13:21:21+00:00",
+        "2026-2610.33379-one-call-ahead-packed-self-speculative-decoding-with-diffusion-drafting.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.33501": {
+      "order": [
+        "2026-11-20T13:22:04+00:00",
+        "2026-2610.33501-dualpace-decoupled-scheduling-and-cooperative-gpu-cpu-decoding-for-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.33688": {
+      "order": [
+        "2026-11-20T13:22:47+00:00",
+        "2026-2610.33688-rescuing-your-pruning-rethinking-visual-token-pruning-and-post-training-recovery-in-mllms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.33719": {
+      "order": [
+        "2026-11-20T13:23:28+00:00",
+        "2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-llm-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.33923": {
+      "order": [
+        "2026-11-20T13:24:10+00:00",
+        "2026-2610.33923-queuing-for-inference-dynamic-memory-footprints-and-costly-preemption.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56274,6 +56324,21 @@
     "arxiv:2610.33215": [
       "papers/inference/99-other-inference-systems/2026-2610.33215-vision-token-pruning-via-query-vision-interaction-decomposition.md",
       "papers/inference/99-other-inference-systems/2026-2610.33215-vision-token-pruning-via-query-vision-interaction-decomposition.md"
+    ],
+    "arxiv:2610.33379": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.33379-one-call-ahead-packed-self-speculative-decoding-with-diffusion-drafting.md"
+    ],
+    "arxiv:2610.33501": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2610.33501-dualpace-decoupled-scheduling-and-cooperative-gpu-cpu-decoding-for-llm-s.md"
+    ],
+    "arxiv:2610.33688": [
+      "papers/inference/99-other-inference-systems/2026-2610.33688-rescuing-your-pruning-rethinking-visual-token-pruning-and-post-training-.md"
+    ],
+    "arxiv:2610.33719": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-.md"
+    ],
+    "arxiv:2610.33923": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.33923-queuing-for-inference-dynamic-memory-footprints-and-costly-preemption.md"
     ]
   }
 }

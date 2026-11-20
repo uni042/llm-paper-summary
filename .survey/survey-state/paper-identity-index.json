@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 4535,
+  "active_count": 4540,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -5621,6 +5621,13 @@
       ],
       "source_hash": "d39f1b7a38e3ff835f3f217ffda0a0916448bfd21c0242814ba11a00093520d2"
     },
+    "arXiv:2610.33379": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2610.33379-one-call-ahead-packed-self-speculative-decoding-with-diffusion-drafting.md",
+      "identifiers": [
+        "arXiv:2610.33379"
+      ],
+      "source_hash": "faa35487acacaecd0273b1915a5cd359170df30445f0c80e5cb078ebe8f9306a"
+    },
     "DOI:10.18653/v1/2026.findings-acl.1065": {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2ad70212cfe6-training-free-adaptive-speculative-decoding-via-linguistic-priors.md",
       "identifiers": [
@@ -9929,6 +9936,20 @@
       ],
       "source_hash": "2453b3b6f22ba3406f5dd2aa1198def334157044d0c02b4c6f781b734a578310"
     },
+    "arXiv:2610.33719": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-.md",
+      "identifiers": [
+        "arXiv:2610.33719"
+      ],
+      "source_hash": "e0f24e77323795ef20dd60a0317c6dbc094dcfa894fbdd6908c0f98c582a8e74"
+    },
+    "arXiv:2610.33923": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.33923-queuing-for-inference-dynamic-memory-footprints-and-costly-preemption.md",
+      "identifiers": [
+        "arXiv:2610.33923"
+      ],
+      "source_hash": "6a6ff324e7cb3d4f9825a89243235985626fc3585d1a5eab3ec9ea2fed2e43d8"
+    },
     "DOI:10.18653/v1/2026.acl-long.859": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2c3e6cdc141b-speccache-speculative-kv-cache-reuse-for-efficient-rag-serving.md",
       "identifiers": [
@@ -13580,6 +13601,13 @@
         "arXiv:2610.30868"
       ],
       "source_hash": "e65d5d6ee177faa696d0d2812baf12f8e78d5fcce4b4f60daea2910389acb2e9"
+    },
+    "arXiv:2610.33501": {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2610.33501-dualpace-decoupled-scheduling-and-cooperative-gpu-cpu-decoding-for-llm-s.md",
+      "identifiers": [
+        "arXiv:2610.33501"
+      ],
+      "source_hash": "d43c3b1892d25c1effc31f1beff6d3786016aa456c86e68542380d54432bfc04"
     },
     "DOI:10.14778/3827998.3828047": {
       "path": "papers/inference/10-kv-cache-offload-recomputation/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md",
@@ -32314,6 +32342,13 @@
       ],
       "source_hash": "ceb663487dcf786a3c5fda86acf513d6733ca1b0893d7964d5f9eed37589d32b"
     },
+    "arXiv:2610.33688": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.33688-rescuing-your-pruning-rethinking-visual-token-pruning-and-post-training-.md",
+      "identifiers": [
+        "arXiv:2610.33688"
+      ],
+      "source_hash": "177824ed71fa9cf518445dbd2b23e506030583f4076750525388d24981d945e7"
+    },
     "DOI:10.1145/3789240.3829130": {
       "path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
       "identifiers": [
@@ -33758,6 +33793,7 @@
     "arXiv:2610.30664": "arXiv:2610.30664",
     "arXiv:2610.31338": "arXiv:2610.31338",
     "arXiv:2610.31840": "arXiv:2610.31840",
+    "arXiv:2610.33379": "arXiv:2610.33379",
     "DOI:10.18653/v1/2026.findings-acl.1065": "DOI:10.18653/v1/2026.findings-acl.1065",
     "DOI:10.65109/sgxl4097": "DOI:10.65109/sgxl4097",
     "DOI:10.18653/v1/2026.findings-eacl.31": "DOI:10.18653/v1/2026.findings-eacl.31",
@@ -34478,6 +34514,8 @@
     "arXiv:2610.32784": "arXiv:2610.32784",
     "arXiv:2610.33006": "arXiv:2610.33006",
     "arXiv:2610.33076": "arXiv:2610.33076",
+    "arXiv:2610.33719": "arXiv:2610.33719",
+    "arXiv:2610.33923": "arXiv:2610.33923",
     "DOI:10.18653/v1/2026.acl-long.859": "DOI:10.18653/v1/2026.acl-long.859",
     "DOI:10.18653/v1/2026.acl-long.1123": "DOI:10.18653/v1/2026.acl-long.1123",
     "DOI:10.18653/v1/2026.acl-long.1250": "DOI:10.18653/v1/2026.acl-long.1250",
@@ -35106,6 +35144,7 @@
     "arXiv:2610.18140": "arXiv:2610.18140",
     "arXiv:2610.30791": "arXiv:2610.30791",
     "arXiv:2610.30868": "arXiv:2610.30868",
+    "arXiv:2610.33501": "arXiv:2610.33501",
     "DOI:10.14778/3827998.3828047": "DOI:10.14778/3827998.3828047",
     "DOI:10.1145/3821219": "DOI:10.1145/3821219",
     "DOI:10.1145/3679240.3734604": "DOI:10.1145/3679240.3734604",
@@ -38191,6 +38230,7 @@
     "arXiv:2610.32492": "arXiv:2610.32492",
     "arXiv:2610.32878": "arXiv:2610.32878",
     "arXiv:2610.33215": "arXiv:2610.33215",
+    "arXiv:2610.33688": "arXiv:2610.33688",
     "DOI:10.1145/3789240.3829130": "DOI:10.1145/3789240.3829130",
     "DOI:10.14778/3819518.3819541": "DOI:10.14778/3819518.3819541",
     "DOI:10.1109/access.2026.3664226": "DOI:10.1109/access.2026.3664226",

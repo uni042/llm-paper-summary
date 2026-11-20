@@ -35,10 +35,15 @@
   "selection_reason": "Transformer推論で要求のKVメモリが時間とともに増え、preemption時のcache退避/復元が追加費用となることを明示した待ち行列モデルを構築する。従来M/G/1で平均応答時間を最小化するGittins-indexでもpreemption過多になり得ると示し、短い要求を優先しつつ閾値でpreemptionを制限するMulti-Level-Priority-Threshold (MLPT)を提案する。著者要旨は平均応答時間の解析と閾値最適化の経験則を示すが具体的な実機speedupは主張していない。推論メモリ制約下のスケジューリング理論としてaccept。",
   "semantic_scholar_id": "9d3f12e5448a38afe8fffd21503b5008effeda9e",
   "source_url": "https://arxiv.org/abs/2610.33923",
-  "status": "ready",
+  "status": "superseded",
   "title": "Queuing for Inference: Dynamic Memory Footprints and Costly Preemption",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.33923-queuing-for-inference-dynamic-memory-footprints-and-costly-preemption.md",
+  "represented_canonical_id": "arXiv:2610.33923",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

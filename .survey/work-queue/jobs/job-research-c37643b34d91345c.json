@@ -35,10 +35,15 @@
   "selection_reason": "KVがGPUメモリに収まらない要求のdecodeを、GPU schedulerが空いた時だけCPUで進めるのではなく、AMX対応CPU側に独立のbatch/schedulerを持つdecode engineを設ける。CPUが1 iterationを完結する経路と、dense stageだけGPU支援を使う経路を使い分ける。著者要旨はdecode中心の設定でNEO比throughput6.9～43.2%、vLLM比11.5～90.6%改善、同程度の遅延を維持と報告。CPU/GPU分離実行とKV offloadを組み合わせる推論runtimeとしてaccept。",
   "semantic_scholar_id": "216f05dc1ecacf6ef1803d2cfc28f2506bdf152a",
   "source_url": "https://arxiv.org/abs/2610.33501",
-  "status": "ready",
+  "status": "superseded",
   "title": "DualPace: Decoupled Scheduling and Cooperative GPU--CPU Decoding for LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2610.33501-dualpace-decoupled-scheduling-and-cooperative-gpu-cpu-decoding-for-llm-s.md",
+  "represented_canonical_id": "arXiv:2610.33501",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

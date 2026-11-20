@@ -35,10 +35,15 @@
   "selection_reason": "ZipFusionは可逆圧縮KVをGPUメモリで全展開せず、attentionカーネルのレジスタ内でbit演算により復元しながら消費する。圧縮で空いた容量を層間に再配分し、生成中の要求に必要なKV領域を先に確保する。FlashInfer実装をSGLangに統合し、H100でdecode attention約1.25倍、8K文脈のmodel decode throughput最大26.3%改善、最大batch時に他の可逆KV圧縮方式比最大2.76倍を報告。推論帯域・容量のシステム最適化としてaccept。",
   "semantic_scholar_id": "0766a4512a2fbc1be5d2e851194b47adc47ca2ef",
   "source_url": "https://arxiv.org/abs/2610.33719",
-  "status": "ready",
+  "status": "superseded",
   "title": "ZipFusion: Fusing Lossless KV Decompression with Attention for Efficient LLM Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.33719-zipfusion-fusing-lossless-kv-decompression-with-attention-for-efficient-.md",
+  "represented_canonical_id": "arXiv:2610.33719",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

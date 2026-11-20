@@ -35,10 +35,15 @@
   "selection_reason": "MLLMの視覚token削減による精度低下をpost-trainingで回復し、削減位置によるend-to-end性能差を36構成で調べる。282K sampleでOCR・grounding等も補正し、encoder側40%保持の方がprojector側10%保持より高速な例を報告。一次要旨ではLLM stageが3.49倍高速でも全体TTFTは1.54倍に留まる。視覚encoderとLLM prefillのボトルネック分離を実証する推論圧縮研究としてaccept。",
   "semantic_scholar_id": "7dc410a1013da45e94a059ac1de962ea2f059a4d",
   "source_url": "https://arxiv.org/abs/2610.33688",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rescuing Your Pruning: Rethinking Visual Token Pruning and Post-Training Recovery in MLLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:25:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.33688-rescuing-your-pruning-rethinking-visual-token-pruning-and-post-training-.md",
+  "represented_canonical_id": "arXiv:2610.33688",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
