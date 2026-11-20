@@ -35,10 +35,15 @@
   "selection_reason": "投機的デコードのドラフトモデル学習損失を、棄却サンプリングでの受理確率（ドラフト分布と対象分布の重なり）から導くD-PALの提案。学習は手段であり最適化対象は受理長と推論スループットで、Qwen3-4Bを対象とする6ベンチマークで受理長（温度0で4.50→4.57）とスループットの改善を測っている。最終目的が推論高速化のため対象に含める。",
   "semantic_scholar_id": "0a9396a43370956ebadd897c5da2a6c9bee4fefe",
   "source_url": "https://arxiv.org/abs/2610.28355",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:01:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.28355-beyond-the-point-mass-acceptance-derived-weights-and-distributional-loss.md",
+  "represented_canonical_id": "arXiv:2610.28355",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

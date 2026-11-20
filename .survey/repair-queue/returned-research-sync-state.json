@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "b71118fa3dd2520aec4af2efcd64095321514a20",
+  "base_commit": "c86b21828ef13c825e6d214cbef48f03790e9377",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -708,6 +708,11 @@
     "2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-models.json",
     "2026-2610.27438-mlips-multi-layer-indexer-pool-sharing.json",
     "2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice-codebooks.json",
+    "2026-2610.27981-adaptive-stopping-of-streamed-reasoning-for-language-model-agents.json",
+    "2026-2610.28223-local-inference-of-llms-on-long-contexts-a-data-systems-perspective.json",
+    "2026-2610.28355-beyond-the-point-mass-acceptance-derived-weights-and-distributional-losses-for-speculative-decoding.json",
+    "2026-2610.28441-stratified-sparse-attention-reducing-the-sparse-to-dense-gap-at-extreme-sparsity.json",
+    "2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-account-for-joules-per-token.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -44645,6 +44650,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.27981": {
+      "order": [
+        "2026-11-20T11:56:19+00:00",
+        "2026-2610.27981-adaptive-stopping-of-streamed-reasoning-for-language-model-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28223": {
+      "order": [
+        "2026-11-20T11:57:17+00:00",
+        "2026-2610.28223-local-inference-of-llms-on-long-contexts-a-data-systems-perspective.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28355": {
+      "order": [
+        "2026-11-20T11:58:16+00:00",
+        "2026-2610.28355-beyond-the-point-mass-acceptance-derived-weights-and-distributional-losses-for-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28441": {
+      "order": [
+        "2026-11-20T11:59:14+00:00",
+        "2026-2610.28441-stratified-sparse-attention-reducing-the-sparse-to-dense-gap-at-extreme-sparsity.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28576": {
+      "order": [
+        "2026-11-20T12:00:13+00:00",
+        "2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-account-for-joules-per-token.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55644,6 +55694,21 @@
     "arxiv:2610.27699": [
       "papers/inference/99-other-inference-systems/2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md",
       "papers/inference/99-other-inference-systems/2026-2610.27699-e8-qat-efficient-2-bit-quantization-aware-training-with-implicit-lattice.md"
+    ],
+    "arxiv:2610.27981": [
+      "papers/inference/99-other-inference-systems/2026-2610.27981-adaptive-stopping-of-streamed-reasoning-for-language-model-agents.md"
+    ],
+    "arxiv:2610.28223": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.28223-local-inference-of-llms-on-long-contexts-a-data-systems-perspective.md"
+    ],
+    "arxiv:2610.28355": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.28355-beyond-the-point-mass-acceptance-derived-weights-and-distributional-loss.md"
+    ],
+    "arxiv:2610.28441": [
+      "papers/inference/13-sparse-attention/2026-2610.28441-stratified-sparse-attention-reducing-the-sparse-to-dense-gap-at-extreme-.md"
+    ],
+    "arxiv:2610.28576": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-accoun.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "Token-Energy Lawはdecode出力当たりのGPU-board energyを、batchで共有される重みbyte、要求ごとに増えるKV byte、実測decode時間の線形式で説明する。Hopper/Blackwellの3モデルとHopper 2GPU tensor parallelで検証し、固定係数・観測時間を使った未使用条件の平均エネルギー予測誤差が最大3.73%と報告。推論性能・電力の定量モデルとしてaccept。",
   "semantic_scholar_id": "a0d91566c27c6f1c6b615693d74f133ea5f2dc95",
   "source_url": "https://arxiv.org/abs/2610.28576",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:01:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-accoun.md",
+  "represented_canonical_id": "arXiv:2610.28576",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

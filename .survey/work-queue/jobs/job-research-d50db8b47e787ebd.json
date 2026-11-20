@@ -35,10 +35,15 @@
   "selection_reason": "StreamStopは推論モデルのhidden stateへアクセスせず、出力途中のreasoning text prefixを軽量readerとstop headで評価する。prefix別の最終action一致を教師にoffline学習し、割引率により推論時の品質・token予算tradeoffを調整。WebShopのQwen3.8-27Bでepisode当たりreasoning token42%削減し、観測task successはほぼ同程度と報告。",
   "semantic_scholar_id": "25672c49b11f1d407f1282236888238fab22e8b6",
   "source_url": "https://arxiv.org/abs/2610.27981",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Stopping of Streamed Reasoning for Language Model Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:01:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.27981-adaptive-stopping-of-streamed-reasoning-for-language-model-agents.md",
+  "represented_canonical_id": "arXiv:2610.27981",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

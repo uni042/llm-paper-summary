@@ -89,6 +89,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：1  
   Gimbalは要求の残りプリフィル量・待機量・KV使用量と専門家負荷を同時に見て要求振り分けと専門家配置を協調し、MoEサービングのキュー偏りとホットスポットを減らす。
 
+- **2026-05 · [EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization](2026-2605.14249-energylens-predictive-energy-aware-exploration-for-multi-gpu-llm-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  EnergyLensは、演算を記号的に指定するだけで推論時のエネルギーと遅延を予測し、構成間のトレードオフを探索する枠組みである。
+
 - **2026-04 · [Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns](2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル時の専門家活性から似た要求を小バッチ化し、要求群で共発火する専門家を同じノードへ置くことで、マルチノードMoEの全対全通信を削減する。
@@ -178,10 +182,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [Federation of Experts: Communication Efficient Distributed Inference for Large Language Models](2026-2605.06206-federation-of-experts-communication-efficient-distributed-inference-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Federation of Experts（FoE）は、配送アルゴリズムだけを改善するのではなく、モデルの注意ヘッドと専門家の構造を一緒に分割する。著者は7B級と1B級のモデルを通常MoEと同条件で最初から学習し、単一ノードH100×8と2ノードH100×16で比較した。
-
-- **2026-05 · [EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization](2026-2605.14249-energylens-predictive-energy-aware-exploration-for-multi-gpu-llm-inferen.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  EnergyLensは、演算を記号的に指定するだけで推論時のエネルギーと遅延を予測し、構成間のトレードオフを探索する枠組みである。
 
 - **2026-05 · [Diagnosing Overhead in Dispatch Operations: Cross-architecture Observatory](2026-2605.20982-diagnosing-overhead-in-dispatch-operations-cross-architecture-observator.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
