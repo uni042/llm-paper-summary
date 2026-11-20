@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "19f0c25dde82e63810fc7c9daad57f65fb45e645",
+  "base_commit": "e227fdaffde0427ebb6cb69a7b4db9332a845243",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -398,6 +398,11 @@
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
     "2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-structured-llm-pruning.json",
     "2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-transformers.json",
+    "2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-models.json",
+    "2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inference.json",
+    "2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-language-models-on-consumer-cpus.json",
+    "2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.json",
+    "2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.json",
     "2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-rank-allocation.json",
     "2026-2610.17970-alignpred-error-controlled-kv-cache-compression-via-alignment-and-predictive-coding.json",
     "2026-2610.18014-latentremedy-efficient-remedy-for-non-prefix-kv-cache-reuse-in-multi-agent-systems.json",
@@ -41936,6 +41941,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.17530": {
+      "order": [
+        "2026-11-20T02:47:22+00:00",
+        "2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.17531": {
+      "order": [
+        "2026-11-20T02:48:18+00:00",
+        "2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.17551": {
+      "order": [
+        "2026-11-20T02:49:13+00:00",
+        "2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-language-models-on-consumer-cpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.17689": {
+      "order": [
+        "2026-11-20T02:50:09+00:00",
+        "2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.17795": {
+      "order": [
+        "2026-11-20T02:51:05+00:00",
+        "2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51897,6 +51947,21 @@
     "arxiv:2610.26660": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.md"
+    ],
+    "arxiv:2610.17530": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-mode.md"
+    ],
+    "arxiv:2610.17531": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md"
+    ],
+    "arxiv:2610.17551": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-languag.md"
+    ],
+    "arxiv:2610.17689": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.md"
+    ],
+    "arxiv:2610.17795": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "University of Waterlooの修士論文原著はLlama2、Phi3.5、OLMo、Qwen2.5の複数モデルで、H100/A6000/A100/L4上の10種類のPTQ方式を比較し、入力・出力長、batch、精度、推論エネルギーを評価する。EETQやbitsandbytesの融合INT8 kernelは短文生成でFP32比最大4倍の省エネを報告する。LLM推論の実機性能・電力特性の直接計測としてaccept。",
   "semantic_scholar_id": "4937008bc2bd12c7795ff9481b9889cb7e16dd3b",
   "source_url": "https://arxiv.org/abs/2610.17531",
-  "status": "ready",
+  "status": "superseded",
   "title": "Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:52:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md",
+  "represented_canonical_id": "arXiv:2610.17531",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

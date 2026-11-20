@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（501本）
+## 自動生成の論文一覧（502本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -530,6 +530,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-10 · [Understanding KV Residency in Production-Scale Agentic LLM Workloads](2026-2610.22863-understanding-kv-residency-in-production-scale-agentic-llm-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   1億2100万回超の本番呼出しを分析し、エージェントのKV保持がセッション規模と配置の両面で律速すること、休止上限と低精度複製の保持が再計算を大きく減らすことを示した。
+
+- **2026-10 · [TwinPrune: Density-Aware Two-Phase Token Pruning for Vision-Language Models](2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-mode.md)**  
+  実装：[✓](https://github.com/Kai-Liu001/TwinPrune) ・ リポジトリ内被引用：0  
+  視覚トークンの空間密度を一度だけ測り、プリフィルではマージによる計算削減へ、デコードではキー・バリュー追い出しによるメモリ削減へ使い回す二相圧縮で、あわせて最初のトークンだけで採点するベンチマークではデコード圧縮を測れないことも実証した研究。
 
 - **2026-10 · [TideKV: Delayed KV eviction via layer-wise chunked prefill for memory-efficient long-context LLM inference](2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

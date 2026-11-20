@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（141本）
+## 自動生成の論文一覧（142本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -137,6 +137,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-10 · [MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference](2026-2610.01950-moe-core-coordinated-expert-offloading-and-residency-for-memory-constrai.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   総パラメータが数百B以上になると、単一NPUのメモリに全専門家を置けず、ホストメモリから必要な重みを転送する。MoE-COREは、プリフィルとデコードで必要な専門家の集合と遅延許容度が異なる点に着目し、異なる常駐・転送方式を一つのランタイムで管理する。
+
+- **2026-10 · [Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs](2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-languag.md)**  
+  実装：[✓](https://github.com/balkeumlabs/LLM-on-CPU) ・ リポジトリ内被引用：0  
+  消費者向け機械の画像処理装置では容量不足で載らない270億パラメータ級の臨床向けモデルを、システムメモリへ4ビット量子化で常駐させることで中央処理装置だけで動かせることを、機械2台の実測で示し、その速度と電力と連合通信量の代償を正直に測った研究。
 
 - **2026-10 · [Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights](2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -487,7 +491,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：123  
+  実装：✓ ・ リポジトリ内被引用：124  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  

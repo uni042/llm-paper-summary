@@ -35,10 +35,15 @@
   "selection_reason": "27B級モデルのINT4重みをconsumer GPU 4～6GBでは収容できない条件で、RAM 34/67GBのCPU推論に切り替える容量中心の配備評価。synthetic FHIR promptで27Bモデルが0.6～2.4tok/s、RAM利用率60/37%で動作し、GPUは推論前にOOMとなることを報告。新規高速化kernelではないが低VRAM端末の実装・性能・電力評価としてaccept。医療性能の実証ではなく合成データによる配備評価である。",
   "semantic_scholar_id": "33e8470eb2044f63313c8ef6a1804306795c2753",
   "source_url": "https://arxiv.org/abs/2610.17551",
-  "status": "ready",
+  "status": "superseded",
   "title": "Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:52:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-languag.md",
+  "represented_canonical_id": "arXiv:2610.17551",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

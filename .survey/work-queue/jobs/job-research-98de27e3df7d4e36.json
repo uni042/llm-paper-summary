@@ -35,10 +35,15 @@
   "selection_reason": "生成長予測に基づくshort-first schedulingは長要求を飢餓させるため、quota制約とdebtに基づくaging昇格を組み合わせるQBAを提案する。chunked prefill、decode優先batch、token budget、KV-safe admissionを模擬したevent-driven simulatorでFCFS等と比較し、長要求のtail latencyを抑えつつ平均遅延改善を保つと著者要旨が報告。具体的倍率は要旨にない。LLM serving schedulerの公平性と遅延tradeoffに直接関係するためaccept。",
   "semantic_scholar_id": "069b689eb365c5d81759b140c513c8259d7a69da",
   "source_url": "https://arxiv.org/abs/2610.17795",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:52:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.17795",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（141本）
+## 自動生成の論文一覧（142本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -89,6 +89,10 @@
   決まった層で視覚トークンを一様に間引く詰め込み口を作り、注意の働きで情報を残るトークンへ移す自己圧縮を学習させる方式で、LLaVA-1.5-7Bの計算量を53.7%、キー値キャッシュを56.7%減らしながら性能の98.2%を保持した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Towards Green AI: Evaluating Energy Efficiency for Quantized LLM Inference](2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みのみ量子化10構成のエネルギー・速度・精度・メモリを5モデル・4タスク・4種のGPUで統一実測し、融合カーネル型の8ビット量子化が最大約4倍省エネルギーであることと、長入力・短出力で利得が最大になり実行時間がエネルギーの代理指標になることを明らかにした評価論文。
 
 - **2026-10 · [PACE: Pareto-Adaptive Compression for Efficient Native MLLMs](2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -372,13 +376,13 @@
   実装：[✓](https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs) ・ リポジトリ内被引用：34  
   本論文は、推論に特化した大規模言語モデルが長い思考連鎖（Chain-of-Thought; CoT）を生成することで正答率を高める一方、単純な質問にも冗長な検証や反復を行ってしまう「過剰思考」を減らす研究を整理したサーベイである。
 
+- **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
+  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：29  
+  4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
+
 - **2025-01 · [LLaVA-Mini: Efficient Image and Video Large Multimodal Models with One Vision Token](2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md)**  
   実装：[✓](https://github.com/ictnlp/LLaVA-Mini) ・ リポジトリ内被引用：29  
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
-
-- **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
-  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：28  
-  4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-02 · [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md)**  
   実装：[✓](https://github.com/seal-rg/recurrent-pretraining) ・ リポジトリ内被引用：28  

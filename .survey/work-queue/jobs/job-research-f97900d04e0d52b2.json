@@ -35,10 +35,15 @@
   "selection_reason": "サーバレスLLM推論のprefill要求流入が既存decodeのITLを乱す問題に対し、ITL・queue depth・ワークロードの実行時feedbackでtoken windowを閉ループ調整し、batch単位でなくtoken単位のadmissionを制御するToken Window Pacing (TWP)を提案する。chunked prefillと併用し、著者要旨はServerlessLLM比最大45%、従来scheduler比最大58%のthroughput向上とp99遅延変動低減を報告。LLM serving runtimeの直接的なスケジューリング貢献としてaccept。",
   "semantic_scholar_id": "84513bc45205cd6bd73ad2a5d75015b284509f3a",
   "source_url": "https://arxiv.org/abs/2610.17689",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stable Token-level Scheduling for Serverless LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:52:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.md",
+  "represented_canonical_id": "arXiv:2610.17689",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

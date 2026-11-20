@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（546本）
+## 自動生成の論文一覧（548本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -32,13 +32,13 @@
   実装：✓ ・ リポジトリ内被引用：13  
   GreenLLMは、プリフィルとデコードの負荷を入力長・出力TPS・P95トークン間時間から観測し、各段階のSLO内でGPU周波数を別々に選ぶ二重帰還制御により、過剰な高周波数動作とエネルギーを減らす。
 
+- **2025-12 · [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  プリフィル・通信・デコードを共通の「トークン速度」で観測し、突発負荷では既存デコードGPUを一時的なプリフィル処理へ転用して、新規GPU起動の遅れを埋める自動スケーリング方式。
+
 - **2026-01 · [Concur: Proactive Agent-Level Admission Control for Efficient Agentic Batch Inference](2026-2601.22705-concur-agentic-admission-control.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   非同期エージェントのKV接頭辞がLRU追い出しと再計算を繰り返す中盤スラッシングを、KV使用率・ヒット率を混雑信号にしたエージェント単位の加算増加・乗算減少型受入れ制御で未然に抑える方式。
-
-- **2025-12 · [TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity](2025-2512.03416-tokenscale-token-velocity-disaggregated-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  プリフィル・通信・デコードを共通の「トークン速度」で観測し、突発負荷では既存デコードGPUを一時的なプリフィル処理へ転用して、新規GPU起動の遅れを埋める自動スケーリング方式。
 
 - **2026-02 · [DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving](2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md)**  
   実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：11  
@@ -136,6 +136,14 @@
   実装：✓ ・ リポジトリ内被引用：4  
   問い合わせごとのモデル振り分けと異種GPU上のモデル配置・並列化を多目的ベイズ最適化で同時に探索し、品質制約下の遅延と運用費を削減する。
 
+- **2025-12 · [WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving](2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md)**  
+  実装：[✓](https://github.com/LLMServe/WarmServe) ・ リポジトリ内被引用：4  
+  将来負荷を予測して複数モデル重みを同じGPU群へ先行配置し、解放前GPUの未使用KV領域とCUDA仮想メモリ再対応付けを使って、冷間起動を隠しながら本番推論時はGPUを専有させる複数LLM配信方式。
+
+- **2025-12 · [Tangram: Accelerating Serverless LLM Loading through GPU Memory Reuse and Affinity](2025-2512.01357-tangram-serverless-llm-loading-gpu-memory-reuse.md)**  
+  実装：[✓](https://anonymous.4open.science/r/Tangram) ・ リポジトリ内被引用：4  
+  未使用GPUメモリにモデルのテンソルを残し、KVキャッシュの動的確保とGPU親和性スケジューリングを組み合わせ、サーバレスLLMの再読み込み量とコールドスタート遅延を削減する。
+
 - **2025-12 · [Cornfigurator: Automated Planning for Any-to-Any Multimodal Model Serving](2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md)**  
   実装：[✓](https://github.com/cornserve-ai/cornfigurator) ・ リポジトリ内被引用：4  
   これらを一つのGPU集合へ固定すると遅い構成要素が全体を止め、逆にすべてを分離すると使われないGPUや通信費が増える。実機評価ではQwen 3 Omni、InternVL 3、Qwen 3 VL、Qwen-Imageなどを対象に、既存方式や専門家調整配置と同等または最大6.32倍の有効スループットを報告する。
@@ -199,14 +207,6 @@
 - **2026-01 · [Power Aware Dynamic Reallocation For Inference](2026-2601.12241-rapid-power-aware-dynamic-reallocation.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   プリフィル・デコード分離環境でGPU台数だけでなく電力上限も段階間で再配分し、待ち行列とTTFT/TPOTを見ながら電力移動→GPU役割変更の順でSLO達成率を維持するRAPIDを実機評価する。
-
-- **2025-12 · [WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving](2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md)**  
-  実装：[✓](https://github.com/LLMServe/WarmServe) ・ リポジトリ内被引用：3  
-  将来負荷を予測して複数モデル重みを同じGPU群へ先行配置し、解放前GPUの未使用KV領域とCUDA仮想メモリ再対応付けを使って、冷間起動を隠しながら本番推論時はGPUを専有させる複数LLM配信方式。
-
-- **2025-12 · [Tangram: Accelerating Serverless LLM Loading through GPU Memory Reuse and Affinity](2025-2512.01357-tangram-serverless-llm-loading-gpu-memory-reuse.md)**  
-  実装：[✓](https://anonymous.4open.science/r/Tangram) ・ リポジトリ内被引用：3  
-  未使用GPUメモリにモデルのテンソルを残し、KVキャッシュの動的確保とGPU親和性スケジューリングを組み合わせ、サーバレスLLMの再読み込み量とコールドスタート遅延を削減する。
 
 - **2026-08 · [TOPAS: Workflow-Aware Prefix-State Scheduling for Multi-Agent LLM Serving](2026-2608.25523-topas-workflow-aware-prefix-state-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -546,9 +546,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   推論型言語モデル（Reasoning Language モデル; RLM）は、数学やプログラミング問題を解くために長い思考過程（Chain-of-Thought; CoT）を生成する。重みを構造的に枝刈り（Structured Pruning）すると、行列の幅や層数が減るため、特殊な疎行列カーネルがなくても演算量とメモリ量を削減できる。
 
+- **2026-10 · [Stable Token-level Scheduling for Serverless LLM Inference](2026-2610.17689-stable-token-level-scheduling-for-serverless-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  トークン間遅延の実測値を混雑信号として毎デコードステップでフィードバックし、残り出力トークン総量の上限であるトークンウィンドウを開閉して新規リクエストの受け入れをトークン単位で制御する、サーバーレス推論向けスケジューラ。
+
 - **2026-10 · [RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving](2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混成モデルの接頭辞再利用で、状態待ちの分岐だけを次ラウンドへ回して走査を続けることでバッチの泡を埋め、再利用率を保ったまま遅延を最大24パーセント、ラウンド数を最大44パーセント削減した。
+
+- **2026-10 · [Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving](2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md)**  
+  実装：[✓](https://github.com/Julianjiuxi/qba-llm-serving) ・ リポジトリ内被引用：0  
+  短優先の受付に、短い受付を一定数こなすごとに滞留した長いリクエストを1件だけ昇格させる割当と昇格権の保持を組み合わせ、平均遅延の利得を保ちながら長いリクエストの尾部膨張を抑えるスケジューリング方針。
 
 - **2026-10 · [LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models](2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1233,7 +1241,7 @@
   注意機構とMoE専門家FFNを別GPU群へ分離し、複数注意レプリカから専門家要求を集約して大きな専門家バッチを作り、専用多対多RDMA通信とピンポン型パイプラインで通信を隠す大規模MoEサービング方式。
 
 - **2025-08 · [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md)**  
-  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：48  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
 - **2025-05 · [Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving](2025-2505.04021-prism-gpu-sharing-multi-llm-serving.md)**  
@@ -1312,6 +1320,10 @@
   実装：✓ ・ リポジトリ内被引用：18  
   次に、どのGPUを何台借りるか、各GPU群にモデルを何個複製しどの並列方式で載せるか、要求種別をどの複製へ何割ずつ振り分けるかを、価格上限と実際のGPU在庫を制約にした混合整数線形計画（Mixed-Integer Linear Programming; MILP）として表す。
 
+- **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
+  実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：17  
+  起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
+
 - **2025-02 · [AIBrix: Towards Scalable, Cost-Effective Large Language Model Inference Infrastructure](2025-2504.03648-aibrix-towards-scalable-cost-effective-large-language-model-inference-in.md)**  
   実装：[✓](https://github.com/vllm-project/aibrix) ・ リポジトリ内被引用：17  
   GPU利用率のみで自動スケーリングすれば、入力長と出力長の差、復号負荷、KV容量圧迫を適切に反映できない。提案は、Kubernetesによる粗粒度資源管理を残しつつ、LLMのトークン処理量・接頭辞一致・KV使用量・アダプター配置・GPU別費用を観測する仕組みを導入する。
@@ -1319,10 +1331,6 @@
 - **2025-07 · [Nexus: Proactive Intra-GPU Disaggregation of Prefill and Decode in LLM Serving](2025-2507.06608-nexus-proactive-intra-gpu-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
-
-- **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
-  実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：16  
-  起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
 
 - **2024-12 · [KVDirect: Distributed Disaggregated LLM Inference](2024-2501.14743-kvdirect-distributed-disaggregated-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
@@ -1344,6 +1352,10 @@
   実装：✓ ・ リポジトリ内被引用：14  
   混合バッチを仕事で埋める方式がいつ最大処理量を達成するかを待ち行列理論で証明し、AIエージェントの分岐処理網への拡張と、成立しない経路構造・運用制約も示す。
 
+- **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
+  実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：14  
+  モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
+
 - **2025-09 · [Parallax: Efficient LLM Inference Service over Decentralized Environment](2025-2509.26182-parallax-decentralized-heterogeneous-serving.md)**  
   実装：[✓](https://github.com/GradientHQ/parallax) ・ リポジトリ内被引用：13  
   地理的に離れた異種GPUでモデル層を地域・VRAM・計算性能に合わせて配置し、GPUごとの処理時間と通信遅延から要求ごとの層経路を選ぶことで、遅いGPU・低速回線によるパイプライン待ちを減らす分散LLMサービング。
@@ -1363,10 +1375,6 @@
 - **2025-03 · [Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation](2025-2503.20552-adrenaline.md)**  
   実装：[✓](https://github.com/ASISys/Adrenaline) ・ リポジトリ内被引用：13  
   デコード注意をプリフィルGPUの余剰HBMへ動的に移し、低遅延同期・GPU資源分割・負荷連動制御で分離配信の資源偏りを解消する。
-
-- **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
-  実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：13  
-  モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
 
 - **2025-01 · [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -1628,6 +1636,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   SARTは、推論分岐を必要数より多く開始し、必要な本数が完成したら残りを停止する冗長サンプリング（redundant sampling with early stopping）と、過程報酬モデル（process reward モデル、PRM）で低品質の分岐を段階的に削る動的枝刈りを組み合わせる。
 
+- **2025-05 · [ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs](2025-2505.14468-serverlesslora-latency-cost-lora-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  LoRAサーバレス推論で基盤重みだけを独立関数間でゼロコピー共有し、到着予測に基づく事前読み込み、SLO適応バッチ、動的退避を組み合わせ、コールドスタートとGPU重複保持を同時に削減する。
+
 - **2025-05 · [Scorpio: Serving Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference](2025-2505.23022-scorpio-heterogeneous-slo-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   要求ごとに異なるTTFT/TPOTのSLOを、締切順の並べ替え・達成不能要求の拒否・SLO比例の処理機会配分で共同制御し、高負荷時の有効スループットを最大14.4倍にする。
@@ -1663,10 +1675,6 @@
 - **2025-07 · [LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems](2025-2507.21276-lemix-unified-training-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。
-
-- **2025-05 · [ServerlessLoRA: Minimizing Latency and Cost in Serverless Inference for LoRA-Based LLMs](2025-2505.14468-serverlesslora-latency-cost-lora-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  LoRAサーバレス推論で基盤重みだけを独立関数間でゼロコピー共有し、到着予測に基づく事前読み込み、SLO適応バッチ、動的退避を組み合わせ、コールドスタートとGPU重複保持を同時に削減する。
 
 - **2025-03 · [AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications](2025-2503.13737-accelgen-heterogeneous-slo-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1851,7 +1859,7 @@
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
-  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：496  
+  実装：[✓](https://github.com/microsoft/sarathi-serve) ・ リポジトリ内被引用：497  
   本論文の重要な点は、単純に事前入力を分割するだけでなく、デコードと事前入力を同じ反復へ混ぜるスケジューリング規則、反復あたりの総トークン予算、パイプライン並列化での仕事量の均等化を一体で設計したことである。
 
 - **2024-06 · [Llumnix: Dynamic Scheduling for Large Language Model Serving](2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md)**  
@@ -2129,7 +2137,7 @@
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
-  実装：✓ ・ リポジトリ内被引用：191  
+  実装：✓ ・ リポジトリ内被引用：192  
   プリフィル分割とデコード最大化混合バッチでデコードを重み読込みへ相乗りさせ、単一GPUとパイプライン並列の双方で推論スループットを改善する。
 
 - **2023-02 · [AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving](2023-2302.11665-alpaserve.md)**  
@@ -2137,7 +2145,7 @@
   複数モデルへ届くリクエスト数が時間ごとに偏る環境で、モデルを複数GPUへ分割して置き、空いているGPUをモデル間で共有しやすくすることで、特定モデルだけ待ち行列が伸びるのを抑えるサービング配置手法。
 
 - **2023-05 · [FastServe: Iteration-Level Preemptive Scheduling for Large Language Model Inference](2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md)**  
-  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：145  
+  実装：[✓](https://github.com/LLMServe/FastServe) ・ リポジトリ内被引用：146  
   出力トークンを1つ生成する区切りで要求（リクエスト）を一時停止・再開できるようにし、短い要求を優先しながらKVキャッシュ（KV キャッシュ）をCPUへ退避・先読みして待ち時間を減らすLLMサービングスケジューラ（serving スケジューラ）。
 
 - **2023-11 · [SpotServe: Serving Generative Large Language Models on Preemptible Instances](2023-2311.15566-spotserve-preemptible-instance-serving.md)**  

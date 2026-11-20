@@ -35,10 +35,15 @@
   "selection_reason": "VLMのprefillでは視覚tokenのbipartite merge、decodeではKV evictionへ同一空間密度signalを使うTwinPruneを提案。prefillだけを評価するfirst-token課題ではdecode時KV除去の影響が測れないという評価上の落とし穴も検証する。一次要旨は高解像度token選択100倍高速、TextVQAで12.5% KV保持時にH2O比9.6点の精度向上を報告。VLM推論のprefill/decode両段階の圧縮としてaccept。",
   "semantic_scholar_id": "04ee178b04b33bbdb3250ed37b24a763f13924b5",
   "source_url": "https://arxiv.org/abs/2610.17530",
-  "status": "ready",
+  "status": "superseded",
   "title": "TwinPrune: Density-Aware Two-Phase Token Pruning for Vision-Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:52:38+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-mode.md",
+  "represented_canonical_id": "arXiv:2610.17530",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
