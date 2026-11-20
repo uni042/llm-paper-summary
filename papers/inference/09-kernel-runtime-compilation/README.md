@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（270本）
+## 自動生成の論文一覧（271本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -213,6 +213,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning](2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-oppor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論レプリカの遊休メモリを、実行中PEFTステップの保存済み活性値1個単位で推論へ引き渡し、ステップを捨てずに逆伝播の再計算で取り戻す細粒度GPUメモリ共有方式。
+
+- **2026-10 · [Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference](2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantizat.md)**  
+  実装：[✓](https://github.com/PuppyQ08/24_quant_compare) ・ リポジトリ内被引用：0  
+  2対4スパース性と量子化を等ビットと等階層で全オペランド実測比較し、床より上では一段の量子化が常に勝ち、床でのみ再学習を条件に2対4が1.3倍から1.7倍の高速化と27パーセントのプリフィル改善をもたらすことを、エネルギー損失の解析とともに示した研究。
 
 - **2026-10 · [HiNa-MoE: High-Performance, Non-Intrusive MoE Inference on CPUs with Matrix Engines](2026-2610.05123-hina-moe-high-performance-non-intrusive-moe-inference-on-cpus-with-matri.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1053,7 +1057,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   QUIKは、生成大規模言語モデルの線形層を重み・活性値の双方が4ビット整数であるW4A4へ移すための量子化方式である。CUTLASSによる低ビット行列積と量子化・逆量子化の融合カーネルを実装し、RTX3090の2048トークン入力一括処理でFP16比最大3.4倍の処理量改善を報告する。
 
 - **2023-10 · [Sparse Fine-tuning for Inference Acceleration of Large Language Models](2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md)**  
-  実装：[✓](https://github.com/IST-DASLab/SparseFinetuning) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/IST-DASLab/SparseFinetuning) ・ リポジトリ内被引用：9  
   本研究は、大規模言語モデル（LLM）を高い重み疎性へ枝刈りしたうえで下流タスクへ微調整し、精度を回復する学習法と、その疎性をCPU/GPUの実際の推論高速化へ変換する実行系を一体で評価する。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  

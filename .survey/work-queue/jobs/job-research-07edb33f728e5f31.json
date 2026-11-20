@@ -35,10 +35,15 @@
   "selection_reason": "MTP投機復号で同時に実行するdraft head数を固定すると受理率低下時に無駄が増えるため、verification結果からprefix受理生存確率を学習し、次passの最適horizonをオンライン選択するAMTPを提案。target verifierを変更せず、regretとwall-clockの理論保証を示す。一次要旨はLlama/Qwenの5組で通常復号比最大4.1倍、固定窓比10%までthroughput改善を報告。LLM speculative decoding runtimeの直接的改善としてaccept。",
   "semantic_scholar_id": "d20738c834c67f8c4ad93fd60d62ee509aebf5e3",
   "source_url": "https://arxiv.org/abs/2610.28619",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Multi-Token Prediction: How far should we go?",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:11:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.28619-adaptive-multi-token-prediction-how-far-should-we-go.md",
+  "represented_canonical_id": "arXiv:2610.28619",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

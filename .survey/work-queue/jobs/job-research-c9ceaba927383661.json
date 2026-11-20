@@ -35,10 +35,15 @@
   "selection_reason": "投機的デコードの検証で得た対象モデルの次トークン分布を、次ラウンドの候補木の選択へ再利用できる条件を理論的に整理し、木配分の前に第一トークンをこの分布から引く方式で受理期待値とデコード速度の改善を示した研究。デコード機構の効率化への直接貢献があり、コードも公開されている。",
   "semantic_scholar_id": "f0969b0d4b9a8719e72ffbd4c773258d38dcac72",
   "source_url": "https://arxiv.org/abs/2610.29210",
-  "status": "ready",
+  "status": "superseded",
   "title": "Understanding Target Probability Reuse in Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:11:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.29210-understanding-target-probability-reuse-in-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2610.29210",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

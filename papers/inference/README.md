@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **4456本**。
+収録論文: **4461本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**4456本**。
+推論論文：**4461本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -43,11 +43,11 @@
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 130 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/) |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 18 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/) |
 | [04-conditional-computation](04-conditional-computation/README.md) | 85 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/) |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 393 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 395 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 29 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 564 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 566 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 92 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 270 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 271 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 122 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 574 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 75 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/) |

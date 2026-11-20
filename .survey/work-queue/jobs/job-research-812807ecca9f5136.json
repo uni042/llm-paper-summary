@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論で同じbit予算なら2:4半構造疎化とさらに低精度への量子化のどちらが有利かを、sparsity metadataを含めて3世代GPUのkernel・品質・vLLM実行で比較する。著者要旨は低精度が残る限り2:4追加は精度・速度で劣り、最小精度まで到達した後は線形層を1.3～1.7倍高速化すると報告。H100の再訓練2:4 FP8でprefill throughput27%増とする一方、Blackwell FP4では精度回復に失敗した条件も記載。量子化・疎化の実用選択に直接関係するためaccept。",
   "semantic_scholar_id": "fd02c5ca54d1f5b3cf87005d1328582a2c8873e3",
   "source_url": "https://arxiv.org/abs/2610.28947",
-  "status": "ready",
+  "status": "superseded",
   "title": "Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:11:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantizat.md",
+  "represented_canonical_id": "arXiv:2610.28947",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

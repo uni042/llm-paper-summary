@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0e77a708989fb8f78e50176974cf2e662f2f6d54",
+  "base_commit": "98b9d05f5b297ccb1c11702fc37d3f4e159127f5",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -713,6 +713,11 @@
     "2026-2610.28355-beyond-the-point-mass-acceptance-derived-weights-and-distributional-losses-for-speculative-decoding.json",
     "2026-2610.28441-stratified-sparse-attention-reducing-the-sparse-to-dense-gap-at-extreme-sparsity.json",
     "2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-account-for-joules-per-token.json",
+    "2026-2610.28577-cache-engineering-for-agents.json",
+    "2026-2610.28619-adaptive-multi-token-prediction-how-far-should-we-go.json",
+    "2026-2610.28671-accelerating-cpu-speculative-decoding-via-unified-graph-execution-and-transactional-kv-isolation.json",
+    "2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantization-in-llm-inference.json",
+    "2026-2610.29210-understanding-target-probability-reuse-in-speculative-decoding.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -44695,6 +44700,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.28577": {
+      "order": [
+        "2026-11-20T12:04:15+00:00",
+        "2026-2610.28577-cache-engineering-for-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28619": {
+      "order": [
+        "2026-11-20T12:05:36+00:00",
+        "2026-2610.28619-adaptive-multi-token-prediction-how-far-should-we-go.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28671": {
+      "order": [
+        "2026-11-20T12:06:57+00:00",
+        "2026-2610.28671-accelerating-cpu-speculative-decoding-via-unified-graph-execution-and-transactional-kv-isolation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.28947": {
+      "order": [
+        "2026-11-20T12:08:19+00:00",
+        "2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantization-in-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.29210": {
+      "order": [
+        "2026-11-20T12:09:40+00:00",
+        "2026-2610.29210-understanding-target-probability-reuse-in-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55714,6 +55764,21 @@
     "arxiv:2610.28576": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-accoun.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.28576-the-token-energy-law-of-llm-decode-active-bytes-and-realized-time-accoun.md"
+    ],
+    "arxiv:2610.28577": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.28577-cache-engineering-for-agents.md"
+    ],
+    "arxiv:2610.28619": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.28619-adaptive-multi-token-prediction-how-far-should-we-go.md"
+    ],
+    "arxiv:2610.28671": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.28671-accelerating-cpu-speculative-decoding-via-unified-graph-execution-and-tr.md"
+    ],
+    "arxiv:2610.28947": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.28947-is-2-4-sparsity-still-worth-it-semi-structured-sparsity-versus-quantizat.md"
+    ],
+    "arxiv:2610.29210": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.29210-understanding-target-probability-reuse-in-speculative-decoding.md"
     ]
   }
 }
