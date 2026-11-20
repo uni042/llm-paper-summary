@@ -35,10 +35,15 @@
   "selection_reason": "Llama2/FalconのNF4・FP4・INT8など事後量子化を、temperature・top-k・最大生成長を変えて生成品質、推論速度、メモリ消費で比較する分析。NF4/FP4の品質差が小さい一方INT8の推論速度が遅いなど、実配備時の量子化・生成設定の性能交換条件を直接測定する。",
   "semantic_scholar_id": "07c8454b8eaf3182997fd8b5906ded9c187fefaf",
   "source_url": "https://arxiv.org/abs/2309.05210",
-  "status": "ready",
+  "status": "superseded",
   "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-11-20T06:46:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md",
+  "represented_canonical_id": "arXiv:2309.05210",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

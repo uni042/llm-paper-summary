@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1059本）
+## 自動生成の論文一覧（1061本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3790,6 +3790,10 @@
   実装：[✓](https://github.com/amazon-science/Approximately-Aligned-Decoding) ・ リポジトリ内被引用：0  
   Approximately Aligned Decoding（AprAD）は、大規模言語モデルの生成途中で禁止文字、構文違反、存在しないAPIの呼び出しなどを検出したとき、生成済み接頭辞をどこまで残して再開するかを投機的サンプリング（投機的 sampling）の受理・棄却計算で決める方式である。
 
+- **2024-10 · [AERO: Entropy-Guided Framework for Private LLM Inference](2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意エントロピーで非線形演算の役割を診断し、静的正規化とヘッド別エントロピー正則化で非線形を削っても学習が崩れないようにする、プライベート推論向けの設計枠組み。通信を3.4倍削減する。
+
 - **2024-09 · [PASS: Pruning Attention Heads with Almost-sure Sparsity Targets](2024-1a2ee8dce5b4-pass-pruning-attention-heads-with-almost-sure-sparsity-targets.md)**  
   実装：[✓](https://github.com/DujianDing/PASS) ・ リポジトリ内被引用：0  
   ゲートの閉じ・開き確率を確率1へ二極化させる「ほぼ確実な疎さ」で、閾値調整なしに指定本数どおり注意ヘッドを枝刈りし、残すヘッドを少数層へ集中させて層ごと省略できるようにした枝刈り方式。
@@ -4023,6 +4027,10 @@
 - **2023-10 · [NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models](2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-e.md)**  
   実装：[✓](https://github.com/jongwooko/NASH-Pruning-Official) ・ リポジトリ内被引用：0  
   復号器は層を均等に間引いて浅くし、符号化器は幅を低い疎さで徐々に狭める非対称な枝刈りで、T5-baseの要約で品質をほぼ保ちながら実時間2.5倍から4.2倍の高速化を示した。
+
+- **2023-09 · [Understanding the Impact of Post-Training Quantization on Large Language Models](2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化方式ごとに温度・生成長・topkへの生成品質の感度を6,300生成で実測した分析。4ビット量子化は温度に敏感で、方式の優劣はモデル系列で逆転する。
 
 - **2023-07 · [Scaling In-Context Demonstrations with Structured Attention](2023-2307.02690-scaling-in-context-demonstrations-with-structured-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（258本）
+## 自動生成の論文一覧（259本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -1019,6 +1019,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2023-07 · [QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models](2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md)**  
   実装：[✓](https://github.com/IST-DASLab/QIGen) ・ リポジトリ内被引用：0  
   QIGenは、量子化済みの大規模言語モデルをCPUで逐次生成するときの行列ベクトル積（GEMV）カーネルを自動生成する研究である。比率は約2.68倍だが、原著は最大約2.6倍と表現する。
+
+- **2023-06 · [An Efficient Sparse Inference Software Accelerator for Transformer-based Language Models on CPUs](2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based.md)**  
+  実装：[✓](https://github.com/intel/intel-extension-for-transformers) ・ リポジトリ内被引用：0  
+  4x1ブロック疎性とINT8を前提に、VNNI向けJIT生成SpMMカーネルでCPUの疎なトランスフォーマー推論を高速化するスタック。既存疎ライブラリを1桁上回り、密GEMM比でも最大5倍。
 
 - **2023-02 · [The Framework Tax: Disparities Between Inference Efficiency in NLP Research and Deployment](2023-2302.06117-the-framework-tax-disparities-between-inference-efficiency-in-nlp-resear.md)**  
   実装：[✓](https://github.com/JaredFern/Framework-Tax) ・ リポジトリ内被引用：0  

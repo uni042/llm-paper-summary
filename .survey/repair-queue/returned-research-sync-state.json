@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3949bdc0b67661086c0641d676c68d0e7441fd46",
+  "base_commit": "e7e19bc9c15d816e0973e1d3c41826c9af271c20",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -38,6 +38,7 @@
     "2023-2304.11520-processing-natural-language-on-embedded-devices-how-well-do-transformer-models-perform.json",
     "2023-2305.19533-lightening-transformer-a-dynamically-operated-optically-interconnected-photonic-transformer-accelerator.json",
     "2023-2306.01841-binary-and-ternary-natural-language-generation.json",
+    "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json",
     "2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language-models.json",
     "2023-2310.10054-nash-a-simple-unified-framework-of-structured-pruning-for-accelerating-encoder-decoder-language-models.json",
     "2023-2311.02772-attention-or-convolution-transformer-encoders-in-audio-language-models-for-inference-efficiency.json",
@@ -53,8 +54,11 @@
     "2024-2406.12018-citrus-chunked-instruction-aware-state-eviction-for-long-sequence-modeling.json",
     "2024-2406.17415-layer-wise-quantization-a-pragmatic-and-effective-method-for-quantizing-llms-beyond-integer-bit-levels.json",
     "2024-2408.07802-kraken-inherently-parallel-transformers-for-efficient-multi-device-inference.json",
+    "2024-2409.10644-improving-multi-candidate-speculative-decoding.json",
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
+    "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json",
+    "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json",
     "2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-deployment.json",
     "2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-scheduling.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
@@ -42986,6 +42990,96 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2306.16601": {
+      "order": [
+        "2026-11-20T06:41:17+00:00",
+        "2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based-language-models-on-cpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2409.10644": {
+      "order": [
+        "2026-11-20T06:42:42+00:00",
+        "2024-2409.10644-improving-multi-candidate-speculative-decoding.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "1064ccf3ef979f94de3ce52b621ffa4241d4dfbfb12d7a75cdc15ff10db04a44",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2024-2409.10644-improving-multi-candidate-speculative-decoding.md",
+        "canonical_id": "arXiv:2409.10644",
+        "worker_completed_at": "2026-11-20T15:24:00+09:00",
+        "worker_run_key": "2026-11-20-muse-c2b4",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 4022,
+          "body_paragraphs": 22,
+          "method_chars": 1428,
+          "method_paragraphs": 5,
+          "evaluation_chars": 493,
+          "limitation_chars": 284,
+          "insufficiency_flags": [
+            "評価説明量 493 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 493 < 500"
+        ],
+        "processed_at": "2026-11-20T06:42:42+00:00"
+      },
+      "return_count": 1
+    },
+    "arXiv:2410.13060": {
+      "order": [
+        "2026-11-20T06:44:03+00:00",
+        "2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2410.18701": {
+      "order": [
+        "2026-11-20T06:44:07+00:00",
+        "2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.json"
+      ],
+      "status": "blocked_quality",
+      "result": {
+        "schema_version": 1,
+        "artifact_type": "research",
+        "status": "blocked_quality",
+        "source_sha256": "9ed7004259f9c01b18cb65bb04b7304fd7c5050028e9d6e8a29b64604a6b89f1",
+        "normalized_source_sha256": null,
+        "japanese_normalized": false,
+        "blocked_path": ".survey/import-inbox/blocked/research/2024-2410.18701-baton-enhancing-batch-wise-inference-efficiency-for-large-language-models-via-dynamic-re-batching.md",
+        "canonical_id": "arXiv:2410.18701",
+        "worker_completed_at": "2026-11-20T15:20:00+09:00",
+        "worker_run_key": "2026-11-20-muse-c2b4",
+        "quality_metrics": {
+          "quality_gate_version": "2026-10-07-v1",
+          "body_chars": 3385,
+          "body_paragraphs": 20,
+          "method_chars": 1250,
+          "method_paragraphs": 4,
+          "evaluation_chars": 462,
+          "limitation_chars": 231,
+          "insufficiency_flags": [
+            "評価説明量 462 < 500"
+          ]
+        },
+        "failures": [
+          "説明不足トリガー: 評価説明量 462 < 500"
+        ],
+        "processed_at": "2026-11-20T06:44:07+00:00"
+      },
+      "return_count": 1
     }
   },
   "imported_paper_paths": {
@@ -53367,6 +53461,12 @@
     "arxiv:2510.26446": [
       "papers/inference/16-weight-quantization-compression/2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-lan.md",
       "papers/inference/16-weight-quantization-compression/2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-lan.md"
+    ],
+    "arxiv:2306.16601": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based.md"
+    ],
+    "arxiv:2410.13060": [
+      "papers/inference/99-other-inference-systems/2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md"
     ]
   }
 }
