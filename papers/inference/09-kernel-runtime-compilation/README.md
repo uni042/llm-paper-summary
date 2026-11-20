@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（266本）
+## 自動生成の論文一覧（267本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -401,6 +401,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring](2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md)**  
   実装：[✓](https://github.com/ashutoshuiuc/tilemaxsim) ・ リポジトリ内被引用：0  
   融合した最大類似度スコア計算が帯域律速から計算律速へ切り替わる境界を閉形式と実測で示し、転送量を15.9倍減らす積量子化の融合が従属的な表引き65億回のために3.0倍遅くなることを明らかにした分析研究。
+
+- **2026-06 · [Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing](2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-local.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意カーネルの固有空間で似たトークンをハッシュによりまとめ、プロンプトをモデル投入前に圧縮する訓練不要の方式。高圧縮で連続平均より品質を保つが、遅延では常に見劣りするため、圧縮率で経路を切り替える適応型が実用形になる。
 
 - **2026-06 · [Qift: Shift-Friendly No-Zero W2 Post-Training Quantization for Rotated W2A4/KV4 LLM Inference](2026-2606.02823-qift-shift-friendly-no-zero-w2-post-training-quantization-for-rotated-w2.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1017,7 +1021,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：589  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：590  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -1059,7 +1063,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：817  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：818  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

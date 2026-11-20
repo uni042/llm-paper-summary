@@ -35,10 +35,15 @@
   "selection_reason": "Krylov射影局所性鋭敏ハッシュによる準二次プロンプト圧縮Spectral-LSH。プリフィルの注意が二次に伸びる問題に対し、プロンプトが言語モデルに入る前に、注意カーネル演算子の主要成分を近似してトークンをマクロトークンへ集約する、訓練不要の圧縮。推論高速化機構そのもの。",
   "semantic_scholar_id": "77f02a68cd3a806a778fa81d35da3ea90c87e99a",
   "source_url": "https://arxiv.org/abs/2607.19368",
-  "status": "ready",
+  "status": "superseded",
   "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:39:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-local.md",
+  "represented_canonical_id": "arXiv:2607.19368",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

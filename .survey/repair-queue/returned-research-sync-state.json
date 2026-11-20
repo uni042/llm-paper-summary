@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c553bfc17664756c3c7cf9af67f5daadf119f2a2",
+  "base_commit": "5b6ce494fdfd695d065dc8abfb47f20515422767",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -409,9 +409,11 @@
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
     "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
+    "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
+    "2026-2607.22587-trisp-tri-signal-structured-pruning-for-large-language-models.json",
     "2026-2607.22720-causalgate-causal-importance-distillation-for-transformer-module-pruning.json",
     "2026-2607.23264-x-stage-modeling-post-issue-backpressure-in-gpu-communication-computation-fusion.json",
     "2026-2607.23265-wavezip-wavelet-driven-space-time-decoupling-for-video-token-condensation.json",
@@ -443,7 +445,10 @@
     "2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-single-stream-webgpu-llm-inference.json",
     "2026-2608.11235-cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffusion-language-model-inference.json",
     "2026-2608.13057-tempo-makespan-aware-expert-parallel-load-balancing-across-memory-and-compute-bound-regimes.json",
+    "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json",
     "2026-2608.17336-tilemix-tile-centric-mixed-precision-attention-for-llm-inference-acceleration.json",
+    "2026-2608.20359-self-speculation-for-faster-reasoning-models.json",
+    "2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-routing-for-agentic-llms-on-unified-memory.json",
     "2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context-transformers.json",
     "2026-2608.21142-coec-calibrated-orthogonal-equivalence-compensation-for-structured-pruning-of-large-language-models.json",
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
@@ -43945,6 +43950,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.19368": {
+      "order": [
+        "2026-11-20T09:31:40+00:00",
+        "2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-locality-sensitive-hashing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.22587": {
+      "order": [
+        "2026-11-20T09:33:07+00:00",
+        "2026-2607.22587-trisp-tri-signal-structured-pruning-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.14614": {
+      "order": [
+        "2026-11-20T09:34:33+00:00",
+        "2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.20359": {
+      "order": [
+        "2026-11-20T09:36:00+00:00",
+        "2026-2608.20359-self-speculation-for-faster-reasoning-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.20397": {
+      "order": [
+        "2026-11-20T09:37:27+00:00",
+        "2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-routing-for-agentic-llms-on-unified-memory.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54664,6 +54714,21 @@
     "arxiv:2607.19358": [
       "papers/inference/13-sparse-attention/2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-chain-of-thought.md",
       "papers/inference/13-sparse-attention/2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-chain-of-thought.md"
+    ],
+    "arxiv:2607.19368": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2607.19368-spectral-lsh-sub-quadratic-prompt-compression-via-krylov-projected-local.md"
+    ],
+    "arxiv:2607.22587": [
+      "papers/inference/99-other-inference-systems/2026-2607.22587-trisp-tri-signal-structured-pruning-for-large-language-models.md"
+    ],
+    "arxiv:2608.14614": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.md"
+    ],
+    "arxiv:2608.20359": [
+      "papers/inference/05-speculative-decoding-moe/2026-2608.20359-self-speculation-for-faster-reasoning-models.md"
+    ],
+    "arxiv:2608.20397": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.20397-nexus-depth-adaptive-kv-cache-splicing-and-retrieval-decoupled-tool-rout.md"
     ]
   }
 }

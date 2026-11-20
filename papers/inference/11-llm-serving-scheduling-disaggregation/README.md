@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（568本）
+## 自動生成の論文一覧（569本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -496,6 +496,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   現在のGPU負荷だけでなく、配置後に残るモデル常駐・親出力局所性・接頭辞再利用を有限先読みで評価し、ワークフローDAGの次段階に有利な状態を残すスケジューラ。
 
+- **2026-05 · [Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes](2026-2606.01387-fail-closed-lowering-of-resident-kv-claims-onto-llm-serving-runtimes.md)**  
+  実装：[✓](https://github.com/gustavgauge/resident-kv-lowering-artifact) ・ リポジトリ内被引用：1  
+  大規模言語モデルの推論基盤には、鍵・値キャッシュ（KVキャッシュ）の保持優先度、期限、CPU・ストレージへの退避、ブロックの保存・削除イベント、退避禁止、キャッシュ状態を考慮した経路選択などがある。
+
 - **2026-05 · [Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs](2026-2605.18165-elastic-dllm-position-preserving-context-compression-and-augmentation-of.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Elastic-dLLMは、この計算を削減する一方で、各[MASK]の位置情報と終端位置が持つ意味を維持する、追加学習不要の推論時方式である。LLaDA-1.5でElastic単独1.52倍、Fast-dLLMとの併用7.28倍という速度倍率を報告する。
@@ -958,6 +962,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Hybrid SWAの理論的KV削減を本番へ落とすため、Full/SWA二重KVプール、層単位先読み、分散GCache、KV親和ルーティング、プリフィル・デコード・マルチモーダル処理を一体最適化する。
 
+- **2026-07 · [DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs](2026-2608.14614-dumpstercluster-from-dumpster-diving-to-serving-llama-70b-on-60-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  中古V100を128台集めた実クラスタを1年運用し、デバイス単位のパイプライン並列で70B提供まで可能にした実証研究。費用優位は大きいが、炭素は電力条件次第で新世代機の40倍超にもなる。
+
 - **2026-07 · [DeltaServe: Host-Agnostic Co-Serving of Inference and Fine-Tuning for LLMs](2026-2607.28848-deltaserve-inference-finetuning-coserving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LoRA微調整の順伝播を既存推論バッチへSLO予算内で混ぜ、逆伝播を層境界でプリエンプト可能な別プロセスへ分離することで、推論GPUの空き計算資源を微調整へ転用する外付け共存実行方式。
@@ -1109,10 +1117,6 @@
 - **2026-05 · [Fine-Tuning and Serving Gemma 4 31B on Google Cloud TPU: A Technical Comparison with GPU Baselines](2026-2605.25645-fine-tuning-and-serving-gemma-4-31b-on-google-cloud-tpu-a-technical-comp.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Gemma 4 31BをTPU v5p-8上で低ランク適応（LoRA）によって教師あり微調整し、TPU v6e-8上のvLLMで推論提供するための具体的な移植手順と、2基のNVIDIA H100 GPUとの実測比較をまとめる。学習ではTPU v5p-8が3.34時間、2×H100が5.39時間で、時間比は1.61倍。
-
-- **2026-05 · [Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes](2026-2606.01387-fail-closed-lowering-of-resident-kv-claims-onto-llm-serving-runtimes.md)**  
-  実装：[✓](https://github.com/gustavgauge/resident-kv-lowering-artifact) ・ リポジトリ内被引用：0  
-  大規模言語モデルの推論基盤には、鍵・値キャッシュ（KVキャッシュ）の保持優先度、期限、CPU・ストレージへの退避、ブロックの保存・削除イベント、退避禁止、キャッシュ状態を考慮した経路選択などがある。
 
 - **2026-05 · [Enabling Performant and Flexible Model-Internal Observability for LLM Inference](2026-2605.11093-enabling-performant-and-flexible-model-internal-observability-for-llm-in.md)**  
   実装：[✓](https://github.com/ProjectDMX/DMI) ・ リポジトリ内被引用：0  
@@ -2245,7 +2249,7 @@
   HexGenは、性能もメモリ容量も異なるGPUが複数のデータセンターに分散し、拠点間ネットワークの帯域と遅延も不均一な環境で、大規模言語モデル（LLM）の生成推論を提供する分散実行システムである。
 
 - **2023-09 · [LLMCarbon: Modeling the End-To-End Carbon Footprint of Large Language Models](2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md)**  
-  実装：[✓](https://github.com/SotaroKaneda/MLCarbon) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/SotaroKaneda/MLCarbon) ・ リポジトリ内被引用：18  
   LLMCarbonは、大規模言語モデル（LLM）を設計・運用する前に、モデル構造とハードウェア、データセンター条件から二酸化炭素換算排出量（CO2eq）を推定するシステムである。T5、GPT-3、GShard、Switch、XLMの5モデルで既報の学習運用排出量と比較すると、LLMCarbonの推定誤差は-3.54%～+8.2%の範囲だった。
 
 - **2023-05 · [Large Language Models as Tool Makers](2023-2305.17126-large-language-models-as-tool-makers.md)**  
