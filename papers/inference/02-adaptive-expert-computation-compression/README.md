@@ -66,6 +66,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
 
+- **2026-08 · [ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration](2026-2608.24938-exfold-training-free-expert-folding.md)**  
+  実装：[✓](https://github.com/Time-Rune/ExFold-MoE) ・ リポジトリ内被引用：3  
+  除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のエキスパート Folding。
+
 - **2026-06 · [Sticky Routing: Training MoE Models for Memory-Efficient Inference](2026-2607.08780-sticky-routing-memory-efficient-inference.md)**  
   実装：[✓](https://github.com/alikayyam/sticky_moe) ・ リポジトリ内被引用：3  
   混合専門家モデルの隣接トークンで専門家が頻繁に切り替わる問題を、学習時の経路一貫性損失で直接抑え、最大59%の切替削減と最大3.92倍のキャッシュミス削減を示した研究である。
@@ -85,10 +89,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   共活性クラスタごとに完全精度代表を残し他専門家を整列済み低ランク補正化、ルータを維持したまま約50%圧縮するLorExpertsと計算共有用BTExperts。
-
-- **2026-08 · [ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration](2026-2608.24938-exfold-training-free-expert-folding.md)**  
-  実装：[✓](https://github.com/Time-Rune/ExFold-MoE) ・ リポジトリ内被引用：2  
-  除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のエキスパート Folding。
 
 - **2026-07 · [It Takes a MAESTRO To Prune Bad Experts](2026-2607.08601-maestro-expert-pruning.md)**  
   実装：[✓](https://github.com/parmanu-lcs2) ・ リポジトリ内被引用：2  
@@ -122,6 +122,18 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
 
+- **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
+
+- **2026-09 · [BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding](2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  逐次生成の律速が高帯域メモリから演算器近傍への重み転送にある場合、トークン単位の疎性はそのまま高速化へ結び付かない。Qwen3-30B-A3Bでは、厳しい専門家予算M=10のBASEが8課題平均76.38点・1463.5トークン/秒であり、速度が近い最良の既存方式Lynxの46.87点・1304.9トークン/秒を大きく上回る。
+
+- **2026-09 · [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ACEはルータ重みと専門家変換能力の事前統計を組み合わせ、Top-k内でも寄与の小さいスロットだけをトークン単位で省く。元重みとTop-1を保ち、追加学習なしでFFN計算を減らす。
+
 - **2026-07 · [TENP: Trapezoidal Expert Neuron Pruning For Mixture-of-Experts](2026-2606.09885-tenp-trapezoidal-expert-neuron-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   重要専門家と元ルーティングを残しつつ、浅層ほど強く専門家内部ニューロンを構造剪定する台形型MoE圧縮。
@@ -137,6 +149,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [Beyond Uniform Experts: Cost-Aware Expert Execution for Efficient Multi-Device MoE Inference](2026-2606.29982-beyond-uniform-experts-cost-aware-expert-execution-for-efficient-multi-device-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本研究は、混合専門家（Mixture of エキスパート、MoE）言語モデルの推論で、ルータが選んだ専門家をすべて実行することが、ハードウェアの費用対効果という観点では最適とは限らない問題を扱う。一方、ルータが割り当てた重みが小さい専門家であっても、転送するパラメータ量は他の専門家とほぼ変わらない。
+
+- **2026-05 · [Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution](2026-2605.08575-intra-expert-activation-sparsity.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  既存MoEのエキスパート内活性値 sparsityをvLLMへ統合し、再学習なしでMoE 層最大2.5倍・エンドツーエンド最大1.2倍を実現する。
 
 - **2026-05 · [HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts](2026-2605.13997-hodgecover-topological-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -184,10 +200,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：0  
   専門家をさらに間引けば推論時の行列積と重み転送を減らせるが、選択数を全トークンで同じように減らすだけで十分なのか、それともトークンや層ごとに専門家数を変える複雑な方式が必要なのか、共通条件での比較が不足していた。9モデルと3課題群を平均すると、元の選択数$K$の約3分の2を残すだけで元性能の98.8%を維持した。
 
-- **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
-
 - **2026-09 · [Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs](2026-2609.00575-parser-residual-sparsification-output-importance.md)**  
   実装：[✓](https://github.com/OSSS-KU/PARSER) ・ リポジトリ内被引用：0  
   MoE残差疎化の選択基準を行列誤差から専門家出力への影響へ変更し、層内全専門家で低影響な隠れ次元を選んで削ることで、同等メモリ削減時の精度低下を抑える。
@@ -227,14 +239,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-09 · [Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment](2026-2609.06076-post-compression-adjustment-cost-normalized.md)**  
   実装：[✓](https://github.com/AIDASLab/Post-Compression-Adjustment) ・ リポジトリ内被引用：0  
   圧縮済みMoEを小規模調整の初期値と再定義し、3000例・1エポックの全パラメータ微調整で平均37.3%の性能差を回復するコスト正規化研究。
-
-- **2026-09 · [BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding](2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  逐次生成の律速が高帯域メモリから演算器近傍への重み転送にある場合、トークン単位の疎性はそのまま高速化へ結び付かない。Qwen3-30B-A3Bでは、厳しい専門家予算M=10のBASEが8課題平均76.38点・1463.5トークン/秒であり、速度が近い最良の既存方式Lynxの46.87点・1304.9トークン/秒を大きく上回る。
-
-- **2026-09 · [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ACEはルータ重みと専門家変換能力の事前統計を組み合わせ、Top-k内でも寄与の小さいスロットだけをトークン単位で省く。元重みとTop-1を保ち、追加学習なしでFFN計算を減らす。
 
 - **2026-08 · [UniMoMo: Expert Merging-Based MoE Acceleration for Large Recommendation Models](2026-2608.08627-unimomo-expert-merging.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -279,10 +283,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking](2026-2608.13565-depth-aware-moe-sensitivity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Qwen3.6-35B-A3Bを実測し、MoE専門家削減は全層一律ではなく後段、とくに35-39層へ集中させる方が品質を保てることを500件の保持検証まで示す。
-
-- **2026-05 · [Uncovering Intra-expert Activation Sparsity for Efficient Mixture-of-Expert Model Execution](2026-2605.08575-intra-expert-activation-sparsity.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  既存MoEのエキスパート内活性値 sparsityをvLLMへ統合し、再学習なしでMoE 層最大2.5倍・エンドツーエンド最大1.2倍を実現する。
 
 - **2026-05 · [DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices](2026-2605.10933-deco-end-side-sparse-moe.md)**  
   実装：[✓](https://github.com/thunlp/DECO) ・ リポジトリ内被引用：0  
@@ -346,6 +346,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/inclusionAI/MoBE) ・ リポジトリ内被引用：8  
   エキスパート固有の小行列と層共有basis行列の組合せでup/gate重みを再構成し、巨大MoEをdata-freeに24〜30%圧縮しながら性能低下を1〜2%程度へ抑える。
 
+- **2025-09 · [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  重みを削除する枝刈りとは異なり、元の専門家集合は保持する。OLMoE-1B-7Bでは、専門家内部の50%枝刈りと同等の処理率に対し平均正答率が10%高い。
+
 - **2025-05 · [Faster MoE LLM Inference for Extremely Large Models](2025-2505.03531-faster-moe-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   細粒度MoEで活性専門家数と総専門家数を別々に削減して実測し、活性専門家スキップは負荷依存で高速化できる一方、総専門家枝刈りは品質損失が大きいという実用境界を示す。
@@ -353,10 +357,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-11 · [BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference](2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   しかしルータが選び得る専門家の重みをすべてGPUに保持できなければ、選択された専門家をCPUメモリからPCIe経由で転送しなければならない。先読み（プリフェッチ）が当たれば転送を隠せるが、外れたときの同期読み込みは生成を止める。
-
-- **2025-09 · [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  重みを削除する枝刈りとは異なり、元の専門家集合は保持する。OLMoE-1B-7Bでは、専門家内部の50%枝刈りと同等の処理率に対し平均正答率が10%高い。
 
 - **2025-09 · [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](2025-2509.21892-elastic-moe-inference-time-scalability.md)**  
   実装：✓ ・ リポジトリ内被引用：5  

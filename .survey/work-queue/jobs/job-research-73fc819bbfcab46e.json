@@ -35,10 +35,15 @@
   "selection_reason": "較正不要のMoEデコード向けチャネル選択。対話的デコードで専門家の重み読み込みが律速になる問題に対し、閾値を較正しても読む量が入力で変動する欠陥を示し、較正データなしでチャネルを選ぶ。推論高速化機構そのもの。",
   "semantic_scholar_id": "54cd4d59a8cec79a5946b6ef3d28757c8de30ec1",
   "source_url": "https://arxiv.org/abs/2610.37386",
-  "status": "ready",
+  "status": "superseded",
   "title": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:18:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-d.md",
+  "represented_canonical_id": "arXiv:2610.37386",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

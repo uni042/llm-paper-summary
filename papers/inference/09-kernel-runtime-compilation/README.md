@@ -120,6 +120,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：2  
   原著は平均4トークンを1概念へ圧縮するR=4の条件を中心に、通常の1.3B Transformerと、概念段に容量を再配分した2.3B DLCMを比較した。両者の推論浮動小数点演算量（FLOPs）を近づけた条件で、12種類のゼロショット課題の平均正解率は41.23%から43.92%へ2.69ポイント改善した。
 
+- **2026-10 · [SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference](2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md)**  
+  実装：[✓](https://wang-qitong.github.io/SparseDecoding) ・ リポジトリ内被引用：1  
+  枝刈りの較正を固定文からモデル自身の生成トークン（生成段階のみ）へ替えることで長文生成の品質劣化を抑え、ビットマスク走査の生成向け疎カーネルで最大1.48倍の復号高速化を得た。
+
 - **2026-09 · [Unfolding the Leech Lattice: Fused Multi-Shell Decoding and VRAM Layouts for 2-Bit LLM Weights](2026-2609.02652-unfolding-the-leech-lattice-fused-multi-shell-decoding-and-vram-layouts-.md)**  
   実装：[✓](https://github.com/pjmalandrino/llvq) ・ リポジトリ内被引用：1  
   本論文は、Leech格子ベクトル量子化（Leech-lattice vector 量子化; LLVQ）を「2 bit/重みで保存できる」という圧縮アルゴリズムの段階から、実際のGPUデコードへ載せる段階まで実装し、そのとき生じる保存bit数と実行時VRAM bit数の乖離を測るシステム研究である。
@@ -209,10 +213,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md)**  
   実装：[✓](https://github.com/intel/SyclKittens) ・ リポジトリ内被引用：0  
   インテルGPUで速くなる書き方そのものを操作として内蔵したタイル型プログラミングモデルを提示し、生の言語よりコーディングエージェントが速いカーネルへ早く届くことと、推論の高速化を実測で示した研究。
-
-- **2026-10 · [SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference](2026-2610.12327-sparsedecoding-decoding-aware-pruning-for-accurate-and-efficient-llm-inf.md)**  
-  実装：[✓](https://wang-qitong.github.io/SparseDecoding) ・ リポジトリ内被引用：0  
-  枝刈りの較正を固定文からモデル自身の生成トークン（生成段階のみ）へ替えることで長文生成の品質劣化を抑え、ビットマスク走査の生成向け疎カーネルで最大1.48倍の復号高速化を得た。
 
 - **2026-10 · [Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off](2026-2610.19405-scaling-llm-inference-via-parallelism-throughput-latency-trade-off.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

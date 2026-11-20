@@ -35,10 +35,15 @@
   "selection_reason": "Attention/SSM混合モデルの層構成を全要求で固定する代わりに、prefillで要求ごとのゲートを決め、decode中は選択構成を固定するMorphを提案する。要求間で層選択が異なってもselective batchingで効率を維持し、hybrid-aware context cacheで正しいprefix reuseを可能にする。著者要旨は6データセットで品質/効率のtradeoff改善と、静的hybrid baseline比最大3.87倍のサービングthroughputを報告。条件付き計算とruntimeの協調設計としてaccept。",
   "semantic_scholar_id": "0ee615c279ff9dee0bac5fccd8e7207b65e866ae",
   "source_url": "https://arxiv.org/abs/2610.37432",
-  "status": "ready",
+  "status": "superseded",
   "title": "Request-Adaptive Execution for Efficient Hybrid LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:18:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37432-request-adaptive-execution-for-efficient-hybrid-llm-inference.md",
+  "represented_canonical_id": "arXiv:2610.37432",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

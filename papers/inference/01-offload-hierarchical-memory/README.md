@@ -112,6 +112,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   総パラメータが数百B以上になると、単一NPUのメモリに全専門家を置けず、ホストメモリから必要な重みを転送する。MoE-COREは、プリフィルとデコードで必要な専門家の集合と遅延許容度が異なる点に着目し、異なる常駐・転送方式を一つのランタイムで管理する。
 
+- **2026-10 · [Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights](2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  退避した重みの読み方を元形式・圧縮近似・省略の三段階に分け、活性値の大きさで割り当てることで、間引きの品質急落を避けながら生成を最大5.57倍高速化した手法。
+
 - **2026-09 · [SeqMoE: Toward Full-Load Performance via Predictive and Graph-Compatible MoE Offloading](2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   専門家活性化の系列予測、期限付きプリフェッチ、将来予測キャッシュ、CUDA Graph互換実行を統合し、MoEオフロードの転送待ちと実行時オーバーヘッドを同時に削減する。
@@ -161,10 +165,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-10 · [Capacity over TFLOPS: Memory-Centric Deployment of Large Clinical Language Models on Consumer CPUs](2026-2610.17551-capacity-over-tflops-memory-centric-deployment-of-large-clinical-languag.md)**  
   実装：[✓](https://github.com/balkeumlabs/LLM-on-CPU) ・ リポジトリ内被引用：0  
   消費者向け機械の画像処理装置では容量不足で載らない270億パラメータ級の臨床向けモデルを、システムメモリへ4ビット量子化で常駐させることで中央処理装置だけで動かせることを、機械2台の実測で示し、その速度と電力と連合通信量の代償を正直に測った研究。
-
-- **2026-10 · [Activation Sparsity with Weight Approximation for Faster LLM Decoding on Offloaded Weights](2026-2610.02598-activation-sparsity-with-weight-approximation-for-faster-llm-decoding-on.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  退避した重みの読み方を元形式・圧縮近似・省略の三段階に分け、活性値の大きさで割り当てることで、間引きの品質急落を避けながら生成を最大5.57倍高速化した手法。
 
 - **2026-09 · [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -503,7 +503,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで選ばれる専門家が少ないため計算量は疎だが、モデル全体の専門家重みをGPUメモリに収めるのは難しい。Fiddlerは、この二つの実行経路の長所を入力トークン数に応じて使い分ける推論システムである。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
-  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：87  
+  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：88  
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  

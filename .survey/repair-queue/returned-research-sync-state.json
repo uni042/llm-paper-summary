@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0efa4565611db15c6461b97b7dc091a39d44f7ec",
+  "base_commit": "f5afea265a5771cceb974a29fb59d07344687072",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -783,6 +783,11 @@
     "2026-2610.37033-p-dcim-a-28nm-probabilistic-sram-dcim-based-ising-machine-for-near-memory-context-selection-in-llm-rag-pipeline.json",
     "2026-2610.37230-tao-tool-aware-joint-scheduling-for-llm-based-agentic-serving.json",
     "2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-platforms.json",
+    "2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-data.json",
+    "2026-2610.37432-request-adaptive-execution-for-efficient-hybrid-llm-inference.json",
+    "2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on-edge-servers.json",
+    "2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.json",
+    "2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45395,6 +45400,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.37386": {
+      "order": [
+        "2026-11-20T14:12:45+00:00",
+        "2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-data.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37432": {
+      "order": [
+        "2026-11-20T14:13:43+00:00",
+        "2026-2610.37432-request-adaptive-execution-for-efficient-hybrid-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37442": {
+      "order": [
+        "2026-11-20T14:14:42+00:00",
+        "2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on-edge-servers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37645": {
+      "order": [
+        "2026-11-20T14:15:40+00:00",
+        "2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.37732": {
+      "order": [
+        "2026-11-20T14:16:39+00:00",
+        "2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56694,6 +56744,21 @@
     "arxiv:2610.37307": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-p.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37307-edgepace-deadline-and-freshness-aware-llm-scheduling-on-unified-memory-p.md"
+    ],
+    "arxiv:2610.37386": [
+      "papers/inference/99-other-inference-systems/2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-d.md"
+    ],
+    "arxiv:2610.37432": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37432-request-adaptive-execution-for-efficient-hybrid-llm-inference.md"
+    ],
+    "arxiv:2610.37442": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on.md"
+    ],
+    "arxiv:2610.37645": [
+      "papers/inference/99-other-inference-systems/2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.md"
+    ],
+    "arxiv:2610.37732": [
+      "papers/inference/99-other-inference-systems/2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.md"
     ]
   }
 }

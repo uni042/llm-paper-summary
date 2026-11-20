@@ -188,6 +188,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   過去のクエリと選択済み索引の組をヘッドごとに保持し、似た過去の選択の和集合を候補にして現クエリの正確なスコアで並べ直すことで、全履歴走査なしに上位K注意を再現し、128K文脈で困惑度増加0.50%のまま注意を3.07倍高速化した。
 
+- **2026-07 · [Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs](2026-2607.27591-prox-training-free-ffn-activation-sparsity-via-approximate-intermediate-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  中間状態の大きさ順位を入力疎性と量子化近似で安く再現してチャネルマスクだけを作り、残したチャネルは元の重みで正確に計算する2段階の学習なし疎化により、疎性70%でも精度を保って逐次生成を最大1.99倍高速化した。
+
 - **2026-07 · [CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention](2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md)**  
   実装：[✓](https://github.com/Tencent/AngelSlim) ・ リポジトリ内被引用：1  
   長文脈のプレフィルで密な自己注意を実行すると、クエリとキーの全組合せを計算する負荷が入力長の二乗で増える。逆にカーネル内で実際の注意logitを見て省略する方式は、判定前のQK内積を減らせず、訪問順が悪いと省略が保守的になる。NVIDIA H20の128K文脈では密注意比で注意演算4.93倍、最初のトークンまでの時間（TTFT）2.53倍を報告した。
@@ -413,10 +417,6 @@
 - **2026-07 · [RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention](2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md)**  
   実装：[✓](https://github.com/santosardr/riskernel) ・ リポジトリ内被引用：0  
   RIS-Kernelは、長文脈の自己注意（self-注意機構）が全トークン対を評価することで計算量・メモリ量が急増する問題に対し、推論時だけ注意相互作用を疎化するReduced Interaction Sampling（RIS）を実装した推論層である。
-
-- **2026-07 · [Prox: Training-Free FFN Activation Sparsity via Approximate Intermediate-Channel Salience in LLMs](2026-2607.27591-prox-training-free-ffn-activation-sparsity-via-approximate-intermediate-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  中間状態の大きさ順位を入力疎性と量子化近似で安く再現してチャネルマスクだけを作り、残したチャネルは元の重みで正確に計算する2段階の学習なし疎化により、疎性70%でも精度を保って逐次生成を最大1.99倍高速化した。
 
 - **2026-07 · [From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion](2026-a55ddcf36e91-from-logical-to-computational-sparsity-structure-aware-block-sparse-atte.md)**  
   実装：[✓](https://github.com/DeepSoftwareAnalytics/SabreCoder) ・ リポジトリ内被引用：0  

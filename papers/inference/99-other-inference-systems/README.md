@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1123本）
+## 自動生成の論文一覧（1126本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -348,6 +348,10 @@
   実装：[✓](https://github.com/Shavit-Lab/Whisper) ・ リポジトリ内被引用：1  
   枝刈りで守るべきものを活性値の大きさから入力対の出力差へ広げ、層単位・ニューロン単位・二階再構成の三方式で、高いスパース率ほどスパースジーピーティーやワンダに対する改善が広がることを示す。
 
+- **2026-10 · [TopK-Guided: Adaptive, Budget-Aware Activation Sparsity for Efficient LLM Inference](2026-2610.01763-topk-guided-adaptive-budget-aware-activation-sparsity-for-efficient-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  両手法はさらにTransformer層間へ一様な疎性予算を与え、疎化への耐性が異なる層を区別しない。論文のC4評価では、Llama-2-7BとLlama-3-8Bの目標疎性30%、50%、70%で、TopK-GuidedはTEALおよびWINAと比べperplexityと8課題平均正解率の両方で全条件最高だった。
+
 - **2026-09 · [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)**  
   実装：[✓](https://github.com/ifm-ai/uno) ・ リポジトリ内被引用：1  
   元の自己回帰モデル分布を保ったまま追加した離散拡散重みで複数トークンを並列提案し、専用サンプラで正しく補正して、逐次デコードの重み読出し回数を減らす。
@@ -419,6 +423,10 @@
 - **2026-06 · [Multi-Token Residual Prediction](2026-2605.18817-multi-token-residual-prediction.md)**  
   実装：[✓](https://github.com/heavyball-research/multi-token-residual-prediction) ・ リポジトリ内被引用：1  
   拡散言語モデルは、マスクされたトークン列を何度も予測し直して文章を生成する。品質を維持する静的ノイズ除去では、MRPが複数トークンを先行提案し、大型モデルが検証することで1.17〜1.40倍のスループット改善を得る。
+
+- **2026-06 · [Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery](2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted.md)**  
+  実装：[✓](https://github.com/brain-lab-research/quantized-reasoning) ・ リポジトリ内被引用：1  
+  2ビット推論の失敗を推論過程の崩れとして診断し、半精度の計画と繰り返し救済を崩れた領域だけへ入れることで、MATH-500の正解率を8Bで17.2から74.2パーセントへ、32Bで65.0から87.2パーセントへ回復させた。
 
 - **2026-06 · [End-to-End Context Compression at Scale](2026-2606.09659-end-to-end-context-compression-at-scale.md)**  
   実装：[✓](https://github.com/LeonLixyz/LCLM) ・ リポジトリ内被引用：1  
@@ -854,10 +862,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   凍結LLMの内部表現と学習した検索トークンだけで証拠チャンクを選び、外部検索モデルなしにコーパス検索と長文脈推論を一つの選択機構で統一する方式。
 
-- **2026-10 · [TopK-Guided: Adaptive, Budget-Aware Activation Sparsity for Efficient LLM Inference](2026-2610.01763-topk-guided-adaptive-budget-aware-activation-sparsity-for-efficient-llm-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  両手法はさらにTransformer層間へ一様な疎性予算を与え、疎化への耐性が異なる層を区別しない。論文のC4評価では、Llama-2-7BとLlama-3-8Bの目標疎性30%、50%、70%で、TopK-GuidedはTEALおよびWINAと比べperplexityと8課題平均正解率の両方で全条件最高だった。
-
 - **2026-10 · [TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning](2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md)**  
   実装：[✓](https://github.com/tokengate-models/TokenGate) ・ リポジトリ内被引用：0  
   中間層に学習可能な採点ゲートを差し込み、重要トークンだけを上層へ通す枝刈りを端から端まで学習することで、精度を保ったまま入力処理を最大11.3倍高速化しピークメモリを最大3.4倍下げた。
@@ -865,6 +869,10 @@
 - **2026-10 · [TIPS: A Tiny Inference-time Policy for Scaling in Diffusion Language Models](2026-2610.22099-tips-a-tiny-inference-time-policy-for-scaling-in-diffusion-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデルのデコードで、どのトークンを見せ、どのトークンを再び隠すかを、デコーダ凍結のまま約60万パラメータの方策が学習して決める方式を提案し、呼出し32回で最強の比較対象を12ポイント上回る正解率を示した研究。
+
+- **2026-10 · [ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions](2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.md)**  
+  実装：[✓](https://github.com/ding-xiaolu/ThinkJev) ・ リポジトリ内被引用：0  
+  一つのハイブリッド思考モデルの回答スロットを、空の思考と実思考の後で同じキャッシュ済みプロンプトから読み、直接回答には誤り率の統計保証を付け、残りは確信度が立つ時点で思考を止める、学習なしの二系統カスケード。
 
 - **2026-10 · [The Devil Is in the Reconstruction Loss Scale: Rethinking Optimization in LLM Quantization](2026-2610.00983-the-devil-is-in-the-reconstruction-loss-scale-rethinking-optimization-in.md)**  
   実装：[✓](https://github.com/IntelChina-AI/RMSE) ・ リポジトリ内被引用：0  
@@ -921,6 +929,10 @@
 - **2026-10 · [MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration](2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-.md)**  
   実装：[✓](https://github.com/KULeuven-MICAS/MX-Like-for-LLM-Inference) ・ リポジトリ内被引用：0  
   ブロック量子化のスケール形式と重み活性値の非対称精度からなる設計空間を、形式特化のデータパスとエヌピー統合で精度とシリコン両面から探索し、エフピー4域ではユーイー5エム3スケールが劣化を25.3パーセント減らしほぼ無償で得られること、高精度域ではスケールは無関係なことを示した研究。
+
+- **2026-10 · [Multi-State Linear Attention with Generalized Second-Order Routing](2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多状態線形注意の集約重みを、セグメント内キーの一次・二次モーメントから復元した整列の平均と分散のゲート付き混合で決め、鋭く整列したキーを含むセグメントを取りこぼさないようにする集約機構。
 
 - **2026-10 · [MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding](2026-2610.04313-moira-mass-oriented-indexing-with-ragged-attention-for-long-context-deco.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -989,6 +1001,10 @@
 - **2026-10 · [Content-Aware Adaptive Token Pruning for Video-Language Models](2026-2608.03112-content-aware-adaptive-token-pruning-for-video-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークンの相関の固有値の減衰率から動画ごとの冗長度を測って保持率を動画ごとに決める学習不要の枝刈りで、平均保持率10パーセントでも固定保持率より動画説明の正解率を7.48ポイント高く保ち、言語モデルの演算量を約95.5パーセント減らす。
+
+- **2026-10 · [Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data](2026-2610.37386-channel-selection-for-mixture-of-experts-decoding-needs-no-calibration-d.md)**  
+  実装：[✓](https://github.com/AidenGeunGeun/calibration-free-moe) ・ リポジトリ内被引用：0  
+  MoEデコードのチャネル選択では較正しきい値は読み出し量も精度も保証しないことを示し、上位k件への置き換えと、重みだけから作る三値スケッチと低ランク回復を持つ読み手で、読み出し17.8パーセントでも精度の98.1パーセントを保つ。
 
 - **2026-10 · [Breaking the Space Barrier and its Application to Language Model Inference](2026-2610.09139-breaking-the-space-barrier-and-its-application-to-language-model-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1573,10 +1589,6 @@
 - **2026-06 · [Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs](2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-.md)**  
   実装：[✓](https://github.com/Junzhou-Chen/ST_Merge) ・ リポジトリ内被引用：0  
   視覚符号化器の浅い層で、時刻と位置を意識した多キュー照合により冗長な視覚トークンを統合し、重心で位置符号を直すことで、ロボット向け視覚言語モデルの推論を動画で約2倍、行動方策の高解像度入力で8.3倍速くした。
-
-- **2026-06 · [Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery](2026-2606.02011-extreme-low-bit-inference-in-reasoning-models-failure-modes-and-targeted.md)**  
-  実装：[✓](https://github.com/brain-lab-research/quantized-reasoning) ・ リポジトリ内被引用：0  
-  2ビット推論の失敗を推論過程の崩れとして診断し、半精度の計画と繰り返し救済を崩れた領域だけへ入れることで、MATH-500の正解率を8Bで17.2から74.2パーセントへ、32Bで65.0から87.2パーセントへ回復させた。
 
 - **2026-06 · [Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md)**  
   実装：[✓](https://github.com/flashrt-project/FlashRT) ・ リポジトリ内被引用：0  
@@ -3691,7 +3703,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：97  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：98  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -4157,7 +4169,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：305  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：306  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -4173,7 +4185,7 @@
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：88  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：89  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
@@ -4517,7 +4529,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：347  
+  実装：✓ ・ リポジトリ内被引用：348  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

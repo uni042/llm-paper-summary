@@ -35,10 +35,15 @@
   "selection_reason": "closed-setのtyped decisionに対し同一hybrid-thinking LLMから高速な直接probability読み取り（System 1）と、同じcached promptで思考後にprobabilityを読むSystem 2を構成。System 1の選択を統計的error-rate gateで制限し、残りは思考中に確信度を満たす時点で停止する。Qwen3.5-27Bで5% error target時24.5%のdecisionをSystem 1のみで処理し、残りを適応停止するとalways-thinkingの82.7%精度に対し81.6%を72%のthought tokenで達成。token budgetに応じたLLM推論計算削減としてaccept。",
   "semantic_scholar_id": "5ee8928d749381a28469d17d9999cd43d4c457ce",
   "source_url": "https://arxiv.org/abs/2610.37732",
-  "status": "ready",
+  "status": "superseded",
   "title": "ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:18:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.37732-thinkjev-one-thought-every-budget-for-calibrated-typed-decisions.md",
+  "represented_canonical_id": "arXiv:2610.37732",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

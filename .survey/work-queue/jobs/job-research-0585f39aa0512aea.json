@@ -35,10 +35,15 @@
   "selection_reason": "edge上のMoEではexpert転送が支配的で、expert組合せ頻度と寄与度が偏る。CRISPはneuronを重要度順に並べて1つのexpertに複数実行幅を持たせ、hot/warm/cold組合せ別の幅と転送/計算重畳をjoint schedulingする。著者要旨はMixtral8x7BとDeepSeekMoE16Bで同メモリ予算のthroughput最大2.1倍、full-width比精度低下3.6%以内と報告。edge MoEのpruning/runtime協調としてaccept。",
   "semantic_scholar_id": "ca9ae8e1710eb159361773a43ce2b051514ef829",
   "source_url": "https://arxiv.org/abs/2610.37442",
-  "status": "ready",
+  "status": "superseded",
   "title": "CRISP: Co-designing Pruning and Scheduling for Efficient MoE Inference on Edge Servers",
   "type": "research",
   "venue": "Proceedings of the 32nd Annual International Conference on Mobile Computing and Networking",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:18:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on.md",
+  "represented_canonical_id": "arXiv:2610.37442",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

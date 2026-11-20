@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（577本）
+## 自動生成の論文一覧（579本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -638,6 +638,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   トークン間遅延の実測値を混雑信号として毎デコードステップでフィードバックし、残り出力トークン総量の上限であるトークンウィンドウを開閉して新規リクエストの受け入れをトークン単位で制御する、サーバーレス推論向けスケジューラ。
 
+- **2026-10 · [Request-Adaptive Execution for Efficient Hybrid LLM Inference](2026-2610.37432-request-adaptive-execution-for-efficient-hybrid-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意層と状態空間モデルの層の配置をリクエストごとにプリフィルで決めて固定し、分割統合のバッチ処理と層履歴まで見る文脈キャッシュで効率的に捌く共同設計で、品質指標18件中13件で最良となりスループットはvLLM比で最大3.87倍になった。
+
 - **2026-10 · [RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving](2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混成モデルの接頭辞再利用で、状態待ちの分岐だけを次ラウンドへ回して走査を続けることでバッチの泡を埋め、再利用率を保ったまま遅延を最大24パーセント、ラウンド数を最大44パーセント削減した。
@@ -697,6 +701,10 @@
 - **2026-10 · [DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving](2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEの精度コストを保存レートと読解レートへ分け、1つの接頭辞可読ストリームからワークロードごとに読み幅をラグランジュ配分で選ぶことで、単一の配備物のままデコード転送量を最適化する手法。
+
+- **2026-10 · [CRISP: Co-designing Pruning and Scheduling for Efficient MoE Inference on Edge Servers](2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  組合せの頻度と専門家の役割で実行幅を変える枝刈りと、幅の不均一を入出力の重なりに使うスケジューリングを共同設計し、縁端の混合専門家推論で同一メモリ予算の下で最大2.1倍のスループットと3.6パーセント以内の精度低下を両立した。
 
 - **2026-10 · [Batch-Paced: Fixed-Budget Batch Decoding in Discrete Diffusion Language Models](2026-2610.17917-batch-paced-fixed-budget-batch-decoding-in-discrete-diffusion-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1616,6 +1624,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   検索数を増やすと根拠が集まりやすい反面、入力長が増え、最初のトークン生成までの処理やGPUメモリ占有が大きくなる。METISは、質問ごとに必要な検索件数、文章片の統合方法、中間要約長を変えることと、同時にGPUで処理する要求を選ぶことを、一つの制御器で行う。
 
+- **2025-11 · [DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing](2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  TBT違反が予測される時だけ単一GPUのSMをプリフィル/デコードへ動的分割し、集約方式のスループットと分離方式のisolationを両立する。
+
 - **2025-11 · [DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving](2025-2511.20982-dopd-dynamic-pd-disaggregation.md)**  
   実装：[✓](https://github.com/liao4s/DOPD) ・ リポジトリ内被引用：6  
   負荷予測と解析的な最適P/D比でプリフィル/デコード instanceを動的再構成し、8x H100実機で有効スループット最大1.5倍・SLO達成99.4%を報告。
@@ -1647,10 +1659,6 @@
 - **2024-12 · [Multi-Bin Batching for Increasing LLM Inference Throughput](2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   しかし固定バッチ方式では、バッチに含まれる要求のうち最も長い生成が終わるまで、そのバッチ全体が実行資源を占有する。2026年改訂版の実測では、単一A100 80GB上のllama.cppでDollyワークロードを処理し、推定長8ビンが固定バッチの273.53生成トークン/秒から684.02生成トークン/秒へ改善する。
-
-- **2025-11 · [DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing](2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  TBT違反が予測される時だけ単一GPUのSMをプリフィル/デコードへ動的分割し、集約方式のスループットと分離方式のisolationを両立する。
 
 - **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
   実装：[✓](https://github.com/EfficientContext/ContextPilot) ・ リポジトリ内被引用：5  

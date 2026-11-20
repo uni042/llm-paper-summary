@@ -35,10 +35,15 @@
   "selection_reason": "multi-state linear attentionでsegmentごとのkey-query平均alignmentだけを使うroutingでは分布の広がりを捉えられない。MERLINは各segment keyの一次・二次momentを保持し、queryごとのalignment平均と分散から各stateのreadoutを重み付けする。Gated DeltaNet-1.3BとMamba-2-780MのRULER/LongBenchで改善し、4倍メモリを使うbaselineも上回ると要旨は報告。推論時の圧縮state routingで長文脈品質とメモリのtradeoffを改善する直接手法としてaccept。",
   "semantic_scholar_id": "905cdc9fddcfd7a29f8b64e40261cd97a12c1d2d",
   "source_url": "https://arxiv.org/abs/2610.37645",
-  "status": "ready",
+  "status": "superseded",
   "title": "Multi-State Linear Attention with Generalized Second-Order Routing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T14:18:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.37645-multi-state-linear-attention-with-generalized-second-order-routing.md",
+  "represented_canonical_id": "arXiv:2610.37645",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
