@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨と公開本文を確認。Litespark-Inferenceは三値重みをCPUのNEON SDOT/AVX-VNNI等の整数SIMD演算に写像し、標準PyTorchの密行列演算を避けるLLM推論カーネルを提供する。BitNet b1.58でTTFT・トークン毎秒・メモリを測定しており、推論実装に直接寄与するためaccept。arXiv表示の冒頭要旨と本文内の最新性能値に差があるため、Research段階で版・ベンチマーク条件を再確認する。",
   "semantic_scholar_id": "e124f4e35248b90ba1be9517053c3bc0c5fd2c87",
   "source_url": "https://arxiv.org/abs/2605.06485",
-  "status": "ready",
+  "status": "superseded",
   "title": "Litespark Inference For CPUs: Ultra-Fast SIMD Framework for Ternary (1.58-bit) Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:04:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-.md",
+  "represented_canonical_id": "arXiv:2605.06485",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

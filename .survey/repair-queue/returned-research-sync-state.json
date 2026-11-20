@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e4e7a2339da4a82b5a04d3c33bd0cb11ac3876bc",
+  "base_commit": "6d350cf231128df687f6d445cfb2bc1500c7298b",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -243,6 +243,7 @@
     "2026-2603.05454-beyond-scattered-acceptance-fast-and-coherent-inference-for-dlms-via-longest-stable-prefixes.json",
     "2026-2603.05663-keeping-the-evidence-chain-semantic-evidence-allocation-for-training-free-token-pruning-in-video-temporal-grounding.json",
     "2026-2603.08065-deterministic-differentiable-structured-pruning-for-large-language-models.json",
+    "2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-architectures-for-ai-accelerators.json",
     "2026-2603.08747-diagnosing-fp4-inference-a-layer-wise-and-block-wise-sensitivity-analysis-of-nvfp4-and-mxfp4.json",
     "2026-2603.10031-architecture-aware-llm-inference-optimization-on-amd-instinct-gpus-a-comprehensive-benchmark-and-deployment-study.json",
     "2026-2603.10899-lookaheadkv-fast-and-accurate-kv-cache-eviction-by-glimpsing-into-the-future-without-generation.json",
@@ -310,11 +311,13 @@
     "2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.json",
     "2026-2604.26103-amma-a-multi-chiplet-memory-centric-architecture-for-low-latency-1m-context-attention-serving.json",
     "2026-2604.26378-coquant-joint-weight-activation-subspace-projection-for-mixed-precision-llms.json",
+    "2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consumer-grade-llm-inference.json",
     "2026-2605.01858-decouple-and-cache-kv-cache-construction-for-streaming-video-understanding.json",
     "2026-2605.02821-when-is-the-same-model-not-the-same-service-a-measurement-study-of-hosted-open-weight-llm-apis.json",
     "2026-2605.04075-retentivekv-state-space-memory-for-uncertainty-aware-multimodal-kv-cache-eviction.json",
     "2026-2605.05699-when-quantization-is-free-an-int4-kv-cache-that-outruns-fp16-on-apple-silicon.json",
     "2026-2605.06052-xtramac-an-efficient-mac-architecture-for-mixed-precision-llm-inference-on-fpga.json",
+    "2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-bit-language-models.json",
     "2026-2605.06850-shadow-mask-distillation-for-memory-efficient-alignment-in-rl-post-training.json",
     "2026-2605.07443-rcllm-accelerating-generative-recommendation-via-beyond-prefix-kv-caching.json",
     "2026-2605.08044-fast-byte-latent-transformer.json",
@@ -338,6 +341,8 @@
     "2026-2605.24019-mgvq-synergizing-multi-dimensional-sensitivity-aware-and-gradient-hessian-fusion-for-vector-quantization.json",
     "2026-2605.27435-when-npus-are-not-always-faster-a-stage-level-analysis-of-mobile-llm-inference.json",
     "2026-2605.27494-grounded-cache-routing-for-retrieval-augmented-generation-when-is-it-safe-to-reuse-an-answer.json",
+    "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json",
+    "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json",
     "2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.json",
     "2026-2606.01563-momentkv-closing-the-directional-gap-in-kv-cache-eviction-for-long-context-inference.json",
     "2026-2606.01790-star-kv-spatio-temporal-adaptive-re-weighting-for-kv-cache-compression-in-gui-vision-language-models.json",
@@ -43795,6 +43800,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2603.08741": {
+      "order": [
+        "2026-11-20T08:56:29+00:00",
+        "2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-architectures-for-ai-accelerators.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.00519": {
+      "order": [
+        "2026-11-20T08:57:49+00:00",
+        "2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consumer-grade-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.06485": {
+      "order": [
+        "2026-11-20T08:59:10+00:00",
+        "2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-bit-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.29873": {
+      "order": [
+        "2026-11-20T09:00:31+00:00",
+        "2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-generation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2605.30574": {
+      "order": [
+        "2026-11-20T09:01:53+00:00",
+        "2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54454,6 +54504,21 @@
     "arxiv:2602.24044": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-s.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.24044-data-driven-optimization-of-gpu-efficiency-for-distributed-llm-adapter-s.md"
+    ],
+    "arxiv:2603.08741": [
+      "papers/inference/99-other-inference-systems/2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-archit.md"
+    ],
+    "arxiv:2605.00519": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consum.md"
+    ],
+    "arxiv:2605.06485": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2605.06485-litespark-inference-for-cpus-ultra-fast-simd-framework-for-ternary-1-58-.md"
+    ],
+    "arxiv:2605.29873": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2605.29873-moment-kv-momentum-based-decode-time-kv-cache-compression-for-long-gener.md"
+    ],
+    "arxiv:2605.30574": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2605.30574-probing-the-prompt-kv-cache-where-it-becomes-dispensable.md"
     ]
   }
 }

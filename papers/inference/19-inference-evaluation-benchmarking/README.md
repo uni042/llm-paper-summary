@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（149本）
+## 自動生成の論文一覧（150本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -289,6 +289,10 @@
 - **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
   実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：0  
   PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
+
+- **2026-05 · [Silicon Showdown: Performance, Efficiency, and Ecosystem Barriers in Consumer-Grade LLM Inference](2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consum.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  消費者向けNvidia GPUとApple Siliconを70B級モデルとNVFP4まで含めて実測比較した分析。Nvidiaは収まる範囲で計算密度が最高だがVRAMの壁とバックエンド摩擦があり、Appleは統合メモリで大規模モデルを実用精度のまま載せ効率でも勝るという二分構造を示した。
 
 - **2026-05 · [PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding](2026-2605.30126-parcel-pool-anchored-resampling-with-conditioned-elastic-queries-for-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "消費者向けNVIDIA GPUとApple Siliconの70B級ローカルLLM推論を比較する実測システム研究。RTX 5090上でNVFP4がBF16比151対92 token/s（約1.6倍）を示す一方、backendと起動遅延にトレードオフがある。VRAM不足時のPCIeオフロードで推論throughputが大幅低下し、統合メモリ機との実装上の差を分析。特定構成・測定条件依存で普遍的な優劣を証明するものではないが、量子化・オフロード・ランタイム選定の推論性能実測に直接寄与するためaccept。",
   "semantic_scholar_id": "916f4401fad2651d6e4baaac55cbe0b99986d4b4",
   "source_url": "https://arxiv.org/abs/2605.00519",
-  "status": "ready",
+  "status": "superseded",
   "title": "Silicon Showdown: Performance, Efficiency, and Ecosystem Barriers in Consumer-Grade LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:04:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2605.00519-silicon-showdown-performance-efficiency-and-ecosystem-barriers-in-consum.md",
+  "represented_canonical_id": "arXiv:2605.00519",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

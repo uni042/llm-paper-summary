@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1092本）
+## 自動生成の論文一覧（1093本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2121,6 +2121,10 @@
 - **2026-02 · [Token Management in Multi-Tenant AI Inference Platforms](2026-2603.00356-token-management-in-multi-tenant-ai-inference-platforms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論容量をトークン処理量、鍵値キャッシュ、同時実行数の三単位の利用権利として定式化し、等級と借金に基づく優先度で受け入れを制御することで、過負荷時も保護対象の遅延を一・二秒未満に保ち、弾力的な作業間で公平な配分へ収束させた。
+
+- **2026-02 · [The AetherFloat Family: Block-Scale-Free Quad-Radix Floating-Point Architectures for AI Accelerators](2026-2603.08741-the-aetherfloat-family-block-scale-free-quad-radix-floating-point-archit.md)**  
+  実装：[✓](https://github.com/k1832/aetherfloat-validation) ・ リポジトリ内被引用：0  
+  基数4の指数と明示的な仮数でブロック・スケーリング回路を不要にし、積和演算器の面積を33.17パーセント減らす浮動小数点形式群。16ビット版はほぼ無損失、8ビット版は微調整前提。
 
 - **2026-02 · [Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching](2026-2602.22871-test-time-scaling-with-diffusion-language-models-via-reward-guided-stitc.md)**  
   実装：[✓](https://github.com/roymiles/diffusion-stitching) ・ リポジトリ内被引用：0  
