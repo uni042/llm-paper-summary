@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨は複数重みで仮数部の最下位ビットを共有し、非整数の実効ビット幅FP5.33・FP4.25を実現するAMS-Quantを提案。共有配置の探索とCUDA線形カーネルを実装し、FP16比でLLM decodeをそれぞれ2.8倍・3.2倍高速化と報告。低ビット表現と実機カーネルの両方に寄与。",
   "semantic_scholar_id": "3062999bdea047ad616944fbfd5d656a9a110516",
   "source_url": "https://arxiv.org/abs/2510.16045",
-  "status": "ready",
+  "status": "superseded",
   "title": "AMS-QUANT: Adaptive Mantissa Sharing for Floating-point Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:14:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.md",
+  "represented_canonical_id": "arXiv:2510.16045",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

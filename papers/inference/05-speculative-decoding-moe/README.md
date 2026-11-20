@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（381本）
+## 自動生成の論文一覧（383本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1114,6 +1114,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：2  
   ドラフト側は複数の先読み位置を1回の前向き計算で予測する投機ストリーミングを使い、ドラフト自身の逐次依存も短縮する。8台のApple M2 UltraのGPU/NPUを使うSpecBench実験で、Qwen3-32Bの数学推論・温度0では自己回帰基準比5.84倍、EAGLE3は同条件で3.77倍であった。
 
+- **2025-10 · [From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing](2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  対象モデルの重みのビットを共有して4ビットドラフトを作るビット共有量子化と、ドラフトと検証を兼用する演算素子アレイで、追加学習も追加保存もなしに投機的デコードを行う協調設計。
+
 - **2025-10 · [CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs](2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号は、安価な草案器が未来のトークンを先に提案し、ターゲットLLMが複数位置を一度に検証することで逐次実行回数を減らす。原著のH100 80GB、Vicuna-7B/13B/33B、Spec-Benchでは、訓練不要のCAS-Specが自己回帰復号比でそれぞれ平均1.578/1.524/1.481倍となる。
@@ -1229,6 +1233,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [TokenTiming: A Dynamic Alignment Method for Universal Speculative Decoding Model Pairs](2025-2510.15545-tokentiming-a-dynamic-alignment-method-for-universal-speculative-decodin.md)**  
   実装：[✓](https://github.com/SeabirdShore/TokenTiming) ・ リポジトリ内被引用：0  
   投機的復号は小型ドラフトモデルが複数の次トークンを提案し、大型ターゲットモデルがまとめて検証することで自己回帰生成の逐次計算を減らす。
+
+- **2025-10 · [On-device Semantic Selection Made Low Latency and Memory Efficient with Monolithic Forwarding](2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全候補を1つのバッチで進め、中間層で順位が安定した候補を落とし、重みを流し読みする、学習不要のオンデバイス再ランク付け推論システム。遅延とピークメモリを同時に大きく減らす。
 
 - **2025-10 · [3-Model Speculative Decoding](2025-2510.12966-3-model-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

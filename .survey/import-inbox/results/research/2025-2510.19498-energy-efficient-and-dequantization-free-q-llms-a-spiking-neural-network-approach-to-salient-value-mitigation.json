@@ -1,15 +1,24 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "blocked_metadata",
-  "source_sha256": "6a001849aa694ad8bfbc0070c8f4bdbd218a539ef2fafbb8d64d2290e6a0a81e",
-  "blocked_path": ".survey/import-inbox/blocked/research/2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.md",
+  "status": "imported",
+  "source_sha256": "7b2891dbb12c354692d3ca914c886892e6bb49d78105b6ca10c96dbd859f980d",
   "canonical_id": "arXiv:2510.19498",
-  "worker_completed_at": null,
-  "worker_run_key": null,
-  "failures": [
-    "worker_completed_at",
-    "worker_run_key"
-  ],
-  "processed_at": "2026-11-15T21:59:28+00:00"
+  "paper_path": "papers/inference/99-other-inference-systems/2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network.md",
+  "lineage": "99-other-inference-systems",
+  "audit_status": "PASS",
+  "japanese_normalized": false,
+  "worker_completed_at": "2026-11-20T15:11:57+09:00",
+  "worker_run_key": "2026-11-20-muse-c2b4",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3761,
+    "body_paragraphs": 20,
+    "method_chars": 1220,
+    "method_paragraphs": 4,
+    "evaluation_chars": 727,
+    "limitation_chars": 189,
+    "insufficiency_flags": []
+  },
+  "processed_at": "2026-11-20T08:12:14+00:00"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6244c769b9b5b9fb623bdc3b1c9ac038eb722ec1",
+  "base_commit": "92e00be12e4564fa102a72ebe5c73e58795d8008",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -152,8 +152,12 @@
     "2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-for-parameter-efficient-fine-tuning-on-large-language-models.json",
     "2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.json",
     "2025-2509.25035-ultra-fast-language-generation-via-discrete-diffusion-divergence-instruct.json",
+    "2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-low-batch-llm-inference.json",
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
+    "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json",
+    "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
+    "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
     "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json",
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
@@ -43583,6 +43587,42 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2510.02675": {
+      "order": [
+        "2026-11-20T08:06:42+00:00",
+        "2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-low-batch-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.15620": {
+      "order": [
+        "2026-11-20T08:08:06+00:00",
+        "2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-monolithic-forwarding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.16045": {
+      "order": [
+        "2026-11-20T08:09:30+00:00",
+        "2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.18525": {
+      "order": [
+        "2026-11-20T08:10:52+00:00",
+        "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54143,6 +54183,18 @@
     "arxiv:2509.23410": [
       "papers/inference/99-other-inference-systems/2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.md",
       "papers/inference/99-other-inference-systems/2025-2509.23410-patch-learnable-tile-level-hybrid-sparsity-for-llms.md"
+    ],
+    "arxiv:2510.02675": [
+      "papers/inference/15-inference-simulation-emulation/2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-.md"
+    ],
+    "arxiv:2510.15620": [
+      "papers/inference/05-speculative-decoding-moe/2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md"
+    ],
+    "arxiv:2510.16045": [
+      "papers/inference/16-weight-quantization-compression/2025-2510.16045-ams-quant-adaptive-mantissa-sharing-for-floating-point-quantization.md"
+    ],
+    "arxiv:2510.18525": [
+      "papers/inference/05-speculative-decoding-moe/2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-p.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "オンデバイスの意味的Top-K選択でクロスエンコーダ再ランキングの遅延とメモリが支配的になる問題に対し、中間層での相対順位の安定化を利用した単一フォワーディングとI/O・計算の重なりでピークメモリを抑える推論システムPRISMを提案し、遅延を最大89.2%削減する。エッジ推論システムへの直接貢献である。",
   "semantic_scholar_id": "e24785e309557f8c294225dbbbce83618563e272",
   "source_url": "https://arxiv.org/abs/2510.15620",
-  "status": "ready",
+  "status": "superseded",
   "title": "On-device Semantic Selection Made Low Latency and Memory Efficient with Monolithic Forwarding",
   "type": "research",
   "venue": "European Conference on Computer Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:14:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2510.15620-on-device-semantic-selection-made-low-latency-and-memory-efficient-with-.md",
+  "represented_canonical_id": "arXiv:2510.15620",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

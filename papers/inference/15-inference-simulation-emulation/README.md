@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（89本）
+## 自動生成の論文一覧（90本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -292,6 +292,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
   本研究が対象とするのは、あらかじめ処理する要求集合が分かっているオフライン推論であり、複数の大規模言語モデル（LLM）を一つのアプリケーション内で使う状況である。単一モデルの要求順序を最適化するだけでは、モデル間のGPU分配を決められない。SamuLLMはこれらを一つの計画問題として扱う。
 
+- **2025-08 · [COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives](2025-2509.00599-comet-a-framework-for-modeling-compound-operation-dataflows-with-explici.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  原著はLlama-3とGPT-2由来の演算形状を使い、GEMM-Softmax、GEMM-LayerNorm、self-注意機構を、edge/cloudの二つの仮想アクセラレータ構成で評価する。非融合のデータフローを基準に、最適化したマッピングの幾何平均速度比は順に1.42倍、3.46倍、1.82倍と報告する。
+
 - **2025-06 · [Semantic Scheduling for LLM Inference](2025-2506.12204-semantic-scheduling-for-llm-inference.md)**  
   実装：[✓](https://github.com/Wenyueh/latency_optimization_with_priority_constraints) ・ リポジトリ内被引用：1  
   本論文は、LLMのオンライン推論に到着する要求を単なる先着順や予測実行時間順ではなく、要求文面から推定される緊急度を第一の優先基準として実行するスケジューラを提案する。実データ条件で最も緊急な要求の正規化待ち時間がFCFS比最大167.3倍短縮した条件がある。
@@ -308,13 +312,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの推論基盤では、負荷に応じてモデル全体の複製を増減することが一般的である。各演算子に異なる複製数、バッチ、並列度を割り当て、最後にGPUへ配置する。
 
+- **2025-10 · [HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference](2025-2510.02675-halo-memory-centric-heterogeneous-accelerator-with-2-5d-integration-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  プリフィルをアナログメモリ内計算、デコードをHBM内計算へ振り分ける2.5D集積の異種アクセラレータ。低バッチでAttAcc比18倍、CENT比2.5倍の高速化をシミュレーションで示す。
+
 - **2025-09 · [SAIL: SRAM-Accelerated LLM Inference System with Lookup-Table-based GEMV](2025-2509.25853-sail-sram-accelerated-llm-inference-system-with-lookup-table-based-gemv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SAIL（SRAM-Accelerated Inference of LLMs）は、量子化されたLLMをCPUベースのサーバで効率的に推論するため、CPUのLast-Level Cache（LLC）の各sliceの近傍に演算可能なSRAM（C-SRAM）を追加し…
-
-- **2025-08 · [COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives](2025-2509.00599-comet-a-framework-for-modeling-compound-operation-dataflows-with-explici.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  原著はLlama-3とGPT-2由来の演算形状を使い、GEMM-Softmax、GEMM-LayerNorm、self-注意機構を、edge/cloudの二つの仮想アクセラレータ構成で評価する。非融合のデータフローを基準に、最適化したマッピングの幾何平均速度比は順に1.42倍、3.46倍、1.82倍と報告する。
 
 - **2025-08 · [Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers](2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

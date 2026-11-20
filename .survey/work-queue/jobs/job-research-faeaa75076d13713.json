@@ -35,10 +35,15 @@
   "selection_reason": "浮動小数点の部分利用による投機的LLMデコードの高速化SPEQ。量子化は性能を落とし投機的デコードは追加のオーバーヘッドを持つ問題に対し、完全モデルの重みビットの一部で量子化した下書きモデルを構成する、アルゴリズム・ハードウェア共同設計。推論高速化機構そのもの。",
   "semantic_scholar_id": "8c03a1a7a604d51fee49deb6473be3aa22a9c224",
   "source_url": "https://arxiv.org/abs/2510.18525",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:14:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-p.md",
+  "represented_canonical_id": "arXiv:2510.18525",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
