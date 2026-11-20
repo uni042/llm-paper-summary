@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（278本）
+## 自動生成の論文一覧（279本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -229,6 +229,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs](2026-2610.04277-syclkittens-a-tile-programming-model-for-programmers-and-coding-agents-o.md)**  
   実装：[✓](https://github.com/intel/SyclKittens) ・ リポジトリ内被引用：0  
   インテルGPUで速くなる書き方そのものを操作として内蔵したタイル型プログラミングモデルを提示し、生の言語よりコーディングエージェントが速いカーネルへ早く届くことと、推論の高速化を実測で示した研究。
+
+- **2026-10 · [SparseGDN: Chunk Sparse in Linear Attention](2026-2610.41420-sparsegdn-chunk-sparse-in-linear-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈のゲート付きデルタネットワークの入力処理を、ブロック隣接のデルタ解法と頭の組ごとの再帰イベント選択の二段で疎化し、平均で約二十九パーセントのイベントだけを残して核の入力処理を一点五倍から一点九四倍速くし、集計精度をほぼ維持したと報告した。
 
 - **2026-10 · [Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off](2026-2610.19405-scaling-llm-inference-via-parallelism-throughput-latency-trade-off.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1149,7 +1153,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-12〜2019-11）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：200  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：201  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

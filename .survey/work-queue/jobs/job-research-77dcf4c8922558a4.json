@@ -35,10 +35,15 @@
   "selection_reason": "コンピュータ操作agentへprogrammatic・アクセシビリティ(AX)・GUIの3チャネルを統合し、AX観測を小型化、操作をbatch化、差分のみ返すことでモデルへの往復を減らす。チャネル切替時のstale stateも保護し、OSWorld 2.0で比較対象よりtask successと効率が高いと報告。推論モデルを変えずagent実行のtool roundtrip・観測context費用を減らす実行基盤の直接改善としてaccept。ただし要旨に定量token削減率はない。",
   "semantic_scholar_id": "2462291800b4f6f5751074379c6480f8bb980657",
   "source_url": "https://arxiv.org/abs/2610.41432",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41432-hybrid-computer-use-a-unified-programmatic-semantic-and-visual-interface.md",
+  "represented_canonical_id": "arXiv:2610.41432",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

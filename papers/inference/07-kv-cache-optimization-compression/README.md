@@ -489,6 +489,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：1  
   CommitKVは、工具呼出しを伴う多輪の推論・行動型エージェント（ReAct agent）で増大する鍵・値キャッシュ（KV キャッシュ）を、情報の利用状態が変化した瞬間を利用して削減する手法である。
 
+- **2026-08 · [Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs](2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  専門家枝刈り、量子化、KV圧縮を重ねる配備を10モデルと7ワークロードで一貫評価するベンチマークを構築し、圧縮率では品質も速度も予測できず専門家軸が劣化を支配すること、KV圧縮が長文脈の復号を遅くし得ることを示した。
+
 - **2026-07 · [SpecCache: Speculative KV Cache Reuse for Efficient RAG Serving](2026-2c3e6cdc141b-speccache-speculative-kv-cache-reuse-for-efficient-rag-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   検索拡張生成（Retrieval-Augmented Generation; RAG）は検索された複数の文書片を質問へ追加するため、初回トークンの生成までに必要な事前充填（プリフィル）が長くなる。単純な全再利用は回答品質を落とし、全再計算は遅い。ただしこの倍率は特定の検索拡張生成ワークロード、GPU、キャッシュの事前作成・保持という条件に依存する。
@@ -1331,10 +1335,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   重み量子化・層削減・鍵値キャッシュ圧縮の相互作用を三予算で評価し、七百億モデルを約三十三ギガバイトへ縮小して単一A40・一万トークン入力で約五十七トークン毎秒を実現する。
 
-- **2026-08 · [Benchmarking Composable Compression Techniques in Mixture-of-Experts LLMs](2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  専門家枝刈り、量子化、KV圧縮を重ねる配備を10モデルと7ワークロードで一貫評価するベンチマークを構築し、圧縮率では品質も速度も予測できず専門家軸が劣化を支配すること、KV圧縮が長文脈の復号を遅くし得ることを示した。
-
 - **2026-08 · [A Probabilistic Interpretation of KV Cache Eviction](2026-2608.28293-a-probabilistic-interpretation-of-kv-cache-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KV追放を期待値推定として定式化し、確率的追放＋復号時重要度補正で既存top-kのバイアスを抑えタスク間頑健性を高める。
@@ -2128,7 +2128,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：387  
+  実装：✓ ・ リポジトリ内被引用：388  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  

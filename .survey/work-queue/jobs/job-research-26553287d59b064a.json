@@ -35,10 +35,15 @@
   "selection_reason": "VLMの空間推論tool chainで無制約なコード生成・再試行がAPI費用と遅延を増やす問題に対し、Frame/Entity/State/Metricの型付き要求へ先にparseし、必要な幾何APIだけ実行、Verifierが十分性を判定して早期終了または局所修復するPEPSを提案。一次要旨では強いtool-integrated baselineに対して推論精度向上とrefinement round・API cost・end-to-end latencyの削減を報告するが具体倍率は示していない。agent推論時の実行回数と外部API費用の直接最適化としてaccept。",
   "semantic_scholar_id": "4a5545e501cb333f91ab973019a9a522e2b52a74",
   "source_url": "https://arxiv.org/abs/2610.41389",
-  "status": "ready",
+  "status": "superseded",
   "title": "Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41389-parse-before-you-execute-efficient-spatial-reasoning-with-executable-pri.md",
+  "represented_canonical_id": "arXiv:2610.41389",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

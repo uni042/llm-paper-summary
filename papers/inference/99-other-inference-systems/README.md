@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1133本）
+## 自動生成の論文一覧（1136本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -88,6 +88,10 @@
   実装：[✓](https://github.com/laychou666/DASH) ・ リポジトリ内被引用：5  
   LLMへ渡す前の入力列が長くなると、プリフィル（プリフィル）の注意演算とKVキャッシュのメモリ消費が増える。DASH（動的 Audio-driven Semantic cHunking）は、音声埋め込みの隣接トークンの変化を意味境界の手掛かりにし、音声と映像を可変長の区間へ分ける学習不要の圧縮方式である。
 
+- **2026-02 · [Is Retraining-Free Enough? The Necessity of Router Calibration for Efficient MoE Compression](2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
+
 - **2026-02 · [ICaRus: Identical Cache Reuse for Efficient Multi Model Inference](2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   複数の専門言語モデルを順番に呼び出すエージェント型推論では、同じシステム指示、会話履歴、検索資料を何度も入力する。LLaMA-3.1-8Bを使うReAct型の8エージェント構成では、通常のモデル別KV方式に対して95パーセンタイル遅延（P95、遅い側5%に入る境界）を最大11.1倍短縮し、最大スループットを3.8倍に高めた。
@@ -131,10 +135,6 @@
 - **2026-02 · [Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models](2026-2602.04399-swordsman-entropy-driven-adaptive-block-partition-for-efficient-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   Swordsmanは、拡散言語モデル（Diffusion Language モデル、DLM）の生成速度と品質を改善するため、出力列を固定長で区切るブロック復号を、モデルの予測エントロピーに応じて動的に区切る方式へ変更する。
-
-- **2026-02 · [Is Retraining-Free Enough? The Necessity of Router Calibration for Efficient MoE Compression](2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
 
 - **2026-02 · [ApET: Approximation-Error Guided Token Compression for Efficient VLMs](2026-2602.19870-apet-approximation-error-guided-token-compression-for-efficient-vlms.md)**  
   実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：4  
@@ -379,6 +379,10 @@
 - **2026-09 · [Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context RL Post-Training](2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   長文脈RLで投機的復号のドラフトを方策と同時更新するため、分岐注意を文脈並列リングへ統合し、中間特徴をパイプライン外のTapChannelで輸送して、最大122B規模で学習品質を保ちつつ最大1.88倍の全体高速化を得る。
+
+- **2026-09 · [MoRA: MoE Pruning via Router Bias Learning and Expert Approximation](2026-2610.00367-mora-moe-pruning-via-router-bias-learning-and-expert-approximation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoRA（MoE Pruning via ルーティング Bias Learning and 専門家 Approximation）は、混合専門家（Mixture of エキスパート; MoE）型大規模言語モデルで、推論時に保持する専門家（専門家）の数を減らしながら、元モデルの生成品質をできるだけ保つ構造的な枝刈り方式である。
 
 - **2026-09 · [Low-Bit Recurrent States in Hybrid Language Models](2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -922,6 +926,10 @@
   実装：[✓](https://github.com/EdisonNi-hku/BELT) ・ リポジトリ内被引用：0  
   凍結した推論モデルの隠れ状態から正答見込みの4つの信念を価格非依存に学習し、その上に線形の停止方策を当てはめることで、価格変更に再学習なしで追随しながら生成トークンを4割から5割減らす早期停止方式。
 
+- **2026-10 · [SACQ: Structure-Aware Codebook Quantization for Ultra-Low-Bit Vision-Language-Action Models](2026-2610.41408-sacq-structure-aware-codebook-quantization-for-ultra-low-bit-vision-lang.md)**  
+  実装：[✓](https://github.com/haesunglee116/SACQ) ・ リポジトリ内被引用：0  
+  射影の役割別の尺度で符号帳を合わせ最終行動の誤差で精度を配分し二段の仕上げを行う重みのみの符号帳量子化で、一点五ビットでも成功率の低下を零点二五ポイントに抑えメモリを四点八三倍削減し活性八ビット併用で一点五一倍高速化したと報告した。
+
 - **2026-10 · [Revisiting Cauchy–Schwarz Norm Bounds for SDC Detection in LLM Inference](2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行列積出力のノルム上限だけでサイレントデータ破損を検出する方式を故障注入で再評価し、稠密モデルの線形層ではチェックサム方式の検出能力の99パーセントを検証費用87パーセント減で保ち、MoEルーターでは55パーセントに落ちることを示した研究。
@@ -941,6 +949,10 @@
 - **2026-10 · [PDScope: Breaking the Prefill-Decode Seesaw for Memory-Bound MoE Inference](2026-2610.39216-pdscope-breaking-the-prefill-decode-seesaw-for-memory-bound-moe-inferenc.md)**  
   実装：[✓](https://github.com/nezha-Anonymous/PDScope) ・ リポジトリ内被引用：0  
   専門家の転送をめぐる入力処理と生成の板挟みを、段階別の予測・層をまたぐ計画・静的な実行の三層で解き、主流モデルで入力処理を最大十・三倍、生成を最大六・一倍速くし、次層予測の当たり率も九割超を示した。
+
+- **2026-10 · [Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives](2026-2610.41389-parse-before-you-execute-efficient-spatial-reasoning-with-executable-pri.md)**  
+  実装：[✓](https://github.com/Xiwei-web/PEPS) ・ リポジトリ内被引用：0  
+  質問を座標系・対象・状態・指標の基本要素へ実行前に確定させ必要な分だけ道具で計算し検証で局所修復する枠組みで、三課題すべてで最良の正解率と、反復型方式より料金十五から二十三点五パーセント減と遅延三十二点三から三十八点二パーセント減を報告した。
 
 - **2026-10 · [PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States](2026-2610.29545-pace-periodic-and-channel-aligned-encoding-of-four-bit-recurrent-states.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -977,6 +989,10 @@
 - **2026-10 · [LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers](2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-t.md)**  
   実装：[✓](https://github.com/Kishon-zzx/LoopQuant) ・ リポジトリ内被引用：0  
   ループ型言語モデル専用の学習後量子化として、共有変換による分布の正準化、感度と相互作用に基づくループ別ビット配分、再帰軌跡に沿った較正を組み合わせ、4ビット量子化でも8ビット従来法を上回る精度と1.5から1.7倍の復号高速化を得た。
+
+- **2026-10 · [Hybrid Computer Use: A Unified Programmatic, Semantic, and Visual Interface for General Agents](2026-2610.41432-hybrid-computer-use-a-unified-programmatic-semantic-and-visual-interface.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  計算機を使う代理人の対話面を視覚と意味と手続きの三経路で統一し、圧縮した意味の観測と一括の動作と入力直前の照合で、OSWorld 2.0 の最高の部分点と完全達成率を出し、入力トークンを五十七パーセント減らし費用を五十五パーセント下げたと報告した。
 
 - **2026-10 · [How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference](2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-in.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1161,10 +1177,6 @@
 - **2026-09 · [One Distribution, Two Channels: Coverage-Calibrated KV Retention and Compensation](2026-2610.02235-one-distribution-two-channels-coverage-calibrated-kv-retention-and-compe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈推論ではKVキャッシュがメモリ容量と読み出し帯域を圧迫する。トークンを単純に重要度順で保持する方式では、重要度の高いトークンが互いに似ている場合に貴重な保持枠を浪費する。RULERでは90% KV圧縮時に最良比較方式を平均2.25ポイント、最大3.78ポイント上回り、複数回の再圧縮やLongBenchでも優位性を報告する。
-
-- **2026-09 · [MoRA: MoE Pruning via Router Bias Learning and Expert Approximation](2026-2610.00367-mora-moe-pruning-via-router-bias-learning-and-expert-approximation.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoRA（MoE Pruning via ルーティング Bias Learning and 専門家 Approximation）は、混合専門家（Mixture of エキスパート; MoE）型大規模言語モデルで、推論時に保持する専門家（専門家）の数を減らしながら、元モデルの生成品質をできるだけ保つ構造的な枝刈り方式である。
 
 - **2026-09 · [Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents](2026-2609.39982-mid-harness-scaling-actions-between-model-and-harness-for-terminal-agent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3735,7 +3747,7 @@
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：98  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：99  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -3747,7 +3759,7 @@
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：64  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
@@ -4237,7 +4249,7 @@
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
-  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：25  
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
@@ -4557,7 +4569,7 @@
 ### 10年前（2016-12〜2017-11）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：351  
+  実装：✓ ・ リポジトリ内被引用：352  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-12〜2016-11）

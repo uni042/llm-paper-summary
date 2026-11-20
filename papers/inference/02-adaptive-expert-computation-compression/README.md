@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（131本）
+## 自動生成の論文一覧（132本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -15,12 +15,16 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [REAM: Merging Improves Pruning of Experts in LLMs](2026-2604.04356-ream-router-weighted-expert-merging.md)**  
-  実装：[✓](https://github.com/SamsungSAILMontreal/ream) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/SamsungSAILMontreal/ream) ・ リポジトリ内被引用：10  
   重要専門家を代表として保護し、低重要度専門家をルータ・活性依存の類似度で統合するMoE圧縮。校正データ構成による選択式／生成性能のトレードオフも分析する。
 
 - **2026-07 · [PuzzleMoE: Efficient Compression of Large Mixture-of-Experts Models via Fine-Grained Expert Merging and Bit-packed Inference](2025-2511.04805-puzzlemoe-efficient-compression-of-large-mixture-of-experts-models-via-s.md)**  
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/PuzzleMoE) ・ リポジトリ内被引用：7  
   混合専門家モデルの重みを要素ごとに共有・固有成分へ分け、復元用のマスクと符号をBF16指数部へ格納することで、圧縮容量の節約をGPUでの実行速度へ結び付ける。
+
+- **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
+  実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：7  
+  全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
 
 - **2025-12 · [MoE Pathfinder: Trajectory-driven Expert Pruning](2025-2512.18425-moe-pathfinder-trajectory-pruning.md)**  
   実装：[✓](https://github.com/xicyang/MoE-Pruning) ・ リポジトリ内被引用：7  
@@ -30,9 +34,9 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/ZongfangLiu/EvoESAP) ・ リポジトリ内被引用：6  
   EvoESAPは、疎な混合専門家モデル（MoE）の推論に必要な総重み容量を減らすため、どの専門家を削るかだけでなく、層ごとに何個の専門家を削るかを最適化する手法である。OLMoE、DeepSeek-V2-Lite、ERNIE-4.5、Qwen3-30Bなどの疎MoEに対し、総枝刈り率25%と50%で評価する。
 
-- **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
-  実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：6  
-  全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
+- **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
+  実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：5  
+  本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
 
 - **2026-02 · [XShare: Collaborative in-Batch Expert Sharing for Faster MoE Inference](2026-2602.07265-xshare-inbatch-expert-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -41,10 +45,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
   実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：5  
   バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
-
-- **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
-  実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：4  
-  本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
 
 - **2026-06 · [DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training](2025-2512.13996-dtop-p-dynamic-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -66,6 +66,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
 
+- **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  共活性クラスタごとに完全精度代表を残し他専門家を整列済み低ランク補正化、ルータを維持したまま約50%圧縮するLorExpertsと計算共有用BTExperts。
+
 - **2026-08 · [ExFold: Unified Expert Folding for Training-Free MoE Prefill-Decode Acceleration](2026-2608.24938-exfold-training-free-expert-folding.md)**  
   実装：[✓](https://github.com/Time-Rune/ExFold-MoE) ・ リポジトリ内被引用：3  
   除外エキスパートの出力を保持エキスパートへスカラー射影して、事前充填と復号を共通機構で高速化する再学習不要のエキスパート Folding。
@@ -73,6 +77,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [Sticky Routing: Training MoE Models for Memory-Efficient Inference](2026-2607.08780-sticky-routing-memory-efficient-inference.md)**  
   実装：[✓](https://github.com/alikayyam/sticky_moe) ・ リポジトリ内被引用：3  
   混合専門家モデルの隣接トークンで専門家が頻繁に切り替わる問題を、学習時の経路一貫性損失で直接抑え、最大59%の切替削減と最大3.92倍のキャッシュミス削減を示した研究である。
+
+- **2026-05 · [Post-Trained MoE Can Skip Half Experts via Self-Distillation](2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md)**  
+  実装：[✓](https://github.com/TsinghuaC3I/ZEDA) ・ リポジトリ内被引用：3  
+  ゼロ出力専門家の挿入と二段階自己蒸留で既存MoEを動的化し、専門家計算を半減しつつ約1.2倍高速化する後処理法ZEDA。
 
 - **2026-04 · [Temporally Extended Mixture-of-Experts Models](2026-2604.20156-temporally-extended-moe-expert-persistence.md)**  
   実装：[✓](https://github.com/princeton-polaris-lab/temporal-moe) ・ リポジトリ内被引用：3  
@@ -86,9 +94,9 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：3  
   MoEエキスパートを低次元潜在空間で計算し、削減した帯域・通信コストを総エキスパート数と活性エキスパート数の拡大へ再投資して、計算量当たり精度とパラメータ当たり精度を同時に改善する設計。
 
-- **2026-08 · [Shape Mutating Expert Compression: LorExperts and BTExperts](2026-2608.07814-lorexperts-btexperts-shape-mutating-compression.md)**  
+- **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
-  共活性クラスタごとに完全精度代表を残し他専門家を整列済み低ランク補正化、ルータを維持したまま約50%圧縮するLorExpertsと計算共有用BTExperts。
+  本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
 
 - **2026-07 · [It Takes a MAESTRO To Prune Bad Experts](2026-2607.08601-maestro-expert-pruning.md)**  
   実装：[✓](https://github.com/parmanu-lcs2) ・ リポジトリ内被引用：2  
@@ -97,10 +105,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-05 · [SlimQwen: Exploring the Pruning and Distillation in Large MoE Model Pre-training](2026-2605.08738-slimqwen-pruning-distillation.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Qwen3-Next 80A3Bを深さ・幅・専門家の段階的剪定と多トークン蒸留で23A2Bへ約4倍圧縮し、剪定初期化と段階的圧縮の優位性を示す。
-
-- **2026-05 · [Post-Trained MoE Can Skip Half Experts via Self-Distillation](2026-2605.18643-zeda-post-trained-dynamic-expert-skipping.md)**  
-  実装：[✓](https://github.com/TsinghuaC3I/ZEDA) ・ リポジトリ内被引用：2  
-  ゼロ出力専門家の挿入と二段階自己蒸留で既存MoEを動的化し、専門家計算を半減しつつ約1.2倍高速化する後処理法ZEDA。
 
 - **2026-05 · [EMO: Pretraining Mixture of Experts for Emergent Modularity](2026-2605.06663-emo-emergent-modularity.md)**  
   実装：[✓](https://github.com/allenai/EMO) ・ リポジトリ内被引用：2  
@@ -114,6 +118,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：2  
   エキスパートの機能類似度から置換・スキップ時の誤差上界を求め、無線路状態・遅延・精度制約を同時に扱う最適化で、分散MoE推論の通信エネルギーをTop-K系手法より削減する。
 
+- **2026-03 · [LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing](2026-2603.12645-lightmoe-expert-replacing.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  枝刈りは知識を不可逆に捨て、統合は異なる専門性を平均化しやすい。OLMoE-1B-7B-SFTを5種類の下流課題で評価した結果、30%圧縮では非圧縮モデルへのLoRA微調整とほぼ同等の平均性能を維持し、50%圧縮では同じ学習予算の既存圧縮法を平均5.6%、単純置換を3.8%上回った。
+
 - **2026-03 · [Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing](2026-2603.11535-expert-threshold-routing.md)**  
   実装：[✓](https://github.com/MasterGodzilla/Expert-Threshold-Routing) ・ リポジトリ内被引用：2  
   専門家ごとの得点分位点を指数移動平均で追跡し、未来トークンを参照せず可変数の専門家を起動して負荷均衡と動的計算を両立する。
@@ -122,9 +130,33 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度MoEの高確信専門家を固定し低確信尾部だけを確率的に選ぶことで、単発品質を崩しにくいまま複数推論経路の多様性とpass@nを高める。
 
-- **2026-09 · [Training-Free Halving of Activated Experts in Fine-Grained Mixture-of-Experts Models](2026-2609.04575-training-free-halving-activated-experts.md)**  
+- **2026-10 · [Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models](2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  本研究は実行する専門家数k1とルータ正規化集合k2を分離し、k2を保ったままk1だけ半減して、細粒度MoEの計算削減とルータ利得を両立する学習不要手法。
+  残す専門家の集合全体の再構成誤差を連続緩和で直接最適化して専門家を選び、選択後に重みも再構成で適応させる枝刈りで、個別得点方式より最大で絶対16.2点高い精度を保った。
+
+- **2026-10 · [GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning](2026-2610.32009-gs-moe-training-free-moe-compression-via-groupwise-subspace-sharing-and-.md)**  
+  実装：[✓](https://github.com/cbacary/GS-MoE) ・ リポジトリ内被引用：1  
+  エキスパートを誤差基準でグループ化してグループ共有の低ランク部分空間を持たせ、同時にニューロン選択で各エキスパートの中間幅を削ることで、再学習なしにMoEの保存量を大きく減らす圧縮方式。予算は層・グループ・エキスパートへ階層的に配分する。
+
+- **2026-10 · [Fine-Grained Units, Flat Decisions: Hierarchical Micro-Experts](2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-experts.md)**  
+  実装：[✓](https://github.com/xzktx003/UC_RAMP) ・ リポジトリ内被引用：1  
+  マイクロエキスパート枝刈りを容量配分とチャネル構成の2決定に分け、複数ドメイン証拠で幅を再配分するケープと相互作用を入れて幅固定で交換するランプで解くことで、50パーセント枝刈りでも数学とコードの能力を大きく残し、遅延も2割前後削れることを示した研究。
+
+- **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  専門家をさらに間引けば推論時の行列積と重み転送を減らせるが、選択数を全トークンで同じように減らすだけで十分なのか、それともトークンや層ごとに専門家数を変える複雑な方式が必要なのか、共通条件での比較が不足していた。9モデルと3課題群を平均すると、元の選択数$K$の約3分の2を残すだけで元性能の98.8%を維持した。
+
+- **2026-09 · [PRIME: Frequency-Aware Unified Pruning and Merging for MoE Compression](2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エキスパートの枝刈りと統合を別々に決める従来法をやめ、使用頻度で重み付けした目的関数の整数線形計画で割当てを一括決定し、頻度重み付き集約とルーターの線形再構成で仕上げる、再学習なしのMoE圧縮枠組み。
+
+- **2026-09 · [OMP-MoE: Efficient Expert Pruning for Mixture-of-Experts LLMs via Orthogonal Matching Pursuit](2026-2609.31631-omp-moe-efficient-expert-pruning-for-mixture-of-experts-llms-via-orthogo.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoEは各トークンに少数の専門家だけを起動するため演算量を抑えられる一方、全専門家の重みを保持する必要があり、GPUメモリ容量とロード・配置が問題になる。単純に利用頻度が低い専門家を削除すると、他専門家が代替できるか、あるいは特定専門家の組合せで初めて再構成できるかという相互依存を見落とす。組合せを総当たりすると専門家数に対して探索空間が指数的に増える。
+
+- **2026-09 · [Higher-order pruning of experts in mixture-of-experts language models](2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.md)**  
+  実装：[✓](https://github.com/awslabs/HOPE) ・ リポジトリ内被引用：1  
+  エキスパート対の協調を相互作用行列で記録し、削除誤差の上限を2次計画で最小化して消すエキスパートを決める枝刈り方式で、50パーセント削除時に既存手法中最高の平均順位1.58を得た。
 
 - **2026-09 · [Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts](2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -174,10 +206,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/Time-Rune/BEAM) ・ リポジトリ内被引用：1  
   固定Top-K候補を学習二値マスクでトークンごとに削り、vLLM CUDA実装で実際の専門家計算を省略する動的MoEルーティング。
 
-- **2026-03 · [LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing](2026-2603.12645-lightmoe-expert-replacing.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  枝刈りは知識を不可逆に捨て、統合は異なる専門性を平均化しやすい。OLMoE-1B-7B-SFTを5種類の下流課題で評価した結果、30%圧縮では非圧縮モデルへのLoRA微調整とほぼ同等の平均性能を維持し、50%圧縮では同じ学習予算の既存圧縮法を平均5.6%、単純置換を3.8%上回った。
-
 - **2026-01 · [Improving MoE Compute Efficiency by Composing Weight and Data Sparsity](2026-2601.15370-composing-weight-data-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ヌル専門家をトークン選択型MoEへ組み込み、因果性を保ったまま情報量に応じて実専門家数を変え、同一期待計算量で損失・下流性能の効率前線を改善する。
@@ -188,45 +216,21 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
-- **2026-10 · [Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models](2026-2610.27123-reconstruction-optimized-expert-pruning-for-mixture-of-experts-language-.md)**  
+- **2026-10 · [What We Keep of What We Forget: Replacement Operators and Routing Semantics in Training-Free MoE Expert Pruning](2026-2610.41366-what-we-keep-of-what-we-forget-replacement-operators-and-routing-semanti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  残す専門家の集合全体の再構成誤差を連続緩和で直接最適化して専門家を選び、選択後に重みも再構成で適応させる枝刈りで、個別得点方式より最大で絶対16.2点高い精度を保った。
-
-- **2026-10 · [GS-MoE: Training-Free MoE Compression via Groupwise Subspace Sharing and Pruning](2026-2610.32009-gs-moe-training-free-moe-compression-via-groupwise-subspace-sharing-and-.md)**  
-  実装：[✓](https://github.com/cbacary/GS-MoE) ・ リポジトリ内被引用：0  
-  エキスパートを誤差基準でグループ化してグループ共有の低ランク部分空間を持たせ、同時にニューロン選択で各エキスパートの中間幅を削ることで、再学習なしにMoEの保存量を大きく減らす圧縮方式。予算は層・グループ・エキスパートへ階層的に配分する。
-
-- **2026-10 · [Fine-Grained Units, Flat Decisions: Hierarchical Micro-Experts](2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-experts.md)**  
-  実装：[✓](https://github.com/xzktx003/UC_RAMP) ・ リポジトリ内被引用：0  
-  マイクロエキスパート枝刈りを容量配分とチャネル構成の2決定に分け、複数ドメイン証拠で幅を再配分するケープと相互作用を入れて幅固定で交換するランプで解くことで、50パーセント枝刈りでも数学とコードの能力を大きく残し、遅延も2割前後削れることを示した研究。
-
-- **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  専門家をさらに間引けば推論時の行列積と重み転送を減らせるが、選択数を全トークンで同じように減らすだけで十分なのか、それともトークンや層ごとに専門家数を変える複雑な方式が必要なのか、共通条件での比較が不足していた。9モデルと3課題群を平均すると、元の選択数$K$の約3分の2を残すだけで元性能の98.8%を維持した。
+  専門家の選択マスクを固定して置換演算子だけを統制比較し、最大の効果が生き残りのゲート尺度にあることと、入力への低ランク写像による置換が損害の一部を安く回復することを示した。
 
 - **2026-09 · [Residual Sparsification via Output Importance for Compressing Mixture-of-Experts LLMs](2026-2609.00575-parser-residual-sparsification-output-importance.md)**  
   実装：[✓](https://github.com/OSSS-KU/PARSER) ・ リポジトリ内被引用：0  
   MoE残差疎化の選択基準を行列誤差から専門家出力への影響へ変更し、層内全専門家で低影響な隠れ次元を選んで削ることで、同等メモリ削減時の精度低下を抑える。
 
-- **2026-09 · [PRIME: Frequency-Aware Unified Pruning and Merging for MoE Compression](2026-2610.13982-prime-frequency-aware-unified-pruning-and-merging-for-moe-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  エキスパートの枝刈りと統合を別々に決める従来法をやめ、使用頻度で重み付けした目的関数の整数線形計画で割当てを一括決定し、頻度重み付き集約とルーターの線形再構成で仕上げる、再学習なしのMoE圧縮枠組み。
-
 - **2026-09 · [PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition](2026-2609.01024-pcomoe-fine-grained-path-composition.md)**  
   実装：[✓](https://github.com/gzyyy0/PCoMoE) ・ リポジトリ内被引用：0  
   MoE専門家を展開側と射影側へ分け、異なる専門家の内部部品を適合度に基づき組み合わせ、共通の展開計算を複数経路で再利用することで、専門家単位の削減より細粒度に計算を減らす方式。
 
-- **2026-09 · [OMP-MoE: Efficient Expert Pruning for Mixture-of-Experts LLMs via Orthogonal Matching Pursuit](2026-2609.31631-omp-moe-efficient-expert-pruning-for-mixture-of-experts-llms-via-orthogo.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoEは各トークンに少数の専門家だけを起動するため演算量を抑えられる一方、全専門家の重みを保持する必要があり、GPUメモリ容量とロード・配置が問題になる。単純に利用頻度が低い専門家を削除すると、他専門家が代替できるか、あるいは特定専門家の組合せで初めて再構成できるかという相互依存を見落とす。組合せを総当たりすると専門家数に対して探索空間が指数的に増える。
-
 - **2026-09 · [MoEP: Compact and efficient sparsity with modular expert paths](2026-moep-modular-expert-paths.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEPの重要点は「層全体を専門家化すれば、FFNだけを専門家化するMoEよりさらに計算を省ける」という単純な主張ではない。自己注意まで含む低次元Transformer経路をトークンごとに選ぶことで固定パラメータ予算内の表現多様性を増やせる一方、注意の系列依存性によって未選択経路の計算を物理的に省きにくくなり、1B規模では密モデルより遅く・大きくなる。
-
-- **2026-09 · [Higher-order pruning of experts in mixture-of-experts language models](2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/awslabs/HOPE) ・ リポジトリ内被引用：0  
-  エキスパート対の協調を相互作用行列で記録し、削除誤差の上限を2次計画で最小化して消すエキスパートを決める枝刈り方式で、50パーセント削除時に既存手法中最高の平均順位1.58を得た。
 
 - **2026-09 · [GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models](2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md)**  
   実装：[✓](https://github.com/caichaoxiang/GeMoE) ・ リポジトリ内被引用：0  
@@ -299,27 +303,27 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [REAP the Experts: Why Pruning Prevails for One-Shot MoE compression](2025-2510.13999-reap-one-shot-moe-compression.md)**  
-  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/CerebrasResearch/reap) ・ リポジトリ内被引用：42  
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-06 · [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](2025-2506.23266-sub-moe-subspace-expert-merging.md)**  
-  実装：[✓](https://github.com/siruihan2024/Sub-MoE) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/siruihan2024/Sub-MoE) ・ リポジトリ内被引用：23  
   機能類似度クラスタリングと共有部分空間SVDでMoE専門家を整列し、活性頻度重み付きV統合でパラメータ衝突を抑える学習不要の専門家統合。
 
 - **2025-04 · [Finding Fantastic Experts in MoEs: A Unified Study for Expert Dropping Strategies and Observations](2025-2504.05586-finding-fantastic-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   MoEエキスパート重要度を4視点・16指標で比較し、反復再評価＋軽量微調整なら50%以上削減でも性能を保ちやすく、指示追従能力の回復が鍵と示す。
+
+- **2025-09 · [DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning](2025-2509.16105-diep-differentiable-expert-pruning.md)**  
+  実装：✓ ・ リポジトリ内被引用：21  
+  層ごとに異なるエキスパート冗長性を微分可能な探索で学習し、重要度に応じた非一様プルーニングでMoEの推論コストを削減する。
 
 - **2025-09 · [LongCat-Flash Technical Report](2025-2509.01322-longcat-flash-zero-computation-experts.md)**  
   実装：[✓](https://github.com/meituan-longcat/LongCat-Flash-Chat) ・ リポジトリ内被引用：20  
   ゼロ計算専門家でトークンごとの活性計算量を18.6B～31.3Bへ動的配分し、ScMoEで専門家通信を密計算へ重ね、560B MoEの学習・推論効率を高める。
 
-- **2025-09 · [DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning](2025-2509.16105-diep-differentiable-expert-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
-  層ごとに異なるエキスパート冗長性を微分可能な探索で学習し、重要度に応じた非一様プルーニングでMoEの推論コストを削減する。
-
 - **2025-04 · [Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md)**  
-  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/RUCAIBox/EASYEP) ・ リポジトリ内被引用：19  
   少数のドメイン内例だけで、その領域で繰り返し使われる専門家集合を同定し、ゲート値だけでなく専門家出力の大きさとトークン表現の変化量まで使って枝刈りするEASY-EP。DeepSeek-R1で256専門家のうち128個だけを残し、平均性能67.20→66.55を保ちながら、同一メモリ予算で2.99倍のスループットを報告する。
 
 - **2025-09 · [Dropping Experts, Recombining Neurons: Retraining-Free Pruning for Sparse Mixture-of-Experts LLMs](2025-2509.10377-dern-dropping-experts-recombining-neurons.md)**  
@@ -329,6 +333,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-11 · [MoDES: Accelerating Mixture-of-Experts Multimodal Large Language Models via Dynamic Expert Skipping](2025-2511.15690-modes-dynamic-expert-skipping.md)**  
   実装：[✓](https://github.com/ModelTC/MoDES) ・ リポジトリ内被引用：10  
   層重要度のKL較正と画像・テキスト別閾値で、重要なエキスパートだけを残し、高省略率でもマルチモーダル性能を保つ学習不要の動的エキスパート省略法。
+
+- **2025-08 · [MoBE: Mixture-of-Basis-Experts for Compressing MoE-based LLMs](2025-2508.05257-mobe-mixture-of-basis-experts.md)**  
+  実装：[✓](https://github.com/inclusionAI/MoBE) ・ リポジトリ内被引用：9  
+  エキスパート固有の小行列と層共有basis行列の組合せでup/gate重みを再構成し、巨大MoEをdata-freeに24〜30%圧縮しながら性能低下を1〜2%程度へ抑える。
 
 - **2025-02 · [Analytical FFN-to-MoE Restructuring via Activation Pattern Analysis](2025-2502.04416-analytical-ffn-to-moe-restructuring.md)**  
   実装：[✓](https://github.com/JarvisPei/CMoE) ・ リポジトリ内被引用：9  
@@ -342,10 +350,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：8  
   エキスパート統合を出力近似問題として行列表現し、使用頻度重みの理論最適性と最小二乗による内部圧縮行列を組み合わせて、同圧縮率の既存統合法を改善する。
 
-- **2025-08 · [MoBE: Mixture-of-Basis-Experts for Compressing MoE-based LLMs](2025-2508.05257-mobe-mixture-of-basis-experts.md)**  
-  実装：[✓](https://github.com/inclusionAI/MoBE) ・ リポジトリ内被引用：8  
-  エキスパート固有の小行列と層共有basis行列の組合せでup/gate重みを再構成し、巨大MoEをdata-freeに24〜30%圧縮しながら性能低下を1〜2%程度へ抑える。
-
 - **2025-09 · [LExI: Layer-Adaptive Active Experts for Efficient MoE Model Inference](2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   重みを削除する枝刈りとは異なり、元の専門家集合は保持する。OLMoE-1B-7Bでは、専門家内部の50%枝刈りと同等の処理率に対し平均正答率が10%高い。
@@ -358,6 +362,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：6  
   しかしルータが選び得る専門家の重みをすべてGPUに保持できなければ、選択された専門家をCPUメモリからPCIe経由で転送しなければならない。先読み（プリフェッチ）が当たれば転送を隠せるが、外れたときの同期読み込みは生成を止める。
 
+- **2025-09 · [HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space](2025-2509.22299-heapr-atomic-expert-pruning.md)**  
+  実装：[✓](https://github.com/LLIKKE/HEAPr) ・ リポジトリ内被引用：5  
+  MoE エキスパートをatomic エキスパートへ分解し、出力空間の二次情報で全層を大域順位付けして剪定することで、20〜25%程度の圧縮を多くのモデルでほぼ無損失に実現する。
+
 - **2025-09 · [Elastic MoE: Unlocking the Inference-Time Scalability of Mixture-of-Experts](2025-2509.21892-elastic-moe-inference-time-scalability.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   学習時と異なる活性エキスパート数でも性能が崩れないよう、多様な共活性組合せと階層的ルーター順位を学習し、単一MoEを2〜3倍の推論予算範囲へ弾性化する。
@@ -369,10 +377,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-11 · [Efficiently Editing Mixture-of-Experts Models with Compressed Experts](2025-2503.00634-efficiently-editing-mixture-of-experts-models-with-compressed-experts.md)**  
   実装：[✓](https://github.com/yifei-he/Compressed-Experts) ・ リポジトリ内被引用：4  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンについて多数の専門家から一部を選択して実行するため、総パラメータ数の大きさに比べて計算を抑えられる。Phi-MoEでは活性パラメータを7.45Bから4.93Bへ削減し、推論遅延を5.59秒から4.35秒へ短縮した。
-
-- **2025-09 · [HEAPr: Hessian-based Efficient Atomic Expert Pruning in Output Space](2025-2509.22299-heapr-atomic-expert-pruning.md)**  
-  実装：[✓](https://github.com/LLIKKE/HEAPr) ・ リポジトリ内被引用：4  
-  MoE エキスパートをatomic エキスパートへ分解し、出力空間の二次情報で全層を大域順位付けして剪定することで、20〜25%程度の圧縮を多くのモデルでほぼ無損失に実現する。
 
 - **2025-08 · [Grove MoE: Towards Efficient and Superior MoE LLMs with Adjugate Experts](2025-2508.07785-grove-moe-heterogeneous-experts.md)**  
   実装：[✓](https://github.com/inclusionAI/GroveMoE) ・ リポジトリ内被引用：4  
@@ -437,23 +441,23 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-02 · [Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models](2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md)**  
-  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：135  
+  実装：[✓](https://github.com/Lucky-Lance/Expert_Sparsity) ・ リポジトリ内被引用：136  
   本研究は、学習済みモデルを大規模に再学習せず、①各層の出力をできるだけ保つ専門家の集合を探索して重みを恒久的に削除する事後専門家枝刈り、②実行時にルータが選んだ2専門家のうち寄与の小さい第2専門家だけをトークン単位で省く動的専門家省略を組み合わせる。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
-  実装：✓ ・ リポジトリ内被引用：54  
+  実装：✓ ・ リポジトリ内被引用：55  
   重み・入力活性・ルータ重みを組み合わせたMoE専用重要度でエキスパート 重みをone-shot枝刈りし、エキスパート-wise蒸留で50%疎性でも元性能の約99%まで回復する。
 
 - **2024-07 · [Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs](2024-2407.00945-efficient-expert-pruning-for-sparse-mixture-of-experts-language-models-e.md)**  
-  実装：[✓](https://github.com/imagination-research/EEP) ・ リポジトリ内被引用：44  
+  実装：[✓](https://github.com/imagination-research/EEP) ・ リポジトリ内被引用：45  
   効率的専門家枝刈り（Efficient 専門家 枝刈り、EEP）は、疎な混合専門家（Sparse Mixture of エキスパート、SMoE）言語モデルを推論用途へ圧縮する研究である。
 
 - **2024-11 · [MoE-I²: Compressing Mixture of Experts Models through Inter-Expert Pruning and Intra-Expert Low-Rank Decomposition](2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md)**  
-  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/xiaochengsky/MoEI-2) ・ リポジトリ内被引用：43  
   MoEの冗長性を「専門家どうし」と「専門家内部」の二段階で削る。層ごとの感度に応じて削除数を変え、遺伝探索（Genetic Search）とブロック横断探索で削除専門家を選んだ後、残存専門家へ重要度に応じた低ランク分解を適用する。
 
 - **2024-10 · [Retraining-Free Merging of Sparse MoE via Hierarchical Clustering](2024-2410.08589-hc-smoe-retraining-free-merging.md)**  
-  実装：[✓](https://github.com/wazenmai/HC-SMoE) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/wazenmai/HC-SMoE) ・ リポジトリ内被引用：32  
   専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。
 
 - **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
@@ -503,7 +507,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy](2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/UNITES-Lab/MC-SMoE) ・ リポジトリ内被引用：85  
   MC-SMoEはルータ履歴で似た専門家を代表へ統合し、統合重みを低ランク成分と疎な残差へ圧縮して、専門家数とメモリ使用量を減らす。
 
 - **2023-07 · [Memory-efficient NLLB-200: Language-specific Expert Pruning of a Massively Multilingual Machine Translation Model](2022-2212.09811-nllb-language-specific-expert-pruning.md)**  

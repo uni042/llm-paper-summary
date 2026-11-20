@@ -35,10 +35,15 @@
   "selection_reason": "VLAモデルの言語・行動重みに対し、演算の役割と入力統計を反映したcodebook適合、最終行動誤差による層別混合bit配分、二段階の量子化後補正を組み合わせる。GR00T N1.7で1.5bit時にLIBERO平均成功率93.85%とモデルメモリ4.83倍削減、INT8活性化と低精度attention併用時にBF16比1.51倍高速を報告。ロボットVLA用途だが言語系重みの推論量子化・メモリ/速度改善を直接評価するためaccept。",
   "semantic_scholar_id": "0f6b81f5e78620e4eda7a3a7aca72ad644eb09d2",
   "source_url": "https://arxiv.org/abs/2610.41408",
-  "status": "ready",
+  "status": "superseded",
   "title": "SACQ: Structure-Aware Codebook Quantization for Ultra-Low-Bit Vision-Language-Action Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41408-sacq-structure-aware-codebook-quantization-for-ultra-low-bit-vision-lang.md",
+  "represented_canonical_id": "arXiv:2610.41408",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

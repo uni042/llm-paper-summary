@@ -35,10 +35,15 @@
   "selection_reason": "MoE expert pruning後に削除expertへルーティングされたtokenをどう代替するかを固定maskで比較し、残存expertのgate scaleとrenormalizationの影響を検証。OLMoE、DeepSeek-V2-Lite、Moonlightで50% pruning時の低rank代替写像を評価し、renormalizationにより0.8〜8.5ポイントの精度差が生じる例を示す。推論向けMoE圧縮の設計・品質保持へ直接関連するためaccept。",
   "semantic_scholar_id": "6cc23834a916b6cd3fc4077e6aa56e4c63e1149b",
   "source_url": "https://arxiv.org/abs/2610.41366",
-  "status": "ready",
+  "status": "superseded",
   "title": "What We Keep of What We Forget: Replacement Operators and Routing Semantics in Training-Free MoE Expert Pruning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2610.41366-what-we-keep-of-what-we-forget-replacement-operators-and-routing-semanti.md",
+  "represented_canonical_id": "arXiv:2610.41366",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

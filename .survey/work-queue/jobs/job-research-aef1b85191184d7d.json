@@ -35,10 +35,15 @@
   "selection_reason": "Gated Delta Networksの長文prefillで、chunk内の密なDelta solveとrecurrent state更新が律速になる問題に対し、隣接block solverと入力依存の更新イベント選択を組み合わせる。Qwen3.5-4B/9B、4K〜128K文脈のRULER評価で平均約29%のrecurrent eventを残し、選択器の費用込みでnative FLA比1.50〜1.94倍のGDN core prefill高速化を報告。LLM推論カーネルと状態メモリの直接最適化。",
   "semantic_scholar_id": "d84974c918ed0cb6dd11db384939ff37ce975915",
   "source_url": "https://arxiv.org/abs/2610.41420",
-  "status": "ready",
+  "status": "superseded",
   "title": "SparseGDN: Chunk Sparse in Linear Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:38:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.41420-sparsegdn-chunk-sparse-in-linear-attention.md",
+  "represented_canonical_id": "arXiv:2610.41420",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
