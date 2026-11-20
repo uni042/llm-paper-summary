@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "e7e19bc9c15d816e0973e1d3c41826c9af271c20",
+  "base_commit": "d67c8c5ffd53214a3924cd25348587e81976ebf8",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -15196,39 +15196,11 @@
     },
     "arXiv:2309.05210": {
       "order": [
-        "2026-10-30T09:15:03+00:00",
-        "retry-research-20d7bcb2518d--libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.json"
+        "2026-11-20T06:42:38+00:00",
+        "2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language-models.json"
       ],
-      "status": "blocked_quality",
-      "result": {
-        "schema_version": 1,
-        "artifact_type": "research",
-        "status": "blocked_quality",
-        "source_sha256": "868bd4287425cc08c649d40e57cec47fc9c02eca7fb463899863c0c083a59521",
-        "normalized_source_sha256": null,
-        "japanese_normalized": false,
-        "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20d7bcb2518d--libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.md",
-        "canonical_id": "arXiv:2309.05210",
-        "worker_completed_at": "2026-10-30T13:51:00+09:00",
-        "worker_run_key": "20261030-1332-scheduled-chat-30/r02",
-        "quality_metrics": {
-          "quality_gate_version": "2026-10-07-v1",
-          "body_chars": 7326,
-          "body_paragraphs": 48,
-          "method_chars": 0,
-          "method_paragraphs": 0,
-          "evaluation_chars": 976,
-          "limitation_chars": 0,
-          "insufficiency_flags": [
-            "手法説明量 0 < 700",
-            "限界説明量 0 < 推奨 120"
-          ]
-        },
-        "failures": [
-          "説明不足トリガー: 手法説明量 0 < 700"
-        ],
-        "processed_at": "2026-10-30T09:15:03+00:00"
-      },
+      "status": "imported",
+      "result": null,
       "return_count": 4
     },
     "arXiv:2310.04564": {
@@ -43034,7 +43006,7 @@
         ],
         "processed_at": "2026-11-20T06:42:42+00:00"
       },
-      "return_count": 1
+      "return_count": 2
     },
     "arXiv:2410.13060": {
       "order": [
@@ -43079,7 +43051,7 @@
         ],
         "processed_at": "2026-11-20T06:44:07+00:00"
       },
-      "return_count": 1
+      "return_count": 2
     }
   },
   "imported_paper_paths": {
@@ -53463,10 +53435,15 @@
       "papers/inference/16-weight-quantization-compression/2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-lan.md"
     ],
     "arxiv:2306.16601": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2306.16601-an-efficient-sparse-inference-software-accelerator-for-transformer-based.md"
     ],
     "arxiv:2410.13060": [
+      "papers/inference/99-other-inference-systems/2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md",
       "papers/inference/99-other-inference-systems/2024-2410.13060-aero-entropy-guided-framework-for-private-llm-inference.md"
+    ],
+    "arxiv:2309.05210": [
+      "papers/inference/99-other-inference-systems/2023-2309.05210-understanding-the-impact-of-post-training-quantization-on-large-language.md"
     ]
   }
 }
