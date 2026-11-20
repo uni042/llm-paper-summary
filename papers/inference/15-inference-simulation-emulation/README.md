@@ -64,6 +64,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://anonymous.4open.science/r/DyQ-VLA-7F51/) ・ リポジトリ内被引用：2  
   DyQ-VLAの2026年10月4日公開の第3版は、量子化によって変わる実行時の行動と誤差の相関を明示的に測り、並進と回転で異なる制御を行う。LIBEROおよびRoboTwin 2.0の評価では、BF16に対する推論単位の速度改善が1.74〜1.81倍、成功した実行全体にわたるモデル推論時間の改善が1.88〜1.93倍となった。
 
+- **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
+
 - **2026-05 · [LLM-Emu: Native Runtime Emulation of LLM Inference via Profile-Driven Sampling](2026-2605.00616-llm-emu-native-runtime-emulation.md)**  
   実装：[✓](https://github.com/AKafakA/llm-emu) ・ リポジトリ内被引用：1  
   vLLMの本番HTTP・スケジューラ・KV管理を実コードのまま動かし、GPU順伝播だけを二次元遅延プロファイルからの標本化へ置換して、実GPU比の出力トークン当たり時間・反復時間を4.8%、エンドツーエンド遅延を5.3%、出力スループットを1.9%以内で再現する（初回トークン時間は最大10.41%ずれる）実時間エミュレータ。
@@ -75,6 +79,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-05 · [BAGEN: Are LLM Agents Budget-Aware?](2026-2606.00198-bagen-are-llm-agents-budget-aware.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   通常の評価では、タスクの成否と終了後の消費トークン数を記録するが、実行途中のエージェント自身が残りの必要予算を理解していたかは別問題である。BAGEN（Budget-Aware Agent）は、残予算の自己推定を独立した能力として定義し、途中状態ごとに「完了に必要な資源の下限・上限」または「完了不可能」を回答させる評価枠組みを提案する。
+
+- **2026-04 · [CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts](2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoot.md)**  
+  実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：1  
+  これを低ビット化するとGPUメモリ使用量を減らせるものの、活性値や重みに少数の大きな外れ値があると、均一な量子化の刻み幅が粗くなり、特に4ビット級で精度が悪化する。主要評価はPhi-mini-MoE-Instruct、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral 8×7Bを対象とする。
 
 - **2026-02 · [Asynchronous Verified Semantic Caching for Tiered LLM Architectures](2026-2602.13165-asynchronous-verified-semantic-caching-for-tiered-llm-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -125,10 +133,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays](2026-2609.20874-decomposing-predictive-kubernetes-autoscaling-for-large-language-model-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）をオンライン配信するKubernetes環境では、レプリカ（同じモデルを提供する推論プロセス）を新しく起動するだけで数分かかる。すなわち、要求件数でなく入力・出力トークン量を測ること、起動遅延 $\Delta$ だけ将来を予測すること、予測誤差の上側余裕を設けること、待ち行列とKVキャッシュ圧迫度を状態として観測することである。
-
-- **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
 
 - **2026-08 · [Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs](2026-2608.03229-unified-lookup-table-inference-with-signed-digit-k-v-caches-for-ternary-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -213,10 +217,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference](2026-2604.04750-deepstack-facilitating-co-design-exploration-of-3d-dram-stacked-accelera.md)**  
   実装：[✓](https://github.com/tile-ai/DeepStack/tree/ae) ・ リポジトリ内被引用：0  
   本論文は、3D積層DRAMを計算ダイの近傍に接続したAIアクセラレータを複数台組み合わせる際、チップ設計とLLMの分散実行計画を別々に最適化すると誤った設計を選ぶという問題に取り組む。重要なのは「高速な新GPUを実際に製造して推論が9.5倍になった」研究ではない点である。
-
-- **2026-04 · [CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts](2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoot.md)**  
-  実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：0  
-  これを低ビット化するとGPUメモリ使用量を減らせるものの、活性値や重みに少数の大きな外れ値があると、均一な量子化の刻み幅が粗くなり、特に4ビット級で精度が悪化する。主要評価はPhi-mini-MoE-Instruct、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral 8×7Bを対象とする。
 
 - **2026-04 · [Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing](2026-cedb2b11ea50-adaptive-load-balancing-for-multi-tier-llm-inference-with-dynamic-model-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

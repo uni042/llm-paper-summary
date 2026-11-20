@@ -15,7 +15,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
-  実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：4  
   総パラメータ数が大きいモデルをGPUメモリへ載せるためには量子化が有効だが、すべての専門家を同じビット幅へ圧縮すると、特に1〜2ビットという極低精度で品質が大きく崩れる。
 
 - **2026-07 · [PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization](2026-2607.16184-pagedweight-efficient-moe-llm-serving-with-dynamic-quality-aware-weight-quantiza.md)**  
@@ -63,19 +63,19 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンについて多数の専門家から少数を選択することで、総パラメータ数の割に活性化計算量を抑える。例えばMixtral-8×7Bは総計約470億パラメータを持つが、1トークンで活性化するのは約130億パラメータであり、元モデルの重みメモリは原著の環境で87.7GBに達する。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
-  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：24  
   MxMoEは、混合専門家モデル（Mixture of エキスパート; MoE）の推論において、モデルの重みを小さくするだけでなく、実際にGPU上で計算が速くなる量子化配置を選ぶ研究である。専門家演算の処理量は16ビット基準に対して、512トークン条件で1.6～2.7倍、8192トークン条件で3.0～3.4倍となった。
 
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
-  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：22  
   MoEQuantは、混合専門家モデル（Mixture of エキスパート、MoE）を低ビットの重みで動かすときに生じる、専門家間の較正例不足と専門家内の入力重要度の違いを同時に扱う学習後量子化（Post-学習 量子化、PTQ）の枠組みである。
 
 - **2025-07 · [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルは、トークンごとに少数の専門家だけを実行するため活性パラメータ数を抑えられるが、専門家の総重みは大きく、GPUメモリの負担が残る。重み量子化は保存容量を削減する一方、各層の出力を少し変化させる。
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
-  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：16  
   しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
 
 - **2025-07 · [MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE](2025-2507.00390-mone-replacing-redundant-experts-with-lightweight-novices-for-structured.md)**  
@@ -94,13 +94,13 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：4  
   DynaExqは、専門家混合モデル（Mixture of エキスパート; MoE）を単一GPUの限られた高帯域メモリへ載せるため、専門家ごとの量子化精度を推論中に変更するシステムである。論文はQwen3-30B-A3B、Qwen3-80B-A3B、Phi-3.5-MoEをRTX A6000 48GBの単一GPUで測定した。
 
+- **2025-09 · [MoPEQ: Mixture of Mixed Precision Quantized Experts](2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md)**  
+  実装：[✓](https://github.com/krishnateja95/MoE-Mixed-Prec) ・ リポジトリ内被引用：2  
+  MoPEQは、混合専門家モデル（Mixture of エキスパート、MoE）の重み容量を削減しながら推論品質を維持するため、各エキスパートへ一律の精度を割り当てず、重要度に応じて2・3・4ビットを選ぶ事後量子化方式である。
+
 - **2025-10 · [MC#: Mixture Compressor for Mixture-of-Experts Large Models](2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md)**  
   実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture of エキスパート、MoE）は、トークンごとに一部の専門家だけを実行することで、総パラメータ数の大きさと実行計算量を切り離す。Mixtral-8x7Bでは、PMQにより16ビット版96.80GBの重みを平均2.05ビット・13.41GBへ圧縮する。
-
-- **2025-09 · [MoPEQ: Mixture of Mixed Precision Quantized Experts](2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md)**  
-  実装：[✓](https://github.com/krishnateja95/MoE-Mixed-Prec) ・ リポジトリ内被引用：1  
-  MoPEQは、混合専門家モデル（Mixture of エキスパート、MoE）の重み容量を削減しながら推論品質を維持するため、各エキスパートへ一律の精度を割り当てず、重要度に応じて2・3・4ビットを選ぶ事後量子化方式である。
 
 - **2025-11 · [Exploiting the Experts: Unauthorized Compression in MoE-LLMs](2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -113,7 +113,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：52  
   第一に、専門家ごとに必要な重み精度が異なるため、全専門家を同じビット幅へ量子化する必要はない。原著表4のMixtral 8×7Bでは、平均2.54ビットのPMQだけで平均ゼロショット正解率67.50%、保存重み16.24GB、活性化パラメータ4.53GB、基準比1.63倍の速度となる。
 
 - **2024-04 · [SEER-MoE: Sparse Expert Efficiency through Regularization for Mixture-of-Experts](2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md)**  

@@ -260,6 +260,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   動画の区間分割と静的トークンの統合、区間ごとの予算配分と多様性を最大化する選択、層の深さに応じた段階的な削減を組み合わせ、視覚トークンを10パーセントまで減らしても性能の9割以上を保つ階層型の枝刈り方式を示した。
 
+- **2026-04 · [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md)**  
+  実装：[✓](https://github.com/nowazrabbani/moe_quantization) ・ リポジトリ内被引用：2  
+  本研究は、混合専門家モデル（Mixture-of-Experts、MoE）の推論メモリを減らすため、全専門家を同じビット幅へ量子化する代わりに、専門家ごとに1〜3ビットなど異なる精度を割り当てる方式を提案する。Mixtral 8x7Bの8課題平均では、専門家平均2.5ビットの提案方式が68.38%、比較方式PMQが67.53%だった。
+
 - **2026-03 · [TERMINATOR: Learning Optimal Exit Points for Early Stopping in Chain-of-Thought Reasoning](2026-2603.12529-terminator-learning-optimal-exit-points-for-early-stopping-in-chain-of-t.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   複雑な問題では思考が必要だが、答えが既に得られた後にも検算、別解探索、方針変更を続けることがある。実行時には未来の最終解答を参照せず、モデル最終層の隠れ状態から終了の可能性を予測し、複数トークンの多数決を経て を挿入する。Qwen3-8BのMATH-500では思考圧縮率45.1%（約54.9%削減）で、正答率91.1%から90.7%とほぼ同水準を維持した。
@@ -564,10 +568,6 @@
   実装：[✓](https://github.com/qianfantianyuzhouzhou/TRACE) ・ リポジトリ内被引用：1  
   推論時の計算量を増やすと難問の正答率を改善できる場合があるが、すべての問題で長い思考を最後まで生成することが効率的とは限らない。答えが既に定まった後も思考を続ける「過剰思考」は、トークン数と応答待ち時間を増やす。一方、途中の回答の確信度が高くなった瞬間に止めると、まだ検討が十分でない誤答を確定する危険がある。正答率も完全には維持していない。
 
-- **2026-04 · [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md)**  
-  実装：[✓](https://github.com/nowazrabbani/moe_quantization) ・ リポジトリ内被引用：1  
-  本研究は、混合専門家モデル（Mixture-of-Experts、MoE）の推論メモリを減らすため、全専門家を同じビット幅へ量子化する代わりに、専門家ごとに1〜3ビットなど異なる精度を割り当てる方式を提案する。Mixtral 8x7Bの8課題平均では、専門家平均2.5ビットの提案方式が68.38%、比較方式PMQが67.53%だった。
-
 - **2026-04 · [ART: Attention Run-time Termination for Efficient Large Language Model Decoding](2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-de.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ART（注意機構 Run-time Termination）は、大規模言語モデルの復号中に、注意計算の累積出力が十分安定したと判断できた時点で残りのキー・値（key-value; KV）ブロックへのアクセスを止める方式である。
@@ -644,6 +644,10 @@
   実装：[✓](https://github.com/SparkEngineAI/AgentFlashInfer) ・ リポジトリ内被引用：1  
   ステップごとにモデル自身が進捗を自己評価し、停滞時だけ大きいモデルへ一時的に制御を移す協調方式で、エージェントの正解率を大きいモデル並みに近づけつつ1.3から2.4倍の高速化を得た。
 
+- **2026-03 · [3BASiL: An Algorithmic Framework for Sparse plus Low-Rank Compression of LLMs](2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-.md)**  
+  実装：[✓](https://github.com/mazumder-lab/3BASiL) ・ リポジトリ内被引用：1  
+  重みの疎＋低ランク分解を3ブロックの交互方向乗数法で同時最適化し、ブロック単位の出力整合で精緻化する一括圧縮で、困惑度の劣化を3割超縮め圧縮も2.5倍超高速化した。
+
 - **2026-02 · [ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces](2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   思考ステップごとにモデルの確信度を見て、低確信なら離散トークン、高確信なら潜在空間の柔らかい埋め込みへ振り分ける学習不要の方式で、正解率を最大19.70ポイント上げながら生成長も削った。
@@ -651,6 +655,10 @@
 - **2026-02 · [T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation with Direct Discriminative Optimization](2026-2602.12262-t3d-few-step-diffusion-language-models-via-trajectory-self-distillation-.md)**  
   実装：[✓](https://github.com/Tyrion58/T3D) ・ リポジトリ内被引用：1  
   これに対しマスク拡散言語モデル（Masked Diffusion Language モデル、MDLM）は、複数位置のマスクを並列に予測し、繰り返し修正して文章を完成させる。動的復号を組み合わせた一部条件では、GSM8Kの正答率を10.8ポイント改善しながら処理量を1.45倍にする実測結果も報告されている。
+
+- **2026-02 · [SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference](2026-2602.00942-salaad-sparse-and-low-rank-adaptation-via-admm-for-large-language-model-.md)**  
+  実装：[✓](https://github.com/HaoMAFRLu/salaad) ・ リポジトリ内被引用：1  
+  SALAADは、言語モデルの重みを疎成分と低ランク成分の和として表現できるように事前学習中から構造を誘導し、配置時には必要なメモリ予算に応じて同じ学習済みチェックポイントを縮小できる方式である。
 
 - **2026-02 · [ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments](2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2210,10 +2218,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   日本語の専門分野向け小規模モデルの適応を、訓練規模の最適点、土台モデルの選択、適応後の量子化の安全性の三段階で検証し、最適規模は4千件、日本語の継続事前学習が決定的に効き、量子化の可否は注意の構造で決まることを示した。
 
-- **2026-03 · [3BASiL: An Algorithmic Framework for Sparse plus Low-Rank Compression of LLMs](2026-2603.01376-3basil-an-algorithmic-framework-for-sparse-plus-low-rank-compression-of-.md)**  
-  実装：[✓](https://github.com/mazumder-lab/3BASiL) ・ リポジトリ内被引用：0  
-  重みの疎＋低ランク分解を3ブロックの交互方向乗数法で同時最適化し、ブロック単位の出力整合で精緻化する一括圧縮で、困惑度の劣化を3割超縮め圧縮も2.5倍超高速化した。
-
 - **2026-02 · [Unlocking Edge Fine-Tuning: A Sample-Efficient Language-Empowered Split Fine-Tuning Framework](2026-e0f5024d7632-unlocking-edge-fine-tuning-a-sample-efficient-language-empowered-split-f.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル分割と連合集約に、正解付き参照入力との二経路対比で重要な推論トークンを重く学ぶ損失を組み合わせ、各課題800件の学習で分割微調整の精度を大きく引き上げた端末向け微調整枠組み。
@@ -2269,10 +2273,6 @@
 - **2026-02 · [Scaling State-Space Models on Multiple GPUs with Tensor Parallelism](2026-2602.21144-scaling-state-space-models-on-multiple-gpus-with-tensor-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   状態空間モデル向けにチャネル分割と状態キャッシュで同期を減らすテンソル並列設計。Mambaで4GPU時に最大4.0倍のスループットと4倍のプロンプト長を実現した。
-
-- **2026-02 · [SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference](2026-2602.00942-salaad-sparse-and-low-rank-adaptation-via-admm-for-large-language-model-.md)**  
-  実装：[✓](https://github.com/HaoMAFRLu/salaad) ・ リポジトリ内被引用：0  
-  SALAADは、言語モデルの重みを疎成分と低ランク成分の和として表現できるように事前学習中から構造を誘導し、配置時には必要なメモリ予算に応じて同じ学習済みチェックポイントを縮小できる方式である。
 
 - **2026-02 · [Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization](2026-2602.02151-revisiting-adaptive-rounding-with-vectorized-reparameterization-for-llm-.md)**  
   実装：[✓](https://github.com/zhoustan/VQRound) ・ リポジトリ内被引用：0  
@@ -2657,7 +2657,7 @@
   本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2024-12 · [ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction](2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md)**  
-  実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：23  
   大規模言語モデル（Large Language モデル; LLM）が長い文章を扱うと、注意機構の鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）は入力文脈の長さと同時処理要求数に比例して増える。
 
 - **2025-10 · [dInfer: An Efficient Inference Framework for Diffusion Language Models](2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md)**  
@@ -2812,6 +2812,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   未来フレームを使わず、隣接フレームとの変化と顕著さでフレームごとに五十トークンだけを言語モデルへ通し、残りを四ビットで蓄積して質問時に必要な分だけ復元することで、鍵値キャッシュを一五・七倍に圧縮しながら無学習方式で最良の精度を示した。
 
+- **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
+
 - **2025-09 · [SpikingBrain: Spiking Brain-inspired Large Models](2025-2509.05276-spikingbrain-spiking-brain-inspired-large-models.md)**  
   実装：[✓](https://github.com/BICLab/SpikingBrain-7B) ・ リポジトリ内被引用：2  
   SpikingBrainは、標準Transformerの長文脈計算・KVキャッシュ負荷と、非NVIDIA GPUでの大規模学習の難しさを同時に扱う研究である。成果は一つの高速注意機構カーネルにとどまらない。
@@ -2931,10 +2935,6 @@
 - **2025-10 · [Key and Value Weights Are Probably All You Need: On the Necessity of the Query, Key, Value weight Triplet in Self-Attention Transformers](2025-2510.23912-key-and-value-weights-are-probably-all-you-need-on-the-necessity-of-the-.md)**  
   実装：[✓](https://github.com/MarkoKarbevski/Wqkv_necessity) ・ リポジトリ内被引用：1  
   各射影が表現力に独立して必要なのかは、モデルのパラメータ数・学習時の最適化・推論時のメモリ使用量を考えるうえで重要である。理論の出発点は、注意機構が元の入力Xを直接見るのではなく、XWQ、XWK、XWVという射影後の値に依存する点である。これは非埋込パラメータ約8.3%削減であり、総モデルパラメータが25%減るわけではない。
-
-- **2025-10 · [CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression](2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  埋め込み行列を群ごとの残差ベクトル量子化で段階的に圧縮し、その誤差を細い多層回路の補正アダプタで直す学習後方式で、専用の低ビットハードウェアなしに平均約一・六ビットまで圧縮し、二ビットの均一量子化が崩壊する条件でも困惑度と正解率を保ったと報告した。
 
 - **2025-10 · [AsyncSpade: Efficient Test-Time Scaling with Asynchronous Sparse Decoding](2025-2510.07486-asyncspade-efficient-test-time-scaling-with-asynchronous-sparse-decoding.md)**  
   実装：[✓](https://github.com/UNITES-Lab/AsyncSpade) ・ リポジトリ内被引用：1  
@@ -3683,7 +3683,7 @@
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：40  
+  実装：✓ ・ リポジトリ内被引用：41  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
@@ -4125,7 +4125,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：303  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：304  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
