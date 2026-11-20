@@ -35,10 +35,15 @@
   "selection_reason": "線形注意向け循環状態量子化LeapQuant。Gated DeltaNet等の固定長循環状態の読み書きが律速になる問題に対し、ウィンドウ単位で一度だけ量子化して誤差蓄積を抑え、外れ行列への対処と併せて8ビット状態量子化でほぼ無損失を達成する学習不要の方式。推論メモリ機構そのもの。",
   "semantic_scholar_id": "3ecf62f53d3386586c160ec4c305708e9dc33d45",
   "source_url": "https://arxiv.org/abs/2609.38166",
-  "status": "ready",
+  "status": "superseded",
   "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:16:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quant.md",
+  "represented_canonical_id": "arXiv:2609.38166",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

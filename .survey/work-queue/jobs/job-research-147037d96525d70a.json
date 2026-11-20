@@ -35,10 +35,15 @@
   "selection_reason": "データ適応変換つきKVキャッシュ量子化WUSH-KV。行列積の両因子の二階統計からデータ配慮の変換を作るWUSHをKVキャッシュへ適応し、鍵と値で別々の変換を較正データから構築して値変換は重みへ畳み込み、鍵変換はRoPE後に適用する。推論メモリ機構そのもの。",
   "semantic_scholar_id": "fe7c087a88fc59c5147e04981f6336ae1e315095",
   "source_url": "https://arxiv.org/abs/2609.38121",
-  "status": "ready",
+  "status": "superseded",
   "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:16:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.md",
+  "represented_canonical_id": "arXiv:2609.38121",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

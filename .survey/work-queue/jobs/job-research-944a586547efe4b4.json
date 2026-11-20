@@ -35,10 +35,15 @@
   "selection_reason": "ReActエージェントのharnessで発生する文脈変更・ツール実行・subagent連携を観測し、メッセージの生存・一時休止・破棄状態をKVキャッシュへ写像する。死んだKVを回収し再利用待ちのKVを優先保持する。著者報告ではLMCache/MORI比のend-to-end要求遅延最大26.3%/17.4%減、平均推定タスクコスト40.0%/33.2%減。LLM servingのKV管理に直接関連。",
   "semantic_scholar_id": "90977290d9c326ca54d1edcef2ef38018e790eba",
   "source_url": "https://arxiv.org/abs/2609.39819",
-  "status": "ready",
+  "status": "superseded",
   "title": "Capture the lifecycle: KV Cache management in ReAct Agents with KVTether",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:16:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.md",
+  "represented_canonical_id": "arXiv:2609.39819",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

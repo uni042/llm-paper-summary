@@ -35,10 +35,15 @@
   "selection_reason": "学習と推論の混合向けモード切替エクスパンダMoSE。プリフィル・デコード分離のKV転送と学習の集合通信で求める接続性が異なる問題に対し、疎な辺予算を推論重みモードではP-D直接接続へ、学習重みモードでは一様なランダム正則エクスパンダへ再配分する再構成可能なトポロジ。推論基盤そのもの。",
   "semantic_scholar_id": "988c25e01895b6dc10b07be1f399c75c4bde5208",
   "source_url": "https://arxiv.org/abs/2609.39138",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoSE: Mode-Switching Expander for Mixed LLM Training and Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T00:16:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.md",
+  "represented_canonical_id": "arXiv:2609.39138",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

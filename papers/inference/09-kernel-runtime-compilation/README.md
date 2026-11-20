@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（243本）
+## 自動生成の論文一覧（244本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -221,6 +221,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [mKernel: Fast Multi-GPU, Multi-Node Fused Kernels](2026-2609.13585-mkernel-fast-multi-gpu-multi-node-fused-kernels.md)**  
   実装：[✓](https://github.com/uccl-project/mKernel) ・ リポジトリ内被引用：0  
   しかし計算がまとまった出力を完成するまで通信を始められない場合、演算の途中で生じる細かな待ち時間を隠せない。計算と通信を一つの融合カーネルへまとめても、従来方式の多くは単一NVLink領域に限られる。
+
+- **2026-09 · [LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization](2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quant.md)**  
+  実装：[✓](https://github.com/leapquant/LeapQuant) ・ リポジトリ内被引用：0  
+  線形注意の再帰状態を窓ごとに1回だけ量子化し、外れ値を高精度の補償トークンへ逃がす学習不要の方式で、8ビットでも精度をほぼ保ちながら状態転送を3.4倍減らしデコードを高速化した。
 
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -569,7 +573,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
-  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：20  
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
@@ -617,7 +621,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   DFloat11は、大規模言語モデルのBFloat16重みを数値を変えずに圧縮し、推論時にGPU上で必要な部分だけ復号する方式である。Llama 3.1 405Bの重み容量は約811.71GBから551.22GBへ減り、8台の80GB GPUを持つ単一ノードで可逆推論できる。
 
 - **2025-08 · [Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning](2025-2508.19828-memory-r1-enhancing-large-language-model-agents-to-manage-and-utilize-me.md)**  
-  実装：[✓](https://github.com/yansikuan/memory-r1) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/yansikuan/memory-r1) ・ リポジトリ内被引用：6  
   メモリ-R1は、記憶を管理するエージェント（メモリ Manager）と、検索した記憶から回答するエージェント（Answer Agent）を分離し、どちらも最終回答の正しさを報酬とする強化学習（reinforcement learning）で訓練する。
 
 - **2025-04 · [Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures](2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled.md)**  
@@ -1009,7 +1013,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-12〜2019-11）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：178  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：179  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

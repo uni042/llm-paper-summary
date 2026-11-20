@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0ada32939fb71984d160842c98419d30bc888830",
+  "base_commit": "c86b65688125e5a38e53e150ba8ffcf9b8476ce5",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -365,6 +365,11 @@
     "2026-2609.34370-spexis-speculative-lookahead-scheduling-for-llm-inference.json",
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
+    "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json",
+    "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json",
+    "2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.json",
+    "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json",
+    "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41136,6 +41141,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.38121": {
+      "order": [
+        "2026-11-20T00:12:40+00:00",
+        "2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.38166": {
+      "order": [
+        "2026-11-20T00:13:25+00:00",
+        "2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.39138": {
+      "order": [
+        "2026-11-20T00:14:10+00:00",
+        "2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.39740": {
+      "order": [
+        "2026-11-20T00:14:54+00:00",
+        "2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-counterfactual-policy-distillation.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.39819": {
+      "order": [
+        "2026-11-20T00:15:39+00:00",
+        "2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -50777,6 +50827,21 @@
     "arxiv:2609.37538": [
       "papers/inference/13-sparse-attention/2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md",
       "papers/inference/13-sparse-attention/2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload.md"
+    ],
+    "arxiv:2609.38121": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.38121-wush-kv-kv-cache-quantization-with-data-adaptive-transforms.md"
+    ],
+    "arxiv:2609.38166": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.38166-leapquant-efficient-linear-attention-with-accurate-recurrent-state-quant.md"
+    ],
+    "arxiv:2609.39138": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.39138-mose-mode-switching-expander-for-mixed-llm-training-and-inference.md"
+    ],
+    "arxiv:2609.39740": [
+      "papers/inference/99-other-inference-systems/2026-2609.39740-latentharness-learning-latent-actions-for-memory-and-reasoning-via-count.md"
+    ],
+    "arxiv:2609.39819": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.39819-capture-the-lifecycle-kv-cache-management-in-react-agents-with-kvtether.md"
     ]
   }
 }
