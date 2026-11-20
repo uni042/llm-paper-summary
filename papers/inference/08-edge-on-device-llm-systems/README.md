@@ -229,7 +229,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
@@ -284,6 +284,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
 
+- **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
+
 - **2025-05 · [RAP: Runtime Adaptive Pruning for LLM Inference](2025-2505.17138-rap-runtime-adaptive-pruning-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   固定の剪定率でモデル重みだけを削る方式は、短い入力では過剰に品質を落とし、長い入力ではKVキャッシュの増加を補えないことがある。
@@ -291,10 +295,6 @@
 - **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Federated 注意機構（FedAttn）は、この協調推論を注意機構の段階で分散する方式として提案された。
-
-- **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
 
 - **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：0  

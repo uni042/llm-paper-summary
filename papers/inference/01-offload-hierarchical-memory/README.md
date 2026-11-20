@@ -368,13 +368,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/Yufeng98/CENT) ・ リポジトリ内被引用：23  
   CXL接続のメモリ内・メモリ近傍演算装置だけで大規模言語モデル推論を実行し、A100基準で処理量2.3倍、エネルギー効率2.3倍、費用当たり生成量5.2倍を報告。
 
+- **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
+  実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：14  
+  専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
+
 - **2025-11 · [Beluga: A CXL-Based Memory Architecture for Scalable and Efficient LLM KVCache Management](2025-2511.20172-beluga-cxl-memory-kvcache.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   CXL 2.0スイッチでGPU/CPUから共有KVメモリを直接ロード／ストア可能にし、細粒度KV転送・共有メモリRPC・局所性不要の配置をvLLMへ統合してRDMA型プールのコピーと同期を削減する。
-
-- **2025-05 · [FloE: On-the-Fly MoE Inference on Memory-constrained GPU](2025-2505.05950-floe-on-the-fly-moe-inference.md)**  
-  実装：[✓](https://github.com/zju-stu-lizheng/FloE) ・ リポジトリ内被引用：13  
-  専門家内部の不要チャネルを予測して転送対象を削り、次層の専門家を先読みすることで、小容量GPU上のMoE推論を高速化する。
 
 - **2025-09 · [DuoServe-MoE: Dual-Phase Expert Prefetch and Caching for LLM Inference QoS Assurance](2025-2509.07379-duoserve-moe-dual-phase-prefetch-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
@@ -487,7 +487,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：169  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：170  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
@@ -503,7 +503,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  
-  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：83  
+  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：84  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで選ばれる専門家が少ないため計算量は疎だが、モデル全体の専門家重みをGPUメモリに収めるのは難しい。Fiddlerは、この二つの実行経路の長所を入力トークン数に応じて使い分ける推論システムである。
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
@@ -519,7 +519,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
 
 - **2024-11 · [MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs](2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md)**  
-  実装：[✓](https://github.com/caoshiyi/artifacts/tree/asplos25) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/caoshiyi/artifacts/tree/asplos25) ・ リポジトリ内被引用：27  
   MoE-Lightningは、GPUメモリに全重みを収容できない混合専門家モデル（Mixture of エキスパート、MoE）を、少数の比較的安価なGPUと大容量のCPUメモリで高スループット実行するシステムである。Mixtral 8x7Bを単一のT4 16GBで実行する条件では、既存のオフロード方式に対する生成スループット改善が最大10.3倍に達した。
 
 - **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  

@@ -1313,7 +1313,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLE-2は、既存のEAGLEで用いる小型の下書きモデルをそのまま使いながら、投機的復号（投機的復号）で検証する候補木の形を入力文脈に応じて変える手法である。代表的な温度0のVicuna 7B・MT-benchでは通常生成比3.62倍、既存EAGLEは2.90倍であり、平均受理長はそれぞれ4.98と3.94トークンである。
 
 - **2024-02 · [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](2024-2402.02057-lookahead-decoding.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/LookaheadDecoding) ・ リポジトリ内被引用：188  
+  実装：[✓](https://github.com/hao-ai-lab/LookaheadDecoding) ・ リポジトリ内被引用：189  
   先読みデコードは、対象LLMを未来位置へ並列反復して途中の正しい短いトークン列を蓄積し、現在接頭辞に合う候補を一括検証して、追加モデルなしに逐次ステップとメモリ帯域待ちを減らす。
 
 - **2024-07 · [Online Speculative Decoding](2023-2310.07177-online-speculative-decoding.md)**  
@@ -1464,6 +1464,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/BradMcDanel/AMUSD) ・ リポジトリ内被引用：10  
   二つのモデルを別々のGPUへ配置しても、この実行順序を変えなければGPUを同時に使い切れない。平均トークン時間は、自己回帰生成に対してHumanEvalで1.57倍、MT-Benchで1.31倍、RefactorChatで1.96倍の高速化となった。
 
+- **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
+  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：9  
+  制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
+
 - **2024-11 · [Draft on the Fly: Adaptive Self-Speculative Decoding using Cosine Similarity](2024-2410.01028-draft-on-the-fly-adaptive-self-speculative-decoding-using-cosine-similar.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   投機的復号（投機的復号）は、安価なドラフトモデルで候補を数トークン生成し、完全な目標モデルで一括検証することで、この逐次性を緩和する。
@@ -1471,10 +1475,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-05 · [Nearest Neighbor Speculative Decoding for LLM Generation and Attribution](2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md)**  
   実装：[✓](https://github.com/facebookresearch/NEST) ・ リポジトリ内被引用：8  
   対象：外部コーパスの根拠に基づく生成と複数トークンの投機的復号を統合する半パラメトリック推論。一次資料はNeurIPS 2024掲載論文のarXiv第3版（2025年4月25日）。標準的な分布保存型の投機的復号と区別する。
-
-- **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
-  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：8  
-  制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
 
 - **2024-05 · [Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge](2024-2405.00263-clover-regressive-lightweight-speculative-decoding-with-sequential-knowl.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1565,10 +1565,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：706  
+  実装：✓ ・ リポジトリ内被引用：707  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  
-  実装：[✓](https://github.com/hemingkx/SpecDec) ・ リポジトリ内被引用：76  
+  実装：[✓](https://github.com/hemingkx/SpecDec) ・ リポジトリ内被引用：77  
   提案の中核は、入力を読むエンコーダを深く、反復生成するデコーダを浅くした独立の候補生成モデル「Spec-Drafter」と、候補を対象モデルでまとめて確かめる「Spec-検証」である。
 <!-- survey:auto:end -->

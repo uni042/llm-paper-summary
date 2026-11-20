@@ -421,7 +421,7 @@
   画像を1枚だけ扱う場合でも自己注意と中間活性の負荷が増え、動画ではフレーム数にほぼ比例して言語モデルの文脈が膨らむ。別の学習可能なクエリを使った圧縮器が、言語モデルへ渡す視覚トークンを最少1個にする。
 
 - **2025-02 · [KernelBench: Can LLMs Write Efficient GPU Kernels?](2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/ScalingIntelligence/KernelBench) ・ リポジトリ内被引用：21  
   一般的なプログラム合成では単体試験に通ることを重視するが、GPUカーネルの実用性は入力形状、メモリ階層、並列実行、命令セットに左右される。正しくても遅い実装を成功とみなさないことが設計の中心にある。例えばDeepSeek-R1の fast1 は単一演算12%、複合演算36%、モデル全体2%である。
 
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  
@@ -559,7 +559,7 @@
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
 
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   この観測を使い、優先度別の二段階電力制御を行うPOLCAを提案する。著者らは本番トレースから生成した合成負荷を用いた離散事象シミュレーションで、既存の電力予算のままサーバーを30%多く配置しても、設定した遅延SLOを満たし、通常条件で電力ブレーキを起こさない結果を示した。
 
 - **2024-02 · [A Comprehensive Evaluation of Quantization Strategies for Large Language Models](2024-2402.16775-a-comprehensive-evaluation-of-quantization-strategies-for-large-language.md)**  

@@ -369,6 +369,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   エージェント型大規模言語モデルの学習軌跡が共有接頭辞を持つ木になることを利用し、各枝を独立学習する際の順伝播・逆伝播の重複を除く。深さ優先直列化、木に沿った注意・状態伝播、枝数に応じた損失重み付け、微分可能な分割境界を組み合わせ、学習目的を保ちながら計算を一度にする。
 
+- **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
+  実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：1  
+  機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
+
 - **2025-10 · [Staircase Streaming for Low-Latency Multi-Agent Inference](2025-2510.05059-staircase-streaming-for-low-latency-multi-agent-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   前段の提案者が最初の8トークン程度を生成した時点で集約者を起動し、後続の生成と集約を重ねる。提案者の全出力を待たないため、MoAでTTFTを10.6秒から0.47秒、MADで6.70秒から0.45秒へ削減する条件がある。
@@ -384,8 +388,4 @@
 - **2025-11 · [O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents](2025-2511.13593-o-mem-omni-memory-system-for-personalized-long-horizon-self-evolving-age.md)**  
   実装：[✓](https://github.com/OPPO-PersonalAI/O-Mem) ・ リポジトリ内被引用：0  
   過去の対話を意味的に近い断片へまとめ、質問に近い断片だけ検索する従来方式にも問題がある。主な結果は、長期対話ベンチマークLoCoMoのGPT-4.1条件でF1がLangMemの48.72から51.67へ、人物記憶のPERSONAMEMでA-Memの59.42から62.99へ改善したことである。
-
-- **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
-  実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：0  
-  機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
 <!-- survey:auto:end -->

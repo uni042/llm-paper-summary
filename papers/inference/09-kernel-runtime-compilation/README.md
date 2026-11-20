@@ -48,6 +48,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/Dao-AILab/sonic-moe) ・ リポジトリ内被引用：12  
   SonicMoEは混合専門家モデル（Mixture-of-Experts、MoE）の学習を対象に、専門家の細粒度化と高疎性化によって生じる三種類の非効率を同時に減らす。ICLR 2026正式版では、7B級の細粒度MoEでScatterMoEに対する活性値メモリ削減45%、Hopper世代GPUでの計算処理量1.86倍を報告する。
 
+- **2026-01 · [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  実LLM serving由来のGPUカーネル課題を統一トレースで検証し、エージェント生成カーネルをSGLang/vLLMへ低オーバーヘッドで動的適用する閉ループ基盤。
+
 - **2026-06 · [FOCUS: DLLMs Know How to Tame Their Compute Bound](2026-2601.23278-focus-dllms-know-how-to-tame-their-compute-bound.md)**  
   実装：[✓](https://github.com/sands-lab/FOCUS) ・ リポジトリ内被引用：4  
   拡散型言語モデル（diffusion language モデル、DLLM）は、マスクされた複数のトークンを一つのブロックとして反復的に復元する。自己回帰型言語モデルと違い、各反復でブロック内の複数位置を同時に処理できるが、実際に確定する位置が少ないと大部分の計算は次の反復でやり直される。直近の確定数と差分の分布から保持予算を決め、上位候補を残す。
@@ -55,10 +59,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](2026-2604.13327-event-tensor-dynamic-megakernel-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   タイル依存関係を記号形状のイベントテンソルとして表し、可変形状とMoEのデータ依存分岐を再コンパイルせず静的・動的メガカーネルへ変換するコンパイラ抽象。
-
-- **2026-01 · [FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems](2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  実LLM serving由来のGPUカーネル課題を統一トレースで検証し、エージェント生成カーネルをSGLang/vLLMへ低オーバーヘッドで動的適用する閉ループ基盤。
 
 - **2026-05 · [KVBuffer: IO-aware Serving for Linear Attention](2026-2605.19049-kvbuffer-io-aware-serving-for-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -87,6 +87,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels](2026-2604.14825-nautilus-an-auto-scheduling-tensor-compiler-for-efficient-tiled-gpu-kern.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデル（Large Language モデル; LLM）の注意計算を高速化するには、数学的に同じ式でも、演算の融合、行列の分割幅、共有メモリの配置、並列実行単位、GPU世代ごとの命令特性を考慮しなければならない。FlashAttention系のカーネルはこれらを手作業で高度に調整してきた。
+
+- **2026-03 · [Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation](2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md)**  
+  実装：[✓](https://github.com/kaist-ina/Trinity-AE) ・ リポジトリ内被引用：2  
+  Transformerの推論カーネル最適化では、計算グラフ上の演算融合・代数変形と、GPU上のタイル分割・共有メモリ配置・並列化を別々のコンパイラ段階で決めることが多い。この分離によって、FlashAttentionのように代数変形とデータ移動・実行順序を同時に変える最適化を一般的なコンパイラが自動発見しにくい。
 
 - **2026-01 · [Understanding Efficiency: Quantization, Batching, and Serving Strategies in LLM Energy Use](2026-2601.22362-understanding-efficiency-quantization-batching-and-serving-strategies-in.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -155,10 +159,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs](2026-2604.07888-bit-by-bit-progressive-qat-strategy-with-outlier-channel-splitting-for-s.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Bit-by-Bitは、事前学習済みLLMを重み2ビット、活性化2ビットまで量子化したときの精度低下と学習不安定性を抑える量子化対応学習（QAT）の方式である。RTX 4090の行列ベクトル積単体では形状によって11倍を超える高速化がある一方、小さい形状ではBF16より遅い。
-
-- **2026-03 · [Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation](2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md)**  
-  実装：[✓](https://github.com/kaist-ina/Trinity-AE) ・ リポジトリ内被引用：1  
-  Transformerの推論カーネル最適化では、計算グラフ上の演算融合・代数変形と、GPU上のタイル分割・共有メモリ配置・並列化を別々のコンパイラ段階で決めることが多い。この分離によって、FlashAttentionのように代数変形とデータ移動・実行順序を同時に変える最適化を一般的なコンパイラが自動発見しにくい。
 
 - **2026-03 · [Scaling Attention via Feature Sparsity](2026-2603.22300-scaling-attention-via-feature-sparsity.md)**  
   実装：[✓](https://github.com/YannX1e/Sparse-Feature-Attention) ・ リポジトリ内被引用：1  
@@ -633,7 +633,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：197  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：198  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -649,7 +649,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
-  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：21  
   大規模な混合専門家モデルの多数の専門家重みをCPUメモリに常駐させ、注意機構などをGPUで処理する異種混成推論基盤。CPUの行列演算命令を算術強度に応じて使い分け、非同期の実行制御と専門家計算の遅延反映によってCPU・GPUの相互待ちを減らす。低同時実行の巨大モデルを主対象とし、評価した環境は二基の高性能XeonとA100またはRTX 4080である。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
@@ -744,6 +744,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   高性能な実装では、演算量だけでなく、レジスタ圧迫、共有メモリ、キャッシュ利用、メモリ帯域、スレッド配置を同時に考える必要がある。KernelBandは、この探索判断を文脈付き多腕バンディット（contextual multi-armed bandit、MAB）へ置き換える方式である。
 
+- **2025-11 · [Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants](2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md)**  
+  実装：[✓](https://github.com/bozhiyou/pytorch-flashlight) ・ リポジトリ内被引用：1  
+  通常のPyTorchコードから、統一リダクション表現と次元降格・代数変換・次元消去の融合でFlashAttention型カーネルを自動生成するコンパイラ拡張。テンプレートに合わない注意バリアントでもtorch.compile比5倍以上の高速化。
+
 - **2025-10 · [Compressed Convolutional Attention: Efficient Attention in a Compressed Latent Space](2025-2510.04476-compressed-convolutional-attention-efficient-attention-in-a-compressed-l.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   CCGQAはさらにGQA型の鍵・値ヘッド共有を潜在空間で行い、クエリの圧縮率 $C1$ とKVの圧縮率 $C2$ を分離する。H100上の融合カーネル評価では、隠れ次元2048、BF16、系列長16Kの事前処理で、CCAの4倍圧縮設定がMHA比約1.6〜1.7倍低遅延、逆伝播で約1.2〜1.3倍高速となる。
@@ -763,6 +767,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [BlindSight: Harnessing Sparsity for Efficient Vision-Language Models](2025-2507.09071-blindsight-harnessing-sparsity-for-efficient-vision-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/BlindSight-AFDC) ・ リポジトリ内被引用：1  
   各ヘッドをDense（密）、Sink（境界シンク）、Intra-Image（同じ画像内）、Intra-Image+Sink（画像内と境界シンク）の4種類へ割り当て、実行時には画像境界位置だけから固定的な疎注意マスクを作る。
+
+- **2025-06 · [MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators](2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  削減次元が小さく帯域律速へ転じた計算集約演算子の連鎖を、タイル式の完全な探索空間とグラフ解析による冗長転送の除去、解析的性能模型による高速な探索で融合し、カーネルを最大五・九倍速くし調整時間を七十倍以上短縮した。
 
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -807,10 +815,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-11 · [Kunlun Anomaly Troubleshooter: Enabling Kernel-Level Anomaly Detection and Causal Reasoning for Large Model Distributed Inference](2025-2511.05978-kunlun-anomaly-troubleshooter-enabling-kernel-level-anomaly-detection-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模モデルの分散推論では、複数のGPUワーカーがモデル並列化の演算、集合通信、メモリ操作、要求処理を協調して実行する。本論文のKunlun Anomaly Troubleshooter（KAT）は、検出と説明を分離する。Outpostの異常イベント検出では適合率88.4%、再現率93.6%、F1値90.1%、偽陽性率0.27%を報告する。
-
-- **2025-11 · [Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants](2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md)**  
-  実装：[✓](https://github.com/bozhiyou/pytorch-flashlight) ・ リポジトリ内被引用：0  
-  通常のPyTorchコードから、統一リダクション表現と次元降格・代数変換・次元消去の融合でFlashAttention型カーネルを自動生成するコンパイラ拡張。テンプレートに合わない注意バリアントでもtorch.compile比5倍以上の高速化。
 
 - **2025-11 · [FlashEVA: Accelerating LLM inference via Efficient Attention](2025-2511.00576-flasheva-accelerating-llm-inference-via-efficient-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -864,10 +868,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/NolanoOrg/TriRun) ・ リポジトリ内被引用：0  
   三値言語モデルのスケーリング則と推論高速化を一体で示す研究。パラメータより学習トークンの拡大が効くことを示し、重みを1.6ビットと2ビットへ詰める方式とGPUカーネルTriRunで70Bモデルを4.9倍高速化した。
 
-- **2025-06 · [MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators](2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  削減次元が小さく帯域律速へ転じた計算集約演算子の連鎖を、タイル式の完全な探索空間とグラフ解析による冗長転送の除去、解析的性能模型による高速な探索で融合し、カーネルを最大五・九倍速くし調整時間を七十倍以上短縮した。
-
 - **2025-05 · [Turning LLM Activations Quantization-Friendly](2025-2506.01967-turning-llm-activations-quantization-friendly.md)**  
   実装：[✓](https://github.com/czakop/smooth-rot-exper) ・ リポジトリ内被引用：0  
   LLMの重み-only量子化は重み転送量を削減する一方、活性がFP16/BF16のままなら、行列演算を低bit整数だけで完結させることはできない。
@@ -907,11 +907,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：191  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：192  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：59  
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
@@ -1071,7 +1071,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：820  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：822  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
