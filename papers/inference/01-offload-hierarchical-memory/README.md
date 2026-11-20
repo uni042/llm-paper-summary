@@ -132,6 +132,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   HBM4の同一スタック内を高密度容量層とPIM計算層へ分け、高頻度KVだけを演算近傍へ動的配置することで、AttAcc比で処理量1.62倍・SLO処理容量1.70倍を達成する。
 
+- **2026-05 · [Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference](2026-2605.22416-asymmetric-virtual-memory-paging-hybrid-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  KVキャッシュと固定長SSM状態を別物理プール・統一仮想アドレスで扱い、割当失敗時だけ容量を移してハイブリッドLLMのメモリ不足と処理性能を改善する。
+
 - **2026-03 · [TriMoE: Augmenting GPU with AMX-Enabled CPU and DIMM-NDP for High-Throughput MoE Inference via Offloading](2026-2603.01058-trimoe-gpu-cpu-ndp-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   高・中・低頻度専門家をGPU・行列演算CPU・DIMM近傍処理へ三分し、予測付き再配置で単一GPUのMoEオフロードを高速化する。
@@ -310,10 +314,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   CoX-MoEは、専門家混合モデル（Mixture of エキスパート; MoE）を限られたGPUメモリで大バッチ推論する際の処理率を改善する、CPUとGPUの協調実行システムである。
 
-- **2026-05 · [Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference](2026-2605.22416-asymmetric-virtual-memory-paging-hybrid-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  KVキャッシュと固定長SSM状態を別物理プール・統一仮想アドレスで扱い、割当失敗時だけ容量を移してハイブリッドLLMのメモリ不足と処理性能を改善する。
-
 - **2026-05 · [Approaching I/O-optimality for Approximate Attention](2026-2605.23751-approaching-i-o-optimality-for-approximate-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   正確な注意演算をタイル化するFlashAttentionは、注意行列全体を保存しない優れた方式だが、通常の長文脈領域では系列長 $n$ に関して二次の入出力（I/O）転送量を必要とする。
@@ -487,24 +487,24 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-12〜2024-11）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：173  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：174  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：131  
+  実装：✓ ・ リポジトリ内被引用：132  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：103  
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
+
+- **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
+  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：87  
+  Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  
   実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：86  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで選ばれる専門家が少ないため計算量は疎だが、モデル全体の専門家重みをGPUメモリに収めるのは難しい。Fiddlerは、この二つの実行経路の長所を入力トークン数に応じて使い分ける推論システムである。
-
-- **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
-  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：86  
-  Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
   実装：✓ ・ リポジトリ内被引用：56  
@@ -569,7 +569,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：524  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：525  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-12〜2022-11）

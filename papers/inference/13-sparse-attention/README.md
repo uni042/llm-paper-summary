@@ -72,6 +72,10 @@
   実装：[✓](https://github.com/qhfan/FlashPrefill) ・ リポジトリ内被引用：7  
   FlashPrefillは、長文脈の大規模言語モデル（LLM）が入力全体を一度に処理するプリフィル段階を高速化する、動的な疎注意（sparse 注意機構）の方式である。原著のQwen3-30B-A3B-Instruct-2507を用いた注意演算子比較では、密なFlashAttentionに対して4Kで1.71倍、256Kで27.78倍の高速化を報告する。
 
+- **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
+  実装：[✓](https://github.com/longcheng-nv/GVR_TopK_supplementaty_materials) ・ リポジトリ内被引用：6  
+  Guess-Verify-Refine（GVR）は、長文脈の疎注意を使う言語モデルが次のトークンを生成するとき、過去の全トークンから重要度上位の位置を選ぶ処理を高速化するGPUアルゴリズムである。
+
 - **2026-02 · [ResidualKV: Residual-Based KV Cache Compression for Efficient Long-Context Inference](2026-2602.08005-residualkv-residual-based-kv-cache-compression-for-efficient-long-contex.md)**  
   実装：[✓](https://github.com/CURRENTF/ResidualKV) ・ リポジトリ内被引用：6  
   遠く離れた類似トークンを参照として引き、残差だけを小さく符号化して保存するKVキャッシュ圧縮で、捨てずに保存率を13から16パーセントまで下げ、選ばれたトークンだけを復元して計算も3割に抑えた。
@@ -79,10 +83,6 @@
 - **2026-01 · [From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation](2026-2601.12904-from-prefix-cache-to-fusion-rag-cache-accelerating-llm-inference-in-retr.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   検索拡張生成（Retrieval-Augmented Generation; RAG）では、質問に関連する文書片を多数連結して言語モデルへ渡す。通常の全文注意では文書片を一度に事前入力処理するため、互いの文脈を利用できる反面、検索片が増えると初回トークン待ち時間（Time to First Token; TTFT）が長くなる。
-
-- **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
-  実装：[✓](https://github.com/longcheng-nv/GVR_TopK_supplementaty_materials) ・ リポジトリ内被引用：5  
-  Guess-Verify-Refine（GVR）は、長文脈の疎注意を使う言語モデルが次のトークンを生成するとき、過去の全トークンから重要度上位の位置を選ぶ処理を高速化するGPUアルゴリズムである。
 
 - **2026-02 · [FASA: Frequency-aware Sparse Attention](2026-2602.03152-fasa-frequency-aware-sparse-attention.md)**  
   実装：[✓](https://github.com/wangyifei0047/FASA-ICLR2026) ・ リポジトリ内被引用：5  
@@ -163,6 +163,10 @@
 - **2026-09 · [Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding](2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Elastic Threshold 注意機構（ETA）は、注意ヘッドごとに現在のクエリから動的な閾値を予測する機構をモデルに組み込み、訓練時から疎化しやすい注意分布を学習する。
+
+- **2026-09 · [DoSA: Dots Sparse Attention](2026-2610.13990-dosa-dots-sparse-attention.md)**  
+  実装：[✓](https://github.com/llm-sys/flash-indexer) ・ リポジトリ内被引用：1  
+  上位K選択の棄却に必要な上限と下限だけを安く計算する証明書で、疎な注意の索引付けを無損失に条件付き計算化し、索引付け器を最大2.74倍、初回トークンまでの時間を最大1.94倍に高速化した。
 
 - **2026-09 · [CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference](2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -341,10 +345,6 @@
 - **2026-09 · [Efficient Agentic LLM Serving over SSD-based Sparse KV Storage](2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去の履歴を再計算しないためには鍵・値キャッシュを保持する必要があるが、全履歴を計算装置の高帯域メモリに置くと容量が不足する。後で正確な選択結果が得られた時点で予測漏れを補正するため、予測を外したトークンを黙って捨てる近似手法ではない。
-
-- **2026-09 · [DoSA: Dots Sparse Attention](2026-2610.13990-dosa-dots-sparse-attention.md)**  
-  実装：[✓](https://github.com/llm-sys/flash-indexer) ・ リポジトリ内被引用：0  
-  上位K選択の棄却に必要な上限と下限だけを安く計算する証明書で、疎な注意の索引付けを無損失に条件付き計算化し、索引付け器を最大2.74倍、初回トークンまでの時間を最大1.94倍に高速化した。
 
 - **2026-09 · [CRISP: Cliff-awaRe Input-adaptive Sparse Prefilling with Structural-Mass-Motivated Routing](2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

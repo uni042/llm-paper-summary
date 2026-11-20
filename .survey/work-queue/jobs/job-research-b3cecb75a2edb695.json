@@ -35,10 +35,15 @@
   "selection_reason": "LinkedInのLLMラベリングで、候補ごとのYES/NOをリストとして自己回帰生成する方式を、prefill-onlyの1-tokenスコアリングに変更。Multiple-Item Scoringで多数候補を1系列へ格納し候補間attentionを遮断して独立性を保つ。SGLangへMISサポートを実装し、1秒p99遅延制約下でモデルサービングthroughputを1.9倍、offlineで1.24倍にしたと報告。生成をスコアリングに置換する実運用LLM推論高速化のためaccept。",
   "semantic_scholar_id": "281ce8e86300d154e4ad1ddca6bb66d61c7d73a6",
   "source_url": "https://arxiv.org/abs/2610.36383",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Generation to Scoring: Scaling LLM-Based Semantic Labeling at LinkedIn",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:57:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.36383-from-generation-to-scoring-scaling-llm-based-semantic-labeling-at-linked.md",
+  "represented_canonical_id": "arXiv:2610.36383",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

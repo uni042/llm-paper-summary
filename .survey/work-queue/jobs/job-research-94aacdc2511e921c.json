@@ -35,10 +35,15 @@
   "selection_reason": "TDLMはmasked diffusion言語モデルで未解決位置が過去の隠れ表現へtemporal attentionし、繰り返すdenoising計算の情報を再利用する。frozen denoiserへ約0.84%の学習パラメータを追加し、LLaDA/Dreamで対応する元モデル比最大7.15倍の生成高速化と品質競争力を報告。比較条件の詳細は本文未監査。",
   "semantic_scholar_id": "49d735f88aeb0a414c4157f47ca5c835c5f0aa6a",
   "source_url": "https://arxiv.org/abs/2610.36940",
-  "status": "ready",
+  "status": "superseded",
   "title": "TDLM: Adaptive Temporal Integration for Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:57:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2610.36940",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

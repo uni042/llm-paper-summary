@@ -35,10 +35,15 @@
   "selection_reason": "Mamba-2 recurrent stateの大きなenergy方向とoutputが読む情報方向が一致しない問題に対し、write/readのcontrollability・observability Gramianを用いたbalanced truncationで状態空間を回転・切り詰める。HARPはHankel spectrumからlayer別rankを配分しretrieval-sensitive layerを保護。130M〜2.7B modelでstate次元半減時のWikiText-2 perplexity悪化平均0.3点（GHOST 1.6点）、較正1 forward passと報告。推論時のSSM state容量・帯域を直接削減するためaccept。",
   "semantic_scholar_id": "5f124ff214267b633fc5fe4a353d7d21c01b81ca",
   "source_url": "https://arxiv.org/abs/2610.36617",
-  "status": "ready",
+  "status": "superseded",
   "title": "Balanced State Subspaces with Spectral Rank Allocation for Mamba-2 State Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:57:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state.md",
+  "represented_canonical_id": "arXiv:2610.36617",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

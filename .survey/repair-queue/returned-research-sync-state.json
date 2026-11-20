@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "63916714894547f7389141d3d2f09be68697a792",
+  "base_commit": "4f90902af57af9853ff8804a5369b10d9a64878e",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -773,6 +773,11 @@
     "2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-agents.json",
     "2026-2610.36339-inc-moe-overlapping-in-network-collectives-and-expert-computation-for-expert-parallel-mixture-of-experts-inference.json",
     "2026-2610.36355-wakman-workload-aware-kvcache-manager.json",
+    "2026-2610.36383-from-generation-to-scoring-scaling-llm-based-semantic-labeling-at-linkedin.json",
+    "2026-2610.36520-folding-attention-biases-into-keys-makes-compacted-kv-caches-run-on-standard-kernels.json",
+    "2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.json",
+    "2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state-compression.json",
+    "2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45295,6 +45300,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.36383": {
+      "order": [
+        "2026-11-20T13:52:56+00:00",
+        "2026-2610.36383-from-generation-to-scoring-scaling-llm-based-semantic-labeling-at-linkedin.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36520": {
+      "order": [
+        "2026-11-20T13:53:44+00:00",
+        "2026-2610.36520-folding-attention-biases-into-keys-makes-compacted-kv-caches-run-on-standard-kernels.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36564": {
+      "order": [
+        "2026-11-20T13:54:32+00:00",
+        "2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36617": {
+      "order": [
+        "2026-11-20T13:55:21+00:00",
+        "2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.36940": {
+      "order": [
+        "2026-11-20T13:56:09+00:00",
+        "2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -56554,6 +56604,21 @@
     "arxiv:2610.36355": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.36355-wakman-workload-aware-kvcache-manager.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2610.36355-wakman-workload-aware-kvcache-manager.md"
+    ],
+    "arxiv:2610.36383": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.36383-from-generation-to-scoring-scaling-llm-based-semantic-labeling-at-linked.md"
+    ],
+    "arxiv:2610.36520": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.36520-folding-attention-biases-into-keys-makes-compacted-kv-caches-run-on-stan.md"
+    ],
+    "arxiv:2610.36564": [
+      "papers/inference/03-expert-prefetch/2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.md"
+    ],
+    "arxiv:2610.36617": [
+      "papers/inference/99-other-inference-systems/2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state.md"
+    ],
+    "arxiv:2610.36940": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.36940-tdlm-adaptive-temporal-integration-for-diffusion-language-models.md"
     ]
   }
 }

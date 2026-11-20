@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（575本）
+## 自動生成の論文一覧（576本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -649,6 +649,10 @@
 - **2026-10 · [InferSlice: A Reference Architecture for SLO-driven LLM Inference over a Telco Wide-Area Network](2026-2610.32638-inferslice-a-reference-architecture-for-slo-driven-llm-inference-over-a-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通信事業者の広域網でSLO駆動の推論を行う参照アーキテクチャを実テストベッドで評価し、階層差別化の成立と、並列・分離の届く範囲が通信の形で決まることを示した研究。
+
+- **2026-10 · [From Generation to Scoring: Scaling LLM-Based Semantic Labeling at LinkedIn](2026-2610.36383-from-generation-to-scoring-scaling-llm-based-semantic-labeling-at-linked.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  独立なはずのラベル判定を回答リスト生成から切り離し、候補ごとのスコアをプリフィルのみで読み出す定式化と、共有文脈を保ったまま候補を隔離するMIS実行で、順序不変性とスループットを同時に得た本番ラベラーの作り替え。
 
 - **2026-10 · [FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving](2026-2610.06917-fluidpd-in-place-elasticity-for-slo-aware-prefill-decode-disaggregated-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2237,7 +2241,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1743  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1745  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  

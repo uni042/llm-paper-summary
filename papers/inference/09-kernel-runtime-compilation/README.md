@@ -100,6 +100,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/kaist-ina/Trinity-AE) ・ リポジトリ内被引用：2  
   Transformerの推論カーネル最適化では、計算グラフ上の演算融合・代数変形と、GPU上のタイル分割・共有メモリ配置・並列化を別々のコンパイラ段階で決めることが多い。この分離によって、FlashAttentionのように代数変形とデータ移動・実行順序を同時に変える最適化を一般的なコンパイラが自動発見しにくい。
 
+- **2026-02 · [On State Reduction in Linear Attention](2026-2602.04852-on-state-reduction-in-linear-attention.md)**  
+  実装：[✓](https://github.com/camail-official/LinearAttentionPruning) ・ リポジトリ内被引用：2  
+  線形注意（linear 注意機構）は、通常のソフトマックス注意と異なり、過去のトークンを固定サイズの行列型状態へ逐次圧縮できる。Gated DeltaNet 1.3Bでは、状態次元を50%削減し回復用微調整を行った場合、WikiText-2困惑度は元モデル16.8に対しDRRQRで16.3、ゼロショット平均精度は59.4から58.0となった。
+
 - **2026-01 · [TIRx: A Unified Tile Primitive ML Compiler Across Heterogeneous Backends](2026-2601.19092-tirx-a-unified-tile-primitive-ml-compiler-across-heterogeneous-backends.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   テンソルの物理配置、演算に参加するハードウェアチーム、プリミティブの実装選択を3つの明示的な接口で分離した機械学習コンパイラで、最新GPUと専用加速器の双方でベンダ水準のカーネル性能を保ちながら低水準コードを大幅に減らした。
@@ -183,10 +187,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-02 · [PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference](2026-2602.06072-packinfer-batched-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   異種長要求を負荷均衡した群へ詰め、共有接頭辞を考慮した連続KV配置と一体化することで、注意計算の無駄と入出力断片化を同時に削減する。
-
-- **2026-02 · [On State Reduction in Linear Attention](2026-2602.04852-on-state-reduction-in-linear-attention.md)**  
-  実装：[✓](https://github.com/camail-official/LinearAttentionPruning) ・ リポジトリ内被引用：1  
-  線形注意（linear 注意機構）は、通常のソフトマックス注意と異なり、過去のトークンを固定サイズの行列型状態へ逐次圧縮できる。Gated DeltaNet 1.3Bでは、状態次元を50%削減し回復用微調整を行った場合、WikiText-2困惑度は元モデル16.8に対しDRRQRで16.3、ゼロショット平均精度は59.4から58.0となった。
 
 - **2026-02 · [NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models](2026-2602.06694-nanoquant-efficient-sub-1-bit-quantization-of-large-language-models.md)**  
   実装：[✓](https://github.com/SamsungLabs/NanoQuant) ・ リポジトリ内被引用：1  
@@ -657,7 +657,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：206  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：207  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -812,6 +812,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   MBOK（Multiple Boolean Kernels）の基本表現は、通常の実数重み行列を複数の符号行列とチャネル別スケールの和で近似するものである。各カーネルの重みは1-bitで、入力側・出力側の実数スケールを別途持つ。元のFP重みから順に近似成分を抽出し、残差へ同じ分解を繰り返すため、単一の符号行列より表現力が高い。
 
+- **2025-05 · [FlashBias: Fast Computation of Attention with Bias](2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.md)**  
+  実装：[✓](https://github.com/thuml/FlashBias) ・ リポジトリ内被引用：1  
+  注意バイアスを低ランク分解してクエリとキーへ埋め込み、二乗のメモリ読み込みを消すことでバイアス付き注意を無損失から近似まで含めて高速化した方式。
+
 - **2025-04 · [Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation](2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computat.md)**  
   実装：[✓](https://github.com/NVIDIA/tilus) ・ リポジトリ内被引用：1  
   一から八ビットの任意幅の低精度型を原生的に扱い、配置の代数と再解釈で配置変換を消しパイプライン化を保つタイル単位の言語で、低精度カーネルが既存コンパイラより一・七五倍と二・六一倍、手書きカーネルより一・二九倍と一・〇三倍速くなった。
@@ -903,10 +907,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [HybridServe: Efficient Serving of Large AI Models with Confidence-Based Cascade Routing](2025-2505.12566-hybridserve-efficient-serving-of-large-ai-models-with-confidence-based-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   小型モデルへ置き換える蒸留・量子化は電力を削減できるが、難しい要求で品質を落としやすい。論文は最大19.8倍の省電力と記載するが、丸め済み表の値から計算すると115/6=19.17倍である。
-
-- **2025-05 · [FlashBias: Fast Computation of Attention with Bias](2025-2505.12044-flashbias-fast-computation-of-attention-with-bias.md)**  
-  実装：[✓](https://github.com/thuml/FlashBias) ・ リポジトリ内被引用：0  
-  注意バイアスを低ランク分解してクエリとキーへ埋め込み、二乗のメモリ読み込みを消すことでバイアス付き注意を無損失から近似まで含めて高速化した方式。
 
 - **2025-05 · [FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration](2025-2505.20839-fireq-fast-int4-fp8-kernel-and-rope-aware-quantization-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1053,7 +1053,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：602  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：603  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

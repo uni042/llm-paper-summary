@@ -5,7 +5,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。将来需要の予測をcache保持判断に使い、必ずしも先読み転送しない方式も含む。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（18本）
+## 自動生成の論文一覧（19本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/)
 
@@ -39,6 +39,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   不要な専門家をCPU側に退避し、必要時だけGPUへ読み込む方式は容量を節約するが、CPU・GPU間の転送が推論遅延を支配する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [DeepInfer-Mac: Running a 750B-Class MoE on a 24 GB Laptop](2026-2610.36564-deepinfer-mac-running-a-750b-class-moe-on-a-24-gb-laptop.md)**  
+  実装：[✓](https://github.com/haoruilee/DeepInfer-Mac) ・ リポジトリ内被引用：0  
+  750B級MoEの作業集合だけを24GBメモリに置き、専門家をSSDからGPUバッファへ直接読む実行系で、毎秒0.21から0.72トークンの生成と先行読みによる21.0パーセントの改善を実測した事例研究。
 
 - **2026-08 · [SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration](2026-2608.21240-spice-speculative-prefetching-low-rank-expert-surrogates-heterogeneous-orchestration.md)**  
   実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：0  
@@ -81,13 +85,13 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：43  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 ### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：✓ ・ リポジトリ内被引用：100  
+  実装：✓ ・ リポジトリ内被引用：101  
   Pre-gated MoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリより大きな規模で動かす際、CPU主記憶から専門家重みを読み込む時間を削減するための、モデル側のルーティング変更と実行系の協調設計である。著者らは単一のA100 80GBと大容量CPU主記憶を使い、SwitchTransformerの複数規模を評価した。
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "Attention Matchingの圧縮KVは残存keyごとにlogit biasを必要とし、標準FlashAttentionやvLLM PagedAttentionでは扱えない。文脈queryから求めた各headの方向へbiasをkeyベクトルに折り込むことで、通常のkey/value形状と標準kernelを維持する。無改造vLLMのKV connector経由で動作を確認し、同じper-head容量でQuALITY/LongHealthの14条件中13条件は元のAM精度と統計的に同等と報告。KV圧縮の実運用互換性を直接改善するためaccept。",
   "semantic_scholar_id": "4841668cc99c371def194a734614bc51e5568df4",
   "source_url": "https://arxiv.org/abs/2610.36520",
-  "status": "ready",
+  "status": "superseded",
   "title": "Folding Attention Biases into Keys Makes Compacted KV Caches Run on Standard Kernels",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:57:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.36520-folding-attention-biases-into-keys-makes-compacted-kv-caches-run-on-stan.md",
+  "represented_canonical_id": "arXiv:2610.36520",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

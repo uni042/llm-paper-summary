@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1122本）
+## 自動生成の論文一覧（1123本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
-  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：19  
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
@@ -204,6 +204,10 @@
   実装：[✓](https://github.com/MaQianKun0/ApET) ・ リポジトリ内被引用：3  
   視覚トークンの重要度を注意ではなく線形再構成の誤差で測って圧縮する学習不要の方式で、約9割のトークン削減でも性能をほぼ保ち、高速注意カーネルとも併用できる。
 
+- **2026-01 · [Residual Context Diffusion Language Models](2026-2601.22954-residual-context-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/yuezhouhu/residual-context-diffusion) ・ リポジトリ内被引用：3  
+  マスク型拡散大規模言語モデル（dLLM）は、複数のトークン位置を同時に予測し、確信度が高い位置だけを確定しながら残りを反復更新する。SDAR-8Bでブロック長64のMATH500正答率は通常の逐次ノイズ除去（Sequential Denoising、SeqD）の64.20%から74.40%へ、AIME24は7.08%から18.75%へ改善する。
+
 - **2026-01 · [MELINOE: Fine-Tuning Enables Memory-Efficient Inference for Mixture-of-Experts Models](2026-2602.11192-melinoe-fine-tuning-enables-memory-efficient-inference-for-mixture-of-ex.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   MELINOEは、混合専門家モデル（MoE）の専門家重みをCPUへ退避する推論環境で、モデル自身の専門家選択を少数の再利用しやすい専門家へ寄せる手法である。著者らはOLMoE、Phi-3.5-MoE、Mixtral-8x7Bを対象に、H100、A100、RTX 4090のメモリ制限環境で評価した。
@@ -312,10 +316,6 @@
   実装：[✓](https://github.com/aiming-lab/SimpleMem) ・ リポジトリ内被引用：2  
   SimpleMemは、書き込み時に記憶を整理して、質問時に必要な情報だけを引き出すことで、この二種類の費用を同時に抑えようとする方式である。原著のLoCoMo評価では、GPT-4.1-miniを基盤としたSimpleMemの平均F1が43.24、Mem0が34.20で、相対26.4%の改善となる。
 
-- **2026-01 · [Residual Context Diffusion Language Models](2026-2601.22954-residual-context-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/yuezhouhu/residual-context-diffusion) ・ リポジトリ内被引用：2  
-  マスク型拡散大規模言語モデル（dLLM）は、複数のトークン位置を同時に予測し、確信度が高い位置だけを確定しながら残りを反復更新する。SDAR-8Bでブロック長64のMATH500正答率は通常の逐次ノイズ除去（Sequential Denoising、SeqD）の64.20%から74.40%へ、AIME24は7.08%から18.75%へ改善する。
-
 - **2026-01 · [LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers](2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LOOKATは、自己回帰Transformerの注意得点計算を、ベクトル検索における内積類似度検索として扱い、キーを圧縮したまま注意得点を計算する方式である。GPT-2の第1注意層で、64次元のキーを2個の1バイト符号へ圧縮すると、キー表現は128バイトから2バイトへ減り、キー単体の表現上の圧縮率は64倍となる。
@@ -375,6 +375,10 @@
 - **2026-08 · [Learning What to Remember: Test-Time Training via Context Distillation](2026-2608.01672-learning-what-to-remember-test-time-training-via-context-distillation.md)**  
   実装：[✓](https://github.com/dangxingyu/ttcd) ・ リポジトリ内被引用：1  
   通常の全注意（full 注意機構）は長い履歴の情報を参照できる一方、長さに応じて注意計算と鍵・値（KV）キャッシュの費用が増える。760Mパラメータをゼロから学習したモデルのRULER針検索（6課題平均）では、32KトークンでIP-TTTの9.29%に対しIP-TTCDは21.96%。
+
+- **2026-08 · [Beyond Sparse Weights: When Is Attention Compressible?](2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  疎な注意マップだけではKV圧縮を正当化できないことを理論化し、値分散配分と末尾要約を厳密な物理予算で実装するCertKVを提案。
 
 - **2026-08 · [Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting](2026-2608.27339-beyond-parallel-blindness-information-floors-and-model-gaps-in-block-dra.md)**  
   実装：[✓](https://github.com/tie-pilot-qxw/specfloor) ・ リポジトリ内被引用：1  
@@ -982,6 +986,10 @@
   実装：[✓](https://github.com/EIT-NLP/Bifocal) ・ リポジトリ内被引用：0  
   視覚トークンの枝刈りで細粒度課題が崩れる問題に対し、質問焦点と画像自体の証拠へ別予算を配る混合粒度の学習不要な2段階枝刈りで、全能力群で未圧縮比90パーセント超を保った。
 
+- **2026-10 · [Balanced State Subspaces with Spectral Rank Allocation for Mamba-2 State Compression](2026-2610.36617-balanced-state-subspaces-with-spectral-rank-allocation-for-mamba-2-state.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Mamba-2の再帰状態を座標ではなくバランス部分空間で切り詰め、ランク予算をハンケルスペクトルで層ごとに配り直すことで、状態半減でもパープレキシティ増加0.3ポイントと検索性能の97パーセント保持を両立させた学習後圧縮。
+
 - **2026-10 · [Advancing SVD-based LLM Compression via Layer-Wise Error Model Search](2026-2610.32878-advancing-svd-based-llm-compression-via-layer-wise-error-model-search.md)**  
   実装：[✓](https://lems-svd.github.io) ・ リポジトリ内被引用：0  
   層ごとの誤差を形・較正・伝播バイアスでモデル化して整数線形計画で最適なランク配分を解き、フィッシャー因子はトークン単位の統計で推定してランク崩壊を防ぐSVD圧縮で、同じ予算でも精度を大きく保てるようにした。
@@ -1285,10 +1293,6 @@
 - **2026-08 · [Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State](2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md)**  
   実装：[✓](https://github.com/StarkLeeSunny/Flexkv-doublenode) ・ リポジトリ内被引用：0  
   外部KV状態の全ヒットを先に把握しつつ、復元はWチャンク窓だけを順次ステージングして解放することで、長大な外部状態とローカル復元メモリを分離する方式。
-
-- **2026-08 · [Beyond Sparse Weights: When Is Attention Compressible?](2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  疎な注意マップだけではKV圧縮を正当化できないことを理論化し、値分散配分と末尾要約を厳密な物理予算で実装するCertKVを提案。
 
 - **2026-08 · [Allocation Before Ranking: Decoupled Token Compression for OmniLLMs](2026-2608.01665-allocation-before-ranking-decoupled-token-compression-for-omnillms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2617,7 +2621,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：121  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：122  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
