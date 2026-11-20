@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（187本）
+## 自動生成の論文一覧（188本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -375,7 +375,7 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
-  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：224  
+  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：225  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
 
 - **2025-04 · [HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem](2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md)**  
@@ -494,6 +494,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Neural 重み Compression（NWC）は、LLMの重みを手作業で設計した一様量子化やHadamard回転だけで圧縮するのではなく、重み分布からencoderとdecoderを学習して圧縮する方式である。
 
+- **2025-10 · [1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models](2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-lan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みを低ランク成分と疎成分へ分け、再構成誤差の単一目的で交互最適化する共同圧縮手法。単独手法の弱点を相殺し、50パーセント圧縮でも品質を保ち、低ランク部だけの微調整で回復もできる。
+
 - **2025-09 · [Fair-GPTQ: Bias-Aware Quantization for Large Language Models](2025-2509.15206-fair-gptq-bias-aware-quantization-for-large-language-models.md)**  
   実装：[✓](https://github.com/upunaprosk/fair-gptq) ・ リポジトリ内被引用：0  
   LLMの重みを16bitから4bitへ量子化すると、パラメータ格納容量とデータ転送量を大幅に減らせる。著者らの主評価では、Mistral-v0.3-7B-InstructのUnQover（曖昧な属性質問での回答評価）が通常GPTQの33.30%からFair-GPTQの58.89%へ改善した。
@@ -517,7 +521,7 @@
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
-  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：202  
+  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：203  
   QuIP#は、学習済みの大規模言語モデルを再学習せずに2〜4ビット/重みへ圧縮する事後学習量子化（Post-学習 量子化、PTQ）である。試作推論実装はRTX 4090上で70Bの2ビット重みを32.74トークン/秒で生成し、実効メモリ帯域利用率56.84%を記録した（表5）。
 
 - **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
@@ -537,7 +541,7 @@
   巨大外れ値を外れ値誘導のブロック回転とジグザグ置換で分散し、4ビット重み・活性量子化の精度を改善しつつ、LLaMA2-7Bでプリフィル最大2.08倍・復号時メモリ3.50倍削減を示す。
 
 - **2023-12 · [ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models](2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md)**  
-  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：76  
+  実装：[✓](https://github.com/hahnyuan/ASVD4LLM) ・ リポジトリ内被引用：77  
   活性値認識型特異値分解（活性値-aware Singular Value Decomposition、ASVD）は、大規模言語モデル（LLM）の線形重みを追加学習なしで低ランク行列へ置き換える圧縮方式である。LLaMA-7BとLLaMA-2-7B/13Bで重み容量を10～30%削減する実験を行い、活性値を考慮しないSVDより大幅に良い困惑度を報告する。
 
 - **2024-10 · [FlatQuant: Flatness Matters for LLM Quantization](2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md)**  
@@ -565,7 +569,7 @@
   複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
 
 - **2024-01 · [SliM-LLM: Salience-Driven Mixed-Precision Quantization for Large Language Models](2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
+  実装：✓ ・ リポジトリ内被引用：50  
   要素単位で重要重みだけ高精度に残すのではなく、重要度が空間的にまとまる性質を使ってグループ単位で1/2/3ビットを割り当てる。さらに各グループ内部の少数の重要要素を量子化器校正で重く扱い、LLaMA-7Bの2ビット級でWikiText2パープレキシティ14.58を達成する。
 
 - **2024-02 · [BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation](2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md)**  
@@ -671,7 +675,7 @@
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
-  実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：255  
+  実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：256  
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
@@ -679,7 +683,7 @@
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression](2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md)**  
-  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：194  
+  実装：[✓](https://github.com/Vahe1994/SpQR) ・ リポジトリ内被引用：195  
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 - **2023-06 · [SqueezeLLM: Dense-and-Sparse Quantization](2023-2306.07629-squeezellm-dense-and-sparse-quantization.md)**  

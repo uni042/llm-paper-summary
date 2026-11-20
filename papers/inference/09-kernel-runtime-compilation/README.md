@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（257本）
+## 自動生成の論文一覧（258本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -827,6 +827,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [Toward Efficient SpMV in Sparse LLMs via Block Extraction and Compressed Storage](2025-2507.12205-toward-efficient-spmv-in-sparse-llms-via-block-extraction-and-compressed.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非構造化剪定は、大規模言語モデルの重みを疎にしてメモリ容量を減らす。しかしゼロ要素を単に削除しただけでは、GPUでの生成が速くなるとは限らない。特にローカルLLMのようにバッチサイズが1の自己回帰デコードでは、線形層の重み行列と入力ベクトルの積が繰り返される。まず非ゼロ要素の共通列を持つ行を組み合わせ、複数の粒度でブロックを抽出する。
+
+- **2025-07 · [PoTPTQ: A Two-step Power-of-Two Post-training for LLMs](2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みを2の冪で表す量子化のスケールを、重みだけのグリッド探索と少量較正での残差学習の2段で決め、ビット操作の逆量子化で推論も速くする学習後量子化。3.25ビットで一様量子化の最先端を上回り、逆量子化は最大3.67倍高速。
 
 - **2025-06 · [MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators](2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intens.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

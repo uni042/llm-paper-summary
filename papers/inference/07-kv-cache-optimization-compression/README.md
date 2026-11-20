@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（531本）
+## 自動生成の論文一覧（533本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1841,6 +1841,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   活性値の外れ値に絞った学習後量子化の系統的レビュー。PRISMAで選んだ52件を等価変換・混合精度・細粒度化・非線形データ型の4群へ分類し、どのビット幅でどの対策が要るかを困惑度の横断比較で示した。
 
+- **2025-04 · [UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference](2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-prun.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FeFETの統一アレイで動的枝刈り・静的枝刈り・厳密注意計算を3モード切替で実行するCIMアクセラレータ。定数時間の上位k選択と同一サイクルの累積で、AEDPを最大831倍改善する。
+
 - **2025-04 · [SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices](2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   10億パラメータ前後の小型言語モデルは重み容量が比較的小さいが、生成が長くなると過去トークンの鍵・値（KV）キャッシュが増え、端末側のメモリを圧迫する。ZengらのSubKVは、鍵をチャネル別、値をトークン別に量子化する非対称な粒度を採用し、直近の重要なトークンと先頭の注意集中領域を高精度で残す。
@@ -1868,7 +1872,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：524  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：525  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -1956,7 +1960,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   従来の圧縮方式は、最近の注意得点を利用して残すトークンを選んだり、層ごとに予算を変えたりする。論文は文脈QAの代表条件で元キャッシュの約1.5%を保持しながら完全キャッシュ性能の97%を得たと報告するが、これは全タスク・全モデルで97%という保証ではない。
 
 - **2024-07 · [Keep the Cost Down: A Review on Methods to Optimize LLM's KV Cache Consumption](2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md)**  
-  実装：✓ ・ リポジトリ内被引用：56  
+  実装：✓ ・ リポジトリ内被引用：57  
   本稿は、Luohe Shi、Hongyi Zhang、Yao Yao、Zuchao Li、Hai Zhaoによる鍵・値キャッシュ（Key-Value Cache、以下KVキャッシュ）の最適化手法に関する総説を、2024年11月20日の第4版を一次資料として再監査した解説である。
 
 - **2024-02 · [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md)**  
@@ -2008,7 +2012,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   キーのL2ノルムと注意重みの逆相関を利用し、注意重みを計算せず重要KVを残す学習不要の圧縮法。FlashAttention互換のまま、長文検索では50〜90%のKV削減でも高精度を維持する。
 
 - **2024-03 · [ALISA: Accelerating Large Language Model Inference via Sparsity-Aware KV Caching](2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md)**  
-  実装：✓ ・ リポジトリ内被引用：40  
+  実装：✓ ・ リポジトリ内被引用：41  
   ALISAは、生成が進むほど増加する鍵・値キャッシュ（KVキャッシュ）の容量とCPU・GPU間転送が、単一GPUでの大規模言語モデル推論を妨げる問題を扱う。提案方式は三つの操作を組み合わせる。原著はOPT、LLaMA、Pythiaの6.7B～33B級を評価し、入力128・出力512トークンのAlpaca負荷で、80%のKV疎化を採用した際の処理量を比較する。
 
 - **2024-10 · [LoRC: Low-Rank Compression for LLMs KV Cache with a Progressive Compression Strategy](2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md)**  
@@ -2115,6 +2119,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：1  
   文脈を符号器の最終表現だけでキャッシュし交差注意で読む形へ復号器を作り替え、KVキャッシュを約30分の1にしながらプロンプト方式より高い質問応答精度を出した方式。
 
+- **2024-10 · [ALISE: Accelerating Large Language Model Serving with Speculative Scheduling](2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-schedul.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  出力長を検索型予測器で推定し、残り時間の短いジョブを優先するプリエンプティブなスケジューリングと、待ち時間に応じたKVキャッシュのスワップで、ヘッドオブライン・ブロッキングを解くサービング方式。vLLM比で最大2.1倍のスループット。
+
 - **2024-07 · [QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering](2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Quantum Entanglement Trees（QET）は、量子コンピュータを用いる方式ではない。主要実験では圧縮比4のLLaMA2重み行列のMSEをPQの5.05%、KキャッシュのMSEを13.33%、VキャッシュのMSEを11.89%に減らしたと報告する。
@@ -2130,7 +2138,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：762  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：763  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  

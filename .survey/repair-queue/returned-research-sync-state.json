@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "0a2b9c490f60fd31fbf20c07c526cf5759a622e4",
+  "base_commit": "42eeef1e845231b44267b510a7a2265304fd72cd",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -56,6 +56,7 @@
     "2024-2410.10254-lolcats-on-low-rank-linearizing-of-large-language-models.json",
     "2024-2410.10912-alphapruning-using-heavy-tailed-self-regularization-theory-for-improved-layer-wise-pruning-of-large-language-models.json",
     "2024-2410.21352-llmcbench-benchmarking-large-language-model-compression-for-efficient-deployment.json",
+    "2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-scheduling.json",
     "2024-2411.02327-ppllava-varied-video-sequence-understanding-with-prompt-guidance.json",
     "2024-2411.10606-amoeballm-constructing-any-shape-large-language-models-for-efficient-and-instant-deployment.json",
     "2024-2412.11242-trimllm-progressive-layer-dropping-for-domain-specific-llms.json",
@@ -70,7 +71,9 @@
     "2025-2503.09657-tyr-the-pruner-structural-pruning-via-global-sparsity-distribution.json",
     "2025-2504.00557-efficient-llama-3-2-vision-by-trimming-cross-attended-visual-features.json",
     "2025-2504.02118-llmpi-optimizing-llms-for-high-throughput-on-raspberry-pi.json",
+    "2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algorithm.json",
     "2025-2504.05352-achieving-binary-weight-and-activation-for-llms-using-post-training-quantization.json",
+    "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json",
     "2025-2504.09897-tamp-token-adaptive-layerwise-pruning-in-multimodal-large-language-models.json",
     "2025-2504.12984-tilus-a-tile-level-gpgpu-programming-language-for-low-precision-computation.json",
     "2025-2505.03810-grouped-sequency-arranged-rotation-optimizing-rotation-transformation-for-quantization-for-free.json",
@@ -90,6 +93,7 @@
     "2025-2506.20480-gptailor-large-language-model-pruning-through-layer-cutting-and-stitching.json",
     "2025-2506.22169-mcfuser-high-performance-and-rapid-fusion-of-memory-bound-compute-intensive-operators.json",
     "2025-2507.04742-activation-steering-for-chain-of-thought-compression.json",
+    "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json",
     "2025-2508.05282-not-all-errors-are-created-equal-ascot-addresses-late-stage-fragility-in-efficient-llm-reasoning.json",
     "2025-2508.08289-attention-as-conditioning-what-classical-learning-theory-predicts-about-linear-transformers.json",
     "2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-strong-aligner.json",
@@ -102,6 +106,7 @@
     "2025-2510.12721-carvq-corrective-adaptor-with-group-residual-vector-quantization-for-llm-embedding-compression.json",
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json",
+    "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
     "2025-2511.18692-vlm-in-a-flash-io-efficient-sparsification-of-vision-language-model-via-neuron-chunking.json",
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
@@ -42936,6 +42941,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2410.23537": {
+      "order": [
+        "2026-11-20T06:24:38+00:00",
+        "2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-scheduling.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.03717": {
+      "order": [
+        "2026-11-20T06:25:59+00:00",
+        "2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algorithm.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2504.07479": {
+      "order": [
+        "2026-11-20T06:27:20+00:00",
+        "2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-pruning-for-efficient-long-context-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2507.11959": {
+      "order": [
+        "2026-11-20T06:28:42+00:00",
+        "2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2510.26446": {
+      "order": [
+        "2026-11-20T06:30:03+00:00",
+        "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53297,6 +53347,21 @@
     "arxiv:2604.26039": [
       "papers/inference/12-moe-parallelism-communication/2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.md",
       "papers/inference/12-moe-parallelism-communication/2026-2604.26039-ramp-runtime-aware-megakernel-polymorphism-for-mixture-of-experts.md"
+    ],
+    "arxiv:2410.23537": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.23537-alise-accelerating-large-language-model-serving-with-speculative-schedul.md"
+    ],
+    "arxiv:2504.03717": [
+      "papers/inference/99-other-inference-systems/2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algo.md"
+    ],
+    "arxiv:2504.07479": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-prun.md"
+    ],
+    "arxiv:2507.11959": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2507.11959-potptq-a-two-step-power-of-two-post-training-for-llms.md"
+    ],
+    "arxiv:2510.26446": [
+      "papers/inference/16-weight-quantization-compression/2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-lan.md"
     ]
   }
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1058本）
+## 自動生成の論文一覧（1059本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2888,6 +2888,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
 
+- **2025-03 · [Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size](2025-2503.04704-universality-of-layer-level-entropy-weighted-quantization-beyond-model-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMを一律4bitに量子化すると、容量は大幅に減るが、精度に敏感な層も同じビット幅へ押し込まれる。原著は1.6B〜70B級の複数モデルを対象に、MMLUで元モデルから概ね0.5%以内の精度差を目標とし、最大18%のメモリ削減を報告する。
+
 - **2025-03 · [Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer](2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md)**  
   実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
   本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
@@ -3360,10 +3364,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   重みに所属ビットを足して四つの自由な代表値を持たせ期待値最大化法で決め、活性値の四ビットを四つの一ビットへ分解して内積を論理演算で計算する学習後量子化で、実質二ビット・四ビット設定の困惑度を七十億モデルで八・五八まで抑え、行列積カーネルで従来カーネルの約三倍の高速化を報告した。
 
-- **2025-03 · [Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size](2025-2503.04704-universality-of-layer-level-entropy-weighted-quantization-beyond-model-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LLMを一律4bitに量子化すると、容量は大幅に減るが、精度に敏感な層も同じビット幅へ押し込まれる。原著は1.6B〜70B級の複数モデルを対象に、MMLUで元モデルから概ね0.5%以内の精度差を目標とし、最大18%のメモリ削減を報告する。
-
 - **2025-03 · [Towards Extreme Pruning of LLMs with Plug-and-Play Mixed Sparsity](2025-2503.11164-towards-extreme-pruning-of-llms-with-plug-and-play-mixed-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重みを学習後に削減する際、既存のMagnitude、SparseGPT、Wandaなどは、重みを残す重要度の測り方を工夫してきた。その後、各層の疎度を遺伝的アルゴリズムに似た進化的探索で調整する。代表例はLLaMA-13B、WikiText、75%削減、ブロック幅M=4のWandaである。
@@ -3371,6 +3371,10 @@
 - **2025-03 · [Radar: Fast Long-Context Decoding for Any Transformer](2025-2503.10571-radar-fast-long-context-decoding-for-any-transformer.md)**  
   実装：[✓](https://github.com/BorealisAI/radar-decoding) ・ リポジトリ内被引用：0  
   Radarは、事前学習済みTransformerの重みを再学習せずに、長い文脈の自己回帰復号を高速化する方式である。論文のPG-19とコード系列の実験では、A100 40GB、Llama-3.1-8BおよびMistral-7Bを用い、密注意に近い困惑度（差がおよそ0.2以下）を維持しながら、2倍超の高速化を報告する。
+
+- **2025-03 · [RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm](2025-2504.03717-raana-a-fast-flexible-and-data-efficient-post-training-quantization-algo.md)**  
+  実装：[✓](https://github.com/FFTYYY/RaanA) ・ リポジトリ内被引用：0  
+  層の最終出力への感度からビット配分を整数計画で最適化し、アダマール変換で高速化したベクトル量子化で重みを圧縮する学習後量子化。較正は5件か合成文1件で足り、70Bでも約55分で量子化できる。
 
 - **2025-03 · [ClusComp: A Simple Paradigm for Model Compression and Efficient Finetuning](2025-2503.13089-cluscomp-a-simple-paradigm-for-model-compression-and-efficient-finetunin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3458,13 +3462,13 @@
   実装：✓ ・ リポジトリ内被引用：88  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
+- **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
+  実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：88  
+  InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
+
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
   実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：87  
   これに対し、状態空間モデル（State Space モデル; SSM）は履歴を固定サイズの隠れ状態へ圧縮するため、学習は系列長に比例する計算量、生成は1トークン当たり定数サイズの状態で済む。
-
-- **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
-  実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：87  
-  InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
   実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：60  

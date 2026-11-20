@@ -35,10 +35,15 @@
   "selection_reason": "FeFETを用いたCAM/CIM融合アクセラレータで、類似度近似による動的KV選択、累積類似度による静的KV剪定、選択KV上の正確な注意計算を同一ハードウェアで実行するUniCAIMを提案。長文脈LLMのKVメモリ・帯域・エネルギー削減を狙う直接的なPIM推論アーキテクチャ。",
   "semantic_scholar_id": "65b2c9808da0549290f0cad02648a68c0e6621de",
   "source_url": "https://arxiv.org/abs/2504.07479",
-  "status": "ready",
+  "status": "superseded",
   "title": "UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference",
   "type": "research",
   "venue": "Design Automation Conference",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T06:32:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2504.07479-unicaim-a-unified-cam-cim-architecture-with-static-dynamic-kv-cache-prun.md",
+  "represented_canonical_id": "arXiv:2504.07479",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
