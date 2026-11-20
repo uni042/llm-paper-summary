@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（374本）
+## 自動生成の論文一覧（375本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -664,6 +664,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   Oilbirdは、学習不要の投機的復号（学習不要 投機的復号）における「保存済みの正解候補を検索できない」という問題を対象とする。提案方式は、対象モデルの検証計算で既に得られた中間隠れ状態を位置ごとに保存し、次回の候補検索で意味的な近傍検索を行う。
 
+- **2026-08 · [Multi-Access Speculative Inference: Uplink or Downlink?](2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機推論の棄却時修正を上り送信と下り送信のどちらで行うかを端末ごとに選び、電力配分と下書き長まで連動させることで、多数端末の無線エッジ推論の確定トークン速度を上げる方式。
+
 - **2026-08 · [MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices](2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MemSpecは、入力と生成履歴から有望なドラフトを予測し、上位モデルを常駐集合へ先読みして、エッジ端末のSSD読み込み待ちを隠し適応投機を高速化する。
@@ -1054,6 +1058,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：3  
   投機的復号（投機的復号）は、小さなドラフトモデルが複数トークンを先に生成し、大きなターゲットモデルがまとめて検証することで、出力品質を維持しながら生成の待機時間を短縮することを目指す。
 
+- **2025-10 · [Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem](2025-2510.22876-correctness-forensics-for-batch-speculative-decoding-diagnosing-the-ragg.md)**  
+  実装：[✓](https://github.com/eBay/spec_dec) ・ リポジトリ内被引用：3  
+  著者らは、既存のBSPとDSDに重大な同期不良があることを具体的な出力で示し、正当性の検査指標を設計する。論文のA100実験ではEXSpecはバッチサイズ8で最大約3倍の処理量を示す。
+
 - **2025-09 · [Speculative Verification: Exploiting Information Gain to Refine Speculative Decoding](2025-2509.24328-speculative-verification-exploiting-information-gain-to-refine-speculati.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   投機的 検証（SV）は、下書きモデルが生成した候補トークンをtargetモデルへ何個渡すかを、候補が受理される見込みと検証に要するGPU時間から選択する投機的復号の拡張方式である。
@@ -1081,10 +1089,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference](2025-2510.13161-mirror-speculative-decoding-breaking-the-serial-barrier-in-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   ドラフト側は複数の先読み位置を1回の前向き計算で予測する投機ストリーミングを使い、ドラフト自身の逐次依存も短縮する。8台のApple M2 UltraのGPU/NPUを使うSpecBench実験で、Qwen3-32Bの数学推論・温度0では自己回帰基準比5.84倍、EAGLE3は同条件で3.77倍であった。
-
-- **2025-10 · [Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem](2025-2510.22876-correctness-forensics-for-batch-speculative-decoding-diagnosing-the-ragg.md)**  
-  実装：[✓](https://github.com/eBay/spec_dec) ・ リポジトリ内被引用：2  
-  著者らは、既存のBSPとDSDに重大な同期不良があることを具体的な出力で示し、正当性の検査指標を設計する。論文のA100実験ではEXSpecはバッチサイズ8で最大約3倍の処理量を示す。
 
 - **2025-10 · [CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs](2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1471,7 +1475,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：498  
+  実装：✓ ・ リポジトリ内被引用：499  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

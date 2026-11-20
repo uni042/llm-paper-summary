@@ -35,10 +35,15 @@
   "selection_reason": "端末SLMが投機トークンを生成し、エッジLLMが並列検証するMulti-SPINの通信設計。棄却時の補正には語彙全体の確率分布が必要で、端末からdraft分布を上り送信する方式と、serverのtarget分布を下り送信する方式を端末ごとに切替える。ドラフト長・送信電力・UL/DL選択を共同最適化し、端末協調LLM推論の通信ボトルネックを直接扱う。",
   "semantic_scholar_id": "391b21be7c82e82f04ad77d1fd525a8081d2c832",
   "source_url": "https://arxiv.org/abs/2608.29618",
-  "status": "ready",
+  "status": "superseded",
   "title": "Multi-Access Speculative Inference: Uplink or Downlink?",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:38:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.md",
+  "represented_canonical_id": "arXiv:2608.29618",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

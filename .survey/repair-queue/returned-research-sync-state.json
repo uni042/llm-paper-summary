@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "1e4f717482eb9c91e9b199e91cfff8769dc9cccd",
+  "base_commit": "0efb54ebca93f4e8bbe6179c781707c242558ceb",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -336,14 +336,18 @@
     "2026-2608.21693-benchmarking-composable-compression-techniques-in-mixture-of-experts-llms.json",
     "2026-2608.23253-e2s-pruner-progressive-two-stage-evidence-fusion-for-visual-token-pruning-in-vision-language-models.json",
     "2026-2608.24004-agentspec-speculative-decoding-for-batch-inference-of-llm-agents.json",
+    "2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.json",
     "2026-2608.25115-less-can-be-more-relieving-rag-bottlenecks-via-evidence-frontloading-and-pressure-adaptive-budgeting.json",
     "2026-2608.26574-dependency-aware-revocable-decoding-for-efficient-diffusion-large-language-model-inference.json",
     "2026-2608.26926-a-layer-importance-metric-for-quantization-accounting-for-the-speed-quality-trade-off-in-autoregressive-models.json",
+    "2026-2608.27128-small-frequency-corrections-can-change-what-survives-kv-cache-compression.json",
     "2026-2608.27514-trajectory-level-speculative-decoding-for-diffusion-language-models.json",
     "2026-2608.27875-hyquant-hybrid-precision-quantization-for-llm-attention.json",
     "2026-2608.27963-saber-stability-aware-early-exit-for-llm-reasoning-via-adversarial-branch-probing.json",
     "2026-2608.28044-characterization-of-request-and-token-energy-costs-for-llm-inference.json",
+    "2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.json",
     "2026-2608.30310-tail-replay-escaping-the-curse-of-linear-attention-in-prefix-caching-for-hybrid-llms.json",
+    "2026-2608.30509-chipsmore-compute-in-interconnect-and-memory-chiplets-for-multi-mode-multi-request-llm-inference-acceleration.json",
     "2026-2609.00066-ocgquant-outlier-companion-grouping-for-nvfp4-quantization.json",
     "2026-2609.00224-qtea-ternary-llms-with-sparse-residual-salient-weight-and-by-column-optimization.json",
     "2026-2609.01004-sinkpruner-sink-free-visual-token-pruning-for-multimodal-large-language-models.json",
@@ -351,6 +355,7 @@
     "2026-2609.01925-crisp-cliff-aware-input-adaptive-sparse-prefilling-with-structural-mass-motivated-routing.json",
     "2026-2609.05707-intra-prompt-parallel-decoding-for-common-context-question-answering.json",
     "2026-2609.05916-star-pro-stage-wise-token-adaptive-reduction-with-progressive-refinement-for-efficient-large-vision-language-models.json",
+    "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json",
     "2026-2609.10297-trace-trajectory-robust-admission-with-evidence-ordering-for-efficient-gui-agents.json",
     "2026-2609.10355-why-is-video-still-so-expensive-a-survey-of-inference-efficiency-mechanisms-in-video-and-audiovisual-llms.json",
     "2026-2609.14706-waterkron-and-flipflop-hessian-information-theoretically-grounded-quantization-with-kronecker-factored-hessians.json",
@@ -42386,6 +42391,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2608.25068": {
+      "order": [
+        "2026-11-20T04:33:17+00:00",
+        "2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.27128": {
+      "order": [
+        "2026-11-20T04:34:13+00:00",
+        "2026-2608.27128-small-frequency-corrections-can-change-what-survives-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.29618": {
+      "order": [
+        "2026-11-20T04:35:10+00:00",
+        "2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2608.30509": {
+      "order": [
+        "2026-11-20T04:36:05+00:00",
+        "2026-2608.30509-chipsmore-compute-in-interconnect-and-memory-chiplets-for-multi-mode-multi-request-llm-inference-acceleration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.08345": {
+      "order": [
+        "2026-11-20T04:37:01+00:00",
+        "2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52527,6 +52577,21 @@
     "arxiv:2608.20427": [
       "papers/inference/13-sparse-attention/2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context.md",
       "papers/inference/13-sparse-attention/2026-2608.20427-bf1-a-causal-dyadic-sparse-attention-retrofit-for-efficient-long-context.md"
+    ],
+    "arxiv:2608.25068": [
+      "papers/inference/99-other-inference-systems/2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.md"
+    ],
+    "arxiv:2608.27128": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.27128-small-frequency-corrections-can-change-what-survives-kv-cache-compressio.md"
+    ],
+    "arxiv:2608.29618": [
+      "papers/inference/05-speculative-decoding-moe/2026-2608.29618-multi-access-speculative-inference-uplink-or-downlink.md"
+    ],
+    "arxiv:2608.30509": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2608.30509-chipsmore-compute-in-interconnect-and-memory-chiplets-for-multi-mode-mul.md"
+    ],
+    "arxiv:2609.08345": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.08345-cover-coverage-based-token-pruning-for-multi-view-3d-reasoning-in-vlms.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "深さ剪定LLMの分布ずれ補正SHIFT-LLM。ブロックを丸ごと除く深さ剪定が隠れ状態の分布を壊す問題に対し、剪定箇所へ線形残差アダプタを挿し、閉形式の最小二乗で較正する訓練不要の補正。推論圧縮機構そのもの。",
   "semantic_scholar_id": "430bd8cb0e3d6c535706cbf3616938bcb1c6ebe3",
   "source_url": "https://arxiv.org/abs/2608.25068",
-  "status": "ready",
+  "status": "superseded",
   "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T04:38:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.25068-shift-llm-distribution-shift-correction-in-depth-pruned-llms.md",
+  "represented_canonical_id": "arXiv:2608.25068",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
