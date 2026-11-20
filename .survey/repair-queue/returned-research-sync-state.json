@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "49b8ae225c5876343f0d4cf591f08a53831b665e",
+  "base_commit": "b302fa4acd2bf85e32f22ecd92c8d3d19a293901",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -858,6 +858,11 @@
     "2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-sparse-attention.json",
     "2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-and-rl.json",
     "2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.json",
+    "2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configuration.json",
+    "2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-models.json",
+    "2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.json",
+    "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
+    "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -46145,6 +46150,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.04032": {
+      "order": [
+        "2026-11-20T22:51:46+00:00",
+        "2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configuration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04055": {
+      "order": [
+        "2026-11-20T22:52:35+00:00",
+        "2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04253": {
+      "order": [
+        "2026-11-20T22:53:24+00:00",
+        "2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04313": {
+      "order": [
+        "2026-11-20T22:54:14+00:00",
+        "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.04401": {
+      "order": [
+        "2026-11-20T22:55:03+00:00",
+        "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57744,6 +57794,21 @@
     "arxiv:2611.03992": [
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.md",
       "papers/inference/07-kv-cache-optimization-compression/2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.md"
+    ],
+    "arxiv:2611.04032": [
+      "papers/inference/15-inference-simulation-emulation/2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configura.md"
+    ],
+    "arxiv:2611.04055": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-mode.md"
+    ],
+    "arxiv:2611.04253": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.md"
+    ],
+    "arxiv:2611.04313": [
+      "papers/inference/13-sparse-attention/2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.md"
+    ],
+    "arxiv:2611.04401": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-bounda.md"
     ]
   }
 }

@@ -35,10 +35,15 @@
   "selection_reason": "統一メモリアーキテクチャ向け高速オンデマンドモデル読み込みUMLoad。対話型オンデバイスAIで読み込みが遅延を支配するのに、離散GPU向けの流れで重みの複写が残る問題に対し、オンデマンド再構成で複写を省くシステムレベルの高速化。推論基盤機構そのもの。",
   "semantic_scholar_id": "7673ad27c15f5a66d47136cfad83bb7bf4304881",
   "source_url": "https://arxiv.org/abs/2611.04253",
-  "status": "ready",
+  "status": "superseded",
   "title": "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:56:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.md",
+  "represented_canonical_id": "arXiv:2611.04253",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

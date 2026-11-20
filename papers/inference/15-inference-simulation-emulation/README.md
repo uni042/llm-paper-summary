@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（93本）
+## 自動生成の論文一覧（94本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -37,11 +37,11 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
 - **2026-01 · [AIConfigurator: Lightning-Fast Configuration Optimization for Multi-Framework LLM Serving](2026-2601.06288-aiconfigurator-multi-framework-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
-  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：9  
   分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。
 
 - **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  
@@ -53,7 +53,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   ScaleSimは、多数の大規模言語モデル利用エージェントを同時に動かすシミュレーションにおいて、GPUメモリ上のエージェント固有状態を、次にどのエージェントが言語モデルを呼び出すかというアプリケーション側の予測に基づいて管理する配信システムである。
 
 - **2026-06 · [KernelSight-LM: A Kernel-Level LLM Inference Simulator](2026-2606.28565-kernelsight-lm-kernel-level-inference-simulator.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   GPUカーネル予測と実運用サービングの離散事象モデルを統合し、未計測GPUでもカーネル誤差12.1%、対象計測ありで3.8%を達成。
 
 - **2026-06 · [Characterizing How Complex Agentic AI Systems Handle General Tasks: A Trace-Based Simulation Study](2026-2606.01725-characterizing-how-complex-agentic-ai-systems-handle-general-tasks-a-tra.md)**  
@@ -101,6 +101,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   外れ値の重みをMRAM、内側の重みをノイズ配慮型量子化でReRAMへ分けて置く量子化とメモリの協調設計で、端末向け小規模モデルのメモリ・エネルギー・遅延を16ビット比で大きく削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration](2026-2611.04032-rocm-inferasim-cut-llm-serving-trial-costs-and-deploy-the-best-configura.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  カーネル集合ごとに一回だけの短い実測を基準にし、固定費を保つ移転則と離散事象の模擬で他配置の性能を予測する枠組みで、十一の基準実測から百七十二構成のトークン当たり時間を中央値誤差八・一パーセントで予測し、探索を実機試行から予測上の探索へ変えたと報告した。
 
 - **2026-10 · [Learning to Formulate: Agentic Hardware–Software Co-Design of AI Infrastructure through Progressive Optimization and Verification](2026-2610.39380-learning-to-formulate-agentic-hardware-software-co-design-of-ai-infrastr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -367,11 +371,11 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   大規模言語モデルの推論基盤では、GPUや専用演算器の設計だけでなく、到着する要求の分布、バッチ化、KVキャッシュ管理、複数装置へのモデル分割が性能を左右する。論文は実GPU上の推論基盤に対する性能傾向の誤差を平均14.7%程度に抑え、既存の演算器シミュレータに対して34.7〜491倍の高速化を報告する。
 
 - **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
-  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：16  
   APEXは、大規模言語モデル（LLM）を複数GPUで提供する際に、どの並列化方式を組み合わせるべきかを実機へ総当たりで配備せず、CPU上のシミュレーションで比較するシステムである。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
-  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：13  
   演算子-階層 ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式から計算/メモリ/ネットワーク要件を逆算するGenZ。
 
 - **2024-08 · [LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference](2024-2408.06003-lut-tensor-core-a-software-hardware-co-design-for-lut-based-low-bit-llm-.md)**  

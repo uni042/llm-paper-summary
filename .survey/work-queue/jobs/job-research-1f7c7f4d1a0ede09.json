@@ -35,10 +35,15 @@
   "selection_reason": "ハイブリッドGDN-MoE向けスループット配慮型投機的デコードHybridSpec。並列下書きで検証が支配的になる中、検証長を増やすと最初の棄却後の作業が無駄になる問題に対し、ハイブリッド目標モデルで検証時間が長さに強く伸びる性質を踏まえて検証長を選ぶ。推論高速化機構そのもの。",
   "semantic_scholar_id": "2e26430205729678832c92a139215ecf56b0370a",
   "source_url": "https://arxiv.org/abs/2611.04055",
-  "status": "ready",
+  "status": "superseded",
   "title": "HybridSpec: Throughput-Aware Speculative Decoding for Hybrid GDN-MoE Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:56:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2611.04055-hybridspec-throughput-aware-speculative-decoding-for-hybrid-gdn-moe-mode.md",
+  "represented_canonical_id": "arXiv:2611.04055",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

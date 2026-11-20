@@ -35,10 +35,15 @@
   "selection_reason": "キーを大きな意味ブロックへクラスタ化してプロンプト固有の索引を作り、クエリごとにブロック単位で疎注意を行う学習不要の方式。プリフィルとデコードの両方を対象に、H200単体で512Kトークン時に密注意比でプリフィル2.3–2.4倍・デコード1.7–2.0倍の実測高速化を報告しており、推論時の注意計算そのものへの直接貢献がある。",
   "semantic_scholar_id": "4b9af297887004320d214444dcd90522d507e068",
   "source_url": "https://arxiv.org/abs/2611.04313",
-  "status": "ready",
+  "status": "superseded",
   "title": "Coarse Semantic Blocks for Efficient Training-Free Sparse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:56:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.md",
+  "represented_canonical_id": "arXiv:2611.04313",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

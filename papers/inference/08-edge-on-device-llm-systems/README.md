@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-05 · [An Efficient Context Management System for On-Device LLMaaS (Libra; preprint: LLM as a System Service on Mobile Devices)](2024-2403.11805-llm-as-a-system-service-on-mobile-devices.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   アプリを切り替えるたびに履歴全体を再計算するか、ディスクへ退避したKVを読み戻すと、次の生成開始までの待ち時間が長くなる。正式出版版の実機評価では、一律8ビット圧縮を伴うチャンク退避方式に対し、コンテキスト切替遅延を最大20倍、平均9.7倍削減した。
 
 - **2026-05 · [Agent-X: Full Pipeline Acceleration of On-device AI Agents](2026-2605.10380-agent-x-full-pipeline-acceleration-of-on-device-ai-agents.md)**  
@@ -36,6 +36,10 @@
   実装：[✓](https://github.com/FlashML-org/FreeToken) ・ リポジトリ内被引用：3  
   FreeTokenは、混合専門家モデル（Mixture of エキスパート、MoE）の全専門家重みがGPUメモリに収まらない場合に、GPU・CPU・主記憶・PCIeを一つの推論基盤として使うローカル配信システムである。
 
+- **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
+
 - **2026-06 · [Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design](2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   巨大MoEのCPU計算・DRAM帯域律速に対し、入力処理は必要重みをGPUへ細粒度転送し、生成はCPU専門家計算とGPU注意を重ねて元精度を保つ方式。
@@ -43,10 +47,6 @@
 - **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
-
-- **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
 
 - **2026-09 · [MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson](2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -63,6 +63,10 @@
 - **2026-04 · [Efficient Mixture-of-Experts LLM Inference with Apple Silicon NPUs](2026-2604.18788-npumoe-apple-silicon-npu-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   NPUMoEは、Apple NPUで動的な専門家選択を固定容量のグループと共有計算グラフへ変換し、頻出群を常駐させて小粒度実行とCPU同期を減らす方式。
+
+- **2026-04 · [EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices](2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  モバイルLLMのコールドスタートで浪費されるフラッシュ帯域を、重要度別の可変精度量子化・SIMD向け重み格納・CPU/NPU協調実行で削減し、同等精度条件の初回応答を最大4.07倍高速化する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
@@ -206,10 +210,6 @@
   実装：[✓](https://github.com/windog-labs/edge-fm-x) ・ リポジトリ内被引用：0  
   本研究は、産業用エッジ装置で視覚・言語モデル（Vision-Language モデル, VLM）と大規模言語モデル（Large Language モデル, LLM）を低遅延で動かすための推論基盤EdgeFMを提案する。
 
-- **2026-04 · [EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices](2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  モバイルLLMのコールドスタートで浪費されるフラッシュ帯域を、重要度別の可変精度量子化・SIMD向け重み格納・CPU/NPU協調実行で削減し、同等精度条件の初回応答を最大4.07倍高速化する。
-
 - **2026-04 · [A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation](2026-2604.14403-a-unified-model-and-document-representation-for-on-device-retrieval-augm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   検索拡張生成（retrieval-augmented generation、RAG）をスマートフォンや小型計算機だけで動かす場合、サーバーへ個人文書を送らずに利用できる反面、二つのメモリ費用が問題となる。従来は検索用の埋め込みと生成用の圧縮文脈を別々に作ることが多く、文書ごとに二重の表現を保持する。
@@ -277,7 +277,7 @@
   小基地局に下書きモデル、大基地局に対象モデルを置き、要求の下書き・検証を二段パイプライン化し、無線帯域・バッチ境界・投機長を調整して往復遅延を減らす方式。
 
 - **2025-04 · [Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash](2025-2504.08378-scaling-up-on-device-llms-via-active-weight-swapping-between-dram-and-fl.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   スマートフォン上で大規模言語モデルを動かす際、モデルの全重みをDRAMに置けないことが最大の制約になる。さらに現在の層の活性化ベクトルから数層先の活性重みを予測して先読みし、複数層の重みをフラッシュ上で近接配置する。
 
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  

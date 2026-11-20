@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（206本）
+## 自動生成の論文一覧（207本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -33,31 +33,31 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：74  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：75  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：61  
+  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：62  
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：32  
+  実装：✓ ・ リポジトリ内被引用：33  
   各層で繰り返す疎注意のトークン選択を一部の層だけで計算し、後続層に再利用する。30B DSAモデルの200K文脈でインデクサ計算を75%削減し、プリフィルを1.82倍、デコードを1.48倍高速化した。
 
 - **2026-03 · [HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention](2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   HISA（階層型索引付き疎注意、Hierarchical Indexed Sparse 注意機構）は、長文脈大規模言語モデルの疎注意（sparse 注意機構）において、注意本体を計算する前に「どの過去トークンを参照するか」を探す索引器が律速になるという問題を扱う。
 
 - **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
-  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：14  
   Qwen3.8-Flash-Nextは履歴を再帰状態へ要約し、圧縮した疎注意機構で長文脈を検索する。論文は1M文脈で注意機構の計算時間を短縮し、検索品質も比較する。
 
 - **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
-  実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：14  
   対象：100万トークン級の長文脈推論・学習における、GQA対応の学習可能なブロック疎注意。一次論文は2026年6月12日改訂の第2版。速度の値は「モデル全体の推論速度」ではなく、論文の注意演算実装をH800で測った値として読む。
 
 - **2025-12 · [Kascade: A Practical Sparse Attention Method for Long-Context LLM Inference](2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md)**  
-  実装：[✓](https://github.com/microsoft/kascade) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/microsoft/kascade) ・ リポジトリ内被引用：11  
   長文脈の注意を10%だけ計算すれば理論上は大きく速くなるが、「どの10%を残すか」を毎層正確に探す処理が高い。Kascadeは、高い注意重みを持つキー集合が近接層でかなり似るという性質を利用し、少数のアンカー層だけでTop-k探索をやり直す。残りの層ではそのインデックスを再利用するため、疎化の選択費用を層間で償却できる。
 
 - **2026-07 · [Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling](2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md)**  
@@ -65,7 +65,7 @@
   本論文の階層ランドマーク疎注意（Hierarchical Landmark Sparse 注意機構、HiLS-注意機構）は、全注意であるチャンクが受ける指数化注意重みの合計を近似するため、各チャンク末尾のランドマークトークンから「圧縮鍵」と「エントロピーバイアス」を作る。
 
 - **2026-03 · [FlashPrefill: Instantaneous Pattern Discovery and Thresholding for Ultra-Fast Long-Context Prefilling](2026-2603.06199-flashprefill-instantaneous-pattern-discovery-and-thresholding-for-ultra-.md)**  
-  実装：[✓](https://github.com/qhfan/FlashPrefill) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/qhfan/FlashPrefill) ・ リポジトリ内被引用：9  
   FlashPrefillは、長文脈の大規模言語モデル（LLM）が入力全体を一度に処理するプリフィル段階を高速化する、動的な疎注意（sparse 注意機構）の方式である。原著のQwen3-30B-A3B-Instruct-2507を用いた注意演算子比較では、密なFlashAttentionに対して4Kで1.71倍、256Kで27.78倍の高速化を報告する。
 
 - **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
@@ -100,21 +100,25 @@
   実装：[✓](https://github.com/Superone77/FlashLoop) ・ リポジトリ内被引用：4  
   ループ型Transformerで、変化の大きいトークンと注意列だけを再計算し、ループ間のKV残差を量子化する学習不要の推論基盤で、精度をほぼ保ち高速化1.64倍とメモリ6分の1を達成した。
 
+- **2026-08 · [FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving](2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md)**  
+  実装：[✓](https://github.com/qhfan/FlashPrefillv2) ・ リポジトリ内被引用：4  
+  平均補正付きブロック疎注意をHopper向けに再設計し、SGLangの長文事前充填を128Kで最大4.8倍高速化する。
+
+- **2026-06 · [SpotAttention: Plug-In Block-Sparse Routing for Pretrained Long-Context Transformers](2026-2606.22874-spotattention-plug-in-block-sparse-routing-for-pretrained-long-context-t.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  SpotAttentionは、既存の学習済みモデルの重みを固定し、全注意層ごとに小さな鍵・質問の選択器を追加する方式である。著者はQwen3-8B、128K文脈、NVIDIA B200単体で70トークン/秒を報告し、FlashAttention比3.9倍、Twilight比1.8倍とする。
+
 - **2026-05 · [DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention](2026-2605.18753-dashattention-differentiable-and-adaptive-sparse-hierarchical-attention.md)**  
   実装：[✓](https://github.com/fasa-org/dash-attention) ・ リポジトリ内被引用：4  
   DashAttentionは、長文脈の大規模言語モデル（Large Language モデル, LLM）で、問い合わせごとに必要な過去トークン数が異なるにもかかわらず、固定個数のブロックを選ぶ階層的疎注意（hierarchical sparse 注意機構）が使われる問題に対処する。
 
-- **2026-08 · [FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving](2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md)**  
-  実装：[✓](https://github.com/qhfan/FlashPrefillv2) ・ リポジトリ内被引用：3  
-  平均補正付きブロック疎注意をHopper向けに再設計し、SGLangの長文事前充填を128Kで最大4.8倍高速化する。
+- **2026-02 · [Scout Before You Attend: Sketch-and-Walk Sparse Attention for Efficient LLM Inference](2026-2602.07397-scout-before-you-attend-sketch-and-walk-sparse-attention-for-efficient-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  Sketch&Walkは、長文脈LLM推論の自己注意を疎にする際、その層で直接似ている鍵だけを残すと、複数層を経由して重要になる情報経路を切断してしまう問題を扱う。提案方式はトークンをブロックにまとめて平均し、Hadamard変換で特徴次元を縮めてブロック間の注意を推定する。
 
 - **2026-07 · [DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning](2026-delta.md)**  
   実装：[✓](https://github.com/hoenza/DELTA) ・ リポジトリ内被引用：3  
   少数の更新層で重要KVページを動的に選び、後続層がその集合を再利用することで、完全なKV保持と推論精度を維持しつつ長文デコードを高速化する疎注意方式。
-
-- **2026-06 · [SpotAttention: Plug-In Block-Sparse Routing for Pretrained Long-Context Transformers](2026-2606.22874-spotattention-plug-in-block-sparse-routing-for-pretrained-long-context-t.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  SpotAttentionは、既存の学習済みモデルの重みを固定し、全注意層ごとに小さな鍵・質問の選択器を追加する方式である。著者はQwen3-8B、128K文脈、NVIDIA B200単体で70トークン/秒を報告し、FlashAttention比3.9倍、Twilight比1.8倍とする。
 
 - **2026-06 · [SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference](2026-2606.04511-sparda.md)**  
   実装：[✓](https://github.com/NVlabs/SparDA) ・ リポジトリ内被引用：3  
@@ -123,10 +127,6 @@
 - **2026-05 · [An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference](2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   CPU常駐KV向けに出力寄与ベース予算配分とCPU・GPU協調疎注意を統合し、長文復号を最大3.7倍高速化する。
-
-- **2026-02 · [Scout Before You Attend: Sketch-and-Walk Sparse Attention for Efficient LLM Inference](2026-2602.07397-scout-before-you-attend-sketch-and-walk-sparse-attention-for-efficient-l.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  Sketch&Walkは、長文脈LLM推論の自己注意を疎にする際、その層で直接似ている鍵だけを残すと、複数層を経由して重要になる情報経路を切断してしまう問題を扱う。提案方式はトークンをブロックにまとめて平均し、Hadamard変換で特徴次元を縮めてブロック間の注意を推定する。
 
 - **2026-02 · [QUOKA: Query-Oriented KV Selection For Efficient LLM Prefill](2026-2602.08722-quoka-query-oriented-kv-selection-for-efficient-llm-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -269,6 +269,10 @@
 - **2026-11 · [Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention](2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キーを学習した潜在空間で意味的に集めてクエリが代表だけを採点する疎な注意で、千万トークンで一層の入力処理を元の疎な注意より二十二・七倍・全注意より七十二・四倍速くし精度を数点以内に保ち、原生型でも全注意と同等の精度と一・六倍の学習高速化を示した。
+
+- **2026-11 · [Coarse Semantic Blocks for Efficient Training-Free Sparse Attention](2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.md)**  
+  実装：[✓](https://github.com/pfnet-research/semantic-block-sparse-attention/) ・ リポジトリ内被引用：0  
+  入力文ごとにキーを二千四十八トークン級の意味の塊へ分け、重心得点で問い合わせごとに塊を選ぶ学習なしの疎な注意で、索引構築込みの模型全体で五百二十四千の入力処理を二・三から二・四倍、復号を一・七から二・〇倍速くし、大きな模型では密な注意に近い精度を保ったと報告した。
 
 - **2026-11 · [AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index](2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inver.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -549,11 +553,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：179  
+  実装：✓ ・ リポジトリ内被引用：180  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：116  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：117  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -727,7 +731,7 @@
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：90  
+  実装：✓ ・ リポジトリ内被引用：91  
   RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
