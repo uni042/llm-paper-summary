@@ -35,10 +35,15 @@
   "selection_reason": "重み共有loop Transformerの品質・モデルサイズ・訓練FLOPs・autoregressive decodeを比較し、loop数に比例するdecode遅延を軽減するParallel Loop Transformerを検証。前token状態と現token埋込を別々に正規化して結合する改良で品質を回復。最大1B・32 loopsの検証で推論効率に直接関係するためaccept。abstractには定量decode高速化率がない。",
   "semantic_scholar_id": "e5ee0d4e410f082c99aec3203b8dc9b5dc6d10b8",
   "source_url": "https://arxiv.org/abs/2610.40325",
-  "status": "ready",
+  "status": "superseded",
   "title": "How to Loop Your Transformer: Loop Scaling, Specialization, and Parallel Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:08:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-in.md",
+  "represented_canonical_id": "arXiv:2610.40325",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

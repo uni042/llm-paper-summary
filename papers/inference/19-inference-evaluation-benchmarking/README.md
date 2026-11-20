@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（157本）
+## 自動生成の論文一覧（159本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -146,6 +146,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   86チェックポイントを7ベンチマークと6基盤で飽和サービングしながらGPUエネルギーを直接測り、能力とエネルギーのパレートフロンティア、推論モードと出力予算の費用、トークン数という代理指標の限界、FP8とハードウェア変更の効果を明らかにした大規模実測研究。
 
+- **2026-10 · [MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads](2026-2610.40293-maservebench-benchmarking-multi-agent-llm-serving-systems-with-hierarchi.md)**  
+  実装：[✓](https://github.com/ShengxuanQiu/MAServeBench) ・ リポジトリ内被引用：0  
+  複数エージェントの協調を負荷の生成規則として組み立て、実現した作業を固定して解放と資源だけを変える比較を可能にしたベンチマークで、解放の順序付けが根の遅延を最大五十四パーセント増やし、期限達成は百パーセント対四パーセントに分かれることを示した。
+
 - **2026-10 · [Lightweight Scheduling Policies for Continuously Batched LLM Serving Across GPU Architectures](2026-2610.15899-lightweight-scheduling-policies-for-continuously-batched-llm-serving-acr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   連続バッチングのデコードスケジューラ8方針を6モデルと3種のGPUで実機比較し、優劣がハードウェアで入れ替わることを示した評価研究。
@@ -153,6 +157,10 @@
 - **2026-10 · [ixi-sLM: On-Device sLM for AI Call Agent Service](2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通話ドメインへの語彙削減とトークナイザー再適合、実通話校正の混合精度量子化で、1.2ビーモデルを803メガバイトに収めてモバイルエヌピーユーで動かし、クラウド級品質の94パーセントを保った実サービス報告。
+
+- **2026-10 · [How Far Are We From On-Device VLM Inference? A Measurement Study on Edge NPUs](2026-2610.40039-how-far-are-we-from-on-device-vlm-inference-a-measurement-study-on-edge-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末の神経処理装置で六つの視覚言語モデルをカーネル単位で測り、注意はソフトマックスが支配して行列装置が空転すること、線形注意の利得は配置変換で消えること、逐次生成の勝敗は注意の行列並列度で決まることを示し、課題ごとの甘い解像度を提案した測定研究である。
 
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

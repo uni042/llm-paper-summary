@@ -35,10 +35,15 @@
   "selection_reason": "著者原著はMoE expert重みとattention stateの固定メモリ区画を廃し、異なるページ粒度を持つmemory viewとmulti-level page allocatorで共有GPUページを弾力的に再配分する。非連続expert重みを参照する融合MoE kernelとworkload-aware adjusterをvLLM上に実装し、負荷時のスループットとTTFTを評価しているためaccept。",
   "semantic_scholar_id": "675c81ac721f4e4c7f0a973ba3eae6420780bedf",
   "source_url": "https://arxiv.org/abs/2610.40305",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:08:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.40305-rimuru-unified-memory-management-for-modern-llm-serving-via-elastic-expe.md",
+  "represented_canonical_id": "arXiv:2610.40305",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

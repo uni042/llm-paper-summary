@@ -35,10 +35,15 @@
   "selection_reason": "分離型LLM推論向けクラスタ単位二値ルーティングDolphinRouting。プリフィル・デコード分離で要請ごとの経路選択がプリフィル量・キャッシュ再利用・デコード需要に依存する問題に対し、SLOフィードバックからクラスタごとの方針を学ぶ。推論基盤のルーティング機構そのもの。",
   "semantic_scholar_id": "468e7dda54d0771a0a96d124ba98a2bf45c950a1",
   "source_url": "https://arxiv.org/abs/2610.40292",
-  "status": "ready",
+  "status": "superseded",
   "title": "DolphinRouting: Cluster-Level Binary Routing for Disaggregated LLM Inference Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T15:08:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.40292-dolphinrouting-cluster-level-binary-routing-for-disaggregated-llm-infere.md",
+  "represented_canonical_id": "arXiv:2610.40292",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

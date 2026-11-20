@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（581本）
+## 自動生成の論文一覧（583本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -638,6 +638,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   トークン間遅延の実測値を混雑信号として毎デコードステップでフィードバックし、残り出力トークン総量の上限であるトークンウィンドウを開閉して新規リクエストの受け入れをトークン単位で制御する、サーバーレス推論向けスケジューラ。
 
+- **2026-10 · [Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading](2026-2610.40305-rimuru-unified-memory-management-for-modern-llm-serving-via-elastic-expe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みと注意状態で固定に仕切られた装置メモリを共有のページ入れ物で統一し、専門家の滞留量を負荷に応じて伸縮させる管理で、比較対象に対して処理能力を最大十九・〇三倍、最初のトークンまでの時間を平均九十八・一パーセント減らしたと報告した。
+
 - **2026-10 · [Request-Adaptive Execution for Efficient Hybrid LLM Inference](2026-2610.37432-request-adaptive-execution-for-efficient-hybrid-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意層と状態空間モデルの層の配置をリクエストごとにプリフィルで決めて固定し、分割統合のバッチ処理と層履歴まで見る文脈キャッシュで効率的に捌く共同設計で、品質指標18件中13件で最良となりスループットはvLLM比で最大3.87倍になった。
@@ -705,6 +709,10 @@
 - **2026-10 · [DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving](2026-2610.13328-duorate-two-rate-per-expert-precision-allocation-for-mixture-of-experts-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoEの精度コストを保存レートと読解レートへ分け、1つの接頭辞可読ストリームからワークロードごとに読み幅をラグランジュ配分で選ぶことで、単一の配備物のままデコード転送量を最適化する手法。
+
+- **2026-10 · [DolphinRouting: Cluster-Level Binary Routing for Disaggregated LLM Inference Serving](2026-2610.40292-dolphinrouting-cluster-level-binary-routing-for-disaggregated-llm-infere.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分離提供の経路選択を、生の入力長と両側のキャッシュ調整後の入力長と出力長で分けたクラスタごとの二値表として目標達成率から学び、混合負荷と実データで長さ条件の振り分けより尾の遅延を最大で約一割改善したと報告した。
 
 - **2026-10 · [CRISP: Co-designing Pruning and Scheduling for Efficient MoE Inference on Edge Servers](2026-2610.37442-crisp-co-designing-pruning-and-scheduling-for-efficient-moe-inference-on.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
