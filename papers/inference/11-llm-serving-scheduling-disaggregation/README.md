@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（545本）
+## 自動生成の論文一覧（546本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -116,6 +116,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   外部APIや検索を待つ拡張LLMで、停止・再開状態、出力長・外部呼出し時間、KV保持・退避・再計算費用を観測して要求順位と反復トークン予算を変え、先頭待ちとGPUメモリ圧迫を減らすスケジューラ。
 
+- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
+  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：4  
+  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
+
 - **2026-04 · [PipeLive: Efficient Live In-place Pipeline Parallelism Reconfiguration for Dynamic LLM Serving](2026-2604.12171-pipelive.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   実行中のKVキャッシュ容量とレイヤー配置を動的に組み替え、差分KV同期で停止を約10msに抑えながら、ワークロードに応じたパイプライン並列構成へ切り替えるLLMサービング方式。
@@ -171,10 +175,6 @@
 - **2026-04 · [StructKV: Preserving the Structural Skeleton for Scalable Long-Context Inference](2026-2604.06746-structkv-preserving-the-structural-skeleton-for-scalable-long-context-in.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   提案の中心は、全層入次数中心性（Global In-Degree Centrality）、動的転換層検出（動的 Pivot Detection）、構造的伝播と保存予算の分離（Structural Propagation and Decoupling）の三機構である。
-
-- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
-  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：3  
-  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
 
 - **2026-04 · [Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions](2026-2604.00499-scheduling-llm-inference-with-uncertainty-aware-output-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -376,6 +376,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   ここで$d$は隠れ次元であり、KVの生成自体を省く方式ではない。NVIDIA GH200 120GBで8B・4096トークンの採点は172.0ミリ秒から4.6ミリ秒へ短縮した。
 
+- **2026-07 · [Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference](2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  5フレームワークと3演算器を実機で横断測定し、演算器単位のエネルギー帰属で、NPUのプリフィル優位とデコード劣位の相分割と、調整だけで最大53.2パーセントの省エネルギー余地を明らかにした。
+
 - **2026-07 · [Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models](2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   原文を送らず、端末にKV認可・軽量投機・低次元出力層を残し、クラウドの重いデコーダと協調する分割推論。H20＋3種端末で素朴な分割推論比の遅延最大46.1%、下り通信最大67.4%削減を報告する。
@@ -545,6 +549,10 @@
 - **2026-10 · [RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving](2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混成モデルの接頭辞再利用で、状態待ちの分岐だけを次ラウンドへ回して走査を続けることでバッチの泡を埋め、再利用率を保ったまま遅延を最大24パーセント、ラウンド数を最大44パーセント削減した。
+
+- **2026-10 · [LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models](2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  チャネルごとの量子化感度の不均一さに着目し、感度の高い部分だけに学習可能回転、残りに固定のアダマール変換を当てる分離型の量子化で、全4ビット条件の精度首位と、較正25分・20.3ギガバイトという最小の較正費用を両立した。
 
 - **2026-10 · [Koi: Evidence-Guided, Self-Calibrating Planning for Multi-Cloud, Heterogeneous LLM Inference Fleets](2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogene.md)**  
   実装：[✓](https://github.com/Tandemn-Labs/tandemn-koi) ・ リポジトリ内被引用：0  
@@ -865,10 +873,6 @@
 - **2026-07 · [Kalypso: Relational LLM Serving](2026-2607.23815-kalypso-relational-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは、段階ごとのメモリ予算、待機列の飢餓・飽和の検知、出力トークン数の予測、明示的または仮想的なKV保持を組み合わせる。利得はLLMの重みや注意機構を変更したためではなく、意味演算子の処理順とKV寿命を連動させたためである。
-
-- **2026-07 · [Is Your NPU Ready for LLMs? Dissecting the Hidden Efficiency Bottlenecks in Mobile LLM Inference](2026-2607.05475-is-your-npu-ready-for-llms-dissecting-the-hidden-efficiency-bottlenecks-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  5フレームワークと3演算器を実機で横断測定し、演算器単位のエネルギー帰属で、NPUのプリフィル優位とデコード劣位の相分割と、調整だけで最大53.2パーセントの省エネルギー余地を明らかにした。
 
 - **2026-07 · [InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata](2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

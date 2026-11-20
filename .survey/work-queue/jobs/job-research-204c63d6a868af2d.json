@@ -35,10 +35,15 @@
   "selection_reason": "拡散下書きのための棄却検証状態の再利用ReAnchor。ブロック拡散の下書きが単一アンカーからの固定長に限られる問題に対し、棄却位置より先の検証隠れ状態を捨てずに再アンカーして並列の下書きブロックを作る、訓練不要の方式。推論高速化機構そのもの。",
   "semantic_scholar_id": "9a4869f061b8f7eaec74f748f09ed73f38d9621e",
   "source_url": "https://arxiv.org/abs/2610.26531",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:45:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.md",
+  "represented_canonical_id": "arXiv:2610.26531",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

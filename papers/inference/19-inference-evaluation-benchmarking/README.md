@@ -9,7 +9,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [AIMER: Calibration-Free Task-Agnostic MoE Expert Pruning](2026-2603.18492-aimer-calibration-free-task-agnostic-moe-expert-pruning.md)**  
-  実装：[✓](https://github.com/ZongfangLiu/AIMER) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/ZongfangLiu/AIMER) ・ リポジトリ内被引用：9  
   特にGPUメモリが限られる場合、未使用時間の長い専門家であっても保存・読込み費用がかかる。この方式は代表入力の分布に依存し、校正用入力の収集・推論・統計保存が必要となる。Qwen3-30Bの専門家50%削減ではコード評価平均がAIMERで0.361、REAPで0.046となった。
 
 - **2025-12 · [Less Is More, but Where? Dynamic Token Compression via LLM-Guided Keyframe Prior](2025-2512.06866-less-is-more-but-where-dynamic-token-compression-via-llm-guided-keyframe.md)**  
@@ -557,7 +557,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   対象は初代LLaMAの7B、13B、65Bで、NVIDIA V100とA100、自然言語指示のAlpaca、算術問題のGSM8Kを用いる。この研究は新しい注意演算や復号アルゴリズムを提案するものではない。
 
 - **2023-09 · [Large Language Model Routing with Benchmark Datasets](2023-2309.15789-large-language-model-routing-with-benchmark-datasets.md)**  

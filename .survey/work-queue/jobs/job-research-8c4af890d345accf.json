@@ -35,10 +35,15 @@
   "selection_reason": "GUI agentの連続prompt間で共通部分を再利用するため、hybrid linear attentionのrecurrent stateを入力分岐位置でcheckpointし、NPU matrix unit上のprefillと短いtailでの投機rollback state生成を両立するTandemを提案。llama.cppに実装し、一次要旨はSnapdragon 8 Eliteでtext画面説明のstep latency30%、screenshotで16%、text step energy33%削減、待機電力0.76→0.22Wを報告。端末内agentic LLMの状態再利用・NPU推論runtimeとしてaccept。",
   "semantic_scholar_id": "12102076ffdeed5d91d69558a3d84360fea9c782",
   "source_url": "https://arxiv.org/abs/2610.26660",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:45:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.md",
+  "represented_canonical_id": "arXiv:2610.26660",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

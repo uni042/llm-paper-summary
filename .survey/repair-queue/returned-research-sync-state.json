@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a1d23ce94a8a2d89ac8eea6b5e8517c9803d9aec",
+  "base_commit": "477a6bd238c6039c743c9b28277f06d46c240dc4",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -440,6 +440,11 @@
     "2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-diffusion-language-models.json",
     "2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.json",
     "2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inference.json",
+    "2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-large-language-models.json",
+    "2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-expert-pruning-for-mixture-of-experts-models.json",
+    "2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-software-co-design-exploration.json",
+    "2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.json",
+    "2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41886,6 +41891,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.25675": {
+      "order": [
+        "2026-11-20T02:40:13+00:00",
+        "2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.25717": {
+      "order": [
+        "2026-11-20T02:41:09+00:00",
+        "2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-expert-pruning-for-mixture-of-experts-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26083": {
+      "order": [
+        "2026-11-20T02:42:03+00:00",
+        "2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-software-co-design-exploration.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26531": {
+      "order": [
+        "2026-11-20T02:42:58+00:00",
+        "2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.26660": {
+      "order": [
+        "2026-11-20T02:43:53+00:00",
+        "2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51827,6 +51877,21 @@
     "arxiv:2610.25219": [
       "papers/inference/09-kernel-runtime-compilation/2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inferen.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inferen.md"
+    ],
+    "arxiv:2610.25675": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-.md"
+    ],
+    "arxiv:2610.25717": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-experts.md"
+    ],
+    "arxiv:2610.26083": [
+      "papers/inference/99-other-inference-systems/2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-.md"
+    ],
+    "arxiv:2610.26531": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.26531-reanchor-reusing-rejected-verifier-states-for-diffusion-drafting.md"
+    ],
+    "arxiv:2610.26660": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.26660-tandem-serving-hybrid-linear-attention-gui-agents-on-mobile-npus.md"
     ]
   }
 }

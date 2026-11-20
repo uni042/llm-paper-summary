@@ -35,10 +35,15 @@
   "selection_reason": "MoEのmicro-expert pruningをexpert間の保持容量配分とexpert内channel選択に分離し、cross-domain較正のCAPEと交換探索RAMPで構成するUC-RAMPを提案する。著者要旨は3モデルで25/50%剪定時のtask accuracy改善、A100で25%剪定時TTFT19.7～23.9%、TPOT20.2～22.3%削減を報告。MoEの圧縮と推論実測が直接結び付くためaccept。",
   "semantic_scholar_id": "b3b07878f1a26f81f7a0d52f427afd7aeb009a9e",
   "source_url": "https://arxiv.org/abs/2610.25717",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fine-Grained Units, Flat Decisions: Hierarchical Micro-Expert Pruning for Mixture-of-Experts Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:45:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-experts.md",
+  "represented_canonical_id": "arXiv:2610.25717",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

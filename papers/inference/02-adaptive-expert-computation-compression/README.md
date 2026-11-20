@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（127本）
+## 自動生成の論文一覧（128本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -38,6 +38,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：5  
   バッチ全体のルーター得点を集約して専門家集合を動的共有し、再学習なしで専門家混合推論の活性数・GPU負荷・投機デコード性能を改善する。
 
+- **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
+  実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：4  
+  本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
+
 - **2026-06 · [DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training](2025-2512.13996-dtop-p-dynamic-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   比例積分制御でTop-p閾値を動かして平均専門家数を予算へ追従させ、層別正規化でトークン・深さごとに計算を再配分する事前学習MoE。
@@ -49,10 +53,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-01 · [Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs](2026-2602.00879-dynamic-expert-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
-
-- **2026-06 · [How to Score Experts for One-Shot MoE Expert Pruning: A Unified Formulation and Selection Principle](2026-2606.15716-how-to-score-experts-for-one-shot-moe-expert-pruning-a-unified-formulati.md)**  
-  実装：[✓](https://github.com/ZongfangLiu/unified-expert-pruning) ・ リポジトリ内被引用：3  
-  本論文は、混合専門家（Mixture-of-Experts; MoE）モデルを一回の校正だけで静的に枝刈りする際、「どの専門家を消すか」を決める重要度指標を統一的に整理する。4種類の代表的MoEモデル、16ベンチマークのタスク非依存評価でMAN/MSANは平均順位の上位2基準となり、最強比較基準に対する平均性能を最大8.8ポイント改善した。
 
 - **2026-05 · [ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference](2026-2605.27081-remoe-router-finetuning-expert-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -163,6 +163,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   意味類似トークンを概念へ適応圧縮し、同一パラメータ・同一平均演算量下で節約計算を専門家混合モデルへ再配分して性能と長文脈推論効率を同時改善する。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [Fine-Grained Units, Flat Decisions: Hierarchical Micro-Experts](2026-2610.25717-fine-grained-units-flat-decisions-hierarchical-micro-experts.md)**  
+  実装：[✓](https://github.com/xzktx003/UC_RAMP) ・ リポジトリ内被引用：0  
+  マイクロエキスパート枝刈りを容量配分とチャネル構成の2決定に分け、複数ドメイン証拠で幅を再配分するケープと相互作用を入れて幅固定で交換するランプで解くことで、50パーセント枝刈りでも数学とコードの能力を大きく残し、遅延も2割前後削れることを示した研究。
 
 - **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -425,7 +429,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   本研究は、学習済みモデルを大規模に再学習せず、①各層の出力をできるだけ保つ専門家の集合を探索して重みを恒久的に削除する事後専門家枝刈り、②実行時にルータが選んだ2専門家のうち寄与の小さい第2専門家だけをトークン単位で省く動的専門家省略を組み合わせる。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
-  実装：✓ ・ リポジトリ内被引用：51  
+  実装：✓ ・ リポジトリ内被引用：52  
   重み・入力活性・ルータ重みを組み合わせたMoE専用重要度でエキスパート 重みをone-shot枝刈りし、エキスパート-wise蒸留で50%疎性でも元性能の約99%まで回復する。
 
 - **2024-11 · [MoE-I²: Compressing Mixture of Experts Models through Inter-Expert Pruning and Intra-Expert Low-Rank Decomposition](2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md)**  

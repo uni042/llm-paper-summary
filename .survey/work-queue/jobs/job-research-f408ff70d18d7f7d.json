@@ -35,10 +35,15 @@
   "selection_reason": "W4A4KV4など低ビット推論のactivation outlierに対し、感度の高いチャネルだけ学習可能な回転、残りは軽量な固定回転を適用する局所分離型PTQを提案する。著者要旨はLlama3-8Bの較正25分、ピークGPUメモリ20.3GB、fused inference kernelによるFP16比prefill最大2.3倍、メモリ3.5倍削減を報告。推論圧縮と実行kernelへの明確な適用があるためaccept。",
   "semantic_scholar_id": "c4685b9637c16725234d4c71d313debc8fb39b15",
   "source_url": "https://arxiv.org/abs/2610.25675",
-  "status": "ready",
+  "status": "superseded",
   "title": "LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:45:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.25675-lirquant-an-efficient-locally-isolated-rotation-quantization-method-for-.md",
+  "represented_canonical_id": "arXiv:2610.25675",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

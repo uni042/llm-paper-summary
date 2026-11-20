@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1044本）
+## 自動生成の論文一覧（1045本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -296,6 +296,10 @@
   実装：[✓](https://github.com/SJTU-DeepVisionLab/EADP) ・ リポジトリ内被引用：1  
   画像を含むVision-Language モデル（VLM）では、画像エンコーダが作る多数のパッチトークンがLLMの入力を長くし、事前充填の注意演算とメモリ転送を増やす。EADP（Entropy-Aware Dense Pruning）はこの二段階の失敗を分離する。
 
+- **2026-07 · [Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization](2026-2607.00908-beyond-activation-alignment-the-alignment-diversity-tradeoff-in-task-awa.md)**  
+  実装：[✓](https://github.com/WangFei-2019/TASA) ・ リポジトリ内被引用：1  
+  TASA（Task-Aware Sensitivity Analysis）は、LLMの重みを低ビットへ圧縮するとき、どの層へ何ビット割り当てるかを単一の言語モデル損失だけで決めない方式である。LLaMA-3-8Bでは平均3.5ビットで7タスク平均68.9%、HQQ W4の68.1%とRTN W4の67.9%を上回るが、AWQ W4の69.4%は下回る。
+
 - **2026-07 · [Back from the Future: Key-Value Cache Management by Counter-Causal Surprise](2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md)**  
   実装：[✓](https://github.com/metacognitionai/counter_causal) ・ リポジトリ内被引用：1  
   従来のスライディングウィンドウは古いトークンを機械的に捨て、H2Oなどのheavy-hitter方式は過去に多く注意されたトークンを残す。Qwen2.5-7B、RTX4090のキャッシュ更新1回では、KV長512で54msから7.9ms、4096で496msから52.6msとなり、更新処理単体で7～9倍速くなる。
@@ -315,6 +319,10 @@
 - **2026-06 · [Delay-Adaptive Speculation Control for Low-Latency Edge-Cloud LLM Inference](2026-2606.20591-delay-adaptive-speculation-control-for-low-latency-edge-cloud-llm-infere.md)**  
   実装：[✓](https://github.com/szpsunkk/UCB-SpecStop) ・ リポジトリ内被引用：1  
   本論文は、端末・クラウド分散推論（edge-cloud inference）で投機的復号（投機的復号）を行うとき、草稿モデルが一度に生成するトークン数を通信遅延に応じて決める問題を扱う。時間と採択数の「平均の比」を使う点が、各回の時間／採択数を単純平均する方式と異なる。
+
+- **2026-06 · [Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression](2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md)**  
+  実装：[✓](https://github.com/yifu-ding/MoE-Slimming) ・ リポジトリ内被引用：1  
+  専門家を丸ごと削除する従来方式では、重要度が高いと判定された専門家の内部にも残る冗長チャネルを見逃し、逆に頻度の低い専門家を全削除すると一部の入力に必要な能力を失う。著者らはDeepSeekとQwenの複数の混合専門家モデルを対象に、構造的枝刈り（structural 枝刈り）50%単独と、25%枝刈りに4ビット量子化を重ねた構成を比較した。
 
 - **2026-06 · [Accelerating Multimodal Large Language Models with Prior-Corrected Token Reduction](2026-2606.24156-accelerating-multimodal-large-language-models-with-prior-corrected-token.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -729,6 +737,10 @@
 - **2026-10 · [Rehearse Everything, Remember Nothing: Attic-KV Rehearses What Will Be Read](2026-2610.12133-rehearse-everything-remember-nothing-attic-kv-rehearses-what-will-be-rea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Attic-KV（Attic）は、長い文書を一度だけプリフィルしてKVキャッシュを保存し、将来の多数の質問に使い回す環境で、質問がまだ分からない段階でKVを圧縮する方式である。最終的なKV位置の重要度は再読時の注意機構・出力寄与から決め、保持率3～5%という厳しい条件でも事実を残しやすくする。
+
+- **2026-10 · [MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration](2026-2610.26083-mx-like-tensor-core-for-llm-inference-with-npu-integration-via-hardware-.md)**  
+  実装：[✓](https://github.com/KULeuven-MICAS/MX-Like-for-LLM-Inference) ・ リポジトリ内被引用：0  
+  ブロック量子化のスケール形式と重み活性値の非対称精度からなる設計空間を、形式特化のデータパスとエヌピー統合で精度とシリコン両面から探索し、エフピー4域ではユーイー5エム3スケールが劣化を25.3パーセント減らしほぼ無償で得られること、高精度域ではスケールは無関係なことを示した研究。
 
 - **2026-10 · [MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding](2026-2610.04313-moira-mass-oriented-indexing-with-ragged-attention-for-long-context-deco.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1178,10 +1190,6 @@
   実装：[✓](https://github.com/JieMaMagic/Trend-aware-Pruning) ・ リポジトリ内被引用：0  
   本論文は、多モーダル大規模言語モデル（Multimodal Large Language モデル、MLLM）の推論時に、画像由来の視覚トークンを削減する学習不要の手法を提案する。LLaVA-v1.5-7Bの実験では、初期保持288/576トークンの条件で平均相対性能98.89%を維持し、計算量を元の55.10%へ削減した。
 
-- **2026-07 · [Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization](2026-2607.00908-beyond-activation-alignment-the-alignment-diversity-tradeoff-in-task-awa.md)**  
-  実装：[✓](https://github.com/WangFei-2019/TASA) ・ リポジトリ内被引用：0  
-  TASA（Task-Aware Sensitivity Analysis）は、LLMの重みを低ビットへ圧縮するとき、どの層へ何ビット割り当てるかを単一の言語モデル損失だけで決めない方式である。LLaMA-3-8Bでは平均3.5ビットで7タスク平均68.9%、HQQ W4の68.1%とRTN W4の67.9%を上回るが、AWQ W4の69.4%は下回る。
-
 - **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
   実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：0  
   線形注意（Linear 注意機構）や状態空間モデル（State Space モデル; SSM）は、入力履歴を固定長の再帰状態へ要約するため、過去の全トークンに対応する鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）を保存する全注意と比べて、長文脈の記憶容量を一定に保ちやすい。
@@ -1381,10 +1389,6 @@
 - **2026-06 · [AVOC: Enhancing Hour-Level Audio-Video Understanding in Omni-Modal LLMs via Retrieval-Inspired Token Compression](2026-2606.24286-avoc-enhancing-hour-level-audio-video-understanding-in-omni-modal-llms-v.md)**  
   実装：[✓](https://github.com/YJCX330/AVOC) ・ リポジトリ内被引用：0  
   圧縮を検索問題として捉え、関連性・重要性・多様性の3基準でトークンを選ぶ学習型モジュールにより、長尺音声映像の正解率で次点を4.9から5.5ポイント上回った。
-
-- **2026-06 · [Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression](2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md)**  
-  実装：[✓](https://github.com/yifu-ding/MoE-Slimming) ・ リポジトリ内被引用：0  
-  専門家を丸ごと削除する従来方式では、重要度が高いと判定された専門家の内部にも残る冗長チャネルを見逃し、逆に頻度の低い専門家を全削除すると一部の入力に必要な能力を失う。著者らはDeepSeekとQwenの複数の混合専門家モデルを対象に、構造的枝刈り（structural 枝刈り）50%単独と、25%枝刈りに4ビット量子化を重ねた構成を比較した。
 
 - **2026-06 · [AdaCodec: A Predictive Visual Code for Video MLLMs](2026-2606.02569-adacodec-a-predictive-visual-code-for-video-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
