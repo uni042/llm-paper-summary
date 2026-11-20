@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-624a483e94e3e752-border-008",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.23436",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.23436",
+    "identity_tokens": [
+      "arXiv:2509.23436"
+    ],
+    "reason": "最適輸送に基づく二重確率的な線形注意を低ランク輸送計画で実現する注意機構だが、評価はSwinやBERT等の視覚・テキストバックボーン中心でLLM推論での効果は示されていない。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LOTFormer: Doubly-Stochastic Linear Attention via Low-Rank Optimal Transport"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-624a483e94e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

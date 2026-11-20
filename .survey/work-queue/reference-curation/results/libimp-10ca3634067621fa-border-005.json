@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10ca3634067621fa-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.09820",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.09820",
+    "identity_tokens": [
+      "arXiv:2605.09820"
+    ],
+    "reason": "Dystructは拡散言語モデルの可変長生成をベイズ的構造推論として定式化し拡張長・ブロック境界・デコードスケジュールを学習不要で決めるが、要旨の評価軸は生成品質と柔軟性が中心でスループット等のシステム効果が具体化されていないため境界とする。",
+    "first_checked_at": "2026-11-20T22:21:20+00:00",
+    "last_checked_at": "2026-11-20T22:21:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Dystruct: Dynamically Structured Diffusion Language Model Decoding via Bayesian Inference"
+  },
+  "processed_at": "2026-11-20T22:21:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10ca36340676",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10ca3634067621fa-unrel-013",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.27955",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.27955",
+    "identity_tokens": [
+      "arXiv:2604.27955"
+    ],
+    "reason": "GUIエージェントと強化学習の交差領域をオフライン・オンライン・ハイブリッドRLの分類で整理したサーベイ論文であり、報酬設計や世界モデル学習の展望が中心でLLM推論システムへの技術的機構の提案が要旨にないため対象外とする。",
+    "first_checked_at": "2026-11-20T22:21:20+00:00",
+    "last_checked_at": "2026-11-20T22:21:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "GUI Agents with Reinforcement Learning: Toward Digital Inhabitants"
+  },
+  "processed_at": "2026-11-20T22:21:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10ca36340676",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

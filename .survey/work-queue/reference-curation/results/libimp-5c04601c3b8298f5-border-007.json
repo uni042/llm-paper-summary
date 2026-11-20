@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5c04601c3b8298f5-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.22996",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.22996",
+    "identity_tokens": [
+      "arXiv:2503.22996"
+    ],
+    "reason": "USMoEはToken ChoiceとExpert Choiceを線形計画法で統一し柔軟な専門家選択予算で推論コスト削減を掲げるスパースMoE枠組みだが、評価はテキスト・視覚を含むモデル品質全般が中心で推論システムとしての実行機構や serving 測定が要旨で薄いため境界とする。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Sparse Mixture of Experts from a Unified Perspective"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5c04601c3b82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

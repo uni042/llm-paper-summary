@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-624a483e94e3e752-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2203.01178",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2203.01178",
+    "identity_tokens": [
+      "arXiv:2203.01178"
+    ],
+    "reason": "離散コサイン変換で注意を近似してメモリと推論時間を減らす汎用トランスフォーマ手法だが、2022年のNLP・CV向け設計でLLMサービングでの検証や大規模モデルへの適用は確認できない。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DCT-Former: Efficient Self-Attention with Discrete Cosine Transform"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-624a483e94e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

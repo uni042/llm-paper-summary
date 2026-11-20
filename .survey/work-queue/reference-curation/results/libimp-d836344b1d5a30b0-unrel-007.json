@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d836344b1d5a30b0-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.21613",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.21613",
+    "identity_tokens": [
+      "arXiv:2508.21613"
+    ],
+    "reason": "Chameleonは分散学習の障害時に回復戦略を性能モデルで適応選択するフォールトトレランス基盤であり、対象は32カードでの学習スループット維持であってLLM推論の実行基盤ではない。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Chameleon: Adaptive Fault Tolerance for Distributed Training via Real-time Policy Selection"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d836344b1d5a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

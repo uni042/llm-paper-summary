@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d8c89c2635e3964-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.04838",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.04838",
+    "identity_tokens": [
+      "arXiv:2402.04838"
+    ],
+    "reason": "固有表現認識の全メンションを同時デコードして生成遅延を下げる並列デコードだが、適用先がNERのラベルとメンション列に特化した課題形式であり汎用LLMデコード機構としての広がりは限られる。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PaDeLLM-NER: Parallel Decoding in Large Language Models for Named Entity Recognition"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d8c89c2635e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

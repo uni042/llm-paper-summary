@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-624a483e94e3e752-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.12601",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.12601",
+    "identity_tokens": [
+      "arXiv:2505.12601"
+    ],
+    "reason": "LLMルーティングで単純なkNNが学習型ルータに匹敵することを示しルーティング用ベンチマークを整備する研究で、提供時のモデル選択には関係するが実行系の機構提案としては薄い。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Predictive Modeling for LLM Routing: When Simple kNN Beats Complex Learned Routers"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-624a483e94e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

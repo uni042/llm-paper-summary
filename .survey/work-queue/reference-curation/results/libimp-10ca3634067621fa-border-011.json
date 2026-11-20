@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10ca3634067621fa-border-011",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.06129",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.06129",
+    "identity_tokens": [
+      "arXiv:2604.06129"
+    ],
+    "reason": "PoMは自己注意を線形時間の多項式ミキサへ置き換え長系列での計算コストを大幅に下げるトークンミキシング機構だが、新規アーキテクチャの学習を前提としテキスト生成以外の多分野で評価される汎用構造提案であり既存LLM推論基盤への適用ではないため境界とする。",
+    "first_checked_at": "2026-11-20T22:21:20+00:00",
+    "last_checked_at": "2026-11-20T22:21:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "PoM: A Linear-Time Replacement for Attention with the Polynomial Mixer"
+  },
+  "processed_at": "2026-11-20T22:21:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10ca36340676",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

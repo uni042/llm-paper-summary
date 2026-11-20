@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-624a483e94e3e752-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.16968",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.16968",
+    "identity_tokens": [
+      "arXiv:2510.16968"
+    ],
+    "reason": "MoEの専門家ルーティングパターンを指紋として知識蒸留を検出する知的財産保護向けフレームワークであり、MoEを分析対象にはするが推論効率や実行方式への貢献はない。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "title": "Leave It to the Experts: Detecting Knowledge Distillation via MoE Expert Signatures"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-624a483e94e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

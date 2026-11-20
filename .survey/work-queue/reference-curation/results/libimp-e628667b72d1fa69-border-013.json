@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e628667b72d1fa69-border-013",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05365",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05365",
+    "identity_tokens": [
+      "arXiv:2605.05365"
+    ],
+    "reason": "ZAYA1-8Bは推論特化MoEモデルの事前学習からRLまでの技術報告が主体であり、テスト時計算のMarkovian RSAが有界長の推論尾部だけを引き継ぐ点は推論時手法に触れるものの、推論システムとしての効率評価は中心ではない。",
+    "first_checked_at": "2026-11-20T22:21:21+00:00",
+    "last_checked_at": "2026-11-20T22:21:21+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ZAYA1-8B Technical Report"
+  },
+  "processed_at": "2026-11-20T22:21:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e628667b72d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10ca3634067621fa-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.02230",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.02230",
+    "identity_tokens": [
+      "arXiv:2603.02230"
+    ],
+    "reason": "SCDDは離散拡散モデルの自己修正を明示的な状態遷移で事前学習し直す枠組みで並列デコードの効率化を掲げるが、貢献の中心は学習時のノイズスケジュールと目的関数の再定式化でありGPT-2規模の検証に留まるため境界とする。",
+    "first_checked_at": "2026-11-20T22:21:20+00:00",
+    "last_checked_at": "2026-11-20T22:21:20+00:00",
+    "linked_from": [
+      "worker-worklist discovery_review"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Generalized Discrete Diffusion with Self-Correction"
+  },
+  "processed_at": "2026-11-20T22:21:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10ca36340676",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
