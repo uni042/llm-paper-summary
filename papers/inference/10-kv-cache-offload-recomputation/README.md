@@ -86,6 +86,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：4  
   疎注意が実際に読むtop-k KVだけを固定サイズHBMキャッシュへ置き、全履歴はホストDRAMに保持してLRU・融合CUDA取得・共有選択の正確な先読みで補うことで、出力を変えず長文デコードのHBM容量壁を外す方式。
 
+- **2026-07 · [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)**  
+  実装：[✓](https://github.com/shutianluo/DirectKV) ・ リポジトリ内被引用：4  
+  注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。
+
 - **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：4  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
@@ -97,10 +101,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning](2026-2602.23592-keep-kv-cache-centric-embodied-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KEEPは更新頻度で具身記憶を群分けし、文脈依存の重要度伝播で必要KVだけを再計算し、層をまたぐ先読みでCPU→GPU読込み待ちを減らす方式。
-
-- **2026-07 · [No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs](2026-osdi26-directkv-no-buffer-no-bottleneck-efficient-zero-copy-kv-cache-offloading-for-long-context-llms.md)**  
-  実装：[✓](https://github.com/shutianluo/DirectKV) ・ リポジトリ内被引用：3  
-  注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。
 
 - **2026-07 · [A CXL Memory Rack for Multi-Turn LLM Serving](2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -154,9 +154,17 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   DualDecoderは投機トークンから次の疎KV位置を予測し、層計算より先にCPUから必要KVを転送する。GPUには現在・次層の二層だけを保持し補助状態の容量を減らす方式。
 
+- **2026-05 · [ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse](2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  細粒度KVチャンクをS3互換ストレージへ保存したまま、複数物体の同一層範囲をサーバ側で集約して層順にRDMA転送し、GPU計算とI/Oを重ね、計算窓に応じて共有帯域も配分する大容量接頭辞キャッシュ方式。
+
 - **2026-05 · [Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches](2026-2605.18825-saecache-semantic-aware-prefix-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   接頭辞ブロックを再利用様式とトークン種別で複数キューへ分け、追い出し後の再参照を使って優先度をオンライン学習し、異質な会話負荷でKV再利用率を高める。
+
+- **2026-04 · [DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference](2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  DUAL-BLADEはKVをページキャッシュとNVMe直接経路へ分け、連続論理ブロックとGPU DMAを使い、mmapのスラッシングとファイル層処理によるSSD待ちを減らす方式。
 
 - **2026-03 · [InfoFlow KV: Information-Flow-Aware KV Recomputation for Long Context](2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -198,10 +206,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   ブロック拡散LLMのKV再利用性を利用し、CPUで1回選択した疎KVをGPUへ先読みしてデノイズと重畳し、5% KV予算で最大2.28倍の処理量を実現する。
 
-- **2026-05 · [ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse](2026-2605.22850-objectcache-layerwise-object-storage-retrieval.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  細粒度KVチャンクをS3互換ストレージへ保存したまま、複数物体の同一層範囲をサーバ側で集約して層順にRDMA転送し、GPU計算とI/Oを重ね、計算窓に応じて共有帯域も配分する大容量接頭辞キャッシュ方式。
-
 - **2026-05 · [Enabling KV Caching of Shared Prefix for Diffusion Language Models](2026-2606.07571-enabling-kv-caching-of-shared-prefix-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/OSSS-KU/BiCache) ・ リポジトリ内被引用：1  
   自己回帰型言語モデルでは、先頭のシステムプロンプトが同じ要求を何度も処理するとき、その接頭辞のKVを一度だけ計算して別要求へ渡せる。LLaDA、NVIDIA B200、4ベンチマークの主評価では、無キャッシュに対し処理量が36.3〜82.8%向上し、正解率差は主に−0.8〜+0.6ポイントの範囲に収まる。
@@ -221,10 +225,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-04 · [ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache](2026-2604.06370-forkkv-copy-on-write-disaggregated-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LoRA由来KVを共有基底キャッシュと低ランク残差キャッシュへ分け、コピーオンライト型DualRadixTreeとSRAM内ResidualAttentionで共有文脈のKV重複を減らすマルチエージェント配信方式。
-
-- **2026-04 · [DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference](2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  DUAL-BLADEはKVをページキャッシュとNVMe直接経路へ分け、連続論理ブロックとGPU DMAを使い、mmapのスラッシングとファイル層処理によるSSD待ちを減らす方式。
 
 - **2026-03 · [TTKV: Temporal-Tiered KV Cache for Long-Context LLM Inference](2026-2604.19769-ttkv-temporal-tiered-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -461,7 +461,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion](2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：174  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：175  
   複数RAG文書の事前計算KVを連結し、交差注意の影響が大きい5〜18%程度のトークンだけを層ごとに再計算する方式。SSD読出しと再計算を重ね、完全再計算比でTTFTを2.2〜3.3倍短縮した。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
@@ -515,7 +515,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
-  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：154  
+  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：155  
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
