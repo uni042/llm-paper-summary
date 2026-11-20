@@ -35,10 +35,15 @@
   "selection_reason": "ハイブリッド注意モデルの線形注意演算をエッジNPUで効率化するHA-NPU。ヘッド次元分割と演算融合、中間値の即時消費、レイアウト最適化によりメモリ転送を減らす。線形注意カーネル最大35.95倍、要求全体最大2.03倍高速化を報告し、推論ランタイムとハードウェア協調が主題。",
   "semantic_scholar_id": "23a9d414dc4f3482940a91394118782d1ef6a152",
   "source_url": "https://arxiv.org/abs/2609.32114",
-  "status": "ready",
+  "status": "superseded",
   "title": "Empowering Hybrid Attention Models on NPUs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:59:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.32114-empowering-hybrid-attention-models-on-npus.md",
+  "represented_canonical_id": "arXiv:2609.32114",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

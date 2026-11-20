@@ -35,10 +35,15 @@
   "selection_reason": "Transformerのprefix依存KVでは文脈の途中を再利用・削除すると後続再計算が必要な問題に対し、ブロック独立エンコーダとcross-attention readerからなるSMemを提案。ブロック単位で厳密な文脈結合・削除を可能にし、帯域律速時のdecode 1.4〜1.7倍高速化と削除の大幅短縮を報告。",
   "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
   "source_url": "https://arxiv.org/abs/2609.32395",
-  "status": "ready",
+  "status": "superseded",
   "title": "Memory as a cache: Exact context reuse and deletion by construction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:59:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.md",
+  "represented_canonical_id": "arXiv:2609.32395",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

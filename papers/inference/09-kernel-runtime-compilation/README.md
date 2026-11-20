@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（251本）
+## 自動生成の論文一覧（252本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -265,6 +265,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with VOXEL](2026-2604.26821-exploring-the-efficiency-of-3d-stacked-ai-chip-architecture-for-llm-infe.md)**  
   実装：[✓](https://github.com/yiqiliu2/voxelsim) ・ リポジトリ内被引用：0  
   VOXELは、演算コアの上に多数のDRAMバンクを三次元積層したAIチップを対象に、コンパイラが生成する演算配置・データ配置と、分散メモリ・オンチップ通信・熱制約を一体として評価するシミュレータである。性能差の大部分は設計空間を模擬した結果であり、量産シリコンの確定性能として扱わない。
+
+- **2026-09 · [Empowering Hybrid Attention Models on NPUs](2026-2609.32114-empowering-hybrid-attention-models-on-npus.md)**  
+  実装：[✓](https://github.com/yinyuanzhang/HA-NPU) ・ リポジトリ内被引用：0  
+  線形注意の仕事をヘッド単位に割り当てて依存演算子を同一コアへ融合し、中間テンソルの寿命に合わせた実行順の並べ替えと、得な場合だけ変換するレイアウト計画で、エッジNPU上のハイブリッド注意モデルのプリフィルを支配するグローバルメモリ往復を消す実行方式。
 
 - **2026-09 · [Does Execution Require Target KV Fidelity? A Mixed-Fidelity KV Runtime for LLM Serving](2026-2609.33536-does-execution-require-target-kv-fidelity-a-mixed-fidelity-kv-runtime-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

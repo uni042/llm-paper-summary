@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1046本）
+## 自動生成の論文一覧（1047本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -913,6 +913,10 @@
 - **2026-09 · [HEAT: Faster Fully Homomorphic Inference via Approximations-Weights Co-Adaptation](2026-2609.01730-heat-faster-fully-homomorphic-inference-via-approximations-weights-co-ad.md)**  
   実装：[✓](https://github.com/gladia-research-group/heat) ・ リポジトリ内被引用：0  
   対象は通常のGPU推論全般ではなく、暗号文上で加算・乗算・回転を組み合わせてTransformerを評価する、非常に高コストなプライバシー保護推論である。ただし比較する平文モデルは各方式の「自分自身の平文版」であり、同一平文モデルへの忠実度を直接比較した値ではない。
+
+- **2026-09 · [GroupMask: Layer-Adaptive Group-wise Sparsity for Semi-Structured LLM Pruning](2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pru.md)**  
+  実装：[✓](https://github.com/ZhengaoLi/GroupMask) ・ リポジトリ内被引用：0  
+  グループ単位で保持・削除する半構造化スパース化で、全層の選択子をハイパーネットワークが生成し予算正則化と自己蒸留で学習させ、N:Mでは効かなかった層適応配分がグループ粒度では効くことを示した枝刈り手法。
 
 - **2026-09 · [Green AI: Cost of LLM-Based Code Completion](2026-2609.33918-green-ai-cost-of-llm-based-code-completion.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21971227) ・ リポジトリ内被引用：0  
@@ -2860,6 +2864,10 @@
   実装：[✓](https://github.com/L-Hugh/RedundancyLens) ・ リポジトリ内被引用：1  
   この構成は実装が単純で精度も高い一方、画像由来のトークン数が増えると、LLMのself-注意機構とFFNの両方で大量の演算が発生する。約半数の層へ演算削減を適用すると、FLOPs比が約71〜72%に下がり、元モデルに近い品質を維持する。
 
+- **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
+
 - **2025-01 · [DReSS: Data-driven Regularized Structured Streamlining for Large Language Models](2025-2501.17905-dress-data-driven-regularized-structured-streamlining-for-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   しかし従来の「重要度を測ってチャネルを直接削除し、その後に回復微調整する」方式では、削除予定チャネルに残っていた有用な情報まで失われる。
@@ -3360,10 +3368,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、LLMの学習後量子化（PTQ）において、校正用の入力文を使わずに重要な重みを識別し、低ビット量子化での品質低下を抑える事前校正（pre-calibration）を提案する。LLaMA-7B、4ビット系の実験では、量子化時間が57秒でAWQの838秒、SpQRの10,901秒より短い。
 
-- **2025-01 · [ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs](2025-2502.00258-proxsparse-regularized-learning-of-semi-structured-sparsity-masks-for-pr.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  二値マスクの硬い制約を正則化へ緩和してマスクを全層横断で学習することで、ラマ二・七十億版のパープレキシティをワンダ比で約三十五パーセント改善した半構造化枝刈り手法。
-
 - **2025-01 · [CURing Large Models: Compression via CUR Decomposition](2025-2501.04211-curing-large-models-compression-via-cur-decomposition.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの重みを圧縮する場合、ニューロンや層を削除する構造化剪定はパラメータ数を減らせるが、ネットワーク構造と残差経路の整合性を変更する必要がある。原著はLlama3.1-8Bで10層をrank 256で分解し、8.03Bパラメータを7.32Bに削減する処理を129.45秒で実行した。
@@ -3857,7 +3861,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：273  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：274  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  

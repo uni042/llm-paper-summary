@@ -1038,6 +1038,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：4  
   HiSpecは、投機的復号の律速が候補トークンの作成ではなく巨大な対象モデルによる検証に移っていることを踏まえ、同じ早期退出モデルの浅い層・中間層・最終層をそれぞれドラフト生成・中間検証・最終検証へ割り当てる階層型の復号方式である。
 
+- **2025-10 · [Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution](2025-2510.15312-accelerating-mobile-language-model-via-speculative-decoding-and-npu-coor.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  sd.npuは、スマートフォン上で検索拡張生成（retrieval-augmented generation; RAG）を動かすとき、モバイル神経処理装置（neural processing unit; NPU）の演算器を使い切れない問題を、実行時制御と推測復号（投機的復号）の両側から解決するシステムである。
+
 - **2025-06 · [AdaDecode: Accelerating LLM Decoding with Adaptive Layer Parallelism](2025-2506.03700-adadecode-accelerating-llm-decoding-with-adaptive-layer-parallelism.md)**  
   実装：[✓](https://github.com/weizhepei/AdaDecode) ・ リポジトリ内被引用：4  
   自己回帰型の大規模言語モデル（LLM）は、次トークンを確定するまで次のトークンの入力を処理できない。通常は各トークンを全Transformer層へ順に通し、最終層の語彙分布から出力を決める。長文生成や長い思考過程ではこの直列依存が繰り返される。別の小さなモデルが候補トークンを作る投機的復号（投機的復号）は有力だが、追加モデルの重み・実行費用を要する。
@@ -1085,10 +1089,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs](2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号は、安価な草案器が未来のトークンを先に提案し、ターゲットLLMが複数位置を一度に検証することで逐次実行回数を減らす。原著のH100 80GB、Vicuna-7B/13B/33B、Spec-Benchでは、訓練不要のCAS-Specが自己回帰復号比でそれぞれ平均1.578/1.524/1.481倍となる。
-
-- **2025-10 · [Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution](2025-2510.15312-accelerating-mobile-language-model-via-speculative-decoding-and-npu-coor.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  sd.npuは、スマートフォン上で検索拡張生成（retrieval-augmented generation; RAG）を動かすとき、モバイル神経処理装置（neural processing unit; NPU）の演算器を使い切れない問題を、実行時制御と推測復号（投機的復号）の両側から解決するシステムである。
 
 - **2025-09 · [Communication-Efficient Collaborative LLM Inference via Distributed Speculative Decoding](2025-2509.04576-communication-efficient-distributed-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

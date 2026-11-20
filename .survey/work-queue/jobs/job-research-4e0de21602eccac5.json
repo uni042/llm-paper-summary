@@ -35,10 +35,15 @@
   "selection_reason": "半構造化LLM剪定向け層適応グループ単位疎性GroupMask。N:Mパターンが全層で同じ疎性率を固定する問題に対し、重み行列を規則的なグループに分けて層適応に疎性を配分する。推論圧縮機構そのもの。",
   "semantic_scholar_id": "bf0751ebfc217087e2e446d3357995185c7bb8ed",
   "source_url": "https://arxiv.org/abs/2609.33977",
-  "status": "ready",
+  "status": "superseded",
   "title": "GroupMask: Layer-Adaptive Group-wise Sparsity for Semi-Structured LLM Pruning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:59:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pru.md",
+  "represented_canonical_id": "arXiv:2609.33977",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

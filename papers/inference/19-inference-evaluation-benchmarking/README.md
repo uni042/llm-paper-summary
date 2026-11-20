@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（142本）
+## 自動生成の論文一覧（143本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -129,6 +129,10 @@
 - **2026-09 · [MaskCoFT: Masked Co-Adaptive Fine-Tuning for Memory-Efficient MoE Inference](2026-2609.34077-maskcoft-masked-co-adaptive-fine-tuning-for-memory-efficient-moe-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPUメモリが不足する場合は専門家をCPUへオフロードし、必要時にGPUへロードする。原著はMoE-OffloadingにおけるMixtral-8×7Bのデコード時間で、専門家ロードが86%、専門家計算が3%という分析を示す。
+
+- **2026-09 · [LazyAgent: Demand-Driven Materialization and Physical Optimization of Agentic Programs](2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-age.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントプログラムについて、実行可能なステップと要求が必要なステップを区別し、プログラム全体から計算した需要集合に入る仕事だけを実行する需要駆動の実体化と、LLMステップの出力を必要分だけに絞る射影などの物理最適化を定式化し、証明と実測で効果の範囲を示した研究。
 
 - **2026-09 · [KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity](2026-2609.30057-krex-concurrent-kernel-benchmarking-on-shared-gpus-via-region-granular-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

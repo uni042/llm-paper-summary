@@ -62,6 +62,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：6  
   CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
 
+- **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  VeriCacheは圧縮KVで候補を生成し、完全KVをCPU／共有ストアから読み込んで最初の不一致を検証・訂正し、品質を保ったまま復元帯域とGPU計算を要求間で重ねる方式。
+
 - **2026-05 · [KVDrive: A Holistic Multi-Tier KV Cache Management System for Long-Context LLM Inference](2026-2605.18071-kvdrive-holistic-multi-tier-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   KVDriveは、自己回帰生成中に蓄積される鍵・値キャッシュ（KVキャッシュ）をGPUの高帯域メモリ（HBM）だけでなく、CPU主記憶（DRAM）と不揮発性記憶装置（SSD）へ分散配置する推論基盤である。疎性を強くするだけでは回答精度が落ちるため、重要KVをどれだけ再利用するか、取得待ちをどの計算と重ねるか、SSDから何を読むかを共同設計する必要がある。
@@ -94,10 +98,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/shutianluo/DirectKV) ・ リポジトリ内被引用：4  
   注意機構の計算を毎回最初からやり直さずに済む反面、数万トークンの文脈と複数の同時要求を抱えるとGPUの高帯域メモリ（HBM）を圧迫する。既存のオフロード方式と比べ、CPU–GPU間の転送量を最大50%減らし、GPUメモリ使用量を43%削減し、端点の性能を最大1.2倍改善した。
 
-- **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  VeriCacheは圧縮KVで候補を生成し、完全KVをCPU／共有ストアから読み込んで最初の不一致を検証・訂正し、品質を保ったまま復元帯域とGPU計算を要求間で重ねる方式。
-
 - **2026-05 · [SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving](2026-2605.01708-splitzip-lossless-kv-compression.md)**  
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：4  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
@@ -105,6 +105,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning](2026-2602.23592-keep-kv-cache-centric-embodied-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   KEEPは更新頻度で具身記憶を群分けし、文脈依存の重要度伝播で必要KVだけを再計算し、層をまたぐ先読みでCPU→GPU読込み待ちを減らす方式。
+
+- **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ハイブリッドLLMの位置非依存キャッシュで、複数の再帰状態を厳密合成せず単一チャンク状態から再計算する方式。Mamba-2ではEPIC併用時の完全プリフィル比品質を46.6%から86.8%へ改善し、合成処理の追加遅延も避ける。
 
 - **2026-07 · [A CXL Memory Rack for Multi-Turn LLM Serving](2026-2607.18141-hymcache-cxl-hybrid-memory-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -141,10 +145,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution](2026-2602.03203-foresightkv-long-term-contribution-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
-
-- **2026-07 · [LinearKV: One Cached State Suffices for Position-Independent Caching in Hybrid LLMs](2026-2608.11231-linearkv-position-independent-caching-hybrid-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  ハイブリッドLLMの位置非依存キャッシュで、複数の再帰状態を厳密合成せず単一チャンク状態から再計算する方式。Mamba-2ではEPIC併用時の完全プリフィル比品質を46.6%から86.8%へ改善し、合成処理の追加遅延も避ける。
 
 - **2026-07 · [Learning Agent Execution for KV-Cache Management in Agentic Serving](2026-2608.14624-cachescout.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

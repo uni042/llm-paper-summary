@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "7254cd684d35cc07f1c89d5931288ce58aa2743b",
+  "base_commit": "d6d03eb58a1e33cf1ffc01d881d4b6b4e5b948c3",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -347,6 +347,8 @@
     "2026-2609.18005-a-calibrated-instrument-for-measuring-how-inference-optimizations-affect-output-quality.json",
     "2026-2609.18916-higher-order-pruning-of-experts-in-mixture-of-experts-language-models.json",
     "2026-2609.23033-wavefront-decoding-parallelized-self-speculative-decoding-for-looped-language-models.json",
+    "2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-agentic-programs.json",
+    "2026-2609.23314-valuediff-value-geometric-kv-cache-eviction-for-sink-suppressed-llms.json",
     "2026-2609.24847-spectra-adaptive-execution-of-speculative-decoding-on-a-runtime-reconfigurable-tiled-architecture.json",
     "2026-2609.24875-sphquant-efficient-extreme-low-bit-weight-quantization-for-vision-language-models.json",
     "2026-2609.25053-latentport-beyond-kv-cache-cross-model-transfer-of-recurrent-memory-in-hybrid-language-models-a-4b-to-9b-hybrid-state-ha.json",
@@ -355,6 +357,8 @@
     "2026-2609.30820-quantizing-looped-transformers-feedback-exposure-and-calibration-blindness.json",
     "2026-2609.30950-low-bit-recurrent-states-in-hybrid-language-models.json",
     "2026-2609.31291-softmax-reparameterization-for-output-head-quantization.json",
+    "2026-2609.32114-empowering-hybrid-attention-models-on-npus.json",
+    "2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.json",
     "2026-2609.32610-kv-lingo-learning-kv-cache-translators-with-distillation.json",
     "2026-2609.32759-the-extender-a-log-structured-transformer.json",
     "2026-2609.32831-unicache-task-and-type-aware-kv-cache-compression-for-unified-multimodal-models.json",
@@ -362,6 +366,7 @@
     "2026-2609.33135-mpfa-hardware-efficient-train-free-qk4v8-flashattention-kernels-on-blackwell-gpus.json",
     "2026-2609.33477-just-let-linear-states-forget-the-distant-past-prefix-caching-via-suffix-replay-for-hybrid-llms.json",
     "2026-2609.33503-relaxkv-recomputation-guided-by-the-query-with-sparse-context-attention-for-efficient-kv-cache-reuse.json",
+    "2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pruning.json",
     "2026-2609.34370-spexis-speculative-lookahead-scheduling-for-llm-inference.json",
     "2026-2609.34538-shallow-queries-mature-values-depth-asynchronous-self-speculative-decoding-for-looped-transformers.json",
     "2026-2609.37538-avsg-accelerated-vectorized-sparse-gather-for-efficient-kv-cache-offload-in-sparse-attention-llm-serving.json",
@@ -42186,6 +42191,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2609.23058": {
+      "order": [
+        "2026-11-20T03:53:48+00:00",
+        "2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-agentic-programs.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.23314": {
+      "order": [
+        "2026-11-20T03:54:43+00:00",
+        "2026-2609.23314-valuediff-value-geometric-kv-cache-eviction-for-sink-suppressed-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.32114": {
+      "order": [
+        "2026-11-20T03:55:38+00:00",
+        "2026-2609.32114-empowering-hybrid-attention-models-on-npus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.32395": {
+      "order": [
+        "2026-11-20T03:56:34+00:00",
+        "2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2609.33977": {
+      "order": [
+        "2026-11-20T03:57:29+00:00",
+        "2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pruning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52247,6 +52297,21 @@
     "arxiv:2610.07219": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.md"
+    ],
+    "arxiv:2609.23058": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2609.23058-lazyagent-demand-driven-materialization-and-physical-optimization-of-age.md"
+    ],
+    "arxiv:2609.23314": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.23314-valuediff-value-geometric-kv-cache-eviction-for-sink-suppressed-llms.md"
+    ],
+    "arxiv:2609.32114": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2609.32114-empowering-hybrid-attention-models-on-npus.md"
+    ],
+    "arxiv:2609.32395": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.32395-memory-as-a-cache-exact-context-reuse-and-deletion-by-construction.md"
+    ],
+    "arxiv:2609.33977": [
+      "papers/inference/99-other-inference-systems/2026-2609.33977-groupmask-layer-adaptive-group-wise-sparsity-for-semi-structured-llm-pru.md"
     ]
   }
 }
