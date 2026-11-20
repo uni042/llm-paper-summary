@@ -35,10 +35,15 @@
   "selection_reason": "形式仕様に適合する構造化出力を得るため、LLM生成の各stepで将来仕様を満たせない値を文法から除外するneuro-symbolic constrained decodingを提案。forward-onlyは仕様充足を構成的に保証し、backtracking版はモデル自身が不適切と判断した過去選択を再検討する。設定・制約充足benchmarkでrejection samplingより反復LLM inferenceを削減し、symbolic overheadは小さいと報告。推論時のdecoding効率化に直接関連する。",
   "semantic_scholar_id": "7762afc346d8e898b222b0b6727193577f0b2a1c",
   "source_url": "https://arxiv.org/abs/2610.41511",
-  "status": "ready",
+  "status": "superseded",
   "title": "Specification-Guided Generation for Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:45:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41511-specification-guided-generation-for-large-language-models.md",
+  "represented_canonical_id": "arXiv:2610.41511",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

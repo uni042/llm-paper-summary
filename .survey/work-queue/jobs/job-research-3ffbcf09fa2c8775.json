@@ -35,10 +35,15 @@
   "selection_reason": "長文脈の拡散型言語モデルでattention graphの接続辺数とtoken当たり活性expert数を別々の計算予算として扱うDualBudgetを解析。local/dilated/global注意と条件付きexpert計算のコスト境界を導出し、16Kまでの長さ評価と劣化条件を報告。DiffuSeq比20%のコスト減は時間計測条件が未指定であり実機推論高速化の証明とは区別するが、推論計算量の削減設計を直接扱うためaccept。",
   "semantic_scholar_id": "2d905f2e03813f937eca3a405a6ce4ec54e113f8",
   "source_url": "https://arxiv.org/abs/2610.41487",
-  "status": "ready",
+  "status": "superseded",
   "title": "Sparse Text Diffusion under Dual Budgets: Context Connectivity and Expert Activation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:45:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41487-sparse-text-diffusion-under-dual-budgets-context-connectivity-and-expert.md",
+  "represented_canonical_id": "arXiv:2610.41487",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

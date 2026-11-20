@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1136本）
+## 自動生成の論文一覧（1140本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -866,6 +866,14 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [Understanding the Energy Cost of Quantized Agents on Shared GPUs](2026-2610.41672-understanding-the-energy-cost-of-quantized-agents-on-shared-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  失敗分も含めた検証済み完了当たりのエネルギーで量子化を測り直し、固定した呼び出しでは10〜25%安い4ビット形式が実実行では余分な作業と未完了で49%高くなる一方、キャッシュ競合のある40GB配置では空きメモリの効果で安くなり、最安の精度は同時実行数と配置で変わることを実機で示した。
+
+- **2026-11 · [Specification-Guided Generation for Large Language Models](2026-2610.41511-specification-guided-generation-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文法では表せない変数同士の論理の制約を、各割当ての前に可能な領域を計算して文法へ変換することで生成の構成により保証し、模型の呼び出しを却下標本化より大幅に減らし、後戻りで促しに合わない割当てを九十八件中九十二件から十三件へ減らしたと報告した。
+
 - **2026-11 · [Calibration of Large Model Quantization based on HiFloat4 Format](2026-2610.41112-calibration-of-large-model-quantization-based-on-hifloat4-format.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   三階層スケールの4ビット形式ハイフロート4へ、誤差補償、指数と仮数の学習補正、外れ値をならす等価変換という三つの較正を作り替えて適用し、五つのモデルと七つの課題の平均精度を直接変換の72.804パーセントから最大73.708パーセントへ上げ、16ビットとの差を0.262ポイントまで縮めたと報告した。
@@ -881,6 +889,10 @@
 - **2026-10 · [UNREAL: Unifying Retrieval and Long-Context with a Single Model](2026-2610.08463-unreal-unifying-retrieval-and-long-context-with-a-single-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   凍結LLMの内部表現と学習した検索トークンだけで証拠チャンクを選び、外部検索モデルなしにコーパス検索と長文脈推論を一つの選択機構で統一する方式。
+
+- **2026-10 · [Trainable Vector Quantization for Large Language Models](2026-2610.41822-trainable-vector-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  離散的な割当て行列を潜在重みとコードブックから決まる関数へ書き直し、直通推定で勾配を流す訓練可能なベクトル量子化で、2ビット量子化の品質を回復させ、Llama2-70B の質問応答では元のモデルとの差を 0.7% まで縮めた。
 
 - **2026-10 · [TokenGate: Adapting LLMs for Fast and Memory-Efficient Prefill with Learned Token Pruning](2026-2610.26754-tokengate-adapting-llms-for-fast-and-memory-efficient-prefill-with-learn.md)**  
   実装：[✓](https://github.com/tokengate-models/TokenGate) ・ リポジトリ内被引用：0  
@@ -913,6 +925,10 @@
 - **2026-10 · [Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion](2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-.md)**  
   実装：[✓](https://github.com/ZacharyBroveak/Spectral-MoE) ・ リポジトリ内被引用：0  
   密モデルから混合専門家モデルへの変換で、トークンあたり総予算を厳密に保ちながら層ごとのエキスパート使用数を静的またはトークン動的に学習して配分し直し、同じ使用率の一律配分より品質を改善する手法。
+
+- **2026-10 · [Sparse Text Diffusion under Dual Budgets: Context Connectivity and Expert Activation](2026-2610.41487-sparse-text-diffusion-under-dual-budgets-context-connectivity-and-expert.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  文章拡散の費用を注意の辺と専門家の活性化の二予算に分けて定式化し、報告された疎な専門家構成が要約の集計で ROUGE-1 四十四・四一と二つの比較対象を上回り十六キロトークンまで優位を保つ一方、費用の測定条件は未指定で主張の範囲が限られることを切り分けた。
 
 - **2026-10 · [Shared Low-rank Basis Factorization for Data-free Mixture-of-Experts Compression](2026-2610.09342-shared-low-rank-basis-factorization-for-data-free-mixture-of-experts-com.md)**  
   実装：[✓](https://github.com/ctxGou/MoE-Compression) ・ リポジトリ内被引用：0  

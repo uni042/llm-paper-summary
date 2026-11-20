@@ -35,10 +35,15 @@
   "selection_reason": "ハイブリッドLLM提供向け階層プレフィックスキャッシュ管理HiState。全注意層と再帰線形層を混ぜたモデルでは、短い接頭辞の状態をチェックポイントから復元できない問題に対し、階層的な接頭辞キャッシュ管理を行う。推論基盤のキャッシュ機構そのもの。",
   "semantic_scholar_id": "282671cce9668cae22039050040b27522d615847",
   "source_url": "https://arxiv.org/abs/2610.41508",
-  "status": "ready",
+  "status": "superseded",
   "title": "HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:45:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2610.41508-histate-hierarchical-prefix-cache-management-for-hybrid-llm-serving-in-a.md",
+  "represented_canonical_id": "arXiv:2610.41508",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "A100 40/80GBの共有GPU上で量子化agentを4〜16同時実行し、単一callのエネルギーと検証済みタスク完了当たりのエネルギーを比較。4bit weight/16bit activationは8bit比で同じcallのエネルギー10〜25%減だが、実agentの追加作業・失敗で完了当たり49%増となる条件を報告。精度選択とadmission/cache容量の同時最適化に直接有用な推論運用評価。",
   "semantic_scholar_id": "21f08c9cdaff12f61254c856c206fadfc5f36789",
   "source_url": "https://arxiv.org/abs/2610.41672",
-  "status": "ready",
+  "status": "superseded",
   "title": "Understanding the Energy Cost of Quantized Agents on Shared GPUs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:45:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.41672-understanding-the-energy-cost-of-quantized-agents-on-shared-gpus.md",
+  "represented_canonical_id": "arXiv:2610.41672",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
