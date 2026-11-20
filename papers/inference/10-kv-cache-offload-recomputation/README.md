@@ -162,6 +162,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   InfoFlow KVは、文書単位で事前計算したキー・バリュー（Key-Value; KV）キャッシュを再利用する長文脈の検索拡張生成（Retrieval-Augmented Generation; RAG）で、問い合わせから文脈への注意質量を使って再計算すべきトークンを選ぶ。
 
+- **2026-02 · [Efficient Remote KV Cache Reuse with GPU-native Video Codec](2026-2602.09725-kvfetcher-gpu-native-media-asic.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  KVFetcherは遠隔KVの取得・展開・逆量子化をGPU近傍メディアASICで処理し、推論GPUとの資源競合を分離してネットワーク転送と復元待ちを減らす方式。
+
 - **2025-12 · [Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse](2025-5e060858489e-sim-llm-optimizing-llm-inference-at-the-edge-through-inter-task-kv-reuse.md)**  
   実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：2  
   キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
@@ -237,10 +241,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [HillInfer: Efficient Long-Context LLM Inference on the Edge with Hierarchical KV Eviction using SmartSSD](2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   HillInferはSmartSSD内FPGAでKV全体ではなく重要度内積だけを評価し、CPUの高温KVとSSDの低温KVを選択転送・GPU計算と重ねてI/O待ちを減らす方式。
-
-- **2026-02 · [Efficient Remote KV Cache Reuse with GPU-native Video Codec](2026-2602.09725-kvfetcher-gpu-native-media-asic.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  KVFetcherは遠隔KVの取得・展開・逆量子化をGPU近傍メディアASICで処理し、推論GPUとの資源競合を分離してネットワーク転送と復元待ちを減らす方式。
 
 - **2026-02 · [CHESS: Context-aware Hierarchical Efficient Semantic Selection for Long-Context LLM Inference](2026-2602.20732-chess-context-aware-hierarchical-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -343,7 +343,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：143  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：144  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  

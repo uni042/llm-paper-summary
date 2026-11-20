@@ -35,10 +35,15 @@
   "selection_reason": "整合と予測による誤差制御KV圧縮AlignPred。数時間から数日保たれるエージェントの永続KVキャッシュに対し、局所直交変換による整合とトークン間・ヘッド間の予測符号化を、再構成誤差予算の下で組み合わせるコーデック。学習した予測器を使わない点が固有。推論メモリ機構そのもの。",
   "semantic_scholar_id": "417da9abe725ea70fbca2ccbf7c7694a9a37e165",
   "source_url": "https://arxiv.org/abs/2610.17970",
-  "status": "ready",
+  "status": "superseded",
   "title": "AlignPred: Error-Controlled KV Cache Compression via Alignment and Predictive Coding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:18:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17970-alignpred-error-controlled-kv-cache-compression-via-alignment-and-predic.md",
+  "represented_canonical_id": "arXiv:2610.17970",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

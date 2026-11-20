@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 4180,
+  "active_count": 4185,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -5284,6 +5284,13 @@
       ],
       "source_hash": "38f525a599b4f2c5f6e93feeec9f69948ad9d917ecb9a60e2866a066fb817350"
     },
+    "arXiv:2610.15417": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.md",
+      "identifiers": [
+        "arXiv:2610.15417"
+      ],
+      "source_hash": "e9023e06807e4103732da16e00d9c0e2f6099e52fc7045b8b9dd72fef6191842"
+    },
     "arXiv:2610.18735": {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2610.18735-sp-ec-adaptive-self-speculative-decoding-for-vision-language-models.md",
       "identifiers": [
@@ -8936,6 +8943,20 @@
       ],
       "source_hash": "d81ff711ef7ffe5506b6ce642cae0c79c2814ee7af7a529220f8c6d3a286838c"
     },
+    "arXiv:2610.17966": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17966-belt-behavior-aligned-low-rank-kv-cache-compression-with-learned-top-k-r.md",
+      "identifiers": [
+        "arXiv:2610.17966"
+      ],
+      "source_hash": "b531157b42bfd404e67f42cf47ccf3ccd01b8f3d28601b1c1480d2540dd74570"
+    },
+    "arXiv:2610.17970": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.17970-alignpred-error-controlled-kv-cache-compression-via-alignment-and-predic.md",
+      "identifiers": [
+        "arXiv:2610.17970"
+      ],
+      "source_hash": "7f99e224d8cf0fd2a7b49307c4f0f1325f28c59d3205bb0f32fe331c704057d6"
+    },
     "DOI:10.1109/2575-8411.2026.00033": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.22172-efficient-kv-cache-migration-for-geo-distributed-llm-inference-in-collab.md",
       "identifiers": [
@@ -11439,6 +11460,13 @@
         "arXiv:2610.12327"
       ],
       "source_hash": "d595f3419e5d2833cb8dc31bac3ef2caa86e37f7145f6fb4d8001334fe844e6f"
+    },
+    "arXiv:2610.15514": {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-stru.md",
+      "identifiers": [
+        "arXiv:2610.15514"
+      ],
+      "source_hash": "5d3a06169adad82f708149f3260b7445cef25b23e12367527e6bedb329894699"
     },
     "arXiv:2610.19405": {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2610.19405-scaling-llm-inference-via-parallelism-throughput-latency-trade-off.md",
@@ -29820,6 +29848,13 @@
       ],
       "source_hash": "eee43e727738d05379188a6156ab5a75f67a91ed508fe7a0b668c5489e576fd1"
     },
+    "arXiv:2610.16368": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-t.md",
+      "identifiers": [
+        "arXiv:2610.16368"
+      ],
+      "source_hash": "e43fe56a72c879de894322d1fe60a85c5ce202692f3747b8a9f65aed9e21f0dd"
+    },
     "DOI:10.1145/3789240.3829130": {
       "path": "papers/inference/99-other-inference-systems/2026-2fe550669a96-turbobus-pooling-pcie-bandwidth-for-llm-workloads-via-scale-up-fabrics.md",
       "identifiers": [
@@ -31215,6 +31250,7 @@
     "arXiv:2610.07659": "arXiv:2610.07659",
     "arXiv:2610.10411": "arXiv:2610.10411",
     "arXiv:2610.12570": "arXiv:2610.12570",
+    "arXiv:2610.15417": "arXiv:2610.15417",
     "arXiv:2610.18735": "arXiv:2610.18735",
     "arXiv:2610.19792": "arXiv:2610.19792",
     "DOI:10.18653/v1/2026.findings-acl.1065": "DOI:10.18653/v1/2026.findings-acl.1065",
@@ -31837,6 +31873,8 @@
     "arXiv:2610.11358": "arXiv:2610.11358",
     "arXiv:2610.12060": "arXiv:2610.12060",
     "arXiv:2610.13060": "arXiv:2610.13060",
+    "arXiv:2610.17966": "arXiv:2610.17966",
+    "arXiv:2610.17970": "arXiv:2610.17970",
     "DOI:10.1109/2575-8411.2026.00033": "DOI:10.1109/2575-8411.2026.00033",
     "arXiv:2610.22172": "DOI:10.1109/2575-8411.2026.00033",
     "DOI:10.18653/v1/2026.acl-long.859": "DOI:10.18653/v1/2026.acl-long.859",
@@ -32253,6 +32291,7 @@
     "arXiv:2609.39816": "arXiv:2609.39816",
     "arXiv:2610.05774": "arXiv:2610.05774",
     "arXiv:2610.12327": "arXiv:2610.12327",
+    "arXiv:2610.15514": "arXiv:2610.15514",
     "arXiv:2610.19405": "arXiv:2610.19405",
     "DOI:10.1109/isca66397.2026.00173": "DOI:10.1109/isca66397.2026.00173",
     "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2": "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2",
@@ -35333,6 +35372,7 @@
     "arXiv:2610.05685": "arXiv:2610.05685",
     "arXiv:2610.09342": "arXiv:2610.09342",
     "arXiv:2610.12133": "arXiv:2610.12133",
+    "arXiv:2610.16368": "arXiv:2610.16368",
     "DOI:10.1145/3789240.3829130": "DOI:10.1145/3789240.3829130",
     "DOI:10.14778/3819518.3819541": "DOI:10.14778/3819518.3819541",
     "DOI:10.1109/access.2026.3664226": "DOI:10.1109/access.2026.3664226",

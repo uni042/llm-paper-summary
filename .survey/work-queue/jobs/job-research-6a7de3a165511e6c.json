@@ -35,10 +35,15 @@
   "selection_reason": "構造化LLM pruningでneuron選択と重み再構成が同一calibration setへ依存する問題に対し、重み幾何に基づくdata-free NMF残差部分空間probeで選択し、局所calibrationを用いるAdaptive OBSで重みを復元するSARATHIを提案。一次要旨はlayerあたりpeak O(d²) memory、6モデル・15～40% sparsityで既存法と同等以上のperplexity・zero-shot精度を報告。dense演算を保った推論計算・重量削減を狙うためaccept。",
   "semantic_scholar_id": "89478668b18a0f497d97481d599f5563d302408b",
   "source_url": "https://arxiv.org/abs/2610.15514",
-  "status": "ready",
+  "status": "superseded",
   "title": "SARATHI: Decoupled Data-Free Probing and Adaptive Reconstruction for Structured LLM Pruning",
   "type": "research",
   "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:18:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-stru.md",
+  "represented_canonical_id": "arXiv:2610.15514",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（245本）
+## 自動生成の論文一覧（246本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -189,6 +189,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off](2026-2610.19405-scaling-llm-inference-via-parallelism-throughput-latency-trade-off.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   新しい注意カーネル、重み圧縮器、GPU間通信プリミティブを提案する論文ではない。実験はQwen2.5-14B-Instruct、BF16、NVIDIA H200 141GBを8基、vLLM v0.15.0という条件で行われた。
+
+- **2026-10 · [SARATHI: Decoupled Data-Free Probing and Adaptive Reconstruction for Structured LLM Pruning](2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-stru.md)**  
+  実装：[✓](https://github.com/snkrbhr/SARATHI) ・ リポジトリ内被引用：0  
+  ニューロン選択を校正データなしの非負行列分解の残差探査に分離し、補償を層ごとの局所再構成に限定することで、除去率40パーセントで他法がメモリ不足や崩壊に陥る条件でも完走し、OPT-2.7Bの困惑度を補正なし2082から18.98へ戻した。
 
 - **2026-10 · [AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill](2026-2610.05774-adaspark-adaptive-dspark-with-online-learning-for-tree-verification-and-.md)**  
   実装：[✓](https://github.com/zeraix/imparo) ・ リポジトリ内被引用：0  
@@ -937,7 +941,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：567  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：568  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  

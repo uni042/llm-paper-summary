@@ -35,10 +35,15 @@
   "selection_reason": "オフロードMoE推論向け投機デコードSpecFit。専門家のホスト転送が律速な環境では、受入長でなく予測スループットで検証サブツリーを選ぶべきだとして、ドラフト経路確率からの確定トークン期待値と、サブツリーの専門家和集合からのサイクル時間予測で木を選ぶ。投機デコードの推論機構そのもの。",
   "semantic_scholar_id": "2be0fdcb1940213e6aed2ba4ecaf933bea79795d",
   "source_url": "https://arxiv.org/abs/2610.15417",
-  "status": "ready",
+  "status": "superseded",
   "title": "SpecFit: Not All Draft Tokens Cost the Same in Offloaded MoE Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T01:18:54+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.md",
+  "represented_canonical_id": "arXiv:2610.15417",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
