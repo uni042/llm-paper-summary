@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "fa34e0e52a59b7ef1f9d27535aad1d621c822d48",
+  "base_commit": "81e62803b1dc4a7f583540c8565ef9abe999bd13",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -853,6 +853,11 @@
     "2026-2611.02082-fairway-load-aware-kv-cache-reuse-for-llm-prefill-scheduling.json",
     "2026-2611.02508-attentionindex-accelerating-learned-sparse-attention-with-a-causal-inverted-file-index.json",
     "2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.json",
+    "2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-accelerators-over-fast-interconnects.json",
+    "2026-2611.03517-ask-dont-equip-question-driven-coding-agents-for-deep-kernel-optimization.json",
+    "2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-sparse-attention.json",
+    "2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-and-rl.json",
+    "2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -46095,6 +46100,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.02975": {
+      "order": [
+        "2026-11-20T22:41:53+00:00",
+        "2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-accelerators-over-fast-interconnects.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.03517": {
+      "order": [
+        "2026-11-20T22:43:17+00:00",
+        "2026-2611.03517-ask-dont-equip-question-driven-coding-agents-for-deep-kernel-optimization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.03768": {
+      "order": [
+        "2026-11-20T22:44:41+00:00",
+        "2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.03899": {
+      "order": [
+        "2026-11-20T22:46:05+00:00",
+        "2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-and-rl.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.03992": {
+      "order": [
+        "2026-11-20T22:47:31+00:00",
+        "2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57674,6 +57724,21 @@
     "arxiv:2611.02543": [
       "papers/inference/14-agentic-inference-serving-runtime/2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.md",
       "papers/inference/14-agentic-inference-serving-runtime/2026-2611.02543-when-cache-pressure-becomes-a-trap-metastability-in-agent-serving.md"
+    ],
+    "arxiv:2611.02975": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-acceler.md"
+    ],
+    "arxiv:2611.03517": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.03517-ask-don-t-equip-question-driven-coding-agents-for-deep-kernel-optimizati.md"
+    ],
+    "arxiv:2611.03768": [
+      "papers/inference/13-sparse-attention/2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-spar.md"
+    ],
+    "arxiv:2611.03899": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-a.md"
+    ],
+    "arxiv:2611.03992": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.md"
     ]
   }
 }

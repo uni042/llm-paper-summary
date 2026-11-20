@@ -708,6 +708,10 @@
   実装：[✓](https://github.com/mazumder-lab/3BASiL) ・ リポジトリ内被引用：1  
   重みの疎＋低ランク分解を3ブロックの交互方向乗数法で同時最適化し、ブロック単位の出力整合で精緻化する一括圧縮で、困惑度の劣化を3割超縮め圧縮も2.5倍超高速化した。
 
+- **2026-02 · [Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL](2026-2602.03839-understanding-and-exploiting-weight-update-sparsity-for-communication-ef.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデル（LLM）の強化学習による後学習（reinforcement learning post-学習）では、重みを更新する学習器（trainer）と、現在の方策を用いて回答を生成する推論ワーカー（inference worker）が分離されることが多い。
+
 - **2026-02 · [ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces](2026-2602.11683-thinkrouter-efficient-reasoning-via-routing-thinking-between-latent-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   思考ステップごとにモデルの確信度を見て、低確信なら離散トークン、高確信なら潜在空間の柔らかい埋め込みへ振り分ける学習不要の方式で、正解率を最大19.70ポイント上げながら生成長も削った。
@@ -2350,10 +2354,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   モデル分割と連合集約に、正解付き参照入力との二経路対比で重要な推論トークンを重く学ぶ損失を組み合わせ、各課題800件の学習で分割微調整の精度を大きく引き上げた端末向け微調整枠組み。
 
-- **2026-02 · [Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL](2026-2602.03839-understanding-and-exploiting-weight-update-sparsity-for-communication-ef.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデル（LLM）の強化学習による後学習（reinforcement learning post-学習）では、重みを更新する学習器（trainer）と、現在の方策を用いて回答を生成する推論ワーカー（inference worker）が分離されることが多い。
-
 - **2026-02 · [Two-Stage Grid Optimization for Group-wise Quantization of LLMs](2026-2602.02126-two-stage-grid-optimization-for-group-wise-quantization-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPTQのグループ別スケールを、入力統計による初期化と層再構成損失の座標降下による洗練の二段で決め直す量子化。2ビットでの精度崩壊を大きく緩和する。
@@ -3152,6 +3152,10 @@
   実装：[✓](https://github.com/TokuyuSou/ULB-SAPR) ・ リポジトリ内被引用：1  
   CaoとArefは、事前学習済み大規模言語モデルの重みを2ビットへ圧縮するとき、既存のApiQが残す精度劣化を、小規模な部分再学習だけで軽減する手法を提案した。LLaMA-2-7Bのゼロショット常識推論5課題平均は、全精度64.85%、ApiQ 55.91%に対して、提案法の最良設定で56.88%となる。
 
+- **2025-04 · [Empower Vision Applications with LoRA LMM](2025-2411.00915-empower-vision-applications-with-lora-lmm.md)**  
+  実装：[✓](https://github.com/mi150/VaLoRA) ・ リポジトリ内被引用：1  
+  オンラインでは入力形状に合うタイル構成を事前探索したATMMカーネルを使い、LoRAを基盤重みへ統合するモード、統合しないモード、両者を混ぜるdeLoRAモードを負荷に応じて選ぶ。
+
 - **2025-03 · [Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size](2025-2503.04704-universality-of-layer-level-entropy-weighted-quantization-beyond-model-a.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMを一律4bitに量子化すると、容量は大幅に減るが、精度に敏感な層も同じビット幅へ押し込まれる。原著は1.6B〜70B級の複数モデルを対象に、MMLUで元モデルから概ね0.5%以内の精度差を目標とし、最大18%のメモリ削減を報告する。
@@ -3655,10 +3659,6 @@
 - **2025-04 · [Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs](2025-2504.13989-gradual-binary-search-and-dimension-expansion-a-general-method-for-activ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの低ビット事後量子化では、活性値の外れ値が量子化範囲を占有し、3〜4ビットの小さい整数レンジに通常の値を十分に割り当てられない。Mistral 7B v0.1を重み・活性・KVとも3ビット化した実験では、QuaRot単独の6課題平均18.43%がGBS併用58.31%へ改善した。
-
-- **2025-04 · [Empower Vision Applications with LoRA LMM](2025-2411.00915-empower-vision-applications-with-lora-lmm.md)**  
-  実装：[✓](https://github.com/mi150/VaLoRA) ・ リポジトリ内被引用：0  
-  オンラインでは入力形状に合うタイル構成を事前探索したATMMカーネルを使い、LoRAを基盤重みへ統合するモード、統合しないモード、両者を混ぜるdeLoRAモードを負荷に応じて選ぶ。
 
 - **2025-04 · [Efficient LLMs with AMP: Attention Heads and MLP Pruning](2025-2504.21174-efficient-llms-with-amp-attention-heads-and-mlp-pruning.md)**  
   実装：[✓](https://github.com/c2d-usp/Efficient-LLMs-with-AMP) ・ リポジトリ内被引用：0  
@@ -4419,7 +4419,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：195  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：196  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
@@ -4557,7 +4557,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：281  
+  実装：✓ ・ リポジトリ内被引用：282  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  

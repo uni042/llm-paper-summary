@@ -35,10 +35,15 @@
   "selection_reason": "Tenstorrent Galaxy上で高速相互接続とリング転送・通信計算重畳・decode replayを統合。8K～256K文脈、BF16/8-bitの3 denseモデルでRTX PRO 6000 Blackwell 8GPUサーバー比1.07～2.24倍のtokens/$を著者報告。分散LLM推論の費用効率に直接関係。",
   "semantic_scholar_id": "1ffb83c59ee4ab1527bcdc972a3a91f1f58d72ba",
   "source_url": "https://arxiv.org/abs/2611.02975",
-  "status": "ready",
+  "status": "superseded",
   "title": "Introducing Cluster Efficiency to LLM Serving: Pooling Economical Accelerators over Fast Interconnects",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:49:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2611.02975-introducing-cluster-efficiency-to-llm-serving-pooling-economical-acceler.md",
+  "represented_canonical_id": "arXiv:2611.02975",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

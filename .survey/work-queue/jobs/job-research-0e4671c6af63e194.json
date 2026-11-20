@@ -35,10 +35,15 @@
   "selection_reason": "低精度GEMMへ多数のLoRAアダプタを融合するEpiLoRA。マルチテナント提供で、アダプタが基盤モデルのGEMMの脇で小カーネルとして走りデコードの遅延を占める問題に対し、下射影がGEMMに必要なことだけを使う観察で融合する。推論基盤機構そのもの。",
   "semantic_scholar_id": "eb77b27a2e5339818d3aef4e07f6f4858b2e10f4",
   "source_url": "https://arxiv.org/abs/2611.03899",
-  "status": "ready",
+  "status": "superseded",
   "title": "EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:49:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-a.md",
+  "represented_canonical_id": "arXiv:2611.03899",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

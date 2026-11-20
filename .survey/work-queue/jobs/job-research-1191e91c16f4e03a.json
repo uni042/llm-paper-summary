@@ -35,10 +35,15 @@
   "selection_reason": "低ビットKVキャッシュのための選択的回転FlagRot。キーを量子化前に回転すると常に助かるという前提が、平坦な部分に新たな峰を作って成り立たないことを示し、32チャネルごとに回転するか否かを較正誤差で選ぶ。推論メモリ機構そのもの。",
   "semantic_scholar_id": "8eae0e3b1765bdc24f3ec8778930a200fabcf2dc",
   "source_url": "https://arxiv.org/abs/2611.03992",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlagRot: Selective Rotation for Low-Bit KV Caches",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:49:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.03992-flagrot-selective-rotation-for-low-bit-kv-caches.md",
+  "represented_canonical_id": "arXiv:2611.03992",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

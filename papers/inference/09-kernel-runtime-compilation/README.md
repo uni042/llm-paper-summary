@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（281本）
+## 自動生成の論文一覧（283本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -192,6 +192,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture of エキスパート; MoE）の分散推論では、入力トークンに応じて選択される専門家（専門家）が偏る。専門家並列（専門家 parallelism; EP）では各GPUが担当する専門家を処理した後に同期するため、あるGPUの処理が遅いと層全体が待たされる。したがってトークン数が等しくても実行時間は等しくならない。
 
+- **2026-04 · [InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models](2026-2604.07173-infinilora-disaggregated-multi-lora-serving-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  低ランク適応の保持と計算を基盤モデルから切り離して専用サーバーで共有し、遠隔実行の通信を専門家計算と二重に重ねて隠すことで、基盤モデルを複製せずに適応の保持容量だけを増やせるようにした分離型の多数適応提供方式。
+
 - **2026-04 · [FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models](2026-2604.02967-foe-forest-of-errors-makes-the-first-solution-the-best-in-large-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   提案手法RED（Refine First and Discard Subs）は、最初の解法を生成している途中で不確実性が高い箇所へ介入し、別解を無制限に増やす代わりに、複数の中間回答が十分に一致した時点で停止する。6種類の推論モデル、数学・科学の5課題で、通常復号と比較して正答率を改善しつつ生成トークンを37.7～70.4%削減した。
@@ -230,9 +234,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL](2026-2611.03899-epilora-fusing-many-lora-adapters-into-low-precision-gemms-for-serving-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  アダプタの下向き射影を先に走らせ低精度の行列積の本体と重ね、上向き射影を行列積の書き出し段で加える方式で、単一アダプタのトークン当たり時間を最大二十四パーセント短縮し、同じ八ビット重みでの訓練により二百七十億級が四十八ギガバイト一台で訓練可能になったと報告した。
+
 - **2026-11 · [CacheWeave: Learning to Recompute for Efficient Position-Independent KV Caching](2026-2611.01735-cacheweave-learning-to-recompute-for-efficient-position-independent-kv-c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   位置を問わない区画キャッシュの再利用へ適応したモデル自身で学習した選択器が、注意得点を使わずに再計算すべき区画を選ぶことで、予算百分の五で規則型二方式を全組で上回り完全な入力処理への相対低下を最大百分の八・三に抑え、初回トークン時間を最大十六・一倍、有効スループットを最大七・八倍にしたと報告した。
+
+- **2026-11 · [Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization](2026-2611.03517-ask-don-t-equip-question-driven-coding-agents-for-deep-kernel-optimizati.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  カーネル最適化エージェントへ装備を足す代わりに、検証可能な目標を強制する最小の基盤と、判断の節目で残りの差の所在を問う短い問いを与え、直接対決で装備型の〇・五〇倍に対し一点一三倍、依存なし注意カーネルで上流比最大一点四六倍を報告した。
 
 - **2026-10 · [Understanding GPU Megakernels: Why Residency Can Mislead](2026-2611.00495-understanding-gpu-megakernels-why-residency-can-mislead.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -573,10 +585,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [LP-GEMM: Integrating Layout Propagation into GEMM Operations](2026-2604.04599-lp-gemm-integrating-layout-propagation-into-gemm-operations.md)**  
   実装：[✓](https://github.com/czariv/simple_attention) ・ リポジトリ内被引用：0  
   連続する行列積が毎回入出力を詰め替える無駄を除くため、GEMMを初期・中間・終端の3種類に分割し、内部の詰め込み配置を次の行列積へ伝播するLP-GEMMを提案。
-
-- **2026-04 · [InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models](2026-2604.07173-infinilora-disaggregated-multi-lora-serving-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  低ランク適応の保持と計算を基盤モデルから切り離して専用サーバーで共有し、遠隔実行の通信を専門家計算と二重に重ねて隠すことで、基盤モデルを複製せずに適応の保持容量だけを増やせるようにした分離型の多数適応提供方式。
 
 - **2026-04 · [Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference](2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -971,7 +979,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-06 · [FLUX: Fast Software-based Communication Overlap On GPUs Through Kernel Fusion](2024-2406.06858-flux-fast-software-based-communication-overlap-on-gpus-through-kernel-fu.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：29  
   テンソル並列では、行列の列や行をGPUごとに分割して計算する。各GPUが自分の部分を処理しても、次の行列積が必要とする入力を集める全収集（AllGather）、あるいは計算結果を加算して分散する縮約散布（ReduceScatter）が必要になる。通信の完了を待ってから次の行列積を始めると、GPUが計算できない待機時間が生じる。
 
 - **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  

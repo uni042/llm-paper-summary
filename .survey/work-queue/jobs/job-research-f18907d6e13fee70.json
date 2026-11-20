@@ -35,10 +35,15 @@
   "selection_reason": "DeepSeek疎注意における選択と注意の重ね合わせ（多層索引器）。索引器の走査がデコード時間の主因になる一方で、隣接層がほぼ同じトークンを選ぶ性質を使い、前の索引器層の選択を流用して走査を重ね合わせる。推論の注意機構そのもの。",
   "semantic_scholar_id": "11c9cd58be76d2ed50cd245849005bb16b2c700e",
   "source_url": "https://arxiv.org/abs/2611.03768",
-  "status": "ready",
+  "status": "superseded",
   "title": "Multi-layer Indexer: Overlapping Selection and Attention in DeepSeek Sparse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:49:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.03768-multi-layer-indexer-overlapping-selection-and-attention-in-deepseek-spar.md",
+  "represented_canonical_id": "arXiv:2611.03768",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

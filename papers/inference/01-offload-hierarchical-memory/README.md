@@ -132,6 +132,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   統合メモリのApple Silicon、CPU–GPU間の一貫性接続を持つGH200、共有主記憶を使うAMD APUなどで問題になる。この三条件が揃うと、Apple M5 Maxの単一トークン用int8行列・ベクトル積では、標準的なテンソル生成経路の53〜82 GB/sに対して、公開APIを用いた直接採用が516 GB/sを記録する。
 
+- **2026-08 · [PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving](2026-2608.05483-plora-pooled-memory-multilora-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  PLoRAはLoRAアダプタとKVキャッシュをCXL級共有メモリへ置き、NDPで縮約して小さな結果だけをGPUへ返し、バッチ別戦略選択で1000超アダプタを低遅延に処理する。
+
 - **2026-08 · [DoMoE: Domain-Aware Semantic Expert Prediction for Efficient MoE Inference Under Expert Offloading](2026-c2bfd86b96f6-domoe-domain-aware-semantic-expert-prediction-for-efficient-moe-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPUメモリに収まらない環境では、使わない専門家をホストメモリに置き、必要なものを転送する。専門家が実際に選ばれてから読み込むと、GPUが転送待ちで止まるため、将来選ばれる専門家を予測して先読み（プリフェッチ）する。
@@ -225,10 +229,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-08 · [SAEM: Stage-Aware Expert Management for Memory-Efficient MoE Inference in Chain-of-Thought Reasoning](2026-2608.21614-saem-stage-aware-expert-management-cot.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SAEMはCoTの遷移語から推論段階を検出し、段階ごとの活性化頻度でGPU専門家キャッシュを更新する。非常駐専門家はCPU計算に回し、トークン再配置で小カーネルの管理費も減らす。
-
-- **2026-08 · [PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving](2026-2608.05483-plora-pooled-memory-multilora-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  PLoRAはLoRAアダプタとKVキャッシュをCXL級共有メモリへ置き、NDPで縮約して小さな結果だけをGPUへ返し、バッチ別戦略選択で1000超アダプタを低遅延に処理する。
 
 - **2026-08 · [NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching](2026-2608.22643-neuroprefetcher-storage-aware-delta-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
