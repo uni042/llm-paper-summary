@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "aa82b7d631f5d93fa35fb3ae6b8088ef175215a1",
+  "base_commit": "8a18904d0e9eb95bcba202e134ecfa4d40ccb33f",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -838,6 +838,11 @@
     "2026-2610.41919-matching-workloads-to-blackwell-power-resolved-benchmarking-of-nvidia-b200-and-b300-across-hpc-and-ai-workloads.json",
     "2026-2610.41968-prune-gradually-adapt-sparsely-efficient-pruning-of-large-language-models-at-extreme-sparsity.json",
     "2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-language-models.json",
+    "2026-2610.42112-subquadratic-attention-with-a-hierarchical-tree-structured-indexer.json",
+    "2026-2610.42116-acct-asymmetric-cross-llm-context-transfer.json",
+    "2026-2610.42128-decisionrank-on-policy-distillation-for-decision-model-rerankers.json",
+    "2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attention.json",
+    "2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45945,6 +45950,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.42112": {
+      "order": [
+        "2026-11-20T21:57:43+00:00",
+        "2026-2610.42112-subquadratic-attention-with-a-hierarchical-tree-structured-indexer.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.42116": {
+      "order": [
+        "2026-11-20T21:58:42+00:00",
+        "2026-2610.42116-acct-asymmetric-cross-llm-context-transfer.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.42128": {
+      "order": [
+        "2026-11-20T21:59:41+00:00",
+        "2026-2610.42128-decisionrank-on-policy-distillation-for-decision-model-rerankers.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.42147": {
+      "order": [
+        "2026-11-20T22:00:41+00:00",
+        "2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.42148": {
+      "order": [
+        "2026-11-20T22:01:40+00:00",
+        "2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57464,6 +57514,21 @@
     "arxiv:2610.42084": [
       "papers/inference/99-other-inference-systems/2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-lan.md",
       "papers/inference/99-other-inference-systems/2026-2610.42084-rangeswa-training-free-length-extrapolation-for-continuous-diffusion-lan.md"
+    ],
+    "arxiv:2610.42112": [
+      "papers/inference/13-sparse-attention/2026-2610.42112-subquadratic-attention-with-a-hierarchical-tree-structured-indexer.md"
+    ],
+    "arxiv:2610.42116": [
+      "papers/inference/99-other-inference-systems/2026-2610.42116-acct-asymmetric-cross-llm-context-transfer.md"
+    ],
+    "arxiv:2610.42128": [
+      "papers/inference/99-other-inference-systems/2026-2610.42128-decisionrank-on-policy-distillation-for-decision-model-rerankers.md"
+    ],
+    "arxiv:2610.42147": [
+      "papers/inference/13-sparse-attention/2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attentio.md"
+    ],
+    "arxiv:2610.42148": [
+      "papers/inference/99-other-inference-systems/2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.md"
     ]
   }
 }

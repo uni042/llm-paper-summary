@@ -358,6 +358,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/Hao-Yuan-He/LongSpark) ・ リポジトリ内被引用：1  
   大規模言語モデルの投機的復号（投機的復号）は、軽い下書き器（drafter）が複数の候補トークンを生成し、対象モデル（対象モデル）が一度の前向き計算でまとめて検証することで逐次生成の回数を減らす。Qwen3-4B、8B、14Bの数学・コード・対話8課題で、通常の自己回帰復号に対する平均処理量倍率はそれぞれ1.88、1.99、2.13倍だった。
 
+- **2026-09 · [GDN Tree-Scan: Served Tree Verification for Recurrent-Hybrid Language Models](2026-2609.23900-gdn-tree-scan-served-tree-verification-for-recurrent-hybrid-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  再帰状態を持つハイブリッドLLMの木型投機検証で、枝ごとのGDN状態を親子関係どおりに走査し、受理枝だけを永続化することで、Qwen3.6-27B-FP8のデコード処理量を27.0%改善する。
+
 - **2026-09 · [ECHO: Early-layer Collaborative Hierarchical Orchestration with Bonus Logits in Speculative Decoding](2026-2609.17241-echo-early-layer-collaborative-hierarchical-orchestration-with-bonus-logits-in-speculative-decoding.md)**  
   実装：[✓](https://github.com/whucs21Mzy/ECHO) ・ リポジトリ内被引用：1  
   対象モデルの前半層を高頻度の候補木探索、後半層を低頻度の厳密検証へ分け、中間状態再利用と補助ロジットで候補を更新し、追加ドラフトモデルなしで2.4〜2.9倍級の生成高速化を報告する。
@@ -759,10 +763,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [GrowMTP: Can RL Grow Its Own Draft Head?](2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md)**  
   実装：[✓](https://growmtp.github.io/) ・ リポジトリ内被引用：0  
   強化学習ロールアウトの検証信号でドラフトヘッドをその場で育成し、事前ヘッドなしでも投機的デコードによる学習加速を実現する。
-
-- **2026-09 · [GDN Tree-Scan: Served Tree Verification for Recurrent-Hybrid Language Models](2026-2609.23900-gdn-tree-scan-served-tree-verification-for-recurrent-hybrid-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  再帰状態を持つハイブリッドLLMの木型投機検証で、枝ごとのGDN状態を親子関係どおりに走査し、受理枝だけを永続化することで、Qwen3.6-27B-FP8のデコード処理量を27.0%改善する。
 
 - **2026-09 · [Efficient Mixture-of-Experts with Speculative Decoding via Expert Coactivation](2026-2609.22471-efficient-mixture-of-experts-with-speculative-decoding-via-expert-coacti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

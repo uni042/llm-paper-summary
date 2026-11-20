@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1143本）
+## 自動生成の論文一覧（1146本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1030,6 +1030,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   重みの格子を半オクターブの分数冪へ細かくし、活性値は一様整数のまま、ルート2倍を加算器1個で近似して誤差を較正で吸収することで、乗算器なしのシフト加算実行を保ったまま4ビットで一様整数に近い精度を得る量子化。
 
+- **2026-10 · [Flide: Accelerating Decision Inference with Exact State Forking](2026-2610.42148-flide-accelerating-decision-inference-with-exact-state-forking.md)**  
+  実装：[✓](https://github.com/OmniJev/flide) ・ リポジトリ内被引用：0  
+  決断要求の木構造をGPUメタデータへ分離し、共有状態を1回だけ計算して全質問を厳密に分岐させる推論エンジンで、確率をずらさず最大9.5倍の高速化と負荷によらない安定した答えを得た。
+
 - **2026-10 · [FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization](2026-2610.30480-figflex-a-mixed-precision-fp-int-gemm-accelerator-co-designed-with-low-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重みのビット数が下がるほど計算が速くなる基数4のFP-INTデータパスと、GPTQの補償後誤差でビット配分を決める量子化器を協調設計し、低ビット化をメモリだけでなく計算の利得へ変えたアクセラレータ。
@@ -1074,6 +1078,10 @@
   実装：[✓](https://github.com/chadlzx/dcd) ・ リポジトリ内被引用：0  
   重要なのは「対比分布を軽量器で近似すること」ではなく、ドラフト器を検証の正しさから分離することにある。
 
+- **2026-10 · [DecisionRank: On-Policy Distillation for Decision-Model Rerankers](2026-2610.42128-decisionrank-on-policy-distillation-for-decision-model-rerankers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  生徒の現在の順位を教師に教師強制で評価させ、残り候補への条件付き選好で先頭トークンスコアを直接直す項目空間オン方策蒸留により、小さい決断モデルが27B教師を超える順位品質と24.5倍の高速化を両立した。
+
 - **2026-10 · [Continue or Restart? The Limits of Early Failure Prediction in Coding Agents](2026-2610.35971-continue-or-restart-the-limits-of-early-failure-prediction-in-coding-age.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   147,002件の軌跡で、早期接頭辞は同一課題の試行を偶然並みにしか分けられないこと、学習型再起動の利得は試行選択ではなく課題間配分から来ること、予算内では継続が再起動を支配することを示した。
@@ -1109,6 +1117,10 @@
 - **2026-10 · [Activation Denoising: A Robustness View on Parallel vs Sequential LLM Quantization](2026-2610.07522-activation-denoising-a-robustness-view-on-parallel-vs-sequential-llm-qua.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   上流の量子化誤差をランダムノイズとして扱い、全層へ並列にデノイジングフィルタを吸収させることで、逐次量子化の精度利得の一部を並列量子化のまま回収する頑健性正則化の手法。
+
+- **2026-10 · [ACCT: Asymmetric Cross-LLM Context Transfer](2026-2610.42116-acct-asymmetric-cross-llm-context-transfer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  元モデルが計算した文脈を対象モデルが読める疎なキー値へ選別・配分・変換の三段で写し、キー値を四分の一にしても開放型質問応答で素の処理を上回り、約一万九千トークンでは変換が入力処理より最大二十一・二倍速かったが、読解や多段推論では低下が残ると報告した。
 
 - **2026-10 · [Accordion: Elastic-Depth Inference via Fixed-Prefix Layer Looping](2026-2610.32492-accordion-elastic-depth-inference-via-fixed-prefix-layer-looping.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

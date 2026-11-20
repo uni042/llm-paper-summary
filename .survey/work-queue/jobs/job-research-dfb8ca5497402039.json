@@ -35,10 +35,15 @@
   "selection_reason": "同系列で規模が異なるsource/target LLM間のKVを再利用するため、Cartographerがquery関連tokenを選び、Allocatorがlayer/head別予算を配分し、Compilerがsparse target KVへ変換する。target側の元文脈prefillを省き、KVを75%削減しても元の推論品質を維持・改善する条件を示す。約19K contextで変換処理がtarget prefillより6.5〜21.2倍高速。推論時cross-model cache再利用の直接貢献。",
   "semantic_scholar_id": "05fcd53fe3a6231c1e921872db510e9bde74b757",
   "source_url": "https://arxiv.org/abs/2610.42116",
-  "status": "ready",
+  "status": "superseded",
   "title": "ACCT: Asymmetric Cross-LLM Context Transfer",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:03:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.42116-acct-asymmetric-cross-llm-context-transfer.md",
+  "represented_canonical_id": "arXiv:2610.42116",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

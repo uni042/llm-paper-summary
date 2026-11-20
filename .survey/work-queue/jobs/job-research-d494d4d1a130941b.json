@@ -35,10 +35,15 @@
   "selection_reason": "生成LLMがdocument ID列を出力するrerankingを、first-tokenの選択スコアを直接予測するdecision modelへ置換し、item-space on-policy distillationで教師の順位情報を移す。8B版は生成型listwise方式に対しTREC DLで24.5倍、BRIGHTで16.7倍高速と報告。学習方法も含むが推論時autoregressive decodingを省略する実測高速化が中心でありaccept。",
   "semantic_scholar_id": "5957aa1214ec95f3f8865e604c9c7d6fc4ce01de",
   "source_url": "https://arxiv.org/abs/2610.42128",
-  "status": "ready",
+  "status": "superseded",
   "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:03:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.42128-decisionrank-on-policy-distillation-for-decision-model-rerankers.md",
+  "represented_canonical_id": "arXiv:2610.42128",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

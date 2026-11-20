@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（201本）
+## 自動生成の論文一覧（203本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -242,9 +242,17 @@
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-11 · [Subquadratic Attention with a Hierarchical Tree-Structured Indexer](2026-2610.42112-subquadratic-attention-with-a-hierarchical-tree-structured-indexer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キー値キャッシュを再帰圧縮した要約の木をクエリが上からたどる階層型索引付けで、索引付け込みで準二次未満の注意を実現し、元のキー値の数パーセントだけを見て検索課題で密な注意に近い精度を保ち、十億トークンでは密な注意より約四百倍速いと模型で外挿した。
+
 - **2026-11 · [OVAL: Output-Aware Local Page Bases for KV Cache Compression](2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.md)**  
   実装：[✓](https://github.com/Ashkan13776/oval-kv) ・ リポジトリ内被引用：0  
   ページ要約を保存形式そのものにするKVキャッシュ圧縮。キーとバリューの広がりから作る出力感応型の低ランク基底だけでページを保持し、基底がスコア付けと再構築を兼ねることで、正確ページを捨てても検索型注意の精度をほぼ保つ。
+
+- **2026-11 · [Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention](2026-2610.42147-latent-sparse-attention-towards-subquadratic-ultra-long-context-attentio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キーを学習した潜在空間で意味的に集めてクエリが代表だけを採点する疎な注意で、千万トークンで一層の入力処理を元の疎な注意より二十二・七倍・全注意より七十二・四倍速くし精度を数点以内に保ち、原生型でも全注意と同等の精度と一・六倍の学習高速化を示した。
 
 - **2026-10 · [UlaCache: Unified Logical Addressing for Sparse LLM Serving](2026-2610.29820-ulacache-unified-logical-addressing-for-sparse-llm-serving.md)**  
   実装：[✓](https://github.com/scitix/UlaCache) ・ リポジトリ内被引用：0  
@@ -719,7 +727,7 @@
   キーの低ランク性を使い、低次元スコアで候補KVを選んでから全次元注意を計算し、品質を保ちながら注意計算を最大約45%短縮する疎注意法。
 
 - **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezedAttention) ・ リポジトリ内被引用：31  
   中心的な前提：入力の大部分が、複数リクエスト間で変化しない固定文書・指示・例示である。前処理で固定文脈の鍵をクラスタ化し、オンラインの問い合わせに関連する元の鍵・値だけを読出す。
 
 - **2024-08 · [Post-Training Sparse Attention with Double Sparsity](2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md)**  

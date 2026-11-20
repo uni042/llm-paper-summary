@@ -112,6 +112,10 @@
   実装：[✓](https://github.com/Echoscd/Load-Balancing-Release) ・ リポジトリ内被引用：6  
   同期障壁で最遅GPUに全体が律速されるデータ並列デコードを、短期先読み付き整数最適化BF-IOで割り当て直し、256基A100相当のシミュレーションでFCFS比スループット約92%向上・エネルギー約29%削減を示す。
 
+- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
+  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：5  
+  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
+
 - **2026-04 · [Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions](2026-2604.00499-scheduling-llm-inference-with-uncertainty-aware-output-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   本論文は、出力長を単一値ではなく確率分布として扱うTIE（Tail Inflated Expectation）スケジューラを提案する。
@@ -151,10 +155,6 @@
 - **2026-05 · [AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System](2026-2605.23389-alignedserve-prefix-aware-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   AlignedServeは、長いKV系列を分離するため要求をCPU KVプールへ置き、接頭辞長が近い要求を四分木から密度優先で集め、次バッチのKVをGPU間へ先読みして反復内の待ちと転送待ちを減らす。
-
-- **2026-04 · [Sparse Prefix Caching for Hybrid and Recurrent LLM Serving](2026-2605.05219-sparse-prefix-caching-hybrid-recurrent.md)**  
-  実装：[✓](https://github.com/arabel1a/sparse-prefix-caching) ・ リポジトリ内被引用：4  
-  再帰型・ハイブリッドLLMの共有接頭辞へ内部状態検査点を疎配置し、O(NM)動的計画法でメモリと正確な再計算の交換関係を最適化する。
 
 - **2026-04 · [Pythia: Exploiting Workflow Predictability for Efficient Agent-Native LLM Serving](2026-2604.25899-pythia-predictability-driven-agent-native-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -388,6 +388,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   系列長が近い要求を同じGPU段へ集め、生成で長くなった要求をKVごと後段へ移すスケジューラ。実行時の境界補正と分散負荷再均衡で偏りも抑え、16 GPU評価で主要比較対象より処理率とSLO達成率を改善する。
 
+- **2026-10 · [RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving](2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  混成モデルの接頭辞再利用で、状態待ちの分岐だけを次ラウンドへ回して走査を続けることでバッチの泡を埋め、再利用率を保ったまま遅延を最大24パーセント、ラウンド数を最大44パーセント削減した。
+
 - **2026-10 · [Characterizing Parallelism Strategies in LLM Inference: Fundamental Compute-Communication Trade-offs](2026-2610.05305-characterizing-parallelism-strategies-in-llm-inference-fundamental-compu.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   一方、同じ8基をPP8、PP4TP2、PP2TP4、TP8として割り当てると、長い入力を処理するプレフィルではPP寄りが速く、逐次生成ではTP寄りが速いという反対の傾向が現れる（図8〜9）。
@@ -395,6 +399,10 @@
 - **2026-09 · [Unlocking Software-defined GPU Fabric Scheduling in the LLM Era](2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPUファブリック競合を監視・通信注入制御し、vLLM+MooncakeでPD KV転送を19.4–34.4%短縮する。
+
+- **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
 
 - **2026-09 · [Janus: Multi-LLM Serving at Production Scale](2026-922addb5dfb2-janus-multi-llm-serving-at-production-scale.md)**  
   実装：[✓](https://github.com/Janus2026/Janus) ・ リポジトリ内被引用：1  
@@ -654,10 +662,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   注意層と状態空間モデルの層の配置をリクエストごとにプリフィルで決めて固定し、分割統合のバッチ処理と層履歴まで見る文脈キャッシュで効率的に捌く共同設計で、品質指標18件中13件で最良となりスループットはvLLM比で最大3.87倍になった。
 
-- **2026-10 · [RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving](2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  混成モデルの接頭辞再利用で、状態待ちの分岐だけを次ラウンドへ回して走査を続けることでバッチの泡を埋め、再利用率を保ったまま遅延を最大24パーセント、ラウンド数を最大44パーセント削減した。
-
 - **2026-10 · [Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving](2026-2610.17795-quota-based-aging-for-prediction-guided-scheduling-in-llm-serving.md)**  
   実装：[✓](https://github.com/Julianjiuxi/qba-llm-serving) ・ リポジトリ内被引用：0  
   短優先の受付に、短い受付を一定数こなすごとに滞留した長いリクエストを1件だけ昇格させる割当と昇格権の保持を組み合わせ、平均遅延の利得を保ちながら長いリクエストの尾部膨張を抑えるスケジューリング方針。
@@ -785,10 +789,6 @@
 - **2026-09 · [Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling](2026-2609.19499-sample-count-is-not-enough-candidate-generation-strategy-shapes-the-ener.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同じ8件の候補でも、1回のバッチ生成と8回の逐次生成では総エネルギーが4.64倍から4.86倍も違うことをA100の実測で示し、候補数だけではテスト時スケーリングの費用を表せないと明らかにした研究。
-
-- **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  接頭辞キャッシュは要求外のサーバ状態を出力へ持ち込み、エージェント軌跡差を16ビット36.2%から4ビット75.0%へ増幅することを制御実験で確認。
 
 - **2026-09 · [REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving](2026-2609.11209-reva-reusable-evidence-view-rag-serving.md)**  
   実装：[✓](https://github.com/UIUC-MLSys/REVA) ・ リポジトリ内被引用：0  
@@ -1464,6 +1464,10 @@
   実装：[✓](https://github.com/vllm-project/aibrix) ・ リポジトリ内被引用：18  
   GPU利用率のみで自動スケーリングすれば、入力長と出力長の差、復号負荷、KV容量圧迫を適切に反映できない。提案は、Kubernetesによる粗粒度資源管理を残しつつ、LLMのトークン処理量・接頭辞一致・KV使用量・アダプター配置・GPU別費用を観測する仕組みを導入する。
 
+- **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  PrefillOnlyはこの出力が一トークンで終了する要求を別の負荷クラスとして定義し、通常の生成要求と同じエンジンで処理する無駄を削減する。提案は大きく二つある。結果として、比較方式より1.4～4.0倍の要求到着率を、平均遅延と99パーセンタイル遅延を悪化させずに処理できる領域があった。
+
 - **2025-02 · [λScale: Enabling Fast Scaling for Serverless Large Language Model Inference](2025-2502.09922-lambdascale-serverless-fast-scaling.md)**  
   実装：[✓](https://github.com/lambda-scale/lambda-scale) ・ リポジトリ内被引用：17  
   モデル重みをRDMAで多段配信し、全重みの到着を待たず受信済み層から分散推論を始めるサーバレス拡張方式。実負荷トレースで末尾TTFTを最大5倍改善し、累積GPU資源を最大31.3%削減する。
@@ -1471,10 +1475,6 @@
 - **2025-10 · [Pie: A Programmable Serving System for Emerging LLM Applications](2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md)**  
   実装：[✓](https://github.com/pie-project/pie) ・ リポジトリ内被引用：16  
   生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。
-
-- **2025-05 · [PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications](2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  PrefillOnlyはこの出力が一トークンで終了する要求を別の負荷クラスとして定義し、通常の生成要求と同じエンジンで処理する無駄を削減する。提案は大きく二つある。結果として、比較方式より1.4～4.0倍の要求到着率を、平均遅延と99パーセンタイル遅延を悪化させずに処理できる領域があった。
 
 - **2025-04 · [Towards High-Goodput LLM Serving with Prefill-decode Multiplexing](2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md)**  
   実装：[✓](https://github.com/ykcombat/sglang/tree/slo_config) ・ リポジトリ内被引用：16  
@@ -2119,7 +2119,7 @@
   TRAILはLLM内部層埋め込みで残り出力長を逐次予測し、KVキャッシュ増加前だけプリエンプトする制限付きSPRPTでvLLMの待ち時間を削減する。
 
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
-  実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：32  
   BatchLLMは、検索結果の説明文生成、広告文書の変換、推薦候補の採点など、数千件以上のプロンプトをまとめて処理する大規模言語モデル（LLM）の一括推論を対象とするシステムである。原著のMLSys 2026産業部門版は、NVIDIA A100とAMD MI200上で、vLLMやSGLangに対して1.3～10.8倍の端点処理率改善を報告する。
 
 - **2024-09 · [No Request Left Behind: Tackling Heterogeneity in Long-Context LLM Inference with Medha](2024-2409.17264-no-request-left-behind-tackling-heterogeneity-in-long-context-llm-infere.md)**  
@@ -2277,7 +2277,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1777  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1778  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
