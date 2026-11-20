@@ -89,6 +89,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   長時間動作するLLMエージェントには、会話や作業をまたいで残す長期記憶（Long-Term メモリ; LTM）と、現在のプロンプト内で参照する短期記憶（Short-Term メモリ; STM）がある。従来は、長期記憶の追加・更新を外部の記憶管理器に任せ、短期文脈の検索・要約は一定間隔や文脈長しきい値で動かすことが多かった。
 
+- **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  ドラフトモデルが隔離環境でツール操作列を先行実行し、権威モデルが先頭操作を確認したマクロだけ後続操作と観測をまとめて確定して、大型モデル呼出しとツール待ちを減らす。
+
 - **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
@@ -126,10 +130,6 @@
   分類段階をQwen3-4B、重い段階をQwen3-8Bへ割り当てた異種構成は、単一Qwen3-8Bの比較対象に対し壁時計時間38%、平均完了時間60%、推定推論費用35%を削減した。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
-
-- **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ドラフトモデルが隔離環境でツール操作列を先行実行し、権威モデルが先頭操作を確認したマクロだけ後続操作と観測をまとめて確定して、大型モデル呼出しとツール待ちを減らす。
 
 - **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -325,6 +325,10 @@
   実装：✓ ・ リポジトリ内被引用：16  
   長期エージェントの記憶を、単なる「過去文書の検索」ではなく「時間とともに変わる事実の履歴」として扱う。LongMemEvalsではgpt-4oの全履歴投入60.2%に対して71.2%へ精度を上げつつ、平均文脈長を115k→1.6kトークン、応答遅延を28.9→2.58秒へ削減した。
 
+- **2025-10 · [Speculative Actions: A Lossless Framework for Faster Agentic Systems](2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md)**  
+  実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：10  
+  本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
+
 - **2025-09 · [Batch Query Processing and Optimization for Agentic Workflows](2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md)**  
   実装：[✓](https://anonymous.4open.science/r/Halo_Demo-BC86/) ・ リポジトリ内被引用：10  
   Haloは「LLM呼出しを1件ずつ速くする」のではなく、同時に走るエージェントワークフロー全体を実行計画として扱う。最新版v2では、同一ツール要求の統合とCPU-GPU協調を加え、強いエージェント基盤に対してバッチ推論最大3.6倍、オンライン処理量最大2.58倍を報告する。
@@ -332,10 +336,6 @@
 - **2025-05 · [HEXGEN-FLOW: Optimizing LLM Inference Request Scheduling for Agentic Text-to-SQL](2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md)**  
   実装：[✓](https://github.com/Relaxed-System-Lab/Hexgen-Flow) ・ リポジトリ内被引用：10  
   本研究は、一つの利用者問い合わせが約20回の大規模言語モデル（LLM）呼び出しを誘発するエージェント型Text-to-SQL処理に対し、問い合わせ全体の応答期限を守る推論スケジューラを設計する。
-
-- **2025-10 · [Speculative Actions: A Lossless Framework for Faster Agentic Systems](2025-2510.04371-speculative-actions-a-lossless-framework-for-faster-agentic-systems.md)**  
-  実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：9  
-  本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
 
 - **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -349,6 +349,10 @@
   実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：5  
   長期間にわたってウェブ操作やソフトウェア修正を行う大規模言語モデル（LLM）エージェントは、過去に成功した手順を別の課題で再発見したり、既に失敗した操作を繰り返したりする。過去の実行軌跡を丸ごと検索する方式では、現在の課題に関係ない画面遷移や局所的な操作が混ざる。
 
+- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
+  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：5  
+  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
+
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
   実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：5  
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
@@ -356,10 +360,6 @@
 - **2025-11 · [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   エージェント型ワークフローは、生成、批評、修正、ツール呼び出し、結果統合などを有向非巡回グラフ（Directed Acyclic Graph; DAG）で結んだ実行系列である。
-
-- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
-  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：4  
-  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
 
 - **2025-11 · [Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse](2025-2511.00413-tree-training-accelerating-agentic-llms-training-via-shared-prefix-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

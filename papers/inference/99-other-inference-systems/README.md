@@ -2640,6 +2640,10 @@
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：2  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
 
+- **2025-11 · [VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking](2025-2511.18692-vlm-in-a-flash-i-o-efficient-sparsification-of-vision-language-model-via.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  連続したニューロンの塊を単位に、重要度を推定遅延で割った効用で塊を選ぶ疎化と、連続分布に基づく遅延の見積もりにより、同等の精度でフラッシュ読み込みの遅延を二つの組み込み機器で平均二・一九倍と二・八九倍、最大四・六五倍と五・七六倍改善したと報告した。
+
 - **2025-11 · [Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer](2025-2502.15779-rotate-clip-and-partition-towards-w2a4kv4-quantization-by-integrating-ro.md)**  
   実装：[✓](https://github.com/songsm921/RCP) ・ リポジトリ内被引用：1  
   重みを二ビット、活性値とキャッシュを四ビットにする極端な量子化では、単純な事後量子化や従来の量子化認識学習だけでは予測が崩れる場合がある。ピークメモリは13.48GBから2.55GBへ減り、約5.29倍の削減となる。
@@ -2823,10 +2827,6 @@
 - **2025-01 · [A Proximal Operator for Inducing 2:4-Sparsity](2025-2501.18015-a-proximal-operator-for-inducing-2-4-sparsity.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPUの2:4疎行列演算では4重み中2つをゼロにすることで、通常の非構造化疎性よりも実行時に利用しやすい規則性が得られる。
-
-- **2025-11 · [VLM in a flash: I/O-Efficient Sparsification of Vision-Language Model via Neuron Chunking](2025-2511.18692-vlm-in-a-flash-i-o-efficient-sparsification-of-vision-language-model-via.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  連続したニューロンの塊を単位に、重要度を推定遅延で割った効用で塊を選ぶ疎化と、連続分布に基づく遅延の見積もりにより、同等の精度でフラッシュ読み込みの遅延を二つの組み込み機器で平均二・一九倍と二・八九倍、最大四・六五倍と五・七六倍改善したと報告した。
 
 - **2025-11 · [Test-Time Temporal Sampling for Efficient MLLM Video Understanding](2025-2511.17945-test-time-temporal-sampling-for-efficient-mllm-video-understanding.md)**  
   実装：[✓](https://github.com/kaibinwang3/T3S) ・ リポジトリ内被引用：0  
@@ -3371,7 +3371,7 @@
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：86  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-05 · [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-throug.md)**  
@@ -3821,7 +3821,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：118  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：119  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -3829,7 +3829,7 @@
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：89  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：90  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
@@ -3837,7 +3837,7 @@
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：72  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  

@@ -41,6 +41,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：6  
   混合専門家モデル（Mixture-of-Experts; MoE）を複数GPUへ載せる専門家並列（専門家 Parallelism; EP）では、人気専門家の複製を作り、各GPUへ配置し、同じ専門家を選んだトークンを複製間へ振り分ける。
 
+- **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
+  実装：[✓](https://github.com/SalesforceAIResearch/LeastLoadedEP) ・ リポジトリ内被引用：5  
+  標準的な専門家並列（専門家 Parallelism、EP）では専門家の重みを複数GPUへ固定配置し、選択された専門家を所有するGPUへトークンを送る。論文の層単体評価では、8台のH200上で極端な専門家偏りに対し最大6.11倍の速度改善とピークメモリの大幅削減を報告する。
+
 - **2025-12 · [JANUS: Disaggregating Attention and Experts for Scalable MoE Inference](2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   JANUSは、専門家混合（Mixture-of-Experts、MoE）モデルのオンライン推論を、注意機構と専門家層を別々のGPU群へ配置して独立に伸縮するシステムである。
@@ -48,10 +52,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-03 · [NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL](2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   大規模言語モデルの混合専門家（MoE）層では、ルータが各トークンを担当する専門家へ割り当て、専門家計算の後に結果を元の順序へ集約する。一方、実際にvLLMへ組み込んでQwen3-30B-A3Bを実行した場合は、DeepEPより出力トークン処理量が7〜10%低く、トークン間遅延も7〜9%長かった。
-
-- **2026-01 · [Least-Loaded Expert Parallelism: Load Balancing An Imbalanced Mixture-of-Experts](2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md)**  
-  実装：[✓](https://github.com/SalesforceAIResearch/LeastLoadedEP) ・ リポジトリ内被引用：4  
-  標準的な専門家並列（専門家 Parallelism、EP）では専門家の重みを複数GPUへ固定配置し、選択された専門家を所有するGPUへトークンを送る。論文の層単体評価では、8台のH200上で極端な専門家偏りに対し最大6.11倍の速度改善とピークメモリの大幅削減を報告する。
 
 - **2026-07 · [Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts](2026-2607.19539-tile-level-compute-communication-overlap-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -202,7 +202,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：31  
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
