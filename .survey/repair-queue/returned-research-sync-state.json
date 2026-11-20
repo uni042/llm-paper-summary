@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "cc72a89d1a6d48f68f25bf808737c83e29036c54",
+  "base_commit": "4fe2a70d260d4b8226dd2c238de8a98a350b7a60",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -435,6 +435,11 @@
     "2026-2610.24102-hierarchical-and-query-aware-visual-token-pruning-for-high-resolution-lvlms.json",
     "2026-2610.24179-kvcompass-a-discovery-plane-for-internet-scale-prefix-cache-sharing-in-llm-serving.json",
     "2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogeneous-llm-inference-fleets.json",
+    "2026-2610.24365-flashmap-flow-map-speculative-decoding.json",
+    "2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-efficient-long-context-llm-inference.json",
+    "2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-diffusion-language-models.json",
+    "2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.json",
+    "2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inference.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -41836,6 +41841,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.24365": {
+      "order": [
+        "2026-11-20T02:33:02+00:00",
+        "2026-2610.24365-flashmap-flow-map-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24499": {
+      "order": [
+        "2026-11-20T02:33:58+00:00",
+        "2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-efficient-long-context-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.24722": {
+      "order": [
+        "2026-11-20T02:34:52+00:00",
+        "2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.25136": {
+      "order": [
+        "2026-11-20T02:35:46+00:00",
+        "2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.25219": {
+      "order": [
+        "2026-11-20T02:36:41+00:00",
+        "2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -51757,6 +51807,21 @@
     "arxiv:2610.24355": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogene.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.24355-koi-evidence-guided-self-calibrating-planning-for-multi-cloud-heterogene.md"
+    ],
+    "arxiv:2610.24365": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.24365-flashmap-flow-map-speculative-decoding.md"
+    ],
+    "arxiv:2610.24499": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-eff.md"
+    ],
+    "arxiv:2610.24722": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-dif.md"
+    ],
+    "arxiv:2610.25136": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.md"
+    ],
+    "arxiv:2610.25219": [
+      "papers/inference/09-kernel-runtime-compilation/2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inferen.md"
     ]
   }
 }

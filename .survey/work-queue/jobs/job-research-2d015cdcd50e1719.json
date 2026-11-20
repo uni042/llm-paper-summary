@@ -35,10 +35,15 @@
   "selection_reason": "PV-Decodingは拡散LLMのmask位置を信頼度閾値2つで直接確定・投機・未確定に分け、投機部分を1/2/複数batchの段階的検証で処理する。GSM8K/MBPP/HumanEvalで通常confidence decode比の逐次forward回数を8～37%減らし、最大精度低下1.3%、Dream-7BのGSM8Kでは1/2batchでthroughput 7.0～13.6%改善を報告。",
   "semantic_scholar_id": "232fe735570919d97d7b8b9df46c9544ca4f869f",
   "source_url": "https://arxiv.org/abs/2610.24722",
-  "status": "ready",
+  "status": "superseded",
   "title": "PV-Decoding: Progressive Verification Decoding with Decode Gating for Diffusion Language Models",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:38:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-dif.md",
+  "represented_canonical_id": "arXiv:2610.24722",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

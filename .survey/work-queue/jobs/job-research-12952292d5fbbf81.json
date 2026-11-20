@@ -35,10 +35,15 @@
   "selection_reason": "VLMの大きな画像入力でexact prefix hitだけではKV再利用が限られる問題に対し、patch entropyで近似hitを検出し、queryに応じたwarmup attentionで再計算patchを選ぶVisMemoを提案する。GPU/CPU/SSDでexact/approx hit別にI/O・保持政策を分ける。著者要旨は実production traceでcache hit率27.78→61.45%、8K入力のprefill latency最大48.3%短縮を報告。VLMサービングと階層KVの直接的貢献としてaccept。",
   "semantic_scholar_id": "f3b2ca6df36d0750271619f17690df1e4237c57b",
   "source_url": "https://arxiv.org/abs/2610.25136",
-  "status": "ready",
+  "status": "superseded",
   "title": "Visual Cache Reuse for Efficient Multimodal Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:38:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.25136-visual-cache-reuse-for-efficient-multimodal-inference.md",
+  "represented_canonical_id": "arXiv:2610.25136",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

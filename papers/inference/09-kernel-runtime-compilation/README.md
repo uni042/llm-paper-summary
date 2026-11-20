@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（246本）
+## 自動生成の論文一覧（247本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -193,6 +193,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [SARATHI: Decoupled Data-Free Probing and Adaptive Reconstruction for Structured LLM Pruning](2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-stru.md)**  
   実装：[✓](https://github.com/snkrbhr/SARATHI) ・ リポジトリ内被引用：0  
   ニューロン選択を校正データなしの非負行列分解の残差探査に分離し、補償を層ごとの局所再構成に限定することで、除去率40パーセントで他法がメモリ不足や崩壊に陥る条件でも完走し、OPT-2.7Bの困惑度を補正なし2082から18.98へ戻した。
+
+- **2026-10 · [gKSM: GPU Memory Deduplication at Driver Layer for Serverless LLM Inference](2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ドライバ層で重複した重みページを検出して物理ページを共有し、転送前の重複除去と書き込み時コピーで分離を保つことで、フレームワークを改変せずに同居インスタンスのメモリ重複を最大59.8パーセント削減する方式。
 
 - **2026-10 · [AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill](2026-2610.05774-adaspark-adaptive-dspark-with-online-learning-for-tree-verification-and-.md)**  
   実装：[✓](https://github.com/zeraix/imparo) ・ リポジトリ内被引用：0  
@@ -569,7 +573,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-12〜2025-11）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：188  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：189  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  

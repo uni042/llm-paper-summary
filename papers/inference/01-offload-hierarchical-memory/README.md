@@ -456,6 +456,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：1  
   RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
 
+- **2025-04 · [MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models](2025-2504.12526-mom-memory-efficient-offloaded-mini-sequence-inference-for-long-context-.md)**  
+  実装：[✓](https://github.com/TianyiZhu877/MOM) ・ リポジトリ内被引用：1  
+  MOM（メモリ-efficient オフロード Mini-sequence Inference）は、長文脈LLMの推論でGPUメモリを圧迫する二種類のデータ、すなわちMLP中間活性と注意機構のKVキャッシュを別々の方法で削減する方式である。
+
 - **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
   実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：1  
   SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
@@ -467,10 +471,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。
-
-- **2025-04 · [MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models](2025-2504.12526-mom-memory-efficient-offloaded-mini-sequence-inference-for-long-context-.md)**  
-  実装：[✓](https://github.com/TianyiZhu877/MOM) ・ リポジトリ内被引用：0  
-  MOM（メモリ-efficient オフロード Mini-sequence Inference）は、長文脈LLMの推論でGPUメモリを圧迫する二種類のデータ、すなわちMLP中間活性と注意機構のKVキャッシュを別々の方法で削減する方式である。
 
 - **2025-04 · [Hardware-based Heterogeneous Memory Management for Large Language Model Inference](2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

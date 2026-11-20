@@ -35,10 +35,15 @@
   "selection_reason": "gKSMはserverless LLMでGPU上に同じモデル重み・状態を複数instanceが重複保持する問題をdriver層で解く。GPUでhash計算し、転送前のzero-copy重み重複排除とCUDA VMMを用いるpage fault時のcopy-on-write相当の分離を実現する。ServerlessLLM比GPUメモリ59.8%削減、制約下のaggregate throughput2.15倍、同時5instanceを報告。",
   "semantic_scholar_id": "b347abbbb6eb9b09b2789e0bef6f9cd1cf54c0a9",
   "source_url": "https://arxiv.org/abs/2610.25219",
-  "status": "ready",
+  "status": "superseded",
   "title": "gKSM: GPU Memory Deduplication at Driver Layer for Serverless LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:38:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.25219-gksm-gpu-memory-deduplication-at-driver-layer-for-serverless-llm-inferen.md",
+  "represented_canonical_id": "arXiv:2610.25219",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

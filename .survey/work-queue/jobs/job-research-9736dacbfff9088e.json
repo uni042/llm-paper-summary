@@ -35,10 +35,15 @@
   "selection_reason": "全promptをprefillしてからKVを圧縮すると構築時の一時メモリが大きく、chunkごとの早期追い出しは全prompt情報を見ずに選択する問題に対し、層優先で全chunkを処理し各層終了時にのみKVを削除する。著者要旨はA100の64Kで構築時一時メモリ83.89%削減、RTX4090の64KでTTFT増加1.06%に留め128K prefillを可能にしたと報告。長文脈推論のcache構築時メモリ最適化としてaccept。",
   "semantic_scholar_id": "b8596428c8ba72d19a5dba21ff7f224be427487f",
   "source_url": "https://arxiv.org/abs/2610.24499",
-  "status": "ready",
+  "status": "superseded",
   "title": "TideKV: Delayed KV eviction via layer-wise chunked prefill for memory-efficient long-context LLM inference",
   "type": "research",
   "venue": "Journal of systems architecture",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:38:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.24499-tidekv-delayed-kv-eviction-via-layer-wise-chunked-prefill-for-memory-eff.md",
+  "represented_canonical_id": "arXiv:2610.24499",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

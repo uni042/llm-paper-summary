@@ -35,10 +35,15 @@
   "selection_reason": "並列draftのblock diffusion方式は候補token間の依存を無視しがちという問題に対し、targetのhidden stateに条件づけた連続flow mapのdrafterで候補ブロックを1 forwardで生成する。Qwen3-8Bを使った著者要旨の比較ではDFlash相当のbaselineより平均speedupが7%高く、最大6.1倍のlossless accelerationを報告。投機復号の受理効率とドラフト計算の高速化に直結するためaccept。",
   "semantic_scholar_id": "3569a3ae399ae36ea1af7aff045a1ed1400b4276",
   "source_url": "https://arxiv.org/abs/2610.24365",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlashMap: Flow Map Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T02:38:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.24365-flashmap-flow-map-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2610.24365",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
