@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（200本）
+## 自動生成の論文一覧（201本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -249,6 +249,10 @@
 - **2026-10 · [Spin: Shadow Predictive Indexer for Sparse Attention](2026-2610.09025-spin-shadow-predictive-indexer-for-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去のインデクサスコアの指数移動平均で重要ブロックを予測し、探索と層別予算で鮮度と配分を保ちながら、スパース注意のインデクサ入力自体を疎にする学習不要の方式。
+
+- **2026-10 · [SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference](2026-2610.34824-sparta-a-sparse-ternary-llm-accelerator-with-adaptive-attention-and-unif.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  三値モデルの線形層と注意を一つの計算基盤で実行し、ページ単位とトークン単位の二段の疎注意でKV転送を4倍以上削ることで、長文脈のエッジ推論を通して速くする専用加速器の設計。
 
 - **2026-10 · [QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution](2026-2610.11134-quilt-rethinking-sparse-attention-prefill-through-shared-query-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -695,7 +699,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：334  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：335  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  

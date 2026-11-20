@@ -35,10 +35,15 @@
   "selection_reason": "SPARTAは三値重みのSpMM/SpMVとbit-serial attentionを共有演算器に載せ、prefill/decodeで異なる疎性を利用するphase-aware dataflowを設計する。ページ単位Top-kとtoken単位Top-pでK/Vアクセスを減らし、KVトラフィックをfull attention比4.1～4.8倍削減する。Jetson AGX Orin比の生成throughput 3.9倍、end-to-endエネルギー効率8.3倍を報告。ただし注意疎化によるタスク依存の品質損失がある。",
   "semantic_scholar_id": "536a82d6dec8f18e78f56fb9bc6dc4fd554835d7",
   "source_url": "https://arxiv.org/abs/2610.34824",
-  "status": "ready",
+  "status": "superseded",
   "title": "SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:43:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.34824-sparta-a-sparse-ternary-llm-accelerator-with-adaptive-attention-and-unif.md",
+  "represented_canonical_id": "arXiv:2610.34824",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "CarbonRouterは複数ターン会話のKV cacheが元の地域・GPUに残るため、低炭素地域への移動が履歴再計算を生むことをコストに含める。モデル・GPU種類・地域を同時選択し、直後に元へ戻る可能性が高い移動を抑えるgateを用いる。5モデル・3GPU・4地域のトレース駆動評価で既存FairCarbon比CO₂平均16.1%削減、30ターン超では23.1%削減を報告。",
   "semantic_scholar_id": "6ad3aa35555bd00a0c030eff206cd80b0af6c6be",
   "source_url": "https://arxiv.org/abs/2610.35230",
-  "status": "ready",
+  "status": "superseded",
   "title": "Context Is Not Free: Carbon-Aware LLM Routing for Multi-Turn LLM Web Services across Geo-Distributed Data Centers",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:43:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.35230-context-is-not-free-carbon-aware-llm-routing-for-multi-turn-llm-web-serv.md",
+  "represented_canonical_id": "arXiv:2610.35230",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

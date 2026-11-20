@@ -35,10 +35,15 @@
   "selection_reason": "隣接Transformer層のhidden stateの類似性を利用して層横断で単一潜在表現を保持し、層固有射影でKVを再構成する学習不要のKVキャッシュ圧縮。低精度量子化と共有evictionを組み合わせ、Llama-3.1-8B、Mistral-7B、Qwen2.5-7Bで著者は3.6倍圧縮時に元精度約99%、13～14倍圧縮時に97～98%保持を報告。推論メモリ効率化に直接関連。",
   "semantic_scholar_id": "19b48dfa7e11d2b770b291c1c53384bfcae427a5",
   "source_url": "https://arxiv.org/abs/2610.35023",
-  "status": "ready",
+  "status": "superseded",
   "title": "BellowsKV: One Latent for Many Layers, Expanded on Demand",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:43:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.35023-bellowskv-one-latent-for-many-layers-expanded-on-demand.md",
+  "represented_canonical_id": "arXiv:2610.35023",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

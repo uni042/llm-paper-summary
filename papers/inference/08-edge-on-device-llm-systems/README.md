@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（92本）
+## 自動生成の論文一覧（93本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -53,6 +53,10 @@
 - **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
+
+- **2026-10 · [Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs](2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimo.md)**  
+  実装：[✓](https://github.com/jimmy-yilong-li/CrossInfer) ・ リポジトリ内被引用：0  
+  履歴を版付き文脈として公開し、エンジン間でKV状態とプリフィル済み分枝を受け渡せるようにして、取り込みと回答を別エンジンで同時に行い、状態の場所と待ちから配置を決めることで、エッジSoCの複数エンジンを遊ばせないストリーミング推論方式。
 
 - **2026-10 · [Seeing at the Edge: Energy Characterization of Vision-Language Model Inference on Edge Platforms](2026-2610.20136-seeing-at-the-edge-energy-characterization-of-vision-language-model-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -335,7 +339,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：72  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  

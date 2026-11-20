@@ -35,10 +35,15 @@
   "selection_reason": "CPU/GPU/NPUを持つedge SoCでMLLMのstreaming ingestionと回答を重ねる際、backend固有KVに履歴が束縛される問題に対し論理historyをengine別KVから分離する。stateful streamingと並列query生成を組み合わせ、予測完了時刻で実行engineを選ぶSDEPを提案。著者要旨はM4 Maxでlive-stream p95 TTFT76%削減、backlog throughput最大35%増、RK3588でも改善を報告。端末内マルチモーダル推論runtimeとしてaccept。",
   "semantic_scholar_id": "c63232128e973172db15bda93a7f694a4410869f",
   "source_url": "https://arxiv.org/abs/2610.35309",
-  "status": "ready",
+  "status": "superseded",
   "title": "Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:43:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/08-edge-on-device-llm-systems/2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimo.md",
+  "represented_canonical_id": "arXiv:2610.35309",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "長文脈のchunked prefill初期に余剰メモリへ再利用KVを複製し、進行につれて冗長コピーを解放してdecode用shardへ移行するMARSと、KV shardを固定しqueryをworker間で移動するdecode方式を組み合わせる。さらにFPGA compute-NICでmetadata-driven KV routingとcollectiveを処理する。著者要旨はTTFT/throughput/scalability改善を主張するが具体的倍率は示していない。長文脈LLM推論の通信・KV配置協調設計としてaccept。",
   "semantic_scholar_id": "c99eedeca6d610cb667cbdd3aa6e5f50eca43d46",
   "source_url": "https://arxiv.org/abs/2610.34731",
-  "status": "ready",
+  "status": "superseded",
   "title": "MCF: A Memory- and Communication-Aware Co-Designed Framework for Long-Context LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T13:43:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.34731-mcf-a-memory-and-communication-aware-co-designed-framework-for-long-cont.md",
+  "represented_canonical_id": "arXiv:2610.34731",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
