@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 4465,
+  "active_count": 4475,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -9555,12 +9555,40 @@
       ],
       "source_hash": "1da06debbd0ebac72dad970268b6402dfb944d09986489855964517a49adea2f"
     },
+    "arXiv:2610.18444": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18444-an-optical-kv-cache-network-for-disaggregated-llm-serving.md",
+      "identifiers": [
+        "arXiv:2610.18444"
+      ],
+      "source_hash": "783f01b6f739f781fb45efb8d634494d61a7a5c28d714c60ab2021097ac50900"
+    },
+    "arXiv:2610.18642": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.md",
+      "identifiers": [
+        "arXiv:2610.18642"
+      ],
+      "source_hash": "c2d1c0e121da4a00d6fbdd1398cd7042a7661f3987b1d7530a74838ccd0a140a"
+    },
+    "arXiv:2610.18925": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reus.md",
+      "identifiers": [
+        "arXiv:2610.18925"
+      ],
+      "source_hash": "c096b040c2888eccdcb8d3f91f79e3f5aa92790bd203f057208277f6acaac076"
+    },
     "arXiv:2610.19605": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.19605-pn-mix-pair-norm-guided-mixed-precision-key-cache-quantization-for-effic.md",
       "identifiers": [
         "arXiv:2610.19605"
       ],
       "source_hash": "bfcb41370e167f766d655b81eabfbe5fb41ed2294c85daa563b7940dd32d5f64"
+    },
+    "arXiv:2610.19822": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.md",
+      "identifiers": [
+        "arXiv:2610.19822"
+      ],
+      "source_hash": "491c92cfeb43ce03d33fc74487b30a87453105742980d70c4a5935624fbbe2ab"
     },
     "arXiv:2610.21241": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.md",
@@ -18056,6 +18084,13 @@
       ],
       "source_hash": "1ec528ce66d9e138add32a6443b2089bbbd62c24a64416a4eca828c29f22efc4"
     },
+    "arXiv:2610.18451": {
+      "path": "papers/inference/12-moe-parallelism-communication/2026-2610.18451-fasteep-fast-intra-instance-elastic-scaling-for-expert-parallel-moe-serv.md",
+      "identifiers": [
+        "arXiv:2610.18451"
+      ],
+      "source_hash": "4756cd56afaea59a504779f010eea040f56d21ae4d36146fe387f8a860c9c0a9"
+    },
     "mlforsystems-neurips2024-paper41": {
       "path": "papers/inference/12-moe-parallelism-communication/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md",
       "identifiers": [
@@ -19407,6 +19442,13 @@
         "arXiv:2610.17191"
       ],
       "source_hash": "3dee7420bde6efb40f80a394517ea8f38b6c8a9f98c093547446a5684abefe15"
+    },
+    "arXiv:2610.19026": {
+      "path": "papers/inference/13-sparse-attention/2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.md",
+      "identifiers": [
+        "arXiv:2610.19026"
+      ],
+      "source_hash": "1abab7fdad0f938db2b061b040d60ad7e4da5c8538df6aec5e411aea26d25840"
     },
     "arXiv:2610.22985": {
       "path": "papers/inference/13-sparse-attention/2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-l.md",
@@ -31788,6 +31830,34 @@
       ],
       "source_hash": "2727eed42a036a63c9c2cd5cc279fe50027f5a3aaa89b0f37b98590b226f7afc"
     },
+    "arXiv:2610.18557": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.md",
+      "identifiers": [
+        "arXiv:2610.18557"
+      ],
+      "source_hash": "4b7b5b32f3d8e23fa1946148ecfc73d76d4978a310cfeaad80d0d563bc98fe3e"
+    },
+    "arXiv:2610.19232": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-.md",
+      "identifiers": [
+        "arXiv:2610.19232"
+      ],
+      "source_hash": "24da3090a7cdfdc8918969e182ee0db9690e05b306dd8443a1686a8825af297b"
+    },
+    "arXiv:2610.19292": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.md",
+      "identifiers": [
+        "arXiv:2610.19292"
+      ],
+      "source_hash": "8e5513113333c64fdb4719b9d281bdbb7afbcd87bff08bec59eca5baf3736fa5"
+    },
+    "arXiv:2610.19819": {
+      "path": "papers/inference/99-other-inference-systems/2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-la.md",
+      "identifiers": [
+        "arXiv:2610.19819"
+      ],
+      "source_hash": "9b6150f3c13722abc8ffa636f5b4e38d51b895626588ec5f2623d7826d14ee26"
+    },
     "arXiv:2610.21257": {
       "path": "papers/inference/99-other-inference-systems/2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multipl.md",
       "identifiers": [
@@ -33932,7 +34002,11 @@
     "arXiv:2610.17966": "arXiv:2610.17966",
     "arXiv:2610.17970": "arXiv:2610.17970",
     "arXiv:2610.18014": "arXiv:2610.18014",
+    "arXiv:2610.18444": "arXiv:2610.18444",
+    "arXiv:2610.18642": "arXiv:2610.18642",
+    "arXiv:2610.18925": "arXiv:2610.18925",
     "arXiv:2610.19605": "arXiv:2610.19605",
+    "arXiv:2610.19822": "arXiv:2610.19822",
     "arXiv:2610.21241": "arXiv:2610.21241",
     "arXiv:2610.21390": "arXiv:2610.21390",
     "arXiv:2610.21500": "arXiv:2610.21500",
@@ -35473,6 +35547,7 @@
     "arXiv:2609.40093": "arXiv:2609.40093",
     "arXiv:2610.00671": "arXiv:2610.00671",
     "arXiv:2610.09424": "arXiv:2610.09424",
+    "arXiv:2610.18451": "arXiv:2610.18451",
     "mlforsystems-neurips2024-paper41": "mlforsystems-neurips2024-paper41",
     "DOI:10.1109/sieds69358.2026.11540265": "DOI:10.1109/sieds69358.2026.11540265",
     "arXiv:1911.02972": "arXiv:1911.02972",
@@ -35691,6 +35766,7 @@
     "DOI:10.1145/3856312": "arXiv:2610.14688",
     "arXiv:2610.14688": "arXiv:2610.14688",
     "arXiv:2610.17191": "arXiv:2610.17191",
+    "arXiv:2610.19026": "arXiv:2610.19026",
     "arXiv:2610.22985": "arXiv:2610.22985",
     "DOI:10.18653/v1/2026.acl-long.46": "DOI:10.18653/v1/2026.acl-long.46",
     "DOI:10.1145/3767295.3769364": "DOI:10.1145/3767295.3769364",
@@ -37625,6 +37701,10 @@
     "arXiv:2610.15921": "arXiv:2610.15921",
     "arXiv:2610.16368": "arXiv:2610.16368",
     "arXiv:2610.18399": "arXiv:2610.18399",
+    "arXiv:2610.18557": "arXiv:2610.18557",
+    "arXiv:2610.19232": "arXiv:2610.19232",
+    "arXiv:2610.19292": "arXiv:2610.19292",
+    "arXiv:2610.19819": "arXiv:2610.19819",
     "arXiv:2610.21257": "arXiv:2610.21257",
     "arXiv:2610.21378": "arXiv:2610.21378",
     "arXiv:2610.22099": "arXiv:2610.22099",

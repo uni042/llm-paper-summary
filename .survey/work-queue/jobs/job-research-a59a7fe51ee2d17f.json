@@ -35,10 +35,15 @@
   "selection_reason": "RAGでchunk単位に事前生成したKVを連結するとcross-chunk attentionが欠落する問題に対し、WarmUp/Probe/Patchの3段階で必要なトークンを再計算し、要求ごとの残りTTFT余裕を考慮してバッチと再計算予算を共同制御する。vLLM実装、RTX PRO 6000 96GBを1～2基使用し、LLaMA-3.1-8B/Qwen3-32Bの4タスクでquality-gated SLO達成率最大27.5%改善、P99 TTFT最大86%短縮を報告。KV再利用・サービング制御を直接改善するためaccept。最大値は全条件平均ではない。",
   "semantic_scholar_id": "11ba5f9fabd62c9965b16366538dce82e114fd41",
   "source_url": "https://arxiv.org/abs/2610.18925",
-  "status": "ready",
+  "status": "superseded",
   "title": "CacheSmith: Accurate RAG Serving under Latency SLOs with Adaptive KV Reuse",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:20:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reus.md",
+  "represented_canonical_id": "arXiv:2610.18925",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

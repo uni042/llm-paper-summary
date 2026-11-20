@@ -35,10 +35,15 @@
   "selection_reason": "dense FFNのMoE変換時、層ごと・トークンごとの活性expert予算を配分。25% FFN利用率でLlama2/3とQwen2.5のperplexityを一様配分より改善。",
   "semantic_scholar_id": "14fa858cdba951990cda677861a341af8d39dab7",
   "source_url": "https://arxiv.org/abs/2610.19232",
-  "status": "ready",
+  "status": "superseded",
   "title": "Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:20:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-.md",
+  "represented_canonical_id": "arXiv:2610.19232",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

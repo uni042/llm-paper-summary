@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "3083ebc4c81db6dff36040397828823398c96674",
+  "base_commit": "20ce175d19b0b811cb7e39bf7bab5fe55900d020",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -641,8 +641,18 @@
     "2026-2610.18140-sparpr-runtime-kv-cache-recovery-for-resource-constrained-llm-inference-on-consumer-hardware.json",
     "2026-2610.18143-radixflow-filling-execution-bubbles-in-prefix-cached-hybrid-llm-serving.json",
     "2026-2610.18399-bifocal-training-free-mixed-granularity-visual-token-pruning-for-multimodal-llms.json",
+    "2026-2610.18444-an-optical-kv-cache-network-for-disaggregated-llm-serving.json",
+    "2026-2610.18451-fasteep-fast-intra-instance-elastic-scaling-for-expert-parallel-moe-serving.json",
+    "2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.json",
+    "2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.json",
+    "2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reuse.json",
+    "2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.json",
+    "2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-conversion.json",
+    "2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.json",
     "2026-2610.19382-ixi-slm-on-device-slm-for-ai-call-agent-service.json",
     "2026-2610.19605-pn-mix-pair-norm-guided-mixed-precision-key-cache-quantization-for-efficient-long-output-llm-inference.json",
+    "2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-large-language-models.json",
+    "2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.json",
     "2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hybrid-linear-attention-large-language-models.json",
     "2026-2610.21241-range-decoupling-kv-cache-reuse-granularity-from-storage-work.json",
     "2026-2610.21257-fractional-power-of-two-quantization-for-efficient-and-effective-multiplier-free-llm-inference.json",
@@ -44395,6 +44405,96 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.18444": {
+      "order": [
+        "2026-11-20T11:05:32+00:00",
+        "2026-2610.18444-an-optical-kv-cache-network-for-disaggregated-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.18451": {
+      "order": [
+        "2026-11-20T11:06:54+00:00",
+        "2026-2610.18451-fasteep-fast-intra-instance-elastic-scaling-for-expert-parallel-moe-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.18557": {
+      "order": [
+        "2026-11-20T11:08:16+00:00",
+        "2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.18642": {
+      "order": [
+        "2026-11-20T11:09:38+00:00",
+        "2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.18925": {
+      "order": [
+        "2026-11-20T11:11:00+00:00",
+        "2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reuse.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.19026": {
+      "order": [
+        "2026-11-20T11:12:22+00:00",
+        "2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.19232": {
+      "order": [
+        "2026-11-20T11:13:44+00:00",
+        "2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-conversion.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.19292": {
+      "order": [
+        "2026-11-20T11:15:07+00:00",
+        "2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.19819": {
+      "order": [
+        "2026-11-20T11:16:29+00:00",
+        "2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.19822": {
+      "order": [
+        "2026-11-20T11:17:51+00:00",
+        "2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55294,6 +55394,36 @@
     "arxiv:2610.18140": [
       "papers/inference/10-kv-cache-offload-recomputation/2026-2610.18140-sparpr-runtime-kv-cache-recovery-for-resource-constrained-llm-inference-.md",
       "papers/inference/10-kv-cache-offload-recomputation/2026-2610.18140-sparpr-runtime-kv-cache-recovery-for-resource-constrained-llm-inference-.md"
+    ],
+    "arxiv:2610.18444": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.18444-an-optical-kv-cache-network-for-disaggregated-llm-serving.md"
+    ],
+    "arxiv:2610.18451": [
+      "papers/inference/12-moe-parallelism-communication/2026-2610.18451-fasteep-fast-intra-instance-elastic-scaling-for-expert-parallel-moe-serv.md"
+    ],
+    "arxiv:2610.18557": [
+      "papers/inference/99-other-inference-systems/2026-2610.18557-revisiting-cauchy-schwarz-norm-bounds-for-sdc-detection-in-llm-inference.md"
+    ],
+    "arxiv:2610.18642": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.md"
+    ],
+    "arxiv:2610.18925": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.18925-cachesmith-accurate-rag-serving-under-latency-slos-with-adaptive-kv-reus.md"
+    ],
+    "arxiv:2610.19026": [
+      "papers/inference/13-sparse-attention/2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.md"
+    ],
+    "arxiv:2610.19232": [
+      "papers/inference/99-other-inference-systems/2026-2610.19232-spectral-moe-heterogeneous-per-layer-expert-utilization-in-dense-to-moe-.md"
+    ],
+    "arxiv:2610.19292": [
+      "papers/inference/99-other-inference-systems/2026-2610.19292-whose-turn-is-it-context-guided-model-routing-for-stateful-agents.md"
+    ],
+    "arxiv:2610.19819": [
+      "papers/inference/99-other-inference-systems/2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-la.md"
+    ],
+    "arxiv:2610.19822": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.md"
     ]
   }
 }

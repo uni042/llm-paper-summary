@@ -35,10 +35,15 @@
   "selection_reason": "JointServeはメモリ制約GPUで複数モデルを使うエージェントの重みshardとKV blockを同一の常駐予算で管理する。呼出し元の出力streamから次モデルの意図を検知してprefetchし、部分的なk*層常駐と転送優先制御で生存セッションのKVを守る。whole-model swap最良方式比セッション完了時間21.7%短縮、SWE-bench/tau-bench/OSWorld再生で最大49%短縮、SLO達成率2.8～24.5%から76.8～100%へ改善を報告。",
   "semantic_scholar_id": "91dc8fd95828bdc06a1423d6e98cb8372fac9207",
   "source_url": "https://arxiv.org/abs/2610.19822",
-  "status": "ready",
+  "status": "superseded",
   "title": "JointServe: Serving Multi-Model Agents on Memory-Constrained GPUs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:20:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.19822-jointserve-serving-multi-model-agents-on-memory-constrained-gpus.md",
+  "represented_canonical_id": "arXiv:2610.19822",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "prefill/decode分離でKVを移送する際、パケット網の過剰収容によるTTFT悪化を光回線交換で緩和する提案。機械式光スイッチの再構成時間をprefill中の予約確定で隠し、各GPUへWDM接続する。著者要旨の実トレースに基づくシミュレーションでは、50ms再構成遅延を許容しつつ400G適応ルーティング網と同等性能を2:1ファブリック費用の0.55～0.78倍で達成すると報告。ネットワーク設計を通じたKV転送高速化としてaccept。ただし実ネットワークでの運用実測ではない。",
   "semantic_scholar_id": "8c52545b6b11f7c70fad8c0fc4ed4e0e7dd3aec2",
   "source_url": "https://arxiv.org/abs/2610.18444",
-  "status": "ready",
+  "status": "superseded",
   "title": "An Optical KV Cache Network for Disaggregated LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:20:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18444-an-optical-kv-cache-network-for-disaggregated-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.18444",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

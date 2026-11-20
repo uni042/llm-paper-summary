@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（195本）
+## 自動生成の論文一覧（196本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -33,7 +33,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：63  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：64  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
@@ -245,6 +245,10 @@
 - **2026-10 · [LatentIndex: Cross-Layer Sharing with Layer-Specific Selection for Sparse Attention](2026-2610.04635-latentindex-cross-layer-sharing-with-layer-specific-selection-for-sparse.md)**  
   実装：[✓](https://github.com/MuLabPKU/TransArch) ・ リポジトリ内被引用：0  
   疎な注意の索引で、離散的な選択結果ではなく連続した潜在表現を層の組で共有し、キーの復号をクエリへ吸収させて層ごとの独立した選択を保ちながら、索引の保存と計算を減らす手法。
+
+- **2026-10 · [Joint Subspace Sparse Attention for Efficient Long-Context Decoding](2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.md)**  
+  実装：[✓](https://github.com/jiwonsong-dev/JSSA) ・ リポジトリ内被引用：0  
+  トークンスコア保存誤差を最小化する共有低次元部分空間でのトークン選択と、KVヘッドごとに異なる選択を元のキャッシュから直接読むギャザーなしカーネルを組み合わせた、学習不要のトークン単位疎な注意。
 
 - **2026-10 · [HHR: Hierarchical Hash Retrieval for Efficient LLM Generation](2026-2610.01230-hhr-hierarchical-hash-retrieval-for-efficient-llm-generation.md)**  
   実装：[✓](https://github.com/lianjunl13-sudo/HHR) ・ リポジトリ内被引用：0  
@@ -679,7 +683,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：223  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：224  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

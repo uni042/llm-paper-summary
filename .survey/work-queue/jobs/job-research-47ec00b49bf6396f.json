@@ -35,10 +35,15 @@
   "selection_reason": "KVキャッシュ量子化の予算配慮型精度配分MultiAlloc。層別精度やトークン保存など異種の精度保存戦略の間で、固定したKVメモリ予算の下で量子化資源をどう配るかという配分問題を解く。推論メモリ機構そのもの。",
   "semantic_scholar_id": "f32736cf1226c3dd3aaf0afab3192f7071ccf795",
   "source_url": "https://arxiv.org/abs/2610.18642",
-  "status": "ready",
+  "status": "superseded",
   "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:20:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.18642-multialloc-budget-aware-precision-allocation-for-kv-cache-quantization.md",
+  "represented_canonical_id": "arXiv:2610.18642",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

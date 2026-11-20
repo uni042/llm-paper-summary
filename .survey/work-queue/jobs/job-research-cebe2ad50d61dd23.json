@@ -35,10 +35,15 @@
   "selection_reason": "RAGや長文脈で増えるprefill入力tokenのエネルギーを、Llama-3.1/Qwen-2とNVIDIA A100の高分解能電力計測で特徴付ける。PagedAttentionを用いた最適化サービングは112K tokenで標準方式比最大8.9倍のエネルギー効率を示し、入力と出力tokenのエネルギー比もengineで変化すると報告。推論時のprefill・decodeエネルギーと実装差を直接計測しているためaccept。",
   "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
   "source_url": "https://arxiv.org/abs/2610.19819",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T11:20:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.19819-the-cost-of-context-profiling-the-energy-footprint-of-input-tokens-in-la.md",
+  "represented_canonical_id": "arXiv:2610.19819",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
