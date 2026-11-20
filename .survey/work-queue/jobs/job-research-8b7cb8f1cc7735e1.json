@@ -35,10 +35,15 @@
   "selection_reason": "合成可能なKVキャッシュ圧縮のための低ランクキーと償却値LowRAM。各ヘッド内で値がキーから概ね予測できる冗長性を使い、テスト時に軽量な予測器を合わせ、再構成の悪いトークンだけ残差を保存する。推論メモリ機構そのもの。",
   "semantic_scholar_id": "c794aa2fa894eba3d9a9ebb8dee6c1dd8886e3d7",
   "source_url": "https://arxiv.org/abs/2611.07025",
-  "status": "ready",
+  "status": "superseded",
   "title": "LowRAM: Low-Rank Keys and Amortised Values for Composable KV Cache Compression at Test-Time",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T23:04:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compre.md",
+  "represented_canonical_id": "arXiv:2611.07025",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

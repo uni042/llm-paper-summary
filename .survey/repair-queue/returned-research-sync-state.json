@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "4de890f4eeb11e6a1dfcc1193286ad758f5c35c1",
+  "base_commit": "3e3d6b94ec773e069ddcb3b958b9ddd9f06d9a66",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -863,6 +863,11 @@
     "2026-2611.04253-umload-fast-on-demand-model-loading-on-unified-memory-architecture.json",
     "2026-2611.04313-coarse-semantic-blocks-for-efficient-training-free-sparse-attention.json",
     "2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-boundaries-in-context-parallelism.json",
+    "2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-the-drafter.json",
+    "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json",
+    "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json",
+    "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json",
+    "2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -46195,6 +46200,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2611.05611": {
+      "order": [
+        "2026-11-20T22:58:28+00:00",
+        "2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-the-drafter.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.06425": {
+      "order": [
+        "2026-11-20T22:59:36+00:00",
+        "2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07025": {
+      "order": [
+        "2026-11-20T23:00:43+00:00",
+        "2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compression-at-test-time.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07232": {
+      "order": [
+        "2026-11-20T23:01:50+00:00",
+        "2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarithmic-cost.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2611.07263": {
+      "order": [
+        "2026-11-20T23:02:56+00:00",
+        "2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57814,6 +57864,21 @@
     "arxiv:2611.04401": [
       "papers/inference/09-kernel-runtime-compilation/2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-bounda.md",
       "papers/inference/09-kernel-runtime-compilation/2026-2611.04401-liquidcp-decoupling-attention-tasks-from-communication-and-kernel-bounda.md"
+    ],
+    "arxiv:2611.05611": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.05611-hybrid-spark-adaptive-speculative-decoding-that-lets-the-content-choose-.md"
+    ],
+    "arxiv:2611.06425": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.06425-d3d-decoupled-diffusion-drafting-for-asynchronous-speculative-decoding.md"
+    ],
+    "arxiv:2611.07025": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2611.07025-lowram-low-rank-keys-and-amortised-values-for-composable-kv-cache-compre.md"
+    ],
+    "arxiv:2611.07232": [
+      "papers/inference/13-sparse-attention/2026-2611.07232-recursive-sparse-attention-million-token-length-extrapolation-at-logarit.md"
+    ],
+    "arxiv:2611.07263": [
+      "papers/inference/05-speculative-decoding-moe/2026-2611.07263-hyflash-a-prefix-memory-prior-for-on-device-speculative-decoding.md"
     ]
   }
 }
