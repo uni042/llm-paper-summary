@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨はPyTorchコンパイル経路に融合・タイル化を組み込み、FlexAttentionの静的テンプレートでは扱いにくいデータ依存注意もFlashAttention型カーネルへ変換するFlashlightを提案。LLM注意計算のGPUカーネル最適化に直接該当。",
   "semantic_scholar_id": "25bf9a4728ecd89b2b80f17583afb038d56b1934",
   "source_url": "https://arxiv.org/abs/2511.02043",
-  "status": "ready",
+  "status": "superseded",
   "title": "Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:21:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md",
+  "represented_canonical_id": "arXiv:2511.02043",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

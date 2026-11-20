@@ -35,10 +35,15 @@
   "selection_reason": "GPUアーキテクチャのNUMA効果を利用した注意の最適化。分離型GPUでメモリ遅延と帯域が計算領域ごとに大きく異なる問題に対し、注意ヘッドをNUMAドメインに合わせる空間配慮型スケジューリング。推論カーネルそのもの。",
   "semantic_scholar_id": "16040ce17a8a36d68f5f7fa22862aa3868997284",
   "source_url": "https://arxiv.org/abs/2511.02132",
-  "status": "ready",
+  "status": "superseded",
   "title": "Optimizing Attention on GPUs by Exploiting GPU Architectural NUMA Effects",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:21:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effect.md",
+  "represented_canonical_id": "arXiv:2511.02132",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

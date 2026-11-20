@@ -35,10 +35,15 @@
   "selection_reason": "SLO配慮型のLLM推論とPEFT微調整の共配置Harli。デコードインスタンスのGPU利用率が低い問題に対し、パラメータ効率微調整のタスクをデコードと共配置して利用率を上げる提供システム。推論基盤機構そのもの。",
   "semantic_scholar_id": "39105bbb12ad60e82993409b201ce0dd37e404a7",
   "source_url": "https://arxiv.org/abs/2511.11729",
-  "status": "ready",
+  "status": "superseded",
   "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-11-20T08:21:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-o.md",
+  "represented_canonical_id": "arXiv:2511.11729",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

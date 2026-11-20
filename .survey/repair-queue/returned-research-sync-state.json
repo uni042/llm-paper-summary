@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a43eda32095b78589fe39aa451e53823649adfe4",
+  "base_commit": "a4cdfc9e060e7012246f2336d4acc9173d95875d",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -159,8 +159,13 @@
     "2025-2510.18269-streamingtom-streaming-token-compression-for-efficient-video-understanding.json",
     "2025-2510.18525-from-quarter-to-all-accelerating-speculative-llm-decoding-via-floating-point-exponent-remapping-and-parameter-sharing.json",
     "2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.json",
+    "2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-language-models.json",
     "2025-2510.26446-1-1-2-a-synergistic-sparse-and-low-rank-compression-method-for-large-language-models.json",
+    "2025-2511.00315-language-modeling-with-factorization-memory.json",
+    "2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.json",
+    "2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effects.json",
     "2025-2511.06190-confidence-guided-stepwise-model-routing-for-cost-efficient-reasoning.json",
+    "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json",
     "2025-2511.18692-vlm-in-a-flash-io-efficient-sparsification-of-vision-language-model-via-neuron-chunking.json",
     "2025-2512.09010-towards-lossless-ultimate-vision-token-compression-for-vlms.json",
     "2025-2512.11221-adaptive-soft-rolling-kv-freeze-with-entropy-guided-recovery-sublinear-memory-growth-for-efficient-llm-inference.json",
@@ -43595,6 +43600,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2510.23652": {
+      "order": [
+        "2026-11-20T08:16:32+00:00",
+        "2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.00315": {
+      "order": [
+        "2026-11-20T08:17:29+00:00",
+        "2025-2511.00315-language-modeling-with-factorization-memory.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.02043": {
+      "order": [
+        "2026-11-20T08:18:25+00:00",
+        "2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.02132": {
+      "order": [
+        "2026-11-20T08:19:22+00:00",
+        "2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effects.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2511.11729": {
+      "order": [
+        "2026-11-20T08:20:19+00:00",
+        "2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-on-model-as-a-service-platforms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54174,6 +54224,21 @@
     ],
     "arxiv:2510.19498": [
       "papers/inference/99-other-inference-systems/2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network.md"
+    ],
+    "arxiv:2510.23652": [
+      "papers/inference/99-other-inference-systems/2025-2510.23652-the-structural-scalpel-automated-contiguous-layer-pruning-for-large-lang.md"
+    ],
+    "arxiv:2511.00315": [
+      "papers/inference/99-other-inference-systems/2025-2511.00315-language-modeling-with-factorization-memory.md"
+    ],
+    "arxiv:2511.02043": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2511.02043-flashlight-pytorch-compiler-extensions-to-accelerate-attention-variants.md"
+    ],
+    "arxiv:2511.02132": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2511.02132-optimizing-attention-on-gpus-by-exploiting-gpu-architectural-numa-effect.md"
+    ],
+    "arxiv:2511.11729": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.11729-harli-slo-aware-co-location-of-llm-inference-and-peft-based-finetuning-o.md"
     ]
   }
 }
