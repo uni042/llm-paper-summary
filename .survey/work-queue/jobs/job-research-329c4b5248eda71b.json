@@ -35,10 +35,15 @@
   "selection_reason": "DeferKVはprefill直後にKVを不可逆破棄する既存one-shot方式を見直し、実際の最初のdecode queryの注意分布を得てから重要度を推定・evictionする。prompt側とdecode側の観測を時系列で組み合わせ、学習・draft・将来query予測を必要としない。LongBench/RULER/Needleで圧縮下の性能改善と低遅延を報告し、KV eviction timingの直接改善としてaccept。",
   "semantic_scholar_id": "4e393d6a08c4d141a84537fb34cd602b65c7d847",
   "source_url": "https://arxiv.org/abs/2610.06286",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeferKV: Rethinking Eviction Timing for One-Shot KV Cache Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:44:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.06286-deferkv-rethinking-eviction-timing-for-one-shot-kv-cache-compression.md",
+  "represented_canonical_id": "arXiv:2610.06286",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "c457992c2290e6bbbc23b4da507e28ee8a039ccc",
+  "base_commit": "ce5dc43ee71ae3382cd84a7816b897dd39502fb7",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -383,8 +383,13 @@
     "2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-opportunistic-fine-tuning.json",
     "2026-2610.06011-d-loop-looped-diffusion-drafting-for-speculative-decoding.json",
     "2026-2610.06026-differentiable-bit-widths-co-optimizing-pruning-and-quantization-via-svd-for-ultra-efficient-llm-compression.json",
+    "2026-2610.06286-deferkv-rethinking-eviction-timing-for-one-shot-kv-cache-compression.json",
     "2026-2610.06479-behavior-preserving-kv-cache-compression.json",
+    "2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-protocol-for-agentic-llm-serving.json",
+    "2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.json",
     "2026-2610.07086-schemafill-efficient-llm-tool-calling-via-slot-parallel-speculative-decoding.json",
+    "2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.json",
+    "2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.json",
     "2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.json",
     "2026-2610.07782-persistent-memory-in-multi-agent-llm-inference-what-it-costs-what-it-buys-and-when-you-can-tell.json",
     "2026-2610.07940-hybrid-latent-attention-for-looped-language-models.json",
@@ -42136,6 +42141,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.06286": {
+      "order": [
+        "2026-11-20T03:37:31+00:00",
+        "2026-2610.06286-deferkv-rethinking-eviction-timing-for-one-shot-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.06597": {
+      "order": [
+        "2026-11-20T03:38:43+00:00",
+        "2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-protocol-for-agentic-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.06686": {
+      "order": [
+        "2026-11-20T03:39:56+00:00",
+        "2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07121": {
+      "order": [
+        "2026-11-20T03:41:09+00:00",
+        "2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.07219": {
+      "order": [
+        "2026-11-20T03:42:21+00:00",
+        "2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52177,6 +52227,21 @@
     "arxiv:2610.06026": [
       "papers/inference/99-other-inference-systems/2026-2610.06026-differentiable-bit-widths-co-optimizing-pruning-and-quantization-via-svd.md",
       "papers/inference/99-other-inference-systems/2026-2610.06026-differentiable-bit-widths-co-optimizing-pruning-and-quantization-via-svd.md"
+    ],
+    "arxiv:2610.06286": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.06286-deferkv-rethinking-eviction-timing-for-one-shot-kv-cache-compression.md"
+    ],
+    "arxiv:2610.06597": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-proto.md"
+    ],
+    "arxiv:2610.06686": [
+      "papers/inference/13-sparse-attention/2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.md"
+    ],
+    "arxiv:2610.07121": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.md"
+    ],
+    "arxiv:2610.07219": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.md"
     ]
   }
 }

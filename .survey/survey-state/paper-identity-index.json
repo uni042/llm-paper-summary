@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "active_count": 4250,
+  "active_count": 4255,
   "papers": {
     "arXiv:2101.06840": {
       "path": "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md",
@@ -5284,6 +5284,13 @@
       ],
       "source_hash": "166fbee6b24507ec78799f5a1e8fd37f31e9d2fec516ca4679673baff21d14a3"
     },
+    "arXiv:2610.07219": {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.md",
+      "identifiers": [
+        "arXiv:2610.07219"
+      ],
+      "source_hash": "2762041e8f321c5eba5bf6ed9ce8294ece052e6c3e3ce06b7ff2cf7169e5e6ff"
+    },
     "arXiv:2610.07659": {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2610.07659-dloop-looped-speculative-decoding.md",
       "identifiers": [
@@ -8978,12 +8985,33 @@
       ],
       "source_hash": "ede707f4007c59e27e3a043c174556b1c18ca106a22417f9829e380ce8474c24"
     },
+    "arXiv:2610.06286": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.06286-deferkv-rethinking-eviction-timing-for-one-shot-kv-cache-compression.md",
+      "identifiers": [
+        "arXiv:2610.06286"
+      ],
+      "source_hash": "569103f8f3e74c02846cf3c8927c18e01e83dd267c9d4555fd91ff0e40c5eb1f"
+    },
     "arXiv:2610.06479": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.06479-behavior-preserving-kv-cache-compression.md",
       "identifiers": [
         "arXiv:2610.06479"
       ],
       "source_hash": "b7f1d47b2e9f68c77afe29b5bd3515bb3e27ae2ef2c8692ad18f4be3a1e5072d"
+    },
+    "arXiv:2610.06597": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.06597-can-agent-harnesses-and-inference-engines-hear-each-other-the-hear-proto.md",
+      "identifiers": [
+        "arXiv:2610.06597"
+      ],
+      "source_hash": "60be3bdbd2f50f7626dd568d7f800382bf0caffe67caa393cd377bd97d0b6368"
+    },
+    "arXiv:2610.07121": {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.md",
+      "identifiers": [
+        "arXiv:2610.07121"
+      ],
+      "source_hash": "dbcadd2847c146dd0df2ef425c3d3f05c84b071cc8a6c7fe827435e8ccddf885"
     },
     "arXiv:2610.07643": {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md",
@@ -18478,6 +18506,13 @@
         "arXiv:2610.01230"
       ],
       "source_hash": "ecda1ccd9a086b72613a0075c2e1a57b6da7a8fad166e0a59a21defbc7056098"
+    },
+    "arXiv:2610.06686": {
+      "path": "papers/inference/13-sparse-attention/2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.md",
+      "identifiers": [
+        "arXiv:2610.06686"
+      ],
+      "source_hash": "02c33923b579c00eeded38d5b5a5f5f2fe4ee01e22cf09a47da621515d987469"
     },
     "arXiv:2610.11201": {
       "path": "papers/inference/13-sparse-attention/2026-2610.11201-pageweaver-kv-guided-query-unions-for-sparse-attention.md",
@@ -31710,6 +31745,7 @@
     "arXiv:2610.05106": "arXiv:2610.05106",
     "arXiv:2610.06011": "arXiv:2610.06011",
     "arXiv:2610.07086": "arXiv:2610.07086",
+    "arXiv:2610.07219": "arXiv:2610.07219",
     "arXiv:2610.07659": "arXiv:2610.07659",
     "arXiv:2610.10411": "arXiv:2610.10411",
     "arXiv:2610.12570": "arXiv:2610.12570",
@@ -32338,7 +32374,10 @@
     "arXiv:2610.00412": "arXiv:2610.00412",
     "arXiv:2610.02953": "arXiv:2610.02953",
     "arXiv:2610.03027": "arXiv:2610.03027",
+    "arXiv:2610.06286": "arXiv:2610.06286",
     "arXiv:2610.06479": "arXiv:2610.06479",
+    "arXiv:2610.06597": "arXiv:2610.06597",
+    "arXiv:2610.07121": "arXiv:2610.07121",
     "arXiv:2610.07643": "arXiv:2610.07643",
     "arXiv:2610.07782": "arXiv:2610.07782",
     "arXiv:2610.07940": "arXiv:2610.07940",
@@ -34045,6 +34084,7 @@
     "arXiv:2609.39068": "arXiv:2609.39068",
     "arXiv:2610.00418": "arXiv:2610.00418",
     "arXiv:2610.01230": "arXiv:2610.01230",
+    "arXiv:2610.06686": "arXiv:2610.06686",
     "arXiv:2610.11201": "arXiv:2610.11201",
     "arXiv:2610.13990": "arXiv:2610.13990",
     "DOI:10.1145/3856312": "arXiv:2610.14688",

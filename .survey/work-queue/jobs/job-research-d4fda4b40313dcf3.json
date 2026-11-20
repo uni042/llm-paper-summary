@@ -35,10 +35,15 @@
   "selection_reason": "総975B/活性41BのMoEモデルを64GB共有メモリとIntel Arc内蔵GPUを持つ11台のAI PCへ分散常駐させる実装。OpenVINO融合primitive向け圧縮graph、層ごとのexpert配置、FP16演算とFP32復元、streaming pipelineを構築する。著者要旨は88同時streamでaggregate decode60.29 token/s、全phase込み46.87 token/s、15streamでmedian TTFT6.05秒と報告。データセンター以外のMoE推論実装と制約を示すためaccept。",
   "semantic_scholar_id": "71c282c2a53ee8c6577c266b493bbaf1d5b1fde7",
   "source_url": "https://arxiv.org/abs/2610.07219",
-  "status": "ready",
+  "status": "superseded",
   "title": "Cascadia: Resident 975B MoE Inference on Eleven AI PCs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:44:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.md",
+  "represented_canonical_id": "arXiv:2610.07219",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "拡散LLMのdenoising stepとmask状態に応じたactivation分布変化へ対応するため、構造化K-RPBH回転とrescaleで重み・activationを校正データなしで量子化する。block diffusionでは確定時KVのみ量子化して処理中blockを保護。一次要旨はLLaDA/Dream/Fast-dLLM v2/Nemotron-Labs-Diffusionで4bit精度維持、NVFP4でピークメモリ最大2.61倍削減、end-to-end推論最大2.24倍高速化を報告。拡散LLMの推論圧縮としてaccept。",
   "semantic_scholar_id": "d3a1529b8915cf2d355e8468b21a95dec1fd0bdf",
   "source_url": "https://arxiv.org/abs/2610.07121",
-  "status": "ready",
+  "status": "superseded",
   "title": "SoloQ: Calibration-Free Quantization for Diffusion Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:44:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07121-soloq-calibration-free-quantization-for-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2610.07121",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（180本）
+## 自動生成の論文一覧（181本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -217,6 +217,10 @@
   疎注意（sparse 注意機構）は重要なブロックだけを計算して演算数を減らす一方、「重要なブロックを決めるための計算」が重くなると、疎化で節約した時間が消えてしまう。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-11 · [OVAL: Output-Aware Local Page Bases for KV Cache Compression](2026-2610.06686-oval-output-aware-local-page-bases-for-kv-cache-compression.md)**  
+  実装：[✓](https://github.com/Ashkan13776/oval-kv) ・ リポジトリ内被引用：0  
+  ページ要約を保存形式そのものにするKVキャッシュ圧縮。キーとバリューの広がりから作る出力感応型の低ランク基底だけでページを保持し、基底がスコア付けと再構築を兼ねることで、正確ページを捨てても検索型注意の精度をほぼ保つ。
 
 - **2026-10 · [Prism Attention: Proposal-Refined Index Sharing Mechanism for Efficient LLMs Inference](2026-2610.22985-prism-attention-proposal-refined-index-sharing-mechanism-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
