@@ -118,16 +118,16 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
+
+- **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
+  実装：✓ ・ リポジトリ内被引用：9  
+  PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
 
 - **2025-06 · [AiF: Accelerating On-Device LLM Inference Using In-Flash Processing](2026-21d5070d498a-aif-accelerating-on-device-llm-inference-using-in-flash-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。
-
-- **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
 
 - **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -160,15 +160,15 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：37  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：36  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
 
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
