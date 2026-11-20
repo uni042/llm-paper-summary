@@ -100,6 +100,18 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-11-20 — llama.cpp b12554〜b12590（開発ビルド）
+
+b12553の続き。対象期間の開発ビルドはb12554（2026-11-19 22:19 UTC）からb12590（2026-11-20 19:02 UTC）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。
+
+- **b12588: Gemma 4の複数シーケンス問い合わせでプロンプト処理を最適化**（PR #32342）。マルチシーケンス時のプリフィル経路の改善で、対象はGemma 4系の利用形態に限られる。一般の生成速度倍率は未提示。
+- **b12561: Vulkanにチャンク化したGATED_DELTA_NET実装を追加**（PR #30207）。共有メモリのバンク競合対策を含むVulkan向けカーネルで、Gated DeltaNet系のハイブリッドモデルの実行経路を広げる。CUDA経路の変更ではない。
+- **b12568: 新モデルDomyn Edge 4Bに対応**（PR #32559）。変換時のトークナイザハッシュ生成を含むモデル対応の追加。
+- **b12590: mtmdでdrama3の音声クローニングに対応**。Fish S2のコーデックエンコーダをdrama3でも使う形で、音声系マルチモーダル経路の拡張であり、テキスト生成速度の改善ではない。
+- その他はbackend別の最適化・正確性修正が中心である: GGMLのROPE／SET_ROWSへのBF16対応（b12554、CPU／CUDA）、OpenCLの分解型Flash Attentionでのdp4a（int8）KQ行列積対応（b12555）とGQAヘッド折り畳み（b12559）、CUDAのOrin向け単一列MMVQ最適化（b12564）とMUL_MAT_IDの精度保持（b12563）、VulkanのRMS_NORM_MUL_ROPEループ制御最適化（b12562）とCOL2IM_1D対応（b12589）、MoEキャッシュ向けグラフノード予約（b12569）等。一般的な生成速度倍率は公表されていない。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b12561 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12568 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12588 ; https://github.com/ggml-org/llama.cpp/releases/tag/b12590
+
 ## 2026-11-19〜11-20 — llama.cpp b12528〜b12553（開発ビルド）
 
 b12483の続き。対象期間の開発ビルドはb12528（2026-11-19）からb12553（2026-11-20）までで、いずれもpre-releaseの開発ビルドであり正式版ではない。重要変更だけを拾う。

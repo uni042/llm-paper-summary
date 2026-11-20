@@ -40,6 +40,16 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 主要更新
 
+### 2026-11-20 — TensorRT-LLM v1.3.0（正式版）
+
+- v1.3系の正式版（1.4系RCとは別系統）。NVIDIA Rubin（SM107）のプレビュー対応を加え、Vera Rubin上で検証。DeepSeek-V4とKimi K3のRubin対応もプレビューとして含む。
+- 新モデル対応: DeepSeek-V4（Blackwell／Rubin）、Kimi K3（Blackwell／Rubin、マルチモーダル・多ノードサービングを含む）、Qwen3.5（Hopper／Blackwell／Rubin、MTPとBlackwellでのNVFP4を含む）とQwen3.6／Qwen3.8-Flash-Next（Blackwell）、MiniMax-M3、GLM-5／GLM-5.2、Kimi-K2.5、Step-3.7-Flash、Nemotron Nano Omni、Gemma 4（マルチモーダルを含む）、Laguna。Mambaハイブリッドモデル（Qwen3.5、Nemotron Super V3等）へプリフィックスキャッシュも追加。
+- KVキャッシュ: KV Cache Manager V2をモデルごとに選択し大半の系列で既定化。KVキャッシュ圧縮（TriAttention、NVFP4コールドページ圧縮）、NVFP4 KVキャッシュとディスクキャッシュ、会話単位のブロック再利用、FlexKV／LMCacheコネクタを追加。
+- 投機的デコード: DSpark、DFlash、Suffix Automaton、PARDのドラフタを追加し、EAGLE3の動的ツリー、受理率に基づく動的投機の自動無効化、LoRA併用投機にも対応。
+- 並列・MoEと量子化: DWDP（分散重みデータ並列）、KVキャッシュを意識するアテンションDPルータ、最大2048エキスパート対応と新規MoEバックエンド群、MXFP8（W8A8）の線形層・MoE対応、Hopper／Ada向けW4A16 NVFP4重みのみ量子化（Marlin経由）を追加。分離サービングは生成優先スケジューリングと会話アフィニティルーティング等を拡張。
+- サービングAPI: Anthropic Messages API（`/v1/messages`）、gRPCサーバ、リクエスト単位の優先度指定等を追加。release notes内に統一した公式ベンチマーク倍率は示されていないため、速度倍率は記録しない。
+- [公式release](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0)
+
 ### 2026-11-18 — TensorRT-LLM v1.4.0rc4（公開候補版）
 
 - 新モデル: Apertus / Apertus 1.5、GLM-5.2 NVFP4 Modeling V2（Rubin向けhigh-throughput / low-latency target）、GLM-5.3-Flash NVFP4 Modeling V2（SM100 / SM120、sparse attention）、MiniMax-M3 NVFP4 low-latency decode（Rubin）、Qwen3.8-Flash-Next NVFP4 Modeling V2（GB300並列構成）、native Qwen3 reranking、Muse Spark Open serving、FastH3等。

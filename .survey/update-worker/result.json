@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "muse-fwllm-20261120",
+  "attempt_id": "muse-fwllm-20261121",
   "kind": "framework_llm_update",
   "updated_paths": [
+    "framework-updates/inference-engines/tensorrt-llm/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
-    "framework-updates/training-frameworks/megatron-core/README.md",
     "framework-updates/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
+    "framework-updates/inference-engines/tensorrt-llm/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md",
-    "framework-updates/training-frameworks/megatron-core/README.md",
     "framework-updates/README.md"
   ],
-  "summary": "2026-11-19〜11-20: llama.cpp b12528-b12553 dev builds (VoxCPM2 TTS support b12531, Vulkan stream-k MUL_MAT b12535, Metal CONV_2D tensor API b12543), Megatron-Core v0.20.1 (2026-11-19, Mixture-of-Kittens MoE backend backport etc.); LLM series: no important updates in window. Direct-apply per skill §9 (Phase 1)."
+  "summary": "2026-11-20〜11-21: TensorRT-LLM v1.3.0 stable (2026-11-20, Rubin preview, DeepSeek-V4/Kimi K3/Qwen3.5 support, KV Cache Manager V2 default, DSpark/DFlash drafters, MXFP8), llama.cpp b12554-b12590 dev builds (Gemma 4 multi-seq prompt processing b12588, Vulkan chunked GATED_DELTA_NET b12561, Domyn Edge 4B b12568, drama3 voice cloning b12590); LLM series: no primary-confirmed important updates in window. Direct-apply per skill §9 (Phase 1)."
 }
