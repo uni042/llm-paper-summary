@@ -35,10 +35,15 @@
   "selection_reason": "分散LLM推論での要求移行・中断復旧に際し、保持した前後層の正確なKVをアンカーにridge回帰で欠損層の注意入力を予測し、元モデルのKV射影行列を折り込んで履歴KVを再構成する。実際の再構成によるNLL増分を品質リスクとして層群を選別。3モデルの試験で履歴KVを18.2〜33.3%省略しperplexity変化0.5%未満、512トークンのローカル復旧で全token replay比1.51〜3.31倍高速と報告。ただし実ネットワーク越し移行は未評価。KV転送・復旧の直接的な推論システム技術としてaccept。",
   "semantic_scholar_id": "c865c2dedc1fa019048bc08088e11165c47df33c",
   "source_url": "https://arxiv.org/abs/2610.29544",
-  "status": "ready",
+  "status": "superseded",
   "title": "RISK-KV: Quality-Aware Selective KV Cache Reconstruction for Distributed LLM Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:19:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.29544-risk-kv-quality-aware-selective-kv-cache-reconstruction-for-distributed-.md",
+  "represented_canonical_id": "arXiv:2610.29544",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

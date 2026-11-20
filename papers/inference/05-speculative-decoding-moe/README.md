@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（395本）
+## 自動生成の論文一覧（396本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -507,6 +507,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models](2026-2610.20503-ready-recurrent-states-as-dynamic-context-for-speculative-drafting-in-hy.md)**  
   実装：[✓](https://github.com/StartLuxLabs/ReaDy) ・ リポジトリ内被引用：0  
   下書き位置ごとの学習クエリで対象の再帰状態を読み、隠れ特徴に無い文脈を補う投機的下書きで、土台方式比でスループット7.97パーセント増と自己回帰比3.16倍を得た。
+
+- **2026-10 · [RCSD: Reinforcement and Continual Learning for Domain-Specific Speculative Decoding](2026-2610.29527-rcsd-reinforcement-and-continual-learning-for-domain-specific-speculativ.md)**  
+  実装：[✓](https://github.com/ooolmk/RCSD-reinforcement-continue-learning-for-speculative-sampling) ・ リポジトリ内被引用：0  
+  ドラフト学習の目的を分布模倣から受理長最大化へ変える研究。検証で生じる受理列と棄却列を選好対にし、マスク付きの選好最適化と受理率報酬のグループ最適化でドラフトを鍛え、蒸留の比較対象より受理長を約35パーセント伸ばす。
 
 - **2026-10 · [PV-Decoding: Progressive Verification Decoding with Decode Gating for Diffusion Language Models](2026-2610.24722-pv-decoding-progressive-verification-decoding-with-decode-gating-for-dif.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1333,11 +1337,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-12〜2024-11）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：484  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：485  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：404  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：405  
   EAGLEは、対象LLMの上位層特徴量と直前に標本化したトークンを小型デコーダへ与えて未来特徴量を予測し、元の言語モデル出力ヘッドと木構造検証で重み読出し回数を減らす。
 
 - **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
@@ -1597,7 +1601,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 5年前（2021-12〜2022-11）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：713  
+  実装：✓ ・ リポジトリ内被引用：714  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2022-03 · [Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation](2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md)**  

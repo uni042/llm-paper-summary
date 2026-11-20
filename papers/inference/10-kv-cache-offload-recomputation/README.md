@@ -46,6 +46,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：10  
   コンテキスト別の圧縮感度とアクセス頻度を用い、KV圧縮方式・圧縮率・CPU/SSD等への退避を統一効用で共同最適化し、同等品質でTTFTを大幅短縮する階層KV管理方式。
 
+- **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：6  
+  疎注意が実際に読むtop-k KVだけを固定サイズHBMキャッシュへ置き、全履歴はホストDRAMに保持してLRU・融合CUDA取得・共有選択の正確な先読みで補うことで、出力を変えず長文デコードのHBM容量壁を外す方式。
+
 - **2026-04 · [TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing](2026-2604.03143-tokendance-collective-kv-sharing-multi-agent.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   全収集型マルチエージェントの共有文脈をラウンド単位で一括再利用し、兄弟KVキャッシュを1本のマスターと疎な差分だけで保存する。A100実機で同時エージェント数をvLLM比最大2.7倍、KV保存量を最大17.5倍圧縮する。
@@ -65,10 +69,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-12 · [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   CXL-SpecKVは低温KVをCXLメモリへ置き、FPGAで圧縮・展開とDMAを処理し、将来トークンを予測し、予測トークンに対応すると論文が説明する将来位置のKVを先読みすることで容量と転送待ちを減らす方式。論文は投機先読みを報告するが、公開実装ではLSTM重み読込・実DMA・予測トークン別address生成を確認できず性能寄与未検証。
-
-- **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：5  
-  疎注意が実際に読むtop-k KVだけを固定サイズHBMキャッシュへ置き、全履歴はホストDRAMに保持してLRU・融合CUDA取得・共有選択の正確な先読みで補うことで、出力を変えず長文デコードのHBM容量壁を外す方式。
 
 - **2026-05 · [VeriCache: Turning Lossy KV Cache into Lossless LLM Inference](2026-2605.17613-vericache-lossless-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -189,6 +189,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-08 · [Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches](2026-2608.01657-prefixshield-admission-responsibility.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   共有KVキャッシュで新規ブロックを作った利用者に持続的な回収責任を持たせ、負債中の再利用昇格を抑えつつ、その利用者の低価値ブロックから追い出すことで、固定分割なしに他利用者の接頭辞再利用を守る方式。
+
+- **2026-08 · [OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching](2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  OasisKVは投機トークンと圧縮キー要約で次に必要なKVブロックを予測し、GPUへ疎な作業集合だけを非同期先読みして、CPU／遠隔メモリ転送とHBM容量を抑える方式。
 
 - **2026-08 · [Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention](2026-2608.03555-karat-pnm-retrieval-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -312,10 +316,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：0  
   単純に全値を2ビットまで量子化すると、外れ値が量子化範囲を占有し、小さな値が同じ離散レベルへ潰れて品質が急激に悪化する場合がある。Llama-3.1-8B-InstructのLongBench英語8課題平均はFP16で53.24、SPECTRAの7.66倍KV圧縮で54.00、8.84倍で51.89、11.12倍で48.81である。
 
-- **2026-08 · [OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching](2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  OasisKVは投機トークンと圧縮キー要約で次に必要なKVブロックを予測し、GPUへ疎な作業集合だけを非同期先読みして、CPU／遠隔メモリ転送とHBM容量を抑える方式。
-
 - **2026-08 · [Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention](2026-2608.23834-minima-kv-mixed-format-paged-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Minima-KVは最近・保護ページをFP8、古い非保護ページを3ビット級へ変換し、形式別注意カーネルを共通softmaxで統合して、KV削除と高精度影コピーを避ける方式。
@@ -347,7 +347,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：157  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：158  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  

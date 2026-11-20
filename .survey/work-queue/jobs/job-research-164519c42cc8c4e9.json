@@ -35,10 +35,15 @@
   "selection_reason": "長ベクトルRISC-V CPUでは従来CPU FlashAttentionのhead次元方向vector化が64要素しか使わず、softmax reductionと係数spillで性能を失う。score tileとrunning outputを転置してquery方向にvector化し、exp多項式係数をscalar registerへ移す。著者要旨は2KB vector registerの実シリコンでkernel cycle1.84～2.08倍短縮、peak利用率16.2→29.7%と報告。GPU以外のattention推論kernel最適化としてaccept。",
   "semantic_scholar_id": "f9b91b9999ece0685cb630bbf213d32ddd8eeed7",
   "source_url": "https://arxiv.org/abs/2610.29489",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:19:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.29489-reorienting-the-vector-axis-restructuring-flashattention-for-long-vector.md",
+  "represented_canonical_id": "arXiv:2610.29489",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

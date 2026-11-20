@@ -35,10 +35,15 @@
   "selection_reason": "GPU/CPUに分散するKVを安定した論理アドレスで参照し、物理配置からsparse attentionのKV選択を分離する。分散時はGPU側の選択済みKVを保持し、不足分のみ転送する。CPU格納を使う構成では並列化したPB-LRUがGPU共有プールを管理する。著者要旨はH200とB300のDP/TP構成で最大1.16～2.51倍のdecode throughputを報告しており、KV管理・疎注意・サービングの直接的なシステム貢献としてaccept。",
   "semantic_scholar_id": "88e2ea6396ce764dcf93a2dba45b61cd83085ae2",
   "source_url": "https://arxiv.org/abs/2610.29820",
-  "status": "ready",
+  "status": "superseded",
   "title": "UlaCache: Unified Logical Addressing for Sparse LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:19:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2610.29820-ulacache-unified-logical-addressing-for-sparse-llm-serving.md",
+  "represented_canonical_id": "arXiv:2610.29820",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

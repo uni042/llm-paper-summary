@@ -35,10 +35,15 @@
   "selection_reason": "投機復号のdraft学習をtargetの全確率分布への蒸留から、実際の受理長を増やす目的へ転換する。投機推論中に観測される受理/棄却系列から暗黙の選好対を作り、targetと一致したtokenを誤って罰しないmasked lossで継続学習する。arXiv一次登録要旨はHASS比で平均受理長35%改善、実用ワークロードでend-to-end推論1.35倍高速化を報告。学習手法だが最終目的と実測は投機復号の推論高速化なのでaccept。",
   "semantic_scholar_id": "f6fa585754ff9aaf0022a353361b02e80340f727",
   "source_url": "https://arxiv.org/abs/2610.29527",
-  "status": "ready",
+  "status": "superseded",
   "title": "RCSD: Reinforcement and Continual Learning for Domain-Specific Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:19:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.29527-rcsd-reinforcement-and-continual-learning-for-domain-specific-speculativ.md",
+  "represented_canonical_id": "arXiv:2610.29527",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

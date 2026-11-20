@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（271本）
+## 自動生成の論文一覧（272本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -56,13 +56,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/sands-lab/FOCUS) ・ リポジトリ内被引用：4  
   拡散型言語モデル（diffusion language モデル、DLLM）は、マスクされた複数のトークンを一つのブロックとして反復的に復元する。自己回帰型言語モデルと違い、各反復でブロック内の複数位置を同時に処理できるが、実際に確定する位置が少ないと大部分の計算は次の反復でやり直される。直近の確定数と差分の分布から保持予算を決め、上位候補を残す。
 
+- **2026-05 · [KVBuffer: IO-aware Serving for Linear Attention](2026-2605.19049-kvbuffer-io-aware-serving-for-linear-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  KVBufferは、線形注意（linear 注意機構）を使う大規模言語モデル（LLM）の推論サービングにおいて、毎トークン更新される大きな内部状態へのメモリアクセスを減らすための機構である。
+
 - **2026-04 · [Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel](2026-2604.13327-event-tensor-dynamic-megakernel-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   タイル依存関係を記号形状のイベントテンソルとして表し、可変形状とMoEのデータ依存分岐を再コンパイルせず静的・動的メガカーネルへ変換するコンパイラ抽象。
-
-- **2026-05 · [KVBuffer: IO-aware Serving for Linear Attention](2026-2605.19049-kvbuffer-io-aware-serving-for-linear-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  KVBufferは、線形注意（linear 注意機構）を使う大規模言語モデル（LLM）の推論サービングにおいて、毎トークン更新される大きな内部状態へのメモリアクセスを減らすための機構である。
 
 - **2026-03 · [WaterSIC: Information-Theoretically (Near) Optimal Linear Layer Quantization](2026-2603.04956-watersic-information-theoretically-near-optimal-linear-layer-quantizatio.md)**  
   実装：[✓](https://github.com/egorlifar/watersic) ・ リポジトリ内被引用：3  
@@ -71,6 +71,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-02 · [MetaAttention: A Unified and Performant Attention Framework across Hardware Backends](2026-2502.15349-metaattention-a-unified-and-performant-attention-framework-across-hardwa.md)**  
   実装：[✓](https://github.com/SJTU-IPADS/MetaAttention) ・ リポジトリ内被引用：3  
   MetaAttentionは、異なる注意機構をハードウェアごとに手作業で実装する費用を削減しながら、専用実装に近い実行性能を得るためのカーネル生成基盤である。両者は著者・基本設計・最大10.4倍という結果が対応する一方、本稿で詳細な数値・実験条件を確認したのは公開プレプリント版である。
+
+- **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
 
 - **2026-05 · [ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention](2026-2605.23081-thriftattention-selective-mixed-precision-for-long-context-fp4-attention.md)**  
   実装：[✓](https://github.com/joesharratt1229/ThriftAttention) ・ リポジトリ内被引用：2  
@@ -123,10 +127,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md)**  
   実装：[✓](https://github.com/LAMDA-Model-Reuse/SaveRouter) ・ リポジトリ内被引用：1  
   LLMの品質と推論単価はモデルごとに異なるため、容易な問い合わせを小型・安価なモデルへ送り、難しい問い合わせを高性能モデルへ送れば総費用を下げられる。しかし、どの問い合わせにどのモデルが適するかを学習するには、通常は大量の過去問い合わせに複数モデルを実行し、品質の教師信号を取得する必要がある。従来方式で最も早い損益分岐は11,500件である。
-
-- **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
 
 - **2026-07 · [Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives](2026-2607.16100-every-microsecond-matters-achieving-near-speed-of-light-latency-in-gpu-c.md)**  
   実装：[✓](https://github.com/ss16118/low-latency-nccl) ・ リポジトリ内被引用：1  
@@ -209,6 +209,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-10 · [SARATHI: Decoupled Data-Free Probing and Adaptive Reconstruction for Structured LLM Pruning](2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-stru.md)**  
   実装：[✓](https://github.com/snkrbhr/SARATHI) ・ リポジトリ内被引用：0  
   ニューロン選択を校正データなしの非負行列分解の残差探査に分離し、補償を層ごとの局所再構成に限定することで、除去率40パーセントで他法がメモリ不足や崩壊に陥る条件でも完走し、OPT-2.7Bの困惑度を補正なし2082から18.98へ戻した。
+
+- **2026-10 · [Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors](2026-2610.29489-reorienting-the-vector-axis-restructuring-flashattention-for-long-vector.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長ベクトルプロセッサ向けにFlashAttentionのスコアタイルと累積出力を転置してクエリ軸をベクトル長にし、行ごとの縮約を消し、指数関数の多項式係数をスカラーレジスタへ逃がすことで、実チップでカーネルを1.84倍から2.08倍高速化するカーネル再構成の研究。
 
 - **2026-10 · [MOLT: A Fine-Grained GPU Memory Sharing System for LLM Serving with Opportunistic Fine-Tuning](2026-2610.05748-molt-a-fine-grained-gpu-memory-sharing-system-for-llm-serving-with-oppor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1131,6 +1135,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-12〜2018-11）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：66  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：67  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->

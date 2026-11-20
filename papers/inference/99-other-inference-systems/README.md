@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1111本）
+## 自動生成の論文一覧（1112本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -861,6 +861,10 @@
 - **2026-10 · [Rehearse Everything, Remember Nothing: Attic-KV Rehearses What Will Be Read](2026-2610.12133-rehearse-everything-remember-nothing-attic-kv-rehearses-what-will-be-rea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Attic-KV（Attic）は、長い文書を一度だけプリフィルしてKVキャッシュを保存し、将来の多数の質問に使い回す環境で、質問がまだ分からない段階でKVを圧縮する方式である。最終的なKV位置の重要度は再読時の注意機構・出力寄与から決め、保持率3～5%という厳しい条件でも事実を残しやすくする。
+
+- **2026-10 · [PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States](2026-2610.29545-pace-periodic-and-channel-aligned-encoding-of-four-bit-recurrent-states.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  再帰状態の4ビット量子化で、丸めを毎トークンから8トークンに1回へ減らし、スケールグループを大きな成分が集まる列方向へそろえ、誤差を長く保つヘッドだけ8ビットにすることで、8ビット手法に約3分の2のメモリで迫る精度を出す方式。
 
 - **2026-10 · [OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization](2026-2610.08231-osfp4-joint-optimization-of-diagonal-smoothing-and-block-scales-for-nvfp.md)**  
   実装：[✓](https://github.com/neriahbd/OSFP4) ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（198本）
+## 自動生成の論文一覧（199本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -37,7 +37,7 @@
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：57  
+  実装：[✓](https://github.com/zai-org/GLM-5) ・ リポジトリ内被引用：58  
   前世代GLM-4.5の3550億/320億活性と比較すると、総容量を増やしながら毎トークンの計算増加を限定する設計である。論文は長系列の注意計算で約1.5〜2倍の削減効果を述べるが、これは全システムの要求処理率が一律2倍になるという意味ではない。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
@@ -48,13 +48,13 @@
   実装：✓ ・ リポジトリ内被引用：12  
   HISA（階層型索引付き疎注意、Hierarchical Indexed Sparse 注意機構）は、長文脈大規模言語モデルの疎注意（sparse 注意機構）において、注意本体を計算する前に「どの過去トークンを参照するか」を探す索引器が律速になるという問題を扱う。
 
+- **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
+  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：11  
+  Qwen3.8-Flash-Nextは履歴を再帰状態へ要約し、圧縮した疎注意機構で長文脈を検索する。論文は1M文脈で注意機構の計算時間を短縮し、検索品質も比較する。
+
 - **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
   実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：11  
   対象：100万トークン級の長文脈推論・学習における、GQA対応の学習可能なブロック疎注意。一次論文は2026年6月12日改訂の第2版。速度の値は「モデル全体の推論速度」ではなく、論文の注意演算実装をH800で測った値として読む。
-
-- **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
-  実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：10  
-  Qwen3.8-Flash-Nextは履歴を再帰状態へ要約し、圧縮した疎注意機構で長文脈を検索する。論文は1M文脈で注意機構の計算時間を短縮し、検索品質も比較する。
 
 - **2025-12 · [Kascade: A Practical Sparse Attention Method for Long-Context LLM Inference](2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md)**  
   実装：[✓](https://github.com/microsoft/kascade) ・ リポジトリ内被引用：9  
@@ -156,6 +156,10 @@
   実装：[✓](https://github.com/PaddlePaddle/PaddleFleet) ・ リポジトリ内被引用：2  
   提案法は各 S トークン区間からヘッドごとに異なる問い合わせを一つ選び、鍵を区間単位で集約して重要度を計算する。Llama-3.1-8BとQwen2.5-7BのHELMETでは、注意ブロックの約半分を省略しながら全注意の平均性能の99%以上を再現した。
 
+- **2026-09 · [SparseEngine: Sparse-First Inference Engine](2026-2609.39068-sparseengine-sparse-first-inference-engine.md)**  
+  実装：[✓](https://github.com/CURRENTF/SparseEngine) ・ リポジトリ内被引用：1  
+  SparseEngineの貢献は、新しい疎注意スコアそのものではなく、疎方式が持つ異なる物理KV表現と状態更新の規則を共通サービング基盤へ接続する抽象化である。
+
 - **2026-09 · [Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding](2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Elastic Threshold 注意機構（ETA）は、注意ヘッドごとに現在のクエリから動的な閾値を予測する機構をモデルに組み込み、訓練時から疎化しやすい注意分布を学習する。
@@ -222,6 +226,10 @@
   実装：[✓](https://github.com/Ashkan13776/oval-kv) ・ リポジトリ内被引用：0  
   ページ要約を保存形式そのものにするKVキャッシュ圧縮。キーとバリューの広がりから作る出力感応型の低ランク基底だけでページを保持し、基底がスコア付けと再構築を兼ねることで、正確ページを捨てても検索型注意の精度をほぼ保つ。
 
+- **2026-10 · [UlaCache: Unified Logical Addressing for Sparse LLM Serving](2026-2610.29820-ulacache-unified-logical-addressing-for-sparse-llm-serving.md)**  
+  実装：[✓](https://github.com/scitix/UlaCache) ・ リポジトリ内被引用：0  
+  GPUとCPUのメモリを1つの論理アドレス空間にまとめ、複製ではなく異なるKVを置くことで有効容量を増やすKV管理システム。テンソル並列の複製も排し、共有プールの置換を並列化したLRUで処理することで、同一予算でHiSparseの最大11.4倍のKV容量と高いデコードスループットを得る。
+
 - **2026-10 · [Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity](2026-2610.28441-stratified-sparse-attention-reducing-the-sparse-to-dense-gap-at-extreme-.md)**  
   実装：[✓](https://github.com/skylight-org/SSA-Paper-Code) ・ リポジトリ内被引用：0  
   上位トークンの決定的保持と残差のスコア誘導サンプリングを包含確率補正でつなぐ疎注意で、50倍疎性でも密注意との精度差を大きく縮め、文脈1Mで最大2.96倍のデコード高速化を得た。
@@ -277,10 +285,6 @@
 - **2026-09 · [SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures](2026-2609.34612-spimoe-exploiting-hybrid-sparsity-for-reasoning-moe-inference-on-heterog.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意と専門家計算をSRAM型とHBM型の異種メモリ内計算へ分離し、ブロック疎注意によるKV削減と適応型ルーティングによる負荷均衡を組み合わせた、長推論MoE向けのアルゴリズムとハードウェアの協調設計。
-
-- **2026-09 · [SparseEngine: Sparse-First Inference Engine](2026-2609.39068-sparseengine-sparse-first-inference-engine.md)**  
-  実装：[✓](https://github.com/CURRENTF/SparseEngine) ・ リポジトリ内被引用：0  
-  SparseEngineの貢献は、新しい疎注意スコアそのものではなく、疎方式が持つ異なる物理KV表現と状態更新の規則を共通サービング基盤へ接続する抽象化である。
 
 - **2026-09 · [SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking](2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md)**  
   実装：[✓](https://github.com/Tencent-Hunyuan/Simple-Attention-Sparsification) ・ リポジトリ内被引用：0  
@@ -687,7 +691,7 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：330  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：331  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -695,7 +699,7 @@
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：84  
+  実装：✓ ・ リポジトリ内被引用：85  
   RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
