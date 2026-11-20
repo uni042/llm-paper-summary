@@ -35,10 +35,15 @@
   "selection_reason": "GPU Direct Storageのkernel制御経路・batch順序制約・非公開engineを解消するため、NVMe commandをuser-spaceで管理しpayloadをPCIe P2P DMA転送するuGDSを提案。CUDA/HIPでcuFile互換APIとqueue分離を提供する。一次要旨はLMCache統合でmedian TTFT最大62.7%短縮、serving goodput最大2.63倍向上を報告。汎用I/O基盤だがLLM KV SSD offload実測を伴うためaccept。",
   "semantic_scholar_id": "58f3005d2a7d3729411afe3e93ee2437c6aeb59d",
   "source_url": "https://arxiv.org/abs/2610.30868",
-  "status": "ready",
+  "status": "superseded",
   "title": "uGDS: A User-Space Development Kit for High-Performance GPU Direct Storage",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:49:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storag.md",
+  "represented_canonical_id": "arXiv:2610.30868",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

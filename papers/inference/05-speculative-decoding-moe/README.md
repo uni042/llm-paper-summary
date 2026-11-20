@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（397本）
+## 自動生成の論文一覧（398本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -15,7 +15,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [DFlash: Block Diffusion for Flash Speculative Decoding](2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md)**  
-  実装：[✓](https://github.com/z-lab/dflash) ・ リポジトリ内被引用：96  
+  実装：[✓](https://github.com/z-lab/dflash) ・ リポジトリ内被引用：97  
   対象 隠れ featuresで条件付けしたblock-diffusion drafterが候補列を1回で並列生成し、投機ドラフト自身の逐次待ちを除くDFlash。
 
 - **2026-07 · [DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation](2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md)**  
@@ -98,6 +98,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/smart-lty/LogitSpec) ・ リポジトリ内被引用：6  
   投機的デコードは、軽い下書き側が将来トークン候補を提案し、大きなtargetモデルが複数候補を一度の順伝播で検証する。target分布を保つ検証規則を使えば、逐次生成と同じ出力分布を維持したまま1回のtarget 順伝播で複数トークンを確定できる。
 
+- **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
+  実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：6  
+  検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
+
 - **2026-07 · [DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting](2026-2607.07409-dels-spec-decoupled-long-short-contexts-for-parallel-speculative-draftin.md)**  
   実装：[✓](https://github.com/dt-3t/DeLS-Spec) ・ リポジトリ内被引用：5  
   投機的復号（投機的復号）は、軽量なドラフトモデルで複数の候補トークンを先に生成し、目標モデルの一度の前向き計算で並列検証することで自己回帰生成の逐次呼出しを減らす。Qwen3-4Bの温度0、8ベンチマーク平均では、DFlashの自己回帰比復号高速化4.63倍・平均受理長6.04から、DeLS-Specは4.82倍・6.35へ改善した。
@@ -113,10 +117,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-03 · [KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization](2026-4d6bf2312451-knn-ssd-enabling-dynamic-self-speculative-decoding-via-nearest-neighbor-.md)**  
   実装：[✓](https://github.com/mbsong/KNN-SSD) ・ リポジトリ内被引用：5  
   KNN-SSDは、同一LLMの一部層を飛ばす自己投機的復号で、入力ドメインが変わると固定skip-層集合の受理率・速度が悪化する問題を扱う。ドメイン別の最適skip集合をBayesian Optimizationで事前探索し、最後の隠れ状態をK-meansで代表化したアンカーへのKNN類似度から入力ごとに集合を選ぶ。
-
-- **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：5  
-  検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
 
 - **2026-02 · [Speculative Decoding with a Speculative Vocabulary](2026-2602.13836-speculative-decoding-with-a-speculative-vocabulary.md)**  
   実装：[✓](https://github.com/SamsungLabs/SpecVocab) ・ リポジトリ内被引用：5  
@@ -169,6 +169,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [LoopSpec: Pipelined Self-Speculative Decoding for Looped Transformers](2026-2609.17184-loopspec-pipelined-self-speculative-looped-transformers.md)**  
   実装：[✓](https://github.com/kaist-flexml-lab/loopspec) ・ リポジトリ内被引用：3  
   ループ型Transformerの中間再帰状態を投機提案に使い、未来ドラフトと現在検証をパイプライン化して最大6.83倍高速化する。
+
+- **2026-07 · [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](2026-2607.21535-windowed-mtp-removing-the-full-context-draft-kv-tax-at-million-token-con.md)**  
+  実装：[✓](https://github.com/avalliappan-nvidia/windowed-mtp-b200) ・ リポジトリ内被引用：3  
+  投機的復号は、小さなドラフトが先のトークンを提案し、大きなターゲットモデルがまとめて検証することで、生成トークン当たりの遅延を短縮する。
 
 - **2026-07 · [SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences](2026-specextend.md)**  
   実装：[✓](https://github.com/jycha98/SpecExtend) ・ リポジトリ内被引用：3  
@@ -233,10 +237,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-08 · [Bole: Efficient Tree Speculation for Hybrid-Attention Language Models](2026-2608.01651-bole-efficient-tree-speculation-for-hybrid-attention-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   再帰型線形注意の木検証を厳密閉形式で並列化し、因子化状態とhardware-aware予算をSGLangへ統合して最大4.72倍のデコード スループットを実現。
-
-- **2026-07 · [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](2026-2607.21535-windowed-mtp-removing-the-full-context-draft-kv-tax-at-million-token-con.md)**  
-  実装：[✓](https://github.com/avalliappan-nvidia/windowed-mtp-b200) ・ リポジトリ内被引用：2  
-  投機的復号は、小さなドラフトが先のトークンを提案し、大きなターゲットモデルがまとめて検証することで、生成トークン当たりの遅延を短縮する。
 
 - **2026-07 · [Speculative Verification: Exploiting Information Gain for Speculative Decoding](2026-9b451e22fa70-speculative-verification-exploiting-information-gain-for-speculative-dec.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -607,6 +607,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [Contextual Correction of Parallel Drafts for Speculative Decoding](2026-2610.12570-contextual-correction-of-parallel-drafts-for-speculative-decoding.md)**  
   実装：[✓](https://github.com/two-delta/DCOCO/) ・ リポジトリ内被引用：0  
   並列下書きの各位置に上位候補を残し、隣接候補間の相性を並列採点して接頭辞優先に選び直す補正器で、ブロック内依存を回復し、投機的復号のスループットを全構成で最良にした。
+
+- **2026-10 · [Compiling Autoregressive LLM Control into Policy-Exact Parallel Inference for Hierarchical RAG](2026-2610.30664-compiling-autoregressive-llm-control-into-policy-exact-parallel-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  階層型検索の文法制約コントローラを、到達可能な行動プレフィックス木をルートプリフィルと木因果プローブで一括評価する形へコンパイルし、厳密算術で逐次デコードと同一の方策を深さ2のクリティカルパスと出力トークンゼロで再現する手法。
 
 - **2026-10 · [Cascadia: Resident 975B MoE Inference on Eleven AI PCs](2026-2610.07219-cascadia-resident-975b-moe-inference-on-eleven-ai-pcs.md)**  
   実装：[✓](https://github.com/labscommunity/cascadia-inkling-panther-lake-paper) ・ リポジトリ内被引用：0  
@@ -1563,7 +1567,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-12〜2023-11）
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：519  
+  実装：✓ ・ リポジトリ内被引用：520  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

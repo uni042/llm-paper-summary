@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（122本）
+## 自動生成の論文一覧（124本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -134,6 +134,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/DeanoC/certified-quantized-attention) ・ リポジトリ内被引用：3  
   GPUではINT8/INT4 KV、CPUではFP16原本を保持し、各生成ステップで注意誤差上界を検証して危険時だけ高精度へ段階復帰する品質保証付きKV圧縮。
 
+- **2026-05 · [Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches](2026-2605.18825-saecache-semantic-aware-prefix-eviction.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  接頭辞ブロックを再利用様式とトークン種別で複数キューへ分け、追い出し後の再参照を使って優先度をオンライン学習し、異質な会話負荷でKV再利用率を高める。
+
 - **2026-04 · [CacheFlow: Efficient LLM Serving with 3D-Parallel KV Cache Restoration](2026-2604.25080-cacheflow.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   CacheFlowは退避接頭辞KVをトークン・層・GPU方向に分割し、一部を再計算し残りをI/O復元して同時進行させ、復元待ちを減らす3次元スケジューラ。
@@ -166,10 +170,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   細粒度KVチャンクをS3互換ストレージへ保存したまま、複数物体の同一層範囲をサーバ側で集約して層順にRDMA転送し、GPU計算とI/Oを重ね、計算窓に応じて共有帯域も配分する大容量接頭辞キャッシュ方式。
 
-- **2026-05 · [Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches](2026-2605.18825-saecache-semantic-aware-prefix-eviction.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  接頭辞ブロックを再利用様式とトークン種別で複数キューへ分け、追い出し後の再参照を使って優先度をオンライン学習し、異質な会話負荷でKV再利用率を高める。
-
 - **2026-04 · [DUAL-BLADE: Dual-Path NVMe-Direct KV-Cache Offloading for Edge LLM Inference](2026-2604.26557-dual-blade-nvme-direct-kv-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   DUAL-BLADEはKVをページキャッシュとNVMe直接経路へ分け、連続論理ブロックとGPU DMAを使い、mmapのスラッシングとファイル層処理によるSSD待ちを減らす方式。
@@ -185,6 +185,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution](2026-2609.18675-hbflex.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
+
+- **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
 
 - **2026-08 · [Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches](2026-2608.01657-prefixshield-admission-responsibility.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -264,9 +268,17 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
 
+- **2026-10 · [uGDS: A User-Space Development Kit for High-Performance GPU Direct Storage](2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storag.md)**  
+  実装：[✓](https://github.com/ScaleX-IO/uGDS) ・ リポジトリ内被引用：0  
+  NVMeの制御経路全体をユーザ空間へ移し、同期・バッチ・ストリーム順序の3種の入出力を特権設定だけのカーネル補助で支えるGPUダイレクトストレージ基盤。小さい入出力の遅延とバッチ帯域、LMCacheでの先頭トークン時間を大きく改善する。
+
 - **2026-10 · [SparPR: Runtime KV-Cache Recovery for Resource-Constrained LLM Inference on Consumer Hardware](2026-2610.18140-sparpr-runtime-kv-cache-recovery-for-resource-constrained-llm-inference-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   消費者向けGPUのオフロード推論で、クエリとの関連で履歴ブロックを選び、コピーと再計算の費用で保持量と回復方式を実行時に決めることで、KVキャッシュ回復の遅延を大きく下げる実行時機構。
+
+- **2026-10 · [Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving](2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cac.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVキャッシュのSSDオフロードで、注意の種類を将来再利用の代理指標として線形注意状態をDRAMへ、全注意KVをSSDへ振り分け、再計算利益と書き込み・追い出し費用を比べる容量対応ゲートで書き込みを絞り、ヒット率を保ったままSSD寿命を平均7.3倍へ延ばす手法。
 
 - **2026-09 · [UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents](2026-2609.09643-unison-agent-session-kv-residency.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -295,10 +307,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Interface-Aware KV Cache Quantization for Dense On-Chip NVM in Long-Context LLM Decoding](2026-2609.05764-interface-aware-kv-quantization-nvm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は固定Hadamard回転・正規化・4ビット符号帳でKVをオンチップNVM向けに量子化し、補助情報と読み出し再構成を減らして長文脈KVの面積・エネルギーを抑える。
-
-- **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
 
 - **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
   実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：0  
@@ -347,7 +355,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：158  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：159  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  

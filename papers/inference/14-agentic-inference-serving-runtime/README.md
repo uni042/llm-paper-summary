@@ -105,6 +105,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   ドラフトモデルが隔離環境でツール操作列を先行実行し、権威モデルが先頭操作を確認したマクロだけ後続操作と観測をまとめて確定して、大型モデル呼出しとツール待ちを減らす。
 
+- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
+
 - **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
@@ -146,10 +150,6 @@
 - **2026-09 · [SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services](2026-2609.26763-sara.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの分離型推論では、入力をまとめて処理する事前充填（プリフィル）、生成された鍵・値キャッシュ（KV キャッシュ）の転送、出力を逐次生成する復号（デコード）を別々の装置群へ配置する。原著の要旨は段階別SLO予測の平均誤差5%未満、同じ配備費用で既存比較方式より平均26.6%高い有効処理率を報告する。
-
-- **2026-09 · [RR-Evict: Fine-Grained Prefix Cache Eviction beyond LRU for Agentic LLM Serving](2026-2609.32278-rr-evict-fine-grained-prefix-cache-eviction-beyond-lru-for-agentic-llm-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
 - **2026-09 · [Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations](2026-2609.14773-pull-lazy-working-memory-materialization.md)**  
   実装：[✓](https://github.com/wulun811/kongmen-pull) ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "353b7e7b866cf78314f83aff6fa9979cc4d5daaa",
+  "base_commit": "0f948eea91d989abc30a2694b9dddeba85d375cc",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -728,6 +728,11 @@
     "2026-2610.30450-same-beliefs-different-policies-learning-reusable-representations-for-early-stopping-in-llm-reasoning.json",
     "2026-2610.30480-figflex-a-mixed-precision-fp-int-gemm-accelerator-co-designed-with-low-bit-llm-quantization.json",
     "2026-2610.30644-speculative-acceptance-does-not-decay-with-position-a-full-length-diagnostic-on-long-chain-of-thought-with-independent-d.json",
+    "2026-2610.30664-compiling-autoregressive-llm-control-into-policy-exact-parallel-inference-for-hierarchical-rag.json",
+    "2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quantization-of-mixture-of-experts-models.json",
+    "2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cache-offloading-in-llm-serving.json",
+    "2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storage.json",
+    "2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressibility-training.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -44845,6 +44850,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.30664": {
+      "order": [
+        "2026-11-20T12:41:20+00:00",
+        "2026-2610.30664-compiling-autoregressive-llm-control-into-policy-exact-parallel-inference-for-hierarchical-rag.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.30779": {
+      "order": [
+        "2026-11-20T12:42:44+00:00",
+        "2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quantization-of-mixture-of-experts-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.30791": {
+      "order": [
+        "2026-11-20T12:44:08+00:00",
+        "2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cache-offloading-in-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.30868": {
+      "order": [
+        "2026-11-20T12:45:33+00:00",
+        "2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storage.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.31098": {
+      "order": [
+        "2026-11-20T12:46:57+00:00",
+        "2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressibility-training.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -55924,6 +55974,21 @@
     "arxiv:2610.30644": [
       "papers/inference/05-speculative-decoding-moe/2026-2610.30644-speculative-acceptance-does-not-decay-with-position-a-full-length-diagno.md",
       "papers/inference/05-speculative-decoding-moe/2026-2610.30644-speculative-acceptance-does-not-decay-with-position-a-full-length-diagno.md"
+    ],
+    "arxiv:2610.30664": [
+      "papers/inference/05-speculative-decoding-moe/2026-2610.30664-compiling-autoregressive-llm-control-into-policy-exact-parallel-inferenc.md"
+    ],
+    "arxiv:2610.30779": [
+      "papers/inference/06-moe-quantization-compression/2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quanti.md"
+    ],
+    "arxiv:2610.30791": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cac.md"
+    ],
+    "arxiv:2610.30868": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2610.30868-ugds-a-user-space-development-kit-for-high-performance-gpu-direct-storag.md"
+    ],
+    "arxiv:2610.31098": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressib.md"
     ]
   }
 }

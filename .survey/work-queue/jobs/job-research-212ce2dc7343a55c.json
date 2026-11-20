@@ -35,10 +35,15 @@
   "selection_reason": "SSDへKVキャッシュを退避する際の書込寿命を目的関数に含め、過去の参照頻度だけでなくattention種類に基づきSSD入場を調整。一次要旨は複数ワークロードトレースでキャッシュヒット率への影響を小さく保ちつつSSD寿命を平均7.3倍延長と報告。SSDを活用するLLM推論基盤の直接研究なのでaccept。",
   "semantic_scholar_id": "d15e994e398c46ff3a14a075c2e53621640af9b3",
   "source_url": "https://arxiv.org/abs/2610.30791",
-  "status": "ready",
+  "status": "superseded",
   "title": "Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:49:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2610.30791-gandalf-flash-shall-not-die-increasing-flash-storage-lifetime-for-kv-cac.md",
+  "represented_canonical_id": "arXiv:2610.30791",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（29本）
+## 自動生成の論文一覧（30本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -31,6 +31,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   ConMoEは、混合専門家モデル（Mixture-of-Experts; MoE）の推論に必要な専門家重みを、学習後の追加学習なしで縮小するための方式である。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [ProQuant: Preserving Expert Quality over Quantity in Ultra-Low-Bit Quantization of Mixture-of-Experts Models](2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quanti.md)**  
+  実装：[✓](https://github.com/ThrowBug/ProQuant.git) ・ リポジトリ内被引用：0  
+  MoEの混合精度量子化で、1ビットの劣化エキスパートを残さず0ビットで枝刈りしてビット予算を重要エキスパートへ回す配分最適化と、ルーティングを保ったまま誤差を補償する等価変換型のRMSNorm微調整を組み合わせ、平均1.5ビットでも生成品質を保つ手法。
 
 - **2026-10 · [Beyond Expert Rankings: Contrast Calibration for Mixed-Precision MoE Quantization](2026-2610.20353-beyond-expert-rankings-contrast-calibration-for-mixed-precision-moe-quan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -79,7 +83,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   MoNE（Mixture of Novices and エキスパート）は、混合専門家モデル（Mixture-of-Experts、MoE）における専門家の枝刈りを、単純な削除ではなく軽量な初心者表現（novice）への置換として実装する圧縮方式である。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
-  実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：8  
   密モデル向けの事後学習量子化（Post-学習 量子化; PTQ）をMoEへそのまま持ち込むと、専門家ごとに異なる活性外れ値、量子化後のルータTop-kの入れ替わり、ほとんど選ばれない専門家の校正データ不足が重なる。EAQuantはこれを一つの量子化誤差として扱わず、専門家認識平滑化、ルーティング整合、専門家単位の校正データ均衡の三機構に分解して補正する。
 
 - **2025-03 · [DynaMo: Runtime Switchable Quantization for MoE with Cross-Dataset Adaptation](2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md)**  
@@ -117,7 +121,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   SEER-MoEは、事前学習済みの混合専門家モデル（Mixture of エキスパート、MoE）のメモリ消費とトークン当たりの演算量を、別々の制約として削減する方式である。Mixtral 8×7Bは通常各トークンを二つの専門家へ送り、専門家部分の演算は推論全体の約55%を占める。
 
 - **2024-06 · [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：26  
   一律ビット幅ではなく、注意層・共有専門家・使用頻度・ブロック位置・線形重みの外れ値を手掛かりに精度を配分する効果を、同じ平均ビット予算で比較したベンチマーク。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  

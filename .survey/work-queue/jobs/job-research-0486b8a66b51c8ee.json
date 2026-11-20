@@ -35,10 +35,15 @@
   "selection_reason": "相補的圧縮による下書きモデル向けKVキャッシュ圧縮RIFT。投機的デコードの下書きで、プリフィル情報に寄る圧縮が出力の伸びとともに陳腐化して下書き精度を落とす現象に対し、プリフィル情報とデコード側のバランスを取る選択型圧縮。推論メモリ機構そのもの。",
   "semantic_scholar_id": "0a93836720a92ea3ea1e153094cb85c3fcf73666",
   "source_url": "https://arxiv.org/abs/2610.31098",
-  "status": "ready",
+  "status": "superseded",
   "title": "RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:49:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.31098-rift-kv-cache-compression-for-draft-models-with-complementary-compressib.md",
+  "represented_canonical_id": "arXiv:2610.31098",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

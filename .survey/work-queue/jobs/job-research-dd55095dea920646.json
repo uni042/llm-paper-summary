@@ -35,10 +35,15 @@
   "selection_reason": "MoEの厳しい重みビット予算ではexpertごとの量子化誤差とrouterの経路変動が生成品質を損なう。ProQuantはPoPでexpert pruningと混合精度ビット割当を同時最適化し、RoCoでRMSNormの等価変換を使ってexpert入力を調整しrouting driftを抑える。推論用MoEのweight-only post-training quantizationとしてモデル格納量と生成品質の両立に直接寄与するためaccept。",
   "semantic_scholar_id": "4c510636060750f19524f0836e47a6ebaee8eb6b",
   "source_url": "https://arxiv.org/abs/2610.30779",
-  "status": "ready",
+  "status": "superseded",
   "title": "ProQuant: Preserving Expert Quality over Quantity in Ultra-Low-Bit Quantization of Mixture-of-Experts Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:49:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/06-moe-quantization-compression/2026-2610.30779-proquant-preserving-expert-quality-over-quantity-in-ultra-low-bit-quanti.md",
+  "represented_canonical_id": "arXiv:2610.30779",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

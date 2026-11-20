@@ -35,10 +35,15 @@
   "selection_reason": "階層RAGでb-of-k選択を逐次JSON/grammar decodeする代わりに、有限深度のaction-prefix treeをコンパイルし、root prefillとtree-causal probeで全action-prefix条件付き分布を並列評価する。exact arithmetic下で元の逐次policyと一致する構造を証明し、MetaX実機の4 split/2 scaleで制御latencyを逐次decode比35〜47%、理想chunk engine比6〜7%削減。浮動小数点near-tieで実際の選択一致率は84〜89%と報告。LLM制御出力の推論並列化としてaccept。",
   "semantic_scholar_id": "4bde6e2a2ca7363147fb51d0713088b883abf6cb",
   "source_url": "https://arxiv.org/abs/2610.30664",
-  "status": "ready",
+  "status": "superseded",
   "title": "Compiling Autoregressive LLM Control into Policy-Exact Parallel Inference for Hierarchical RAG",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T12:49:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.30664-compiling-autoregressive-llm-control-into-policy-exact-parallel-inferenc.md",
+  "represented_canonical_id": "arXiv:2610.30664",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
