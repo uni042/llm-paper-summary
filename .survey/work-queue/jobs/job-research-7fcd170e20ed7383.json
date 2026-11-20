@@ -35,10 +35,15 @@
   "selection_reason": "LLMの重み・活性の低bit量子化で、量子化範囲・線形変換・重み丸めをFisher近似に基づくHessian-guided出力感度目的で共同最適化する。channel-wise/block-wise設定で既存変換・丸め方式より高精度と報告。推論時の重み・活性容量と計算費用削減を目的とする量子化手法でaccept。ただしabstractには実測token/sや数値化した削減率はない。",
   "semantic_scholar_id": "8deb6ddbca2cd65f6ae7f0cca1123384cc2e3769",
   "source_url": "https://arxiv.org/abs/2610.40345",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Unified Hessian-Guided Framework for Post-Training Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:11:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2610.40345-a-unified-hessian-guided-framework-for-post-training-quantization.md",
+  "represented_canonical_id": "arXiv:2610.40345",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

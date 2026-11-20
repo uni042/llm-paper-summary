@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "6af4c0158d9812c8b5aed976777d00cfd4c4bb15",
+  "base_commit": "57ab51f20b4a1352727c0d74ec576ff138419a66",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -813,6 +813,11 @@
     "2026-2610.40293-maservebench-benchmarking-multi-agent-llm-serving-systems-with-hierarchical-collaboration-workloads.json",
     "2026-2610.40305-rimuru-unified-memory-management-for-modern-llm-serving-via-elastic-expert-offloading.json",
     "2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-inference.json",
+    "2026-2610.40345-a-unified-hessian-guided-framework-for-post-training-quantization.json",
+    "2026-2610.40541-on-the-fundamental-limits-of-prefill-based-decoding-length-prediction.json",
+    "2026-2610.40943-kernel-based-interpolatory-methods-for-context-compression-of-attention-mechanisms.json",
+    "2026-2610.41112-calibration-of-large-model-quantization-based-on-hifloat4-format.json",
+    "2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic-systems-with-harnesses.json",
     "2026-component-aware-self-speculative-decoding-for-hybrid-language-models.json",
     "2026-de7f1d0908f4-o-p-s-erve-opportunistic-llm-inference-over-fragmented-gpu-capacity-in-hpc-systems.json",
     "2026-faas-faascale-unlocking-fast-llm-scaling-for-serverless-inference.json",
@@ -45695,6 +45700,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.40345": {
+      "order": [
+        "2026-11-20T21:04:06+00:00",
+        "2026-2610.40345-a-unified-hessian-guided-framework-for-post-training-quantization.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.40541": {
+      "order": [
+        "2026-11-20T21:05:30+00:00",
+        "2026-2610.40541-on-the-fundamental-limits-of-prefill-based-decoding-length-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.40943": {
+      "order": [
+        "2026-11-20T21:06:54+00:00",
+        "2026-2610.40943-kernel-based-interpolatory-methods-for-context-compression-of-attention-mechanisms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.41112": {
+      "order": [
+        "2026-11-20T21:08:18+00:00",
+        "2026-2610.41112-calibration-of-large-model-quantization-based-on-hifloat4-format.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.41172": {
+      "order": [
+        "2026-11-20T21:09:42+00:00",
+        "2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic-systems-with-harnesses.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -57114,6 +57164,21 @@
     "arxiv:2610.40325": [
       "papers/inference/99-other-inference-systems/2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-in.md",
       "papers/inference/99-other-inference-systems/2026-2610.40325-how-to-loop-your-transformer-loop-scaling-specialization-and-parallel-in.md"
+    ],
+    "arxiv:2610.40345": [
+      "papers/inference/99-other-inference-systems/2026-2610.40345-a-unified-hessian-guided-framework-for-post-training-quantization.md"
+    ],
+    "arxiv:2610.40541": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2610.40541-on-the-fundamental-limits-of-prefill-based-decoding-length-prediction.md"
+    ],
+    "arxiv:2610.40943": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.40943-kernel-based-interpolatory-methods-for-context-compression-of-attention-.md"
+    ],
+    "arxiv:2610.41112": [
+      "papers/inference/99-other-inference-systems/2026-2610.41112-calibration-of-large-model-quantization-based-on-hifloat4-format.md"
+    ],
+    "arxiv:2610.41172": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic.md"
     ]
   }
 }

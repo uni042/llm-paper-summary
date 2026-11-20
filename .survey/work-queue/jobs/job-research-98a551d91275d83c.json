@@ -35,10 +35,15 @@
   "selection_reason": "LLMのprefill隠れ状態から出力token数を予測するサービング・スケジューリング基盤について、自己回帰生成の停止時刻を確率過程として解析する。停止確率が出力途中で変化するため予測誤差に不可避の下限があることを導き、モデル・データ・samplingを固定した比較ではMLP、FiLM、MoE型予測器の誤差がその限界に近づくと示す。要求長予測に基づくスケジューラの評価設計へ直接寄与するためaccept。",
   "semantic_scholar_id": "1e1f337b2cf5a78ff51132612b2272b54f698dc3",
   "source_url": "https://arxiv.org/abs/2610.40541",
-  "status": "ready",
+  "status": "superseded",
   "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:11:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2610.40541-on-the-fundamental-limits-of-prefill-based-decoding-length-prediction.md",
+  "represented_canonical_id": "arXiv:2610.40541",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

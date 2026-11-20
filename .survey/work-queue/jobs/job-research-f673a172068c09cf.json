@@ -35,10 +35,15 @@
   "selection_reason": "attentionをカーネルHilbert空間の線形写像比として表現し、GEIM/Q-DEIM由来のGAIM・Q-DAIMでKVコンテキストを補間圧縮する。元の選点計算は系列長二乗だが、Taylor・Performer・Random Fourier Featuresによる代理で線形化し、streaming更新にも拡張。LongBench-Eの予備評価と残差・出力誤差を示し、LLM推論のKV圧縮方式へ直接寄与。",
   "semantic_scholar_id": "670e69c8f4f66ed97b87598f004849f0ab19e739",
   "source_url": "https://arxiv.org/abs/2610.40943",
-  "status": "ready",
+  "status": "superseded",
   "title": "Kernel-based Interpolatory Methods for Context Compression of Attention Mechanisms",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:11:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.40943-kernel-based-interpolatory-methods-for-context-compression-of-attention-.md",
+  "represented_canonical_id": "arXiv:2610.40943",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（159本）
+## 自動生成の論文一覧（160本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -137,6 +137,10 @@
 - **2026-10 · [PACE: Pareto-Adaptive Compression for Efficient Native MLLMs](2026-2610.24005-pace-pareto-adaptive-compression-for-efficient-native-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ネイティブ型マルチモーダルモデルの視覚トークンを、高さと幅へ分けた重要度とパレート最適な段階別保持率で圧縮し、保持率25パーセントでもほぼ無損失のまま計算量を2.0倍分減らした研究。
+
+- **2026-10 · [On the Fundamental Limits of Prefill-Based Decoding Length Prediction](2026-2610.40541-on-the-fundamental-limits-of-prefill-based-decoding-length-prediction.md)**  
+  実装：[✓](https://github.com/ShwStone/DecodingPredict) ・ リポジトリ内被引用：0  
+  デコード長を停止時刻と更新過程でモデル化し、プリフィル予測の誤差下限が生成の標準偏差だけで決まることを理論と実測で示した研究。下限は平均絶対誤差で標準偏差の0.798倍であり、単純な予測器でもほぼ到達できる。
 
 - **2026-10 · [Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking](2026-2610.07026-offline-ai-modules-voice-first-offline-architecture-hardware-reference-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

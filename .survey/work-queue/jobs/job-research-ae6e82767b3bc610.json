@@ -35,10 +35,15 @@
   "selection_reason": "RAG agentが繰り返す検索・再読込でcontext tokenを浪費する問題に対し、文書をclaim-evidence leaf付きnavigation treeへ事前コンパイルし、十分な根拠がある場合にcontextへ注入する。必要な場合のquery tokenを91%削減し、十分でない場合は1.9%増、平均38%削減と報告。decision gateでlatencyを140秒から30秒へ短縮したが追加retrieval roundの費用もある。LLM agent推論時のtoken・latency最適化としてaccept。",
   "semantic_scholar_id": "254e117da638793f7410eed7f40ed0f29467db2e",
   "source_url": "https://arxiv.org/abs/2610.41172",
-  "status": "ready",
+  "status": "superseded",
   "title": "Context as Infrastructure: Knowledge Compilation for Retrieval in Agentic Systems with Harnesses",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T21:11:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2610.41172-context-as-infrastructure-knowledge-compilation-for-retrieval-in-agentic.md",
+  "represented_canonical_id": "arXiv:2610.41172",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
