@@ -35,10 +35,15 @@
   "selection_reason": "prefill/decodeの局所サービス時間と共有資源・階層KV利用可能性を分離する離散イベントシミュレータを提案し、1P-1Dで校正した計算・転送モデルを3P-1Dへ再利用する。SGLang/Qwen3-8B・32BでQA平均要求遅延誤差1.34%、coding session6.36%、CPU simulationは実replayより平均15.33倍高速と報告。推論クラスタ設計評価の直接的な基盤としてaccept。",
   "semantic_scholar_id": "519d76c91348308fb28193be0f1cca2b183d56a5",
   "source_url": "https://arxiv.org/abs/2610.15366",
-  "status": "ready",
+  "status": "superseded",
   "title": "Compositional Performance Modeling of LLM Inference Clusters with Hierarchical KV Caching",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:18:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierar.md",
+  "represented_canonical_id": "arXiv:2610.15366",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

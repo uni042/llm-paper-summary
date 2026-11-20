@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "a4e3a26418c9d77b5bc737eb167f6bbdc99571e2",
+  "base_commit": "609cf9ad90d748cf850e6b0be7e555b250388084",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -400,8 +400,13 @@
     "2026-2610.14686-vesta-queueing-aware-llm-scheduling-for-real-world-workloads.json",
     "2026-2610.14688-accelerating-cross-model-llm-inference-via-attention-map-reuse.json",
     "2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.json",
+    "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json",
+    "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json",
     "2026-2610.15417-specfit-not-all-draft-tokens-cost-the-same-in-offloaded-moe-inference.json",
     "2026-2610.15514-sarathi-decoupled-data-free-probing-and-adaptive-reconstruction-for-structured-llm-pruning.json",
+    "2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggregated-llm-inference.json",
+    "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json",
+    "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json",
     "2026-2610.16368-loopquant-accurate-and-efficient-post-training-quantization-for-looped-transformers.json",
     "2026-2610.17530-twinprune-density-aware-two-phase-token-pruning-for-vision-language-models.json",
     "2026-2610.17531-towards-green-ai-evaluating-energy-efficiency-for-quantized-llm-inference.json",
@@ -42036,6 +42041,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2610.15366": {
+      "order": [
+        "2026-11-20T03:13:19+00:00",
+        "2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierarchical-kv-caching.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15384": {
+      "order": [
+        "2026-11-20T03:14:14+00:00",
+        "2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15579": {
+      "order": [
+        "2026-11-20T03:15:08+00:00",
+        "2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggregated-llm-inference.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15629": {
+      "order": [
+        "2026-11-20T03:16:03+00:00",
+        "2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2610.15640": {
+      "order": [
+        "2026-11-20T03:16:57+00:00",
+        "2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -52037,6 +52087,21 @@
     "arxiv:2610.14745": [
       "papers/inference/16-weight-quantization-compression/2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.md",
       "papers/inference/16-weight-quantization-compression/2026-2610.14745-sage-pushing-2-bit-vector-quantized-llms-toward-real-world-usability.md"
+    ],
+    "arxiv:2610.15366": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15366-compositional-performance-modeling-of-llm-inference-clusters-with-hierar.md"
+    ],
+    "arxiv:2610.15384": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.md"
+    ],
+    "arxiv:2610.15579": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15579-approximation-algorithms-for-dual-memory-request-scheduling-in-disaggreg.md"
+    ],
+    "arxiv:2610.15629": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-s.md"
+    ],
+    "arxiv:2610.15640": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.md"
     ]
   }
 }

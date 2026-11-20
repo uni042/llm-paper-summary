@@ -33,7 +33,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure](2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md)**  
-  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：15  
   異種GPU/TPU/PIMと分離サービング・多階層鍵値メモリ・MoE・電力を要求駆動ループで統合模擬するLLMサービングシミュレータ。
 
 - **2026-01 · [AIConfigurator: Lightning-Fast Configuration Optimization for Multi-Framework LLM Serving](2026-2601.06288-aiconfigurator-multi-framework-llm-serving.md)**  
@@ -41,7 +41,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実GPUで測った演算・通信性能から複数のLLMサービング構成をCPU上で予測し、並列化やバッチ、プリフィル・デコード分離を探索して遅延目標を満たす候補を選ぶ。
 
 - **2026-06 · [Frontier: Towards Comprehensive and Accurate LLM Inference Simulation](2026-2605.21312-frontier-comprehensive-accurate-llm-inference-simulation.md)**  
-  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/NetX-lab/Frontier) ・ リポジトリ内被引用：8  
   分離プリフィル/デコードや注意-FFN分離を役割別イベントグラフとして再現し、演算・通信・KVメモリを実測校正して、現代LLMサービング構成の性能を高精度に予測する。
 
 - **2026-01 · [Revati: Transparent GPU-Free Time-Warp Emulation for LLM Serving](2026-2601.00397-revati-transparent-gpu-free-time-warp-emulation.md)**  

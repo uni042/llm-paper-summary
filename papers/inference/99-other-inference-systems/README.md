@@ -244,6 +244,10 @@
   実装：[✓](https://github.com/yuezhouhu/residual-context-diffusion) ・ リポジトリ内被引用：2  
   マスク型拡散大規模言語モデル（dLLM）は、複数のトークン位置を同時に予測し、確信度が高い位置だけを確定しながら残りを反復更新する。SDAR-8Bでブロック長64のMATH500正答率は通常の逐次ノイズ除去（Sequential Denoising、SeqD）の64.20%から74.40%へ、AIME24は7.08%から18.75%へ改善する。
 
+- **2026-01 · [LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers](2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  LOOKATは、自己回帰Transformerの注意得点計算を、ベクトル検索における内積類似度検索として扱い、キーを圧縮したまま注意得点を計算する方式である。GPT-2の第1注意層で、64次元のキーを2個の1バイト符号へ圧縮すると、キー表現は128バイトから2バイトへ減り、キー単体の表現上の圧縮率は64倍となる。
+
 - **2025-12 · [More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization](2025-2512.24545-more-than-bits-multi-envelope-double-binary-factorization-for-extreme-qu.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデルの重みを1～1.5ビットまで圧縮すると、各重みを独立に丸める方式では振幅の情報が著しく失われ、生成品質が低下する。
@@ -639,10 +643,6 @@
 - **2026-01 · [Speculative Sampling with Reinforcement Learning](2026-2601.12212-speculative-sampling-with-reinforcement-learning.md)**  
   実装：[✓](https://github.com/wmd3i/ReSpS) ・ リポジトリ内被引用：1  
   Re-SpS（Reinforcement Learning for 投機的 Sampling）は、投機的復号（投機的復号）における草稿木（下書き木）の全体トークン上限、深さ、分岐展開数を、文脈に応じて強化学習で切り替える方式である。
-
-- **2026-01 · [LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers](2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  LOOKATは、自己回帰Transformerの注意得点計算を、ベクトル検索における内積類似度検索として扱い、キーを圧縮したまま注意得点を計算する方式である。GPT-2の第1注意層で、64次元のキーを2個の1バイト符号へ圧縮すると、キー表現は128バイトから2バイトへ減り、キー単体の表現上の圧縮率は64倍となる。
 
 - **2026-01 · [HeRo-Q: A General Framework for Stable Low-Bit Quantization via Hessian Conditioning](2026-2601.21626-hero-q-a-general-framework-for-stable-low-bit-quantization-via-hessian-c.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

@@ -35,10 +35,15 @@
   "selection_reason": "低ビットKVキャッシュ圧縮のためのE8格子キー量子化。スカラー量子化が2ビットで不安定か3ビットを要する問題に対し、E8格子に基づくベクトル量子化でキーを2ビット化し、キー・値とも2ビットで基線に近い品質を保つ。推論メモリ機構そのもの。",
   "semantic_scholar_id": "ba28503406e91c5e4bc5f78e18d179d9d7927f43",
   "source_url": "https://arxiv.org/abs/2610.15384",
-  "status": "ready",
+  "status": "superseded",
   "title": "E8 Lattice Key Quantization for Low-Bit KV-Cache Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:18:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.15384-e8-lattice-key-quantization-for-low-bit-kv-cache-compression.md",
+  "represented_canonical_id": "arXiv:2610.15384",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "端末内SLMで文脈長に応じてKV読出しが増えると、重みprecisionを固定する最適化は崩れる。tensor感度と文脈長別の実測latency modelを組み合わせ、精度/遅延制約下で複数weight formatを切替えるscheduleを事前構築する。一次要旨はlaptop GPUで実際にscheduleを実行し、tool-use全応答時間・正解率を評価。KV量子化誤差も精度予算へ組み込むLLM推論時の動的precision選択としてaccept。",
   "semantic_scholar_id": "ffb7efa1ab732b872ad430767a91c67d1a73d136",
   "source_url": "https://arxiv.org/abs/2610.15640",
-  "status": "ready",
+  "status": "superseded",
   "title": "Context-Aware Precision Scheduling for Small Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:18:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.15640-context-aware-precision-scheduling-for-small-language-models.md",
+  "represented_canonical_id": "arXiv:2610.15640",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

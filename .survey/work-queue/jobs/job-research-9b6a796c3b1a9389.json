@@ -35,10 +35,15 @@
   "selection_reason": "LLMのmixed precisionで平均bit数を速度の代理とすると、prefill/decode・batch・文脈に応じたcompute/weight/KVの律速変化を見逃す。モデル・GPU・serving stackでcalibrateしたlatency modelとtensor別accuracy costを組み合わせ、動的計画法でlatency/精度予算下のbit配分を選ぶ。一次要旨は3 hardware classで予測精度とbyte-aware等との配分比較を報告。推論速度を意識した量子化設定の直接的最適化としてaccept。",
   "semantic_scholar_id": "ac8770ba88aedabfce5d4f80313831dcc0f061ee",
   "source_url": "https://arxiv.org/abs/2610.15629",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T03:18:27+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.15629-the-price-of-precision-a-calibrated-cost-model-for-mixed-precision-llm-s.md",
+  "represented_canonical_id": "arXiv:2610.15629",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
