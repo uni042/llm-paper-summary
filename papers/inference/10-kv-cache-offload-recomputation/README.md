@@ -50,6 +50,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/microsoft/sutradhara) ・ リポジトリ内被引用：7  
   Sutradharaは、ツール利用型エージェントの性能問題を「LLM推論エンジン単体の高速化」ではなく、エージェントを制御するオーケストレータと推論エンジンの協調設計として扱う。著者らが6,000件の生産相当エージェント要求を分析すると、ツール実行はFTRの中央値で約32%、90パーセンタイルで61%、99パーセンタイルで85%を占める。
 
+- **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
+  実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：7  
+  SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
+
 - **2025-12 · [HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference](2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   GPUとNVMe SSDをGDSで直結し、pSLCと順次KVブロック配置でDRAMなしのKV交換を実現し、長文脈推論の性能を保ちながら容量費用を削減する。
@@ -69,10 +73,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)**  
   実装：[✓](https://github.com/amy-77/ParisKV) ・ リポジトリ内被引用：6  
   長文脈の大規模言語モデル（LLM）では、生成が進むほど過去の鍵・値（KV）キャッシュが長くなり、全ての過去KVを毎ステップ読み込む注意計算が帯域と容量を圧迫する。過去KVの大部分をCPU主記憶へ退避し、現在の問い合わせに重要な上位k件だけを読み込めば、GPUの高帯域メモリを節約できる。
-
-- **2026-01 · [SuperInfer: SLO-Aware Rotary Scheduling and Memory Management for LLM Inference on Superchips](2026-2601.20309-superinfer-slo-aware-rotary-scheduling-and-memory-management-for-llm-inference-on-superchips.md)**  
-  実装：[✓](https://github.com/Supercomputing-System-AI-Lab/SuperInfer) ・ リポジトリ内被引用：6  
-  SuperInferはTTFT/TBTのSLO遅れを監視し、要求KVをGH200のHBMとCPU DRAM間で入れ替え、KVブロックを集約転送してヘッドオブライン待ちとC2C帯域浪費を抑える方式。
 
 - **2025-12 · [CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving](2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -162,6 +162,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：3  
   ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
 
+- **2026-02 · [Efficient Remote KV Cache Reuse with GPU-native Video Codec](2026-2602.09725-kvfetcher-gpu-native-media-asic.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  KVFetcherは遠隔KVの取得・展開・逆量子化をGPU近傍メディアASICで処理し、推論GPUとの資源競合を分離してネットワーク転送と復元待ちを減らす方式。
+
 - **2026-09 · [HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution](2026-2609.18675-hbflex.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
@@ -182,10 +186,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   DUAL-BLADEはKVをページキャッシュとNVMe直接経路へ分け、連続論理ブロックとGPU DMAを使い、mmapのスラッシングとファイル層処理によるSSD待ちを減らす方式。
 
-- **2026-02 · [Efficient Remote KV Cache Reuse with GPU-native Video Codec](2026-2602.09725-kvfetcher-gpu-native-media-asic.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  KVFetcherは遠隔KVの取得・展開・逆量子化をGPU近傍メディアASICで処理し、推論GPUとの資源競合を分離してネットワーク転送と復元待ちを減らす方式。
-
 - **2025-12 · [Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse](2025-5e060858489e-sim-llm-optimizing-llm-inference-at-the-edge-through-inter-task-kv-reuse.md)**  
   実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：2  
   キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
@@ -193,6 +193,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
+
+- **2026-08 · [SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding](2026-2608.07915-spectra-pushing-the-kv-cache-beyond-the-2-bit-cliff-via-spectral-transfo.md)**  
+  実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：1  
+  単純に全値を2ビットまで量子化すると、外れ値が量子化範囲を占有し、小さな値が同じ離散レベルへ潰れて品質が急激に悪化する場合がある。Llama-3.1-8B-InstructのLongBench英語8課題平均はFP16で53.24、SPECTRAの7.66倍KV圧縮で54.00、8.84倍で51.89、11.12倍で48.81である。
 
 - **2026-08 · [OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching](2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -323,10 +327,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management](2026-2609.26828-lm-cxd.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LM-CXDは、CXL接続のNAND基盤記憶装置へKVチャンクの識別子と要求進捗を共有し、装置内DRAMをGPUから直接読める一時領域として使う。計算非同期先読みと層単位先読みを使い分け、標準CXL-SSDに対する初回トークン時間を最大4.03倍改善する。
-
-- **2026-08 · [SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding](2026-2608.07915-spectra-pushing-the-kv-cache-beyond-the-2-bit-cliff-via-spectral-transfo.md)**  
-  実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：0  
-  単純に全値を2ビットまで量子化すると、外れ値が量子化範囲を占有し、小さな値が同じ離散レベルへ潰れて品質が急激に悪化する場合がある。Llama-3.1-8B-InstructのLongBench英語8課題平均はFP16で53.24、SPECTRAの7.66倍KV圧縮で54.00、8.84倍で51.89、11.12倍で48.81である。
 
 - **2026-08 · [Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention](2026-2608.23834-minima-kv-mixed-format-paged-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -531,10 +531,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](2024-2310.07240-cachegen.md)**  
-  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：169  
+  実装：[✓](https://github.com/UChi-JCL/CacheGen) ・ リポジトリ内被引用：171  
   KVキャッシュを差分・層別量子化・算術符号化で転送用ビットストリーム化し、帯域適応ストリーミングで長文脈再利用のTTFTを削減する。
 
 - **2023-11 · [Prompt Cache: Modular Attention Reuse for Low-Latency Inference](2023-2311.04934-prompt-cache.md)**  
-  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：149  
+  実装：[✓](https://github.com/yale-sys/prompt-cache) ・ リポジトリ内被引用：151  
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 <!-- survey:auto:end -->

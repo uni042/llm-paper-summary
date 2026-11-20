@@ -457,7 +457,7 @@
   LatentMASはこの境界を変え、エージェントが最終層の隠れ状態を連続表現のまま自己回帰生成し、層ごとの鍵・値キャッシュ（KVキャッシュ）を共有作業メモリとして次のエージェントへ渡す。著者は既存モデルを追加学習しない訓練不要方式として設計し、入力埋め込みと最終層隠れ状態の分布の違いを補正する線形写像を組み込む。
 
 - **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：13  
   初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
 
 - **2025-06 · [Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference](2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md)**  
@@ -508,6 +508,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   半構造化N:M疎性は、各M要素のうちN要素を残す制約を設ける。2:4、4:8、8:16、16:32はいずれも50%の要素をゼロ化するが、ブロックが大きいほど、どの要素を残すかの組合せが増える。したがって本研究は「半構造化活性疎性が現時点で実用上安全」と結論するより、将来ハードウェアの設計選択を促す精度とコストの基礎ベンチマークとして読むべきである。
 
+- **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
+
 - **2025-05 · [Quantitative Analysis of Performance Drop in DeepSeek Model Quantization](2025-2505.02390-quantitative-analysis-of-performance-drop-in-deepseek-model-quantization.md)**  
   実装：[✓](https://github.com/UnicomAI/DeepSeek-Eval) ・ リポジトリ内被引用：1  
   671BのDeepSeek-R1/V3を含む系列全体で2から8ビット量子化の性能低下を実測し、重要モジュールへ高精度を配る動的3ビット量子化DQ3KMが4ビット級の精度を281GBで達成することを示した評価報告。
@@ -531,10 +535,6 @@
 - **2025-09 · [PLaMo 2 Technical Report](2025-2509.04897-plamo-2-technical-report.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PLaMo 2 Technical Reportは、Preferred Networksが開発した日本語向け大規模言語モデル系列のアーキテクチャ、学習・蒸留、長文脈対応、推論実装と量子化をまとめた技術報告である。推論側では、31BモデルのBF16重みが約63GB、KVキャッシュが約110KB/トークンであり、32K文脈だけで約3.6GBのKVを使う。
-
-- **2025-09 · [MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness](2025-2509.10372-mcbp-a-memory-compute-efficient-llm-inference-accelerator-leveraging-bit.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  重みをビットの層へ分解して見える重複と疎さを3つの滞留へ効かせる専用加速器で、A100比9.43倍の高速化と31.1倍のエネルギー効率をシミュレーション評価で示した。
 
 - **2025-09 · [Efficient Fine-Grained GPU Performance Modeling for Distributed Deep Learning of LLM](2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -641,6 +641,6 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：123  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：124  
   自己注意（self-注意機構）は系列長Lに対して二次の注意行列を作るため、1万〜数万ステップの系列では計算・メモリ負荷が大きくなる。論文はLong Range Arena（LRA）の全課題で当時の最良水準を更新し、長さ16,384のPath-Xで88%正解率を達成した。
 <!-- survey:auto:end -->

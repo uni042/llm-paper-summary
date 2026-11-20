@@ -88,6 +88,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：1  
   これを低ビット化するとGPUメモリ使用量を減らせるものの、活性値や重みに少数の大きな外れ値があると、均一な量子化の刻み幅が粗くなり、特に4ビット級で精度が悪化する。主要評価はPhi-mini-MoE-Instruct、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral 8×7Bを対象とする。
 
+- **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
+
 - **2026-02 · [Asynchronous Verified Semantic Caching for Tiered LLM Architectures](2026-2602.13165-asynchronous-verified-semantic-caching-for-tiered-llm-architectures.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   著者は、事前に人手や大規模モデルで検証した回答を持つ静的キャッシュと、通常の要求を処理しながら生成回答を保存する動的キャッシュを分離する構成を前提とする。原著のトレース駆動シミュレーションでは、会話要求における静的由来回答の割合が8.2%から19.4%、検索要求では2.2%から8.6%へ増えた。
@@ -242,10 +246,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   TriGenは、モバイルや組込み機器のようにSRAM容量とDRAM帯域が厳しく制限される環境で、Transformer型LLMの線形演算だけでなくRMSNorm、softmax、SiLUなどの非線形演算を含むモデル全体を一つのNPU設計で実行する研究である。
 
-- **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
-
 - **2026-02 · [Harmonia: Algorithm-Hardware Co-Design for Memory- and Compute-Efficient BFP-based LLM Inference](2026-2602.04595-harmonia-algorithm-hardware-co-design-for-memory-and-compute-efficient-b.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの推論ではモデル重みだけでなく、各層で生じる活性化と、長い入力履歴を保持する鍵・値キャッシュ（KVキャッシュ）がメモリ容量・帯域・演算器の面積を消費する。重みだけを4ビット整数へ量子化しても、活性化がFP16のままでは浮動小数点と整数の混合積和演算を処理する回路が必要になる。
@@ -367,7 +367,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   演算子-階層 ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式から計算/メモリ/ネットワーク要件を逆算するGenZ。
 
 - **2024-08 · [LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference](2024-2408.06003-lut-tensor-core-a-software-hardware-co-design-for-lut-based-low-bit-llm-.md)**  
-  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：10  
   重みを1〜4ビットに量子化した大規模言語モデル（LLM）では、重みの転送量は小さくなる一方、活性化はFP16やINT8など比較的高い精度で保持される。ISCA 2025の原著は、従来のLUTアクセラレータに比べて計算密度とエネルギー効率を1.44倍改善し、低ビットLLMの推論をモデル単位のシミュレーションで2.06〜5.51倍高速化したと報告する。
 
 - **2024-09 · [TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation](2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md)**  
@@ -399,12 +399,12 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 7年前（2019-12〜2020-11）
 
 - **2020-02 · [A3: Accelerating Attention Mechanisms in Neural Networks with Approximation](2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   通常の注意機構は、クエリベクトルと全キー行の内積を求め、softmaxで正規化し、値ベクトルを重み付き合成する。保守的設定は近似によるタスク精度の低下をおおむね1%に抑える一方、積極的設定はおおむね8%の精度低下を伴う。
 
 ### 9年前（2017-12〜2018-11）
 
 - **2017-12 · [Ray: A Distributed Framework for Emerging AI Applications](2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md)**  
-  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：26  
   Rayは、強化学習で頻繁に現れる「多数の環境を並列に動かす」「学習器で方策を更新する」「更新した方策を低遅延で実行する」という異質な仕事を、別々の分散基盤へ切り分けずに一つの実行系へ載せるための研究である。提案の中核は、状態を持たない遠隔関数を「タスク」、状態を保持する遠隔オブジェクトを「アクター」として同じ動的依存グラフへ埋め込むことである。
 <!-- survey:auto:end -->

@@ -24,21 +24,37 @@
   実装：✓ ・ リポジトリ内被引用：5  
   SRAM/HBM/LPDDR/GDDR/HBFを統一モデル化し、プリフィル/デコードNPUとメモリ階層を共同探索して、基準NPU比でプリフィル最大2.3倍・デコード最大1.93倍の電力効率を得る。
 
+- **2026-06 · [VLMCache: Efficient On-Device Vision-Language Model Inference](2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  VLMCacheは、UIエージェントや視覚質問応答のように連続フレームを処理する視覚言語モデルで、毎フレームの視覚入力を最初から入力処理するため初回トークン時間が長くなる問題を扱う。提案法は安定した背景ブロックと変化した前景ブロックを意味的に分離し、背景を再利用可能なKVキャッシュ接頭辞として並べ、前景だけを再計算する。
+
 - **2026-03 · [FastTTS: Accelerating Test-Time Scaling for Edge LLM Reasoning](2026-2509.00195-fasttts-accelerating-test-time-scaling-for-edge-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   生成モデルと過程評価モデルを1枚のGPUに載せる場合には、両者へのKV領域の配分も難しい。FastTTSはこの三つの資源問題に対応する配信システムである。論文の主評価は単一のRTX 4090（24GB）で、AIME2024とAMC2023の数学問題を対象に、複数の生成器・検証器の組合せと探索枝数を比較する。
 
-- **2026-06 · [VLMCache: Efficient On-Device Vision-Language Model Inference](2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  VLMCacheは、UIエージェントや視覚質問応答のように連続フレームを処理する視覚言語モデルで、毎フレームの視覚入力を最初から入力処理するため初回トークン時間が長くなる問題を扱う。提案法は安定した背景ブロックと変化した前景ブロックを意味的に分離し、背景を再利用可能なKVキャッシュ接頭辞として並べ、前景だけを再計算する。
-
 - **2026-08 · [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](2026-2608.16157-freetoken-efficient-edge-native-moe-serving-with-bandwidth-adaptive-execution.md)**  
-  実装：[✓](https://github.com/FlashML-org/FreeToken) ・ リポジトリ内被引用：2  
+  実装：[✓](https://github.com/FlashML-org/FreeToken) ・ リポジトリ内被引用：3  
   FreeTokenは、混合専門家モデル（Mixture of エキスパート、MoE）の全専門家重みがGPUメモリに収まらない場合に、GPU・CPU・主記憶・PCIeを一つの推論基盤として使うローカル配信システムである。
 
 - **2026-06 · [Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design](2026-2606.10493-achieving-cloud-grade-slos-for-local-mixture-of-experts-inference-through-cpu-gpu-hybrid-design.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   巨大MoEのCPU計算・DRAM帯域律速に対し、入力処理は必要重みをGPUへ細粒度転送し、生成はCPU専門家計算とGPU注意を重ねて元精度を保つ方式。
+
+- **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
+
+- **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
+
+- **2026-09 · [MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson](2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Jetson統合メモリの隠れた帯域競合を監視し、締切危険時だけ背景LLMを一時停止してロボット処理を保護する軽量実行時スケジューラ。
+
+- **2026-07 · [HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference](2026-2607.12839-heteromosaic-exposing-and-exploiting-heterogeneous-execution-opportuniti.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  近年の端末向けシステムオンチップ（SoC）には、CPU、内蔵画像処理装置（integrated GPU、iGPU）、神経処理装置（NPU）が同居し、同じ主記憶を共有するものがある。原著はAMD Ryzen AIの3機種を用いて、事前充填（プリフィル）で内蔵GPU単独比の平均速度向上率をそれぞれ約2.30倍、1.50倍、1.17倍と報告する。
 
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -49,10 +65,6 @@
   NPUMoEは、Apple NPUで動的な専門家選択を固定容量のグループと共有計算グラフへ変換し、頻出群を常駐させて小粒度実行とCPU同期を減らす方式。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
-
-- **2026-10 · [Stepped MoE: Segment-Level Routing with Configurable Inference Complexity](2026-2610.07348-stepped-moe-segment-level-routing-with-configurable-inference-complexity.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  区間ごとに全層の専門家を一括選択して固定し、入れ替えの入出力を消しながら、1つのモデルから活性1Bから4Bまでを選べるようにした、端末向けの専門家混合構造。
 
 - **2026-10 · [Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs](2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimo.md)**  
   実装：[✓](https://github.com/jimmy-yilong-li/CrossInfer) ・ リポジトリ内被引用：0  
@@ -81,14 +93,6 @@
 - **2026-09 · [OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming](2026-2609.34653-omnitide-co-designing-algorithms-and-systems-for-efficient-on-device-omn.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   各時刻の視覚・音声表現がLLMへ投入されるとKVキャッシュが累積し、後続の質問が過去の場面を参照できる一方、端末のメモリ容量と注意機構の計算量を圧迫する。主な検証では、Qwen2.5-Omni-3B/7Bの完全履歴との比較でストリームセッション時間が2.29〜2.40倍短くなり、StreamingBench正答率はほぼ同水準である。
-
-- **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
-
-- **2026-09 · [MCSched: Memory-Controller-Aware Scheduling for Embodied LLM Workloads on NVIDIA Jetson](2026-fd0d3fa4e564-mcsched-memory-controller-aware-scheduling-for-embodied-llm-workloads-on-nvidia-jetson.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Jetson統合メモリの隠れた帯域競合を監視し、締切危険時だけ背景LLMを一時停止してロボット処理を保護する軽量実行時スケジューラ。
 
 - **2026-09 · [JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management](2026-2609.17475-justfit-200k-token-llm-serving-on-a-24-gib-laptop-with-just-in-time-state-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -141,10 +145,6 @@
 - **2026-07 · [NPUsper: Eliminating Redundant Computation for Real-Time Whisper on Mobile NPUs](2026-2607.01108-npusper-eliminating-redundant-computation-for-real-time-whisper-on-mobil.md)**  
   実装：[✓](https://github.com/npusper/NPUsper) ・ リポジトリ内被引用：0  
   第一は、短い音声片に対するWhisperの幻覚を抑えるため、従来方式が毎回30秒近い入力を作り、既に処理した音声や無音埋めを再計算すること。
-
-- **2026-07 · [HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference](2026-2607.12839-heteromosaic-exposing-and-exploiting-heterogeneous-execution-opportuniti.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  近年の端末向けシステムオンチップ（SoC）には、CPU、内蔵画像処理装置（integrated GPU、iGPU）、神経処理装置（NPU）が同居し、同じ主記憶を共有するものがある。原著はAMD Ryzen AIの3機種を用いて、事前充填（プリフィル）で内蔵GPU単独比の平均速度向上率をそれぞれ約2.30倍、1.50倍、1.17倍と報告する。
 
 - **2026-07 · [Automated Tensor Scheduling for Hybrid CPU-GPU LLM Inference on Consumer Devices](2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -237,11 +237,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   HeteroInferは、携帯端末のシステムオンチップ（システム-on-Chip; SoC）に同居するGPUとニューラル処理装置（Neural Processing Unit; NPU）を同時利用し、大規模言語モデル（LLM）の前処理と自己回帰復号を高速化する推論基盤である。
 
 - **2025-09 · [Scaling LLM Test-Time Compute with Mobile NPU on Smartphones](2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md)**  
@@ -249,7 +249,7 @@
   Hexagon NPUの復号時に遊休しやすい行列演算器を、並列テスト時計算へ転用する。4ビット細粒度タイル量子化とルックアップテーブル（Lookup Table; LUT）演算により、混合精度GEMM最大19.0倍、Softmax最大2.2倍を報告する。
 
 - **2025-06 · [Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference](2025-2412.00099-mixture-of-cache-conditional-experts-for-efficient-mobile-device-inferen.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   提案するキャッシュ優先ルーティング（Cache-Prior ルーティング）は、既存ルータのスコアに「DRAM内に既にある専門家」への加算項を導入し、上位K個の専門家の選択を変更する。
 
 - **2025-08 · [ShadowNPU: System and Algorithm Co-design for NPU-Centric On-Device LLM Inference](2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md)**  
@@ -260,13 +260,13 @@
   実装：[✓](https://github.com/alibaba/MNN) ・ リポジトリ内被引用：8  
   DRAMとFlashの階層利用、役割別量子化、CPU/GPU別データ配置と負荷分散を統合し、スマートフォン上のLLM推論を高速・省メモリ化する。
 
+- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  端末内で一つの大規模言語モデルを複数アプリから共用する場合、画面操作エージェント、チャット、バックグラウンド要約は、それぞれ異なる遅延目標を要求する。ElastiLMは、この二つの調整軸を同じ要求制御に統合する。これは生成速度が10.45%増えたという意味ではなく、指定された遅延制約を守った要求の正答率の絶対差である。
+
 - **2025-07 · [DSSD: Efficient Edge-Device LLM Deployment and Collaborative Inference via Distributed Split Speculative Decoding](2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md)**  
   実装：[✓](https://github.com/JasonNing96/DSSD-Efficient-Edge-Computing) ・ リポジトリ内被引用：7  
   端末で大規模言語モデルを動かすにはメモリ、演算能力、電力が不足しやすい。基地局やエッジサーバに大型モデルを置けば演算資源は確保できるが、ネットワーク往復時間と帯域が生成遅延へ加わる。ただしモデル対やドラフト長によっては通常の大型モデル推論より遅い条件があり、通信を減らせば無条件に高速化するわけではない。
-
-- **2025-10 · [Elastic On-Device LLM Service](2025-2409.09071-elastic-on-device-llm-service.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  端末内で一つの大規模言語モデルを複数アプリから共用する場合、画面操作エージェント、チャット、バックグラウンド要約は、それぞれ異なる遅延目標を要求する。ElastiLMは、この二つの調整軸を同じ要求制御に統合する。これは生成速度が10.45%増えたという意味ではなく、指定された遅延制約を守った要求の正答率の絶対差である。
 
 - **2025-10 · [Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding](2025-2510.11331-heterogeneous-edge-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -277,7 +277,7 @@
   スマートフォン上で大規模言語モデルを動かす際、モデルの全重みをDRAMに置けないことが最大の制約になる。さらに現在の層の活性化ベクトルから数層先の活性重みを予測して先読みし、複数層の重みをフラッシュ上で近接配置する。
 
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
 
 - **2025-01 · [MoE²: Optimizing Collaborative Inference for Edge Large Language Models](2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md)**  
@@ -369,7 +369,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices](2023-2308.14352-edgemoe.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/UbiquitousLearning/mllm) ・ リポジトリ内被引用：64  
   MoE エキスパートを外部ストレージ化し、エキスパート別混合量子化と活性相関に基づく先読み・キャッシュでモバイル推論のI/O律速を緩和する。
 
 - **2023-09 · [LLMCad: Fast and Scalable On-device Large Language Model Inference](2023-2309.04255-llmcad-fast-and-scalable-on-device-large-language-model-inference.md)**  
