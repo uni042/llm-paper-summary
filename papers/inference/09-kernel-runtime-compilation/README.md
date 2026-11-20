@@ -33,7 +33,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](2026-2603.05451-flashattention-4-algorithm-and-kernel-pipelining-co-design-for-asymmetri.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention/tree/main/flash_attn/cute) ・ リポジトリ内被引用：35  
   FlashAttention-4は、NVIDIA Blackwell世代のB200でテンソルコアの行列積性能が大きく増加した一方、共有メモリの読出し帯域や指数関数演算器の性能が同じ比率では伸びないことに対応する注意カーネルである。FlashAttention-4は前向き・逆向きの処理を別々に設計し、行列積、softmax、メモリ転送、勾配集約を重ね合わせる。
 
 - **2025-12 · [MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs](2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md)**  
@@ -144,6 +144,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/leapquant/LeapQuant) ・ リポジトリ内被引用：1  
   線形注意の再帰状態を窓ごとに1回だけ量子化し、外れ値を高精度の補償トークンへ逃がす学習不要の方式で、8ビットでも精度をほぼ保ちながら状態転送を3.4倍減らしデコードを高速化した。
 
+- **2026-09 · [Empowering Hybrid Attention Models on NPUs](2026-2609.32114-empowering-hybrid-attention-models-on-npus.md)**  
+  実装：[✓](https://github.com/yinyuanzhang/HA-NPU) ・ リポジトリ内被引用：1  
+  線形注意の仕事をヘッド単位に割り当てて依存演算子を同一コアへ融合し、中間テンソルの寿命に合わせた実行順の並べ替えと、得な場合だけ変換するレイアウト計画で、エッジNPU上のハイブリッド注意モデルのプリフィルを支配するグローバルメモリ往復を消す実行方式。
+
 - **2026-08 · [Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference](2026-2608.08730-dispatch-overhead-not-kernel-quality-the-performance-bottleneck-in-singl.md)**  
   実装：[✓](https://github.com/jmaczan/torch-webgpu) ・ リポジトリ内被引用：1  
   単一演算測定が同期を混ぜて発行費用を約20倍に膨らませることを暴き、連続発行測定で真の費用を測った上で、同じシェーダで発行だけを減らして53パーセント速くなる統制実験により、律速がカーネルではなく発行回数だと示した測定研究。
@@ -151,6 +155,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-07 · [Every Microsecond Matters: Achieving Near Speed-of-Light Latency in GPU Collectives](2026-2607.16100-every-microsecond-matters-achieving-near-speed-of-light-latency-in-gpu-c.md)**  
   実装：[✓](https://github.com/ss16118/low-latency-nccl) ・ リポジトリ内被引用：1  
   本研究は、GPU間の集合通信（collective 通信）を大きなメッセージの帯域幅ではなく、短いメッセージの待ち時間を中心に最適化する。そこで、データ転送と到着通知を一体化するLL方式、受信領域の特殊値で到着を判定するsentinel方式、双方向通信と二重バッファによる暗黙の順序制御、NVLinkの原子的加算を使うLL128方式を設計した。
+
+- **2026-06 · [When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet](2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approxi.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  三角行列の逆行列を低次のノイマン級数と対角マスクと乗算のみの残差補正で近似し、逐次依存を消して神経処理装置の行列演算へ載せ、カーネルで最大5.2倍、層全体で最大24.6パーセントの削減を得た。
 
 - **2026-06 · [TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization](2026-2606.01556-twinquant-learnable-subspace-decomposition-for-4-bit-llm-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -338,10 +346,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/yiqiliu2/voxelsim) ・ リポジトリ内被引用：0  
   VOXELは、演算コアの上に多数のDRAMバンクを三次元積層したAIチップを対象に、コンパイラが生成する演算配置・データ配置と、分散メモリ・オンチップ通信・熱制約を一体として評価するシミュレータである。性能差の大部分は設計空間を模擬した結果であり、量産シリコンの確定性能として扱わない。
 
-- **2026-09 · [Empowering Hybrid Attention Models on NPUs](2026-2609.32114-empowering-hybrid-attention-models-on-npus.md)**  
-  実装：[✓](https://github.com/yinyuanzhang/HA-NPU) ・ リポジトリ内被引用：0  
-  線形注意の仕事をヘッド単位に割り当てて依存演算子を同一コアへ融合し、中間テンソルの寿命に合わせた実行順の並べ替えと、得な場合だけ変換するレイアウト計画で、エッジNPU上のハイブリッド注意モデルのプリフィルを支配するグローバルメモリ往復を消す実行方式。
-
 - **2026-09 · [EFQ-Softmax: Exp-Free Quantization for Softmax](2026-2609.09721-efq-softmax-exp-free-quantization-for-softmax.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意の確率生成から高精度な指数関数と事後量子化を外し、ずらしたスコアをブロック単位スケール付きのE2M1コードへアフィン規則で直接変換して、分子と分母で共有する低ビット確率生成法。
@@ -449,10 +453,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-07 · [BrownoutMoE: Structure-Aware Expert Grouping for Efficient and Accurate LLM Web-based Services](2026-2607.04164-brownoutmoe-structure-aware-expert-grouping-for-efficient-and-accurate-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   BrownoutMoEは、混合専門家モデル（Mixture of エキスパート、MoE）の推論配信において、低頻度の専門家をまとめて計算量とメモリ転送を減らす際の精度低下を抑える方式である。
-
-- **2026-06 · [When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet](2026-2606.06034-when-good-enough-is-optimal-multiplication-only-matrix-inversion-approxi.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  三角行列の逆行列を低次のノイマン級数と対角マスクと乗算のみの残差補正で近似し、逐次依存を消して神経処理装置の行列演算へ載せ、カーネルで最大5.2倍、層全体で最大24.6パーセントの削減を得た。
 
 - **2026-06 · [TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring](2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-.md)**  
   実装：[✓](https://github.com/ashutoshuiuc/tilemaxsim) ・ リポジトリ内被引用：0  
@@ -673,20 +673,20 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
-  実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：59  
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
   実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：49  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
+- **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
+  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：24  
+  大規模な混合専門家モデルの多数の専門家重みをCPUメモリに常駐させ、注意機構などをGPUで処理する異種混成推論基盤。CPUの行列演算命令を算術強度に応じて使い分け、非同期の実行制御と専門家計算の遅延反映によってCPU・GPUの相互待ちを減らす。低同時実行の巨大モデルを主対象とし、評価した環境は二基の高性能XeonとA100またはRTX 4080である。
+
 - **2025-04 · [TileLang: A Composable Tiled Programming Model for AI Systems](2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md)**  
   実装：[✓](https://github.com/tile-ai/tilelang) ・ リポジトリ内被引用：24  
   GPUカーネルの「何を計算するか」をタイル単位のデータ流として書き、「どのスレッドがどの配置で、どの命令を使い、転送と計算をどう重ねるか」を別のスケジュール層へ分離する。高水準な記述を保ちながら、FlashAttention-3級の複雑なパイプラインまで表現・自動推論できることを狙う。
-
-- **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
-  実装：[✓](https://github.com/kvcache-ai/ktransformers) ・ リポジトリ内被引用：23  
-  大規模な混合専門家モデルの多数の専門家重みをCPUメモリに常駐させ、注意機構などをGPUで処理する異種混成推論基盤。CPUの行列演算命令を算術強度に応じて使い分け、非同期の実行制御と専門家計算の遅延反映によってCPU・GPUの相互待ちを減らす。低同時実行の巨大モデルを主対象とし、評価した環境は二基の高性能XeonとA100またはRTX 4080である。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
   実装：[✓](https://github.com/thustorage/Medusa) ・ リポジトリ内被引用：20  
@@ -943,7 +943,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-12〜2024-11）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：202  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：203  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
@@ -1107,7 +1107,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：845  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：847  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  

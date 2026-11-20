@@ -391,7 +391,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   AndaはこのFP-INT行列積を対象に、活性値の格納形式、各演算モジュールへ割り当てる精度、専用回路の三つを共同最適化する研究である。
 
 - **2024-11 · [MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices](2024-2411.17720-mas-attention-memory-aware-stream-processing-for-attention-acceleration-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   MAS-注意機構は、演算資源とオンチップ記憶容量が限られる端末向けニューラル演算器において、正確な注意機構を高速化する計算配置方式である。著者らは、改変TileFlow・Timeloop・Accelergyによる端末向け演算器のシミュレーションで、FLATに対する注意演算サイクルの最大2.75倍の高速化、最大54.03%の推定消費エネルギー削減を報告した。
 
 ### 4年前（2022-12〜2023-11）

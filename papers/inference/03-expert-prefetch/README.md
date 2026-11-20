@@ -67,7 +67,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   しかし、GPUメモリが限られると専門家の重みをすべて常駐させられない。従来のCPU専門家実行方式Fiddlerに対し、DAOPは二つの最適化を加える。RTX A6000 48GBと18コアCPUの実機評価では、Fiddler比で専門家キャッシュ比率を変えた場合の平均生成速度改善が35.4%、一部条件では40.4%である。
 
 - **2025-02 · [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   11GBのGPUメモリしか持たないRTX 1080Tiでは全専門家を常駐させられず、CPUメモリから必要な専門家を都度転送すると待機時間が発生する。加えて、先読みの外れやすい浅い層へGPUキャッシュを重点配分し、最近使った専門家と繰り返し使う専門家を適応的に残す。
 
 - **2025-09 · [LayerScope: Predictive Cross-Layer Scheduling for Efficient Multi-Batch MoE Inference on Legacy Servers](2025-2509.23638-layerscope-predictive-cross-layer-scheduling-for-efficient-multi-batch-moe-infer.md)**  
@@ -91,7 +91,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：✓ ・ リポジトリ内被引用：103  
+  実装：✓ ・ リポジトリ内被引用：104  
   Pre-gated MoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリより大きな規模で動かす際、CPU主記憶から専門家重みを読み込む時間を削減するための、モデル側のルーティング変更と実行系の協調設計である。著者らは単一のA100 80GBと大容量CPU主記憶を使い、SwitchTransformerの複数規模を評価した。
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  

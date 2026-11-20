@@ -785,7 +785,7 @@
   文書が長いほど参照すべきキーと値の数が増え、推論時のメモリ使用量と注意計算が膨らむ。長文専用の注意構造へモデルを変更する方式は再事前学習や追加の位置埋め込み学習を要する場合がある。
 
 - **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  
-  実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：4  
   Ren・Jia・Zhuの研究は、自己回帰型の大規模言語モデル（Large Language モデル; LLM）で、長い入力に伴って増える鍵・値キャッシュ（Key–Value キャッシュ; KVキャッシュ）を、捨てる前に情報を短い表現へ移すことで削減する方式を提案する。
 
 - **2023-11 · [One Pass Streaming Algorithm for Super Long Token Attention Approximation in Sublinear Space](2023-2311.14652-one-pass-streaming-algorithm-for-super-long-token-attention-approximatio.md)**  
