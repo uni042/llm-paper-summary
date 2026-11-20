@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（93本）
+## 自動生成の論文一覧（94本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -65,6 +65,10 @@
   NPUMoEは、Apple NPUで動的な専門家選択を固定容量のグループと共有計算グラフへ変換し、頻出群を常駐させて小粒度実行とCPU同期を減らす方式。
 
 ### 直近12か月・未被引用（2025-12〜2026-11）
+
+- **2026-10 · [TileWeave: Heterogeneous Tiling for Sparse Prefill on Mobile SoCs](2026-2611.00408-tileweave-heterogeneous-tiling-for-sparse-prefill-on-mobile-socs.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  細かく選んだキーの塊を共有度で分け、共有の多い塊は大きなタイルで主演算器、少ない塊は画像処理器で処理する異種分担により、検索精度を比較対象の疎な注意と同等以上に保ちながら携帯電話の入力処理を最大三・二三倍速くしたと報告した。
 
 - **2026-10 · [Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs](2026-2610.35309-shared-context-separate-engines-stateful-streaming-inference-for-multimo.md)**  
   実装：[✓](https://github.com/jimmy-yilong-li/CrossInfer) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "投機的デコードの直列ヘッド向けオンチップメガカーネル。並列下書きの直列ヘッドが、語彙規模の射影行列をステップごとに繰り返し転送して遅延源になる問題に対し、射影の断片をチップ上に常駐させる永続メガカーネル。推論カーネルそのもの。",
   "semantic_scholar_id": "1209f20e353c1f6519dc8f8bbc600945787364d4",
   "source_url": "https://arxiv.org/abs/2611.00506",
-  "status": "ready",
+  "status": "superseded",
   "title": "Weights That Stay: On-Chip Megakernels for Serial Heads in Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:23:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2611.00506-weights-that-stay-on-chip-megakernels-for-serial-heads-in-speculative-de.md",
+  "represented_canonical_id": "arXiv:2611.00506",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

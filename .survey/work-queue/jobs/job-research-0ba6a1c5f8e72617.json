@@ -35,10 +35,15 @@
   "selection_reason": "4ビット疎注意によるエージェントLLM推論の高速化Jet-QSparse。長期エージェントのワークロードでKV容量とデコード注意のスループットが逼迫する問題に対し、NVFP4のキャッシュ保存とFP4のクエリ・キー計算を訓練不要で組み合わせる。推論高速化機構そのもの。",
   "semantic_scholar_id": "d13ac2fc29b9fd9a8e537c9e4adc6a0a58b0cf9c",
   "source_url": "https://arxiv.org/abs/2611.01022",
-  "status": "ready",
+  "status": "superseded",
   "title": "Jet-QSparse: Accelerating Agentic LLM Inference with 4-Bit Sparse Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T22:23:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attenti.md",
+  "represented_canonical_id": "arXiv:2611.01022",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（203本）
+## 自動生成の論文一覧（204本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -301,6 +301,10 @@
 - **2026-10 · [Joint Subspace Sparse Attention for Efficient Long-Context Decoding](2026-2610.19026-joint-subspace-sparse-attention-for-efficient-long-context-decoding.md)**  
   実装：[✓](https://github.com/jiwonsong-dev/JSSA) ・ リポジトリ内被引用：0  
   トークンスコア保存誤差を最小化する共有低次元部分空間でのトークン選択と、KVヘッドごとに異なる選択を元のキャッシュから直接読むギャザーなしカーネルを組み合わせた、学習不要のトークン単位疎な注意。
+
+- **2026-10 · [Jet-QSparse: Accelerating Agentic LLM Inference with 4-Bit Sparse Attention](2026-2611.01022-jet-qsparse-accelerating-agentic-llm-inference-with-4-bit-sparse-attenti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全履歴を四ビットで保持し毎ステップ全キーを四ビット演算で走査して重い塊だけを高精度で集約する学習なしの注意で、六十四ブロック時に文脈十二万八千・同時要求十六で生成一・九四倍高速化と収容量二・五八倍以上を、百二十八ブロック時には四モデル五課題で検出可能な精度低下なしを報告した。
 
 - **2026-10 · [INTRA: Interleaved Non-contiguous Token spaRse Attention](2026-2610.34056-intra-interleaved-non-contiguous-token-sparse-attention.md)**  
   実装：[✓](https://github.com/NovTi/INTRA) ・ リポジトリ内被引用：0  
@@ -723,7 +727,7 @@
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
-  実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：65  
+  実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：66  
   キーの低ランク性を使い、低次元スコアで候補KVを選んでから全次元注意を計算し、品質を保ちながら注意計算を最大約45%短縮する疎注意法。
 
 - **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
