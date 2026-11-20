@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（186本）
+## 自動生成の論文一覧（187本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -382,6 +382,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   既存のクエリ依存疎注意（query-aware sparse 注意機構）は、現在のトークンに必要な過去のKVの一部だけを計算に使う。Llama系モデルの実験では、メモリ削減率最大75%の条件で非制限基準の復号効率の95%を維持し、容量制限下の比較で復号遅延を最大54.84%低減したと報告する。
 
+- **2026-06 · [Hierarchical Global Attention (HGA)](2026-2606.30709-hierarchical-global-attention-hga.md)**  
+  実装：[✓](https://github.com/vfedosov77/HierarchicalGlobalAttention) ・ リポジトリ内被引用：0  
+  学習済みモデルの重みを変えず、チャンクとグループの2段ルーティングで選んだ実トークンだけへ正確な注意を計算する差し替え式の疎注意。履歴KVをRAMへ置くことでGPUメモリを文脈長から切り離す。
+
 - **2026-06 · [Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets](2026-2606.23961-forget-without-compromise-nexus-sampling-for-streaming-kv-cache-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   橋渡しトークンを拾うウォーク型スコアと重み付き貯水池サンプリングでKVキャッシュを追い出す学習不要の方式で、8割追い出しでも全注意に約1ポイント差まで迫った。
@@ -643,7 +647,7 @@
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：215  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：216  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

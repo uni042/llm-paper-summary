@@ -35,10 +35,15 @@
   "selection_reason": "事前学習済みTransformerのQ/K/V/O射影を変更せず、RoPE対応のコンパクトなチャンク要約による二段階ルーティングで必要なKVだけをホストRAM/NVMeからGPUへ取得し、取得集合内で正確なattentionを計算する。Qwen3-30B-A3BをRTX 5090上で64K文脈まで実行し、KVの約3%を使う条件でdenseとの差を約0.01–0.02 natsと報告。長文脈LLM推論のGPUメモリ削減と階層メモリ活用に直接該当する。",
   "semantic_scholar_id": "989039d128bd05489ca0f98cad6e10893c7fe1fc",
   "source_url": "https://arxiv.org/abs/2606.30709",
-  "status": "ready",
+  "status": "superseded",
   "title": "Hierarchical Global Attention (HGA)",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:58:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2606.30709-hierarchical-global-attention-hga.md",
+  "represented_canonical_id": "arXiv:2606.30709",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

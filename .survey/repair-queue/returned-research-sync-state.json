@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "cecb4acf87c62526de5161cb957a3a5a4c0d72b9",
+  "base_commit": "635c026fcbc340293b050afa8eebe83ac3f8a54c",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -271,10 +271,13 @@
     "2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multimodal-llms-in-cloud-edge-continuum.json",
     "2026-2606.15805-mean-field-parallel-decoding-for-discrete-diffusion-language-models.json",
     "2026-2606.16067-stepwise-token-selection-for-efficient-multimodal-large-language-models.json",
+    "2026-2606.17421-bifrost-hybrid-tee-fhe-inference-for-privacy-preserving-transformer-and-llm-serving.json",
     "2026-2606.18681-moving-beyond-diversity-visual-token-pruning-as-subspace-reconstruction-for-efficient-vlms.json",
+    "2026-2606.19993-activation-and-influence-aware-ranks-air-function-preserving-svd-compression-for-llms.json",
     "2026-2606.20474-ultraquant-4-bit-kv-caching-for-context-heavy-agents.json",
     "2026-2606.21428-does-mixture-of-experts-actually-help-inference-on-consumer-and-edge-hardware-an-empirical-study.json",
     "2026-2606.21869-the-language-energy-divide-measuring-energy-costs-of-multilingual-llm-inference.json",
+    "2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-api-serving.json",
     "2026-2606.23961-forget-without-compromise-nexus-sampling-for-streaming-kv-cache-eviction-under-fixed-budgets.json",
     "2026-2606.24156-accelerating-multimodal-large-language-models-with-prior-corrected-token-reduction.json",
     "2026-2606.24165-spectral-evolution-guided-token-pruning-in-multimodal-large-language-models.json",
@@ -282,9 +285,11 @@
     "2026-2606.24286-avoc-enhancing-hour-level-audio-video-understanding-in-omni-modal-llms-via-retrieval-inspired-token-compression.json",
     "2026-2606.25354-efficient-and-trainable-language-model-test-time-scaling-via-local-branch-routing.json",
     "2026-2606.26439-tilemaxsim-roofline-regimes-and-compression-limits-for-fused-gpu-maxsim-scoring.json",
+    "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json",
     "2026-2606.29350-fast-enough-to-act-spatio-temporal-visual-token-merging-for-low-latency-robotic-vlms-and-vlas.json",
     "2026-2606.30005-llm-agents-are-latent-context-managers.json",
     "2026-2606.30553-cosm-a-cooperative-scheduling-framework-for-concurrent-pim-and-cpu-execution-on-mobile-devices.json",
+    "2026-2606.30709-hierarchical-global-attention-hga.json",
     "2026-2606.31580-laser-load-aware-serving-with-early-exit-for-reasoning-llms-at-the-edge.json",
     "2026-2607.01308-cache-merging-as-a-convergent-replicated-state-for-multi-agent-latent-reasoning.json",
     "2026-2607.02522-multi-turn-distributed-inference-with-mixture-of-experts-for-6g-edge-cloud-networks.json",
@@ -42786,6 +42791,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2606.17421": {
+      "order": [
+        "2026-11-20T05:54:10+00:00",
+        "2026-2606.17421-bifrost-hybrid-tee-fhe-inference-for-privacy-preserving-transformer-and-llm-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.19993": {
+      "order": [
+        "2026-11-20T05:54:57+00:00",
+        "2026-2606.19993-activation-and-influence-aware-ranks-air-function-preserving-svd-compression-for-llms.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.22840": {
+      "order": [
+        "2026-11-20T05:55:44+00:00",
+        "2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-api-serving.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.27550": {
+      "order": [
+        "2026-11-20T05:56:32+00:00",
+        "2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-prediction.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2606.30709": {
+      "order": [
+        "2026-11-20T05:57:19+00:00",
+        "2026-2606.30709-hierarchical-global-attention-hga.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -53087,6 +53137,21 @@
     "arxiv:2606.15210": [
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multi.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.15210-generation-quality-latency-tradeoff-aware-inference-offloading-for-multi.md"
+    ],
+    "arxiv:2606.17421": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17421-bifrost-hybrid-tee-fhe-inference-for-privacy-preserving-transformer-and-.md"
+    ],
+    "arxiv:2606.19993": [
+      "papers/inference/16-weight-quantization-compression/2026-2606.19993-activation-and-influence-aware-ranks-air-function-preserving-svd-compres.md"
+    ],
+    "arxiv:2606.22840": [
+      "papers/inference/05-speculative-decoding-moe/2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-a.md"
+    ],
+    "arxiv:2606.27550": [
+      "papers/inference/05-speculative-decoding-moe/2026-2606.27550-entmtp-accelerating-llm-inference-with-entropy-guided-multi-token-predic.md"
+    ],
+    "arxiv:2606.30709": [
+      "papers/inference/13-sparse-attention/2026-2606.30709-hierarchical-global-attention-hga.md"
     ]
   }
 }

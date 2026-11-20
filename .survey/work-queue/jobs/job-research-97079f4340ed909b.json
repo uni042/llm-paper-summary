@@ -35,10 +35,15 @@
   "selection_reason": "費用効率的LLM向け応答レベル投機的デコードRLM-Cascade。モデルへのアクセスなしに代理層で応答レベルの投機的デコードを行い、複雑さルータで検証モデルを使い分けてAPI費用を下げる。推論基盤機構そのもの。",
   "semantic_scholar_id": "b4debda8ca6146bc995b4101b68b37a4ff7ae387",
   "source_url": "https://arxiv.org/abs/2606.22840",
-  "status": "ready",
+  "status": "superseded",
   "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T05:58:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2606.22840-rlm-cascade-response-level-speculative-decoding-for-cost-efficient-llm-a.md",
+  "represented_canonical_id": "arXiv:2606.22840",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

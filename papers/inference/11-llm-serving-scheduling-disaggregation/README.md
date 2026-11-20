@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（560本）
+## 自動生成の論文一覧（561本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1025,6 +1025,10 @@
 - **2026-06 · [BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference](2026-2606.09514-buddy-budget-driven-dynamic-depth-routing-for-adaptive-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文脈に応じて予算どおりの層数だけを実行する動的深さ振り分けで、第1層のキャッシュを全体文脈の要約に使って生成中も経路を更新し、単一モデルで複数予算と厳密な層数制御を両立させた。
+
+- **2026-06 · [Bifrost: Hybrid TEE-FHE Inference for Privacy-Preserving Transformer and LLM Serving](2026-2606.17421-bifrost-hybrid-tee-fhe-inference-for-privacy-preserving-transformer-and-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形層だけを暗号文のままアクセラレータへ委譲し、非線形演算子とリフレッシュとプリフィルをCPUの信頼実行環境へ寄せる混在型の秘匿推論基盤。最初のトークンまでの時間を最大53.4倍短縮する。
 
 - **2026-06 · [Beyond Prediction: Tail-Aware Scheduling for LLM Inference](2026-2606.18431-tail-aware-prediction-free-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2177,7 +2181,7 @@
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1660  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1661  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
