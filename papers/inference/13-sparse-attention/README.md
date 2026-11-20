@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（189本）
+## 自動生成の論文一覧（191本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -350,6 +350,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   回転位置埋め込みの周波数対ごとに波長比例の窓で内積項を削る注意の近似を提案し、項の37から48パーセント削減と分布の近一致、100万文脈で1.31倍の高速化を示した。
 
+- **2026-07 · [Uncertainty-gated selection for block-sparse attention](2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.md)**  
+  実装：[✓](https://github.com/ThomasRossi/uncertainty-gated-block-sparse-attention) ・ リポジトリ内被引用：0  
+  ブロック疎注意の上位k件境界の曖昧さをマージンで測り、不確かなタイルだけ保持ブロックを2倍化する予算配分層。評点方式に依存せずQuest等へ重ねられ、長文脈の検索精度と速度を両立させる。
+
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Beyondは、長文脈の大規模言語モデル（LLM）でキー・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域メモリ（HBM）からあふれた際、中央処理装置（CPU）の主記憶を単なる退避場所にせず、CPU側でも注意計算を実行する仕組みである。
@@ -401,6 +405,10 @@
 - **2026-05 · [PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models](2026-2605.20813-pulsecol-periodically-refreshed-column-sparse-attention-for-accelerating.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PulseColは、拡散言語モデル（diffusion language モデル、dLLM）の生成で同じ系列に対する双方向の自己注意を何度も計算する費用を減らす方式である。
+
+- **2026-05 · [LISA: Linear-Indexed Sparse Attention for Efficient Long Chain-of-Thought Reasoning](2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-chain-of-thought.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意で長距離の状態を保持し、索引器が選んだ256トークンへだけ通常の注意を当てる長い推論向けの注意置換。1.5Bで平均遅延を23.9パーセント短縮し、精度も基準を上回ったが、計算量のクラスは二乗のままである。
 
 - **2026-05 · [Inference Time Context Sparsity: Illusion or Opportunity?](2026-2605.24168-inference-time-context-sparsity-illusion-or-opportunity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -481,11 +489,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：164  
+  実装：✓ ・ リポジトリ内被引用：165  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：108  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：109  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -651,11 +659,11 @@
 ### 3年前（2023-12〜2024-11）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：323  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：324  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：220  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：221  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  

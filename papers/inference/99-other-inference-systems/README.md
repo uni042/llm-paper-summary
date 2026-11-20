@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（1095本）
+## 自動生成の論文一覧（1096本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1197,6 +1197,10 @@
 - **2026-07 · [Resting Neurons, Active Insights: Robustifying Activation Sparsity in LLMs via Spontaneity](2025-2512.12744-resting-neurons-active-insights-improving-input-sparsification-for-large.md)**  
   実装：[✓](https://github.com/hxu105/SPON) ・ リポジトリ内被引用：0  
   TEALなどの活性疎化方式は、小さい入力活性を閾値処理で零にして重み転送と積和を省く。実際にNVIDIA A6000でバッチ1の生成速度を測定し、50%疎化したLlama3-8Bは64.13 トークン/s、Mistral-7Bは71.84 トークン/sであり、TEALの64.28、71.25 トークン/sとほぼ同じだった。
+
+- **2026-07 · [RDQ: Residual Distribution Quantization for Large Language Models](2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化劣化の主因を残差ストリームのドリフトと特定し、量子化済み上流から捕捉した実際の入力で層ごとに較正し直す逐次補償で、3ビットでも最良水準のパープレキシティを達成する学習後量子化。
 
 - **2026-07 · [PReM: Learning What to Preserve and When to Refresh for Context Compression](2026-2607.14327-prem-learning-what-to-preserve-and-when-to-refresh-for-context-compressi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -4345,11 +4349,11 @@
 ### 8年前（2018-12〜2019-11）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：344  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：345  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：275  
+  実装：✓ ・ リポジトリ内被引用：276  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  

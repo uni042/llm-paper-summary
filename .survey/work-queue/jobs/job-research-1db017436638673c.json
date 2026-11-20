@@ -35,10 +35,15 @@
   "selection_reason": "arXiv v2要旨は線形注意の長距離記憶とLightning Indexerによる動的疎注意を学習済みゲートで融合し、長いCoTの二乗注意コストを抑制。DeepSeek蒸留Qwenで16K文脈のeager-mode平均サンプル遅延を23.9%削減し長文脈推論品質を維持と報告。推論時の長文脈注意高速化に直接該当。",
   "semantic_scholar_id": "c61efb0bf86ba56f6f9ebf8ec851436ea118611f",
   "source_url": "https://arxiv.org/abs/2607.19358",
-  "status": "ready",
+  "status": "superseded",
   "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:29:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-chain-of-thought.md",
+  "represented_canonical_id": "arXiv:2607.19358",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

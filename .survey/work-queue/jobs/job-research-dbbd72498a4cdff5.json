@@ -35,10 +35,15 @@
   "selection_reason": "残差分布量子化RDQ。4ビット未満で学習後量子化が急激に劣化する根本原因を、層ごとに注入される量子化雑音が残差流に蓄積する分布ドリフトとして同定し、残差分布の観点から量子化する。推論量子化機構そのもの。",
   "semantic_scholar_id": "5f803869ca967d393064c6b7500e03e50a1ac9ff",
   "source_url": "https://arxiv.org/abs/2607.10137",
-  "status": "ready",
+  "status": "superseded",
   "title": "RDQ: Residual Distribution Quantization for Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-11-20T09:29:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.md",
+  "represented_canonical_id": "arXiv:2607.10137",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

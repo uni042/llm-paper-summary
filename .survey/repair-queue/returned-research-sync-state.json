@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "base_commit": "d2fcb15ae18076dd393e3a5e1a9ddb61417911fe",
+  "base_commit": "02a9a69620d78fd7b52b0f3fee9ef69391df87da",
   "last_full_scan_at": "2026-11-19T17:15:38+00:00",
   "known_files": [
     "0-libfile_067aa1fe93288191960f18fa910c0453--start-snapshot-20261024.json",
@@ -397,13 +397,18 @@
     "2026-2607.06906-the-harness-effect-how-orchestration-design-sets-the-token-economics-of-enterprise-agentic-ai.json",
     "2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-empowered-edge-intelligence.json",
     "2026-2607.07706-the-key-to-going-linear-analysis-driven-transformer-linearization.json",
+    "2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.json",
+    "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json",
+    "2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.json",
     "2026-2607.10640-spectral-heat-flow-for-conservative-token-condensation-in-vision-language-models.json",
+    "2026-2607.11211-fasttps-an-optimized-method-for-llm-token-phase-for-ai-accelerators.json",
     "2026-2607.11368-decomposing-runtime-kernel-and-quantization-speedups-via-a-matched-fp16-intermediate-a-hardware-conditioned-case-study-o.json",
     "2026-2607.12266-saturation-makes-quantization-error-additive-a-coverage-model-with-a-certificate.json",
     "2026-2607.14327-prem-learning-what-to-preserve-and-when-to-refresh-for-context-compression.json",
     "2026-2607.14557-seeing-the-end-at-step-zero-accelerating-diffusion-mllms-via-mlp-sparsity-aware-truncation.json",
     "2026-2607.14630-cross-layer-error-compensation-and-finite-sample-feature-statistics-matching-for-extreme-low-bit-quantization-of-large-l.json",
     "2026-2607.17175-lmedge-qos-aware-llm-inference-orchestration-on-edge-clusters.json",
+    "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json",
     "2026-2607.20507-cachespec-finding-the-sweet-spot-for-small-models-in-large-language-models.json",
     "2026-2607.22465-oracle-agentic-ai-orchestrator-routing-via-adaptive-verifier-calibration-feedback.json",
     "2026-2607.22586-mm-shiftkv-decode-aware-prefill-stage-kv-selection-for-multimodal-large-language-models.json",
@@ -43895,6 +43900,51 @@
       "status": "imported",
       "result": null,
       "return_count": 0
+    },
+    "arXiv:2607.07724": {
+      "order": [
+        "2026-11-20T09:25:01+00:00",
+        "2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.09029": {
+      "order": [
+        "2026-11-20T09:25:44+00:00",
+        "2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-vision-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.10137": {
+      "order": [
+        "2026-11-20T09:26:27+00:00",
+        "2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.11211": {
+      "order": [
+        "2026-11-20T09:27:11+00:00",
+        "2026-2607.11211-fasttps-an-optimized-method-for-llm-token-phase-for-ai-accelerators.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
+    },
+    "arXiv:2607.19358": {
+      "order": [
+        "2026-11-20T09:27:54+00:00",
+        "2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-context-reasoning.json"
+      ],
+      "status": "imported",
+      "result": null,
+      "return_count": 0
     }
   },
   "imported_paper_paths": {
@@ -54594,6 +54644,21 @@
     "arxiv:2607.07046": [
       "papers/inference/08-edge-on-device-llm-systems/2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-emp.md",
       "papers/inference/08-edge-on-device-llm-systems/2026-2607.07046-voltron-enabling-elastic-multi-device-execution-of-llm-inference-for-emp.md"
+    ],
+    "arxiv:2607.07724": [
+      "papers/inference/13-sparse-attention/2026-2607.07724-uncertainty-gated-selection-for-block-sparse-attention.md"
+    ],
+    "arxiv:2607.09029": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.09029-mosaic-adaptive-inter-layer-composition-for-efficient-heterogeneous-visi.md"
+    ],
+    "arxiv:2607.10137": [
+      "papers/inference/99-other-inference-systems/2026-2607.10137-rdq-residual-distribution-quantization-for-large-language-models.md"
+    ],
+    "arxiv:2607.11211": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2607.11211-fasttps-an-optimized-method-for-llm-token-phase-for-ai-accelerators.md"
+    ],
+    "arxiv:2607.19358": [
+      "papers/inference/13-sparse-attention/2026-2607.19358-lisa-linear-indexed-sparse-attention-for-efficient-long-chain-of-thought.md"
     ]
   }
 }
