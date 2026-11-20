@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "muse",
+  "run_key": "muse-20261121-d09::chunk-0002-of-0002",
+  "reference_main_sha": "64c368e5ced9eaf66a94a15b028364f54b3b081d",
+  "record_count": 10,
+  "origin": "discovery_worklist",
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11628",
+      "identity_tokens": [
+        "arXiv:2604.11628",
+        "https://arxiv.org/abs/2604.11628"
+      ],
+      "title": "Back to Basics: Let Conversational Agents Remember with Just Retrieval and Generation",
+      "reason": "対話エージェントの長期記憶を検索と生成のみで構成し、ターン分離検索とクエリ駆動プルーニングでトークンとレイテンシの効率も示すが、主題は会話記憶の精度であり推論システムの汎用技術としては応用寄りのため保留とする。",
+      "source_url": "https://arxiv.org/abs/2604.11628",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01737",
+      "identity_tokens": [
+        "arXiv:2607.01737",
+        "https://arxiv.org/abs/2607.01737"
+      ],
+      "title": "ReQuest: Rethinking-based Question-Aware Frame Selection for Long-Form Video QA",
+      "reason": "長尺動画QAで不確実性に応じてキーフレームを追加選択するReQuestは、固定トークン予算下の選択的計算として推論効率と関係するが、主目的は動画質問応答の精度であり応用主体の手法のため保留とする。",
+      "source_url": "https://arxiv.org/abs/2607.01737",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 411
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19567",
+      "identity_tokens": [
+        "arXiv:2603.19567",
+        "https://arxiv.org/abs/2603.19567"
+      ],
+      "title": "Efficiency Follows Global-Local Decoupling",
+      "reason": "画像モデルで大域推論と局所表現を分離したConvNeurによりサブ二次スケーリングと精度・レイテンシ改善を狙う視覚アーキテクチャの研究であり、LLMの推論システムとは対象が異なるため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2603.19567",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 412
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36059",
+      "identity_tokens": [
+        "arXiv:2609.36059",
+        "https://arxiv.org/abs/2609.36059"
+      ],
+      "title": "Mnemon: Raw Records, Fast Judgments, Slow Thoughts",
+      "reason": "会話記録を生のまま保持し高速な判定モデルで証拠を選ぶMnemonは、質問あたり文脈トークンとコストを抑える点で推論と関係するが、主題はLLM助手の長期記憶エージェントの設計と精度評価であり記憶応用寄りのため保留とする。",
+      "source_url": "https://arxiv.org/abs/2609.36059",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 413
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.06989",
+      "identity_tokens": [
+        "arXiv:2512.06989",
+        "https://arxiv.org/abs/2512.06989"
+      ],
+      "title": "Flash Multi-Head Feed-Forward Network",
+      "reason": "FFNを多ヘッド化する際のメモリ増に対し、FlashAttention式のI/O配慮融合カーネルでオンライン計算するFlashMHFを提案し、ピークメモリを3〜5倍削減し推論も高速化すると示すため、Transformer推論のカーネル効率化として採用する。",
+      "source_url": "https://arxiv.org/abs/2512.06989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 414
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00207",
+      "identity_tokens": [
+        "arXiv:2603.00207",
+        "https://arxiv.org/abs/2603.00207"
+      ],
+      "title": "VisRef: Visual Refocusing while Thinking Improves Test-Time Scaling in Multi-Modal Large Reasoning Models",
+      "reason": "視覚推論でテスト時計算を伸ばす際に視覚トークンを再注入するVisRefは、推論時スケーリングの枠組みだが、狙いは固定計算予算での精度改善であり、レイテンシやスループット等のシステム効率の改善は要旨で示されないため保留とする。",
+      "source_url": "https://arxiv.org/abs/2603.00207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 415
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07686",
+      "identity_tokens": [
+        "arXiv:2605.07686",
+        "https://arxiv.org/abs/2605.07686"
+      ],
+      "title": "The Coupling Tax: How Shared Token Budgets Undermine Visible Chain-of-Thought Under Fixed Output Limits",
+      "reason": "思考トレースと最終回答が同じ出力トークン予算を奪い合うcoupling taxを実証し、予算分割生成による緩和も示すが、中心は推論精度と予算配分の分析であり、サービングやデコーディング基盤の新技術というより知見の提示のため保留とする。",
+      "source_url": "https://arxiv.org/abs/2605.07686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 416
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15817",
+      "identity_tokens": [
+        "arXiv:2608.15817",
+        "https://arxiv.org/abs/2608.15817"
+      ],
+      "title": "RLCascadeRouter: Quality-Estimator-Free Cascade Routing via Reinforcement Learning",
+      "reason": "応答品質の事前推定に頼らず、停止とモデル選択を強化学習で直接最適化するカスケードルーティングRLCascadeRouterを提案し、複数ベンチマークで性能と推論コストのトレードオフを改善するため、LLM推論のルーティング最適化として採用する。",
+      "source_url": "https://arxiv.org/abs/2608.15817",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 417
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01531",
+      "identity_tokens": [
+        "arXiv:2407.01531",
+        "https://arxiv.org/abs/2407.01531"
+      ],
+      "title": "Sparse Diffusion Policy: A Sparse, Reusable, and Flexible Policy for Robot Learning",
+      "reason": "拡散ポリシーへMoEを組み込みロボットのマルチタスク学習と継続学習を効率化するSparse Diffusion Policyの研究であり、対象はロボット制御の学習であってLLM推論システムとは関係しないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2407.01531",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 418
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.20915",
+      "identity_tokens": [
+        "arXiv:2405.20915",
+        "https://arxiv.org/abs/2405.20915"
+      ],
+      "title": "Fast yet Safe: Early-Exiting with Risk Control",
+      "reason": "早期終了ネットワークへリスク制御を適用し、品質目標を保ちながら計算を節約する枠組みを視覚と言語の課題で検証するが、LLM特化ではなく一般的なニューラルネット推論の手法であり、LLM推論への適用可能性が要旨では間接的なため保留とする。",
+      "source_url": "https://arxiv.org/abs/2405.20915",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-21T09:30:00+09:00",
+      "last_checked_at": "2026-11-21T09:30:00+09:00",
+      "linked_from": [
+        "worker-worklist discovery_review"
+      ],
+      "worklist_rank": 419
+    }
+  ],
+  "parent_run_key": "muse-20261121-d09",
+  "chunk_index": 2,
+  "chunk_count": 2,
+  "source_record_count": 30
+}
